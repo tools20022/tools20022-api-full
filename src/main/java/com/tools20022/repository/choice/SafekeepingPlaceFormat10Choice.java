@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
@@ -33,6 +34,7 @@ import com.tools20022.repository.msg.SafekeepingPlaceTypeAndAnyBICIdentifier1;
 import com.tools20022.repository.msg.SafekeepingPlaceTypeAndText8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -82,8 +84,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,15 +100,16 @@ import javax.xml.bind.annotation.XmlType;
  * SafekeepingPlaceFormat3Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SafekeepingPlaceFormat10Choice", propOrder = {"identification", "country", "typeAndIdentification", "proprietary"})
 public class SafekeepingPlaceFormat10Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected SafekeepingPlaceTypeAndText8 identification;
 	/**
-	 * Place of safekeeping expressed as a code and a narrative description.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -125,6 +128,9 @@ public class SafekeepingPlaceFormat10Choice {
 	 * SafekeepingPlaceFormat10Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Id"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94F::SAFE</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -145,9 +151,10 @@ public class SafekeepingPlaceFormat10Choice {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
-			componentContext_lazy = () -> SafekeepingPlaceFormat10Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94F::SAFE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Place of safekeeping expressed as a code and a narrative description.";
@@ -158,10 +165,11 @@ public class SafekeepingPlaceFormat10Choice {
 			type_lazy = () -> SafekeepingPlaceTypeAndText8.mmObject();
 		}
 	};
+	@XmlElement(name = "Ctry", required = true)
 	protected CountryCode country;
 	/**
-	 * Place of safekeeping expressed with a country code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -181,6 +189,9 @@ public class SafekeepingPlaceFormat10Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Ctry"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -199,9 +210,10 @@ public class SafekeepingPlaceFormat10Choice {
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SafekeepingPlace.mmCountry;
-			componentContext_lazy = () -> SafekeepingPlaceFormat10Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Place of safekeeping expressed with a country code.";
@@ -211,10 +223,11 @@ public class SafekeepingPlaceFormat10Choice {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "TpAndId", required = true)
 	protected SafekeepingPlaceTypeAndAnyBICIdentifier1 typeAndIdentification;
 	/**
-	 * Place of safekeeping expressed with a type and identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -233,6 +246,9 @@ public class SafekeepingPlaceFormat10Choice {
 	 * SafekeepingPlaceFormat10Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TpAndId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94a:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -253,9 +269,10 @@ public class SafekeepingPlaceFormat10Choice {
 	public static final MMMessageAssociationEnd mmTypeAndIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
-			componentContext_lazy = () -> SafekeepingPlaceFormat10Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TpAndId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeAndIdentification";
 			definition = "Place of safekeeping expressed with a type and identification.";
@@ -266,10 +283,11 @@ public class SafekeepingPlaceFormat10Choice {
 			type_lazy = () -> SafekeepingPlaceTypeAndAnyBICIdentifier1.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification78 proprietary;
 	/**
-	 * Place of safekeeping expressed with a propriety identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -308,7 +326,7 @@ public class SafekeepingPlaceFormat10Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> SafekeepingPlaceFormat10Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,11 +343,11 @@ public class SafekeepingPlaceFormat10Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SafekeepingPlaceFormat10Choice.mmIdentification, SafekeepingPlaceFormat10Choice.mmCountry, SafekeepingPlaceFormat10Choice.mmTypeAndIdentification,
-						SafekeepingPlaceFormat10Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.mmIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.mmCountry,
+						com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.mmTypeAndIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.mmProprietary);
 				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementInstructionV04.mmSafekeepingPlace, IntraPositionMovementConfirmationV05.mmSafekeepingPlace, IntraPositionMovementConfirmationV06.mmSafekeepingPlace);
 				trace_lazy = () -> SafekeepingPlace.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingPlaceFormat10Choice";
 				definition = "Choice between formats for the place of safekeeping.";
@@ -339,39 +357,39 @@ public class SafekeepingPlaceFormat10Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public SafekeepingPlaceTypeAndText8 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(SafekeepingPlaceTypeAndText8 identification) {
-		this.identification = identification;
+	public SafekeepingPlaceFormat10Choice setIdentification(SafekeepingPlaceTypeAndText8 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
 
-	public void setCountry(CountryCode country) {
-		this.country = country;
+	public SafekeepingPlaceFormat10Choice setCountry(CountryCode country) {
+		this.country = Objects.requireNonNull(country);
+		return this;
 	}
 
-	@XmlElement(name = "TpAndId", required = true)
 	public SafekeepingPlaceTypeAndAnyBICIdentifier1 getTypeAndIdentification() {
 		return typeAndIdentification;
 	}
 
-	public void setTypeAndIdentification(SafekeepingPlaceTypeAndAnyBICIdentifier1 typeAndIdentification) {
-		this.typeAndIdentification = typeAndIdentification;
+	public SafekeepingPlaceFormat10Choice setTypeAndIdentification(SafekeepingPlaceTypeAndAnyBICIdentifier1 typeAndIdentification) {
+		this.typeAndIdentification = Objects.requireNonNull(typeAndIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification78 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification78 proprietary) {
-		this.proprietary = proprietary;
+	public SafekeepingPlaceFormat10Choice setProprietary(GenericIdentification78 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

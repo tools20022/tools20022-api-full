@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.VoteInstructionRequest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the vote instructions."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "VoteInstruction", propOrder = {"identification", "requestedExecutionDate", "voteExecutionConfirmation", "votePerResolution", "voteInstructionForMeetingResolution"})
 public class VoteInstruction {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Identifies the instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +117,7 @@ public class VoteInstruction {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> VoteInstruction.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +128,11 @@ public class VoteInstruction {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdExctnDt")
 	protected ISODateTime requestedExecutionDate;
 	/**
-	 * Date at which the instruction must b e executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +165,7 @@ public class VoteInstruction {
 	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InstructionForMeeting.mmRequestedExecutionDate;
-			componentContext_lazy = () -> VoteInstruction.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +176,11 @@ public class VoteInstruction {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteExctnConf", required = true)
 	protected YesNoIndicator voteExecutionConfirmation;
 	/**
-	 * Indicates that a Vote execution confirmation is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +215,7 @@ public class VoteInstruction {
 	public static final MMMessageAttribute mmVoteExecutionConfirmation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteExecutionConfirmation;
-			componentContext_lazy = () -> VoteInstruction.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "VoteExctnConf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,10 +226,11 @@ public class VoteInstruction {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "VotePerRsltn", required = true)
 	protected VoteChoice votePerResolution;
 	/**
-	 * Details of the vote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -256,7 +262,7 @@ public class VoteInstruction {
 	public static final MMMessageAssociationEnd mmVotePerResolution = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVotePerResolution;
-			componentContext_lazy = () -> VoteInstruction.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "VotePerRsltn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -268,11 +274,11 @@ public class VoteInstruction {
 			type_lazy = () -> VoteChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteInstrForMtgRsltn")
 	protected VoteInstructionForMeetingResolution voteInstructionForMeetingResolution;
 	/**
-	 * Indicates the vote instruction for the resolutions that would be added
-	 * during the meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -307,7 +313,7 @@ public class VoteInstruction {
 	public static final MMMessageAssociationEnd mmVoteInstructionForMeetingResolution = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteForMeetingResolution;
-			componentContext_lazy = () -> VoteInstruction.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteInstruction.mmObject();
 			isDerived = false;
 			xmlTag = "VoteInstrForMtgRsltn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -323,10 +329,11 @@ public class VoteInstruction {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(VoteInstruction.mmIdentification, VoteInstruction.mmRequestedExecutionDate, VoteInstruction.mmVoteExecutionConfirmation, VoteInstruction.mmVotePerResolution,
-						VoteInstruction.mmVoteInstructionForMeetingResolution);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteInstruction.mmIdentification, com.tools20022.repository.msg.VoteInstruction.mmRequestedExecutionDate,
+						com.tools20022.repository.msg.VoteInstruction.mmVoteExecutionConfirmation, com.tools20022.repository.msg.VoteInstruction.mmVotePerResolution,
+						com.tools20022.repository.msg.VoteInstruction.mmVoteInstructionForMeetingResolution);
 				trace_lazy = () -> VoteInstructionRequest.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "VoteInstruction";
 				definition = "Specifies the vote instructions.";
@@ -335,48 +342,48 @@ public class VoteInstruction {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public VoteInstruction setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "ReqdExctnDt")
-	public ISODateTime getRequestedExecutionDate() {
-		return requestedExecutionDate;
+	public Optional<ISODateTime> getRequestedExecutionDate() {
+		return requestedExecutionDate == null ? Optional.empty() : Optional.of(requestedExecutionDate);
 	}
 
-	public void setRequestedExecutionDate(ISODateTime requestedExecutionDate) {
+	public VoteInstruction setRequestedExecutionDate(ISODateTime requestedExecutionDate) {
 		this.requestedExecutionDate = requestedExecutionDate;
+		return this;
 	}
 
-	@XmlElement(name = "VoteExctnConf", required = true)
 	public YesNoIndicator getVoteExecutionConfirmation() {
 		return voteExecutionConfirmation;
 	}
 
-	public void setVoteExecutionConfirmation(YesNoIndicator voteExecutionConfirmation) {
-		this.voteExecutionConfirmation = voteExecutionConfirmation;
+	public VoteInstruction setVoteExecutionConfirmation(YesNoIndicator voteExecutionConfirmation) {
+		this.voteExecutionConfirmation = Objects.requireNonNull(voteExecutionConfirmation);
+		return this;
 	}
 
-	@XmlElement(name = "VotePerRsltn", required = true)
 	public VoteChoice getVotePerResolution() {
 		return votePerResolution;
 	}
 
-	public void setVotePerResolution(VoteChoice votePerResolution) {
-		this.votePerResolution = votePerResolution;
+	public VoteInstruction setVotePerResolution(VoteChoice votePerResolution) {
+		this.votePerResolution = Objects.requireNonNull(votePerResolution);
+		return this;
 	}
 
-	@XmlElement(name = "VoteInstrForMtgRsltn")
-	public VoteInstructionForMeetingResolution getVoteInstructionForMeetingResolution() {
-		return voteInstructionForMeetingResolution;
+	public Optional<VoteInstructionForMeetingResolution> getVoteInstructionForMeetingResolution() {
+		return voteInstructionForMeetingResolution == null ? Optional.empty() : Optional.of(voteInstructionForMeetingResolution);
 	}
 
-	public void setVoteInstructionForMeetingResolution(com.tools20022.repository.msg.VoteInstructionForMeetingResolution voteInstructionForMeetingResolution) {
+	public VoteInstruction setVoteInstructionForMeetingResolution(com.tools20022.repository.msg.VoteInstructionForMeetingResolution voteInstructionForMeetingResolution) {
 		this.voteInstructionForMeetingResolution = voteInstructionForMeetingResolution;
+		return this;
 	}
 }

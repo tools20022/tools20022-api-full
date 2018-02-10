@@ -25,9 +25,8 @@ import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.ValuationStatistics;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +66,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCurrencyPriceChangeRule#forValuationStatistics2
+ * ConstraintCurrencyPriceChangeRule.forValuationStatistics2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCurrencyPredefinedPeriodsRule#forValuationStatistics2
+ * ConstraintCurrencyPredefinedPeriodsRule.forValuationStatistics2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCurrencyUserDefinedPeriodsRule#forValuationStatistics2
+ * ConstraintCurrencyUserDefinedPeriodsRule.forValuationStatistics2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Statistical data related to the price change of a security."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ValuationStatistics2", propOrder = {"currency", "priceTypeChangeBasis", "priceChange", "yield", "byPredefinedTimePeriods", "byUserDefinedTimePeriod"})
 public class ValuationStatistics2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ccy", required = true)
 	protected ActiveOrHistoricCurrencyCode currency;
 	/**
-	 * Currency of the valuation statistics.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +135,7 @@ public class ValuationStatistics2 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ValuationStatistics.mmCurrency;
-			componentContext_lazy = () -> ValuationStatistics2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationStatistics2.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,11 +146,11 @@ public class ValuationStatistics2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "PricTpChngBsis", required = true)
 	protected PriceType2 priceTypeChangeBasis;
 	/**
-	 * Type of price from which the change is calculated, eg, bid, offer, or
-	 * single.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +185,7 @@ public class ValuationStatistics2 {
 	public static final MMMessageAttribute mmPriceTypeChangeBasis = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ValuationStatistics.mmPriceTypeChangeBasis;
-			componentContext_lazy = () -> ValuationStatistics2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationStatistics2.mmObject();
 			isDerived = false;
 			xmlTag = "PricTpChngBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,10 +196,11 @@ public class ValuationStatistics2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PriceType2.mmObject();
 		}
 	};
+	@XmlElement(name = "PricChng", required = true)
 	protected PriceValue2 priceChange;
 	/**
-	 * Change in price since the last valuation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,7 +233,7 @@ public class ValuationStatistics2 {
 	public static final MMMessageAttribute mmPriceChange = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ValuationStatistics.mmPriceChange;
-			componentContext_lazy = () -> ValuationStatistics2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationStatistics2.mmObject();
 			isDerived = false;
 			xmlTag = "PricChng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,12 +244,11 @@ public class ValuationStatistics2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue2.mmObject();
 		}
 	};
+	@XmlElement(name = "Yld")
 	protected PercentageRate yield;
 	/**
-	 * Rate of income from the financial instrument, usually calculated as total
-	 * dividends or coupon interest available to investors in the last
-	 * year,divided by the current price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -270,7 +284,7 @@ public class ValuationStatistics2 {
 	public static final MMMessageAttribute mmYield = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ValuationStatistics.mmYield;
-			componentContext_lazy = () -> ValuationStatistics2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationStatistics2.mmObject();
 			isDerived = false;
 			xmlTag = "Yld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,11 +295,11 @@ public class ValuationStatistics2 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "ByPrdfndTmPrds")
 	protected StatisticsByPredefinedTimePeriods1 byPredefinedTimePeriods;
 	/**
-	 * Information related to price variations, expressed using pre-defined
-	 * periods.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -314,7 +328,7 @@ public class ValuationStatistics2 {
 	 */
 	public static final MMMessageAssociationEnd mmByPredefinedTimePeriods = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ValuationStatistics2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationStatistics2.mmObject();
 			isDerived = false;
 			xmlTag = "ByPrdfndTmPrds";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -326,11 +340,11 @@ public class ValuationStatistics2 {
 			type_lazy = () -> com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods1.mmObject();
 		}
 	};
+	@XmlElement(name = "ByUsrDfndTmPrd")
 	protected List<com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod1> byUserDefinedTimePeriod;
 	/**
-	 * Information related to price variations, expressed using user-defined
-	 * periods.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -359,7 +373,7 @@ public class ValuationStatistics2 {
 	 */
 	public static final MMMessageAssociationEnd mmByUserDefinedTimePeriod = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ValuationStatistics2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationStatistics2.mmObject();
 			isDerived = false;
 			xmlTag = "ByUsrDfndTmPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -374,10 +388,13 @@ public class ValuationStatistics2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ValuationStatistics2.mmCurrency, ValuationStatistics2.mmPriceTypeChangeBasis, ValuationStatistics2.mmPriceChange, ValuationStatistics2.mmYield,
-						ValuationStatistics2.mmByPredefinedTimePeriods, ValuationStatistics2.mmByUserDefinedTimePeriod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValuationStatistics2.mmCurrency, com.tools20022.repository.msg.ValuationStatistics2.mmPriceTypeChangeBasis,
+						com.tools20022.repository.msg.ValuationStatistics2.mmPriceChange, com.tools20022.repository.msg.ValuationStatistics2.mmYield, com.tools20022.repository.msg.ValuationStatistics2.mmByPredefinedTimePeriods,
+						com.tools20022.repository.msg.ValuationStatistics2.mmByUserDefinedTimePeriod);
 				trace_lazy = () -> ValuationStatistics.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCurrencyPriceChangeRule.forValuationStatistics2,
+						com.tools20022.repository.constraints.ConstraintCurrencyPredefinedPeriodsRule.forValuationStatistics2, com.tools20022.repository.constraints.ConstraintCurrencyUserDefinedPeriodsRule.forValuationStatistics2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ValuationStatistics2";
 				definition = "Statistical data related to the price change of a security.";
@@ -386,57 +403,57 @@ public class ValuationStatistics2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ccy", required = true)
 	public ActiveOrHistoricCurrencyCode getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(ActiveOrHistoricCurrencyCode currency) {
-		this.currency = currency;
+	public ValuationStatistics2 setCurrency(ActiveOrHistoricCurrencyCode currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 
-	@XmlElement(name = "PricTpChngBsis", required = true)
 	public PriceType2 getPriceTypeChangeBasis() {
 		return priceTypeChangeBasis;
 	}
 
-	public void setPriceTypeChangeBasis(com.tools20022.repository.msg.PriceType2 priceTypeChangeBasis) {
-		this.priceTypeChangeBasis = priceTypeChangeBasis;
+	public ValuationStatistics2 setPriceTypeChangeBasis(com.tools20022.repository.msg.PriceType2 priceTypeChangeBasis) {
+		this.priceTypeChangeBasis = Objects.requireNonNull(priceTypeChangeBasis);
+		return this;
 	}
 
-	@XmlElement(name = "PricChng", required = true)
 	public PriceValue2 getPriceChange() {
 		return priceChange;
 	}
 
-	public void setPriceChange(com.tools20022.repository.msg.PriceValue2 priceChange) {
-		this.priceChange = priceChange;
+	public ValuationStatistics2 setPriceChange(com.tools20022.repository.msg.PriceValue2 priceChange) {
+		this.priceChange = Objects.requireNonNull(priceChange);
+		return this;
 	}
 
-	@XmlElement(name = "Yld")
-	public PercentageRate getYield() {
-		return yield;
+	public Optional<PercentageRate> getYield() {
+		return yield == null ? Optional.empty() : Optional.of(yield);
 	}
 
-	public void setYield(PercentageRate yield) {
+	public ValuationStatistics2 setYield(PercentageRate yield) {
 		this.yield = yield;
+		return this;
 	}
 
-	@XmlElement(name = "ByPrdfndTmPrds")
-	public StatisticsByPredefinedTimePeriods1 getByPredefinedTimePeriods() {
-		return byPredefinedTimePeriods;
+	public Optional<StatisticsByPredefinedTimePeriods1> getByPredefinedTimePeriods() {
+		return byPredefinedTimePeriods == null ? Optional.empty() : Optional.of(byPredefinedTimePeriods);
 	}
 
-	public void setByPredefinedTimePeriods(com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods1 byPredefinedTimePeriods) {
+	public ValuationStatistics2 setByPredefinedTimePeriods(com.tools20022.repository.msg.StatisticsByPredefinedTimePeriods1 byPredefinedTimePeriods) {
 		this.byPredefinedTimePeriods = byPredefinedTimePeriods;
+		return this;
 	}
 
-	@XmlElement(name = "ByUsrDfndTmPrd")
 	public List<StatisticsByUserDefinedTimePeriod1> getByUserDefinedTimePeriod() {
-		return byUserDefinedTimePeriod;
+		return byUserDefinedTimePeriod == null ? byUserDefinedTimePeriod = new ArrayList<>() : byUserDefinedTimePeriod;
 	}
 
-	public void setByUserDefinedTimePeriod(List<com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod1> byUserDefinedTimePeriod) {
-		this.byUserDefinedTimePeriod = byUserDefinedTimePeriod;
+	public ValuationStatistics2 setByUserDefinedTimePeriod(List<com.tools20022.repository.msg.StatisticsByUserDefinedTimePeriod1> byUserDefinedTimePeriod) {
+		this.byUserDefinedTimePeriod = Objects.requireNonNull(byUserDefinedTimePeriod);
+		return this;
 	}
 }

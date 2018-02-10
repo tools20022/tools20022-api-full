@@ -31,6 +31,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -45,8 +46,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CommissionWaiver3#mmInstructionBasisOrExtendedInstructionBasisRule
- * CommissionWaiver3.mmInstructionBasisOrExtendedInstructionBasisRule}</li>
+ * {@linkplain com.tools20022.repository.msg.CommissionWaiver3#InstructionBasisOrExtendedInstructionBasisRule
+ * CommissionWaiver3.InstructionBasisOrExtendedInstructionBasisRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -69,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -91,15 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CommissionWaiver3", propOrder = {"instructionBasis", "extendedInstructionBasis", "waivedRate"})
 public class CommissionWaiver3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InstrBsis", required = true)
 	protected WaivingInstruction1Code instructionBasis;
 	/**
-	 * Form of the rebate, eg, cash.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,7 +135,7 @@ public class CommissionWaiver3 {
 	public static final MMMessageAttribute mmInstructionBasis = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CommissionWaiver.mmInstructionBasis;
-			componentContext_lazy = () -> CommissionWaiver3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommissionWaiver3.mmObject();
 			isDerived = false;
 			xmlTag = "InstrBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -144,10 +146,11 @@ public class CommissionWaiver3 {
 			simpleType_lazy = () -> WaivingInstruction1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedInstrBsis", required = true)
 	protected Extended350Code extendedInstructionBasis;
 	/**
-	 * Form of the rebate, eg, cash.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -181,7 +184,7 @@ public class CommissionWaiver3 {
 	public static final MMMessageAttribute mmExtendedInstructionBasis = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CommissionWaiver.mmInstructionBasis;
-			componentContext_lazy = () -> CommissionWaiver3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommissionWaiver3.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedInstrBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,11 +195,11 @@ public class CommissionWaiver3 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "WvdRate", required = true)
 	protected PercentageRate waivedRate;
 	/**
-	 * Proportion of the commission that is waived, ie, if the commission is 5%
-	 * and half is waived, 2.5% should be stated in this field.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,7 +243,7 @@ public class CommissionWaiver3 {
 	public static final MMMessageAttribute mmWaivedRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CommissionWaiver.mmWaivedRate;
-			componentContext_lazy = () -> CommissionWaiver3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommissionWaiver3.mmObject();
 			isDerived = false;
 			xmlTag = "WvdRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,22 +289,23 @@ public class CommissionWaiver3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmInstructionBasisOrExtendedInstructionBasisRule = new MMXor() {
+	public static final MMXor InstructionBasisOrExtendedInstructionBasisRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionBasisOrExtendedInstructionBasisRule";
 			definition = "Either InstructionBasis or ExtendedInstructionBasis must be present, but not both.";
-			messageComponent_lazy = () -> CommissionWaiver3.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(CommissionWaiver3.mmInstructionBasis, CommissionWaiver3.mmExtendedInstructionBasis);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.CommissionWaiver3.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommissionWaiver3.mmInstructionBasis, com.tools20022.repository.msg.CommissionWaiver3.mmExtendedInstructionBasis);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CommissionWaiver3.mmInstructionBasis, CommissionWaiver3.mmExtendedInstructionBasis, CommissionWaiver3.mmWaivedRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommissionWaiver3.mmInstructionBasis, com.tools20022.repository.msg.CommissionWaiver3.mmExtendedInstructionBasis,
+						com.tools20022.repository.msg.CommissionWaiver3.mmWaivedRate);
 				trace_lazy = () -> CommissionWaiver.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -313,36 +317,36 @@ public class CommissionWaiver3 {
 				name = "CommissionWaiver3";
 				definition = "Non-enforcement of the right to all or part of a commission by the party entitled to the commission.";
 				nextVersions_lazy = () -> Arrays.asList(CommissionWaiver4.mmObject());
-				xors_lazy = () -> Arrays.asList(CommissionWaiver3.mmInstructionBasisOrExtendedInstructionBasisRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommissionWaiver3.InstructionBasisOrExtendedInstructionBasisRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InstrBsis", required = true)
 	public WaivingInstruction1Code getInstructionBasis() {
 		return instructionBasis;
 	}
 
-	public void setInstructionBasis(WaivingInstruction1Code instructionBasis) {
-		this.instructionBasis = instructionBasis;
+	public CommissionWaiver3 setInstructionBasis(WaivingInstruction1Code instructionBasis) {
+		this.instructionBasis = Objects.requireNonNull(instructionBasis);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedInstrBsis", required = true)
 	public Extended350Code getExtendedInstructionBasis() {
 		return extendedInstructionBasis;
 	}
 
-	public void setExtendedInstructionBasis(Extended350Code extendedInstructionBasis) {
-		this.extendedInstructionBasis = extendedInstructionBasis;
+	public CommissionWaiver3 setExtendedInstructionBasis(Extended350Code extendedInstructionBasis) {
+		this.extendedInstructionBasis = Objects.requireNonNull(extendedInstructionBasis);
+		return this;
 	}
 
-	@XmlElement(name = "WvdRate", required = true)
 	public PercentageRate getWaivedRate() {
 		return waivedRate;
 	}
 
-	public void setWaivedRate(PercentageRate waivedRate) {
-		this.waivedRate = waivedRate;
+	public CommissionWaiver3 setWaivedRate(PercentageRate waivedRate) {
+		this.waivedRate = Objects.requireNonNull(waivedRate);
+		return this;
 	}
 }

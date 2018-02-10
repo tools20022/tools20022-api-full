@@ -25,9 +25,8 @@ import com.tools20022.repository.choice.InvestorType2Choice;
 import com.tools20022.repository.choice.LegalRestrictions2Choice;
 import com.tools20022.repository.choice.SecurityRestrictionType1Choice;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Restrictions applicable to the security."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecurityRestriction1", propOrder = {"effectivePeriod", "restrictionType", "legalRestrictionType", "investorRestrictionType", "investorType"})
 public class SecurityRestriction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FctvPrd")
 	protected DateTimePeriodDetails1 effectivePeriod;
 	/**
-	 * Period during which the restriction applies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +110,7 @@ public class SecurityRestriction1 {
 	 */
 	public static final MMMessageAttribute mmEffectivePeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityRestriction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityRestriction1.mmObject();
 			isDerived = false;
 			xmlTag = "FctvPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,11 +121,11 @@ public class SecurityRestriction1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails1.mmObject();
 		}
 	};
+	@XmlElement(name = "RstrctnTp")
 	protected SecurityRestrictionType1Choice restrictionType;
 	/**
-	 * Type of the restriction, for example, selling restriction, buying
-	 * restriction, placing restriction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +155,7 @@ public class SecurityRestriction1 {
 	 */
 	public static final MMMessageAttribute mmRestrictionType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityRestriction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityRestriction1.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,10 +166,11 @@ public class SecurityRestriction1 {
 			complexType_lazy = () -> SecurityRestrictionType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LglRstrctnTp")
 	protected LegalRestrictions2Choice legalRestrictionType;
 	/**
-	 * Specifies the regulatory restrictions applicable to a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,7 +199,7 @@ public class SecurityRestriction1 {
 	 */
 	public static final MMMessageAttribute mmLegalRestrictionType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityRestriction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityRestriction1.mmObject();
 			isDerived = false;
 			xmlTag = "LglRstrctnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,11 +210,11 @@ public class SecurityRestriction1 {
 			complexType_lazy = () -> LegalRestrictions2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstrRstrctnTp")
 	protected List<InvestorRestrictionType2Choice> investorRestrictionType;
 	/**
-	 * Specifies whether the restriction to be applied is relevant for citizen,
-	 * resident, country.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -243,7 +244,7 @@ public class SecurityRestriction1 {
 	 */
 	public static final MMMessageAttribute mmInvestorRestrictionType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityRestriction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityRestriction1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstrRstrctnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -253,10 +254,11 @@ public class SecurityRestriction1 {
 			complexType_lazy = () -> InvestorRestrictionType2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstrTp")
 	protected List<InvestorType2Choice> investorType;
 	/**
-	 * Type of investor that is allowed to hold the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -284,7 +286,7 @@ public class SecurityRestriction1 {
 	 */
 	public static final MMMessageAttribute mmInvestorType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityRestriction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityRestriction1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstrTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -298,9 +300,10 @@ public class SecurityRestriction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityRestriction1.mmEffectivePeriod, SecurityRestriction1.mmRestrictionType, SecurityRestriction1.mmLegalRestrictionType, SecurityRestriction1.mmInvestorRestrictionType,
-						SecurityRestriction1.mmInvestorType);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityRestriction1.mmEffectivePeriod, com.tools20022.repository.msg.SecurityRestriction1.mmRestrictionType,
+						com.tools20022.repository.msg.SecurityRestriction1.mmLegalRestrictionType, com.tools20022.repository.msg.SecurityRestriction1.mmInvestorRestrictionType,
+						com.tools20022.repository.msg.SecurityRestriction1.mmInvestorType);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityRestriction1";
 				definition = "Restrictions applicable to the security.";
@@ -309,48 +312,48 @@ public class SecurityRestriction1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FctvPrd")
-	public DateTimePeriodDetails1 getEffectivePeriod() {
-		return effectivePeriod;
+	public Optional<DateTimePeriodDetails1> getEffectivePeriod() {
+		return effectivePeriod == null ? Optional.empty() : Optional.of(effectivePeriod);
 	}
 
-	public void setEffectivePeriod(com.tools20022.repository.msg.DateTimePeriodDetails1 effectivePeriod) {
+	public SecurityRestriction1 setEffectivePeriod(com.tools20022.repository.msg.DateTimePeriodDetails1 effectivePeriod) {
 		this.effectivePeriod = effectivePeriod;
+		return this;
 	}
 
-	@XmlElement(name = "RstrctnTp")
-	public SecurityRestrictionType1Choice getRestrictionType() {
-		return restrictionType;
+	public Optional<SecurityRestrictionType1Choice> getRestrictionType() {
+		return restrictionType == null ? Optional.empty() : Optional.of(restrictionType);
 	}
 
-	public void setRestrictionType(SecurityRestrictionType1Choice restrictionType) {
+	public SecurityRestriction1 setRestrictionType(SecurityRestrictionType1Choice restrictionType) {
 		this.restrictionType = restrictionType;
+		return this;
 	}
 
-	@XmlElement(name = "LglRstrctnTp")
-	public LegalRestrictions2Choice getLegalRestrictionType() {
-		return legalRestrictionType;
+	public Optional<LegalRestrictions2Choice> getLegalRestrictionType() {
+		return legalRestrictionType == null ? Optional.empty() : Optional.of(legalRestrictionType);
 	}
 
-	public void setLegalRestrictionType(LegalRestrictions2Choice legalRestrictionType) {
+	public SecurityRestriction1 setLegalRestrictionType(LegalRestrictions2Choice legalRestrictionType) {
 		this.legalRestrictionType = legalRestrictionType;
+		return this;
 	}
 
-	@XmlElement(name = "InvstrRstrctnTp")
 	public List<InvestorRestrictionType2Choice> getInvestorRestrictionType() {
-		return investorRestrictionType;
+		return investorRestrictionType == null ? investorRestrictionType = new ArrayList<>() : investorRestrictionType;
 	}
 
-	public void setInvestorRestrictionType(List<InvestorRestrictionType2Choice> investorRestrictionType) {
-		this.investorRestrictionType = investorRestrictionType;
+	public SecurityRestriction1 setInvestorRestrictionType(List<InvestorRestrictionType2Choice> investorRestrictionType) {
+		this.investorRestrictionType = Objects.requireNonNull(investorRestrictionType);
+		return this;
 	}
 
-	@XmlElement(name = "InvstrTp")
 	public List<InvestorType2Choice> getInvestorType() {
-		return investorType;
+		return investorType == null ? investorType = new ArrayList<>() : investorType;
 	}
 
-	public void setInvestorType(List<InvestorType2Choice> investorType) {
-		this.investorType = investorType;
+	public SecurityRestriction1 setInvestorType(List<InvestorType2Choice> investorType) {
+		this.investorType = Objects.requireNonNull(investorType);
+		return this;
 	}
 }

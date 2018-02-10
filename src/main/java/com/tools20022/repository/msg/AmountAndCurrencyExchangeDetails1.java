@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,17 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountAndCurrencyExchangeDetails1", propOrder = {"amount", "currencyExchange"})
 public class AmountAndCurrencyExchangeDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected CurrencyAndAmount amount;
 	/**
-	 * Amount of money to be moved between the debtor and creditor, before
-	 * deduction of charges, expressed in the currency as ordered by the
-	 * initiating party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +115,7 @@ public class AmountAndCurrencyExchangeDetails1 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
-			componentContext_lazy = () -> AmountAndCurrencyExchangeDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +126,11 @@ public class AmountAndCurrencyExchangeDetails1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CcyXchg")
 	protected CurrencyExchange3 currencyExchange;
 	/**
-	 * Reports on currency exchange information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -160,7 +162,7 @@ public class AmountAndCurrencyExchangeDetails1 {
 	public static final MMMessageAssociationEnd mmCurrencyExchange = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCurrencyExchange;
-			componentContext_lazy = () -> AmountAndCurrencyExchangeDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "CcyXchg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,9 +178,9 @@ public class AmountAndCurrencyExchangeDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountAndCurrencyExchangeDetails1.mmAmount, AmountAndCurrencyExchangeDetails1.mmCurrencyExchange);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails1.mmAmount, com.tools20022.repository.msg.AmountAndCurrencyExchangeDetails1.mmCurrencyExchange);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndCurrencyExchangeDetails1";
 				definition = "Set of elements providing information on the original amount and currency information.";
@@ -187,21 +189,21 @@ public class AmountAndCurrencyExchangeDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
-		this.amount = amount;
+	public AmountAndCurrencyExchangeDetails1 setAmount(CurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "CcyXchg")
-	public CurrencyExchange3 getCurrencyExchange() {
-		return currencyExchange;
+	public Optional<CurrencyExchange3> getCurrencyExchange() {
+		return currencyExchange == null ? Optional.empty() : Optional.of(currencyExchange);
 	}
 
-	public void setCurrencyExchange(com.tools20022.repository.msg.CurrencyExchange3 currencyExchange) {
+	public AmountAndCurrencyExchangeDetails1 setCurrencyExchange(com.tools20022.repository.msg.CurrencyExchange3 currencyExchange) {
 		this.currencyExchange = currencyExchange;
+		return this;
 	}
 }

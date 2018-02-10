@@ -20,33 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PriorityCode;
+import com.tools20022.repository.codeset.Priority1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the priority level of an event.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PriorityCode PriorityCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Priority1Code#mmHigh
- * Priority1Code.mmHigh}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Priority1Code#mmNormal
- * Priority1Code.mmNormal}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Priority1Code#mmLow
- * Priority1Code.mmLow}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Priority1Code#High
+ * Priority1Code.High}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Priority1Code#Normal
+ * Priority1Code.Normal}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Priority1Code#Low
+ * Priority1Code.Low}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PriorityCode PriorityCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -63,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the priority level of an event."</li>
  * </ul>
  */
-public class Priority1Code extends PriorityCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Priority1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,11 +87,12 @@ public class Priority1Code extends PriorityCode {
 	 * name} = "High"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHigh = new MMCode() {
+	public static final Priority1Code High = new Priority1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "High";
-			owner_lazy = () -> Priority1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Priority1Code.mmObject();
+			codeName = PriorityCode.High.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -105,11 +111,12 @@ public class Priority1Code extends PriorityCode {
 	 * name} = "Normal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNormal = new MMCode() {
+	public static final Priority1Code Normal = new Priority1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Normal";
-			owner_lazy = () -> Priority1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Priority1Code.mmObject();
+			codeName = PriorityCode.Normal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -128,26 +135,58 @@ public class Priority1Code extends PriorityCode {
 	 * name} = "Low"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLow = new MMCode() {
+	public static final Priority1Code Low = new Priority1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Low";
-			owner_lazy = () -> Priority1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Priority1Code.mmObject();
+			codeName = PriorityCode.Low.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Priority1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Priority1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("HIGH");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Priority1Code";
 				definition = "Specifies the priority level of an event.";
-				code_lazy = () -> Arrays.asList(Priority1Code.mmHigh, Priority1Code.mmNormal, Priority1Code.mmLow);
 				trace_lazy = () -> PriorityCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Priority1Code.High, com.tools20022.repository.codeset.Priority1Code.Normal, com.tools20022.repository.codeset.Priority1Code.Low);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(High.getCodeName().get(), High);
+		codesByName.put(Normal.getCodeName().get(), Normal);
+		codesByName.put(Low.getCodeName().get(), Low);
+	}
+
+	public static Priority1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Priority1Code[] values() {
+		Priority1Code[] values = new Priority1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Priority1Code> {
+		@Override
+		public Priority1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Priority1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

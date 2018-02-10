@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.Percentage1;
 import com.tools20022.repository.msg.UndertakingAmount4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between an amount and percentage."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountOrPercentage1Choice", propOrder = {"definedAmount", "percentageAmount"})
 public class AmountOrPercentage1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DfndAmt", required = true)
 	protected UndertakingAmount4 definedAmount;
 	/**
-	 * Details related to a defined monetary amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,7 +108,7 @@ public class AmountOrPercentage1Choice {
 	public static final MMMessageAssociationEnd mmDefinedAmount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingAmount.mmObject();
-			componentContext_lazy = () -> AmountOrPercentage1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AmountOrPercentage1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DfndAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +120,11 @@ public class AmountOrPercentage1Choice {
 			type_lazy = () -> UndertakingAmount4.mmObject();
 		}
 	};
+	@XmlElement(name = "PctgAmt", required = true)
 	protected Percentage1 percentageAmount;
 	/**
-	 * Details related to an amount percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -153,7 +156,7 @@ public class AmountOrPercentage1Choice {
 	public static final MMMessageAssociationEnd mmPercentageAmount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingAmount.mmObject();
-			componentContext_lazy = () -> AmountOrPercentage1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AmountOrPercentage1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PctgAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,9 +172,9 @@ public class AmountOrPercentage1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountOrPercentage1Choice.mmDefinedAmount, AmountOrPercentage1Choice.mmPercentageAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountOrPercentage1Choice.mmDefinedAmount, com.tools20022.repository.choice.AmountOrPercentage1Choice.mmPercentageAmount);
 				trace_lazy = () -> UndertakingAmount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountOrPercentage1Choice";
 				definition = "Choice between an amount and percentage.";
@@ -180,21 +183,21 @@ public class AmountOrPercentage1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DfndAmt", required = true)
 	public UndertakingAmount4 getDefinedAmount() {
 		return definedAmount;
 	}
 
-	public void setDefinedAmount(UndertakingAmount4 definedAmount) {
-		this.definedAmount = definedAmount;
+	public AmountOrPercentage1Choice setDefinedAmount(UndertakingAmount4 definedAmount) {
+		this.definedAmount = Objects.requireNonNull(definedAmount);
+		return this;
 	}
 
-	@XmlElement(name = "PctgAmt", required = true)
 	public Percentage1 getPercentageAmount() {
 		return percentageAmount;
 	}
 
-	public void setPercentageAmount(Percentage1 percentageAmount) {
-		this.percentageAmount = percentageAmount;
+	public AmountOrPercentage1Choice setPercentageAmount(Percentage1 percentageAmount) {
+		this.percentageAmount = Objects.requireNonNull(percentageAmount);
+		return this;
 	}
 }

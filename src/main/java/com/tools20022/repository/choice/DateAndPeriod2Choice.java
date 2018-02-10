@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Period2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between a date and period."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DateAndPeriod2Choice", propOrder = {"date", "period", "fromDate", "toDate"})
 public class DateAndPeriod2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dt", required = true)
 	protected ISODate date;
 	/**
-	 * Specific date within a period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +106,7 @@ public class DateAndPeriod2Choice {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateAndPeriod2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndPeriod2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +117,11 @@ public class DateAndPeriod2Choice {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "Prd", required = true)
 	protected Period2 period;
 	/**
-	 * Time span defined by a start date and an end date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -149,7 +152,7 @@ public class DateAndPeriod2Choice {
 	public static final MMMessageAssociationEnd mmPeriod = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> DateTimePeriod.mmObject();
-			componentContext_lazy = () -> DateAndPeriod2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndPeriod2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,10 +164,11 @@ public class DateAndPeriod2Choice {
 			type_lazy = () -> Period2.mmObject();
 		}
 	};
+	@XmlElement(name = "FrDt", required = true)
 	protected ISODate fromDate;
 	/**
-	 * Date at which the range starts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,7 +201,7 @@ public class DateAndPeriod2Choice {
 	public static final MMMessageAttribute mmFromDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> DateAndPeriod2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndPeriod2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,10 +212,11 @@ public class DateAndPeriod2Choice {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ToDt", required = true)
 	protected ISODate toDate;
 	/**
-	 * Date at which the range ends.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,7 +249,7 @@ public class DateAndPeriod2Choice {
 	public static final MMMessageAttribute mmToDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
-			componentContext_lazy = () -> DateAndPeriod2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateAndPeriod2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ToDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -259,8 +264,9 @@ public class DateAndPeriod2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DateAndPeriod2Choice.mmDate, DateAndPeriod2Choice.mmPeriod, DateAndPeriod2Choice.mmFromDate, DateAndPeriod2Choice.mmToDate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateAndPeriod2Choice.mmDate, com.tools20022.repository.choice.DateAndPeriod2Choice.mmPeriod,
+						com.tools20022.repository.choice.DateAndPeriod2Choice.mmFromDate, com.tools20022.repository.choice.DateAndPeriod2Choice.mmToDate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DateAndPeriod2Choice";
 				definition = "Choice between a date and period.";
@@ -269,39 +275,39 @@ public class DateAndPeriod2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
 
-	public void setDate(ISODate date) {
-		this.date = date;
+	public DateAndPeriod2Choice setDate(ISODate date) {
+		this.date = Objects.requireNonNull(date);
+		return this;
 	}
 
-	@XmlElement(name = "Prd", required = true)
 	public Period2 getPeriod() {
 		return period;
 	}
 
-	public void setPeriod(Period2 period) {
-		this.period = period;
+	public DateAndPeriod2Choice setPeriod(Period2 period) {
+		this.period = Objects.requireNonNull(period);
+		return this;
 	}
 
-	@XmlElement(name = "FrDt", required = true)
 	public ISODate getFromDate() {
 		return fromDate;
 	}
 
-	public void setFromDate(ISODate fromDate) {
-		this.fromDate = fromDate;
+	public DateAndPeriod2Choice setFromDate(ISODate fromDate) {
+		this.fromDate = Objects.requireNonNull(fromDate);
+		return this;
 	}
 
-	@XmlElement(name = "ToDt", required = true)
 	public ISODate getToDate() {
 		return toDate;
 	}
 
-	public void setToDate(ISODate toDate) {
-		this.toDate = toDate;
+	public DateAndPeriod2Choice setToDate(ISODate toDate) {
+		this.toDate = Objects.requireNonNull(toDate);
+		return this;
 	}
 }

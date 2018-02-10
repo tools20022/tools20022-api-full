@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.entity.TradingSession;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "The details of a specific trading session."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TradingSession1", propOrder = {"tradingSessionIdentification", "tradingSessionSubIdentification"})
 public class TradingSession1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradgSsnId")
 	protected Max128Text tradingSessionIdentification;
 	/**
-	 * Identification of a specific execution time bracket code through its
-	 * trading session name or description.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -94,6 +96,9 @@ public class TradingSession1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradgSsnId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 336</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -109,9 +114,10 @@ public class TradingSession1 {
 	public static final MMMessageAttribute mmTradingSessionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradingSession.mmTradingSessionName;
-			componentContext_lazy = () -> TradingSession1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingSession1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSsnId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "336"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSessionIdentification";
 			definition = "Identification of a specific execution time bracket code through its trading session name or description.";
@@ -120,11 +126,11 @@ public class TradingSession1 {
 			simpleType_lazy = () -> Max128Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgSsnSubId")
 	protected Max128Text tradingSessionSubIdentification;
 	/**
-	 * Optional market assigned sub identifier for a trading session. Usage is
-	 * determined by market or counterparties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,6 +150,9 @@ public class TradingSession1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradgSsnSubId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 625</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -159,9 +168,10 @@ public class TradingSession1 {
 	public static final MMMessageAttribute mmTradingSessionSubIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradingSession.mmTradingSessionName;
-			componentContext_lazy = () -> TradingSession1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TradingSession1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSsnSubId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "625"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSessionSubIdentification";
 			definition = "Optional market assigned sub identifier for a trading session. Usage is determined by market or counterparties.";
@@ -174,9 +184,9 @@ public class TradingSession1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TradingSession1.mmTradingSessionIdentification, TradingSession1.mmTradingSessionSubIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradingSession1.mmTradingSessionIdentification, com.tools20022.repository.msg.TradingSession1.mmTradingSessionSubIdentification);
 				trace_lazy = () -> TradingSession.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TradingSession1";
 				definition = "The details of a specific trading session.";
@@ -185,21 +195,21 @@ public class TradingSession1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradgSsnId")
-	public Max128Text getTradingSessionIdentification() {
-		return tradingSessionIdentification;
+	public Optional<Max128Text> getTradingSessionIdentification() {
+		return tradingSessionIdentification == null ? Optional.empty() : Optional.of(tradingSessionIdentification);
 	}
 
-	public void setTradingSessionIdentification(Max128Text tradingSessionIdentification) {
+	public TradingSession1 setTradingSessionIdentification(Max128Text tradingSessionIdentification) {
 		this.tradingSessionIdentification = tradingSessionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TradgSsnSubId")
-	public Max128Text getTradingSessionSubIdentification() {
-		return tradingSessionSubIdentification;
+	public Optional<Max128Text> getTradingSessionSubIdentification() {
+		return tradingSessionSubIdentification == null ? Optional.empty() : Optional.of(tradingSessionSubIdentification);
 	}
 
-	public void setTradingSessionSubIdentification(Max128Text tradingSessionSubIdentification) {
+	public TradingSession1 setTradingSessionSubIdentification(Max128Text tradingSessionSubIdentification) {
 		this.tradingSessionSubIdentification = tradingSessionSubIdentification;
+		return this;
 	}
 }

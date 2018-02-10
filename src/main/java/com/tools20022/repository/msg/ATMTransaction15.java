@@ -29,9 +29,8 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.entity.ReconciliationTransaction;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -79,8 +78,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,16 +100,17 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.msg.ATMTransaction13 ATMTransaction13}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMTransaction15", propOrder = {"transactionIdentification", "reconciliationIdentification", "accountData", "protectedAccountData", "totalAmount", "detailedRequestedAmount", "depositedMedia", "requestedReceipt",
-		"ICCRelatedData"})
+		"iCCRelatedData"})
 public class ATMTransaction15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId", required = true)
 	protected TransactionIdentifier1 transactionIdentification;
 	/**
-	 * Identification of the transaction assigned by the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +155,7 @@ public class ATMTransaction15 {
 	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionIdentification;
-			componentContext_lazy = () -> ATMTransaction15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction15.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,10 +169,11 @@ public class ATMTransaction15 {
 			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
 		}
 	};
+	@XmlElement(name = "RcncltnId")
 	protected Max35Text reconciliationIdentification;
 	/**
-	 * Identification of the reconciliation period assigned by the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -219,7 +220,7 @@ public class ATMTransaction15 {
 	public static final MMMessageAttribute mmReconciliationIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ReconciliationTransaction.mmReconciliationIdentification;
-			componentContext_lazy = () -> ATMTransaction15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction15.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,10 +233,11 @@ public class ATMTransaction15 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctData")
 	protected CardAccount9 accountData;
 	/**
-	 * Unprotected account information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -280,7 +282,7 @@ public class ATMTransaction15 {
 	public static final MMMessageAssociationEnd mmAccountData = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAccount;
-			componentContext_lazy = () -> ATMTransaction15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction15.mmObject();
 			isDerived = false;
 			xmlTag = "AcctData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -294,10 +296,11 @@ public class ATMTransaction15 {
 			type_lazy = () -> com.tools20022.repository.msg.CardAccount9.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctdAcctData")
 	protected ContentInformationType10 protectedAccountData;
 	/**
-	 * Encryption of account information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -337,7 +340,7 @@ public class ATMTransaction15 {
 	 */
 	public static final MMMessageAssociationEnd mmProtectedAccountData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMTransaction15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction15.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctdAcctData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -351,10 +354,11 @@ public class ATMTransaction15 {
 			type_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlAmt")
 	protected AmountAndCurrency1 totalAmount;
 	/**
-	 * Total amount of the deposit transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -399,7 +403,7 @@ public class ATMTransaction15 {
 	public static final MMMessageAssociationEnd mmTotalAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
-			componentContext_lazy = () -> ATMTransaction15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction15.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -413,10 +417,11 @@ public class ATMTransaction15 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndCurrency1.mmObject();
 		}
 	};
+	@XmlElement(name = "DtldReqdAmt")
 	protected List<com.tools20022.repository.msg.DetailedAmount16> detailedRequestedAmount;
 	/**
-	 * Amounts of the deposit transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -461,7 +466,7 @@ public class ATMTransaction15 {
 	public static final MMMessageAssociationEnd mmDetailedRequestedAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
-			componentContext_lazy = () -> ATMTransaction15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction15.mmObject();
 			isDerived = false;
 			xmlTag = "DtldReqdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -474,10 +479,11 @@ public class ATMTransaction15 {
 			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount16.mmObject();
 		}
 	};
+	@XmlElement(name = "DpstdMdia")
 	protected List<com.tools20022.repository.msg.ATMDepositedMedia1> depositedMedia;
 	/**
-	 * Deposited media put in the safe.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -503,7 +509,7 @@ public class ATMTransaction15 {
 	 */
 	public static final MMMessageAssociationEnd mmDepositedMedia = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMTransaction15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction15.mmObject();
 			isDerived = false;
 			xmlTag = "DpstdMdia";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -514,10 +520,11 @@ public class ATMTransaction15 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMDepositedMedia1.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdRct")
 	protected TrueFalseIndicator requestedReceipt;
 	/**
-	 * True if a receipt has be requested by the customer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -550,7 +557,7 @@ public class ATMTransaction15 {
 	 */
 	public static final MMMessageAttribute mmRequestedReceipt = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMTransaction15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction15.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdRct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -562,12 +569,11 @@ public class ATMTransaction15 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ICCRltdData")
 	protected Max10000Binary iCCRelatedData;
 	/**
-	 * Sequence of one or more TLV data elements from the ATM application, in
-	 * accordance with ISO 7816-6, not in a specific order. Present if the
-	 * transaction is performed with an EMV chip card application.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -610,7 +616,7 @@ public class ATMTransaction15 {
 	 */
 	public static final MMMessageAttribute mmICCRelatedData = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMTransaction15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransaction15.mmObject();
 			isDerived = false;
 			xmlTag = "ICCRltdData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -627,10 +633,12 @@ public class ATMTransaction15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMTransaction15.mmTransactionIdentification, ATMTransaction15.mmReconciliationIdentification, ATMTransaction15.mmAccountData, ATMTransaction15.mmProtectedAccountData,
-						ATMTransaction15.mmTotalAmount, ATMTransaction15.mmDetailedRequestedAmount, ATMTransaction15.mmDepositedMedia, ATMTransaction15.mmRequestedReceipt, ATMTransaction15.mmICCRelatedData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransaction15.mmTransactionIdentification, com.tools20022.repository.msg.ATMTransaction15.mmReconciliationIdentification,
+						com.tools20022.repository.msg.ATMTransaction15.mmAccountData, com.tools20022.repository.msg.ATMTransaction15.mmProtectedAccountData, com.tools20022.repository.msg.ATMTransaction15.mmTotalAmount,
+						com.tools20022.repository.msg.ATMTransaction15.mmDetailedRequestedAmount, com.tools20022.repository.msg.ATMTransaction15.mmDepositedMedia, com.tools20022.repository.msg.ATMTransaction15.mmRequestedReceipt,
+						com.tools20022.repository.msg.ATMTransaction15.mmICCRelatedData);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTransaction15";
 				definition = "Deposit transaction for which the service is requested.";
@@ -641,84 +649,84 @@ public class ATMTransaction15 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public ATMTransaction15 setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RcncltnId")
-	public Max35Text getReconciliationIdentification() {
-		return reconciliationIdentification;
+	public Optional<Max35Text> getReconciliationIdentification() {
+		return reconciliationIdentification == null ? Optional.empty() : Optional.of(reconciliationIdentification);
 	}
 
-	public void setReconciliationIdentification(Max35Text reconciliationIdentification) {
+	public ATMTransaction15 setReconciliationIdentification(Max35Text reconciliationIdentification) {
 		this.reconciliationIdentification = reconciliationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AcctData")
-	public CardAccount9 getAccountData() {
-		return accountData;
+	public Optional<CardAccount9> getAccountData() {
+		return accountData == null ? Optional.empty() : Optional.of(accountData);
 	}
 
-	public void setAccountData(com.tools20022.repository.msg.CardAccount9 accountData) {
+	public ATMTransaction15 setAccountData(com.tools20022.repository.msg.CardAccount9 accountData) {
 		this.accountData = accountData;
+		return this;
 	}
 
-	@XmlElement(name = "PrtctdAcctData")
-	public ContentInformationType10 getProtectedAccountData() {
-		return protectedAccountData;
+	public Optional<ContentInformationType10> getProtectedAccountData() {
+		return protectedAccountData == null ? Optional.empty() : Optional.of(protectedAccountData);
 	}
 
-	public void setProtectedAccountData(com.tools20022.repository.msg.ContentInformationType10 protectedAccountData) {
+	public ATMTransaction15 setProtectedAccountData(com.tools20022.repository.msg.ContentInformationType10 protectedAccountData) {
 		this.protectedAccountData = protectedAccountData;
+		return this;
 	}
 
-	@XmlElement(name = "TtlAmt")
-	public AmountAndCurrency1 getTotalAmount() {
-		return totalAmount;
+	public Optional<AmountAndCurrency1> getTotalAmount() {
+		return totalAmount == null ? Optional.empty() : Optional.of(totalAmount);
 	}
 
-	public void setTotalAmount(com.tools20022.repository.msg.AmountAndCurrency1 totalAmount) {
+	public ATMTransaction15 setTotalAmount(com.tools20022.repository.msg.AmountAndCurrency1 totalAmount) {
 		this.totalAmount = totalAmount;
+		return this;
 	}
 
-	@XmlElement(name = "DtldReqdAmt")
 	public List<DetailedAmount16> getDetailedRequestedAmount() {
-		return detailedRequestedAmount;
+		return detailedRequestedAmount == null ? detailedRequestedAmount = new ArrayList<>() : detailedRequestedAmount;
 	}
 
-	public void setDetailedRequestedAmount(List<com.tools20022.repository.msg.DetailedAmount16> detailedRequestedAmount) {
-		this.detailedRequestedAmount = detailedRequestedAmount;
+	public ATMTransaction15 setDetailedRequestedAmount(List<com.tools20022.repository.msg.DetailedAmount16> detailedRequestedAmount) {
+		this.detailedRequestedAmount = Objects.requireNonNull(detailedRequestedAmount);
+		return this;
 	}
 
-	@XmlElement(name = "DpstdMdia")
 	public List<ATMDepositedMedia1> getDepositedMedia() {
-		return depositedMedia;
+		return depositedMedia == null ? depositedMedia = new ArrayList<>() : depositedMedia;
 	}
 
-	public void setDepositedMedia(List<com.tools20022.repository.msg.ATMDepositedMedia1> depositedMedia) {
-		this.depositedMedia = depositedMedia;
+	public ATMTransaction15 setDepositedMedia(List<com.tools20022.repository.msg.ATMDepositedMedia1> depositedMedia) {
+		this.depositedMedia = Objects.requireNonNull(depositedMedia);
+		return this;
 	}
 
-	@XmlElement(name = "ReqdRct")
-	public TrueFalseIndicator getRequestedReceipt() {
-		return requestedReceipt;
+	public Optional<TrueFalseIndicator> getRequestedReceipt() {
+		return requestedReceipt == null ? Optional.empty() : Optional.of(requestedReceipt);
 	}
 
-	public void setRequestedReceipt(TrueFalseIndicator requestedReceipt) {
+	public ATMTransaction15 setRequestedReceipt(TrueFalseIndicator requestedReceipt) {
 		this.requestedReceipt = requestedReceipt;
+		return this;
 	}
 
-	@XmlElement(name = "ICCRltdData")
-	public Max10000Binary getICCRelatedData() {
-		return iCCRelatedData;
+	public Optional<Max10000Binary> getICCRelatedData() {
+		return iCCRelatedData == null ? Optional.empty() : Optional.of(iCCRelatedData);
 	}
 
-	public void setICCRelatedData(Max10000Binary iCCRelatedData) {
+	public ATMTransaction15 setICCRelatedData(Max10000Binary iCCRelatedData) {
 		this.iCCRelatedData = iCCRelatedData;
+		return this;
 	}
 }

@@ -26,6 +26,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,8 +40,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashForecastParameters1#mmParametersOrNoCriteria
- * FundCashForecastParameters1.mmParametersOrNoCriteria}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashForecastParameters1#ParametersOrNoCriteria
+ * FundCashForecastParameters1.ParametersOrNoCriteria}</li>
  * </ul>
  * </li>
  * <li>
@@ -61,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -75,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Parameters for which a fund cash forecast report is requested."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FundCashForecastParameters1", propOrder = {"cashForecastType", "parameters", "noCriteria"})
 public class FundCashForecastParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CshFcstTp", required = true)
 	protected CashForecastMessage1Code cashForecastType;
 	/**
-	 * Specifes the fund cash forecast message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class FundCashForecastParameters1 {
 	 */
 	public static final MMMessageAttribute mmCashForecastType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FundCashForecastParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecastParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "CshFcstTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class FundCashForecastParameters1 {
 			simpleType_lazy = () -> CashForecastMessage1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Params", required = true)
 	protected FundCashForecastParameters2 parameters;
 	/**
-	 * Report parameters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -152,7 +155,7 @@ public class FundCashForecastParameters1 {
 	 */
 	public static final MMMessageAssociationEnd mmParameters = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FundCashForecastParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecastParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "Params";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,12 +167,11 @@ public class FundCashForecastParameters1 {
 			type_lazy = () -> com.tools20022.repository.msg.FundCashForecastParameters2.mmObject();
 		}
 	};
+	@XmlElement(name = "NoCrit", required = true)
 	protected NoCriteria1Code noCriteria;
 	/**
-	 * Specifies that there is no criteria for the report. The request is a
-	 * request for all reports, rather than reports attributed to a specific
-	 * financial instrument or date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,7 +201,7 @@ public class FundCashForecastParameters1 {
 	 */
 	public static final MMMessageAttribute mmNoCriteria = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FundCashForecastParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashForecastParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "NoCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,21 +243,22 @@ public class FundCashForecastParameters1 {
 	 * definition} = "Either Parameters or NoCriteria must be present."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmParametersOrNoCriteria = new MMXor() {
+	public static final MMXor ParametersOrNoCriteria = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParametersOrNoCriteria";
 			definition = "Either Parameters or NoCriteria must be present.";
-			messageComponent_lazy = () -> FundCashForecastParameters1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(FundCashForecastParameters1.mmParameters, FundCashForecastParameters1.mmNoCriteria);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.FundCashForecastParameters1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundCashForecastParameters1.mmParameters, com.tools20022.repository.msg.FundCashForecastParameters1.mmNoCriteria);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FundCashForecastParameters1.mmCashForecastType, FundCashForecastParameters1.mmParameters, FundCashForecastParameters1.mmNoCriteria);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundCashForecastParameters1.mmCashForecastType, com.tools20022.repository.msg.FundCashForecastParameters1.mmParameters,
+						com.tools20022.repository.msg.FundCashForecastParameters1.mmNoCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -266,36 +269,36 @@ public class FundCashForecastParameters1 {
 				})).get();
 				name = "FundCashForecastParameters1";
 				definition = "Parameters for which a fund cash forecast report is requested.";
-				xors_lazy = () -> Arrays.asList(FundCashForecastParameters1.mmParametersOrNoCriteria);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundCashForecastParameters1.ParametersOrNoCriteria);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CshFcstTp", required = true)
 	public CashForecastMessage1Code getCashForecastType() {
 		return cashForecastType;
 	}
 
-	public void setCashForecastType(CashForecastMessage1Code cashForecastType) {
-		this.cashForecastType = cashForecastType;
+	public FundCashForecastParameters1 setCashForecastType(CashForecastMessage1Code cashForecastType) {
+		this.cashForecastType = Objects.requireNonNull(cashForecastType);
+		return this;
 	}
 
-	@XmlElement(name = "Params", required = true)
 	public FundCashForecastParameters2 getParameters() {
 		return parameters;
 	}
 
-	public void setParameters(com.tools20022.repository.msg.FundCashForecastParameters2 parameters) {
-		this.parameters = parameters;
+	public FundCashForecastParameters1 setParameters(com.tools20022.repository.msg.FundCashForecastParameters2 parameters) {
+		this.parameters = Objects.requireNonNull(parameters);
+		return this;
 	}
 
-	@XmlElement(name = "NoCrit", required = true)
 	public NoCriteria1Code getNoCriteria() {
 		return noCriteria;
 	}
 
-	public void setNoCriteria(NoCriteria1Code noCriteria) {
-		this.noCriteria = noCriteria;
+	public FundCashForecastParameters1 setNoCriteria(NoCriteria1Code noCriteria) {
+		this.noCriteria = Objects.requireNonNull(noCriteria);
+		return this;
 	}
 }

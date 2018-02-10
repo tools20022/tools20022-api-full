@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.DateTimePeriodChoice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,15 +61,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about inactivity of a system."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemClosureDetails", propOrder = {"period", "reason"})
 public class SystemClosureDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Prd", required = true)
 	protected DateTimePeriodChoice period;
 	/**
-	 * Period of time when the system is closed/not operating.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -96,7 +98,7 @@ public class SystemClosureDetails {
 	 */
 	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemClosureDetails.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemClosureDetails.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -107,10 +109,11 @@ public class SystemClosureDetails {
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn", required = true)
 	protected ClosureReasonChoice reason;
 	/**
-	 * Reason the system is closed/not operating.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -138,7 +141,7 @@ public class SystemClosureDetails {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemClosureDetails.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemClosureDetails.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,8 +156,8 @@ public class SystemClosureDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SystemClosureDetails.mmPeriod, SystemClosureDetails.mmReason);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemClosureDetails.mmPeriod, com.tools20022.repository.msg.SystemClosureDetails.mmReason);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemClosureDetails";
 				definition = "Information about inactivity of a system.";
@@ -163,21 +166,21 @@ public class SystemClosureDetails {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Prd", required = true)
 	public DateTimePeriodChoice getPeriod() {
 		return period;
 	}
 
-	public void setPeriod(DateTimePeriodChoice period) {
-		this.period = period;
+	public SystemClosureDetails setPeriod(DateTimePeriodChoice period) {
+		this.period = Objects.requireNonNull(period);
+		return this;
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public ClosureReasonChoice getReason() {
 		return reason;
 	}
 
-	public void setReason(ClosureReasonChoice reason) {
-		this.reason = reason;
+	public SystemClosureDetails setReason(ClosureReasonChoice reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 }

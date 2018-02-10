@@ -20,29 +20,33 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DateTypeCode;
+import com.tools20022.repository.codeset.DateType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies a type of date.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DateTypeCode DateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DateType3Code#mmVarious
- * DateType3Code.mmVarious}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateType3Code#Various
+ * DateType3Code.Various}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DateTypeCode DateTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -59,7 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies a type of date."</li>
  * </ul>
  */
-public class DateType3Code extends DateTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DateType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -78,26 +83,56 @@ public class DateType3Code extends DateTypeCode {
 	 * name} = "Various"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVarious = new MMCode() {
+	public static final DateType3Code Various = new DateType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Various";
-			owner_lazy = () -> DateType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DateType3Code.mmObject();
+			codeName = DateTypeCode.Various.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DateType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DateType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("VARI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateType3Code";
 				definition = "Specifies a type of date.";
-				code_lazy = () -> Arrays.asList(DateType3Code.mmVarious);
 				trace_lazy = () -> DateTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DateType3Code.Various);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Various.getCodeName().get(), Various);
+	}
+
+	public static DateType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DateType3Code[] values() {
+		DateType3Code[] values = new DateType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DateType3Code> {
+		@Override
+		public DateType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DateType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

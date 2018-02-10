@@ -17,40 +17,48 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SecuritiesPaymentStatusCode;
+import com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the state of payment of a security at a particular time.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatusCode
- * SecuritiesPaymentStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code#mmFullyPaid
- * SecuritiesPaymentStatus1Code.mmFullyPaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code#FullyPaid
+ * SecuritiesPaymentStatus1Code.FullyPaid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code#mmNillPaid
- * SecuritiesPaymentStatus1Code.mmNillPaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code#NillPaid
+ * SecuritiesPaymentStatus1Code.NillPaid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code#mmPartiallyPaid
- * SecuritiesPaymentStatus1Code.mmPartiallyPaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code#PartiallyPaid
+ * SecuritiesPaymentStatus1Code.PartiallyPaid}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesPaymentStatusCode
+ * SecuritiesPaymentStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = ISO15022Synonym: :22F::PAYS</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the state of payment of a security at a particular time."</li>
  * </ul>
  */
-public class SecuritiesPaymentStatus1Code extends SecuritiesPaymentStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecuritiesPaymentStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +96,12 @@ public class SecuritiesPaymentStatus1Code extends SecuritiesPaymentStatusCode {
 	 * name} = "FullyPaid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullyPaid = new MMCode() {
+	public static final SecuritiesPaymentStatus1Code FullyPaid = new SecuritiesPaymentStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyPaid";
-			owner_lazy = () -> SecuritiesPaymentStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code.mmObject();
+			codeName = SecuritiesPaymentStatusCode.FullyPaid.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +120,12 @@ public class SecuritiesPaymentStatus1Code extends SecuritiesPaymentStatusCode {
 	 * name} = "NillPaid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNillPaid = new MMCode() {
+	public static final SecuritiesPaymentStatus1Code NillPaid = new SecuritiesPaymentStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NillPaid";
-			owner_lazy = () -> SecuritiesPaymentStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code.mmObject();
+			codeName = SecuritiesPaymentStatusCode.NillPaid.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,26 +144,60 @@ public class SecuritiesPaymentStatus1Code extends SecuritiesPaymentStatusCode {
 	 * name} = "PartiallyPaid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartiallyPaid = new MMCode() {
+	public static final SecuritiesPaymentStatus1Code PartiallyPaid = new SecuritiesPaymentStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyPaid";
-			owner_lazy = () -> SecuritiesPaymentStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code.mmObject();
+			codeName = SecuritiesPaymentStatusCode.PartiallyPaid.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SecuritiesPaymentStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecuritiesPaymentStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PAYS"));
 				example = Arrays.asList("FULL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesPaymentStatus1Code";
 				definition = "Specifies the state of payment of a security at a particular time.";
-				code_lazy = () -> Arrays.asList(SecuritiesPaymentStatus1Code.mmFullyPaid, SecuritiesPaymentStatus1Code.mmNillPaid, SecuritiesPaymentStatus1Code.mmPartiallyPaid);
 				trace_lazy = () -> SecuritiesPaymentStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code.FullyPaid, com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code.NillPaid,
+						com.tools20022.repository.codeset.SecuritiesPaymentStatus1Code.PartiallyPaid);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(FullyPaid.getCodeName().get(), FullyPaid);
+		codesByName.put(NillPaid.getCodeName().get(), NillPaid);
+		codesByName.put(PartiallyPaid.getCodeName().get(), PartiallyPaid);
+	}
+
+	public static SecuritiesPaymentStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecuritiesPaymentStatus1Code[] values() {
+		SecuritiesPaymentStatus1Code[] values = new SecuritiesPaymentStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecuritiesPaymentStatus1Code> {
+		@Override
+		public SecuritiesPaymentStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecuritiesPaymentStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

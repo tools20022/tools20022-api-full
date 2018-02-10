@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PriceValueTypeCode;
+import com.tools20022.repository.codeset.PriceValueType4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies a type of price value.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode
- * PriceValueTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType4Code#mmOpenDated
- * PriceValueType4Code.mmOpenDated}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType4Code#OpenDated
+ * PriceValueType4Code.OpenDated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType4Code#mmToBeSpecified
- * PriceValueType4Code.mmToBeSpecified}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType4Code#ToBeSpecified
+ * PriceValueType4Code.ToBeSpecified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType4Code#mmUnspecified
- * PriceValueType4Code.mmUnspecified}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType4Code#Unspecified
+ * PriceValueType4Code.Unspecified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceValueType4Code#mmUnknown
- * PriceValueType4Code.mmUnknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceValueType4Code#Unknown
+ * PriceValueType4Code.Unknown}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode
+ * PriceValueTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies a type of price value."</li>
  * </ul>
  */
-public class PriceValueType4Code extends PriceValueTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PriceValueType4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class PriceValueType4Code extends PriceValueTypeCode {
 	 * name} = "OpenDated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpenDated = new MMCode() {
+	public static final PriceValueType4Code OpenDated = new PriceValueType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenDated";
-			owner_lazy = () -> PriceValueType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType4Code.mmObject();
+			codeName = PriceValueTypeCode.OpenDated.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class PriceValueType4Code extends PriceValueTypeCode {
 	 * name} = "ToBeSpecified"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmToBeSpecified = new MMCode() {
+	public static final PriceValueType4Code ToBeSpecified = new PriceValueType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToBeSpecified";
-			owner_lazy = () -> PriceValueType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType4Code.mmObject();
+			codeName = PriceValueTypeCode.ToBeSpecified.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class PriceValueType4Code extends PriceValueTypeCode {
 	 * name} = "Unspecified"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnspecified = new MMCode() {
+	public static final PriceValueType4Code Unspecified = new PriceValueType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unspecified";
-			owner_lazy = () -> PriceValueType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType4Code.mmObject();
+			codeName = PriceValueTypeCode.Unspecified.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,26 +166,60 @@ public class PriceValueType4Code extends PriceValueTypeCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknown = new MMCode() {
+	public static final PriceValueType4Code Unknown = new PriceValueType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
-			owner_lazy = () -> PriceValueType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceValueType4Code.mmObject();
+			codeName = PriceValueTypeCode.Unknown.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PriceValueType4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PriceValueType4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("OPEN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceValueType4Code";
 				definition = "Specifies a type of price value.";
-				code_lazy = () -> Arrays.asList(PriceValueType4Code.mmOpenDated, PriceValueType4Code.mmToBeSpecified, PriceValueType4Code.mmUnspecified, PriceValueType4Code.mmUnknown);
 				trace_lazy = () -> PriceValueTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceValueType4Code.OpenDated, com.tools20022.repository.codeset.PriceValueType4Code.ToBeSpecified,
+						com.tools20022.repository.codeset.PriceValueType4Code.Unspecified, com.tools20022.repository.codeset.PriceValueType4Code.Unknown);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(OpenDated.getCodeName().get(), OpenDated);
+		codesByName.put(ToBeSpecified.getCodeName().get(), ToBeSpecified);
+		codesByName.put(Unspecified.getCodeName().get(), Unspecified);
+		codesByName.put(Unknown.getCodeName().get(), Unknown);
+	}
+
+	public static PriceValueType4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PriceValueType4Code[] values() {
+		PriceValueType4Code[] values = new PriceValueType4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PriceValueType4Code> {
+		@Override
+		public PriceValueType4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PriceValueType4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

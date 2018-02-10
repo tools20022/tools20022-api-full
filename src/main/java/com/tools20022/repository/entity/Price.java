@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.CurrencyCode;
@@ -26,9 +27,8 @@ import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Amount of money for which goods, services or assets are offered, sold, or
@@ -67,32 +67,6 @@ import java.util.List;
  * Price.mmNetting}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Price#mmSecuritiesPricing
  * Price.mmSecuritiesPricing}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PriceValueChange1
- * PriceValueChange1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1 OtherPrices1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryPrice1
- * ProprietaryPrice1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryPrice2
- * ProprietaryPrice2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PriceRate1 PriceRate1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitPrice8 UnitPrice8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitPrice9 UnitPrice9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingPrice1 BillingPrice1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2 OtherPrices2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnitPrice18 UnitPrice18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCassetteCounters1
- * ATMCassetteCounters1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ATMCassetteCounters3
- * ATMCassetteCounters3}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice
- * SecuritiesTransactionPrice4Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -194,10 +168,39 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceValueChange1
+ * PriceValueChange1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherPrices1 OtherPrices1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryPrice1
+ * ProprietaryPrice1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryPrice2
+ * ProprietaryPrice2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceRate1 PriceRate1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitPrice8 UnitPrice8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitPrice9 UnitPrice9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingPrice1 BillingPrice1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2 OtherPrices2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitPrice18 UnitPrice18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCassetteCounters1
+ * ATMCassetteCounters1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCassetteCounters3
+ * ATMCassetteCounters3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice
+ * SecuritiesTransactionPrice4Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = ISO15022Synonym: PRIC</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -215,8 +218,8 @@ public class Price {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyAndAmount amount;
 	/**
-	 * Price expressed as a currency and value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -444,8 +447,8 @@ public class Price {
 					PriceFormat51Choice.mmAmountPrice, PriceFormat46Choice.mmAmountPrice, PriceFormat49Choice.mmAmountPrice, PriceFormat47Choice.mmAmountPrice, PriceFormat44Choice.mmAmountPrice, PriceFormat56Choice.mmAmountPrice,
 					PriceFormat57Choice.mmAmountPrice, PriceFormat52Choice.mmAmountPrice, PriceFormat59Choice.mmAmountPrice, PriceFormat55Choice.mmAmountPrice, PriceFormat53Choice.mmAmountPrice, PriceFormat60Choice.mmAmountPrice,
 					PriceFormat58Choice.mmAmountPrice, ATMCassetteCounters3.mmUnitValue, ATMCassetteCounters3.mmCurrentAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Price expressed as a currency and value.";
@@ -464,8 +467,8 @@ public class Price {
 	};
 	protected Option option;
 	/**
-	 * Option for which a strike price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -496,8 +499,8 @@ public class Price {
 	 */
 	public static final MMBusinessAssociationEnd mmOption = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Option";
 			definition = "Option for which a strike price is specified.";
@@ -510,8 +513,8 @@ public class Price {
 	};
 	protected Product unitPriceProduct;
 	/**
-	 * Product for which a unit price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -542,8 +545,8 @@ public class Price {
 	 */
 	public static final MMBusinessAssociationEnd mmUnitPriceProduct = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnitPriceProduct";
 			definition = "Product for which a unit price is specified.";
@@ -556,8 +559,8 @@ public class Price {
 	};
 	protected Product netPriceProduct;
 	/**
-	 * Product for which a net price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -588,8 +591,8 @@ public class Price {
 	 */
 	public static final MMBusinessAssociationEnd mmNetPriceProduct = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetPriceProduct";
 			definition = "Product for which a net price is specified.";
@@ -602,8 +605,8 @@ public class Price {
 	};
 	protected List<com.tools20022.repository.entity.Adjustment> priceAdjustment;
 	/**
-	 * Variance on price for the goods and services.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -702,8 +705,8 @@ public class Price {
 					LineItem4.mmAdjustment, LineItemDetails9.mmAdjustment, LineItem9.mmAdjustment, ReportLine3.mmAdjustment, ReportLine2.mmAdjustment, ReportLine4.mmAdjustment, LineItem11.mmAdjustment, LineItemDetails10.mmAdjustment,
 					ReportLine7.mmAdjustment, LineItem12.mmAdjustment, LineItemDetails11.mmAdjustment, ReportLine6.mmAdjustment, ReportLine5.mmAdjustment, LineItemDetails13.mmAdjustment, LineItem13.mmAdjustment, LineItem15.mmAdjustment,
 					LineItemDetails14.mmAdjustment, LineItem16.mmNetPriceAllowanceCharge);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceAdjustment";
 			definition = "Variance on price for the goods and services.";
@@ -715,8 +718,8 @@ public class Price {
 	};
 	protected Product grossPriceProduct;
 	/**
-	 * Product for which a gross price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -747,8 +750,8 @@ public class Price {
 	 */
 	public static final MMBusinessAssociationEnd mmGrossPriceProduct = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossPriceProduct";
 			definition = "Product for which a gross price is specified.";
@@ -761,8 +764,8 @@ public class Price {
 	};
 	protected UnitOfMeasureCode unitOfMeasure;
 	/**
-	 * Specifies the unit of measurement. For example: kilo, tons.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -808,8 +811,8 @@ public class Price {
 	public static final MMBusinessAttribute mmUnitOfMeasure = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnitPrice8.mmUnitOfMeasureCode, UnitPrice8.mmOtherUnitOfMeasure, UnitPrice9.mmUnitOfMeasureCode, UnitPrice9.mmOtherUnitOfMeasure, UnitPrice18.mmUnitPrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnitOfMeasure";
 			definition = "Specifies the unit of measurement. For example: kilo, tons.";
@@ -828,8 +831,8 @@ public class Price {
 	};
 	protected Tolerance priceTolerance;
 	/**
-	 * Variance allowed on the price of goods.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -889,8 +892,8 @@ public class Price {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItemDetails4.mmPriceTolerance, LineItemDetails7.mmPriceTolerance, LineItemDetails5.mmPriceTolerance, LineItemDetails8.mmPriceTolerance, LineItemDetails10.mmPriceTolerance,
 					LineItemDetails13.mmPriceTolerance, LineItemDetails12.mmPriceTolerance);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceTolerance";
 			definition = "Variance allowed on the price of goods.";
@@ -903,8 +906,8 @@ public class Price {
 	};
 	protected CurrencyCode currency;
 	/**
-	 * Currency code in which the price is expressed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -942,8 +945,8 @@ public class Price {
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingPrice1.mmCurrency, ATMCassetteCounters1.mmCurrency, ATMCassetteCounters3.mmCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
 			definition = "Currency code in which the price is expressed.";
@@ -962,8 +965,8 @@ public class Price {
 	};
 	protected Max15NumericText factor;
 	/**
-	 * Multiplication factor of measurement values. For example: 36 pieces.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -989,8 +992,8 @@ public class Price {
 	 */
 	public static final MMBusinessAttribute mmFactor = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Factor";
 			definition = "Multiplication factor of measurement values. For example: 36 pieces.";
@@ -1009,8 +1012,8 @@ public class Price {
 	};
 	protected Netting netting;
 	/**
-	 * Netting for which an average price is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1041,8 +1044,8 @@ public class Price {
 	 */
 	public static final MMBusinessAssociationEnd mmNetting = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Netting";
 			definition = "Netting for which an average price is specified.";
@@ -1055,8 +1058,8 @@ public class Price {
 	};
 	protected SecuritiesPricing securitiesPricing;
 	/**
-	 * Pricing parameters for a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1169,8 +1172,8 @@ public class Price {
 					FinancialInstrumentAttributes30.mmStrikePrice, FinancialInstrumentAttributes28.mmStrikePrice, Option1.mmStrikePrice, FinancialInstrumentAttributes15.mmStrikePrice, FinancialInstrumentAttributes29.mmStrikePrice,
 					Option7.mmStrikePrice, FinancialInstrumentAttributes2.mmStrikePrice, FinancialInstrumentAttributes63.mmStrikePrice, FinancialInstrumentAttributes64.mmStrikePrice, FinancialInstrumentAttributes75.mmStrikePrice,
 					FinancialInstrumentAttributes78.mmStrikePrice, SecuritiesTransactionPrice4Choice.mmPrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesPricing";
 			definition = "Pricing parameters for a security.";
@@ -1185,7 +1188,8 @@ public class Price {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "PRIC"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Price";
 				definition = "Amount of money for which goods, services or assets are offered, sold, or bought.";
@@ -1218,95 +1222,107 @@ public class Price {
 		return amount;
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
-		this.amount = amount;
+	public Price setAmount(CurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
 	public Option getOption() {
 		return option;
 	}
 
-	public void setOption(com.tools20022.repository.entity.Option option) {
-		this.option = option;
+	public Price setOption(com.tools20022.repository.entity.Option option) {
+		this.option = Objects.requireNonNull(option);
+		return this;
 	}
 
-	public Product getUnitPriceProduct() {
-		return unitPriceProduct;
+	public Optional<Product> getUnitPriceProduct() {
+		return unitPriceProduct == null ? Optional.empty() : Optional.of(unitPriceProduct);
 	}
 
-	public void setUnitPriceProduct(com.tools20022.repository.entity.Product unitPriceProduct) {
+	public Price setUnitPriceProduct(com.tools20022.repository.entity.Product unitPriceProduct) {
 		this.unitPriceProduct = unitPriceProduct;
+		return this;
 	}
 
-	public Product getNetPriceProduct() {
-		return netPriceProduct;
+	public Optional<Product> getNetPriceProduct() {
+		return netPriceProduct == null ? Optional.empty() : Optional.of(netPriceProduct);
 	}
 
-	public void setNetPriceProduct(com.tools20022.repository.entity.Product netPriceProduct) {
+	public Price setNetPriceProduct(com.tools20022.repository.entity.Product netPriceProduct) {
 		this.netPriceProduct = netPriceProduct;
+		return this;
 	}
 
 	public List<Adjustment> getPriceAdjustment() {
-		return priceAdjustment;
+		return priceAdjustment == null ? priceAdjustment = new ArrayList<>() : priceAdjustment;
 	}
 
-	public void setPriceAdjustment(List<com.tools20022.repository.entity.Adjustment> priceAdjustment) {
-		this.priceAdjustment = priceAdjustment;
+	public Price setPriceAdjustment(List<com.tools20022.repository.entity.Adjustment> priceAdjustment) {
+		this.priceAdjustment = Objects.requireNonNull(priceAdjustment);
+		return this;
 	}
 
-	public Product getGrossPriceProduct() {
-		return grossPriceProduct;
+	public Optional<Product> getGrossPriceProduct() {
+		return grossPriceProduct == null ? Optional.empty() : Optional.of(grossPriceProduct);
 	}
 
-	public void setGrossPriceProduct(com.tools20022.repository.entity.Product grossPriceProduct) {
+	public Price setGrossPriceProduct(com.tools20022.repository.entity.Product grossPriceProduct) {
 		this.grossPriceProduct = grossPriceProduct;
+		return this;
 	}
 
 	public UnitOfMeasureCode getUnitOfMeasure() {
 		return unitOfMeasure;
 	}
 
-	public void setUnitOfMeasure(UnitOfMeasureCode unitOfMeasure) {
-		this.unitOfMeasure = unitOfMeasure;
+	public Price setUnitOfMeasure(UnitOfMeasureCode unitOfMeasure) {
+		this.unitOfMeasure = Objects.requireNonNull(unitOfMeasure);
+		return this;
 	}
 
 	public Tolerance getPriceTolerance() {
 		return priceTolerance;
 	}
 
-	public void setPriceTolerance(com.tools20022.repository.entity.Tolerance priceTolerance) {
-		this.priceTolerance = priceTolerance;
+	public Price setPriceTolerance(com.tools20022.repository.entity.Tolerance priceTolerance) {
+		this.priceTolerance = Objects.requireNonNull(priceTolerance);
+		return this;
 	}
 
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(CurrencyCode currency) {
-		this.currency = currency;
+	public Price setCurrency(CurrencyCode currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 
 	public Max15NumericText getFactor() {
 		return factor;
 	}
 
-	public void setFactor(Max15NumericText factor) {
-		this.factor = factor;
+	public Price setFactor(Max15NumericText factor) {
+		this.factor = Objects.requireNonNull(factor);
+		return this;
 	}
 
-	public Netting getNetting() {
-		return netting;
+	public Optional<Netting> getNetting() {
+		return netting == null ? Optional.empty() : Optional.of(netting);
 	}
 
-	public void setNetting(com.tools20022.repository.entity.Netting netting) {
+	public Price setNetting(com.tools20022.repository.entity.Netting netting) {
 		this.netting = netting;
+		return this;
 	}
 
 	public SecuritiesPricing getSecuritiesPricing() {
 		return securitiesPricing;
 	}
 
-	public void setSecuritiesPricing(com.tools20022.repository.entity.SecuritiesPricing securitiesPricing) {
-		this.securitiesPricing = securitiesPricing;
+	public Price setSecuritiesPricing(com.tools20022.repository.entity.SecuritiesPricing securitiesPricing) {
+		this.securitiesPricing = Objects.requireNonNull(securitiesPricing);
+		return this;
 	}
 }

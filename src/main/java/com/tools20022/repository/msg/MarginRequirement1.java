@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.MarginAmountRequirement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,17 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MarginRequirement1", propOrder = {"deliverMarginAmount", "returnMarginAmount"})
 public class MarginRequirement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DlvrMrgnAmt")
 	protected ActiveCurrencyAndAmount deliverMarginAmount;
 	/**
-	 * Amount of new margin that will be delivered to one party by the other
-	 * party after rounding, threshold and minimum transfer amount are taken
-	 * into account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +115,7 @@ public class MarginRequirement1 {
 	public static final MMMessageAttribute mmDeliverMarginAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MarginAmountRequirement.mmDeliverMarginAmount;
-			componentContext_lazy = () -> MarginRequirement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarginRequirement1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrMrgnAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,12 +126,11 @@ public class MarginRequirement1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RtrMrgnAmt")
 	protected ActiveCurrencyAndAmount returnMarginAmount;
 	/**
-	 * Amount of new margin that will be recalled to one party from the other
-	 * party after rounding, threshold and minimum transfer amount are taken
-	 * into account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +166,7 @@ public class MarginRequirement1 {
 	public static final MMMessageAttribute mmReturnMarginAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MarginAmountRequirement.mmReturnMarginAmount;
-			componentContext_lazy = () -> MarginRequirement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarginRequirement1.mmObject();
 			isDerived = false;
 			xmlTag = "RtrMrgnAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,9 +181,9 @@ public class MarginRequirement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MarginRequirement1.mmDeliverMarginAmount, MarginRequirement1.mmReturnMarginAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarginRequirement1.mmDeliverMarginAmount, com.tools20022.repository.msg.MarginRequirement1.mmReturnMarginAmount);
 				trace_lazy = () -> MarginAmountRequirement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginRequirement1";
 				definition = "Amount of expected margin required by any of the parties of the margin calculation.";
@@ -193,21 +192,21 @@ public class MarginRequirement1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DlvrMrgnAmt")
-	public ActiveCurrencyAndAmount getDeliverMarginAmount() {
-		return deliverMarginAmount;
+	public Optional<ActiveCurrencyAndAmount> getDeliverMarginAmount() {
+		return deliverMarginAmount == null ? Optional.empty() : Optional.of(deliverMarginAmount);
 	}
 
-	public void setDeliverMarginAmount(ActiveCurrencyAndAmount deliverMarginAmount) {
+	public MarginRequirement1 setDeliverMarginAmount(ActiveCurrencyAndAmount deliverMarginAmount) {
 		this.deliverMarginAmount = deliverMarginAmount;
+		return this;
 	}
 
-	@XmlElement(name = "RtrMrgnAmt")
-	public ActiveCurrencyAndAmount getReturnMarginAmount() {
-		return returnMarginAmount;
+	public Optional<ActiveCurrencyAndAmount> getReturnMarginAmount() {
+		return returnMarginAmount == null ? Optional.empty() : Optional.of(returnMarginAmount);
 	}
 
-	public void setReturnMarginAmount(ActiveCurrencyAndAmount returnMarginAmount) {
+	public MarginRequirement1 setReturnMarginAmount(ActiveCurrencyAndAmount returnMarginAmount) {
 		this.returnMarginAmount = returnMarginAmount;
+		return this;
 	}
 }

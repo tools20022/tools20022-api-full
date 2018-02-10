@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies a price expressed as a rate."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PriceRate1", propOrder = {"rateType", "rate"})
 public class PriceRate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RateTp", required = true)
 	protected PriceRateType3FormatChoice rateType;
 	/**
-	 * Type of rate, eg, yield.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +107,7 @@ public class PriceRate1 {
 	public static final MMMessageAttribute mmRateType = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
-			componentContext_lazy = () -> PriceRate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceRate1.mmObject();
 			isDerived = false;
 			xmlTag = "RateTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +118,11 @@ public class PriceRate1 {
 			complexType_lazy = () -> PriceRateType3FormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate", required = true)
 	protected PercentageRate rate;
 	/**
-	 * Price expressed as a rate, ie, percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,7 +155,7 @@ public class PriceRate1 {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
-			componentContext_lazy = () -> PriceRate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceRate1.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,9 +170,9 @@ public class PriceRate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PriceRate1.mmRateType, PriceRate1.mmRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceRate1.mmRateType, com.tools20022.repository.msg.PriceRate1.mmRate);
 				trace_lazy = () -> Price.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceRate1";
 				definition = "Specifies a price expressed as a rate.";
@@ -178,21 +181,21 @@ public class PriceRate1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RateTp", required = true)
 	public PriceRateType3FormatChoice getRateType() {
 		return rateType;
 	}
 
-	public void setRateType(PriceRateType3FormatChoice rateType) {
-		this.rateType = rateType;
+	public PriceRate1 setRateType(PriceRateType3FormatChoice rateType) {
+		this.rateType = Objects.requireNonNull(rateType);
+		return this;
 	}
 
-	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public PriceRate1 setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 }

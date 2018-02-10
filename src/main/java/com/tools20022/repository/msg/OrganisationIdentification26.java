@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,18 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Unique and unambiguous way to identify an organisation."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OrganisationIdentification26", propOrder = "anyBIC")
 public class OrganisationIdentification26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AnyBIC")
 	protected AnyBICIdentifier anyBIC;
 	/**
-	 * Code allocated to an institution by the ISO 9362 Registration Authority
-	 * as described in ISO 9362
-	 * "Banking - Banking telecommunication messages - Business identifier code (BIC)"
-	 * .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +109,7 @@ public class OrganisationIdentification26 {
 	public static final MMMessageAttribute mmAnyBIC = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
-			componentContext_lazy = () -> OrganisationIdentification26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrganisationIdentification26.mmObject();
 			isDerived = false;
 			xmlTag = "AnyBIC";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,9 +124,9 @@ public class OrganisationIdentification26 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OrganisationIdentification26.mmAnyBIC);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrganisationIdentification26.mmAnyBIC);
 				trace_lazy = () -> OrganisationIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OrganisationIdentification26";
 				definition = "Unique and unambiguous way to identify an organisation.";
@@ -136,12 +135,12 @@ public class OrganisationIdentification26 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AnyBIC")
-	public AnyBICIdentifier getAnyBIC() {
-		return anyBIC;
+	public Optional<AnyBICIdentifier> getAnyBIC() {
+		return anyBIC == null ? Optional.empty() : Optional.of(anyBIC);
 	}
 
-	public void setAnyBIC(AnyBICIdentifier anyBIC) {
+	public OrganisationIdentification26 setAnyBIC(AnyBICIdentifier anyBIC) {
 		this.anyBIC = anyBIC;
+		return this;
 	}
 }

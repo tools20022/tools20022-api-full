@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification47;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * WaivingInstruction1Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "WaivingInstruction2Choice", propOrder = {"code", "proprietary"})
 public class WaivingInstruction2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected WaivingInstruction1Code code;
 	/**
-	 * Type of discount or waiving expressed as a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +120,7 @@ public class WaivingInstruction2Choice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CommissionWaiver.mmInstructionBasis;
-			componentContext_lazy = () -> WaivingInstruction2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.WaivingInstruction2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +132,11 @@ public class WaivingInstruction2Choice {
 			simpleType_lazy = () -> WaivingInstruction1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification47 proprietary;
 	/**
-	 * Type of discount or waiving expressed as a proprietary code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -172,7 +175,7 @@ public class WaivingInstruction2Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CommissionWaiver.mmInstructionBasis;
-			componentContext_lazy = () -> WaivingInstruction2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.WaivingInstruction2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,9 +192,9 @@ public class WaivingInstruction2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(WaivingInstruction2Choice.mmCode, WaivingInstruction2Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.WaivingInstruction2Choice.mmCode, com.tools20022.repository.choice.WaivingInstruction2Choice.mmProprietary);
 				trace_lazy = () -> CommissionWaiver.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "WaivingInstruction2Choice";
 				definition = "Choice of formats for the waiving instruction.";
@@ -201,21 +204,21 @@ public class WaivingInstruction2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public WaivingInstruction1Code getCode() {
 		return code;
 	}
 
-	public void setCode(WaivingInstruction1Code code) {
-		this.code = code;
+	public WaivingInstruction2Choice setCode(WaivingInstruction1Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification47 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification47 proprietary) {
-		this.proprietary = proprietary;
+	public WaivingInstruction2Choice setProprietary(GenericIdentification47 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

@@ -25,9 +25,11 @@ import com.tools20022.repository.entity.AccountPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Specifies roles played by a party that are related to an investment account.
@@ -39,6 +41,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.AccountPartyRole
+ * AccountPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -57,154 +62,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InvestmentAccountPartyRole#mmCRSStatus
  * InvestmentAccountPartyRole.mmCRSStatus}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.PrimaryOwner PrimaryOwner}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TrusteeRole TrusteeRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CustodianForMinor
- * CustodianForMinor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Nominee Nominee}</li>
- * <li>{@linkplain com.tools20022.repository.entity.JointOwner JointOwner}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SecondaryOwner
- * SecondaryOwner}</li>
- * <li>{@linkplain com.tools20022.repository.entity.LegalGuardianRole
- * LegalGuardianRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.SuccessorOnDeath
- * SuccessorOnDeath}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AdministratorRole
- * AdministratorRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.IndividualInvestor
- * IndividualInvestor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CorporateInvestor
- * CorporateInvestor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Investor Investor}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.AccountPartyRole
- * AccountPartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5
- * InvestmentAccountOwnershipInformation5}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2
- * InvestmentAccountOwnershipInformation2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties2
- * AccountParties2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty2 ExtendedParty2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties5
- * AccountParties5}</li>
- * <li>{@linkplain com.tools20022.repository.choice.MoneyLaunderingCheck1Choice
- * MoneyLaunderingCheck1Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6
- * InvestmentAccountOwnershipInformation6}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AccountParties1Choice
- * AccountParties1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty3 ExtendedParty3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties6
- * AccountParties6}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3
- * InvestmentAccountOwnershipInformation3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties3
- * AccountParties3}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4
- * InvestmentAccountOwnershipInformation4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty1 ExtendedParty1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties4
- * AccountParties4}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7
- * InvestmentAccountOwnershipInformation7}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AccountParties2Choice
- * AccountParties2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty4 ExtendedParty4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties7
- * AccountParties7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties9
- * AccountParties9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties8
- * AccountParties8}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8
- * InvestmentAccountOwnershipInformation8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty6 ExtendedParty6}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9
- * InvestmentAccountOwnershipInformation9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty5 ExtendedParty5}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AccountParties3Choice
- * AccountParties3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AccountParties4Choice
- * AccountParties4Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties11
- * AccountParties11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties10
- * AccountParties10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties12
- * AccountParties12}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AccountParties7Choice
- * AccountParties7Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10
- * InvestmentAccountOwnershipInformation10}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11
- * InvestmentAccountOwnershipInformation11}</li>
- * <li>{@linkplain com.tools20022.repository.choice.FATCAForm1Choice
- * FATCAForm1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty7 ExtendedParty7}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AccountParties6Choice
- * AccountParties6Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty8 ExtendedParty8}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AccountParties5Choice
- * AccountParties5Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties13
- * AccountParties13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties14
- * AccountParties14}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12
- * InvestmentAccountOwnershipInformation12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty10
- * ExtendedParty10}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13
- * InvestmentAccountOwnershipInformation13}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AccountParties9Choice
- * AccountParties9Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AccountParties8Choice
- * AccountParties8Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty9 ExtendedParty9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties15
- * AccountParties15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountParties16
- * AccountParties16}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15
- * InvestmentAccountOwnershipInformation15}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AccountParties11Choice
- * AccountParties11Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty12
- * ExtendedParty12}</li>
- * <li>{@linkplain com.tools20022.repository.choice.CRSForm1Choice
- * CRSForm1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AccountParties10Choice
- * AccountParties10Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14
- * InvestmentAccountOwnershipInformation14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty11
- * ExtendedParty11}</li>
  * </ul>
  * </li>
  * <li>
@@ -357,11 +214,156 @@ import java.util.List;
  * ExtendedParty11.mmOtherPartyDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.PrimaryOwner PrimaryOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TrusteeRole TrusteeRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CustodianForMinor
+ * CustodianForMinor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Nominee Nominee}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.JointOwner JointOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SecondaryOwner
+ * SecondaryOwner}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.LegalGuardianRole
+ * LegalGuardianRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.SuccessorOnDeath
+ * SuccessorOnDeath}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AdministratorRole
+ * AdministratorRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.IndividualInvestor
+ * IndividualInvestor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CorporateInvestor
+ * CorporateInvestor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Investor Investor}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation5
+ * InvestmentAccountOwnershipInformation5}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation2
+ * InvestmentAccountOwnershipInformation2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties2
+ * AccountParties2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty2 ExtendedParty2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties5
+ * AccountParties5}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.MoneyLaunderingCheck1Choice
+ * MoneyLaunderingCheck1Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation6
+ * InvestmentAccountOwnershipInformation6}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AccountParties1Choice
+ * AccountParties1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty3 ExtendedParty3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties6
+ * AccountParties6}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation3
+ * InvestmentAccountOwnershipInformation3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties3
+ * AccountParties3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation4
+ * InvestmentAccountOwnershipInformation4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty1 ExtendedParty1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties4
+ * AccountParties4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation7
+ * InvestmentAccountOwnershipInformation7}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AccountParties2Choice
+ * AccountParties2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty4 ExtendedParty4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties7
+ * AccountParties7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties9
+ * AccountParties9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties8
+ * AccountParties8}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation8
+ * InvestmentAccountOwnershipInformation8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty6 ExtendedParty6}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation9
+ * InvestmentAccountOwnershipInformation9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty5 ExtendedParty5}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AccountParties3Choice
+ * AccountParties3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AccountParties4Choice
+ * AccountParties4Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties11
+ * AccountParties11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties10
+ * AccountParties10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties12
+ * AccountParties12}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AccountParties7Choice
+ * AccountParties7Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10
+ * InvestmentAccountOwnershipInformation10}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation11
+ * InvestmentAccountOwnershipInformation11}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.FATCAForm1Choice
+ * FATCAForm1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty7 ExtendedParty7}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AccountParties6Choice
+ * AccountParties6Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty8 ExtendedParty8}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AccountParties5Choice
+ * AccountParties5Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties13
+ * AccountParties13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties14
+ * AccountParties14}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation12
+ * InvestmentAccountOwnershipInformation12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty10
+ * ExtendedParty10}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation13
+ * InvestmentAccountOwnershipInformation13}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AccountParties9Choice
+ * AccountParties9Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AccountParties8Choice
+ * AccountParties8Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty9 ExtendedParty9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties15
+ * AccountParties15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountParties16
+ * AccountParties16}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation15
+ * InvestmentAccountOwnershipInformation15}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AccountParties11Choice
+ * AccountParties11Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty12
+ * ExtendedParty12}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CRSForm1Choice
+ * CRSForm1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AccountParties10Choice
+ * AccountParties10Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14
+ * InvestmentAccountOwnershipInformation14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExtendedParty11
+ * ExtendedParty11}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -379,10 +381,8 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected PercentageRate ownershipBeneficiaryRate;
 	/**
-	 * Percentage of ownership or of beneficial ownership of the shares/units in
-	 * the account. All subsequent subscriptions and or redemptions will be
-	 * allocated using the same percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -462,8 +462,8 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 					InvestmentAccountOwnershipInformation7.mmOwnershipBeneficiaryRate, InvestmentAccountOwnershipInformation8.mmOwnershipBeneficiaryRate, InvestmentAccountOwnershipInformation9.mmOwnershipBeneficiaryRate,
 					InvestmentAccountOwnershipInformation10.mmOwnershipBeneficiaryRate, InvestmentAccountOwnershipInformation11.mmOwnershipBeneficiaryRate, InvestmentAccountOwnershipInformation12.mmOwnershipBeneficiaryRate,
 					InvestmentAccountOwnershipInformation13.mmOwnershipBeneficiaryRate, InvestmentAccountOwnershipInformation15.mmOwnershipBeneficiaryRate, InvestmentAccountOwnershipInformation14.mmOwnershipBeneficiaryRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OwnershipBeneficiaryRate";
 			definition = "Percentage of ownership or of beneficial ownership of the shares/units in the account. All subsequent subscriptions and or redemptions will be allocated using the same percentage.";
@@ -482,9 +482,8 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	};
 	protected List<com.tools20022.repository.entity.InvestmentAccount> investmentAccount;
 	/**
-	 * Specifies the account for which the party plays a role. It is derived
-	 * from the association between AccountPartyRole and Account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -528,8 +527,8 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	public static final MMBusinessAssociationEnd mmInvestmentAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransferOut3.mmNomineeAccount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccount";
 			definition = "Specifies the account for which the party plays a role. It is derived from the association between AccountPartyRole and Account.";
@@ -541,9 +540,8 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	};
 	protected FATCAFormTypeCode fATCAFormType;
 	/**
-	 * Type of Foreign Account Tax Compliance Act (FATCA) form submitted by the
-	 * investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -607,8 +605,8 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 			derivation_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation10.mmFATCAFormType, InvestmentAccountOwnershipInformation11.mmFATCAFormType, FATCAForm1Choice.mmCode,
 					InvestmentAccountOwnershipInformation12.mmFATCAFormType, InvestmentAccountOwnershipInformation13.mmFATCAFormType, InvestmentAccountOwnershipInformation15.mmFATCAFormType,
 					InvestmentAccountOwnershipInformation15.mmCRSFormType, CRSForm1Choice.mmCode, InvestmentAccountOwnershipInformation14.mmFATCAFormType, InvestmentAccountOwnershipInformation14.mmCRSFormType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FATCAFormType";
 			definition = "Type of Foreign Account Tax Compliance Act (FATCA) form submitted by the investor.";
@@ -627,8 +625,8 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	};
 	protected List<com.tools20022.repository.entity.FATCAStatus> fATCAStatus;
 	/**
-	 * Foreign Account Tax Compliance Act (FATCA) status of the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -687,8 +685,8 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation10.mmFATCAStatus, InvestmentAccountOwnershipInformation11.mmFATCAStatus, InvestmentAccountOwnershipInformation12.mmFATCAStatus,
 					InvestmentAccountOwnershipInformation13.mmFATCAStatus, InvestmentAccountOwnershipInformation15.mmFATCAStatus, InvestmentAccountOwnershipInformation14.mmFATCAStatus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FATCAStatus";
 			definition = "Foreign Account Tax Compliance Act (FATCA) status of the investor.";
@@ -700,8 +698,8 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	};
 	protected CRSStatus cRSStatus;
 	/**
-	 * Common Reporting Standard (CRS) status of the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -746,8 +744,8 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	public static final MMBusinessAssociationEnd mmCRSStatus = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation15.mmCRSStatus, InvestmentAccountOwnershipInformation14.mmCRSStatus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CRSStatus";
 			definition = "Common Reporting Standard (CRS) status of the investor.";
@@ -762,7 +760,7 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentAccountPartyRole";
 				definition = "Specifies roles played by a party that are related to an investment account.";
@@ -808,39 +806,44 @@ public class InvestmentAccountPartyRole extends AccountPartyRole {
 		return ownershipBeneficiaryRate;
 	}
 
-	public void setOwnershipBeneficiaryRate(PercentageRate ownershipBeneficiaryRate) {
-		this.ownershipBeneficiaryRate = ownershipBeneficiaryRate;
+	public InvestmentAccountPartyRole setOwnershipBeneficiaryRate(PercentageRate ownershipBeneficiaryRate) {
+		this.ownershipBeneficiaryRate = Objects.requireNonNull(ownershipBeneficiaryRate);
+		return this;
 	}
 
 	public List<InvestmentAccount> getInvestmentAccount() {
-		return investmentAccount;
+		return investmentAccount == null ? investmentAccount = new ArrayList<>() : investmentAccount;
 	}
 
-	public void setInvestmentAccount(List<com.tools20022.repository.entity.InvestmentAccount> investmentAccount) {
-		this.investmentAccount = investmentAccount;
+	public InvestmentAccountPartyRole setInvestmentAccount(List<com.tools20022.repository.entity.InvestmentAccount> investmentAccount) {
+		this.investmentAccount = Objects.requireNonNull(investmentAccount);
+		return this;
 	}
 
 	public FATCAFormTypeCode getFATCAFormType() {
 		return fATCAFormType;
 	}
 
-	public void setFATCAFormType(FATCAFormTypeCode fATCAFormType) {
-		this.fATCAFormType = fATCAFormType;
+	public InvestmentAccountPartyRole setFATCAFormType(FATCAFormTypeCode fATCAFormType) {
+		this.fATCAFormType = Objects.requireNonNull(fATCAFormType);
+		return this;
 	}
 
 	public List<FATCAStatus> getFATCAStatus() {
-		return fATCAStatus;
+		return fATCAStatus == null ? fATCAStatus = new ArrayList<>() : fATCAStatus;
 	}
 
-	public void setFATCAStatus(List<com.tools20022.repository.entity.FATCAStatus> fATCAStatus) {
-		this.fATCAStatus = fATCAStatus;
+	public InvestmentAccountPartyRole setFATCAStatus(List<com.tools20022.repository.entity.FATCAStatus> fATCAStatus) {
+		this.fATCAStatus = Objects.requireNonNull(fATCAStatus);
+		return this;
 	}
 
 	public CRSStatus getCRSStatus() {
 		return cRSStatus;
 	}
 
-	public void setCRSStatus(com.tools20022.repository.entity.CRSStatus cRSStatus) {
-		this.cRSStatus = cRSStatus;
+	public InvestmentAccountPartyRole setCRSStatus(com.tools20022.repository.entity.CRSStatus cRSStatus) {
+		this.cRSStatus = Objects.requireNonNull(cRSStatus);
+		return this;
 	}
 }

@@ -26,9 +26,11 @@ import com.tools20022.repository.entity.ChoiceCorporateAction;
 import com.tools20022.repository.entity.CorporateActionEntitlement;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InstructedBalanceDetails1", propOrder = {"totalInstructedBalance", "optionDetails"})
 public class InstructedBalanceDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlInstdBal", required = true)
 	protected BalanceFormat1Choice totalInstructedBalance;
 	/**
-	 * Provides information about the total instructed balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +121,7 @@ public class InstructedBalanceDetails1 {
 	public static final MMMessageAttribute mmTotalInstructedBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
-			componentContext_lazy = () -> InstructedBalanceDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstructedBalanceDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlInstdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +132,11 @@ public class InstructedBalanceDetails1 {
 			complexType_lazy = () -> BalanceFormat1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnDtls")
 	protected List<com.tools20022.repository.msg.InstructedCorporateActionOption1> optionDetails;
 	/**
-	 * Provide instructed balance breakdown information per option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -166,7 +170,7 @@ public class InstructedBalanceDetails1 {
 	public static final MMMessageAssociationEnd mmOptionDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ChoiceCorporateAction.mmCorporateActionOptionDefinition;
-			componentContext_lazy = () -> InstructedBalanceDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstructedBalanceDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,9 +185,9 @@ public class InstructedBalanceDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InstructedBalanceDetails1.mmTotalInstructedBalance, InstructedBalanceDetails1.mmOptionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructedBalanceDetails1.mmTotalInstructedBalance, com.tools20022.repository.msg.InstructedBalanceDetails1.mmOptionDetails);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructedBalanceDetails1";
 				definition = "Provides information about total instructed balance.";
@@ -193,21 +197,21 @@ public class InstructedBalanceDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlInstdBal", required = true)
 	public BalanceFormat1Choice getTotalInstructedBalance() {
 		return totalInstructedBalance;
 	}
 
-	public void setTotalInstructedBalance(BalanceFormat1Choice totalInstructedBalance) {
-		this.totalInstructedBalance = totalInstructedBalance;
+	public InstructedBalanceDetails1 setTotalInstructedBalance(BalanceFormat1Choice totalInstructedBalance) {
+		this.totalInstructedBalance = Objects.requireNonNull(totalInstructedBalance);
+		return this;
 	}
 
-	@XmlElement(name = "OptnDtls")
 	public List<InstructedCorporateActionOption1> getOptionDetails() {
-		return optionDetails;
+		return optionDetails == null ? optionDetails = new ArrayList<>() : optionDetails;
 	}
 
-	public void setOptionDetails(List<com.tools20022.repository.msg.InstructedCorporateActionOption1> optionDetails) {
-		this.optionDetails = optionDetails;
+	public InstructedBalanceDetails1 setOptionDetails(List<com.tools20022.repository.msg.InstructedCorporateActionOption1> optionDetails) {
+		this.optionDetails = Objects.requireNonNull(optionDetails);
+		return this;
 	}
 }

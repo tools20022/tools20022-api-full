@@ -33,6 +33,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -47,9 +48,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification3#mmDomesticOrProprietaryIdentificationSourceRule
+ * {@linkplain com.tools20022.repository.msg.AlternateSecurityIdentification3#DomesticOrProprietaryIdentificationSourceRule
  * AlternateSecurityIdentification3.
- * mmDomesticOrProprietaryIdentificationSourceRule}</li>
+ * DomesticOrProprietaryIdentificationSourceRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -74,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -89,15 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AlternateSecurityIdentification3", propOrder = {"identification", "domesticIdentificationSource", "proprietaryIdentificationSource"})
 public class AlternateSecurityIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max70Text identification;
 	/**
-	 * Unique and unambiguous identifier of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +132,7 @@ public class AlternateSecurityIdentification3 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> AlternateSecurityIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateSecurityIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,10 +143,11 @@ public class AlternateSecurityIdentification3 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DmstIdSrc", required = true)
 	protected CountryCode domesticIdentificationSource;
 	/**
-	 * Country of the proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,7 +180,7 @@ public class AlternateSecurityIdentification3 {
 	public static final MMMessageAttribute mmDomesticIdentificationSource = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> IdentificationIssuerRole.mmCountry;
-			componentContext_lazy = () -> AlternateSecurityIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateSecurityIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "DmstIdSrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,10 +191,11 @@ public class AlternateSecurityIdentification3 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryIdSrc", required = true)
 	protected Max35Text proprietaryIdentificationSource;
 	/**
-	 * Entity that issues the proprietary identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,7 +228,7 @@ public class AlternateSecurityIdentification3 {
 	public static final MMMessageAttribute mmProprietaryIdentificationSource = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> IdentificationIssuerRole.mmEntityName;
-			componentContext_lazy = () -> AlternateSecurityIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateSecurityIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryIdSrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,23 +273,24 @@ public class AlternateSecurityIdentification3 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmDomesticOrProprietaryIdentificationSourceRule = new MMXor() {
+	public static final MMXor DomesticOrProprietaryIdentificationSourceRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomesticOrProprietaryIdentificationSourceRule";
 			definition = "Either DomesticIdentificationSource or ProprietaryIdentificationSource must be present, but not both.";
-			messageComponent_lazy = () -> AlternateSecurityIdentification3.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(AlternateSecurityIdentification3.mmDomesticIdentificationSource, AlternateSecurityIdentification3.mmProprietaryIdentificationSource);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.AlternateSecurityIdentification3.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification3.mmDomesticIdentificationSource,
+					com.tools20022.repository.msg.AlternateSecurityIdentification3.mmProprietaryIdentificationSource);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AlternateSecurityIdentification3.mmIdentification, AlternateSecurityIdentification3.mmDomesticIdentificationSource,
-						AlternateSecurityIdentification3.mmProprietaryIdentificationSource);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification3.mmIdentification, com.tools20022.repository.msg.AlternateSecurityIdentification3.mmDomesticIdentificationSource,
+						com.tools20022.repository.msg.AlternateSecurityIdentification3.mmProprietaryIdentificationSource);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -296,36 +301,36 @@ public class AlternateSecurityIdentification3 {
 				})).get();
 				name = "AlternateSecurityIdentification3";
 				definition = "Proprietary or domestic identification scheme that uniquely identifies a security.";
-				xors_lazy = () -> Arrays.asList(AlternateSecurityIdentification3.mmDomesticOrProprietaryIdentificationSourceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification3.DomesticOrProprietaryIdentificationSourceRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max70Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max70Text identification) {
-		this.identification = identification;
+	public AlternateSecurityIdentification3 setIdentification(Max70Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "DmstIdSrc", required = true)
 	public CountryCode getDomesticIdentificationSource() {
 		return domesticIdentificationSource;
 	}
 
-	public void setDomesticIdentificationSource(CountryCode domesticIdentificationSource) {
-		this.domesticIdentificationSource = domesticIdentificationSource;
+	public AlternateSecurityIdentification3 setDomesticIdentificationSource(CountryCode domesticIdentificationSource) {
+		this.domesticIdentificationSource = Objects.requireNonNull(domesticIdentificationSource);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryIdSrc", required = true)
 	public Max35Text getProprietaryIdentificationSource() {
 		return proprietaryIdentificationSource;
 	}
 
-	public void setProprietaryIdentificationSource(Max35Text proprietaryIdentificationSource) {
-		this.proprietaryIdentificationSource = proprietaryIdentificationSource;
+	public AlternateSecurityIdentification3 setProprietaryIdentificationSource(Max35Text proprietaryIdentificationSource) {
+		this.proprietaryIdentificationSource = Objects.requireNonNull(proprietaryIdentificationSource);
+		return this;
 	}
 }

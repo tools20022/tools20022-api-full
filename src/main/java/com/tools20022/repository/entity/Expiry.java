@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Expiry parameters.
@@ -52,16 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ExpiryTerms1 ExpiryTerms1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExpiryDetails1 ExpiryDetails1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExpiryTerms2 ExpiryTerms2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ExpiryDetails2 ExpiryDetails2}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -72,10 +63,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ExpiryTerms1 ExpiryTerms1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExpiryDetails1 ExpiryDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExpiryTerms2 ExpiryTerms2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExpiryDetails2 ExpiryDetails2}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,8 +92,8 @@ public class Expiry {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected ISODateTime expiryDateTime;
 	/**
-	 * Date and time when the expiry of the undertaking takes effect.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,8 +134,8 @@ public class Expiry {
 	public static final MMBusinessAttribute mmExpiryDateTime = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ExtendOrPayQuery1.mmRequestedExpiryDate, ExpiryTerms1.mmDateTime, ExpiryTerms2.mmDateTime, Demand1.mmRequestedExpiryDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Expiry.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Expiry.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpiryDateTime";
 			definition = "Date and time when the expiry of the undertaking takes effect.";
@@ -153,8 +154,8 @@ public class Expiry {
 	};
 	protected Undertaking undertaking;
 	/**
-	 * Undertaking for which expiry information is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,8 +187,8 @@ public class Expiry {
 	 */
 	public static final MMBusinessAssociationEnd mmUndertaking = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Expiry.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Expiry.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Undertaking";
 			definition = "Undertaking for which expiry information is specified.";
@@ -200,9 +201,8 @@ public class Expiry {
 	};
 	protected Max2000Text expiryCondition;
 	/**
-	 * Condition that indicates when the undertaking will cease to be available
-	 * at the place for presentation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -238,8 +238,8 @@ public class Expiry {
 	public static final MMBusinessAttribute mmExpiryCondition = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ExpiryTerms1.mmCondition, ExpiryTerms2.mmCondition);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Expiry.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Expiry.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpiryCondition";
 			definition = "Condition that indicates when the undertaking will cease to be available at the place for presentation. ";
@@ -258,8 +258,8 @@ public class Expiry {
 	};
 	protected YesNoIndicator openEndedIndicator;
 	/**
-	 * Specifies whether the expiry period is open ended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -296,8 +296,8 @@ public class Expiry {
 	public static final MMBusinessAttribute mmOpenEndedIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ExpiryTerms1.mmOpenEndedIndicator, ExpiryTerms2.mmOpenEndedIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Expiry.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Expiry.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OpenEndedIndicator";
 			definition = "Specifies whether the expiry period is open ended.";
@@ -316,8 +316,8 @@ public class Expiry {
 	};
 	protected Location expiryPlace;
 	/**
-	 * Place where the expiry of the undertaking takes effect.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -348,8 +348,8 @@ public class Expiry {
 	 */
 	public static final MMBusinessAssociationEnd mmExpiryPlace = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Expiry.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Expiry.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryPlace";
 			definition = "Place where the expiry of the undertaking takes effect.";
@@ -364,7 +364,7 @@ public class Expiry {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Expiry";
 				definition = "Expiry parameters.";
@@ -386,39 +386,44 @@ public class Expiry {
 		return expiryDateTime;
 	}
 
-	public void setExpiryDateTime(ISODateTime expiryDateTime) {
-		this.expiryDateTime = expiryDateTime;
+	public Expiry setExpiryDateTime(ISODateTime expiryDateTime) {
+		this.expiryDateTime = Objects.requireNonNull(expiryDateTime);
+		return this;
 	}
 
 	public Undertaking getUndertaking() {
 		return undertaking;
 	}
 
-	public void setUndertaking(com.tools20022.repository.entity.Undertaking undertaking) {
-		this.undertaking = undertaking;
+	public Expiry setUndertaking(com.tools20022.repository.entity.Undertaking undertaking) {
+		this.undertaking = Objects.requireNonNull(undertaking);
+		return this;
 	}
 
 	public Max2000Text getExpiryCondition() {
 		return expiryCondition;
 	}
 
-	public void setExpiryCondition(Max2000Text expiryCondition) {
-		this.expiryCondition = expiryCondition;
+	public Expiry setExpiryCondition(Max2000Text expiryCondition) {
+		this.expiryCondition = Objects.requireNonNull(expiryCondition);
+		return this;
 	}
 
 	public YesNoIndicator getOpenEndedIndicator() {
 		return openEndedIndicator;
 	}
 
-	public void setOpenEndedIndicator(YesNoIndicator openEndedIndicator) {
-		this.openEndedIndicator = openEndedIndicator;
+	public Expiry setOpenEndedIndicator(YesNoIndicator openEndedIndicator) {
+		this.openEndedIndicator = Objects.requireNonNull(openEndedIndicator);
+		return this;
 	}
 
 	public Location getExpiryPlace() {
 		return expiryPlace;
 	}
 
-	public void setExpiryPlace(com.tools20022.repository.entity.Location expiryPlace) {
-		this.expiryPlace = expiryPlace;
+	public Expiry setExpiryPlace(com.tools20022.repository.entity.Location expiryPlace) {
+		this.expiryPlace = Objects.requireNonNull(expiryPlace);
+		return this;
 	}
 }

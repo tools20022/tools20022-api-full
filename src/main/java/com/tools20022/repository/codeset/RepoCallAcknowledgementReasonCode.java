@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies additional information about the repurchase agreement call
@@ -33,20 +38,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#mmAccountServicerDeadlineMissed
- * RepoCallAcknowledgementReasonCode.mmAccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#AccountServicerDeadlineMissed
+ * RepoCallAcknowledgementReasonCode.AccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#mmInProcess
- * RepoCallAcknowledgementReasonCode.mmInProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#InProcess
+ * RepoCallAcknowledgementReasonCode.InProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#mmIssued
- * RepoCallAcknowledgementReasonCode.mmIssued}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#Issued
+ * RepoCallAcknowledgementReasonCode.Issued}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#mmProcessed
- * RepoCallAcknowledgementReasonCode.mmProcessed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#Processed
+ * RepoCallAcknowledgementReasonCode.Processed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#mmBeingProcessed
- * RepoCallAcknowledgementReasonCode.mmBeingProcessed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode#BeingProcessed
+ * RepoCallAcknowledgementReasonCode.BeingProcessed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -63,8 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class RepoCallAcknowledgementReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RepoCallAcknowledgementReasonCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -110,12 +116,12 @@ public class RepoCallAcknowledgementReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
+	public static final RepoCallAcknowledgementReasonCode AccountServicerDeadlineMissed = new RepoCallAcknowledgementReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
 			definition = "Received after the account servicer's deadline. Processed on best effort basis.";
-			owner_lazy = () -> RepoCallAcknowledgementReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.mmObject();
 			codeName = "ADEA";
 		}
 	};
@@ -140,12 +146,12 @@ public class RepoCallAcknowledgementReasonCode {
 	 * definition} = "Repuchase agreement call is in process."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInProcess = new MMCode() {
+	public static final RepoCallAcknowledgementReasonCode InProcess = new RepoCallAcknowledgementReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InProcess";
 			definition = "Repuchase agreement call is in process.";
-			owner_lazy = () -> RepoCallAcknowledgementReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.mmObject();
 			codeName = "CALD";
 		}
 	};
@@ -170,12 +176,12 @@ public class RepoCallAcknowledgementReasonCode {
 	 * definition} = "Repurchase agreement call is issued."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssued = new MMCode() {
+	public static final RepoCallAcknowledgementReasonCode Issued = new RepoCallAcknowledgementReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issued";
 			definition = "Repurchase agreement call is issued.";
-			owner_lazy = () -> RepoCallAcknowledgementReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.mmObject();
 			codeName = "CALI";
 		}
 	};
@@ -200,12 +206,12 @@ public class RepoCallAcknowledgementReasonCode {
 	 * definition} = "Repurchase agreement call is processed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProcessed = new MMCode() {
+	public static final RepoCallAcknowledgementReasonCode Processed = new RepoCallAcknowledgementReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Processed";
 			definition = "Repurchase agreement call is processed.";
-			owner_lazy = () -> RepoCallAcknowledgementReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.mmObject();
 			codeName = "CALP";
 		}
 	};
@@ -230,29 +236,63 @@ public class RepoCallAcknowledgementReasonCode {
 	 * definition} = "Repurchase agreement call request is being processed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBeingProcessed = new MMCode() {
+	public static final RepoCallAcknowledgementReasonCode BeingProcessed = new RepoCallAcknowledgementReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeingProcessed";
 			definition = "Repurchase agreement call request is being processed.";
-			owner_lazy = () -> RepoCallAcknowledgementReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.mmObject();
 			codeName = "CALR";
 		}
 	};
+	final static private LinkedHashMap<String, RepoCallAcknowledgementReasonCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RepoCallAcknowledgementReasonCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ADEA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RepoCallAcknowledgementReasonCode";
 				definition = "Specifies additional information about the repurchase agreement call processed instruction.";
-				code_lazy = () -> Arrays.asList(RepoCallAcknowledgementReasonCode.mmAccountServicerDeadlineMissed, RepoCallAcknowledgementReasonCode.mmInProcess, RepoCallAcknowledgementReasonCode.mmIssued,
-						RepoCallAcknowledgementReasonCode.mmProcessed, RepoCallAcknowledgementReasonCode.mmBeingProcessed);
 				derivation_lazy = () -> Arrays.asList(RepoCallAcknowledgementReason2Code.mmObject(), RepoCallAcknowledgementReason1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.InProcess,
+						com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.Issued, com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.Processed,
+						com.tools20022.repository.codeset.RepoCallAcknowledgementReasonCode.BeingProcessed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccountServicerDeadlineMissed.getCodeName().get(), AccountServicerDeadlineMissed);
+		codesByName.put(InProcess.getCodeName().get(), InProcess);
+		codesByName.put(Issued.getCodeName().get(), Issued);
+		codesByName.put(Processed.getCodeName().get(), Processed);
+		codesByName.put(BeingProcessed.getCodeName().get(), BeingProcessed);
+	}
+
+	public static RepoCallAcknowledgementReasonCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RepoCallAcknowledgementReasonCode[] values() {
+		RepoCallAcknowledgementReasonCode[] values = new RepoCallAcknowledgementReasonCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RepoCallAcknowledgementReasonCode> {
+		@Override
+		public RepoCallAcknowledgementReasonCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RepoCallAcknowledgementReasonCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

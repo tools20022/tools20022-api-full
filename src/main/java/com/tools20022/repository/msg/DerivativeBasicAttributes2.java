@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DerivativeBasicAttributes2", propOrder = {"notionalCurrencyAndAmount", "interestIncludedInPrice"})
 public class DerivativeBasicAttributes2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NtnlCcyAndAmt", required = true)
 	protected RestrictedFINActiveOrHistoricCurrencyAndAmount notionalCurrencyAndAmount;
 	/**
-	 * Amount underlying a financial derivatives contract necessary for
-	 * calculating payments or receipts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +115,7 @@ public class DerivativeBasicAttributes2 {
 	public static final MMMessageAttribute mmNotionalCurrencyAndAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrencyAndAmount;
-			componentContext_lazy = () -> DerivativeBasicAttributes2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeBasicAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "NtnlCcyAndAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,11 +126,11 @@ public class DerivativeBasicAttributes2 {
 			simpleType_lazy = () -> RestrictedFINActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstInclInPric")
 	protected YesNoIndicator interestIncludedInPrice;
 	/**
-	 * Indicates whether the given derivative price includes a prorated accrued
-	 * interest component.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +160,7 @@ public class DerivativeBasicAttributes2 {
 	 */
 	public static final MMMessageAttribute mmInterestIncludedInPrice = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DerivativeBasicAttributes2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeBasicAttributes2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstInclInPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,9 +175,9 @@ public class DerivativeBasicAttributes2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DerivativeBasicAttributes2.mmNotionalCurrencyAndAmount, DerivativeBasicAttributes2.mmInterestIncludedInPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeBasicAttributes2.mmNotionalCurrencyAndAmount, com.tools20022.repository.msg.DerivativeBasicAttributes2.mmInterestIncludedInPrice);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DerivativeBasicAttributes2";
 				definition = "Details of the derivative contract not included in the general financial instrument attributes component.";
@@ -184,21 +186,21 @@ public class DerivativeBasicAttributes2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NtnlCcyAndAmt", required = true)
 	public RestrictedFINActiveOrHistoricCurrencyAndAmount getNotionalCurrencyAndAmount() {
 		return notionalCurrencyAndAmount;
 	}
 
-	public void setNotionalCurrencyAndAmount(RestrictedFINActiveOrHistoricCurrencyAndAmount notionalCurrencyAndAmount) {
-		this.notionalCurrencyAndAmount = notionalCurrencyAndAmount;
+	public DerivativeBasicAttributes2 setNotionalCurrencyAndAmount(RestrictedFINActiveOrHistoricCurrencyAndAmount notionalCurrencyAndAmount) {
+		this.notionalCurrencyAndAmount = Objects.requireNonNull(notionalCurrencyAndAmount);
+		return this;
 	}
 
-	@XmlElement(name = "IntrstInclInPric")
-	public YesNoIndicator getInterestIncludedInPrice() {
-		return interestIncludedInPrice;
+	public Optional<YesNoIndicator> getInterestIncludedInPrice() {
+		return interestIncludedInPrice == null ? Optional.empty() : Optional.of(interestIncludedInPrice);
 	}
 
-	public void setInterestIncludedInPrice(YesNoIndicator interestIncludedInPrice) {
+	public DerivativeBasicAttributes2 setInterestIncludedInPrice(YesNoIndicator interestIncludedInPrice) {
 		this.interestIncludedInPrice = interestIncludedInPrice;
+		return this;
 	}
 }

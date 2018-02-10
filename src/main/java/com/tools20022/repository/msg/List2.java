@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -28,6 +29,8 @@ import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,16 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "List2", propOrder = {"listIdentification", "tradeOriginationDateTime", "tradeDate"})
 public class List2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ListId", required = true)
 	protected Max35Text listIdentification;
 	/**
-	 * Unique identifier for a list, as assigned by the trading party. The
-	 * identifier must be unique within a single trading day.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,6 +111,9 @@ public class List2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ListId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 66</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -123,9 +129,10 @@ public class List2 {
 	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
-			componentContext_lazy = () -> List2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.List2.mmObject();
 			isDerived = false;
 			xmlTag = "ListId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "66"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListIdentification";
 			definition = "Unique identifier for a list, as assigned by the trading party. The identifier must be unique within a single trading day.";
@@ -134,12 +141,11 @@ public class List2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TradOrgtnDtTm")
 	protected ISODateTime tradeOriginationDateTime;
 	/**
-	 * Indicates the date and time of the agreement in principal between
-	 * counter-parties prior to actual trade date. Used with fixed income for
-	 * municipal new issue markets.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,6 +164,9 @@ public class List2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradOrgtnDtTm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 229</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -173,9 +182,10 @@ public class List2 {
 	public static final MMMessageAttribute mmTradeOriginationDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeOriginationDate;
-			componentContext_lazy = () -> List2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.List2.mmObject();
 			isDerived = false;
 			xmlTag = "TradOrgtnDtTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "229"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeOriginationDateTime";
 			definition = "Indicates the date and time of the agreement in principal between counter-parties prior to actual trade date.\nUsed with fixed income for municipal new issue markets.";
@@ -184,10 +194,11 @@ public class List2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDt")
 	protected ISODateTime tradeDate;
 	/**
-	 * Specifies the date/time on which the trade was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,6 +217,9 @@ public class List2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 75</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -219,9 +233,10 @@ public class List2 {
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> List2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.List2.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "75"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
@@ -234,9 +249,9 @@ public class List2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(List2.mmListIdentification, List2.mmTradeOriginationDateTime, List2.mmTradeDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.List2.mmListIdentification, com.tools20022.repository.msg.List2.mmTradeOriginationDateTime, com.tools20022.repository.msg.List2.mmTradeDate);
 				trace_lazy = () -> ListTrading.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "List2";
 				definition = "Provides the details for negotiating and trading a large number of securities contained in or comprising a portfolio. \n\nOne example is index arbitrage, which consists in the purchase or sale of a basket of stocks in conjunction with the sale or purchase of\na derivative product (for example index futures) to profit from price differences between the basket and the derivative product. \n\nOther examples include liquidation of EFP (Exchange for Physical) stock positions, portfolio realignment and portfolio liquidation.";
@@ -245,30 +260,30 @@ public class List2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ListId", required = true)
 	public Max35Text getListIdentification() {
 		return listIdentification;
 	}
 
-	public void setListIdentification(Max35Text listIdentification) {
-		this.listIdentification = listIdentification;
+	public List2 setListIdentification(Max35Text listIdentification) {
+		this.listIdentification = Objects.requireNonNull(listIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TradOrgtnDtTm")
-	public ISODateTime getTradeOriginationDateTime() {
-		return tradeOriginationDateTime;
+	public Optional<ISODateTime> getTradeOriginationDateTime() {
+		return tradeOriginationDateTime == null ? Optional.empty() : Optional.of(tradeOriginationDateTime);
 	}
 
-	public void setTradeOriginationDateTime(ISODateTime tradeOriginationDateTime) {
+	public List2 setTradeOriginationDateTime(ISODateTime tradeOriginationDateTime) {
 		this.tradeOriginationDateTime = tradeOriginationDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "TradDt")
-	public ISODateTime getTradeDate() {
-		return tradeDate;
+	public Optional<ISODateTime> getTradeDate() {
+		return tradeDate == null ? Optional.empty() : Optional.of(tradeDate);
 	}
 
-	public void setTradeDate(ISODateTime tradeDate) {
+	public List2 setTradeDate(ISODateTime tradeDate) {
 		this.tradeDate = tradeDate;
+		return this;
 	}
 }

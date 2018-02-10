@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.EventGroupCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies DTC (The Depository Trust Company) processing domain for the event.
@@ -31,15 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventGroupCode#Redemption
+ * EventGroupCode.Redemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventGroupCode#mmRedemption
- * EventGroupCode.mmRedemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventGroupCode#Reorganization
+ * EventGroupCode.Reorganization}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EventGroupCode#mmReorganization
- * EventGroupCode.mmReorganization}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventGroupCode#mmDistribution
- * EventGroupCode.mmDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.EventGroupCode#Distribution
+ * EventGroupCode.Distribution}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class EventGroupCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EventGroupCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,12 +103,12 @@ public class EventGroupCode {
 	 * definition} = "Redemption domain events."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRedemption = new MMCode() {
+	public static final EventGroupCode Redemption = new EventGroupCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
 			definition = "Redemption domain events.";
-			owner_lazy = () -> EventGroupCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventGroupCode.mmObject();
 			codeName = "REDM";
 		}
 	};
@@ -128,12 +133,12 @@ public class EventGroupCode {
 	 * definition} = "Reorganization domain events."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReorganization = new MMCode() {
+	public static final EventGroupCode Reorganization = new EventGroupCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reorganization";
 			definition = "Reorganization domain events.";
-			owner_lazy = () -> EventGroupCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventGroupCode.mmObject();
 			codeName = "REOR";
 		}
 	};
@@ -158,28 +163,59 @@ public class EventGroupCode {
 	 * definition} = "Distribution domain events."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDistribution = new MMCode() {
+	public static final EventGroupCode Distribution = new EventGroupCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Distribution";
 			definition = "Distribution domain events.";
-			owner_lazy = () -> EventGroupCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventGroupCode.mmObject();
 			codeName = "DISN";
 		}
 	};
+	final static private LinkedHashMap<String, EventGroupCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EventGroupCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REDM");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventGroupCode";
 				definition = "Specifies DTC (The Depository Trust Company) processing domain for the event.";
-				code_lazy = () -> Arrays.asList(EventGroupCode.mmRedemption, EventGroupCode.mmReorganization, EventGroupCode.mmDistribution);
 				derivation_lazy = () -> Arrays.asList(EventGroup1Code.mmObject(), EventGroup2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventGroupCode.Redemption, com.tools20022.repository.codeset.EventGroupCode.Reorganization, com.tools20022.repository.codeset.EventGroupCode.Distribution);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Redemption.getCodeName().get(), Redemption);
+		codesByName.put(Reorganization.getCodeName().get(), Reorganization);
+		codesByName.put(Distribution.getCodeName().get(), Distribution);
+	}
+
+	public static EventGroupCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EventGroupCode[] values() {
+		EventGroupCode[] values = new EventGroupCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EventGroupCode> {
+		@Override
+		public EventGroupCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EventGroupCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

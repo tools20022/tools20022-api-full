@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification
 import com.tools20022.repository.msg.PartyIdentification94;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Identification of a person, an organisation or a financial institution."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Party29Choice", propOrder = {"organisationIdentification", "financialInstitutionIdentification"})
 public class Party29Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgId", required = true)
 	protected PartyIdentification94 organisationIdentification;
 	/**
-	 * Identification of a person or an organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +111,7 @@ public class Party29Choice {
 	public static final MMMessageAssociationEnd mmOrganisationIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
-			componentContext_lazy = () -> Party29Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Party29Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +123,11 @@ public class Party29Choice {
 			type_lazy = () -> PartyIdentification94.mmObject();
 		}
 	};
+	@XmlElement(name = "FIId", required = true)
 	protected BranchAndFinancialInstitutionIdentification5 financialInstitutionIdentification;
 	/**
-	 * Identification of a financial institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -157,7 +160,7 @@ public class Party29Choice {
 	public static final MMMessageAssociationEnd mmFinancialInstitutionIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
-			componentContext_lazy = () -> Party29Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Party29Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FIId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,9 +176,9 @@ public class Party29Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Party29Choice.mmOrganisationIdentification, Party29Choice.mmFinancialInstitutionIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party29Choice.mmOrganisationIdentification, com.tools20022.repository.choice.Party29Choice.mmFinancialInstitutionIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Party29Choice";
 				definition = "Identification of a person, an organisation or a financial institution.";
@@ -184,21 +187,21 @@ public class Party29Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgId", required = true)
 	public PartyIdentification94 getOrganisationIdentification() {
 		return organisationIdentification;
 	}
 
-	public void setOrganisationIdentification(PartyIdentification94 organisationIdentification) {
-		this.organisationIdentification = organisationIdentification;
+	public Party29Choice setOrganisationIdentification(PartyIdentification94 organisationIdentification) {
+		this.organisationIdentification = Objects.requireNonNull(organisationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "FIId", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getFinancialInstitutionIdentification() {
 		return financialInstitutionIdentification;
 	}
 
-	public void setFinancialInstitutionIdentification(BranchAndFinancialInstitutionIdentification5 financialInstitutionIdentification) {
-		this.financialInstitutionIdentification = financialInstitutionIdentification;
+	public Party29Choice setFinancialInstitutionIdentification(BranchAndFinancialInstitutionIdentification5 financialInstitutionIdentification) {
+		this.financialInstitutionIdentification = Objects.requireNonNull(financialInstitutionIdentification);
+		return this;
 	}
 }

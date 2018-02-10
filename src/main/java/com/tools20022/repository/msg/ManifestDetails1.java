@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,17 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ManifestDetails1", propOrder = {"documentType", "numberOfDocuments"})
 public class ManifestDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DocTp", required = true)
 	protected Max35Text documentType;
 	/**
-	 * Specifies the type of items contained in the document set. An initial
-	 * list of values can be found in the ISO20022 message type catalogue such
-	 * as admi, camt, pacs , sese, semt etc. ISO messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +104,7 @@ public class ManifestDetails1 {
 	 */
 	public static final MMMessageAttribute mmDocumentType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ManifestDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ManifestDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "DocTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +115,11 @@ public class ManifestDetails1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfDocs", required = true)
 	protected Number numberOfDocuments;
 	/**
-	 * Gives the number of instances (messages) for each declared type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +147,7 @@ public class ManifestDetails1 {
 	 */
 	public static final MMMessageAttribute mmNumberOfDocuments = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ManifestDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ManifestDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfDocs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,8 +162,8 @@ public class ManifestDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ManifestDetails1.mmDocumentType, ManifestDetails1.mmNumberOfDocuments);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ManifestDetails1.mmDocumentType, com.tools20022.repository.msg.ManifestDetails1.mmNumberOfDocuments);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ManifestDetails1";
 				definition = "Describes the related items or attachments (such as message types and number of messages types) within the file.";
@@ -171,21 +172,21 @@ public class ManifestDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DocTp", required = true)
 	public Max35Text getDocumentType() {
 		return documentType;
 	}
 
-	public void setDocumentType(Max35Text documentType) {
-		this.documentType = documentType;
+	public ManifestDetails1 setDocumentType(Max35Text documentType) {
+		this.documentType = Objects.requireNonNull(documentType);
+		return this;
 	}
 
-	@XmlElement(name = "NbOfDocs", required = true)
 	public Number getNumberOfDocuments() {
 		return numberOfDocuments;
 	}
 
-	public void setNumberOfDocuments(Number numberOfDocuments) {
-		this.numberOfDocuments = numberOfDocuments;
+	public ManifestDetails1 setNumberOfDocuments(Number numberOfDocuments) {
+		this.numberOfDocuments = Objects.requireNonNull(numberOfDocuments);
+		return this;
 	}
 }

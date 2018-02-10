@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SignedQuantityFormat4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * AdjustedBalanceTypeSD1Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AdjustedBalanceTypeSD2Choice", propOrder = {"stockLoan", "repo"})
 public class AdjustedBalanceTypeSD2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StockLn", required = true)
 	protected SignedQuantityFormat4 stockLoan;
 	/**
-	 * Stock loan transaction position. Stock loan is loaned / borrowed from /
-	 * to a third party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -90,6 +92,9 @@ public class AdjustedBalanceTypeSD2Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StockLn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Stock Loan</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -104,9 +109,10 @@ public class AdjustedBalanceTypeSD2Choice {
 	 */
 	public static final MMMessageAttribute mmStockLoan = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AdjustedBalanceTypeSD2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AdjustedBalanceTypeSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StockLn";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Stock Loan"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoan";
 			definition = "Stock loan transaction position. Stock loan is loaned / borrowed from / to a third party.";
@@ -115,12 +121,11 @@ public class AdjustedBalanceTypeSD2Choice {
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "Repo", required = true)
 	protected SignedQuantityFormat4 repo;
 	/**
-	 * Repurchase agreement (REPO) between a seller and a buyer whereby the
-	 * seller agrees to repurchase the securities at an agreed upon price, and
-	 * usually at a stated time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,6 +141,9 @@ public class AdjustedBalanceTypeSD2Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Repo"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: REPO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -150,9 +158,10 @@ public class AdjustedBalanceTypeSD2Choice {
 	 */
 	public static final MMMessageAttribute mmRepo = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AdjustedBalanceTypeSD2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AdjustedBalanceTypeSD2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Repo";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "REPO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repo";
 			definition = "Repurchase agreement (REPO) between a seller and a buyer whereby the seller agrees to repurchase the securities at an agreed upon price, and usually at a stated time. ";
@@ -165,8 +174,8 @@ public class AdjustedBalanceTypeSD2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AdjustedBalanceTypeSD2Choice.mmStockLoan, AdjustedBalanceTypeSD2Choice.mmRepo);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdjustedBalanceTypeSD2Choice.mmStockLoan, com.tools20022.repository.choice.AdjustedBalanceTypeSD2Choice.mmRepo);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AdjustedBalanceTypeSD2Choice";
 				definition = "Choice of balance types to provide transaction details.";
@@ -176,21 +185,21 @@ public class AdjustedBalanceTypeSD2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StockLn", required = true)
 	public SignedQuantityFormat4 getStockLoan() {
 		return stockLoan;
 	}
 
-	public void setStockLoan(SignedQuantityFormat4 stockLoan) {
-		this.stockLoan = stockLoan;
+	public AdjustedBalanceTypeSD2Choice setStockLoan(SignedQuantityFormat4 stockLoan) {
+		this.stockLoan = Objects.requireNonNull(stockLoan);
+		return this;
 	}
 
-	@XmlElement(name = "Repo", required = true)
 	public SignedQuantityFormat4 getRepo() {
 		return repo;
 	}
 
-	public void setRepo(SignedQuantityFormat4 repo) {
-		this.repo = repo;
+	public AdjustedBalanceTypeSD2Choice setRepo(SignedQuantityFormat4 repo) {
+		this.repo = Objects.requireNonNull(repo);
+		return this;
 	}
 }

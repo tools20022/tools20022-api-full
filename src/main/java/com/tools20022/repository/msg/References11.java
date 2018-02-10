@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -92,8 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCounterpartyReferenceRule#forReferences11
+ * ConstraintCounterpartyReferenceRule.forReferences11}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,15 +121,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "References11", propOrder = {"poolReference", "previousReference", "relatedReference", "counterpartyReference"})
 public class References11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PoolRef")
 	protected AdditionalReference2 poolReference;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +165,7 @@ public class References11 {
 	 */
 	public static final MMMessageAttribute mmPoolReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> References11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.References11.mmObject();
 			isDerived = false;
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,10 +177,11 @@ public class References11 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsRef")
 	protected AdditionalReference2 previousReference;
 	/**
-	 * Reference of the linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,7 +217,7 @@ public class References11 {
 	 */
 	public static final MMMessageAttribute mmPreviousReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> References11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.References11.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,10 +229,11 @@ public class References11 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdRef")
 	protected AdditionalReference2 relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -257,7 +269,7 @@ public class References11 {
 	 */
 	public static final MMMessageAttribute mmRelatedReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> References11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.References11.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,10 +281,11 @@ public class References11 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference2.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrPtyRef")
 	protected AdditionalReference2 counterpartyReference;
 	/**
-	 * Unambiguous identification of the transfer allocated by the counterparty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -307,7 +320,7 @@ public class References11 {
 	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
-			componentContext_lazy = () -> References11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.References11.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -322,12 +335,14 @@ public class References11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(References11.mmPoolReference, References11.mmPreviousReference, References11.mmRelatedReference, References11.mmCounterpartyReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.References11.mmPoolReference, com.tools20022.repository.msg.References11.mmPreviousReference,
+						com.tools20022.repository.msg.References11.mmRelatedReference, com.tools20022.repository.msg.References11.mmCounterpartyReference);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ReversalOfTransferInConfirmationV03.mmReferences, ReversalOfTransferInConfirmationV04.mmReferences, ReversalOfTransferOutConfirmationV03.mmReferences,
 						ReversalOfTransferOutConfirmationV04.mmReferences, TransferInCancellationRequestV03.mmReferences, TransferInCancellationRequestV04.mmReferences, TransferOutCancellationRequestV03.mmReferences,
 						TransferOutCancellationRequestV04.mmReferences);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCounterpartyReferenceRule.forReferences11);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "References11";
 				definition = "Reference to the transaction identifier issued by the counterparty. Building block may also be used to reference a previous transaction, or tie a set of messages together.";
@@ -337,39 +352,39 @@ public class References11 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PoolRef")
-	public AdditionalReference2 getPoolReference() {
-		return poolReference;
+	public Optional<AdditionalReference2> getPoolReference() {
+		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public void setPoolReference(com.tools20022.repository.msg.AdditionalReference2 poolReference) {
+	public References11 setPoolReference(com.tools20022.repository.msg.AdditionalReference2 poolReference) {
 		this.poolReference = poolReference;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef")
-	public AdditionalReference2 getPreviousReference() {
-		return previousReference;
+	public Optional<AdditionalReference2> getPreviousReference() {
+		return previousReference == null ? Optional.empty() : Optional.of(previousReference);
 	}
 
-	public void setPreviousReference(com.tools20022.repository.msg.AdditionalReference2 previousReference) {
+	public References11 setPreviousReference(com.tools20022.repository.msg.AdditionalReference2 previousReference) {
 		this.previousReference = previousReference;
+		return this;
 	}
 
-	@XmlElement(name = "RltdRef")
-	public AdditionalReference2 getRelatedReference() {
-		return relatedReference;
+	public Optional<AdditionalReference2> getRelatedReference() {
+		return relatedReference == null ? Optional.empty() : Optional.of(relatedReference);
 	}
 
-	public void setRelatedReference(com.tools20022.repository.msg.AdditionalReference2 relatedReference) {
+	public References11 setRelatedReference(com.tools20022.repository.msg.AdditionalReference2 relatedReference) {
 		this.relatedReference = relatedReference;
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtyRef")
-	public AdditionalReference2 getCounterpartyReference() {
-		return counterpartyReference;
+	public Optional<AdditionalReference2> getCounterpartyReference() {
+		return counterpartyReference == null ? Optional.empty() : Optional.of(counterpartyReference);
 	}
 
-	public void setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference2 counterpartyReference) {
+	public References11 setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference2 counterpartyReference) {
 		this.counterpartyReference = counterpartyReference;
+		return this;
 	}
 }

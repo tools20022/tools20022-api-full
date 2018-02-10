@@ -20,52 +20,56 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SecuritiesBalanceTypeCode;
+import com.tools20022.repository.codeset.SecuritiesBalanceType4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the nature of the securities or investment fund balance.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceTypeCode
- * SecuritiesBalanceTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#mmTaxExempt
- * SecuritiesBalanceType4Code.mmTaxExempt}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#TaxExempt
+ * SecuritiesBalanceType4Code.TaxExempt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#mmNonTaxExempt
- * SecuritiesBalanceType4Code.mmNonTaxExempt}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#NonTaxExempt
+ * SecuritiesBalanceType4Code.NonTaxExempt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#mmRegistered
- * SecuritiesBalanceType4Code.mmRegistered}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#Registered
+ * SecuritiesBalanceType4Code.Registered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#mmUnclassified
- * SecuritiesBalanceType4Code.mmUnclassified}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#Unclassified
+ * SecuritiesBalanceType4Code.Unclassified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#mmStreetPosition
- * SecuritiesBalanceType4Code.mmStreetPosition}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#StreetPosition
+ * SecuritiesBalanceType4Code.StreetPosition}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#mmUnregistered
- * SecuritiesBalanceType4Code.mmUnregistered}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#Unregistered
+ * SecuritiesBalanceType4Code.Unregistered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#mmSidePocketComponent
- * SecuritiesBalanceType4Code.mmSidePocketComponent}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#SidePocketComponent
+ * SecuritiesBalanceType4Code.SidePocketComponent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#mmHoldback
- * SecuritiesBalanceType4Code.mmHoldback}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType4Code#Holdback
+ * SecuritiesBalanceType4Code.Holdback}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceTypeCode
+ * SecuritiesBalanceTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the nature of the securities or investment fund balance."</li>
  * </ul>
  */
-public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecuritiesBalanceType4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -102,11 +107,12 @@ public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
 	 * name} = "TaxExempt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxExempt = new MMCode() {
+	public static final SecuritiesBalanceType4Code TaxExempt = new SecuritiesBalanceType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxExempt";
-			owner_lazy = () -> SecuritiesBalanceType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType4Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.TaxExempt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -125,11 +131,12 @@ public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
 	 * name} = "NonTaxExempt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonTaxExempt = new MMCode() {
+	public static final SecuritiesBalanceType4Code NonTaxExempt = new SecuritiesBalanceType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonTaxExempt";
-			owner_lazy = () -> SecuritiesBalanceType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType4Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.NonTaxExempt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -148,11 +155,12 @@ public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Registered"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegistered = new MMCode() {
+	public static final SecuritiesBalanceType4Code Registered = new SecuritiesBalanceType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registered";
-			owner_lazy = () -> SecuritiesBalanceType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType4Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.Registered.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -171,11 +179,12 @@ public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Unclassified"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnclassified = new MMCode() {
+	public static final SecuritiesBalanceType4Code Unclassified = new SecuritiesBalanceType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unclassified";
-			owner_lazy = () -> SecuritiesBalanceType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType4Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.Unclassified.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -194,11 +203,12 @@ public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
 	 * name} = "StreetPosition"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStreetPosition = new MMCode() {
+	public static final SecuritiesBalanceType4Code StreetPosition = new SecuritiesBalanceType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StreetPosition";
-			owner_lazy = () -> SecuritiesBalanceType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType4Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.StreetPosition.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -217,11 +227,12 @@ public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Unregistered"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnregistered = new MMCode() {
+	public static final SecuritiesBalanceType4Code Unregistered = new SecuritiesBalanceType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unregistered";
-			owner_lazy = () -> SecuritiesBalanceType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType4Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.Unregistered.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -240,11 +251,12 @@ public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
 	 * name} = "SidePocketComponent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSidePocketComponent = new MMCode() {
+	public static final SecuritiesBalanceType4Code SidePocketComponent = new SecuritiesBalanceType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SidePocketComponent";
-			owner_lazy = () -> SecuritiesBalanceType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType4Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.SidePocketComponent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -263,27 +275,66 @@ public class SecuritiesBalanceType4Code extends SecuritiesBalanceTypeCode {
 	 * name} = "Holdback"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHoldback = new MMCode() {
+	public static final SecuritiesBalanceType4Code Holdback = new SecuritiesBalanceType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Holdback";
-			owner_lazy = () -> SecuritiesBalanceType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType4Code.mmObject();
+			codeName = SecuritiesBalanceTypeCode.Holdback.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SecuritiesBalanceType4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecuritiesBalanceType4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CLEN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceType4Code";
 				definition = "Specifies the nature of the securities or investment fund balance.";
-				code_lazy = () -> Arrays.asList(SecuritiesBalanceType4Code.mmTaxExempt, SecuritiesBalanceType4Code.mmNonTaxExempt, SecuritiesBalanceType4Code.mmRegistered, SecuritiesBalanceType4Code.mmUnclassified,
-						SecuritiesBalanceType4Code.mmStreetPosition, SecuritiesBalanceType4Code.mmUnregistered, SecuritiesBalanceType4Code.mmSidePocketComponent, SecuritiesBalanceType4Code.mmHoldback);
 				trace_lazy = () -> SecuritiesBalanceTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesBalanceType4Code.TaxExempt, com.tools20022.repository.codeset.SecuritiesBalanceType4Code.NonTaxExempt,
+						com.tools20022.repository.codeset.SecuritiesBalanceType4Code.Registered, com.tools20022.repository.codeset.SecuritiesBalanceType4Code.Unclassified,
+						com.tools20022.repository.codeset.SecuritiesBalanceType4Code.StreetPosition, com.tools20022.repository.codeset.SecuritiesBalanceType4Code.Unregistered,
+						com.tools20022.repository.codeset.SecuritiesBalanceType4Code.SidePocketComponent, com.tools20022.repository.codeset.SecuritiesBalanceType4Code.Holdback);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(TaxExempt.getCodeName().get(), TaxExempt);
+		codesByName.put(NonTaxExempt.getCodeName().get(), NonTaxExempt);
+		codesByName.put(Registered.getCodeName().get(), Registered);
+		codesByName.put(Unclassified.getCodeName().get(), Unclassified);
+		codesByName.put(StreetPosition.getCodeName().get(), StreetPosition);
+		codesByName.put(Unregistered.getCodeName().get(), Unregistered);
+		codesByName.put(SidePocketComponent.getCodeName().get(), SidePocketComponent);
+		codesByName.put(Holdback.getCodeName().get(), Holdback);
+	}
+
+	public static SecuritiesBalanceType4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecuritiesBalanceType4Code[] values() {
+		SecuritiesBalanceType4Code[] values = new SecuritiesBalanceType4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecuritiesBalanceType4Code> {
+		@Override
+		public SecuritiesBalanceType4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecuritiesBalanceType4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

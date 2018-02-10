@@ -25,9 +25,11 @@ import com.tools20022.repository.codeset.FreightCharges1Code;
 import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Charge12", propOrder = {"type", "charges"})
 public class Charge12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected FreightCharges1Code type;
 	/**
-	 * Identifies whether the freight charges associated with the goods are
-	 * "prepaid" or "collect".
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +125,7 @@ public class Charge12 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmFreightChargesPrepaidOrCollect;
-			componentContext_lazy = () -> Charge12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge12.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +137,11 @@ public class Charge12 {
 			simpleType_lazy = () -> FreightCharges1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Chrgs")
 	protected List<com.tools20022.repository.msg.ChargesDetails1> charges;
 	/**
-	 * Amount of money associated with a service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -175,7 +178,7 @@ public class Charge12 {
 	public static final MMMessageAssociationEnd mmCharges = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Charges.mmObject();
-			componentContext_lazy = () -> Charge12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge12.mmObject();
 			isDerived = false;
 			xmlTag = "Chrgs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,9 +194,9 @@ public class Charge12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Charge12.mmType, Charge12.mmCharges);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge12.mmType, com.tools20022.repository.msg.Charge12.mmCharges);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Charge12";
 				definition = "Identifies the different types of freight charges associated with goods.";
@@ -203,21 +206,21 @@ public class Charge12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public FreightCharges1Code getType() {
 		return type;
 	}
 
-	public void setType(FreightCharges1Code type) {
-		this.type = type;
+	public Charge12 setType(FreightCharges1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Chrgs")
 	public List<ChargesDetails1> getCharges() {
-		return charges;
+		return charges == null ? charges = new ArrayList<>() : charges;
 	}
 
-	public void setCharges(List<com.tools20022.repository.msg.ChargesDetails1> charges) {
-		this.charges = charges;
+	public Charge12 setCharges(List<com.tools20022.repository.msg.ChargesDetails1> charges) {
+		this.charges = Objects.requireNonNull(charges);
+		return this;
 	}
 }

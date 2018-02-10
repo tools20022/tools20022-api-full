@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -29,6 +30,7 @@ import com.tools20022.repository.msg.NoSpecifiedReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -82,8 +84,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,15 +108,16 @@ import javax.xml.bind.annotation.XmlType;
  * InstructionProcessingStatus7Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InstructionProcessingStatus12Choice", propOrder = {"cancelled", "acceptedForFurtherProcessing", "rejected", "pending", "defaultAction", "standingInstruction", "proprietaryStatus"})
 public class InstructionProcessingStatus12Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Canc", required = true)
 	protected CancelledStatus3Choice cancelled;
 	/**
-	 * Provides status information related to an instruction request cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -133,6 +136,9 @@ public class InstructionProcessingStatus12Choice {
 	 * InstructionProcessingStatus12Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Canc"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::IPRC//CAND</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -157,9 +163,10 @@ public class InstructionProcessingStatus12Choice {
 	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmCancellationReason;
-			componentContext_lazy = () -> InstructionProcessingStatus12Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Canc";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::IPRC//CAND"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			definition = "Provides status information related to an instruction request cancelled.";
@@ -170,12 +177,11 @@ public class InstructionProcessingStatus12Choice {
 			type_lazy = () -> com.tools20022.repository.choice.CancelledStatus3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AccptdForFrthrPrcg", required = true)
 	protected AcceptedStatus1Choice acceptedForFurtherProcessing;
 	/**
-	 * Provides status information related to an instruction request that is
-	 * accepted. This means that the instruction has been received, is
-	 * processable and has been validated for further processing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -194,6 +200,9 @@ public class InstructionProcessingStatus12Choice {
 	 * InstructionProcessingStatus12Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AccptdForFrthrPrcg"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::IPRC//PACK</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -218,9 +227,10 @@ public class InstructionProcessingStatus12Choice {
 	public static final MMMessageAssociationEnd mmAcceptedForFurtherProcessing = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatusReason.mmAcceptedReason;
-			componentContext_lazy = () -> InstructionProcessingStatus12Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AccptdForFrthrPrcg";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::IPRC//PACK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedForFurtherProcessing";
 			definition = "Provides status information related to an instruction request that is accepted. This means that the instruction has been received, is processable and has been validated for further processing.";
@@ -231,11 +241,11 @@ public class InstructionProcessingStatus12Choice {
 			type_lazy = () -> com.tools20022.repository.choice.AcceptedStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Rjctd", required = true)
 	protected RejectedStatus1Choice rejected;
 	/**
-	 * Provides status information related to an instruction request rejected
-	 * for further processing due to system reasons.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -254,6 +264,9 @@ public class InstructionProcessingStatus12Choice {
 	 * InstructionProcessingStatus12Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Rjctd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::IPRC//REJT</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -278,9 +291,10 @@ public class InstructionProcessingStatus12Choice {
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmRejectionReason;
-			componentContext_lazy = () -> InstructionProcessingStatus12Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::IPRC//REJT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Provides status information related to an instruction request rejected for further processing due to system reasons.";
@@ -291,10 +305,11 @@ public class InstructionProcessingStatus12Choice {
 			type_lazy = () -> com.tools20022.repository.choice.RejectedStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Pdg", required = true)
 	protected PendingStatus1Choice pending;
 	/**
-	 * Provides status information related to a pending instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -313,6 +328,9 @@ public class InstructionProcessingStatus12Choice {
 	 * InstructionProcessingStatus12Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pdg"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::IPRC//PEND</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -336,9 +354,10 @@ public class InstructionProcessingStatus12Choice {
 	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmPendingReason;
-			componentContext_lazy = () -> InstructionProcessingStatus12Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::IPRC//PEND"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
 			definition = "Provides status information related to a pending instruction.";
@@ -349,10 +368,11 @@ public class InstructionProcessingStatus12Choice {
 			type_lazy = () -> com.tools20022.repository.choice.PendingStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DfltActn", required = true)
 	protected NoSpecifiedReason1 defaultAction;
 	/**
-	 * Default action is taken.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -370,6 +390,9 @@ public class InstructionProcessingStatus12Choice {
 	 * InstructionProcessingStatus12Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DfltActn"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::IPRC//DFLA</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -392,9 +415,10 @@ public class InstructionProcessingStatus12Choice {
 	public static final MMMessageAssociationEnd mmDefaultAction = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatusReason.mmObject();
-			componentContext_lazy = () -> InstructionProcessingStatus12Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DfltActn";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::IPRC//DFLA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultAction";
 			definition = "Default action is taken.";
@@ -405,10 +429,11 @@ public class InstructionProcessingStatus12Choice {
 			type_lazy = () -> NoSpecifiedReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "StgInstr", required = true)
 	protected NoSpecifiedReason1 standingInstruction;
 	/**
-	 * Standing instruction has been applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -426,6 +451,9 @@ public class InstructionProcessingStatus12Choice {
 	 * InstructionProcessingStatus12Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StgInstr"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::IPRC//STIN</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -448,9 +476,10 @@ public class InstructionProcessingStatus12Choice {
 	public static final MMMessageAssociationEnd mmStandingInstruction = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatusReason.mmObject();
-			componentContext_lazy = () -> InstructionProcessingStatus12Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StgInstr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::IPRC//STIN"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstruction";
 			definition = "Standing instruction has been applied.";
@@ -461,10 +490,11 @@ public class InstructionProcessingStatus12Choice {
 			type_lazy = () -> NoSpecifiedReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtrySts", required = true)
 	protected ProprietaryStatusAndReason1 proprietaryStatus;
 	/**
-	 * Proprietary status related to an instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -483,6 +513,9 @@ public class InstructionProcessingStatus12Choice {
 	 * InstructionProcessingStatus12Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrtrySts"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :25D::IPRC//[8c]/4!c</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -505,9 +538,10 @@ public class InstructionProcessingStatus12Choice {
 	public static final MMMessageAssociationEnd mmProprietaryStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
-			componentContext_lazy = () -> InstructionProcessingStatus12Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InstructionProcessingStatus12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtrySts";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":25D::IPRC//[8c]/4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatus";
 			definition = "Proprietary status related to an instruction.";
@@ -522,11 +556,13 @@ public class InstructionProcessingStatus12Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InstructionProcessingStatus12Choice.mmCancelled, InstructionProcessingStatus12Choice.mmAcceptedForFurtherProcessing, InstructionProcessingStatus12Choice.mmRejected,
-						InstructionProcessingStatus12Choice.mmPending, InstructionProcessingStatus12Choice.mmDefaultAction, InstructionProcessingStatus12Choice.mmStandingInstruction, InstructionProcessingStatus12Choice.mmProprietaryStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstructionProcessingStatus12Choice.mmCancelled,
+						com.tools20022.repository.choice.InstructionProcessingStatus12Choice.mmAcceptedForFurtherProcessing, com.tools20022.repository.choice.InstructionProcessingStatus12Choice.mmRejected,
+						com.tools20022.repository.choice.InstructionProcessingStatus12Choice.mmPending, com.tools20022.repository.choice.InstructionProcessingStatus12Choice.mmDefaultAction,
+						com.tools20022.repository.choice.InstructionProcessingStatus12Choice.mmStandingInstruction, com.tools20022.repository.choice.InstructionProcessingStatus12Choice.mmProprietaryStatus);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionStatusAdviceV04.mmInstructionProcessingStatus);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionProcessingStatus12Choice";
 				definition = "Choice between different instruction processing statuses.";
@@ -537,66 +573,66 @@ public class InstructionProcessingStatus12Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Canc", required = true)
 	public CancelledStatus3Choice getCancelled() {
 		return cancelled;
 	}
 
-	public void setCancelled(com.tools20022.repository.choice.CancelledStatus3Choice cancelled) {
-		this.cancelled = cancelled;
+	public InstructionProcessingStatus12Choice setCancelled(com.tools20022.repository.choice.CancelledStatus3Choice cancelled) {
+		this.cancelled = Objects.requireNonNull(cancelled);
+		return this;
 	}
 
-	@XmlElement(name = "AccptdForFrthrPrcg", required = true)
 	public AcceptedStatus1Choice getAcceptedForFurtherProcessing() {
 		return acceptedForFurtherProcessing;
 	}
 
-	public void setAcceptedForFurtherProcessing(com.tools20022.repository.choice.AcceptedStatus1Choice acceptedForFurtherProcessing) {
-		this.acceptedForFurtherProcessing = acceptedForFurtherProcessing;
+	public InstructionProcessingStatus12Choice setAcceptedForFurtherProcessing(com.tools20022.repository.choice.AcceptedStatus1Choice acceptedForFurtherProcessing) {
+		this.acceptedForFurtherProcessing = Objects.requireNonNull(acceptedForFurtherProcessing);
+		return this;
 	}
 
-	@XmlElement(name = "Rjctd", required = true)
 	public RejectedStatus1Choice getRejected() {
 		return rejected;
 	}
 
-	public void setRejected(com.tools20022.repository.choice.RejectedStatus1Choice rejected) {
-		this.rejected = rejected;
+	public InstructionProcessingStatus12Choice setRejected(com.tools20022.repository.choice.RejectedStatus1Choice rejected) {
+		this.rejected = Objects.requireNonNull(rejected);
+		return this;
 	}
 
-	@XmlElement(name = "Pdg", required = true)
 	public PendingStatus1Choice getPending() {
 		return pending;
 	}
 
-	public void setPending(com.tools20022.repository.choice.PendingStatus1Choice pending) {
-		this.pending = pending;
+	public InstructionProcessingStatus12Choice setPending(com.tools20022.repository.choice.PendingStatus1Choice pending) {
+		this.pending = Objects.requireNonNull(pending);
+		return this;
 	}
 
-	@XmlElement(name = "DfltActn", required = true)
 	public NoSpecifiedReason1 getDefaultAction() {
 		return defaultAction;
 	}
 
-	public void setDefaultAction(NoSpecifiedReason1 defaultAction) {
-		this.defaultAction = defaultAction;
+	public InstructionProcessingStatus12Choice setDefaultAction(NoSpecifiedReason1 defaultAction) {
+		this.defaultAction = Objects.requireNonNull(defaultAction);
+		return this;
 	}
 
-	@XmlElement(name = "StgInstr", required = true)
 	public NoSpecifiedReason1 getStandingInstruction() {
 		return standingInstruction;
 	}
 
-	public void setStandingInstruction(NoSpecifiedReason1 standingInstruction) {
-		this.standingInstruction = standingInstruction;
+	public InstructionProcessingStatus12Choice setStandingInstruction(NoSpecifiedReason1 standingInstruction) {
+		this.standingInstruction = Objects.requireNonNull(standingInstruction);
+		return this;
 	}
 
-	@XmlElement(name = "PrtrySts", required = true)
 	public ProprietaryStatusAndReason1 getProprietaryStatus() {
 		return proprietaryStatus;
 	}
 
-	public void setProprietaryStatus(ProprietaryStatusAndReason1 proprietaryStatus) {
-		this.proprietaryStatus = proprietaryStatus;
+	public InstructionProcessingStatus12Choice setProprietaryStatus(ProprietaryStatusAndReason1 proprietaryStatus) {
+		this.proprietaryStatus = Objects.requireNonNull(proprietaryStatus);
+		return this;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.PremiumCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PremiumQuote1Choice", propOrder = {"percentageOfCallAmount", "percentageOfPutAmount", "pointsOfCallAmount", "pointsOfPutAmount"})
 public class PremiumQuote1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PctgOfCallAmt", required = true)
 	protected PercentageRate percentageOfCallAmount;
 	/**
-	 * Premium calculation is based on a percentage of the call amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +120,7 @@ public class PremiumQuote1Choice {
 	public static final MMMessageAttribute mmPercentageOfCallAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PremiumCalculation.mmPercentageOfCallAmount;
-			componentContext_lazy = () -> PremiumQuote1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PremiumQuote1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PctgOfCallAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +131,11 @@ public class PremiumQuote1Choice {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "PctgOfPutAmt", required = true)
 	protected PercentageRate percentageOfPutAmount;
 	/**
-	 * Premium calculation is based on a percentage of the put amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +170,7 @@ public class PremiumQuote1Choice {
 	public static final MMMessageAttribute mmPercentageOfPutAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PremiumCalculation.mmPercentageOfPutAmount;
-			componentContext_lazy = () -> PremiumQuote1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PremiumQuote1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PctgOfPutAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +181,11 @@ public class PremiumQuote1Choice {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "PtsOfCallAmt", required = true)
 	protected BaseOneRate pointsOfCallAmount;
 	/**
-	 * Premium calculation is based on points of the call amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,7 +219,7 @@ public class PremiumQuote1Choice {
 	public static final MMMessageAttribute mmPointsOfCallAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PremiumCalculation.mmPointsOfCallAmount;
-			componentContext_lazy = () -> PremiumQuote1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PremiumQuote1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PtsOfCallAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,10 +230,11 @@ public class PremiumQuote1Choice {
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	@XmlElement(name = "PtsOfPutAmt", required = true)
 	protected BaseOneRate pointsOfPutAmount;
 	/**
-	 * Premium calculation is based on points of the put amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -263,7 +268,7 @@ public class PremiumQuote1Choice {
 	public static final MMMessageAttribute mmPointsOfPutAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PremiumCalculation.mmPointsOfPutAmount;
-			componentContext_lazy = () -> PremiumQuote1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PremiumQuote1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PtsOfPutAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -278,9 +283,10 @@ public class PremiumQuote1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PremiumQuote1Choice.mmPercentageOfCallAmount, PremiumQuote1Choice.mmPercentageOfPutAmount, PremiumQuote1Choice.mmPointsOfCallAmount, PremiumQuote1Choice.mmPointsOfPutAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PremiumQuote1Choice.mmPercentageOfCallAmount, com.tools20022.repository.choice.PremiumQuote1Choice.mmPercentageOfPutAmount,
+						com.tools20022.repository.choice.PremiumQuote1Choice.mmPointsOfCallAmount, com.tools20022.repository.choice.PremiumQuote1Choice.mmPointsOfPutAmount);
 				trace_lazy = () -> PremiumCalculation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PremiumQuote1Choice";
 				definition = "Specifies the amount of a premium on a currency option together with its calculation method.";
@@ -289,39 +295,39 @@ public class PremiumQuote1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PctgOfCallAmt", required = true)
 	public PercentageRate getPercentageOfCallAmount() {
 		return percentageOfCallAmount;
 	}
 
-	public void setPercentageOfCallAmount(PercentageRate percentageOfCallAmount) {
-		this.percentageOfCallAmount = percentageOfCallAmount;
+	public PremiumQuote1Choice setPercentageOfCallAmount(PercentageRate percentageOfCallAmount) {
+		this.percentageOfCallAmount = Objects.requireNonNull(percentageOfCallAmount);
+		return this;
 	}
 
-	@XmlElement(name = "PctgOfPutAmt", required = true)
 	public PercentageRate getPercentageOfPutAmount() {
 		return percentageOfPutAmount;
 	}
 
-	public void setPercentageOfPutAmount(PercentageRate percentageOfPutAmount) {
-		this.percentageOfPutAmount = percentageOfPutAmount;
+	public PremiumQuote1Choice setPercentageOfPutAmount(PercentageRate percentageOfPutAmount) {
+		this.percentageOfPutAmount = Objects.requireNonNull(percentageOfPutAmount);
+		return this;
 	}
 
-	@XmlElement(name = "PtsOfCallAmt", required = true)
 	public BaseOneRate getPointsOfCallAmount() {
 		return pointsOfCallAmount;
 	}
 
-	public void setPointsOfCallAmount(BaseOneRate pointsOfCallAmount) {
-		this.pointsOfCallAmount = pointsOfCallAmount;
+	public PremiumQuote1Choice setPointsOfCallAmount(BaseOneRate pointsOfCallAmount) {
+		this.pointsOfCallAmount = Objects.requireNonNull(pointsOfCallAmount);
+		return this;
 	}
 
-	@XmlElement(name = "PtsOfPutAmt", required = true)
 	public BaseOneRate getPointsOfPutAmount() {
 		return pointsOfPutAmount;
 	}
 
-	public void setPointsOfPutAmount(BaseOneRate pointsOfPutAmount) {
-		this.pointsOfPutAmount = pointsOfPutAmount;
+	public PremiumQuote1Choice setPointsOfPutAmount(BaseOneRate pointsOfPutAmount) {
+		this.pointsOfPutAmount = Objects.requireNonNull(pointsOfPutAmount);
+		return this;
 	}
 }

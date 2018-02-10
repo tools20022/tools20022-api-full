@@ -31,9 +31,8 @@ import com.tools20022.repository.msg.LegalMandate1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.AuthoritiesFinancialInvestigationsISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -47,22 +46,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
- * AuthoritiesLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.AuthoritiesFinancialInvestigationsISOLatestversion
- * AuthoritiesFinancialInvestigationsISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "InfReqOpng"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -90,6 +73,22 @@ import javax.xml.bind.annotation.*;
  * InformationRequestOpeningV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.AuthoritiesFinancialInvestigationsISOLatestversion
+ * AuthoritiesFinancialInvestigationsISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "InfReqOpng"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
+ * AuthoritiesLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code auth.001.001.01}</li>
@@ -105,16 +104,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InformationRequestOpeningV01", propOrder = {"investigationIdentification", "legalMandateBasis", "confidentialityStatus", "dueDate", "investigationPeriod", "searchCriteria", "supplementaryData"})
 public class InformationRequestOpeningV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InvstgtnId", required = true)
 	protected Max35Text investigationIdentification;
 	/**
-	 * Unique identification for the specific investigation as known by the
-	 * requesting party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,10 +154,11 @@ public class InformationRequestOpeningV01 {
 			}
 		}
 	};
+	@XmlElement(name = "LglMndtBsis", required = true)
 	protected LegalMandate1 legalMandateBasis;
 	/**
-	 * Provides details on the legal basis of the request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,10 +197,11 @@ public class InformationRequestOpeningV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CnfdtltySts", required = true)
 	protected YesNoIndicator confidentialityStatus;
 	/**
-	 * Specifies the confidentiality status of the investigation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -241,11 +242,11 @@ public class InformationRequestOpeningV01 {
 			}
 		}
 	};
+	@XmlElement(name = "DueDt")
 	protected DueDate1 dueDate;
 	/**
-	 * Specifies the date by when the financial institutiion needs to provide a
-	 * response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -286,11 +287,11 @@ public class InformationRequestOpeningV01 {
 			}
 		}
 	};
+	@XmlElement(name = "InvstgtnPrd", required = true)
 	protected DateOrDateTimePeriodChoice investigationPeriod;
 	/**
-	 * Specifies the dates between which period the authority requests that the
-	 * financial institution provides a response to the information request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -332,12 +333,11 @@ public class InformationRequestOpeningV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SchCrit", required = true)
 	protected SearchCriteria1Choice searchCriteria;
 	/**
-	 * Specifies the the search criteria for the financial institution to
-	 * perform the search on. The search criteria can be an account, a customer
-	 * identification or a payment instrument type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -379,11 +379,11 @@ public class InformationRequestOpeningV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -457,70 +457,70 @@ public class InformationRequestOpeningV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InvstgtnId", required = true)
 	public Max35Text getInvestigationIdentification() {
 		return investigationIdentification;
 	}
 
-	public void setInvestigationIdentification(Max35Text investigationIdentification) {
-		this.investigationIdentification = investigationIdentification;
+	public InformationRequestOpeningV01 setInvestigationIdentification(Max35Text investigationIdentification) {
+		this.investigationIdentification = Objects.requireNonNull(investigationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "LglMndtBsis", required = true)
 	public LegalMandate1 getLegalMandateBasis() {
 		return legalMandateBasis;
 	}
 
-	public void setLegalMandateBasis(LegalMandate1 legalMandateBasis) {
-		this.legalMandateBasis = legalMandateBasis;
+	public InformationRequestOpeningV01 setLegalMandateBasis(LegalMandate1 legalMandateBasis) {
+		this.legalMandateBasis = Objects.requireNonNull(legalMandateBasis);
+		return this;
 	}
 
-	@XmlElement(name = "CnfdtltySts", required = true)
 	public YesNoIndicator getConfidentialityStatus() {
 		return confidentialityStatus;
 	}
 
-	public void setConfidentialityStatus(YesNoIndicator confidentialityStatus) {
-		this.confidentialityStatus = confidentialityStatus;
+	public InformationRequestOpeningV01 setConfidentialityStatus(YesNoIndicator confidentialityStatus) {
+		this.confidentialityStatus = Objects.requireNonNull(confidentialityStatus);
+		return this;
 	}
 
-	@XmlElement(name = "DueDt")
-	public DueDate1 getDueDate() {
-		return dueDate;
+	public Optional<DueDate1> getDueDate() {
+		return dueDate == null ? Optional.empty() : Optional.of(dueDate);
 	}
 
-	public void setDueDate(DueDate1 dueDate) {
+	public InformationRequestOpeningV01 setDueDate(DueDate1 dueDate) {
 		this.dueDate = dueDate;
+		return this;
 	}
 
-	@XmlElement(name = "InvstgtnPrd", required = true)
 	public DateOrDateTimePeriodChoice getInvestigationPeriod() {
 		return investigationPeriod;
 	}
 
-	public void setInvestigationPeriod(DateOrDateTimePeriodChoice investigationPeriod) {
-		this.investigationPeriod = investigationPeriod;
+	public InformationRequestOpeningV01 setInvestigationPeriod(DateOrDateTimePeriodChoice investigationPeriod) {
+		this.investigationPeriod = Objects.requireNonNull(investigationPeriod);
+		return this;
 	}
 
-	@XmlElement(name = "SchCrit", required = true)
 	public SearchCriteria1Choice getSearchCriteria() {
 		return searchCriteria;
 	}
 
-	public void setSearchCriteria(SearchCriteria1Choice searchCriteria) {
-		this.searchCriteria = searchCriteria;
+	public InformationRequestOpeningV01 setSearchCriteria(SearchCriteria1Choice searchCriteria) {
+		this.searchCriteria = Objects.requireNonNull(searchCriteria);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public InformationRequestOpeningV01 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.001.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:auth.001.001.01")
 	static public class Document {
 		@XmlElement(name = "InfReqOpng", required = true)
 		public InformationRequestOpeningV01 messageBody;

@@ -30,9 +30,8 @@ import com.tools20022.repository.msg.DocumentIdentification15;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -61,20 +60,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
- * SecuritiesEventsArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CorpActnMvmntPrlimryAdvcCxlAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -133,9 +118,36 @@ import javax.xml.bind.annotation.*;
  * mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CorpActnMvmntPrlimryAdvcCxlAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
+ * SecuritiesEventsArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.044.001.03}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forCorporateActionMovementPreliminaryAdviceCancellationAdviceV03
+ * ConstraintCoexistenceCharacterSetXRule.
+ * forCorporateActionMovementPreliminaryAdviceCancellationAdviceV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forCorporateActionMovementPreliminaryAdviceCancellationAdviceV03
+ * ConstraintCoexistenceIdentificationRule.
+ * forCorporateActionMovementPreliminaryAdviceCancellationAdviceV03}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -160,16 +172,17 @@ import javax.xml.bind.annotation.*;
  * CorporateActionMovementPreliminaryAdviceCancellationAdviceV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionMovementPreliminaryAdviceCancellationAdviceV03", propOrder = {"cancellationAdviceGeneralInformation", "movementPreliminaryAdviceIdentification", "corporateActionGeneralInformation", "accountDetails",
 		"issuerAgent", "payingAgent", "subPayingAgent", "registrar", "resellingAgent", "physicalSecuritiesAgent", "dropAgent", "solicitationAgent", "informationAgent", "supplementaryData"})
 public class CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CxlAdvcGnlInf", required = true)
 	protected CorporateActionProcessingStatus1Choice cancellationAdviceGeneralInformation;
 	/**
-	 * Specifies the status of the details of the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -209,10 +222,11 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 {
 			}
 		}
 	};
+	@XmlElement(name = "MvmntPrlimryAdvcId", required = true)
 	protected DocumentIdentification15 movementPreliminaryAdviceIdentification;
 	/**
-	 * Identification of a previously sent movement preliminary advice document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -254,10 +268,11 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	protected CorporateActionGeneralInformation35 corporateActionGeneralInformation;
 	/**
-	 * General information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,10 +312,11 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected AccountIdentification13Choice accountDetails;
 	/**
-	 * General information about the safekeeping account and the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -342,12 +358,11 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 {
 			}
 		}
 	};
+	@XmlElement(name = "IssrAgt")
 	protected List<PartyIdentification46Choice> issuerAgent;
 	/**
-	 * Party appointed to administer the event on behalf of the issuer
-	 * company/offeror. The party may be contacted for more information about
-	 * the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -388,11 +403,11 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PngAgt")
 	protected List<PartyIdentification46Choice> payingAgent;
 	/**
-	 * Agent (principal or fiscal paying agent) appointed to execute the payment
-	 * for the corporate action event on behalf of the issuer company/offeror.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -433,11 +448,11 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SubPngAgt")
 	protected List<PartyIdentification46Choice> subPayingAgent;
 	/**
-	 * Sub-agent appointed to execute the payment for the corporate action event
-	 * on behalf of the issuer company/offeror.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -478,10 +493,11 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Regar")
 	protected PartyIdentification46Choice registrar;
 	/**
-	 * Party/agent responsible for maintaining the register of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -522,11 +538,11 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RsellngAgt")
 	protected List<PartyIdentification46Choice> resellingAgent;
 	/**
-	 * A broker-dealer responsible for reselling to new investors securities
-	 * (usually bonds) that have been tendered for purchase by their owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -567,12 +583,11 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PhysSctiesAgt")
 	protected PartyIdentification46Choice physicalSecuritiesAgent;
 	/**
-	 * A trust company, bank or similar financial institution assigned by an
-	 * issuer to accept presentations of instruments, usually bonds, for
-	 * transfer and or exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -614,12 +629,11 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 {
 			}
 		}
 	};
+	@XmlElement(name = "DrpAgt")
 	protected PartyIdentification46Choice dropAgent;
 	/**
-	 * A trust company, bank or similar financial institution who acts on behalf
-	 * of an out of town agent or event agent where securities can be delivered
-	 * in person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -661,12 +675,11 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SlctnAgt")
 	protected List<PartyIdentification46Choice> solicitationAgent;
 	/**
-	 * A trust company, bank or similar financial institution assigned by an
-	 * issuer to maintain records of investors and account balances and
-	 * transactions for the consent of a material change.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -707,11 +720,11 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 {
 			}
 		}
 	};
+	@XmlElement(name = "InfAgt")
 	protected PartyIdentification46Choice informationAgent;
 	/**
-	 * A trust company, bank or similar financial institution assigned by an
-	 * Issuer to provide information and copies of the offering documentation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -753,11 +766,11 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -802,6 +815,8 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementPreliminaryAdviceCancellationAdviceV03,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementPreliminaryAdviceCancellationAdviceV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMovementPreliminaryAdviceCancellationAdviceV03";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionMovementPreliminaryAdviceCancellationAdvice message to an account owner or its designated agent to cancel a previously announced CorporateActionMovementPreliminaryAdvice.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).\nISO 15022 - 20022 COEXISTENCE\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
@@ -843,133 +858,133 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CxlAdvcGnlInf", required = true)
 	public CorporateActionProcessingStatus1Choice getCancellationAdviceGeneralInformation() {
 		return cancellationAdviceGeneralInformation;
 	}
 
-	public void setCancellationAdviceGeneralInformation(CorporateActionProcessingStatus1Choice cancellationAdviceGeneralInformation) {
-		this.cancellationAdviceGeneralInformation = cancellationAdviceGeneralInformation;
+	public CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 setCancellationAdviceGeneralInformation(CorporateActionProcessingStatus1Choice cancellationAdviceGeneralInformation) {
+		this.cancellationAdviceGeneralInformation = Objects.requireNonNull(cancellationAdviceGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "MvmntPrlimryAdvcId", required = true)
 	public DocumentIdentification15 getMovementPreliminaryAdviceIdentification() {
 		return movementPreliminaryAdviceIdentification;
 	}
 
-	public void setMovementPreliminaryAdviceIdentification(DocumentIdentification15 movementPreliminaryAdviceIdentification) {
-		this.movementPreliminaryAdviceIdentification = movementPreliminaryAdviceIdentification;
+	public CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 setMovementPreliminaryAdviceIdentification(DocumentIdentification15 movementPreliminaryAdviceIdentification) {
+		this.movementPreliminaryAdviceIdentification = Objects.requireNonNull(movementPreliminaryAdviceIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionGeneralInformation35 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
 
-	public void setCorporateActionGeneralInformation(CorporateActionGeneralInformation35 corporateActionGeneralInformation) {
-		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	public CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 setCorporateActionGeneralInformation(CorporateActionGeneralInformation35 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = Objects.requireNonNull(corporateActionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public AccountIdentification13Choice getAccountDetails() {
 		return accountDetails;
 	}
 
-	public void setAccountDetails(AccountIdentification13Choice accountDetails) {
-		this.accountDetails = accountDetails;
+	public CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 setAccountDetails(AccountIdentification13Choice accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "IssrAgt")
 	public List<PartyIdentification46Choice> getIssuerAgent() {
-		return issuerAgent;
+		return issuerAgent == null ? issuerAgent = new ArrayList<>() : issuerAgent;
 	}
 
-	public void setIssuerAgent(List<PartyIdentification46Choice> issuerAgent) {
-		this.issuerAgent = issuerAgent;
+	public CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 setIssuerAgent(List<PartyIdentification46Choice> issuerAgent) {
+		this.issuerAgent = Objects.requireNonNull(issuerAgent);
+		return this;
 	}
 
-	@XmlElement(name = "PngAgt")
 	public List<PartyIdentification46Choice> getPayingAgent() {
-		return payingAgent;
+		return payingAgent == null ? payingAgent = new ArrayList<>() : payingAgent;
 	}
 
-	public void setPayingAgent(List<PartyIdentification46Choice> payingAgent) {
-		this.payingAgent = payingAgent;
+	public CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 setPayingAgent(List<PartyIdentification46Choice> payingAgent) {
+		this.payingAgent = Objects.requireNonNull(payingAgent);
+		return this;
 	}
 
-	@XmlElement(name = "SubPngAgt")
 	public List<PartyIdentification46Choice> getSubPayingAgent() {
-		return subPayingAgent;
+		return subPayingAgent == null ? subPayingAgent = new ArrayList<>() : subPayingAgent;
 	}
 
-	public void setSubPayingAgent(List<PartyIdentification46Choice> subPayingAgent) {
-		this.subPayingAgent = subPayingAgent;
+	public CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 setSubPayingAgent(List<PartyIdentification46Choice> subPayingAgent) {
+		this.subPayingAgent = Objects.requireNonNull(subPayingAgent);
+		return this;
 	}
 
-	@XmlElement(name = "Regar")
-	public PartyIdentification46Choice getRegistrar() {
-		return registrar;
+	public Optional<PartyIdentification46Choice> getRegistrar() {
+		return registrar == null ? Optional.empty() : Optional.of(registrar);
 	}
 
-	public void setRegistrar(PartyIdentification46Choice registrar) {
+	public CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 setRegistrar(PartyIdentification46Choice registrar) {
 		this.registrar = registrar;
+		return this;
 	}
 
-	@XmlElement(name = "RsellngAgt")
 	public List<PartyIdentification46Choice> getResellingAgent() {
-		return resellingAgent;
+		return resellingAgent == null ? resellingAgent = new ArrayList<>() : resellingAgent;
 	}
 
-	public void setResellingAgent(List<PartyIdentification46Choice> resellingAgent) {
-		this.resellingAgent = resellingAgent;
+	public CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 setResellingAgent(List<PartyIdentification46Choice> resellingAgent) {
+		this.resellingAgent = Objects.requireNonNull(resellingAgent);
+		return this;
 	}
 
-	@XmlElement(name = "PhysSctiesAgt")
-	public PartyIdentification46Choice getPhysicalSecuritiesAgent() {
-		return physicalSecuritiesAgent;
+	public Optional<PartyIdentification46Choice> getPhysicalSecuritiesAgent() {
+		return physicalSecuritiesAgent == null ? Optional.empty() : Optional.of(physicalSecuritiesAgent);
 	}
 
-	public void setPhysicalSecuritiesAgent(PartyIdentification46Choice physicalSecuritiesAgent) {
+	public CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 setPhysicalSecuritiesAgent(PartyIdentification46Choice physicalSecuritiesAgent) {
 		this.physicalSecuritiesAgent = physicalSecuritiesAgent;
+		return this;
 	}
 
-	@XmlElement(name = "DrpAgt")
-	public PartyIdentification46Choice getDropAgent() {
-		return dropAgent;
+	public Optional<PartyIdentification46Choice> getDropAgent() {
+		return dropAgent == null ? Optional.empty() : Optional.of(dropAgent);
 	}
 
-	public void setDropAgent(PartyIdentification46Choice dropAgent) {
+	public CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 setDropAgent(PartyIdentification46Choice dropAgent) {
 		this.dropAgent = dropAgent;
+		return this;
 	}
 
-	@XmlElement(name = "SlctnAgt")
 	public List<PartyIdentification46Choice> getSolicitationAgent() {
-		return solicitationAgent;
+		return solicitationAgent == null ? solicitationAgent = new ArrayList<>() : solicitationAgent;
 	}
 
-	public void setSolicitationAgent(List<PartyIdentification46Choice> solicitationAgent) {
-		this.solicitationAgent = solicitationAgent;
+	public CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 setSolicitationAgent(List<PartyIdentification46Choice> solicitationAgent) {
+		this.solicitationAgent = Objects.requireNonNull(solicitationAgent);
+		return this;
 	}
 
-	@XmlElement(name = "InfAgt")
-	public PartyIdentification46Choice getInformationAgent() {
-		return informationAgent;
+	public Optional<PartyIdentification46Choice> getInformationAgent() {
+		return informationAgent == null ? Optional.empty() : Optional.of(informationAgent);
 	}
 
-	public void setInformationAgent(PartyIdentification46Choice informationAgent) {
+	public CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 setInformationAgent(PartyIdentification46Choice informationAgent) {
 		this.informationAgent = informationAgent;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.044.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.044.001.03")
 	static public class Document {
 		@XmlElement(name = "CorpActnMvmntPrlimryAdvcCxlAdvc", required = true)
 		public CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 messageBody;

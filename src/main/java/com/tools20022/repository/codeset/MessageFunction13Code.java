@@ -20,100 +20,104 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MessageFunctionCode;
+import com.tools20022.repository.codeset.MessageFunction13Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of message supporting a service.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode
- * MessageFunctionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmAuthorisationRequest
- * MessageFunction13Code.mmAuthorisationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#AuthorisationRequest
+ * MessageFunction13Code.AuthorisationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmAuthorisationResponse
- * MessageFunction13Code.mmAuthorisationResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#AuthorisationResponse
+ * MessageFunction13Code.AuthorisationResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmCancellationAdvice
- * MessageFunction13Code.mmCancellationAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#CancellationAdvice
+ * MessageFunction13Code.CancellationAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmCancellationAdviceResponse
- * MessageFunction13Code.mmCancellationAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#CancellationAdviceResponse
+ * MessageFunction13Code.CancellationAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmCancellationRequest
- * MessageFunction13Code.mmCancellationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#CancellationRequest
+ * MessageFunction13Code.CancellationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmCancellationResponse
- * MessageFunction13Code.mmCancellationResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#CancellationResponse
+ * MessageFunction13Code.CancellationResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmCompletionAdvice
- * MessageFunction13Code.mmCompletionAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#CompletionAdvice
+ * MessageFunction13Code.CompletionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmCompletionAdviceResponse
- * MessageFunction13Code.mmCompletionAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#CompletionAdviceResponse
+ * MessageFunction13Code.CompletionAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmCurrencyConversionAdvice
- * MessageFunction13Code.mmCurrencyConversionAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#CurrencyConversionAdvice
+ * MessageFunction13Code.CurrencyConversionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmCurrencyConversionAdviceResponse
- * MessageFunction13Code.mmCurrencyConversionAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#CurrencyConversionAdviceResponse
+ * MessageFunction13Code.CurrencyConversionAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmCurrencyConversionRequest
- * MessageFunction13Code.mmCurrencyConversionRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#CurrencyConversionRequest
+ * MessageFunction13Code.CurrencyConversionRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmCurrencyConversionResponse
- * MessageFunction13Code.mmCurrencyConversionResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#CurrencyConversionResponse
+ * MessageFunction13Code.CurrencyConversionResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmDiagnosticRequest
- * MessageFunction13Code.mmDiagnosticRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#DiagnosticRequest
+ * MessageFunction13Code.DiagnosticRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmDiagnosticResponse
- * MessageFunction13Code.mmDiagnosticResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#DiagnosticResponse
+ * MessageFunction13Code.DiagnosticResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmFinancialAuthorisationRequest
- * MessageFunction13Code.mmFinancialAuthorisationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#FinancialAuthorisationRequest
+ * MessageFunction13Code.FinancialAuthorisationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmFinancialAuthorisationResponse
- * MessageFunction13Code.mmFinancialAuthorisationResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#FinancialAuthorisationResponse
+ * MessageFunction13Code.FinancialAuthorisationResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmFinancialCompletionAdvice
- * MessageFunction13Code.mmFinancialCompletionAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#FinancialCompletionAdvice
+ * MessageFunction13Code.FinancialCompletionAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmFinancialCompletionAdviceResponse
- * MessageFunction13Code.mmFinancialCompletionAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#FinancialCompletionAdviceResponse
+ * MessageFunction13Code.FinancialCompletionAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmFinancialReversalAdvice
- * MessageFunction13Code.mmFinancialReversalAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#FinancialReversalAdvice
+ * MessageFunction13Code.FinancialReversalAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmFinancialReversalAdviceResponse
- * MessageFunction13Code.mmFinancialReversalAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#FinancialReversalAdviceResponse
+ * MessageFunction13Code.FinancialReversalAdviceResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmReconciliationRequest
- * MessageFunction13Code.mmReconciliationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#ReconciliationRequest
+ * MessageFunction13Code.ReconciliationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmReconciliationResponse
- * MessageFunction13Code.mmReconciliationResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#ReconciliationResponse
+ * MessageFunction13Code.ReconciliationResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmReversalAdvice
- * MessageFunction13Code.mmReversalAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#ReversalAdvice
+ * MessageFunction13Code.ReversalAdvice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#mmReversalAdviceResponse
- * MessageFunction13Code.mmReversalAdviceResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction13Code#ReversalAdviceResponse
+ * MessageFunction13Code.ReversalAdviceResponse}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode
+ * MessageFunctionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -124,7 +128,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of message supporting a service."</li>
  * </ul>
  */
-public class MessageFunction13Code extends MessageFunctionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MessageFunction13Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -143,11 +148,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "AuthorisationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuthorisationRequest = new MMCode() {
+	public static final MessageFunction13Code AuthorisationRequest = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationRequest";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.AuthorisationRequest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -166,11 +172,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "AuthorisationResponse"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuthorisationResponse = new MMCode() {
+	public static final MessageFunction13Code AuthorisationResponse = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationResponse";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.AuthorisationResponse.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -189,11 +196,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "CancellationAdvice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellationAdvice = new MMCode() {
+	public static final MessageFunction13Code CancellationAdvice = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationAdvice";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.CancellationAdvice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -212,11 +220,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "CancellationAdviceResponse"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellationAdviceResponse = new MMCode() {
+	public static final MessageFunction13Code CancellationAdviceResponse = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationAdviceResponse";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.CancellationAdviceResponse.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -235,11 +244,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "CancellationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellationRequest = new MMCode() {
+	public static final MessageFunction13Code CancellationRequest = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRequest";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.CancellationRequest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -258,11 +268,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "CancellationResponse"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellationResponse = new MMCode() {
+	public static final MessageFunction13Code CancellationResponse = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationResponse";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.CancellationResponse.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -281,11 +292,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "CompletionAdvice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompletionAdvice = new MMCode() {
+	public static final MessageFunction13Code CompletionAdvice = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletionAdvice";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.CompletionAdvice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -304,11 +316,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "CompletionAdviceResponse"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompletionAdviceResponse = new MMCode() {
+	public static final MessageFunction13Code CompletionAdviceResponse = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletionAdviceResponse";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.CompletionAdviceResponse.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -327,11 +340,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "CurrencyConversionAdvice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrencyConversionAdvice = new MMCode() {
+	public static final MessageFunction13Code CurrencyConversionAdvice = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionAdvice";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.CurrencyConversionAdvice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -350,11 +364,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "CurrencyConversionAdviceResponse"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrencyConversionAdviceResponse = new MMCode() {
+	public static final MessageFunction13Code CurrencyConversionAdviceResponse = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionAdviceResponse";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.CurrencyConversionAdviceResponse.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -373,11 +388,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "CurrencyConversionRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrencyConversionRequest = new MMCode() {
+	public static final MessageFunction13Code CurrencyConversionRequest = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionRequest";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.CurrencyConversionRequest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -396,11 +412,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "CurrencyConversionResponse"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrencyConversionResponse = new MMCode() {
+	public static final MessageFunction13Code CurrencyConversionResponse = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionResponse";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.CurrencyConversionResponse.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -419,11 +436,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "DiagnosticRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiagnosticRequest = new MMCode() {
+	public static final MessageFunction13Code DiagnosticRequest = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiagnosticRequest";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.DiagnosticRequest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -442,11 +460,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "DiagnosticResponse"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiagnosticResponse = new MMCode() {
+	public static final MessageFunction13Code DiagnosticResponse = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiagnosticResponse";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.DiagnosticResponse.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -465,11 +484,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "FinancialAuthorisationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancialAuthorisationRequest = new MMCode() {
+	public static final MessageFunction13Code FinancialAuthorisationRequest = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAuthorisationRequest";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.FinancialAuthorisationRequest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -488,11 +508,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "FinancialAuthorisationResponse"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancialAuthorisationResponse = new MMCode() {
+	public static final MessageFunction13Code FinancialAuthorisationResponse = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAuthorisationResponse";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.FinancialAuthorisationResponse.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -511,11 +532,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "FinancialCompletionAdvice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancialCompletionAdvice = new MMCode() {
+	public static final MessageFunction13Code FinancialCompletionAdvice = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialCompletionAdvice";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.FinancialCompletionAdvice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -534,11 +556,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "FinancialCompletionAdviceResponse"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancialCompletionAdviceResponse = new MMCode() {
+	public static final MessageFunction13Code FinancialCompletionAdviceResponse = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialCompletionAdviceResponse";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.FinancialCompletionAdviceResponse.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -557,11 +580,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "FinancialReversalAdvice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancialReversalAdvice = new MMCode() {
+	public static final MessageFunction13Code FinancialReversalAdvice = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialReversalAdvice";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.FinancialReversalAdvice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -580,11 +604,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "FinancialReversalAdviceResponse"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancialReversalAdviceResponse = new MMCode() {
+	public static final MessageFunction13Code FinancialReversalAdviceResponse = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialReversalAdviceResponse";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.FinancialReversalAdviceResponse.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -603,11 +628,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "ReconciliationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReconciliationRequest = new MMCode() {
+	public static final MessageFunction13Code ReconciliationRequest = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationRequest";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.ReconciliationRequest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -626,11 +652,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "ReconciliationResponse"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReconciliationResponse = new MMCode() {
+	public static final MessageFunction13Code ReconciliationResponse = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationResponse";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.ReconciliationResponse.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -649,11 +676,12 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "ReversalAdvice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReversalAdvice = new MMCode() {
+	public static final MessageFunction13Code ReversalAdvice = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalAdvice";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.ReversalAdvice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -672,30 +700,89 @@ public class MessageFunction13Code extends MessageFunctionCode {
 	 * name} = "ReversalAdviceResponse"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReversalAdviceResponse = new MMCode() {
+	public static final MessageFunction13Code ReversalAdviceResponse = new MessageFunction13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalAdviceResponse";
-			owner_lazy = () -> MessageFunction13Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction13Code.mmObject();
+			codeName = MessageFunctionCode.ReversalAdviceResponse.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MessageFunction13Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MessageFunction13Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageFunction13Code";
 				definition = "Type of message supporting a service.";
-				code_lazy = () -> Arrays.asList(MessageFunction13Code.mmAuthorisationRequest, MessageFunction13Code.mmAuthorisationResponse, MessageFunction13Code.mmCancellationAdvice, MessageFunction13Code.mmCancellationAdviceResponse,
-						MessageFunction13Code.mmCancellationRequest, MessageFunction13Code.mmCancellationResponse, MessageFunction13Code.mmCompletionAdvice, MessageFunction13Code.mmCompletionAdviceResponse,
-						MessageFunction13Code.mmCurrencyConversionAdvice, MessageFunction13Code.mmCurrencyConversionAdviceResponse, MessageFunction13Code.mmCurrencyConversionRequest, MessageFunction13Code.mmCurrencyConversionResponse,
-						MessageFunction13Code.mmDiagnosticRequest, MessageFunction13Code.mmDiagnosticResponse, MessageFunction13Code.mmFinancialAuthorisationRequest, MessageFunction13Code.mmFinancialAuthorisationResponse,
-						MessageFunction13Code.mmFinancialCompletionAdvice, MessageFunction13Code.mmFinancialCompletionAdviceResponse, MessageFunction13Code.mmFinancialReversalAdvice, MessageFunction13Code.mmFinancialReversalAdviceResponse,
-						MessageFunction13Code.mmReconciliationRequest, MessageFunction13Code.mmReconciliationResponse, MessageFunction13Code.mmReversalAdvice, MessageFunction13Code.mmReversalAdviceResponse);
 				trace_lazy = () -> MessageFunctionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction13Code.AuthorisationRequest, com.tools20022.repository.codeset.MessageFunction13Code.AuthorisationResponse,
+						com.tools20022.repository.codeset.MessageFunction13Code.CancellationAdvice, com.tools20022.repository.codeset.MessageFunction13Code.CancellationAdviceResponse,
+						com.tools20022.repository.codeset.MessageFunction13Code.CancellationRequest, com.tools20022.repository.codeset.MessageFunction13Code.CancellationResponse,
+						com.tools20022.repository.codeset.MessageFunction13Code.CompletionAdvice, com.tools20022.repository.codeset.MessageFunction13Code.CompletionAdviceResponse,
+						com.tools20022.repository.codeset.MessageFunction13Code.CurrencyConversionAdvice, com.tools20022.repository.codeset.MessageFunction13Code.CurrencyConversionAdviceResponse,
+						com.tools20022.repository.codeset.MessageFunction13Code.CurrencyConversionRequest, com.tools20022.repository.codeset.MessageFunction13Code.CurrencyConversionResponse,
+						com.tools20022.repository.codeset.MessageFunction13Code.DiagnosticRequest, com.tools20022.repository.codeset.MessageFunction13Code.DiagnosticResponse,
+						com.tools20022.repository.codeset.MessageFunction13Code.FinancialAuthorisationRequest, com.tools20022.repository.codeset.MessageFunction13Code.FinancialAuthorisationResponse,
+						com.tools20022.repository.codeset.MessageFunction13Code.FinancialCompletionAdvice, com.tools20022.repository.codeset.MessageFunction13Code.FinancialCompletionAdviceResponse,
+						com.tools20022.repository.codeset.MessageFunction13Code.FinancialReversalAdvice, com.tools20022.repository.codeset.MessageFunction13Code.FinancialReversalAdviceResponse,
+						com.tools20022.repository.codeset.MessageFunction13Code.ReconciliationRequest, com.tools20022.repository.codeset.MessageFunction13Code.ReconciliationResponse,
+						com.tools20022.repository.codeset.MessageFunction13Code.ReversalAdvice, com.tools20022.repository.codeset.MessageFunction13Code.ReversalAdviceResponse);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AuthorisationRequest.getCodeName().get(), AuthorisationRequest);
+		codesByName.put(AuthorisationResponse.getCodeName().get(), AuthorisationResponse);
+		codesByName.put(CancellationAdvice.getCodeName().get(), CancellationAdvice);
+		codesByName.put(CancellationAdviceResponse.getCodeName().get(), CancellationAdviceResponse);
+		codesByName.put(CancellationRequest.getCodeName().get(), CancellationRequest);
+		codesByName.put(CancellationResponse.getCodeName().get(), CancellationResponse);
+		codesByName.put(CompletionAdvice.getCodeName().get(), CompletionAdvice);
+		codesByName.put(CompletionAdviceResponse.getCodeName().get(), CompletionAdviceResponse);
+		codesByName.put(CurrencyConversionAdvice.getCodeName().get(), CurrencyConversionAdvice);
+		codesByName.put(CurrencyConversionAdviceResponse.getCodeName().get(), CurrencyConversionAdviceResponse);
+		codesByName.put(CurrencyConversionRequest.getCodeName().get(), CurrencyConversionRequest);
+		codesByName.put(CurrencyConversionResponse.getCodeName().get(), CurrencyConversionResponse);
+		codesByName.put(DiagnosticRequest.getCodeName().get(), DiagnosticRequest);
+		codesByName.put(DiagnosticResponse.getCodeName().get(), DiagnosticResponse);
+		codesByName.put(FinancialAuthorisationRequest.getCodeName().get(), FinancialAuthorisationRequest);
+		codesByName.put(FinancialAuthorisationResponse.getCodeName().get(), FinancialAuthorisationResponse);
+		codesByName.put(FinancialCompletionAdvice.getCodeName().get(), FinancialCompletionAdvice);
+		codesByName.put(FinancialCompletionAdviceResponse.getCodeName().get(), FinancialCompletionAdviceResponse);
+		codesByName.put(FinancialReversalAdvice.getCodeName().get(), FinancialReversalAdvice);
+		codesByName.put(FinancialReversalAdviceResponse.getCodeName().get(), FinancialReversalAdviceResponse);
+		codesByName.put(ReconciliationRequest.getCodeName().get(), ReconciliationRequest);
+		codesByName.put(ReconciliationResponse.getCodeName().get(), ReconciliationResponse);
+		codesByName.put(ReversalAdvice.getCodeName().get(), ReversalAdvice);
+		codesByName.put(ReversalAdviceResponse.getCodeName().get(), ReversalAdviceResponse);
+	}
+
+	public static MessageFunction13Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MessageFunction13Code[] values() {
+		MessageFunction13Code[] values = new MessageFunction13Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MessageFunction13Code> {
+		@Override
+		public MessageFunction13Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MessageFunction13Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

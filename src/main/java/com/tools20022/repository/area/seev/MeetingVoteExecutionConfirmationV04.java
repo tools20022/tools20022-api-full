@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.ProxyVotingISOPreviousversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -48,23 +50,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousVersion
- * SecuritiesEventsPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ProxyVotingISOPreviousversion
- * ProxyVotingISOPreviousversion}</li>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "MtgVoteExctnConf"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -92,6 +77,23 @@ import javax.xml.bind.annotation.*;
  * MeetingVoteExecutionConfirmationV04.mmExtension}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ProxyVotingISOPreviousversion
+ * ProxyVotingISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "MtgVoteExctnConf"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousVersion
+ * SecuritiesEventsPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.007.001.04}</li>
@@ -119,15 +121,16 @@ import javax.xml.bind.annotation.*;
  * MeetingVoteExecutionConfirmationV03}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MeetingVoteExecutionConfirmationV04", propOrder = {"identification", "relatedReference", "meetingReference", "reportingParty", "securityIdentification", "voteInstructions", "extension"})
 public class MeetingVoteExecutionConfirmationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected MessageIdentification1 identification;
 	/**
-	 * Identifies the vote execution confirmation message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,10 +170,11 @@ public class MeetingVoteExecutionConfirmationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdRef", required = true)
 	protected MessageIdentification relatedReference;
 	/**
-	 * Identifies the meeting instruction message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -219,10 +223,11 @@ public class MeetingVoteExecutionConfirmationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "MtgRef", required = true)
 	protected MeetingReference4 meetingReference;
 	/**
-	 * Series of elements which allow to identify a meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -271,10 +276,11 @@ public class MeetingVoteExecutionConfirmationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "RptgPty", required = true)
 	protected PartyIdentification9Choice reportingParty;
 	/**
-	 * Party confirming the votes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -314,10 +320,11 @@ public class MeetingVoteExecutionConfirmationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SctyId", required = true)
 	protected SecurityIdentification11 securityIdentification;
 	/**
-	 * Identifies the securities for which the meeting is organised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -367,10 +374,11 @@ public class MeetingVoteExecutionConfirmationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "VoteInstrs", required = true)
 	protected List<DetailedInstructionStatus9> voteInstructions;
 	/**
-	 * Specifies how a party has voted for each agenda item.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -418,11 +426,11 @@ public class MeetingVoteExecutionConfirmationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<Extension2> extension;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -497,70 +505,70 @@ public class MeetingVoteExecutionConfirmationV04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public MessageIdentification1 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(MessageIdentification1 identification) {
-		this.identification = identification;
+	public MeetingVoteExecutionConfirmationV04 setIdentification(MessageIdentification1 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "RltdRef", required = true)
 	public MessageIdentification getRelatedReference() {
 		return relatedReference;
 	}
 
-	public void setRelatedReference(MessageIdentification relatedReference) {
-		this.relatedReference = relatedReference;
+	public MeetingVoteExecutionConfirmationV04 setRelatedReference(MessageIdentification relatedReference) {
+		this.relatedReference = Objects.requireNonNull(relatedReference);
+		return this;
 	}
 
-	@XmlElement(name = "MtgRef", required = true)
 	public MeetingReference4 getMeetingReference() {
 		return meetingReference;
 	}
 
-	public void setMeetingReference(MeetingReference4 meetingReference) {
-		this.meetingReference = meetingReference;
+	public MeetingVoteExecutionConfirmationV04 setMeetingReference(MeetingReference4 meetingReference) {
+		this.meetingReference = Objects.requireNonNull(meetingReference);
+		return this;
 	}
 
-	@XmlElement(name = "RptgPty", required = true)
 	public PartyIdentification9Choice getReportingParty() {
 		return reportingParty;
 	}
 
-	public void setReportingParty(PartyIdentification9Choice reportingParty) {
-		this.reportingParty = reportingParty;
+	public MeetingVoteExecutionConfirmationV04 setReportingParty(PartyIdentification9Choice reportingParty) {
+		this.reportingParty = Objects.requireNonNull(reportingParty);
+		return this;
 	}
 
-	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification11 getSecurityIdentification() {
 		return securityIdentification;
 	}
 
-	public void setSecurityIdentification(SecurityIdentification11 securityIdentification) {
-		this.securityIdentification = securityIdentification;
+	public MeetingVoteExecutionConfirmationV04 setSecurityIdentification(SecurityIdentification11 securityIdentification) {
+		this.securityIdentification = Objects.requireNonNull(securityIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "VoteInstrs", required = true)
 	public List<DetailedInstructionStatus9> getVoteInstructions() {
-		return voteInstructions;
+		return voteInstructions == null ? voteInstructions = new ArrayList<>() : voteInstructions;
 	}
 
-	public void setVoteInstructions(List<DetailedInstructionStatus9> voteInstructions) {
-		this.voteInstructions = voteInstructions;
+	public MeetingVoteExecutionConfirmationV04 setVoteInstructions(List<DetailedInstructionStatus9> voteInstructions) {
+		this.voteInstructions = Objects.requireNonNull(voteInstructions);
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension2> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<Extension2> extension) {
-		this.extension = extension;
+	public MeetingVoteExecutionConfirmationV04 setExtension(List<Extension2> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.007.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.007.001.04")
 	static public class Document {
 		@XmlElement(name = "MtgVoteExctnConf", required = true)
 		public MeetingVoteExecutionConfirmationV04 messageBody;

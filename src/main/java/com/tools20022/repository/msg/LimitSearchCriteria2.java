@@ -28,9 +28,8 @@ import com.tools20022.repository.codeset.LimitType2Code;
 import com.tools20022.repository.datatype.BICIdentifier;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +69,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBilateralLimitCounterparty3Rule#forLimitSearchCriteria2
+ * ConstraintBilateralLimitCounterparty3Rule.forLimitSearchCriteria2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBilateralLimitCounterparty4Rule#forLimitSearchCriteria2
+ * ConstraintBilateralLimitCounterparty4Rule.forLimitSearchCriteria2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,15 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the criteria used to search for a limit."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LimitSearchCriteria2", propOrder = {"systemIdentification", "bilateralLimitCounterpartyIdentification", "defaultLimitType", "currentLimitType", "accountOwner", "accountIdentification"})
 public class LimitSearchCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SysId")
 	protected SystemIdentificationChoice systemIdentification;
 	/**
-	 * Identification of a particular cash clearing system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +135,7 @@ public class LimitSearchCriteria2 {
 	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TransactionAdministrator.mmCashClearingSystem;
-			componentContext_lazy = () -> LimitSearchCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "SysId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,11 +146,11 @@ public class LimitSearchCriteria2 {
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "BilLmtCtrPtyId")
 	protected List<MemberIdentificationChoice> bilateralLimitCounterpartyIdentification;
 	/**
-	 * Unique and unambiguous identification of a member within a system,
-	 * assigned using the member identification scheme of the system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -175,7 +186,7 @@ public class LimitSearchCriteria2 {
 	public static final MMMessageAttribute mmBilateralLimitCounterpartyIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RiskManagementLimit.mmCounterparty;
-			componentContext_lazy = () -> LimitSearchCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "BilLmtCtrPtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,11 +196,11 @@ public class LimitSearchCriteria2 {
 			complexType_lazy = () -> MemberIdentificationChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "DfltLmtTp")
 	protected List<LimitType2Code> defaultLimitType;
 	/**
-	 * Type of limit as set by default in the system. The default limit is
-	 * applicable by the system unless otherwise instructed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,7 +235,7 @@ public class LimitSearchCriteria2 {
 	public static final MMMessageAttribute mmDefaultLimitType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
-			componentContext_lazy = () -> LimitSearchCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "DfltLmtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,10 +245,11 @@ public class LimitSearchCriteria2 {
 			simpleType_lazy = () -> LimitType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "CurLmtTp")
 	protected List<LimitType2Code> currentLimitType;
 	/**
-	 * Type of limit applied by the system at the present time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -270,7 +282,7 @@ public class LimitSearchCriteria2 {
 	public static final MMMessageAttribute mmCurrentLimitType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
-			componentContext_lazy = () -> LimitSearchCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "CurLmtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,10 +292,11 @@ public class LimitSearchCriteria2 {
 			simpleType_lazy = () -> LimitType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected BICIdentifier accountOwner;
 	/**
-	 * Owner of the account which is being queried.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -317,7 +330,7 @@ public class LimitSearchCriteria2 {
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> LimitSearchCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -328,11 +341,11 @@ public class LimitSearchCriteria2 {
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctId")
 	protected AccountIdentification1Choice accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -367,7 +380,7 @@ public class LimitSearchCriteria2 {
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> LimitSearchCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitSearchCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -383,10 +396,13 @@ public class LimitSearchCriteria2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LimitSearchCriteria2.mmSystemIdentification, LimitSearchCriteria2.mmBilateralLimitCounterpartyIdentification, LimitSearchCriteria2.mmDefaultLimitType,
-						LimitSearchCriteria2.mmCurrentLimitType, LimitSearchCriteria2.mmAccountOwner, LimitSearchCriteria2.mmAccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitSearchCriteria2.mmSystemIdentification, com.tools20022.repository.msg.LimitSearchCriteria2.mmBilateralLimitCounterpartyIdentification,
+						com.tools20022.repository.msg.LimitSearchCriteria2.mmDefaultLimitType, com.tools20022.repository.msg.LimitSearchCriteria2.mmCurrentLimitType, com.tools20022.repository.msg.LimitSearchCriteria2.mmAccountOwner,
+						com.tools20022.repository.msg.LimitSearchCriteria2.mmAccountIdentification);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBilateralLimitCounterparty3Rule.forLimitSearchCriteria2,
+						com.tools20022.repository.constraints.ConstraintBilateralLimitCounterparty4Rule.forLimitSearchCriteria2);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitSearchCriteria2";
 				definition = "Defines the criteria used to search for a limit.";
@@ -395,57 +411,57 @@ public class LimitSearchCriteria2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SysId")
-	public SystemIdentificationChoice getSystemIdentification() {
-		return systemIdentification;
+	public Optional<SystemIdentificationChoice> getSystemIdentification() {
+		return systemIdentification == null ? Optional.empty() : Optional.of(systemIdentification);
 	}
 
-	public void setSystemIdentification(SystemIdentificationChoice systemIdentification) {
+	public LimitSearchCriteria2 setSystemIdentification(SystemIdentificationChoice systemIdentification) {
 		this.systemIdentification = systemIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "BilLmtCtrPtyId")
 	public List<MemberIdentificationChoice> getBilateralLimitCounterpartyIdentification() {
-		return bilateralLimitCounterpartyIdentification;
+		return bilateralLimitCounterpartyIdentification == null ? bilateralLimitCounterpartyIdentification = new ArrayList<>() : bilateralLimitCounterpartyIdentification;
 	}
 
-	public void setBilateralLimitCounterpartyIdentification(List<MemberIdentificationChoice> bilateralLimitCounterpartyIdentification) {
-		this.bilateralLimitCounterpartyIdentification = bilateralLimitCounterpartyIdentification;
+	public LimitSearchCriteria2 setBilateralLimitCounterpartyIdentification(List<MemberIdentificationChoice> bilateralLimitCounterpartyIdentification) {
+		this.bilateralLimitCounterpartyIdentification = Objects.requireNonNull(bilateralLimitCounterpartyIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "DfltLmtTp")
 	public List<LimitType2Code> getDefaultLimitType() {
-		return defaultLimitType;
+		return defaultLimitType == null ? defaultLimitType = new ArrayList<>() : defaultLimitType;
 	}
 
-	public void setDefaultLimitType(List<LimitType2Code> defaultLimitType) {
-		this.defaultLimitType = defaultLimitType;
+	public LimitSearchCriteria2 setDefaultLimitType(List<LimitType2Code> defaultLimitType) {
+		this.defaultLimitType = Objects.requireNonNull(defaultLimitType);
+		return this;
 	}
 
-	@XmlElement(name = "CurLmtTp")
 	public List<LimitType2Code> getCurrentLimitType() {
-		return currentLimitType;
+		return currentLimitType == null ? currentLimitType = new ArrayList<>() : currentLimitType;
 	}
 
-	public void setCurrentLimitType(List<LimitType2Code> currentLimitType) {
-		this.currentLimitType = currentLimitType;
+	public LimitSearchCriteria2 setCurrentLimitType(List<LimitType2Code> currentLimitType) {
+		this.currentLimitType = Objects.requireNonNull(currentLimitType);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public BICIdentifier getAccountOwner() {
-		return accountOwner;
+	public Optional<BICIdentifier> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(BICIdentifier accountOwner) {
+	public LimitSearchCriteria2 setAccountOwner(BICIdentifier accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "AcctId")
-	public AccountIdentification1Choice getAccountIdentification() {
-		return accountIdentification;
+	public Optional<AccountIdentification1Choice> getAccountIdentification() {
+		return accountIdentification == null ? Optional.empty() : Optional.of(accountIdentification);
 	}
 
-	public void setAccountIdentification(AccountIdentification1Choice accountIdentification) {
+	public LimitSearchCriteria2 setAccountIdentification(AccountIdentification1Choice accountIdentification) {
 		this.accountIdentification = accountIdentification;
+		return this;
 	}
 }

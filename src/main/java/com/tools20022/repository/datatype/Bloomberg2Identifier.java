@@ -19,9 +19,13 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMIdentifierSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.datatype.Bloomberg2Identifier.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * An identifier of a security assigned by the Bloomberg organisation.
@@ -36,8 +40,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -57,14 +61,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * "An identifier of a security assigned by the Bloomberg organisation."</li>
  * </ul>
  */
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
 public class Bloomberg2Identifier {
 
 	final static private AtomicReference<MMIdentifierSet> mmObject_lazy = new AtomicReference<>();
+	protected String value;
 
 	final static public MMIdentifierSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMIdentifierSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BBG000KBVJX0", "BBG000BLNNH6", "BBG000M5WT59");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Bloomberg2Identifier";
@@ -74,5 +80,26 @@ public class Bloomberg2Identifier {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Bloomberg2Identifier(String value) {
+		this.value = value;
+	}
+
+	@Override
+	public String toString() {
+		return value;
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Bloomberg2Identifier> {
+		@Override
+		public Bloomberg2Identifier unmarshal(String value) {
+			return new Bloomberg2Identifier(value);
+		}
+
+		@Override
+		public String marshal(Bloomberg2Identifier typedData) {
+			return typedData.value;
+		}
 	}
 }

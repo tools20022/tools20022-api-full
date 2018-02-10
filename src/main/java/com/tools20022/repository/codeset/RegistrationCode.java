@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.RegistrationCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Instruction is in a hold/frozen/preadvice mode as it fulfils predefined
@@ -34,22 +39,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegistrationCode#mmStreetName
- * RegistrationCode.mmStreetName}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegistrationCode#StreetName
+ * RegistrationCode.StreetName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegistrationCode#mmRegistered
- * RegistrationCode.mmRegistered}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegistrationCode#Registered
+ * RegistrationCode.Registered}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RegistrationCode#PartyHold
+ * RegistrationCode.PartyHold}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RegistrationCode#CSDHold
+ * RegistrationCode.CSDHold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegistrationCode#mmPartyHold
- * RegistrationCode.mmPartyHold}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RegistrationCode#mmCSDHold
- * RegistrationCode.mmCSDHold}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegistrationCode#ConditionalDelivery
+ * RegistrationCode.ConditionalDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RegistrationCode#mmConditionalDelivery
- * RegistrationCode.mmConditionalDelivery}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RegistrationCode#mmCSDValidation
- * RegistrationCode.mmCSDValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RegistrationCode#CSDValidation
+ * RegistrationCode.CSDValidation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -64,8 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class RegistrationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RegistrationCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -112,12 +117,12 @@ public class RegistrationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmStreetName = new MMCode() {
+	public static final RegistrationCode StreetName = new RegistrationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StreetName";
 			definition = "Hold the securities in street name. If there is a standing instruction in place to register on receipt, then this standing instruction is to be ignored.";
-			owner_lazy = () -> RegistrationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RegistrationCode.mmObject();
 			codeName = "NREG";
 		}
 	};
@@ -146,12 +151,12 @@ public class RegistrationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegistered = new MMCode() {
+	public static final RegistrationCode Registered = new RegistrationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Registered";
 			definition = "Register on receipt. If there is a standing instruction in place to hold the securities in street name, then this standing instruction is to be ignored.";
-			owner_lazy = () -> RegistrationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RegistrationCode.mmObject();
 			codeName = "YREG";
 		}
 	};
@@ -178,12 +183,12 @@ public class RegistrationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartyHold = new MMCode() {
+	public static final RegistrationCode PartyHold = new RegistrationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyHold";
 			definition = "You or your party set the  instruction in a hold/frozen/preadvice mode.";
-			owner_lazy = () -> RegistrationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RegistrationCode.mmObject();
 			codeName = "PTYH";
 		}
 	};
@@ -211,12 +216,12 @@ public class RegistrationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCSDHold = new MMCode() {
+	public static final RegistrationCode CSDHold = new RegistrationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CSDHold";
 			definition = "Central securities depository sets the  instruction in a hold/frozen/preadvice mode.";
-			owner_lazy = () -> RegistrationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RegistrationCode.mmObject();
 			codeName = "CSDH";
 		}
 	};
@@ -245,12 +250,12 @@ public class RegistrationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmConditionalDelivery = new MMCode() {
+	public static final RegistrationCode ConditionalDelivery = new RegistrationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConditionalDelivery";
 			definition = "Instruction is in a hold/frozen/preadvice mode as it fulfils predefined conditional delivery rules in the market infrastructure platform for conditional delivery.";
-			owner_lazy = () -> RegistrationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RegistrationCode.mmObject();
 			codeName = "CDEL";
 		}
 	};
@@ -279,29 +284,63 @@ public class RegistrationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCSDValidation = new MMCode() {
+	public static final RegistrationCode CSDValidation = new RegistrationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CSDValidation";
 			definition = "Instruction is in a hold/frozen/preadvice mode as it fulfils predefined conditions of a restriction processing type in the market infrastructure platform.";
-			owner_lazy = () -> RegistrationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RegistrationCode.mmObject();
 			codeName = "CVAL";
 		}
 	};
+	final static private LinkedHashMap<String, RegistrationCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RegistrationCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NREG");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegistrationCode";
 				definition = "Instruction is in a hold/frozen/preadvice mode as it fulfils predefined conditions of a restriction processing type in the market infrastructure platform.";
-				code_lazy = () -> Arrays.asList(RegistrationCode.mmStreetName, RegistrationCode.mmRegistered, RegistrationCode.mmPartyHold, RegistrationCode.mmCSDHold, RegistrationCode.mmConditionalDelivery,
-						RegistrationCode.mmCSDValidation);
 				derivation_lazy = () -> Arrays.asList(Registration1Code.mmObject(), Registration2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RegistrationCode.StreetName, com.tools20022.repository.codeset.RegistrationCode.Registered, com.tools20022.repository.codeset.RegistrationCode.PartyHold,
+						com.tools20022.repository.codeset.RegistrationCode.CSDHold, com.tools20022.repository.codeset.RegistrationCode.ConditionalDelivery, com.tools20022.repository.codeset.RegistrationCode.CSDValidation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(StreetName.getCodeName().get(), StreetName);
+		codesByName.put(Registered.getCodeName().get(), Registered);
+		codesByName.put(PartyHold.getCodeName().get(), PartyHold);
+		codesByName.put(CSDHold.getCodeName().get(), CSDHold);
+		codesByName.put(ConditionalDelivery.getCodeName().get(), ConditionalDelivery);
+		codesByName.put(CSDValidation.getCodeName().get(), CSDValidation);
+	}
+
+	public static RegistrationCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RegistrationCode[] values() {
+		RegistrationCode[] values = new RegistrationCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RegistrationCode> {
+		@Override
+		public RegistrationCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RegistrationCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

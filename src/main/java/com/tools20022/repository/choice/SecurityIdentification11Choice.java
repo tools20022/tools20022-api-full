@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AlternateIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,21 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "SecurityIdentification11Choice", propOrder = {"ISIN", "otherIdentification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "SecurityIdentification11Choice", propOrder = {"iSIN", "otherIdentification"})
 public class SecurityIdentification11Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ISIN", required = true)
 	protected ISINIdentifier iSIN;
 	/**
-	 * International Securities Identification Number (ISIN). A numbering system
-	 * designed by the United Nation's International Organisation for
-	 * Standardisation (ISO). The ISIN is composed of a 2-character prefix
-	 * representing the country of issue, followed by the national security
-	 * number (if one exists), and a check digit. Each country has a national
-	 * numbering agency that assigns ISIN numbers for securities in that
-	 * country.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +117,7 @@ public class SecurityIdentification11Choice {
 	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
-			componentContext_lazy = () -> SecurityIdentification11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ISIN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,11 +128,11 @@ public class SecurityIdentification11Choice {
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrId", required = true)
 	protected AlternateIdentification1 otherIdentification;
 	/**
-	 * Identification of a security by proprietary or domestic identification
-	 * scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -171,7 +167,7 @@ public class SecurityIdentification11Choice {
 	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
-			componentContext_lazy = () -> SecurityIdentification11Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification11Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,9 +183,9 @@ public class SecurityIdentification11Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityIdentification11Choice.mmISIN, SecurityIdentification11Choice.mmOtherIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification11Choice.mmISIN, com.tools20022.repository.choice.SecurityIdentification11Choice.mmOtherIdentification);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityIdentification11Choice";
 				definition = "Choice between ISIN and an alternative format for the identification of a security. ISIN is the preferred format.";
@@ -198,21 +194,21 @@ public class SecurityIdentification11Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ISIN", required = true)
 	public ISINIdentifier getISIN() {
 		return iSIN;
 	}
 
-	public void setISIN(ISINIdentifier iSIN) {
-		this.iSIN = iSIN;
+	public SecurityIdentification11Choice setISIN(ISINIdentifier iSIN) {
+		this.iSIN = Objects.requireNonNull(iSIN);
+		return this;
 	}
 
-	@XmlElement(name = "OthrId", required = true)
 	public AlternateIdentification1 getOtherIdentification() {
 		return otherIdentification;
 	}
 
-	public void setOtherIdentification(AlternateIdentification1 otherIdentification) {
-		this.otherIdentification = otherIdentification;
+	public SecurityIdentification11Choice setOtherIdentification(AlternateIdentification1 otherIdentification) {
+		this.otherIdentification = Objects.requireNonNull(otherIdentification);
+		return this;
 	}
 }

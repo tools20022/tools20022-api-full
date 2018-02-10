@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MissingOrIncorrectInformation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnableToApplyJustification1Choice", propOrder = {"anyInformation", "missingOrIncorrectInformation"})
 public class UnableToApplyJustification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AnyInf", required = true)
 	protected YesNoIndicator anyInformation;
 	/**
-	 * When set to yes, indicates that all available information about the
-	 * underlying payment instruction shall be sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +106,7 @@ public class UnableToApplyJustification1Choice {
 	 */
 	public static final MMMessageAttribute mmAnyInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UnableToApplyJustification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UnableToApplyJustification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AnyInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +117,11 @@ public class UnableToApplyJustification1Choice {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "MssngOrIncrrctInf", required = true)
 	protected MissingOrIncorrectInformation1 missingOrIncorrectInformation;
 	/**
-	 * Missing or incorrect information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -146,7 +148,7 @@ public class UnableToApplyJustification1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmMissingOrIncorrectInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UnableToApplyJustification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UnableToApplyJustification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MssngOrIncrrctInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,8 +164,9 @@ public class UnableToApplyJustification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnableToApplyJustification1Choice.mmAnyInformation, UnableToApplyJustification1Choice.mmMissingOrIncorrectInformation);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnableToApplyJustification1Choice.mmAnyInformation,
+						com.tools20022.repository.choice.UnableToApplyJustification1Choice.mmMissingOrIncorrectInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UnableToApplyJustification1Choice";
 				definition = "Choice between details of missing information or the complete set of available information.";
@@ -172,21 +175,21 @@ public class UnableToApplyJustification1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AnyInf", required = true)
 	public YesNoIndicator getAnyInformation() {
 		return anyInformation;
 	}
 
-	public void setAnyInformation(YesNoIndicator anyInformation) {
-		this.anyInformation = anyInformation;
+	public UnableToApplyJustification1Choice setAnyInformation(YesNoIndicator anyInformation) {
+		this.anyInformation = Objects.requireNonNull(anyInformation);
+		return this;
 	}
 
-	@XmlElement(name = "MssngOrIncrrctInf", required = true)
 	public MissingOrIncorrectInformation1 getMissingOrIncorrectInformation() {
 		return missingOrIncorrectInformation;
 	}
 
-	public void setMissingOrIncorrectInformation(MissingOrIncorrectInformation1 missingOrIncorrectInformation) {
-		this.missingOrIncorrectInformation = missingOrIncorrectInformation;
+	public UnableToApplyJustification1Choice setMissingOrIncorrectInformation(MissingOrIncorrectInformation1 missingOrIncorrectInformation) {
+		this.missingOrIncorrectInformation = Objects.requireNonNull(missingOrIncorrectInformation);
+		return this;
 	}
 }

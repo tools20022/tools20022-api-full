@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.entity.Warrant;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,16 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Warrant2", propOrder = {"multiplier", "subscriptionPrice", "type", "warrantAgent"})
 public class Warrant2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Mltplr")
 	protected BaseOneRate multiplier;
 	/**
-	 * Specifies the ratio or multiply factor used to convert from contracts to
-	 * shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +115,7 @@ public class Warrant2 {
 	public static final MMMessageAttribute mmMultiplier = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Warrant.mmMultiplier;
-			componentContext_lazy = () -> Warrant2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Warrant2.mmObject();
 			isDerived = false;
 			xmlTag = "Mltplr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,11 +126,11 @@ public class Warrant2 {
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	@XmlElement(name = "SbcptPric")
 	protected Price1 subscriptionPrice;
 	/**
-	 * Pre-determined price at which the holder of a warrant is entitled to buy
-	 * the underlying instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +163,7 @@ public class Warrant2 {
 	public static final MMMessageAttribute mmSubscriptionPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Warrant.mmSubscriptionPrice;
-			componentContext_lazy = () -> Warrant2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Warrant2.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,10 +174,11 @@ public class Warrant2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected WarrantStyle2Choice type;
 	/**
-	 * Indicates when a warrant can be exercised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,7 +211,7 @@ public class Warrant2 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Warrant.mmStyle;
-			componentContext_lazy = () -> Warrant2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Warrant2.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,11 +222,11 @@ public class Warrant2 {
 			complexType_lazy = () -> WarrantStyle2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "WarrtAgt")
 	protected List<com.tools20022.repository.msg.Organisation2> warrantAgent;
 	/**
-	 * Entity appointed by the issuer to process the exercising of warrants,
-	 * sometimes responsible for the issuance of the warrants into the market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -258,7 +258,7 @@ public class Warrant2 {
 	public static final MMMessageAssociationEnd mmWarrantAgent = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
-			componentContext_lazy = () -> Warrant2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Warrant2.mmObject();
 			isDerived = false;
 			xmlTag = "WarrtAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,9 +273,10 @@ public class Warrant2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Warrant2.mmMultiplier, Warrant2.mmSubscriptionPrice, Warrant2.mmType, Warrant2.mmWarrantAgent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Warrant2.mmMultiplier, com.tools20022.repository.msg.Warrant2.mmSubscriptionPrice, com.tools20022.repository.msg.Warrant2.mmType,
+						com.tools20022.repository.msg.Warrant2.mmWarrantAgent);
 				trace_lazy = () -> Warrant.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Warrant2";
 				definition = "Financial instrument that gives the holder the right to purchase shares or bonds at a given price within a specified time.";
@@ -284,39 +285,39 @@ public class Warrant2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Mltplr")
-	public BaseOneRate getMultiplier() {
-		return multiplier;
+	public Optional<BaseOneRate> getMultiplier() {
+		return multiplier == null ? Optional.empty() : Optional.of(multiplier);
 	}
 
-	public void setMultiplier(BaseOneRate multiplier) {
+	public Warrant2 setMultiplier(BaseOneRate multiplier) {
 		this.multiplier = multiplier;
+		return this;
 	}
 
-	@XmlElement(name = "SbcptPric")
-	public Price1 getSubscriptionPrice() {
-		return subscriptionPrice;
+	public Optional<Price1> getSubscriptionPrice() {
+		return subscriptionPrice == null ? Optional.empty() : Optional.of(subscriptionPrice);
 	}
 
-	public void setSubscriptionPrice(com.tools20022.repository.msg.Price1 subscriptionPrice) {
+	public Warrant2 setSubscriptionPrice(com.tools20022.repository.msg.Price1 subscriptionPrice) {
 		this.subscriptionPrice = subscriptionPrice;
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public WarrantStyle2Choice getType() {
-		return type;
+	public Optional<WarrantStyle2Choice> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(WarrantStyle2Choice type) {
+	public Warrant2 setType(WarrantStyle2Choice type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "WarrtAgt")
 	public List<Organisation2> getWarrantAgent() {
-		return warrantAgent;
+		return warrantAgent == null ? warrantAgent = new ArrayList<>() : warrantAgent;
 	}
 
-	public void setWarrantAgent(List<com.tools20022.repository.msg.Organisation2> warrantAgent) {
-		this.warrantAgent = warrantAgent;
+	public Warrant2 setWarrantAgent(List<com.tools20022.repository.msg.Organisation2> warrantAgent) {
+		this.warrantAgent = Objects.requireNonNull(warrantAgent);
+		return this;
 	}
 }

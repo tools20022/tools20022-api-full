@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.UndertakingDocument;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Document presented for examination."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DemandDocumentation1", propOrder = {"completeIndicator", "completionInformation", "enclosedFile", "demandNarrative"})
 public class DemandDocumentation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CmpltInd", required = true)
 	protected YesNoIndicator completeIndicator;
 	/**
-	 * Indication as to whether the presentation is complete.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +108,7 @@ public class DemandDocumentation1 {
 	 */
 	public static final MMMessageAttribute mmCompleteIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DemandDocumentation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DemandDocumentation1.mmObject();
 			isDerived = false;
 			xmlTag = "CmpltInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +119,11 @@ public class DemandDocumentation1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CmpltnInf")
 	protected Max2000Text completionInformation;
 	/**
-	 * Information related to an incomplete presentation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,7 +150,7 @@ public class DemandDocumentation1 {
 	 */
 	public static final MMMessageAttribute mmCompletionInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DemandDocumentation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DemandDocumentation1.mmObject();
 			isDerived = false;
 			xmlTag = "CmpltnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,10 +161,11 @@ public class DemandDocumentation1 {
 			simpleType_lazy = () -> Max2000Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NclsdFile")
 	protected List<com.tools20022.repository.msg.Document9> enclosedFile;
 	/**
-	 * Document or template enclosed in the demand.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -194,7 +196,7 @@ public class DemandDocumentation1 {
 	public static final MMMessageAssociationEnd mmEnclosedFile = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingDocument.mmObject();
-			componentContext_lazy = () -> DemandDocumentation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DemandDocumentation1.mmObject();
 			isDerived = false;
 			xmlTag = "NclsdFile";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,10 +207,11 @@ public class DemandDocumentation1 {
 			type_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
 		}
 	};
+	@XmlElement(name = "DmndNrrtv")
 	protected Max20000Text demandNarrative;
 	/**
-	 * Narrative text constituting the demand.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,7 +239,7 @@ public class DemandDocumentation1 {
 	 */
 	public static final MMMessageAttribute mmDemandNarrative = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DemandDocumentation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DemandDocumentation1.mmObject();
 			isDerived = false;
 			xmlTag = "DmndNrrtv";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,8 +254,9 @@ public class DemandDocumentation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DemandDocumentation1.mmCompleteIndicator, DemandDocumentation1.mmCompletionInformation, DemandDocumentation1.mmEnclosedFile, DemandDocumentation1.mmDemandNarrative);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DemandDocumentation1.mmCompleteIndicator, com.tools20022.repository.msg.DemandDocumentation1.mmCompletionInformation,
+						com.tools20022.repository.msg.DemandDocumentation1.mmEnclosedFile, com.tools20022.repository.msg.DemandDocumentation1.mmDemandNarrative);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DemandDocumentation1";
 				definition = "Document presented for examination.";
@@ -261,39 +265,39 @@ public class DemandDocumentation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CmpltInd", required = true)
 	public YesNoIndicator getCompleteIndicator() {
 		return completeIndicator;
 	}
 
-	public void setCompleteIndicator(YesNoIndicator completeIndicator) {
-		this.completeIndicator = completeIndicator;
+	public DemandDocumentation1 setCompleteIndicator(YesNoIndicator completeIndicator) {
+		this.completeIndicator = Objects.requireNonNull(completeIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "CmpltnInf")
-	public Max2000Text getCompletionInformation() {
-		return completionInformation;
+	public Optional<Max2000Text> getCompletionInformation() {
+		return completionInformation == null ? Optional.empty() : Optional.of(completionInformation);
 	}
 
-	public void setCompletionInformation(Max2000Text completionInformation) {
+	public DemandDocumentation1 setCompletionInformation(Max2000Text completionInformation) {
 		this.completionInformation = completionInformation;
+		return this;
 	}
 
-	@XmlElement(name = "NclsdFile")
 	public List<Document9> getEnclosedFile() {
-		return enclosedFile;
+		return enclosedFile == null ? enclosedFile = new ArrayList<>() : enclosedFile;
 	}
 
-	public void setEnclosedFile(List<com.tools20022.repository.msg.Document9> enclosedFile) {
-		this.enclosedFile = enclosedFile;
+	public DemandDocumentation1 setEnclosedFile(List<com.tools20022.repository.msg.Document9> enclosedFile) {
+		this.enclosedFile = Objects.requireNonNull(enclosedFile);
+		return this;
 	}
 
-	@XmlElement(name = "DmndNrrtv")
-	public Max20000Text getDemandNarrative() {
-		return demandNarrative;
+	public Optional<Max20000Text> getDemandNarrative() {
+		return demandNarrative == null ? Optional.empty() : Optional.of(demandNarrative);
 	}
 
-	public void setDemandNarrative(Max20000Text demandNarrative) {
+	public DemandDocumentation1 setDemandNarrative(Max20000Text demandNarrative) {
 		this.demandNarrative = demandNarrative;
+		return this;
 	}
 }

@@ -29,9 +29,8 @@ import com.tools20022.repository.msg.ReportParameters1;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -49,22 +48,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
- * SecuritiesClearingLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion
- * CentralCounterPartyCCPSecuritiesClearingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "NetPos"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -89,6 +72,22 @@ import javax.xml.bind.annotation.*;
  * NetPositionV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion
+ * CentralCounterPartyCCPSecuritiesClearingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "NetPos"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
+ * SecuritiesClearingLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code secl.004.001.03}</li>
@@ -104,16 +103,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NetPositionV03", propOrder = {"reportParameters", "pagination", "clearingMember", "clearingSegment", "netPositionReport", "supplementaryData"})
 public class NetPositionV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptParams", required = true)
 	protected ReportParameters1 reportParameters;
 	/**
-	 * Provides parameters of the margin report such as the creation date and
-	 * time, the report currency or the calculation date and time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,10 +154,11 @@ public class NetPositionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Pgntn", required = true)
 	protected Pagination pagination;
 	/**
-	 * Provides information about the number of used pages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,11 +197,11 @@ public class NetPositionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "ClrMmb", required = true)
 	protected PartyIdentification35Choice clearingMember;
 	/**
-	 * Provides the identification of the account owner, that is the clearing
-	 * member (individual clearing member or general clearing member).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -243,15 +243,11 @@ public class NetPositionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "ClrSgmt")
 	protected PartyIdentification35Choice clearingSegment;
 	/**
-	 * Clearing organisation that will clear the trade.<br>
-	 * <br>
-	 * Note: This field allows Clearing Member Firm to segregate flows coming
-	 * from clearing counterparty's clearing system. Indeed, Clearing Member
-	 * Firms receive messages from the same system (same sender) and this field
-	 * allows them to know if the message is related to equities or derivatives.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -293,11 +289,11 @@ public class NetPositionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "NetPosRpt", required = true)
 	protected List<NetPosition3> netPositionReport;
 	/**
-	 * Provides the net position details such as the average deal price and net
-	 * quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -337,11 +333,11 @@ public class NetPositionV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -414,61 +410,61 @@ public class NetPositionV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptParams", required = true)
 	public ReportParameters1 getReportParameters() {
 		return reportParameters;
 	}
 
-	public void setReportParameters(ReportParameters1 reportParameters) {
-		this.reportParameters = reportParameters;
+	public NetPositionV03 setReportParameters(ReportParameters1 reportParameters) {
+		this.reportParameters = Objects.requireNonNull(reportParameters);
+		return this;
 	}
 
-	@XmlElement(name = "Pgntn", required = true)
 	public Pagination getPagination() {
 		return pagination;
 	}
 
-	public void setPagination(Pagination pagination) {
-		this.pagination = pagination;
+	public NetPositionV03 setPagination(Pagination pagination) {
+		this.pagination = Objects.requireNonNull(pagination);
+		return this;
 	}
 
-	@XmlElement(name = "ClrMmb", required = true)
 	public PartyIdentification35Choice getClearingMember() {
 		return clearingMember;
 	}
 
-	public void setClearingMember(PartyIdentification35Choice clearingMember) {
-		this.clearingMember = clearingMember;
+	public NetPositionV03 setClearingMember(PartyIdentification35Choice clearingMember) {
+		this.clearingMember = Objects.requireNonNull(clearingMember);
+		return this;
 	}
 
-	@XmlElement(name = "ClrSgmt")
-	public PartyIdentification35Choice getClearingSegment() {
-		return clearingSegment;
+	public Optional<PartyIdentification35Choice> getClearingSegment() {
+		return clearingSegment == null ? Optional.empty() : Optional.of(clearingSegment);
 	}
 
-	public void setClearingSegment(PartyIdentification35Choice clearingSegment) {
+	public NetPositionV03 setClearingSegment(PartyIdentification35Choice clearingSegment) {
 		this.clearingSegment = clearingSegment;
+		return this;
 	}
 
-	@XmlElement(name = "NetPosRpt", required = true)
 	public List<NetPosition3> getNetPositionReport() {
-		return netPositionReport;
+		return netPositionReport == null ? netPositionReport = new ArrayList<>() : netPositionReport;
 	}
 
-	public void setNetPositionReport(List<NetPosition3> netPositionReport) {
-		this.netPositionReport = netPositionReport;
+	public NetPositionV03 setNetPositionReport(List<NetPosition3> netPositionReport) {
+		this.netPositionReport = Objects.requireNonNull(netPositionReport);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public NetPositionV03 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:secl.004.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:secl.004.001.03")
 	static public class Document {
 		@XmlElement(name = "NetPos", required = true)
 		public NetPositionV03 messageBody;

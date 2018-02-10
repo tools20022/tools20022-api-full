@@ -20,29 +20,33 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RateTypeCode;
+import com.tools20022.repository.codeset.RateType5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of rate.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RateTypeCode RateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType5Code#mmUnknown
- * RateType5Code.mmUnknown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType5Code#Unknown
+ * RateType5Code.Unknown}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RateTypeCode RateTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -59,7 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of rate."</li>
  * </ul>
  */
-public class RateType5Code extends RateTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RateType5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -78,26 +83,56 @@ public class RateType5Code extends RateTypeCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknown = new MMCode() {
+	public static final RateType5Code Unknown = new RateType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
-			owner_lazy = () -> RateType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType5Code.mmObject();
+			codeName = RateTypeCode.Unknown.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RateType5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RateType5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("UKWN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateType5Code";
 				definition = "Specifies the type of rate.";
-				code_lazy = () -> Arrays.asList(RateType5Code.mmUnknown);
 				trace_lazy = () -> RateTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType5Code.Unknown);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Unknown.getCodeName().get(), Unknown);
+	}
+
+	public static RateType5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RateType5Code[] values() {
+		RateType5Code[] values = new RateType5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RateType5Code> {
+		@Override
+		public RateType5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RateType5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

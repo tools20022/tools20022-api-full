@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.ReportingService;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +74,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,16 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Account and statement parameters for which a statement is requested."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatementAttributes1", propOrder = {"accountIdentification", "subAccountIdentification", "accountOwner", "statementType", "statementTerm", "frequency", "updateType", "statementBasis"})
 public class StatementAttributes1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId", required = true)
 	protected AccountIdentificationFormatChoice accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +132,7 @@ public class StatementAttributes1 {
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> StatementAttributes1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,11 +143,11 @@ public class StatementAttributes1 {
 			complexType_lazy = () -> AccountIdentificationFormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "SubAcctId")
 	protected AccountIdentificationFormatChoice subAccountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -181,7 +183,7 @@ public class StatementAttributes1 {
 	public static final MMMessageAttribute mmSubAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> StatementAttributes1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,10 +194,11 @@ public class StatementAttributes1 {
 			complexType_lazy = () -> AccountIdentificationFormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification2Choice accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -229,7 +232,7 @@ public class StatementAttributes1 {
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> StatementAttributes1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,10 +243,11 @@ public class StatementAttributes1 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtTp", required = true)
 	protected StatementType1Choice statementType;
 	/**
-	 * Specifes the statement message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -271,7 +275,7 @@ public class StatementAttributes1 {
 	 */
 	public static final MMMessageAttribute mmStatementType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatementAttributes1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "StmtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -282,10 +286,11 @@ public class StatementAttributes1 {
 			complexType_lazy = () -> StatementType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtTerm")
 	protected StatementTerm1Choice statementTerm;
 	/**
-	 * Date of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -318,7 +323,7 @@ public class StatementAttributes1 {
 	public static final MMMessageAttribute mmStatementTerm = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Account.mmObject();
-			componentContext_lazy = () -> StatementAttributes1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "StmtTerm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,10 +334,11 @@ public class StatementAttributes1 {
 			complexType_lazy = () -> StatementTerm1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Frqcy")
 	protected FrequencyCodeAndDSSCode1Choice frequency;
 	/**
-	 * Frequency of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -366,7 +372,7 @@ public class StatementAttributes1 {
 	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ReportingService.mmStatementFrequency;
-			componentContext_lazy = () -> StatementAttributes1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -377,10 +383,11 @@ public class StatementAttributes1 {
 			complexType_lazy = () -> FrequencyCodeAndDSSCode1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "UpdTp")
 	protected StatementUpdateTypeCodeAndDSSCodeChoice updateType;
 	/**
-	 * Indicates whether the report is complete or contains changes only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -409,7 +416,7 @@ public class StatementAttributes1 {
 	 */
 	public static final MMMessageAttribute mmUpdateType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatementAttributes1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "UpdTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -420,10 +427,11 @@ public class StatementAttributes1 {
 			complexType_lazy = () -> StatementUpdateTypeCodeAndDSSCodeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtBsis")
 	protected StatementBasisCodeAndDSSCodeChoice statementBasis;
 	/**
-	 * Type of balance on which the statement is prepared.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -451,7 +459,7 @@ public class StatementAttributes1 {
 	 */
 	public static final MMMessageAttribute mmStatementBasis = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatementAttributes1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatementAttributes1.mmObject();
 			isDerived = false;
 			xmlTag = "StmtBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -466,10 +474,11 @@ public class StatementAttributes1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatementAttributes1.mmAccountIdentification, StatementAttributes1.mmSubAccountIdentification, StatementAttributes1.mmAccountOwner, StatementAttributes1.mmStatementType,
-						StatementAttributes1.mmStatementTerm, StatementAttributes1.mmFrequency, StatementAttributes1.mmUpdateType, StatementAttributes1.mmStatementBasis);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatementAttributes1.mmAccountIdentification, com.tools20022.repository.msg.StatementAttributes1.mmSubAccountIdentification,
+						com.tools20022.repository.msg.StatementAttributes1.mmAccountOwner, com.tools20022.repository.msg.StatementAttributes1.mmStatementType, com.tools20022.repository.msg.StatementAttributes1.mmStatementTerm,
+						com.tools20022.repository.msg.StatementAttributes1.mmFrequency, com.tools20022.repository.msg.StatementAttributes1.mmUpdateType, com.tools20022.repository.msg.StatementAttributes1.mmStatementBasis);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StatementAttributes1";
 				definition = "Account and statement parameters for which a statement is requested.";
@@ -478,75 +487,75 @@ public class StatementAttributes1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentificationFormatChoice getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(AccountIdentificationFormatChoice accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public StatementAttributes1 setAccountIdentification(AccountIdentificationFormatChoice accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "SubAcctId")
-	public AccountIdentificationFormatChoice getSubAccountIdentification() {
-		return subAccountIdentification;
+	public Optional<AccountIdentificationFormatChoice> getSubAccountIdentification() {
+		return subAccountIdentification == null ? Optional.empty() : Optional.of(subAccountIdentification);
 	}
 
-	public void setSubAccountIdentification(AccountIdentificationFormatChoice subAccountIdentification) {
+	public StatementAttributes1 setSubAccountIdentification(AccountIdentificationFormatChoice subAccountIdentification) {
 		this.subAccountIdentification = subAccountIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification2Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification2Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification2Choice accountOwner) {
+	public StatementAttributes1 setAccountOwner(PartyIdentification2Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "StmtTp", required = true)
 	public StatementType1Choice getStatementType() {
 		return statementType;
 	}
 
-	public void setStatementType(StatementType1Choice statementType) {
-		this.statementType = statementType;
+	public StatementAttributes1 setStatementType(StatementType1Choice statementType) {
+		this.statementType = Objects.requireNonNull(statementType);
+		return this;
 	}
 
-	@XmlElement(name = "StmtTerm")
-	public StatementTerm1Choice getStatementTerm() {
-		return statementTerm;
+	public Optional<StatementTerm1Choice> getStatementTerm() {
+		return statementTerm == null ? Optional.empty() : Optional.of(statementTerm);
 	}
 
-	public void setStatementTerm(StatementTerm1Choice statementTerm) {
+	public StatementAttributes1 setStatementTerm(StatementTerm1Choice statementTerm) {
 		this.statementTerm = statementTerm;
+		return this;
 	}
 
-	@XmlElement(name = "Frqcy")
-	public FrequencyCodeAndDSSCode1Choice getFrequency() {
-		return frequency;
+	public Optional<FrequencyCodeAndDSSCode1Choice> getFrequency() {
+		return frequency == null ? Optional.empty() : Optional.of(frequency);
 	}
 
-	public void setFrequency(FrequencyCodeAndDSSCode1Choice frequency) {
+	public StatementAttributes1 setFrequency(FrequencyCodeAndDSSCode1Choice frequency) {
 		this.frequency = frequency;
+		return this;
 	}
 
-	@XmlElement(name = "UpdTp")
-	public StatementUpdateTypeCodeAndDSSCodeChoice getUpdateType() {
-		return updateType;
+	public Optional<StatementUpdateTypeCodeAndDSSCodeChoice> getUpdateType() {
+		return updateType == null ? Optional.empty() : Optional.of(updateType);
 	}
 
-	public void setUpdateType(StatementUpdateTypeCodeAndDSSCodeChoice updateType) {
+	public StatementAttributes1 setUpdateType(StatementUpdateTypeCodeAndDSSCodeChoice updateType) {
 		this.updateType = updateType;
+		return this;
 	}
 
-	@XmlElement(name = "StmtBsis")
-	public StatementBasisCodeAndDSSCodeChoice getStatementBasis() {
-		return statementBasis;
+	public Optional<StatementBasisCodeAndDSSCodeChoice> getStatementBasis() {
+		return statementBasis == null ? Optional.empty() : Optional.of(statementBasis);
 	}
 
-	public void setStatementBasis(StatementBasisCodeAndDSSCodeChoice statementBasis) {
+	public StatementAttributes1 setStatementBasis(StatementBasisCodeAndDSSCodeChoice statementBasis) {
 		this.statementBasis = statementBasis;
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SequenceTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of the current transaction that belongs to a sequence of
@@ -32,18 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.SequenceTypeCode#mmFirst
- * SequenceTypeCode.mmFirst}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SequenceTypeCode#First
+ * SequenceTypeCode.First}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SequenceTypeCode#Recurring
+ * SequenceTypeCode.Recurring}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SequenceTypeCode#Final
+ * SequenceTypeCode.Final}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SequenceTypeCode#OneOff
+ * SequenceTypeCode.OneOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SequenceTypeCode#mmRecurring
- * SequenceTypeCode.mmRecurring}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SequenceTypeCode#mmFinal
- * SequenceTypeCode.mmFinal}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SequenceTypeCode#mmOneOff
- * SequenceTypeCode.mmOneOff}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SequenceTypeCode#mmRepresented
- * SequenceTypeCode.mmRepresented}</li>
+ * {@linkplain com.tools20022.repository.codeset.SequenceTypeCode#Represented
+ * SequenceTypeCode.Represented}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -60,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class SequenceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SequenceTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -105,12 +110,12 @@ public class SequenceTypeCode {
 	 * "First collection of a series of direct debit instructions."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFirst = new MMCode() {
+	public static final SequenceTypeCode First = new SequenceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "First";
 			definition = "First collection of a series of direct debit instructions.";
-			owner_lazy = () -> SequenceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SequenceTypeCode.mmObject();
 			codeName = "FRST";
 		}
 	};
@@ -138,12 +143,12 @@ public class SequenceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRecurring = new MMCode() {
+	public static final SequenceTypeCode Recurring = new SequenceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Recurring";
 			definition = "Direct debit instruction where the debtor's authorisation is used for regular direct debit transactions initiated by the creditor.";
-			owner_lazy = () -> SequenceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SequenceTypeCode.mmObject();
 			codeName = "RCUR";
 		}
 	};
@@ -169,12 +174,12 @@ public class SequenceTypeCode {
 	 * "Final collection of a series of direct debit instructions."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinal = new MMCode() {
+	public static final SequenceTypeCode Final = new SequenceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Final";
 			definition = "Final collection of a series of direct debit instructions.";
-			owner_lazy = () -> SequenceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SequenceTypeCode.mmObject();
 			codeName = "FNAL";
 		}
 	};
@@ -202,12 +207,12 @@ public class SequenceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOneOff = new MMCode() {
+	public static final SequenceTypeCode OneOff = new SequenceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OneOff";
 			definition = "Direct debit instruction where the debtor's authorisation is used to initiate one single direct debit transaction.";
-			owner_lazy = () -> SequenceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SequenceTypeCode.mmObject();
 			codeName = "OOFF";
 		}
 	};
@@ -235,28 +240,62 @@ public class SequenceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRepresented = new MMCode() {
+	public static final SequenceTypeCode Represented = new SequenceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Represented";
 			definition = "Collection used to re-present previously reversed or returned direct debit transactions.";
-			owner_lazy = () -> SequenceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SequenceTypeCode.mmObject();
 			codeName = "RPRE";
 		}
 	};
+	final static private LinkedHashMap<String, SequenceTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SequenceTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FRST");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SequenceTypeCode";
 				definition = "Specifies the type of the current transaction that belongs to a sequence of transactions.";
-				code_lazy = () -> Arrays.asList(SequenceTypeCode.mmFirst, SequenceTypeCode.mmRecurring, SequenceTypeCode.mmFinal, SequenceTypeCode.mmOneOff, SequenceTypeCode.mmRepresented);
 				derivation_lazy = () -> Arrays.asList(SequenceType1Code.mmObject(), SequenceType3Code.mmObject(), SequenceType2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SequenceTypeCode.First, com.tools20022.repository.codeset.SequenceTypeCode.Recurring, com.tools20022.repository.codeset.SequenceTypeCode.Final,
+						com.tools20022.repository.codeset.SequenceTypeCode.OneOff, com.tools20022.repository.codeset.SequenceTypeCode.Represented);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(First.getCodeName().get(), First);
+		codesByName.put(Recurring.getCodeName().get(), Recurring);
+		codesByName.put(Final.getCodeName().get(), Final);
+		codesByName.put(OneOff.getCodeName().get(), OneOff);
+		codesByName.put(Represented.getCodeName().get(), Represented);
+	}
+
+	public static SequenceTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SequenceTypeCode[] values() {
+		SequenceTypeCode[] values = new SequenceTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SequenceTypeCode> {
+		@Override
+		public SequenceTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SequenceTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * TransferInstructionStatus3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransferInstructionStatus4", propOrder = {"status", "reason"})
 public class TransferInstructionStatus4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected TransferStatus4Code status;
 	/**
-	 * Status code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +121,7 @@ public class TransferInstructionStatus4 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeStatus.mmTransferStatus;
-			componentContext_lazy = () -> TransferInstructionStatus4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferInstructionStatus4.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +133,11 @@ public class TransferInstructionStatus4 {
 			simpleType_lazy = () -> TransferStatus4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn")
 	protected Max350Text reason;
 	/**
-	 * Reason for the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +175,7 @@ public class TransferInstructionStatus4 {
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-			componentContext_lazy = () -> TransferInstructionStatus4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferInstructionStatus4.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,9 +191,9 @@ public class TransferInstructionStatus4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransferInstructionStatus4.mmStatus, TransferInstructionStatus4.mmReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferInstructionStatus4.mmStatus, com.tools20022.repository.msg.TransferInstructionStatus4.mmReason);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferInstructionStatus4";
 				definition = "Instruction status.";
@@ -199,21 +203,21 @@ public class TransferInstructionStatus4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public TransferStatus4Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(TransferStatus4Code status) {
-		this.status = status;
+	public TransferInstructionStatus4 setStatus(TransferStatus4Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "Rsn")
-	public Max350Text getReason() {
-		return reason;
+	public Optional<Max350Text> getReason() {
+		return reason == null ? Optional.empty() : Optional.of(reason);
 	}
 
-	public void setReason(Max350Text reason) {
+	public TransferInstructionStatus4 setReason(Max350Text reason) {
 		this.reason = reason;
+		return this;
 	}
 }

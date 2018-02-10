@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.TransferUnmatchedStatusReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Status is unmatched."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransferUnmatchedStatus", propOrder = {"reason", "dataSourceScheme", "noReason"})
 public class TransferUnmatchedStatus {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rsn", required = true)
 	protected TransferUnmatchedStatusReason1 reason;
 	/**
-	 * Reason for an unmatched status in the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,7 +113,7 @@ public class TransferUnmatchedStatus {
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
-			componentContext_lazy = () -> TransferUnmatchedStatus.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TransferUnmatchedStatus.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,11 +125,11 @@ public class TransferUnmatchedStatus {
 			type_lazy = () -> TransferUnmatchedStatusReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "DataSrcSchme", required = true)
 	protected GenericIdentification1 dataSourceScheme;
 	/**
-	 * Proprietary identification for a reason of a specific status in the
-	 * report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -161,7 +163,7 @@ public class TransferUnmatchedStatus {
 	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmDataSourceScheme;
-			componentContext_lazy = () -> TransferUnmatchedStatus.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TransferUnmatchedStatus.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +175,11 @@ public class TransferUnmatchedStatus {
 			type_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "NoRsn", required = true)
 	protected NoReasonCode noReason;
 	/**
-	 * Indicates that there is no reason available or to report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +213,7 @@ public class TransferUnmatchedStatus {
 	public static final MMMessageAttribute mmNoReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
-			componentContext_lazy = () -> TransferUnmatchedStatus.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TransferUnmatchedStatus.mmObject();
 			isDerived = false;
 			xmlTag = "NoRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,9 +228,10 @@ public class TransferUnmatchedStatus {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransferUnmatchedStatus.mmReason, TransferUnmatchedStatus.mmDataSourceScheme, TransferUnmatchedStatus.mmNoReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransferUnmatchedStatus.mmReason, com.tools20022.repository.choice.TransferUnmatchedStatus.mmDataSourceScheme,
+						com.tools20022.repository.choice.TransferUnmatchedStatus.mmNoReason);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferUnmatchedStatus";
 				definition = "Status is unmatched.";
@@ -236,30 +240,30 @@ public class TransferUnmatchedStatus {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public TransferUnmatchedStatusReason1 getReason() {
 		return reason;
 	}
 
-	public void setReason(TransferUnmatchedStatusReason1 reason) {
-		this.reason = reason;
+	public TransferUnmatchedStatus setReason(TransferUnmatchedStatusReason1 reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	@XmlElement(name = "DataSrcSchme", required = true)
 	public GenericIdentification1 getDataSourceScheme() {
 		return dataSourceScheme;
 	}
 
-	public void setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
-		this.dataSourceScheme = dataSourceScheme;
+	public TransferUnmatchedStatus setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
+		return this;
 	}
 
-	@XmlElement(name = "NoRsn", required = true)
 	public NoReasonCode getNoReason() {
 		return noReason;
 	}
 
-	public void setNoReason(NoReasonCode noReason) {
-		this.noReason = noReason;
+	public TransferUnmatchedStatus setNoReason(NoReasonCode noReason) {
+		this.noReason = Objects.requireNonNull(noReason);
+		return this;
 	}
 }

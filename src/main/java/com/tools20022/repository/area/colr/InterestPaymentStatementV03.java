@@ -27,9 +27,8 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CollateralManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -48,23 +47,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CollateralManagementPreviousVersion
- * CollateralManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CollateralManagementISOPreviousversion
- * CollateralManagementISOPreviousversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "IntrstPmtStmt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -92,6 +74,23 @@ import javax.xml.bind.annotation.*;
  * InterestPaymentStatementV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CollateralManagementISOPreviousversion
+ * CollateralManagementISOPreviousversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "IntrstPmtStmt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CollateralManagementPreviousVersion
+ * CollateralManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code colr.015.001.03}</li>
@@ -115,16 +114,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InterestPaymentStatementV03", propOrder = {"transactionIdentification", "agreement", "obligation", "statementParameters", "pagination", "interestStatement", "supplementaryData"})
 public class InterestPaymentStatementV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId", required = true)
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as know by the instructing
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,10 +173,11 @@ public class InterestPaymentStatementV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Agrmt")
 	protected Agreement2 agreement;
 	/**
-	 * Agreement details for the over the counter market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,12 +225,11 @@ public class InterestPaymentStatementV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Oblgtn", required = true)
 	protected Obligation3 obligation;
 	/**
-	 * Provides information like the identification of the party or parties
-	 * associated with the collateral agreement, the exposure type and the
-	 * valuation date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -280,11 +279,11 @@ public class InterestPaymentStatementV03 {
 			}
 		}
 	};
+	@XmlElement(name = "StmtParams", required = true)
 	protected Statement32 statementParameters;
 	/**
-	 * Provides general information on the report such as the statement
-	 * identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -334,12 +333,11 @@ public class InterestPaymentStatementV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Pgntn")
 	protected Pagination pagination;
 	/**
-	 * Page number of the message (within a statement) and continuation
-	 * indicator to indicate that the statement is to continue or that the
-	 * message is the last page of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -389,10 +387,11 @@ public class InterestPaymentStatementV03 {
 			}
 		}
 	};
+	@XmlElement(name = "IntrstStmt", required = true)
 	protected InterestStatement3 interestStatement;
 	/**
-	 * Provides details on the interest statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -441,11 +440,11 @@ public class InterestPaymentStatementV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -529,70 +528,70 @@ public class InterestPaymentStatementV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public InterestPaymentStatementV03 setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Agrmt")
-	public Agreement2 getAgreement() {
-		return agreement;
+	public Optional<Agreement2> getAgreement() {
+		return agreement == null ? Optional.empty() : Optional.of(agreement);
 	}
 
-	public void setAgreement(Agreement2 agreement) {
+	public InterestPaymentStatementV03 setAgreement(Agreement2 agreement) {
 		this.agreement = agreement;
+		return this;
 	}
 
-	@XmlElement(name = "Oblgtn", required = true)
 	public Obligation3 getObligation() {
 		return obligation;
 	}
 
-	public void setObligation(Obligation3 obligation) {
-		this.obligation = obligation;
+	public InterestPaymentStatementV03 setObligation(Obligation3 obligation) {
+		this.obligation = Objects.requireNonNull(obligation);
+		return this;
 	}
 
-	@XmlElement(name = "StmtParams", required = true)
 	public Statement32 getStatementParameters() {
 		return statementParameters;
 	}
 
-	public void setStatementParameters(Statement32 statementParameters) {
-		this.statementParameters = statementParameters;
+	public InterestPaymentStatementV03 setStatementParameters(Statement32 statementParameters) {
+		this.statementParameters = Objects.requireNonNull(statementParameters);
+		return this;
 	}
 
-	@XmlElement(name = "Pgntn")
-	public Pagination getPagination() {
-		return pagination;
+	public Optional<Pagination> getPagination() {
+		return pagination == null ? Optional.empty() : Optional.of(pagination);
 	}
 
-	public void setPagination(Pagination pagination) {
+	public InterestPaymentStatementV03 setPagination(Pagination pagination) {
 		this.pagination = pagination;
+		return this;
 	}
 
-	@XmlElement(name = "IntrstStmt", required = true)
 	public InterestStatement3 getInterestStatement() {
 		return interestStatement;
 	}
 
-	public void setInterestStatement(InterestStatement3 interestStatement) {
-		this.interestStatement = interestStatement;
+	public InterestPaymentStatementV03 setInterestStatement(InterestStatement3 interestStatement) {
+		this.interestStatement = Objects.requireNonNull(interestStatement);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public InterestPaymentStatementV03 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:colr.015.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:colr.015.001.03")
 	static public class Document {
 		@XmlElement(name = "IntrstPmtStmt", required = true)
 		public InterestPaymentStatementV03 messageBody;

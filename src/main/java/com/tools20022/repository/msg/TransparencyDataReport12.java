@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -90,8 +92,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValidISINRule#forTransparencyDataReport12
+ * ConstraintValidISINRule.forTransparencyDataReport12}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValidMICRule#forTransparencyDataReport12
+ * ConstraintValidMICRule.forTransparencyDataReport12}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,19 +117,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransparencyDataReport12", propOrder = {"technicalRecordIdentification", "identification", "fullName", "tradingVenue", "reportingPeriod", "liquidity", "methodology", "statistics", "relevantMarket"})
 public class TransparencyDataReport12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TechRcrdId")
 	protected Max35Text technicalRecordIdentification;
 	/**
-	 * Unique identifier of a record in a message used as part of error
-	 * management and status advice messages.<br>
-	 * <br>
-	 * Usage:<br>
-	 * This identification will be used in the status advice report sent back.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,7 +155,7 @@ public class TransparencyDataReport12 {
 	 */
 	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransparencyDataReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport12.mmObject();
 			isDerived = false;
 			xmlTag = "TechRcrdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +166,11 @@ public class TransparencyDataReport12 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected ISINOct2015Identifier identification;
 	/**
-	 * Identifies the financial instrument using an ISIN.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,7 +204,7 @@ public class TransparencyDataReport12 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
-			componentContext_lazy = () -> TransparencyDataReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport12.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,10 +215,11 @@ public class TransparencyDataReport12 {
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	@XmlElement(name = "FullNm")
 	protected Max350Text fullName;
 	/**
-	 * Full name of the reporting entity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,7 +252,7 @@ public class TransparencyDataReport12 {
 	public static final MMMessageAttribute mmFullName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
-			componentContext_lazy = () -> TransparencyDataReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport12.mmObject();
 			isDerived = false;
 			xmlTag = "FullNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,11 +263,11 @@ public class TransparencyDataReport12 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgVn")
 	protected MICIdentifier tradingVenue;
 	/**
-	 * Segment MIC for the trading venue where applicable, otherwise the
-	 * operational MIC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -291,7 +303,7 @@ public class TransparencyDataReport12 {
 	public static final MMMessageAttribute mmTradingVenue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
-			componentContext_lazy = () -> TransparencyDataReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport12.mmObject();
 			isDerived = false;
 			xmlTag = "TradgVn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -302,10 +314,11 @@ public class TransparencyDataReport12 {
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "RptgPrd")
 	protected Period4Choice reportingPeriod;
 	/**
-	 * Period to which the quantitative data fields relate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -331,7 +344,7 @@ public class TransparencyDataReport12 {
 	 */
 	public static final MMMessageAssociationEnd mmReportingPeriod = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransparencyDataReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport12.mmObject();
 			isDerived = false;
 			xmlTag = "RptgPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -343,13 +356,11 @@ public class TransparencyDataReport12 {
 			type_lazy = () -> Period4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Lqdty")
 	protected TrueFalseIndicator liquidity;
 	/**
-	 * Flag to say if this ISIN is liquid or not post calculations.<br>
-	 * <br>
-	 * Usage:<br>
-	 * When not present, this field should be treated as not applicable.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -379,7 +390,7 @@ public class TransparencyDataReport12 {
 	 */
 	public static final MMMessageAttribute mmLiquidity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransparencyDataReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport12.mmObject();
 			isDerived = false;
 			xmlTag = "Lqdty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -390,10 +401,11 @@ public class TransparencyDataReport12 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Mthdlgy")
 	protected TransparencyMethodology2Code methodology;
 	/**
-	 * Methodology that has been used to calculate the result.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -421,7 +433,7 @@ public class TransparencyDataReport12 {
 	 */
 	public static final MMMessageAttribute mmMethodology = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransparencyDataReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport12.mmObject();
 			isDerived = false;
 			xmlTag = "Mthdlgy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -432,11 +444,11 @@ public class TransparencyDataReport12 {
 			simpleType_lazy = () -> TransparencyMethodology2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Sttstcs")
 	protected StatisticsTransparency3 statistics;
 	/**
-	 * Statistics for a financial instrument generated as part of transparency
-	 * calculations.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -465,7 +477,7 @@ public class TransparencyDataReport12 {
 	 */
 	public static final MMMessageAssociationEnd mmStatistics = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransparencyDataReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport12.mmObject();
 			isDerived = false;
 			xmlTag = "Sttstcs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -477,11 +489,11 @@ public class TransparencyDataReport12 {
 			type_lazy = () -> com.tools20022.repository.msg.StatisticsTransparency3.mmObject();
 		}
 	};
+	@XmlElement(name = "RlvntMkt")
 	protected MarketDetail2 relevantMarket;
 	/**
-	 * Specific market details related to the most relevant market in terms of
-	 * liquidity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -515,7 +527,7 @@ public class TransparencyDataReport12 {
 	public static final MMMessageAssociationEnd mmRelevantMarket = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
-			componentContext_lazy = () -> TransparencyDataReport12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport12.mmObject();
 			isDerived = false;
 			xmlTag = "RlvntMkt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -531,11 +543,14 @@ public class TransparencyDataReport12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransparencyDataReport12.mmTechnicalRecordIdentification, TransparencyDataReport12.mmIdentification, TransparencyDataReport12.mmFullName, TransparencyDataReport12.mmTradingVenue,
-						TransparencyDataReport12.mmReportingPeriod, TransparencyDataReport12.mmLiquidity, TransparencyDataReport12.mmMethodology, TransparencyDataReport12.mmStatistics, TransparencyDataReport12.mmRelevantMarket);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransparencyDataReport12.mmTechnicalRecordIdentification, com.tools20022.repository.msg.TransparencyDataReport12.mmIdentification,
+						com.tools20022.repository.msg.TransparencyDataReport12.mmFullName, com.tools20022.repository.msg.TransparencyDataReport12.mmTradingVenue, com.tools20022.repository.msg.TransparencyDataReport12.mmReportingPeriod,
+						com.tools20022.repository.msg.TransparencyDataReport12.mmLiquidity, com.tools20022.repository.msg.TransparencyDataReport12.mmMethodology, com.tools20022.repository.msg.TransparencyDataReport12.mmStatistics,
+						com.tools20022.repository.msg.TransparencyDataReport12.mmRelevantMarket);
 				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingEquityTradingActivityResultV01.mmEquityTransparencyData);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintValidISINRule.forTransparencyDataReport12, com.tools20022.repository.constraints.ConstraintValidMICRule.forTransparencyDataReport12);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransparencyDataReport12";
 				definition = "Provides for reporting calculation results of equity instruments as part of transparency.";
@@ -544,84 +559,84 @@ public class TransparencyDataReport12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TechRcrdId")
-	public Max35Text getTechnicalRecordIdentification() {
-		return technicalRecordIdentification;
+	public Optional<Max35Text> getTechnicalRecordIdentification() {
+		return technicalRecordIdentification == null ? Optional.empty() : Optional.of(technicalRecordIdentification);
 	}
 
-	public void setTechnicalRecordIdentification(Max35Text technicalRecordIdentification) {
+	public TransparencyDataReport12 setTechnicalRecordIdentification(Max35Text technicalRecordIdentification) {
 		this.technicalRecordIdentification = technicalRecordIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public ISINOct2015Identifier getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(ISINOct2015Identifier identification) {
-		this.identification = identification;
+	public TransparencyDataReport12 setIdentification(ISINOct2015Identifier identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "FullNm")
-	public Max350Text getFullName() {
-		return fullName;
+	public Optional<Max350Text> getFullName() {
+		return fullName == null ? Optional.empty() : Optional.of(fullName);
 	}
 
-	public void setFullName(Max350Text fullName) {
+	public TransparencyDataReport12 setFullName(Max350Text fullName) {
 		this.fullName = fullName;
+		return this;
 	}
 
-	@XmlElement(name = "TradgVn")
-	public MICIdentifier getTradingVenue() {
-		return tradingVenue;
+	public Optional<MICIdentifier> getTradingVenue() {
+		return tradingVenue == null ? Optional.empty() : Optional.of(tradingVenue);
 	}
 
-	public void setTradingVenue(MICIdentifier tradingVenue) {
+	public TransparencyDataReport12 setTradingVenue(MICIdentifier tradingVenue) {
 		this.tradingVenue = tradingVenue;
+		return this;
 	}
 
-	@XmlElement(name = "RptgPrd")
-	public Period4Choice getReportingPeriod() {
-		return reportingPeriod;
+	public Optional<Period4Choice> getReportingPeriod() {
+		return reportingPeriod == null ? Optional.empty() : Optional.of(reportingPeriod);
 	}
 
-	public void setReportingPeriod(Period4Choice reportingPeriod) {
+	public TransparencyDataReport12 setReportingPeriod(Period4Choice reportingPeriod) {
 		this.reportingPeriod = reportingPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "Lqdty")
-	public TrueFalseIndicator getLiquidity() {
-		return liquidity;
+	public Optional<TrueFalseIndicator> getLiquidity() {
+		return liquidity == null ? Optional.empty() : Optional.of(liquidity);
 	}
 
-	public void setLiquidity(TrueFalseIndicator liquidity) {
+	public TransparencyDataReport12 setLiquidity(TrueFalseIndicator liquidity) {
 		this.liquidity = liquidity;
+		return this;
 	}
 
-	@XmlElement(name = "Mthdlgy")
-	public TransparencyMethodology2Code getMethodology() {
-		return methodology;
+	public Optional<TransparencyMethodology2Code> getMethodology() {
+		return methodology == null ? Optional.empty() : Optional.of(methodology);
 	}
 
-	public void setMethodology(TransparencyMethodology2Code methodology) {
+	public TransparencyDataReport12 setMethodology(TransparencyMethodology2Code methodology) {
 		this.methodology = methodology;
+		return this;
 	}
 
-	@XmlElement(name = "Sttstcs")
-	public StatisticsTransparency3 getStatistics() {
-		return statistics;
+	public Optional<StatisticsTransparency3> getStatistics() {
+		return statistics == null ? Optional.empty() : Optional.of(statistics);
 	}
 
-	public void setStatistics(com.tools20022.repository.msg.StatisticsTransparency3 statistics) {
+	public TransparencyDataReport12 setStatistics(com.tools20022.repository.msg.StatisticsTransparency3 statistics) {
 		this.statistics = statistics;
+		return this;
 	}
 
-	@XmlElement(name = "RlvntMkt")
-	public MarketDetail2 getRelevantMarket() {
-		return relevantMarket;
+	public Optional<MarketDetail2> getRelevantMarket() {
+		return relevantMarket == null ? Optional.empty() : Optional.of(relevantMarket);
 	}
 
-	public void setRelevantMarket(com.tools20022.repository.msg.MarketDetail2 relevantMarket) {
+	public TransparencyDataReport12 setRelevantMarket(com.tools20022.repository.msg.MarketDetail2 relevantMarket) {
 		this.relevantMarket = relevantMarket;
+		return this;
 	}
 }

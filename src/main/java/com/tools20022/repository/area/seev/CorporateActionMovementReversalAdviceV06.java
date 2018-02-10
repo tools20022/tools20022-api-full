@@ -26,9 +26,8 @@ import com.tools20022.repository.choice.PartyIdentification40Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -52,20 +51,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
- * SecuritiesEventsArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CorpActnMvmntRvslAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -114,9 +99,62 @@ import javax.xml.bind.annotation.*;
  * CorporateActionMovementReversalAdviceV06.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CorpActnMvmntRvslAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
+ * SecuritiesEventsArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.037.001.06}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionMovementReversalAdviceV06
+ * ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherDocumentIdentificationRule#forCorporateActionMovementReversalAdviceV06
+ * ConstraintOtherDocumentIdentificationRule.
+ * forCorporateActionMovementReversalAdviceV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionMovementReversalAdviceV06
+ * ConstraintAdditionalInformationRule.
+ * forCorporateActionMovementReversalAdviceV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionMovementReversalAdviceV06
+ * ConstraintIssuerAgentGuideline.forCorporateActionMovementReversalAdviceV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment1Rule#forCorporateActionMovementReversalAdviceV06
+ * ConstraintScripOrDividendReinvestment1Rule.
+ * forCorporateActionMovementReversalAdviceV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment2Rule#forCorporateActionMovementReversalAdviceV06
+ * ConstraintScripOrDividendReinvestment2Rule.
+ * forCorporateActionMovementReversalAdviceV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment3Rule#forCorporateActionMovementReversalAdviceV06
+ * ConstraintScripOrDividendReinvestment3Rule.
+ * forCorporateActionMovementReversalAdviceV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forCorporateActionMovementReversalAdviceV06
+ * ConstraintCoexistenceCharacterSetXRule.
+ * forCorporateActionMovementReversalAdviceV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forCorporateActionMovementReversalAdviceV06
+ * ConstraintCoexistenceIdentificationRule.
+ * forCorporateActionMovementReversalAdviceV06}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -141,16 +179,17 @@ import javax.xml.bind.annotation.*;
  * CorporateActionMovementReversalAdviceV05}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionMovementReversalAdviceV06", propOrder = {"movementConfirmationIdentification", "otherDocumentIdentification", "eventsLinkage", "reversalReason", "corporateActionGeneralInformation", "accountDetails",
 		"corporateActionDetails", "corporateActionConfirmationDetails", "additionalInformation", "issuerAgent", "payingAgent", "subPayingAgent", "supplementaryData"})
 public class CorporateActionMovementReversalAdviceV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MvmntConfId", required = true)
 	protected DocumentIdentification15 movementConfirmationIdentification;
 	/**
-	 * Identification of a previously sent movement confirmation document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,10 +247,11 @@ public class CorporateActionMovementReversalAdviceV06 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrDocId")
 	protected List<DocumentIdentification13> otherDocumentIdentification;
 	/**
-	 * Identification of other documents as well as the document number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -266,11 +306,11 @@ public class CorporateActionMovementReversalAdviceV06 {
 			}
 		}
 	};
+	@XmlElement(name = "EvtsLkg")
 	protected List<CorporateActionEventReference1> eventsLinkage;
 	/**
-	 * Identification of an other corporate action event that needs to be
-	 * closely linked to the processing of the event notified in this document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -326,10 +366,11 @@ public class CorporateActionMovementReversalAdviceV06 {
 			}
 		}
 	};
+	@XmlElement(name = "RvslRsn")
 	protected CorporateActionReversalReason1 reversalReason;
 	/**
-	 * Reason for the reversal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -384,10 +425,11 @@ public class CorporateActionMovementReversalAdviceV06 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	protected CorporateActionGeneralInformation79 corporateActionGeneralInformation;
 	/**
-	 * General information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -444,11 +486,11 @@ public class CorporateActionMovementReversalAdviceV06 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected AccountAndBalance4 accountDetails;
 	/**
-	 * General information about the safekeeping account, owner and account
-	 * balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -505,10 +547,11 @@ public class CorporateActionMovementReversalAdviceV06 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnDtls")
 	protected CorporateAction13 corporateActionDetails;
 	/**
-	 * Information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -563,10 +606,11 @@ public class CorporateActionMovementReversalAdviceV06 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnConfDtls", required = true)
 	protected CorporateActionOption39 corporateActionConfirmationDetails;
 	/**
-	 * Information about the corporate action option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -623,10 +667,11 @@ public class CorporateActionMovementReversalAdviceV06 {
 			}
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected CorporateActionNarrative4 additionalInformation;
 	/**
-	 * Provides additional information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -681,12 +726,11 @@ public class CorporateActionMovementReversalAdviceV06 {
 			}
 		}
 	};
+	@XmlElement(name = "IssrAgt")
 	protected List<PartyIdentification40Choice> issuerAgent;
 	/**
-	 * Party appointed to administer the event on behalf of the issuer
-	 * company/offeror. The party may be contacted for more information about
-	 * the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -742,11 +786,11 @@ public class CorporateActionMovementReversalAdviceV06 {
 			}
 		}
 	};
+	@XmlElement(name = "PngAgt")
 	protected List<PartyIdentification40Choice> payingAgent;
 	/**
-	 * Agent (principal or fiscal paying agent) appointed to execute the payment
-	 * for the corporate action event on behalf of the issuer company/offeror.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -802,11 +846,11 @@ public class CorporateActionMovementReversalAdviceV06 {
 			}
 		}
 	};
+	@XmlElement(name = "SubPngAgt")
 	protected List<PartyIdentification40Choice> subPayingAgent;
 	/**
-	 * Sub-agent appointed to execute the payment for the corporate action event
-	 * on behalf of the issuer company/offeror.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -862,11 +906,11 @@ public class CorporateActionMovementReversalAdviceV06 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -926,6 +970,15 @@ public class CorporateActionMovementReversalAdviceV06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV06,
+						com.tools20022.repository.constraints.ConstraintOtherDocumentIdentificationRule.forCorporateActionMovementReversalAdviceV06,
+						com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionMovementReversalAdviceV06,
+						com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionMovementReversalAdviceV06,
+						com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment1Rule.forCorporateActionMovementReversalAdviceV06,
+						com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment2Rule.forCorporateActionMovementReversalAdviceV06,
+						com.tools20022.repository.constraints.ConstraintScripOrDividendReinvestment3Rule.forCorporateActionMovementReversalAdviceV06,
+						com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionMovementReversalAdviceV06,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionMovementReversalAdviceV06);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMovementReversalAdviceV06";
 				definition = "Scope\nAn account servicer sends the CorporateActionMovementReversalAdvice message to an account owner or its designated agent to reverse previously confirmed posting of securities or cash.\nUsage\nThe message may also be used to:\n- re-send a message previously sent (the sub-function of the message is Duplicate),\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\nusing the relevant elements in the business application header (BAH).\nISO 15022 - 20022 COEXISTENCE\r\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
@@ -961,124 +1014,124 @@ public class CorporateActionMovementReversalAdviceV06 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MvmntConfId", required = true)
 	public DocumentIdentification15 getMovementConfirmationIdentification() {
 		return movementConfirmationIdentification;
 	}
 
-	public void setMovementConfirmationIdentification(DocumentIdentification15 movementConfirmationIdentification) {
-		this.movementConfirmationIdentification = movementConfirmationIdentification;
+	public CorporateActionMovementReversalAdviceV06 setMovementConfirmationIdentification(DocumentIdentification15 movementConfirmationIdentification) {
+		this.movementConfirmationIdentification = Objects.requireNonNull(movementConfirmationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OthrDocId")
 	public List<DocumentIdentification13> getOtherDocumentIdentification() {
-		return otherDocumentIdentification;
+		return otherDocumentIdentification == null ? otherDocumentIdentification = new ArrayList<>() : otherDocumentIdentification;
 	}
 
-	public void setOtherDocumentIdentification(List<DocumentIdentification13> otherDocumentIdentification) {
-		this.otherDocumentIdentification = otherDocumentIdentification;
+	public CorporateActionMovementReversalAdviceV06 setOtherDocumentIdentification(List<DocumentIdentification13> otherDocumentIdentification) {
+		this.otherDocumentIdentification = Objects.requireNonNull(otherDocumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "EvtsLkg")
 	public List<CorporateActionEventReference1> getEventsLinkage() {
-		return eventsLinkage;
+		return eventsLinkage == null ? eventsLinkage = new ArrayList<>() : eventsLinkage;
 	}
 
-	public void setEventsLinkage(List<CorporateActionEventReference1> eventsLinkage) {
-		this.eventsLinkage = eventsLinkage;
+	public CorporateActionMovementReversalAdviceV06 setEventsLinkage(List<CorporateActionEventReference1> eventsLinkage) {
+		this.eventsLinkage = Objects.requireNonNull(eventsLinkage);
+		return this;
 	}
 
-	@XmlElement(name = "RvslRsn")
-	public CorporateActionReversalReason1 getReversalReason() {
-		return reversalReason;
+	public Optional<CorporateActionReversalReason1> getReversalReason() {
+		return reversalReason == null ? Optional.empty() : Optional.of(reversalReason);
 	}
 
-	public void setReversalReason(CorporateActionReversalReason1 reversalReason) {
+	public CorporateActionMovementReversalAdviceV06 setReversalReason(CorporateActionReversalReason1 reversalReason) {
 		this.reversalReason = reversalReason;
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionGeneralInformation79 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
 
-	public void setCorporateActionGeneralInformation(CorporateActionGeneralInformation79 corporateActionGeneralInformation) {
-		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	public CorporateActionMovementReversalAdviceV06 setCorporateActionGeneralInformation(CorporateActionGeneralInformation79 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = Objects.requireNonNull(corporateActionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public AccountAndBalance4 getAccountDetails() {
 		return accountDetails;
 	}
 
-	public void setAccountDetails(AccountAndBalance4 accountDetails) {
-		this.accountDetails = accountDetails;
+	public CorporateActionMovementReversalAdviceV06 setAccountDetails(AccountAndBalance4 accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnDtls")
-	public CorporateAction13 getCorporateActionDetails() {
-		return corporateActionDetails;
+	public Optional<CorporateAction13> getCorporateActionDetails() {
+		return corporateActionDetails == null ? Optional.empty() : Optional.of(corporateActionDetails);
 	}
 
-	public void setCorporateActionDetails(CorporateAction13 corporateActionDetails) {
+	public CorporateActionMovementReversalAdviceV06 setCorporateActionDetails(CorporateAction13 corporateActionDetails) {
 		this.corporateActionDetails = corporateActionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnConfDtls", required = true)
 	public CorporateActionOption39 getCorporateActionConfirmationDetails() {
 		return corporateActionConfirmationDetails;
 	}
 
-	public void setCorporateActionConfirmationDetails(CorporateActionOption39 corporateActionConfirmationDetails) {
-		this.corporateActionConfirmationDetails = corporateActionConfirmationDetails;
+	public CorporateActionMovementReversalAdviceV06 setCorporateActionConfirmationDetails(CorporateActionOption39 corporateActionConfirmationDetails) {
+		this.corporateActionConfirmationDetails = Objects.requireNonNull(corporateActionConfirmationDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public CorporateActionNarrative4 getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<CorporateActionNarrative4> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(CorporateActionNarrative4 additionalInformation) {
+	public CorporateActionMovementReversalAdviceV06 setAdditionalInformation(CorporateActionNarrative4 additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 
-	@XmlElement(name = "IssrAgt")
 	public List<PartyIdentification40Choice> getIssuerAgent() {
-		return issuerAgent;
+		return issuerAgent == null ? issuerAgent = new ArrayList<>() : issuerAgent;
 	}
 
-	public void setIssuerAgent(List<PartyIdentification40Choice> issuerAgent) {
-		this.issuerAgent = issuerAgent;
+	public CorporateActionMovementReversalAdviceV06 setIssuerAgent(List<PartyIdentification40Choice> issuerAgent) {
+		this.issuerAgent = Objects.requireNonNull(issuerAgent);
+		return this;
 	}
 
-	@XmlElement(name = "PngAgt")
 	public List<PartyIdentification40Choice> getPayingAgent() {
-		return payingAgent;
+		return payingAgent == null ? payingAgent = new ArrayList<>() : payingAgent;
 	}
 
-	public void setPayingAgent(List<PartyIdentification40Choice> payingAgent) {
-		this.payingAgent = payingAgent;
+	public CorporateActionMovementReversalAdviceV06 setPayingAgent(List<PartyIdentification40Choice> payingAgent) {
+		this.payingAgent = Objects.requireNonNull(payingAgent);
+		return this;
 	}
 
-	@XmlElement(name = "SubPngAgt")
 	public List<PartyIdentification40Choice> getSubPayingAgent() {
-		return subPayingAgent;
+		return subPayingAgent == null ? subPayingAgent = new ArrayList<>() : subPayingAgent;
 	}
 
-	public void setSubPayingAgent(List<PartyIdentification40Choice> subPayingAgent) {
-		this.subPayingAgent = subPayingAgent;
+	public CorporateActionMovementReversalAdviceV06 setSubPayingAgent(List<PartyIdentification40Choice> subPayingAgent) {
+		this.subPayingAgent = Objects.requireNonNull(subPayingAgent);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CorporateActionMovementReversalAdviceV06 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.037.06.06")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.037.001.06")
 	static public class Document {
 		@XmlElement(name = "CorpActnMvmntRvslAdvc", required = true)
 		public CorporateActionMovementReversalAdviceV06 messageBody;

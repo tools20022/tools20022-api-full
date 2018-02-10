@@ -28,9 +28,8 @@ import com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2
 import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -73,22 +72,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
- * SecuritiesTradeLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
- * InvestmentFundsISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "OrdrConfStsRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -107,9 +90,37 @@ import javax.xml.bind.annotation.*;
  * OrderConfirmationStatusReportV02.mmExtension}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvestmentFundsISOLatestversion
+ * InvestmentFundsISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "OrdrConfStsRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
+ * SecuritiesTradeLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code setr.057.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline#forOrderConfirmationStatusReportV02
+ * ConstraintMessageNameAndReferenceGuideline.
+ * forOrderConfirmationStatusReportV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#forOrderConfirmationStatusReportV02
+ * ConstraintOtherReferenceGuideline.forOrderConfirmationStatusReportV02}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -126,16 +137,16 @@ import javax.xml.bind.annotation.*;
  * OrderConfirmationStatusReportV01}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OrderConfirmationStatusReportV02", propOrder = {"messageIdentification", "reference", "individualOrderConfirmationDetailsReport", "extension"})
 public class OrderConfirmationStatusReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected MessageIdentification1 messageIdentification;
 	/**
-	 * Reference that uniquely identifies the message from a business
-	 * application standpoint.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,10 +194,11 @@ public class OrderConfirmationStatusReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Ref")
 	protected References61Choice reference;
 	/**
-	 * Reference to the message or communication that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,10 +240,11 @@ public class OrderConfirmationStatusReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "IndvOrdrConfDtlsRpt", required = true)
 	protected List<IndividualOrderConfirmationStatusAndReason2> individualOrderConfirmationDetailsReport;
 	/**
-	 * Status report details of an individual order confirmation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -278,11 +291,11 @@ public class OrderConfirmationStatusReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -332,6 +345,8 @@ public class OrderConfirmationStatusReportV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline.forOrderConfirmationStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forOrderConfirmationStatusReportV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderConfirmationStatusReportV02";
 				definition = "Scope\r\nThe OrderConfirmationStatusReport message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to report the status of an order confirmation or an order confirmation amendment.\r\nUsage\r\nThe OrderConfirmationStatusReport message is used to report on the status of one or more individual:\r\n- subscription confirmations,\r\n- subscription confirmation amendments,\r\n- redemption confirmations,\r\n- redemption confirmation amendments,\r\n- switch order confirmations,\r\n- switch order confirmation amendments.\r\nOne of the following statuses can be reported:\r\n- confirmation rejected, or,\r\n- amendment rejected, or,\r\n- sent to next party, or,\r\n- communication problem with next party, or,\r\n- confirmation accepted, or,\r\n- confirmation received.\r\nIt is likely that the OrderConfirmationStatusReport is only sent by the order instructing party to the order executing party to reject an order confirmation or to reject an order confirmation amendment, although if an intermediary party is used, the statuses sent to next party and communication problem with next party are also likely be used. The statuses confirmation accepted and confirmation received would only be used in the event the order executing party sends a RequestForOrderConfirmationStatusReport message and one of the other statuses does not apply.\r\nIf the status being reported is either confirmation rejected or amendment rejected, then a reason for the rejection must be given.\r\nThe individual order confirmation or confirmation amendment for which the status is given is identified with its order reference. The message identification of the message in which the individual order confirmation or confirmation amendment was conveyed may also be quoted in RelatedReference, but this is not recommended.";
@@ -360,43 +375,43 @@ public class OrderConfirmationStatusReportV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public MessageIdentification1 getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(MessageIdentification1 messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public OrderConfirmationStatusReportV02 setMessageIdentification(MessageIdentification1 messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Ref")
-	public References61Choice getReference() {
-		return reference;
+	public Optional<References61Choice> getReference() {
+		return reference == null ? Optional.empty() : Optional.of(reference);
 	}
 
-	public void setReference(References61Choice reference) {
+	public OrderConfirmationStatusReportV02 setReference(References61Choice reference) {
 		this.reference = reference;
+		return this;
 	}
 
-	@XmlElement(name = "IndvOrdrConfDtlsRpt", required = true)
 	public List<IndividualOrderConfirmationStatusAndReason2> getIndividualOrderConfirmationDetailsReport() {
-		return individualOrderConfirmationDetailsReport;
+		return individualOrderConfirmationDetailsReport == null ? individualOrderConfirmationDetailsReport = new ArrayList<>() : individualOrderConfirmationDetailsReport;
 	}
 
-	public void setIndividualOrderConfirmationDetailsReport(List<IndividualOrderConfirmationStatusAndReason2> individualOrderConfirmationDetailsReport) {
-		this.individualOrderConfirmationDetailsReport = individualOrderConfirmationDetailsReport;
+	public OrderConfirmationStatusReportV02 setIndividualOrderConfirmationDetailsReport(List<IndividualOrderConfirmationStatusAndReason2> individualOrderConfirmationDetailsReport) {
+		this.individualOrderConfirmationDetailsReport = Objects.requireNonNull(individualOrderConfirmationDetailsReport);
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<Extension1> extension) {
-		this.extension = extension;
+	public OrderConfirmationStatusReportV02 setExtension(List<Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.057.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:setr.057.001.02")
 	static public class Document {
 		@XmlElement(name = "OrdrConfStsRpt", required = true)
 		public OrderConfirmationStatusReportV02 messageBody;

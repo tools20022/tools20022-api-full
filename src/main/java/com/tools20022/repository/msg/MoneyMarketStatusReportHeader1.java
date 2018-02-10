@@ -25,9 +25,11 @@ import com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdv
 import com.tools20022.repository.codeset.StatisticalReportingStatus1Code;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,15 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MoneyMarketStatusReportHeader1", propOrder = {"reportingAgent", "reportingPeriod", "reportStatus", "validationRule"})
 public class MoneyMarketStatusReportHeader1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptgAgt", required = true)
 	protected LEIIdentifier reportingAgent;
 	/**
-	 * Agent which is subject to reporting requirements.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +127,7 @@ public class MoneyMarketStatusReportHeader1 {
 	 */
 	public static final MMMessageAttribute mmReportingAgent = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MoneyMarketStatusReportHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,15 +138,11 @@ public class MoneyMarketStatusReportHeader1 {
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "RptgPrd", required = true)
 	protected DateTimePeriod1 reportingPeriod;
 	/**
-	 * For daily reporting this is the day to which the transaction data in the
-	 * status message refers (trade date or amendment date if there are
-	 * corrections).<br>
-	 * For periodic reporting this is the first and the last day to which the
-	 * transaction data in the status message refers (trade date or amendment
-	 * date in case of corrections).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -171,7 +170,7 @@ public class MoneyMarketStatusReportHeader1 {
 	 */
 	public static final MMMessageAssociationEnd mmReportingPeriod = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MoneyMarketStatusReportHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "RptgPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,10 +182,11 @@ public class MoneyMarketStatusReportHeader1 {
 			type_lazy = () -> com.tools20022.repository.msg.DateTimePeriod1.mmObject();
 		}
 	};
+	@XmlElement(name = "RptSts", required = true)
 	protected StatisticalReportingStatus1Code reportStatus;
 	/**
-	 * Provides the status for the full report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,7 +222,7 @@ public class MoneyMarketStatusReportHeader1 {
 	 */
 	public static final MMMessageAttribute mmReportStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MoneyMarketStatusReportHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "RptSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,10 +234,11 @@ public class MoneyMarketStatusReportHeader1 {
 			simpleType_lazy = () -> StatisticalReportingStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "VldtnRule")
 	protected List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule;
 	/**
-	 * Provides the details of the rule which could not be validated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -273,7 +274,7 @@ public class MoneyMarketStatusReportHeader1 {
 	 */
 	public static final MMMessageAssociationEnd mmValidationRule = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MoneyMarketStatusReportHeader1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtnRule";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -289,10 +290,10 @@ public class MoneyMarketStatusReportHeader1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MoneyMarketStatusReportHeader1.mmReportingAgent, MoneyMarketStatusReportHeader1.mmReportingPeriod, MoneyMarketStatusReportHeader1.mmReportStatus,
-						MoneyMarketStatusReportHeader1.mmValidationRule);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmReportingAgent, com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmReportingPeriod,
+						com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmReportStatus, com.tools20022.repository.msg.MoneyMarketStatusReportHeader1.mmValidationRule);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MoneyMarketStatisticalReportStatusAdviceV01.mmStatusReportHeader);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MoneyMarketStatusReportHeader1";
 				definition = "Provides the money market statistical status report header details.";
@@ -302,39 +303,39 @@ public class MoneyMarketStatusReportHeader1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptgAgt", required = true)
 	public LEIIdentifier getReportingAgent() {
 		return reportingAgent;
 	}
 
-	public void setReportingAgent(LEIIdentifier reportingAgent) {
-		this.reportingAgent = reportingAgent;
+	public MoneyMarketStatusReportHeader1 setReportingAgent(LEIIdentifier reportingAgent) {
+		this.reportingAgent = Objects.requireNonNull(reportingAgent);
+		return this;
 	}
 
-	@XmlElement(name = "RptgPrd", required = true)
 	public DateTimePeriod1 getReportingPeriod() {
 		return reportingPeriod;
 	}
 
-	public void setReportingPeriod(com.tools20022.repository.msg.DateTimePeriod1 reportingPeriod) {
-		this.reportingPeriod = reportingPeriod;
+	public MoneyMarketStatusReportHeader1 setReportingPeriod(com.tools20022.repository.msg.DateTimePeriod1 reportingPeriod) {
+		this.reportingPeriod = Objects.requireNonNull(reportingPeriod);
+		return this;
 	}
 
-	@XmlElement(name = "RptSts", required = true)
 	public StatisticalReportingStatus1Code getReportStatus() {
 		return reportStatus;
 	}
 
-	public void setReportStatus(StatisticalReportingStatus1Code reportStatus) {
-		this.reportStatus = reportStatus;
+	public MoneyMarketStatusReportHeader1 setReportStatus(StatisticalReportingStatus1Code reportStatus) {
+		this.reportStatus = Objects.requireNonNull(reportStatus);
+		return this;
 	}
 
-	@XmlElement(name = "VldtnRule")
 	public List<GenericValidationRuleIdentification1> getValidationRule() {
-		return validationRule;
+		return validationRule == null ? validationRule = new ArrayList<>() : validationRule;
 	}
 
-	public void setValidationRule(List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule) {
-		this.validationRule = validationRule;
+	public MoneyMarketStatusReportHeader1 setValidationRule(List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule) {
+		this.validationRule = Objects.requireNonNull(validationRule);
+		return this;
 	}
 }

@@ -26,9 +26,8 @@ import com.tools20022.repository.entity.AssetHolding;
 import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.PortfolioValuation;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -102,8 +101,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,17 +113,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Valuation information of the portfolio."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TotalPortfolioValuation1", propOrder = {"totalPortfolioValue", "previousTotalPortfolioValue", "totalPortfolioValueChange", "totalBookValue", "previousTotalBookValue", "totalBookValueChange", "totalReceipts",
 		"totalDisbursements", "incomeReceived", "expensesPaid", "unrealisedGainOrLoss", "realisedGainOrLoss", "accruedIncome", "investmentFundDetails"})
 public class TotalPortfolioValuation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlPrtflVal", required = true)
 	protected AmountAndDirection30 totalPortfolioValue;
 	/**
-	 * Total value of the portfolio (sum of the assets, liabilities and
-	 * unrealised gain/loss) calculated according to the accounting rules.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +159,7 @@ public class TotalPortfolioValuation1 {
 	public static final MMMessageAttribute mmTotalPortfolioValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PortfolioValuation.mmTotalPortfolioValue;
-			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlPrtflVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +170,11 @@ public class TotalPortfolioValuation1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsTtlPrtflVal")
 	protected AmountAndDirection30 previousTotalPortfolioValue;
 	/**
-	 * Previous total value of the portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,7 +208,7 @@ public class TotalPortfolioValuation1 {
 	public static final MMMessageAttribute mmPreviousTotalPortfolioValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PortfolioValuation.mmTotalPortfolioValue;
-			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsTtlPrtflVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,11 +219,11 @@ public class TotalPortfolioValuation1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlPrtflValChng")
 	protected AmountAndRate2 totalPortfolioValueChange;
 	/**
-	 * Difference or change between the previous total portfolio value and the
-	 * current total portfolio value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -252,7 +252,7 @@ public class TotalPortfolioValuation1 {
 	 */
 	public static final MMMessageAttribute mmTotalPortfolioValueChange = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlPrtflValChng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,11 +263,11 @@ public class TotalPortfolioValuation1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndRate2.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlBookVal", required = true)
 	protected AmountAndDirection30 totalBookValue;
 	/**
-	 * Net asset on balance sheet - total portfolio value minus or plus the
-	 * unrealised gain or loss.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -303,7 +303,7 @@ public class TotalPortfolioValuation1 {
 	public static final MMMessageAttribute mmTotalBookValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PortfolioValuation.mmTotalBookValue;
-			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlBookVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -314,10 +314,11 @@ public class TotalPortfolioValuation1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsTtlBookVal")
 	protected AmountAndDirection30 previousTotalBookValue;
 	/**
-	 * Previous net asset on balance sheet.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -351,7 +352,7 @@ public class TotalPortfolioValuation1 {
 	public static final MMMessageAttribute mmPreviousTotalBookValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PortfolioValuation.mmTotalBookValue;
-			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsTtlBookVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -362,11 +363,11 @@ public class TotalPortfolioValuation1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlBookValChng")
 	protected AmountAndRate2 totalBookValueChange;
 	/**
-	 * Difference or change between the previous net asset on balance sheet and
-	 * the current net asset on balance sheet.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -395,7 +396,7 @@ public class TotalPortfolioValuation1 {
 	 */
 	public static final MMMessageAttribute mmTotalBookValueChange = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlBookValChng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -406,10 +407,11 @@ public class TotalPortfolioValuation1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndRate2.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlRcts")
 	protected AmountAndDirection30 totalReceipts;
 	/**
-	 * Total receipts attributable to the portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -443,7 +445,7 @@ public class TotalPortfolioValuation1 {
 	public static final MMMessageAttribute mmTotalReceipts = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PortfolioValuation.mmTotalReceipts;
-			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlRcts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -454,10 +456,11 @@ public class TotalPortfolioValuation1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlDsbrsmnts")
 	protected AmountAndDirection30 totalDisbursements;
 	/**
-	 * Total disbursements attributable to the portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -491,7 +494,7 @@ public class TotalPortfolioValuation1 {
 	public static final MMMessageAttribute mmTotalDisbursements = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PortfolioValuation.mmTotalDisbursements;
-			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlDsbrsmnts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -502,10 +505,11 @@ public class TotalPortfolioValuation1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	@XmlElement(name = "IncmRcvd")
 	protected AmountAndDirection30 incomeReceived;
 	/**
-	 * Income attributable to the portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -539,7 +543,7 @@ public class TotalPortfolioValuation1 {
 	public static final MMMessageAttribute mmIncomeReceived = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PortfolioValuation.mmIncomeReceived;
-			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
 			isDerived = false;
 			xmlTag = "IncmRcvd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -550,10 +554,11 @@ public class TotalPortfolioValuation1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	@XmlElement(name = "ExpnssPd")
 	protected AmountAndDirection30 expensesPaid;
 	/**
-	 * Expenses attributable to the portfolio
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -587,7 +592,7 @@ public class TotalPortfolioValuation1 {
 	public static final MMMessageAttribute mmExpensesPaid = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PortfolioValuation.mmExpensesPaid;
-			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
 			isDerived = false;
 			xmlTag = "ExpnssPd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -598,10 +603,11 @@ public class TotalPortfolioValuation1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	@XmlElement(name = "UrlsdGnOrLoss")
 	protected AmountAndDirection31 unrealisedGainOrLoss;
 	/**
-	 * Difference between the holding value and the book value of the portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -637,7 +643,7 @@ public class TotalPortfolioValuation1 {
 	public static final MMMessageAttribute mmUnrealisedGainOrLoss = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmUnrealisedGainOrLoss;
-			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
 			isDerived = false;
 			xmlTag = "UrlsdGnOrLoss";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -648,11 +654,11 @@ public class TotalPortfolioValuation1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection31.mmObject();
 		}
 	};
+	@XmlElement(name = "RealsdGnOrLoss")
 	protected AmountAndDirection31 realisedGainOrLoss;
 	/**
-	 * Difference between the realised value caused by the actual
-	 * trade/re-evaluation and the book value of the portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -688,7 +694,7 @@ public class TotalPortfolioValuation1 {
 	public static final MMMessageAttribute mmRealisedGainOrLoss = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmRealisedGainOrLoss;
-			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
 			isDerived = false;
 			xmlTag = "RealsdGnOrLoss";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -699,10 +705,11 @@ public class TotalPortfolioValuation1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection31.mmObject();
 		}
 	};
+	@XmlElement(name = "AcrdIncm")
 	protected AmountAndDirection30 accruedIncome;
 	/**
-	 * Accrued income.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -730,7 +737,7 @@ public class TotalPortfolioValuation1 {
 	 */
 	public static final MMMessageAttribute mmAccruedIncome = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
 			isDerived = false;
 			xmlTag = "AcrdIncm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -741,11 +748,11 @@ public class TotalPortfolioValuation1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtFndDtls")
 	protected List<com.tools20022.repository.msg.InvestmentFund1> investmentFundDetails;
 	/**
-	 * Valuation information of the investment fund or investment fund share
-	 * class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -779,7 +786,7 @@ public class TotalPortfolioValuation1 {
 	public static final MMMessageAssociationEnd mmInvestmentFundDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
-			componentContext_lazy = () -> TotalPortfolioValuation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalPortfolioValuation1.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtFndDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -794,13 +801,16 @@ public class TotalPortfolioValuation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmTotalPortfolioValue, TotalPortfolioValuation1.mmPreviousTotalPortfolioValue, TotalPortfolioValuation1.mmTotalPortfolioValueChange,
-						TotalPortfolioValuation1.mmTotalBookValue, TotalPortfolioValuation1.mmPreviousTotalBookValue, TotalPortfolioValuation1.mmTotalBookValueChange, TotalPortfolioValuation1.mmTotalReceipts,
-						TotalPortfolioValuation1.mmTotalDisbursements, TotalPortfolioValuation1.mmIncomeReceived, TotalPortfolioValuation1.mmExpensesPaid, TotalPortfolioValuation1.mmUnrealisedGainOrLoss,
-						TotalPortfolioValuation1.mmRealisedGainOrLoss, TotalPortfolioValuation1.mmAccruedIncome, TotalPortfolioValuation1.mmInvestmentFundDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalPortfolioValuation1.mmTotalPortfolioValue, com.tools20022.repository.msg.TotalPortfolioValuation1.mmPreviousTotalPortfolioValue,
+						com.tools20022.repository.msg.TotalPortfolioValuation1.mmTotalPortfolioValueChange, com.tools20022.repository.msg.TotalPortfolioValuation1.mmTotalBookValue,
+						com.tools20022.repository.msg.TotalPortfolioValuation1.mmPreviousTotalBookValue, com.tools20022.repository.msg.TotalPortfolioValuation1.mmTotalBookValueChange,
+						com.tools20022.repository.msg.TotalPortfolioValuation1.mmTotalReceipts, com.tools20022.repository.msg.TotalPortfolioValuation1.mmTotalDisbursements,
+						com.tools20022.repository.msg.TotalPortfolioValuation1.mmIncomeReceived, com.tools20022.repository.msg.TotalPortfolioValuation1.mmExpensesPaid,
+						com.tools20022.repository.msg.TotalPortfolioValuation1.mmUnrealisedGainOrLoss, com.tools20022.repository.msg.TotalPortfolioValuation1.mmRealisedGainOrLoss,
+						com.tools20022.repository.msg.TotalPortfolioValuation1.mmAccruedIncome, com.tools20022.repository.msg.TotalPortfolioValuation1.mmInvestmentFundDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(TotalPortfolioValuationReportV01.mmTotalPortfolioValuation);
 				trace_lazy = () -> PortfolioValuation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalPortfolioValuation1";
 				definition = "Valuation information of the portfolio.";
@@ -809,129 +819,129 @@ public class TotalPortfolioValuation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlPrtflVal", required = true)
 	public AmountAndDirection30 getTotalPortfolioValue() {
 		return totalPortfolioValue;
 	}
 
-	public void setTotalPortfolioValue(com.tools20022.repository.msg.AmountAndDirection30 totalPortfolioValue) {
-		this.totalPortfolioValue = totalPortfolioValue;
+	public TotalPortfolioValuation1 setTotalPortfolioValue(com.tools20022.repository.msg.AmountAndDirection30 totalPortfolioValue) {
+		this.totalPortfolioValue = Objects.requireNonNull(totalPortfolioValue);
+		return this;
 	}
 
-	@XmlElement(name = "PrvsTtlPrtflVal")
-	public AmountAndDirection30 getPreviousTotalPortfolioValue() {
-		return previousTotalPortfolioValue;
+	public Optional<AmountAndDirection30> getPreviousTotalPortfolioValue() {
+		return previousTotalPortfolioValue == null ? Optional.empty() : Optional.of(previousTotalPortfolioValue);
 	}
 
-	public void setPreviousTotalPortfolioValue(com.tools20022.repository.msg.AmountAndDirection30 previousTotalPortfolioValue) {
+	public TotalPortfolioValuation1 setPreviousTotalPortfolioValue(com.tools20022.repository.msg.AmountAndDirection30 previousTotalPortfolioValue) {
 		this.previousTotalPortfolioValue = previousTotalPortfolioValue;
+		return this;
 	}
 
-	@XmlElement(name = "TtlPrtflValChng")
-	public AmountAndRate2 getTotalPortfolioValueChange() {
-		return totalPortfolioValueChange;
+	public Optional<AmountAndRate2> getTotalPortfolioValueChange() {
+		return totalPortfolioValueChange == null ? Optional.empty() : Optional.of(totalPortfolioValueChange);
 	}
 
-	public void setTotalPortfolioValueChange(com.tools20022.repository.msg.AmountAndRate2 totalPortfolioValueChange) {
+	public TotalPortfolioValuation1 setTotalPortfolioValueChange(com.tools20022.repository.msg.AmountAndRate2 totalPortfolioValueChange) {
 		this.totalPortfolioValueChange = totalPortfolioValueChange;
+		return this;
 	}
 
-	@XmlElement(name = "TtlBookVal", required = true)
 	public AmountAndDirection30 getTotalBookValue() {
 		return totalBookValue;
 	}
 
-	public void setTotalBookValue(com.tools20022.repository.msg.AmountAndDirection30 totalBookValue) {
-		this.totalBookValue = totalBookValue;
+	public TotalPortfolioValuation1 setTotalBookValue(com.tools20022.repository.msg.AmountAndDirection30 totalBookValue) {
+		this.totalBookValue = Objects.requireNonNull(totalBookValue);
+		return this;
 	}
 
-	@XmlElement(name = "PrvsTtlBookVal")
-	public AmountAndDirection30 getPreviousTotalBookValue() {
-		return previousTotalBookValue;
+	public Optional<AmountAndDirection30> getPreviousTotalBookValue() {
+		return previousTotalBookValue == null ? Optional.empty() : Optional.of(previousTotalBookValue);
 	}
 
-	public void setPreviousTotalBookValue(com.tools20022.repository.msg.AmountAndDirection30 previousTotalBookValue) {
+	public TotalPortfolioValuation1 setPreviousTotalBookValue(com.tools20022.repository.msg.AmountAndDirection30 previousTotalBookValue) {
 		this.previousTotalBookValue = previousTotalBookValue;
+		return this;
 	}
 
-	@XmlElement(name = "TtlBookValChng")
-	public AmountAndRate2 getTotalBookValueChange() {
-		return totalBookValueChange;
+	public Optional<AmountAndRate2> getTotalBookValueChange() {
+		return totalBookValueChange == null ? Optional.empty() : Optional.of(totalBookValueChange);
 	}
 
-	public void setTotalBookValueChange(com.tools20022.repository.msg.AmountAndRate2 totalBookValueChange) {
+	public TotalPortfolioValuation1 setTotalBookValueChange(com.tools20022.repository.msg.AmountAndRate2 totalBookValueChange) {
 		this.totalBookValueChange = totalBookValueChange;
+		return this;
 	}
 
-	@XmlElement(name = "TtlRcts")
-	public AmountAndDirection30 getTotalReceipts() {
-		return totalReceipts;
+	public Optional<AmountAndDirection30> getTotalReceipts() {
+		return totalReceipts == null ? Optional.empty() : Optional.of(totalReceipts);
 	}
 
-	public void setTotalReceipts(com.tools20022.repository.msg.AmountAndDirection30 totalReceipts) {
+	public TotalPortfolioValuation1 setTotalReceipts(com.tools20022.repository.msg.AmountAndDirection30 totalReceipts) {
 		this.totalReceipts = totalReceipts;
+		return this;
 	}
 
-	@XmlElement(name = "TtlDsbrsmnts")
-	public AmountAndDirection30 getTotalDisbursements() {
-		return totalDisbursements;
+	public Optional<AmountAndDirection30> getTotalDisbursements() {
+		return totalDisbursements == null ? Optional.empty() : Optional.of(totalDisbursements);
 	}
 
-	public void setTotalDisbursements(com.tools20022.repository.msg.AmountAndDirection30 totalDisbursements) {
+	public TotalPortfolioValuation1 setTotalDisbursements(com.tools20022.repository.msg.AmountAndDirection30 totalDisbursements) {
 		this.totalDisbursements = totalDisbursements;
+		return this;
 	}
 
-	@XmlElement(name = "IncmRcvd")
-	public AmountAndDirection30 getIncomeReceived() {
-		return incomeReceived;
+	public Optional<AmountAndDirection30> getIncomeReceived() {
+		return incomeReceived == null ? Optional.empty() : Optional.of(incomeReceived);
 	}
 
-	public void setIncomeReceived(com.tools20022.repository.msg.AmountAndDirection30 incomeReceived) {
+	public TotalPortfolioValuation1 setIncomeReceived(com.tools20022.repository.msg.AmountAndDirection30 incomeReceived) {
 		this.incomeReceived = incomeReceived;
+		return this;
 	}
 
-	@XmlElement(name = "ExpnssPd")
-	public AmountAndDirection30 getExpensesPaid() {
-		return expensesPaid;
+	public Optional<AmountAndDirection30> getExpensesPaid() {
+		return expensesPaid == null ? Optional.empty() : Optional.of(expensesPaid);
 	}
 
-	public void setExpensesPaid(com.tools20022.repository.msg.AmountAndDirection30 expensesPaid) {
+	public TotalPortfolioValuation1 setExpensesPaid(com.tools20022.repository.msg.AmountAndDirection30 expensesPaid) {
 		this.expensesPaid = expensesPaid;
+		return this;
 	}
 
-	@XmlElement(name = "UrlsdGnOrLoss")
-	public AmountAndDirection31 getUnrealisedGainOrLoss() {
-		return unrealisedGainOrLoss;
+	public Optional<AmountAndDirection31> getUnrealisedGainOrLoss() {
+		return unrealisedGainOrLoss == null ? Optional.empty() : Optional.of(unrealisedGainOrLoss);
 	}
 
-	public void setUnrealisedGainOrLoss(com.tools20022.repository.msg.AmountAndDirection31 unrealisedGainOrLoss) {
+	public TotalPortfolioValuation1 setUnrealisedGainOrLoss(com.tools20022.repository.msg.AmountAndDirection31 unrealisedGainOrLoss) {
 		this.unrealisedGainOrLoss = unrealisedGainOrLoss;
+		return this;
 	}
 
-	@XmlElement(name = "RealsdGnOrLoss")
-	public AmountAndDirection31 getRealisedGainOrLoss() {
-		return realisedGainOrLoss;
+	public Optional<AmountAndDirection31> getRealisedGainOrLoss() {
+		return realisedGainOrLoss == null ? Optional.empty() : Optional.of(realisedGainOrLoss);
 	}
 
-	public void setRealisedGainOrLoss(com.tools20022.repository.msg.AmountAndDirection31 realisedGainOrLoss) {
+	public TotalPortfolioValuation1 setRealisedGainOrLoss(com.tools20022.repository.msg.AmountAndDirection31 realisedGainOrLoss) {
 		this.realisedGainOrLoss = realisedGainOrLoss;
+		return this;
 	}
 
-	@XmlElement(name = "AcrdIncm")
-	public AmountAndDirection30 getAccruedIncome() {
-		return accruedIncome;
+	public Optional<AmountAndDirection30> getAccruedIncome() {
+		return accruedIncome == null ? Optional.empty() : Optional.of(accruedIncome);
 	}
 
-	public void setAccruedIncome(com.tools20022.repository.msg.AmountAndDirection30 accruedIncome) {
+	public TotalPortfolioValuation1 setAccruedIncome(com.tools20022.repository.msg.AmountAndDirection30 accruedIncome) {
 		this.accruedIncome = accruedIncome;
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtFndDtls")
 	public List<InvestmentFund1> getInvestmentFundDetails() {
-		return investmentFundDetails;
+		return investmentFundDetails == null ? investmentFundDetails = new ArrayList<>() : investmentFundDetails;
 	}
 
-	public void setInvestmentFundDetails(List<com.tools20022.repository.msg.InvestmentFund1> investmentFundDetails) {
-		this.investmentFundDetails = investmentFundDetails;
+	public TotalPortfolioValuation1 setInvestmentFundDetails(List<com.tools20022.repository.msg.InvestmentFund1> investmentFundDetails) {
+		this.investmentFundDetails = Objects.requireNonNull(investmentFundDetails);
+		return this;
 	}
 }

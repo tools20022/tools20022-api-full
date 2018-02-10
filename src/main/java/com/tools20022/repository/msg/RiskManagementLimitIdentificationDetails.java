@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.TransactionAdministrator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +71,21 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBilateralLimitCounterparty1Rule#forRiskManagementLimitIdentificationDetails
+ * ConstraintBilateralLimitCounterparty1Rule.
+ * forRiskManagementLimitIdentificationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBilateralLimitCounterparty2Rule#forRiskManagementLimitIdentificationDetails
+ * ConstraintBilateralLimitCounterparty2Rule.
+ * forRiskManagementLimitIdentificationDetails}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +98,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RiskManagementLimitIdentificationDetails", propOrder = {"systemIdentification", "type", "bilateralLimitCounterpartyIdentification"})
 public class RiskManagementLimitIdentificationDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SysId")
 	protected SystemIdentificationChoice systemIdentification;
 	/**
-	 * Identification of a particular cash clearing system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,7 +141,7 @@ public class RiskManagementLimitIdentificationDetails {
 	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TransactionAdministrator.mmCashClearingSystem;
-			componentContext_lazy = () -> RiskManagementLimitIdentificationDetails.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.mmObject();
 			isDerived = false;
 			xmlTag = "SysId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +152,11 @@ public class RiskManagementLimitIdentificationDetails {
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected RiskLimitType1Code type;
 	/**
-	 * Nature of the risk management limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,7 +189,7 @@ public class RiskManagementLimitIdentificationDetails {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmType;
-			componentContext_lazy = () -> RiskManagementLimitIdentificationDetails.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,10 +200,11 @@ public class RiskManagementLimitIdentificationDetails {
 			simpleType_lazy = () -> RiskLimitType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "BilLmtCtrPtyId")
 	protected MemberIdentificationChoice bilateralLimitCounterpartyIdentification;
 	/**
-	 * Identification of the system member for which the limit is established.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,7 +240,7 @@ public class RiskManagementLimitIdentificationDetails {
 	public static final MMMessageAttribute mmBilateralLimitCounterpartyIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> RiskManagementLimitIdentificationDetails.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.mmObject();
 			isDerived = false;
 			xmlTag = "BilLmtCtrPtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,10 +255,12 @@ public class RiskManagementLimitIdentificationDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RiskManagementLimitIdentificationDetails.mmSystemIdentification, RiskManagementLimitIdentificationDetails.mmType,
-						RiskManagementLimitIdentificationDetails.mmBilateralLimitCounterpartyIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.mmSystemIdentification, com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.mmType,
+						com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails.mmBilateralLimitCounterpartyIdentification);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBilateralLimitCounterparty1Rule.forRiskManagementLimitIdentificationDetails,
+						com.tools20022.repository.constraints.ConstraintBilateralLimitCounterparty2Rule.forRiskManagementLimitIdentificationDetails);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RiskManagementLimitIdentificationDetails";
 				definition = "Cash management feature limiting the maximum risk a party accepts to take with respect to a counterparty or a set of counterparties. A risk management limit is either bilateral, ie, for a counterparty, or multilateral, ie, for a set of counterparties or all other members in a system.The limit may also apply to sponsored members, ie, indirect members. In principle, a risk management limit is calculated on the net position between two members and is expressed as a credit or debit limit, from the point of view of the party setting the limit.";
@@ -249,30 +269,30 @@ public class RiskManagementLimitIdentificationDetails {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SysId")
-	public SystemIdentificationChoice getSystemIdentification() {
-		return systemIdentification;
+	public Optional<SystemIdentificationChoice> getSystemIdentification() {
+		return systemIdentification == null ? Optional.empty() : Optional.of(systemIdentification);
 	}
 
-	public void setSystemIdentification(SystemIdentificationChoice systemIdentification) {
+	public RiskManagementLimitIdentificationDetails setSystemIdentification(SystemIdentificationChoice systemIdentification) {
 		this.systemIdentification = systemIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public RiskLimitType1Code getType() {
 		return type;
 	}
 
-	public void setType(RiskLimitType1Code type) {
-		this.type = type;
+	public RiskManagementLimitIdentificationDetails setType(RiskLimitType1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "BilLmtCtrPtyId")
-	public MemberIdentificationChoice getBilateralLimitCounterpartyIdentification() {
-		return bilateralLimitCounterpartyIdentification;
+	public Optional<MemberIdentificationChoice> getBilateralLimitCounterpartyIdentification() {
+		return bilateralLimitCounterpartyIdentification == null ? Optional.empty() : Optional.of(bilateralLimitCounterpartyIdentification);
 	}
 
-	public void setBilateralLimitCounterpartyIdentification(MemberIdentificationChoice bilateralLimitCounterpartyIdentification) {
+	public RiskManagementLimitIdentificationDetails setBilateralLimitCounterpartyIdentification(MemberIdentificationChoice bilateralLimitCounterpartyIdentification) {
 		this.bilateralLimitCounterpartyIdentification = bilateralLimitCounterpartyIdentification;
+		return this;
 	}
 }

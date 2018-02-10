@@ -32,6 +32,8 @@ import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Liquidity set aside by the account owner for specific purposes."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReservationIdentificationDetails1", propOrder = {"systemIdentification", "type", "accountOwner", "accountIdentification"})
 public class ReservationIdentificationDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SysId")
 	protected SystemIdentificationChoice systemIdentification;
 	/**
-	 * Identification of a particular cash clearing system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +124,7 @@ public class ReservationIdentificationDetails1 {
 	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
-			componentContext_lazy = () -> ReservationIdentificationDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationIdentificationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SysId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +135,11 @@ public class ReservationIdentificationDetails1 {
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected ReservationType1Code type;
 	/**
-	 * Nature of the reservation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,7 +173,7 @@ public class ReservationIdentificationDetails1 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Reservation.mmReservationType;
-			componentContext_lazy = () -> ReservationIdentificationDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationIdentificationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,10 +184,11 @@ public class ReservationIdentificationDetails1 {
 			simpleType_lazy = () -> ReservationType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected BICIdentifier accountOwner;
 	/**
-	 * Owner of the account which is being queried.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,7 +222,7 @@ public class ReservationIdentificationDetails1 {
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> ReservationIdentificationDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationIdentificationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,11 +233,11 @@ public class ReservationIdentificationDetails1 {
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctId")
 	protected AccountIdentification1Choice accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -267,7 +272,7 @@ public class ReservationIdentificationDetails1 {
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> ReservationIdentificationDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReservationIdentificationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,10 +288,10 @@ public class ReservationIdentificationDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReservationIdentificationDetails1.mmSystemIdentification, ReservationIdentificationDetails1.mmType, ReservationIdentificationDetails1.mmAccountOwner,
-						ReservationIdentificationDetails1.mmAccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationIdentificationDetails1.mmSystemIdentification, com.tools20022.repository.msg.ReservationIdentificationDetails1.mmType,
+						com.tools20022.repository.msg.ReservationIdentificationDetails1.mmAccountOwner, com.tools20022.repository.msg.ReservationIdentificationDetails1.mmAccountIdentification);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReservationIdentificationDetails1";
 				definition = "Liquidity set aside by the account owner for specific purposes.";
@@ -295,39 +300,39 @@ public class ReservationIdentificationDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SysId")
-	public SystemIdentificationChoice getSystemIdentification() {
-		return systemIdentification;
+	public Optional<SystemIdentificationChoice> getSystemIdentification() {
+		return systemIdentification == null ? Optional.empty() : Optional.of(systemIdentification);
 	}
 
-	public void setSystemIdentification(SystemIdentificationChoice systemIdentification) {
+	public ReservationIdentificationDetails1 setSystemIdentification(SystemIdentificationChoice systemIdentification) {
 		this.systemIdentification = systemIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public ReservationType1Code getType() {
 		return type;
 	}
 
-	public void setType(ReservationType1Code type) {
-		this.type = type;
+	public ReservationIdentificationDetails1 setType(ReservationType1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public BICIdentifier getAccountOwner() {
-		return accountOwner;
+	public Optional<BICIdentifier> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(BICIdentifier accountOwner) {
+	public ReservationIdentificationDetails1 setAccountOwner(BICIdentifier accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "AcctId")
-	public AccountIdentification1Choice getAccountIdentification() {
-		return accountIdentification;
+	public Optional<AccountIdentification1Choice> getAccountIdentification() {
+		return accountIdentification == null ? Optional.empty() : Optional.of(accountIdentification);
 	}
 
-	public void setAccountIdentification(AccountIdentification1Choice accountIdentification) {
+	public ReservationIdentificationDetails1 setAccountIdentification(AccountIdentification1Choice accountIdentification) {
 		this.accountIdentification = accountIdentification;
+		return this;
 	}
 }

@@ -31,6 +31,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -44,8 +46,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.ReferredDocumentType1#mmCodeOrProprietaryRule
- * ReferredDocumentType1.mmCodeOrProprietaryRule}</li>
+ * {@linkplain com.tools20022.repository.msg.ReferredDocumentType1#CodeOrProprietaryRule
+ * ReferredDocumentType1.CodeOrProprietaryRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -66,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -80,15 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Specifies the type of the document referred in the remittance information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReferredDocumentType1", propOrder = {"code", "proprietary", "issuer"})
 public class ReferredDocumentType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected DocumentType2Code code;
 	/**
-	 * Document type in a coded form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +125,7 @@ public class ReferredDocumentType1 {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
-			componentContext_lazy = () -> ReferredDocumentType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentType1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,10 +136,11 @@ public class ReferredDocumentType1 {
 			simpleType_lazy = () -> DocumentType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected Max35Text proprietary;
 	/**
-	 * Proprietary identification of the type of the remittance document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,7 +174,7 @@ public class ReferredDocumentType1 {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
-			componentContext_lazy = () -> ReferredDocumentType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentType1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,10 +185,11 @@ public class ReferredDocumentType1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Issr")
 	protected Max35Text issuer;
 	/**
-	 * Identification of the issuer of the reference document type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,7 +223,7 @@ public class ReferredDocumentType1 {
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> DocumentIssuer.mmObject();
-			componentContext_lazy = () -> ReferredDocumentType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReferredDocumentType1.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,22 +268,23 @@ public class ReferredDocumentType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmCodeOrProprietaryRule = new MMXor() {
+	public static final MMXor CodeOrProprietaryRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CodeOrProprietaryRule";
 			definition = "If Code is present then Proprietary must not be present.\nIf Proprietary is present then Code must not be present.";
-			messageComponent_lazy = () -> ReferredDocumentType1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(ReferredDocumentType1.mmCode, ReferredDocumentType1.mmProprietary);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.ReferredDocumentType1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredDocumentType1.mmCode, com.tools20022.repository.msg.ReferredDocumentType1.mmProprietary);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReferredDocumentType1.mmCode, ReferredDocumentType1.mmProprietary, ReferredDocumentType1.mmIssuer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredDocumentType1.mmCode, com.tools20022.repository.msg.ReferredDocumentType1.mmProprietary,
+						com.tools20022.repository.msg.ReferredDocumentType1.mmIssuer);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -289,36 +295,36 @@ public class ReferredDocumentType1 {
 				})).get();
 				name = "ReferredDocumentType1";
 				definition = "Specifies the type of the document referred in the remittance information.";
-				xors_lazy = () -> Arrays.asList(ReferredDocumentType1.mmCodeOrProprietaryRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReferredDocumentType1.CodeOrProprietaryRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public DocumentType2Code getCode() {
 		return code;
 	}
 
-	public void setCode(DocumentType2Code code) {
-		this.code = code;
+	public ReferredDocumentType1 setCode(DocumentType2Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public Max35Text getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(Max35Text proprietary) {
-		this.proprietary = proprietary;
+	public ReferredDocumentType1 setProprietary(Max35Text proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 
-	@XmlElement(name = "Issr")
-	public Max35Text getIssuer() {
-		return issuer;
+	public Optional<Max35Text> getIssuer() {
+		return issuer == null ? Optional.empty() : Optional.of(issuer);
 	}
 
-	public void setIssuer(Max35Text issuer) {
+	public ReferredDocumentType1 setIssuer(Max35Text issuer) {
 		this.issuer = issuer;
+		return this;
 	}
 }

@@ -20,34 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AutoRoutingCode;
+import com.tools20022.repository.codeset.AutoRouting1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates whether an automatic routing system is involved.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AutoRouting1Code#DOTSystem
+ * AutoRouting1Code.DOTSystem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AutoRouting1Code#SuperDOTSystem
+ * AutoRouting1Code.SuperDOTSystem}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.AutoRoutingCode
  * AutoRoutingCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AutoRouting1Code#mmDOTSystem
- * AutoRouting1Code.mmDOTSystem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AutoRouting1Code#mmSuperDOTSystem
- * AutoRouting1Code.mmSuperDOTSystem}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates whether an automatic routing system is involved."</li>
  * </ul>
  */
-public class AutoRouting1Code extends AutoRoutingCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AutoRouting1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +87,12 @@ public class AutoRouting1Code extends AutoRoutingCode {
 	 * name} = "DOTSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDOTSystem = new MMCode() {
+	public static final AutoRouting1Code DOTSystem = new AutoRouting1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DOTSystem";
-			owner_lazy = () -> AutoRouting1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AutoRouting1Code.mmObject();
+			codeName = AutoRoutingCode.DOTSystem.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +111,57 @@ public class AutoRouting1Code extends AutoRoutingCode {
 	 * name} = "SuperDOTSystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuperDOTSystem = new MMCode() {
+	public static final AutoRouting1Code SuperDOTSystem = new AutoRouting1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuperDOTSystem";
-			owner_lazy = () -> AutoRouting1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AutoRouting1Code.mmObject();
+			codeName = AutoRoutingCode.SuperDOTSystem.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AutoRouting1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AutoRouting1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DDOT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AutoRouting1Code";
 				definition = "Indicates whether an automatic routing system is involved.";
-				code_lazy = () -> Arrays.asList(AutoRouting1Code.mmDOTSystem, AutoRouting1Code.mmSuperDOTSystem);
 				trace_lazy = () -> AutoRoutingCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AutoRouting1Code.DOTSystem, com.tools20022.repository.codeset.AutoRouting1Code.SuperDOTSystem);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(DOTSystem.getCodeName().get(), DOTSystem);
+		codesByName.put(SuperDOTSystem.getCodeName().get(), SuperDOTSystem);
+	}
+
+	public static AutoRouting1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AutoRouting1Code[] values() {
+		AutoRouting1Code[] values = new AutoRouting1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AutoRouting1Code> {
+		@Override
+		public AutoRouting1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AutoRouting1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

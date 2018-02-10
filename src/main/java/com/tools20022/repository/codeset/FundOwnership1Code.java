@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.FundOwnershipCode;
+import com.tools20022.repository.codeset.FundOwnership1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies if all the shares are owned exclusively by the fund company.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.FundOwnershipCode
- * FundOwnershipCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOwnership1Code#mmAllOwned
- * FundOwnership1Code.mmAllOwned}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOwnership1Code#AllOwned
+ * FundOwnership1Code.AllOwned}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundOwnership1Code#mmNotAllOwned
- * FundOwnership1Code.mmNotAllOwned}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundOwnership1Code#NotAllOwned
+ * FundOwnership1Code.NotAllOwned}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.FundOwnershipCode
+ * FundOwnershipCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,7 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies if all the shares are owned exclusively by the fund company."</li>
  * </ul>
  */
-public class FundOwnership1Code extends FundOwnershipCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FundOwnership1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -78,11 +83,12 @@ public class FundOwnership1Code extends FundOwnershipCode {
 	 * name} = "AllOwned"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAllOwned = new MMCode() {
+	public static final FundOwnership1Code AllOwned = new FundOwnership1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllOwned";
-			owner_lazy = () -> FundOwnership1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOwnership1Code.mmObject();
+			codeName = FundOwnershipCode.AllOwned.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -101,25 +107,56 @@ public class FundOwnership1Code extends FundOwnershipCode {
 	 * name} = "NotAllOwned"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotAllOwned = new MMCode() {
+	public static final FundOwnership1Code NotAllOwned = new FundOwnership1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAllOwned";
-			owner_lazy = () -> FundOwnership1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundOwnership1Code.mmObject();
+			codeName = FundOwnershipCode.NotAllOwned.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, FundOwnership1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FundOwnership1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundOwnership1Code";
 				definition = "Specifies if all the shares are owned exclusively by the fund company.";
-				code_lazy = () -> Arrays.asList(FundOwnership1Code.mmAllOwned, FundOwnership1Code.mmNotAllOwned);
 				trace_lazy = () -> FundOwnershipCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundOwnership1Code.AllOwned, com.tools20022.repository.codeset.FundOwnership1Code.NotAllOwned);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AllOwned.getCodeName().get(), AllOwned);
+		codesByName.put(NotAllOwned.getCodeName().get(), NotAllOwned);
+	}
+
+	public static FundOwnership1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FundOwnership1Code[] values() {
+		FundOwnership1Code[] values = new FundOwnership1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FundOwnership1Code> {
+		@Override
+		public FundOwnership1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FundOwnership1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

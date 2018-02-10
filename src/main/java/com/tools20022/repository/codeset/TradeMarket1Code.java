@@ -20,42 +20,45 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TradeMarketCode;
+import com.tools20022.repository.codeset.TradeMarket1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies a code for a trade market.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeMarket1Code#Domestic
+ * TradeMarket1Code.Domestic}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeMarket1Code#EuroDomestic
+ * TradeMarket1Code.EuroDomestic}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeMarket1Code#FrenchDomTom
+ * TradeMarket1Code.FrenchDomTom}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradeMarket1Code#International
+ * TradeMarket1Code.International}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradeMarket1Code#NAFTA
+ * TradeMarket1Code.NAFTA}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.TradeMarketCode
  * TradeMarketCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeMarket1Code#mmDomestic
- * TradeMarket1Code.mmDomestic}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeMarket1Code#mmEuroDomestic
- * TradeMarket1Code.mmEuroDomestic}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeMarket1Code#mmFrenchDomTom
- * TradeMarket1Code.mmFrenchDomTom}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeMarket1Code#mmInternational
- * TradeMarket1Code.mmInternational}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TradeMarket1Code#mmNAFTA
- * TradeMarket1Code.mmNAFTA}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies a code for a trade market."</li>
  * </ul>
  */
-public class TradeMarket1Code extends TradeMarketCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TradeMarket1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,11 +89,12 @@ public class TradeMarket1Code extends TradeMarketCode {
 	 * name} = "Domestic"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDomestic = new MMCode() {
+	public static final TradeMarket1Code Domestic = new TradeMarket1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Domestic";
-			owner_lazy = () -> TradeMarket1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeMarket1Code.mmObject();
+			codeName = TradeMarketCode.Domestic.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -108,11 +113,12 @@ public class TradeMarket1Code extends TradeMarketCode {
 	 * name} = "EuroDomestic"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEuroDomestic = new MMCode() {
+	public static final TradeMarket1Code EuroDomestic = new TradeMarket1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EuroDomestic";
-			owner_lazy = () -> TradeMarket1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeMarket1Code.mmObject();
+			codeName = TradeMarketCode.EuroDomestic.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -131,11 +137,12 @@ public class TradeMarket1Code extends TradeMarketCode {
 	 * name} = "FrenchDomTom"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFrenchDomTom = new MMCode() {
+	public static final TradeMarket1Code FrenchDomTom = new TradeMarket1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrenchDomTom";
-			owner_lazy = () -> TradeMarket1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeMarket1Code.mmObject();
+			codeName = TradeMarketCode.FrenchDomTom.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -154,11 +161,12 @@ public class TradeMarket1Code extends TradeMarketCode {
 	 * name} = "International"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInternational = new MMCode() {
+	public static final TradeMarket1Code International = new TradeMarket1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "International";
-			owner_lazy = () -> TradeMarket1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeMarket1Code.mmObject();
+			codeName = TradeMarketCode.International.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -177,25 +185,60 @@ public class TradeMarket1Code extends TradeMarketCode {
 	 * name} = "NAFTA"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNAFTA = new MMCode() {
+	public static final TradeMarket1Code NAFTA = new TradeMarket1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NAFTA";
-			owner_lazy = () -> TradeMarket1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeMarket1Code.mmObject();
+			codeName = TradeMarketCode.NAFTA.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TradeMarket1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TradeMarket1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeMarket1Code";
 				definition = "Specifies a code for a trade market.";
-				code_lazy = () -> Arrays.asList(TradeMarket1Code.mmDomestic, TradeMarket1Code.mmEuroDomestic, TradeMarket1Code.mmFrenchDomTom, TradeMarket1Code.mmInternational, TradeMarket1Code.mmNAFTA);
 				trace_lazy = () -> TradeMarketCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeMarket1Code.Domestic, com.tools20022.repository.codeset.TradeMarket1Code.EuroDomestic, com.tools20022.repository.codeset.TradeMarket1Code.FrenchDomTom,
+						com.tools20022.repository.codeset.TradeMarket1Code.International, com.tools20022.repository.codeset.TradeMarket1Code.NAFTA);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Domestic.getCodeName().get(), Domestic);
+		codesByName.put(EuroDomestic.getCodeName().get(), EuroDomestic);
+		codesByName.put(FrenchDomTom.getCodeName().get(), FrenchDomTom);
+		codesByName.put(International.getCodeName().get(), International);
+		codesByName.put(NAFTA.getCodeName().get(), NAFTA);
+	}
+
+	public static TradeMarket1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TradeMarket1Code[] values() {
+		TradeMarket1Code[] values = new TradeMarket1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TradeMarket1Code> {
+		@Override
+		public TradeMarket1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TradeMarket1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

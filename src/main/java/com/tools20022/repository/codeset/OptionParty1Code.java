@@ -20,32 +20,36 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OptionPartyCode;
+import com.tools20022.repository.codeset.OptionParty1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies if a trade party is a buyer or a seller.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionParty1Code#Seller
+ * OptionParty1Code.Seller}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionParty1Code#Buyer
+ * OptionParty1Code.Buyer}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.OptionPartyCode
  * OptionPartyCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionParty1Code#mmSeller
- * OptionParty1Code.mmSeller}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OptionParty1Code#mmBuyer
- * OptionParty1Code.mmBuyer}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -62,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies if a trade party is a buyer or a seller."</li>
  * </ul>
  */
-public class OptionParty1Code extends OptionPartyCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OptionParty1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,11 +86,12 @@ public class OptionParty1Code extends OptionPartyCode {
 	 * name} = "Seller"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSeller = new MMCode() {
+	public static final OptionParty1Code Seller = new OptionParty1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
-			owner_lazy = () -> OptionParty1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionParty1Code.mmObject();
+			codeName = OptionPartyCode.Seller.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -104,26 +110,57 @@ public class OptionParty1Code extends OptionPartyCode {
 	 * name} = "Buyer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBuyer = new MMCode() {
+	public static final OptionParty1Code Buyer = new OptionParty1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
-			owner_lazy = () -> OptionParty1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionParty1Code.mmObject();
+			codeName = OptionPartyCode.Buyer.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OptionParty1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OptionParty1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SLLR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionParty1Code";
 				definition = "Specifies if a trade party is a buyer or a seller.";
-				code_lazy = () -> Arrays.asList(OptionParty1Code.mmSeller, OptionParty1Code.mmBuyer);
 				trace_lazy = () -> OptionPartyCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionParty1Code.Seller, com.tools20022.repository.codeset.OptionParty1Code.Buyer);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Seller.getCodeName().get(), Seller);
+		codesByName.put(Buyer.getCodeName().get(), Buyer);
+	}
+
+	public static OptionParty1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OptionParty1Code[] values() {
+		OptionParty1Code[] values = new OptionParty1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OptionParty1Code> {
+		@Override
+		public OptionParty1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OptionParty1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

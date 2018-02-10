@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.PaymentProcessing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MandateTypeInformation1", propOrder = {"serviceLevel", "localInstrument"})
 public class MandateTypeInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SvcLvl")
 	protected ServiceLevel8Choice serviceLevel;
 	/**
-	 * Agreement under which or rules under which the mandate resides.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -126,7 +128,7 @@ public class MandateTypeInformation1 {
 	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmServiceLevel;
-			componentContext_lazy = () -> MandateTypeInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MandateTypeInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcLvl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,12 +141,11 @@ public class MandateTypeInformation1 {
 			type_lazy = () -> ServiceLevel8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LclInstrm")
 	protected LocalInstrument2Choice localInstrument;
 	/**
-	 * User community specific instrument. Usage: This element is used to
-	 * specify a local instrument, local clearing option and/or further qualify
-	 * the service or service level.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -187,7 +188,7 @@ public class MandateTypeInformation1 {
 	public static final MMMessageAssociationEnd mmLocalInstrument = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> DirectDebitMandate.mmMandatePaymentType;
-			componentContext_lazy = () -> MandateTypeInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MandateTypeInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "LclInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,9 +205,9 @@ public class MandateTypeInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MandateTypeInformation1.mmServiceLevel, MandateTypeInformation1.mmLocalInstrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateTypeInformation1.mmServiceLevel, com.tools20022.repository.msg.MandateTypeInformation1.mmLocalInstrument);
 				trace_lazy = () -> Mandate.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MandateTypeInformation1";
 				definition = "Set of elements used to further detail the information related to the type of payment.";
@@ -216,21 +217,21 @@ public class MandateTypeInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SvcLvl")
-	public ServiceLevel8Choice getServiceLevel() {
-		return serviceLevel;
+	public Optional<ServiceLevel8Choice> getServiceLevel() {
+		return serviceLevel == null ? Optional.empty() : Optional.of(serviceLevel);
 	}
 
-	public void setServiceLevel(ServiceLevel8Choice serviceLevel) {
+	public MandateTypeInformation1 setServiceLevel(ServiceLevel8Choice serviceLevel) {
 		this.serviceLevel = serviceLevel;
+		return this;
 	}
 
-	@XmlElement(name = "LclInstrm")
-	public LocalInstrument2Choice getLocalInstrument() {
-		return localInstrument;
+	public Optional<LocalInstrument2Choice> getLocalInstrument() {
+		return localInstrument == null ? Optional.empty() : Optional.of(localInstrument);
 	}
 
-	public void setLocalInstrument(LocalInstrument2Choice localInstrument) {
+	public MandateTypeInformation1 setLocalInstrument(LocalInstrument2Choice localInstrument) {
 		this.localInstrument = localInstrument;
+		return this;
 	}
 }

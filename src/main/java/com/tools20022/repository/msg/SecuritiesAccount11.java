@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -105,8 +107,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -124,16 +126,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAccount11", propOrder = {"identification", "type", "name", "designation"})
 public class SecuritiesAccount11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,7 +178,7 @@ public class SecuritiesAccount11 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> SecuritiesAccount11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount11.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,10 +190,11 @@ public class SecuritiesAccount11 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected PurposeCode1Choice type;
 	/**
-	 * Specifies the type of securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -232,7 +235,7 @@ public class SecuritiesAccount11 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesAccountType;
-			componentContext_lazy = () -> SecuritiesAccount11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount11.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,12 +247,11 @@ public class SecuritiesAccount11 {
 			complexType_lazy = () -> PurposeCode1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm")
 	protected Max70Text name;
 	/**
-	 * Name of the account. It provides an additional means of identification,
-	 * and is designated by the account servicer in agreement with the account
-	 * owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -291,7 +293,7 @@ public class SecuritiesAccount11 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
-			componentContext_lazy = () -> SecuritiesAccount11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount11.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -303,14 +305,11 @@ public class SecuritiesAccount11 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Dsgnt")
 	protected Max35Text designation;
 	/**
-	 * Supplementary registration information applying to a specific block of
-	 * units for dealing and reporting purposes. The supplementary registration
-	 * information may be used when all the units are registered, for example,
-	 * to a funds supermarket, but holdings for each investor have to reconciled
-	 * individually.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -353,7 +352,7 @@ public class SecuritiesAccount11 {
 	public static final MMMessageAttribute mmDesignation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmDesignation;
-			componentContext_lazy = () -> SecuritiesAccount11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount11.mmObject();
 			isDerived = false;
 			xmlTag = "Dsgnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -369,14 +368,15 @@ public class SecuritiesAccount11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAccount11.mmIdentification, SecuritiesAccount11.mmType, SecuritiesAccount11.mmName, SecuritiesAccount11.mmDesignation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccount11.mmIdentification, com.tools20022.repository.msg.SecuritiesAccount11.mmType,
+						com.tools20022.repository.msg.SecuritiesAccount11.mmName, com.tools20022.repository.msg.SecuritiesAccount11.mmDesignation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesBalanceAccountingReportV03.mmSafekeepingAccount, SecuritiesBalanceAccountingReportV04.mmSafekeepingAccount,
 						SecuritiesBalanceAccountingReportV05.mmSafekeepingAccount, SecuritiesBalanceAccountingReportV06.mmSafekeepingAccount, SecuritiesBalanceCustodyReportV03.mmSafekeepingAccount,
 						SecuritiesBalanceCustodyReportV04.mmSafekeepingAccount, SecuritiesBalanceCustodyReportV05.mmSafekeepingAccount, SecuritiesBalanceCustodyReportV06.mmSafekeepingAccount,
 						SecuritiesBalanceCustodyReportV07.mmSafekeepingAccount, SecuritiesBalanceAccountingReportV07.mmSafekeepingAccount, SecuritiesBalanceCustodyReportV08.mmSafekeepingAccount,
 						SecuritiesBalanceAccountingReportV08.mmSafekeepingAccount);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccount11";
 				definition = "Account to or from which a securities entry is made.";
@@ -386,39 +386,39 @@ public class SecuritiesAccount11 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public SecuritiesAccount11 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public PurposeCode1Choice getType() {
-		return type;
+	public Optional<PurposeCode1Choice> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(PurposeCode1Choice type) {
+	public SecuritiesAccount11 setType(PurposeCode1Choice type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Nm")
-	public Max70Text getName() {
-		return name;
+	public Optional<Max70Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max70Text name) {
+	public SecuritiesAccount11 setName(Max70Text name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "Dsgnt")
-	public Max35Text getDesignation() {
-		return designation;
+	public Optional<Max35Text> getDesignation() {
+		return designation == null ? Optional.empty() : Optional.of(designation);
 	}
 
-	public void setDesignation(Max35Text designation) {
+	public SecuritiesAccount11 setDesignation(Max35Text designation) {
 		this.designation = designation;
+		return this;
 	}
 }

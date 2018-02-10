@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.GenderCode;
+import com.tools20022.repository.codeset.Gender1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the gender of a person.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.GenderCode GenderCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Gender1Code#mmFemale
- * Gender1Code.mmFemale}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Gender1Code#mmMale
- * Gender1Code.mmMale}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Gender1Code#Female
+ * Gender1Code.Female}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Gender1Code#Male
+ * Gender1Code.Male}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.GenderCode GenderCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,7 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the gender of a person."</li>
  * </ul>
  */
-public class Gender1Code extends GenderCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Gender1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -73,11 +78,12 @@ public class Gender1Code extends GenderCode {
 	 * name} = "Female"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFemale = new MMCode() {
+	public static final Gender1Code Female = new Gender1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Female";
-			owner_lazy = () -> Gender1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Gender1Code.mmObject();
+			codeName = GenderCode.Female.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -95,25 +101,56 @@ public class Gender1Code extends GenderCode {
 	 * name} = "Male"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMale = new MMCode() {
+	public static final Gender1Code Male = new Gender1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Male";
-			owner_lazy = () -> Gender1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Gender1Code.mmObject();
+			codeName = GenderCode.Male.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Gender1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Gender1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Gender1Code";
 				definition = "Specifies the gender of a person.";
-				code_lazy = () -> Arrays.asList(Gender1Code.mmFemale, Gender1Code.mmMale);
 				trace_lazy = () -> GenderCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Gender1Code.Female, com.tools20022.repository.codeset.Gender1Code.Male);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Female.getCodeName().get(), Female);
+		codesByName.put(Male.getCodeName().get(), Male);
+	}
+
+	public static Gender1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Gender1Code[] values() {
+		Gender1Code[] values = new Gender1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Gender1Code> {
+		@Override
+		public Gender1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Gender1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

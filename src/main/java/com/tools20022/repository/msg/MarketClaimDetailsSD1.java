@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -29,6 +30,8 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountOwnerOrServicerIdentificationRule#forMarketClaimDetailsSD1
+ * ConstraintAccountOwnerOrServicerIdentificationRule.forMarketClaimDetailsSD1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MarketClaimDetailsSD1", propOrder = {"fiscalDomicile", "accountServicerIdentification", "accountOwnerIdentification", "taxRate", "cashCompensation", "dividendCorrection"})
 public class MarketClaimDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FsclDmcl", required = true)
 	protected CountryCode fiscalDomicile;
 	/**
-	 * Country in which the account owner has one's fiscal domicile.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +129,7 @@ public class MarketClaimDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmFiscalDomicile = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MarketClaimDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarketClaimDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FsclDmcl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +140,11 @@ public class MarketClaimDetailsSD1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcrId")
 	protected Max35Text accountServicerIdentification;
 	/**
-	 * Identification of the document assigned by the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,6 +164,9 @@ public class MarketClaimDetailsSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctSvcrId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -165,9 +181,10 @@ public class MarketClaimDetailsSD1 {
 	public static final MMMessageAttribute mmAccountServicerIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> MarketClaimDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarketClaimDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerIdentification";
 			definition = "Identification of the document assigned by the account servicer.";
@@ -176,10 +193,11 @@ public class MarketClaimDetailsSD1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnrId")
 	protected Max35Text accountOwnerIdentification;
 	/**
-	 * Identification of the document assigned by the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,6 +217,9 @@ public class MarketClaimDetailsSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctOwnrId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -213,9 +234,10 @@ public class MarketClaimDetailsSD1 {
 	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> MarketClaimDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarketClaimDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIdentification";
 			definition = "Identification of the document assigned by the account owner.";
@@ -224,12 +246,11 @@ public class MarketClaimDetailsSD1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxRate")
 	protected PercentageRate taxRate;
 	/**
-	 * Percentage of a cash distribution that will be withheld by the tax
-	 * authorities of the jurisdiction of the issuer, for which a relief at
-	 * source and/or reclaim may be possible.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,7 +280,7 @@ public class MarketClaimDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmTaxRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MarketClaimDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarketClaimDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,11 +291,11 @@ public class MarketClaimDetailsSD1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "CshCompstn")
 	protected FinancialInstrumentQuantity18Choice cashCompensation;
 	/**
-	 * Quantity of securities that do not impact the taxable record date
-	 * entitlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -303,7 +324,7 @@ public class MarketClaimDetailsSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmCashCompensation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MarketClaimDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarketClaimDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CshCompstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -315,10 +336,11 @@ public class MarketClaimDetailsSD1 {
 			type_lazy = () -> FinancialInstrumentQuantity18Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DvddCrrctn")
 	protected FinancialInstrumentQuantity18Choice dividendCorrection;
 	/**
-	 * Quantity of securities that impact the taxable record date entitlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -347,7 +369,7 @@ public class MarketClaimDetailsSD1 {
 	 */
 	public static final MMMessageAssociationEnd mmDividendCorrection = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MarketClaimDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarketClaimDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "DvddCrrctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -363,9 +385,11 @@ public class MarketClaimDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MarketClaimDetailsSD1.mmFiscalDomicile, MarketClaimDetailsSD1.mmAccountServicerIdentification, MarketClaimDetailsSD1.mmAccountOwnerIdentification, MarketClaimDetailsSD1.mmTaxRate,
-						MarketClaimDetailsSD1.mmCashCompensation, MarketClaimDetailsSD1.mmDividendCorrection);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketClaimDetailsSD1.mmFiscalDomicile, com.tools20022.repository.msg.MarketClaimDetailsSD1.mmAccountServicerIdentification,
+						com.tools20022.repository.msg.MarketClaimDetailsSD1.mmAccountOwnerIdentification, com.tools20022.repository.msg.MarketClaimDetailsSD1.mmTaxRate,
+						com.tools20022.repository.msg.MarketClaimDetailsSD1.mmCashCompensation, com.tools20022.repository.msg.MarketClaimDetailsSD1.mmDividendCorrection);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountOwnerOrServicerIdentificationRule.forMarketClaimDetailsSD1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MarketClaimDetailsSD1";
 				definition = "Identification information expressed as a country of fiscal domicile and a reference.";
@@ -374,57 +398,57 @@ public class MarketClaimDetailsSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FsclDmcl", required = true)
 	public CountryCode getFiscalDomicile() {
 		return fiscalDomicile;
 	}
 
-	public void setFiscalDomicile(CountryCode fiscalDomicile) {
-		this.fiscalDomicile = fiscalDomicile;
+	public MarketClaimDetailsSD1 setFiscalDomicile(CountryCode fiscalDomicile) {
+		this.fiscalDomicile = Objects.requireNonNull(fiscalDomicile);
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcrId")
-	public Max35Text getAccountServicerIdentification() {
-		return accountServicerIdentification;
+	public Optional<Max35Text> getAccountServicerIdentification() {
+		return accountServicerIdentification == null ? Optional.empty() : Optional.of(accountServicerIdentification);
 	}
 
-	public void setAccountServicerIdentification(Max35Text accountServicerIdentification) {
+	public MarketClaimDetailsSD1 setAccountServicerIdentification(Max35Text accountServicerIdentification) {
 		this.accountServicerIdentification = accountServicerIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnrId")
-	public Max35Text getAccountOwnerIdentification() {
-		return accountOwnerIdentification;
+	public Optional<Max35Text> getAccountOwnerIdentification() {
+		return accountOwnerIdentification == null ? Optional.empty() : Optional.of(accountOwnerIdentification);
 	}
 
-	public void setAccountOwnerIdentification(Max35Text accountOwnerIdentification) {
+	public MarketClaimDetailsSD1 setAccountOwnerIdentification(Max35Text accountOwnerIdentification) {
 		this.accountOwnerIdentification = accountOwnerIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TaxRate")
-	public PercentageRate getTaxRate() {
-		return taxRate;
+	public Optional<PercentageRate> getTaxRate() {
+		return taxRate == null ? Optional.empty() : Optional.of(taxRate);
 	}
 
-	public void setTaxRate(PercentageRate taxRate) {
+	public MarketClaimDetailsSD1 setTaxRate(PercentageRate taxRate) {
 		this.taxRate = taxRate;
+		return this;
 	}
 
-	@XmlElement(name = "CshCompstn")
-	public FinancialInstrumentQuantity18Choice getCashCompensation() {
-		return cashCompensation;
+	public Optional<FinancialInstrumentQuantity18Choice> getCashCompensation() {
+		return cashCompensation == null ? Optional.empty() : Optional.of(cashCompensation);
 	}
 
-	public void setCashCompensation(FinancialInstrumentQuantity18Choice cashCompensation) {
+	public MarketClaimDetailsSD1 setCashCompensation(FinancialInstrumentQuantity18Choice cashCompensation) {
 		this.cashCompensation = cashCompensation;
+		return this;
 	}
 
-	@XmlElement(name = "DvddCrrctn")
-	public FinancialInstrumentQuantity18Choice getDividendCorrection() {
-		return dividendCorrection;
+	public Optional<FinancialInstrumentQuantity18Choice> getDividendCorrection() {
+		return dividendCorrection == null ? Optional.empty() : Optional.of(dividendCorrection);
 	}
 
-	public void setDividendCorrection(FinancialInstrumentQuantity18Choice dividendCorrection) {
+	public MarketClaimDetailsSD1 setDividendCorrection(FinancialInstrumentQuantity18Choice dividendCorrection) {
 		this.dividendCorrection = dividendCorrection;
+		return this;
 	}
 }

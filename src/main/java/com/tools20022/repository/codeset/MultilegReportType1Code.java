@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MultilegReportTypeCode;
+import com.tools20022.repository.codeset.MultilegReportType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the method of execution reporting requested by issuer of the order.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MultilegReportTypeCode
- * MultilegReportTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MultilegReportType1Code#mmBySecurity
- * MultilegReportType1Code.mmBySecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.MultilegReportType1Code#BySecurity
+ * MultilegReportType1Code.BySecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MultilegReportType1Code#mmBySecurityAndLeg
- * MultilegReportType1Code.mmBySecurityAndLeg}</li>
+ * {@linkplain com.tools20022.repository.codeset.MultilegReportType1Code#BySecurityAndLeg
+ * MultilegReportType1Code.BySecurityAndLeg}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MultilegReportType1Code#mmByInstrumentLeg
- * MultilegReportType1Code.mmByInstrumentLeg}</li>
+ * {@linkplain com.tools20022.repository.codeset.MultilegReportType1Code#ByInstrumentLeg
+ * MultilegReportType1Code.ByInstrumentLeg}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MultilegReportTypeCode
+ * MultilegReportTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class MultilegReportType1Code extends MultilegReportTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MultilegReportType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,11 +93,12 @@ public class MultilegReportType1Code extends MultilegReportTypeCode {
 	 * name} = "BySecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBySecurity = new MMCode() {
+	public static final MultilegReportType1Code BySecurity = new MultilegReportType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BySecurity";
-			owner_lazy = () -> MultilegReportType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MultilegReportType1Code.mmObject();
+			codeName = MultilegReportTypeCode.BySecurity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -111,11 +117,12 @@ public class MultilegReportType1Code extends MultilegReportTypeCode {
 	 * name} = "BySecurityAndLeg"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBySecurityAndLeg = new MMCode() {
+	public static final MultilegReportType1Code BySecurityAndLeg = new MultilegReportType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BySecurityAndLeg";
-			owner_lazy = () -> MultilegReportType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MultilegReportType1Code.mmObject();
+			codeName = MultilegReportTypeCode.BySecurityAndLeg.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -134,26 +141,59 @@ public class MultilegReportType1Code extends MultilegReportTypeCode {
 	 * name} = "ByInstrumentLeg"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmByInstrumentLeg = new MMCode() {
+	public static final MultilegReportType1Code ByInstrumentLeg = new MultilegReportType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ByInstrumentLeg";
-			owner_lazy = () -> MultilegReportType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MultilegReportType1Code.mmObject();
+			codeName = MultilegReportTypeCode.ByInstrumentLeg.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MultilegReportType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MultilegReportType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BYSE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MultilegReportType1Code";
 				definition = "Indicates the method of execution reporting requested by issuer of the order.";
-				code_lazy = () -> Arrays.asList(MultilegReportType1Code.mmBySecurity, MultilegReportType1Code.mmBySecurityAndLeg, MultilegReportType1Code.mmByInstrumentLeg);
 				trace_lazy = () -> MultilegReportTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MultilegReportType1Code.BySecurity, com.tools20022.repository.codeset.MultilegReportType1Code.BySecurityAndLeg,
+						com.tools20022.repository.codeset.MultilegReportType1Code.ByInstrumentLeg);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BySecurity.getCodeName().get(), BySecurity);
+		codesByName.put(BySecurityAndLeg.getCodeName().get(), BySecurityAndLeg);
+		codesByName.put(ByInstrumentLeg.getCodeName().get(), ByInstrumentLeg);
+	}
+
+	public static MultilegReportType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MultilegReportType1Code[] values() {
+		MultilegReportType1Code[] values = new MultilegReportType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MultilegReportType1Code> {
+		@Override
+		public MultilegReportType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MultilegReportType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

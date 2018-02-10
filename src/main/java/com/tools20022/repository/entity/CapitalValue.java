@@ -24,6 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 
 /**
  * Value of the capital.
@@ -44,8 +45,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,8 +62,8 @@ public class CapitalValue {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Capital capital;
 	/**
-	 * Capital for which a value is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -86,8 +87,8 @@ public class CapitalValue {
 	 */
 	public static final MMBusinessAttribute mmCapital = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CapitalValue.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CapitalValue.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capital";
 			definition = "Capital for which a value is provided.";
@@ -108,7 +109,7 @@ public class CapitalValue {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CapitalValue";
 				definition = "Value of the capital.";
@@ -123,11 +124,12 @@ public class CapitalValue {
 		return mmObject_lazy.get();
 	}
 
-	public Capital getCapital() {
-		return capital;
+	public Optional<Capital> getCapital() {
+		return capital == null ? Optional.empty() : Optional.of(capital);
 	}
 
-	public void setCapital(com.tools20022.repository.entity.Capital capital) {
+	public CapitalValue setCapital(com.tools20022.repository.entity.Capital capital) {
 		this.capital = capital;
+		return this;
 	}
 }

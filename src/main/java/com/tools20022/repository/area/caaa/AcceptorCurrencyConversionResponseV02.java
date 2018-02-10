@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerI
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -39,25 +40,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVersion
- * AcceptortoAcquirerCardTransactionLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion
- * CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20142015
- * CAPEAcceptortoAcquirerMaintenance20142015}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AccptrCcyConvsRspn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -73,6 +55,25 @@ import javax.xml.bind.annotation.*;
  * AcceptorCurrencyConversionResponseV02.mmSecurityTrailer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion
+ * CardPaymentsExchangesAcceptortoAcquirerISOPreviousversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20142015
+ * CAPEAcceptortoAcquirerMaintenance20142015}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AccptrCcyConvsRspn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVersion
+ * AcceptortoAcquirerCardTransactionLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code caaa.017.001.02}</li>
@@ -100,15 +101,16 @@ import javax.xml.bind.annotation.*;
  * AcceptorCurrencyConversionResponseV01}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcceptorCurrencyConversionResponseV02", propOrder = {"header", "currencyConversionResponse", "securityTrailer"})
 public class AcceptorCurrencyConversionResponseV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header10 header;
 	/**
-	 * Currency conversion response message management information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,10 +165,11 @@ public class AcceptorCurrencyConversionResponseV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CcyConvsRspn", required = true)
 	protected AcceptorCurrencyConversionResponse2 currencyConversionResponse;
 	/**
-	 * Information related to the outcome of the currency conversion.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,10 +225,11 @@ public class AcceptorCurrencyConversionResponseV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SctyTrlr", required = true)
 	protected ContentInformationType11 securityTrailer;
 	/**
-	 * Trailer of the message containing a MAC (message authentication code).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -314,34 +318,34 @@ public class AcceptorCurrencyConversionResponseV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header10 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header10 header) {
-		this.header = header;
+	public AcceptorCurrencyConversionResponseV02 setHeader(Header10 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "CcyConvsRspn", required = true)
 	public AcceptorCurrencyConversionResponse2 getCurrencyConversionResponse() {
 		return currencyConversionResponse;
 	}
 
-	public void setCurrencyConversionResponse(AcceptorCurrencyConversionResponse2 currencyConversionResponse) {
-		this.currencyConversionResponse = currencyConversionResponse;
+	public AcceptorCurrencyConversionResponseV02 setCurrencyConversionResponse(AcceptorCurrencyConversionResponse2 currencyConversionResponse) {
+		this.currencyConversionResponse = Objects.requireNonNull(currencyConversionResponse);
+		return this;
 	}
 
-	@XmlElement(name = "SctyTrlr", required = true)
 	public ContentInformationType11 getSecurityTrailer() {
 		return securityTrailer;
 	}
 
-	public void setSecurityTrailer(ContentInformationType11 securityTrailer) {
-		this.securityTrailer = securityTrailer;
+	public AcceptorCurrencyConversionResponseV02 setSecurityTrailer(ContentInformationType11 securityTrailer) {
+		this.securityTrailer = Objects.requireNonNull(securityTrailer);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.017.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.017.001.02")
 	static public class Document {
 		@XmlElement(name = "AccptrCcyConvsRspn", required = true)
 		public AcceptorCurrencyConversionResponseV02 messageBody;

@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information used to calculate the tax."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TaxCalculationInformation7", propOrder = {"taxCalculationBasis", "taxableAmount"})
 public class TaxCalculationInformation7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TaxClctnBsis")
 	protected TaxCalculationBasisType1Choice taxCalculationBasis;
 	/**
-	 * Calculation basis.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -108,7 +110,7 @@ public class TaxCalculationInformation7 {
 	public static final MMMessageAssociationEnd mmTaxCalculationBasis = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
-			componentContext_lazy = () -> TaxCalculationInformation7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "TaxClctnBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +122,11 @@ public class TaxCalculationInformation7 {
 			type_lazy = () -> TaxCalculationBasisType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxblAmt")
 	protected ActiveCurrencyAnd13DecimalAmount taxableAmount;
 	/**
-	 * Amount of money that it is to be taxed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +160,7 @@ public class TaxCalculationInformation7 {
 	public static final MMMessageAttribute mmTaxableAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
-			componentContext_lazy = () -> TaxCalculationInformation7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation7.mmObject();
 			isDerived = false;
 			xmlTag = "TaxblAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +175,9 @@ public class TaxCalculationInformation7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TaxCalculationInformation7.mmTaxCalculationBasis, TaxCalculationInformation7.mmTaxableAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation7.mmTaxCalculationBasis, com.tools20022.repository.msg.TaxCalculationInformation7.mmTaxableAmount);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TaxCalculationInformation7";
 				definition = "Information used to calculate the tax.";
@@ -183,21 +186,21 @@ public class TaxCalculationInformation7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TaxClctnBsis")
-	public TaxCalculationBasisType1Choice getTaxCalculationBasis() {
-		return taxCalculationBasis;
+	public Optional<TaxCalculationBasisType1Choice> getTaxCalculationBasis() {
+		return taxCalculationBasis == null ? Optional.empty() : Optional.of(taxCalculationBasis);
 	}
 
-	public void setTaxCalculationBasis(TaxCalculationBasisType1Choice taxCalculationBasis) {
+	public TaxCalculationInformation7 setTaxCalculationBasis(TaxCalculationBasisType1Choice taxCalculationBasis) {
 		this.taxCalculationBasis = taxCalculationBasis;
+		return this;
 	}
 
-	@XmlElement(name = "TaxblAmt")
-	public ActiveCurrencyAnd13DecimalAmount getTaxableAmount() {
-		return taxableAmount;
+	public Optional<ActiveCurrencyAnd13DecimalAmount> getTaxableAmount() {
+		return taxableAmount == null ? Optional.empty() : Optional.of(taxableAmount);
 	}
 
-	public void setTaxableAmount(ActiveCurrencyAnd13DecimalAmount taxableAmount) {
+	public TaxCalculationInformation7 setTaxableAmount(ActiveCurrencyAnd13DecimalAmount taxableAmount) {
 		this.taxableAmount = taxableAmount;
+		return this;
 	}
 }

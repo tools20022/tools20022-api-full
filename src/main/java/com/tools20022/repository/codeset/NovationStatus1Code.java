@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.NovationStatusCode;
+import com.tools20022.repository.codeset.NovationStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of the novation.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.NovationStatusCode
- * NovationStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NovationStatus1Code#mmNoNovation
- * NovationStatus1Code.mmNoNovation}</li>
+ * {@linkplain com.tools20022.repository.codeset.NovationStatus1Code#NoNovation
+ * NovationStatus1Code.NoNovation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NovationStatus1Code#mmNovation
- * NovationStatus1Code.mmNovation}</li>
+ * {@linkplain com.tools20022.repository.codeset.NovationStatus1Code#Novation
+ * NovationStatus1Code.Novation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.NovationStatusCode
+ * NovationStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of the novation."</li>
  * </ul>
  */
-public class NovationStatus1Code extends NovationStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class NovationStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class NovationStatus1Code extends NovationStatusCode {
 	 * name} = "NoNovation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoNovation = new MMCode() {
+	public static final NovationStatus1Code NoNovation = new NovationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoNovation";
-			owner_lazy = () -> NovationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NovationStatus1Code.mmObject();
+			codeName = NovationStatusCode.NoNovation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class NovationStatus1Code extends NovationStatusCode {
 	 * name} = "Novation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNovation = new MMCode() {
+	public static final NovationStatus1Code Novation = new NovationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Novation";
-			owner_lazy = () -> NovationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NovationStatus1Code.mmObject();
+			codeName = NovationStatusCode.Novation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, NovationStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected NovationStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NovationStatus1Code";
 				definition = "Specifies the status of the novation.";
-				code_lazy = () -> Arrays.asList(NovationStatus1Code.mmNoNovation, NovationStatus1Code.mmNovation);
 				trace_lazy = () -> NovationStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NovationStatus1Code.NoNovation, com.tools20022.repository.codeset.NovationStatus1Code.Novation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NoNovation.getCodeName().get(), NoNovation);
+		codesByName.put(Novation.getCodeName().get(), Novation);
+	}
+
+	public static NovationStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static NovationStatus1Code[] values() {
+		NovationStatus1Code[] values = new NovationStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, NovationStatus1Code> {
+		@Override
+		public NovationStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(NovationStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
+import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.QualifierCode;
 import com.tools20022.repository.codeset.QualityIndicationCode;
@@ -29,9 +31,11 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.IndicationOfInterest1;
 import com.tools20022.repository.msg.Order6;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Intention to buy or sell a financial Instrument.
@@ -88,14 +92,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IndicationOfInterest1
- * IndicationOfInterest1}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -117,10 +113,22 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IndicationOfInterest1
+ * IndicationOfInterest1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = type=BusinessComment, BusinessComment=Intention to buy or
+ * sell a Financial Instrument.</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -136,8 +144,8 @@ public class BuyOrSellIndicationOfInterest {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Negotiation negotiationDetails;
 	/**
-	 * Negotiation details associated with an indication of interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,8 +179,8 @@ public class BuyOrSellIndicationOfInterest {
 	 */
 	public static final MMBusinessAssociationEnd mmNegotiationDetails = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NegotiationDetails";
 			definition = "Negotiation details associated with an indication of interest.";
@@ -185,9 +193,8 @@ public class BuyOrSellIndicationOfInterest {
 	};
 	protected List<com.tools20022.repository.entity.Organisation> organisations;
 	/**
-	 * Organisations to be included from the targeted list of firms, managed by
-	 * the vendor, receiving indications.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,8 +229,8 @@ public class BuyOrSellIndicationOfInterest {
 	 */
 	public static final MMBusinessAssociationEnd mmOrganisations = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Organisations";
 			definition = "Organisations to be included from the targeted list of firms, managed by the vendor, receiving indications.";
@@ -235,8 +242,8 @@ public class BuyOrSellIndicationOfInterest {
 	};
 	protected RelativeSizeCode relativeSize;
 	/**
-	 * Indicates a quantity in relative size.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -250,6 +257,9 @@ public class BuyOrSellIndicationOfInterest {
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 27</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -262,8 +272,9 @@ public class BuyOrSellIndicationOfInterest {
 	 */
 	public static final MMBusinessAttribute mmRelativeSize = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "27"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelativeSize";
 			definition = "Indicates a quantity in relative size.";
@@ -282,9 +293,8 @@ public class BuyOrSellIndicationOfInterest {
 	};
 	protected SecuritiesPricing price;
 	/**
-	 * Indicates the price of the instrument, applicable to the indication of
-	 * interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -306,6 +316,9 @@ public class BuyOrSellIndicationOfInterest {
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 423 44 and 15</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -321,8 +334,9 @@ public class BuyOrSellIndicationOfInterest {
 	public static final MMBusinessAttribute mmPrice = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndicationOfInterest1.mmPrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "423 44 and 15"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Price";
 			definition = "Indicates the price of the instrument, applicable to the indication of interest.";
@@ -341,8 +355,8 @@ public class BuyOrSellIndicationOfInterest {
 	};
 	protected QualityIndicationCode qualityIndication;
 	/**
-	 * Indicates the relative quality of the indication of interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -364,6 +378,9 @@ public class BuyOrSellIndicationOfInterest {
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 25</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -378,8 +395,9 @@ public class BuyOrSellIndicationOfInterest {
 	public static final MMBusinessAttribute mmQualityIndication = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndicationOfInterest1.mmQualityIndication);
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "25"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QualityIndication";
 			definition = "Indicates the relative quality of the indication of interest.";
@@ -398,10 +416,8 @@ public class BuyOrSellIndicationOfInterest {
 	};
 	protected TrueFalseIndicator naturalIndicator;
 	/**
-	 * Indicates whether or not the indication of interest is the result of an
-	 * existing agency order or a facilitation position resulting from an agency
-	 * order, not from principal trading or order solicitation activity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -423,6 +439,9 @@ public class BuyOrSellIndicationOfInterest {
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 130</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -438,8 +457,9 @@ public class BuyOrSellIndicationOfInterest {
 	public static final MMBusinessAttribute mmNaturalIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndicationOfInterest1.mmNaturalIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "130"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NaturalIndicator";
 			definition = "Indicates whether or not the indication of interest is the result of an existing agency order or a facilitation position resulting from an agency order, not from principal trading or order solicitation activity.";
@@ -458,8 +478,8 @@ public class BuyOrSellIndicationOfInterest {
 	};
 	protected QualifierCode qualifier;
 	/**
-	 * Qualifies the use of the indication of interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -481,6 +501,9 @@ public class BuyOrSellIndicationOfInterest {
 	 * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest
 	 * BuyOrSellIndicationOfInterest}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 104</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -494,8 +517,9 @@ public class BuyOrSellIndicationOfInterest {
 	public static final MMBusinessAttribute mmQualifier = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndicationOfInterest1.mmQualifier);
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "104"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Qualifier";
 			definition = "Qualifies the use of the indication of interest.";
@@ -514,9 +538,8 @@ public class BuyOrSellIndicationOfInterest {
 	};
 	protected Number numberOfLegs;
 	/**
-	 * In case of multilegs indication of interest, indicates number of
-	 * instrumentLeg repeating group .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -552,8 +575,8 @@ public class BuyOrSellIndicationOfInterest {
 	public static final MMBusinessAttribute mmNumberOfLegs = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndicationOfInterest1.mmNumberOfLegs);
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfLegs";
 			definition = "In case of multilegs indication of interest, indicates number of instrumentLeg repeating group .";
@@ -572,8 +595,8 @@ public class BuyOrSellIndicationOfInterest {
 	};
 	protected Spread spreadToBenchmark;
 	/**
-	 * Indicates the spread to benchmark details of an indication of interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -619,8 +642,8 @@ public class BuyOrSellIndicationOfInterest {
 	public static final MMBusinessAssociationEnd mmSpreadToBenchmark = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndicationOfInterest1.mmSpreadAndBenchmarkCurveDetails, Order6.mmSpreadAndBenchmarkCurveDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpreadToBenchmark";
 			definition = "Indicates the spread to benchmark details of an indication of interest.";
@@ -633,8 +656,8 @@ public class BuyOrSellIndicationOfInterest {
 	};
 	protected Spread swapSpread;
 	/**
-	 * Indicates the swap spread details of an indication of interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -667,8 +690,8 @@ public class BuyOrSellIndicationOfInterest {
 	 */
 	public static final MMBusinessAssociationEnd mmSwapSpread = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SwapSpread";
 			definition = "Indicates the swap spread details of an indication of interest.";
@@ -681,10 +704,8 @@ public class BuyOrSellIndicationOfInterest {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesFinancing> twoLegTransaction;
 	/**
-	 * Securities Financing is the process of lending or borrowing cash or
-	 * securities against securities or cash collateral. It aims at optimising
-	 * liquidity, support a trading strategy, or increase settlement efficiency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -728,8 +749,8 @@ public class BuyOrSellIndicationOfInterest {
 	public static final MMBusinessAssociationEnd mmTwoLegTransaction = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndicationOfInterest1.mmTwoLegTransactionDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TwoLegTransaction";
 			definition = "Securities Financing is the process of lending or borrowing cash or securities against securities or cash collateral. It aims at optimising liquidity, support a trading strategy, or increase settlement efficiency.";
@@ -741,8 +762,8 @@ public class BuyOrSellIndicationOfInterest {
 	};
 	protected RoutingTypeCode routingType;
 	/**
-	 * Indicates if the type of routing is allowed or blocked.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -768,8 +789,8 @@ public class BuyOrSellIndicationOfInterest {
 	 */
 	public static final MMBusinessAttribute mmRoutingType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoutingType";
 			definition = "Indicates if the type of routing is allowed or blocked.";
@@ -788,8 +809,8 @@ public class BuyOrSellIndicationOfInterest {
 	};
 	protected Max35Text organisationListName;
 	/**
-	 * Name of the organisation list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -814,8 +835,8 @@ public class BuyOrSellIndicationOfInterest {
 	 */
 	public static final MMBusinessAttribute mmOrganisationListName = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrganisationListName";
 			definition = "Name of the organisation list.";
@@ -836,7 +857,8 @@ public class BuyOrSellIndicationOfInterest {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "BusinessComment", new String[]{"BusinessComment", "Intention to buy or sell a Financial Instrument."}));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BuyOrSellIndicationOfInterest";
 				definition = "Intention to buy or sell a financial Instrument.";
@@ -864,103 +886,116 @@ public class BuyOrSellIndicationOfInterest {
 		return negotiationDetails;
 	}
 
-	public void setNegotiationDetails(com.tools20022.repository.entity.Negotiation negotiationDetails) {
-		this.negotiationDetails = negotiationDetails;
+	public BuyOrSellIndicationOfInterest setNegotiationDetails(com.tools20022.repository.entity.Negotiation negotiationDetails) {
+		this.negotiationDetails = Objects.requireNonNull(negotiationDetails);
+		return this;
 	}
 
 	public List<Organisation> getOrganisations() {
-		return organisations;
+		return organisations == null ? organisations = new ArrayList<>() : organisations;
 	}
 
-	public void setOrganisations(List<com.tools20022.repository.entity.Organisation> organisations) {
-		this.organisations = organisations;
+	public BuyOrSellIndicationOfInterest setOrganisations(List<com.tools20022.repository.entity.Organisation> organisations) {
+		this.organisations = Objects.requireNonNull(organisations);
+		return this;
 	}
 
 	public RelativeSizeCode getRelativeSize() {
 		return relativeSize;
 	}
 
-	public void setRelativeSize(RelativeSizeCode relativeSize) {
-		this.relativeSize = relativeSize;
+	public BuyOrSellIndicationOfInterest setRelativeSize(RelativeSizeCode relativeSize) {
+		this.relativeSize = Objects.requireNonNull(relativeSize);
+		return this;
 	}
 
 	public SecuritiesPricing getPrice() {
 		return price;
 	}
 
-	public void setPrice(com.tools20022.repository.entity.SecuritiesPricing price) {
-		this.price = price;
+	public BuyOrSellIndicationOfInterest setPrice(com.tools20022.repository.entity.SecuritiesPricing price) {
+		this.price = Objects.requireNonNull(price);
+		return this;
 	}
 
 	public QualityIndicationCode getQualityIndication() {
 		return qualityIndication;
 	}
 
-	public void setQualityIndication(QualityIndicationCode qualityIndication) {
-		this.qualityIndication = qualityIndication;
+	public BuyOrSellIndicationOfInterest setQualityIndication(QualityIndicationCode qualityIndication) {
+		this.qualityIndication = Objects.requireNonNull(qualityIndication);
+		return this;
 	}
 
 	public TrueFalseIndicator getNaturalIndicator() {
 		return naturalIndicator;
 	}
 
-	public void setNaturalIndicator(TrueFalseIndicator naturalIndicator) {
-		this.naturalIndicator = naturalIndicator;
+	public BuyOrSellIndicationOfInterest setNaturalIndicator(TrueFalseIndicator naturalIndicator) {
+		this.naturalIndicator = Objects.requireNonNull(naturalIndicator);
+		return this;
 	}
 
 	public QualifierCode getQualifier() {
 		return qualifier;
 	}
 
-	public void setQualifier(QualifierCode qualifier) {
-		this.qualifier = qualifier;
+	public BuyOrSellIndicationOfInterest setQualifier(QualifierCode qualifier) {
+		this.qualifier = Objects.requireNonNull(qualifier);
+		return this;
 	}
 
 	public Number getNumberOfLegs() {
 		return numberOfLegs;
 	}
 
-	public void setNumberOfLegs(Number numberOfLegs) {
-		this.numberOfLegs = numberOfLegs;
+	public BuyOrSellIndicationOfInterest setNumberOfLegs(Number numberOfLegs) {
+		this.numberOfLegs = Objects.requireNonNull(numberOfLegs);
+		return this;
 	}
 
 	public Spread getSpreadToBenchmark() {
 		return spreadToBenchmark;
 	}
 
-	public void setSpreadToBenchmark(com.tools20022.repository.entity.Spread spreadToBenchmark) {
-		this.spreadToBenchmark = spreadToBenchmark;
+	public BuyOrSellIndicationOfInterest setSpreadToBenchmark(com.tools20022.repository.entity.Spread spreadToBenchmark) {
+		this.spreadToBenchmark = Objects.requireNonNull(spreadToBenchmark);
+		return this;
 	}
 
 	public Spread getSwapSpread() {
 		return swapSpread;
 	}
 
-	public void setSwapSpread(com.tools20022.repository.entity.Spread swapSpread) {
-		this.swapSpread = swapSpread;
+	public BuyOrSellIndicationOfInterest setSwapSpread(com.tools20022.repository.entity.Spread swapSpread) {
+		this.swapSpread = Objects.requireNonNull(swapSpread);
+		return this;
 	}
 
 	public List<SecuritiesFinancing> getTwoLegTransaction() {
-		return twoLegTransaction;
+		return twoLegTransaction == null ? twoLegTransaction = new ArrayList<>() : twoLegTransaction;
 	}
 
-	public void setTwoLegTransaction(List<com.tools20022.repository.entity.SecuritiesFinancing> twoLegTransaction) {
-		this.twoLegTransaction = twoLegTransaction;
+	public BuyOrSellIndicationOfInterest setTwoLegTransaction(List<com.tools20022.repository.entity.SecuritiesFinancing> twoLegTransaction) {
+		this.twoLegTransaction = Objects.requireNonNull(twoLegTransaction);
+		return this;
 	}
 
 	public RoutingTypeCode getRoutingType() {
 		return routingType;
 	}
 
-	public void setRoutingType(RoutingTypeCode routingType) {
-		this.routingType = routingType;
+	public BuyOrSellIndicationOfInterest setRoutingType(RoutingTypeCode routingType) {
+		this.routingType = Objects.requireNonNull(routingType);
+		return this;
 	}
 
 	public Max35Text getOrganisationListName() {
 		return organisationListName;
 	}
 
-	public void setOrganisationListName(Max35Text organisationListName) {
-		this.organisationListName = organisationListName;
+	public BuyOrSellIndicationOfInterest setOrganisationListName(Max35Text organisationListName) {
+		this.organisationListName = Objects.requireNonNull(organisationListName);
+		return this;
 	}
 }

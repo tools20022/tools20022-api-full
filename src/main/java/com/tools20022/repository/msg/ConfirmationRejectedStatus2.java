@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReasonElementRule#forConfirmationRejectedStatus2
+ * ConstraintReasonElementRule.forConfirmationRejectedStatus2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * ConfirmationRejectedStatus1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ConfirmationRejectedStatus2", propOrder = {"reason", "additionalInformation"})
 public class ConfirmationRejectedStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rsn")
 	protected ConfirmationRejectedReason1Choice reason;
 	/**
-	 * Reason for the rejected status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,7 +143,7 @@ public class ConfirmationRejectedStatus2 {
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConfirmationRejectedStatusReason;
-			componentContext_lazy = () -> ConfirmationRejectedStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationRejectedStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,10 +156,11 @@ public class ConfirmationRejectedStatus2 {
 			complexType_lazy = () -> ConfirmationRejectedReason1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected Max350Text additionalInformation;
 	/**
-	 * Additional information about the rejected reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,7 +187,7 @@ public class ConfirmationRejectedStatus2 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ConfirmationRejectedStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ConfirmationRejectedStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,9 +202,10 @@ public class ConfirmationRejectedStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ConfirmationRejectedStatus2.mmReason, ConfirmationRejectedStatus2.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConfirmationRejectedStatus2.mmReason, com.tools20022.repository.msg.ConfirmationRejectedStatus2.mmAdditionalInformation);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReasonElementRule.forConfirmationRejectedStatus2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationRejectedStatus2";
 				definition = "Rejection of a confirmation.";
@@ -204,21 +216,21 @@ public class ConfirmationRejectedStatus2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rsn")
-	public ConfirmationRejectedReason1Choice getReason() {
-		return reason;
+	public Optional<ConfirmationRejectedReason1Choice> getReason() {
+		return reason == null ? Optional.empty() : Optional.of(reason);
 	}
 
-	public void setReason(ConfirmationRejectedReason1Choice reason) {
+	public ConfirmationRejectedStatus2 setReason(ConfirmationRejectedReason1Choice reason) {
 		this.reason = reason;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public Max350Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<Max350Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(Max350Text additionalInformation) {
+	public ConfirmationRejectedStatus2 setAdditionalInformation(Max350Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 }

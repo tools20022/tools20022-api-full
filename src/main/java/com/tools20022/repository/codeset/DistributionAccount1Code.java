@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DistributionAccountCode;
+import com.tools20022.repository.codeset.DistributionAccount1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Code specifying the type of account where the disbursed CUSIP will be
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DistributionAccountCode
- * DistributionAccountCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionAccount1Code#mmGeneralFree
- * DistributionAccount1Code.mmGeneralFree}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionAccount1Code#GeneralFree
+ * DistributionAccount1Code.GeneralFree}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DistributionAccount1Code#mmRRGAccount
- * DistributionAccount1Code.mmRRGAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.DistributionAccount1Code#RRGAccount
+ * DistributionAccount1Code.RRGAccount}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DistributionAccountCode
+ * DistributionAccountCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class DistributionAccount1Code extends DistributionAccountCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DistributionAccount1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class DistributionAccount1Code extends DistributionAccountCode {
 	 * name} = "GeneralFree"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGeneralFree = new MMCode() {
+	public static final DistributionAccount1Code GeneralFree = new DistributionAccount1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralFree";
-			owner_lazy = () -> DistributionAccount1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DistributionAccount1Code.mmObject();
+			codeName = DistributionAccountCode.GeneralFree.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,57 @@ public class DistributionAccount1Code extends DistributionAccountCode {
 	 * name} = "RRGAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRRGAccount = new MMCode() {
+	public static final DistributionAccount1Code RRGAccount = new DistributionAccount1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RRGAccount";
-			owner_lazy = () -> DistributionAccount1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DistributionAccount1Code.mmObject();
+			codeName = DistributionAccountCode.RRGAccount.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DistributionAccount1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DistributionAccount1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("GENF");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DistributionAccount1Code";
 				definition = "Code specifying the type of account where the disbursed CUSIP will be allocated.";
-				code_lazy = () -> Arrays.asList(DistributionAccount1Code.mmGeneralFree, DistributionAccount1Code.mmRRGAccount);
 				trace_lazy = () -> DistributionAccountCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DistributionAccount1Code.GeneralFree, com.tools20022.repository.codeset.DistributionAccount1Code.RRGAccount);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(GeneralFree.getCodeName().get(), GeneralFree);
+		codesByName.put(RRGAccount.getCodeName().get(), RRGAccount);
+	}
+
+	public static DistributionAccount1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DistributionAccount1Code[] values() {
+		DistributionAccount1Code[] values = new DistributionAccount1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DistributionAccount1Code> {
+		@Override
+		public DistributionAccount1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DistributionAccount1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

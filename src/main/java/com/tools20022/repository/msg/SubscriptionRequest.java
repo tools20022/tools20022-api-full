@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.codeset.SubscriptionRequest1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,8 +48,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,15 +61,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Used to subscribe or unsubscribe for the receipt of a certain message."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SubscriptionRequest", propOrder = "subscriptionRequest")
 public class SubscriptionRequest {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SbcptReq", required = true)
 	protected SubscriptionRequest1Code subscriptionRequest;
 	/**
-	 * Used to subscribe or unsubscribe for the receipt of a certain message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -83,6 +86,9 @@ public class SubscriptionRequest {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SbcptReq"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 263</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -96,9 +102,10 @@ public class SubscriptionRequest {
 	 */
 	public static final MMMessageAttribute mmSubscriptionRequest = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SubscriptionRequest.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubscriptionRequest.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptReq";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "263"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionRequest";
 			definition = "Used to subscribe or unsubscribe for the receipt of a certain message.";
@@ -111,8 +118,8 @@ public class SubscriptionRequest {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SubscriptionRequest.mmSubscriptionRequest);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubscriptionRequest.mmSubscriptionRequest);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SubscriptionRequest";
 				definition = "Used to subscribe or unsubscribe for the receipt of a certain message.";
@@ -121,12 +128,12 @@ public class SubscriptionRequest {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SbcptReq", required = true)
 	public SubscriptionRequest1Code getSubscriptionRequest() {
 		return subscriptionRequest;
 	}
 
-	public void setSubscriptionRequest(SubscriptionRequest1Code subscriptionRequest) {
-		this.subscriptionRequest = subscriptionRequest;
+	public SubscriptionRequest setSubscriptionRequest(SubscriptionRequest1Code subscriptionRequest) {
+		this.subscriptionRequest = Objects.requireNonNull(subscriptionRequest);
+		return this;
 	}
 }

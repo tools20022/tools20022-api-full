@@ -24,6 +24,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Reference20", propOrder = {"interestPaymentRequestIdentification", "interestPaymentResponseIdentification"})
 public class Reference20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IntrstPmtReqId", required = true)
 	protected Max35Text interestPaymentRequestIdentification;
 	/**
-	 * Provides the reference to the interest payment request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +102,7 @@ public class Reference20 {
 	 */
 	public static final MMMessageAttribute mmInterestPaymentRequestIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference20.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstPmtReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,10 +113,11 @@ public class Reference20 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstPmtRspnId")
 	protected Max35Text interestPaymentResponseIdentification;
 	/**
-	 * Provides the reference to the interest payment response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +143,7 @@ public class Reference20 {
 	 */
 	public static final MMMessageAttribute mmInterestPaymentResponseIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference20.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstPmtRspnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +158,8 @@ public class Reference20 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Reference20.mmInterestPaymentRequestIdentification, Reference20.mmInterestPaymentResponseIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference20.mmInterestPaymentRequestIdentification, com.tools20022.repository.msg.Reference20.mmInterestPaymentResponseIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reference20";
 				definition = "Additional references linked to the updated interest request such the original InterestRequest identification, and optionaly the InterestResponse identification.";
@@ -164,21 +168,21 @@ public class Reference20 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IntrstPmtReqId", required = true)
 	public Max35Text getInterestPaymentRequestIdentification() {
 		return interestPaymentRequestIdentification;
 	}
 
-	public void setInterestPaymentRequestIdentification(Max35Text interestPaymentRequestIdentification) {
-		this.interestPaymentRequestIdentification = interestPaymentRequestIdentification;
+	public Reference20 setInterestPaymentRequestIdentification(Max35Text interestPaymentRequestIdentification) {
+		this.interestPaymentRequestIdentification = Objects.requireNonNull(interestPaymentRequestIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "IntrstPmtRspnId")
-	public Max35Text getInterestPaymentResponseIdentification() {
-		return interestPaymentResponseIdentification;
+	public Optional<Max35Text> getInterestPaymentResponseIdentification() {
+		return interestPaymentResponseIdentification == null ? Optional.empty() : Optional.of(interestPaymentResponseIdentification);
 	}
 
-	public void setInterestPaymentResponseIdentification(Max35Text interestPaymentResponseIdentification) {
+	public Reference20 setInterestPaymentResponseIdentification(Max35Text interestPaymentResponseIdentification) {
 		this.interestPaymentResponseIdentification = interestPaymentResponseIdentification;
+		return this;
 	}
 }

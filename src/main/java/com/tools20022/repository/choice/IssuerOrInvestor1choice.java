@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,15 +61,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines how the CSD is linked to the security."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IssuerOrInvestor1choice", propOrder = {"issuerCSD", "investorCSD"})
 public class IssuerOrInvestor1choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IssrCSD", required = true)
 	protected SystemPartyIdentification1Choice issuerCSD;
 	/**
-	 * CSD Issuer of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -95,7 +97,7 @@ public class IssuerOrInvestor1choice {
 	 */
 	public static final MMMessageAssociationEnd mmIssuerCSD = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IssuerOrInvestor1choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IssuerOrInvestor1choice.mmObject();
 			isDerived = false;
 			xmlTag = "IssrCSD";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -107,10 +109,11 @@ public class IssuerOrInvestor1choice {
 			type_lazy = () -> com.tools20022.repository.choice.SystemPartyIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstrCSD", required = true)
 	protected SystemPartyIdentification1Choice investorCSD;
 	/**
-	 * CSD Investor of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -137,7 +140,7 @@ public class IssuerOrInvestor1choice {
 	 */
 	public static final MMMessageAssociationEnd mmInvestorCSD = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IssuerOrInvestor1choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.IssuerOrInvestor1choice.mmObject();
 			isDerived = false;
 			xmlTag = "InvstrCSD";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,8 +156,8 @@ public class IssuerOrInvestor1choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IssuerOrInvestor1choice.mmIssuerCSD, IssuerOrInvestor1choice.mmInvestorCSD);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.IssuerOrInvestor1choice.mmIssuerCSD, com.tools20022.repository.choice.IssuerOrInvestor1choice.mmInvestorCSD);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IssuerOrInvestor1choice";
 				definition = "Defines how the CSD is linked to the security.";
@@ -163,21 +166,21 @@ public class IssuerOrInvestor1choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IssrCSD", required = true)
 	public SystemPartyIdentification1Choice getIssuerCSD() {
 		return issuerCSD;
 	}
 
-	public void setIssuerCSD(com.tools20022.repository.choice.SystemPartyIdentification1Choice issuerCSD) {
-		this.issuerCSD = issuerCSD;
+	public IssuerOrInvestor1choice setIssuerCSD(com.tools20022.repository.choice.SystemPartyIdentification1Choice issuerCSD) {
+		this.issuerCSD = Objects.requireNonNull(issuerCSD);
+		return this;
 	}
 
-	@XmlElement(name = "InvstrCSD", required = true)
 	public SystemPartyIdentification1Choice getInvestorCSD() {
 		return investorCSD;
 	}
 
-	public void setInvestorCSD(com.tools20022.repository.choice.SystemPartyIdentification1Choice investorCSD) {
-		this.investorCSD = investorCSD;
+	public IssuerOrInvestor1choice setInvestorCSD(com.tools20022.repository.choice.SystemPartyIdentification1Choice investorCSD) {
+		this.investorCSD = Objects.requireNonNull(investorCSD);
+		return this;
 	}
 }

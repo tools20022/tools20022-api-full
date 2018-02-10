@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ResultDetailCode;
+import com.tools20022.repository.codeset.ResultDetail3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Detail of the response.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ResultDetailCode
- * ResultDetailCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail3Code#mmUnknownCertificate
- * ResultDetail3Code.mmUnknownCertificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail3Code#UnknownCertificate
+ * ResultDetail3Code.UnknownCertificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResultDetail3Code#mmUnsupportedService
- * ResultDetail3Code.mmUnsupportedService}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResultDetail3Code#UnsupportedService
+ * ResultDetail3Code.UnsupportedService}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ResultDetailCode
+ * ResultDetailCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Detail of the response."</li>
  * </ul>
  */
-public class ResultDetail3Code extends ResultDetailCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ResultDetail3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class ResultDetail3Code extends ResultDetailCode {
 	 * name} = "UnknownCertificate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknownCertificate = new MMCode() {
+	public static final ResultDetail3Code UnknownCertificate = new ResultDetail3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownCertificate";
-			owner_lazy = () -> ResultDetail3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResultDetail3Code.mmObject();
+			codeName = ResultDetailCode.UnknownCertificate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class ResultDetail3Code extends ResultDetailCode {
 	 * name} = "UnsupportedService"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnsupportedService = new MMCode() {
+	public static final ResultDetail3Code UnsupportedService = new ResultDetail3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnsupportedService";
-			owner_lazy = () -> ResultDetail3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResultDetail3Code.mmObject();
+			codeName = ResultDetailCode.UnsupportedService.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ResultDetail3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ResultDetail3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResultDetail3Code";
 				definition = "Detail of the response.";
-				code_lazy = () -> Arrays.asList(ResultDetail3Code.mmUnknownCertificate, ResultDetail3Code.mmUnsupportedService);
 				trace_lazy = () -> ResultDetailCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResultDetail3Code.UnknownCertificate, com.tools20022.repository.codeset.ResultDetail3Code.UnsupportedService);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(UnknownCertificate.getCodeName().get(), UnknownCertificate);
+		codesByName.put(UnsupportedService.getCodeName().get(), UnsupportedService);
+	}
+
+	public static ResultDetail3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ResultDetail3Code[] values() {
+		ResultDetail3Code[] values = new ResultDetail3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ResultDetail3Code> {
+		@Override
+		public ResultDetail3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ResultDetail3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

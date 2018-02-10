@@ -27,9 +27,8 @@ import com.tools20022.repository.choice.InvestigationStatus3Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -89,20 +88,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementArchive
- * CashManagementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "RsltnOfInvstgtn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -133,9 +118,46 @@ import javax.xml.bind.annotation.*;
  * ResolutionOfInvestigationV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "RsltnOfInvstgtn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementArchive
+ * CashManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.029.001.04}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule#forResolutionOfInvestigationV04
+ * ConstraintPartialOrRejectedCancellationRule.forResolutionOfInvestigationV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrGroupResolvedCaseRule#forResolutionOfInvestigationV04
+ * ConstraintMessageOrGroupResolvedCaseRule.forResolutionOfInvestigationV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationResolvedCaseRule#forResolutionOfInvestigationV04
+ * ConstraintMessageOrPaymentInformationResolvedCaseRule.
+ * forResolutionOfInvestigationV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule#forResolutionOfInvestigationV04
+ * ConstraintMessageOrInitiationTransactionResolvedCaseRule.
+ * forResolutionOfInvestigationV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageOrInterbankTransactionResolvedCaseRule#forResolutionOfInvestigationV04
+ * ConstraintMessageOrInterbankTransactionResolvedCaseRule.
+ * forResolutionOfInvestigationV04}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -160,17 +182,16 @@ import javax.xml.bind.annotation.*;
  * ResolutionOfInvestigationV03}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ResolutionOfInvestigationV04", propOrder = {"assignment", "resolvedCase", "status", "cancellationDetails", "statementDetails", "correctionTransaction", "resolutionRelatedInformation", "supplementaryData"})
 public class ResolutionOfInvestigationV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Assgnmt", required = true)
 	protected CaseAssignment3 assignment;
 	/**
-	 * Identifies the assignment of an investigation case from an assigner to an
-	 * assignee. Usage: The Assigner must be the sender of this confirmation and
-	 * the Assignee must be the receiver.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -220,10 +241,11 @@ public class ResolutionOfInvestigationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "RslvdCase")
 	protected Case3 resolvedCase;
 	/**
-	 * Identifies a resolved case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -270,10 +292,11 @@ public class ResolutionOfInvestigationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected InvestigationStatus3Choice status;
 	/**
-	 * Indicates the status of the investigation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -322,10 +345,11 @@ public class ResolutionOfInvestigationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "CxlDtls")
 	protected List<UnderlyingTransaction4> cancellationDetails;
 	/**
-	 * Specifies the details of the underlying transactions being cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -374,10 +398,11 @@ public class ResolutionOfInvestigationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "StmtDtls")
 	protected StatementResolutionEntry2 statementDetails;
 	/**
-	 * Details on the underlying statement entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -426,10 +451,11 @@ public class ResolutionOfInvestigationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "CrrctnTx")
 	protected CorrectiveTransaction1Choice correctionTransaction;
 	/**
-	 * References a transaction initiated to fix the case under investigation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -480,11 +506,11 @@ public class ResolutionOfInvestigationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "RsltnRltdInf")
 	protected ResolutionInformation1 resolutionRelatedInformation;
 	/**
-	 * Reference of a return or a reversal initiated to fix the case under
-	 * investigation as part of the resolution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -535,11 +561,11 @@ public class ResolutionOfInvestigationV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -593,6 +619,11 @@ public class ResolutionOfInvestigationV04 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialOrRejectedCancellationRule.forResolutionOfInvestigationV04,
+						com.tools20022.repository.constraints.ConstraintMessageOrGroupResolvedCaseRule.forResolutionOfInvestigationV04,
+						com.tools20022.repository.constraints.ConstraintMessageOrPaymentInformationResolvedCaseRule.forResolutionOfInvestigationV04,
+						com.tools20022.repository.constraints.ConstraintMessageOrInitiationTransactionResolvedCaseRule.forResolutionOfInvestigationV04,
+						com.tools20022.repository.constraints.ConstraintMessageOrInterbankTransactionResolvedCaseRule.forResolutionOfInvestigationV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResolutionOfInvestigationV04";
 				definition = "Scope\r\nThe Resolution Of Investigation message is sent by a case assignee to a case creator/case assigner.\r\nThis message is used to inform of the resolution of a case, and optionally provides details about .\r\n- the corrective action undertaken by the case assignee\r\n- information on the return where applicable\r\nUsage\r\nThe Resolution Of Investigation message is used by the case assignee to inform a case creator or case assigner about the resolution of a:\r\n- request to cancel payment case\r\n- request to modify payment case\r\n- unable to apply case\r\n- claim non receipt case\r\nThe Resolution Of Investigation message covers one and only one case at a time. If the case assignee needs to communicate about several cases, then several Resolution Of Investigation messages must be sent.\r\nThe Resolution Of Investigation message provides:\r\n- the final outcome of the case, whether positive or negative\r\n- optionally, the details of the corrective action undertaken by the case assignee and the information of the return\r\nWhenever a payment instruction has been generated to solve the case under investigation following a claim non receipt or an unable to apply, the optional CorrectionTransaction component present in the message must be completed.\r\nWhenever the action of modifying or cancelling a payment results in funds being returned or reversed, an investigating agent may provide the details in the resolution related investigation component, to identify the return or reversal transaction. These details will facilitate the account reconciliations at the initiating bank and the intermediaries. It must be stressed that the return or reversal of funds is outside the scope of this Exceptions and Investigation service. The features given here is only meant to transmit the information of return or reversal when it is available through the resolution of the case.\r\nThe Resolution Of Investigation message must:\r\n- be forwarded by all subsequent case assignee(s) until it reaches the case creator\r\n- not be used in place of a Reject Case Assignment or Case Status Report or Notification Of Case Assignment message\r\nTake note of an exceptional rule that allows the use of Resolution Of Investigation in lieu of a Case Status Report. Case Status Report is a response-message to a Case Status Report Request. The latter which is sent when the assigner has reached its own time-out threshold to receive a response. However it may happen that when the Request arrives, the investigating agent has just obtained a resolution. In such a situation, it would be redundant to send a Case Status Report when then followed immediately by a Resolution Of Investigation. It is therefore quite acceptable for the investigating agent, the assignee, to skip the Case Status Report and send the Resolution Of Investigation message directly.\r\nThe Resolution Of Investigation message should be the sole message to respond to a cancellation request. Details of the underlying transactions and the related statuses for which the cancellation request has been issued may be provided in the Cancellation Details component.";
@@ -624,79 +655,79 @@ public class ResolutionOfInvestigationV04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment3 getAssignment() {
 		return assignment;
 	}
 
-	public void setAssignment(CaseAssignment3 assignment) {
-		this.assignment = assignment;
+	public ResolutionOfInvestigationV04 setAssignment(CaseAssignment3 assignment) {
+		this.assignment = Objects.requireNonNull(assignment);
+		return this;
 	}
 
-	@XmlElement(name = "RslvdCase")
-	public Case3 getResolvedCase() {
-		return resolvedCase;
+	public Optional<Case3> getResolvedCase() {
+		return resolvedCase == null ? Optional.empty() : Optional.of(resolvedCase);
 	}
 
-	public void setResolvedCase(Case3 resolvedCase) {
+	public ResolutionOfInvestigationV04 setResolvedCase(Case3 resolvedCase) {
 		this.resolvedCase = resolvedCase;
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public InvestigationStatus3Choice getStatus() {
 		return status;
 	}
 
-	public void setStatus(InvestigationStatus3Choice status) {
-		this.status = status;
+	public ResolutionOfInvestigationV04 setStatus(InvestigationStatus3Choice status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "CxlDtls")
 	public List<UnderlyingTransaction4> getCancellationDetails() {
-		return cancellationDetails;
+		return cancellationDetails == null ? cancellationDetails = new ArrayList<>() : cancellationDetails;
 	}
 
-	public void setCancellationDetails(List<UnderlyingTransaction4> cancellationDetails) {
-		this.cancellationDetails = cancellationDetails;
+	public ResolutionOfInvestigationV04 setCancellationDetails(List<UnderlyingTransaction4> cancellationDetails) {
+		this.cancellationDetails = Objects.requireNonNull(cancellationDetails);
+		return this;
 	}
 
-	@XmlElement(name = "StmtDtls")
-	public StatementResolutionEntry2 getStatementDetails() {
-		return statementDetails;
+	public Optional<StatementResolutionEntry2> getStatementDetails() {
+		return statementDetails == null ? Optional.empty() : Optional.of(statementDetails);
 	}
 
-	public void setStatementDetails(StatementResolutionEntry2 statementDetails) {
+	public ResolutionOfInvestigationV04 setStatementDetails(StatementResolutionEntry2 statementDetails) {
 		this.statementDetails = statementDetails;
+		return this;
 	}
 
-	@XmlElement(name = "CrrctnTx")
-	public CorrectiveTransaction1Choice getCorrectionTransaction() {
-		return correctionTransaction;
+	public Optional<CorrectiveTransaction1Choice> getCorrectionTransaction() {
+		return correctionTransaction == null ? Optional.empty() : Optional.of(correctionTransaction);
 	}
 
-	public void setCorrectionTransaction(CorrectiveTransaction1Choice correctionTransaction) {
+	public ResolutionOfInvestigationV04 setCorrectionTransaction(CorrectiveTransaction1Choice correctionTransaction) {
 		this.correctionTransaction = correctionTransaction;
+		return this;
 	}
 
-	@XmlElement(name = "RsltnRltdInf")
-	public ResolutionInformation1 getResolutionRelatedInformation() {
-		return resolutionRelatedInformation;
+	public Optional<ResolutionInformation1> getResolutionRelatedInformation() {
+		return resolutionRelatedInformation == null ? Optional.empty() : Optional.of(resolutionRelatedInformation);
 	}
 
-	public void setResolutionRelatedInformation(ResolutionInformation1 resolutionRelatedInformation) {
+	public ResolutionOfInvestigationV04 setResolutionRelatedInformation(ResolutionInformation1 resolutionRelatedInformation) {
 		this.resolutionRelatedInformation = resolutionRelatedInformation;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public ResolutionOfInvestigationV04 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.029.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.029.001.04")
 	static public class Document {
 		@XmlElement(name = "RsltnOfInvstgtn", required = true)
 		public ResolutionOfInvestigationV04 messageBody;

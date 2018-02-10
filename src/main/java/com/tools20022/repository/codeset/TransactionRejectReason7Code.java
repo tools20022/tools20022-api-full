@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TransactionReasonCode;
+import com.tools20022.repository.codeset.TransactionRejectReason7Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for a transaction to be rejected or returned by an
@@ -31,64 +35,64 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TransactionReasonCode
- * TransactionReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#mmIncorrectAccountNumber
- * TransactionRejectReason7Code.mmIncorrectAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#IncorrectAccountNumber
+ * TransactionRejectReason7Code.IncorrectAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#mmClosedAccountNumber
- * TransactionRejectReason7Code.mmClosedAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#ClosedAccountNumber
+ * TransactionRejectReason7Code.ClosedAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#mmBlockedAccount
- * TransactionRejectReason7Code.mmBlockedAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#BlockedAccount
+ * TransactionRejectReason7Code.BlockedAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#mmTransactionForbidden
- * TransactionRejectReason7Code.mmTransactionForbidden}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#TransactionForbidden
+ * TransactionRejectReason7Code.TransactionForbidden}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#mmInvalidBankOperationCode
- * TransactionRejectReason7Code.mmInvalidBankOperationCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#InvalidBankOperationCode
+ * TransactionRejectReason7Code.InvalidBankOperationCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#mmInsufficientFunds
- * TransactionRejectReason7Code.mmInsufficientFunds}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#InsufficientFunds
+ * TransactionRejectReason7Code.InsufficientFunds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#mmDuplication
- * TransactionRejectReason7Code.mmDuplication}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#Duplication
+ * TransactionRejectReason7Code.Duplication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#mmNoMandate
- * TransactionRejectReason7Code.mmNoMandate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#NoMandate
+ * TransactionRejectReason7Code.NoMandate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#mmMissingMandatoryInformationInMandate
- * TransactionRejectReason7Code.mmMissingMandatoryInformationInMandate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#MissingMandatoryInformationInMandate
+ * TransactionRejectReason7Code.MissingMandatoryInformationInMandate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#mmInvalidFileFormatForOtherReasonThanGroupingIndicator
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#InvalidFileFormatForOtherReasonThanGroupingIndicator
  * TransactionRejectReason7Code.
- * mmInvalidFileFormatForOtherReasonThanGroupingIndicator}</li>
+ * InvalidFileFormatForOtherReasonThanGroupingIndicator}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#mmBankIdentifierIncorrect
- * TransactionRejectReason7Code.mmBankIdentifierIncorrect}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#BankIdentifierIncorrect
+ * TransactionRejectReason7Code.BankIdentifierIncorrect}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#mmEndCustomerDeceased
- * TransactionRejectReason7Code.mmEndCustomerDeceased}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#EndCustomerDeceased
+ * TransactionRejectReason7Code.EndCustomerDeceased}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#mmNotSpecifiedReasonCustomerGenerated
- * TransactionRejectReason7Code.mmNotSpecifiedReasonCustomerGenerated}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#NotSpecifiedReasonCustomerGenerated
+ * TransactionRejectReason7Code.NotSpecifiedReasonCustomerGenerated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#mmNotSpecifiedReasonAgentGenerated
- * TransactionRejectReason7Code.mmNotSpecifiedReasonAgentGenerated}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#NotSpecifiedReasonAgentGenerated
+ * TransactionRejectReason7Code.NotSpecifiedReasonAgentGenerated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#mmCutOffTime
- * TransactionRejectReason7Code.mmCutOffTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionRejectReason7Code#CutOffTime
+ * TransactionRejectReason7Code.CutOffTime}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TransactionReasonCode
+ * TransactionReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -107,7 +111,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TransactionRejectReason7Code extends TransactionReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransactionRejectReason7Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -126,11 +131,12 @@ public class TransactionRejectReason7Code extends TransactionReasonCode {
 	 * name} = "IncorrectAccountNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectAccountNumber = new MMCode() {
+	public static final TransactionRejectReason7Code IncorrectAccountNumber = new TransactionRejectReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAccountNumber";
-			owner_lazy = () -> TransactionRejectReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason7Code.mmObject();
+			codeName = TransactionReasonCode.IncorrectAccountNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -149,11 +155,12 @@ public class TransactionRejectReason7Code extends TransactionReasonCode {
 	 * name} = "ClosedAccountNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClosedAccountNumber = new MMCode() {
+	public static final TransactionRejectReason7Code ClosedAccountNumber = new TransactionRejectReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosedAccountNumber";
-			owner_lazy = () -> TransactionRejectReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason7Code.mmObject();
+			codeName = TransactionReasonCode.ClosedAccountNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -172,11 +179,12 @@ public class TransactionRejectReason7Code extends TransactionReasonCode {
 	 * name} = "BlockedAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBlockedAccount = new MMCode() {
+	public static final TransactionRejectReason7Code BlockedAccount = new TransactionRejectReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedAccount";
-			owner_lazy = () -> TransactionRejectReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason7Code.mmObject();
+			codeName = TransactionReasonCode.BlockedAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -195,11 +203,12 @@ public class TransactionRejectReason7Code extends TransactionReasonCode {
 	 * name} = "TransactionForbidden"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransactionForbidden = new MMCode() {
+	public static final TransactionRejectReason7Code TransactionForbidden = new TransactionRejectReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionForbidden";
-			owner_lazy = () -> TransactionRejectReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason7Code.mmObject();
+			codeName = TransactionReasonCode.TransactionForbidden.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -218,11 +227,12 @@ public class TransactionRejectReason7Code extends TransactionReasonCode {
 	 * name} = "InvalidBankOperationCode"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidBankOperationCode = new MMCode() {
+	public static final TransactionRejectReason7Code InvalidBankOperationCode = new TransactionRejectReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidBankOperationCode";
-			owner_lazy = () -> TransactionRejectReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason7Code.mmObject();
+			codeName = TransactionReasonCode.InvalidBankOperationCode.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -241,11 +251,12 @@ public class TransactionRejectReason7Code extends TransactionReasonCode {
 	 * name} = "InsufficientFunds"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInsufficientFunds = new MMCode() {
+	public static final TransactionRejectReason7Code InsufficientFunds = new TransactionRejectReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientFunds";
-			owner_lazy = () -> TransactionRejectReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason7Code.mmObject();
+			codeName = TransactionReasonCode.InsufficientFunds.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -264,11 +275,12 @@ public class TransactionRejectReason7Code extends TransactionReasonCode {
 	 * name} = "Duplication"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDuplication = new MMCode() {
+	public static final TransactionRejectReason7Code Duplication = new TransactionRejectReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Duplication";
-			owner_lazy = () -> TransactionRejectReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason7Code.mmObject();
+			codeName = TransactionReasonCode.Duplication.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -287,11 +299,12 @@ public class TransactionRejectReason7Code extends TransactionReasonCode {
 	 * name} = "NoMandate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoMandate = new MMCode() {
+	public static final TransactionRejectReason7Code NoMandate = new TransactionRejectReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMandate";
-			owner_lazy = () -> TransactionRejectReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason7Code.mmObject();
+			codeName = TransactionReasonCode.NoMandate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -310,11 +323,12 @@ public class TransactionRejectReason7Code extends TransactionReasonCode {
 	 * name} = "MissingMandatoryInformationInMandate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingMandatoryInformationInMandate = new MMCode() {
+	public static final TransactionRejectReason7Code MissingMandatoryInformationInMandate = new TransactionRejectReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingMandatoryInformationInMandate";
-			owner_lazy = () -> TransactionRejectReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason7Code.mmObject();
+			codeName = TransactionReasonCode.MissingMandatoryInformationInMandate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -333,11 +347,12 @@ public class TransactionRejectReason7Code extends TransactionReasonCode {
 	 * name} = "InvalidFileFormatForOtherReasonThanGroupingIndicator"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidFileFormatForOtherReasonThanGroupingIndicator = new MMCode() {
+	public static final TransactionRejectReason7Code InvalidFileFormatForOtherReasonThanGroupingIndicator = new TransactionRejectReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidFileFormatForOtherReasonThanGroupingIndicator";
-			owner_lazy = () -> TransactionRejectReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason7Code.mmObject();
+			codeName = TransactionReasonCode.InvalidFileFormatForOtherReasonThanGroupingIndicator.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -356,11 +371,12 @@ public class TransactionRejectReason7Code extends TransactionReasonCode {
 	 * name} = "BankIdentifierIncorrect"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBankIdentifierIncorrect = new MMCode() {
+	public static final TransactionRejectReason7Code BankIdentifierIncorrect = new TransactionRejectReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankIdentifierIncorrect";
-			owner_lazy = () -> TransactionRejectReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason7Code.mmObject();
+			codeName = TransactionReasonCode.BankIdentifierIncorrect.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -379,11 +395,12 @@ public class TransactionRejectReason7Code extends TransactionReasonCode {
 	 * name} = "EndCustomerDeceased"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEndCustomerDeceased = new MMCode() {
+	public static final TransactionRejectReason7Code EndCustomerDeceased = new TransactionRejectReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndCustomerDeceased";
-			owner_lazy = () -> TransactionRejectReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason7Code.mmObject();
+			codeName = TransactionReasonCode.EndCustomerDeceased.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -402,11 +419,12 @@ public class TransactionRejectReason7Code extends TransactionReasonCode {
 	 * name} = "NotSpecifiedReasonCustomerGenerated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotSpecifiedReasonCustomerGenerated = new MMCode() {
+	public static final TransactionRejectReason7Code NotSpecifiedReasonCustomerGenerated = new TransactionRejectReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedReasonCustomerGenerated";
-			owner_lazy = () -> TransactionRejectReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason7Code.mmObject();
+			codeName = TransactionReasonCode.NotSpecifiedReasonCustomerGenerated.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -425,11 +443,12 @@ public class TransactionRejectReason7Code extends TransactionReasonCode {
 	 * name} = "NotSpecifiedReasonAgentGenerated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotSpecifiedReasonAgentGenerated = new MMCode() {
+	public static final TransactionRejectReason7Code NotSpecifiedReasonAgentGenerated = new TransactionRejectReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedReasonAgentGenerated";
-			owner_lazy = () -> TransactionRejectReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason7Code.mmObject();
+			codeName = TransactionReasonCode.NotSpecifiedReasonAgentGenerated.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -448,30 +467,77 @@ public class TransactionRejectReason7Code extends TransactionReasonCode {
 	 * name} = "CutOffTime"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCutOffTime = new MMCode() {
+	public static final TransactionRejectReason7Code CutOffTime = new TransactionRejectReason7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CutOffTime";
-			owner_lazy = () -> TransactionRejectReason7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionRejectReason7Code.mmObject();
+			codeName = TransactionReasonCode.CutOffTime.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TransactionRejectReason7Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransactionRejectReason7Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AC01");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionRejectReason7Code";
 				definition = "Specifies the reason for a transaction to be rejected or returned by an instructed agent or somebody acting on behalf of an instructed agent.";
-				code_lazy = () -> Arrays.asList(TransactionRejectReason7Code.mmIncorrectAccountNumber, TransactionRejectReason7Code.mmClosedAccountNumber, TransactionRejectReason7Code.mmBlockedAccount,
-						TransactionRejectReason7Code.mmTransactionForbidden, TransactionRejectReason7Code.mmInvalidBankOperationCode, TransactionRejectReason7Code.mmInsufficientFunds, TransactionRejectReason7Code.mmDuplication,
-						TransactionRejectReason7Code.mmNoMandate, TransactionRejectReason7Code.mmMissingMandatoryInformationInMandate, TransactionRejectReason7Code.mmInvalidFileFormatForOtherReasonThanGroupingIndicator,
-						TransactionRejectReason7Code.mmBankIdentifierIncorrect, TransactionRejectReason7Code.mmEndCustomerDeceased, TransactionRejectReason7Code.mmNotSpecifiedReasonCustomerGenerated,
-						TransactionRejectReason7Code.mmNotSpecifiedReasonAgentGenerated, TransactionRejectReason7Code.mmCutOffTime);
 				trace_lazy = () -> TransactionReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionRejectReason7Code.IncorrectAccountNumber, com.tools20022.repository.codeset.TransactionRejectReason7Code.ClosedAccountNumber,
+						com.tools20022.repository.codeset.TransactionRejectReason7Code.BlockedAccount, com.tools20022.repository.codeset.TransactionRejectReason7Code.TransactionForbidden,
+						com.tools20022.repository.codeset.TransactionRejectReason7Code.InvalidBankOperationCode, com.tools20022.repository.codeset.TransactionRejectReason7Code.InsufficientFunds,
+						com.tools20022.repository.codeset.TransactionRejectReason7Code.Duplication, com.tools20022.repository.codeset.TransactionRejectReason7Code.NoMandate,
+						com.tools20022.repository.codeset.TransactionRejectReason7Code.MissingMandatoryInformationInMandate,
+						com.tools20022.repository.codeset.TransactionRejectReason7Code.InvalidFileFormatForOtherReasonThanGroupingIndicator, com.tools20022.repository.codeset.TransactionRejectReason7Code.BankIdentifierIncorrect,
+						com.tools20022.repository.codeset.TransactionRejectReason7Code.EndCustomerDeceased, com.tools20022.repository.codeset.TransactionRejectReason7Code.NotSpecifiedReasonCustomerGenerated,
+						com.tools20022.repository.codeset.TransactionRejectReason7Code.NotSpecifiedReasonAgentGenerated, com.tools20022.repository.codeset.TransactionRejectReason7Code.CutOffTime);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(IncorrectAccountNumber.getCodeName().get(), IncorrectAccountNumber);
+		codesByName.put(ClosedAccountNumber.getCodeName().get(), ClosedAccountNumber);
+		codesByName.put(BlockedAccount.getCodeName().get(), BlockedAccount);
+		codesByName.put(TransactionForbidden.getCodeName().get(), TransactionForbidden);
+		codesByName.put(InvalidBankOperationCode.getCodeName().get(), InvalidBankOperationCode);
+		codesByName.put(InsufficientFunds.getCodeName().get(), InsufficientFunds);
+		codesByName.put(Duplication.getCodeName().get(), Duplication);
+		codesByName.put(NoMandate.getCodeName().get(), NoMandate);
+		codesByName.put(MissingMandatoryInformationInMandate.getCodeName().get(), MissingMandatoryInformationInMandate);
+		codesByName.put(InvalidFileFormatForOtherReasonThanGroupingIndicator.getCodeName().get(), InvalidFileFormatForOtherReasonThanGroupingIndicator);
+		codesByName.put(BankIdentifierIncorrect.getCodeName().get(), BankIdentifierIncorrect);
+		codesByName.put(EndCustomerDeceased.getCodeName().get(), EndCustomerDeceased);
+		codesByName.put(NotSpecifiedReasonCustomerGenerated.getCodeName().get(), NotSpecifiedReasonCustomerGenerated);
+		codesByName.put(NotSpecifiedReasonAgentGenerated.getCodeName().get(), NotSpecifiedReasonAgentGenerated);
+		codesByName.put(CutOffTime.getCodeName().get(), CutOffTime);
+	}
+
+	public static TransactionRejectReason7Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransactionRejectReason7Code[] values() {
+		TransactionRejectReason7Code[] values = new TransactionRejectReason7Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransactionRejectReason7Code> {
+		@Override
+		public TransactionRejectReason7Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransactionRejectReason7Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

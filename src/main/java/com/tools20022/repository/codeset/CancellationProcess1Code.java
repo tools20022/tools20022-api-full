@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CancellationProcessCode;
+import com.tools20022.repository.codeset.CancellationProcess1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Configuration of the exchanges to perform the cancellation of a payment
@@ -31,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CancellationProcessCode
- * CancellationProcessCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationProcess1Code#mmAdvice
- * CancellationProcess1Code.mmAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationProcess1Code#Advice
+ * CancellationProcess1Code.Advice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationProcess1Code#mmNotAllowed
- * CancellationProcess1Code.mmNotAllowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationProcess1Code#NotAllowed
+ * CancellationProcess1Code.NotAllowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CancellationProcess1Code#mmRequest
- * CancellationProcess1Code.mmRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.CancellationProcess1Code#Request
+ * CancellationProcess1Code.Request}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CancellationProcessCode
+ * CancellationProcessCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CancellationProcess1Code extends CancellationProcessCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CancellationProcess1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class CancellationProcess1Code extends CancellationProcessCode {
 	 * name} = "Advice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAdvice = new MMCode() {
+	public static final CancellationProcess1Code Advice = new CancellationProcess1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Advice";
-			owner_lazy = () -> CancellationProcess1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationProcess1Code.mmObject();
+			codeName = CancellationProcessCode.Advice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class CancellationProcess1Code extends CancellationProcessCode {
 	 * name} = "NotAllowed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotAllowed = new MMCode() {
+	public static final CancellationProcess1Code NotAllowed = new CancellationProcess1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAllowed";
-			owner_lazy = () -> CancellationProcess1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationProcess1Code.mmObject();
+			codeName = CancellationProcessCode.NotAllowed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,26 +142,59 @@ public class CancellationProcess1Code extends CancellationProcessCode {
 	 * name} = "Request"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRequest = new MMCode() {
+	public static final CancellationProcess1Code Request = new CancellationProcess1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Request";
-			owner_lazy = () -> CancellationProcess1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CancellationProcess1Code.mmObject();
+			codeName = CancellationProcessCode.Request.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CancellationProcess1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CancellationProcess1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ADVC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationProcess1Code";
 				definition = "Configuration of the exchanges to perform the cancellation of a payment transaction.";
-				code_lazy = () -> Arrays.asList(CancellationProcess1Code.mmAdvice, CancellationProcess1Code.mmNotAllowed, CancellationProcess1Code.mmRequest);
 				trace_lazy = () -> CancellationProcessCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationProcess1Code.Advice, com.tools20022.repository.codeset.CancellationProcess1Code.NotAllowed,
+						com.tools20022.repository.codeset.CancellationProcess1Code.Request);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Advice.getCodeName().get(), Advice);
+		codesByName.put(NotAllowed.getCodeName().get(), NotAllowed);
+		codesByName.put(Request.getCodeName().get(), Request);
+	}
+
+	public static CancellationProcess1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CancellationProcess1Code[] values() {
+		CancellationProcess1Code[] values = new CancellationProcess1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CancellationProcess1Code> {
+		@Override
+		public CancellationProcess1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CancellationProcess1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

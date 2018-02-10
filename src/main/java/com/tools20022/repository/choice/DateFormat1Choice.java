@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between the formats to express a date."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DateFormat1Choice", propOrder = {"date", "code", "dateTime"})
 public class DateFormat1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dt", required = true)
 	protected ISODate date;
 	/**
-	 * Date expressed as a calendar date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +123,7 @@ public class DateFormat1Choice {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateFormat1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +134,11 @@ public class DateFormat1Choice {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "Cd", required = true)
 	protected SettlementDate1Code code;
 	/**
-	 * Date expressed as a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +166,7 @@ public class DateFormat1Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateFormat1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +177,11 @@ public class DateFormat1Choice {
 			simpleType_lazy = () -> SettlementDate1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DtTm", required = true)
 	protected ISODateTime dateTime;
 	/**
-	 * Date expressed as a calendar date and time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,7 +208,7 @@ public class DateFormat1Choice {
 	 */
 	public static final MMMessageAttribute mmDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateFormat1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,10 +223,10 @@ public class DateFormat1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DateFormat1Choice.mmDate, DateFormat1Choice.mmCode, DateFormat1Choice.mmDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat1Choice.mmDate, com.tools20022.repository.choice.DateFormat1Choice.mmCode, com.tools20022.repository.choice.DateFormat1Choice.mmDateTime);
 				messageBuildingBlock_lazy = () -> Arrays.asList(TransferOutInstructionV03.mmRequestedTransferDate, TransferOutInstructionV04.mmRequestedTransferDate, TransferOutInstructionV05.mmRequestedTransferDate,
 						TransferOutInstructionV06.mmRequestedTransferDate, TransferOutInstructionV07.mmRequestedTransferDate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateFormat1Choice";
 				definition = "Choice between the formats to express a date.";
@@ -231,30 +235,30 @@ public class DateFormat1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
 
-	public void setDate(ISODate date) {
-		this.date = date;
+	public DateFormat1Choice setDate(ISODate date) {
+		this.date = Objects.requireNonNull(date);
+		return this;
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public SettlementDate1Code getCode() {
 		return code;
 	}
 
-	public void setCode(SettlementDate1Code code) {
-		this.code = code;
+	public DateFormat1Choice setCode(SettlementDate1Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "DtTm", required = true)
 	public ISODateTime getDateTime() {
 		return dateTime;
 	}
 
-	public void setDateTime(ISODateTime dateTime) {
-		this.dateTime = dateTime;
+	public DateFormat1Choice setDateTime(ISODateTime dateTime) {
+		this.dateTime = Objects.requireNonNull(dateTime);
+		return this;
 	}
 }

@@ -29,6 +29,8 @@ import com.tools20022.repository.codeset.ContentType2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -135,8 +137,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -161,15 +163,16 @@ import javax.xml.bind.annotation.XmlType;
  * ContentInformationType9}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ContentInformationType12", propOrder = {"contentType", "envelopedData", "authenticatedData", "signedData", "digestedData"})
 public class ContentInformationType12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CnttTp", required = true)
 	protected ContentType2Code contentType;
 	/**
-	 * Type of data protection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,7 +216,7 @@ public class ContentInformationType12 {
 	 */
 	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ContentInformationType12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType12.mmObject();
 			isDerived = false;
 			xmlTag = "CnttTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,10 +229,11 @@ public class ContentInformationType12 {
 			simpleType_lazy = () -> ContentType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "EnvlpdData")
 	protected EnvelopedData4 envelopedData;
 	/**
-	 * Data protection by encryption, with a session key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -260,7 +264,7 @@ public class ContentInformationType12 {
 	 */
 	public static final MMMessageAssociationEnd mmEnvelopedData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ContentInformationType12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType12.mmObject();
 			isDerived = false;
 			xmlTag = "EnvlpdData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,10 +277,11 @@ public class ContentInformationType12 {
 			type_lazy = () -> com.tools20022.repository.msg.EnvelopedData4.mmObject();
 		}
 	};
+	@XmlElement(name = "AuthntcdData")
 	protected AuthenticatedData4 authenticatedData;
 	/**
-	 * Data protection by a message authentication code (MAC).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -315,7 +320,7 @@ public class ContentInformationType12 {
 	 */
 	public static final MMMessageAssociationEnd mmAuthenticatedData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ContentInformationType12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType12.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcdData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,10 +334,11 @@ public class ContentInformationType12 {
 			type_lazy = () -> com.tools20022.repository.msg.AuthenticatedData4.mmObject();
 		}
 	};
+	@XmlElement(name = "SgndData")
 	protected SignedData4 signedData;
 	/**
-	 * Data protected by a digital signatures.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -374,7 +380,7 @@ public class ContentInformationType12 {
 	 */
 	public static final MMMessageAssociationEnd mmSignedData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ContentInformationType12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType12.mmObject();
 			isDerived = false;
 			xmlTag = "SgndData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -388,10 +394,11 @@ public class ContentInformationType12 {
 			type_lazy = () -> com.tools20022.repository.msg.SignedData4.mmObject();
 		}
 	};
+	@XmlElement(name = "DgstdData")
 	protected DigestedData4 digestedData;
 	/**
-	 * Data protected by a digest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -422,7 +429,7 @@ public class ContentInformationType12 {
 	 */
 	public static final MMMessageAssociationEnd mmDigestedData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ContentInformationType12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType12.mmObject();
 			isDerived = false;
 			xmlTag = "DgstdData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -439,15 +446,15 @@ public class ContentInformationType12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ContentInformationType12.mmContentType, ContentInformationType12.mmEnvelopedData, ContentInformationType12.mmAuthenticatedData, ContentInformationType12.mmSignedData,
-						ContentInformationType12.mmDigestedData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType12.mmContentType, com.tools20022.repository.msg.ContentInformationType12.mmEnvelopedData,
+						com.tools20022.repository.msg.ContentInformationType12.mmAuthenticatedData, com.tools20022.repository.msg.ContentInformationType12.mmSignedData, com.tools20022.repository.msg.ContentInformationType12.mmDigestedData);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV04.mmSecurityTrailer, ManagementPlanReplacementV04.mmSecurityTrailer, StatusReportV04.mmSecurityTrailer,
 						MaintenanceDelegationResponseV01.mmSecurityTrailer, MaintenanceDelegationRequestV01.mmSecurityTrailer, AcceptorBatchTransferResponseV04.mmSecurityTrailer, AcceptorBatchTransferV04.mmSecurityTrailer,
 						KeyExchangeResponse.mmSecurityTrailer, KeyExchangeInitiation.mmSecurityTrailer, AcceptorBatchTransferResponseV05.mmSecurityTrailer, AcceptorBatchTransferV05.mmSecurityTrailer,
 						MaintenanceDelegationResponseV02.mmSecurityTrailer, MaintenanceDelegationRequestV02.mmSecurityTrailer, AcceptorConfigurationUpdateV05.mmSecurityTrailer, StatusReportV05.mmSecurityTrailer,
 						ManagementPlanReplacementV05.mmSecurityTrailer, StatusReportV06.mmSecurityTrailer, AcceptorConfigurationUpdateV06.mmSecurityTrailer, MaintenanceDelegationRequestV03.mmSecurityTrailer,
 						ManagementPlanReplacementV06.mmSecurityTrailer, AcceptorBatchTransferResponseV06.mmSecurityTrailer, AcceptorBatchTransferV06.mmSecurityTrailer);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType12";
 				definition = "General cryptographic message syntax (CMS) containing protected data.";
@@ -458,48 +465,48 @@ public class ContentInformationType12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CnttTp", required = true)
 	public ContentType2Code getContentType() {
 		return contentType;
 	}
 
-	public void setContentType(ContentType2Code contentType) {
-		this.contentType = contentType;
+	public ContentInformationType12 setContentType(ContentType2Code contentType) {
+		this.contentType = Objects.requireNonNull(contentType);
+		return this;
 	}
 
-	@XmlElement(name = "EnvlpdData")
-	public EnvelopedData4 getEnvelopedData() {
-		return envelopedData;
+	public Optional<EnvelopedData4> getEnvelopedData() {
+		return envelopedData == null ? Optional.empty() : Optional.of(envelopedData);
 	}
 
-	public void setEnvelopedData(com.tools20022.repository.msg.EnvelopedData4 envelopedData) {
+	public ContentInformationType12 setEnvelopedData(com.tools20022.repository.msg.EnvelopedData4 envelopedData) {
 		this.envelopedData = envelopedData;
+		return this;
 	}
 
-	@XmlElement(name = "AuthntcdData")
-	public AuthenticatedData4 getAuthenticatedData() {
-		return authenticatedData;
+	public Optional<AuthenticatedData4> getAuthenticatedData() {
+		return authenticatedData == null ? Optional.empty() : Optional.of(authenticatedData);
 	}
 
-	public void setAuthenticatedData(com.tools20022.repository.msg.AuthenticatedData4 authenticatedData) {
+	public ContentInformationType12 setAuthenticatedData(com.tools20022.repository.msg.AuthenticatedData4 authenticatedData) {
 		this.authenticatedData = authenticatedData;
+		return this;
 	}
 
-	@XmlElement(name = "SgndData")
-	public SignedData4 getSignedData() {
-		return signedData;
+	public Optional<SignedData4> getSignedData() {
+		return signedData == null ? Optional.empty() : Optional.of(signedData);
 	}
 
-	public void setSignedData(com.tools20022.repository.msg.SignedData4 signedData) {
+	public ContentInformationType12 setSignedData(com.tools20022.repository.msg.SignedData4 signedData) {
 		this.signedData = signedData;
+		return this;
 	}
 
-	@XmlElement(name = "DgstdData")
-	public DigestedData4 getDigestedData() {
-		return digestedData;
+	public Optional<DigestedData4> getDigestedData() {
+		return digestedData == null ? Optional.empty() : Optional.of(digestedData);
 	}
 
-	public void setDigestedData(com.tools20022.repository.msg.DigestedData4 digestedData) {
+	public ContentInformationType12 setDigestedData(com.tools20022.repository.msg.DigestedData4 digestedData) {
 		this.digestedData = digestedData;
+		return this;
 	}
 }

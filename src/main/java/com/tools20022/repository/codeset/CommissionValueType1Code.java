@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PriceValueTypeCode;
+import com.tools20022.repository.codeset.CommissionValueType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies a type of value of the commission.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode
- * PriceValueTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionValueType1Code#mmPerUnit
- * CommissionValueType1Code.mmPerUnit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionValueType1Code#PerUnit
+ * CommissionValueType1Code.PerUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CommissionValueType1Code#mmAbsolute
- * CommissionValueType1Code.mmAbsolute}</li>
+ * {@linkplain com.tools20022.repository.codeset.CommissionValueType1Code#Absolute
+ * CommissionValueType1Code.Absolute}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PriceValueTypeCode
+ * PriceValueTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies a type of value of the commission."</li>
  * </ul>
  */
-public class CommissionValueType1Code extends PriceValueTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CommissionValueType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class CommissionValueType1Code extends PriceValueTypeCode {
 	 * name} = "PerUnit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPerUnit = new MMCode() {
+	public static final CommissionValueType1Code PerUnit = new CommissionValueType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
-			owner_lazy = () -> CommissionValueType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionValueType1Code.mmObject();
+			codeName = PriceValueTypeCode.PerUnit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class CommissionValueType1Code extends PriceValueTypeCode {
 	 * name} = "Absolute"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAbsolute = new MMCode() {
+	public static final CommissionValueType1Code Absolute = new CommissionValueType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Absolute";
-			owner_lazy = () -> CommissionValueType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CommissionValueType1Code.mmObject();
+			codeName = PriceValueTypeCode.Absolute.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CommissionValueType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CommissionValueType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PEUN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommissionValueType1Code";
 				definition = "Specifies a type of value of the commission.";
-				code_lazy = () -> Arrays.asList(CommissionValueType1Code.mmPerUnit, CommissionValueType1Code.mmAbsolute);
 				trace_lazy = () -> PriceValueTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CommissionValueType1Code.PerUnit, com.tools20022.repository.codeset.CommissionValueType1Code.Absolute);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PerUnit.getCodeName().get(), PerUnit);
+		codesByName.put(Absolute.getCodeName().get(), Absolute);
+	}
+
+	public static CommissionValueType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CommissionValueType1Code[] values() {
+		CommissionValueType1Code[] values = new CommissionValueType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CommissionValueType1Code> {
+		@Override
+		public CommissionValueType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CommissionValueType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FractionDispositionTypeSD2", propOrder = {"placeAndName", "roundingFactor"})
 public class FractionDispositionTypeSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +104,7 @@ public class FractionDispositionTypeSD2 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FractionDispositionTypeSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FractionDispositionTypeSD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,12 +115,11 @@ public class FractionDispositionTypeSD2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RndgFctr")
 	protected DecimalNumber roundingFactor;
 	/**
-	 * Decimal above which numbers are rounded. For an example if rounding
-	 * factor is 0.6 this means that fractional units greater than or equal to 6
-	 * will be rounded up and less than 6 will be rounded down.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,6 +135,9 @@ public class FractionDispositionTypeSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RndgFctr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Rounding Factor</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -146,9 +152,10 @@ public class FractionDispositionTypeSD2 {
 	 */
 	public static final MMMessageAttribute mmRoundingFactor = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FractionDispositionTypeSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FractionDispositionTypeSD2.mmObject();
 			isDerived = false;
 			xmlTag = "RndgFctr";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Rounding Factor"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingFactor";
 			definition = "Decimal above which numbers are rounded. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and  less than 6 will be rounded down.";
@@ -161,8 +168,8 @@ public class FractionDispositionTypeSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FractionDispositionTypeSD2.mmPlaceAndName, FractionDispositionTypeSD2.mmRoundingFactor);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FractionDispositionTypeSD2.mmPlaceAndName, com.tools20022.repository.msg.FractionDispositionTypeSD2.mmRoundingFactor);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FractionDispositionTypeSD2";
 				definition = "Provides additional information regarding corporate action securities movement fraction disposition details.";
@@ -171,21 +178,21 @@ public class FractionDispositionTypeSD2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public FractionDispositionTypeSD2 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "RndgFctr")
-	public DecimalNumber getRoundingFactor() {
-		return roundingFactor;
+	public Optional<DecimalNumber> getRoundingFactor() {
+		return roundingFactor == null ? Optional.empty() : Optional.of(roundingFactor);
 	}
 
-	public void setRoundingFactor(DecimalNumber roundingFactor) {
+	public FractionDispositionTypeSD2 setRoundingFactor(DecimalNumber roundingFactor) {
 		this.roundingFactor = roundingFactor;
+		return this;
 	}
 }

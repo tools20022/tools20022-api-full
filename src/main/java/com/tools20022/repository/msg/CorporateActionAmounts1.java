@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -197,8 +198,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -210,20 +211,21 @@ import javax.xml.bind.annotation.XmlType;
  * "Specifies amounts in the framework of a corporate action event.."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionAmounts1", propOrder = {"grossCashAmount", "netCashAmount", "issueDiscountAmount", "solicitationFees", "cashInLieuOfShare", "originalAmount", "capitalGain", "interestAmount", "indemnityAmount",
 		"redemptionPremiumAmount", "manufacturedDividendAmount", "principalOrCorpus", "reinvestmentAmount", "marketClaimAmount", "fullyFrankedAmount", "unfrankedAmount", "sundryOrOtherAmount", "specialConcessionAmount", "entitledAmount",
 		"cashIncentive", "additionalSubscriptionCost", "taxFreeAmount", "taxDeferredAmount", "germanLocalTax1Amount", "germanLocalTax2Amount", "germanLocalTax3Amount", "germanLocalTax4Amount", "stockExchangeTaxAmount", "transferTaxAmount",
-		"transactionTaxAmount", "valueAddedTaxAmount", "EURetentionTaxAmount", "localTaxAmount", "paymentLevyTaxAmount", "countryNationalFederalTaxAmount", "stampDutyAmount", "taxReclaimAmount", "taxCreditAmount",
+		"transactionTaxAmount", "valueAddedTaxAmount", "eURetentionTaxAmount", "localTaxAmount", "paymentLevyTaxAmount", "countryNationalFederalTaxAmount", "stampDutyAmount", "taxReclaimAmount", "taxCreditAmount",
 		"withholdingOfForeignTaxAmount", "withholdingOfLocalTaxAmount", "additionalTaxAmount", "withholdingTaxAmount", "fiscalStampAmount", "executingBrokerAmount", "payingAgentCommissionAmount", "localBrokerCommissionAmount",
 		"postageFeeAmount", "regulatoryFeesAmount", "shippingFeesAmount", "chargesAmount"})
 public class CorporateActionAmounts1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrssCshAmt")
 	protected ActiveCurrencyAndAmount grossCashAmount;
 	/**
-	 * Amount of money before any deductions and allowances have been made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -258,7 +260,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmGrossCashAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmGrossCashAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "GrssCshAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,11 +271,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "NetCshAmt")
 	protected ActiveCurrencyAndAmount netCashAmount;
 	/**
-	 * Amount of money after deductions and allowances have been made, if any,
-	 * ie, the total amount +/- charges/fees.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -309,7 +311,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmNetCashAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmNetCashAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "NetCshAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -320,11 +322,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "IsseDscntAmt")
 	protected ActiveCurrencyAndAmount issueDiscountAmount;
 	/**
-	 * Amount of money defined as a discount on a new issue or on a tranche of
-	 * an existing issue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -360,7 +362,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmIssueDiscountAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssueDiscountAllowance;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDscntAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -371,12 +373,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SlctnFees")
 	protected ActiveCurrencyAndAmount solicitationFees;
 	/**
-	 * Amount of cash premium made available in order to encourage participation
-	 * in the offer. Payment is made to a third party who has solicited an
-	 * entity to take part in the offer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -412,7 +413,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmSolicitationFees = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionFeesAndCharges.mmSolicitationFee;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "SlctnFees";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -423,10 +424,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CshInLieuOfShr")
 	protected ActiveCurrencyAndAmount cashInLieuOfShare;
 	/**
-	 * Cash disbursement in lieu of a fractional quantity of, eg, equity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -461,7 +463,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmCashInLieuOfShare = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmCashInLieuOfShare;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "CshInLieuOfShr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -472,11 +474,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlAmt")
 	protected ActiveCurrencyAndAmount originalAmount;
 	/**
-	 * Amount in its original currency when conversion from/into another
-	 * currency has occurred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -512,7 +514,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmOriginalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmOriginalAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -523,10 +525,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CptlGn")
 	protected ActiveCurrencyAndAmount capitalGain;
 	/**
-	 * Amount of money distributed as the result of a capital gain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -561,7 +564,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmCapitalGain = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmCapitalGain;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "CptlGn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -572,10 +575,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstAmt")
 	protected ActiveCurrencyAndAmount interestAmount;
 	/**
-	 * Amount of money representing a coupon payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -609,7 +613,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmInterestAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -620,11 +624,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "IndmntyAmt")
 	protected ActiveCurrencyAndAmount indemnityAmount;
 	/**
-	 * (Unique to France) Amount due to a buyer of securities dealt prior to ex
-	 * date which may be subject to different rate of taxation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -660,7 +664,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmIndemnityAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmIndemnityAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "IndmntyAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -671,11 +675,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RedPrmAmt")
 	protected ActiveCurrencyAndAmount redemptionPremiumAmount;
 	/**
-	 * Amount of money (not interest) in addition to the principal at the
-	 * redemption of a bond.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -711,7 +715,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmRedemptionPremiumAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmRedemptionPremiumAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "RedPrmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -722,12 +726,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ManfctrdDvddAmt")
 	protected ActiveCurrencyAndAmount manufacturedDividendAmount;
 	/**
-	 * Amount of money that the borrower pays to the lender as a compensation.
-	 * It does not entitle the lender to reclaim any tax credit and is sometimes
-	 * treated differently by the local tax authorities of the lender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -763,7 +766,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmManufacturedDividendAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmManufacturedDividendAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "ManfctrdDvddAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -774,11 +777,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "PrncplOrCrps")
 	protected ActiveCurrencyAndAmount principalOrCorpus;
 	/**
-	 * Amount of money representing a distribution of a bond's principal, eg,
-	 * repayment of outstanding debt.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -814,7 +817,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmPrincipalOrCorpus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmPrincipalOrCorpus;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "PrncplOrCrps";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -825,10 +828,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RinvstmtAmt")
 	protected ActiveCurrencyAndAmount reinvestmentAmount;
 	/**
-	 * Amount of money reinvested in additional securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -862,7 +866,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmReinvestmentAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmReinvestmentAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "RinvstmtAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -873,10 +877,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "MktClmAmt")
 	protected ActiveCurrencyAndAmount marketClaimAmount;
 	/**
-	 * Amount of money resulting from a market claim.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -910,7 +915,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmMarketClaimAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MarketClaim.mmMarketClaimAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "MktClmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -921,12 +926,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "FullyFrnkdAmt")
 	protected ActiveCurrencyAndAmount fullyFrankedAmount;
 	/**
-	 * Amount resulting from a fully franked dividend paid by a company; amount
-	 * includes tax credit for companies that have made sufficient tax payments
-	 * during the fiscal period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -962,7 +966,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmFullyFrankedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "FullyFrnkdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -973,11 +977,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "UfrnkdAmt")
 	protected ActiveCurrencyAndAmount unfrankedAmount;
 	/**
-	 * Amount resulting from an unfranked dividend paid by a company; the amount
-	 * does not include tax credit and is subject to withholding tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1013,7 +1017,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmUnfrankedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmUnfrankedAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "UfrnkdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1024,10 +1028,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SndryOrOthrAmt")
 	protected ActiveCurrencyAndAmount sundryOrOtherAmount;
 	/**
-	 * Amount of money related to taxable income that cannot be categorised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1062,7 +1067,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmSundryOrOtherAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmSundryOrOtherAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "SndryOrOthrAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1073,11 +1078,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SpclCncssnAmt")
 	protected ActiveCurrencyAndAmount specialConcessionAmount;
 	/**
-	 * Amount of drawdown or other reduction from or in addition to the deal
-	 * price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1113,7 +1118,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmSpecialConcessionAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmSpecialConcessionAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "SpclCncssnAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1124,12 +1129,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "EntitldAmt")
 	protected ActiveCurrencyAndAmount entitledAmount;
 	/**
-	 * Cash amount based on terms of corporate action event and balance of
-	 * underlying securities, entitled to/from account owner (which may be
-	 * positive or negative).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1165,7 +1169,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmEntitledAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmEntitledCashAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "EntitldAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1176,11 +1180,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CshIncntiv")
 	protected ActiveCurrencyAndAmount cashIncentive;
 	/**
-	 * Rate of the cash premium made available if the securities holder consents
-	 * or participates to an event, e.g. consent fees.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1216,7 +1220,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmCashIncentive = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmCashIncentiveAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "CshIncntiv";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1227,12 +1231,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlSbcptCost")
 	protected ActiveCurrencyAndAmount additionalSubscriptionCost;
 	/**
-	 * Additional costs - coming on top of the subscription costs - which the
-	 * subscriber should pay as per the subscription process. Not to be used for
-	 * the subscription cost itself.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1268,7 +1271,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmAdditionalSubscriptionCost = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmAdditionalSubscriptionCost;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlSbcptCost";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1279,10 +1282,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxFreeAmt")
 	protected ActiveCurrencyAndAmount taxFreeAmount;
 	/**
-	 * Amount of money that has not been subject to taxation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1315,7 +1319,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmTaxFreeAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxFreeAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1326,10 +1330,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxDfrrdAmt")
 	protected ActiveCurrencyAndAmount taxDeferredAmount;
 	/**
-	 * Amount of income eligible for deferred taxation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1362,7 +1367,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmTaxDeferredAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDfrrdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1373,12 +1378,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "GrmnLclTax1Amt")
 	protected ActiveCurrencyAndAmount germanLocalTax1Amount;
 	/**
-	 * Local tax (ZAS Anrechnungsbetrag) subject to interest down payment tax
-	 * (proportion of interest liable for interest down payment tax/interim
-	 * profit that is not covered by the tax exempt amount).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1413,7 +1417,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmGermanLocalTax1Amount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "GrmnLclTax1Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1424,12 +1428,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "GrmnLclTax2Amt")
 	protected ActiveCurrencyAndAmount germanLocalTax2Amount;
 	/**
-	 * Local tax (ZAS Pflichtige Zinsen) interest liable for interest down
-	 * payment tax (proportion of gross interest per unit/interim profits that
-	 * is not covered by the credit in the interest pool).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1464,7 +1467,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmGermanLocalTax2Amount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "GrmnLclTax2Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1475,11 +1478,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "GrmnLclTax3Amt")
 	protected ActiveCurrencyAndAmount germanLocalTax3Amount;
 	/**
-	 * Local tax (Zinstopf) offset interest per unit against tax exempt amount
-	 * (variation to offset interest per unit in relation to tax exempt amount).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1514,7 +1517,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmGermanLocalTax3Amount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "GrmnLclTax3Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1525,11 +1528,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "GrmnLclTax4Amt")
 	protected ActiveCurrencyAndAmount germanLocalTax4Amount;
 	/**
-	 * Local tax (Ertrag Besitzanteilig) yield liable for interest down payment
-	 * tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1564,7 +1567,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmGermanLocalTax4Amount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "GrmnLclTax4Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1575,10 +1578,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "StockXchgTaxAmt")
 	protected ActiveCurrencyAndAmount stockExchangeTaxAmount;
 	/**
-	 * Amount of stock exchange tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1611,7 +1615,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmStockExchangeTaxAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "StockXchgTaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1622,10 +1626,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfTaxAmt")
 	protected ActiveCurrencyAndAmount transferTaxAmount;
 	/**
-	 * Tax levied on a transfer of ownership of financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1659,7 +1664,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmTransferTaxAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "TrfTaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1670,10 +1675,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TxTaxAmt")
 	protected ActiveCurrencyAndAmount transactionTaxAmount;
 	/**
-	 * Amount of transaction tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1706,7 +1712,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmTransactionTaxAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "TxTaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1717,10 +1723,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ValAddedTaxAmt")
 	protected ActiveCurrencyAndAmount valueAddedTaxAmount;
 	/**
-	 * Tax on value added.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1753,7 +1760,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmValueAddedTaxAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "ValAddedTaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1764,11 +1771,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "EURtntnTaxAmt")
 	protected ActiveCurrencyAndAmount eURetentionTaxAmount;
 	/**
-	 * Total amount of tax withheld at source in conformance with the EU Savings
-	 * Directive.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1803,7 +1810,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmEURetentionTaxAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "EURtntnTaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1814,11 +1821,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "LclTaxAmt")
 	protected ActiveCurrencyAndAmount localTaxAmount;
 	/**
-	 * Amount of tax charged by the jurisdiction in which the financial
-	 * instrument settles.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1853,7 +1860,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmLocalTaxAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "LclTaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1864,10 +1871,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtLevyTaxAmt")
 	protected ActiveCurrencyAndAmount paymentLevyTaxAmount;
 	/**
-	 * Payment levy tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1900,7 +1908,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmPaymentLevyTaxAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtLevyTaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1911,11 +1919,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CtryNtlFdrlTaxAmt")
 	protected ActiveCurrencyAndAmount countryNationalFederalTaxAmount;
 	/**
-	 * Amount of country, national or federal tax charged by the jurisdiction in
-	 * which the account servicer is located.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1950,7 +1958,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmCountryNationalFederalTaxAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "CtryNtlFdrlTaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1961,10 +1969,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "StmpDtyAmt")
 	protected ActiveCurrencyAndAmount stampDutyAmount;
 	/**
-	 * Amount of stamp duty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1997,7 +2006,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmStampDutyAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "StmpDtyAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2008,11 +2017,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxRclmAmt")
 	protected ActiveCurrencyAndAmount taxReclaimAmount;
 	/**
-	 * Amount that was paid in excess of actual tax obligation and was
-	 * reclaimed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2047,7 +2056,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmTaxReclaimAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRclmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2058,11 +2067,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxCdtAmt")
 	protected ActiveCurrencyAndAmount taxCreditAmount;
 	/**
-	 * Amount of taxes that have been previously paid in relation to the taxable
-	 * event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2098,7 +2107,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmTaxCreditAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmCreditAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxCdtAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2109,12 +2118,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "WhldgOfFrgnTaxAmt")
 	protected ActiveCurrencyAndAmount withholdingOfForeignTaxAmount;
 	/**
-	 * Amount of money withheld by the jurisdiction in which the income was
-	 * originally paid, for which relief at source and/or reclaim may be
-	 * possible.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2149,7 +2157,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmWithholdingOfForeignTaxAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "WhldgOfFrgnTaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2160,11 +2168,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "WhldgOfLclTaxAmt")
 	protected ActiveCurrencyAndAmount withholdingOfLocalTaxAmount;
 	/**
-	 * Amount of money withheld by the jurisdiction in which the account owner
-	 * is located, for which relief at source and/or reclaim may be possible.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2199,7 +2207,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmWithholdingOfLocalTaxAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "WhldgOfLclTaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2210,10 +2218,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlTaxAmt")
 	protected ActiveCurrencyAndAmount additionalTaxAmount;
 	/**
-	 * Amount of additional taxes that cannot be categorised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2246,7 +2255,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmAdditionalTaxAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlTaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2257,10 +2266,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "WhldgTaxAmt")
 	protected ActiveCurrencyAndAmount withholdingTaxAmount;
 	/**
-	 * Amount of a cash distribution that will be withheld by a tax authority.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2295,7 +2305,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmWithholdingTaxAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "WhldgTaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2306,10 +2316,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "FsclStmpAmt")
 	protected ActiveCurrencyAndAmount fiscalStampAmount;
 	/**
-	 * Amount of fiscal tax to apply.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2342,7 +2353,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmFiscalStampAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "FsclStmpAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2353,10 +2364,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ExctgBrkrAmt")
 	protected ActiveCurrencyAndAmount executingBrokerAmount;
 	/**
-	 * Amount of money paid to an executing broker as a commission.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2391,7 +2403,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmExecutingBrokerAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "ExctgBrkrAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2402,10 +2414,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "PngAgtComssnAmt")
 	protected ActiveCurrencyAndAmount payingAgentCommissionAmount;
 	/**
-	 * Amount of paying/sub-paying agent commission.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2439,7 +2452,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmPayingAgentCommissionAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "PngAgtComssnAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2450,10 +2463,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "LclBrkrComssnAmt")
 	protected ActiveCurrencyAndAmount localBrokerCommissionAmount;
 	/**
-	 * Local broker's commission.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2487,7 +2501,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmLocalBrokerCommissionAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "LclBrkrComssnAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2498,10 +2512,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "PstgFeeAmt")
 	protected ActiveCurrencyAndAmount postageFeeAmount;
 	/**
-	 * Amount of money paid for delivery by regular post mail.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2535,7 +2550,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmPostageFeeAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesRelatedFees.mmPostageFeeAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "PstgFeeAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2546,11 +2561,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RgltryFeesAmt")
 	protected ActiveCurrencyAndAmount regulatoryFeesAmount;
 	/**
-	 * Amount of money charged by a regulatory authority, eg, Securities and
-	 * Exchange fees.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2586,7 +2601,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmRegulatoryFeesAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesRelatedFees.mmRegulatoryFeesAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "RgltryFeesAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2597,10 +2612,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ShppgFeesAmt")
 	protected ActiveCurrencyAndAmount shippingFeesAmount;
 	/**
-	 * Amount of money (including insurance) paid for delivery by carrier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2635,7 +2651,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmShippingFeesAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesRelatedFees.mmShippingFeesAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "ShppgFeesAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2646,11 +2662,11 @@ public class CorporateActionAmounts1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgsAmt")
 	protected ActiveCurrencyAndAmount chargesAmount;
 	/**
-	 * Amount of money paid for the provision of financial services that cannot
-	 * be categorised by another qualifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2686,7 +2702,7 @@ public class CorporateActionAmounts1 {
 	public static final MMMessageAttribute mmChargesAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> CorporateActionAmounts1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2701,21 +2717,33 @@ public class CorporateActionAmounts1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionAmounts1.mmGrossCashAmount, CorporateActionAmounts1.mmNetCashAmount, CorporateActionAmounts1.mmIssueDiscountAmount, CorporateActionAmounts1.mmSolicitationFees,
-						CorporateActionAmounts1.mmCashInLieuOfShare, CorporateActionAmounts1.mmOriginalAmount, CorporateActionAmounts1.mmCapitalGain, CorporateActionAmounts1.mmInterestAmount, CorporateActionAmounts1.mmIndemnityAmount,
-						CorporateActionAmounts1.mmRedemptionPremiumAmount, CorporateActionAmounts1.mmManufacturedDividendAmount, CorporateActionAmounts1.mmPrincipalOrCorpus, CorporateActionAmounts1.mmReinvestmentAmount,
-						CorporateActionAmounts1.mmMarketClaimAmount, CorporateActionAmounts1.mmFullyFrankedAmount, CorporateActionAmounts1.mmUnfrankedAmount, CorporateActionAmounts1.mmSundryOrOtherAmount,
-						CorporateActionAmounts1.mmSpecialConcessionAmount, CorporateActionAmounts1.mmEntitledAmount, CorporateActionAmounts1.mmCashIncentive, CorporateActionAmounts1.mmAdditionalSubscriptionCost,
-						CorporateActionAmounts1.mmTaxFreeAmount, CorporateActionAmounts1.mmTaxDeferredAmount, CorporateActionAmounts1.mmGermanLocalTax1Amount, CorporateActionAmounts1.mmGermanLocalTax2Amount,
-						CorporateActionAmounts1.mmGermanLocalTax3Amount, CorporateActionAmounts1.mmGermanLocalTax4Amount, CorporateActionAmounts1.mmStockExchangeTaxAmount, CorporateActionAmounts1.mmTransferTaxAmount,
-						CorporateActionAmounts1.mmTransactionTaxAmount, CorporateActionAmounts1.mmValueAddedTaxAmount, CorporateActionAmounts1.mmEURetentionTaxAmount, CorporateActionAmounts1.mmLocalTaxAmount,
-						CorporateActionAmounts1.mmPaymentLevyTaxAmount, CorporateActionAmounts1.mmCountryNationalFederalTaxAmount, CorporateActionAmounts1.mmStampDutyAmount, CorporateActionAmounts1.mmTaxReclaimAmount,
-						CorporateActionAmounts1.mmTaxCreditAmount, CorporateActionAmounts1.mmWithholdingOfForeignTaxAmount, CorporateActionAmounts1.mmWithholdingOfLocalTaxAmount, CorporateActionAmounts1.mmAdditionalTaxAmount,
-						CorporateActionAmounts1.mmWithholdingTaxAmount, CorporateActionAmounts1.mmFiscalStampAmount, CorporateActionAmounts1.mmExecutingBrokerAmount, CorporateActionAmounts1.mmPayingAgentCommissionAmount,
-						CorporateActionAmounts1.mmLocalBrokerCommissionAmount, CorporateActionAmounts1.mmPostageFeeAmount, CorporateActionAmounts1.mmRegulatoryFeesAmount, CorporateActionAmounts1.mmShippingFeesAmount,
-						CorporateActionAmounts1.mmChargesAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionAmounts1.mmGrossCashAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmNetCashAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmIssueDiscountAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmSolicitationFees,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmCashInLieuOfShare, com.tools20022.repository.msg.CorporateActionAmounts1.mmOriginalAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmCapitalGain,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmInterestAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmIndemnityAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmRedemptionPremiumAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmManufacturedDividendAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmPrincipalOrCorpus, com.tools20022.repository.msg.CorporateActionAmounts1.mmReinvestmentAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmMarketClaimAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmFullyFrankedAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmUnfrankedAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmSundryOrOtherAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmSpecialConcessionAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmEntitledAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmCashIncentive, com.tools20022.repository.msg.CorporateActionAmounts1.mmAdditionalSubscriptionCost,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmTaxFreeAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmTaxDeferredAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmGermanLocalTax1Amount, com.tools20022.repository.msg.CorporateActionAmounts1.mmGermanLocalTax2Amount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmGermanLocalTax3Amount, com.tools20022.repository.msg.CorporateActionAmounts1.mmGermanLocalTax4Amount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmStockExchangeTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmTransferTaxAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmTransactionTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmValueAddedTaxAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmEURetentionTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmLocalTaxAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmPaymentLevyTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmCountryNationalFederalTaxAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmStampDutyAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmTaxReclaimAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmTaxCreditAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmWithholdingOfForeignTaxAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmWithholdingOfLocalTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmAdditionalTaxAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmWithholdingTaxAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmFiscalStampAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmExecutingBrokerAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmPayingAgentCommissionAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmLocalBrokerCommissionAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmPostageFeeAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmRegulatoryFeesAmount, com.tools20022.repository.msg.CorporateActionAmounts1.mmShippingFeesAmount,
+						com.tools20022.repository.msg.CorporateActionAmounts1.mmChargesAmount);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionAmounts1";
 				definition = "Specifies amounts in the framework of a corporate action event..";
@@ -2724,453 +2752,453 @@ public class CorporateActionAmounts1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrssCshAmt")
-	public ActiveCurrencyAndAmount getGrossCashAmount() {
-		return grossCashAmount;
+	public Optional<ActiveCurrencyAndAmount> getGrossCashAmount() {
+		return grossCashAmount == null ? Optional.empty() : Optional.of(grossCashAmount);
 	}
 
-	public void setGrossCashAmount(ActiveCurrencyAndAmount grossCashAmount) {
+	public CorporateActionAmounts1 setGrossCashAmount(ActiveCurrencyAndAmount grossCashAmount) {
 		this.grossCashAmount = grossCashAmount;
+		return this;
 	}
 
-	@XmlElement(name = "NetCshAmt")
-	public ActiveCurrencyAndAmount getNetCashAmount() {
-		return netCashAmount;
+	public Optional<ActiveCurrencyAndAmount> getNetCashAmount() {
+		return netCashAmount == null ? Optional.empty() : Optional.of(netCashAmount);
 	}
 
-	public void setNetCashAmount(ActiveCurrencyAndAmount netCashAmount) {
+	public CorporateActionAmounts1 setNetCashAmount(ActiveCurrencyAndAmount netCashAmount) {
 		this.netCashAmount = netCashAmount;
+		return this;
 	}
 
-	@XmlElement(name = "IsseDscntAmt")
-	public ActiveCurrencyAndAmount getIssueDiscountAmount() {
-		return issueDiscountAmount;
+	public Optional<ActiveCurrencyAndAmount> getIssueDiscountAmount() {
+		return issueDiscountAmount == null ? Optional.empty() : Optional.of(issueDiscountAmount);
 	}
 
-	public void setIssueDiscountAmount(ActiveCurrencyAndAmount issueDiscountAmount) {
+	public CorporateActionAmounts1 setIssueDiscountAmount(ActiveCurrencyAndAmount issueDiscountAmount) {
 		this.issueDiscountAmount = issueDiscountAmount;
+		return this;
 	}
 
-	@XmlElement(name = "SlctnFees")
-	public ActiveCurrencyAndAmount getSolicitationFees() {
-		return solicitationFees;
+	public Optional<ActiveCurrencyAndAmount> getSolicitationFees() {
+		return solicitationFees == null ? Optional.empty() : Optional.of(solicitationFees);
 	}
 
-	public void setSolicitationFees(ActiveCurrencyAndAmount solicitationFees) {
+	public CorporateActionAmounts1 setSolicitationFees(ActiveCurrencyAndAmount solicitationFees) {
 		this.solicitationFees = solicitationFees;
+		return this;
 	}
 
-	@XmlElement(name = "CshInLieuOfShr")
-	public ActiveCurrencyAndAmount getCashInLieuOfShare() {
-		return cashInLieuOfShare;
+	public Optional<ActiveCurrencyAndAmount> getCashInLieuOfShare() {
+		return cashInLieuOfShare == null ? Optional.empty() : Optional.of(cashInLieuOfShare);
 	}
 
-	public void setCashInLieuOfShare(ActiveCurrencyAndAmount cashInLieuOfShare) {
+	public CorporateActionAmounts1 setCashInLieuOfShare(ActiveCurrencyAndAmount cashInLieuOfShare) {
 		this.cashInLieuOfShare = cashInLieuOfShare;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlAmt")
-	public ActiveCurrencyAndAmount getOriginalAmount() {
-		return originalAmount;
+	public Optional<ActiveCurrencyAndAmount> getOriginalAmount() {
+		return originalAmount == null ? Optional.empty() : Optional.of(originalAmount);
 	}
 
-	public void setOriginalAmount(ActiveCurrencyAndAmount originalAmount) {
+	public CorporateActionAmounts1 setOriginalAmount(ActiveCurrencyAndAmount originalAmount) {
 		this.originalAmount = originalAmount;
+		return this;
 	}
 
-	@XmlElement(name = "CptlGn")
-	public ActiveCurrencyAndAmount getCapitalGain() {
-		return capitalGain;
+	public Optional<ActiveCurrencyAndAmount> getCapitalGain() {
+		return capitalGain == null ? Optional.empty() : Optional.of(capitalGain);
 	}
 
-	public void setCapitalGain(ActiveCurrencyAndAmount capitalGain) {
+	public CorporateActionAmounts1 setCapitalGain(ActiveCurrencyAndAmount capitalGain) {
 		this.capitalGain = capitalGain;
+		return this;
 	}
 
-	@XmlElement(name = "IntrstAmt")
-	public ActiveCurrencyAndAmount getInterestAmount() {
-		return interestAmount;
+	public Optional<ActiveCurrencyAndAmount> getInterestAmount() {
+		return interestAmount == null ? Optional.empty() : Optional.of(interestAmount);
 	}
 
-	public void setInterestAmount(ActiveCurrencyAndAmount interestAmount) {
+	public CorporateActionAmounts1 setInterestAmount(ActiveCurrencyAndAmount interestAmount) {
 		this.interestAmount = interestAmount;
+		return this;
 	}
 
-	@XmlElement(name = "IndmntyAmt")
-	public ActiveCurrencyAndAmount getIndemnityAmount() {
-		return indemnityAmount;
+	public Optional<ActiveCurrencyAndAmount> getIndemnityAmount() {
+		return indemnityAmount == null ? Optional.empty() : Optional.of(indemnityAmount);
 	}
 
-	public void setIndemnityAmount(ActiveCurrencyAndAmount indemnityAmount) {
+	public CorporateActionAmounts1 setIndemnityAmount(ActiveCurrencyAndAmount indemnityAmount) {
 		this.indemnityAmount = indemnityAmount;
+		return this;
 	}
 
-	@XmlElement(name = "RedPrmAmt")
-	public ActiveCurrencyAndAmount getRedemptionPremiumAmount() {
-		return redemptionPremiumAmount;
+	public Optional<ActiveCurrencyAndAmount> getRedemptionPremiumAmount() {
+		return redemptionPremiumAmount == null ? Optional.empty() : Optional.of(redemptionPremiumAmount);
 	}
 
-	public void setRedemptionPremiumAmount(ActiveCurrencyAndAmount redemptionPremiumAmount) {
+	public CorporateActionAmounts1 setRedemptionPremiumAmount(ActiveCurrencyAndAmount redemptionPremiumAmount) {
 		this.redemptionPremiumAmount = redemptionPremiumAmount;
+		return this;
 	}
 
-	@XmlElement(name = "ManfctrdDvddAmt")
-	public ActiveCurrencyAndAmount getManufacturedDividendAmount() {
-		return manufacturedDividendAmount;
+	public Optional<ActiveCurrencyAndAmount> getManufacturedDividendAmount() {
+		return manufacturedDividendAmount == null ? Optional.empty() : Optional.of(manufacturedDividendAmount);
 	}
 
-	public void setManufacturedDividendAmount(ActiveCurrencyAndAmount manufacturedDividendAmount) {
+	public CorporateActionAmounts1 setManufacturedDividendAmount(ActiveCurrencyAndAmount manufacturedDividendAmount) {
 		this.manufacturedDividendAmount = manufacturedDividendAmount;
+		return this;
 	}
 
-	@XmlElement(name = "PrncplOrCrps")
-	public ActiveCurrencyAndAmount getPrincipalOrCorpus() {
-		return principalOrCorpus;
+	public Optional<ActiveCurrencyAndAmount> getPrincipalOrCorpus() {
+		return principalOrCorpus == null ? Optional.empty() : Optional.of(principalOrCorpus);
 	}
 
-	public void setPrincipalOrCorpus(ActiveCurrencyAndAmount principalOrCorpus) {
+	public CorporateActionAmounts1 setPrincipalOrCorpus(ActiveCurrencyAndAmount principalOrCorpus) {
 		this.principalOrCorpus = principalOrCorpus;
+		return this;
 	}
 
-	@XmlElement(name = "RinvstmtAmt")
-	public ActiveCurrencyAndAmount getReinvestmentAmount() {
-		return reinvestmentAmount;
+	public Optional<ActiveCurrencyAndAmount> getReinvestmentAmount() {
+		return reinvestmentAmount == null ? Optional.empty() : Optional.of(reinvestmentAmount);
 	}
 
-	public void setReinvestmentAmount(ActiveCurrencyAndAmount reinvestmentAmount) {
+	public CorporateActionAmounts1 setReinvestmentAmount(ActiveCurrencyAndAmount reinvestmentAmount) {
 		this.reinvestmentAmount = reinvestmentAmount;
+		return this;
 	}
 
-	@XmlElement(name = "MktClmAmt")
-	public ActiveCurrencyAndAmount getMarketClaimAmount() {
-		return marketClaimAmount;
+	public Optional<ActiveCurrencyAndAmount> getMarketClaimAmount() {
+		return marketClaimAmount == null ? Optional.empty() : Optional.of(marketClaimAmount);
 	}
 
-	public void setMarketClaimAmount(ActiveCurrencyAndAmount marketClaimAmount) {
+	public CorporateActionAmounts1 setMarketClaimAmount(ActiveCurrencyAndAmount marketClaimAmount) {
 		this.marketClaimAmount = marketClaimAmount;
+		return this;
 	}
 
-	@XmlElement(name = "FullyFrnkdAmt")
-	public ActiveCurrencyAndAmount getFullyFrankedAmount() {
-		return fullyFrankedAmount;
+	public Optional<ActiveCurrencyAndAmount> getFullyFrankedAmount() {
+		return fullyFrankedAmount == null ? Optional.empty() : Optional.of(fullyFrankedAmount);
 	}
 
-	public void setFullyFrankedAmount(ActiveCurrencyAndAmount fullyFrankedAmount) {
+	public CorporateActionAmounts1 setFullyFrankedAmount(ActiveCurrencyAndAmount fullyFrankedAmount) {
 		this.fullyFrankedAmount = fullyFrankedAmount;
+		return this;
 	}
 
-	@XmlElement(name = "UfrnkdAmt")
-	public ActiveCurrencyAndAmount getUnfrankedAmount() {
-		return unfrankedAmount;
+	public Optional<ActiveCurrencyAndAmount> getUnfrankedAmount() {
+		return unfrankedAmount == null ? Optional.empty() : Optional.of(unfrankedAmount);
 	}
 
-	public void setUnfrankedAmount(ActiveCurrencyAndAmount unfrankedAmount) {
+	public CorporateActionAmounts1 setUnfrankedAmount(ActiveCurrencyAndAmount unfrankedAmount) {
 		this.unfrankedAmount = unfrankedAmount;
+		return this;
 	}
 
-	@XmlElement(name = "SndryOrOthrAmt")
-	public ActiveCurrencyAndAmount getSundryOrOtherAmount() {
-		return sundryOrOtherAmount;
+	public Optional<ActiveCurrencyAndAmount> getSundryOrOtherAmount() {
+		return sundryOrOtherAmount == null ? Optional.empty() : Optional.of(sundryOrOtherAmount);
 	}
 
-	public void setSundryOrOtherAmount(ActiveCurrencyAndAmount sundryOrOtherAmount) {
+	public CorporateActionAmounts1 setSundryOrOtherAmount(ActiveCurrencyAndAmount sundryOrOtherAmount) {
 		this.sundryOrOtherAmount = sundryOrOtherAmount;
+		return this;
 	}
 
-	@XmlElement(name = "SpclCncssnAmt")
-	public ActiveCurrencyAndAmount getSpecialConcessionAmount() {
-		return specialConcessionAmount;
+	public Optional<ActiveCurrencyAndAmount> getSpecialConcessionAmount() {
+		return specialConcessionAmount == null ? Optional.empty() : Optional.of(specialConcessionAmount);
 	}
 
-	public void setSpecialConcessionAmount(ActiveCurrencyAndAmount specialConcessionAmount) {
+	public CorporateActionAmounts1 setSpecialConcessionAmount(ActiveCurrencyAndAmount specialConcessionAmount) {
 		this.specialConcessionAmount = specialConcessionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "EntitldAmt")
-	public ActiveCurrencyAndAmount getEntitledAmount() {
-		return entitledAmount;
+	public Optional<ActiveCurrencyAndAmount> getEntitledAmount() {
+		return entitledAmount == null ? Optional.empty() : Optional.of(entitledAmount);
 	}
 
-	public void setEntitledAmount(ActiveCurrencyAndAmount entitledAmount) {
+	public CorporateActionAmounts1 setEntitledAmount(ActiveCurrencyAndAmount entitledAmount) {
 		this.entitledAmount = entitledAmount;
+		return this;
 	}
 
-	@XmlElement(name = "CshIncntiv")
-	public ActiveCurrencyAndAmount getCashIncentive() {
-		return cashIncentive;
+	public Optional<ActiveCurrencyAndAmount> getCashIncentive() {
+		return cashIncentive == null ? Optional.empty() : Optional.of(cashIncentive);
 	}
 
-	public void setCashIncentive(ActiveCurrencyAndAmount cashIncentive) {
+	public CorporateActionAmounts1 setCashIncentive(ActiveCurrencyAndAmount cashIncentive) {
 		this.cashIncentive = cashIncentive;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlSbcptCost")
-	public ActiveCurrencyAndAmount getAdditionalSubscriptionCost() {
-		return additionalSubscriptionCost;
+	public Optional<ActiveCurrencyAndAmount> getAdditionalSubscriptionCost() {
+		return additionalSubscriptionCost == null ? Optional.empty() : Optional.of(additionalSubscriptionCost);
 	}
 
-	public void setAdditionalSubscriptionCost(ActiveCurrencyAndAmount additionalSubscriptionCost) {
+	public CorporateActionAmounts1 setAdditionalSubscriptionCost(ActiveCurrencyAndAmount additionalSubscriptionCost) {
 		this.additionalSubscriptionCost = additionalSubscriptionCost;
+		return this;
 	}
 
-	@XmlElement(name = "TaxFreeAmt")
-	public ActiveCurrencyAndAmount getTaxFreeAmount() {
-		return taxFreeAmount;
+	public Optional<ActiveCurrencyAndAmount> getTaxFreeAmount() {
+		return taxFreeAmount == null ? Optional.empty() : Optional.of(taxFreeAmount);
 	}
 
-	public void setTaxFreeAmount(ActiveCurrencyAndAmount taxFreeAmount) {
+	public CorporateActionAmounts1 setTaxFreeAmount(ActiveCurrencyAndAmount taxFreeAmount) {
 		this.taxFreeAmount = taxFreeAmount;
+		return this;
 	}
 
-	@XmlElement(name = "TaxDfrrdAmt")
-	public ActiveCurrencyAndAmount getTaxDeferredAmount() {
-		return taxDeferredAmount;
+	public Optional<ActiveCurrencyAndAmount> getTaxDeferredAmount() {
+		return taxDeferredAmount == null ? Optional.empty() : Optional.of(taxDeferredAmount);
 	}
 
-	public void setTaxDeferredAmount(ActiveCurrencyAndAmount taxDeferredAmount) {
+	public CorporateActionAmounts1 setTaxDeferredAmount(ActiveCurrencyAndAmount taxDeferredAmount) {
 		this.taxDeferredAmount = taxDeferredAmount;
+		return this;
 	}
 
-	@XmlElement(name = "GrmnLclTax1Amt")
-	public ActiveCurrencyAndAmount getGermanLocalTax1Amount() {
-		return germanLocalTax1Amount;
+	public Optional<ActiveCurrencyAndAmount> getGermanLocalTax1Amount() {
+		return germanLocalTax1Amount == null ? Optional.empty() : Optional.of(germanLocalTax1Amount);
 	}
 
-	public void setGermanLocalTax1Amount(ActiveCurrencyAndAmount germanLocalTax1Amount) {
+	public CorporateActionAmounts1 setGermanLocalTax1Amount(ActiveCurrencyAndAmount germanLocalTax1Amount) {
 		this.germanLocalTax1Amount = germanLocalTax1Amount;
+		return this;
 	}
 
-	@XmlElement(name = "GrmnLclTax2Amt")
-	public ActiveCurrencyAndAmount getGermanLocalTax2Amount() {
-		return germanLocalTax2Amount;
+	public Optional<ActiveCurrencyAndAmount> getGermanLocalTax2Amount() {
+		return germanLocalTax2Amount == null ? Optional.empty() : Optional.of(germanLocalTax2Amount);
 	}
 
-	public void setGermanLocalTax2Amount(ActiveCurrencyAndAmount germanLocalTax2Amount) {
+	public CorporateActionAmounts1 setGermanLocalTax2Amount(ActiveCurrencyAndAmount germanLocalTax2Amount) {
 		this.germanLocalTax2Amount = germanLocalTax2Amount;
+		return this;
 	}
 
-	@XmlElement(name = "GrmnLclTax3Amt")
-	public ActiveCurrencyAndAmount getGermanLocalTax3Amount() {
-		return germanLocalTax3Amount;
+	public Optional<ActiveCurrencyAndAmount> getGermanLocalTax3Amount() {
+		return germanLocalTax3Amount == null ? Optional.empty() : Optional.of(germanLocalTax3Amount);
 	}
 
-	public void setGermanLocalTax3Amount(ActiveCurrencyAndAmount germanLocalTax3Amount) {
+	public CorporateActionAmounts1 setGermanLocalTax3Amount(ActiveCurrencyAndAmount germanLocalTax3Amount) {
 		this.germanLocalTax3Amount = germanLocalTax3Amount;
+		return this;
 	}
 
-	@XmlElement(name = "GrmnLclTax4Amt")
-	public ActiveCurrencyAndAmount getGermanLocalTax4Amount() {
-		return germanLocalTax4Amount;
+	public Optional<ActiveCurrencyAndAmount> getGermanLocalTax4Amount() {
+		return germanLocalTax4Amount == null ? Optional.empty() : Optional.of(germanLocalTax4Amount);
 	}
 
-	public void setGermanLocalTax4Amount(ActiveCurrencyAndAmount germanLocalTax4Amount) {
+	public CorporateActionAmounts1 setGermanLocalTax4Amount(ActiveCurrencyAndAmount germanLocalTax4Amount) {
 		this.germanLocalTax4Amount = germanLocalTax4Amount;
+		return this;
 	}
 
-	@XmlElement(name = "StockXchgTaxAmt")
-	public ActiveCurrencyAndAmount getStockExchangeTaxAmount() {
-		return stockExchangeTaxAmount;
+	public Optional<ActiveCurrencyAndAmount> getStockExchangeTaxAmount() {
+		return stockExchangeTaxAmount == null ? Optional.empty() : Optional.of(stockExchangeTaxAmount);
 	}
 
-	public void setStockExchangeTaxAmount(ActiveCurrencyAndAmount stockExchangeTaxAmount) {
+	public CorporateActionAmounts1 setStockExchangeTaxAmount(ActiveCurrencyAndAmount stockExchangeTaxAmount) {
 		this.stockExchangeTaxAmount = stockExchangeTaxAmount;
+		return this;
 	}
 
-	@XmlElement(name = "TrfTaxAmt")
-	public ActiveCurrencyAndAmount getTransferTaxAmount() {
-		return transferTaxAmount;
+	public Optional<ActiveCurrencyAndAmount> getTransferTaxAmount() {
+		return transferTaxAmount == null ? Optional.empty() : Optional.of(transferTaxAmount);
 	}
 
-	public void setTransferTaxAmount(ActiveCurrencyAndAmount transferTaxAmount) {
+	public CorporateActionAmounts1 setTransferTaxAmount(ActiveCurrencyAndAmount transferTaxAmount) {
 		this.transferTaxAmount = transferTaxAmount;
+		return this;
 	}
 
-	@XmlElement(name = "TxTaxAmt")
-	public ActiveCurrencyAndAmount getTransactionTaxAmount() {
-		return transactionTaxAmount;
+	public Optional<ActiveCurrencyAndAmount> getTransactionTaxAmount() {
+		return transactionTaxAmount == null ? Optional.empty() : Optional.of(transactionTaxAmount);
 	}
 
-	public void setTransactionTaxAmount(ActiveCurrencyAndAmount transactionTaxAmount) {
+	public CorporateActionAmounts1 setTransactionTaxAmount(ActiveCurrencyAndAmount transactionTaxAmount) {
 		this.transactionTaxAmount = transactionTaxAmount;
+		return this;
 	}
 
-	@XmlElement(name = "ValAddedTaxAmt")
-	public ActiveCurrencyAndAmount getValueAddedTaxAmount() {
-		return valueAddedTaxAmount;
+	public Optional<ActiveCurrencyAndAmount> getValueAddedTaxAmount() {
+		return valueAddedTaxAmount == null ? Optional.empty() : Optional.of(valueAddedTaxAmount);
 	}
 
-	public void setValueAddedTaxAmount(ActiveCurrencyAndAmount valueAddedTaxAmount) {
+	public CorporateActionAmounts1 setValueAddedTaxAmount(ActiveCurrencyAndAmount valueAddedTaxAmount) {
 		this.valueAddedTaxAmount = valueAddedTaxAmount;
+		return this;
 	}
 
-	@XmlElement(name = "EURtntnTaxAmt")
-	public ActiveCurrencyAndAmount getEURetentionTaxAmount() {
-		return eURetentionTaxAmount;
+	public Optional<ActiveCurrencyAndAmount> getEURetentionTaxAmount() {
+		return eURetentionTaxAmount == null ? Optional.empty() : Optional.of(eURetentionTaxAmount);
 	}
 
-	public void setEURetentionTaxAmount(ActiveCurrencyAndAmount eURetentionTaxAmount) {
+	public CorporateActionAmounts1 setEURetentionTaxAmount(ActiveCurrencyAndAmount eURetentionTaxAmount) {
 		this.eURetentionTaxAmount = eURetentionTaxAmount;
+		return this;
 	}
 
-	@XmlElement(name = "LclTaxAmt")
-	public ActiveCurrencyAndAmount getLocalTaxAmount() {
-		return localTaxAmount;
+	public Optional<ActiveCurrencyAndAmount> getLocalTaxAmount() {
+		return localTaxAmount == null ? Optional.empty() : Optional.of(localTaxAmount);
 	}
 
-	public void setLocalTaxAmount(ActiveCurrencyAndAmount localTaxAmount) {
+	public CorporateActionAmounts1 setLocalTaxAmount(ActiveCurrencyAndAmount localTaxAmount) {
 		this.localTaxAmount = localTaxAmount;
+		return this;
 	}
 
-	@XmlElement(name = "PmtLevyTaxAmt")
-	public ActiveCurrencyAndAmount getPaymentLevyTaxAmount() {
-		return paymentLevyTaxAmount;
+	public Optional<ActiveCurrencyAndAmount> getPaymentLevyTaxAmount() {
+		return paymentLevyTaxAmount == null ? Optional.empty() : Optional.of(paymentLevyTaxAmount);
 	}
 
-	public void setPaymentLevyTaxAmount(ActiveCurrencyAndAmount paymentLevyTaxAmount) {
+	public CorporateActionAmounts1 setPaymentLevyTaxAmount(ActiveCurrencyAndAmount paymentLevyTaxAmount) {
 		this.paymentLevyTaxAmount = paymentLevyTaxAmount;
+		return this;
 	}
 
-	@XmlElement(name = "CtryNtlFdrlTaxAmt")
-	public ActiveCurrencyAndAmount getCountryNationalFederalTaxAmount() {
-		return countryNationalFederalTaxAmount;
+	public Optional<ActiveCurrencyAndAmount> getCountryNationalFederalTaxAmount() {
+		return countryNationalFederalTaxAmount == null ? Optional.empty() : Optional.of(countryNationalFederalTaxAmount);
 	}
 
-	public void setCountryNationalFederalTaxAmount(ActiveCurrencyAndAmount countryNationalFederalTaxAmount) {
+	public CorporateActionAmounts1 setCountryNationalFederalTaxAmount(ActiveCurrencyAndAmount countryNationalFederalTaxAmount) {
 		this.countryNationalFederalTaxAmount = countryNationalFederalTaxAmount;
+		return this;
 	}
 
-	@XmlElement(name = "StmpDtyAmt")
-	public ActiveCurrencyAndAmount getStampDutyAmount() {
-		return stampDutyAmount;
+	public Optional<ActiveCurrencyAndAmount> getStampDutyAmount() {
+		return stampDutyAmount == null ? Optional.empty() : Optional.of(stampDutyAmount);
 	}
 
-	public void setStampDutyAmount(ActiveCurrencyAndAmount stampDutyAmount) {
+	public CorporateActionAmounts1 setStampDutyAmount(ActiveCurrencyAndAmount stampDutyAmount) {
 		this.stampDutyAmount = stampDutyAmount;
+		return this;
 	}
 
-	@XmlElement(name = "TaxRclmAmt")
-	public ActiveCurrencyAndAmount getTaxReclaimAmount() {
-		return taxReclaimAmount;
+	public Optional<ActiveCurrencyAndAmount> getTaxReclaimAmount() {
+		return taxReclaimAmount == null ? Optional.empty() : Optional.of(taxReclaimAmount);
 	}
 
-	public void setTaxReclaimAmount(ActiveCurrencyAndAmount taxReclaimAmount) {
+	public CorporateActionAmounts1 setTaxReclaimAmount(ActiveCurrencyAndAmount taxReclaimAmount) {
 		this.taxReclaimAmount = taxReclaimAmount;
+		return this;
 	}
 
-	@XmlElement(name = "TaxCdtAmt")
-	public ActiveCurrencyAndAmount getTaxCreditAmount() {
-		return taxCreditAmount;
+	public Optional<ActiveCurrencyAndAmount> getTaxCreditAmount() {
+		return taxCreditAmount == null ? Optional.empty() : Optional.of(taxCreditAmount);
 	}
 
-	public void setTaxCreditAmount(ActiveCurrencyAndAmount taxCreditAmount) {
+	public CorporateActionAmounts1 setTaxCreditAmount(ActiveCurrencyAndAmount taxCreditAmount) {
 		this.taxCreditAmount = taxCreditAmount;
+		return this;
 	}
 
-	@XmlElement(name = "WhldgOfFrgnTaxAmt")
-	public ActiveCurrencyAndAmount getWithholdingOfForeignTaxAmount() {
-		return withholdingOfForeignTaxAmount;
+	public Optional<ActiveCurrencyAndAmount> getWithholdingOfForeignTaxAmount() {
+		return withholdingOfForeignTaxAmount == null ? Optional.empty() : Optional.of(withholdingOfForeignTaxAmount);
 	}
 
-	public void setWithholdingOfForeignTaxAmount(ActiveCurrencyAndAmount withholdingOfForeignTaxAmount) {
+	public CorporateActionAmounts1 setWithholdingOfForeignTaxAmount(ActiveCurrencyAndAmount withholdingOfForeignTaxAmount) {
 		this.withholdingOfForeignTaxAmount = withholdingOfForeignTaxAmount;
+		return this;
 	}
 
-	@XmlElement(name = "WhldgOfLclTaxAmt")
-	public ActiveCurrencyAndAmount getWithholdingOfLocalTaxAmount() {
-		return withholdingOfLocalTaxAmount;
+	public Optional<ActiveCurrencyAndAmount> getWithholdingOfLocalTaxAmount() {
+		return withholdingOfLocalTaxAmount == null ? Optional.empty() : Optional.of(withholdingOfLocalTaxAmount);
 	}
 
-	public void setWithholdingOfLocalTaxAmount(ActiveCurrencyAndAmount withholdingOfLocalTaxAmount) {
+	public CorporateActionAmounts1 setWithholdingOfLocalTaxAmount(ActiveCurrencyAndAmount withholdingOfLocalTaxAmount) {
 		this.withholdingOfLocalTaxAmount = withholdingOfLocalTaxAmount;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlTaxAmt")
-	public ActiveCurrencyAndAmount getAdditionalTaxAmount() {
-		return additionalTaxAmount;
+	public Optional<ActiveCurrencyAndAmount> getAdditionalTaxAmount() {
+		return additionalTaxAmount == null ? Optional.empty() : Optional.of(additionalTaxAmount);
 	}
 
-	public void setAdditionalTaxAmount(ActiveCurrencyAndAmount additionalTaxAmount) {
+	public CorporateActionAmounts1 setAdditionalTaxAmount(ActiveCurrencyAndAmount additionalTaxAmount) {
 		this.additionalTaxAmount = additionalTaxAmount;
+		return this;
 	}
 
-	@XmlElement(name = "WhldgTaxAmt")
-	public ActiveCurrencyAndAmount getWithholdingTaxAmount() {
-		return withholdingTaxAmount;
+	public Optional<ActiveCurrencyAndAmount> getWithholdingTaxAmount() {
+		return withholdingTaxAmount == null ? Optional.empty() : Optional.of(withholdingTaxAmount);
 	}
 
-	public void setWithholdingTaxAmount(ActiveCurrencyAndAmount withholdingTaxAmount) {
+	public CorporateActionAmounts1 setWithholdingTaxAmount(ActiveCurrencyAndAmount withholdingTaxAmount) {
 		this.withholdingTaxAmount = withholdingTaxAmount;
+		return this;
 	}
 
-	@XmlElement(name = "FsclStmpAmt")
-	public ActiveCurrencyAndAmount getFiscalStampAmount() {
-		return fiscalStampAmount;
+	public Optional<ActiveCurrencyAndAmount> getFiscalStampAmount() {
+		return fiscalStampAmount == null ? Optional.empty() : Optional.of(fiscalStampAmount);
 	}
 
-	public void setFiscalStampAmount(ActiveCurrencyAndAmount fiscalStampAmount) {
+	public CorporateActionAmounts1 setFiscalStampAmount(ActiveCurrencyAndAmount fiscalStampAmount) {
 		this.fiscalStampAmount = fiscalStampAmount;
+		return this;
 	}
 
-	@XmlElement(name = "ExctgBrkrAmt")
-	public ActiveCurrencyAndAmount getExecutingBrokerAmount() {
-		return executingBrokerAmount;
+	public Optional<ActiveCurrencyAndAmount> getExecutingBrokerAmount() {
+		return executingBrokerAmount == null ? Optional.empty() : Optional.of(executingBrokerAmount);
 	}
 
-	public void setExecutingBrokerAmount(ActiveCurrencyAndAmount executingBrokerAmount) {
+	public CorporateActionAmounts1 setExecutingBrokerAmount(ActiveCurrencyAndAmount executingBrokerAmount) {
 		this.executingBrokerAmount = executingBrokerAmount;
+		return this;
 	}
 
-	@XmlElement(name = "PngAgtComssnAmt")
-	public ActiveCurrencyAndAmount getPayingAgentCommissionAmount() {
-		return payingAgentCommissionAmount;
+	public Optional<ActiveCurrencyAndAmount> getPayingAgentCommissionAmount() {
+		return payingAgentCommissionAmount == null ? Optional.empty() : Optional.of(payingAgentCommissionAmount);
 	}
 
-	public void setPayingAgentCommissionAmount(ActiveCurrencyAndAmount payingAgentCommissionAmount) {
+	public CorporateActionAmounts1 setPayingAgentCommissionAmount(ActiveCurrencyAndAmount payingAgentCommissionAmount) {
 		this.payingAgentCommissionAmount = payingAgentCommissionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "LclBrkrComssnAmt")
-	public ActiveCurrencyAndAmount getLocalBrokerCommissionAmount() {
-		return localBrokerCommissionAmount;
+	public Optional<ActiveCurrencyAndAmount> getLocalBrokerCommissionAmount() {
+		return localBrokerCommissionAmount == null ? Optional.empty() : Optional.of(localBrokerCommissionAmount);
 	}
 
-	public void setLocalBrokerCommissionAmount(ActiveCurrencyAndAmount localBrokerCommissionAmount) {
+	public CorporateActionAmounts1 setLocalBrokerCommissionAmount(ActiveCurrencyAndAmount localBrokerCommissionAmount) {
 		this.localBrokerCommissionAmount = localBrokerCommissionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "PstgFeeAmt")
-	public ActiveCurrencyAndAmount getPostageFeeAmount() {
-		return postageFeeAmount;
+	public Optional<ActiveCurrencyAndAmount> getPostageFeeAmount() {
+		return postageFeeAmount == null ? Optional.empty() : Optional.of(postageFeeAmount);
 	}
 
-	public void setPostageFeeAmount(ActiveCurrencyAndAmount postageFeeAmount) {
+	public CorporateActionAmounts1 setPostageFeeAmount(ActiveCurrencyAndAmount postageFeeAmount) {
 		this.postageFeeAmount = postageFeeAmount;
+		return this;
 	}
 
-	@XmlElement(name = "RgltryFeesAmt")
-	public ActiveCurrencyAndAmount getRegulatoryFeesAmount() {
-		return regulatoryFeesAmount;
+	public Optional<ActiveCurrencyAndAmount> getRegulatoryFeesAmount() {
+		return regulatoryFeesAmount == null ? Optional.empty() : Optional.of(regulatoryFeesAmount);
 	}
 
-	public void setRegulatoryFeesAmount(ActiveCurrencyAndAmount regulatoryFeesAmount) {
+	public CorporateActionAmounts1 setRegulatoryFeesAmount(ActiveCurrencyAndAmount regulatoryFeesAmount) {
 		this.regulatoryFeesAmount = regulatoryFeesAmount;
+		return this;
 	}
 
-	@XmlElement(name = "ShppgFeesAmt")
-	public ActiveCurrencyAndAmount getShippingFeesAmount() {
-		return shippingFeesAmount;
+	public Optional<ActiveCurrencyAndAmount> getShippingFeesAmount() {
+		return shippingFeesAmount == null ? Optional.empty() : Optional.of(shippingFeesAmount);
 	}
 
-	public void setShippingFeesAmount(ActiveCurrencyAndAmount shippingFeesAmount) {
+	public CorporateActionAmounts1 setShippingFeesAmount(ActiveCurrencyAndAmount shippingFeesAmount) {
 		this.shippingFeesAmount = shippingFeesAmount;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgsAmt")
-	public ActiveCurrencyAndAmount getChargesAmount() {
-		return chargesAmount;
+	public Optional<ActiveCurrencyAndAmount> getChargesAmount() {
+		return chargesAmount == null ? Optional.empty() : Optional.of(chargesAmount);
 	}
 
-	public void setChargesAmount(ActiveCurrencyAndAmount chargesAmount) {
+	public CorporateActionAmounts1 setChargesAmount(ActiveCurrencyAndAmount chargesAmount) {
 		this.chargesAmount = chargesAmount;
+		return this;
 	}
 }

@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -88,8 +90,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -113,16 +115,17 @@ import javax.xml.bind.annotation.XmlType;
  * SecuritiesCollateral2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesCollateral3", propOrder = {"collateralIdentification", "securityIdentification", "maturityDate", "limitedCoverageIndicator", "quantity", "price", "marketValue", "haircut", "collateralValue", "valueDate",
 		"safekeepingAccount", "safekeepingPlace", "settlementParameters"})
 public class SecuritiesCollateral3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CollId")
 	protected Max35Text collateralIdentification;
 	/**
-	 * Provides the identification of the proposed collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +163,7 @@ public class SecuritiesCollateral3 {
 	 */
 	public static final MMMessageAttribute mmCollateralIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesCollateral3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmObject();
 			isDerived = false;
 			xmlTag = "CollId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +175,11 @@ public class SecuritiesCollateral3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyId", required = true)
 	protected SecurityIdentification14 securityIdentification;
 	/**
-	 * Identification of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,7 +229,7 @@ public class SecuritiesCollateral3 {
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> SecuritiesCollateral3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,10 +242,11 @@ public class SecuritiesCollateral3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	@XmlElement(name = "MtrtyDt")
 	protected DateAndDateTimeChoice maturityDate;
 	/**
-	 * Planned final repayment date at the time of issuance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -291,7 +296,7 @@ public class SecuritiesCollateral3 {
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
-			componentContext_lazy = () -> SecuritiesCollateral3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -304,11 +309,11 @@ public class SecuritiesCollateral3 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "LtdCvrgInd")
 	protected YesNoIndicator limitedCoverageIndicator;
 	/**
-	 * Indicates that the collateral posted in the clearing house covers the
-	 * margin until a specific timeframe.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -349,7 +354,7 @@ public class SecuritiesCollateral3 {
 	 */
 	public static final MMMessageAttribute mmLimitedCoverageIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesCollateral3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmObject();
 			isDerived = false;
 			xmlTag = "LtdCvrgInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -361,10 +366,11 @@ public class SecuritiesCollateral3 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Qty", required = true)
 	protected FinancialInstrumentQuantity1Choice quantity;
 	/**
-	 * Quantity of securities collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -413,7 +419,7 @@ public class SecuritiesCollateral3 {
 	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
-			componentContext_lazy = () -> SecuritiesCollateral3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -427,10 +433,11 @@ public class SecuritiesCollateral3 {
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Pric")
 	protected Price2 price;
 	/**
-	 * Indicates the price of the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -477,7 +484,7 @@ public class SecuritiesCollateral3 {
 	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPricing;
-			componentContext_lazy = () -> SecuritiesCollateral3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -491,10 +498,11 @@ public class SecuritiesCollateral3 {
 			type_lazy = () -> com.tools20022.repository.msg.Price2.mmObject();
 		}
 	};
+	@XmlElement(name = "MktVal")
 	protected ActiveCurrencyAndAmount marketValue;
 	/**
-	 * Value of the collateral based on current market prices.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -544,7 +552,7 @@ public class SecuritiesCollateral3 {
 	public static final MMMessageAttribute mmMarketValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmMarketValue;
-			componentContext_lazy = () -> SecuritiesCollateral3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmObject();
 			isDerived = false;
 			xmlTag = "MktVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -557,10 +565,11 @@ public class SecuritiesCollateral3 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Hrcut")
 	protected PercentageRate haircut;
 	/**
-	 * Haircut or valuation factor on the security expressed as a percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -611,7 +620,7 @@ public class SecuritiesCollateral3 {
 	public static final MMMessageAttribute mmHaircut = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> HaircutValuation.mmHaircut;
-			componentContext_lazy = () -> SecuritiesCollateral3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmObject();
 			isDerived = false;
 			xmlTag = "Hrcut";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -624,10 +633,11 @@ public class SecuritiesCollateral3 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "CollVal")
 	protected ActiveCurrencyAndAmount collateralValue;
 	/**
-	 * Value of the collateral after taking into account the haircut.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -678,7 +688,7 @@ public class SecuritiesCollateral3 {
 	public static final MMMessageAttribute mmCollateralValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmRiskAdjustedValue;
-			componentContext_lazy = () -> SecuritiesCollateral3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmObject();
 			isDerived = false;
 			xmlTag = "CollVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -691,10 +701,11 @@ public class SecuritiesCollateral3 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDt")
 	protected ISODate valueDate;
 	/**
-	 * Valuation date of the securities taken as collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -743,7 +754,7 @@ public class SecuritiesCollateral3 {
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CollateralValuation.mmCollateralValuationDate;
-			componentContext_lazy = () -> SecuritiesCollateral3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -756,10 +767,11 @@ public class SecuritiesCollateral3 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgAcct")
 	protected SecuritiesAccount19 safekeepingAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -807,7 +819,7 @@ public class SecuritiesCollateral3 {
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesAccount;
-			componentContext_lazy = () -> SecuritiesCollateral3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -821,13 +833,11 @@ public class SecuritiesCollateral3 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgPlc", required = true)
 	protected SafekeepingPlaceFormat7Choice safekeepingPlace;
 	/**
-	 * Place where the securities are safe-kept, physically or notionally. This
-	 * place can be, for example, a local custodian, a Central Securities
-	 * Depository (CSD) or an International Central Securities Depository
-	 * (ICSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -878,7 +888,7 @@ public class SecuritiesCollateral3 {
 	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
-			componentContext_lazy = () -> SecuritiesCollateral3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -892,13 +902,11 @@ public class SecuritiesCollateral3 {
 			type_lazy = () -> SafekeepingPlaceFormat7Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmParams")
 	protected SettlementDetails88 settlementParameters;
 	/**
-	 * Parameters which explicitly state the conditions that must be fulfilled
-	 * before a particular transaction of a financial instrument can be settled.
-	 * These parameters are defined by the instructing party in compliance with
-	 * settlement rules in the market the transaction will settle in.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -943,7 +951,7 @@ public class SecuritiesCollateral3 {
 	public static final MMMessageAssociationEnd mmSettlementParameters = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesSettlement;
-			componentContext_lazy = () -> SecuritiesCollateral3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCollateral3.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -960,11 +968,13 @@ public class SecuritiesCollateral3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesCollateral3.mmCollateralIdentification, SecuritiesCollateral3.mmSecurityIdentification, SecuritiesCollateral3.mmMaturityDate,
-						SecuritiesCollateral3.mmLimitedCoverageIndicator, SecuritiesCollateral3.mmQuantity, SecuritiesCollateral3.mmPrice, SecuritiesCollateral3.mmMarketValue, SecuritiesCollateral3.mmHaircut,
-						SecuritiesCollateral3.mmCollateralValue, SecuritiesCollateral3.mmValueDate, SecuritiesCollateral3.mmSafekeepingAccount, SecuritiesCollateral3.mmSafekeepingPlace, SecuritiesCollateral3.mmSettlementParameters);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCollateral3.mmCollateralIdentification, com.tools20022.repository.msg.SecuritiesCollateral3.mmSecurityIdentification,
+						com.tools20022.repository.msg.SecuritiesCollateral3.mmMaturityDate, com.tools20022.repository.msg.SecuritiesCollateral3.mmLimitedCoverageIndicator, com.tools20022.repository.msg.SecuritiesCollateral3.mmQuantity,
+						com.tools20022.repository.msg.SecuritiesCollateral3.mmPrice, com.tools20022.repository.msg.SecuritiesCollateral3.mmMarketValue, com.tools20022.repository.msg.SecuritiesCollateral3.mmHaircut,
+						com.tools20022.repository.msg.SecuritiesCollateral3.mmCollateralValue, com.tools20022.repository.msg.SecuritiesCollateral3.mmValueDate, com.tools20022.repository.msg.SecuritiesCollateral3.mmSafekeepingAccount,
+						com.tools20022.repository.msg.SecuritiesCollateral3.mmSafekeepingPlace, com.tools20022.repository.msg.SecuritiesCollateral3.mmSettlementParameters);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesCollateral3";
 				definition = "Provides details about the securities posted as collateral.";
@@ -975,120 +985,120 @@ public class SecuritiesCollateral3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CollId")
-	public Max35Text getCollateralIdentification() {
-		return collateralIdentification;
+	public Optional<Max35Text> getCollateralIdentification() {
+		return collateralIdentification == null ? Optional.empty() : Optional.of(collateralIdentification);
 	}
 
-	public void setCollateralIdentification(Max35Text collateralIdentification) {
+	public SecuritiesCollateral3 setCollateralIdentification(Max35Text collateralIdentification) {
 		this.collateralIdentification = collateralIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification14 getSecurityIdentification() {
 		return securityIdentification;
 	}
 
-	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification14 securityIdentification) {
-		this.securityIdentification = securityIdentification;
+	public SecuritiesCollateral3 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification14 securityIdentification) {
+		this.securityIdentification = Objects.requireNonNull(securityIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "MtrtyDt")
-	public DateAndDateTimeChoice getMaturityDate() {
-		return maturityDate;
+	public Optional<DateAndDateTimeChoice> getMaturityDate() {
+		return maturityDate == null ? Optional.empty() : Optional.of(maturityDate);
 	}
 
-	public void setMaturityDate(DateAndDateTimeChoice maturityDate) {
+	public SecuritiesCollateral3 setMaturityDate(DateAndDateTimeChoice maturityDate) {
 		this.maturityDate = maturityDate;
+		return this;
 	}
 
-	@XmlElement(name = "LtdCvrgInd")
-	public YesNoIndicator getLimitedCoverageIndicator() {
-		return limitedCoverageIndicator;
+	public Optional<YesNoIndicator> getLimitedCoverageIndicator() {
+		return limitedCoverageIndicator == null ? Optional.empty() : Optional.of(limitedCoverageIndicator);
 	}
 
-	public void setLimitedCoverageIndicator(YesNoIndicator limitedCoverageIndicator) {
+	public SecuritiesCollateral3 setLimitedCoverageIndicator(YesNoIndicator limitedCoverageIndicator) {
 		this.limitedCoverageIndicator = limitedCoverageIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity1Choice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(FinancialInstrumentQuantity1Choice quantity) {
-		this.quantity = quantity;
+	public SecuritiesCollateral3 setQuantity(FinancialInstrumentQuantity1Choice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "Pric")
-	public Price2 getPrice() {
-		return price;
+	public Optional<Price2> getPrice() {
+		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public void setPrice(com.tools20022.repository.msg.Price2 price) {
+	public SecuritiesCollateral3 setPrice(com.tools20022.repository.msg.Price2 price) {
 		this.price = price;
+		return this;
 	}
 
-	@XmlElement(name = "MktVal")
-	public ActiveCurrencyAndAmount getMarketValue() {
-		return marketValue;
+	public Optional<ActiveCurrencyAndAmount> getMarketValue() {
+		return marketValue == null ? Optional.empty() : Optional.of(marketValue);
 	}
 
-	public void setMarketValue(ActiveCurrencyAndAmount marketValue) {
+	public SecuritiesCollateral3 setMarketValue(ActiveCurrencyAndAmount marketValue) {
 		this.marketValue = marketValue;
+		return this;
 	}
 
-	@XmlElement(name = "Hrcut")
-	public PercentageRate getHaircut() {
-		return haircut;
+	public Optional<PercentageRate> getHaircut() {
+		return haircut == null ? Optional.empty() : Optional.of(haircut);
 	}
 
-	public void setHaircut(PercentageRate haircut) {
+	public SecuritiesCollateral3 setHaircut(PercentageRate haircut) {
 		this.haircut = haircut;
+		return this;
 	}
 
-	@XmlElement(name = "CollVal")
-	public ActiveCurrencyAndAmount getCollateralValue() {
-		return collateralValue;
+	public Optional<ActiveCurrencyAndAmount> getCollateralValue() {
+		return collateralValue == null ? Optional.empty() : Optional.of(collateralValue);
 	}
 
-	public void setCollateralValue(ActiveCurrencyAndAmount collateralValue) {
+	public SecuritiesCollateral3 setCollateralValue(ActiveCurrencyAndAmount collateralValue) {
 		this.collateralValue = collateralValue;
+		return this;
 	}
 
-	@XmlElement(name = "ValDt")
-	public ISODate getValueDate() {
-		return valueDate;
+	public Optional<ISODate> getValueDate() {
+		return valueDate == null ? Optional.empty() : Optional.of(valueDate);
 	}
 
-	public void setValueDate(ISODate valueDate) {
+	public SecuritiesCollateral3 setValueDate(ISODate valueDate) {
 		this.valueDate = valueDate;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct")
-	public SecuritiesAccount19 getSafekeepingAccount() {
-		return safekeepingAccount;
+	public Optional<SecuritiesAccount19> getSafekeepingAccount() {
+		return safekeepingAccount == null ? Optional.empty() : Optional.of(safekeepingAccount);
 	}
 
-	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount19 safekeepingAccount) {
+	public SecuritiesCollateral3 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount19 safekeepingAccount) {
 		this.safekeepingAccount = safekeepingAccount;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgPlc", required = true)
 	public SafekeepingPlaceFormat7Choice getSafekeepingPlace() {
 		return safekeepingPlace;
 	}
 
-	public void setSafekeepingPlace(SafekeepingPlaceFormat7Choice safekeepingPlace) {
-		this.safekeepingPlace = safekeepingPlace;
+	public SecuritiesCollateral3 setSafekeepingPlace(SafekeepingPlaceFormat7Choice safekeepingPlace) {
+		this.safekeepingPlace = Objects.requireNonNull(safekeepingPlace);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmParams")
-	public SettlementDetails88 getSettlementParameters() {
-		return settlementParameters;
+	public Optional<SettlementDetails88> getSettlementParameters() {
+		return settlementParameters == null ? Optional.empty() : Optional.of(settlementParameters);
 	}
 
-	public void setSettlementParameters(com.tools20022.repository.msg.SettlementDetails88 settlementParameters) {
+	public SecuritiesCollateral3 setSettlementParameters(com.tools20022.repository.msg.SettlementDetails88 settlementParameters) {
 		this.settlementParameters = settlementParameters;
+		return this;
 	}
 }

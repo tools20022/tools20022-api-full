@@ -26,6 +26,8 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of format for the market type."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MarketType13Choice", propOrder = {"code", "proprietary"})
 public class MarketType13Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected MarketType8Code code;
 	/**
-	 * Market type expressed as an ISO 20022 code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +101,7 @@ public class MarketType13Choice {
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MarketType13Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MarketType13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +112,11 @@ public class MarketType13Choice {
 			simpleType_lazy = () -> MarketType8Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry")
 	protected GenericIdentification1 proprietary;
 	/**
-	 * Market type expressed as a proprietary code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -138,7 +142,7 @@ public class MarketType13Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MarketType13Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MarketType13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +158,8 @@ public class MarketType13Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MarketType13Choice.mmCode, MarketType13Choice.mmProprietary);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarketType13Choice.mmCode, com.tools20022.repository.choice.MarketType13Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketType13Choice";
 				definition = "Choice of format for the market type.";
@@ -164,21 +168,21 @@ public class MarketType13Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public MarketType8Code getCode() {
 		return code;
 	}
 
-	public void setCode(MarketType8Code code) {
-		this.code = code;
+	public MarketType13Choice setCode(MarketType8Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry")
-	public GenericIdentification1 getProprietary() {
-		return proprietary;
+	public Optional<GenericIdentification1> getProprietary() {
+		return proprietary == null ? Optional.empty() : Optional.of(proprietary);
 	}
 
-	public void setProprietary(GenericIdentification1 proprietary) {
+	public MarketType13Choice setProprietary(GenericIdentification1 proprietary) {
 		this.proprietary = proprietary;
+		return this;
 	}
 }

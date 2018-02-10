@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.OptionPayoutTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the type of payout that will result from an in-the-money option.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionPayoutTypeCode#mmVanilla
- * OptionPayoutTypeCode.mmVanilla}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionPayoutTypeCode#Vanilla
+ * OptionPayoutTypeCode.Vanilla}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionPayoutTypeCode#mmCapped
- * OptionPayoutTypeCode.mmCapped}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionPayoutTypeCode#Capped
+ * OptionPayoutTypeCode.Capped}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OptionPayoutTypeCode#mmBinary
- * OptionPayoutTypeCode.mmBinary}</li>
+ * {@linkplain com.tools20022.repository.codeset.OptionPayoutTypeCode#Binary
+ * OptionPayoutTypeCode.Binary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Indicates the type of payout that will result from an in-the-money option."</li>
  * </ul>
  */
-public class OptionPayoutTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OptionPayoutTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,12 +95,12 @@ public class OptionPayoutTypeCode {
 	 * definition} = "Indicates the type of vanilla option."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVanilla = new MMCode() {
+	public static final OptionPayoutTypeCode Vanilla = new OptionPayoutTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Vanilla";
 			definition = "Indicates the type of vanilla option.";
-			owner_lazy = () -> OptionPayoutTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionPayoutTypeCode.mmObject();
 			codeName = "VANI";
 		}
 	};
@@ -119,12 +125,12 @@ public class OptionPayoutTypeCode {
 	 * definition} = "Indicates the type of capped option."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCapped = new MMCode() {
+	public static final OptionPayoutTypeCode Capped = new OptionPayoutTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capped";
 			definition = "Indicates the type of capped option.";
-			owner_lazy = () -> OptionPayoutTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionPayoutTypeCode.mmObject();
 			codeName = "CAPP";
 		}
 	};
@@ -149,27 +155,58 @@ public class OptionPayoutTypeCode {
 	 * definition} = "Indicates the type of binaryoption."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBinary = new MMCode() {
+	public static final OptionPayoutTypeCode Binary = new OptionPayoutTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Binary";
 			definition = "Indicates the type of binaryoption.";
-			owner_lazy = () -> OptionPayoutTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OptionPayoutTypeCode.mmObject();
 			codeName = "BINA";
 		}
 	};
+	final static private LinkedHashMap<String, OptionPayoutTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OptionPayoutTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionPayoutTypeCode";
 				definition = "Indicates the type of payout that will result from an in-the-money option.";
-				code_lazy = () -> Arrays.asList(OptionPayoutTypeCode.mmVanilla, OptionPayoutTypeCode.mmCapped, OptionPayoutTypeCode.mmBinary);
 				derivation_lazy = () -> Arrays.asList(OptionPayoutType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionPayoutTypeCode.Vanilla, com.tools20022.repository.codeset.OptionPayoutTypeCode.Capped, com.tools20022.repository.codeset.OptionPayoutTypeCode.Binary);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Vanilla.getCodeName().get(), Vanilla);
+		codesByName.put(Capped.getCodeName().get(), Capped);
+		codesByName.put(Binary.getCodeName().get(), Binary);
+	}
+
+	public static OptionPayoutTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OptionPayoutTypeCode[] values() {
+		OptionPayoutTypeCode[] values = new OptionPayoutTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OptionPayoutTypeCode> {
+		@Override
+		public OptionPayoutTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OptionPayoutTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.QueryType2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,16 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the query criteria."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CurrencyQuery1", propOrder = {"queryType", "currencyCriteria"})
 public class CurrencyQuery1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QryTp")
 	protected QueryType2Code queryType;
 	/**
-	 * Specifies the type of matching items to be returned in the response to
-	 * the query.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +101,7 @@ public class CurrencyQuery1 {
 	 */
 	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyQuery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyQuery1.mmObject();
 			isDerived = false;
 			xmlTag = "QryTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +112,11 @@ public class CurrencyQuery1 {
 			simpleType_lazy = () -> QueryType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "CcyCrit")
 	protected CurrencyCriteria1Choice currencyCriteria;
 	/**
-	 * Defines of the currency query criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -140,7 +142,7 @@ public class CurrencyQuery1 {
 	 */
 	public static final MMMessageAssociationEnd mmCurrencyCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CurrencyQuery1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyQuery1.mmObject();
 			isDerived = false;
 			xmlTag = "CcyCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,8 +158,8 @@ public class CurrencyQuery1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CurrencyQuery1.mmQueryType, CurrencyQuery1.mmCurrencyCriteria);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyQuery1.mmQueryType, com.tools20022.repository.msg.CurrencyQuery1.mmCurrencyCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CurrencyQuery1";
 				definition = "Defines the query criteria.";
@@ -166,21 +168,21 @@ public class CurrencyQuery1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QryTp")
-	public QueryType2Code getQueryType() {
-		return queryType;
+	public Optional<QueryType2Code> getQueryType() {
+		return queryType == null ? Optional.empty() : Optional.of(queryType);
 	}
 
-	public void setQueryType(QueryType2Code queryType) {
+	public CurrencyQuery1 setQueryType(QueryType2Code queryType) {
 		this.queryType = queryType;
+		return this;
 	}
 
-	@XmlElement(name = "CcyCrit")
-	public CurrencyCriteria1Choice getCurrencyCriteria() {
-		return currencyCriteria;
+	public Optional<CurrencyCriteria1Choice> getCurrencyCriteria() {
+		return currencyCriteria == null ? Optional.empty() : Optional.of(currencyCriteria);
 	}
 
-	public void setCurrencyCriteria(CurrencyCriteria1Choice currencyCriteria) {
+	public CurrencyQuery1 setCurrencyCriteria(CurrencyCriteria1Choice currencyCriteria) {
 		this.currencyCriteria = currencyCriteria;
+		return this;
 	}
 }

@@ -27,9 +27,11 @@ import com.tools20022.repository.entity.Reconciliation;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Totals performed during the reconciliation period, for a certain type of
@@ -42,6 +44,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Reconciliation
+ * Reconciliation}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -66,41 +71,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.ReconciliationTransaction#mmCardPaymentTotal
  * ReconciliationTransaction.mmCardPaymentTotal}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Reconciliation
- * Reconciliation}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals1
- * TransactionTotals1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionReconciliation1
- * TransactionReconciliation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest1
- * AcceptorReconciliationRequest1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionReconciliation2
- * TransactionReconciliation2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest2
- * AcceptorReconciliationRequest2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest3
- * AcceptorReconciliationRequest3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest4
- * AcceptorReconciliationRequest4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionReconciliation3
- * TransactionReconciliation3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransaction10
- * CardTransaction10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardTransaction9
- * CardTransaction9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest5
- * AcceptorReconciliationRequest5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransactionReconciliation4
- * TransactionReconciliation4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest6
- * AcceptorReconciliationRequest6}</li>
  * </ul>
  * </li>
  * <li>
@@ -137,10 +107,42 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionTotals1
+ * TransactionTotals1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionReconciliation1
+ * TransactionReconciliation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest1
+ * AcceptorReconciliationRequest1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionReconciliation2
+ * TransactionReconciliation2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest2
+ * AcceptorReconciliationRequest2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest3
+ * AcceptorReconciliationRequest3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest4
+ * AcceptorReconciliationRequest4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionReconciliation3
+ * TransactionReconciliation3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransaction10
+ * CardTransaction10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransaction9
+ * CardTransaction9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest5
+ * AcceptorReconciliationRequest5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionReconciliation4
+ * TransactionReconciliation4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest6
+ * AcceptorReconciliationRequest6}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -158,11 +160,8 @@ public class ReconciliationTransaction extends Reconciliation {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Max35Text reconciliationIdentification;
 	/**
-	 * Unique identification of the reconciliation period between the acceptor
-	 * and the acquirer. This identification might be linked to the
-	 * identification of the settlement for further verification by the
-	 * merchant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -435,8 +434,8 @@ public class ReconciliationTransaction extends Reconciliation {
 					CardPaymentTransaction71.mmReconciliationIdentification, CardPaymentTransaction75.mmReconciliationIdentification, CardPaymentTransaction74.mmReconciliationIdentification,
 					CardPaymentTransaction70.mmReconciliationIdentification, CardPaymentTransaction76.mmReconciliationIdentification, CommonData6.mmReconciliationIdentification, CardPaymentTransaction69.mmReconciliationIdentification,
 					CardPaymentTransaction77.mmReconciliationIdentification, CardPaymentTransaction78.mmReconciliationIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReconciliationIdentification";
 			definition = "Unique identification of the reconciliation period between the acceptor and the acquirer. This identification might be linked to the identification of the settlement for further verification by the merchant.";
@@ -455,8 +454,8 @@ public class ReconciliationTransaction extends Reconciliation {
 	};
 	protected CurrencyCode currency;
 	/**
-	 * Currency associated with thecumulative amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -499,8 +498,8 @@ public class ReconciliationTransaction extends Reconciliation {
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionTotals1.mmCurrency, TransactionTotals2.mmCurrency, TransactionTotals3.mmCurrency, TransactionTotals7.mmCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
 			definition = "Currency associated with thecumulative amount.";
@@ -519,8 +518,8 @@ public class ReconciliationTransaction extends Reconciliation {
 	};
 	protected TypeTransactionTotalsCode transactionType;
 	/**
-	 * Identification of the type of transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -560,8 +559,8 @@ public class ReconciliationTransaction extends Reconciliation {
 	public static final MMBusinessAttribute mmTransactionType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionTotals1.mmType, TransactionTotals2.mmType, TransactionTotals3.mmType, TransactionTotals7.mmType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionType";
 			definition = "Identification of the type of transaction.";
@@ -580,8 +579,8 @@ public class ReconciliationTransaction extends Reconciliation {
 	};
 	protected Max35Text totalNumber;
 	/**
-	 * Total number of transactions during a reconciliation period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -619,8 +618,8 @@ public class ReconciliationTransaction extends Reconciliation {
 	public static final MMBusinessAttribute mmTotalNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionTotals1.mmTotalNumber, TransactionTotals2.mmTotalNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalNumber";
 			definition = "Total number of transactions during a reconciliation period.";
@@ -639,8 +638,8 @@ public class ReconciliationTransaction extends Reconciliation {
 	};
 	protected ImpliedCurrencyAndAmount cumulativeAmount;
 	/**
-	 * Total amount of a collection of transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -684,8 +683,8 @@ public class ReconciliationTransaction extends Reconciliation {
 	public static final MMBusinessAttribute mmCumulativeAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionTotals1.mmCumulativeAmount, TransactionTotals2.mmCumulativeAmount, TransactionTotals3.mmCumulativeAmount, TransactionTotals7.mmCumulativeAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CumulativeAmount";
 			definition = "Total amount of a collection of transactions.";
@@ -704,9 +703,8 @@ public class ReconciliationTransaction extends Reconciliation {
 	};
 	protected TrueFalseIndicator closePeriod;
 	/**
-	 * Indicates if the exchange requires a closure of the reconciliation
-	 * period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -743,8 +741,8 @@ public class ReconciliationTransaction extends Reconciliation {
 	public static final MMBusinessAttribute mmClosePeriod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionReconciliation1.mmClosePeriod);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosePeriod";
 			definition = "Indicates if the exchange requires a closure of the reconciliation period.";
@@ -763,9 +761,8 @@ public class ReconciliationTransaction extends Reconciliation {
 	};
 	protected List<com.tools20022.repository.entity.CardPayment> cardPaymentTotal;
 	/**
-	 * Specifies the card payments which are part of the transaction
-	 * reconciliation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -825,8 +822,8 @@ public class ReconciliationTransaction extends Reconciliation {
 		{
 			derivation_lazy = () -> Arrays.asList(AcceptorReconciliationRequest1.mmEnvironment, AcceptorReconciliationRequest2.mmEnvironment, AcceptorReconciliationRequest3.mmEnvironment, AcceptorReconciliationRequest4.mmEnvironment,
 					AcceptorReconciliationRequest5.mmEnvironment, AcceptorReconciliationRequest6.mmEnvironment);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardPaymentTotal";
 			definition = "Specifies the card payments which are part of the transaction reconciliation.";
@@ -840,7 +837,7 @@ public class ReconciliationTransaction extends Reconciliation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReconciliationTransaction";
 				definition = "Totals performed during the reconciliation period, for a certain type of transaction.";
@@ -869,55 +866,62 @@ public class ReconciliationTransaction extends Reconciliation {
 		return reconciliationIdentification;
 	}
 
-	public void setReconciliationIdentification(Max35Text reconciliationIdentification) {
-		this.reconciliationIdentification = reconciliationIdentification;
+	public ReconciliationTransaction setReconciliationIdentification(Max35Text reconciliationIdentification) {
+		this.reconciliationIdentification = Objects.requireNonNull(reconciliationIdentification);
+		return this;
 	}
 
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(CurrencyCode currency) {
-		this.currency = currency;
+	public ReconciliationTransaction setCurrency(CurrencyCode currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 
 	public TypeTransactionTotalsCode getTransactionType() {
 		return transactionType;
 	}
 
-	public void setTransactionType(TypeTransactionTotalsCode transactionType) {
-		this.transactionType = transactionType;
+	public ReconciliationTransaction setTransactionType(TypeTransactionTotalsCode transactionType) {
+		this.transactionType = Objects.requireNonNull(transactionType);
+		return this;
 	}
 
 	public Max35Text getTotalNumber() {
 		return totalNumber;
 	}
 
-	public void setTotalNumber(Max35Text totalNumber) {
-		this.totalNumber = totalNumber;
+	public ReconciliationTransaction setTotalNumber(Max35Text totalNumber) {
+		this.totalNumber = Objects.requireNonNull(totalNumber);
+		return this;
 	}
 
 	public ImpliedCurrencyAndAmount getCumulativeAmount() {
 		return cumulativeAmount;
 	}
 
-	public void setCumulativeAmount(ImpliedCurrencyAndAmount cumulativeAmount) {
-		this.cumulativeAmount = cumulativeAmount;
+	public ReconciliationTransaction setCumulativeAmount(ImpliedCurrencyAndAmount cumulativeAmount) {
+		this.cumulativeAmount = Objects.requireNonNull(cumulativeAmount);
+		return this;
 	}
 
 	public TrueFalseIndicator getClosePeriod() {
 		return closePeriod;
 	}
 
-	public void setClosePeriod(TrueFalseIndicator closePeriod) {
-		this.closePeriod = closePeriod;
+	public ReconciliationTransaction setClosePeriod(TrueFalseIndicator closePeriod) {
+		this.closePeriod = Objects.requireNonNull(closePeriod);
+		return this;
 	}
 
 	public List<CardPayment> getCardPaymentTotal() {
-		return cardPaymentTotal;
+		return cardPaymentTotal == null ? cardPaymentTotal = new ArrayList<>() : cardPaymentTotal;
 	}
 
-	public void setCardPaymentTotal(List<com.tools20022.repository.entity.CardPayment> cardPaymentTotal) {
-		this.cardPaymentTotal = cardPaymentTotal;
+	public ReconciliationTransaction setCardPaymentTotal(List<com.tools20022.repository.entity.CardPayment> cardPaymentTotal) {
+		this.cardPaymentTotal = Objects.requireNonNull(cardPaymentTotal);
+		return this;
 	}
 }

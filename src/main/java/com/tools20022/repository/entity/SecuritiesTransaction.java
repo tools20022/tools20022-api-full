@@ -30,6 +30,7 @@ import com.tools20022.repository.msg.SecuritiesTransactionReport4;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Exchange of securities.
@@ -41,27 +42,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.SecuritiesTrade
+ * SecuritiesTrade}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesTransaction#mmReplacedAmount
  * SecuritiesTransaction.mmReplacedAmount}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.SecuritiesTrade
- * SecuritiesTrade}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTransaction1
- * SecuritiesTransaction1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2
- * SecuritiesTransactionReport2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4
- * SecuritiesTransactionReport4}</li>
  * </ul>
  * </li>
  * <li>
@@ -80,10 +69,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTransaction1
+ * SecuritiesTransaction1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport2
+ * SecuritiesTransactionReport2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4
+ * SecuritiesTransactionReport4}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,8 +100,8 @@ public class SecuritiesTransaction extends SecuritiesTrade {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyAndAmount replacedAmount;
 	/**
-	 * Specifies the amount requested to be replaced or actually replaced.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,8 +128,8 @@ public class SecuritiesTransaction extends SecuritiesTrade {
 	 */
 	public static final MMBusinessAttribute mmReplacedAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransaction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReplacedAmount";
 			definition = "Specifies the amount requested to be replaced or actually replaced.";
@@ -149,7 +150,7 @@ public class SecuritiesTransaction extends SecuritiesTrade {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransaction";
 				definition = "Exchange of securities.";
@@ -171,7 +172,8 @@ public class SecuritiesTransaction extends SecuritiesTrade {
 		return replacedAmount;
 	}
 
-	public void setReplacedAmount(CurrencyAndAmount replacedAmount) {
-		this.replacedAmount = replacedAmount;
+	public SecuritiesTransaction setReplacedAmount(CurrencyAndAmount replacedAmount) {
+		this.replacedAmount = Objects.requireNonNull(replacedAmount);
+		return this;
 	}
 }

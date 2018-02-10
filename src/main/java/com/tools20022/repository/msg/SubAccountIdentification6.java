@@ -27,9 +27,11 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.InvestmentAccount;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionOnSubAccountRule#forSubAccountIdentification6
+ * ConstraintTransactionOnSubAccountRule.forSubAccountIdentification6}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,16 +99,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SubAccountIdentification6", propOrder = {"identification", "activityIndicator", "transactionOnSubAccount"})
 public class SubAccountIdentification6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected AccountIdentificationFormatChoice identification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +152,7 @@ public class SubAccountIdentification6 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
-			componentContext_lazy = () -> SubAccountIdentification6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,10 +164,11 @@ public class SubAccountIdentification6 {
 			complexType_lazy = () -> AccountIdentificationFormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "ActvtyInd", required = true)
 	protected YesNoIndicator activityIndicator;
 	/**
-	 * Indicates whether there is activity reported in the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -194,7 +205,7 @@ public class SubAccountIdentification6 {
 	 */
 	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SubAccountIdentification6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtyInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,11 +217,11 @@ public class SubAccountIdentification6 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "TxOnSubAcct")
 	protected List<com.tools20022.repository.msg.InvestmentFundTransactionsByFund2> transactionOnSubAccount;
 	/**
-	 * Creation/cancellation of investment units on the books of the fund or its
-	 * designated agent, as a result of executing an investment fund order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -253,7 +264,7 @@ public class SubAccountIdentification6 {
 	public static final MMMessageAssociationEnd mmTransactionOnSubAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccount.mmInvestmentFundTransaction;
-			componentContext_lazy = () -> SubAccountIdentification6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "TxOnSubAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,10 +280,12 @@ public class SubAccountIdentification6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SubAccountIdentification6.mmIdentification, SubAccountIdentification6.mmActivityIndicator, SubAccountIdentification6.mmTransactionOnSubAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubAccountIdentification6.mmIdentification, com.tools20022.repository.msg.SubAccountIdentification6.mmActivityIndicator,
+						com.tools20022.repository.msg.SubAccountIdentification6.mmTransactionOnSubAccount);
 				messageBuildingBlock_lazy = () -> Arrays.asList(StatementOfInvestmentFundTransactionsV02.mmSubAccountDetails);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionOnSubAccountRule.forSubAccountIdentification6);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubAccountIdentification6";
 				definition = "Account to or from which a securities entry is made.";
@@ -282,30 +295,30 @@ public class SubAccountIdentification6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public AccountIdentificationFormatChoice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(AccountIdentificationFormatChoice identification) {
-		this.identification = identification;
+	public SubAccountIdentification6 setIdentification(AccountIdentificationFormatChoice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}
 
-	public void setActivityIndicator(YesNoIndicator activityIndicator) {
-		this.activityIndicator = activityIndicator;
+	public SubAccountIdentification6 setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = Objects.requireNonNull(activityIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "TxOnSubAcct")
 	public List<InvestmentFundTransactionsByFund2> getTransactionOnSubAccount() {
-		return transactionOnSubAccount;
+		return transactionOnSubAccount == null ? transactionOnSubAccount = new ArrayList<>() : transactionOnSubAccount;
 	}
 
-	public void setTransactionOnSubAccount(List<com.tools20022.repository.msg.InvestmentFundTransactionsByFund2> transactionOnSubAccount) {
-		this.transactionOnSubAccount = transactionOnSubAccount;
+	public SubAccountIdentification6 setTransactionOnSubAccount(List<com.tools20022.repository.msg.InvestmentFundTransactionsByFund2> transactionOnSubAccount) {
+		this.transactionOnSubAccount = Objects.requireNonNull(transactionOnSubAccount);
+		return this;
 	}
 }

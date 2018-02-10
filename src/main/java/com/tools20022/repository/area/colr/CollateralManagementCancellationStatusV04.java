@@ -30,9 +30,11 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CollateralManagementISOLatestversion;
 import com.tools20022.repository.msgset.CollateralManagementMaintenance20162017;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -55,25 +57,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CollateralManagementLatestVersion
- * CollateralManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CollateralManagementISOLatestversion
- * CollateralManagementISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CollateralManagementMaintenance20162017
- * CollateralManagementMaintenance20162017}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CollMgmtCxlSts"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -95,6 +78,25 @@ import javax.xml.bind.annotation.*;
  * CollateralManagementCancellationStatusV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CollateralManagementISOLatestversion
+ * CollateralManagementISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CollateralManagementMaintenance20162017
+ * CollateralManagementMaintenance20162017}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CollMgmtCxlSts"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CollateralManagementLatestVersion
+ * CollateralManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code colr.006.001.04}</li>
@@ -114,16 +116,16 @@ import javax.xml.bind.annotation.*;
  * CollateralManagementCancellationStatusV03}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CollateralManagementCancellationStatusV04", propOrder = {"transactionIdentification", "reference", "obligation", "cancellationStatus", "supplementaryData"})
 public class CollateralManagementCancellationStatusV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId", required = true)
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as know by the instructing
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,10 +172,11 @@ public class CollateralManagementCancellationStatusV04 {
 			}
 		}
 	};
+	@XmlElement(name = "Ref", required = true)
 	protected Reference16 reference;
 	/**
-	 * Provides reference to the previous received message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,12 +221,11 @@ public class CollateralManagementCancellationStatusV04 {
 			}
 		}
 	};
+	@XmlElement(name = "Oblgtn", required = true)
 	protected Obligation4 obligation;
 	/**
-	 * Provides information like the identification of the party or parties
-	 * associated with the collateral agreement, the exposure type and the
-	 * valuation date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -270,10 +272,11 @@ public class CollateralManagementCancellationStatusV04 {
 			}
 		}
 	};
+	@XmlElement(name = "CxlSts", required = true)
 	protected CollateralCancellationStatus1 cancellationStatus;
 	/**
-	 * Provides status details of the collateral cancellation message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -320,11 +323,11 @@ public class CollateralManagementCancellationStatusV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -404,52 +407,52 @@ public class CollateralManagementCancellationStatusV04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public CollateralManagementCancellationStatusV04 setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Ref", required = true)
 	public Reference16 getReference() {
 		return reference;
 	}
 
-	public void setReference(Reference16 reference) {
-		this.reference = reference;
+	public CollateralManagementCancellationStatusV04 setReference(Reference16 reference) {
+		this.reference = Objects.requireNonNull(reference);
+		return this;
 	}
 
-	@XmlElement(name = "Oblgtn", required = true)
 	public Obligation4 getObligation() {
 		return obligation;
 	}
 
-	public void setObligation(Obligation4 obligation) {
-		this.obligation = obligation;
+	public CollateralManagementCancellationStatusV04 setObligation(Obligation4 obligation) {
+		this.obligation = Objects.requireNonNull(obligation);
+		return this;
 	}
 
-	@XmlElement(name = "CxlSts", required = true)
 	public CollateralCancellationStatus1 getCancellationStatus() {
 		return cancellationStatus;
 	}
 
-	public void setCancellationStatus(CollateralCancellationStatus1 cancellationStatus) {
-		this.cancellationStatus = cancellationStatus;
+	public CollateralManagementCancellationStatusV04 setCancellationStatus(CollateralCancellationStatus1 cancellationStatus) {
+		this.cancellationStatus = Objects.requireNonNull(cancellationStatus);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CollateralManagementCancellationStatusV04 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:colr.006.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:colr.006.001.04")
 	static public class Document {
 		@XmlElement(name = "CollMgmtCxlSts", required = true)
 		public CollateralManagementCancellationStatusV04 messageBody;

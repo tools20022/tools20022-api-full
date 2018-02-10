@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.VariationMarginTerm;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,16 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "VariationMargin1", propOrder = {"thresholdAmount", "thresholdType", "minimumTransferAmount", "roundingAmount", "roundingMethod"})
 public class VariationMargin1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ThrshldAmt", required = true)
 	protected ActiveCurrencyAndAmount thresholdAmount;
 	/**
-	 * Amount of unsecured exposure a counterparty will accept before issuing a
-	 * margin call in the base currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,7 +127,7 @@ public class VariationMargin1 {
 	public static final MMMessageAttribute mmThresholdAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VariationMarginTerm.mmThresholdAmount;
-			componentContext_lazy = () -> VariationMargin1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMargin1.mmObject();
 			isDerived = false;
 			xmlTag = "ThrshldAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +138,11 @@ public class VariationMargin1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ThrshldTp")
 	protected ThresholdType1Code thresholdType;
 	/**
-	 * Specifies if the threshold amount is secured or unsecured.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,7 +177,7 @@ public class VariationMargin1 {
 	public static final MMMessageAttribute mmThresholdType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VariationMarginTerm.mmThresholdType;
-			componentContext_lazy = () -> VariationMargin1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMargin1.mmObject();
 			isDerived = false;
 			xmlTag = "ThrshldTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,12 +188,11 @@ public class VariationMargin1 {
 			simpleType_lazy = () -> ThresholdType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MinTrfAmt", required = true)
 	protected ActiveCurrencyAndAmount minimumTransferAmount;
 	/**
-	 * Minimum amount to pay/receive as specified in the agreement in the base
-	 * currency (to avoid the need to transfer an inconveniently small amount of
-	 * variation margin).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -226,7 +228,7 @@ public class VariationMargin1 {
 	public static final MMMessageAttribute mmMinimumTransferAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmMinimumTransferAmount;
-			componentContext_lazy = () -> VariationMargin1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMargin1.mmObject();
 			isDerived = false;
 			xmlTag = "MinTrfAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,11 +239,11 @@ public class VariationMargin1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RndgAmt", required = true)
 	protected ActiveCurrencyAndAmount roundingAmount;
 	/**
-	 * Amount specified to avoid the need to transfer uneven amounts of
-	 * collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,7 +279,7 @@ public class VariationMargin1 {
 	public static final MMMessageAttribute mmRoundingAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmRoundingAmount;
-			componentContext_lazy = () -> VariationMargin1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMargin1.mmObject();
 			isDerived = false;
 			xmlTag = "RndgAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,12 +290,11 @@ public class VariationMargin1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RndgMtd", required = true)
 	protected RoundingMethod1Code roundingMethod;
 	/**
-	 * Defines how the rounding amount was applied in the calculation. For
-	 * example, should the amount of collateral required be rounded up, down, to
-	 * the closer integral multiple specified or not rounded.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -329,7 +330,7 @@ public class VariationMargin1 {
 	public static final MMMessageAttribute mmRoundingMethod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ExposureTerm.mmRoundingMethod;
-			componentContext_lazy = () -> VariationMargin1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VariationMargin1.mmObject();
 			isDerived = false;
 			xmlTag = "RndgMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -344,9 +345,10 @@ public class VariationMargin1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(VariationMargin1.mmThresholdAmount, VariationMargin1.mmThresholdType, VariationMargin1.mmMinimumTransferAmount, VariationMargin1.mmRoundingAmount, VariationMargin1.mmRoundingMethod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VariationMargin1.mmThresholdAmount, com.tools20022.repository.msg.VariationMargin1.mmThresholdType,
+						com.tools20022.repository.msg.VariationMargin1.mmMinimumTransferAmount, com.tools20022.repository.msg.VariationMargin1.mmRoundingAmount, com.tools20022.repository.msg.VariationMargin1.mmRoundingMethod);
 				trace_lazy = () -> VariationMarginTerm.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VariationMargin1";
 				definition = "Elements used to calculate the collateral margin call for the variation margin.";
@@ -355,48 +357,48 @@ public class VariationMargin1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ThrshldAmt", required = true)
 	public ActiveCurrencyAndAmount getThresholdAmount() {
 		return thresholdAmount;
 	}
 
-	public void setThresholdAmount(ActiveCurrencyAndAmount thresholdAmount) {
-		this.thresholdAmount = thresholdAmount;
+	public VariationMargin1 setThresholdAmount(ActiveCurrencyAndAmount thresholdAmount) {
+		this.thresholdAmount = Objects.requireNonNull(thresholdAmount);
+		return this;
 	}
 
-	@XmlElement(name = "ThrshldTp")
-	public ThresholdType1Code getThresholdType() {
-		return thresholdType;
+	public Optional<ThresholdType1Code> getThresholdType() {
+		return thresholdType == null ? Optional.empty() : Optional.of(thresholdType);
 	}
 
-	public void setThresholdType(ThresholdType1Code thresholdType) {
+	public VariationMargin1 setThresholdType(ThresholdType1Code thresholdType) {
 		this.thresholdType = thresholdType;
+		return this;
 	}
 
-	@XmlElement(name = "MinTrfAmt", required = true)
 	public ActiveCurrencyAndAmount getMinimumTransferAmount() {
 		return minimumTransferAmount;
 	}
 
-	public void setMinimumTransferAmount(ActiveCurrencyAndAmount minimumTransferAmount) {
-		this.minimumTransferAmount = minimumTransferAmount;
+	public VariationMargin1 setMinimumTransferAmount(ActiveCurrencyAndAmount minimumTransferAmount) {
+		this.minimumTransferAmount = Objects.requireNonNull(minimumTransferAmount);
+		return this;
 	}
 
-	@XmlElement(name = "RndgAmt", required = true)
 	public ActiveCurrencyAndAmount getRoundingAmount() {
 		return roundingAmount;
 	}
 
-	public void setRoundingAmount(ActiveCurrencyAndAmount roundingAmount) {
-		this.roundingAmount = roundingAmount;
+	public VariationMargin1 setRoundingAmount(ActiveCurrencyAndAmount roundingAmount) {
+		this.roundingAmount = Objects.requireNonNull(roundingAmount);
+		return this;
 	}
 
-	@XmlElement(name = "RndgMtd", required = true)
 	public RoundingMethod1Code getRoundingMethod() {
 		return roundingMethod;
 	}
 
-	public void setRoundingMethod(RoundingMethod1Code roundingMethod) {
-		this.roundingMethod = roundingMethod;
+	public VariationMargin1 setRoundingMethod(RoundingMethod1Code roundingMethod) {
+		this.roundingMethod = Objects.requireNonNull(roundingMethod);
+		return this;
 	}
 }

@@ -17,15 +17,18 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides information about pending balance and pending transactions."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PendingBalance2", propOrder = {"balance", "pendingTransactions"})
 public class PendingBalance2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Bal", required = true)
 	protected SignedQuantityFormat4 balance;
 	/**
-	 * Signed quantity of balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -93,6 +97,9 @@ public class PendingBalance2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Bal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93a:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -106,9 +113,10 @@ public class PendingBalance2 {
 	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
-			componentContext_lazy = () -> PendingBalance2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PendingBalance2.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Signed quantity of balance.";
@@ -118,11 +126,11 @@ public class PendingBalance2 {
 			type_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "PdgTxs")
 	protected List<com.tools20022.repository.msg.SettlementTypeAndIdentification5> pendingTransactions;
 	/**
-	 * Overall process covering the trade and settlement transactions of
-	 * financial instruments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -151,7 +159,7 @@ public class PendingBalance2 {
 	 */
 	public static final MMMessageAssociationEnd mmPendingTransactions = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PendingBalance2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PendingBalance2.mmObject();
 			isDerived = false;
 			xmlTag = "PdgTxs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,9 +174,9 @@ public class PendingBalance2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PendingBalance2.mmBalance, PendingBalance2.mmPendingTransactions);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PendingBalance2.mmBalance, com.tools20022.repository.msg.PendingBalance2.mmPendingTransactions);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingBalance2";
 				definition = "Provides information about pending balance and pending transactions.";
@@ -177,21 +185,21 @@ public class PendingBalance2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Bal", required = true)
 	public SignedQuantityFormat4 getBalance() {
 		return balance;
 	}
 
-	public void setBalance(com.tools20022.repository.msg.SignedQuantityFormat4 balance) {
-		this.balance = balance;
+	public PendingBalance2 setBalance(com.tools20022.repository.msg.SignedQuantityFormat4 balance) {
+		this.balance = Objects.requireNonNull(balance);
+		return this;
 	}
 
-	@XmlElement(name = "PdgTxs")
 	public List<SettlementTypeAndIdentification5> getPendingTransactions() {
-		return pendingTransactions;
+		return pendingTransactions == null ? pendingTransactions = new ArrayList<>() : pendingTransactions;
 	}
 
-	public void setPendingTransactions(List<com.tools20022.repository.msg.SettlementTypeAndIdentification5> pendingTransactions) {
-		this.pendingTransactions = pendingTransactions;
+	public PendingBalance2 setPendingTransactions(List<com.tools20022.repository.msg.SettlementTypeAndIdentification5> pendingTransactions) {
+		this.pendingTransactions = Objects.requireNonNull(pendingTransactions);
+		return this;
 	}
 }

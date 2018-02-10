@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -127,8 +129,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -145,15 +147,16 @@ import javax.xml.bind.annotation.XmlType;
  * AdditionalReference8}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AdditionalReference9", propOrder = {"reference", "referenceIssuer", "messageName"})
 public class AdditionalReference9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ref", required = true)
 	protected Max35Text reference;
 	/**
-	 * Reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,7 +194,7 @@ public class AdditionalReference9 {
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> AdditionalReference9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalReference9.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,10 +206,11 @@ public class AdditionalReference9 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RefIssr")
 	protected PartyIdentification113 referenceIssuer;
 	/**
-	 * Issuer of the reference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,7 +249,7 @@ public class AdditionalReference9 {
 	public static final MMMessageAttribute mmReferenceIssuer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> AdditionalReference9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalReference9.mmObject();
 			isDerived = false;
 			xmlTag = "RefIssr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,10 +261,11 @@ public class AdditionalReference9 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgNm")
 	protected Max35Text messageName;
 	/**
-	 * Name of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -292,7 +297,7 @@ public class AdditionalReference9 {
 	 */
 	public static final MMMessageAttribute mmMessageName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AdditionalReference9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalReference9.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -308,7 +313,8 @@ public class AdditionalReference9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AdditionalReference9.mmReference, AdditionalReference9.mmReferenceIssuer, AdditionalReference9.mmMessageName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference9.mmReference, com.tools20022.repository.msg.AdditionalReference9.mmReferenceIssuer,
+						com.tools20022.repository.msg.AdditionalReference9.mmMessageName);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SubscriptionBulkOrderConfirmationV04.mmPoolReference, RedemptionBulkOrderV04.mmPoolReference, SubscriptionBulkOrderCancellationRequestV04.mmPoolReference,
 						RedemptionOrderV04.mmPoolReference, SubscriptionOrderCancellationRequestV04.mmPoolReference, RedemptionBulkOrderConfirmationCancellationInstructionV02.mmPoolReference,
 						RedemptionBulkOrderConfirmationV04.mmPoolReference, RedemptionBulkOrderCancellationRequestV04.mmPoolReference, SwitchOrderConfirmationV04.mmPoolReference, SubscriptionOrderConfirmationV04.mmPoolReference,
@@ -316,7 +322,7 @@ public class AdditionalReference9 {
 						RedemptionOrderConfirmationCancellationInstructionV02.mmPoolReference, RedemptionOrderConfirmationV04.mmPoolReference, SubscriptionBulkOrderConfirmationCancellationInstructionV02.mmPoolReference,
 						RedemptionOrderCancellationRequestV04.mmPoolReference, SubscriptionBulkOrderV04.mmPoolReference, SwitchOrderConfirmationCancellationInstructionV02.mmPoolReference, SubscriptionOrderV04.mmPoolReference);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalReference9";
 				definition = "References a related message or provides another reference, such as a pool reference, linking a set of messages. The party which issued the related reference may be the Sender of the referenced message or a party other than the Sender.";
@@ -326,30 +332,30 @@ public class AdditionalReference9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ref", required = true)
 	public Max35Text getReference() {
 		return reference;
 	}
 
-	public void setReference(Max35Text reference) {
-		this.reference = reference;
+	public AdditionalReference9 setReference(Max35Text reference) {
+		this.reference = Objects.requireNonNull(reference);
+		return this;
 	}
 
-	@XmlElement(name = "RefIssr")
-	public PartyIdentification113 getReferenceIssuer() {
-		return referenceIssuer;
+	public Optional<PartyIdentification113> getReferenceIssuer() {
+		return referenceIssuer == null ? Optional.empty() : Optional.of(referenceIssuer);
 	}
 
-	public void setReferenceIssuer(com.tools20022.repository.msg.PartyIdentification113 referenceIssuer) {
+	public AdditionalReference9 setReferenceIssuer(com.tools20022.repository.msg.PartyIdentification113 referenceIssuer) {
 		this.referenceIssuer = referenceIssuer;
+		return this;
 	}
 
-	@XmlElement(name = "MsgNm")
-	public Max35Text getMessageName() {
-		return messageName;
+	public Optional<Max35Text> getMessageName() {
+		return messageName == null ? Optional.empty() : Optional.of(messageName);
 	}
 
-	public void setMessageName(Max35Text messageName) {
+	public AdditionalReference9 setMessageName(Max35Text messageName) {
 		this.messageName = messageName;
+		return this;
 	}
 }

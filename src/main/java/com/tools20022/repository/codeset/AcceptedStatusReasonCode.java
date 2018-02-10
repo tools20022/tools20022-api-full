@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AcceptedStatusReasonCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for an accepted status.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcceptedStatusReasonCode#mmSectorNotAllowed
- * AcceptedStatusReasonCode.mmSectorNotAllowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcceptedStatusReasonCode#SectorNotAllowed
+ * AcceptedStatusReasonCode.SectorNotAllowed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AcceptedStatusReasonCode#mmPlaceNotAllowed
- * AcceptedStatusReasonCode.mmPlaceNotAllowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AcceptedStatusReasonCode#PlaceNotAllowed
+ * AcceptedStatusReasonCode.PlaceNotAllowed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason for an accepted status."</li>
  * </ul>
  */
-public class AcceptedStatusReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AcceptedStatusReasonCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,12 +95,12 @@ public class AcceptedStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSectorNotAllowed = new MMCode() {
+	public static final AcceptedStatusReasonCode SectorNotAllowed = new AcceptedStatusReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SectorNotAllowed";
 			definition = "Status of the account modification instruction is accepted but modification of the account data will not be carried out for the sector code.";
-			owner_lazy = () -> AcceptedStatusReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AcceptedStatusReasonCode.mmObject();
 			codeName = "SECT";
 		}
 	};
@@ -122,27 +128,57 @@ public class AcceptedStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPlaceNotAllowed = new MMCode() {
+	public static final AcceptedStatusReasonCode PlaceNotAllowed = new AcceptedStatusReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceNotAllowed";
 			definition = "Status of the account modification instruction is accepted but modification of the account data will not be carried out for the place.";
-			owner_lazy = () -> AcceptedStatusReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AcceptedStatusReasonCode.mmObject();
 			codeName = "PLAC";
 		}
 	};
+	final static private LinkedHashMap<String, AcceptedStatusReasonCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AcceptedStatusReasonCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptedStatusReasonCode";
 				definition = "Specifies the reason for an accepted status.";
-				code_lazy = () -> Arrays.asList(AcceptedStatusReasonCode.mmSectorNotAllowed, AcceptedStatusReasonCode.mmPlaceNotAllowed);
 				derivation_lazy = () -> Arrays.asList(AcceptedStatusReason1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AcceptedStatusReasonCode.SectorNotAllowed, com.tools20022.repository.codeset.AcceptedStatusReasonCode.PlaceNotAllowed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SectorNotAllowed.getCodeName().get(), SectorNotAllowed);
+		codesByName.put(PlaceNotAllowed.getCodeName().get(), PlaceNotAllowed);
+	}
+
+	public static AcceptedStatusReasonCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AcceptedStatusReasonCode[] values() {
+		AcceptedStatusReasonCode[] values = new AcceptedStatusReasonCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AcceptedStatusReasonCode> {
+		@Override
+		public AcceptedStatusReasonCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AcceptedStatusReasonCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

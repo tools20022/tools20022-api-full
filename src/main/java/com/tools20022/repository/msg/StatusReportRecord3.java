@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReportingRecordStatus1Code;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides the per record status details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatusReportRecord3", propOrder = {"originalRecordIdentification", "status", "validationRule", "supplementaryData"})
 public class StatusReportRecord3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgnlRcrdId", required = true)
 	protected Max140Text originalRecordIdentification;
 	/**
-	 * Unique and unambiguous technical identification of the original data for
-	 * which the status is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +109,7 @@ public class StatusReportRecord3 {
 	 */
 	public static final MMMessageAttribute mmOriginalRecordIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatusReportRecord3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportRecord3.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlRcrdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +120,11 @@ public class StatusReportRecord3 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected ReportingRecordStatus1Code status;
 	/**
-	 * Defines status of the reported transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,7 +152,7 @@ public class StatusReportRecord3 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatusReportRecord3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportRecord3.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,10 +163,11 @@ public class StatusReportRecord3 {
 			simpleType_lazy = () -> ReportingRecordStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "VldtnRule")
 	protected List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule;
 	/**
-	 * Provides the details of the rule which could not be validated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -191,7 +195,7 @@ public class StatusReportRecord3 {
 	 */
 	public static final MMMessageAssociationEnd mmValidationRule = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusReportRecord3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportRecord3.mmObject();
 			isDerived = false;
 			xmlTag = "VldtnRule";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,11 +206,11 @@ public class StatusReportRecord3 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericValidationRuleIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -234,7 +238,7 @@ public class StatusReportRecord3 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusReportRecord3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportRecord3.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,8 +253,9 @@ public class StatusReportRecord3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatusReportRecord3.mmOriginalRecordIdentification, StatusReportRecord3.mmStatus, StatusReportRecord3.mmValidationRule, StatusReportRecord3.mmSupplementaryData);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportRecord3.mmOriginalRecordIdentification, com.tools20022.repository.msg.StatusReportRecord3.mmStatus,
+						com.tools20022.repository.msg.StatusReportRecord3.mmValidationRule, com.tools20022.repository.msg.StatusReportRecord3.mmSupplementaryData);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusReportRecord3";
 				definition = "Provides the per record status details.";
@@ -259,39 +264,39 @@ public class StatusReportRecord3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgnlRcrdId", required = true)
 	public Max140Text getOriginalRecordIdentification() {
 		return originalRecordIdentification;
 	}
 
-	public void setOriginalRecordIdentification(Max140Text originalRecordIdentification) {
-		this.originalRecordIdentification = originalRecordIdentification;
+	public StatusReportRecord3 setOriginalRecordIdentification(Max140Text originalRecordIdentification) {
+		this.originalRecordIdentification = Objects.requireNonNull(originalRecordIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public ReportingRecordStatus1Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(ReportingRecordStatus1Code status) {
-		this.status = status;
+	public StatusReportRecord3 setStatus(ReportingRecordStatus1Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "VldtnRule")
 	public List<GenericValidationRuleIdentification1> getValidationRule() {
-		return validationRule;
+		return validationRule == null ? validationRule = new ArrayList<>() : validationRule;
 	}
 
-	public void setValidationRule(List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule) {
-		this.validationRule = validationRule;
+	public StatusReportRecord3 setValidationRule(List<com.tools20022.repository.msg.GenericValidationRuleIdentification1> validationRule) {
+		this.validationRule = Objects.requireNonNull(validationRule);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public StatusReportRecord3 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 }

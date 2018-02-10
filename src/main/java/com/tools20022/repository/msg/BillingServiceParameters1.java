@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.ProductQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BillingServiceParameters1", propOrder = {"bankService", "volume"})
 public class BillingServiceParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BkSvc", required = true)
 	protected BillingServiceIdentification1 bankService;
 	/**
-	 * Specifies the details to fully identify the bank service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +127,7 @@ public class BillingServiceParameters1 {
 	public static final MMMessageAttribute mmBankService = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> CashAccountService.mmObject();
-			componentContext_lazy = () -> BillingServiceParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BillingServiceParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "BkSvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +139,11 @@ public class BillingServiceParameters1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.BillingServiceIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "Vol")
 	protected DecimalNumber volume;
 	/**
-	 * Count or number of items (volume) involved in the charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,7 +186,7 @@ public class BillingServiceParameters1 {
 	public static final MMMessageAttribute mmVolume = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProductQuantity.mmValue;
-			componentContext_lazy = () -> BillingServiceParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BillingServiceParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "Vol";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,9 +202,9 @@ public class BillingServiceParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BillingServiceParameters1.mmBankService, BillingServiceParameters1.mmVolume);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingServiceParameters1.mmBankService, com.tools20022.repository.msg.BillingServiceParameters1.mmVolume);
 				trace_lazy = () -> CashAccountService.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingServiceParameters1";
 				definition = "Specifies the detailed parameters a service to be billed.";
@@ -210,21 +214,21 @@ public class BillingServiceParameters1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BkSvc", required = true)
 	public BillingServiceIdentification1 getBankService() {
 		return bankService;
 	}
 
-	public void setBankService(com.tools20022.repository.msg.BillingServiceIdentification1 bankService) {
-		this.bankService = bankService;
+	public BillingServiceParameters1 setBankService(com.tools20022.repository.msg.BillingServiceIdentification1 bankService) {
+		this.bankService = Objects.requireNonNull(bankService);
+		return this;
 	}
 
-	@XmlElement(name = "Vol")
-	public DecimalNumber getVolume() {
-		return volume;
+	public Optional<DecimalNumber> getVolume() {
+		return volume == null ? Optional.empty() : Optional.of(volume);
 	}
 
-	public void setVolume(DecimalNumber volume) {
+	public BillingServiceParameters1 setVolume(DecimalNumber volume) {
 		this.volume = volume;
+		return this;
 	}
 }

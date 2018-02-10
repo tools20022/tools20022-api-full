@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.BillingStatementStatusCode;
+import com.tools20022.repository.codeset.BillingStatementStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines the status of the billing statement.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.BillingStatementStatusCode
- * BillingStatementStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingStatementStatus1Code#mmOriginal
- * BillingStatementStatus1Code.mmOriginal}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingStatementStatus1Code#Original
+ * BillingStatementStatus1Code.Original}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingStatementStatus1Code#mmReplace
- * BillingStatementStatus1Code.mmReplace}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingStatementStatus1Code#Replace
+ * BillingStatementStatus1Code.Replace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingStatementStatus1Code#mmTest
- * BillingStatementStatus1Code.mmTest}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingStatementStatus1Code#Test
+ * BillingStatementStatus1Code.Test}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.BillingStatementStatusCode
+ * BillingStatementStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the status of the billing statement."</li>
  * </ul>
  */
-public class BillingStatementStatus1Code extends BillingStatementStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BillingStatementStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class BillingStatementStatus1Code extends BillingStatementStatusCode {
 	 * name} = "Original"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOriginal = new MMCode() {
+	public static final BillingStatementStatus1Code Original = new BillingStatementStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Original";
-			owner_lazy = () -> BillingStatementStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BillingStatementStatus1Code.mmObject();
+			codeName = BillingStatementStatusCode.Original.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class BillingStatementStatus1Code extends BillingStatementStatusCode {
 	 * name} = "Replace"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReplace = new MMCode() {
+	public static final BillingStatementStatus1Code Replace = new BillingStatementStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replace";
-			owner_lazy = () -> BillingStatementStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BillingStatementStatus1Code.mmObject();
+			codeName = BillingStatementStatusCode.Replace.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class BillingStatementStatus1Code extends BillingStatementStatusCode {
 	 * name} = "Test"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTest = new MMCode() {
+	public static final BillingStatementStatus1Code Test = new BillingStatementStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Test";
-			owner_lazy = () -> BillingStatementStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BillingStatementStatus1Code.mmObject();
+			codeName = BillingStatementStatusCode.Test.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, BillingStatementStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BillingStatementStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ORGN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingStatementStatus1Code";
 				definition = "Defines the status of the billing statement.";
-				code_lazy = () -> Arrays.asList(BillingStatementStatus1Code.mmOriginal, BillingStatementStatus1Code.mmReplace, BillingStatementStatus1Code.mmTest);
 				trace_lazy = () -> BillingStatementStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BillingStatementStatus1Code.Original, com.tools20022.repository.codeset.BillingStatementStatus1Code.Replace,
+						com.tools20022.repository.codeset.BillingStatementStatus1Code.Test);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Original.getCodeName().get(), Original);
+		codesByName.put(Replace.getCodeName().get(), Replace);
+		codesByName.put(Test.getCodeName().get(), Test);
+	}
+
+	public static BillingStatementStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BillingStatementStatus1Code[] values() {
+		BillingStatementStatus1Code[] values = new BillingStatementStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BillingStatementStatus1Code> {
+		@Override
+		public BillingStatementStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BillingStatementStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -24,9 +24,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Contractual details related to an agreement between parties.
@@ -56,6 +55,22 @@ import java.util.List;
  * Agreement.mmJurisdiction}</li>
  * </ul>
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedAgreement
+ * DateTimePeriod.mmRelatedAgreement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Document#mmAgreement
+ * Document.mmAgreement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Jurisdiction#mmRelatedAgreement
+ * Jurisdiction.mmRelatedAgreement}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.CommercialTrade#mmAgreement
+ * CommercialTrade.mmAgreement}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -82,26 +97,10 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmRelatedAgreement
- * DateTimePeriod.mmRelatedAgreement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Document#mmAgreement
- * Document.mmAgreement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Jurisdiction#mmRelatedAgreement
- * Jurisdiction.mmRelatedAgreement}</li>
- * <li>{@linkplain com.tools20022.repository.entity.CommercialTrade#mmAgreement
- * CommercialTrade.mmAgreement}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -117,8 +116,8 @@ public class Agreement {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected ISODate dateSigned;
 	/**
-	 * Date on which the agreement was signed by all parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -243,8 +242,8 @@ public class Agreement {
 					InvestmentAccount46.mmAccountSignatureDateTime, InvestmentAccount47.mmAccountSignatureDateTime, RegisteredContractAmendment1.mmStartDate, InvestmentAccount49.mmAccountSignatureDateTime,
 					InvestmentAccount51.mmAccountSignatureDateTime, InvestmentAccount50.mmAccountSignatureDateTime, Agreement4.mmAgreementDate, InvestmentAccount61.mmAccountSignatureDateTime, InvestmentAccount63.mmAccountSignatureDateTime,
 					InvestmentAccount62.mmAccountSignatureDateTime, GeneralInformation5.mmDefinitionsYear, AgreementConditions1.mmDate, MandateRelatedInformation11.mmDateOfSignature);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DateSigned";
 			definition = "Date on which the agreement was signed by all parties.";
@@ -263,9 +262,8 @@ public class Agreement {
 	};
 	protected Max350Text description;
 	/**
-	 * Full name of an agreement, annexes and amendments in place between the
-	 * principals.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -341,8 +339,8 @@ public class Agreement {
 			derivation_lazy = () -> Arrays.asList(Agreement3.mmDescription, ContractDocument1.mmReference, Agreement2.mmAgreementDetails, Agreement1.mmDescription, Mandate7.mmReason, AmendmentInformationDetails10.mmOriginalReason,
 					Mandate6.mmReason, Mandate5.mmReason, MandateRelatedInformation10.mmReason, SupportingDocumentRequestOrLetter1.mmDescription, Agreement4.mmAgreementDetails, Mandate10.mmReason, Mandate9.mmReason,
 					MandateRelatedInformation11.mmReason, Mandate11.mmReason, Mandate8.mmReason, AmendmentInformationDetails11.mmOriginalReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Description";
 			definition = "Full name of an agreement, annexes and amendments in place between the principals.";
@@ -361,8 +359,8 @@ public class Agreement {
 	};
 	protected Max35Text version;
 	/**
-	 * Version number of a contract or of a legal agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -398,8 +396,8 @@ public class Agreement {
 	public static final MMBusinessAttribute mmVersion = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ContractDocument1.mmVersion, AgreementConditions1.mmVersion);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Version";
 			definition = "Version number of a contract or of a  legal agreement.";
@@ -418,8 +416,8 @@ public class Agreement {
 	};
 	protected List<com.tools20022.repository.entity.DateTimePeriod> validityPeriod;
 	/**
-	 * Period during which the agreement is valid
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -469,8 +467,8 @@ public class Agreement {
 	public static final MMBusinessAssociationEnd mmValidityPeriod = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(MandateOccurrences1.mmDuration, MandateOccurrences2.mmDuration, MandateOccurrences3.mmDuration, MandateOccurrences4.mmDuration);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Period during which the agreement is valid";
@@ -482,8 +480,8 @@ public class Agreement {
 	};
 	protected Document document;
 	/**
-	 * Document which materialises the agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -580,8 +578,8 @@ public class Agreement {
 					Mandate2.mmReferredDocument, Mandate4.mmReferredDocument, InvoiceRequestInformation1.mmInvoiceGeneralInformation, Mandate7.mmReferredDocument, Mandate6.mmReferredDocument, Mandate5.mmReferredDocument,
 					FinancingAgreementItem1.mmRelatedGuaranteeLetter, FinancingAgreementItem1.mmAssociatedDocument, SupportingDocument1.mmEntry, RegisteredContractAmendment1.mmDocument, Mandate10.mmReferredDocument,
 					Mandate9.mmReferredDocument, Mandate11.mmReferredDocument, Mandate8.mmReferredDocument);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Document";
 			definition = "Document which materialises the agreement.";
@@ -594,10 +592,8 @@ public class Agreement {
 	};
 	protected CommercialTrade trade;
 	/**
-	 * Specifies the type of trade that is the subject of an agreement. The
-	 * agreement contains the clauses that will govern each trade between the
-	 * signing parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -631,8 +627,8 @@ public class Agreement {
 	 */
 	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trade";
 			definition = "Specifies the type of trade that is the subject of an agreement. The agreement contains the clauses that will govern each trade between the signing parties.";
@@ -645,8 +641,8 @@ public class Agreement {
 	};
 	protected Jurisdiction jurisdiction;
 	/**
-	 * Jurisdiction where an agreement applies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -678,8 +674,8 @@ public class Agreement {
 	 */
 	public static final MMBusinessAssociationEnd mmJurisdiction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Jurisdiction";
 			definition = "Jurisdiction where an agreement applies.";
@@ -694,7 +690,7 @@ public class Agreement {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Agreement";
 				definition = "Contractual details related to an agreement between parties.";
@@ -719,55 +715,62 @@ public class Agreement {
 		return dateSigned;
 	}
 
-	public void setDateSigned(ISODate dateSigned) {
-		this.dateSigned = dateSigned;
+	public Agreement setDateSigned(ISODate dateSigned) {
+		this.dateSigned = Objects.requireNonNull(dateSigned);
+		return this;
 	}
 
 	public Max350Text getDescription() {
 		return description;
 	}
 
-	public void setDescription(Max350Text description) {
-		this.description = description;
+	public Agreement setDescription(Max350Text description) {
+		this.description = Objects.requireNonNull(description);
+		return this;
 	}
 
 	public Max35Text getVersion() {
 		return version;
 	}
 
-	public void setVersion(Max35Text version) {
-		this.version = version;
+	public Agreement setVersion(Max35Text version) {
+		this.version = Objects.requireNonNull(version);
+		return this;
 	}
 
 	public List<DateTimePeriod> getValidityPeriod() {
-		return validityPeriod;
+		return validityPeriod == null ? validityPeriod = new ArrayList<>() : validityPeriod;
 	}
 
-	public void setValidityPeriod(List<com.tools20022.repository.entity.DateTimePeriod> validityPeriod) {
-		this.validityPeriod = validityPeriod;
+	public Agreement setValidityPeriod(List<com.tools20022.repository.entity.DateTimePeriod> validityPeriod) {
+		this.validityPeriod = Objects.requireNonNull(validityPeriod);
+		return this;
 	}
 
 	public Document getDocument() {
 		return document;
 	}
 
-	public void setDocument(com.tools20022.repository.entity.Document document) {
-		this.document = document;
+	public Agreement setDocument(com.tools20022.repository.entity.Document document) {
+		this.document = Objects.requireNonNull(document);
+		return this;
 	}
 
 	public CommercialTrade getTrade() {
 		return trade;
 	}
 
-	public void setTrade(com.tools20022.repository.entity.CommercialTrade trade) {
-		this.trade = trade;
+	public Agreement setTrade(com.tools20022.repository.entity.CommercialTrade trade) {
+		this.trade = Objects.requireNonNull(trade);
+		return this;
 	}
 
-	public Jurisdiction getJurisdiction() {
-		return jurisdiction;
+	public Optional<Jurisdiction> getJurisdiction() {
+		return jurisdiction == null ? Optional.empty() : Optional.of(jurisdiction);
 	}
 
-	public void setJurisdiction(com.tools20022.repository.entity.Jurisdiction jurisdiction) {
+	public Agreement setJurisdiction(com.tools20022.repository.entity.Jurisdiction jurisdiction) {
 		this.jurisdiction = jurisdiction;
+		return this;
 	}
 }

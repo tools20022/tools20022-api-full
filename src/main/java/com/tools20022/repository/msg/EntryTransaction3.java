@@ -29,9 +29,8 @@ import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.Max500Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -119,8 +118,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -138,17 +137,18 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EntryTransaction3", propOrder = {"references", "amount", "creditDebitIndicator", "amountDetails", "availability", "bankTransactionCode", "charges", "interest", "relatedParties", "relatedAgents", "purpose",
 		"relatedRemittanceInformation", "remittanceInformation", "relatedDates", "relatedPrice", "relatedQuantities", "financialInstrumentIdentification", "tax", "returnInformation", "corporateAction", "safekeepingAccount", "cashDeposit",
 		"cardTransaction", "additionalTransactionInformation"})
 public class EntryTransaction3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Refs")
 	protected TransactionReferences3 references;
 	/**
-	 * Provides the identification of the underlying transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -181,7 +181,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmReferences = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmIdentification;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "Refs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -193,10 +193,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> com.tools20022.repository.msg.TransactionReferences3.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount amount;
 	/**
-	 * Amount of money in the cash transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -230,7 +231,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,10 +242,11 @@ public class EntryTransaction3 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd", required = true)
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates whether the transaction is a credit or a debit transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -279,7 +281,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmCreditDebitIndicator;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -290,15 +292,11 @@ public class EntryTransaction3 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtDtls")
 	protected AmountAndCurrencyExchange3 amountDetails;
 	/**
-	 * Provides detailed information on the original amount.
 	 * 
-	 * Usage: This component (on transaction level) should be used in case
-	 * booking is for a single transaction and the original amount is different
-	 * from the entry amount. It can also be used in case individual original
-	 * amounts are provided in case of a batch or aggregate booking.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -332,7 +330,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmAmountDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashEntry.mmObject();
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "AmtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -344,17 +342,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndCurrencyExchange3.mmObject();
 		}
 	};
+	@XmlElement(name = "Avlbty")
 	protected List<com.tools20022.repository.msg.CashBalanceAvailability2> availability;
 	/**
-	 * Indicates when the booked amount of money will become available, that is
-	 * can be accessed and starts generating interest.
 	 * 
-	 * Usage: This type of information is used in the US and is linked to
-	 * particular instruments such as cheques. Example: When a cheque is
-	 * deposited, it will be booked on the deposit day, but the amount of money
-	 * will only be accessible as of the indicated availability day (according
-	 * to national banking regulations).
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -389,7 +381,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmAvailability = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAvailability;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "Avlbty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -400,11 +392,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailability2.mmObject();
 		}
 	};
+	@XmlElement(name = "BkTxCd")
 	protected BankTransactionCodeStructure4 bankTransactionCode;
 	/**
-	 * Set of elements used to fully identify the type of underlying transaction
-	 * resulting in an entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -439,7 +431,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmBankTransactionCode = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmBankTransactionCode;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "BkTxCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -451,16 +443,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure4.mmObject();
 		}
 	};
+	@XmlElement(name = "Chrgs")
 	protected List<com.tools20022.repository.msg.Charges3> charges;
 	/**
-	 * Provides information on the charges included in the entry amount.
 	 * 
-	 * Usage: This component (on transaction level) can be used in case the
-	 * booking is for a single transaction, and charges are included in the
-	 * entry amount. It can also be used in case individual charge amounts are
-	 * applied to individual transactions in case of a batch or aggregate amount
-	 * booking.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -493,7 +480,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmCharges = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCharges;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "Chrgs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -504,16 +491,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> com.tools20022.repository.msg.Charges3.mmObject();
 		}
 	};
+	@XmlElement(name = "Intrst")
 	protected List<com.tools20022.repository.msg.TransactionInterest3> interest;
 	/**
-	 * Provides details of the interest amount included in the entry amount.
 	 * 
-	 * Usage: This component (on transaction level) can be used if the booking
-	 * is for a single transaction, and interest amount is included in the entry
-	 * amount. It can also be used if individual interest amounts are applied to
-	 * individual transactions in the case of a batch or aggregate amount
-	 * booking.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -547,7 +529,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "Intrst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -558,11 +540,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> com.tools20022.repository.msg.TransactionInterest3.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdPties")
 	protected TransactionParties3 relatedParties;
 	/**
-	 * Set of elements used to identify the parties related to the underlying
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -596,7 +578,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmRelatedParties = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPartyRole;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -608,11 +590,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> com.tools20022.repository.msg.TransactionParties3.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdAgts")
 	protected TransactionAgents3 relatedAgents;
 	/**
-	 * Set of elements used to identify the agents related to the underlying
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -646,7 +628,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmRelatedAgents = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPartyRole;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "RltdAgts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -658,14 +640,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> com.tools20022.repository.msg.TransactionAgents3.mmObject();
 		}
 	};
+	@XmlElement(name = "Purp")
 	protected Purpose2Choice purpose;
 	/**
-	 * Underlying reason for the payment transaction. Usage: Purpose is used by
-	 * the end-customers, that is initiating party, (ultimate) debtor,
-	 * (ultimate) creditor to provide information concerning the nature of the
-	 * payment. Purpose is a content element, which is not used for processing
-	 * by any of the agents involved in the payment chain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -699,7 +678,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmPurpose = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPurpose;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "Purp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -711,11 +690,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> Purpose2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdRmtInf")
 	protected List<com.tools20022.repository.msg.RemittanceLocation2> relatedRemittanceInformation;
 	/**
-	 * Provides information related to the handling of the remittance
-	 * information by any of the agents in the transaction processing chain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -749,7 +728,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmRelatedRemittanceInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Document.mmPlaceOfStorage;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRmtInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -761,12 +740,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> com.tools20022.repository.msg.RemittanceLocation2.mmObject();
 		}
 	};
+	@XmlElement(name = "RmtInf")
 	protected RemittanceInformation7 remittanceInformation;
 	/**
-	 * Structured information that enables the matching, that is reconciliation,
-	 * of a payment with the items that the payment is intended to settle, such
-	 * as commercial invoices in an account receivable system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -800,7 +778,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmRemittanceInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAssociatedDocument;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "RmtInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -812,11 +790,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> com.tools20022.repository.msg.RemittanceInformation7.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdDts")
 	protected TransactionDates2 relatedDates;
 	/**
-	 * Set of elements used to identify the dates related to the underlying
-	 * transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -850,7 +828,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmRelatedDates = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentExecution;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "RltdDts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -862,11 +840,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> com.tools20022.repository.msg.TransactionDates2.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdPric")
 	protected TransactionPrice3Choice relatedPrice;
 	/**
-	 * Set of elements used to identify the price information related to the
-	 * underlying transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -901,7 +879,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmRelatedPrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmDealPrice;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "RltdPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -913,11 +891,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> TransactionPrice3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RltdQties")
 	protected List<TransactionQuantities2Choice> relatedQuantities;
 	/**
-	 * Set of elements used to identify the related quantities, such as
-	 * securities, in the underlying transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -952,7 +930,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmRelatedQuantities = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesEntry.mmFinancialInstrumentQuantity;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "RltdQties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -963,11 +941,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> TransactionQuantities2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmId")
 	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
-	 * Identification of a security, as assigned under a formal or proprietary
-	 * identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1002,7 +980,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1014,10 +992,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	@XmlElement(name = "Tax")
 	protected TaxInformation3 tax;
 	/**
-	 * Provides details on the tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1049,7 +1028,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmTax = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmTaxOnPayment;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "Tax";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1061,10 +1040,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> com.tools20022.repository.msg.TaxInformation3.mmObject();
 		}
 	};
+	@XmlElement(name = "RtrInf")
 	protected PaymentReturnReason2 returnInformation;
 	/**
-	 * Provides the return information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1096,7 +1076,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmReturnInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentStatus;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "RtrInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1108,10 +1088,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentReturnReason2.mmObject();
 		}
 	};
+	@XmlElement(name = "CorpActn")
 	protected CorporateAction9 corporateAction;
 	/**
-	 * Set of elements used to identify the underlying corporate action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1144,7 +1125,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmCorporateAction = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmCorporateEvent;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1156,14 +1137,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> com.tools20022.repository.msg.CorporateAction9.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgAcct")
 	protected SecuritiesAccount13 safekeepingAccount;
 	/**
-	 * Safekeeping or investment account. A safekeeping account is an account on
-	 * which a securities entry is made. An investment account is an account
-	 * between an investor(s) and a fund manager or a fund. The account can
-	 * contain holdings in any investment fund or investment fund class managed
-	 * (or distributed) by the fund manager, within the same fund family.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1197,7 +1175,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1209,11 +1187,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	@XmlElement(name = "CshDpst")
 	protected List<com.tools20022.repository.msg.CashDeposit1> cashDeposit;
 	/**
-	 * Provides the details of a cash deposit for an amount of money in cash
-	 * notes and/or coins.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1246,7 +1224,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAssociationEnd mmCashDeposit = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashDeposit.mmObject();
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "CshDpst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1257,12 +1235,11 @@ public class EntryTransaction3 {
 			type_lazy = () -> com.tools20022.repository.msg.CashDeposit1.mmObject();
 		}
 	};
+	@XmlElement(name = "CardTx")
 	protected CardTransaction1 cardTransaction;
 	/**
-	 * Provides the data related to the card (number, scheme), terminal (number,
-	 * identification) and transactional data used to uniquely identify a card
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1297,7 +1274,7 @@ public class EntryTransaction3 {
 	public static final MMMessageAttribute mmCardTransaction = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "CardTx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1308,10 +1285,11 @@ public class EntryTransaction3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.CardTransaction1.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlTxInf")
 	protected Max500Text additionalTransactionInformation;
 	/**
-	 * Further details of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1338,7 +1316,7 @@ public class EntryTransaction3 {
 	 */
 	public static final MMMessageAttribute mmAdditionalTransactionInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EntryTransaction3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntryTransaction3.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlTxInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1353,13 +1331,17 @@ public class EntryTransaction3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EntryTransaction3.mmReferences, EntryTransaction3.mmAmount, EntryTransaction3.mmCreditDebitIndicator, EntryTransaction3.mmAmountDetails, EntryTransaction3.mmAvailability,
-						EntryTransaction3.mmBankTransactionCode, EntryTransaction3.mmCharges, EntryTransaction3.mmInterest, EntryTransaction3.mmRelatedParties, EntryTransaction3.mmRelatedAgents, EntryTransaction3.mmPurpose,
-						EntryTransaction3.mmRelatedRemittanceInformation, EntryTransaction3.mmRemittanceInformation, EntryTransaction3.mmRelatedDates, EntryTransaction3.mmRelatedPrice, EntryTransaction3.mmRelatedQuantities,
-						EntryTransaction3.mmFinancialInstrumentIdentification, EntryTransaction3.mmTax, EntryTransaction3.mmReturnInformation, EntryTransaction3.mmCorporateAction, EntryTransaction3.mmSafekeepingAccount,
-						EntryTransaction3.mmCashDeposit, EntryTransaction3.mmCardTransaction, EntryTransaction3.mmAdditionalTransactionInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntryTransaction3.mmReferences, com.tools20022.repository.msg.EntryTransaction3.mmAmount,
+						com.tools20022.repository.msg.EntryTransaction3.mmCreditDebitIndicator, com.tools20022.repository.msg.EntryTransaction3.mmAmountDetails, com.tools20022.repository.msg.EntryTransaction3.mmAvailability,
+						com.tools20022.repository.msg.EntryTransaction3.mmBankTransactionCode, com.tools20022.repository.msg.EntryTransaction3.mmCharges, com.tools20022.repository.msg.EntryTransaction3.mmInterest,
+						com.tools20022.repository.msg.EntryTransaction3.mmRelatedParties, com.tools20022.repository.msg.EntryTransaction3.mmRelatedAgents, com.tools20022.repository.msg.EntryTransaction3.mmPurpose,
+						com.tools20022.repository.msg.EntryTransaction3.mmRelatedRemittanceInformation, com.tools20022.repository.msg.EntryTransaction3.mmRemittanceInformation,
+						com.tools20022.repository.msg.EntryTransaction3.mmRelatedDates, com.tools20022.repository.msg.EntryTransaction3.mmRelatedPrice, com.tools20022.repository.msg.EntryTransaction3.mmRelatedQuantities,
+						com.tools20022.repository.msg.EntryTransaction3.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.EntryTransaction3.mmTax, com.tools20022.repository.msg.EntryTransaction3.mmReturnInformation,
+						com.tools20022.repository.msg.EntryTransaction3.mmCorporateAction, com.tools20022.repository.msg.EntryTransaction3.mmSafekeepingAccount, com.tools20022.repository.msg.EntryTransaction3.mmCashDeposit,
+						com.tools20022.repository.msg.EntryTransaction3.mmCardTransaction, com.tools20022.repository.msg.EntryTransaction3.mmAdditionalTransactionInformation);
 				trace_lazy = () -> Entry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EntryTransaction3";
 				definition = "Identifies the underlying transaction.";
@@ -1369,219 +1351,219 @@ public class EntryTransaction3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Refs")
-	public TransactionReferences3 getReferences() {
-		return references;
+	public Optional<TransactionReferences3> getReferences() {
+		return references == null ? Optional.empty() : Optional.of(references);
 	}
 
-	public void setReferences(com.tools20022.repository.msg.TransactionReferences3 references) {
+	public EntryTransaction3 setReferences(com.tools20022.repository.msg.TransactionReferences3 references) {
 		this.references = references;
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
-		this.amount = amount;
+	public EntryTransaction3 setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
-		this.creditDebitIndicator = creditDebitIndicator;
+	public EntryTransaction3 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = Objects.requireNonNull(creditDebitIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "AmtDtls")
-	public AmountAndCurrencyExchange3 getAmountDetails() {
-		return amountDetails;
+	public Optional<AmountAndCurrencyExchange3> getAmountDetails() {
+		return amountDetails == null ? Optional.empty() : Optional.of(amountDetails);
 	}
 
-	public void setAmountDetails(com.tools20022.repository.msg.AmountAndCurrencyExchange3 amountDetails) {
+	public EntryTransaction3 setAmountDetails(com.tools20022.repository.msg.AmountAndCurrencyExchange3 amountDetails) {
 		this.amountDetails = amountDetails;
+		return this;
 	}
 
-	@XmlElement(name = "Avlbty")
 	public List<CashBalanceAvailability2> getAvailability() {
-		return availability;
+		return availability == null ? availability = new ArrayList<>() : availability;
 	}
 
-	public void setAvailability(List<com.tools20022.repository.msg.CashBalanceAvailability2> availability) {
-		this.availability = availability;
+	public EntryTransaction3 setAvailability(List<com.tools20022.repository.msg.CashBalanceAvailability2> availability) {
+		this.availability = Objects.requireNonNull(availability);
+		return this;
 	}
 
-	@XmlElement(name = "BkTxCd")
-	public BankTransactionCodeStructure4 getBankTransactionCode() {
-		return bankTransactionCode;
+	public Optional<BankTransactionCodeStructure4> getBankTransactionCode() {
+		return bankTransactionCode == null ? Optional.empty() : Optional.of(bankTransactionCode);
 	}
 
-	public void setBankTransactionCode(com.tools20022.repository.msg.BankTransactionCodeStructure4 bankTransactionCode) {
+	public EntryTransaction3 setBankTransactionCode(com.tools20022.repository.msg.BankTransactionCodeStructure4 bankTransactionCode) {
 		this.bankTransactionCode = bankTransactionCode;
+		return this;
 	}
 
-	@XmlElement(name = "Chrgs")
 	public List<Charges3> getCharges() {
-		return charges;
+		return charges == null ? charges = new ArrayList<>() : charges;
 	}
 
-	public void setCharges(List<com.tools20022.repository.msg.Charges3> charges) {
-		this.charges = charges;
+	public EntryTransaction3 setCharges(List<com.tools20022.repository.msg.Charges3> charges) {
+		this.charges = Objects.requireNonNull(charges);
+		return this;
 	}
 
-	@XmlElement(name = "Intrst")
 	public List<TransactionInterest3> getInterest() {
-		return interest;
+		return interest == null ? interest = new ArrayList<>() : interest;
 	}
 
-	public void setInterest(List<com.tools20022.repository.msg.TransactionInterest3> interest) {
-		this.interest = interest;
+	public EntryTransaction3 setInterest(List<com.tools20022.repository.msg.TransactionInterest3> interest) {
+		this.interest = Objects.requireNonNull(interest);
+		return this;
 	}
 
-	@XmlElement(name = "RltdPties")
-	public TransactionParties3 getRelatedParties() {
-		return relatedParties;
+	public Optional<TransactionParties3> getRelatedParties() {
+		return relatedParties == null ? Optional.empty() : Optional.of(relatedParties);
 	}
 
-	public void setRelatedParties(com.tools20022.repository.msg.TransactionParties3 relatedParties) {
+	public EntryTransaction3 setRelatedParties(com.tools20022.repository.msg.TransactionParties3 relatedParties) {
 		this.relatedParties = relatedParties;
+		return this;
 	}
 
-	@XmlElement(name = "RltdAgts")
-	public TransactionAgents3 getRelatedAgents() {
-		return relatedAgents;
+	public Optional<TransactionAgents3> getRelatedAgents() {
+		return relatedAgents == null ? Optional.empty() : Optional.of(relatedAgents);
 	}
 
-	public void setRelatedAgents(com.tools20022.repository.msg.TransactionAgents3 relatedAgents) {
+	public EntryTransaction3 setRelatedAgents(com.tools20022.repository.msg.TransactionAgents3 relatedAgents) {
 		this.relatedAgents = relatedAgents;
+		return this;
 	}
 
-	@XmlElement(name = "Purp")
-	public Purpose2Choice getPurpose() {
-		return purpose;
+	public Optional<Purpose2Choice> getPurpose() {
+		return purpose == null ? Optional.empty() : Optional.of(purpose);
 	}
 
-	public void setPurpose(Purpose2Choice purpose) {
+	public EntryTransaction3 setPurpose(Purpose2Choice purpose) {
 		this.purpose = purpose;
+		return this;
 	}
 
-	@XmlElement(name = "RltdRmtInf")
 	public List<RemittanceLocation2> getRelatedRemittanceInformation() {
-		return relatedRemittanceInformation;
+		return relatedRemittanceInformation == null ? relatedRemittanceInformation = new ArrayList<>() : relatedRemittanceInformation;
 	}
 
-	public void setRelatedRemittanceInformation(List<com.tools20022.repository.msg.RemittanceLocation2> relatedRemittanceInformation) {
-		this.relatedRemittanceInformation = relatedRemittanceInformation;
+	public EntryTransaction3 setRelatedRemittanceInformation(List<com.tools20022.repository.msg.RemittanceLocation2> relatedRemittanceInformation) {
+		this.relatedRemittanceInformation = Objects.requireNonNull(relatedRemittanceInformation);
+		return this;
 	}
 
-	@XmlElement(name = "RmtInf")
-	public RemittanceInformation7 getRemittanceInformation() {
-		return remittanceInformation;
+	public Optional<RemittanceInformation7> getRemittanceInformation() {
+		return remittanceInformation == null ? Optional.empty() : Optional.of(remittanceInformation);
 	}
 
-	public void setRemittanceInformation(com.tools20022.repository.msg.RemittanceInformation7 remittanceInformation) {
+	public EntryTransaction3 setRemittanceInformation(com.tools20022.repository.msg.RemittanceInformation7 remittanceInformation) {
 		this.remittanceInformation = remittanceInformation;
+		return this;
 	}
 
-	@XmlElement(name = "RltdDts")
-	public TransactionDates2 getRelatedDates() {
-		return relatedDates;
+	public Optional<TransactionDates2> getRelatedDates() {
+		return relatedDates == null ? Optional.empty() : Optional.of(relatedDates);
 	}
 
-	public void setRelatedDates(com.tools20022.repository.msg.TransactionDates2 relatedDates) {
+	public EntryTransaction3 setRelatedDates(com.tools20022.repository.msg.TransactionDates2 relatedDates) {
 		this.relatedDates = relatedDates;
+		return this;
 	}
 
-	@XmlElement(name = "RltdPric")
-	public TransactionPrice3Choice getRelatedPrice() {
-		return relatedPrice;
+	public Optional<TransactionPrice3Choice> getRelatedPrice() {
+		return relatedPrice == null ? Optional.empty() : Optional.of(relatedPrice);
 	}
 
-	public void setRelatedPrice(TransactionPrice3Choice relatedPrice) {
+	public EntryTransaction3 setRelatedPrice(TransactionPrice3Choice relatedPrice) {
 		this.relatedPrice = relatedPrice;
+		return this;
 	}
 
-	@XmlElement(name = "RltdQties")
 	public List<TransactionQuantities2Choice> getRelatedQuantities() {
-		return relatedQuantities;
+		return relatedQuantities == null ? relatedQuantities = new ArrayList<>() : relatedQuantities;
 	}
 
-	public void setRelatedQuantities(List<TransactionQuantities2Choice> relatedQuantities) {
-		this.relatedQuantities = relatedQuantities;
+	public EntryTransaction3 setRelatedQuantities(List<TransactionQuantities2Choice> relatedQuantities) {
+		this.relatedQuantities = Objects.requireNonNull(relatedQuantities);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId")
-	public SecurityIdentification14 getFinancialInstrumentIdentification() {
-		return financialInstrumentIdentification;
+	public Optional<SecurityIdentification14> getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification == null ? Optional.empty() : Optional.of(financialInstrumentIdentification);
 	}
 
-	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+	public EntryTransaction3 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Tax")
-	public TaxInformation3 getTax() {
-		return tax;
+	public Optional<TaxInformation3> getTax() {
+		return tax == null ? Optional.empty() : Optional.of(tax);
 	}
 
-	public void setTax(com.tools20022.repository.msg.TaxInformation3 tax) {
+	public EntryTransaction3 setTax(com.tools20022.repository.msg.TaxInformation3 tax) {
 		this.tax = tax;
+		return this;
 	}
 
-	@XmlElement(name = "RtrInf")
-	public PaymentReturnReason2 getReturnInformation() {
-		return returnInformation;
+	public Optional<PaymentReturnReason2> getReturnInformation() {
+		return returnInformation == null ? Optional.empty() : Optional.of(returnInformation);
 	}
 
-	public void setReturnInformation(com.tools20022.repository.msg.PaymentReturnReason2 returnInformation) {
+	public EntryTransaction3 setReturnInformation(com.tools20022.repository.msg.PaymentReturnReason2 returnInformation) {
 		this.returnInformation = returnInformation;
+		return this;
 	}
 
-	@XmlElement(name = "CorpActn")
-	public CorporateAction9 getCorporateAction() {
-		return corporateAction;
+	public Optional<CorporateAction9> getCorporateAction() {
+		return corporateAction == null ? Optional.empty() : Optional.of(corporateAction);
 	}
 
-	public void setCorporateAction(com.tools20022.repository.msg.CorporateAction9 corporateAction) {
+	public EntryTransaction3 setCorporateAction(com.tools20022.repository.msg.CorporateAction9 corporateAction) {
 		this.corporateAction = corporateAction;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct")
-	public SecuritiesAccount13 getSafekeepingAccount() {
-		return safekeepingAccount;
+	public Optional<SecuritiesAccount13> getSafekeepingAccount() {
+		return safekeepingAccount == null ? Optional.empty() : Optional.of(safekeepingAccount);
 	}
 
-	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
+	public EntryTransaction3 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount13 safekeepingAccount) {
 		this.safekeepingAccount = safekeepingAccount;
+		return this;
 	}
 
-	@XmlElement(name = "CshDpst")
 	public List<CashDeposit1> getCashDeposit() {
-		return cashDeposit;
+		return cashDeposit == null ? cashDeposit = new ArrayList<>() : cashDeposit;
 	}
 
-	public void setCashDeposit(List<com.tools20022.repository.msg.CashDeposit1> cashDeposit) {
-		this.cashDeposit = cashDeposit;
+	public EntryTransaction3 setCashDeposit(List<com.tools20022.repository.msg.CashDeposit1> cashDeposit) {
+		this.cashDeposit = Objects.requireNonNull(cashDeposit);
+		return this;
 	}
 
-	@XmlElement(name = "CardTx")
-	public CardTransaction1 getCardTransaction() {
-		return cardTransaction;
+	public Optional<CardTransaction1> getCardTransaction() {
+		return cardTransaction == null ? Optional.empty() : Optional.of(cardTransaction);
 	}
 
-	public void setCardTransaction(com.tools20022.repository.msg.CardTransaction1 cardTransaction) {
+	public EntryTransaction3 setCardTransaction(com.tools20022.repository.msg.CardTransaction1 cardTransaction) {
 		this.cardTransaction = cardTransaction;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlTxInf")
-	public Max500Text getAdditionalTransactionInformation() {
-		return additionalTransactionInformation;
+	public Optional<Max500Text> getAdditionalTransactionInformation() {
+		return additionalTransactionInformation == null ? Optional.empty() : Optional.of(additionalTransactionInformation);
 	}
 
-	public void setAdditionalTransactionInformation(Max500Text additionalTransactionInformation) {
+	public EntryTransaction3 setAdditionalTransactionInformation(Max500Text additionalTransactionInformation) {
 		this.additionalTransactionInformation = additionalTransactionInformation;
+		return this;
 	}
 }

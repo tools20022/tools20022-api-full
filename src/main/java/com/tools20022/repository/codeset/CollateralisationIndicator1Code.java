@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CollateralisationIndicatorCode;
+import com.tools20022.repository.codeset.CollateralisationIndicator1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the transaction is collateralised.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicatorCode
- * CollateralisationIndicatorCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicator1Code#mmFullyCollateralised
- * CollateralisationIndicator1Code.mmFullyCollateralised}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicator1Code#FullyCollateralised
+ * CollateralisationIndicator1Code.FullyCollateralised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicator1Code#mmOneWayCollateralised
- * CollateralisationIndicator1Code.mmOneWayCollateralised}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicator1Code#OneWayCollateralised
+ * CollateralisationIndicator1Code.OneWayCollateralised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicator1Code#mmPartiallyCollateralised
- * CollateralisationIndicator1Code.mmPartiallyCollateralised}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicator1Code#PartiallyCollateralised
+ * CollateralisationIndicator1Code.PartiallyCollateralised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicator1Code#mmUncollateralised
- * CollateralisationIndicator1Code.mmUncollateralised}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicator1Code#Uncollateralised
+ * CollateralisationIndicator1Code.Uncollateralised}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CollateralisationIndicatorCode
+ * CollateralisationIndicatorCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies whether the transaction is collateralised."</li>
  * </ul>
  */
-public class CollateralisationIndicator1Code extends CollateralisationIndicatorCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CollateralisationIndicator1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class CollateralisationIndicator1Code extends CollateralisationIndicatorC
 	 * name} = "FullyCollateralised"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullyCollateralised = new MMCode() {
+	public static final CollateralisationIndicator1Code FullyCollateralised = new CollateralisationIndicator1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyCollateralised";
-			owner_lazy = () -> CollateralisationIndicator1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralisationIndicator1Code.mmObject();
+			codeName = CollateralisationIndicatorCode.FullyCollateralised.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class CollateralisationIndicator1Code extends CollateralisationIndicatorC
 	 * name} = "OneWayCollateralised"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOneWayCollateralised = new MMCode() {
+	public static final CollateralisationIndicator1Code OneWayCollateralised = new CollateralisationIndicator1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneWayCollateralised";
-			owner_lazy = () -> CollateralisationIndicator1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralisationIndicator1Code.mmObject();
+			codeName = CollateralisationIndicatorCode.OneWayCollateralised.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class CollateralisationIndicator1Code extends CollateralisationIndicatorC
 	 * name} = "PartiallyCollateralised"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartiallyCollateralised = new MMCode() {
+	public static final CollateralisationIndicator1Code PartiallyCollateralised = new CollateralisationIndicator1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyCollateralised";
-			owner_lazy = () -> CollateralisationIndicator1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralisationIndicator1Code.mmObject();
+			codeName = CollateralisationIndicatorCode.PartiallyCollateralised.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,27 +166,60 @@ public class CollateralisationIndicator1Code extends CollateralisationIndicatorC
 	 * name} = "Uncollateralised"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUncollateralised = new MMCode() {
+	public static final CollateralisationIndicator1Code Uncollateralised = new CollateralisationIndicator1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Uncollateralised";
-			owner_lazy = () -> CollateralisationIndicator1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralisationIndicator1Code.mmObject();
+			codeName = CollateralisationIndicatorCode.Uncollateralised.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CollateralisationIndicator1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CollateralisationIndicator1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FULL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralisationIndicator1Code";
 				definition = "Specifies whether the transaction is collateralised.";
-				code_lazy = () -> Arrays.asList(CollateralisationIndicator1Code.mmFullyCollateralised, CollateralisationIndicator1Code.mmOneWayCollateralised, CollateralisationIndicator1Code.mmPartiallyCollateralised,
-						CollateralisationIndicator1Code.mmUncollateralised);
 				trace_lazy = () -> CollateralisationIndicatorCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralisationIndicator1Code.FullyCollateralised, com.tools20022.repository.codeset.CollateralisationIndicator1Code.OneWayCollateralised,
+						com.tools20022.repository.codeset.CollateralisationIndicator1Code.PartiallyCollateralised, com.tools20022.repository.codeset.CollateralisationIndicator1Code.Uncollateralised);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(FullyCollateralised.getCodeName().get(), FullyCollateralised);
+		codesByName.put(OneWayCollateralised.getCodeName().get(), OneWayCollateralised);
+		codesByName.put(PartiallyCollateralised.getCodeName().get(), PartiallyCollateralised);
+		codesByName.put(Uncollateralised.getCodeName().get(), Uncollateralised);
+	}
+
+	public static CollateralisationIndicator1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CollateralisationIndicator1Code[] values() {
+		CollateralisationIndicator1Code[] values = new CollateralisationIndicator1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CollateralisationIndicator1Code> {
+		@Override
+		public CollateralisationIndicator1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CollateralisationIndicator1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

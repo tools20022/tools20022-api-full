@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +28,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CorporateActionOptionSD2", propOrder = {"placeAndName", "extendedOptionFeatures", "defaultOptionFlag", "DTCTaxControlNumberRequiredFlag"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CorporateActionOptionSD2", propOrder = {"placeAndName", "extendedOptionFeatures", "defaultOptionFlag", "dTCTaxControlNumberRequiredFlag"})
 public class CorporateActionOptionSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +117,7 @@ public class CorporateActionOptionSD2 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,11 +128,11 @@ public class CorporateActionOptionSD2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedOptnFeatrs")
 	protected ExtendedOptionFeature1Code extendedOptionFeatures;
 	/**
-	 * Used for options that have particular proprietary feature that cannot be
-	 * represented in standard ISO message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,6 +148,9 @@ public class CorporateActionOptionSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XtndedOptnFeatrs"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Option Type</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -157,9 +165,10 @@ public class CorporateActionOptionSD2 {
 	 */
 	public static final MMMessageAttribute mmExtendedOptionFeatures = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedOptnFeatrs";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Option Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedOptionFeatures";
 			definition = "Used for options that have particular proprietary feature that cannot be represented in standard ISO message.";
@@ -168,12 +177,11 @@ public class CorporateActionOptionSD2 {
 			simpleType_lazy = () -> ExtendedOptionFeature1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DfltOptnFlg", required = true)
 	protected YesNoIndicator defaultOptionFlag;
 	/**
-	 * Identifies whether the option is declared as default by the issuer /
-	 * offeror, and will be treated as default by the issuer / offeror if no
-	 * elections is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,6 +197,10 @@ public class CorporateActionOptionSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DfltOptnFlg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :17B::DFLT, DTCCSynonym: Issuer
+	 * Default Option Flag</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -203,9 +215,10 @@ public class CorporateActionOptionSD2 {
 	 */
 	public static final MMMessageAttribute mmDefaultOptionFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DfltOptnFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":17B::DFLT"), new DTCCSynonym(this, "Issuer Default Option Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultOptionFlag";
 			definition = "Identifies whether the option is declared as default by the issuer / offeror,  and will be treated as default by the issuer / offeror if no elections is made.";
@@ -214,13 +227,11 @@ public class CorporateActionOptionSD2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCTaxCtrlNbReqrdFlg")
 	protected YesNoIndicator dTCTaxControlNumberRequiredFlag;
 	/**
-	 * Certain tax authorities provide control numbers to investors to instruct
-	 * on Foreign Tax Relief service at DTC (The Depository Trust Corporation).
-	 * This flag notes which events have these requirements and requires the DTC
-	 * participant to input the control numbers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,6 +247,9 @@ public class CorporateActionOptionSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCTaxCtrlNbReqrdFlg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Tax Control Number Required Flag</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -250,9 +264,10 @@ public class CorporateActionOptionSD2 {
 	 */
 	public static final MMMessageAttribute mmDTCTaxControlNumberRequiredFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DTCTaxCtrlNbReqrdFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Tax Control Number Required Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCTaxControlNumberRequiredFlag";
 			definition = "Certain tax authorities provide control numbers to investors to instruct on Foreign Tax Relief service at DTC (The Depository Trust Corporation). This flag notes which events have these requirements and requires the DTC participant to input the control numbers.";
@@ -265,9 +280,9 @@ public class CorporateActionOptionSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionOptionSD2.mmPlaceAndName, CorporateActionOptionSD2.mmExtendedOptionFeatures, CorporateActionOptionSD2.mmDefaultOptionFlag,
-						CorporateActionOptionSD2.mmDTCTaxControlNumberRequiredFlag);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionOptionSD2.mmExtendedOptionFeatures,
+						com.tools20022.repository.msg.CorporateActionOptionSD2.mmDefaultOptionFlag, com.tools20022.repository.msg.CorporateActionOptionSD2.mmDTCTaxControlNumberRequiredFlag);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOptionSD2";
 				definition = "Provides additional information regarding corporate action option details.";
@@ -277,39 +292,39 @@ public class CorporateActionOptionSD2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionOptionSD2 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedOptnFeatrs")
-	public ExtendedOptionFeature1Code getExtendedOptionFeatures() {
-		return extendedOptionFeatures;
+	public Optional<ExtendedOptionFeature1Code> getExtendedOptionFeatures() {
+		return extendedOptionFeatures == null ? Optional.empty() : Optional.of(extendedOptionFeatures);
 	}
 
-	public void setExtendedOptionFeatures(ExtendedOptionFeature1Code extendedOptionFeatures) {
+	public CorporateActionOptionSD2 setExtendedOptionFeatures(ExtendedOptionFeature1Code extendedOptionFeatures) {
 		this.extendedOptionFeatures = extendedOptionFeatures;
+		return this;
 	}
 
-	@XmlElement(name = "DfltOptnFlg", required = true)
 	public YesNoIndicator getDefaultOptionFlag() {
 		return defaultOptionFlag;
 	}
 
-	public void setDefaultOptionFlag(YesNoIndicator defaultOptionFlag) {
-		this.defaultOptionFlag = defaultOptionFlag;
+	public CorporateActionOptionSD2 setDefaultOptionFlag(YesNoIndicator defaultOptionFlag) {
+		this.defaultOptionFlag = Objects.requireNonNull(defaultOptionFlag);
+		return this;
 	}
 
-	@XmlElement(name = "DTCTaxCtrlNbReqrdFlg")
-	public YesNoIndicator getDTCTaxControlNumberRequiredFlag() {
-		return dTCTaxControlNumberRequiredFlag;
+	public Optional<YesNoIndicator> getDTCTaxControlNumberRequiredFlag() {
+		return dTCTaxControlNumberRequiredFlag == null ? Optional.empty() : Optional.of(dTCTaxControlNumberRequiredFlag);
 	}
 
-	public void setDTCTaxControlNumberRequiredFlag(YesNoIndicator dTCTaxControlNumberRequiredFlag) {
+	public CorporateActionOptionSD2 setDTCTaxControlNumberRequiredFlag(YesNoIndicator dTCTaxControlNumberRequiredFlag) {
 		this.dTCTaxControlNumberRequiredFlag = dTCTaxControlNumberRequiredFlag;
+		return this;
 	}
 }

@@ -29,6 +29,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistence35to30TextFieldRule#forMarketIdentification82
+ * ConstraintCoexistence35to30TextFieldRule.forMarketIdentification82}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMarketTypeAndIdentificationRule#forMarketIdentification82
+ * ConstraintMarketTypeAndIdentificationRule.forMarketIdentification82}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -72,18 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MarketIdentification82", propOrder = {"identification", "type"})
 public class MarketIdentification82 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id")
 	protected MarketIdentification2Choice identification;
 	/**
-	 * Code allocated to places of trade, ie, stock exchanges, regulated
-	 * markets, eg, Electronic Trading Platforms (ECN), and unregulated markets,
-	 * eg, Automated Trading Systems (ATS), as sources of prices and related
-	 * information, in order to facilitate automated processing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,7 +129,7 @@ public class MarketIdentification82 {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
-			componentContext_lazy = () -> MarketIdentification82.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification82.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +141,11 @@ public class MarketIdentification82 {
 			type_lazy = () -> MarketIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected MarketType6Choice type;
 	/**
-	 * Nature of a market in which transactions take place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -165,7 +177,7 @@ public class MarketIdentification82 {
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmType;
-			componentContext_lazy = () -> MarketIdentification82.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MarketIdentification82.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,9 +193,11 @@ public class MarketIdentification82 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MarketIdentification82.mmIdentification, MarketIdentification82.mmType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification82.mmIdentification, com.tools20022.repository.msg.MarketIdentification82.mmType);
 				trace_lazy = () -> TradingMarket.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistence35to30TextFieldRule.forMarketIdentification82,
+						com.tools20022.repository.constraints.ConstraintMarketTypeAndIdentificationRule.forMarketIdentification82);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -199,21 +213,21 @@ public class MarketIdentification82 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id")
-	public MarketIdentification2Choice getIdentification() {
-		return identification;
+	public Optional<MarketIdentification2Choice> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(MarketIdentification2Choice identification) {
+	public MarketIdentification82 setIdentification(MarketIdentification2Choice identification) {
 		this.identification = identification;
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public MarketType6Choice getType() {
 		return type;
 	}
 
-	public void setType(MarketType6Choice type) {
-		this.type = type;
+	public MarketIdentification82 setType(MarketType6Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 }

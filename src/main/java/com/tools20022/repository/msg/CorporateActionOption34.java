@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -29,11 +30,9 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -128,8 +127,28 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalTextRule#forCorporateActionOption34
+ * ConstraintAdditionalTextRule.forCorporateActionOption34}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberGuideline#forCorporateActionOption34
+ * ConstraintOptionNumberGuideline.forCorporateActionOption34}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRevocabilityPeriodRule#forCorporateActionOption34
+ * ConstraintRevocabilityPeriodRule.forCorporateActionOption34}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forCorporateActionOption34
+ * ConstraintCoexistenceQuantityRule.forCorporateActionOption34}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule#forCorporateActionOption34
+ * ConstraintCoexistenceAmountRule.forCorporateActionOption34}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -141,17 +160,18 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information about the corporate action option."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionOption34", propOrder = {"optionNumber", "optionType", "fractionDisposition", "offerType", "optionFeatures", "optionAvailabilityStatus", "certificationType", "nonDomicileCountry", "validDomicileCountry",
 		"currencyOption", "defaultProcessingOrStandingInstruction", "chargesAppliedIndicator", "certificationIndicator", "withdrawalAllowedIndicator", "changeAllowedIndicator", "securityIdentification", "dateDetails", "periodDetails",
 		"rateAndAmountDetails", "priceDetails", "securitiesQuantity", "securitiesMovementDetails", "cashMovementDetails", "additionalInformation"})
 public class CorporateActionOption34 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OptnNb", required = true)
 	protected Exact3NumericText optionNumber;
 	/**
-	 * Number identifying the available corporate action options.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,6 +192,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OptnNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13A::CAON</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -186,9 +209,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAttribute mmOptionNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "OptnNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13A::CAON"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
@@ -197,10 +221,11 @@ public class CorporateActionOption34 {
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnTp", required = true)
 	protected CorporateActionOption9Choice optionType;
 	/**
-	 * Specifies the corporate action options available to the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -220,6 +245,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OptnTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::CAOP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -234,9 +262,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAssociationEnd mmOptionType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionType;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CAOP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
@@ -246,12 +275,11 @@ public class CorporateActionOption34 {
 			type_lazy = () -> CorporateActionOption9Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FrctnDspstn")
 	protected FractionDispositionType6Choice fractionDisposition;
 	/**
-	 * Specifies how fractions resulting from derived securities will be
-	 * processed or how prorated decisions will be rounding, if provided with a
-	 * pro ration rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -271,6 +299,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FrctnDspstn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::DISF</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -286,9 +317,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAssociationEnd mmFractionDisposition = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmFractionDisposition;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "FrctnDspstn";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::DISF"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionDisposition";
 			definition = "Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
@@ -298,10 +330,11 @@ public class CorporateActionOption34 {
 			type_lazy = () -> FractionDispositionType6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "OfferTp")
 	protected List<OfferTypeFormat2Choice> offerType;
 	/**
-	 * Specifies the conditions that apply to the offer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -321,6 +354,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OfferTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::OFFE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -334,9 +370,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAssociationEnd mmOfferType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOfferType;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "OfferTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::OFFE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfferType";
 			definition = "Specifies the conditions that apply to the offer.";
@@ -345,10 +382,11 @@ public class CorporateActionOption34 {
 			type_lazy = () -> OfferTypeFormat2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnFeatrs")
 	protected List<OptionFeaturesFormat8Choice> optionFeatures;
 	/**
-	 * Specifies the features that may apply to a corporate action option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -368,6 +406,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OptnFeatrs"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::OPTF</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -382,9 +423,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAssociationEnd mmOptionFeatures = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionFeatures;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "OptnFeatrs";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::OPTF"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionFeatures";
 			definition = "Specifies the features that may apply to a corporate action option.";
@@ -393,10 +435,11 @@ public class CorporateActionOption34 {
 			type_lazy = () -> OptionFeaturesFormat8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnAvlbtySts")
 	protected OptionAvailabilityStatus2Choice optionAvailabilityStatus;
 	/**
-	 * Specifies the status of the option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -416,6 +459,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OptnAvlbtySts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::OSTA</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -429,9 +475,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAssociationEnd mmOptionAvailabilityStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmOptionAvailabilityStatus;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "OptnAvlbtySts";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::OSTA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionAvailabilityStatus";
 			definition = "Specifies the status of the option.";
@@ -441,10 +488,11 @@ public class CorporateActionOption34 {
 			type_lazy = () -> OptionAvailabilityStatus2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CertfctnTp")
 	protected List<BeneficiaryCertificationType3Choice> certificationType;
 	/**
-	 * Type of certification which is required.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -464,6 +512,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CertfctnTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::CETI</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -477,9 +528,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAssociationEnd mmCertificationType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationType;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CETI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationType";
 			definition = "Type of certification which is required.";
@@ -488,11 +540,11 @@ public class CorporateActionOption34 {
 			type_lazy = () -> BeneficiaryCertificationType3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NonDmclCtry")
 	protected List<CountryCode> nonDomicileCountry;
 	/**
-	 * Holder of the security has to certify, in line with the terms of the
-	 * corporate action, that it is not domiciled in the country indicated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -512,6 +564,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NonDmclCtry"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94C::NDOM</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -527,9 +582,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAttribute mmNonDomicileCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmNonDomicileCountry;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "NonDmclCtry";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94C::NDOM"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDomicileCountry";
 			definition = "Holder of the security has to certify, in line with the terms of the corporate action, that it is not domiciled in the country indicated.";
@@ -537,12 +593,11 @@ public class CorporateActionOption34 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "VldDmclCtry")
 	protected List<CountryCode> validDomicileCountry;
 	/**
-	 * Country of domicile in which the Corporate Action option is valid. The
-	 * holder of the security has to certify that it is domiciled in the country
-	 * indicated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -562,6 +617,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VldDmclCtry"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94C::DOMI</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -577,9 +635,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAttribute mmValidDomicileCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "VldDmclCtry";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94C::DOMI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidDomicileCountry";
 			definition = "Country of domicile in which the Corporate Action option is valid. The holder of the security has to certify that it is domiciled in the country indicated.";
@@ -587,11 +646,11 @@ public class CorporateActionOption34 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CcyOptn")
 	protected ActiveCurrencyCode currencyOption;
 	/**
-	 * Currency in which the cash disbursed from an interest or dividend payment
-	 * is offered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -612,6 +671,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CcyOptn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :11A::OPTN</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -627,9 +689,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAttribute mmCurrencyOption = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmCurrencyOption;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "CcyOptn";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":11A::OPTN"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyOption";
 			definition = "Currency in which the cash disbursed from an interest or dividend payment is offered.";
@@ -638,11 +701,11 @@ public class CorporateActionOption34 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "DfltPrcgOrStgInstr", required = true)
 	protected DefaultProcessingOrStandingInstruction1Choice defaultProcessingOrStandingInstruction;
 	/**
-	 * Indicates whether the corporate action movement is a default processing
-	 * or a standing instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -656,6 +719,9 @@ public class CorporateActionOption34 {
 	 * CorporateActionOption34}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DfltPrcgOrStgInstr"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :17B::DFLT or STIN</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -671,9 +737,10 @@ public class CorporateActionOption34 {
 	 */
 	public static final MMMessageAssociationEnd mmDefaultProcessingOrStandingInstruction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "DfltPrcgOrStgInstr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":17B::DFLT or STIN"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultProcessingOrStandingInstruction";
 			definition = "Indicates whether the corporate action movement is a default processing or a standing instruction.";
@@ -683,11 +750,11 @@ public class CorporateActionOption34 {
 			type_lazy = () -> DefaultProcessingOrStandingInstruction1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgsApldInd")
 	protected YesNoIndicator chargesAppliedIndicator;
 	/**
-	 * Indicates whether charges apply to the holder, for instance redemption
-	 * charges.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -708,6 +775,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ChrgsApldInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :17B::RCHG</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -723,9 +793,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAttribute mmChargesAppliedIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmChargesAppliedIndicator;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsApldInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":17B::RCHG"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAppliedIndicator";
 			definition = "Indicates whether charges apply to the holder, for instance redemption charges.";
@@ -734,11 +805,11 @@ public class CorporateActionOption34 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CertfctnInd")
 	protected YesNoIndicator certificationIndicator;
 	/**
-	 * Whether or not certification is required from the account owner. Yes:
-	 * certification required No: no certification required
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -759,6 +830,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CertfctnInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :17B::CERT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -774,9 +848,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAttribute mmCertificationIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmCertificationIndicator;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":17B::CERT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationIndicator";
 			definition = "Whether or not certification is required from the account owner. \nYes: certification required \nNo: no certification required";
@@ -785,10 +860,11 @@ public class CorporateActionOption34 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "WdrwlAllwdInd")
 	protected YesNoIndicator withdrawalAllowedIndicator;
 	/**
-	 * Indicates whether withdrawal of instruction is allowed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -809,6 +885,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "WdrwlAllwdInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :17B::WTHD</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -822,9 +901,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAttribute mmWithdrawalAllowedIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmWithdrawalAllowedIndicator;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "WdrwlAllwdInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":17B::WTHD"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalAllowedIndicator";
 			definition = "Indicates whether withdrawal of instruction is allowed.";
@@ -833,10 +913,11 @@ public class CorporateActionOption34 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ChngAllwdInd")
 	protected YesNoIndicator changeAllowedIndicator;
 	/**
-	 * Indicates whether change of instruction is allowed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -857,6 +938,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ChngAllwdInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :17B::CHAN</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -870,9 +954,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAttribute mmChangeAllowedIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmChangeAllowedIndicator;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "ChngAllwdInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":17B::CHAN"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeAllowedIndicator";
 			definition = "Indicates whether change of instruction is allowed.";
@@ -881,10 +966,11 @@ public class CorporateActionOption34 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyId")
 	protected SecurityIdentification15 securityIdentification;
 	/**
-	 * Identifies the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -904,6 +990,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctyId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :35B:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -917,9 +1006,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAssociationEnd mmSecurityIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "SctyId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":35B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identifies the financial instrument.";
@@ -929,11 +1019,11 @@ public class CorporateActionOption34 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
+	@XmlElement(name = "DtDtls")
 	protected CorporateActionDate16 dateDetails;
 	/**
-	 * Provides information about the dates related to a corporate action
-	 * option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -952,6 +1042,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DtDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -967,9 +1060,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmRelatedChoiceCorporateAction;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "DtDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDetails";
 			definition = "Provides information about the dates related to a corporate action option.";
@@ -979,11 +1073,11 @@ public class CorporateActionOption34 {
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionDate16.mmObject();
 		}
 	};
+	@XmlElement(name = "PrdDtls")
 	protected CorporateActionPeriod7 periodDetails;
 	/**
-	 * Provides information about the periods related to a corporate action
-	 * option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1002,6 +1096,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrdDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :69a:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1017,9 +1114,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAssociationEnd mmPeriodDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmRelatedChoiceCorporateAction;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "PrdDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":69a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeriodDetails";
 			definition = "Provides information about the periods related to a corporate action option.";
@@ -1029,11 +1127,11 @@ public class CorporateActionOption34 {
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionPeriod7.mmObject();
 		}
 	};
+	@XmlElement(name = "RateAndAmtDtls")
 	protected CorporateActionRate18 rateAndAmountDetails;
 	/**
-	 * Provides information about rates and amounts related to a corporate
-	 * action option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1052,6 +1150,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RateAndAmtDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1067,9 +1168,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAssociationEnd mmRateAndAmountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmRelatedChoiceCorporateAction;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "RateAndAmtDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateAndAmountDetails";
 			definition = "Provides information about rates and amounts related to a corporate action option.";
@@ -1079,11 +1181,11 @@ public class CorporateActionOption34 {
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionRate18.mmObject();
 		}
 	};
+	@XmlElement(name = "PricDtls")
 	protected CorporateActionPrice23 priceDetails;
 	/**
-	 * Provides information about the prices related to a corporate action
-	 * option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1102,6 +1204,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PricDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1117,9 +1222,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmCorporateActionPrice;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "PricDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Provides information about the prices related to a corporate action option.";
@@ -1129,11 +1235,11 @@ public class CorporateActionOption34 {
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice23.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesQty")
 	protected SecuritiesOption16 securitiesQuantity;
 	/**
-	 * Provides information about securities quantity linked to a corporate
-	 * action option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1152,6 +1258,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36a:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1167,9 +1276,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAssociationEnd mmSecuritiesQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmSecuritiesQuantity;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesQuantity";
 			definition = "Provides information about securities quantity linked to a corporate action option.";
@@ -1179,11 +1289,11 @@ public class CorporateActionOption34 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesOption16.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesMvmntDtls")
 	protected List<com.tools20022.repository.msg.SecuritiesOption22> securitiesMovementDetails;
 	/**
-	 * Provides information about the securities movement linked to the
-	 * corporate action option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1202,6 +1312,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesMvmntDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R::SECMOVE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1217,9 +1330,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAssociationEnd mmSecuritiesMovementDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionProceedsDeliveryInstruction.mmSecuritiesProceedsMovement;
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesMvmntDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R::SECMOVE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementDetails";
 			definition = "Provides information about the securities movement linked to the corporate action option.";
@@ -1228,11 +1342,11 @@ public class CorporateActionOption34 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesOption22.mmObject();
 		}
 	};
+	@XmlElement(name = "CshMvmntDtls")
 	protected List<com.tools20022.repository.msg.CashOption15> cashMovementDetails;
 	/**
-	 * Provides information about the cash movement linked to the corporate
-	 * action option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1251,6 +1365,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CshMvmntDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R:CASHMOVE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1266,9 +1383,10 @@ public class CorporateActionOption34 {
 	public static final MMMessageAssociationEnd mmCashMovementDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashProceedsDefinition.mmObject();
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "CshMvmntDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R:CASHMOVE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashMovementDetails";
 			definition = "Provides information about the cash movement linked to the corporate action option.";
@@ -1277,10 +1395,11 @@ public class CorporateActionOption34 {
 			type_lazy = () -> com.tools20022.repository.msg.CashOption15.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected CorporateActionNarrative15 additionalInformation;
 	/**
-	 * Provides additional information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1295,6 +1414,9 @@ public class CorporateActionOption34 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlInf"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70a:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1307,9 +1429,10 @@ public class CorporateActionOption34 {
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionOption34.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOption34.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information.";
@@ -1323,14 +1446,23 @@ public class CorporateActionOption34 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionOption34.mmOptionNumber, CorporateActionOption34.mmOptionType, CorporateActionOption34.mmFractionDisposition, CorporateActionOption34.mmOfferType,
-						CorporateActionOption34.mmOptionFeatures, CorporateActionOption34.mmOptionAvailabilityStatus, CorporateActionOption34.mmCertificationType, CorporateActionOption34.mmNonDomicileCountry,
-						CorporateActionOption34.mmValidDomicileCountry, CorporateActionOption34.mmCurrencyOption, CorporateActionOption34.mmDefaultProcessingOrStandingInstruction, CorporateActionOption34.mmChargesAppliedIndicator,
-						CorporateActionOption34.mmCertificationIndicator, CorporateActionOption34.mmWithdrawalAllowedIndicator, CorporateActionOption34.mmChangeAllowedIndicator, CorporateActionOption34.mmSecurityIdentification,
-						CorporateActionOption34.mmDateDetails, CorporateActionOption34.mmPeriodDetails, CorporateActionOption34.mmRateAndAmountDetails, CorporateActionOption34.mmPriceDetails, CorporateActionOption34.mmSecuritiesQuantity,
-						CorporateActionOption34.mmSecuritiesMovementDetails, CorporateActionOption34.mmCashMovementDetails, CorporateActionOption34.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOption34.mmOptionNumber, com.tools20022.repository.msg.CorporateActionOption34.mmOptionType,
+						com.tools20022.repository.msg.CorporateActionOption34.mmFractionDisposition, com.tools20022.repository.msg.CorporateActionOption34.mmOfferType, com.tools20022.repository.msg.CorporateActionOption34.mmOptionFeatures,
+						com.tools20022.repository.msg.CorporateActionOption34.mmOptionAvailabilityStatus, com.tools20022.repository.msg.CorporateActionOption34.mmCertificationType,
+						com.tools20022.repository.msg.CorporateActionOption34.mmNonDomicileCountry, com.tools20022.repository.msg.CorporateActionOption34.mmValidDomicileCountry,
+						com.tools20022.repository.msg.CorporateActionOption34.mmCurrencyOption, com.tools20022.repository.msg.CorporateActionOption34.mmDefaultProcessingOrStandingInstruction,
+						com.tools20022.repository.msg.CorporateActionOption34.mmChargesAppliedIndicator, com.tools20022.repository.msg.CorporateActionOption34.mmCertificationIndicator,
+						com.tools20022.repository.msg.CorporateActionOption34.mmWithdrawalAllowedIndicator, com.tools20022.repository.msg.CorporateActionOption34.mmChangeAllowedIndicator,
+						com.tools20022.repository.msg.CorporateActionOption34.mmSecurityIdentification, com.tools20022.repository.msg.CorporateActionOption34.mmDateDetails,
+						com.tools20022.repository.msg.CorporateActionOption34.mmPeriodDetails, com.tools20022.repository.msg.CorporateActionOption34.mmRateAndAmountDetails,
+						com.tools20022.repository.msg.CorporateActionOption34.mmPriceDetails, com.tools20022.repository.msg.CorporateActionOption34.mmSecuritiesQuantity,
+						com.tools20022.repository.msg.CorporateActionOption34.mmSecuritiesMovementDetails, com.tools20022.repository.msg.CorporateActionOption34.mmCashMovementDetails,
+						com.tools20022.repository.msg.CorporateActionOption34.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalTextRule.forCorporateActionOption34,
+						com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption34, com.tools20022.repository.constraints.ConstraintRevocabilityPeriodRule.forCorporateActionOption34,
+						com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forCorporateActionOption34, com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forCorporateActionOption34);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -1346,219 +1478,219 @@ public class CorporateActionOption34 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OptnNb", required = true)
 	public Exact3NumericText getOptionNumber() {
 		return optionNumber;
 	}
 
-	public void setOptionNumber(Exact3NumericText optionNumber) {
-		this.optionNumber = optionNumber;
+	public CorporateActionOption34 setOptionNumber(Exact3NumericText optionNumber) {
+		this.optionNumber = Objects.requireNonNull(optionNumber);
+		return this;
 	}
 
-	@XmlElement(name = "OptnTp", required = true)
 	public CorporateActionOption9Choice getOptionType() {
 		return optionType;
 	}
 
-	public void setOptionType(CorporateActionOption9Choice optionType) {
-		this.optionType = optionType;
+	public CorporateActionOption34 setOptionType(CorporateActionOption9Choice optionType) {
+		this.optionType = Objects.requireNonNull(optionType);
+		return this;
 	}
 
-	@XmlElement(name = "FrctnDspstn")
-	public FractionDispositionType6Choice getFractionDisposition() {
-		return fractionDisposition;
+	public Optional<FractionDispositionType6Choice> getFractionDisposition() {
+		return fractionDisposition == null ? Optional.empty() : Optional.of(fractionDisposition);
 	}
 
-	public void setFractionDisposition(FractionDispositionType6Choice fractionDisposition) {
+	public CorporateActionOption34 setFractionDisposition(FractionDispositionType6Choice fractionDisposition) {
 		this.fractionDisposition = fractionDisposition;
+		return this;
 	}
 
-	@XmlElement(name = "OfferTp")
 	public List<OfferTypeFormat2Choice> getOfferType() {
-		return offerType;
+		return offerType == null ? offerType = new ArrayList<>() : offerType;
 	}
 
-	public void setOfferType(List<OfferTypeFormat2Choice> offerType) {
-		this.offerType = offerType;
+	public CorporateActionOption34 setOfferType(List<OfferTypeFormat2Choice> offerType) {
+		this.offerType = Objects.requireNonNull(offerType);
+		return this;
 	}
 
-	@XmlElement(name = "OptnFeatrs")
 	public List<OptionFeaturesFormat8Choice> getOptionFeatures() {
-		return optionFeatures;
+		return optionFeatures == null ? optionFeatures = new ArrayList<>() : optionFeatures;
 	}
 
-	public void setOptionFeatures(List<OptionFeaturesFormat8Choice> optionFeatures) {
-		this.optionFeatures = optionFeatures;
+	public CorporateActionOption34 setOptionFeatures(List<OptionFeaturesFormat8Choice> optionFeatures) {
+		this.optionFeatures = Objects.requireNonNull(optionFeatures);
+		return this;
 	}
 
-	@XmlElement(name = "OptnAvlbtySts")
-	public OptionAvailabilityStatus2Choice getOptionAvailabilityStatus() {
-		return optionAvailabilityStatus;
+	public Optional<OptionAvailabilityStatus2Choice> getOptionAvailabilityStatus() {
+		return optionAvailabilityStatus == null ? Optional.empty() : Optional.of(optionAvailabilityStatus);
 	}
 
-	public void setOptionAvailabilityStatus(OptionAvailabilityStatus2Choice optionAvailabilityStatus) {
+	public CorporateActionOption34 setOptionAvailabilityStatus(OptionAvailabilityStatus2Choice optionAvailabilityStatus) {
 		this.optionAvailabilityStatus = optionAvailabilityStatus;
+		return this;
 	}
 
-	@XmlElement(name = "CertfctnTp")
 	public List<BeneficiaryCertificationType3Choice> getCertificationType() {
-		return certificationType;
+		return certificationType == null ? certificationType = new ArrayList<>() : certificationType;
 	}
 
-	public void setCertificationType(List<BeneficiaryCertificationType3Choice> certificationType) {
-		this.certificationType = certificationType;
+	public CorporateActionOption34 setCertificationType(List<BeneficiaryCertificationType3Choice> certificationType) {
+		this.certificationType = Objects.requireNonNull(certificationType);
+		return this;
 	}
 
-	@XmlElement(name = "NonDmclCtry")
 	public List<CountryCode> getNonDomicileCountry() {
-		return nonDomicileCountry;
+		return nonDomicileCountry == null ? nonDomicileCountry = new ArrayList<>() : nonDomicileCountry;
 	}
 
-	public void setNonDomicileCountry(List<CountryCode> nonDomicileCountry) {
-		this.nonDomicileCountry = nonDomicileCountry;
+	public CorporateActionOption34 setNonDomicileCountry(List<CountryCode> nonDomicileCountry) {
+		this.nonDomicileCountry = Objects.requireNonNull(nonDomicileCountry);
+		return this;
 	}
 
-	@XmlElement(name = "VldDmclCtry")
 	public List<CountryCode> getValidDomicileCountry() {
-		return validDomicileCountry;
+		return validDomicileCountry == null ? validDomicileCountry = new ArrayList<>() : validDomicileCountry;
 	}
 
-	public void setValidDomicileCountry(List<CountryCode> validDomicileCountry) {
-		this.validDomicileCountry = validDomicileCountry;
+	public CorporateActionOption34 setValidDomicileCountry(List<CountryCode> validDomicileCountry) {
+		this.validDomicileCountry = Objects.requireNonNull(validDomicileCountry);
+		return this;
 	}
 
-	@XmlElement(name = "CcyOptn")
-	public ActiveCurrencyCode getCurrencyOption() {
-		return currencyOption;
+	public Optional<ActiveCurrencyCode> getCurrencyOption() {
+		return currencyOption == null ? Optional.empty() : Optional.of(currencyOption);
 	}
 
-	public void setCurrencyOption(ActiveCurrencyCode currencyOption) {
+	public CorporateActionOption34 setCurrencyOption(ActiveCurrencyCode currencyOption) {
 		this.currencyOption = currencyOption;
+		return this;
 	}
 
-	@XmlElement(name = "DfltPrcgOrStgInstr", required = true)
 	public DefaultProcessingOrStandingInstruction1Choice getDefaultProcessingOrStandingInstruction() {
 		return defaultProcessingOrStandingInstruction;
 	}
 
-	public void setDefaultProcessingOrStandingInstruction(DefaultProcessingOrStandingInstruction1Choice defaultProcessingOrStandingInstruction) {
-		this.defaultProcessingOrStandingInstruction = defaultProcessingOrStandingInstruction;
+	public CorporateActionOption34 setDefaultProcessingOrStandingInstruction(DefaultProcessingOrStandingInstruction1Choice defaultProcessingOrStandingInstruction) {
+		this.defaultProcessingOrStandingInstruction = Objects.requireNonNull(defaultProcessingOrStandingInstruction);
+		return this;
 	}
 
-	@XmlElement(name = "ChrgsApldInd")
-	public YesNoIndicator getChargesAppliedIndicator() {
-		return chargesAppliedIndicator;
+	public Optional<YesNoIndicator> getChargesAppliedIndicator() {
+		return chargesAppliedIndicator == null ? Optional.empty() : Optional.of(chargesAppliedIndicator);
 	}
 
-	public void setChargesAppliedIndicator(YesNoIndicator chargesAppliedIndicator) {
+	public CorporateActionOption34 setChargesAppliedIndicator(YesNoIndicator chargesAppliedIndicator) {
 		this.chargesAppliedIndicator = chargesAppliedIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "CertfctnInd")
-	public YesNoIndicator getCertificationIndicator() {
-		return certificationIndicator;
+	public Optional<YesNoIndicator> getCertificationIndicator() {
+		return certificationIndicator == null ? Optional.empty() : Optional.of(certificationIndicator);
 	}
 
-	public void setCertificationIndicator(YesNoIndicator certificationIndicator) {
+	public CorporateActionOption34 setCertificationIndicator(YesNoIndicator certificationIndicator) {
 		this.certificationIndicator = certificationIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "WdrwlAllwdInd")
-	public YesNoIndicator getWithdrawalAllowedIndicator() {
-		return withdrawalAllowedIndicator;
+	public Optional<YesNoIndicator> getWithdrawalAllowedIndicator() {
+		return withdrawalAllowedIndicator == null ? Optional.empty() : Optional.of(withdrawalAllowedIndicator);
 	}
 
-	public void setWithdrawalAllowedIndicator(YesNoIndicator withdrawalAllowedIndicator) {
+	public CorporateActionOption34 setWithdrawalAllowedIndicator(YesNoIndicator withdrawalAllowedIndicator) {
 		this.withdrawalAllowedIndicator = withdrawalAllowedIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "ChngAllwdInd")
-	public YesNoIndicator getChangeAllowedIndicator() {
-		return changeAllowedIndicator;
+	public Optional<YesNoIndicator> getChangeAllowedIndicator() {
+		return changeAllowedIndicator == null ? Optional.empty() : Optional.of(changeAllowedIndicator);
 	}
 
-	public void setChangeAllowedIndicator(YesNoIndicator changeAllowedIndicator) {
+	public CorporateActionOption34 setChangeAllowedIndicator(YesNoIndicator changeAllowedIndicator) {
 		this.changeAllowedIndicator = changeAllowedIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "SctyId")
-	public SecurityIdentification15 getSecurityIdentification() {
-		return securityIdentification;
+	public Optional<SecurityIdentification15> getSecurityIdentification() {
+		return securityIdentification == null ? Optional.empty() : Optional.of(securityIdentification);
 	}
 
-	public void setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 securityIdentification) {
+	public CorporateActionOption34 setSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 securityIdentification) {
 		this.securityIdentification = securityIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "DtDtls")
-	public CorporateActionDate16 getDateDetails() {
-		return dateDetails;
+	public Optional<CorporateActionDate16> getDateDetails() {
+		return dateDetails == null ? Optional.empty() : Optional.of(dateDetails);
 	}
 
-	public void setDateDetails(com.tools20022.repository.msg.CorporateActionDate16 dateDetails) {
+	public CorporateActionOption34 setDateDetails(com.tools20022.repository.msg.CorporateActionDate16 dateDetails) {
 		this.dateDetails = dateDetails;
+		return this;
 	}
 
-	@XmlElement(name = "PrdDtls")
-	public CorporateActionPeriod7 getPeriodDetails() {
-		return periodDetails;
+	public Optional<CorporateActionPeriod7> getPeriodDetails() {
+		return periodDetails == null ? Optional.empty() : Optional.of(periodDetails);
 	}
 
-	public void setPeriodDetails(com.tools20022.repository.msg.CorporateActionPeriod7 periodDetails) {
+	public CorporateActionOption34 setPeriodDetails(com.tools20022.repository.msg.CorporateActionPeriod7 periodDetails) {
 		this.periodDetails = periodDetails;
+		return this;
 	}
 
-	@XmlElement(name = "RateAndAmtDtls")
-	public CorporateActionRate18 getRateAndAmountDetails() {
-		return rateAndAmountDetails;
+	public Optional<CorporateActionRate18> getRateAndAmountDetails() {
+		return rateAndAmountDetails == null ? Optional.empty() : Optional.of(rateAndAmountDetails);
 	}
 
-	public void setRateAndAmountDetails(com.tools20022.repository.msg.CorporateActionRate18 rateAndAmountDetails) {
+	public CorporateActionOption34 setRateAndAmountDetails(com.tools20022.repository.msg.CorporateActionRate18 rateAndAmountDetails) {
 		this.rateAndAmountDetails = rateAndAmountDetails;
+		return this;
 	}
 
-	@XmlElement(name = "PricDtls")
-	public CorporateActionPrice23 getPriceDetails() {
-		return priceDetails;
+	public Optional<CorporateActionPrice23> getPriceDetails() {
+		return priceDetails == null ? Optional.empty() : Optional.of(priceDetails);
 	}
 
-	public void setPriceDetails(com.tools20022.repository.msg.CorporateActionPrice23 priceDetails) {
+	public CorporateActionOption34 setPriceDetails(com.tools20022.repository.msg.CorporateActionPrice23 priceDetails) {
 		this.priceDetails = priceDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesQty")
-	public SecuritiesOption16 getSecuritiesQuantity() {
-		return securitiesQuantity;
+	public Optional<SecuritiesOption16> getSecuritiesQuantity() {
+		return securitiesQuantity == null ? Optional.empty() : Optional.of(securitiesQuantity);
 	}
 
-	public void setSecuritiesQuantity(com.tools20022.repository.msg.SecuritiesOption16 securitiesQuantity) {
+	public CorporateActionOption34 setSecuritiesQuantity(com.tools20022.repository.msg.SecuritiesOption16 securitiesQuantity) {
 		this.securitiesQuantity = securitiesQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesMvmntDtls")
 	public List<SecuritiesOption22> getSecuritiesMovementDetails() {
-		return securitiesMovementDetails;
+		return securitiesMovementDetails == null ? securitiesMovementDetails = new ArrayList<>() : securitiesMovementDetails;
 	}
 
-	public void setSecuritiesMovementDetails(List<com.tools20022.repository.msg.SecuritiesOption22> securitiesMovementDetails) {
-		this.securitiesMovementDetails = securitiesMovementDetails;
+	public CorporateActionOption34 setSecuritiesMovementDetails(List<com.tools20022.repository.msg.SecuritiesOption22> securitiesMovementDetails) {
+		this.securitiesMovementDetails = Objects.requireNonNull(securitiesMovementDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CshMvmntDtls")
 	public List<CashOption15> getCashMovementDetails() {
-		return cashMovementDetails;
+		return cashMovementDetails == null ? cashMovementDetails = new ArrayList<>() : cashMovementDetails;
 	}
 
-	public void setCashMovementDetails(List<com.tools20022.repository.msg.CashOption15> cashMovementDetails) {
-		this.cashMovementDetails = cashMovementDetails;
+	public CorporateActionOption34 setCashMovementDetails(List<com.tools20022.repository.msg.CashOption15> cashMovementDetails) {
+		this.cashMovementDetails = Objects.requireNonNull(cashMovementDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public CorporateActionNarrative15 getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<CorporateActionNarrative15> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(com.tools20022.repository.msg.CorporateActionNarrative15 additionalInformation) {
+	public CorporateActionOption34 setAdditionalInformation(com.tools20022.repository.msg.CorporateActionNarrative15 additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the value of a date."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DateFormat4Choice", propOrder = {"date", "notSpecifiedDate", "proprietary"})
 public class DateFormat4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dt", required = true)
 	protected DateAndDateTimeChoice date;
 	/**
-	 * Date expressed as an ISO Date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +102,7 @@ public class DateFormat4Choice {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateFormat4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +113,11 @@ public class DateFormat4Choice {
 			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "NotSpcfdDt", required = true)
 	protected DateType6Code notSpecifiedDate;
 	/**
-	 * The date is not specified, eg, the date is unknown.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +145,7 @@ public class DateFormat4Choice {
 	 */
 	public static final MMMessageAttribute mmNotSpecifiedDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateFormat4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,10 +156,11 @@ public class DateFormat4Choice {
 			simpleType_lazy = () -> DateType6Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification13 proprietary;
 	/**
-	 * Proprietary scheme to specify a date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -184,7 +188,7 @@ public class DateFormat4Choice {
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateFormat4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,8 +203,9 @@ public class DateFormat4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DateFormat4Choice.mmDate, DateFormat4Choice.mmNotSpecifiedDate, DateFormat4Choice.mmProprietary);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat4Choice.mmDate, com.tools20022.repository.choice.DateFormat4Choice.mmNotSpecifiedDate,
+						com.tools20022.repository.choice.DateFormat4Choice.mmProprietary);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateFormat4Choice";
 				definition = "Specifies the value of a date.";
@@ -209,30 +214,30 @@ public class DateFormat4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dt", required = true)
 	public DateAndDateTimeChoice getDate() {
 		return date;
 	}
 
-	public void setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
-		this.date = date;
+	public DateFormat4Choice setDate(com.tools20022.repository.choice.DateAndDateTimeChoice date) {
+		this.date = Objects.requireNonNull(date);
+		return this;
 	}
 
-	@XmlElement(name = "NotSpcfdDt", required = true)
 	public DateType6Code getNotSpecifiedDate() {
 		return notSpecifiedDate;
 	}
 
-	public void setNotSpecifiedDate(DateType6Code notSpecifiedDate) {
-		this.notSpecifiedDate = notSpecifiedDate;
+	public DateFormat4Choice setNotSpecifiedDate(DateType6Code notSpecifiedDate) {
+		this.notSpecifiedDate = Objects.requireNonNull(notSpecifiedDate);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification13 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification13 proprietary) {
-		this.proprietary = proprietary;
+	public DateFormat4Choice setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

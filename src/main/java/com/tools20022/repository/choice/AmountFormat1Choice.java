@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between amount formats."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountFormat1Choice", propOrder = {"amount", "notSpecifiedAmount"})
 public class AmountFormat1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Number of monetary units specified in a currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,7 +99,7 @@ public class AmountFormat1Choice {
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AmountFormat1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AmountFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +110,11 @@ public class AmountFormat1Choice {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "NotSpcfdAmt", required = true)
 	protected AmountType1FormatChoice notSpecifiedAmount;
 	/**
-	 * The amount is not specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +142,7 @@ public class AmountFormat1Choice {
 	 */
 	public static final MMMessageAttribute mmNotSpecifiedAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AmountFormat1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AmountFormat1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotSpcfdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +157,8 @@ public class AmountFormat1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountFormat1Choice.mmAmount, AmountFormat1Choice.mmNotSpecifiedAmount);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountFormat1Choice.mmAmount, com.tools20022.repository.choice.AmountFormat1Choice.mmNotSpecifiedAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AmountFormat1Choice";
 				definition = "Choice between amount formats.";
@@ -164,21 +167,21 @@ public class AmountFormat1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public AmountFormat1Choice setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "NotSpcfdAmt", required = true)
 	public AmountType1FormatChoice getNotSpecifiedAmount() {
 		return notSpecifiedAmount;
 	}
 
-	public void setNotSpecifiedAmount(com.tools20022.repository.choice.AmountType1FormatChoice notSpecifiedAmount) {
-		this.notSpecifiedAmount = notSpecifiedAmount;
+	public AmountFormat1Choice setNotSpecifiedAmount(com.tools20022.repository.choice.AmountType1FormatChoice notSpecifiedAmount) {
+		this.notSpecifiedAmount = Objects.requireNonNull(notSpecifiedAmount);
+		return this;
 	}
 }

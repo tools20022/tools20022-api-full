@@ -25,6 +25,7 @@ import com.tools20022.repository.choice.IssuerOrInvestor1choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines how the CSD is linked to the security."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecurityCSDLink3", propOrder = {"financialInstrumentIdentification", "issuerInvestorCSD", "validFrom"})
 public class SecurityCSDLink3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FinInstrmId", required = true)
 	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
-	 * Identification of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +102,7 @@ public class SecurityCSDLink3 {
 	 */
 	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityCSDLink3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink3.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +113,11 @@ public class SecurityCSDLink3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	@XmlElement(name = "IssrInvstrCSD", required = true)
 	protected IssuerOrInvestor1choice issuerInvestorCSD;
 	/**
-	 * CSD Issuer of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +145,7 @@ public class SecurityCSDLink3 {
 	 */
 	public static final MMMessageAttribute mmIssuerInvestorCSD = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityCSDLink3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink3.mmObject();
 			isDerived = false;
 			xmlTag = "IssrInvstrCSD";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,10 +156,11 @@ public class SecurityCSDLink3 {
 			complexType_lazy = () -> IssuerOrInvestor1choice.mmObject();
 		}
 	};
+	@XmlElement(name = "VldFr", required = true)
 	protected DateAndDateTimeChoice validFrom;
 	/**
-	 * Defines the date since when the CSD is linked to the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -185,7 +189,7 @@ public class SecurityCSDLink3 {
 	 */
 	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecurityCSDLink3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityCSDLink3.mmObject();
 			isDerived = false;
 			xmlTag = "VldFr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,8 +204,9 @@ public class SecurityCSDLink3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityCSDLink3.mmFinancialInstrumentIdentification, SecurityCSDLink3.mmIssuerInvestorCSD, SecurityCSDLink3.mmValidFrom);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityCSDLink3.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.SecurityCSDLink3.mmIssuerInvestorCSD,
+						com.tools20022.repository.msg.SecurityCSDLink3.mmValidFrom);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityCSDLink3";
 				definition = "Defines how the CSD is linked to the security.";
@@ -210,30 +215,30 @@ public class SecurityCSDLink3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public SecurityCSDLink3 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "IssrInvstrCSD", required = true)
 	public IssuerOrInvestor1choice getIssuerInvestorCSD() {
 		return issuerInvestorCSD;
 	}
 
-	public void setIssuerInvestorCSD(IssuerOrInvestor1choice issuerInvestorCSD) {
-		this.issuerInvestorCSD = issuerInvestorCSD;
+	public SecurityCSDLink3 setIssuerInvestorCSD(IssuerOrInvestor1choice issuerInvestorCSD) {
+		this.issuerInvestorCSD = Objects.requireNonNull(issuerInvestorCSD);
+		return this;
 	}
 
-	@XmlElement(name = "VldFr", required = true)
 	public DateAndDateTimeChoice getValidFrom() {
 		return validFrom;
 	}
 
-	public void setValidFrom(DateAndDateTimeChoice validFrom) {
-		this.validFrom = validFrom;
+	public SecurityCSDLink3 setValidFrom(DateAndDateTimeChoice validFrom) {
+		this.validFrom = Objects.requireNonNull(validFrom);
+		return this;
 	}
 }

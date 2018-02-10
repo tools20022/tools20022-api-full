@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.CancellationProcessingStatus1;
 import com.tools20022.repository.msg.CancellationRejectionStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Status applying to the instruction cancellation request received."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CancellationStatus1Choice", propOrder = {"processingStatus", "rejectionStatus"})
 public class CancellationStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrcgSts", required = true)
 	protected CancellationProcessingStatus1 processingStatus;
 	/**
-	 * Status advising on the processing of the cancellation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -119,7 +121,7 @@ public class CancellationStatus1Choice {
 	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatus.mmInstructionCancellationStatus;
-			componentContext_lazy = () -> CancellationStatus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +133,11 @@ public class CancellationStatus1Choice {
 			type_lazy = () -> CancellationProcessingStatus1.mmObject();
 		}
 	};
+	@XmlElement(name = "RjctnSts", required = true)
 	protected CancellationRejectionStatus1 rejectionStatus;
 	/**
-	 * Status advising on the rejection of the cancellation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -168,7 +171,7 @@ public class CancellationStatus1Choice {
 	public static final MMMessageAssociationEnd mmRejectionStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatus.mmReason;
-			componentContext_lazy = () -> CancellationStatus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CancellationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RjctnSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,10 +187,10 @@ public class CancellationStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CancellationStatus1Choice.mmProcessingStatus, CancellationStatus1Choice.mmRejectionStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CancellationStatus1Choice.mmProcessingStatus, com.tools20022.repository.choice.CancellationStatus1Choice.mmRejectionStatus);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingInstructionStatusV02.mmCancellationStatus);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationStatus1Choice";
 				definition = "Status applying to the instruction cancellation request received.";
@@ -196,21 +199,21 @@ public class CancellationStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrcgSts", required = true)
 	public CancellationProcessingStatus1 getProcessingStatus() {
 		return processingStatus;
 	}
 
-	public void setProcessingStatus(CancellationProcessingStatus1 processingStatus) {
-		this.processingStatus = processingStatus;
+	public CancellationStatus1Choice setProcessingStatus(CancellationProcessingStatus1 processingStatus) {
+		this.processingStatus = Objects.requireNonNull(processingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "RjctnSts", required = true)
 	public CancellationRejectionStatus1 getRejectionStatus() {
 		return rejectionStatus;
 	}
 
-	public void setRejectionStatus(CancellationRejectionStatus1 rejectionStatus) {
-		this.rejectionStatus = rejectionStatus;
+	public CancellationStatus1Choice setRejectionStatus(CancellationRejectionStatus1 rejectionStatus) {
+		this.rejectionStatus = Objects.requireNonNull(rejectionStatus);
+		return this;
 	}
 }

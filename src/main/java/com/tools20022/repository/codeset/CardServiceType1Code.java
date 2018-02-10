@@ -20,37 +20,40 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CardServiceTypeCode;
+import com.tools20022.repository.codeset.CardServiceType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of reconciliation.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode
- * CardServiceTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceType1Code#mmCheckPoint
- * CardServiceType1Code.mmCheckPoint}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceType1Code#CheckPoint
+ * CardServiceType1Code.CheckPoint}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CardServiceType1Code#Final
+ * CardServiceType1Code.Final}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceType1Code#mmFinal
- * CardServiceType1Code.mmFinal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.CardServiceType1Code#mmTotalInquiry
- * CardServiceType1Code.mmTotalInquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardServiceType1Code#TotalInquiry
+ * CardServiceType1Code.TotalInquiry}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CardServiceTypeCode
+ * CardServiceTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of reconciliation."</li>
  * </ul>
  */
-public class CardServiceType1Code extends CardServiceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CardServiceType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,11 +84,12 @@ public class CardServiceType1Code extends CardServiceTypeCode {
 	 * name} = "CheckPoint"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCheckPoint = new MMCode() {
+	public static final CardServiceType1Code CheckPoint = new CardServiceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CheckPoint";
-			owner_lazy = () -> CardServiceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardServiceType1Code.mmObject();
+			codeName = CardServiceTypeCode.CheckPoint.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,11 +108,12 @@ public class CardServiceType1Code extends CardServiceTypeCode {
 	 * name} = "Final"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinal = new MMCode() {
+	public static final CardServiceType1Code Final = new CardServiceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Final";
-			owner_lazy = () -> CardServiceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardServiceType1Code.mmObject();
+			codeName = CardServiceTypeCode.Final.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -126,25 +132,58 @@ public class CardServiceType1Code extends CardServiceTypeCode {
 	 * name} = "TotalInquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTotalInquiry = new MMCode() {
+	public static final CardServiceType1Code TotalInquiry = new CardServiceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInquiry";
-			owner_lazy = () -> CardServiceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardServiceType1Code.mmObject();
+			codeName = CardServiceTypeCode.TotalInquiry.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CardServiceType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CardServiceType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardServiceType1Code";
 				definition = "Type of reconciliation.";
-				code_lazy = () -> Arrays.asList(CardServiceType1Code.mmCheckPoint, CardServiceType1Code.mmFinal, CardServiceType1Code.mmTotalInquiry);
 				trace_lazy = () -> CardServiceTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardServiceType1Code.CheckPoint, com.tools20022.repository.codeset.CardServiceType1Code.Final,
+						com.tools20022.repository.codeset.CardServiceType1Code.TotalInquiry);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CheckPoint.getCodeName().get(), CheckPoint);
+		codesByName.put(Final.getCodeName().get(), Final);
+		codesByName.put(TotalInquiry.getCodeName().get(), TotalInquiry);
+	}
+
+	public static CardServiceType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CardServiceType1Code[] values() {
+		CardServiceType1Code[] values = new CardServiceType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CardServiceType1Code> {
+		@Override
+		public CardServiceType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CardServiceType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

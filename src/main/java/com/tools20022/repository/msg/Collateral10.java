@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Collateral;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Collateral10", propOrder = {"valuation", "haircut", "specialCollateralIndicator"})
 public class Collateral10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Valtn", required = true)
 	protected SecuredCollateral1Choice valuation;
 	/**
-	 * Provides the values of the security pledged as collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -123,7 +126,7 @@ public class Collateral10 {
 	public static final MMMessageAssociationEnd mmValuation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmValuation;
-			componentContext_lazy = () -> Collateral10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral10.mmObject();
 			isDerived = false;
 			xmlTag = "Valtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,23 +139,11 @@ public class Collateral10 {
 			type_lazy = () -> SecuredCollateral1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Hrcut")
 	protected PercentageRate haircut;
 	/**
-	 * Risk control measure applied to underlying collateral whereby the value
-	 * of that underlying collateral is calculated as the market value of the
-	 * assets reduced by a certain percentage. <br>
-	 * <br>
-	 * For reporting purposes the collateral haircut will be calculated as 100
-	 * minus the ratio between the cash lent/borrowed and the market value
-	 * including accrued interest of the collateral pledged times 100. <br>
-	 * <br>
-	 * In the case of multi-collateral repos the haircut will be based on the
-	 * ratio between the cash borrowed/lent and the market value, including
-	 * accrued interest of each of the individual collateral pledged. <br>
-	 * <br>
-	 * Only actual values, as opposed to estimated or default values will be
-	 * reported for this variable.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -194,7 +185,7 @@ public class Collateral10 {
 	public static final MMMessageAttribute mmHaircut = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmHaircut;
-			componentContext_lazy = () -> Collateral10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral10.mmObject();
 			isDerived = false;
 			xmlTag = "Hrcut";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,22 +197,11 @@ public class Collateral10 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "SpclCollInd")
 	protected SpecialCollateral1Code specialCollateralIndicator;
 	/**
-	 * Identifies all repurchase agreements conducted against general collateral
-	 * and those conducted against special collateral. <br>
-	 * - General Collateral is a repurchase transaction in which the security
-	 * lender may choose the security to pledge as collateral with the cash
-	 * provider amongst a relatively wide range of securities meeting predefined
-	 * criteria; <br>
-	 * - Special Collateral is a repurchase transaction in which the cash
-	 * provider requests a specific security (individual ISIN) to be provided by
-	 * the cash borrower. <br>
-	 * <br>
-	 * Usage:<br>
-	 * This field is optional and it should be provided only in case it is
-	 * feasible for the reporting agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -264,7 +244,7 @@ public class Collateral10 {
 	public static final MMMessageAttribute mmSpecialCollateralIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Collateral.mmCollateralType;
-			componentContext_lazy = () -> Collateral10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Collateral10.mmObject();
 			isDerived = false;
 			xmlTag = "SpclCollInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,9 +260,10 @@ public class Collateral10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Collateral10.mmValuation, Collateral10.mmHaircut, Collateral10.mmSpecialCollateralIndicator);
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.msg.Collateral10.mmValuation, com.tools20022.repository.msg.Collateral10.mmHaircut, com.tools20022.repository.msg.Collateral10.mmSpecialCollateralIndicator);
 				trace_lazy = () -> Collateral.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Collateral10";
 				definition = "Provides the details of the security pledge as collateral.";
@@ -292,30 +273,30 @@ public class Collateral10 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Valtn", required = true)
 	public SecuredCollateral1Choice getValuation() {
 		return valuation;
 	}
 
-	public void setValuation(SecuredCollateral1Choice valuation) {
-		this.valuation = valuation;
+	public Collateral10 setValuation(SecuredCollateral1Choice valuation) {
+		this.valuation = Objects.requireNonNull(valuation);
+		return this;
 	}
 
-	@XmlElement(name = "Hrcut")
-	public PercentageRate getHaircut() {
-		return haircut;
+	public Optional<PercentageRate> getHaircut() {
+		return haircut == null ? Optional.empty() : Optional.of(haircut);
 	}
 
-	public void setHaircut(PercentageRate haircut) {
+	public Collateral10 setHaircut(PercentageRate haircut) {
 		this.haircut = haircut;
+		return this;
 	}
 
-	@XmlElement(name = "SpclCollInd")
-	public SpecialCollateral1Code getSpecialCollateralIndicator() {
-		return specialCollateralIndicator;
+	public Optional<SpecialCollateral1Code> getSpecialCollateralIndicator() {
+		return specialCollateralIndicator == null ? Optional.empty() : Optional.of(specialCollateralIndicator);
 	}
 
-	public void setSpecialCollateralIndicator(SpecialCollateral1Code specialCollateralIndicator) {
+	public Collateral10 setSpecialCollateralIndicator(SpecialCollateral1Code specialCollateralIndicator) {
 		this.specialCollateralIndicator = specialCollateralIndicator;
+		return this;
 	}
 }

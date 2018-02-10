@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PriceReportFunctionCode;
+import com.tools20022.repository.codeset.PriceReportFunction1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the function of the price report.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PriceReportFunctionCode
- * PriceReportFunctionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceReportFunction1Code#mmCompleteReplacementPriceReport
- * PriceReportFunction1Code.mmCompleteReplacementPriceReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceReportFunction1Code#CompleteReplacementPriceReport
+ * PriceReportFunction1Code.CompleteReplacementPriceReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceReportFunction1Code#mmNewPriceReport
- * PriceReportFunction1Code.mmNewPriceReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceReportFunction1Code#NewPriceReport
+ * PriceReportFunction1Code.NewPriceReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceReportFunction1Code#mmPartialCorrectionPriceReport
- * PriceReportFunction1Code.mmPartialCorrectionPriceReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceReportFunction1Code#PartialCorrectionPriceReport
+ * PriceReportFunction1Code.PartialCorrectionPriceReport}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PriceReportFunctionCode
+ * PriceReportFunctionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the function of the price report."</li>
  * </ul>
  */
-public class PriceReportFunction1Code extends PriceReportFunctionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PriceReportFunction1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class PriceReportFunction1Code extends PriceReportFunctionCode {
 	 * name} = "CompleteReplacementPriceReport"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompleteReplacementPriceReport = new MMCode() {
+	public static final PriceReportFunction1Code CompleteReplacementPriceReport = new PriceReportFunction1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompleteReplacementPriceReport";
-			owner_lazy = () -> PriceReportFunction1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceReportFunction1Code.mmObject();
+			codeName = PriceReportFunctionCode.CompleteReplacementPriceReport.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class PriceReportFunction1Code extends PriceReportFunctionCode {
 	 * name} = "NewPriceReport"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNewPriceReport = new MMCode() {
+	public static final PriceReportFunction1Code NewPriceReport = new PriceReportFunction1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPriceReport";
-			owner_lazy = () -> PriceReportFunction1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceReportFunction1Code.mmObject();
+			codeName = PriceReportFunctionCode.NewPriceReport.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class PriceReportFunction1Code extends PriceReportFunctionCode {
 	 * name} = "PartialCorrectionPriceReport"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialCorrectionPriceReport = new MMCode() {
+	public static final PriceReportFunction1Code PartialCorrectionPriceReport = new PriceReportFunction1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialCorrectionPriceReport";
-			owner_lazy = () -> PriceReportFunction1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceReportFunction1Code.mmObject();
+			codeName = PriceReportFunctionCode.PartialCorrectionPriceReport.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PriceReportFunction1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PriceReportFunction1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REPL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceReportFunction1Code";
 				definition = "Specifies the function of the price report.";
-				code_lazy = () -> Arrays.asList(PriceReportFunction1Code.mmCompleteReplacementPriceReport, PriceReportFunction1Code.mmNewPriceReport, PriceReportFunction1Code.mmPartialCorrectionPriceReport);
 				trace_lazy = () -> PriceReportFunctionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceReportFunction1Code.CompleteReplacementPriceReport, com.tools20022.repository.codeset.PriceReportFunction1Code.NewPriceReport,
+						com.tools20022.repository.codeset.PriceReportFunction1Code.PartialCorrectionPriceReport);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CompleteReplacementPriceReport.getCodeName().get(), CompleteReplacementPriceReport);
+		codesByName.put(NewPriceReport.getCodeName().get(), NewPriceReport);
+		codesByName.put(PartialCorrectionPriceReport.getCodeName().get(), PartialCorrectionPriceReport);
+	}
+
+	public static PriceReportFunction1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PriceReportFunction1Code[] values() {
+		PriceReportFunction1Code[] values = new PriceReportFunction1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PriceReportFunction1Code> {
+		@Override
+		public PriceReportFunction1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PriceReportFunction1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

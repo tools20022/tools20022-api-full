@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Adjustment5", propOrder = {"direction", "amount"})
 public class Adjustment5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Drctn", required = true)
 	protected AdjustmentDirection1Code direction;
 	/**
-	 * Specifies whether the adjustment must be substracted or added to the
-	 * total amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +111,7 @@ public class Adjustment5 {
 	public static final MMMessageAttribute mmDirection = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmDirection;
-			componentContext_lazy = () -> Adjustment5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment5.mmObject();
 			isDerived = false;
 			xmlTag = "Drctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +122,11 @@ public class Adjustment5 {
 			simpleType_lazy = () -> AdjustmentDirection1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Specifies the monetary amount of the adjustment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +159,7 @@ public class Adjustment5 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> Adjustment5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment5.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +174,9 @@ public class Adjustment5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Adjustment5.mmDirection, Adjustment5.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment5.mmDirection, com.tools20022.repository.msg.Adjustment5.mmAmount);
 				trace_lazy = () -> Adjustment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Adjustment5";
 				definition = "Modification on the value of goods and / or services. For example: rebate, discount, surcharge";
@@ -183,21 +185,21 @@ public class Adjustment5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Drctn", required = true)
 	public AdjustmentDirection1Code getDirection() {
 		return direction;
 	}
 
-	public void setDirection(AdjustmentDirection1Code direction) {
-		this.direction = direction;
+	public Adjustment5 setDirection(AdjustmentDirection1Code direction) {
+		this.direction = Objects.requireNonNull(direction);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public Adjustment5 setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 }

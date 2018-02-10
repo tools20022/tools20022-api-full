@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -71,8 +72,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,15 +89,16 @@ import javax.xml.bind.annotation.XmlType;
  * AccountIdentification1Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "AccountIdentification30Choice", propOrder = {"card", "MSISDN", "EMail", "IBAN", "BBAN", "UPIC", "domestic", "other"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "AccountIdentification30Choice", propOrder = {"card", "mSISDN", "eMail", "iBAN", "bBAN", "uPIC", "domestic", "other"})
 public class AccountIdentification30Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Card", required = true)
 	protected Min8Max28NumericText card;
 	/**
-	 * PAN of the card identifying the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +132,7 @@ public class AccountIdentification30Choice {
 	public static final MMMessageAttribute mmCard = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
-			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Card";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,11 +143,11 @@ public class AccountIdentification30Choice {
 			simpleType_lazy = () -> Min8Max28NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "MSISDN", required = true)
 	protected Max16Text mSISDN;
 	/**
-	 * Mobile Subscriber Integrated Service Digital Network (i.e. mobile phone
-	 * number of the SIM card).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,7 +182,7 @@ public class AccountIdentification30Choice {
 	public static final MMMessageAttribute mmMSISDN = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
-			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MSISDN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,10 +193,11 @@ public class AccountIdentification30Choice {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "EMail", required = true)
 	protected Max35Text eMail;
 	/**
-	 * E-mail identifying the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -227,7 +230,7 @@ public class AccountIdentification30Choice {
 	public static final MMMessageAttribute mmEMail = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
-			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EMail";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,15 +241,11 @@ public class AccountIdentification30Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IBAN", required = true)
 	protected IBANIdentifier iBAN;
 	/**
-	 * International Bank Account Number (IBAN) - identifier used
-	 * internationally by financial institutions to uniquely identify the
-	 * account of a customer. Further specifications of the format and content
-	 * of the IBAN can be found in the standard ISO 13616
-	 * "Banking and related financial services - International Bank Account Number (IBAN)"
-	 * version 1997-10-01, or later revisions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -287,7 +286,7 @@ public class AccountIdentification30Choice {
 	public static final MMMessageAttribute mmIBAN = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmIBAN;
-			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IBAN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -299,13 +298,11 @@ public class AccountIdentification30Choice {
 			simpleType_lazy = () -> IBANIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "BBAN", required = true)
 	protected BBANIdentifier bBAN;
 	/**
-	 * Basic Bank Account Number (BBAN) - identifier used nationally by
-	 * financial institutions, that is, in individual countries, generally as
-	 * part of a National Account Numbering Scheme(s), to uniquely identify the
-	 * account of a customer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -346,7 +343,7 @@ public class AccountIdentification30Choice {
 	public static final MMMessageAttribute mmBBAN = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmBBAN;
-			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BBAN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -358,13 +355,11 @@ public class AccountIdentification30Choice {
 			simpleType_lazy = () -> BBANIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "UPIC", required = true)
 	protected UPICIdentifier uPIC;
 	/**
-	 * Universal Payment Identification Code (UPIC) - identifier used by the New
-	 * York Clearing House to mask confidential data, such as bank accounts and
-	 * bank routing numbers. UPIC numbers remain with business customers,
-	 * regardless of banking relationship changes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -405,7 +400,7 @@ public class AccountIdentification30Choice {
 	public static final MMMessageAttribute mmUPIC = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmUPIC;
-			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "UPIC";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -417,12 +412,11 @@ public class AccountIdentification30Choice {
 			simpleType_lazy = () -> UPICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Dmst", required = true)
 	protected Max35Text domestic;
 	/**
-	 * Account number used by financial institutions in individual countries to
-	 * identify an account of a customer, but not necessarily the bank and
-	 * branch of the financial institution in which the account is held.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -457,7 +451,7 @@ public class AccountIdentification30Choice {
 	public static final MMMessageAttribute mmDomestic = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AccountIdentification.mmObject();
-			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dmst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -468,10 +462,11 @@ public class AccountIdentification30Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Othr", required = true)
 	protected Max35Text other;
 	/**
-	 * Other identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -504,7 +499,7 @@ public class AccountIdentification30Choice {
 	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmProprietaryIdentification;
-			componentContext_lazy = () -> AccountIdentification30Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountIdentification30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -519,10 +514,12 @@ public class AccountIdentification30Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountIdentification30Choice.mmCard, AccountIdentification30Choice.mmMSISDN, AccountIdentification30Choice.mmEMail, AccountIdentification30Choice.mmIBAN,
-						AccountIdentification30Choice.mmBBAN, AccountIdentification30Choice.mmUPIC, AccountIdentification30Choice.mmDomestic, AccountIdentification30Choice.mmOther);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification30Choice.mmCard, com.tools20022.repository.choice.AccountIdentification30Choice.mmMSISDN,
+						com.tools20022.repository.choice.AccountIdentification30Choice.mmEMail, com.tools20022.repository.choice.AccountIdentification30Choice.mmIBAN, com.tools20022.repository.choice.AccountIdentification30Choice.mmBBAN,
+						com.tools20022.repository.choice.AccountIdentification30Choice.mmUPIC, com.tools20022.repository.choice.AccountIdentification30Choice.mmDomestic,
+						com.tools20022.repository.choice.AccountIdentification30Choice.mmOther);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification30Choice";
 				definition = "Identifier of an account, as assigned by the account servicer.";
@@ -532,75 +529,75 @@ public class AccountIdentification30Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Card", required = true)
 	public Min8Max28NumericText getCard() {
 		return card;
 	}
 
-	public void setCard(Min8Max28NumericText card) {
-		this.card = card;
+	public AccountIdentification30Choice setCard(Min8Max28NumericText card) {
+		this.card = Objects.requireNonNull(card);
+		return this;
 	}
 
-	@XmlElement(name = "MSISDN", required = true)
 	public Max16Text getMSISDN() {
 		return mSISDN;
 	}
 
-	public void setMSISDN(Max16Text mSISDN) {
-		this.mSISDN = mSISDN;
+	public AccountIdentification30Choice setMSISDN(Max16Text mSISDN) {
+		this.mSISDN = Objects.requireNonNull(mSISDN);
+		return this;
 	}
 
-	@XmlElement(name = "EMail", required = true)
 	public Max35Text getEMail() {
 		return eMail;
 	}
 
-	public void setEMail(Max35Text eMail) {
-		this.eMail = eMail;
+	public AccountIdentification30Choice setEMail(Max35Text eMail) {
+		this.eMail = Objects.requireNonNull(eMail);
+		return this;
 	}
 
-	@XmlElement(name = "IBAN", required = true)
 	public IBANIdentifier getIBAN() {
 		return iBAN;
 	}
 
-	public void setIBAN(IBANIdentifier iBAN) {
-		this.iBAN = iBAN;
+	public AccountIdentification30Choice setIBAN(IBANIdentifier iBAN) {
+		this.iBAN = Objects.requireNonNull(iBAN);
+		return this;
 	}
 
-	@XmlElement(name = "BBAN", required = true)
 	public BBANIdentifier getBBAN() {
 		return bBAN;
 	}
 
-	public void setBBAN(BBANIdentifier bBAN) {
-		this.bBAN = bBAN;
+	public AccountIdentification30Choice setBBAN(BBANIdentifier bBAN) {
+		this.bBAN = Objects.requireNonNull(bBAN);
+		return this;
 	}
 
-	@XmlElement(name = "UPIC", required = true)
 	public UPICIdentifier getUPIC() {
 		return uPIC;
 	}
 
-	public void setUPIC(UPICIdentifier uPIC) {
-		this.uPIC = uPIC;
+	public AccountIdentification30Choice setUPIC(UPICIdentifier uPIC) {
+		this.uPIC = Objects.requireNonNull(uPIC);
+		return this;
 	}
 
-	@XmlElement(name = "Dmst", required = true)
 	public Max35Text getDomestic() {
 		return domestic;
 	}
 
-	public void setDomestic(Max35Text domestic) {
-		this.domestic = domestic;
+	public AccountIdentification30Choice setDomestic(Max35Text domestic) {
+		this.domestic = Objects.requireNonNull(domestic);
+		return this;
 	}
 
-	@XmlElement(name = "Othr", required = true)
 	public Max35Text getOther() {
 		return other;
 	}
 
-	public void setOther(Max35Text other) {
-		this.other = other;
+	public AccountIdentification30Choice setOther(Max35Text other) {
+		this.other = Objects.requireNonNull(other);
+		return this;
 	}
 }

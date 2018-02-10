@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DividendRateTypeCode;
+import com.tools20022.repository.codeset.DividendRateType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of dividend rate.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode
- * DividendRateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DividendRateType1Code#mmTaxablePortion
- * DividendRateType1Code.mmTaxablePortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.DividendRateType1Code#TaxablePortion
+ * DividendRateType1Code.TaxablePortion}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode
+ * DividendRateTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of dividend rate."</li>
  * </ul>
  */
-public class DividendRateType1Code extends DividendRateTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DividendRateType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,26 +85,56 @@ public class DividendRateType1Code extends DividendRateTypeCode {
 	 * name} = "TaxablePortion"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxablePortion = new MMCode() {
+	public static final DividendRateType1Code TaxablePortion = new DividendRateType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxablePortion";
-			owner_lazy = () -> DividendRateType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DividendRateType1Code.mmObject();
+			codeName = DividendRateTypeCode.TaxablePortion.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DividendRateType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DividendRateType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("TXBL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DividendRateType1Code";
 				definition = "Specifies the type of dividend rate.";
-				code_lazy = () -> Arrays.asList(DividendRateType1Code.mmTaxablePortion);
 				trace_lazy = () -> DividendRateTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DividendRateType1Code.TaxablePortion);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(TaxablePortion.getCodeName().get(), TaxablePortion);
+	}
+
+	public static DividendRateType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DividendRateType1Code[] values() {
+		DividendRateType1Code[] values = new DividendRateType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DividendRateType1Code> {
+		@Override
+		public DividendRateType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DividendRateType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

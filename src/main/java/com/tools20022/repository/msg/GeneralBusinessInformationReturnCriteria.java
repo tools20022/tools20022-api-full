@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the criteria used to report on business information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GeneralBusinessInformationReturnCriteria", propOrder = {"qualifierIndicator", "subjectIndicator", "subjectDetailsIndicator"})
 public class GeneralBusinessInformationReturnCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QlfrInd")
 	protected RequestedIndicator qualifierIndicator;
 	/**
-	 * Indicates whether the qualifier is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +102,7 @@ public class GeneralBusinessInformationReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmQualifierIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GeneralBusinessInformationReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "QlfrInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,10 +113,11 @@ public class GeneralBusinessInformationReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "SbjtInd")
 	protected RequestedIndicator subjectIndicator;
 	/**
-	 * Indicates whether the subject is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +145,7 @@ public class GeneralBusinessInformationReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmSubjectIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GeneralBusinessInformationReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "SbjtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,10 +156,11 @@ public class GeneralBusinessInformationReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "SbjtDtlsInd")
 	protected RequestedIndicator subjectDetailsIndicator;
 	/**
-	 * Indicates whether the subject details are requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -184,7 +188,7 @@ public class GeneralBusinessInformationReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmSubjectDetailsIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GeneralBusinessInformationReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "SbjtDtlsInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,9 +203,9 @@ public class GeneralBusinessInformationReturnCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GeneralBusinessInformationReturnCriteria.mmQualifierIndicator, GeneralBusinessInformationReturnCriteria.mmSubjectIndicator,
-						GeneralBusinessInformationReturnCriteria.mmSubjectDetailsIndicator);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmQualifierIndicator,
+						com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmSubjectIndicator, com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmSubjectDetailsIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GeneralBusinessInformationReturnCriteria";
 				definition = "Defines the criteria used to report on business information.";
@@ -210,30 +214,30 @@ public class GeneralBusinessInformationReturnCriteria {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QlfrInd")
-	public RequestedIndicator getQualifierIndicator() {
-		return qualifierIndicator;
+	public Optional<RequestedIndicator> getQualifierIndicator() {
+		return qualifierIndicator == null ? Optional.empty() : Optional.of(qualifierIndicator);
 	}
 
-	public void setQualifierIndicator(RequestedIndicator qualifierIndicator) {
+	public GeneralBusinessInformationReturnCriteria setQualifierIndicator(RequestedIndicator qualifierIndicator) {
 		this.qualifierIndicator = qualifierIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "SbjtInd")
-	public RequestedIndicator getSubjectIndicator() {
-		return subjectIndicator;
+	public Optional<RequestedIndicator> getSubjectIndicator() {
+		return subjectIndicator == null ? Optional.empty() : Optional.of(subjectIndicator);
 	}
 
-	public void setSubjectIndicator(RequestedIndicator subjectIndicator) {
+	public GeneralBusinessInformationReturnCriteria setSubjectIndicator(RequestedIndicator subjectIndicator) {
 		this.subjectIndicator = subjectIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "SbjtDtlsInd")
-	public RequestedIndicator getSubjectDetailsIndicator() {
-		return subjectDetailsIndicator;
+	public Optional<RequestedIndicator> getSubjectDetailsIndicator() {
+		return subjectDetailsIndicator == null ? Optional.empty() : Optional.of(subjectDetailsIndicator);
 	}
 
-	public void setSubjectDetailsIndicator(RequestedIndicator subjectDetailsIndicator) {
+	public GeneralBusinessInformationReturnCriteria setSubjectDetailsIndicator(RequestedIndicator subjectDetailsIndicator) {
 		this.subjectDetailsIndicator = subjectDetailsIndicator;
+		return this;
 	}
 }

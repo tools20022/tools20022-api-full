@@ -20,35 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ATMStatusCode;
+import com.tools20022.repository.codeset.ATMStatus3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Current status of the key.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ATMStatusCode ATMStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMStatus3Code#InOperation
+ * ATMStatus3Code.InOperation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMStatus3Code#Stopped
+ * ATMStatus3Code.Stopped}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMStatus3Code#mmInOperation
- * ATMStatus3Code.mmInOperation}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMStatus3Code#mmStopped
- * ATMStatus3Code.mmStopped}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMStatus3Code#mmWaitingActivation
- * ATMStatus3Code.mmWaitingActivation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMStatus3Code#WaitingActivation
+ * ATMStatus3Code.WaitingActivation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ATMStatusCode ATMStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Current status of the key."</li>
  * </ul>
  */
-public class ATMStatus3Code extends ATMStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ATMStatus3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -78,11 +82,12 @@ public class ATMStatus3Code extends ATMStatusCode {
 	 * name} = "InOperation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInOperation = new MMCode() {
+	public static final ATMStatus3Code InOperation = new ATMStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InOperation";
-			owner_lazy = () -> ATMStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMStatus3Code.mmObject();
+			codeName = ATMStatusCode.InOperation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -101,11 +106,12 @@ public class ATMStatus3Code extends ATMStatusCode {
 	 * name} = "Stopped"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStopped = new MMCode() {
+	public static final ATMStatus3Code Stopped = new ATMStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stopped";
-			owner_lazy = () -> ATMStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMStatus3Code.mmObject();
+			codeName = ATMStatusCode.Stopped.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -124,25 +130,57 @@ public class ATMStatus3Code extends ATMStatusCode {
 	 * name} = "WaitingActivation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWaitingActivation = new MMCode() {
+	public static final ATMStatus3Code WaitingActivation = new ATMStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaitingActivation";
-			owner_lazy = () -> ATMStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMStatus3Code.mmObject();
+			codeName = ATMStatusCode.WaitingActivation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ATMStatus3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ATMStatus3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMStatus3Code";
 				definition = "Current status of the key.";
-				code_lazy = () -> Arrays.asList(ATMStatus3Code.mmInOperation, ATMStatus3Code.mmStopped, ATMStatus3Code.mmWaitingActivation);
 				trace_lazy = () -> ATMStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMStatus3Code.InOperation, com.tools20022.repository.codeset.ATMStatus3Code.Stopped, com.tools20022.repository.codeset.ATMStatus3Code.WaitingActivation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(InOperation.getCodeName().get(), InOperation);
+		codesByName.put(Stopped.getCodeName().get(), Stopped);
+		codesByName.put(WaitingActivation.getCodeName().get(), WaitingActivation);
+	}
+
+	public static ATMStatus3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ATMStatus3Code[] values() {
+		ATMStatus3Code[] values = new ATMStatus3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ATMStatus3Code> {
+		@Override
+		public ATMStatus3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ATMStatus3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

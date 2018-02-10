@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max1kBinary;
 import com.tools20022.repository.datatype.Max50Binary;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "IsabelEpaymentTokenResponse1", propOrder = {"LRCITransactionIdentification", "paymentInformation", "serverSignature"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "IsabelEpaymentTokenResponse1", propOrder = {"lRCITransactionIdentification", "paymentInformation", "serverSignature"})
 public class IsabelEpaymentTokenResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LRCITxId", required = true)
 	protected Max50Binary lRCITransactionIdentification;
 	/**
-	 * Unique and unambiguous transaction identification of the group of signed
-	 * payment files.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +110,7 @@ public class IsabelEpaymentTokenResponse1 {
 	 */
 	public static final MMMessageAttribute mmLRCITransactionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelEpaymentTokenResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "LRCITxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,11 +121,11 @@ public class IsabelEpaymentTokenResponse1 {
 			simpleType_lazy = () -> Max50Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtInf", required = true)
 	protected List<com.tools20022.repository.msg.IsabelLRCIPaymentInformation1> paymentInformation;
 	/**
-	 * Individual record holding all data related to a payment file that is
-	 * being used during the signature process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -152,7 +154,7 @@ public class IsabelEpaymentTokenResponse1 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelEpaymentTokenResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,12 +166,11 @@ public class IsabelEpaymentTokenResponse1 {
 			type_lazy = () -> com.tools20022.repository.msg.IsabelLRCIPaymentInformation1.mmObject();
 		}
 	};
+	@XmlElement(name = "SvrSgntr", required = true)
 	protected Max1kBinary serverSignature;
 	/**
-	 * Mathematical scheme for demonstrating the authenticity of the original
-	 * server challenge exchanged by the LRCI protocol during the signature
-	 * process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,7 +199,7 @@ public class IsabelEpaymentTokenResponse1 {
 	 */
 	public static final MMMessageAttribute mmServerSignature = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelEpaymentTokenResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "SvrSgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,8 +214,9 @@ public class IsabelEpaymentTokenResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IsabelEpaymentTokenResponse1.mmLRCITransactionIdentification, IsabelEpaymentTokenResponse1.mmPaymentInformation, IsabelEpaymentTokenResponse1.mmServerSignature);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.mmLRCITransactionIdentification, com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.mmPaymentInformation,
+						com.tools20022.repository.msg.IsabelEpaymentTokenResponse1.mmServerSignature);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelEpaymentTokenResponse1";
 				definition = "Specifies the token data on which the signature is calculated by the LRCI client.";
@@ -223,30 +225,30 @@ public class IsabelEpaymentTokenResponse1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LRCITxId", required = true)
 	public Max50Binary getLRCITransactionIdentification() {
 		return lRCITransactionIdentification;
 	}
 
-	public void setLRCITransactionIdentification(Max50Binary lRCITransactionIdentification) {
-		this.lRCITransactionIdentification = lRCITransactionIdentification;
+	public IsabelEpaymentTokenResponse1 setLRCITransactionIdentification(Max50Binary lRCITransactionIdentification) {
+		this.lRCITransactionIdentification = Objects.requireNonNull(lRCITransactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PmtInf", required = true)
 	public List<IsabelLRCIPaymentInformation1> getPaymentInformation() {
-		return paymentInformation;
+		return paymentInformation == null ? paymentInformation = new ArrayList<>() : paymentInformation;
 	}
 
-	public void setPaymentInformation(List<com.tools20022.repository.msg.IsabelLRCIPaymentInformation1> paymentInformation) {
-		this.paymentInformation = paymentInformation;
+	public IsabelEpaymentTokenResponse1 setPaymentInformation(List<com.tools20022.repository.msg.IsabelLRCIPaymentInformation1> paymentInformation) {
+		this.paymentInformation = Objects.requireNonNull(paymentInformation);
+		return this;
 	}
 
-	@XmlElement(name = "SvrSgntr", required = true)
 	public Max1kBinary getServerSignature() {
 		return serverSignature;
 	}
 
-	public void setServerSignature(Max1kBinary serverSignature) {
-		this.serverSignature = serverSignature;
+	public IsabelEpaymentTokenResponse1 setServerSignature(Max1kBinary serverSignature) {
+		this.serverSignature = Objects.requireNonNull(serverSignature);
+		return this;
 	}
 }

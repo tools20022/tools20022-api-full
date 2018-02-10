@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MarginTypeCode;
+import com.tools20022.repository.codeset.MarginType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the type of margin, for example, initial margin, variation margin,
@@ -31,50 +35,50 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MarginTypeCode MarginTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmSettlementRiskMargin
- * MarginType1Code.mmSettlementRiskMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#SettlementRiskMargin
+ * MarginType1Code.SettlementRiskMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmAdditionalDefaultFundMargin
- * MarginType1Code.mmAdditionalDefaultFundMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#AdditionalDefaultFundMargin
+ * MarginType1Code.AdditionalDefaultFundMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmShortChargeMargin
- * MarginType1Code.mmShortChargeMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#ShortChargeMargin
+ * MarginType1Code.ShortChargeMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmCouponMargin
- * MarginType1Code.mmCouponMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#CouponMargin
+ * MarginType1Code.CouponMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmUpfrontMargin
- * MarginType1Code.mmUpfrontMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#UpfrontMargin
+ * MarginType1Code.UpfrontMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmCreditEventMargin
- * MarginType1Code.mmCreditEventMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#CreditEventMargin
+ * MarginType1Code.CreditEventMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmInitialDeposit
- * MarginType1Code.mmInitialDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#InitialDeposit
+ * MarginType1Code.InitialDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmNegociationMargin
- * MarginType1Code.mmNegociationMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#NegociationMargin
+ * MarginType1Code.NegociationMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmInitialMargin
- * MarginType1Code.mmInitialMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#InitialMargin
+ * MarginType1Code.InitialMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmVariationMargin
- * MarginType1Code.mmVariationMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#VariationMargin
+ * MarginType1Code.VariationMargin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginType1Code#mmIncreaseCoverageAmount
- * MarginType1Code.mmIncreaseCoverageAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginType1Code#IncreaseCoverageAmount
+ * MarginType1Code.IncreaseCoverageAmount}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MarginTypeCode MarginTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -93,7 +97,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class MarginType1Code extends MarginTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MarginType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -112,11 +117,12 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "SettlementRiskMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementRiskMargin = new MMCode() {
+	public static final MarginType1Code SettlementRiskMargin = new MarginType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementRiskMargin";
-			owner_lazy = () -> MarginType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarginType1Code.mmObject();
+			codeName = MarginTypeCode.SettlementRiskMargin.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +141,12 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "AdditionalDefaultFundMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAdditionalDefaultFundMargin = new MMCode() {
+	public static final MarginType1Code AdditionalDefaultFundMargin = new MarginType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalDefaultFundMargin";
-			owner_lazy = () -> MarginType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarginType1Code.mmObject();
+			codeName = MarginTypeCode.AdditionalDefaultFundMargin.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,11 +165,12 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "ShortChargeMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmShortChargeMargin = new MMCode() {
+	public static final MarginType1Code ShortChargeMargin = new MarginType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortChargeMargin";
-			owner_lazy = () -> MarginType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarginType1Code.mmObject();
+			codeName = MarginTypeCode.ShortChargeMargin.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -181,11 +189,12 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "CouponMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCouponMargin = new MMCode() {
+	public static final MarginType1Code CouponMargin = new MarginType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponMargin";
-			owner_lazy = () -> MarginType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarginType1Code.mmObject();
+			codeName = MarginTypeCode.CouponMargin.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -204,11 +213,12 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "UpfrontMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUpfrontMargin = new MMCode() {
+	public static final MarginType1Code UpfrontMargin = new MarginType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpfrontMargin";
-			owner_lazy = () -> MarginType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarginType1Code.mmObject();
+			codeName = MarginTypeCode.UpfrontMargin.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -227,11 +237,12 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "CreditEventMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreditEventMargin = new MMCode() {
+	public static final MarginType1Code CreditEventMargin = new MarginType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditEventMargin";
-			owner_lazy = () -> MarginType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarginType1Code.mmObject();
+			codeName = MarginTypeCode.CreditEventMargin.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -250,11 +261,12 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "InitialDeposit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInitialDeposit = new MMCode() {
+	public static final MarginType1Code InitialDeposit = new MarginType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialDeposit";
-			owner_lazy = () -> MarginType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarginType1Code.mmObject();
+			codeName = MarginTypeCode.InitialDeposit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -273,11 +285,12 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "NegociationMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNegociationMargin = new MMCode() {
+	public static final MarginType1Code NegociationMargin = new MarginType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NegociationMargin";
-			owner_lazy = () -> MarginType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarginType1Code.mmObject();
+			codeName = MarginTypeCode.NegociationMargin.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -296,11 +309,12 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "InitialMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInitialMargin = new MMCode() {
+	public static final MarginType1Code InitialMargin = new MarginType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialMargin";
-			owner_lazy = () -> MarginType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarginType1Code.mmObject();
+			codeName = MarginTypeCode.InitialMargin.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -319,11 +333,12 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "VariationMargin"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVariationMargin = new MMCode() {
+	public static final MarginType1Code VariationMargin = new MarginType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMargin";
-			owner_lazy = () -> MarginType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarginType1Code.mmObject();
+			codeName = MarginTypeCode.VariationMargin.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -342,28 +357,69 @@ public class MarginType1Code extends MarginTypeCode {
 	 * name} = "IncreaseCoverageAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncreaseCoverageAmount = new MMCode() {
+	public static final MarginType1Code IncreaseCoverageAmount = new MarginType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseCoverageAmount";
-			owner_lazy = () -> MarginType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarginType1Code.mmObject();
+			codeName = MarginTypeCode.IncreaseCoverageAmount.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MarginType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MarginType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SEMA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginType1Code";
 				definition = "Indicates the type of margin, for example, initial margin, variation margin, initial deposit or coupon margin.";
-				code_lazy = () -> Arrays.asList(MarginType1Code.mmSettlementRiskMargin, MarginType1Code.mmAdditionalDefaultFundMargin, MarginType1Code.mmShortChargeMargin, MarginType1Code.mmCouponMargin, MarginType1Code.mmUpfrontMargin,
-						MarginType1Code.mmCreditEventMargin, MarginType1Code.mmInitialDeposit, MarginType1Code.mmNegociationMargin, MarginType1Code.mmInitialMargin, MarginType1Code.mmVariationMargin,
-						MarginType1Code.mmIncreaseCoverageAmount);
 				trace_lazy = () -> MarginTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarginType1Code.SettlementRiskMargin, com.tools20022.repository.codeset.MarginType1Code.AdditionalDefaultFundMargin,
+						com.tools20022.repository.codeset.MarginType1Code.ShortChargeMargin, com.tools20022.repository.codeset.MarginType1Code.CouponMargin, com.tools20022.repository.codeset.MarginType1Code.UpfrontMargin,
+						com.tools20022.repository.codeset.MarginType1Code.CreditEventMargin, com.tools20022.repository.codeset.MarginType1Code.InitialDeposit, com.tools20022.repository.codeset.MarginType1Code.NegociationMargin,
+						com.tools20022.repository.codeset.MarginType1Code.InitialMargin, com.tools20022.repository.codeset.MarginType1Code.VariationMargin, com.tools20022.repository.codeset.MarginType1Code.IncreaseCoverageAmount);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SettlementRiskMargin.getCodeName().get(), SettlementRiskMargin);
+		codesByName.put(AdditionalDefaultFundMargin.getCodeName().get(), AdditionalDefaultFundMargin);
+		codesByName.put(ShortChargeMargin.getCodeName().get(), ShortChargeMargin);
+		codesByName.put(CouponMargin.getCodeName().get(), CouponMargin);
+		codesByName.put(UpfrontMargin.getCodeName().get(), UpfrontMargin);
+		codesByName.put(CreditEventMargin.getCodeName().get(), CreditEventMargin);
+		codesByName.put(InitialDeposit.getCodeName().get(), InitialDeposit);
+		codesByName.put(NegociationMargin.getCodeName().get(), NegociationMargin);
+		codesByName.put(InitialMargin.getCodeName().get(), InitialMargin);
+		codesByName.put(VariationMargin.getCodeName().get(), VariationMargin);
+		codesByName.put(IncreaseCoverageAmount.getCodeName().get(), IncreaseCoverageAmount);
+	}
+
+	public static MarginType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MarginType1Code[] values() {
+		MarginType1Code[] values = new MarginType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MarginType1Code> {
+		@Override
+		public MarginType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MarginType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

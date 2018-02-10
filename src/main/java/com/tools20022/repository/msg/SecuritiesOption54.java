@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -28,6 +29,8 @@ import com.tools20022.repository.entity.SecuritiesProceedsDefinition;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,17 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the security option of a corporate event."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesOption54", propOrder = {"conditionalQuantity", "instructedQuantity"})
 public class SecuritiesOption54 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CondlQty")
 	protected FinancialInstrumentQuantity15Choice conditionalQuantity;
 	/**
-	 * Minimum quantity of securities to be accepted (used in the framework of
-	 * conditional privilege on election). In case of proration, if this minimum
-	 * quantity is not reached then the instruction is void.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,6 +101,9 @@ public class SecuritiesOption54 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CondlQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::COND</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -114,9 +119,10 @@ public class SecuritiesOption54 {
 	public static final MMMessageAttribute mmConditionalQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmConditionalQuantity;
-			componentContext_lazy = () -> SecuritiesOption54.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption54.mmObject();
 			isDerived = false;
 			xmlTag = "CondlQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::COND"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalQuantity";
 			definition = "Minimum quantity of securities to be accepted (used in the framework of conditional privilege on election). In case of proration, if this minimum quantity is not reached then the instruction is void.";
@@ -125,10 +131,11 @@ public class SecuritiesOption54 {
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdQty", required = true)
 	protected Quantity40Choice instructedQuantity;
 	/**
-	 * Quantity of securities to which this instruction applies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +170,7 @@ public class SecuritiesOption54 {
 	public static final MMMessageAttribute mmInstructedQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
-			componentContext_lazy = () -> SecuritiesOption54.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOption54.mmObject();
 			isDerived = false;
 			xmlTag = "InstdQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,9 +185,9 @@ public class SecuritiesOption54 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesOption54.mmConditionalQuantity, SecuritiesOption54.mmInstructedQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOption54.mmConditionalQuantity, com.tools20022.repository.msg.SecuritiesOption54.mmInstructedQuantity);
 				trace_lazy = () -> CorporateActionOption.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesOption54";
 				definition = "Specifies the security option of a corporate event.";
@@ -189,21 +196,21 @@ public class SecuritiesOption54 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CondlQty")
-	public FinancialInstrumentQuantity15Choice getConditionalQuantity() {
-		return conditionalQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getConditionalQuantity() {
+		return conditionalQuantity == null ? Optional.empty() : Optional.of(conditionalQuantity);
 	}
 
-	public void setConditionalQuantity(FinancialInstrumentQuantity15Choice conditionalQuantity) {
+	public SecuritiesOption54 setConditionalQuantity(FinancialInstrumentQuantity15Choice conditionalQuantity) {
 		this.conditionalQuantity = conditionalQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "InstdQty", required = true)
 	public Quantity40Choice getInstructedQuantity() {
 		return instructedQuantity;
 	}
 
-	public void setInstructedQuantity(Quantity40Choice instructedQuantity) {
-		this.instructedQuantity = instructedQuantity;
+	public SecuritiesOption54 setInstructedQuantity(Quantity40Choice instructedQuantity) {
+		this.instructedQuantity = Objects.requireNonNull(instructedQuantity);
+		return this;
 	}
 }

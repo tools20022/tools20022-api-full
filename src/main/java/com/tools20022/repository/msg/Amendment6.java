@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.Max2000Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.AmendmentOfUndertaking;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of the amendment."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Amendment6", propOrder = {"undertakingAmendmentMessage", "applicantReferenceNumber", "additionalInformation"})
 public class Amendment6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UdrtkgAmdmntMsg", required = true)
 	protected UndertakingAmendmentMessage1 undertakingAmendmentMessage;
 	/**
-	 * Contents of the related proposed Undertaking Amendment message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -123,7 +123,7 @@ public class Amendment6 {
 	public static final MMMessageAssociationEnd mmUndertakingAmendmentMessage = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> AmendmentOfUndertaking.mmObject();
-			componentContext_lazy = () -> Amendment6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment6.mmObject();
 			isDerived = false;
 			xmlTag = "UdrtkgAmdmntMsg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,11 +135,11 @@ public class Amendment6 {
 			type_lazy = () -> com.tools20022.repository.msg.UndertakingAmendmentMessage1.mmObject();
 		}
 	};
+	@XmlElement(name = "ApplcntRefNb")
 	protected Max35Text applicantReferenceNumber;
 	/**
-	 * Unique and unambiguous identifier assigned by the applicant to the
-	 * undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +167,7 @@ public class Amendment6 {
 	 */
 	public static final MMMessageAttribute mmApplicantReferenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Amendment6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment6.mmObject();
 			isDerived = false;
 			xmlTag = "ApplcntRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +178,11 @@ public class Amendment6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected List<Max2000Text> additionalInformation;
 	/**
-	 * Additional information related to the notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -207,7 +208,7 @@ public class Amendment6 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Amendment6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment6.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,10 +223,11 @@ public class Amendment6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Amendment6.mmUndertakingAmendmentMessage, Amendment6.mmApplicantReferenceNumber, Amendment6.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment6.mmUndertakingAmendmentMessage, com.tools20022.repository.msg.Amendment6.mmApplicantReferenceNumber,
+						com.tools20022.repository.msg.Amendment6.mmAdditionalInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(UndertakingAmendmentNotificationV01.mmUndertakingAmendmentNotificationDetails);
 				trace_lazy = () -> AmendmentOfUndertaking.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Amendment6";
 				definition = "Details of the amendment.";
@@ -234,30 +236,30 @@ public class Amendment6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UdrtkgAmdmntMsg", required = true)
 	public UndertakingAmendmentMessage1 getUndertakingAmendmentMessage() {
 		return undertakingAmendmentMessage;
 	}
 
-	public void setUndertakingAmendmentMessage(com.tools20022.repository.msg.UndertakingAmendmentMessage1 undertakingAmendmentMessage) {
-		this.undertakingAmendmentMessage = undertakingAmendmentMessage;
+	public Amendment6 setUndertakingAmendmentMessage(com.tools20022.repository.msg.UndertakingAmendmentMessage1 undertakingAmendmentMessage) {
+		this.undertakingAmendmentMessage = Objects.requireNonNull(undertakingAmendmentMessage);
+		return this;
 	}
 
-	@XmlElement(name = "ApplcntRefNb")
-	public Max35Text getApplicantReferenceNumber() {
-		return applicantReferenceNumber;
+	public Optional<Max35Text> getApplicantReferenceNumber() {
+		return applicantReferenceNumber == null ? Optional.empty() : Optional.of(applicantReferenceNumber);
 	}
 
-	public void setApplicantReferenceNumber(Max35Text applicantReferenceNumber) {
+	public Amendment6 setApplicantReferenceNumber(Max35Text applicantReferenceNumber) {
 		this.applicantReferenceNumber = applicantReferenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
 	public List<Max2000Text> getAdditionalInformation() {
-		return additionalInformation;
+		return additionalInformation == null ? additionalInformation = new ArrayList<>() : additionalInformation;
 	}
 
-	public void setAdditionalInformation(List<Max2000Text> additionalInformation) {
-		this.additionalInformation = additionalInformation;
+	public Amendment6 setAdditionalInformation(List<Max2000Text> additionalInformation) {
+		this.additionalInformation = Objects.requireNonNull(additionalInformation);
+		return this;
 	}
 }

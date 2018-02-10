@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TaxLiabilityCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the tax role capacity of the instructing party.
@@ -32,11 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxLiabilityCode#mmTaxPrincipal
- * TaxLiabilityCode.mmTaxPrincipal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxLiabilityCode#mmTaxAgent
- * TaxLiabilityCode.mmTaxAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TaxLiabilityCode#TaxPrincipal
+ * TaxLiabilityCode.TaxPrincipal}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxLiabilityCode#TaxAgent
+ * TaxLiabilityCode.TaxAgent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the tax role capacity of the instructing party."</li>
  * </ul>
  */
-public class TaxLiabilityCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TaxLiabilityCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,12 +97,12 @@ public class TaxLiabilityCode {
 	 * "Settlement party is acting as a principal for tax liability."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxPrincipal = new MMCode() {
+	public static final TaxLiabilityCode TaxPrincipal = new TaxLiabilityCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxPrincipal";
 			definition = "Settlement party is acting as a principal for tax liability.";
-			owner_lazy = () -> TaxLiabilityCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxLiabilityCode.mmObject();
 			codeName = "PRIN";
 		}
 	};
@@ -123,28 +128,58 @@ public class TaxLiabilityCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxAgent = new MMCode() {
+	public static final TaxLiabilityCode TaxAgent = new TaxLiabilityCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxAgent";
 			definition = "Settlement party is acting as an agent for tax liability.";
-			owner_lazy = () -> TaxLiabilityCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxLiabilityCode.mmObject();
 			codeName = "AGEN";
 		}
 	};
+	final static private LinkedHashMap<String, TaxLiabilityCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TaxLiabilityCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PRIN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxLiabilityCode";
 				definition = "Specifies the tax role capacity of the instructing party.";
-				code_lazy = () -> Arrays.asList(TaxLiabilityCode.mmTaxPrincipal, TaxLiabilityCode.mmTaxAgent);
 				derivation_lazy = () -> Arrays.asList(TaxLiability1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxLiabilityCode.TaxPrincipal, com.tools20022.repository.codeset.TaxLiabilityCode.TaxAgent);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(TaxPrincipal.getCodeName().get(), TaxPrincipal);
+		codesByName.put(TaxAgent.getCodeName().get(), TaxAgent);
+	}
+
+	public static TaxLiabilityCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TaxLiabilityCode[] values() {
+		TaxLiabilityCode[] values = new TaxLiabilityCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TaxLiabilityCode> {
+		@Override
+		public TaxLiabilityCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TaxLiabilityCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

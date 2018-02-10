@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -45,8 +46,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,15 +58,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Deletion of the current element."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Deletion1", propOrder = "deletedValue")
 public class Deletion1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DeltdVal", required = true)
 	protected Max140Text deletedValue;
 	/**
-	 * Content of the deleted element.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -91,7 +93,7 @@ public class Deletion1 {
 	 */
 	public static final MMMessageAttribute mmDeletedValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Deletion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Deletion1.mmObject();
 			isDerived = false;
 			xmlTag = "DeltdVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -106,8 +108,8 @@ public class Deletion1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Deletion1.mmDeletedValue);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Deletion1.mmDeletedValue);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Deletion1";
 				definition = "Deletion of the current element.";
@@ -116,12 +118,12 @@ public class Deletion1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DeltdVal", required = true)
 	public Max140Text getDeletedValue() {
 		return deletedValue;
 	}
 
-	public void setDeletedValue(Max140Text deletedValue) {
-		this.deletedValue = deletedValue;
+	public Deletion1 setDeletedValue(Max140Text deletedValue) {
+		this.deletedValue = Objects.requireNonNull(deletedValue);
+		return this;
 	}
 }

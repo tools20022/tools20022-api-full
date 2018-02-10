@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -32,6 +33,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +68,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forProprietaryQuantity6
+ * ConstraintCoexistenceQuantityRule.forProprietaryQuantity6}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIssuerSchemeNameRule#forProprietaryQuantity6
+ * ConstraintCoexistenceIssuerSchemeNameRule.forProprietaryQuantity6}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -78,15 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Proprietary quantity format."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProprietaryQuantity6", propOrder = {"shortLongPosition", "quantity", "quantityType", "issuer", "schemeName"})
 public class ProprietaryQuantity6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ShrtLngPos")
 	protected ShortLong1Code shortLongPosition;
 	/**
-	 * Sign of the quantity of security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +129,7 @@ public class ProprietaryQuantity6 {
 	 */
 	public static final MMMessageAttribute mmShortLongPosition = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProprietaryQuantity6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity6.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtLngPos";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +140,11 @@ public class ProprietaryQuantity6 {
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Qty", required = true)
 	protected RestrictedFINDecimalNumber quantity;
 	/**
-	 * Provides the proprietary quantity with a decimal number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +172,7 @@ public class ProprietaryQuantity6 {
 	 */
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProprietaryQuantity6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity6.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,10 +183,11 @@ public class ProprietaryQuantity6 {
 			simpleType_lazy = () -> RestrictedFINDecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "QtyTp", required = true)
 	protected Exact4AlphaNumericText quantityType;
 	/**
-	 * Identifies the type of proprietary quantity reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,7 +215,7 @@ public class ProprietaryQuantity6 {
 	 */
 	public static final MMMessageAttribute mmQuantityType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProprietaryQuantity6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity6.mmObject();
 			isDerived = false;
 			xmlTag = "QtyTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,10 +226,11 @@ public class ProprietaryQuantity6 {
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Issr", required = true)
 	protected Max4AlphaNumericText issuer;
 	/**
-	 * Provides information related to issuer in free format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -233,6 +251,9 @@ public class ProprietaryQuantity6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Issr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B::4!c/4c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -246,9 +267,10 @@ public class ProprietaryQuantity6 {
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmPartyRole;
-			componentContext_lazy = () -> ProprietaryQuantity6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity6.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::4!c/4c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Provides information related to issuer in free format.";
@@ -257,10 +279,11 @@ public class ProprietaryQuantity6 {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "SchmeNm")
 	protected Max4AlphaNumericText schemeName;
 	/**
-	 * Name of the identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -294,7 +317,7 @@ public class ProprietaryQuantity6 {
 	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmNameShort;
-			componentContext_lazy = () -> ProprietaryQuantity6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProprietaryQuantity6.mmObject();
 			isDerived = false;
 			xmlTag = "SchmeNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,8 +332,11 @@ public class ProprietaryQuantity6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProprietaryQuantity6.mmShortLongPosition, ProprietaryQuantity6.mmQuantity, ProprietaryQuantity6.mmQuantityType, ProprietaryQuantity6.mmIssuer, ProprietaryQuantity6.mmSchemeName);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProprietaryQuantity6.mmShortLongPosition, com.tools20022.repository.msg.ProprietaryQuantity6.mmQuantity,
+						com.tools20022.repository.msg.ProprietaryQuantity6.mmQuantityType, com.tools20022.repository.msg.ProprietaryQuantity6.mmIssuer, com.tools20022.repository.msg.ProprietaryQuantity6.mmSchemeName);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forProprietaryQuantity6,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIssuerSchemeNameRule.forProprietaryQuantity6);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -326,48 +352,48 @@ public class ProprietaryQuantity6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ShrtLngPos")
-	public ShortLong1Code getShortLongPosition() {
-		return shortLongPosition;
+	public Optional<ShortLong1Code> getShortLongPosition() {
+		return shortLongPosition == null ? Optional.empty() : Optional.of(shortLongPosition);
 	}
 
-	public void setShortLongPosition(ShortLong1Code shortLongPosition) {
+	public ProprietaryQuantity6 setShortLongPosition(ShortLong1Code shortLongPosition) {
 		this.shortLongPosition = shortLongPosition;
+		return this;
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public RestrictedFINDecimalNumber getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(RestrictedFINDecimalNumber quantity) {
-		this.quantity = quantity;
+	public ProprietaryQuantity6 setQuantity(RestrictedFINDecimalNumber quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "QtyTp", required = true)
 	public Exact4AlphaNumericText getQuantityType() {
 		return quantityType;
 	}
 
-	public void setQuantityType(Exact4AlphaNumericText quantityType) {
-		this.quantityType = quantityType;
+	public ProprietaryQuantity6 setQuantityType(Exact4AlphaNumericText quantityType) {
+		this.quantityType = Objects.requireNonNull(quantityType);
+		return this;
 	}
 
-	@XmlElement(name = "Issr", required = true)
 	public Max4AlphaNumericText getIssuer() {
 		return issuer;
 	}
 
-	public void setIssuer(Max4AlphaNumericText issuer) {
-		this.issuer = issuer;
+	public ProprietaryQuantity6 setIssuer(Max4AlphaNumericText issuer) {
+		this.issuer = Objects.requireNonNull(issuer);
+		return this;
 	}
 
-	@XmlElement(name = "SchmeNm")
-	public Max4AlphaNumericText getSchemeName() {
-		return schemeName;
+	public Optional<Max4AlphaNumericText> getSchemeName() {
+		return schemeName == null ? Optional.empty() : Optional.of(schemeName);
 	}
 
-	public void setSchemeName(Max4AlphaNumericText schemeName) {
+	public ProprietaryQuantity6 setSchemeName(Max4AlphaNumericText schemeName) {
 		this.schemeName = schemeName;
+		return this;
 	}
 }

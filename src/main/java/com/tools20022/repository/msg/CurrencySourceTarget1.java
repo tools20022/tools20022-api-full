@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Information needed to process a currency exchange or conversion."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CurrencySourceTarget1", propOrder = {"sourceCurrency", "targetCurrency"})
 public class CurrencySourceTarget1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SrcCcy", required = true)
 	protected ActiveOrHistoricCurrencyCode sourceCurrency;
 	/**
-	 * Currency of the amount to be converted in a currency conversion.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +111,7 @@ public class CurrencySourceTarget1 {
 	public static final MMMessageAttribute mmSourceCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmSourceCurrency;
-			componentContext_lazy = () -> CurrencySourceTarget1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencySourceTarget1.mmObject();
 			isDerived = false;
 			xmlTag = "SrcCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,11 +122,11 @@ public class CurrencySourceTarget1 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "TrgtCcy", required = true)
 	protected ActiveOrHistoricCurrencyCode targetCurrency;
 	/**
-	 * Currency into which an amount is to be converted in a currency
-	 * conversion.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +162,7 @@ public class CurrencySourceTarget1 {
 	public static final MMMessageAttribute mmTargetCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmTargetCurrency;
-			componentContext_lazy = () -> CurrencySourceTarget1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencySourceTarget1.mmObject();
 			isDerived = false;
 			xmlTag = "TrgtCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,9 +177,9 @@ public class CurrencySourceTarget1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CurrencySourceTarget1.mmSourceCurrency, CurrencySourceTarget1.mmTargetCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencySourceTarget1.mmSourceCurrency, com.tools20022.repository.msg.CurrencySourceTarget1.mmTargetCurrency);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CurrencySourceTarget1";
 				definition = "Information needed to process a currency exchange or conversion.";
@@ -186,21 +188,21 @@ public class CurrencySourceTarget1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SrcCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getSourceCurrency() {
 		return sourceCurrency;
 	}
 
-	public void setSourceCurrency(ActiveOrHistoricCurrencyCode sourceCurrency) {
-		this.sourceCurrency = sourceCurrency;
+	public CurrencySourceTarget1 setSourceCurrency(ActiveOrHistoricCurrencyCode sourceCurrency) {
+		this.sourceCurrency = Objects.requireNonNull(sourceCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "TrgtCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getTargetCurrency() {
 		return targetCurrency;
 	}
 
-	public void setTargetCurrency(ActiveOrHistoricCurrencyCode targetCurrency) {
-		this.targetCurrency = targetCurrency;
+	public CurrencySourceTarget1 setTargetCurrency(ActiveOrHistoricCurrencyCode targetCurrency) {
+		this.targetCurrency = Objects.requireNonNull(targetCurrency);
+		return this;
 	}
 }

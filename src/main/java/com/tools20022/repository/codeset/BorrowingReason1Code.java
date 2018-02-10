@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.BorrowingReasonCode;
+import com.tools20022.repository.codeset.BorrowingReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies the underlying reason for the borrowing.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.BorrowingReasonCode
- * BorrowingReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BorrowingReason1Code#mmSelfConsumption
- * BorrowingReason1Code.mmSelfConsumption}</li>
+ * {@linkplain com.tools20022.repository.codeset.BorrowingReason1Code#SelfConsumption
+ * BorrowingReason1Code.SelfConsumption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BorrowingReason1Code#mmTransferToThirdParty
- * BorrowingReason1Code.mmTransferToThirdParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.BorrowingReason1Code#TransferToThirdParty
+ * BorrowingReason1Code.TransferToThirdParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BorrowingReason1Code#mmMarketMakingPurpose
- * BorrowingReason1Code.mmMarketMakingPurpose}</li>
+ * {@linkplain com.tools20022.repository.codeset.BorrowingReason1Code#MarketMakingPurpose
+ * BorrowingReason1Code.MarketMakingPurpose}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.BorrowingReasonCode
+ * BorrowingReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies the underlying reason for the borrowing."</li>
  * </ul>
  */
-public class BorrowingReason1Code extends BorrowingReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BorrowingReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class BorrowingReason1Code extends BorrowingReasonCode {
 	 * name} = "SelfConsumption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSelfConsumption = new MMCode() {
+	public static final BorrowingReason1Code SelfConsumption = new BorrowingReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfConsumption";
-			owner_lazy = () -> BorrowingReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BorrowingReason1Code.mmObject();
+			codeName = BorrowingReasonCode.SelfConsumption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class BorrowingReason1Code extends BorrowingReasonCode {
 	 * name} = "TransferToThirdParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransferToThirdParty = new MMCode() {
+	public static final BorrowingReason1Code TransferToThirdParty = new BorrowingReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferToThirdParty";
-			owner_lazy = () -> BorrowingReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BorrowingReason1Code.mmObject();
+			codeName = BorrowingReasonCode.TransferToThirdParty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class BorrowingReason1Code extends BorrowingReasonCode {
 	 * name} = "MarketMakingPurpose"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarketMakingPurpose = new MMCode() {
+	public static final BorrowingReason1Code MarketMakingPurpose = new BorrowingReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketMakingPurpose";
-			owner_lazy = () -> BorrowingReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BorrowingReason1Code.mmObject();
+			codeName = BorrowingReasonCode.MarketMakingPurpose.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, BorrowingReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BorrowingReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SFCT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BorrowingReason1Code";
 				definition = "Identifies the underlying reason for the borrowing.";
-				code_lazy = () -> Arrays.asList(BorrowingReason1Code.mmSelfConsumption, BorrowingReason1Code.mmTransferToThirdParty, BorrowingReason1Code.mmMarketMakingPurpose);
 				trace_lazy = () -> BorrowingReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BorrowingReason1Code.SelfConsumption, com.tools20022.repository.codeset.BorrowingReason1Code.TransferToThirdParty,
+						com.tools20022.repository.codeset.BorrowingReason1Code.MarketMakingPurpose);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SelfConsumption.getCodeName().get(), SelfConsumption);
+		codesByName.put(TransferToThirdParty.getCodeName().get(), TransferToThirdParty);
+		codesByName.put(MarketMakingPurpose.getCodeName().get(), MarketMakingPurpose);
+	}
+
+	public static BorrowingReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BorrowingReason1Code[] values() {
+		BorrowingReason1Code[] values = new BorrowingReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BorrowingReason1Code> {
+		@Override
+		public BorrowingReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BorrowingReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

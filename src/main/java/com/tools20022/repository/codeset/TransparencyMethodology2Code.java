@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TransparencyMethodologyCode;
+import com.tools20022.repository.codeset.TransparencyMethodology2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the methodology used for a transparency operation.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TransparencyMethodologyCode
- * TransparencyMethodologyCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code#mmYear
- * TransparencyMethodology2Code.mmYear}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code#Year
+ * TransparencyMethodology2Code.Year}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code#mmSystematicInternaliser
- * TransparencyMethodology2Code.mmSystematicInternaliser}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code#SystematicInternaliser
+ * TransparencyMethodology2Code.SystematicInternaliser}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code#mmFirstFourWeeks
- * TransparencyMethodology2Code.mmFirstFourWeeks}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code#FirstFourWeeks
+ * TransparencyMethodology2Code.FirstFourWeeks}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code#mmEstimated
- * TransparencyMethodology2Code.mmEstimated}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransparencyMethodology2Code#Estimated
+ * TransparencyMethodology2Code.Estimated}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TransparencyMethodologyCode
+ * TransparencyMethodologyCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the methodology used for a transparency operation."</li>
  * </ul>
  */
-public class TransparencyMethodology2Code extends TransparencyMethodologyCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransparencyMethodology2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class TransparencyMethodology2Code extends TransparencyMethodologyCode {
 	 * name} = "Year"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmYear = new MMCode() {
+	public static final TransparencyMethodology2Code Year = new TransparencyMethodology2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Year";
-			owner_lazy = () -> TransparencyMethodology2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransparencyMethodology2Code.mmObject();
+			codeName = TransparencyMethodologyCode.Year.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,11 +112,12 @@ public class TransparencyMethodology2Code extends TransparencyMethodologyCode {
 	 * name} = "SystematicInternaliser"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSystematicInternaliser = new MMCode() {
+	public static final TransparencyMethodology2Code SystematicInternaliser = new TransparencyMethodology2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystematicInternaliser";
-			owner_lazy = () -> TransparencyMethodology2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransparencyMethodology2Code.mmObject();
+			codeName = TransparencyMethodologyCode.SystematicInternaliser.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -129,11 +136,12 @@ public class TransparencyMethodology2Code extends TransparencyMethodologyCode {
 	 * name} = "FirstFourWeeks"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFirstFourWeeks = new MMCode() {
+	public static final TransparencyMethodology2Code FirstFourWeeks = new TransparencyMethodology2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstFourWeeks";
-			owner_lazy = () -> TransparencyMethodology2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransparencyMethodology2Code.mmObject();
+			codeName = TransparencyMethodologyCode.FirstFourWeeks.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -152,25 +160,59 @@ public class TransparencyMethodology2Code extends TransparencyMethodologyCode {
 	 * name} = "Estimated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEstimated = new MMCode() {
+	public static final TransparencyMethodology2Code Estimated = new TransparencyMethodology2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Estimated";
-			owner_lazy = () -> TransparencyMethodology2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransparencyMethodology2Code.mmObject();
+			codeName = TransparencyMethodologyCode.Estimated.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TransparencyMethodology2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransparencyMethodology2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransparencyMethodology2Code";
 				definition = "Specifies the methodology used for a transparency operation.";
-				code_lazy = () -> Arrays.asList(TransparencyMethodology2Code.mmYear, TransparencyMethodology2Code.mmSystematicInternaliser, TransparencyMethodology2Code.mmFirstFourWeeks, TransparencyMethodology2Code.mmEstimated);
 				trace_lazy = () -> TransparencyMethodologyCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransparencyMethodology2Code.Year, com.tools20022.repository.codeset.TransparencyMethodology2Code.SystematicInternaliser,
+						com.tools20022.repository.codeset.TransparencyMethodology2Code.FirstFourWeeks, com.tools20022.repository.codeset.TransparencyMethodology2Code.Estimated);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Year.getCodeName().get(), Year);
+		codesByName.put(SystematicInternaliser.getCodeName().get(), SystematicInternaliser);
+		codesByName.put(FirstFourWeeks.getCodeName().get(), FirstFourWeeks);
+		codesByName.put(Estimated.getCodeName().get(), Estimated);
+	}
+
+	public static TransparencyMethodology2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransparencyMethodology2Code[] values() {
+		TransparencyMethodology2Code[] values = new TransparencyMethodology2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransparencyMethodology2Code> {
+		@Override
+		public TransparencyMethodology2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransparencyMethodology2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

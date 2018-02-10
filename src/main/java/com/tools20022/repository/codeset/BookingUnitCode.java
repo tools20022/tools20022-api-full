@@ -17,12 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.BookingUnitCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Description of the method used to book single or grouped executions.
@@ -32,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BookingUnitCode#mmEachPartial
- * BookingUnitCode.mmEachPartial}</li>
+ * {@linkplain com.tools20022.repository.codeset.BookingUnitCode#EachPartial
+ * BookingUnitCode.EachPartial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BookingUnitCode#mmAggregatePartial
- * BookingUnitCode.mmAggregatePartial}</li>
+ * {@linkplain com.tools20022.repository.codeset.BookingUnitCode#AggregatePartial
+ * BookingUnitCode.AggregatePartial}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BookingUnitCode#mmAggregateExecutions
- * BookingUnitCode.mmAggregateExecutions}</li>
+ * {@linkplain com.tools20022.repository.codeset.BookingUnitCode#AggregateExecutions
+ * BookingUnitCode.AggregateExecutions}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +58,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = FIXSynonym: 590</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Description of the method used to book single or grouped executions."</li>
  * </ul>
  */
-public class BookingUnitCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BookingUnitCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,6 +95,9 @@ public class BookingUnitCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "EACP"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 590 value 0</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -95,12 +108,13 @@ public class BookingUnitCode {
 	 * definition} = "Each partial execution is a bookable unit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEachPartial = new MMCode() {
+	public static final BookingUnitCode EachPartial = new BookingUnitCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "590 value 0"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EachPartial";
 			definition = "Each partial execution is a bookable unit";
-			owner_lazy = () -> BookingUnitCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BookingUnitCode.mmObject();
 			codeName = "EACP";
 		}
 	};
@@ -115,6 +129,9 @@ public class BookingUnitCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "AGGP"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 590 value 1</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -127,12 +144,13 @@ public class BookingUnitCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAggregatePartial = new MMCode() {
+	public static final BookingUnitCode AggregatePartial = new BookingUnitCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "590 value 1"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregatePartial";
 			definition = "Aggregate partial executions on this order, and book one trade per order.";
-			owner_lazy = () -> BookingUnitCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BookingUnitCode.mmObject();
 			codeName = "AGGP";
 		}
 	};
@@ -147,6 +165,9 @@ public class BookingUnitCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "AGGE"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 590 value 2</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -158,28 +179,62 @@ public class BookingUnitCode {
 	 * "Aggregate executions for this symbol, side and settlement date."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAggregateExecutions = new MMCode() {
+	public static final BookingUnitCode AggregateExecutions = new BookingUnitCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "590 value 2"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregateExecutions";
 			definition = "Aggregate executions for this symbol, side and settlement date.";
-			owner_lazy = () -> BookingUnitCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BookingUnitCode.mmObject();
 			codeName = "AGGE";
 		}
 	};
+	final static private LinkedHashMap<String, BookingUnitCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BookingUnitCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "590"));
 				example = Arrays.asList("EACP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BookingUnitCode";
 				definition = "Description of the method used to book single or grouped executions.";
-				code_lazy = () -> Arrays.asList(BookingUnitCode.mmEachPartial, BookingUnitCode.mmAggregatePartial, BookingUnitCode.mmAggregateExecutions);
 				derivation_lazy = () -> Arrays.asList(BookingUnit1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BookingUnitCode.EachPartial, com.tools20022.repository.codeset.BookingUnitCode.AggregatePartial,
+						com.tools20022.repository.codeset.BookingUnitCode.AggregateExecutions);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(EachPartial.getCodeName().get(), EachPartial);
+		codesByName.put(AggregatePartial.getCodeName().get(), AggregatePartial);
+		codesByName.put(AggregateExecutions.getCodeName().get(), AggregateExecutions);
+	}
+
+	public static BookingUnitCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BookingUnitCode[] values() {
+		BookingUnitCode[] values = new BookingUnitCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BookingUnitCode> {
+		@Override
+		public BookingUnitCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BookingUnitCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

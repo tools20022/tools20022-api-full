@@ -17,12 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SecuritiesAccountType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of securities account.
@@ -32,15 +38,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountType1Code#mmSafekeeping
- * SecuritiesAccountType1Code.mmSafekeeping}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountType1Code#Safekeeping
+ * SecuritiesAccountType1Code.Safekeeping}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = ISO15022Synonym: :94B::SAFE</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -56,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of securities account."</li>
  * </ul>
  */
-public class SecuritiesAccountType1Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecuritiesAccountType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,27 +92,57 @@ public class SecuritiesAccountType1Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSafekeeping = new MMCode() {
+	public static final SecuritiesAccountType1Code Safekeeping = new SecuritiesAccountType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Safekeeping";
 			definition = "Account is used for safekeeping, ie, the receipt/delivery of securities.";
-			owner_lazy = () -> SecuritiesAccountType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesAccountType1Code.mmObject();
 			codeName = "SAFE";
 		}
 	};
+	final static private LinkedHashMap<String, SecuritiesAccountType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecuritiesAccountType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94B::SAFE"));
 				example = Arrays.asList("SAFE");
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "SecuritiesAccountType1Code";
 				definition = "Specifies the type of securities account.";
-				code_lazy = () -> Arrays.asList(SecuritiesAccountType1Code.mmSafekeeping);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesAccountType1Code.Safekeeping);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Safekeeping.getCodeName().get(), Safekeeping);
+	}
+
+	public static SecuritiesAccountType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecuritiesAccountType1Code[] values() {
+		SecuritiesAccountType1Code[] values = new SecuritiesAccountType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecuritiesAccountType1Code> {
+		@Override
+		public SecuritiesAccountType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecuritiesAccountType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

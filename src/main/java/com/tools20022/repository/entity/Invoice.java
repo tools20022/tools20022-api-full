@@ -27,9 +27,11 @@ import com.tools20022.repository.entity.FinancialDocument;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * General information about an invoice, such as number, issue date date and
@@ -41,6 +43,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.FinancialDocument
+ * FinancialDocument}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -91,45 +96,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.Invoice#mmCreditDebitIndicator
  * Invoice.mmCreditDebitIndicator}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.FinancialDocument
- * FinancialDocument}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceTotals1 InvoiceTotals1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OriginalInvoiceInformation1
- * OriginalInvoiceInformation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceFinancingDetails1
- * InvoiceFinancingDetails1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SettlementMonetarySummation1
- * SettlementMonetarySummation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceIdentification1
- * InvoiceIdentification1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.BillingCompensationType1Choice
- * BillingCompensationType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingStatement1
- * BillingStatement1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceLegalIssue1
- * InvoiceLegalIssue1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvoiceTotals2 InvoiceTotals2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ServiceCategoryTotals1
- * ServiceCategoryTotals1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingReport1 BillingReport1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingCancellationReport1
- * BillingCancellationReport1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingSearchCriteria1
- * BillingSearchCriteria1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancingItemList1
- * FinancingItemList1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialItemParameters1
- * FinancialItemParameters1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BillingStatement2
- * BillingStatement2}</li>
  * </ul>
  * </li>
  * <li>
@@ -197,10 +163,46 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceTotals1 InvoiceTotals1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalInvoiceInformation1
+ * OriginalInvoiceInformation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceFinancingDetails1
+ * InvoiceFinancingDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementMonetarySummation1
+ * SettlementMonetarySummation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceIdentification1
+ * InvoiceIdentification1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.BillingCompensationType1Choice
+ * BillingCompensationType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingStatement1
+ * BillingStatement1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceLegalIssue1
+ * InvoiceLegalIssue1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceTotals2 InvoiceTotals2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ServiceCategoryTotals1
+ * ServiceCategoryTotals1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingReport1 BillingReport1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingCancellationReport1
+ * BillingCancellationReport1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingSearchCriteria1
+ * BillingSearchCriteria1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancingItemList1
+ * FinancingItemList1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialItemParameters1
+ * FinancialItemParameters1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingStatement2
+ * BillingStatement2}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -218,8 +220,8 @@ public class Invoice extends FinancialDocument {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyAndAmount creditDebitNoteAmount;
 	/**
-	 * Amount of credit/debit note related to the invoice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,8 +261,8 @@ public class Invoice extends FinancialDocument {
 	public static final MMBusinessAttribute mmCreditDebitNoteAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RemittanceAmount1.mmCreditNoteAmount, RemittanceAmount2.mmCreditNoteAmount, InvoiceRequestInformation1.mmCreditDebitNoteAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitNoteAmount";
 			definition = "Amount of credit/debit note related to the invoice.";
@@ -279,9 +281,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected CurrencyAndAmount totalTaxAmount;
 	/**
-	 * Sum of all tax amounts related to the invoice. It is derived from the
-	 * association between line item and tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -323,8 +324,8 @@ public class Invoice extends FinancialDocument {
 	public static final MMBusinessAttribute mmTotalTaxAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RemittanceAmount1.mmTaxAmount, RemittanceAmount2.mmTaxAmount, SettlementMonetarySummation1.mmTaxTotalAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalTaxAmount";
 			definition = "Sum of all tax amounts related to the invoice. It is derived from the association between line item and tax.";
@@ -343,10 +344,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected CurrencyAndAmount totalInvoiceAmount;
 	/**
-	 * Total amount of the invoice, being the sum of total invoice lines
-	 * amounts, total invoice additional amounts (allowances and charges) and
-	 * total tax amounts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -444,8 +443,8 @@ public class Invoice extends FinancialDocument {
 					LineItem7.mmLineItemsTotalAmount, LineItem7.mmTotalNetAmount, LineItem6.mmAcceptedTotalNetAmount, LineItem8.mmAcceptedTotalNetAmount, LineItem4.mmLineItemsTotalAmount, LineItem4.mmTotalNetAmount,
 					LineItem9.mmLineItemsTotalAmount, LineItem9.mmTotalNetAmount, LineItem11.mmLineItemsTotalAmount, LineItem11.mmTotalNetAmount, LineItem12.mmLineItemsTotalAmount, LineItem12.mmTotalNetAmount,
 					LineItem14.mmAcceptedTotalNetAmount, LineItem13.mmLineItemsTotalAmount, LineItem13.mmTotalNetAmount, LineItem15.mmLineItemsTotalAmount, LineItem15.mmTotalNetAmount, FinancialItem1.mmTotalAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalInvoiceAmount";
 			definition = "Total amount of the invoice, being the sum of total invoice lines amounts, total invoice additional amounts (allowances and charges) and total tax amounts.";
@@ -464,8 +463,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected CurrencyCode invoiceCurrency;
 	/**
-	 * Code specifying the currency of the invoice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -501,8 +500,8 @@ public class Invoice extends FinancialDocument {
 	public static final MMBusinessAttribute mmInvoiceCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmInvoiceCurrencyCode, FinancialItemParameters1.mmCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvoiceCurrency";
 			definition = "Code specifying the currency of the invoice.";
@@ -521,9 +520,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected List<com.tools20022.repository.entity.DateTimePeriod> periodCovered;
 	/**
-	 * Specifies the period covered by an invoice for instance for recurring
-	 * services.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -582,8 +580,8 @@ public class Invoice extends FinancialDocument {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmBillingPeriod, BillingStatement1.mmFromToDate, BillingReport1.mmBillingPeriod, BillingCancellationReport1.mmBillingPeriod, BillingSearchCriteria1.mmBillingPeriod,
 					BillingStatement2.mmFromToDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PeriodCovered";
 			definition = "Specifies the period covered by an invoice for instance for recurring services.";
@@ -595,8 +593,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected List<com.tools20022.repository.entity.CommercialTradeSettlement> tradeSettlement;
 	/**
-	 * Specifies the process which takes place to settle an invoice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -630,8 +628,8 @@ public class Invoice extends FinancialDocument {
 	 */
 	public static final MMBusinessAssociationEnd mmTradeSettlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeSettlement";
 			definition = "Specifies the process which takes place to settle an invoice.";
@@ -643,8 +641,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected CurrencyAndAmount totalCharge;
 	/**
-	 * Algebraical sum of charges related to the invoice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -678,8 +676,8 @@ public class Invoice extends FinancialDocument {
 	public static final MMBusinessAttribute mmTotalCharge = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementMonetarySummation1.mmChargeTotalAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalCharge";
 			definition = "Algebraical sum of charges related to the invoice.";
@@ -698,9 +696,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected CurrencyAndAmount totalPrepaidAmount;
 	/**
-	 * Monetary value of the total prepaid amount being reported for this
-	 * settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -736,8 +733,8 @@ public class Invoice extends FinancialDocument {
 	public static final MMBusinessAttribute mmTotalPrepaidAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementMonetarySummation1.mmTotalPrepaidAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalPrepaidAmount";
 			definition = "Monetary value of the total prepaid amount being reported for this settlement.";
@@ -756,9 +753,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected List<com.tools20022.repository.entity.LineItem> lineItem;
 	/**
-	 * Unit of information showing the related provision of products and/or
-	 * services and monetary summations reported as a discrete line item.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -844,8 +840,8 @@ public class Invoice extends FinancialDocument {
 			derivation_lazy = () -> Arrays.asList(LineItem5.mmLineItemDetails, LineItem7.mmLineItemDetails, LineItem6.mmLineItemDetails, LineItem8.mmLineItemDetails, LineItem4.mmCommercialLineItems, LineItem9.mmCommercialLineItems,
 					CertificateDataSet1.mmLineItem, LineItem11.mmLineItemDetails, CertificateDataSet2.mmLineItem, LineItem12.mmCommercialLineItems, CardPaymentInvoice1.mmLineItem, LineItem14.mmLineItemDetails, LineItem13.mmLineItemDetails,
 					LineItem15.mmCommercialLineItems, CardPaymentInvoice2.mmLineItem);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LineItem";
 			definition = "Unit of information  showing the related  provision of products and/or services and monetary summations reported as a discrete line item.";
@@ -857,8 +853,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected CurrencyAndAmount totalNetAmount;
 	/**
-	 * Total amount after taxes, adjustments and charges.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -898,8 +894,8 @@ public class Invoice extends FinancialDocument {
 	public static final MMBusinessAttribute mmTotalNetAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItem6.mmOrderedTotalNetAmount, LineItem8.mmOrderedTotalNetAmount, LineItem14.mmOrderedTotalNetAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalNetAmount";
 			definition = "Total amount after taxes, adjustments and charges.";
@@ -918,9 +914,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected List<com.tools20022.repository.entity.CurrencyExchange> currencyExchange;
 	/**
-	 * Specifies currency exchange information which is used when currency
-	 * conversion is necessary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -972,8 +967,8 @@ public class Invoice extends FinancialDocument {
 	public static final MMBusinessAssociationEnd mmCurrencyExchange = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmInvoiceCurrencyExchange, BillingStatement1.mmCurrencyExchange, FinancingItemList1.mmAgreedRate, BillingStatement2.mmCurrencyExchange);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchange";
 			definition = "Specifies currency exchange information which is used when currency conversion is necessary.";
@@ -985,8 +980,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected ExternalBillingCompensationTypeCode billingCompensationType;
 	/**
-	 * Defines the type of billing compensation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1026,8 +1021,8 @@ public class Invoice extends FinancialDocument {
 	public static final MMBusinessAttribute mmBillingCompensationType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BillingCompensationType1Choice.mmCode, BillingCompensationType1Choice.mmProprietary, BillingCompensation1.mmType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BillingCompensationType";
 			definition = "Defines the type of billing compensation.";
@@ -1046,8 +1041,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected List<com.tools20022.repository.entity.InvoicePartyRole> invoicePartyRole;
 	/**
-	 * Role played by a party in the context of invoices.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1079,8 +1074,8 @@ public class Invoice extends FinancialDocument {
 	 */
 	public static final MMBusinessAssociationEnd mmInvoicePartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvoicePartyRole";
 			definition = "Role played by a party in the context of invoices.";
@@ -1092,8 +1087,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected Invoice originalInvoice;
 	/**
-	 * Invoice to which another invoice is associated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1133,8 +1128,8 @@ public class Invoice extends FinancialDocument {
 	public static final MMBusinessAssociationEnd mmOriginalInvoice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvoiceFinancingDetails1.mmOriginalInvoiceInformation);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OriginalInvoice";
 			definition = "Invoice to which another invoice is associated.";
@@ -1147,9 +1142,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected List<com.tools20022.repository.entity.Invoice> relatedInvoice;
 	/**
-	 * Specifies another invoice linked to the current one, for instance a
-	 * previous invoice for which a credit note is available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1182,8 +1176,8 @@ public class Invoice extends FinancialDocument {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedInvoice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvoice";
 			definition = "Specifies another invoice linked to the current one, for instance a previous invoice for which a credit note is available.";
@@ -1195,8 +1189,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected InvoiceFinancingAgreement invoiceFinancingTransaction;
 	/**
-	 * Financing transaction related to an invoice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1241,8 +1235,8 @@ public class Invoice extends FinancialDocument {
 	public static final MMBusinessAssociationEnd mmInvoiceFinancingTransaction = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancingItemList1.mmTotalRequestFinancing, FinancialItem1.mmFinancingStatus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvoiceFinancingTransaction";
 			definition = "Financing transaction related to an invoice.";
@@ -1255,8 +1249,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected CurrencyAndAmount billingCompensationAmount;
 	/**
-	 * Specifies the compensation amount of an incorrect billing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1282,8 +1276,8 @@ public class Invoice extends FinancialDocument {
 	 */
 	public static final MMBusinessAttribute mmBillingCompensationAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BillingCompensationAmount";
 			definition = "Specifies the compensation amount of an incorrect billing.";
@@ -1302,8 +1296,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected InvoiceStatus invoiceStatus;
 	/**
-	 * Status of the invoice or of the billing process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1335,8 +1329,8 @@ public class Invoice extends FinancialDocument {
 	 */
 	public static final MMBusinessAssociationEnd mmInvoiceStatus = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvoiceStatus";
 			definition = "Status of the invoice or of the billing process.";
@@ -1349,8 +1343,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected List<com.tools20022.repository.entity.Payment> payment;
 	/**
-	 * Payment related to an invoice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1390,8 +1384,8 @@ public class Invoice extends FinancialDocument {
 	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ReconciliationList1.mmPaymentMeans);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
 			definition = "Payment related to an invoice.";
@@ -1403,8 +1397,8 @@ public class Invoice extends FinancialDocument {
 	};
 	protected DebitCreditCode creditDebitIndicator;
 	/**
-	 * Indicates the direction of the invoice amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1438,8 +1432,8 @@ public class Invoice extends FinancialDocument {
 	public static final MMBusinessAttribute mmCreditDebitIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialItem1.mmCreditDebitIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates the direction of the invoice amount.";
@@ -1460,7 +1454,7 @@ public class Invoice extends FinancialDocument {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Invoice";
 				definition = "General information about an invoice, such as number, issue date date and monetary amounts.";
@@ -1496,159 +1490,179 @@ public class Invoice extends FinancialDocument {
 		return creditDebitNoteAmount;
 	}
 
-	public void setCreditDebitNoteAmount(CurrencyAndAmount creditDebitNoteAmount) {
-		this.creditDebitNoteAmount = creditDebitNoteAmount;
+	public Invoice setCreditDebitNoteAmount(CurrencyAndAmount creditDebitNoteAmount) {
+		this.creditDebitNoteAmount = Objects.requireNonNull(creditDebitNoteAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getTotalTaxAmount() {
 		return totalTaxAmount;
 	}
 
-	public void setTotalTaxAmount(CurrencyAndAmount totalTaxAmount) {
-		this.totalTaxAmount = totalTaxAmount;
+	public Invoice setTotalTaxAmount(CurrencyAndAmount totalTaxAmount) {
+		this.totalTaxAmount = Objects.requireNonNull(totalTaxAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getTotalInvoiceAmount() {
 		return totalInvoiceAmount;
 	}
 
-	public void setTotalInvoiceAmount(CurrencyAndAmount totalInvoiceAmount) {
-		this.totalInvoiceAmount = totalInvoiceAmount;
+	public Invoice setTotalInvoiceAmount(CurrencyAndAmount totalInvoiceAmount) {
+		this.totalInvoiceAmount = Objects.requireNonNull(totalInvoiceAmount);
+		return this;
 	}
 
 	public CurrencyCode getInvoiceCurrency() {
 		return invoiceCurrency;
 	}
 
-	public void setInvoiceCurrency(CurrencyCode invoiceCurrency) {
-		this.invoiceCurrency = invoiceCurrency;
+	public Invoice setInvoiceCurrency(CurrencyCode invoiceCurrency) {
+		this.invoiceCurrency = Objects.requireNonNull(invoiceCurrency);
+		return this;
 	}
 
 	public List<DateTimePeriod> getPeriodCovered() {
-		return periodCovered;
+		return periodCovered == null ? periodCovered = new ArrayList<>() : periodCovered;
 	}
 
-	public void setPeriodCovered(List<com.tools20022.repository.entity.DateTimePeriod> periodCovered) {
-		this.periodCovered = periodCovered;
+	public Invoice setPeriodCovered(List<com.tools20022.repository.entity.DateTimePeriod> periodCovered) {
+		this.periodCovered = Objects.requireNonNull(periodCovered);
+		return this;
 	}
 
 	public List<CommercialTradeSettlement> getTradeSettlement() {
-		return tradeSettlement;
+		return tradeSettlement == null ? tradeSettlement = new ArrayList<>() : tradeSettlement;
 	}
 
-	public void setTradeSettlement(List<com.tools20022.repository.entity.CommercialTradeSettlement> tradeSettlement) {
-		this.tradeSettlement = tradeSettlement;
+	public Invoice setTradeSettlement(List<com.tools20022.repository.entity.CommercialTradeSettlement> tradeSettlement) {
+		this.tradeSettlement = Objects.requireNonNull(tradeSettlement);
+		return this;
 	}
 
 	public CurrencyAndAmount getTotalCharge() {
 		return totalCharge;
 	}
 
-	public void setTotalCharge(CurrencyAndAmount totalCharge) {
-		this.totalCharge = totalCharge;
+	public Invoice setTotalCharge(CurrencyAndAmount totalCharge) {
+		this.totalCharge = Objects.requireNonNull(totalCharge);
+		return this;
 	}
 
 	public CurrencyAndAmount getTotalPrepaidAmount() {
 		return totalPrepaidAmount;
 	}
 
-	public void setTotalPrepaidAmount(CurrencyAndAmount totalPrepaidAmount) {
-		this.totalPrepaidAmount = totalPrepaidAmount;
+	public Invoice setTotalPrepaidAmount(CurrencyAndAmount totalPrepaidAmount) {
+		this.totalPrepaidAmount = Objects.requireNonNull(totalPrepaidAmount);
+		return this;
 	}
 
 	public List<LineItem> getLineItem() {
-		return lineItem;
+		return lineItem == null ? lineItem = new ArrayList<>() : lineItem;
 	}
 
-	public void setLineItem(List<com.tools20022.repository.entity.LineItem> lineItem) {
-		this.lineItem = lineItem;
+	public Invoice setLineItem(List<com.tools20022.repository.entity.LineItem> lineItem) {
+		this.lineItem = Objects.requireNonNull(lineItem);
+		return this;
 	}
 
 	public CurrencyAndAmount getTotalNetAmount() {
 		return totalNetAmount;
 	}
 
-	public void setTotalNetAmount(CurrencyAndAmount totalNetAmount) {
-		this.totalNetAmount = totalNetAmount;
+	public Invoice setTotalNetAmount(CurrencyAndAmount totalNetAmount) {
+		this.totalNetAmount = Objects.requireNonNull(totalNetAmount);
+		return this;
 	}
 
 	public List<CurrencyExchange> getCurrencyExchange() {
-		return currencyExchange;
+		return currencyExchange == null ? currencyExchange = new ArrayList<>() : currencyExchange;
 	}
 
-	public void setCurrencyExchange(List<com.tools20022.repository.entity.CurrencyExchange> currencyExchange) {
-		this.currencyExchange = currencyExchange;
+	public Invoice setCurrencyExchange(List<com.tools20022.repository.entity.CurrencyExchange> currencyExchange) {
+		this.currencyExchange = Objects.requireNonNull(currencyExchange);
+		return this;
 	}
 
 	public ExternalBillingCompensationTypeCode getBillingCompensationType() {
 		return billingCompensationType;
 	}
 
-	public void setBillingCompensationType(ExternalBillingCompensationTypeCode billingCompensationType) {
-		this.billingCompensationType = billingCompensationType;
+	public Invoice setBillingCompensationType(ExternalBillingCompensationTypeCode billingCompensationType) {
+		this.billingCompensationType = Objects.requireNonNull(billingCompensationType);
+		return this;
 	}
 
 	public List<InvoicePartyRole> getInvoicePartyRole() {
-		return invoicePartyRole;
+		return invoicePartyRole == null ? invoicePartyRole = new ArrayList<>() : invoicePartyRole;
 	}
 
-	public void setInvoicePartyRole(List<com.tools20022.repository.entity.InvoicePartyRole> invoicePartyRole) {
-		this.invoicePartyRole = invoicePartyRole;
+	public Invoice setInvoicePartyRole(List<com.tools20022.repository.entity.InvoicePartyRole> invoicePartyRole) {
+		this.invoicePartyRole = Objects.requireNonNull(invoicePartyRole);
+		return this;
 	}
 
 	public Invoice getOriginalInvoice() {
 		return originalInvoice;
 	}
 
-	public void setOriginalInvoice(com.tools20022.repository.entity.Invoice originalInvoice) {
-		this.originalInvoice = originalInvoice;
+	public Invoice setOriginalInvoice(com.tools20022.repository.entity.Invoice originalInvoice) {
+		this.originalInvoice = Objects.requireNonNull(originalInvoice);
+		return this;
 	}
 
 	public List<Invoice> getRelatedInvoice() {
-		return relatedInvoice;
+		return relatedInvoice == null ? relatedInvoice = new ArrayList<>() : relatedInvoice;
 	}
 
-	public void setRelatedInvoice(List<com.tools20022.repository.entity.Invoice> relatedInvoice) {
-		this.relatedInvoice = relatedInvoice;
+	public Invoice setRelatedInvoice(List<com.tools20022.repository.entity.Invoice> relatedInvoice) {
+		this.relatedInvoice = Objects.requireNonNull(relatedInvoice);
+		return this;
 	}
 
 	public InvoiceFinancingAgreement getInvoiceFinancingTransaction() {
 		return invoiceFinancingTransaction;
 	}
 
-	public void setInvoiceFinancingTransaction(com.tools20022.repository.entity.InvoiceFinancingAgreement invoiceFinancingTransaction) {
-		this.invoiceFinancingTransaction = invoiceFinancingTransaction;
+	public Invoice setInvoiceFinancingTransaction(com.tools20022.repository.entity.InvoiceFinancingAgreement invoiceFinancingTransaction) {
+		this.invoiceFinancingTransaction = Objects.requireNonNull(invoiceFinancingTransaction);
+		return this;
 	}
 
 	public CurrencyAndAmount getBillingCompensationAmount() {
 		return billingCompensationAmount;
 	}
 
-	public void setBillingCompensationAmount(CurrencyAndAmount billingCompensationAmount) {
-		this.billingCompensationAmount = billingCompensationAmount;
+	public Invoice setBillingCompensationAmount(CurrencyAndAmount billingCompensationAmount) {
+		this.billingCompensationAmount = Objects.requireNonNull(billingCompensationAmount);
+		return this;
 	}
 
 	public InvoiceStatus getInvoiceStatus() {
 		return invoiceStatus;
 	}
 
-	public void setInvoiceStatus(com.tools20022.repository.entity.InvoiceStatus invoiceStatus) {
-		this.invoiceStatus = invoiceStatus;
+	public Invoice setInvoiceStatus(com.tools20022.repository.entity.InvoiceStatus invoiceStatus) {
+		this.invoiceStatus = Objects.requireNonNull(invoiceStatus);
+		return this;
 	}
 
 	public List<Payment> getPayment() {
-		return payment;
+		return payment == null ? payment = new ArrayList<>() : payment;
 	}
 
-	public void setPayment(List<com.tools20022.repository.entity.Payment> payment) {
-		this.payment = payment;
+	public Invoice setPayment(List<com.tools20022.repository.entity.Payment> payment) {
+		this.payment = Objects.requireNonNull(payment);
+		return this;
 	}
 
 	public DebitCreditCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
 
-	public void setCreditDebitIndicator(DebitCreditCode creditDebitIndicator) {
-		this.creditDebitIndicator = creditDebitIndicator;
+	public Invoice setCreditDebitIndicator(DebitCreditCode creditDebitIndicator) {
+		this.creditDebitIndicator = Objects.requireNonNull(creditDebitIndicator);
+		return this;
 	}
 }

@@ -20,61 +20,64 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.LimitTypeCode;
+import com.tools20022.repository.codeset.LimitType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of risk management limit.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.LimitTypeCode LimitTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType2Code#mmMultilateral
- * LimitType2Code.mmMultilateral}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LimitType2Code#mmBilateral
- * LimitType2Code.mmBilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType2Code#Multilateral
+ * LimitType2Code.Multilateral}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LimitType2Code#Bilateral
+ * LimitType2Code.Bilateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType2Code#mmMandatoryBilateral
- * LimitType2Code.mmMandatoryBilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType2Code#MandatoryBilateral
+ * LimitType2Code.MandatoryBilateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType2Code#mmDiscretionaryBilateral
- * LimitType2Code.mmDiscretionaryBilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType2Code#DiscretionaryBilateral
+ * LimitType2Code.DiscretionaryBilateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType2Code#mmNetBilateral
- * LimitType2Code.mmNetBilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType2Code#NetBilateral
+ * LimitType2Code.NetBilateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType2Code#mmIndirectBilateral
- * LimitType2Code.mmIndirectBilateral}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.LimitType2Code#mmGlobal
- * LimitType2Code.mmGlobal}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType2Code#IndirectBilateral
+ * LimitType2Code.IndirectBilateral}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LimitType2Code#Global
+ * LimitType2Code.Global}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LimitType2Code#DirectDebit
+ * LimitType2Code.DirectDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType2Code#mmDirectDebit
- * LimitType2Code.mmDirectDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType2Code#SingleCustomerDirectDebit
+ * LimitType2Code.SingleCustomerDirectDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType2Code#mmSingleCustomerDirectDebit
- * LimitType2Code.mmSingleCustomerDirectDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType2Code#SingleFinancialInstitutionDirectDebit
+ * LimitType2Code.SingleFinancialInstitutionDirectDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType2Code#mmSingleFinancialInstitutionDirectDebit
- * LimitType2Code.mmSingleFinancialInstitutionDirectDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType2Code#TotalDailyCustomerDirectDebit
+ * LimitType2Code.TotalDailyCustomerDirectDebit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType2Code#mmTotalDailyCustomerDirectDebit
- * LimitType2Code.mmTotalDailyCustomerDirectDebit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.LimitType2Code#mmTotalDailyFinancialInstitutionDirectDebit
- * LimitType2Code.mmTotalDailyFinancialInstitutionDirectDebit}</li>
+ * {@linkplain com.tools20022.repository.codeset.LimitType2Code#TotalDailyFinancialInstitutionDirectDebit
+ * LimitType2Code.TotalDailyFinancialInstitutionDirectDebit}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.LimitTypeCode LimitTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of risk management limit."</li>
  * </ul>
  */
-public class LimitType2Code extends LimitTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class LimitType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -110,11 +114,12 @@ public class LimitType2Code extends LimitTypeCode {
 	 * name} = "Multilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMultilateral = new MMCode() {
+	public static final LimitType2Code Multilateral = new LimitType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multilateral";
-			owner_lazy = () -> LimitType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LimitType2Code.mmObject();
+			codeName = LimitTypeCode.Multilateral.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,11 +138,12 @@ public class LimitType2Code extends LimitTypeCode {
 	 * name} = "Bilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBilateral = new MMCode() {
+	public static final LimitType2Code Bilateral = new LimitType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bilateral";
-			owner_lazy = () -> LimitType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LimitType2Code.mmObject();
+			codeName = LimitTypeCode.Bilateral.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -156,11 +162,12 @@ public class LimitType2Code extends LimitTypeCode {
 	 * name} = "MandatoryBilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMandatoryBilateral = new MMCode() {
+	public static final LimitType2Code MandatoryBilateral = new LimitType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryBilateral";
-			owner_lazy = () -> LimitType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LimitType2Code.mmObject();
+			codeName = LimitTypeCode.MandatoryBilateral.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -179,11 +186,12 @@ public class LimitType2Code extends LimitTypeCode {
 	 * name} = "DiscretionaryBilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiscretionaryBilateral = new MMCode() {
+	public static final LimitType2Code DiscretionaryBilateral = new LimitType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscretionaryBilateral";
-			owner_lazy = () -> LimitType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LimitType2Code.mmObject();
+			codeName = LimitTypeCode.DiscretionaryBilateral.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -202,11 +210,12 @@ public class LimitType2Code extends LimitTypeCode {
 	 * name} = "NetBilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNetBilateral = new MMCode() {
+	public static final LimitType2Code NetBilateral = new LimitType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetBilateral";
-			owner_lazy = () -> LimitType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LimitType2Code.mmObject();
+			codeName = LimitTypeCode.NetBilateral.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -225,11 +234,12 @@ public class LimitType2Code extends LimitTypeCode {
 	 * name} = "IndirectBilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIndirectBilateral = new MMCode() {
+	public static final LimitType2Code IndirectBilateral = new LimitType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndirectBilateral";
-			owner_lazy = () -> LimitType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LimitType2Code.mmObject();
+			codeName = LimitTypeCode.IndirectBilateral.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -248,11 +258,12 @@ public class LimitType2Code extends LimitTypeCode {
 	 * name} = "Global"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGlobal = new MMCode() {
+	public static final LimitType2Code Global = new LimitType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Global";
-			owner_lazy = () -> LimitType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LimitType2Code.mmObject();
+			codeName = LimitTypeCode.Global.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -271,11 +282,12 @@ public class LimitType2Code extends LimitTypeCode {
 	 * name} = "DirectDebit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDirectDebit = new MMCode() {
+	public static final LimitType2Code DirectDebit = new LimitType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectDebit";
-			owner_lazy = () -> LimitType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LimitType2Code.mmObject();
+			codeName = LimitTypeCode.DirectDebit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -294,11 +306,12 @@ public class LimitType2Code extends LimitTypeCode {
 	 * name} = "SingleCustomerDirectDebit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSingleCustomerDirectDebit = new MMCode() {
+	public static final LimitType2Code SingleCustomerDirectDebit = new LimitType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleCustomerDirectDebit";
-			owner_lazy = () -> LimitType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LimitType2Code.mmObject();
+			codeName = LimitTypeCode.SingleCustomerDirectDebit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -317,11 +330,12 @@ public class LimitType2Code extends LimitTypeCode {
 	 * name} = "SingleFinancialInstitutionDirectDebit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSingleFinancialInstitutionDirectDebit = new MMCode() {
+	public static final LimitType2Code SingleFinancialInstitutionDirectDebit = new LimitType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SingleFinancialInstitutionDirectDebit";
-			owner_lazy = () -> LimitType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LimitType2Code.mmObject();
+			codeName = LimitTypeCode.SingleFinancialInstitutionDirectDebit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -340,11 +354,12 @@ public class LimitType2Code extends LimitTypeCode {
 	 * name} = "TotalDailyCustomerDirectDebit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTotalDailyCustomerDirectDebit = new MMCode() {
+	public static final LimitType2Code TotalDailyCustomerDirectDebit = new LimitType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalDailyCustomerDirectDebit";
-			owner_lazy = () -> LimitType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LimitType2Code.mmObject();
+			codeName = LimitTypeCode.TotalDailyCustomerDirectDebit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -363,28 +378,71 @@ public class LimitType2Code extends LimitTypeCode {
 	 * name} = "TotalDailyFinancialInstitutionDirectDebit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTotalDailyFinancialInstitutionDirectDebit = new MMCode() {
+	public static final LimitType2Code TotalDailyFinancialInstitutionDirectDebit = new LimitType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalDailyFinancialInstitutionDirectDebit";
-			owner_lazy = () -> LimitType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LimitType2Code.mmObject();
+			codeName = LimitTypeCode.TotalDailyFinancialInstitutionDirectDebit.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, LimitType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected LimitType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MULT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LimitType2Code";
 				definition = "Specifies the type of risk management limit.";
-				code_lazy = () -> Arrays.asList(LimitType2Code.mmMultilateral, LimitType2Code.mmBilateral, LimitType2Code.mmMandatoryBilateral, LimitType2Code.mmDiscretionaryBilateral, LimitType2Code.mmNetBilateral,
-						LimitType2Code.mmIndirectBilateral, LimitType2Code.mmGlobal, LimitType2Code.mmDirectDebit, LimitType2Code.mmSingleCustomerDirectDebit, LimitType2Code.mmSingleFinancialInstitutionDirectDebit,
-						LimitType2Code.mmTotalDailyCustomerDirectDebit, LimitType2Code.mmTotalDailyFinancialInstitutionDirectDebit);
 				trace_lazy = () -> LimitTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LimitType2Code.Multilateral, com.tools20022.repository.codeset.LimitType2Code.Bilateral, com.tools20022.repository.codeset.LimitType2Code.MandatoryBilateral,
+						com.tools20022.repository.codeset.LimitType2Code.DiscretionaryBilateral, com.tools20022.repository.codeset.LimitType2Code.NetBilateral, com.tools20022.repository.codeset.LimitType2Code.IndirectBilateral,
+						com.tools20022.repository.codeset.LimitType2Code.Global, com.tools20022.repository.codeset.LimitType2Code.DirectDebit, com.tools20022.repository.codeset.LimitType2Code.SingleCustomerDirectDebit,
+						com.tools20022.repository.codeset.LimitType2Code.SingleFinancialInstitutionDirectDebit, com.tools20022.repository.codeset.LimitType2Code.TotalDailyCustomerDirectDebit,
+						com.tools20022.repository.codeset.LimitType2Code.TotalDailyFinancialInstitutionDirectDebit);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Multilateral.getCodeName().get(), Multilateral);
+		codesByName.put(Bilateral.getCodeName().get(), Bilateral);
+		codesByName.put(MandatoryBilateral.getCodeName().get(), MandatoryBilateral);
+		codesByName.put(DiscretionaryBilateral.getCodeName().get(), DiscretionaryBilateral);
+		codesByName.put(NetBilateral.getCodeName().get(), NetBilateral);
+		codesByName.put(IndirectBilateral.getCodeName().get(), IndirectBilateral);
+		codesByName.put(Global.getCodeName().get(), Global);
+		codesByName.put(DirectDebit.getCodeName().get(), DirectDebit);
+		codesByName.put(SingleCustomerDirectDebit.getCodeName().get(), SingleCustomerDirectDebit);
+		codesByName.put(SingleFinancialInstitutionDirectDebit.getCodeName().get(), SingleFinancialInstitutionDirectDebit);
+		codesByName.put(TotalDailyCustomerDirectDebit.getCodeName().get(), TotalDailyCustomerDirectDebit);
+		codesByName.put(TotalDailyFinancialInstitutionDirectDebit.getCodeName().get(), TotalDailyFinancialInstitutionDirectDebit);
+	}
+
+	public static LimitType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static LimitType2Code[] values() {
+		LimitType2Code[] values = new LimitType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, LimitType2Code> {
+		@Override
+		public LimitType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(LimitType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

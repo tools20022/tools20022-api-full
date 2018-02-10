@@ -28,6 +28,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Separate transactions which combined together form a trade.
@@ -51,17 +53,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * Leg.mmSwapType}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Leg#mmPool Leg.mmPool}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Leg#mmTrade Leg.mmTrade}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.LegDetails1 LegDetails1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg2 InstrumentLeg2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg3 InstrumentLeg3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg1 InstrumentLeg1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg6 InstrumentLeg6}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,10 +84,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.LegDetails1 LegDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg2 InstrumentLeg2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg3 InstrumentLeg3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg1 InstrumentLeg1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg6 InstrumentLeg6}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,8 +114,8 @@ public class Leg {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Asset relatedAsset;
 	/**
-	 * Asset for which leg information is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,8 +160,8 @@ public class Leg {
 	public static final MMBusinessAssociationEnd mmRelatedAsset = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(InstrumentLeg2.mmLegFinancialInstrumentAttributes, InstrumentLeg3.mmLegFinancialInstrumentAttributes, InstrumentLeg1.mmLegFinancialInstrumentAttributes);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedAsset";
 			definition = "Asset for which leg information is provided.";
@@ -172,9 +174,8 @@ public class Leg {
 	};
 	protected PercentageRate ratioQuantity;
 	/**
-	 * Only for multileg instrument - Ratio of quantity for an individual leg
-	 * relative to the entire multileg security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -209,8 +210,8 @@ public class Leg {
 	public static final MMBusinessAttribute mmRatioQuantity = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(LegDetails1.mmRatioQuantity);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RatioQuantity";
 			definition = "Only for multileg instrument - Ratio of quantity for an individual leg relative to the entire multileg security.";
@@ -229,9 +230,8 @@ public class Leg {
 	};
 	protected CurrencyCode currency;
 	/**
-	 * Only for multileg instrument - Currency associated with a particular
-	 * Leg's quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -267,8 +267,8 @@ public class Leg {
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(LegDetails1.mmCurrency, InstrumentLeg6.mmLegCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
 			definition = "Only for multileg instrument - Currency associated with a particular Leg's quantity.";
@@ -287,10 +287,8 @@ public class Leg {
 	};
 	protected Max35Text swapType;
 	/**
-	 * For Fixed Income, used instead of LegQty or LegOrderQty to requests the
-	 * respondent to calculate the quantity based on the quantity on the
-	 * opposite side of the swap.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -324,8 +322,8 @@ public class Leg {
 	public static final MMBusinessAttribute mmSwapType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InstrumentLeg2.mmLegSwapType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SwapType";
 			definition = "For Fixed Income, used instead of LegQty or LegOrderQty to requests the respondent to calculate the quantity based on the quantity on the opposite side of the swap.";
@@ -344,9 +342,8 @@ public class Leg {
 	};
 	protected Number pool;
 	/**
-	 * For Fixed Income, identifies MBS / ABS pool for a specific leg of a
-	 * multi-leg instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -371,8 +368,8 @@ public class Leg {
 	 */
 	public static final MMBusinessAttribute mmPool = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Pool";
 			definition = "For Fixed Income, identifies MBS / ABS pool for a specific leg of a multi-leg instrument.";
@@ -391,8 +388,8 @@ public class Leg {
 	};
 	protected Trade trade;
 	/**
-	 * Trade which is composed of several legs.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -421,8 +418,8 @@ public class Leg {
 	 */
 	public static final MMBusinessAssociationEnd mmTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Trade";
 			definition = "Trade which is composed of several legs.";
@@ -437,7 +434,7 @@ public class Leg {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Leg";
 				definition = "Separate transactions which combined together form a trade.";
@@ -457,51 +454,57 @@ public class Leg {
 		return mmObject_lazy.get();
 	}
 
-	public Asset getRelatedAsset() {
-		return relatedAsset;
+	public Optional<Asset> getRelatedAsset() {
+		return relatedAsset == null ? Optional.empty() : Optional.of(relatedAsset);
 	}
 
-	public void setRelatedAsset(com.tools20022.repository.entity.Asset relatedAsset) {
+	public Leg setRelatedAsset(com.tools20022.repository.entity.Asset relatedAsset) {
 		this.relatedAsset = relatedAsset;
+		return this;
 	}
 
 	public PercentageRate getRatioQuantity() {
 		return ratioQuantity;
 	}
 
-	public void setRatioQuantity(PercentageRate ratioQuantity) {
-		this.ratioQuantity = ratioQuantity;
+	public Leg setRatioQuantity(PercentageRate ratioQuantity) {
+		this.ratioQuantity = Objects.requireNonNull(ratioQuantity);
+		return this;
 	}
 
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(CurrencyCode currency) {
-		this.currency = currency;
+	public Leg setCurrency(CurrencyCode currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 
 	public Max35Text getSwapType() {
 		return swapType;
 	}
 
-	public void setSwapType(Max35Text swapType) {
-		this.swapType = swapType;
+	public Leg setSwapType(Max35Text swapType) {
+		this.swapType = Objects.requireNonNull(swapType);
+		return this;
 	}
 
 	public Number getPool() {
 		return pool;
 	}
 
-	public void setPool(Number pool) {
-		this.pool = pool;
+	public Leg setPool(Number pool) {
+		this.pool = Objects.requireNonNull(pool);
+		return this;
 	}
 
 	public Trade getTrade() {
 		return trade;
 	}
 
-	public void setTrade(com.tools20022.repository.entity.Trade trade) {
-		this.trade = trade;
+	public Leg setTrade(com.tools20022.repository.entity.Trade trade) {
+		this.trade = Objects.requireNonNull(trade);
+		return this;
 	}
 }

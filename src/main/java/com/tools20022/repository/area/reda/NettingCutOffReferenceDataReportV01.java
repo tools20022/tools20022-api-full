@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -40,25 +42,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.ReferenceDataLatestVersion
- * ReferenceDataLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
- * PostTradeForeignExchangeISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement
- * PostTradeForeignExchangeMaintenance20162017andSupplement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "NetgCutOffRefDataRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -74,6 +57,25 @@ import javax.xml.bind.annotation.*;
  * NettingCutOffReferenceDataReportV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeISOLatestversion
+ * PostTradeForeignExchangeISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeForeignExchangeMaintenance20162017andSupplement
+ * PostTradeForeignExchangeMaintenance20162017andSupplement}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "NetgCutOffRefDataRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.ReferenceDataLatestVersion
+ * ReferenceDataLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code reda.061.001.01}</li>
@@ -89,16 +91,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NettingCutOffReferenceDataReportV01", propOrder = {"reportData", "participantNettingCutOffData", "supplementaryData"})
 public class NettingCutOffReferenceDataReportV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptData", required = true)
 	protected NettingCutOffReportData1 reportData;
 	/**
-	 * Specifies the meta data for the netting cut off report including message
-	 * pagination.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,11 +142,11 @@ public class NettingCutOffReferenceDataReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "PtcptNetgCutOffData", required = true)
 	protected List<CutOffData1> participantNettingCutOffData;
 	/**
-	 * Provides the latest information related to the status of a netting cut
-	 * off held at a central system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -184,11 +186,11 @@ public class NettingCutOffReferenceDataReportV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -260,34 +262,34 @@ public class NettingCutOffReferenceDataReportV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptData", required = true)
 	public NettingCutOffReportData1 getReportData() {
 		return reportData;
 	}
 
-	public void setReportData(NettingCutOffReportData1 reportData) {
-		this.reportData = reportData;
+	public NettingCutOffReferenceDataReportV01 setReportData(NettingCutOffReportData1 reportData) {
+		this.reportData = Objects.requireNonNull(reportData);
+		return this;
 	}
 
-	@XmlElement(name = "PtcptNetgCutOffData", required = true)
 	public List<CutOffData1> getParticipantNettingCutOffData() {
-		return participantNettingCutOffData;
+		return participantNettingCutOffData == null ? participantNettingCutOffData = new ArrayList<>() : participantNettingCutOffData;
 	}
 
-	public void setParticipantNettingCutOffData(List<CutOffData1> participantNettingCutOffData) {
-		this.participantNettingCutOffData = participantNettingCutOffData;
+	public NettingCutOffReferenceDataReportV01 setParticipantNettingCutOffData(List<CutOffData1> participantNettingCutOffData) {
+		this.participantNettingCutOffData = Objects.requireNonNull(participantNettingCutOffData);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public NettingCutOffReferenceDataReportV01 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:reda.061.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:reda.061.001.01")
 	static public class Document {
 		@XmlElement(name = "NetgCutOffRefDataRpt", required = true)
 		public NettingCutOffReferenceDataReportV01 messageBody;

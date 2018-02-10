@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SubscriptionRequestCode;
+import com.tools20022.repository.codeset.SubscriptionRequest1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of subscription to market data.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SubscriptionRequestCode
- * SubscriptionRequestCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SubscriptionRequest1Code#mmSnapshot
- * SubscriptionRequest1Code.mmSnapshot}</li>
+ * {@linkplain com.tools20022.repository.codeset.SubscriptionRequest1Code#Snapshot
+ * SubscriptionRequest1Code.Snapshot}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SubscriptionRequest1Code#mmSubscribe
- * SubscriptionRequest1Code.mmSubscribe}</li>
+ * {@linkplain com.tools20022.repository.codeset.SubscriptionRequest1Code#Subscribe
+ * SubscriptionRequest1Code.Subscribe}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SubscriptionRequest1Code#mmUnsubscribe
- * SubscriptionRequest1Code.mmUnsubscribe}</li>
+ * {@linkplain com.tools20022.repository.codeset.SubscriptionRequest1Code#Unsubscribe
+ * SubscriptionRequest1Code.Unsubscribe}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SubscriptionRequestCode
+ * SubscriptionRequestCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of subscription to market data."</li>
  * </ul>
  */
-public class SubscriptionRequest1Code extends SubscriptionRequestCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SubscriptionRequest1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class SubscriptionRequest1Code extends SubscriptionRequestCode {
 	 * name} = "Snapshot"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSnapshot = new MMCode() {
+	public static final SubscriptionRequest1Code Snapshot = new SubscriptionRequest1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Snapshot";
-			owner_lazy = () -> SubscriptionRequest1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SubscriptionRequest1Code.mmObject();
+			codeName = SubscriptionRequestCode.Snapshot.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class SubscriptionRequest1Code extends SubscriptionRequestCode {
 	 * name} = "Subscribe"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubscribe = new MMCode() {
+	public static final SubscriptionRequest1Code Subscribe = new SubscriptionRequest1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscribe";
-			owner_lazy = () -> SubscriptionRequest1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SubscriptionRequest1Code.mmObject();
+			codeName = SubscriptionRequestCode.Subscribe.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class SubscriptionRequest1Code extends SubscriptionRequestCode {
 	 * name} = "Unsubscribe"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnsubscribe = new MMCode() {
+	public static final SubscriptionRequest1Code Unsubscribe = new SubscriptionRequest1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unsubscribe";
-			owner_lazy = () -> SubscriptionRequest1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SubscriptionRequest1Code.mmObject();
+			codeName = SubscriptionRequestCode.Unsubscribe.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SubscriptionRequest1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SubscriptionRequest1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SNAP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubscriptionRequest1Code";
 				definition = "Type of subscription to market data.";
-				code_lazy = () -> Arrays.asList(SubscriptionRequest1Code.mmSnapshot, SubscriptionRequest1Code.mmSubscribe, SubscriptionRequest1Code.mmUnsubscribe);
 				trace_lazy = () -> SubscriptionRequestCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SubscriptionRequest1Code.Snapshot, com.tools20022.repository.codeset.SubscriptionRequest1Code.Subscribe,
+						com.tools20022.repository.codeset.SubscriptionRequest1Code.Unsubscribe);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Snapshot.getCodeName().get(), Snapshot);
+		codesByName.put(Subscribe.getCodeName().get(), Subscribe);
+		codesByName.put(Unsubscribe.getCodeName().get(), Unsubscribe);
+	}
+
+	public static SubscriptionRequest1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SubscriptionRequest1Code[] values() {
+		SubscriptionRequest1Code[] values = new SubscriptionRequest1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SubscriptionRequest1Code> {
+		@Override
+		public SubscriptionRequest1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SubscriptionRequest1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

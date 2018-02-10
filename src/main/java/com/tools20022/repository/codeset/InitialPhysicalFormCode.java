@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.InitialPhysicalFormCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the physical form of the securities.
@@ -31,15 +36,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.InitialPhysicalFormCode#GT
+ * InitialPhysicalFormCode.GT}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InitialPhysicalFormCode#GP
+ * InitialPhysicalFormCode.GP}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InitialPhysicalFormCode#mmGT
- * InitialPhysicalFormCode.mmGT}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InitialPhysicalFormCode#mmGP
- * InitialPhysicalFormCode.mmGP}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InitialPhysicalFormCode#mmDefinitive
- * InitialPhysicalFormCode.mmDefinitive}</li>
+ * {@linkplain com.tools20022.repository.codeset.InitialPhysicalFormCode#Definitive
+ * InitialPhysicalFormCode.Definitive}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -72,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates the physical form of the securities."</li>
  * </ul>
  */
-public class InitialPhysicalFormCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InitialPhysicalFormCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -96,12 +100,12 @@ public class InitialPhysicalFormCode {
 	 * definition} = "Initial Physical Form is GT."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGT = new MMCode() {
+	public static final InitialPhysicalFormCode GT = new InitialPhysicalFormCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GT";
 			definition = "Initial Physical Form is GT.";
-			owner_lazy = () -> InitialPhysicalFormCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InitialPhysicalFormCode.mmObject();
 			codeName = "GTGT";
 		}
 	};
@@ -126,12 +130,12 @@ public class InitialPhysicalFormCode {
 	 * definition} = "Initial Physical Form is GP."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGP = new MMCode() {
+	public static final InitialPhysicalFormCode GP = new InitialPhysicalFormCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GP";
 			definition = "Initial Physical Form is GP.";
-			owner_lazy = () -> InitialPhysicalFormCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InitialPhysicalFormCode.mmObject();
 			codeName = "GPGP";
 		}
 	};
@@ -156,28 +160,60 @@ public class InitialPhysicalFormCode {
 	 * definition} = "Initial Physical Form is definitive."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDefinitive = new MMCode() {
+	public static final InitialPhysicalFormCode Definitive = new InitialPhysicalFormCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Definitive";
 			definition = "Initial Physical Form is definitive.";
-			owner_lazy = () -> InitialPhysicalFormCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InitialPhysicalFormCode.mmObject();
 			codeName = "DERN";
 		}
 	};
+	final static private LinkedHashMap<String, InitialPhysicalFormCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InitialPhysicalFormCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("GTGT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InitialPhysicalFormCode";
 				definition = "Indicates the physical form of the securities.";
-				code_lazy = () -> Arrays.asList(InitialPhysicalFormCode.mmGT, InitialPhysicalFormCode.mmGP, InitialPhysicalFormCode.mmDefinitive);
 				derivation_lazy = () -> Arrays.asList(InitialPhysicalForm1Code.mmObject(), InitialPhysicalForm2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InitialPhysicalFormCode.GT, com.tools20022.repository.codeset.InitialPhysicalFormCode.GP,
+						com.tools20022.repository.codeset.InitialPhysicalFormCode.Definitive);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(GT.getCodeName().get(), GT);
+		codesByName.put(GP.getCodeName().get(), GP);
+		codesByName.put(Definitive.getCodeName().get(), Definitive);
+	}
+
+	public static InitialPhysicalFormCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InitialPhysicalFormCode[] values() {
+		InitialPhysicalFormCode[] values = new InitialPhysicalFormCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InitialPhysicalFormCode> {
+		@Override
+		public InitialPhysicalFormCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InitialPhysicalFormCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

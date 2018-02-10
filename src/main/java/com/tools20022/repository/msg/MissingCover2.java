@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.PaymentInvestigationCaseResolution;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MissingCover2", propOrder = {"missingCoverIndicator", "coverCorrection"})
 public class MissingCover2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MssngCoverInd", required = true)
 	protected YesNoIndicator missingCoverIndicator;
 	/**
-	 * Indicates whether or not the claim is related to a missing cover.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +126,7 @@ public class MissingCover2 {
 	public static final MMMessageAttribute mmMissingCoverIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCase.mmMissingCoverIndication;
-			componentContext_lazy = () -> MissingCover2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MissingCover2.mmObject();
 			isDerived = false;
 			xmlTag = "MssngCoverInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,11 +137,11 @@ public class MissingCover2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CoverCrrctn")
 	protected SettlementInformation15 coverCorrection;
 	/**
-	 * Set of elements provided to update incorrect settlement information for
-	 * the cover related to the received payment instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -172,7 +175,7 @@ public class MissingCover2 {
 	public static final MMMessageAssociationEnd mmCoverCorrection = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseResolution.mmCoverCorrection;
-			componentContext_lazy = () -> MissingCover2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MissingCover2.mmObject();
 			isDerived = false;
 			xmlTag = "CoverCrrctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,10 +191,10 @@ public class MissingCover2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MissingCover2.mmMissingCoverIndicator, MissingCover2.mmCoverCorrection);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingCover2.mmMissingCoverIndicator, com.tools20022.repository.msg.MissingCover2.mmCoverCorrection);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ClaimNonReceiptV03.mmCoverDetails);
 				trace_lazy = () -> PaymentInvestigationCase.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MissingCover2";
 				definition = "Set of elements used to provide additional cover details for the claim non receipt.";
@@ -200,21 +203,21 @@ public class MissingCover2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MssngCoverInd", required = true)
 	public YesNoIndicator getMissingCoverIndicator() {
 		return missingCoverIndicator;
 	}
 
-	public void setMissingCoverIndicator(YesNoIndicator missingCoverIndicator) {
-		this.missingCoverIndicator = missingCoverIndicator;
+	public MissingCover2 setMissingCoverIndicator(YesNoIndicator missingCoverIndicator) {
+		this.missingCoverIndicator = Objects.requireNonNull(missingCoverIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "CoverCrrctn")
-	public SettlementInformation15 getCoverCorrection() {
-		return coverCorrection;
+	public Optional<SettlementInformation15> getCoverCorrection() {
+		return coverCorrection == null ? Optional.empty() : Optional.of(coverCorrection);
 	}
 
-	public void setCoverCorrection(com.tools20022.repository.msg.SettlementInformation15 coverCorrection) {
+	public MissingCover2 setCoverCorrection(com.tools20022.repository.msg.SettlementInformation15 coverCorrection) {
 		this.coverCorrection = coverCorrection;
+		return this;
 	}
 }

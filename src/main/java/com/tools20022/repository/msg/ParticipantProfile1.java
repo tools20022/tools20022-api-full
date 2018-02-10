@@ -21,9 +21,11 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information from participant profile."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ParticipantProfile1", propOrder = {"participantInformation", "participantAccountInformation"})
 public class ParticipantProfile1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtcptInf", required = true)
 	protected ParticipantInformation1 participantInformation;
 	/**
-	 * Participant information from participant profile.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -96,7 +99,7 @@ public class ParticipantProfile1 {
 	 */
 	public static final MMMessageAssociationEnd mmParticipantInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ParticipantProfile1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +111,11 @@ public class ParticipantProfile1 {
 			type_lazy = () -> com.tools20022.repository.msg.ParticipantInformation1.mmObject();
 		}
 	};
+	@XmlElement(name = "PtcptAcctInf")
 	protected List<com.tools20022.repository.msg.ParticipantAccount1> participantAccountInformation;
 	/**
-	 * Account information from participant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -137,7 +141,7 @@ public class ParticipantProfile1 {
 	 */
 	public static final MMMessageAssociationEnd mmParticipantAccountInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ParticipantProfile1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParticipantProfile1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptAcctInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,8 +156,8 @@ public class ParticipantProfile1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ParticipantProfile1.mmParticipantInformation, ParticipantProfile1.mmParticipantAccountInformation);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParticipantProfile1.mmParticipantInformation, com.tools20022.repository.msg.ParticipantProfile1.mmParticipantAccountInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ParticipantProfile1";
 				definition = "Information from participant profile.";
@@ -162,21 +166,21 @@ public class ParticipantProfile1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtcptInf", required = true)
 	public ParticipantInformation1 getParticipantInformation() {
 		return participantInformation;
 	}
 
-	public void setParticipantInformation(com.tools20022.repository.msg.ParticipantInformation1 participantInformation) {
-		this.participantInformation = participantInformation;
+	public ParticipantProfile1 setParticipantInformation(com.tools20022.repository.msg.ParticipantInformation1 participantInformation) {
+		this.participantInformation = Objects.requireNonNull(participantInformation);
+		return this;
 	}
 
-	@XmlElement(name = "PtcptAcctInf")
 	public List<ParticipantAccount1> getParticipantAccountInformation() {
-		return participantAccountInformation;
+		return participantAccountInformation == null ? participantAccountInformation = new ArrayList<>() : participantAccountInformation;
 	}
 
-	public void setParticipantAccountInformation(List<com.tools20022.repository.msg.ParticipantAccount1> participantAccountInformation) {
-		this.participantAccountInformation = participantAccountInformation;
+	public ParticipantProfile1 setParticipantAccountInformation(List<com.tools20022.repository.msg.ParticipantAccount1> participantAccountInformation) {
+		this.participantAccountInformation = Objects.requireNonNull(participantAccountInformation);
+		return this;
 	}
 }

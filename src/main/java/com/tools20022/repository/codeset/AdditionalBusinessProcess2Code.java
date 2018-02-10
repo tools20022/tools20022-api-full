@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AdditionalBusinessProcessCode;
+import com.tools20022.repository.codeset.AdditionalBusinessProcess2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the additional business process linked to a corporate action event.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcessCode
- * AdditionalBusinessProcessCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess2Code#mmClaimOrCompensation
- * AdditionalBusinessProcess2Code.mmClaimOrCompensation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess2Code#ClaimOrCompensation
+ * AdditionalBusinessProcess2Code.ClaimOrCompensation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess2Code#mmNotificationOfReversal
- * AdditionalBusinessProcess2Code.mmNotificationOfReversal}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess2Code#NotificationOfReversal
+ * AdditionalBusinessProcess2Code.NotificationOfReversal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess2Code#mmTaxRefund
- * AdditionalBusinessProcess2Code.mmTaxRefund}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess2Code#TaxRefund
+ * AdditionalBusinessProcess2Code.TaxRefund}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcessCode
+ * AdditionalBusinessProcessCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class AdditionalBusinessProcess2Code extends AdditionalBusinessProcessCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AdditionalBusinessProcess2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,18 +103,19 @@ public class AdditionalBusinessProcess2Code extends AdditionalBusinessProcessCod
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#mmClaimOrCompensation
-	 * AdditionalBusinessProcess6Code.mmClaimOrCompensation}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#ClaimOrCompensation
+	 * AdditionalBusinessProcess6Code.ClaimOrCompensation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmClaimOrCompensation = new MMCode() {
+	public static final AdditionalBusinessProcess2Code ClaimOrCompensation = new AdditionalBusinessProcess2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClaimOrCompensation";
-			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess6Code.mmClaimOrCompensation);
-			owner_lazy = () -> AdditionalBusinessProcess2Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess6Code.ClaimOrCompensation);
+			owner_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess2Code.mmObject();
+			codeName = AdditionalBusinessProcessCode.ClaimOrCompensation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -130,18 +136,19 @@ public class AdditionalBusinessProcess2Code extends AdditionalBusinessProcessCod
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#mmNotificationOfReversal
-	 * AdditionalBusinessProcess6Code.mmNotificationOfReversal}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#NotificationOfReversal
+	 * AdditionalBusinessProcess6Code.NotificationOfReversal}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotificationOfReversal = new MMCode() {
+	public static final AdditionalBusinessProcess2Code NotificationOfReversal = new AdditionalBusinessProcess2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationOfReversal";
-			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess6Code.mmNotificationOfReversal);
-			owner_lazy = () -> AdditionalBusinessProcess2Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess6Code.NotificationOfReversal);
+			owner_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess2Code.mmObject();
+			codeName = AdditionalBusinessProcessCode.NotificationOfReversal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -162,34 +169,67 @@ public class AdditionalBusinessProcess2Code extends AdditionalBusinessProcessCod
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#mmTaxRefund
-	 * AdditionalBusinessProcess6Code.mmTaxRefund}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code#TaxRefund
+	 * AdditionalBusinessProcess6Code.TaxRefund}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxRefund = new MMCode() {
+	public static final AdditionalBusinessProcess2Code TaxRefund = new AdditionalBusinessProcess2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRefund";
-			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess6Code.mmTaxRefund);
-			owner_lazy = () -> AdditionalBusinessProcess2Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess6Code.TaxRefund);
+			owner_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess2Code.mmObject();
+			codeName = AdditionalBusinessProcessCode.TaxRefund.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AdditionalBusinessProcess2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AdditionalBusinessProcess2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CLAI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalBusinessProcess2Code";
 				definition = "Specifies the additional business process linked to a corporate action event.";
 				nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess6Code.mmObject());
-				code_lazy = () -> Arrays.asList(AdditionalBusinessProcess2Code.mmClaimOrCompensation, AdditionalBusinessProcess2Code.mmNotificationOfReversal, AdditionalBusinessProcess2Code.mmTaxRefund);
 				trace_lazy = () -> AdditionalBusinessProcessCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess2Code.ClaimOrCompensation, com.tools20022.repository.codeset.AdditionalBusinessProcess2Code.NotificationOfReversal,
+						com.tools20022.repository.codeset.AdditionalBusinessProcess2Code.TaxRefund);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ClaimOrCompensation.getCodeName().get(), ClaimOrCompensation);
+		codesByName.put(NotificationOfReversal.getCodeName().get(), NotificationOfReversal);
+		codesByName.put(TaxRefund.getCodeName().get(), TaxRefund);
+	}
+
+	public static AdditionalBusinessProcess2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AdditionalBusinessProcess2Code[] values() {
+		AdditionalBusinessProcess2Code[] values = new AdditionalBusinessProcess2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AdditionalBusinessProcess2Code> {
+		@Override
+		public AdditionalBusinessProcess2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AdditionalBusinessProcess2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

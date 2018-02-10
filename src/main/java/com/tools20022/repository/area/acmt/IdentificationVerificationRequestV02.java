@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.IdentificationVerification2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ChangeorVerifyAccountIdentificationISOLatestversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -45,22 +47,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AccountManagementLatestVersion
- * AccountManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ChangeorVerifyAccountIdentificationISOLatestversion
- * ChangeorVerifyAccountIdentificationISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "IdVrfctnReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -76,6 +62,22 @@ import javax.xml.bind.annotation.*;
  * IdentificationVerificationRequestV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ChangeorVerifyAccountIdentificationISOLatestversion
+ * ChangeorVerifyAccountIdentificationISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "IdVrfctnReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AccountManagementLatestVersion
+ * AccountManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code acmt.023.001.02}</li>
@@ -95,15 +97,16 @@ import javax.xml.bind.annotation.*;
  * IdentificationVerificationRequestV01}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IdentificationVerificationRequestV02", propOrder = {"assignment", "verification", "supplementaryData"})
 public class IdentificationVerificationRequestV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Assgnmt", required = true)
 	protected IdentificationAssignment2 assignment;
 	/**
-	 * Identifies the identification assignment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,11 +146,11 @@ public class IdentificationVerificationRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Vrfctn", required = true)
 	protected List<IdentificationVerification2> verification;
 	/**
-	 * Information concerning the identification data that is requested to be
-	 * verified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,11 +191,11 @@ public class IdentificationVerificationRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -265,34 +268,34 @@ public class IdentificationVerificationRequestV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Assgnmt", required = true)
 	public IdentificationAssignment2 getAssignment() {
 		return assignment;
 	}
 
-	public void setAssignment(IdentificationAssignment2 assignment) {
-		this.assignment = assignment;
+	public IdentificationVerificationRequestV02 setAssignment(IdentificationAssignment2 assignment) {
+		this.assignment = Objects.requireNonNull(assignment);
+		return this;
 	}
 
-	@XmlElement(name = "Vrfctn", required = true)
 	public List<IdentificationVerification2> getVerification() {
-		return verification;
+		return verification == null ? verification = new ArrayList<>() : verification;
 	}
 
-	public void setVerification(List<IdentificationVerification2> verification) {
-		this.verification = verification;
+	public IdentificationVerificationRequestV02 setVerification(List<IdentificationVerification2> verification) {
+		this.verification = Objects.requireNonNull(verification);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public IdentificationVerificationRequestV02 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.023.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.023.001.02")
 	static public class Document {
 		@XmlElement(name = "IdVrfctnReq", required = true)
 		public IdentificationVerificationRequestV02 messageBody;

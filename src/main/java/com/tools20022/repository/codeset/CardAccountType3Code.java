@@ -20,94 +20,98 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CardAccountTypeCode;
+import com.tools20022.repository.codeset.CardAccountType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of cardholder account used for the transaction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CardAccountTypeCode
- * CardAccountTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmCertificateOfDeposit
- * CardAccountType3Code.mmCertificateOfDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#CertificateOfDeposit
+ * CardAccountType3Code.CertificateOfDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmChecking
- * CardAccountType3Code.mmChecking}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#Checking
+ * CardAccountType3Code.Checking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmCreditCard
- * CardAccountType3Code.mmCreditCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#CreditCard
+ * CardAccountType3Code.CreditCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmCurrent
- * CardAccountType3Code.mmCurrent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#Current
+ * CardAccountType3Code.Current}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmDebitCard
- * CardAccountType3Code.mmDebitCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#DebitCard
+ * CardAccountType3Code.DebitCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmDefault
- * CardAccountType3Code.mmDefault}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#Default
+ * CardAccountType3Code.Default}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmEpurseCard
- * CardAccountType3Code.mmEpurseCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#EpurseCard
+ * CardAccountType3Code.EpurseCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmHomeEquityLoan
- * CardAccountType3Code.mmHomeEquityLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#HomeEquityLoan
+ * CardAccountType3Code.HomeEquityLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmInstalmentLoan
- * CardAccountType3Code.mmInstalmentLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#InstalmentLoan
+ * CardAccountType3Code.InstalmentLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmInvestment
- * CardAccountType3Code.mmInvestment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#Investment
+ * CardAccountType3Code.Investment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmLineOfCredit
- * CardAccountType3Code.mmLineOfCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#LineOfCredit
+ * CardAccountType3Code.LineOfCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmMobilePhoneAccount
- * CardAccountType3Code.mmMobilePhoneAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#MobilePhoneAccount
+ * CardAccountType3Code.MobilePhoneAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmMoneyMarket
- * CardAccountType3Code.mmMoneyMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#MoneyMarket
+ * CardAccountType3Code.MoneyMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmMoneyMarketChecking
- * CardAccountType3Code.mmMoneyMarketChecking}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#MoneyMarketChecking
+ * CardAccountType3Code.MoneyMarketChecking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmMortgageLoan
- * CardAccountType3Code.mmMortgageLoan}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#MortgageLoan
+ * CardAccountType3Code.MortgageLoan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmRetirementAccount
- * CardAccountType3Code.mmRetirementAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#RetirementAccount
+ * CardAccountType3Code.RetirementAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmRevolvingLoanAccount
- * CardAccountType3Code.mmRevolvingLoanAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#RevolvingLoanAccount
+ * CardAccountType3Code.RevolvingLoanAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmSavings
- * CardAccountType3Code.mmSavings}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#Savings
+ * CardAccountType3Code.Savings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmStockOrBond
- * CardAccountType3Code.mmStockOrBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#StockOrBond
+ * CardAccountType3Code.StockOrBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmUniversal
- * CardAccountType3Code.mmUniversal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#Universal
+ * CardAccountType3Code.Universal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmPrePaid
- * CardAccountType3Code.mmPrePaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#PrePaid
+ * CardAccountType3Code.PrePaid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#mmFleetCard
- * CardAccountType3Code.mmFleetCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardAccountType3Code#FleetCard
+ * CardAccountType3Code.FleetCard}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CardAccountTypeCode
+ * CardAccountTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -122,7 +126,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardAccountType2Code}</li>
  * </ul>
  */
-public class CardAccountType3Code extends CardAccountTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CardAccountType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -142,16 +147,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmCertificateOfDeposit
-	 * CardAccountType2Code.mmCertificateOfDeposit}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#CertificateOfDeposit
+	 * CardAccountType2Code.CertificateOfDeposit}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificateOfDeposit = new MMCode() {
+	public static final CardAccountType3Code CertificateOfDeposit = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateOfDeposit";
-			previousVersion_lazy = () -> CardAccountType2Code.mmCertificateOfDeposit;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.CertificateOfDeposit;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.CertificateOfDeposit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -171,16 +177,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmChecking
-	 * CardAccountType2Code.mmChecking}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#Checking
+	 * CardAccountType2Code.Checking}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmChecking = new MMCode() {
+	public static final CardAccountType3Code Checking = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Checking";
-			previousVersion_lazy = () -> CardAccountType2Code.mmChecking;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.Checking;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.Checking.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -200,16 +207,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmCreditCard
-	 * CardAccountType2Code.mmCreditCard}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#CreditCard
+	 * CardAccountType2Code.CreditCard}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreditCard = new MMCode() {
+	public static final CardAccountType3Code CreditCard = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditCard";
-			previousVersion_lazy = () -> CardAccountType2Code.mmCreditCard;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.CreditCard;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.CreditCard.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -229,16 +237,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmCurrent
-	 * CardAccountType2Code.mmCurrent}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#Current
+	 * CardAccountType2Code.Current}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrent = new MMCode() {
+	public static final CardAccountType3Code Current = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
-			previousVersion_lazy = () -> CardAccountType2Code.mmCurrent;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.Current;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.Current.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -258,16 +267,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmDebitCard
-	 * CardAccountType2Code.mmDebitCard}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#DebitCard
+	 * CardAccountType2Code.DebitCard}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDebitCard = new MMCode() {
+	public static final CardAccountType3Code DebitCard = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitCard";
-			previousVersion_lazy = () -> CardAccountType2Code.mmDebitCard;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.DebitCard;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.DebitCard.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -287,16 +297,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmDefault
-	 * CardAccountType2Code.mmDefault}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#Default
+	 * CardAccountType2Code.Default}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDefault = new MMCode() {
+	public static final CardAccountType3Code Default = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Default";
-			previousVersion_lazy = () -> CardAccountType2Code.mmDefault;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.Default;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.Default.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -316,16 +327,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmEpurseCard
-	 * CardAccountType2Code.mmEpurseCard}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#EpurseCard
+	 * CardAccountType2Code.EpurseCard}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEpurseCard = new MMCode() {
+	public static final CardAccountType3Code EpurseCard = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EpurseCard";
-			previousVersion_lazy = () -> CardAccountType2Code.mmEpurseCard;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.EpurseCard;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.EpurseCard.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -345,16 +357,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmHomeEquityLoan
-	 * CardAccountType2Code.mmHomeEquityLoan}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#HomeEquityLoan
+	 * CardAccountType2Code.HomeEquityLoan}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHomeEquityLoan = new MMCode() {
+	public static final CardAccountType3Code HomeEquityLoan = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HomeEquityLoan";
-			previousVersion_lazy = () -> CardAccountType2Code.mmHomeEquityLoan;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.HomeEquityLoan;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.HomeEquityLoan.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -374,16 +387,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmInstalmentLoan
-	 * CardAccountType2Code.mmInstalmentLoan}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#InstalmentLoan
+	 * CardAccountType2Code.InstalmentLoan}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstalmentLoan = new MMCode() {
+	public static final CardAccountType3Code InstalmentLoan = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentLoan";
-			previousVersion_lazy = () -> CardAccountType2Code.mmInstalmentLoan;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.InstalmentLoan;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.InstalmentLoan.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -403,16 +417,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmInvestment
-	 * CardAccountType2Code.mmInvestment}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#Investment
+	 * CardAccountType2Code.Investment}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestment = new MMCode() {
+	public static final CardAccountType3Code Investment = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investment";
-			previousVersion_lazy = () -> CardAccountType2Code.mmInvestment;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.Investment;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.Investment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -432,16 +447,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmLineOfCredit
-	 * CardAccountType2Code.mmLineOfCredit}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#LineOfCredit
+	 * CardAccountType2Code.LineOfCredit}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLineOfCredit = new MMCode() {
+	public static final CardAccountType3Code LineOfCredit = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineOfCredit";
-			previousVersion_lazy = () -> CardAccountType2Code.mmLineOfCredit;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.LineOfCredit;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.LineOfCredit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -461,16 +477,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmMobilePhoneAccount
-	 * CardAccountType2Code.mmMobilePhoneAccount}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#MobilePhoneAccount
+	 * CardAccountType2Code.MobilePhoneAccount}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMobilePhoneAccount = new MMCode() {
+	public static final CardAccountType3Code MobilePhoneAccount = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MobilePhoneAccount";
-			previousVersion_lazy = () -> CardAccountType2Code.mmMobilePhoneAccount;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.MobilePhoneAccount;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.MobilePhoneAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -490,16 +507,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmMoneyMarket
-	 * CardAccountType2Code.mmMoneyMarket}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#MoneyMarket
+	 * CardAccountType2Code.MoneyMarket}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMoneyMarket = new MMCode() {
+	public static final CardAccountType3Code MoneyMarket = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyMarket";
-			previousVersion_lazy = () -> CardAccountType2Code.mmMoneyMarket;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.MoneyMarket;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.MoneyMarket.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -519,16 +537,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmMoneyMarketChecking
-	 * CardAccountType2Code.mmMoneyMarketChecking}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#MoneyMarketChecking
+	 * CardAccountType2Code.MoneyMarketChecking}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMoneyMarketChecking = new MMCode() {
+	public static final CardAccountType3Code MoneyMarketChecking = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyMarketChecking";
-			previousVersion_lazy = () -> CardAccountType2Code.mmMoneyMarketChecking;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.MoneyMarketChecking;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.MoneyMarketChecking.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -548,16 +567,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmMortgageLoan
-	 * CardAccountType2Code.mmMortgageLoan}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#MortgageLoan
+	 * CardAccountType2Code.MortgageLoan}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMortgageLoan = new MMCode() {
+	public static final CardAccountType3Code MortgageLoan = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MortgageLoan";
-			previousVersion_lazy = () -> CardAccountType2Code.mmMortgageLoan;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.MortgageLoan;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.MortgageLoan.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -577,16 +597,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmRetirementAccount
-	 * CardAccountType2Code.mmRetirementAccount}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#RetirementAccount
+	 * CardAccountType2Code.RetirementAccount}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRetirementAccount = new MMCode() {
+	public static final CardAccountType3Code RetirementAccount = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetirementAccount";
-			previousVersion_lazy = () -> CardAccountType2Code.mmRetirementAccount;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.RetirementAccount;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.RetirementAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -606,16 +627,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmRevolvingLoanAccount
-	 * CardAccountType2Code.mmRevolvingLoanAccount}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#RevolvingLoanAccount
+	 * CardAccountType2Code.RevolvingLoanAccount}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRevolvingLoanAccount = new MMCode() {
+	public static final CardAccountType3Code RevolvingLoanAccount = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RevolvingLoanAccount";
-			previousVersion_lazy = () -> CardAccountType2Code.mmRevolvingLoanAccount;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.RevolvingLoanAccount;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.RevolvingLoanAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -635,16 +657,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmSavings
-	 * CardAccountType2Code.mmSavings}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#Savings
+	 * CardAccountType2Code.Savings}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSavings = new MMCode() {
+	public static final CardAccountType3Code Savings = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Savings";
-			previousVersion_lazy = () -> CardAccountType2Code.mmSavings;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.Savings;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.Savings.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -664,16 +687,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmStockOrBond
-	 * CardAccountType2Code.mmStockOrBond}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#StockOrBond
+	 * CardAccountType2Code.StockOrBond}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockOrBond = new MMCode() {
+	public static final CardAccountType3Code StockOrBond = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockOrBond";
-			previousVersion_lazy = () -> CardAccountType2Code.mmStockOrBond;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.StockOrBond;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.StockOrBond.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -693,16 +717,17 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#mmUniversal
-	 * CardAccountType2Code.mmUniversal}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CardAccountType2Code#Universal
+	 * CardAccountType2Code.Universal}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUniversal = new MMCode() {
+	public static final CardAccountType3Code Universal = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Universal";
-			previousVersion_lazy = () -> CardAccountType2Code.mmUniversal;
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			previousVersion_lazy = () -> CardAccountType2Code.Universal;
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.Universal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -721,11 +746,12 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * name} = "PrePaid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrePaid = new MMCode() {
+	public static final CardAccountType3Code PrePaid = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrePaid";
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.PrePaid.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -744,30 +770,85 @@ public class CardAccountType3Code extends CardAccountTypeCode {
 	 * name} = "FleetCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFleetCard = new MMCode() {
+	public static final CardAccountType3Code FleetCard = new CardAccountType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FleetCard";
-			owner_lazy = () -> CardAccountType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardAccountType3Code.mmObject();
+			codeName = CardAccountTypeCode.FleetCard.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CardAccountType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CardAccountType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardAccountType3Code";
 				definition = "Type of cardholder account used for the transaction.";
 				previousVersion_lazy = () -> CardAccountType2Code.mmObject();
-				code_lazy = () -> Arrays.asList(CardAccountType3Code.mmCertificateOfDeposit, CardAccountType3Code.mmChecking, CardAccountType3Code.mmCreditCard, CardAccountType3Code.mmCurrent, CardAccountType3Code.mmDebitCard,
-						CardAccountType3Code.mmDefault, CardAccountType3Code.mmEpurseCard, CardAccountType3Code.mmHomeEquityLoan, CardAccountType3Code.mmInstalmentLoan, CardAccountType3Code.mmInvestment,
-						CardAccountType3Code.mmLineOfCredit, CardAccountType3Code.mmMobilePhoneAccount, CardAccountType3Code.mmMoneyMarket, CardAccountType3Code.mmMoneyMarketChecking, CardAccountType3Code.mmMortgageLoan,
-						CardAccountType3Code.mmRetirementAccount, CardAccountType3Code.mmRevolvingLoanAccount, CardAccountType3Code.mmSavings, CardAccountType3Code.mmStockOrBond, CardAccountType3Code.mmUniversal,
-						CardAccountType3Code.mmPrePaid, CardAccountType3Code.mmFleetCard);
 				trace_lazy = () -> CardAccountTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardAccountType3Code.CertificateOfDeposit, com.tools20022.repository.codeset.CardAccountType3Code.Checking,
+						com.tools20022.repository.codeset.CardAccountType3Code.CreditCard, com.tools20022.repository.codeset.CardAccountType3Code.Current, com.tools20022.repository.codeset.CardAccountType3Code.DebitCard,
+						com.tools20022.repository.codeset.CardAccountType3Code.Default, com.tools20022.repository.codeset.CardAccountType3Code.EpurseCard, com.tools20022.repository.codeset.CardAccountType3Code.HomeEquityLoan,
+						com.tools20022.repository.codeset.CardAccountType3Code.InstalmentLoan, com.tools20022.repository.codeset.CardAccountType3Code.Investment, com.tools20022.repository.codeset.CardAccountType3Code.LineOfCredit,
+						com.tools20022.repository.codeset.CardAccountType3Code.MobilePhoneAccount, com.tools20022.repository.codeset.CardAccountType3Code.MoneyMarket,
+						com.tools20022.repository.codeset.CardAccountType3Code.MoneyMarketChecking, com.tools20022.repository.codeset.CardAccountType3Code.MortgageLoan,
+						com.tools20022.repository.codeset.CardAccountType3Code.RetirementAccount, com.tools20022.repository.codeset.CardAccountType3Code.RevolvingLoanAccount, com.tools20022.repository.codeset.CardAccountType3Code.Savings,
+						com.tools20022.repository.codeset.CardAccountType3Code.StockOrBond, com.tools20022.repository.codeset.CardAccountType3Code.Universal, com.tools20022.repository.codeset.CardAccountType3Code.PrePaid,
+						com.tools20022.repository.codeset.CardAccountType3Code.FleetCard);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CertificateOfDeposit.getCodeName().get(), CertificateOfDeposit);
+		codesByName.put(Checking.getCodeName().get(), Checking);
+		codesByName.put(CreditCard.getCodeName().get(), CreditCard);
+		codesByName.put(Current.getCodeName().get(), Current);
+		codesByName.put(DebitCard.getCodeName().get(), DebitCard);
+		codesByName.put(Default.getCodeName().get(), Default);
+		codesByName.put(EpurseCard.getCodeName().get(), EpurseCard);
+		codesByName.put(HomeEquityLoan.getCodeName().get(), HomeEquityLoan);
+		codesByName.put(InstalmentLoan.getCodeName().get(), InstalmentLoan);
+		codesByName.put(Investment.getCodeName().get(), Investment);
+		codesByName.put(LineOfCredit.getCodeName().get(), LineOfCredit);
+		codesByName.put(MobilePhoneAccount.getCodeName().get(), MobilePhoneAccount);
+		codesByName.put(MoneyMarket.getCodeName().get(), MoneyMarket);
+		codesByName.put(MoneyMarketChecking.getCodeName().get(), MoneyMarketChecking);
+		codesByName.put(MortgageLoan.getCodeName().get(), MortgageLoan);
+		codesByName.put(RetirementAccount.getCodeName().get(), RetirementAccount);
+		codesByName.put(RevolvingLoanAccount.getCodeName().get(), RevolvingLoanAccount);
+		codesByName.put(Savings.getCodeName().get(), Savings);
+		codesByName.put(StockOrBond.getCodeName().get(), StockOrBond);
+		codesByName.put(Universal.getCodeName().get(), Universal);
+		codesByName.put(PrePaid.getCodeName().get(), PrePaid);
+		codesByName.put(FleetCard.getCodeName().get(), FleetCard);
+	}
+
+	public static CardAccountType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CardAccountType3Code[] values() {
+		CardAccountType3Code[] values = new CardAccountType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CardAccountType3Code> {
+		@Override
+		public CardAccountType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CardAccountType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -31,9 +31,8 @@ import com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteris
 import com.tools20022.repository.entity.Location;
 import com.tools20022.repository.entity.TimeFrame;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -90,8 +89,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDealingCutOffTimeFrameRule#forProcessingCharacteristics3
+ * ConstraintDealingCutOffTimeFrameRule.forProcessingCharacteristics3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,16 +111,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProcessingCharacteristics3", propOrder = {"dealingCurrencyAccepted", "redemptionAuthorisation", "amountIndicator", "unitsIndicator", "mainFundOrderDeskLocation", "dealingCutOffTime", "dealingCutOffTimeFrame",
 		"dealingFrequency", "dealingFrequencyDescription", "limitedPeriod", "settlementCycle"})
 public class ProcessingCharacteristics3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DealgCcyAccptd", required = true)
 	protected List<ActiveCurrencyCode> dealingCurrencyAccepted;
 	/**
-	 * Currency in which a subscription or redemption is accepted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +156,7 @@ public class ProcessingCharacteristics3 {
 	public static final MMMessageAttribute mmDealingCurrencyAccepted = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmDealingCurrency;
-			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "DealgCcyAccptd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,10 +166,11 @@ public class ProcessingCharacteristics3 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "RedAuthstn", required = true)
 	protected Forms redemptionAuthorisation;
 	/**
-	 * Authorization to claim redemption proceeds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -193,7 +202,7 @@ public class ProcessingCharacteristics3 {
 	public static final MMMessageAssociationEnd mmRedemptionAuthorisation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumInitialSubscriptionAmount;
-			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "RedAuthstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,11 +214,11 @@ public class ProcessingCharacteristics3 {
 			type_lazy = () -> com.tools20022.repository.msg.Forms.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtInd", required = true)
 	protected YesNoIndicator amountIndicator;
 	/**
-	 * Indicates whether a subscription or a redemption can be instructed by
-	 * amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,7 +254,7 @@ public class ProcessingCharacteristics3 {
 	public static final MMMessageAttribute mmAmountIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmAmountIndicator;
-			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "AmtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,11 +265,11 @@ public class ProcessingCharacteristics3 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "UnitsInd", required = true)
 	protected YesNoIndicator unitsIndicator;
 	/**
-	 * Indicates whether subscriptions or redemptions may be placed as a number
-	 * of units.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -296,7 +305,7 @@ public class ProcessingCharacteristics3 {
 	public static final MMMessageAttribute mmUnitsIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmUnitsIndicator;
-			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -307,10 +316,11 @@ public class ProcessingCharacteristics3 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "MainFndOrdrDskLctn", required = true)
 	protected MainFundOrderDeskLocation1 mainFundOrderDeskLocation;
 	/**
-	 * Specifies the location of the main fund order desk.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -342,7 +352,7 @@ public class ProcessingCharacteristics3 {
 	public static final MMMessageAssociationEnd mmMainFundOrderDeskLocation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Location.mmObject();
-			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "MainFndOrdrDskLctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -354,10 +364,11 @@ public class ProcessingCharacteristics3 {
 			type_lazy = () -> com.tools20022.repository.msg.MainFundOrderDeskLocation1.mmObject();
 		}
 	};
+	@XmlElement(name = "DealgCutOffTm", required = true)
 	protected ISOTime dealingCutOffTime;
 	/**
-	 * Last date/time at which an order to subscribe or redeem can be given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -391,7 +402,7 @@ public class ProcessingCharacteristics3 {
 	public static final MMMessageAttribute mmDealingCutOffTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmOrderCutOffDateTime;
-			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "DealgCutOffTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -402,11 +413,11 @@ public class ProcessingCharacteristics3 {
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
+	@XmlElement(name = "DealgCutOffTmFrame", required = true)
 	protected TimeFrame3 dealingCutOffTimeFrame;
 	/**
-	 * TimeFrame or period concept that allows definition of a period as number
-	 * of days before or after a defined activity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -440,7 +451,7 @@ public class ProcessingCharacteristics3 {
 	public static final MMMessageAttribute mmDealingCutOffTimeFrame = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> TimeFrame.mmObject();
-			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "DealgCutOffTmFrame";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -451,10 +462,11 @@ public class ProcessingCharacteristics3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.TimeFrame3.mmObject();
 		}
 	};
+	@XmlElement(name = "DealgFrqcy", required = true)
 	protected EventFrequency5Code dealingFrequency;
 	/**
-	 * Frequency at which the subscriptions are done.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -488,7 +500,7 @@ public class ProcessingCharacteristics3 {
 	public static final MMMessageAttribute mmDealingFrequency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmDealingFrequency;
-			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "DealgFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -499,10 +511,11 @@ public class ProcessingCharacteristics3 {
 			simpleType_lazy = () -> EventFrequency5Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DealgFrqcyDesc", required = true)
 	protected Max350Text dealingFrequencyDescription;
 	/**
-	 * Description of frequency at which the subscription is done.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -530,7 +543,7 @@ public class ProcessingCharacteristics3 {
 	 */
 	public static final MMMessageAttribute mmDealingFrequencyDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "DealgFrqcyDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -541,11 +554,11 @@ public class ProcessingCharacteristics3 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "LtdPrd")
 	protected Max350Text limitedPeriod;
 	/**
-	 * Specific period, eg, for some guaranteed funds, during which the
-	 * units/shares may be redeemed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -580,7 +593,7 @@ public class ProcessingCharacteristics3 {
 	public static final MMMessageAttribute mmLimitedPeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmLimitedPeriod;
-			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "LtdPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -591,17 +604,11 @@ public class ProcessingCharacteristics3 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmCycl", required = true)
 	protected TimeFrame4Choice settlementCycle;
 	/**
-	 * Indicate the last business day following the day on which a redemption
-	 * order is priced (T) by which settlement will be due<br>
-	 * for orders placed with the main Fund Order Desk.&amp;nbsp; Alternatively,
-	 * if proceeds will be paid following receipt of written<br>
-	 * renunciation, indicate the last business day following receipt of the
-	 * relevant renunciation documentation by the main Fund<br>
-	 * Order Desk (R) by which the proceeds will be sent.&amp;nbsp; Examples of
-	 * the above would be T+3, R+4 etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -637,7 +644,7 @@ public class ProcessingCharacteristics3 {
 	public static final MMMessageAttribute mmSettlementCycle = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmSettlementCycle;
-			componentContext_lazy = () -> ProcessingCharacteristics3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessingCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCycl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -652,11 +659,15 @@ public class ProcessingCharacteristics3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProcessingCharacteristics3.mmDealingCurrencyAccepted, ProcessingCharacteristics3.mmRedemptionAuthorisation, ProcessingCharacteristics3.mmAmountIndicator,
-						ProcessingCharacteristics3.mmUnitsIndicator, ProcessingCharacteristics3.mmMainFundOrderDeskLocation, ProcessingCharacteristics3.mmDealingCutOffTime, ProcessingCharacteristics3.mmDealingCutOffTimeFrame,
-						ProcessingCharacteristics3.mmDealingFrequency, ProcessingCharacteristics3.mmDealingFrequencyDescription, ProcessingCharacteristics3.mmLimitedPeriod, ProcessingCharacteristics3.mmSettlementCycle);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProcessingCharacteristics3.mmDealingCurrencyAccepted, com.tools20022.repository.msg.ProcessingCharacteristics3.mmRedemptionAuthorisation,
+						com.tools20022.repository.msg.ProcessingCharacteristics3.mmAmountIndicator, com.tools20022.repository.msg.ProcessingCharacteristics3.mmUnitsIndicator,
+						com.tools20022.repository.msg.ProcessingCharacteristics3.mmMainFundOrderDeskLocation, com.tools20022.repository.msg.ProcessingCharacteristics3.mmDealingCutOffTime,
+						com.tools20022.repository.msg.ProcessingCharacteristics3.mmDealingCutOffTimeFrame, com.tools20022.repository.msg.ProcessingCharacteristics3.mmDealingFrequency,
+						com.tools20022.repository.msg.ProcessingCharacteristics3.mmDealingFrequencyDescription, com.tools20022.repository.msg.ProcessingCharacteristics3.mmLimitedPeriod,
+						com.tools20022.repository.msg.ProcessingCharacteristics3.mmSettlementCycle);
 				trace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDealingCutOffTimeFrameRule.forProcessingCharacteristics3);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingCharacteristics3";
 				definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
@@ -665,102 +676,102 @@ public class ProcessingCharacteristics3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DealgCcyAccptd", required = true)
 	public List<ActiveCurrencyCode> getDealingCurrencyAccepted() {
-		return dealingCurrencyAccepted;
+		return dealingCurrencyAccepted == null ? dealingCurrencyAccepted = new ArrayList<>() : dealingCurrencyAccepted;
 	}
 
-	public void setDealingCurrencyAccepted(List<ActiveCurrencyCode> dealingCurrencyAccepted) {
-		this.dealingCurrencyAccepted = dealingCurrencyAccepted;
+	public ProcessingCharacteristics3 setDealingCurrencyAccepted(List<ActiveCurrencyCode> dealingCurrencyAccepted) {
+		this.dealingCurrencyAccepted = Objects.requireNonNull(dealingCurrencyAccepted);
+		return this;
 	}
 
-	@XmlElement(name = "RedAuthstn", required = true)
 	public Forms getRedemptionAuthorisation() {
 		return redemptionAuthorisation;
 	}
 
-	public void setRedemptionAuthorisation(com.tools20022.repository.msg.Forms redemptionAuthorisation) {
-		this.redemptionAuthorisation = redemptionAuthorisation;
+	public ProcessingCharacteristics3 setRedemptionAuthorisation(com.tools20022.repository.msg.Forms redemptionAuthorisation) {
+		this.redemptionAuthorisation = Objects.requireNonNull(redemptionAuthorisation);
+		return this;
 	}
 
-	@XmlElement(name = "AmtInd", required = true)
 	public YesNoIndicator getAmountIndicator() {
 		return amountIndicator;
 	}
 
-	public void setAmountIndicator(YesNoIndicator amountIndicator) {
-		this.amountIndicator = amountIndicator;
+	public ProcessingCharacteristics3 setAmountIndicator(YesNoIndicator amountIndicator) {
+		this.amountIndicator = Objects.requireNonNull(amountIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "UnitsInd", required = true)
 	public YesNoIndicator getUnitsIndicator() {
 		return unitsIndicator;
 	}
 
-	public void setUnitsIndicator(YesNoIndicator unitsIndicator) {
-		this.unitsIndicator = unitsIndicator;
+	public ProcessingCharacteristics3 setUnitsIndicator(YesNoIndicator unitsIndicator) {
+		this.unitsIndicator = Objects.requireNonNull(unitsIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "MainFndOrdrDskLctn", required = true)
 	public MainFundOrderDeskLocation1 getMainFundOrderDeskLocation() {
 		return mainFundOrderDeskLocation;
 	}
 
-	public void setMainFundOrderDeskLocation(com.tools20022.repository.msg.MainFundOrderDeskLocation1 mainFundOrderDeskLocation) {
-		this.mainFundOrderDeskLocation = mainFundOrderDeskLocation;
+	public ProcessingCharacteristics3 setMainFundOrderDeskLocation(com.tools20022.repository.msg.MainFundOrderDeskLocation1 mainFundOrderDeskLocation) {
+		this.mainFundOrderDeskLocation = Objects.requireNonNull(mainFundOrderDeskLocation);
+		return this;
 	}
 
-	@XmlElement(name = "DealgCutOffTm", required = true)
 	public ISOTime getDealingCutOffTime() {
 		return dealingCutOffTime;
 	}
 
-	public void setDealingCutOffTime(ISOTime dealingCutOffTime) {
-		this.dealingCutOffTime = dealingCutOffTime;
+	public ProcessingCharacteristics3 setDealingCutOffTime(ISOTime dealingCutOffTime) {
+		this.dealingCutOffTime = Objects.requireNonNull(dealingCutOffTime);
+		return this;
 	}
 
-	@XmlElement(name = "DealgCutOffTmFrame", required = true)
 	public TimeFrame3 getDealingCutOffTimeFrame() {
 		return dealingCutOffTimeFrame;
 	}
 
-	public void setDealingCutOffTimeFrame(com.tools20022.repository.msg.TimeFrame3 dealingCutOffTimeFrame) {
-		this.dealingCutOffTimeFrame = dealingCutOffTimeFrame;
+	public ProcessingCharacteristics3 setDealingCutOffTimeFrame(com.tools20022.repository.msg.TimeFrame3 dealingCutOffTimeFrame) {
+		this.dealingCutOffTimeFrame = Objects.requireNonNull(dealingCutOffTimeFrame);
+		return this;
 	}
 
-	@XmlElement(name = "DealgFrqcy", required = true)
 	public EventFrequency5Code getDealingFrequency() {
 		return dealingFrequency;
 	}
 
-	public void setDealingFrequency(EventFrequency5Code dealingFrequency) {
-		this.dealingFrequency = dealingFrequency;
+	public ProcessingCharacteristics3 setDealingFrequency(EventFrequency5Code dealingFrequency) {
+		this.dealingFrequency = Objects.requireNonNull(dealingFrequency);
+		return this;
 	}
 
-	@XmlElement(name = "DealgFrqcyDesc", required = true)
 	public Max350Text getDealingFrequencyDescription() {
 		return dealingFrequencyDescription;
 	}
 
-	public void setDealingFrequencyDescription(Max350Text dealingFrequencyDescription) {
-		this.dealingFrequencyDescription = dealingFrequencyDescription;
+	public ProcessingCharacteristics3 setDealingFrequencyDescription(Max350Text dealingFrequencyDescription) {
+		this.dealingFrequencyDescription = Objects.requireNonNull(dealingFrequencyDescription);
+		return this;
 	}
 
-	@XmlElement(name = "LtdPrd")
-	public Max350Text getLimitedPeriod() {
-		return limitedPeriod;
+	public Optional<Max350Text> getLimitedPeriod() {
+		return limitedPeriod == null ? Optional.empty() : Optional.of(limitedPeriod);
 	}
 
-	public void setLimitedPeriod(Max350Text limitedPeriod) {
+	public ProcessingCharacteristics3 setLimitedPeriod(Max350Text limitedPeriod) {
 		this.limitedPeriod = limitedPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmCycl", required = true)
 	public TimeFrame4Choice getSettlementCycle() {
 		return settlementCycle;
 	}
 
-	public void setSettlementCycle(TimeFrame4Choice settlementCycle) {
-		this.settlementCycle = settlementCycle;
+	public ProcessingCharacteristics3 setSettlementCycle(TimeFrame4Choice settlementCycle) {
+		this.settlementCycle = Objects.requireNonNull(settlementCycle);
+		return this;
 	}
 }

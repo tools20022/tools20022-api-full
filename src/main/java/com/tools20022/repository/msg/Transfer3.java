@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,16 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Parameters applied to the settlement of a security transfer."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Transfer3", propOrder = {"transferReference", "transferDate", "totalUnitsNumber", "ownAccountTransferIndicator"})
 public class Transfer3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TrfRef", required = true)
 	protected Max35Text transferReference;
 	/**
-	 * Unique and unambiguous identifier for a transfer instruction, as assigned
-	 * by the instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +126,7 @@ public class Transfer3 {
 	public static final MMMessageAttribute mmTransferReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmIdentification;
-			componentContext_lazy = () -> Transfer3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer3.mmObject();
 			isDerived = false;
 			xmlTag = "TrfRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +137,11 @@ public class Transfer3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfDt")
 	protected DateFormat1Choice transferDate;
 	/**
-	 * Date and time at which the securities are to be delivered or received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,7 +175,7 @@ public class Transfer3 {
 	public static final MMMessageAttribute mmTransferDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesDeliveryObligation.mmTransferInstructionDate;
-			componentContext_lazy = () -> Transfer3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer3.mmObject();
 			isDerived = false;
 			xmlTag = "TrfDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,10 +186,11 @@ public class Transfer3 {
 			complexType_lazy = () -> DateFormat1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlUnitsNb", required = true)
 	protected FinancialInstrumentQuantity1 totalUnitsNumber;
 	/**
-	 * Total quantity of securities to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -219,7 +223,7 @@ public class Transfer3 {
 	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
-			componentContext_lazy = () -> Transfer3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer3.mmObject();
 			isDerived = false;
 			xmlTag = "TtlUnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,10 +234,11 @@ public class Transfer3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	@XmlElement(name = "OwnAcctTrfInd", required = true)
 	protected YesNoIndicator ownAccountTransferIndicator;
 	/**
-	 * Indicates whether the transfer results in a change of beneficial owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -268,7 +273,7 @@ public class Transfer3 {
 	public static final MMMessageAttribute mmOwnAccountTransferIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmOwnAccountTransferIndicator;
-			componentContext_lazy = () -> Transfer3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Transfer3.mmObject();
 			isDerived = false;
 			xmlTag = "OwnAcctTrfInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,10 +288,11 @@ public class Transfer3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Transfer3.mmTransferReference, Transfer3.mmTransferDate, Transfer3.mmTotalUnitsNumber, Transfer3.mmOwnAccountTransferIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Transfer3.mmTransferReference, com.tools20022.repository.msg.Transfer3.mmTransferDate, com.tools20022.repository.msg.Transfer3.mmTotalUnitsNumber,
+						com.tools20022.repository.msg.Transfer3.mmOwnAccountTransferIndicator);
 				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInInstruction.mmTransferDetails);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Transfer3";
 				definition = "Parameters applied to the settlement of a security transfer.";
@@ -295,39 +301,39 @@ public class Transfer3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TrfRef", required = true)
 	public Max35Text getTransferReference() {
 		return transferReference;
 	}
 
-	public void setTransferReference(Max35Text transferReference) {
-		this.transferReference = transferReference;
+	public Transfer3 setTransferReference(Max35Text transferReference) {
+		this.transferReference = Objects.requireNonNull(transferReference);
+		return this;
 	}
 
-	@XmlElement(name = "TrfDt")
-	public DateFormat1Choice getTransferDate() {
-		return transferDate;
+	public Optional<DateFormat1Choice> getTransferDate() {
+		return transferDate == null ? Optional.empty() : Optional.of(transferDate);
 	}
 
-	public void setTransferDate(DateFormat1Choice transferDate) {
+	public Transfer3 setTransferDate(DateFormat1Choice transferDate) {
 		this.transferDate = transferDate;
+		return this;
 	}
 
-	@XmlElement(name = "TtlUnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
 		return totalUnitsNumber;
 	}
 
-	public void setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
-		this.totalUnitsNumber = totalUnitsNumber;
+	public Transfer3 setTotalUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 totalUnitsNumber) {
+		this.totalUnitsNumber = Objects.requireNonNull(totalUnitsNumber);
+		return this;
 	}
 
-	@XmlElement(name = "OwnAcctTrfInd", required = true)
 	public YesNoIndicator getOwnAccountTransferIndicator() {
 		return ownAccountTransferIndicator;
 	}
 
-	public void setOwnAccountTransferIndicator(YesNoIndicator ownAccountTransferIndicator) {
-		this.ownAccountTransferIndicator = ownAccountTransferIndicator;
+	public Transfer3 setOwnAccountTransferIndicator(YesNoIndicator ownAccountTransferIndicator) {
+		this.ownAccountTransferIndicator = Objects.requireNonNull(ownAccountTransferIndicator);
+		return this;
 	}
 }

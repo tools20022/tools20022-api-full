@@ -20,49 +20,52 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TradingCapacityCode;
+import com.tools20022.repository.codeset.TradingCapacity6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the role of a trading party in a transaction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradingCapacity6Code#Agent
+ * TradingCapacity6Code.Agent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacity6Code#ActingAgent
+ * TradingCapacity6Code.ActingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacity6Code#CrossingAgent
+ * TradingCapacity6Code.CrossingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacity6Code#CrossingPrincipal
+ * TradingCapacity6Code.CrossingPrincipal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacity6Code#OtherAgent
+ * TradingCapacity6Code.OtherAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacity6Code#PrincipalAgent
+ * TradingCapacity6Code.PrincipalAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TradingCapacity6Code#Principal
+ * TradingCapacity6Code.Principal}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.TradingCapacityCode
  * TradingCapacityCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacity6Code#mmAgent
- * TradingCapacity6Code.mmAgent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacity6Code#mmActingAgent
- * TradingCapacity6Code.mmActingAgent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacity6Code#mmCrossingAgent
- * TradingCapacity6Code.mmCrossingAgent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacity6Code#mmCrossingPrincipal
- * TradingCapacity6Code.mmCrossingPrincipal}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacity6Code#mmOtherAgent
- * TradingCapacity6Code.mmOtherAgent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacity6Code#mmPrincipalAgent
- * TradingCapacity6Code.mmPrincipalAgent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingCapacity6Code#mmPrincipal
- * TradingCapacity6Code.mmPrincipal}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the role of a trading party in a transaction."</li>
  * </ul>
  */
-public class TradingCapacity6Code extends TradingCapacityCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TradingCapacity6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,11 +102,12 @@ public class TradingCapacity6Code extends TradingCapacityCode {
 	 * name} = "Agent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgent = new MMCode() {
+	public static final TradingCapacity6Code Agent = new TradingCapacity6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
-			owner_lazy = () -> TradingCapacity6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingCapacity6Code.mmObject();
+			codeName = TradingCapacityCode.Agent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -121,11 +126,12 @@ public class TradingCapacity6Code extends TradingCapacityCode {
 	 * name} = "ActingAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActingAgent = new MMCode() {
+	public static final TradingCapacity6Code ActingAgent = new TradingCapacity6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActingAgent";
-			owner_lazy = () -> TradingCapacity6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingCapacity6Code.mmObject();
+			codeName = TradingCapacityCode.ActingAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -144,11 +150,12 @@ public class TradingCapacity6Code extends TradingCapacityCode {
 	 * name} = "CrossingAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCrossingAgent = new MMCode() {
+	public static final TradingCapacity6Code CrossingAgent = new TradingCapacity6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossingAgent";
-			owner_lazy = () -> TradingCapacity6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingCapacity6Code.mmObject();
+			codeName = TradingCapacityCode.CrossingAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -167,11 +174,12 @@ public class TradingCapacity6Code extends TradingCapacityCode {
 	 * name} = "CrossingPrincipal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCrossingPrincipal = new MMCode() {
+	public static final TradingCapacity6Code CrossingPrincipal = new TradingCapacity6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossingPrincipal";
-			owner_lazy = () -> TradingCapacity6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingCapacity6Code.mmObject();
+			codeName = TradingCapacityCode.CrossingPrincipal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -190,11 +198,12 @@ public class TradingCapacity6Code extends TradingCapacityCode {
 	 * name} = "OtherAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherAgent = new MMCode() {
+	public static final TradingCapacity6Code OtherAgent = new TradingCapacity6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAgent";
-			owner_lazy = () -> TradingCapacity6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingCapacity6Code.mmObject();
+			codeName = TradingCapacityCode.OtherAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -213,11 +222,12 @@ public class TradingCapacity6Code extends TradingCapacityCode {
 	 * name} = "PrincipalAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrincipalAgent = new MMCode() {
+	public static final TradingCapacity6Code PrincipalAgent = new TradingCapacity6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalAgent";
-			owner_lazy = () -> TradingCapacity6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingCapacity6Code.mmObject();
+			codeName = TradingCapacityCode.PrincipalAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -236,27 +246,64 @@ public class TradingCapacity6Code extends TradingCapacityCode {
 	 * name} = "Principal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrincipal = new MMCode() {
+	public static final TradingCapacity6Code Principal = new TradingCapacity6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Principal";
-			owner_lazy = () -> TradingCapacity6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingCapacity6Code.mmObject();
+			codeName = TradingCapacityCode.Principal.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TradingCapacity6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TradingCapacity6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AGEN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingCapacity6Code";
 				definition = "Specifies the role of a trading party in a transaction.";
-				code_lazy = () -> Arrays.asList(TradingCapacity6Code.mmAgent, TradingCapacity6Code.mmActingAgent, TradingCapacity6Code.mmCrossingAgent, TradingCapacity6Code.mmCrossingPrincipal, TradingCapacity6Code.mmOtherAgent,
-						TradingCapacity6Code.mmPrincipalAgent, TradingCapacity6Code.mmPrincipal);
 				trace_lazy = () -> TradingCapacityCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingCapacity6Code.Agent, com.tools20022.repository.codeset.TradingCapacity6Code.ActingAgent,
+						com.tools20022.repository.codeset.TradingCapacity6Code.CrossingAgent, com.tools20022.repository.codeset.TradingCapacity6Code.CrossingPrincipal, com.tools20022.repository.codeset.TradingCapacity6Code.OtherAgent,
+						com.tools20022.repository.codeset.TradingCapacity6Code.PrincipalAgent, com.tools20022.repository.codeset.TradingCapacity6Code.Principal);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Agent.getCodeName().get(), Agent);
+		codesByName.put(ActingAgent.getCodeName().get(), ActingAgent);
+		codesByName.put(CrossingAgent.getCodeName().get(), CrossingAgent);
+		codesByName.put(CrossingPrincipal.getCodeName().get(), CrossingPrincipal);
+		codesByName.put(OtherAgent.getCodeName().get(), OtherAgent);
+		codesByName.put(PrincipalAgent.getCodeName().get(), PrincipalAgent);
+		codesByName.put(Principal.getCodeName().get(), Principal);
+	}
+
+	public static TradingCapacity6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TradingCapacity6Code[] values() {
+		TradingCapacity6Code[] values = new TradingCapacity6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TradingCapacity6Code> {
+		@Override
+		public TradingCapacity6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TradingCapacity6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

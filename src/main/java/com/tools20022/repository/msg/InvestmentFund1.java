@@ -27,9 +27,8 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.NetAssetValueCalculation;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details about the investment fund class."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvestmentFund1", propOrder = {"financialInstrumentIdentification", "classType", "totalUnitsOutstanding", "transactionalUnits", "totalValue", "price", "supplementaryData"})
 public class InvestmentFund1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FinInstrmId")
 	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
-	 * Identification of the investment fund or investment fund class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -124,7 +124,7 @@ public class InvestmentFund1 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
-			componentContext_lazy = () -> InvestmentFund1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFund1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,14 +136,11 @@ public class InvestmentFund1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	@XmlElement(name = "ClssTp")
 	protected Max35Text classType;
 	/**
-	 * Features of units offered by a fund. For example, a unit may have a
-	 * specific load structure, eg, front end or back end, an income policy, eg,
-	 * pay out or accumulate, or a trailer policy, eg, with or without. Fund
-	 * classes are typically denoted by a single character, for example, 'Class
-	 * A', 'Class 2'.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,7 +175,7 @@ public class InvestmentFund1 {
 	public static final MMMessageAttribute mmClassType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmClassType;
-			componentContext_lazy = () -> InvestmentFund1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFund1.mmObject();
 			isDerived = false;
 			xmlTag = "ClssTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,11 +186,11 @@ public class InvestmentFund1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlUnitsOutsdng")
 	protected DecimalNumber totalUnitsOutstanding;
 	/**
-	 * Number of shares outstanding for the investment fund or investment fund
-	 * share class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -229,7 +226,7 @@ public class InvestmentFund1 {
 	public static final MMMessageAttribute mmTotalUnitsOutstanding = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmOutstandingUnits;
-			componentContext_lazy = () -> InvestmentFund1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFund1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlUnitsOutsdng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,12 +237,11 @@ public class InvestmentFund1 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "TxnlUnits")
 	protected DecimalNumber transactionalUnits;
 	/**
-	 * Total transactional units (subscriptions and redemptions) which are
-	 * applied to the investment fund or investment fund share class for the
-	 * report period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -275,7 +271,7 @@ public class InvestmentFund1 {
 	 */
 	public static final MMMessageAttribute mmTransactionalUnits = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentFund1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFund1.mmObject();
 			isDerived = false;
 			xmlTag = "TxnlUnits";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,10 +282,11 @@ public class InvestmentFund1 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlVal")
 	protected AmountAndDirection30 totalValue;
 	/**
-	 * Total value of the investment fund or investment fund share class units
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -325,7 +322,7 @@ public class InvestmentFund1 {
 	public static final MMMessageAttribute mmTotalValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmNetAssetValue;
-			componentContext_lazy = () -> InvestmentFund1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFund1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -336,10 +333,11 @@ public class InvestmentFund1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();
 		}
 	};
+	@XmlElement(name = "Pric")
 	protected List<com.tools20022.repository.msg.PriceInformation10> price;
 	/**
-	 * Amount of money for which goods or services are offered, sold, or bought.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -373,7 +371,7 @@ public class InvestmentFund1 {
 	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPricing;
-			componentContext_lazy = () -> InvestmentFund1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFund1.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -384,11 +382,11 @@ public class InvestmentFund1 {
 			type_lazy = () -> com.tools20022.repository.msg.PriceInformation10.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -416,7 +414,7 @@ public class InvestmentFund1 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InvestmentFund1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFund1.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -431,10 +429,11 @@ public class InvestmentFund1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InvestmentFund1.mmFinancialInstrumentIdentification, InvestmentFund1.mmClassType, InvestmentFund1.mmTotalUnitsOutstanding, InvestmentFund1.mmTransactionalUnits,
-						InvestmentFund1.mmTotalValue, InvestmentFund1.mmPrice, InvestmentFund1.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFund1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.InvestmentFund1.mmClassType,
+						com.tools20022.repository.msg.InvestmentFund1.mmTotalUnitsOutstanding, com.tools20022.repository.msg.InvestmentFund1.mmTransactionalUnits, com.tools20022.repository.msg.InvestmentFund1.mmTotalValue,
+						com.tools20022.repository.msg.InvestmentFund1.mmPrice, com.tools20022.repository.msg.InvestmentFund1.mmSupplementaryData);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFund1";
 				definition = "Details about the investment fund class.";
@@ -443,66 +442,66 @@ public class InvestmentFund1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FinInstrmId")
-	public SecurityIdentification14 getFinancialInstrumentIdentification() {
-		return financialInstrumentIdentification;
+	public Optional<SecurityIdentification14> getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification == null ? Optional.empty() : Optional.of(financialInstrumentIdentification);
 	}
 
-	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+	public InvestmentFund1 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ClssTp")
-	public Max35Text getClassType() {
-		return classType;
+	public Optional<Max35Text> getClassType() {
+		return classType == null ? Optional.empty() : Optional.of(classType);
 	}
 
-	public void setClassType(Max35Text classType) {
+	public InvestmentFund1 setClassType(Max35Text classType) {
 		this.classType = classType;
+		return this;
 	}
 
-	@XmlElement(name = "TtlUnitsOutsdng")
-	public DecimalNumber getTotalUnitsOutstanding() {
-		return totalUnitsOutstanding;
+	public Optional<DecimalNumber> getTotalUnitsOutstanding() {
+		return totalUnitsOutstanding == null ? Optional.empty() : Optional.of(totalUnitsOutstanding);
 	}
 
-	public void setTotalUnitsOutstanding(DecimalNumber totalUnitsOutstanding) {
+	public InvestmentFund1 setTotalUnitsOutstanding(DecimalNumber totalUnitsOutstanding) {
 		this.totalUnitsOutstanding = totalUnitsOutstanding;
+		return this;
 	}
 
-	@XmlElement(name = "TxnlUnits")
-	public DecimalNumber getTransactionalUnits() {
-		return transactionalUnits;
+	public Optional<DecimalNumber> getTransactionalUnits() {
+		return transactionalUnits == null ? Optional.empty() : Optional.of(transactionalUnits);
 	}
 
-	public void setTransactionalUnits(DecimalNumber transactionalUnits) {
+	public InvestmentFund1 setTransactionalUnits(DecimalNumber transactionalUnits) {
 		this.transactionalUnits = transactionalUnits;
+		return this;
 	}
 
-	@XmlElement(name = "TtlVal")
-	public AmountAndDirection30 getTotalValue() {
-		return totalValue;
+	public Optional<AmountAndDirection30> getTotalValue() {
+		return totalValue == null ? Optional.empty() : Optional.of(totalValue);
 	}
 
-	public void setTotalValue(com.tools20022.repository.msg.AmountAndDirection30 totalValue) {
+	public InvestmentFund1 setTotalValue(com.tools20022.repository.msg.AmountAndDirection30 totalValue) {
 		this.totalValue = totalValue;
+		return this;
 	}
 
-	@XmlElement(name = "Pric")
 	public List<PriceInformation10> getPrice() {
-		return price;
+		return price == null ? price = new ArrayList<>() : price;
 	}
 
-	public void setPrice(List<com.tools20022.repository.msg.PriceInformation10> price) {
-		this.price = price;
+	public InvestmentFund1 setPrice(List<com.tools20022.repository.msg.PriceInformation10> price) {
+		this.price = Objects.requireNonNull(price);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public InvestmentFund1 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 }

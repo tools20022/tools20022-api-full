@@ -20,112 +20,116 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionOptionCode;
+import com.tools20022.repository.codeset.CorporateActionOption4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of corporate action options.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionCode
- * CorporateActionOptionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmAbstain
- * CorporateActionOption4Code.mmAbstain}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#Abstain
+ * CorporateActionOption4Code.Abstain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmVoteAgainstManagement
- * CorporateActionOption4Code.mmVoteAgainstManagement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#VoteAgainstManagement
+ * CorporateActionOption4Code.VoteAgainstManagement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmBonusSharePlan
- * CorporateActionOption4Code.mmBonusSharePlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#BonusSharePlan
+ * CorporateActionOption4Code.BonusSharePlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmBuyUp
- * CorporateActionOption4Code.mmBuyUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#BuyUp
+ * CorporateActionOption4Code.BuyUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmCashAndSecurity
- * CorporateActionOption4Code.mmCashAndSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#CashAndSecurity
+ * CorporateActionOption4Code.CashAndSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmCash
- * CorporateActionOption4Code.mmCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#Cash
+ * CorporateActionOption4Code.Cash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmCertification
- * CorporateActionOption4Code.mmCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#Certification
+ * CorporateActionOption4Code.Certification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmConsentAndExchange
- * CorporateActionOption4Code.mmConsentAndExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#ConsentAndExchange
+ * CorporateActionOption4Code.ConsentAndExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmConsentDenied
- * CorporateActionOption4Code.mmConsentDenied}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#ConsentDenied
+ * CorporateActionOption4Code.ConsentDenied}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmConsentGranted
- * CorporateActionOption4Code.mmConsentGranted}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#ConsentGranted
+ * CorporateActionOption4Code.ConsentGranted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmConsentAndTender
- * CorporateActionOption4Code.mmConsentAndTender}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#ConsentAndTender
+ * CorporateActionOption4Code.ConsentAndTender}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmExercise
- * CorporateActionOption4Code.mmExercise}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#Exercise
+ * CorporateActionOption4Code.Exercise}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmLapse
- * CorporateActionOption4Code.mmLapse}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#Lapse
+ * CorporateActionOption4Code.Lapse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmMarkDown
- * CorporateActionOption4Code.mmMarkDown}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#MarkDown
+ * CorporateActionOption4Code.MarkDown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmMarkUp
- * CorporateActionOption4Code.mmMarkUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#MarkUp
+ * CorporateActionOption4Code.MarkUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmVoteWithManagement
- * CorporateActionOption4Code.mmVoteWithManagement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#VoteWithManagement
+ * CorporateActionOption4Code.VoteWithManagement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmRetain
- * CorporateActionOption4Code.mmRetain}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#Retain
+ * CorporateActionOption4Code.Retain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmNoAction
- * CorporateActionOption4Code.mmNoAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#NoAction
+ * CorporateActionOption4Code.NoAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmNonQualifiedInvestor
- * CorporateActionOption4Code.mmNonQualifiedInvestor}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#NonQualifiedInvestor
+ * CorporateActionOption4Code.NonQualifiedInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmProposedRate
- * CorporateActionOption4Code.mmProposedRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#ProposedRate
+ * CorporateActionOption4Code.ProposedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmOther
- * CorporateActionOption4Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#Other
+ * CorporateActionOption4Code.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmOversubscribe
- * CorporateActionOption4Code.mmOversubscribe}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#Oversubscribe
+ * CorporateActionOption4Code.Oversubscribe}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmProxyCard
- * CorporateActionOption4Code.mmProxyCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#ProxyCard
+ * CorporateActionOption4Code.ProxyCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmQualifiedInvestor
- * CorporateActionOption4Code.mmQualifiedInvestor}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#QualifiedInvestor
+ * CorporateActionOption4Code.QualifiedInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmSecurity
- * CorporateActionOption4Code.mmSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#Security
+ * CorporateActionOption4Code.Security}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmSellEntitlement
- * CorporateActionOption4Code.mmSellEntitlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#SellEntitlement
+ * CorporateActionOption4Code.SellEntitlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmSplitInstruction
- * CorporateActionOption4Code.mmSplitInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#SplitInstruction
+ * CorporateActionOption4Code.SplitInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#mmTaxInstruction
- * CorporateActionOption4Code.mmTaxInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOption4Code#TaxInstruction
+ * CorporateActionOption4Code.TaxInstruction}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionCode
+ * CorporateActionOptionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -149,7 +153,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CorporateActionOption4Code extends CorporateActionOptionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionOption4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -168,11 +173,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "Abstain"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAbstain = new MMCode() {
+	public static final CorporateActionOption4Code Abstain = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Abstain";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.Abstain.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -191,11 +197,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "VoteAgainstManagement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVoteAgainstManagement = new MMCode() {
+	public static final CorporateActionOption4Code VoteAgainstManagement = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteAgainstManagement";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.VoteAgainstManagement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -214,11 +221,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "BonusSharePlan"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBonusSharePlan = new MMCode() {
+	public static final CorporateActionOption4Code BonusSharePlan = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BonusSharePlan";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.BonusSharePlan.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -237,11 +245,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "BuyUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBuyUp = new MMCode() {
+	public static final CorporateActionOption4Code BuyUp = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyUp";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.BuyUp.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -260,11 +269,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "CashAndSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashAndSecurity = new MMCode() {
+	public static final CorporateActionOption4Code CashAndSecurity = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAndSecurity";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.CashAndSecurity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -283,11 +293,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "Cash"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCash = new MMCode() {
+	public static final CorporateActionOption4Code Cash = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.Cash.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -306,11 +317,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "Certification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertification = new MMCode() {
+	public static final CorporateActionOption4Code Certification = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certification";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.Certification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -329,11 +341,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "ConsentAndExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsentAndExchange = new MMCode() {
+	public static final CorporateActionOption4Code ConsentAndExchange = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsentAndExchange";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.ConsentAndExchange.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -352,11 +365,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "ConsentDenied"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsentDenied = new MMCode() {
+	public static final CorporateActionOption4Code ConsentDenied = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsentDenied";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.ConsentDenied.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -375,11 +389,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "ConsentGranted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsentGranted = new MMCode() {
+	public static final CorporateActionOption4Code ConsentGranted = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsentGranted";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.ConsentGranted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -398,11 +413,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "ConsentAndTender"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsentAndTender = new MMCode() {
+	public static final CorporateActionOption4Code ConsentAndTender = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsentAndTender";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.ConsentAndTender.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -421,11 +437,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "Exercise"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExercise = new MMCode() {
+	public static final CorporateActionOption4Code Exercise = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exercise";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.Exercise.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -444,11 +461,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "Lapse"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLapse = new MMCode() {
+	public static final CorporateActionOption4Code Lapse = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lapse";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.Lapse.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -467,11 +485,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "MarkDown"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarkDown = new MMCode() {
+	public static final CorporateActionOption4Code MarkDown = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkDown";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.MarkDown.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -490,11 +509,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "MarkUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarkUp = new MMCode() {
+	public static final CorporateActionOption4Code MarkUp = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkUp";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.MarkUp.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -513,11 +533,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "VoteWithManagement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVoteWithManagement = new MMCode() {
+	public static final CorporateActionOption4Code VoteWithManagement = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteWithManagement";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.VoteWithManagement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -536,11 +557,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "Retain"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRetain = new MMCode() {
+	public static final CorporateActionOption4Code Retain = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Retain";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.Retain.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -559,11 +581,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "NoAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoAction = new MMCode() {
+	public static final CorporateActionOption4Code NoAction = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAction";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.NoAction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -582,11 +605,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "NonQualifiedInvestor"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonQualifiedInvestor = new MMCode() {
+	public static final CorporateActionOption4Code NonQualifiedInvestor = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonQualifiedInvestor";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.NonQualifiedInvestor.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -605,11 +629,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "ProposedRate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProposedRate = new MMCode() {
+	public static final CorporateActionOption4Code ProposedRate = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedRate";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.ProposedRate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -628,11 +653,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final CorporateActionOption4Code Other = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.Other.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -651,11 +677,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "Oversubscribe"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOversubscribe = new MMCode() {
+	public static final CorporateActionOption4Code Oversubscribe = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Oversubscribe";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.Oversubscribe.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -674,11 +701,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "ProxyCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProxyCard = new MMCode() {
+	public static final CorporateActionOption4Code ProxyCard = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProxyCard";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.ProxyCard.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -697,11 +725,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "QualifiedInvestor"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQualifiedInvestor = new MMCode() {
+	public static final CorporateActionOption4Code QualifiedInvestor = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifiedInvestor";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.QualifiedInvestor.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -720,11 +749,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "Security"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecurity = new MMCode() {
+	public static final CorporateActionOption4Code Security = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Security";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.Security.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -743,11 +773,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "SellEntitlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSellEntitlement = new MMCode() {
+	public static final CorporateActionOption4Code SellEntitlement = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellEntitlement";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.SellEntitlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -766,11 +797,12 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "SplitInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSplitInstruction = new MMCode() {
+	public static final CorporateActionOption4Code SplitInstruction = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitInstruction";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.SplitInstruction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -789,33 +821,97 @@ public class CorporateActionOption4Code extends CorporateActionOptionCode {
 	 * name} = "TaxInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxInstruction = new MMCode() {
+	public static final CorporateActionOption4Code TaxInstruction = new CorporateActionOption4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxInstruction";
-			owner_lazy = () -> CorporateActionOption4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOption4Code.mmObject();
+			codeName = CorporateActionOptionCode.TaxInstruction.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionOption4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionOption4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ABST");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOption4Code";
 				definition = "Specifies the type of corporate action options.";
 				nextVersions_lazy = () -> Arrays.asList(CorporateActionOption9Code.mmObject());
-				code_lazy = () -> Arrays.asList(CorporateActionOption4Code.mmAbstain, CorporateActionOption4Code.mmVoteAgainstManagement, CorporateActionOption4Code.mmBonusSharePlan, CorporateActionOption4Code.mmBuyUp,
-						CorporateActionOption4Code.mmCashAndSecurity, CorporateActionOption4Code.mmCash, CorporateActionOption4Code.mmCertification, CorporateActionOption4Code.mmConsentAndExchange,
-						CorporateActionOption4Code.mmConsentDenied, CorporateActionOption4Code.mmConsentGranted, CorporateActionOption4Code.mmConsentAndTender, CorporateActionOption4Code.mmExercise, CorporateActionOption4Code.mmLapse,
-						CorporateActionOption4Code.mmMarkDown, CorporateActionOption4Code.mmMarkUp, CorporateActionOption4Code.mmVoteWithManagement, CorporateActionOption4Code.mmRetain, CorporateActionOption4Code.mmNoAction,
-						CorporateActionOption4Code.mmNonQualifiedInvestor, CorporateActionOption4Code.mmProposedRate, CorporateActionOption4Code.mmOther, CorporateActionOption4Code.mmOversubscribe, CorporateActionOption4Code.mmProxyCard,
-						CorporateActionOption4Code.mmQualifiedInvestor, CorporateActionOption4Code.mmSecurity, CorporateActionOption4Code.mmSellEntitlement, CorporateActionOption4Code.mmSplitInstruction,
-						CorporateActionOption4Code.mmTaxInstruction);
 				trace_lazy = () -> CorporateActionOptionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionOption4Code.Abstain, com.tools20022.repository.codeset.CorporateActionOption4Code.VoteAgainstManagement,
+						com.tools20022.repository.codeset.CorporateActionOption4Code.BonusSharePlan, com.tools20022.repository.codeset.CorporateActionOption4Code.BuyUp,
+						com.tools20022.repository.codeset.CorporateActionOption4Code.CashAndSecurity, com.tools20022.repository.codeset.CorporateActionOption4Code.Cash,
+						com.tools20022.repository.codeset.CorporateActionOption4Code.Certification, com.tools20022.repository.codeset.CorporateActionOption4Code.ConsentAndExchange,
+						com.tools20022.repository.codeset.CorporateActionOption4Code.ConsentDenied, com.tools20022.repository.codeset.CorporateActionOption4Code.ConsentGranted,
+						com.tools20022.repository.codeset.CorporateActionOption4Code.ConsentAndTender, com.tools20022.repository.codeset.CorporateActionOption4Code.Exercise,
+						com.tools20022.repository.codeset.CorporateActionOption4Code.Lapse, com.tools20022.repository.codeset.CorporateActionOption4Code.MarkDown, com.tools20022.repository.codeset.CorporateActionOption4Code.MarkUp,
+						com.tools20022.repository.codeset.CorporateActionOption4Code.VoteWithManagement, com.tools20022.repository.codeset.CorporateActionOption4Code.Retain,
+						com.tools20022.repository.codeset.CorporateActionOption4Code.NoAction, com.tools20022.repository.codeset.CorporateActionOption4Code.NonQualifiedInvestor,
+						com.tools20022.repository.codeset.CorporateActionOption4Code.ProposedRate, com.tools20022.repository.codeset.CorporateActionOption4Code.Other,
+						com.tools20022.repository.codeset.CorporateActionOption4Code.Oversubscribe, com.tools20022.repository.codeset.CorporateActionOption4Code.ProxyCard,
+						com.tools20022.repository.codeset.CorporateActionOption4Code.QualifiedInvestor, com.tools20022.repository.codeset.CorporateActionOption4Code.Security,
+						com.tools20022.repository.codeset.CorporateActionOption4Code.SellEntitlement, com.tools20022.repository.codeset.CorporateActionOption4Code.SplitInstruction,
+						com.tools20022.repository.codeset.CorporateActionOption4Code.TaxInstruction);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Abstain.getCodeName().get(), Abstain);
+		codesByName.put(VoteAgainstManagement.getCodeName().get(), VoteAgainstManagement);
+		codesByName.put(BonusSharePlan.getCodeName().get(), BonusSharePlan);
+		codesByName.put(BuyUp.getCodeName().get(), BuyUp);
+		codesByName.put(CashAndSecurity.getCodeName().get(), CashAndSecurity);
+		codesByName.put(Cash.getCodeName().get(), Cash);
+		codesByName.put(Certification.getCodeName().get(), Certification);
+		codesByName.put(ConsentAndExchange.getCodeName().get(), ConsentAndExchange);
+		codesByName.put(ConsentDenied.getCodeName().get(), ConsentDenied);
+		codesByName.put(ConsentGranted.getCodeName().get(), ConsentGranted);
+		codesByName.put(ConsentAndTender.getCodeName().get(), ConsentAndTender);
+		codesByName.put(Exercise.getCodeName().get(), Exercise);
+		codesByName.put(Lapse.getCodeName().get(), Lapse);
+		codesByName.put(MarkDown.getCodeName().get(), MarkDown);
+		codesByName.put(MarkUp.getCodeName().get(), MarkUp);
+		codesByName.put(VoteWithManagement.getCodeName().get(), VoteWithManagement);
+		codesByName.put(Retain.getCodeName().get(), Retain);
+		codesByName.put(NoAction.getCodeName().get(), NoAction);
+		codesByName.put(NonQualifiedInvestor.getCodeName().get(), NonQualifiedInvestor);
+		codesByName.put(ProposedRate.getCodeName().get(), ProposedRate);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(Oversubscribe.getCodeName().get(), Oversubscribe);
+		codesByName.put(ProxyCard.getCodeName().get(), ProxyCard);
+		codesByName.put(QualifiedInvestor.getCodeName().get(), QualifiedInvestor);
+		codesByName.put(Security.getCodeName().get(), Security);
+		codesByName.put(SellEntitlement.getCodeName().get(), SellEntitlement);
+		codesByName.put(SplitInstruction.getCodeName().get(), SplitInstruction);
+		codesByName.put(TaxInstruction.getCodeName().get(), TaxInstruction);
+	}
+
+	public static CorporateActionOption4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionOption4Code[] values() {
+		CorporateActionOption4Code[] values = new CorporateActionOption4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionOption4Code> {
+		@Override
+		public CorporateActionOption4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionOption4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

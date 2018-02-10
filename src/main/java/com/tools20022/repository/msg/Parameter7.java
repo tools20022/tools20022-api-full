@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max500Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * Parameter1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Parameter7", propOrder = {"initialisationVector", "bytePadding"})
 public class Parameter7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InitlstnVctr")
 	protected Max500Binary initialisationVector;
 	/**
-	 * Initialisation vector of a cipher block chaining (CBC) mode encryption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +108,7 @@ public class Parameter7 {
 	 */
 	public static final MMMessageAttribute mmInitialisationVector = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Parameter7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter7.mmObject();
 			isDerived = false;
 			xmlTag = "InitlstnVctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,11 +120,11 @@ public class Parameter7 {
 			simpleType_lazy = () -> Max500Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "BPddg")
 	protected BytePadding1Code bytePadding;
 	/**
-	 * Byte padding for a cypher block chaining mode encryption, if the padding
-	 * is not implicit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,7 +153,7 @@ public class Parameter7 {
 	 */
 	public static final MMMessageAttribute mmBytePadding = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Parameter7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter7.mmObject();
 			isDerived = false;
 			xmlTag = "BPddg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,8 +168,8 @@ public class Parameter7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Parameter7.mmInitialisationVector, Parameter7.mmBytePadding);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter7.mmInitialisationVector, com.tools20022.repository.msg.Parameter7.mmBytePadding);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Parameter7";
 				definition = "Parameters associated to the MAC algorithm.";
@@ -177,21 +179,21 @@ public class Parameter7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InitlstnVctr")
-	public Max500Binary getInitialisationVector() {
-		return initialisationVector;
+	public Optional<Max500Binary> getInitialisationVector() {
+		return initialisationVector == null ? Optional.empty() : Optional.of(initialisationVector);
 	}
 
-	public void setInitialisationVector(Max500Binary initialisationVector) {
+	public Parameter7 setInitialisationVector(Max500Binary initialisationVector) {
 		this.initialisationVector = initialisationVector;
+		return this;
 	}
 
-	@XmlElement(name = "BPddg")
-	public BytePadding1Code getBytePadding() {
-		return bytePadding;
+	public Optional<BytePadding1Code> getBytePadding() {
+		return bytePadding == null ? Optional.empty() : Optional.of(bytePadding);
 	}
 
-	public void setBytePadding(BytePadding1Code bytePadding) {
+	public Parameter7 setBytePadding(BytePadding1Code bytePadding) {
 		this.bytePadding = bytePadding;
+		return this;
 	}
 }

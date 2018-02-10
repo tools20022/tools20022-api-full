@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +74,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIdentificationRule#forCorrectivePaymentInitiation1
+ * ConstraintIdentificationRule.forCorrectivePaymentInitiation1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRequestedDateRule#forCorrectivePaymentInitiation1
+ * ConstraintRequestedDateRule.forCorrectivePaymentInitiation1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,16 +106,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorrectivePaymentInitiation1", propOrder = {"groupHeader", "paymentInformationIdentification", "instructionIdentification", "endToEndIdentification", "instructedAmount", "requestedExecutionDate", "requestedCollectionDate"})
 public class CorrectivePaymentInitiation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr")
 	protected CorrectiveGroupInformation1 groupHeader;
 	/**
-	 * Set of elements used to provide corrective information for the group
-	 * header of the message under investigation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -139,7 +152,7 @@ public class CorrectivePaymentInitiation1 {
 	 */
 	public static final MMMessageAssociationEnd mmGroupHeader = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorrectivePaymentInitiation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "GrpHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,11 +165,11 @@ public class CorrectivePaymentInitiation1 {
 			type_lazy = () -> com.tools20022.repository.msg.CorrectiveGroupInformation1.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtInfId")
 	protected Max35Text paymentInformationIdentification;
 	/**
-	 * Unique identification, as assigned by a sending party, to unambiguously
-	 * identify the payment information group within the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,7 +212,7 @@ public class CorrectivePaymentInitiation1 {
 	public static final MMMessageAttribute mmPaymentInformationIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
-			componentContext_lazy = () -> CorrectivePaymentInitiation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInfId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,16 +224,11 @@ public class CorrectivePaymentInitiation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrId")
 	protected Max35Text instructionIdentification;
 	/**
-	 * Unique identification, as assigned by an instructing party for an
-	 * instructed party, to unambiguously identify the instruction.
 	 * 
-	 * Usage: The instruction identification is a point to point reference that
-	 * can be used between the instructing party and the instructed party to
-	 * refer to the individual instruction. It can be included in several
-	 * messages related to the instruction.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -263,7 +271,7 @@ public class CorrectivePaymentInitiation1 {
 	public static final MMMessageAttribute mmInstructionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmInstructionIdentification;
-			componentContext_lazy = () -> CorrectivePaymentInitiation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "InstrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,20 +283,11 @@ public class CorrectivePaymentInitiation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "EndToEndId")
 	protected Max35Text endToEndIdentification;
 	/**
-	 * Unique identification, as assigned by the initiating party, to
-	 * unambiguously identify the transaction. This identification is passed on,
-	 * unchanged, throughout the entire end-to-end chain.
 	 * 
-	 * Usage: The end-to-end identification can be used for reconciliation or to
-	 * link tasks relating to the transaction. It can be included in several
-	 * messages related to the transaction.
-	 * 
-	 * Usage: In case there are technical limitations to pass on multiple
-	 * references, the end-to-end identification must be passed on throughout
-	 * the entire end-to-end chain.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -331,7 +330,7 @@ public class CorrectivePaymentInitiation1 {
 	public static final MMMessageAttribute mmEndToEndIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
-			componentContext_lazy = () -> CorrectivePaymentInitiation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "EndToEndId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -343,12 +342,11 @@ public class CorrectivePaymentInitiation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdAmt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount instructedAmount;
 	/**
-	 * Amount of money to be moved between the debtor and creditor, before
-	 * deduction of charges, expressed in the currency as ordered by the
-	 * initiating party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -392,7 +390,7 @@ public class CorrectivePaymentInitiation1 {
 	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
-			componentContext_lazy = () -> CorrectivePaymentInitiation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -404,13 +402,11 @@ public class CorrectivePaymentInitiation1 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdExctnDt")
 	protected ISODate requestedExecutionDate;
 	/**
-	 * Date at which the initiating party requests the clearing agent to process
-	 * the payment. Usage: This is the date on which the debtor's account is to
-	 * be debited. If payment by cheque, the date when the cheque must be
-	 * generated by the bank.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -453,7 +449,7 @@ public class CorrectivePaymentInitiation1 {
 	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
-			componentContext_lazy = () -> CorrectivePaymentInitiation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -465,11 +461,11 @@ public class CorrectivePaymentInitiation1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdColltnDt")
 	protected ISODate requestedCollectionDate;
 	/**
-	 * Date at which the creditor requests the amount of money to be collected
-	 * from the debtor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -512,7 +508,7 @@ public class CorrectivePaymentInitiation1 {
 	public static final MMMessageAttribute mmRequestedCollectionDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
-			componentContext_lazy = () -> CorrectivePaymentInitiation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdColltnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -528,10 +524,14 @@ public class CorrectivePaymentInitiation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorrectivePaymentInitiation1.mmGroupHeader, CorrectivePaymentInitiation1.mmPaymentInformationIdentification, CorrectivePaymentInitiation1.mmInstructionIdentification,
-						CorrectivePaymentInitiation1.mmEndToEndIdentification, CorrectivePaymentInitiation1.mmInstructedAmount, CorrectivePaymentInitiation1.mmRequestedExecutionDate, CorrectivePaymentInitiation1.mmRequestedCollectionDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmGroupHeader, com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmPaymentInformationIdentification,
+						com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmInstructionIdentification, com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmEndToEndIdentification,
+						com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmInstructedAmount, com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmRequestedExecutionDate,
+						com.tools20022.repository.msg.CorrectivePaymentInitiation1.mmRequestedCollectionDate);
 				trace_lazy = () -> PaymentInitiation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIdentificationRule.forCorrectivePaymentInitiation1,
+						com.tools20022.repository.constraints.ConstraintRequestedDateRule.forCorrectivePaymentInitiation1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorrectivePaymentInitiation1";
 				definition = "Set of elements used to provide information on the corrective payment initiation transaction, to which the resolution message refers.";
@@ -541,66 +541,66 @@ public class CorrectivePaymentInitiation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr")
-	public CorrectiveGroupInformation1 getGroupHeader() {
-		return groupHeader;
+	public Optional<CorrectiveGroupInformation1> getGroupHeader() {
+		return groupHeader == null ? Optional.empty() : Optional.of(groupHeader);
 	}
 
-	public void setGroupHeader(com.tools20022.repository.msg.CorrectiveGroupInformation1 groupHeader) {
+	public CorrectivePaymentInitiation1 setGroupHeader(com.tools20022.repository.msg.CorrectiveGroupInformation1 groupHeader) {
 		this.groupHeader = groupHeader;
+		return this;
 	}
 
-	@XmlElement(name = "PmtInfId")
-	public Max35Text getPaymentInformationIdentification() {
-		return paymentInformationIdentification;
+	public Optional<Max35Text> getPaymentInformationIdentification() {
+		return paymentInformationIdentification == null ? Optional.empty() : Optional.of(paymentInformationIdentification);
 	}
 
-	public void setPaymentInformationIdentification(Max35Text paymentInformationIdentification) {
+	public CorrectivePaymentInitiation1 setPaymentInformationIdentification(Max35Text paymentInformationIdentification) {
 		this.paymentInformationIdentification = paymentInformationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "InstrId")
-	public Max35Text getInstructionIdentification() {
-		return instructionIdentification;
+	public Optional<Max35Text> getInstructionIdentification() {
+		return instructionIdentification == null ? Optional.empty() : Optional.of(instructionIdentification);
 	}
 
-	public void setInstructionIdentification(Max35Text instructionIdentification) {
+	public CorrectivePaymentInitiation1 setInstructionIdentification(Max35Text instructionIdentification) {
 		this.instructionIdentification = instructionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "EndToEndId")
-	public Max35Text getEndToEndIdentification() {
-		return endToEndIdentification;
+	public Optional<Max35Text> getEndToEndIdentification() {
+		return endToEndIdentification == null ? Optional.empty() : Optional.of(endToEndIdentification);
 	}
 
-	public void setEndToEndIdentification(Max35Text endToEndIdentification) {
+	public CorrectivePaymentInitiation1 setEndToEndIdentification(Max35Text endToEndIdentification) {
 		this.endToEndIdentification = endToEndIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "InstdAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getInstructedAmount() {
 		return instructedAmount;
 	}
 
-	public void setInstructedAmount(ActiveOrHistoricCurrencyAndAmount instructedAmount) {
-		this.instructedAmount = instructedAmount;
+	public CorrectivePaymentInitiation1 setInstructedAmount(ActiveOrHistoricCurrencyAndAmount instructedAmount) {
+		this.instructedAmount = Objects.requireNonNull(instructedAmount);
+		return this;
 	}
 
-	@XmlElement(name = "ReqdExctnDt")
-	public ISODate getRequestedExecutionDate() {
-		return requestedExecutionDate;
+	public Optional<ISODate> getRequestedExecutionDate() {
+		return requestedExecutionDate == null ? Optional.empty() : Optional.of(requestedExecutionDate);
 	}
 
-	public void setRequestedExecutionDate(ISODate requestedExecutionDate) {
+	public CorrectivePaymentInitiation1 setRequestedExecutionDate(ISODate requestedExecutionDate) {
 		this.requestedExecutionDate = requestedExecutionDate;
+		return this;
 	}
 
-	@XmlElement(name = "ReqdColltnDt")
-	public ISODate getRequestedCollectionDate() {
-		return requestedCollectionDate;
+	public Optional<ISODate> getRequestedCollectionDate() {
+		return requestedCollectionDate == null ? Optional.empty() : Optional.of(requestedCollectionDate);
 	}
 
-	public void setRequestedCollectionDate(ISODate requestedCollectionDate) {
+	public CorrectivePaymentInitiation1 setRequestedCollectionDate(ISODate requestedCollectionDate) {
 		this.requestedCollectionDate = requestedCollectionDate;
+		return this;
 	}
 }

@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PEPISACode;
+import com.tools20022.repository.codeset.PEPISA1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of Transfer, PEP or ISA.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PEPISACode PEPISACode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PEPISA1Code#mmPEP
- * PEPISA1Code.mmPEP}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PEPISA1Code#mmISA
- * PEPISA1Code.mmISA}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PEPISA1Code#PEP
+ * PEPISA1Code.PEP}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PEPISA1Code#ISA
+ * PEPISA1Code.ISA}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PEPISACode PEPISACode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of Transfer, PEP or ISA."</li>
  * </ul>
  */
-public class PEPISA1Code extends PEPISACode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PEPISA1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -79,11 +84,12 @@ public class PEPISA1Code extends PEPISACode {
 	 * name} = "PEP"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPEP = new MMCode() {
+	public static final PEPISA1Code PEP = new PEPISA1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PEP";
-			owner_lazy = () -> PEPISA1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PEPISA1Code.mmObject();
+			codeName = PEPISACode.PEP.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -101,26 +107,57 @@ public class PEPISA1Code extends PEPISACode {
 	 * name} = "ISA"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmISA = new MMCode() {
+	public static final PEPISA1Code ISA = new PEPISA1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISA";
-			owner_lazy = () -> PEPISA1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PEPISA1Code.mmObject();
+			codeName = PEPISACode.ISA.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PEPISA1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PEPISA1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PEPT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PEPISA1Code";
 				definition = "Specifies the type of Transfer, PEP or ISA.";
-				code_lazy = () -> Arrays.asList(PEPISA1Code.mmPEP, PEPISA1Code.mmISA);
 				trace_lazy = () -> PEPISACode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PEPISA1Code.PEP, com.tools20022.repository.codeset.PEPISA1Code.ISA);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PEP.getCodeName().get(), PEP);
+		codesByName.put(ISA.getCodeName().get(), ISA);
+	}
+
+	public static PEPISA1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PEPISA1Code[] values() {
+		PEPISA1Code[] values = new PEPISA1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PEPISA1Code> {
+		@Override
+		public PEPISA1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PEPISA1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

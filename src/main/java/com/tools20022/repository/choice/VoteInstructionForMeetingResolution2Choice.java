@@ -28,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.NameAndAddress9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * VoteInstructionForMeetingResolution1Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "VoteInstructionForMeetingResolution2Choice", propOrder = {"voteIndication", "shareholder"})
 public class VoteInstructionForMeetingResolution2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "VoteIndctn", required = true)
 	protected VoteInstruction4Code voteIndication;
 	/**
-	 * Specifies the vote recommendation for resolutions added during the
-	 * meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +124,7 @@ public class VoteInstructionForMeetingResolution2Choice {
 	public static final MMMessageAttribute mmVoteIndication = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VoteInstructionRequest.mmVoteForMeetingResolution;
-			componentContext_lazy = () -> VoteInstructionForMeetingResolution2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.VoteInstructionForMeetingResolution2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "VoteIndctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,11 +136,11 @@ public class VoteInstructionForMeetingResolution2Choice {
 			simpleType_lazy = () -> VoteInstruction4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Shrhldr", required = true)
 	protected NameAndAddress9 shareholder;
 	/**
-	 * Specifies the name and address of the shareholder to whom the rights to
-	 * vote are transferred for resolutions added during the meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -178,7 +179,7 @@ public class VoteInstructionForMeetingResolution2Choice {
 	public static final MMMessageAssociationEnd mmShareholder = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> VoteInstructionForMeetingResolution2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.VoteInstructionForMeetingResolution2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Shrhldr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,9 +196,10 @@ public class VoteInstructionForMeetingResolution2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(VoteInstructionForMeetingResolution2Choice.mmVoteIndication, VoteInstructionForMeetingResolution2Choice.mmShareholder);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.VoteInstructionForMeetingResolution2Choice.mmVoteIndication,
+						com.tools20022.repository.choice.VoteInstructionForMeetingResolution2Choice.mmShareholder);
 				trace_lazy = () -> VoteInstructionRequest.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VoteInstructionForMeetingResolution2Choice";
 				definition = "Vote instruction applying to resolutions added during the meeting.";
@@ -207,21 +209,21 @@ public class VoteInstructionForMeetingResolution2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "VoteIndctn", required = true)
 	public VoteInstruction4Code getVoteIndication() {
 		return voteIndication;
 	}
 
-	public void setVoteIndication(VoteInstruction4Code voteIndication) {
-		this.voteIndication = voteIndication;
+	public VoteInstructionForMeetingResolution2Choice setVoteIndication(VoteInstruction4Code voteIndication) {
+		this.voteIndication = Objects.requireNonNull(voteIndication);
+		return this;
 	}
 
-	@XmlElement(name = "Shrhldr", required = true)
 	public NameAndAddress9 getShareholder() {
 		return shareholder;
 	}
 
-	public void setShareholder(NameAndAddress9 shareholder) {
-		this.shareholder = shareholder;
+	public VoteInstructionForMeetingResolution2Choice setShareholder(NameAndAddress9 shareholder) {
+		this.shareholder = Objects.requireNonNull(shareholder);
+		return this;
 	}
 }

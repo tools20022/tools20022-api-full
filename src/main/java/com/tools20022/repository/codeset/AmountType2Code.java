@@ -20,36 +20,40 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AmountTypeCode;
+import com.tools20022.repository.codeset.AmountType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the amount type.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AmountTypeCode AmountTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountType2Code#mmFixedAmount
- * AmountType2Code.mmFixedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountType2Code#FixedAmount
+ * AmountType2Code.FixedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountType2Code#mmMaximumAmount
- * AmountType2Code.mmMaximumAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountType2Code#MaximumAmount
+ * AmountType2Code.MaximumAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountType2Code#mmMinimumAmount
- * AmountType2Code.mmMinimumAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountType2Code#MinimumAmount
+ * AmountType2Code.MinimumAmount}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AmountTypeCode AmountTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the amount type."</li>
  * </ul>
  */
-public class AmountType2Code extends AmountTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AmountType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,11 +90,12 @@ public class AmountType2Code extends AmountTypeCode {
 	 * name} = "FixedAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFixedAmount = new MMCode() {
+	public static final AmountType2Code FixedAmount = new AmountType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedAmount";
-			owner_lazy = () -> AmountType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountType2Code.mmObject();
+			codeName = AmountTypeCode.FixedAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -108,11 +114,12 @@ public class AmountType2Code extends AmountTypeCode {
 	 * name} = "MaximumAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMaximumAmount = new MMCode() {
+	public static final AmountType2Code MaximumAmount = new AmountType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAmount";
-			owner_lazy = () -> AmountType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountType2Code.mmObject();
+			codeName = AmountTypeCode.MaximumAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -131,26 +138,59 @@ public class AmountType2Code extends AmountTypeCode {
 	 * name} = "MinimumAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMinimumAmount = new MMCode() {
+	public static final AmountType2Code MinimumAmount = new AmountType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumAmount";
-			owner_lazy = () -> AmountType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountType2Code.mmObject();
+			codeName = AmountTypeCode.MinimumAmount.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AmountType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AmountType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FIXD");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountType2Code";
 				definition = "Specifies the amount type.";
-				code_lazy = () -> Arrays.asList(AmountType2Code.mmFixedAmount, AmountType2Code.mmMaximumAmount, AmountType2Code.mmMinimumAmount);
 				trace_lazy = () -> AmountTypeCode.mmObject();
+				code_lazy = () -> Arrays
+						.asList(com.tools20022.repository.codeset.AmountType2Code.FixedAmount, com.tools20022.repository.codeset.AmountType2Code.MaximumAmount, com.tools20022.repository.codeset.AmountType2Code.MinimumAmount);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(FixedAmount.getCodeName().get(), FixedAmount);
+		codesByName.put(MaximumAmount.getCodeName().get(), MaximumAmount);
+		codesByName.put(MinimumAmount.getCodeName().get(), MinimumAmount);
+	}
+
+	public static AmountType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AmountType2Code[] values() {
+		AmountType2Code[] values = new AmountType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AmountType2Code> {
+		@Override
+		public AmountType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AmountType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

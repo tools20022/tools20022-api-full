@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,16 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Account details of the report item."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReportItem1", propOrder = {"accountIdentification", "accountLevel", "financialInstrumentIdentification", "itemDate"})
 public class ReportItem1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId", required = true)
 	protected SecuritiesAccount19 accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -116,7 +118,7 @@ public class ReportItem1 {
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
-			componentContext_lazy = () -> ReportItem1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportItem1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +130,11 @@ public class ReportItem1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctLvl", required = true)
 	protected HoldingAccountLevel1Code accountLevel;
 	/**
-	 * Level of the safekeeping account or sub-account of the report item.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +162,7 @@ public class ReportItem1 {
 	 */
 	public static final MMMessageAttribute mmAccountLevel = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportItem1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportItem1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctLvl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,10 +173,11 @@ public class ReportItem1 {
 			simpleType_lazy = () -> HoldingAccountLevel1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmId")
 	protected SecurityIdentification19 financialInstrumentIdentification;
 	/**
-	 * Financial instrument identification of the report item.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -205,7 +209,7 @@ public class ReportItem1 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
-			componentContext_lazy = () -> ReportItem1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportItem1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,10 +221,11 @@ public class ReportItem1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification19.mmObject();
 		}
 	};
+	@XmlElement(name = "ItmDt")
 	protected ISODate itemDate;
 	/**
-	 * Date of the report item.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -252,7 +257,7 @@ public class ReportItem1 {
 	public static final MMMessageAttribute mmItemDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
-			componentContext_lazy = () -> ReportItem1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportItem1.mmObject();
 			isDerived = false;
 			xmlTag = "ItmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,9 +272,10 @@ public class ReportItem1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReportItem1.mmAccountIdentification, ReportItem1.mmAccountLevel, ReportItem1.mmFinancialInstrumentIdentification, ReportItem1.mmItemDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportItem1.mmAccountIdentification, com.tools20022.repository.msg.ReportItem1.mmAccountLevel,
+						com.tools20022.repository.msg.ReportItem1.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.ReportItem1.mmItemDate);
 				trace_lazy = () -> SecuritiesEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportItem1";
 				definition = "Account details of the report item.";
@@ -278,39 +284,39 @@ public class ReportItem1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public SecuritiesAccount19 getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount19 accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public ReportItem1 setAccountIdentification(com.tools20022.repository.msg.SecuritiesAccount19 accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctLvl", required = true)
 	public HoldingAccountLevel1Code getAccountLevel() {
 		return accountLevel;
 	}
 
-	public void setAccountLevel(HoldingAccountLevel1Code accountLevel) {
-		this.accountLevel = accountLevel;
+	public ReportItem1 setAccountLevel(HoldingAccountLevel1Code accountLevel) {
+		this.accountLevel = Objects.requireNonNull(accountLevel);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId")
-	public SecurityIdentification19 getFinancialInstrumentIdentification() {
-		return financialInstrumentIdentification;
+	public Optional<SecurityIdentification19> getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification == null ? Optional.empty() : Optional.of(financialInstrumentIdentification);
 	}
 
-	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification19 financialInstrumentIdentification) {
+	public ReportItem1 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification19 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ItmDt")
-	public ISODate getItemDate() {
-		return itemDate;
+	public Optional<ISODate> getItemDate() {
+		return itemDate == null ? Optional.empty() : Optional.of(itemDate);
 	}
 
-	public void setItemDate(ISODate itemDate) {
+	public ReportItem1 setItemDate(ISODate itemDate) {
 		this.itemDate = itemDate;
+		return this;
 	}
 }

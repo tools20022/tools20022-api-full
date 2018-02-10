@@ -29,6 +29,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -47,20 +48,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
- * CashManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "PrtryFrmtInvstgtn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -76,6 +63,20 @@ import javax.xml.bind.annotation.*;
  * ProprietaryFormatInvestigationV02.mmProprietaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "PrtryFrmtInvstgtn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
+ * CashManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.035.001.02}</li>
@@ -99,17 +100,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ProprietaryFormatInvestigationV02", propOrder = {"assignment", "case", "proprietaryData"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ProprietaryFormatInvestigationV02", propOrder = {"assignment", "case_", "proprietaryData"})
 public class ProprietaryFormatInvestigationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Assgnmt", required = true)
 	protected CaseAssignment2 assignment;
 	/**
-	 * Identifies the assignment of an investigation case from an assigner to an
-	 * assignee. Usage Rule: the Assigner must be the sender of this
-	 * confirmation and the Assignee must be the receiver.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,10 +150,11 @@ public class ProprietaryFormatInvestigationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Case", required = true)
 	protected Case2 case_;
 	/**
-	 * Identifies the investigation case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,10 +192,11 @@ public class ProprietaryFormatInvestigationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PrtryData", required = true)
 	protected ProprietaryData4 proprietaryData;
 	/**
-	 * Proprietary information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -266,34 +268,34 @@ public class ProprietaryFormatInvestigationV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Assgnmt", required = true)
 	public CaseAssignment2 getAssignment() {
 		return assignment;
 	}
 
-	public void setAssignment(CaseAssignment2 assignment) {
-		this.assignment = assignment;
+	public ProprietaryFormatInvestigationV02 setAssignment(CaseAssignment2 assignment) {
+		this.assignment = Objects.requireNonNull(assignment);
+		return this;
 	}
 
-	@XmlElement(name = "Case", required = true)
 	public Case2 getCase() {
 		return case_;
 	}
 
-	public void setCase(Case2 case_) {
-		this.case_ = case_;
+	public ProprietaryFormatInvestigationV02 setCase(Case2 case_) {
+		this.case_ = Objects.requireNonNull(case_);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryData", required = true)
 	public ProprietaryData4 getProprietaryData() {
 		return proprietaryData;
 	}
 
-	public void setProprietaryData(ProprietaryData4 proprietaryData) {
-		this.proprietaryData = proprietaryData;
+	public ProprietaryFormatInvestigationV02 setProprietaryData(ProprietaryData4 proprietaryData) {
+		this.proprietaryData = Objects.requireNonNull(proprietaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.035.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.035.001.02")
 	static public class Document {
 		@XmlElement(name = "PrtryFrmtInvstgtn", required = true)
 		public ProprietaryFormatInvestigationV02 messageBody;

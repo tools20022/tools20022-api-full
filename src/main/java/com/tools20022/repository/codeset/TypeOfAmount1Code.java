@@ -20,42 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TypeOfAmountCode;
+import com.tools20022.repository.codeset.TypeOfAmount1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Qualifies the amount associated with the transaction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount1Code#Actual
+ * TypeOfAmount1Code.Actual}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount1Code#Estimated
+ * TypeOfAmount1Code.Estimated}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount1Code#Maximum
+ * TypeOfAmount1Code.Maximum}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount1Code#Default
+ * TypeOfAmount1Code.Default}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfAmount1Code#Replacement
+ * TypeOfAmount1Code.Replacement}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.TypeOfAmountCode
  * TypeOfAmountCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfAmount1Code#mmActual
- * TypeOfAmount1Code.mmActual}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount1Code#mmEstimated
- * TypeOfAmount1Code.mmEstimated}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount1Code#mmMaximum
- * TypeOfAmount1Code.mmMaximum}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount1Code#mmDefault
- * TypeOfAmount1Code.mmDefault}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfAmount1Code#mmReplacement
- * TypeOfAmount1Code.mmReplacement}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TypeOfAmount1Code extends TypeOfAmountCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TypeOfAmount1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -100,18 +103,19 @@ public class TypeOfAmount1Code extends TypeOfAmountCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TypeOfAmount8Code#mmActual
-	 * TypeOfAmount8Code.mmActual}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TypeOfAmount8Code#Actual
+	 * TypeOfAmount8Code.Actual}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmActual = new MMCode() {
+	public static final TypeOfAmount1Code Actual = new TypeOfAmount1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Actual";
-			nextVersions_lazy = () -> Arrays.asList(TypeOfAmount8Code.mmActual);
-			owner_lazy = () -> TypeOfAmount1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(TypeOfAmount8Code.Actual);
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount1Code.mmObject();
+			codeName = TypeOfAmountCode.Actual.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,18 +136,19 @@ public class TypeOfAmount1Code extends TypeOfAmountCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TypeOfAmount8Code#mmEstimated
-	 * TypeOfAmount8Code.mmEstimated}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TypeOfAmount8Code#Estimated
+	 * TypeOfAmount8Code.Estimated}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEstimated = new MMCode() {
+	public static final TypeOfAmount1Code Estimated = new TypeOfAmount1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Estimated";
-			nextVersions_lazy = () -> Arrays.asList(TypeOfAmount8Code.mmEstimated);
-			owner_lazy = () -> TypeOfAmount1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(TypeOfAmount8Code.Estimated);
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount1Code.mmObject();
+			codeName = TypeOfAmountCode.Estimated.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -164,18 +169,19 @@ public class TypeOfAmount1Code extends TypeOfAmountCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TypeOfAmount8Code#mmMaximum
-	 * TypeOfAmount8Code.mmMaximum}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TypeOfAmount8Code#Maximum
+	 * TypeOfAmount8Code.Maximum}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMaximum = new MMCode() {
+	public static final TypeOfAmount1Code Maximum = new TypeOfAmount1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Maximum";
-			nextVersions_lazy = () -> Arrays.asList(TypeOfAmount8Code.mmMaximum);
-			owner_lazy = () -> TypeOfAmount1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(TypeOfAmount8Code.Maximum);
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount1Code.mmObject();
+			codeName = TypeOfAmountCode.Maximum.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -196,18 +202,19 @@ public class TypeOfAmount1Code extends TypeOfAmountCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TypeOfAmount8Code#mmDefault
-	 * TypeOfAmount8Code.mmDefault}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TypeOfAmount8Code#Default
+	 * TypeOfAmount8Code.Default}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDefault = new MMCode() {
+	public static final TypeOfAmount1Code Default = new TypeOfAmount1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Default";
-			nextVersions_lazy = () -> Arrays.asList(TypeOfAmount8Code.mmDefault);
-			owner_lazy = () -> TypeOfAmount1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(TypeOfAmount8Code.Default);
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount1Code.mmObject();
+			codeName = TypeOfAmountCode.Default.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -228,34 +235,69 @@ public class TypeOfAmount1Code extends TypeOfAmountCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.TypeOfAmount8Code#mmReplacement
-	 * TypeOfAmount8Code.mmReplacement}</li>
+	 * {@linkplain com.tools20022.repository.codeset.TypeOfAmount8Code#Replacement
+	 * TypeOfAmount8Code.Replacement}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmReplacement = new MMCode() {
+	public static final TypeOfAmount1Code Replacement = new TypeOfAmount1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replacement";
-			nextVersions_lazy = () -> Arrays.asList(TypeOfAmount8Code.mmReplacement);
-			owner_lazy = () -> TypeOfAmount1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(TypeOfAmount8Code.Replacement);
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfAmount1Code.mmObject();
+			codeName = TypeOfAmountCode.Replacement.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TypeOfAmount1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TypeOfAmount1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACTL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfAmount1Code";
 				definition = "Qualifies the amount associated with the transaction.";
 				nextVersions_lazy = () -> Arrays.asList(TypeOfAmount8Code.mmObject());
-				code_lazy = () -> Arrays.asList(TypeOfAmount1Code.mmActual, TypeOfAmount1Code.mmEstimated, TypeOfAmount1Code.mmMaximum, TypeOfAmount1Code.mmDefault, TypeOfAmount1Code.mmReplacement);
 				trace_lazy = () -> TypeOfAmountCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfAmount1Code.Actual, com.tools20022.repository.codeset.TypeOfAmount1Code.Estimated, com.tools20022.repository.codeset.TypeOfAmount1Code.Maximum,
+						com.tools20022.repository.codeset.TypeOfAmount1Code.Default, com.tools20022.repository.codeset.TypeOfAmount1Code.Replacement);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Actual.getCodeName().get(), Actual);
+		codesByName.put(Estimated.getCodeName().get(), Estimated);
+		codesByName.put(Maximum.getCodeName().get(), Maximum);
+		codesByName.put(Default.getCodeName().get(), Default);
+		codesByName.put(Replacement.getCodeName().get(), Replacement);
+	}
+
+	public static TypeOfAmount1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TypeOfAmount1Code[] values() {
+		TypeOfAmount1Code[] values = new TypeOfAmount1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TypeOfAmount1Code> {
+		@Override
+		public TypeOfAmount1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TypeOfAmount1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

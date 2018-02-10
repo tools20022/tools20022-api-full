@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * MeetingContactPerson1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MeetingContactPerson2", propOrder = {"contactPerson", "employingParty", "placeOfListing"})
 public class MeetingContactPerson2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CtctPrsn")
 	protected ContactIdentification1 contactPerson;
 	/**
-	 * Identifies the contact person by its name, given name and address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -125,7 +127,7 @@ public class MeetingContactPerson2 {
 	public static final MMMessageAssociationEnd mmContactPerson = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Role.mmContactPersonRole;
-			componentContext_lazy = () -> MeetingContactPerson2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingContactPerson2.mmObject();
 			isDerived = false;
 			xmlTag = "CtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,11 +140,11 @@ public class MeetingContactPerson2 {
 			type_lazy = () -> com.tools20022.repository.msg.ContactIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "EmplngPty")
 	protected PartyIdentification40Choice employingParty;
 	/**
-	 * Identifies the organisation which is represented by the person or for
-	 * which the person works.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -182,7 +184,7 @@ public class MeetingContactPerson2 {
 	public static final MMMessageAssociationEnd mmEmployingParty = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> MeetingContactPerson2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingContactPerson2.mmObject();
 			isDerived = false;
 			xmlTag = "EmplngPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,11 +197,11 @@ public class MeetingContactPerson2 {
 			type_lazy = () -> PartyIdentification40Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfListg")
 	protected MICIdentifier placeOfListing;
 	/**
-	 * Identification of the financial market, as stipulated in the norm ISO
-	 * 10383 'Codes for exchanges and market identifications'.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,7 +242,7 @@ public class MeetingContactPerson2 {
 	public static final MMMessageAttribute mmPlaceOfListing = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
-			componentContext_lazy = () -> MeetingContactPerson2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MeetingContactPerson2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfListg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,9 +258,10 @@ public class MeetingContactPerson2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MeetingContactPerson2.mmContactPerson, MeetingContactPerson2.mmEmployingParty, MeetingContactPerson2.mmPlaceOfListing);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MeetingContactPerson2.mmContactPerson, com.tools20022.repository.msg.MeetingContactPerson2.mmEmployingParty,
+						com.tools20022.repository.msg.MeetingContactPerson2.mmPlaceOfListing);
 				trace_lazy = () -> Meeting.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingContactPerson2";
 				definition = "Contact person at the party organising the meeting, at the issuer or at an intermediary.";
@@ -268,30 +271,30 @@ public class MeetingContactPerson2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CtctPrsn")
-	public ContactIdentification1 getContactPerson() {
-		return contactPerson;
+	public Optional<ContactIdentification1> getContactPerson() {
+		return contactPerson == null ? Optional.empty() : Optional.of(contactPerson);
 	}
 
-	public void setContactPerson(com.tools20022.repository.msg.ContactIdentification1 contactPerson) {
+	public MeetingContactPerson2 setContactPerson(com.tools20022.repository.msg.ContactIdentification1 contactPerson) {
 		this.contactPerson = contactPerson;
+		return this;
 	}
 
-	@XmlElement(name = "EmplngPty")
-	public PartyIdentification40Choice getEmployingParty() {
-		return employingParty;
+	public Optional<PartyIdentification40Choice> getEmployingParty() {
+		return employingParty == null ? Optional.empty() : Optional.of(employingParty);
 	}
 
-	public void setEmployingParty(PartyIdentification40Choice employingParty) {
+	public MeetingContactPerson2 setEmployingParty(PartyIdentification40Choice employingParty) {
 		this.employingParty = employingParty;
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfListg")
-	public MICIdentifier getPlaceOfListing() {
-		return placeOfListing;
+	public Optional<MICIdentifier> getPlaceOfListing() {
+		return placeOfListing == null ? Optional.empty() : Optional.of(placeOfListing);
 	}
 
-	public void setPlaceOfListing(MICIdentifier placeOfListing) {
+	public MeetingContactPerson2 setPlaceOfListing(MICIdentifier placeOfListing) {
 		this.placeOfListing = placeOfListing;
+		return this;
 	}
 }

@@ -24,6 +24,8 @@ import com.tools20022.repository.entity.BuyerRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,16 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyIdentification72", propOrder = {"partyIdentification", "legalOrganisation", "taxParty"})
 public class PartyIdentification72 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtyId", required = true)
 	protected PartyIdentification43 partyIdentification;
 	/**
-	 * Unique identification, as assigned by an organisation, to unambiguously
-	 * identify a party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -104,7 +106,7 @@ public class PartyIdentification72 {
 	 */
 	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentification72.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification72.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,11 +118,11 @@ public class PartyIdentification72 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "LglOrg")
 	protected LegalOrganisation1 legalOrganisation;
 	/**
-	 * Identifier and name of an organisation that is allocated by an
-	 * institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -148,7 +150,7 @@ public class PartyIdentification72 {
 	 */
 	public static final MMMessageAssociationEnd mmLegalOrganisation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentification72.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification72.mmObject();
 			isDerived = false;
 			xmlTag = "LglOrg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,10 +162,11 @@ public class PartyIdentification72 {
 			type_lazy = () -> com.tools20022.repository.msg.LegalOrganisation1.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxPty")
 	protected TaxParty1 taxParty;
 	/**
-	 * Tax registration details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -188,7 +191,7 @@ public class PartyIdentification72 {
 	 */
 	public static final MMMessageAssociationEnd mmTaxParty = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentification72.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification72.mmObject();
 			isDerived = false;
 			xmlTag = "TaxPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,9 +207,10 @@ public class PartyIdentification72 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification72.mmPartyIdentification, PartyIdentification72.mmLegalOrganisation, PartyIdentification72.mmTaxParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification72.mmPartyIdentification, com.tools20022.repository.msg.PartyIdentification72.mmLegalOrganisation,
+						com.tools20022.repository.msg.PartyIdentification72.mmTaxParty);
 				trace_lazy = () -> BuyerRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification72";
 				definition = "Set of elements used to identify an organization or a person.";
@@ -215,30 +219,30 @@ public class PartyIdentification72 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtyId", required = true)
 	public PartyIdentification43 getPartyIdentification() {
 		return partyIdentification;
 	}
 
-	public void setPartyIdentification(com.tools20022.repository.msg.PartyIdentification43 partyIdentification) {
-		this.partyIdentification = partyIdentification;
+	public PartyIdentification72 setPartyIdentification(com.tools20022.repository.msg.PartyIdentification43 partyIdentification) {
+		this.partyIdentification = Objects.requireNonNull(partyIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "LglOrg")
-	public LegalOrganisation1 getLegalOrganisation() {
-		return legalOrganisation;
+	public Optional<LegalOrganisation1> getLegalOrganisation() {
+		return legalOrganisation == null ? Optional.empty() : Optional.of(legalOrganisation);
 	}
 
-	public void setLegalOrganisation(com.tools20022.repository.msg.LegalOrganisation1 legalOrganisation) {
+	public PartyIdentification72 setLegalOrganisation(com.tools20022.repository.msg.LegalOrganisation1 legalOrganisation) {
 		this.legalOrganisation = legalOrganisation;
+		return this;
 	}
 
-	@XmlElement(name = "TaxPty")
-	public TaxParty1 getTaxParty() {
-		return taxParty;
+	public Optional<TaxParty1> getTaxParty() {
+		return taxParty == null ? Optional.empty() : Optional.of(taxParty);
 	}
 
-	public void setTaxParty(com.tools20022.repository.msg.TaxParty1 taxParty) {
+	public PartyIdentification72 setTaxParty(com.tools20022.repository.msg.TaxParty1 taxParty) {
 		this.taxParty = taxParty;
+		return this;
 	}
 }

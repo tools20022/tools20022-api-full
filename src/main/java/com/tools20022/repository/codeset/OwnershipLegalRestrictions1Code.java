@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OwnershipLegalRestrictionsCode;
+import com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the regulatory restrictions applicable to a financial instrument.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.OwnershipLegalRestrictionsCode
- * OwnershipLegalRestrictionsCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code#mmUSLegal144A
- * OwnershipLegalRestrictions1Code.mmUSLegal144A}</li>
+ * {@linkplain com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code#USLegal144A
+ * OwnershipLegalRestrictions1Code.USLegal144A}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code#mmNoRestrictions
- * OwnershipLegalRestrictions1Code.mmNoRestrictions}</li>
+ * {@linkplain com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code#NoRestrictions
+ * OwnershipLegalRestrictions1Code.NoRestrictions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code#mmRestrictions
- * OwnershipLegalRestrictions1Code.mmRestrictions}</li>
+ * {@linkplain com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code#Restrictions
+ * OwnershipLegalRestrictions1Code.Restrictions}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.OwnershipLegalRestrictionsCode
+ * OwnershipLegalRestrictionsCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class OwnershipLegalRestrictions1Code extends OwnershipLegalRestrictionsCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OwnershipLegalRestrictions1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,11 +93,12 @@ public class OwnershipLegalRestrictions1Code extends OwnershipLegalRestrictionsC
 	 * name} = "USLegal144A"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSLegal144A = new MMCode() {
+	public static final OwnershipLegalRestrictions1Code USLegal144A = new OwnershipLegalRestrictions1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USLegal144A";
-			owner_lazy = () -> OwnershipLegalRestrictions1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code.mmObject();
+			codeName = OwnershipLegalRestrictionsCode.USLegal144A.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -111,11 +117,12 @@ public class OwnershipLegalRestrictions1Code extends OwnershipLegalRestrictionsC
 	 * name} = "NoRestrictions"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoRestrictions = new MMCode() {
+	public static final OwnershipLegalRestrictions1Code NoRestrictions = new OwnershipLegalRestrictions1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoRestrictions";
-			owner_lazy = () -> OwnershipLegalRestrictions1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code.mmObject();
+			codeName = OwnershipLegalRestrictionsCode.NoRestrictions.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -134,26 +141,59 @@ public class OwnershipLegalRestrictions1Code extends OwnershipLegalRestrictionsC
 	 * name} = "Restrictions"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRestrictions = new MMCode() {
+	public static final OwnershipLegalRestrictions1Code Restrictions = new OwnershipLegalRestrictions1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restrictions";
-			owner_lazy = () -> OwnershipLegalRestrictions1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code.mmObject();
+			codeName = OwnershipLegalRestrictionsCode.Restrictions.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OwnershipLegalRestrictions1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OwnershipLegalRestrictions1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("A144");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OwnershipLegalRestrictions1Code";
 				definition = "Specifies the regulatory restrictions applicable to a financial instrument.";
-				code_lazy = () -> Arrays.asList(OwnershipLegalRestrictions1Code.mmUSLegal144A, OwnershipLegalRestrictions1Code.mmNoRestrictions, OwnershipLegalRestrictions1Code.mmRestrictions);
 				trace_lazy = () -> OwnershipLegalRestrictionsCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code.USLegal144A, com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code.NoRestrictions,
+						com.tools20022.repository.codeset.OwnershipLegalRestrictions1Code.Restrictions);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(USLegal144A.getCodeName().get(), USLegal144A);
+		codesByName.put(NoRestrictions.getCodeName().get(), NoRestrictions);
+		codesByName.put(Restrictions.getCodeName().get(), Restrictions);
+	}
+
+	public static OwnershipLegalRestrictions1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OwnershipLegalRestrictions1Code[] values() {
+		OwnershipLegalRestrictions1Code[] values = new OwnershipLegalRestrictions1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OwnershipLegalRestrictions1Code> {
+		@Override
+		public OwnershipLegalRestrictions1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OwnershipLegalRestrictions1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

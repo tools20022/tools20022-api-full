@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.UndertakingDocument;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about a document."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Document10", propOrder = {"documentType", "presentationChannel", "documentFormat", "copyIndicator", "signedIndicator"})
 public class Document10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DocTp", required = true)
 	protected UndertakingDocumentType2Choice documentType;
 	/**
-	 * Type of document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +118,7 @@ public class Document10 {
 	public static final MMMessageAttribute mmDocumentType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> UndertakingDocument.mmDocumentType;
-			componentContext_lazy = () -> Document10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Document10.mmObject();
 			isDerived = false;
 			xmlTag = "DocTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +129,11 @@ public class Document10 {
 			complexType_lazy = () -> UndertakingDocumentType2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PresntnChanl")
 	protected Channel1Choice presentationChannel;
 	/**
-	 * Channel through which the document should be presented.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +166,7 @@ public class Document10 {
 	public static final MMMessageAttribute mmPresentationChannel = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmCommunicationMethod;
-			componentContext_lazy = () -> Document10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Document10.mmObject();
 			isDerived = false;
 			xmlTag = "PresntnChanl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +177,11 @@ public class Document10 {
 			complexType_lazy = () -> Channel1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DocFrmt")
 	protected DocumentFormat1Choice documentFormat;
 	/**
-	 * Format of the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -209,7 +214,7 @@ public class Document10 {
 	public static final MMMessageAttribute mmDocumentFormat = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> UndertakingDocument.mmFormat;
-			componentContext_lazy = () -> Document10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Document10.mmObject();
 			isDerived = false;
 			xmlTag = "DocFrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,10 +225,11 @@ public class Document10 {
 			complexType_lazy = () -> DocumentFormat1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CpyInd")
 	protected YesNoIndicator copyIndicator;
 	/**
-	 * Indication whether the document may be a copy of the original document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -258,7 +264,7 @@ public class Document10 {
 	public static final MMMessageAttribute mmCopyIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> UndertakingDocument.mmCopyIndicator;
-			componentContext_lazy = () -> Document10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Document10.mmObject();
 			isDerived = false;
 			xmlTag = "CpyInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,10 +275,11 @@ public class Document10 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "SgndInd")
 	protected YesNoIndicator signedIndicator;
 	/**
-	 * Indication whether the document must be signed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -299,7 +306,7 @@ public class Document10 {
 	 */
 	public static final MMMessageAttribute mmSignedIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Document10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Document10.mmObject();
 			isDerived = false;
 			xmlTag = "SgndInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -314,9 +321,10 @@ public class Document10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Document10.mmDocumentType, Document10.mmPresentationChannel, Document10.mmDocumentFormat, Document10.mmCopyIndicator, Document10.mmSignedIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Document10.mmDocumentType, com.tools20022.repository.msg.Document10.mmPresentationChannel, com.tools20022.repository.msg.Document10.mmDocumentFormat,
+						com.tools20022.repository.msg.Document10.mmCopyIndicator, com.tools20022.repository.msg.Document10.mmSignedIndicator);
 				trace_lazy = () -> UndertakingDocument.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Document10";
 				definition = "Information about a document.";
@@ -325,48 +333,48 @@ public class Document10 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DocTp", required = true)
 	public UndertakingDocumentType2Choice getDocumentType() {
 		return documentType;
 	}
 
-	public void setDocumentType(UndertakingDocumentType2Choice documentType) {
-		this.documentType = documentType;
+	public Document10 setDocumentType(UndertakingDocumentType2Choice documentType) {
+		this.documentType = Objects.requireNonNull(documentType);
+		return this;
 	}
 
-	@XmlElement(name = "PresntnChanl")
-	public Channel1Choice getPresentationChannel() {
-		return presentationChannel;
+	public Optional<Channel1Choice> getPresentationChannel() {
+		return presentationChannel == null ? Optional.empty() : Optional.of(presentationChannel);
 	}
 
-	public void setPresentationChannel(Channel1Choice presentationChannel) {
+	public Document10 setPresentationChannel(Channel1Choice presentationChannel) {
 		this.presentationChannel = presentationChannel;
+		return this;
 	}
 
-	@XmlElement(name = "DocFrmt")
-	public DocumentFormat1Choice getDocumentFormat() {
-		return documentFormat;
+	public Optional<DocumentFormat1Choice> getDocumentFormat() {
+		return documentFormat == null ? Optional.empty() : Optional.of(documentFormat);
 	}
 
-	public void setDocumentFormat(DocumentFormat1Choice documentFormat) {
+	public Document10 setDocumentFormat(DocumentFormat1Choice documentFormat) {
 		this.documentFormat = documentFormat;
+		return this;
 	}
 
-	@XmlElement(name = "CpyInd")
-	public YesNoIndicator getCopyIndicator() {
-		return copyIndicator;
+	public Optional<YesNoIndicator> getCopyIndicator() {
+		return copyIndicator == null ? Optional.empty() : Optional.of(copyIndicator);
 	}
 
-	public void setCopyIndicator(YesNoIndicator copyIndicator) {
+	public Document10 setCopyIndicator(YesNoIndicator copyIndicator) {
 		this.copyIndicator = copyIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "SgndInd")
-	public YesNoIndicator getSignedIndicator() {
-		return signedIndicator;
+	public Optional<YesNoIndicator> getSignedIndicator() {
+		return signedIndicator == null ? Optional.empty() : Optional.of(signedIndicator);
 	}
 
-	public void setSignedIndicator(YesNoIndicator signedIndicator) {
+	public Document10 setSignedIndicator(YesNoIndicator signedIndicator) {
 		this.signedIndicator = signedIndicator;
+		return this;
 	}
 }

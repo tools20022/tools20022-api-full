@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode;
+import com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Further sub product code list for commodity derivative Electricity.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode
- * AssetClassDetailedSubProductTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#mmBaseLoad
- * AssetClassDetailedSubProductType5Code.mmBaseLoad}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#BaseLoad
+ * AssetClassDetailedSubProductType5Code.BaseLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#mmFinancialTransmissionRights
- * AssetClassDetailedSubProductType5Code.mmFinancialTransmissionRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#FinancialTransmissionRights
+ * AssetClassDetailedSubProductType5Code.FinancialTransmissionRights}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#mmPeakLoad
- * AssetClassDetailedSubProductType5Code.mmPeakLoad}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#PeakLoad
+ * AssetClassDetailedSubProductType5Code.PeakLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#mmOffPeak
- * AssetClassDetailedSubProductType5Code.mmOffPeak}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#OffPeak
+ * AssetClassDetailedSubProductType5Code.OffPeak}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#mmOther
- * AssetClassDetailedSubProductType5Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code#Other
+ * AssetClassDetailedSubProductType5Code.Other}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode
+ * AssetClassDetailedSubProductTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Further sub product code list for commodity derivative Electricity."</li>
  * </ul>
  */
-public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSubProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AssetClassDetailedSubProductType5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +92,12 @@ public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSub
 	 * name} = "BaseLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBaseLoad = new MMCode() {
+	public static final AssetClassDetailedSubProductType5Code BaseLoad = new AssetClassDetailedSubProductType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseLoad";
-			owner_lazy = () -> AssetClassDetailedSubProductType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.BaseLoad.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +116,12 @@ public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSub
 	 * name} = "FinancialTransmissionRights"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinancialTransmissionRights = new MMCode() {
+	public static final AssetClassDetailedSubProductType5Code FinancialTransmissionRights = new AssetClassDetailedSubProductType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialTransmissionRights";
-			owner_lazy = () -> AssetClassDetailedSubProductType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.FinancialTransmissionRights.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,11 +140,12 @@ public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSub
 	 * name} = "PeakLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPeakLoad = new MMCode() {
+	public static final AssetClassDetailedSubProductType5Code PeakLoad = new AssetClassDetailedSubProductType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeakLoad";
-			owner_lazy = () -> AssetClassDetailedSubProductType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.PeakLoad.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -156,11 +164,12 @@ public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSub
 	 * name} = "OffPeak"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOffPeak = new MMCode() {
+	public static final AssetClassDetailedSubProductType5Code OffPeak = new AssetClassDetailedSubProductType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffPeak";
-			owner_lazy = () -> AssetClassDetailedSubProductType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.OffPeak.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -179,26 +188,61 @@ public class AssetClassDetailedSubProductType5Code extends AssetClassDetailedSub
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final AssetClassDetailedSubProductType5Code Other = new AssetClassDetailedSubProductType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> AssetClassDetailedSubProductType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.Other.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AssetClassDetailedSubProductType5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AssetClassDetailedSubProductType5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassDetailedSubProductType5Code";
 				definition = "Further sub product code list for commodity derivative Electricity.";
-				code_lazy = () -> Arrays.asList(AssetClassDetailedSubProductType5Code.mmBaseLoad, AssetClassDetailedSubProductType5Code.mmFinancialTransmissionRights, AssetClassDetailedSubProductType5Code.mmPeakLoad,
-						AssetClassDetailedSubProductType5Code.mmOffPeak, AssetClassDetailedSubProductType5Code.mmOther);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.BaseLoad, com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.FinancialTransmissionRights,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.PeakLoad, com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.OffPeak,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType5Code.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BaseLoad.getCodeName().get(), BaseLoad);
+		codesByName.put(FinancialTransmissionRights.getCodeName().get(), FinancialTransmissionRights);
+		codesByName.put(PeakLoad.getCodeName().get(), PeakLoad);
+		codesByName.put(OffPeak.getCodeName().get(), OffPeak);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static AssetClassDetailedSubProductType5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AssetClassDetailedSubProductType5Code[] values() {
+		AssetClassDetailedSubProductType5Code[] values = new AssetClassDetailedSubProductType5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AssetClassDetailedSubProductType5Code> {
+		@Override
+		public AssetClassDetailedSubProductType5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AssetClassDetailedSubProductType5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

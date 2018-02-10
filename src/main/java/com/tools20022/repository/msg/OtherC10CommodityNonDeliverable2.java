@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.Commodity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OtherC10CommodityNonDeliverable2", propOrder = {"baseProduct", "subProduct"})
 public class OtherC10CommodityNonDeliverable2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BasePdct", required = true)
 	protected AssetClassProductType11Code baseProduct;
 	/**
-	 * Base product for the underlying asset class as specified in the
-	 * classification of commodities derivatives table.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +115,7 @@ public class OtherC10CommodityNonDeliverable2 {
 	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
-			componentContext_lazy = () -> OtherC10CommodityNonDeliverable2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherC10CommodityNonDeliverable2.mmObject();
 			isDerived = false;
 			xmlTag = "BasePdct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +126,11 @@ public class OtherC10CommodityNonDeliverable2 {
 			simpleType_lazy = () -> AssetClassProductType11Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SubPdct")
 	protected AssetClassSubProductType48Code subProduct;
 	/**
-	 * Sub-product for the underlying asset class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +164,7 @@ public class OtherC10CommodityNonDeliverable2 {
 	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> OtherC10CommodityNonDeliverable2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OtherC10CommodityNonDeliverable2.mmObject();
 			isDerived = false;
 			xmlTag = "SubPdct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,9 +179,9 @@ public class OtherC10CommodityNonDeliverable2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OtherC10CommodityNonDeliverable2.mmBaseProduct, OtherC10CommodityNonDeliverable2.mmSubProduct);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherC10CommodityNonDeliverable2.mmBaseProduct, com.tools20022.repository.msg.OtherC10CommodityNonDeliverable2.mmSubProduct);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OtherC10CommodityNonDeliverable2";
 				definition = "Defines commodity sub-product attributes of an other c10 of type non-deliverable.";
@@ -187,21 +190,21 @@ public class OtherC10CommodityNonDeliverable2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BasePdct", required = true)
 	public AssetClassProductType11Code getBaseProduct() {
 		return baseProduct;
 	}
 
-	public void setBaseProduct(AssetClassProductType11Code baseProduct) {
-		this.baseProduct = baseProduct;
+	public OtherC10CommodityNonDeliverable2 setBaseProduct(AssetClassProductType11Code baseProduct) {
+		this.baseProduct = Objects.requireNonNull(baseProduct);
+		return this;
 	}
 
-	@XmlElement(name = "SubPdct")
-	public AssetClassSubProductType48Code getSubProduct() {
-		return subProduct;
+	public Optional<AssetClassSubProductType48Code> getSubProduct() {
+		return subProduct == null ? Optional.empty() : Optional.of(subProduct);
 	}
 
-	public void setSubProduct(AssetClassSubProductType48Code subProduct) {
+	public OtherC10CommodityNonDeliverable2 setSubProduct(AssetClassSubProductType48Code subProduct) {
 		this.subProduct = subProduct;
+		return this;
 	}
 }

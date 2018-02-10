@@ -25,9 +25,8 @@ import com.tools20022.repository.choice.TechnicalIdentification1Choice;
 import com.tools20022.repository.codeset.SystemPartyType1Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +72,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,16 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemParty1", propOrder = {"identification", "address", "openingDate", "closingDate", "type", "technicalAddress", "marketSpecificAttribute", "name", "restriction"})
 public class SystemParty1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected SystemPartyIdentification1 identification;
 	/**
-	 * Unique identification to unambiguously identify the party within the
-	 * system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -124,7 +123,7 @@ public class SystemParty1 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SystemParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +135,11 @@ public class SystemParty1 {
 			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "Adr")
 	protected PostalAddress10 address;
 	/**
-	 * Information that locates and identifies a specific address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -165,7 +165,7 @@ public class SystemParty1 {
 	 */
 	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SystemParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,10 +177,11 @@ public class SystemParty1 {
 			type_lazy = () -> com.tools20022.repository.msg.PostalAddress10.mmObject();
 		}
 	};
+	@XmlElement(name = "OpngDt", required = true)
 	protected ISODate openingDate;
 	/**
-	 * Specifies the opening date of the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,7 +207,7 @@ public class SystemParty1 {
 	 */
 	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
 			xmlTag = "OpngDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,10 +218,11 @@ public class SystemParty1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ClsgDt")
 	protected ISODate closingDate;
 	/**
-	 * Specifies the closing date of the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -246,7 +248,7 @@ public class SystemParty1 {
 	 */
 	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,10 +259,11 @@ public class SystemParty1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected SystemPartyType1Code type;
 	/**
-	 * Specifies the type classification of the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -287,7 +290,7 @@ public class SystemParty1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -298,11 +301,11 @@ public class SystemParty1 {
 			simpleType_lazy = () -> SystemPartyType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TechAdr", required = true)
 	protected List<TechnicalIdentification1Choice> technicalAddress;
 	/**
-	 * Unique technical address to unambiguously identify a party for receiving
-	 * messages from the executing system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -331,7 +334,7 @@ public class SystemParty1 {
 	 */
 	public static final MMMessageAttribute mmTechnicalAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
 			xmlTag = "TechAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -341,11 +344,11 @@ public class SystemParty1 {
 			complexType_lazy = () -> TechnicalIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MktSpcfcAttr")
 	protected List<com.tools20022.repository.msg.MarketSpecificAttribute1> marketSpecificAttribute;
 	/**
-	 * Additional attributes defined by a central security depositary for a
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -373,7 +376,7 @@ public class SystemParty1 {
 	 */
 	public static final MMMessageAssociationEnd mmMarketSpecificAttribute = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SystemParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
 			xmlTag = "MktSpcfcAttr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -384,11 +387,11 @@ public class SystemParty1 {
 			type_lazy = () -> com.tools20022.repository.msg.MarketSpecificAttribute1.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm", required = true)
 	protected PartyName1 name;
 	/**
-	 * Specifies the name by which a party is known and which is usually used to
-	 * identify that party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -414,7 +417,7 @@ public class SystemParty1 {
 	 */
 	public static final MMMessageAssociationEnd mmName = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SystemParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -426,12 +429,11 @@ public class SystemParty1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyName1.mmObject();
 		}
 	};
+	@XmlElement(name = "Rstrctn")
 	protected List<com.tools20022.repository.msg.SystemRestriction1> restriction;
 	/**
-	 * Defines the specific processing characteristics for a party to ensure
-	 * configurability of specific requirements, as prescribed by national legal
-	 * and regulatory requirements and practices.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -458,7 +460,7 @@ public class SystemParty1 {
 	 */
 	public static final MMMessageAssociationEnd mmRestriction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SystemParty1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemParty1.mmObject();
 			isDerived = false;
 			xmlTag = "Rstrctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -473,9 +475,10 @@ public class SystemParty1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SystemParty1.mmIdentification, SystemParty1.mmAddress, SystemParty1.mmOpeningDate, SystemParty1.mmClosingDate, SystemParty1.mmType, SystemParty1.mmTechnicalAddress,
-						SystemParty1.mmMarketSpecificAttribute, SystemParty1.mmName, SystemParty1.mmRestriction);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemParty1.mmIdentification, com.tools20022.repository.msg.SystemParty1.mmAddress, com.tools20022.repository.msg.SystemParty1.mmOpeningDate,
+						com.tools20022.repository.msg.SystemParty1.mmClosingDate, com.tools20022.repository.msg.SystemParty1.mmType, com.tools20022.repository.msg.SystemParty1.mmTechnicalAddress,
+						com.tools20022.repository.msg.SystemParty1.mmMarketSpecificAttribute, com.tools20022.repository.msg.SystemParty1.mmName, com.tools20022.repository.msg.SystemParty1.mmRestriction);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemParty1";
 				definition = "Provides the definition of a party within a system. \r\nA party shall denote any legal or organisational entity required in the system. \r\nThis entity shall store the parties from the first three levels: the system operator, the central securities depositaries, the participants of the central securities depositaries, the national central banks and payment banks.";
@@ -484,84 +487,84 @@ public class SystemParty1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public SystemPartyIdentification1 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.SystemPartyIdentification1 identification) {
-		this.identification = identification;
+	public SystemParty1 setIdentification(com.tools20022.repository.msg.SystemPartyIdentification1 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Adr")
-	public PostalAddress10 getAddress() {
-		return address;
+	public Optional<PostalAddress10> getAddress() {
+		return address == null ? Optional.empty() : Optional.of(address);
 	}
 
-	public void setAddress(com.tools20022.repository.msg.PostalAddress10 address) {
+	public SystemParty1 setAddress(com.tools20022.repository.msg.PostalAddress10 address) {
 		this.address = address;
+		return this;
 	}
 
-	@XmlElement(name = "OpngDt", required = true)
 	public ISODate getOpeningDate() {
 		return openingDate;
 	}
 
-	public void setOpeningDate(ISODate openingDate) {
-		this.openingDate = openingDate;
+	public SystemParty1 setOpeningDate(ISODate openingDate) {
+		this.openingDate = Objects.requireNonNull(openingDate);
+		return this;
 	}
 
-	@XmlElement(name = "ClsgDt")
-	public ISODate getClosingDate() {
-		return closingDate;
+	public Optional<ISODate> getClosingDate() {
+		return closingDate == null ? Optional.empty() : Optional.of(closingDate);
 	}
 
-	public void setClosingDate(ISODate closingDate) {
+	public SystemParty1 setClosingDate(ISODate closingDate) {
 		this.closingDate = closingDate;
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public SystemPartyType1Code getType() {
 		return type;
 	}
 
-	public void setType(SystemPartyType1Code type) {
-		this.type = type;
+	public SystemParty1 setType(SystemPartyType1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "TechAdr", required = true)
 	public List<TechnicalIdentification1Choice> getTechnicalAddress() {
-		return technicalAddress;
+		return technicalAddress == null ? technicalAddress = new ArrayList<>() : technicalAddress;
 	}
 
-	public void setTechnicalAddress(List<TechnicalIdentification1Choice> technicalAddress) {
-		this.technicalAddress = technicalAddress;
+	public SystemParty1 setTechnicalAddress(List<TechnicalIdentification1Choice> technicalAddress) {
+		this.technicalAddress = Objects.requireNonNull(technicalAddress);
+		return this;
 	}
 
-	@XmlElement(name = "MktSpcfcAttr")
 	public List<MarketSpecificAttribute1> getMarketSpecificAttribute() {
-		return marketSpecificAttribute;
+		return marketSpecificAttribute == null ? marketSpecificAttribute = new ArrayList<>() : marketSpecificAttribute;
 	}
 
-	public void setMarketSpecificAttribute(List<com.tools20022.repository.msg.MarketSpecificAttribute1> marketSpecificAttribute) {
-		this.marketSpecificAttribute = marketSpecificAttribute;
+	public SystemParty1 setMarketSpecificAttribute(List<com.tools20022.repository.msg.MarketSpecificAttribute1> marketSpecificAttribute) {
+		this.marketSpecificAttribute = Objects.requireNonNull(marketSpecificAttribute);
+		return this;
 	}
 
-	@XmlElement(name = "Nm", required = true)
 	public PartyName1 getName() {
 		return name;
 	}
 
-	public void setName(com.tools20022.repository.msg.PartyName1 name) {
-		this.name = name;
+	public SystemParty1 setName(com.tools20022.repository.msg.PartyName1 name) {
+		this.name = Objects.requireNonNull(name);
+		return this;
 	}
 
-	@XmlElement(name = "Rstrctn")
 	public List<SystemRestriction1> getRestriction() {
-		return restriction;
+		return restriction == null ? restriction = new ArrayList<>() : restriction;
 	}
 
-	public void setRestriction(List<com.tools20022.repository.msg.SystemRestriction1> restriction) {
-		this.restriction = restriction;
+	public SystemParty1 setRestriction(List<com.tools20022.repository.msg.SystemRestriction1> restriction) {
+		this.restriction = Objects.requireNonNull(restriction);
+		return this;
 	}
 }

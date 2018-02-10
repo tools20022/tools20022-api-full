@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.AmountRange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Range of amount values."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ActiveOrHistoricCurrencyAndAmountRange1", propOrder = {"amount", "creditDebitIndicator", "currency"})
 public class ActiveOrHistoricCurrencyAndAmountRange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ImpliedCurrencyAmountRangeChoice amount;
 	/**
-	 * Specified amount or amount range.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +114,7 @@ public class ActiveOrHistoricCurrencyAndAmountRange1 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AmountRange.mmObject();
-			componentContext_lazy = () -> ActiveOrHistoricCurrencyAndAmountRange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ActiveOrHistoricCurrencyAndAmountRange1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +125,11 @@ public class ActiveOrHistoricCurrencyAndAmountRange1 {
 			complexType_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd")
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates whether the amount is a credited or debited amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +164,7 @@ public class ActiveOrHistoricCurrencyAndAmountRange1 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AmountRange.mmCreditDebitIndicator;
-			componentContext_lazy = () -> ActiveOrHistoricCurrencyAndAmountRange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ActiveOrHistoricCurrencyAndAmountRange1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +175,11 @@ public class ActiveOrHistoricCurrencyAndAmountRange1 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy", required = true)
 	protected ActiveOrHistoricCurrencyCode currency;
 	/**
-	 * Medium of exchange of value, used to qualify an amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,7 +213,7 @@ public class ActiveOrHistoricCurrencyAndAmountRange1 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AmountRange.mmCurrency;
-			componentContext_lazy = () -> ActiveOrHistoricCurrencyAndAmountRange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ActiveOrHistoricCurrencyAndAmountRange1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,9 +228,10 @@ public class ActiveOrHistoricCurrencyAndAmountRange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ActiveOrHistoricCurrencyAndAmountRange1.mmAmount, ActiveOrHistoricCurrencyAndAmountRange1.mmCreditDebitIndicator, ActiveOrHistoricCurrencyAndAmountRange1.mmCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ActiveOrHistoricCurrencyAndAmountRange1.mmAmount, com.tools20022.repository.msg.ActiveOrHistoricCurrencyAndAmountRange1.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.ActiveOrHistoricCurrencyAndAmountRange1.mmCurrency);
 				trace_lazy = () -> AmountRange.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ActiveOrHistoricCurrencyAndAmountRange1";
 				definition = "Range of amount values.";
@@ -234,30 +240,30 @@ public class ActiveOrHistoricCurrencyAndAmountRange1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ImpliedCurrencyAmountRangeChoice getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ImpliedCurrencyAmountRangeChoice amount) {
-		this.amount = amount;
+	public ActiveOrHistoricCurrencyAndAmountRange1 setAmount(ImpliedCurrencyAmountRangeChoice amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd")
-	public CreditDebitCode getCreditDebitIndicator() {
-		return creditDebitIndicator;
+	public Optional<CreditDebitCode> getCreditDebitIndicator() {
+		return creditDebitIndicator == null ? Optional.empty() : Optional.of(creditDebitIndicator);
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+	public ActiveOrHistoricCurrencyAndAmountRange1 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
 		this.creditDebitIndicator = creditDebitIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy", required = true)
 	public ActiveOrHistoricCurrencyCode getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(ActiveOrHistoricCurrencyCode currency) {
-		this.currency = currency;
+	public ActiveOrHistoricCurrencyAndAmountRange1 setCurrency(ActiveOrHistoricCurrencyCode currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 }

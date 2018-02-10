@@ -20,40 +20,43 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RejectionReasonCode;
+import com.tools20022.repository.codeset.RejectionReason9Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason of a rejection of an election cancellation request.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RejectionReasonCode
- * RejectionReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason9Code#mmCancellationNotAllowed
- * RejectionReason9Code.mmCancellationNotAllowed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason9Code#CancellationNotAllowed
+ * RejectionReason9Code.CancellationNotAllowed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RejectionReason9Code#Late
+ * RejectionReason9Code.Late}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason9Code#mmLate
- * RejectionReason9Code.mmLate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason9Code#ElectionAlreadyCancelled
+ * RejectionReason9Code.ElectionAlreadyCancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason9Code#mmElectionAlreadyCancelled
- * RejectionReason9Code.mmElectionAlreadyCancelled}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectionReason9Code#mmFailedValidation
- * RejectionReason9Code.mmFailedValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectionReason9Code#FailedValidation
+ * RejectionReason9Code.FailedValidation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RejectionReasonCode
+ * RejectionReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the reason of a rejection of an election cancellation request."</li>
  * </ul>
  */
-public class RejectionReason9Code extends RejectionReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RejectionReason9Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,11 +94,12 @@ public class RejectionReason9Code extends RejectionReasonCode {
 	 * name} = "CancellationNotAllowed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellationNotAllowed = new MMCode() {
+	public static final RejectionReason9Code CancellationNotAllowed = new RejectionReason9Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationNotAllowed";
-			owner_lazy = () -> RejectionReason9Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason9Code.mmObject();
+			codeName = RejectionReasonCode.CancellationNotAllowed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -113,11 +118,12 @@ public class RejectionReason9Code extends RejectionReasonCode {
 	 * name} = "Late"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLate = new MMCode() {
+	public static final RejectionReason9Code Late = new RejectionReason9Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Late";
-			owner_lazy = () -> RejectionReason9Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason9Code.mmObject();
+			codeName = RejectionReasonCode.Late.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -136,11 +142,12 @@ public class RejectionReason9Code extends RejectionReasonCode {
 	 * name} = "ElectionAlreadyCancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmElectionAlreadyCancelled = new MMCode() {
+	public static final RejectionReason9Code ElectionAlreadyCancelled = new RejectionReason9Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionAlreadyCancelled";
-			owner_lazy = () -> RejectionReason9Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason9Code.mmObject();
+			codeName = RejectionReasonCode.ElectionAlreadyCancelled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -159,26 +166,60 @@ public class RejectionReason9Code extends RejectionReasonCode {
 	 * name} = "FailedValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFailedValidation = new MMCode() {
+	public static final RejectionReason9Code FailedValidation = new RejectionReason9Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailedValidation";
-			owner_lazy = () -> RejectionReason9Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReason9Code.mmObject();
+			codeName = RejectionReasonCode.FailedValidation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RejectionReason9Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RejectionReason9Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NCAN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason9Code";
 				definition = "Specifies the reason of a rejection of an election cancellation request.";
-				code_lazy = () -> Arrays.asList(RejectionReason9Code.mmCancellationNotAllowed, RejectionReason9Code.mmLate, RejectionReason9Code.mmElectionAlreadyCancelled, RejectionReason9Code.mmFailedValidation);
 				trace_lazy = () -> RejectionReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason9Code.CancellationNotAllowed, com.tools20022.repository.codeset.RejectionReason9Code.Late,
+						com.tools20022.repository.codeset.RejectionReason9Code.ElectionAlreadyCancelled, com.tools20022.repository.codeset.RejectionReason9Code.FailedValidation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CancellationNotAllowed.getCodeName().get(), CancellationNotAllowed);
+		codesByName.put(Late.getCodeName().get(), Late);
+		codesByName.put(ElectionAlreadyCancelled.getCodeName().get(), ElectionAlreadyCancelled);
+		codesByName.put(FailedValidation.getCodeName().get(), FailedValidation);
+	}
+
+	public static RejectionReason9Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RejectionReason9Code[] values() {
+		RejectionReason9Code[] values = new RejectionReason9Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RejectionReason9Code> {
+		@Override
+		public RejectionReason9Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RejectionReason9Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

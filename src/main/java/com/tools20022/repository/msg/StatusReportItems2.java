@@ -27,9 +27,8 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.BaselineStatus;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,17 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Describes a transaction and its status."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatusReportItems2", propOrder = {"transactionIdentification", "reportedEntity", "status", "subStatus"})
 public class StatusReportItems2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId", required = true)
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unique identification assigned by the matching application to the
-	 * transaction. This identification is to be used in any communication
-	 * between the parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +117,7 @@ public class StatusReportItems2 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatusReportItems2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +128,11 @@ public class StatusReportItems2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RptdNtty", required = true)
 	protected List<com.tools20022.repository.msg.BICIdentification1> reportedEntity;
 	/**
-	 * Entity for which the matching application has generated a report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -160,7 +159,7 @@ public class StatusReportItems2 {
 	 */
 	public static final MMMessageAssociationEnd mmReportedEntity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusReportItems2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "RptdNtty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +171,11 @@ public class StatusReportItems2 {
 			type_lazy = () -> com.tools20022.repository.msg.BICIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected BaselineStatus3Code status;
 	/**
-	 * Identifies the status of the transaction by means of a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +210,7 @@ public class StatusReportItems2 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BaselineStatus.mmStatus;
-			componentContext_lazy = () -> StatusReportItems2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,10 +221,11 @@ public class StatusReportItems2 {
 			simpleType_lazy = () -> BaselineStatus3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SubSts")
 	protected Max140Text subStatus;
 	/**
-	 * Further description of the transaction status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,7 +252,7 @@ public class StatusReportItems2 {
 	 */
 	public static final MMMessageAttribute mmSubStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StatusReportItems2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusReportItems2.mmObject();
 			isDerived = false;
 			xmlTag = "SubSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,9 +267,10 @@ public class StatusReportItems2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatusReportItems2.mmTransactionIdentification, StatusReportItems2.mmReportedEntity, StatusReportItems2.mmStatus, StatusReportItems2.mmSubStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusReportItems2.mmTransactionIdentification, com.tools20022.repository.msg.StatusReportItems2.mmReportedEntity,
+						com.tools20022.repository.msg.StatusReportItems2.mmStatus, com.tools20022.repository.msg.StatusReportItems2.mmSubStatus);
 				messageBuildingBlock_lazy = () -> Arrays.asList(StatusReportV03.mmReportedItems);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusReportItems2";
 				definition = "Describes a transaction and its status.";
@@ -277,39 +279,39 @@ public class StatusReportItems2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public StatusReportItems2 setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RptdNtty", required = true)
 	public List<BICIdentification1> getReportedEntity() {
-		return reportedEntity;
+		return reportedEntity == null ? reportedEntity = new ArrayList<>() : reportedEntity;
 	}
 
-	public void setReportedEntity(List<com.tools20022.repository.msg.BICIdentification1> reportedEntity) {
-		this.reportedEntity = reportedEntity;
+	public StatusReportItems2 setReportedEntity(List<com.tools20022.repository.msg.BICIdentification1> reportedEntity) {
+		this.reportedEntity = Objects.requireNonNull(reportedEntity);
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public BaselineStatus3Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(BaselineStatus3Code status) {
-		this.status = status;
+	public StatusReportItems2 setStatus(BaselineStatus3Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "SubSts")
-	public Max140Text getSubStatus() {
-		return subStatus;
+	public Optional<Max140Text> getSubStatus() {
+		return subStatus == null ? Optional.empty() : Optional.of(subStatus);
 	}
 
-	public void setSubStatus(Max140Text subStatus) {
+	public StatusReportItems2 setSubStatus(Max140Text subStatus) {
 		this.subStatus = subStatus;
+		return this;
 	}
 }

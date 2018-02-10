@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -29,6 +30,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forSubBalanceQuantity4Choice
+ * ConstraintCoexistenceQuantityRule.forSubBalanceQuantity4Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -73,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between formats for the balance information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SubBalanceQuantity4Choice", propOrder = {"quantity", "proprietary", "quantityAndAvailability"})
 public class SubBalanceQuantity4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Qty", required = true)
 	protected FinancialInstrumentQuantity15Choice quantity;
 	/**
-	 * Quantity of securities in the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -101,6 +112,9 @@ public class SubBalanceQuantity4Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Qty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -114,9 +128,10 @@ public class SubBalanceQuantity4Choice {
 	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
-			componentContext_lazy = () -> SubBalanceQuantity4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SubBalanceQuantity4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of securities in the sub-balance.";
@@ -126,10 +141,11 @@ public class SubBalanceQuantity4Choice {
 			type_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification28 proprietary;
 	/**
-	 * Quantity of securities in the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -149,6 +165,9 @@ public class SubBalanceQuantity4Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Prtry"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -162,9 +181,10 @@ public class SubBalanceQuantity4Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
-			componentContext_lazy = () -> SubBalanceQuantity4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SubBalanceQuantity4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Quantity of securities in the sub-balance.";
@@ -174,11 +194,11 @@ public class SubBalanceQuantity4Choice {
 			type_lazy = () -> GenericIdentification28.mmObject();
 		}
 	};
+	@XmlElement(name = "QtyAndAvlbty", required = true)
 	protected QuantityAndAvailability2 quantityAndAvailability;
 	/**
-	 * Quantity of securities in the sub-balance and whether the balance is
-	 * available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -198,6 +218,9 @@ public class SubBalanceQuantity4Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtyAndAvlbty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -213,9 +236,10 @@ public class SubBalanceQuantity4Choice {
 	public static final MMMessageAssociationEnd mmQuantityAndAvailability = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
-			componentContext_lazy = () -> SubBalanceQuantity4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SubBalanceQuantity4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyAndAvlbty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityAndAvailability";
 			definition = "Quantity of securities in the sub-balance and whether the balance is available.";
@@ -229,9 +253,11 @@ public class SubBalanceQuantity4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SubBalanceQuantity4Choice.mmQuantity, SubBalanceQuantity4Choice.mmProprietary, SubBalanceQuantity4Choice.mmQuantityAndAvailability);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SubBalanceQuantity4Choice.mmQuantity, com.tools20022.repository.choice.SubBalanceQuantity4Choice.mmProprietary,
+						com.tools20022.repository.choice.SubBalanceQuantity4Choice.mmQuantityAndAvailability);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forSubBalanceQuantity4Choice);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -247,30 +273,30 @@ public class SubBalanceQuantity4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity15Choice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice quantity) {
-		this.quantity = quantity;
+	public SubBalanceQuantity4Choice setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification28 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification28 proprietary) {
-		this.proprietary = proprietary;
+	public SubBalanceQuantity4Choice setProprietary(GenericIdentification28 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 
-	@XmlElement(name = "QtyAndAvlbty", required = true)
 	public QuantityAndAvailability2 getQuantityAndAvailability() {
 		return quantityAndAvailability;
 	}
 
-	public void setQuantityAndAvailability(QuantityAndAvailability2 quantityAndAvailability) {
-		this.quantityAndAvailability = quantityAndAvailability;
+	public SubBalanceQuantity4Choice setQuantityAndAvailability(QuantityAndAvailability2 quantityAndAvailability) {
+		this.quantityAndAvailability = Objects.requireNonNull(quantityAndAvailability);
+		return this;
 	}
 }

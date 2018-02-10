@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Additional information about a request (e.g. financing request)."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AdditionalInformation1", propOrder = {"informationType", "informationValue"})
 public class AdditionalInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InfTp", required = true)
 	protected InformationType1Choice informationType;
 	/**
-	 * Specifies the type of additional information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +101,7 @@ public class AdditionalInformation1 {
 	 */
 	public static final MMMessageAttribute mmInformationType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AdditionalInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "InfTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,10 +112,11 @@ public class AdditionalInformation1 {
 			complexType_lazy = () -> InformationType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "InfVal", required = true)
 	protected Max350Text informationValue;
 	/**
-	 * Contents of the additional information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,7 +143,7 @@ public class AdditionalInformation1 {
 	 */
 	public static final MMMessageAttribute mmInformationValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AdditionalInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "InfVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,8 +158,8 @@ public class AdditionalInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AdditionalInformation1.mmInformationType, AdditionalInformation1.mmInformationValue);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalInformation1.mmInformationType, com.tools20022.repository.msg.AdditionalInformation1.mmInformationValue);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalInformation1";
 				definition = "Additional information about a request (e.g. financing request).";
@@ -165,21 +168,21 @@ public class AdditionalInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InfTp", required = true)
 	public InformationType1Choice getInformationType() {
 		return informationType;
 	}
 
-	public void setInformationType(InformationType1Choice informationType) {
-		this.informationType = informationType;
+	public AdditionalInformation1 setInformationType(InformationType1Choice informationType) {
+		this.informationType = Objects.requireNonNull(informationType);
+		return this;
 	}
 
-	@XmlElement(name = "InfVal", required = true)
 	public Max350Text getInformationValue() {
 		return informationValue;
 	}
 
-	public void setInformationValue(Max350Text informationValue) {
-		this.informationValue = informationValue;
+	public AdditionalInformation1 setInformationValue(Max350Text informationValue) {
+		this.informationValue = Objects.requireNonNull(informationValue);
+		return this;
 	}
 }

@@ -24,11 +24,9 @@ import com.tools20022.repository.choice.SystemIdentificationChoice;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -68,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Defines the criteria used to search for system business day information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BusinessDayInformationSearchCriteria", propOrder = {"systemIdentification", "systemCurrency"})
 public class BusinessDayInformationSearchCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SysId")
 	protected List<SystemIdentificationChoice> systemIdentification;
 	/**
-	 * Identification of a particular cash clearing system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +103,7 @@ public class BusinessDayInformationSearchCriteria {
 	 */
 	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BusinessDayInformationSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "SysId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,11 +113,11 @@ public class BusinessDayInformationSearchCriteria {
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "SysCcy")
 	protected List<CurrencyCode> systemCurrency;
 	/**
-	 * Currency which may be processed by the system. A system may process
-	 * transactions in a single currency or in multiple currencies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,7 +146,7 @@ public class BusinessDayInformationSearchCriteria {
 	 */
 	public static final MMMessageAttribute mmSystemCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BusinessDayInformationSearchCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationSearchCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "SysCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,8 +160,8 @@ public class BusinessDayInformationSearchCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BusinessDayInformationSearchCriteria.mmSystemIdentification, BusinessDayInformationSearchCriteria.mmSystemCurrency);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDayInformationSearchCriteria.mmSystemIdentification, com.tools20022.repository.msg.BusinessDayInformationSearchCriteria.mmSystemCurrency);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -178,21 +177,21 @@ public class BusinessDayInformationSearchCriteria {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SysId")
 	public List<SystemIdentificationChoice> getSystemIdentification() {
-		return systemIdentification;
+		return systemIdentification == null ? systemIdentification = new ArrayList<>() : systemIdentification;
 	}
 
-	public void setSystemIdentification(List<SystemIdentificationChoice> systemIdentification) {
-		this.systemIdentification = systemIdentification;
+	public BusinessDayInformationSearchCriteria setSystemIdentification(List<SystemIdentificationChoice> systemIdentification) {
+		this.systemIdentification = Objects.requireNonNull(systemIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "SysCcy")
 	public List<CurrencyCode> getSystemCurrency() {
-		return systemCurrency;
+		return systemCurrency == null ? systemCurrency = new ArrayList<>() : systemCurrency;
 	}
 
-	public void setSystemCurrency(List<CurrencyCode> systemCurrency) {
-		this.systemCurrency = systemCurrency;
+	public BusinessDayInformationSearchCriteria setSystemCurrency(List<CurrencyCode> systemCurrency) {
+		this.systemCurrency = Objects.requireNonNull(systemCurrency);
+		return this;
 	}
 }

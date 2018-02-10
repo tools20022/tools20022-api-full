@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides acceptance marker to the identified conditions."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ConditionAcceptance1", propOrder = {"conditionIdentification", "acceptanceFlag"})
 public class ConditionAcceptance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CondId", required = true)
 	protected Max1NumericText conditionIdentification;
 	/**
-	 * Identification of the condition number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -86,6 +89,9 @@ public class ConditionAcceptance1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CondId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Condition Identification</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -98,9 +104,10 @@ public class ConditionAcceptance1 {
 	 */
 	public static final MMMessageAttribute mmConditionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ConditionAcceptance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ConditionAcceptance1.mmObject();
 			isDerived = false;
 			xmlTag = "CondId";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Condition Identification"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionIdentification";
 			definition = "Identification of the condition number.";
@@ -109,10 +116,11 @@ public class ConditionAcceptance1 {
 			simpleType_lazy = () -> Max1NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "AccptncFlg", required = true)
 	protected YesNoIndicator acceptanceFlag;
 	/**
-	 * Indicates whether the condition is accepted or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,6 +136,9 @@ public class ConditionAcceptance1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AccptncFlg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Acceptance Flag</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -140,9 +151,10 @@ public class ConditionAcceptance1 {
 	 */
 	public static final MMMessageAttribute mmAcceptanceFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ConditionAcceptance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ConditionAcceptance1.mmObject();
 			isDerived = false;
 			xmlTag = "AccptncFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Acceptance Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptanceFlag";
 			definition = "Indicates whether the condition is accepted or not.";
@@ -155,8 +167,8 @@ public class ConditionAcceptance1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ConditionAcceptance1.mmConditionIdentification, ConditionAcceptance1.mmAcceptanceFlag);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ConditionAcceptance1.mmConditionIdentification, com.tools20022.repository.msg.ConditionAcceptance1.mmAcceptanceFlag);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ConditionAcceptance1";
 				definition = "Provides acceptance marker to the identified conditions.";
@@ -165,21 +177,21 @@ public class ConditionAcceptance1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CondId", required = true)
 	public Max1NumericText getConditionIdentification() {
 		return conditionIdentification;
 	}
 
-	public void setConditionIdentification(Max1NumericText conditionIdentification) {
-		this.conditionIdentification = conditionIdentification;
+	public ConditionAcceptance1 setConditionIdentification(Max1NumericText conditionIdentification) {
+		this.conditionIdentification = Objects.requireNonNull(conditionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AccptncFlg", required = true)
 	public YesNoIndicator getAcceptanceFlag() {
 		return acceptanceFlag;
 	}
 
-	public void setAcceptanceFlag(YesNoIndicator acceptanceFlag) {
-		this.acceptanceFlag = acceptanceFlag;
+	public ConditionAcceptance1 setAcceptanceFlag(YesNoIndicator acceptanceFlag) {
+		this.acceptanceFlag = Objects.requireNonNull(acceptanceFlag);
+		return this;
 	}
 }

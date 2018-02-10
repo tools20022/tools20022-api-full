@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.SystemParty3;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Report between the party reference data or a business error."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyOrBusinessError1Choice", propOrder = {"businessError", "systemParty"})
 public class PartyOrBusinessError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BizErr", required = true)
 	protected List<ErrorHandling3> businessError;
 	/**
-	 * Business error resulting from a rejection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -97,7 +100,7 @@ public class PartyOrBusinessError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyOrBusinessError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyOrBusinessError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +111,11 @@ public class PartyOrBusinessError1Choice {
 			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
+	@XmlElement(name = "SysPty", required = true)
 	protected SystemParty3 systemParty;
 	/**
-	 * Specifications of a party defined within a system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -137,7 +141,7 @@ public class PartyOrBusinessError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSystemParty = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyOrBusinessError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyOrBusinessError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SysPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,8 +157,8 @@ public class PartyOrBusinessError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyOrBusinessError1Choice.mmBusinessError, PartyOrBusinessError1Choice.mmSystemParty);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyOrBusinessError1Choice.mmBusinessError, com.tools20022.repository.choice.PartyOrBusinessError1Choice.mmSystemParty);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyOrBusinessError1Choice";
 				definition = "Report between the party reference data or a business error.";
@@ -163,21 +167,21 @@ public class PartyOrBusinessError1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BizErr", required = true)
 	public List<ErrorHandling3> getBusinessError() {
-		return businessError;
+		return businessError == null ? businessError = new ArrayList<>() : businessError;
 	}
 
-	public void setBusinessError(List<ErrorHandling3> businessError) {
-		this.businessError = businessError;
+	public PartyOrBusinessError1Choice setBusinessError(List<ErrorHandling3> businessError) {
+		this.businessError = Objects.requireNonNull(businessError);
+		return this;
 	}
 
-	@XmlElement(name = "SysPty", required = true)
 	public SystemParty3 getSystemParty() {
 		return systemParty;
 	}
 
-	public void setSystemParty(SystemParty3 systemParty) {
-		this.systemParty = systemParty;
+	public PartyOrBusinessError1Choice setSystemParty(SystemParty3 systemParty) {
+		this.systemParty = Objects.requireNonNull(systemParty);
+		return this;
 	}
 }

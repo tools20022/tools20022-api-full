@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.Reinvestment3;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Parameters of the reinvestment of the income on the fund.
@@ -50,15 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Reinvestment1 Reinvestment1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Reinvestment2 Reinvestment2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Reinvestment3 Reinvestment3}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -71,10 +63,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Reinvestment1 Reinvestment1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Reinvestment2 Reinvestment2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Reinvestment3 Reinvestment3}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,8 +91,8 @@ public class Reinvestment {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected InvestmentAccountService relatedinvestmentAccountService;
 	/**
-	 * Investment account services which include reinvestment information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,8 +126,8 @@ public class Reinvestment {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedinvestmentAccountService = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Reinvestment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Reinvestment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedinvestmentAccountService";
 			definition = "Investment account services which include reinvestment information.";
@@ -139,9 +140,8 @@ public class Reinvestment {
 	};
 	protected InvestmentFundClass investmentFundClass;
 	/**
-	 * Investment fund class which is the fund in which the income must be
-	 * reinvested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,8 +190,8 @@ public class Reinvestment {
 	public static final MMBusinessAssociationEnd mmInvestmentFundClass = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Reinvestment1.mmFundDetails, Reinvestment2.mmFinancialInstrumentDetails, Reinvestment3.mmFinancialInstrumentDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Reinvestment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Reinvestment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFundClass";
 			definition = "Investment fund class which is the fund in which the income must be reinvested.";
@@ -204,8 +204,8 @@ public class Reinvestment {
 	};
 	protected PercentageRate percentage;
 	/**
-	 * Percentage on the income on the fund to be reinvested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,8 +245,8 @@ public class Reinvestment {
 	public static final MMBusinessAttribute mmPercentage = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Reinvestment1.mmReinvestmentPercentage, Reinvestment2.mmReinvestmentPercentage, Reinvestment3.mmReinvestmentPercentage);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Reinvestment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Reinvestment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Percentage";
 			definition = "Percentage on the income on the fund to be reinvested.";
@@ -267,7 +267,7 @@ public class Reinvestment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reinvestment";
 				definition = "Parameters of the reinvestment of the income on the fund.";
@@ -289,23 +289,26 @@ public class Reinvestment {
 		return relatedinvestmentAccountService;
 	}
 
-	public void setRelatedinvestmentAccountService(com.tools20022.repository.entity.InvestmentAccountService relatedinvestmentAccountService) {
-		this.relatedinvestmentAccountService = relatedinvestmentAccountService;
+	public Reinvestment setRelatedinvestmentAccountService(com.tools20022.repository.entity.InvestmentAccountService relatedinvestmentAccountService) {
+		this.relatedinvestmentAccountService = Objects.requireNonNull(relatedinvestmentAccountService);
+		return this;
 	}
 
 	public InvestmentFundClass getInvestmentFundClass() {
 		return investmentFundClass;
 	}
 
-	public void setInvestmentFundClass(com.tools20022.repository.entity.InvestmentFundClass investmentFundClass) {
-		this.investmentFundClass = investmentFundClass;
+	public Reinvestment setInvestmentFundClass(com.tools20022.repository.entity.InvestmentFundClass investmentFundClass) {
+		this.investmentFundClass = Objects.requireNonNull(investmentFundClass);
+		return this;
 	}
 
 	public PercentageRate getPercentage() {
 		return percentage;
 	}
 
-	public void setPercentage(PercentageRate percentage) {
-		this.percentage = percentage;
+	public Reinvestment setPercentage(PercentageRate percentage) {
+		this.percentage = Objects.requireNonNull(percentage);
+		return this;
 	}
 }

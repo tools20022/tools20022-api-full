@@ -20,46 +20,50 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode;
+import com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the purpose of the securities account.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode
- * SecuritiesAccountPurposeTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code#mmMargin
- * SecuritiesAccountPurposeType1Code.mmMargin}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code#Margin
+ * SecuritiesAccountPurposeType1Code.Margin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code#mmShortSale
- * SecuritiesAccountPurposeType1Code.mmShortSale}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code#ShortSale
+ * SecuritiesAccountPurposeType1Code.ShortSale}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code#mmAbroad
- * SecuritiesAccountPurposeType1Code.mmAbroad}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code#Abroad
+ * SecuritiesAccountPurposeType1Code.Abroad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code#mmCentralised
- * SecuritiesAccountPurposeType1Code.mmCentralised}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code#Centralised
+ * SecuritiesAccountPurposeType1Code.Centralised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code#mmCashDVP
- * SecuritiesAccountPurposeType1Code.mmCashDVP}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code#CashDVP
+ * SecuritiesAccountPurposeType1Code.CashDVP}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code#mmPhysical
- * SecuritiesAccountPurposeType1Code.mmPhysical}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code#Physical
+ * SecuritiesAccountPurposeType1Code.Physical}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesAccountPurposeTypeCode
+ * SecuritiesAccountPurposeTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -76,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the purpose of the securities account."</li>
  * </ul>
  */
-public class SecuritiesAccountPurposeType1Code extends SecuritiesAccountPurposeTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecuritiesAccountPurposeType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,11 +100,12 @@ public class SecuritiesAccountPurposeType1Code extends SecuritiesAccountPurposeT
 	 * name} = "Margin"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMargin = new MMCode() {
+	public static final SecuritiesAccountPurposeType1Code Margin = new SecuritiesAccountPurposeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Margin";
-			owner_lazy = () -> SecuritiesAccountPurposeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code.mmObject();
+			codeName = SecuritiesAccountPurposeTypeCode.Margin.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -118,11 +124,12 @@ public class SecuritiesAccountPurposeType1Code extends SecuritiesAccountPurposeT
 	 * name} = "ShortSale"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmShortSale = new MMCode() {
+	public static final SecuritiesAccountPurposeType1Code ShortSale = new SecuritiesAccountPurposeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortSale";
-			owner_lazy = () -> SecuritiesAccountPurposeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code.mmObject();
+			codeName = SecuritiesAccountPurposeTypeCode.ShortSale.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -141,11 +148,12 @@ public class SecuritiesAccountPurposeType1Code extends SecuritiesAccountPurposeT
 	 * name} = "Abroad"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAbroad = new MMCode() {
+	public static final SecuritiesAccountPurposeType1Code Abroad = new SecuritiesAccountPurposeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Abroad";
-			owner_lazy = () -> SecuritiesAccountPurposeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code.mmObject();
+			codeName = SecuritiesAccountPurposeTypeCode.Abroad.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -164,11 +172,12 @@ public class SecuritiesAccountPurposeType1Code extends SecuritiesAccountPurposeT
 	 * name} = "Centralised"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCentralised = new MMCode() {
+	public static final SecuritiesAccountPurposeType1Code Centralised = new SecuritiesAccountPurposeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Centralised";
-			owner_lazy = () -> SecuritiesAccountPurposeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code.mmObject();
+			codeName = SecuritiesAccountPurposeTypeCode.Centralised.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -187,11 +196,12 @@ public class SecuritiesAccountPurposeType1Code extends SecuritiesAccountPurposeT
 	 * name} = "CashDVP"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashDVP = new MMCode() {
+	public static final SecuritiesAccountPurposeType1Code CashDVP = new SecuritiesAccountPurposeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDVP";
-			owner_lazy = () -> SecuritiesAccountPurposeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code.mmObject();
+			codeName = SecuritiesAccountPurposeTypeCode.CashDVP.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -210,27 +220,63 @@ public class SecuritiesAccountPurposeType1Code extends SecuritiesAccountPurposeT
 	 * name} = "Physical"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPhysical = new MMCode() {
+	public static final SecuritiesAccountPurposeType1Code Physical = new SecuritiesAccountPurposeType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Physical";
-			owner_lazy = () -> SecuritiesAccountPurposeType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code.mmObject();
+			codeName = SecuritiesAccountPurposeTypeCode.Physical.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SecuritiesAccountPurposeType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecuritiesAccountPurposeType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MARG");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccountPurposeType1Code";
 				definition = "Specifies the purpose of the securities account.";
-				code_lazy = () -> Arrays.asList(SecuritiesAccountPurposeType1Code.mmMargin, SecuritiesAccountPurposeType1Code.mmShortSale, SecuritiesAccountPurposeType1Code.mmAbroad, SecuritiesAccountPurposeType1Code.mmCentralised,
-						SecuritiesAccountPurposeType1Code.mmCashDVP, SecuritiesAccountPurposeType1Code.mmPhysical);
 				trace_lazy = () -> SecuritiesAccountPurposeTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code.Margin, com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code.ShortSale,
+						com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code.Abroad, com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code.Centralised,
+						com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code.CashDVP, com.tools20022.repository.codeset.SecuritiesAccountPurposeType1Code.Physical);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Margin.getCodeName().get(), Margin);
+		codesByName.put(ShortSale.getCodeName().get(), ShortSale);
+		codesByName.put(Abroad.getCodeName().get(), Abroad);
+		codesByName.put(Centralised.getCodeName().get(), Centralised);
+		codesByName.put(CashDVP.getCodeName().get(), CashDVP);
+		codesByName.put(Physical.getCodeName().get(), Physical);
+	}
+
+	public static SecuritiesAccountPurposeType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecuritiesAccountPurposeType1Code[] values() {
+		SecuritiesAccountPurposeType1Code[] values = new SecuritiesAccountPurposeType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecuritiesAccountPurposeType1Code> {
+		@Override
+		public SecuritiesAccountPurposeType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecuritiesAccountPurposeType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

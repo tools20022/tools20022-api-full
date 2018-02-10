@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculatedCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the fund calculates the taxable income per dividend/taxable
@@ -33,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculatedCode#mmCalculated
- * CorporateActionTaxableIncomePerShareCalculatedCode.mmCalculated}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculatedCode#Calculated
+ * CorporateActionTaxableIncomePerShareCalculatedCode.Calculated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculatedCode#mmNotCalculated
- * CorporateActionTaxableIncomePerShareCalculatedCode.mmNotCalculated}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculatedCode#NotCalculated
+ * CorporateActionTaxableIncomePerShareCalculatedCode.NotCalculated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculatedCode#mmUnknown
- * CorporateActionTaxableIncomePerShareCalculatedCode.mmUnknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculatedCode#Unknown
+ * CorporateActionTaxableIncomePerShareCalculatedCode.Unknown}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CorporateActionTaxableIncomePerShareCalculatedCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionTaxableIncomePerShareCalculatedCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -101,12 +107,12 @@ public class CorporateActionTaxableIncomePerShareCalculatedCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCalculated = new MMCode() {
+	public static final CorporateActionTaxableIncomePerShareCalculatedCode Calculated = new CorporateActionTaxableIncomePerShareCalculatedCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Calculated";
 			definition = "Fund is calculating the taxable income per dividend/taxable income per share.";
-			owner_lazy = () -> CorporateActionTaxableIncomePerShareCalculatedCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculatedCode.mmObject();
 			codeName = "TDIY";
 		}
 	};
@@ -134,12 +140,12 @@ public class CorporateActionTaxableIncomePerShareCalculatedCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotCalculated = new MMCode() {
+	public static final CorporateActionTaxableIncomePerShareCalculatedCode NotCalculated = new CorporateActionTaxableIncomePerShareCalculatedCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotCalculated";
 			definition = "Fund is not calculating the taxable income per dividend/taxable income per share.";
-			owner_lazy = () -> CorporateActionTaxableIncomePerShareCalculatedCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculatedCode.mmObject();
 			codeName = "TDIN";
 		}
 	};
@@ -167,29 +173,60 @@ public class CorporateActionTaxableIncomePerShareCalculatedCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknown = new MMCode() {
+	public static final CorporateActionTaxableIncomePerShareCalculatedCode Unknown = new CorporateActionTaxableIncomePerShareCalculatedCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Unknown";
 			definition = "Unknown whether the fund is calculating the taxable income per dividend/taxable income per share.";
-			owner_lazy = () -> CorporateActionTaxableIncomePerShareCalculatedCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculatedCode.mmObject();
 			codeName = "UKWN";
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionTaxableIncomePerShareCalculatedCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionTaxableIncomePerShareCalculatedCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("TDIY");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionTaxableIncomePerShareCalculatedCode";
 				definition = "Specifies whether the fund calculates the taxable income per dividend/taxable income per share (TID/TIS).";
-				code_lazy = () -> Arrays.asList(CorporateActionTaxableIncomePerShareCalculatedCode.mmCalculated, CorporateActionTaxableIncomePerShareCalculatedCode.mmNotCalculated,
-						CorporateActionTaxableIncomePerShareCalculatedCode.mmUnknown);
 				derivation_lazy = () -> Arrays.asList(CorporateActionTaxableIncomePerShareCalculated1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculatedCode.Calculated,
+						com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculatedCode.NotCalculated, com.tools20022.repository.codeset.CorporateActionTaxableIncomePerShareCalculatedCode.Unknown);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Calculated.getCodeName().get(), Calculated);
+		codesByName.put(NotCalculated.getCodeName().get(), NotCalculated);
+		codesByName.put(Unknown.getCodeName().get(), Unknown);
+	}
+
+	public static CorporateActionTaxableIncomePerShareCalculatedCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionTaxableIncomePerShareCalculatedCode[] values() {
+		CorporateActionTaxableIncomePerShareCalculatedCode[] values = new CorporateActionTaxableIncomePerShareCalculatedCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionTaxableIncomePerShareCalculatedCode> {
+		@Override
+		public CorporateActionTaxableIncomePerShareCalculatedCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionTaxableIncomePerShareCalculatedCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

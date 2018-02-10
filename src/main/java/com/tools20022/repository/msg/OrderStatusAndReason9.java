@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,16 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * OrderStatusAndReason8}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OrderStatusAndReason9", propOrder = {"masterReference", "cancellationStatus", "statusInitiator"})
 public class OrderStatusAndReason9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MstrRef")
 	protected Max35Text masterReference;
 	/**
-	 * Reference assigned to a set of orders or trades in order to link them
-	 * together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +130,7 @@ public class OrderStatusAndReason9 {
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
-			componentContext_lazy = () -> OrderStatusAndReason9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason9.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,10 +142,11 @@ public class OrderStatusAndReason9 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CxlSts", required = true)
 	protected CancellationStatus22Choice cancellationStatus;
 	/**
-	 * Cancellation status of the order cancellation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -170,7 +173,7 @@ public class OrderStatusAndReason9 {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OrderStatusAndReason9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason9.mmObject();
 			isDerived = false;
 			xmlTag = "CxlSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,10 +185,11 @@ public class OrderStatusAndReason9 {
 			type_lazy = () -> CancellationStatus22Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "StsInitr")
 	protected PartyIdentification113 statusInitiator;
 	/**
-	 * Party that initiates the status of the order cancellation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -223,7 +227,7 @@ public class OrderStatusAndReason9 {
 	public static final MMMessageAssociationEnd mmStatusInitiator = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> OrderStatusAndReason9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderStatusAndReason9.mmObject();
 			isDerived = false;
 			xmlTag = "StsInitr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,9 +244,10 @@ public class OrderStatusAndReason9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OrderStatusAndReason9.mmMasterReference, OrderStatusAndReason9.mmCancellationStatus, OrderStatusAndReason9.mmStatusInitiator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderStatusAndReason9.mmMasterReference, com.tools20022.repository.msg.OrderStatusAndReason9.mmCancellationStatus,
+						com.tools20022.repository.msg.OrderStatusAndReason9.mmStatusInitiator);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderStatusAndReason9";
 				definition = "Status report of a bulk or multiple or switch order cancellation instruction that was previously received.";
@@ -252,30 +257,30 @@ public class OrderStatusAndReason9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MstrRef")
-	public Max35Text getMasterReference() {
-		return masterReference;
+	public Optional<Max35Text> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(Max35Text masterReference) {
+	public OrderStatusAndReason9 setMasterReference(Max35Text masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "CxlSts", required = true)
 	public CancellationStatus22Choice getCancellationStatus() {
 		return cancellationStatus;
 	}
 
-	public void setCancellationStatus(CancellationStatus22Choice cancellationStatus) {
-		this.cancellationStatus = cancellationStatus;
+	public OrderStatusAndReason9 setCancellationStatus(CancellationStatus22Choice cancellationStatus) {
+		this.cancellationStatus = Objects.requireNonNull(cancellationStatus);
+		return this;
 	}
 
-	@XmlElement(name = "StsInitr")
-	public PartyIdentification113 getStatusInitiator() {
-		return statusInitiator;
+	public Optional<PartyIdentification113> getStatusInitiator() {
+		return statusInitiator == null ? Optional.empty() : Optional.of(statusInitiator);
 	}
 
-	public void setStatusInitiator(com.tools20022.repository.msg.PartyIdentification113 statusInitiator) {
+	public OrderStatusAndReason9 setStatusInitiator(com.tools20022.repository.msg.PartyIdentification113 statusInitiator) {
 		this.statusInitiator = statusInitiator;
+		return this;
 	}
 }

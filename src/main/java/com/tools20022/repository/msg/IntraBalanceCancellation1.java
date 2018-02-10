@@ -26,9 +26,8 @@ import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +61,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCashAccountRule#forIntraBalanceCancellation1
+ * ConstraintCashAccountRule.forIntraBalanceCancellation1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAccountOwnerRule#forIntraBalanceCancellation1
+ * ConstraintAccountOwnerRule.forIntraBalanceCancellation1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintProcessingStatusRule#forIntraBalanceCancellation1
+ * ConstraintProcessingStatusRule.forIntraBalanceCancellation1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides the cancellation requests data in the report."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IntraBalanceCancellation1", propOrder = {"accountOwner", "cashAccount", "processingStatus", "cancellation"})
 public class IntraBalanceCancellation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctOwnr")
 	protected SystemPartyIdentification5 accountOwner;
 	/**
-	 * Party that owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -115,7 +129,7 @@ public class IntraBalanceCancellation1 {
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> System.mmPartyRole;
-			componentContext_lazy = () -> IntraBalanceCancellation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceCancellation1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +141,11 @@ public class IntraBalanceCancellation1 {
 			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAcct")
 	protected CashAccount24 cashAccount;
 	/**
-	 * Account to or from which a cash entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -162,7 +177,7 @@ public class IntraBalanceCancellation1 {
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashAccount;
-			componentContext_lazy = () -> IntraBalanceCancellation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceCancellation1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +189,11 @@ public class IntraBalanceCancellation1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcgSts")
 	protected ProcessingStatus32Choice processingStatus;
 	/**
-	 * Status and status reason of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -210,7 +226,7 @@ public class IntraBalanceCancellation1 {
 	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeStatus;
-			componentContext_lazy = () -> IntraBalanceCancellation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceCancellation1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,10 +238,11 @@ public class IntraBalanceCancellation1 {
 			type_lazy = () -> ProcessingStatus32Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Cxl", required = true)
 	protected List<com.tools20022.repository.msg.IntraBalanceCancellation2> cancellation;
 	/**
-	 * Identifies the individual transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -257,7 +274,7 @@ public class IntraBalanceCancellation1 {
 	public static final MMMessageAssociationEnd mmCancellation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> BookEntry.mmObject();
-			componentContext_lazy = () -> IntraBalanceCancellation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceCancellation1.mmObject();
 			isDerived = false;
 			xmlTag = "Cxl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,9 +289,12 @@ public class IntraBalanceCancellation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IntraBalanceCancellation1.mmAccountOwner, IntraBalanceCancellation1.mmCashAccount, IntraBalanceCancellation1.mmProcessingStatus, IntraBalanceCancellation1.mmCancellation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceCancellation1.mmAccountOwner, com.tools20022.repository.msg.IntraBalanceCancellation1.mmCashAccount,
+						com.tools20022.repository.msg.IntraBalanceCancellation1.mmProcessingStatus, com.tools20022.repository.msg.IntraBalanceCancellation1.mmCancellation);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashAccountRule.forIntraBalanceCancellation1,
+						com.tools20022.repository.constraints.ConstraintAccountOwnerRule.forIntraBalanceCancellation1, com.tools20022.repository.constraints.ConstraintProcessingStatusRule.forIntraBalanceCancellation1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceCancellation1";
 				definition = "Provides the cancellation requests data in the report.";
@@ -283,39 +303,39 @@ public class IntraBalanceCancellation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public SystemPartyIdentification5 getAccountOwner() {
-		return accountOwner;
+	public Optional<SystemPartyIdentification5> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification5 accountOwner) {
+	public IntraBalanceCancellation1 setAccountOwner(com.tools20022.repository.msg.SystemPartyIdentification5 accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "CshAcct")
-	public CashAccount24 getCashAccount() {
-		return cashAccount;
+	public Optional<CashAccount24> getCashAccount() {
+		return cashAccount == null ? Optional.empty() : Optional.of(cashAccount);
 	}
 
-	public void setCashAccount(com.tools20022.repository.msg.CashAccount24 cashAccount) {
+	public IntraBalanceCancellation1 setCashAccount(com.tools20022.repository.msg.CashAccount24 cashAccount) {
 		this.cashAccount = cashAccount;
+		return this;
 	}
 
-	@XmlElement(name = "PrcgSts")
-	public ProcessingStatus32Choice getProcessingStatus() {
-		return processingStatus;
+	public Optional<ProcessingStatus32Choice> getProcessingStatus() {
+		return processingStatus == null ? Optional.empty() : Optional.of(processingStatus);
 	}
 
-	public void setProcessingStatus(ProcessingStatus32Choice processingStatus) {
+	public IntraBalanceCancellation1 setProcessingStatus(ProcessingStatus32Choice processingStatus) {
 		this.processingStatus = processingStatus;
+		return this;
 	}
 
-	@XmlElement(name = "Cxl", required = true)
 	public List<IntraBalanceCancellation2> getCancellation() {
-		return cancellation;
+		return cancellation == null ? cancellation = new ArrayList<>() : cancellation;
 	}
 
-	public void setCancellation(List<com.tools20022.repository.msg.IntraBalanceCancellation2> cancellation) {
-		this.cancellation = cancellation;
+	public IntraBalanceCancellation1 setCancellation(List<com.tools20022.repository.msg.IntraBalanceCancellation2> cancellation) {
+		this.cancellation = Objects.requireNonNull(cancellation);
+		return this;
 	}
 }

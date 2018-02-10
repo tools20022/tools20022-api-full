@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.FundConfirmedCashForecastReportCancellationV03;
 import com.tools20022.repository.entity.FundsCashFlow;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +69,29 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTradeDate1Rule#forFundConfirmedCashForecastReport3
+ * ConstraintTradeDate1Rule.forFundConfirmedCashForecastReport3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousTradeDate1Rule#forFundConfirmedCashForecastReport3
+ * ConstraintPreviousTradeDate1Rule.forFundConfirmedCashForecastReport3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTradeDate2Rule#forFundConfirmedCashForecastReport3
+ * ConstraintTradeDate2Rule.forFundConfirmedCashForecastReport3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintConsolidatedNetCashRule#forFundConfirmedCashForecastReport3
+ * ConstraintConsolidatedNetCashRule.forFundConfirmedCashForecastReport3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintFundOrSubFundAndShareClassGuideline#forFundConfirmedCashForecastReport3
+ * ConstraintFundOrSubFundAndShareClassGuideline.
+ * forFundConfirmedCashForecastReport3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,16 +106,16 @@ import javax.xml.bind.annotation.XmlType;
  * FundConfirmedCashForecastReport2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FundConfirmedCashForecastReport3", propOrder = {"fundOrSubFundDetails", "fundCashForecastDetails", "consolidatedNetCashForecast", "extension"})
 public class FundConfirmedCashForecastReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FndOrSubFndDtls")
 	protected List<com.tools20022.repository.msg.Fund2> fundOrSubFundDetails;
 	/**
-	 * Information about the fund/sub fund when the report either specifies cash
-	 * flow for the fund/sub fund or for a share class of the fund/sub fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -122,7 +142,7 @@ public class FundConfirmedCashForecastReport3 {
 	 */
 	public static final MMMessageAssociationEnd mmFundOrSubFundDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FundConfirmedCashForecastReport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundConfirmedCashForecastReport3.mmObject();
 			isDerived = false;
 			xmlTag = "FndOrSubFndDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,13 +153,11 @@ public class FundConfirmedCashForecastReport3 {
 			type_lazy = () -> com.tools20022.repository.msg.Fund2.mmObject();
 		}
 	};
+	@XmlElement(name = "FndCshFcstDtls")
 	protected List<com.tools20022.repository.msg.FundCashForecast7> fundCashForecastDetails;
 	/**
-	 * Information related to the cash-in and cash-out flows for a specific
-	 * trade date as a result of investment fund transactions, for example,
-	 * subscriptions, redemptions or switches to/from a specified investment
-	 * fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -178,7 +196,7 @@ public class FundConfirmedCashForecastReport3 {
 	public static final MMMessageAssociationEnd mmFundCashForecastDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
-			componentContext_lazy = () -> FundConfirmedCashForecastReport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundConfirmedCashForecastReport3.mmObject();
 			isDerived = false;
 			xmlTag = "FndCshFcstDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,10 +208,11 @@ public class FundConfirmedCashForecastReport3 {
 			type_lazy = () -> com.tools20022.repository.msg.FundCashForecast7.mmObject();
 		}
 	};
+	@XmlElement(name = "CnsltdNetCshFcst")
 	protected NetCashForecast3 consolidatedNetCashForecast;
 	/**
-	 * Estimated net cash as a result of the cash-in and cash-out flows.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -231,7 +250,7 @@ public class FundConfirmedCashForecastReport3 {
 	public static final MMMessageAssociationEnd mmConsolidatedNetCashForecast = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
-			componentContext_lazy = () -> FundConfirmedCashForecastReport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundConfirmedCashForecastReport3.mmObject();
 			isDerived = false;
 			xmlTag = "CnsltdNetCshFcst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,11 +263,11 @@ public class FundConfirmedCashForecastReport3 {
 			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast3.mmObject();
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -280,7 +299,7 @@ public class FundConfirmedCashForecastReport3 {
 	 */
 	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FundConfirmedCashForecastReport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundConfirmedCashForecastReport3.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -296,11 +315,15 @@ public class FundConfirmedCashForecastReport3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FundConfirmedCashForecastReport3.mmFundOrSubFundDetails, FundConfirmedCashForecastReport3.mmFundCashForecastDetails, FundConfirmedCashForecastReport3.mmConsolidatedNetCashForecast,
-						FundConfirmedCashForecastReport3.mmExtension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundConfirmedCashForecastReport3.mmFundOrSubFundDetails, com.tools20022.repository.msg.FundConfirmedCashForecastReport3.mmFundCashForecastDetails,
+						com.tools20022.repository.msg.FundConfirmedCashForecastReport3.mmConsolidatedNetCashForecast, com.tools20022.repository.msg.FundConfirmedCashForecastReport3.mmExtension);
 				messageBuildingBlock_lazy = () -> Arrays.asList(FundConfirmedCashForecastReportCancellationV03.mmCashForecastReportToBeCancelled);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDate1Rule.forFundConfirmedCashForecastReport3,
+						com.tools20022.repository.constraints.ConstraintPreviousTradeDate1Rule.forFundConfirmedCashForecastReport3, com.tools20022.repository.constraints.ConstraintTradeDate2Rule.forFundConfirmedCashForecastReport3,
+						com.tools20022.repository.constraints.ConstraintConsolidatedNetCashRule.forFundConfirmedCashForecastReport3,
+						com.tools20022.repository.constraints.ConstraintFundOrSubFundAndShareClassGuideline.forFundConfirmedCashForecastReport3);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FundConfirmedCashForecastReport3";
 				definition = "Information about a cash forecast report.";
@@ -310,39 +333,39 @@ public class FundConfirmedCashForecastReport3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FndOrSubFndDtls")
 	public List<Fund2> getFundOrSubFundDetails() {
-		return fundOrSubFundDetails;
+		return fundOrSubFundDetails == null ? fundOrSubFundDetails = new ArrayList<>() : fundOrSubFundDetails;
 	}
 
-	public void setFundOrSubFundDetails(List<com.tools20022.repository.msg.Fund2> fundOrSubFundDetails) {
-		this.fundOrSubFundDetails = fundOrSubFundDetails;
+	public FundConfirmedCashForecastReport3 setFundOrSubFundDetails(List<com.tools20022.repository.msg.Fund2> fundOrSubFundDetails) {
+		this.fundOrSubFundDetails = Objects.requireNonNull(fundOrSubFundDetails);
+		return this;
 	}
 
-	@XmlElement(name = "FndCshFcstDtls")
 	public List<FundCashForecast7> getFundCashForecastDetails() {
-		return fundCashForecastDetails;
+		return fundCashForecastDetails == null ? fundCashForecastDetails = new ArrayList<>() : fundCashForecastDetails;
 	}
 
-	public void setFundCashForecastDetails(List<com.tools20022.repository.msg.FundCashForecast7> fundCashForecastDetails) {
-		this.fundCashForecastDetails = fundCashForecastDetails;
+	public FundConfirmedCashForecastReport3 setFundCashForecastDetails(List<com.tools20022.repository.msg.FundCashForecast7> fundCashForecastDetails) {
+		this.fundCashForecastDetails = Objects.requireNonNull(fundCashForecastDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CnsltdNetCshFcst")
-	public NetCashForecast3 getConsolidatedNetCashForecast() {
-		return consolidatedNetCashForecast;
+	public Optional<NetCashForecast3> getConsolidatedNetCashForecast() {
+		return consolidatedNetCashForecast == null ? Optional.empty() : Optional.of(consolidatedNetCashForecast);
 	}
 
-	public void setConsolidatedNetCashForecast(com.tools20022.repository.msg.NetCashForecast3 consolidatedNetCashForecast) {
+	public FundConfirmedCashForecastReport3 setConsolidatedNetCashForecast(com.tools20022.repository.msg.NetCashForecast3 consolidatedNetCashForecast) {
 		this.consolidatedNetCashForecast = consolidatedNetCashForecast;
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
-		this.extension = extension;
+	public FundConfirmedCashForecastReport3 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 }

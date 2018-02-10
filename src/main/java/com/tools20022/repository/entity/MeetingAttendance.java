@@ -26,6 +26,8 @@ import com.tools20022.repository.msg.IndividualPerson26;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Information on the participation of the security holder or of its assigned
@@ -66,8 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,8 +87,8 @@ public class MeetingAttendance {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected AttendanceCard attendanceCard;
 	/**
-	 * Specifies details linked to the attendance card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,8 +136,8 @@ public class MeetingAttendance {
 	public static final MMBusinessAssociationEnd mmAttendanceCard = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndividualPerson13.mmAttendanceCardDetails, IndividualPerson17.mmAttendanceCardDetails, IndividualPerson26.mmAttendanceCardDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingAttendance.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingAttendance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AttendanceCard";
 			definition = "Specifies details linked to the attendance card.";
@@ -148,9 +150,8 @@ public class MeetingAttendance {
 	};
 	protected PercentageRate percentageOfVotingRights;
 	/**
-	 * Percentage of rights participating to the vote versus total voting
-	 * rights.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,8 +179,8 @@ public class MeetingAttendance {
 	 */
 	public static final MMBusinessAttribute mmPercentageOfVotingRights = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingAttendance.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingAttendance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PercentageOfVotingRights";
 			definition = "Percentage of rights participating to the vote versus total voting rights.";
@@ -198,8 +199,8 @@ public class MeetingAttendance {
 	};
 	protected InstructionForMeeting relatedMeeting;
 	/**
-	 * Instruction in which the meeting attendance conditions are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,8 +235,8 @@ public class MeetingAttendance {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedMeeting = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingAttendance.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingAttendance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedMeeting";
 			definition = "Instruction in which the meeting attendance conditions are specified.";
@@ -250,7 +251,7 @@ public class MeetingAttendance {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingAttendance";
 				definition = "Information on the participation of the security holder or of its assigned representative.";
@@ -271,23 +272,26 @@ public class MeetingAttendance {
 		return attendanceCard;
 	}
 
-	public void setAttendanceCard(com.tools20022.repository.entity.AttendanceCard attendanceCard) {
-		this.attendanceCard = attendanceCard;
+	public MeetingAttendance setAttendanceCard(com.tools20022.repository.entity.AttendanceCard attendanceCard) {
+		this.attendanceCard = Objects.requireNonNull(attendanceCard);
+		return this;
 	}
 
 	public PercentageRate getPercentageOfVotingRights() {
 		return percentageOfVotingRights;
 	}
 
-	public void setPercentageOfVotingRights(PercentageRate percentageOfVotingRights) {
-		this.percentageOfVotingRights = percentageOfVotingRights;
+	public MeetingAttendance setPercentageOfVotingRights(PercentageRate percentageOfVotingRights) {
+		this.percentageOfVotingRights = Objects.requireNonNull(percentageOfVotingRights);
+		return this;
 	}
 
-	public InstructionForMeeting getRelatedMeeting() {
-		return relatedMeeting;
+	public Optional<InstructionForMeeting> getRelatedMeeting() {
+		return relatedMeeting == null ? Optional.empty() : Optional.of(relatedMeeting);
 	}
 
-	public void setRelatedMeeting(com.tools20022.repository.entity.InstructionForMeeting relatedMeeting) {
+	public MeetingAttendance setRelatedMeeting(com.tools20022.repository.entity.InstructionForMeeting relatedMeeting) {
 		this.relatedMeeting = relatedMeeting;
+		return this;
 	}
 }

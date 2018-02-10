@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.InsuranceCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of insurance.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InsuranceCode#mmLifeInsurance
- * InsuranceCode.mmLifeInsurance}</li>
+ * {@linkplain com.tools20022.repository.codeset.InsuranceCode#LifeInsurance
+ * InsuranceCode.LifeInsurance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InsuranceCode#mmPermanentDisabilityInsurance
- * InsuranceCode.mmPermanentDisabilityInsurance}</li>
+ * {@linkplain com.tools20022.repository.codeset.InsuranceCode#PermanentDisabilityInsurance
+ * InsuranceCode.PermanentDisabilityInsurance}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of insurance."</li>
  * </ul>
  */
-public class InsuranceCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InsuranceCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,12 +97,12 @@ public class InsuranceCode {
 	 * definition} = "Life insurance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLifeInsurance = new MMCode() {
+	public static final InsuranceCode LifeInsurance = new InsuranceCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LifeInsurance";
 			definition = "Life insurance";
-			owner_lazy = () -> InsuranceCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceCode.mmObject();
 			codeName = "LIFE";
 		}
 	};
@@ -121,28 +127,58 @@ public class InsuranceCode {
 	 * definition} = "Permanent disability insurance."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPermanentDisabilityInsurance = new MMCode() {
+	public static final InsuranceCode PermanentDisabilityInsurance = new InsuranceCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PermanentDisabilityInsurance";
 			definition = "Permanent disability insurance.";
-			owner_lazy = () -> InsuranceCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceCode.mmObject();
 			codeName = "PDIS";
 		}
 	};
+	final static private LinkedHashMap<String, InsuranceCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InsuranceCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("LIFE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InsuranceCode";
 				definition = "Specifies the type of insurance.";
-				code_lazy = () -> Arrays.asList(InsuranceCode.mmLifeInsurance, InsuranceCode.mmPermanentDisabilityInsurance);
 				derivation_lazy = () -> Arrays.asList(Insurance1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InsuranceCode.LifeInsurance, com.tools20022.repository.codeset.InsuranceCode.PermanentDisabilityInsurance);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(LifeInsurance.getCodeName().get(), LifeInsurance);
+		codesByName.put(PermanentDisabilityInsurance.getCodeName().get(), PermanentDisabilityInsurance);
+	}
+
+	public static InsuranceCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InsuranceCode[] values() {
+		InsuranceCode[] values = new InsuranceCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InsuranceCode> {
+		@Override
+		public InsuranceCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InsuranceCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

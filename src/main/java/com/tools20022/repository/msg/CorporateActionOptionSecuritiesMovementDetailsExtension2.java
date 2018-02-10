@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,8 @@ import com.tools20022.repository.datatype.Max3Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CorporateActionOptionSecuritiesMovementDetailsExtension2", propOrder = {"placeAndName", "payoutNumber", "DTCPayMethod", "DTCPayOrder"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CorporateActionOptionSecuritiesMovementDetailsExtension2", propOrder = {"placeAndName", "payoutNumber", "dTCPayMethod", "dTCPayOrder"})
 public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +111,7 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +122,11 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PyoutNb", required = true)
 	protected Exact3NumericText payoutNumber;
 	/**
-	 * Unique number associated with a payout within an option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,6 +142,9 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PyoutNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Payout Number</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -149,9 +157,10 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	 */
 	public static final MMMessageAttribute mmPayoutNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "PyoutNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Payout Number"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutNumber";
 			definition = "Unique number associated with a payout within an option.";
@@ -160,11 +169,11 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCPayMtd")
 	protected Max3Text dTCPayMethod;
 	/**
-	 * Indicates the type of payment. Used in Stock Dividends processing at DTC
-	 * (The Depository Trust Corporation). Values list is provided separately.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,6 +187,9 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	 * CorporateActionOptionSecuritiesMovementDetailsExtension2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCPayMtd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Pay Method</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -193,9 +205,10 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	 */
 	public static final MMMessageAttribute mmDTCPayMethod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "DTCPayMtd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Pay Method"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
 			definition = "Indicates the type of payment. Used in Stock Dividends processing at DTC (The Depository Trust Corporation). Values list is provided separately. ";
@@ -204,11 +217,11 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 			simpleType_lazy = () -> Max3Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCPayOrdr")
 	protected Max3Text dTCPayOrder;
 	/**
-	 * Indicates the payment order. Used in Stock Dividends processing at DTC
-	 * (The Depository Trust Corporation). Values list is provided separately.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,6 +235,9 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	 * CorporateActionOptionSecuritiesMovementDetailsExtension2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCPayOrdr"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Pay Order</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -237,9 +253,10 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	 */
 	public static final MMMessageAttribute mmDTCPayOrder = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "DTCPayOrdr";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Pay Order"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayOrder";
 			definition = "Indicates the payment order. Used in Stock Dividends processing at DTC (The Depository Trust Corporation). Values list is provided separately. ";
@@ -252,9 +269,10 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionOptionSecuritiesMovementDetailsExtension2.mmPlaceAndName, CorporateActionOptionSecuritiesMovementDetailsExtension2.mmPayoutNumber,
-						CorporateActionOptionSecuritiesMovementDetailsExtension2.mmDTCPayMethod, CorporateActionOptionSecuritiesMovementDetailsExtension2.mmDTCPayOrder);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmPayoutNumber, com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmDTCPayMethod,
+						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDetailsExtension2.mmDTCPayOrder);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOptionSecuritiesMovementDetailsExtension2";
 				definition = "Provides additional information regarding corporate action option securities movement details.";
@@ -263,39 +281,39 @@ public class CorporateActionOptionSecuritiesMovementDetailsExtension2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionOptionSecuritiesMovementDetailsExtension2 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "PyoutNb", required = true)
 	public Exact3NumericText getPayoutNumber() {
 		return payoutNumber;
 	}
 
-	public void setPayoutNumber(Exact3NumericText payoutNumber) {
-		this.payoutNumber = payoutNumber;
+	public CorporateActionOptionSecuritiesMovementDetailsExtension2 setPayoutNumber(Exact3NumericText payoutNumber) {
+		this.payoutNumber = Objects.requireNonNull(payoutNumber);
+		return this;
 	}
 
-	@XmlElement(name = "DTCPayMtd")
-	public Max3Text getDTCPayMethod() {
-		return dTCPayMethod;
+	public Optional<Max3Text> getDTCPayMethod() {
+		return dTCPayMethod == null ? Optional.empty() : Optional.of(dTCPayMethod);
 	}
 
-	public void setDTCPayMethod(Max3Text dTCPayMethod) {
+	public CorporateActionOptionSecuritiesMovementDetailsExtension2 setDTCPayMethod(Max3Text dTCPayMethod) {
 		this.dTCPayMethod = dTCPayMethod;
+		return this;
 	}
 
-	@XmlElement(name = "DTCPayOrdr")
-	public Max3Text getDTCPayOrder() {
-		return dTCPayOrder;
+	public Optional<Max3Text> getDTCPayOrder() {
+		return dTCPayOrder == null ? Optional.empty() : Optional.of(dTCPayOrder);
 	}
 
-	public void setDTCPayOrder(Max3Text dTCPayOrder) {
+	public CorporateActionOptionSecuritiesMovementDetailsExtension2 setDTCPayOrder(Max3Text dTCPayOrder) {
 		this.dTCPayOrder = dTCPayOrder;
+		return this;
 	}
 }

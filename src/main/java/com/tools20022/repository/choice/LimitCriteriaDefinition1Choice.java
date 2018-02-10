@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.LimitCriteria1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LimitCriteriaDefinition1Choice", propOrder = {"queryName", "newCriteria"})
 public class LimitCriteriaDefinition1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QryNm", required = true)
 	protected Max35Text queryName;
 	/**
-	 * Recalls the criteria (search and return criteria) defined in a preceding
-	 * query.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +105,7 @@ public class LimitCriteriaDefinition1Choice {
 	 */
 	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LimitCriteriaDefinition1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.LimitCriteriaDefinition1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QryNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +116,11 @@ public class LimitCriteriaDefinition1Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NewCrit", required = true)
 	protected LimitCriteria1 newCriteria;
 	/**
-	 * Defines the criteria based on which the information is extracted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -145,7 +147,7 @@ public class LimitCriteriaDefinition1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitCriteriaDefinition1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.LimitCriteriaDefinition1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NewCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,8 +163,8 @@ public class LimitCriteriaDefinition1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LimitCriteriaDefinition1Choice.mmQueryName, LimitCriteriaDefinition1Choice.mmNewCriteria);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitCriteriaDefinition1Choice.mmQueryName, com.tools20022.repository.choice.LimitCriteriaDefinition1Choice.mmNewCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitCriteriaDefinition1Choice";
 				definition = "Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.";
@@ -171,21 +173,21 @@ public class LimitCriteriaDefinition1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QryNm", required = true)
 	public Max35Text getQueryName() {
 		return queryName;
 	}
 
-	public void setQueryName(Max35Text queryName) {
-		this.queryName = queryName;
+	public LimitCriteriaDefinition1Choice setQueryName(Max35Text queryName) {
+		this.queryName = Objects.requireNonNull(queryName);
+		return this;
 	}
 
-	@XmlElement(name = "NewCrit", required = true)
 	public LimitCriteria1 getNewCriteria() {
 		return newCriteria;
 	}
 
-	public void setNewCriteria(LimitCriteria1 newCriteria) {
-		this.newCriteria = newCriteria;
+	public LimitCriteriaDefinition1Choice setNewCriteria(LimitCriteria1 newCriteria) {
+		this.newCriteria = Objects.requireNonNull(newCriteria);
+		return this;
 	}
 }

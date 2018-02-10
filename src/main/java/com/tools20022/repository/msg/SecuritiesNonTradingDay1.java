@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,19 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details the date and reason for a non working day."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesNonTradingDay1", propOrder = {"technicalRecordIdentification", "date", "reason"})
 public class SecuritiesNonTradingDay1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TechRcrdId")
 	protected Max35Text technicalRecordIdentification;
 	/**
-	 * Unique identifier of a record in a message used as part of error
-	 * management and status advice messages.<br>
-	 * <br>
-	 * Usage:<br>
-	 * This identification will be used in the status advice report sent back.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +106,7 @@ public class SecuritiesNonTradingDay1 {
 	 */
 	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesNonTradingDay1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesNonTradingDay1.mmObject();
 			isDerived = false;
 			xmlTag = "TechRcrdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +117,11 @@ public class SecuritiesNonTradingDay1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Dt", required = true)
 	protected ISODate date;
 	/**
-	 * Non-working date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +148,7 @@ public class SecuritiesNonTradingDay1 {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesNonTradingDay1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesNonTradingDay1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,10 +159,11 @@ public class SecuritiesNonTradingDay1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn")
 	protected NonTradingDayReason1Code reason;
 	/**
-	 * Reason code for the non-working day.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +191,7 @@ public class SecuritiesNonTradingDay1 {
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesNonTradingDay1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesNonTradingDay1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,8 +206,9 @@ public class SecuritiesNonTradingDay1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesNonTradingDay1.mmTechnicalRecordIdentification, SecuritiesNonTradingDay1.mmDate, SecuritiesNonTradingDay1.mmReason);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesNonTradingDay1.mmTechnicalRecordIdentification, com.tools20022.repository.msg.SecuritiesNonTradingDay1.mmDate,
+						com.tools20022.repository.msg.SecuritiesNonTradingDay1.mmReason);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesNonTradingDay1";
 				definition = "Details the date and reason for a non working day.";
@@ -215,30 +217,30 @@ public class SecuritiesNonTradingDay1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TechRcrdId")
-	public Max35Text getTechnicalRecordIdentification() {
-		return technicalRecordIdentification;
+	public Optional<Max35Text> getTechnicalRecordIdentification() {
+		return technicalRecordIdentification == null ? Optional.empty() : Optional.of(technicalRecordIdentification);
 	}
 
-	public void setTechnicalRecordIdentification(Max35Text technicalRecordIdentification) {
+	public SecuritiesNonTradingDay1 setTechnicalRecordIdentification(Max35Text technicalRecordIdentification) {
 		this.technicalRecordIdentification = technicalRecordIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
 
-	public void setDate(ISODate date) {
-		this.date = date;
+	public SecuritiesNonTradingDay1 setDate(ISODate date) {
+		this.date = Objects.requireNonNull(date);
+		return this;
 	}
 
-	@XmlElement(name = "Rsn")
-	public NonTradingDayReason1Code getReason() {
-		return reason;
+	public Optional<NonTradingDayReason1Code> getReason() {
+		return reason == null ? Optional.empty() : Optional.of(reason);
 	}
 
-	public void setReason(NonTradingDayReason1Code reason) {
+	public SecuritiesNonTradingDay1 setReason(NonTradingDayReason1Code reason) {
 		this.reason = reason;
+		return this;
 	}
 }

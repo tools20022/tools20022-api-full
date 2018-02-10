@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DividendRateTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of dividend rate.
@@ -32,47 +37,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#mmCapitalPortion
- * DividendRateTypeCode.mmCapitalPortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#CapitalPortion
+ * DividendRateTypeCode.CapitalPortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#mmFullyFranked
- * DividendRateTypeCode.mmFullyFranked}</li>
+ * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#FullyFranked
+ * DividendRateTypeCode.FullyFranked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#mmIncomePortion
- * DividendRateTypeCode.mmIncomePortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#IncomePortion
+ * DividendRateTypeCode.IncomePortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#mmInterest
- * DividendRateTypeCode.mmInterest}</li>
+ * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#Interest
+ * DividendRateTypeCode.Interest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#mmSundryOrOtherIncome
- * DividendRateTypeCode.mmSundryOrOtherIncome}</li>
+ * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#SundryOrOtherIncome
+ * DividendRateTypeCode.SundryOrOtherIncome}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#mmTaxablePortion
- * DividendRateTypeCode.mmTaxablePortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#TaxablePortion
+ * DividendRateTypeCode.TaxablePortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#mmTaxDeferred
- * DividendRateTypeCode.mmTaxDeferred}</li>
+ * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#TaxDeferred
+ * DividendRateTypeCode.TaxDeferred}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#mmTaxFree
- * DividendRateTypeCode.mmTaxFree}</li>
+ * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#TaxFree
+ * DividendRateTypeCode.TaxFree}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#mmUnfranked
- * DividendRateTypeCode.mmUnfranked}</li>
+ * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#Unfranked
+ * DividendRateTypeCode.Unfranked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#mmLongTermCapitalGain
- * DividendRateTypeCode.mmLongTermCapitalGain}</li>
+ * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#LongTermCapitalGain
+ * DividendRateTypeCode.LongTermCapitalGain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#mmShortTermCapitalGain
- * DividendRateTypeCode.mmShortTermCapitalGain}</li>
+ * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#ShortTermCapitalGain
+ * DividendRateTypeCode.ShortTermCapitalGain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#mmFullPeriodUnitsIncomePortion
- * DividendRateTypeCode.mmFullPeriodUnitsIncomePortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#FullPeriodUnitsIncomePortion
+ * DividendRateTypeCode.FullPeriodUnitsIncomePortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#mmPartWayPeriodUnitsIncomePortion
- * DividendRateTypeCode.mmPartWayPeriodUnitsIncomePortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#PartWayPeriodUnitsIncomePortion
+ * DividendRateTypeCode.PartWayPeriodUnitsIncomePortion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#mmRealEstatePropertyIncomePortion
- * DividendRateTypeCode.mmRealEstatePropertyIncomePortion}</li>
+ * {@linkplain com.tools20022.repository.codeset.DividendRateTypeCode#RealEstatePropertyIncomePortion
+ * DividendRateTypeCode.RealEstatePropertyIncomePortion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -97,8 +102,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -115,7 +120,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of dividend rate."</li>
  * </ul>
  */
-public class DividendRateTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DividendRateTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -142,12 +148,12 @@ public class DividendRateTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCapitalPortion = new MMCode() {
+	public static final DividendRateTypeCode CapitalPortion = new DividendRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CapitalPortion";
 			definition = "Rate relating to the underlying security for which capital is distributed.";
-			owner_lazy = () -> DividendRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DividendRateTypeCode.mmObject();
 			codeName = "CAPO";
 		}
 	};
@@ -176,12 +182,12 @@ public class DividendRateTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullyFranked = new MMCode() {
+	public static final DividendRateTypeCode FullyFranked = new DividendRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FullyFranked";
 			definition = "Rate resulting from a fully franked dividend paid by a company; rate includes tax credit for companies that have made sufficient tax payments during fiscal period.";
-			owner_lazy = () -> DividendRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DividendRateTypeCode.mmObject();
 			codeName = "FLFR";
 		}
 	};
@@ -208,12 +214,12 @@ public class DividendRateTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncomePortion = new MMCode() {
+	public static final DividendRateTypeCode IncomePortion = new DividendRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IncomePortion";
 			definition = "Rate relating to the underlying security for which income is distributed.";
-			owner_lazy = () -> DividendRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DividendRateTypeCode.mmObject();
 			codeName = "INCO";
 		}
 	};
@@ -239,12 +245,12 @@ public class DividendRateTypeCode {
 	 * "Rate relating to the underlying security for which interest is paid."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterest = new MMCode() {
+	public static final DividendRateTypeCode Interest = new DividendRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
 			definition = "Rate relating to the underlying security for which interest is paid.";
-			owner_lazy = () -> DividendRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DividendRateTypeCode.mmObject();
 			codeName = "INTR";
 		}
 	};
@@ -271,12 +277,12 @@ public class DividendRateTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSundryOrOtherIncome = new MMCode() {
+	public static final DividendRateTypeCode SundryOrOtherIncome = new DividendRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SundryOrOtherIncome";
 			definition = "Rate relating to the underlying security for which other income is paid.";
-			owner_lazy = () -> DividendRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DividendRateTypeCode.mmObject();
 			codeName = "SOIC";
 		}
 	};
@@ -302,12 +308,12 @@ public class DividendRateTypeCode {
 	 * "Rate relating to the underlying security for which tax is charged."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxablePortion = new MMCode() {
+	public static final DividendRateTypeCode TaxablePortion = new DividendRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxablePortion";
 			definition = "Rate relating to the underlying security for which tax is charged.";
-			owner_lazy = () -> DividendRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DividendRateTypeCode.mmObject();
 			codeName = "TXBL";
 		}
 	};
@@ -333,12 +339,12 @@ public class DividendRateTypeCode {
 	 * "Rate relating to the underlying security for which tax is deferred."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxDeferred = new MMCode() {
+	public static final DividendRateTypeCode TaxDeferred = new DividendRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxDeferred";
 			definition = "Rate relating to the underlying security for which tax is deferred.";
-			owner_lazy = () -> DividendRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DividendRateTypeCode.mmObject();
 			codeName = "TXDF";
 		}
 	};
@@ -364,12 +370,12 @@ public class DividendRateTypeCode {
 	 * "Rate relating to the underlying security which is not taxable"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxFree = new MMCode() {
+	public static final DividendRateTypeCode TaxFree = new DividendRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxFree";
 			definition = "Rate relating to the underlying security which is not taxable";
-			owner_lazy = () -> DividendRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DividendRateTypeCode.mmObject();
 			codeName = "TXFR";
 		}
 	};
@@ -397,12 +403,12 @@ public class DividendRateTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnfranked = new MMCode() {
+	public static final DividendRateTypeCode Unfranked = new DividendRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Unfranked";
 			definition = "Rate resulting from an unfranked dividend paid by a company; the rate\ndoesnt include tax credit and is subject to withholding tax.";
-			owner_lazy = () -> DividendRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DividendRateTypeCode.mmObject();
 			codeName = "UNFR";
 		}
 	};
@@ -427,12 +433,12 @@ public class DividendRateTypeCode {
 	 * definition} = "Long term capital gain."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLongTermCapitalGain = new MMCode() {
+	public static final DividendRateTypeCode LongTermCapitalGain = new DividendRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LongTermCapitalGain";
 			definition = "Long term capital gain.";
-			owner_lazy = () -> DividendRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DividendRateTypeCode.mmObject();
 			codeName = "LTCG";
 		}
 	};
@@ -457,12 +463,12 @@ public class DividendRateTypeCode {
 	 * definition} = "Short term capital gain."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmShortTermCapitalGain = new MMCode() {
+	public static final DividendRateTypeCode ShortTermCapitalGain = new DividendRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ShortTermCapitalGain";
 			definition = "Short term capital gain.";
-			owner_lazy = () -> DividendRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DividendRateTypeCode.mmObject();
 			codeName = "STCG";
 		}
 	};
@@ -490,12 +496,12 @@ public class DividendRateTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullPeriodUnitsIncomePortion = new MMCode() {
+	public static final DividendRateTypeCode FullPeriodUnitsIncomePortion = new DividendRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPeriodUnitsIncomePortion";
 			definition = "Distribution rate relating to the full period units, for example Group I units in UK. ";
-			owner_lazy = () -> DividendRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DividendRateTypeCode.mmObject();
 			codeName = "FUPU";
 		}
 	};
@@ -523,12 +529,12 @@ public class DividendRateTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartWayPeriodUnitsIncomePortion = new MMCode() {
+	public static final DividendRateTypeCode PartWayPeriodUnitsIncomePortion = new DividendRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartWayPeriodUnitsIncomePortion";
 			definition = "Distribution rate relating to the part way period units, for example Group II units in UK. ";
-			owner_lazy = () -> DividendRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DividendRateTypeCode.mmObject();
 			codeName = "PAPU";
 		}
 	};
@@ -554,31 +560,76 @@ public class DividendRateTypeCode {
 	 * "Rate of income distribution originated by real estate investment."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRealEstatePropertyIncomePortion = new MMCode() {
+	public static final DividendRateTypeCode RealEstatePropertyIncomePortion = new DividendRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RealEstatePropertyIncomePortion";
 			definition = "Rate of income distribution originated by real estate investment.";
-			owner_lazy = () -> DividendRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DividendRateTypeCode.mmObject();
 			codeName = "REES";
 		}
 	};
+	final static private LinkedHashMap<String, DividendRateTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DividendRateTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CAPO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DividendRateTypeCode";
 				definition = "Specifies the type of dividend rate.";
-				code_lazy = () -> Arrays.asList(DividendRateTypeCode.mmCapitalPortion, DividendRateTypeCode.mmFullyFranked, DividendRateTypeCode.mmIncomePortion, DividendRateTypeCode.mmInterest, DividendRateTypeCode.mmSundryOrOtherIncome,
-						DividendRateTypeCode.mmTaxablePortion, DividendRateTypeCode.mmTaxDeferred, DividendRateTypeCode.mmTaxFree, DividendRateTypeCode.mmUnfranked, DividendRateTypeCode.mmLongTermCapitalGain,
-						DividendRateTypeCode.mmShortTermCapitalGain, DividendRateTypeCode.mmFullPeriodUnitsIncomePortion, DividendRateTypeCode.mmPartWayPeriodUnitsIncomePortion, DividendRateTypeCode.mmRealEstatePropertyIncomePortion);
 				derivation_lazy = () -> Arrays.asList(GrossDividendRateType1Code.mmObject(), NetDividendRateType1Code.mmObject(), DividendRateType1Code.mmObject(), GrossDividendRateType3Code.mmObject(), NetDividendRateType3Code.mmObject(),
 						GrossDividendRateType2Code.mmObject(), NetDividendRateType2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DividendRateTypeCode.CapitalPortion, com.tools20022.repository.codeset.DividendRateTypeCode.FullyFranked,
+						com.tools20022.repository.codeset.DividendRateTypeCode.IncomePortion, com.tools20022.repository.codeset.DividendRateTypeCode.Interest, com.tools20022.repository.codeset.DividendRateTypeCode.SundryOrOtherIncome,
+						com.tools20022.repository.codeset.DividendRateTypeCode.TaxablePortion, com.tools20022.repository.codeset.DividendRateTypeCode.TaxDeferred, com.tools20022.repository.codeset.DividendRateTypeCode.TaxFree,
+						com.tools20022.repository.codeset.DividendRateTypeCode.Unfranked, com.tools20022.repository.codeset.DividendRateTypeCode.LongTermCapitalGain,
+						com.tools20022.repository.codeset.DividendRateTypeCode.ShortTermCapitalGain, com.tools20022.repository.codeset.DividendRateTypeCode.FullPeriodUnitsIncomePortion,
+						com.tools20022.repository.codeset.DividendRateTypeCode.PartWayPeriodUnitsIncomePortion, com.tools20022.repository.codeset.DividendRateTypeCode.RealEstatePropertyIncomePortion);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CapitalPortion.getCodeName().get(), CapitalPortion);
+		codesByName.put(FullyFranked.getCodeName().get(), FullyFranked);
+		codesByName.put(IncomePortion.getCodeName().get(), IncomePortion);
+		codesByName.put(Interest.getCodeName().get(), Interest);
+		codesByName.put(SundryOrOtherIncome.getCodeName().get(), SundryOrOtherIncome);
+		codesByName.put(TaxablePortion.getCodeName().get(), TaxablePortion);
+		codesByName.put(TaxDeferred.getCodeName().get(), TaxDeferred);
+		codesByName.put(TaxFree.getCodeName().get(), TaxFree);
+		codesByName.put(Unfranked.getCodeName().get(), Unfranked);
+		codesByName.put(LongTermCapitalGain.getCodeName().get(), LongTermCapitalGain);
+		codesByName.put(ShortTermCapitalGain.getCodeName().get(), ShortTermCapitalGain);
+		codesByName.put(FullPeriodUnitsIncomePortion.getCodeName().get(), FullPeriodUnitsIncomePortion);
+		codesByName.put(PartWayPeriodUnitsIncomePortion.getCodeName().get(), PartWayPeriodUnitsIncomePortion);
+		codesByName.put(RealEstatePropertyIncomePortion.getCodeName().get(), RealEstatePropertyIncomePortion);
+	}
+
+	public static DividendRateTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DividendRateTypeCode[] values() {
+		DividendRateTypeCode[] values = new DividendRateTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DividendRateTypeCode> {
+		@Override
+		public DividendRateTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DividendRateTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

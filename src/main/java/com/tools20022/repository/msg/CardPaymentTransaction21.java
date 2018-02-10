@@ -29,9 +29,8 @@ import com.tools20022.repository.entity.CardPayment;
 import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.entity.SystemIdentification;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -81,8 +80,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,16 +105,17 @@ import javax.xml.bind.annotation.XmlType;
  * CardPaymentTransaction17}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CardPaymentTransaction21", propOrder = {"saleReferenceIdentification", "transactionIdentification", "POIIdentification", "initiatorTransactionIdentification", "recipientTransactionIdentification", "transactionType",
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CardPaymentTransaction21", propOrder = {"saleReferenceIdentification", "transactionIdentification", "pOIIdentification", "initiatorTransactionIdentification", "recipientTransactionIdentification", "transactionType",
 		"additionalService", "serviceAttribute", "transactionResult"})
 public class CardPaymentTransaction21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SaleRefId")
 	protected Max35Text saleReferenceIdentification;
 	/**
-	 * Global reference of the sale transaction for the sale system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,7 +151,7 @@ public class CardPaymentTransaction21 {
 	 */
 	public static final MMMessageAttribute mmSaleReferenceIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentTransaction21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction21.mmObject();
 			isDerived = false;
 			xmlTag = "SaleRefId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,11 +163,11 @@ public class CardPaymentTransaction21 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TxId", required = true)
 	protected TransactionIdentifier1 transactionIdentification;
 	/**
-	 * Unique identification of the transaction assigned by the POI (Point Of
-	 * Interaction).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -217,7 +217,7 @@ public class CardPaymentTransaction21 {
 	public static final MMMessageAssociationEnd mmTransactionIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionIdentification;
-			componentContext_lazy = () -> CardPaymentTransaction21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction21.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,11 +231,11 @@ public class CardPaymentTransaction21 {
 			type_lazy = () -> com.tools20022.repository.msg.TransactionIdentifier1.mmObject();
 		}
 	};
+	@XmlElement(name = "POIId")
 	protected GenericIdentification32 pOIIdentification;
 	/**
-	 * Identification of the POI (Point Of Interaction) performing the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -286,7 +286,7 @@ public class CardPaymentTransaction21 {
 	public static final MMMessageAssociationEnd mmPOIIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SystemIdentification.mmIdentification;
-			componentContext_lazy = () -> CardPaymentTransaction21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction21.mmObject();
 			isDerived = false;
 			xmlTag = "POIId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -300,11 +300,11 @@ public class CardPaymentTransaction21 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	@XmlElement(name = "InitrTxId")
 	protected Max35Text initiatorTransactionIdentification;
 	/**
-	 * Identification of the transaction assigned by the initiating party for
-	 * the recipient party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -352,7 +352,7 @@ public class CardPaymentTransaction21 {
 	public static final MMMessageAttribute mmInitiatorTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmInitiatorTransactionIdentifier;
-			componentContext_lazy = () -> CardPaymentTransaction21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction21.mmObject();
 			isDerived = false;
 			xmlTag = "InitrTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -365,11 +365,11 @@ public class CardPaymentTransaction21 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RcptTxId")
 	protected Max35Text recipientTransactionIdentification;
 	/**
-	 * Identification of the transaction assigned by the recipient party for the
-	 * initiating party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -411,7 +411,7 @@ public class CardPaymentTransaction21 {
 	 */
 	public static final MMMessageAttribute mmRecipientTransactionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CardPaymentTransaction21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction21.mmObject();
 			isDerived = false;
 			xmlTag = "RcptTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -424,10 +424,11 @@ public class CardPaymentTransaction21 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TxTp", required = true)
 	protected CardPaymentServiceType5Code transactionType;
 	/**
-	 * Type of transaction being undertaken for the main service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -475,7 +476,7 @@ public class CardPaymentTransaction21 {
 	public static final MMMessageAttribute mmTransactionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardPaymentService;
-			componentContext_lazy = () -> CardPaymentTransaction21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction21.mmObject();
 			isDerived = false;
 			xmlTag = "TxTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -488,10 +489,11 @@ public class CardPaymentTransaction21 {
 			simpleType_lazy = () -> CardPaymentServiceType5Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlSvc")
 	protected List<CardPaymentServiceType6Code> additionalService;
 	/**
-	 * Service in addition to the main service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -538,7 +540,7 @@ public class CardPaymentTransaction21 {
 	public static final MMMessageAttribute mmAdditionalService = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardPaymentService;
-			componentContext_lazy = () -> CardPaymentTransaction21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction21.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlSvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -550,10 +552,11 @@ public class CardPaymentTransaction21 {
 			simpleType_lazy = () -> CardPaymentServiceType6Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SvcAttr")
 	protected CardPaymentServiceType3Code serviceAttribute;
 	/**
-	 * Additional attribute of the service type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -600,7 +603,7 @@ public class CardPaymentTransaction21 {
 	public static final MMMessageAttribute mmServiceAttribute = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardPaymentService;
-			componentContext_lazy = () -> CardPaymentTransaction21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction21.mmObject();
 			isDerived = false;
 			xmlTag = "SvcAttr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -613,10 +616,11 @@ public class CardPaymentTransaction21 {
 			simpleType_lazy = () -> CardPaymentServiceType3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TxRslt")
 	protected CardPaymentTransactionResult1 transactionResult;
 	/**
-	 * Result of the original transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -656,7 +660,7 @@ public class CardPaymentTransaction21 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionResult = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardPaymentTransaction21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction21.mmObject();
 			isDerived = false;
 			xmlTag = "TxRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -674,11 +678,13 @@ public class CardPaymentTransaction21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardPaymentTransaction21.mmSaleReferenceIdentification, CardPaymentTransaction21.mmTransactionIdentification, CardPaymentTransaction21.mmPOIIdentification,
-						CardPaymentTransaction21.mmInitiatorTransactionIdentification, CardPaymentTransaction21.mmRecipientTransactionIdentification, CardPaymentTransaction21.mmTransactionType, CardPaymentTransaction21.mmAdditionalService,
-						CardPaymentTransaction21.mmServiceAttribute, CardPaymentTransaction21.mmTransactionResult);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction21.mmSaleReferenceIdentification, com.tools20022.repository.msg.CardPaymentTransaction21.mmTransactionIdentification,
+						com.tools20022.repository.msg.CardPaymentTransaction21.mmPOIIdentification, com.tools20022.repository.msg.CardPaymentTransaction21.mmInitiatorTransactionIdentification,
+						com.tools20022.repository.msg.CardPaymentTransaction21.mmRecipientTransactionIdentification, com.tools20022.repository.msg.CardPaymentTransaction21.mmTransactionType,
+						com.tools20022.repository.msg.CardPaymentTransaction21.mmAdditionalService, com.tools20022.repository.msg.CardPaymentTransaction21.mmServiceAttribute,
+						com.tools20022.repository.msg.CardPaymentTransaction21.mmTransactionResult);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentTransaction21";
 				definition = "Identification of the original transaction.";
@@ -689,84 +695,84 @@ public class CardPaymentTransaction21 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SaleRefId")
-	public Max35Text getSaleReferenceIdentification() {
-		return saleReferenceIdentification;
+	public Optional<Max35Text> getSaleReferenceIdentification() {
+		return saleReferenceIdentification == null ? Optional.empty() : Optional.of(saleReferenceIdentification);
 	}
 
-	public void setSaleReferenceIdentification(Max35Text saleReferenceIdentification) {
+	public CardPaymentTransaction21 setSaleReferenceIdentification(Max35Text saleReferenceIdentification) {
 		this.saleReferenceIdentification = saleReferenceIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public TransactionIdentifier1 getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public CardPaymentTransaction21 setTransactionIdentification(com.tools20022.repository.msg.TransactionIdentifier1 transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "POIId")
-	public GenericIdentification32 getPOIIdentification() {
-		return pOIIdentification;
+	public Optional<GenericIdentification32> getPOIIdentification() {
+		return pOIIdentification == null ? Optional.empty() : Optional.of(pOIIdentification);
 	}
 
-	public void setPOIIdentification(com.tools20022.repository.msg.GenericIdentification32 pOIIdentification) {
+	public CardPaymentTransaction21 setPOIIdentification(com.tools20022.repository.msg.GenericIdentification32 pOIIdentification) {
 		this.pOIIdentification = pOIIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "InitrTxId")
-	public Max35Text getInitiatorTransactionIdentification() {
-		return initiatorTransactionIdentification;
+	public Optional<Max35Text> getInitiatorTransactionIdentification() {
+		return initiatorTransactionIdentification == null ? Optional.empty() : Optional.of(initiatorTransactionIdentification);
 	}
 
-	public void setInitiatorTransactionIdentification(Max35Text initiatorTransactionIdentification) {
+	public CardPaymentTransaction21 setInitiatorTransactionIdentification(Max35Text initiatorTransactionIdentification) {
 		this.initiatorTransactionIdentification = initiatorTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "RcptTxId")
-	public Max35Text getRecipientTransactionIdentification() {
-		return recipientTransactionIdentification;
+	public Optional<Max35Text> getRecipientTransactionIdentification() {
+		return recipientTransactionIdentification == null ? Optional.empty() : Optional.of(recipientTransactionIdentification);
 	}
 
-	public void setRecipientTransactionIdentification(Max35Text recipientTransactionIdentification) {
+	public CardPaymentTransaction21 setRecipientTransactionIdentification(Max35Text recipientTransactionIdentification) {
 		this.recipientTransactionIdentification = recipientTransactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TxTp", required = true)
 	public CardPaymentServiceType5Code getTransactionType() {
 		return transactionType;
 	}
 
-	public void setTransactionType(CardPaymentServiceType5Code transactionType) {
-		this.transactionType = transactionType;
+	public CardPaymentTransaction21 setTransactionType(CardPaymentServiceType5Code transactionType) {
+		this.transactionType = Objects.requireNonNull(transactionType);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlSvc")
 	public List<CardPaymentServiceType6Code> getAdditionalService() {
-		return additionalService;
+		return additionalService == null ? additionalService = new ArrayList<>() : additionalService;
 	}
 
-	public void setAdditionalService(List<CardPaymentServiceType6Code> additionalService) {
-		this.additionalService = additionalService;
+	public CardPaymentTransaction21 setAdditionalService(List<CardPaymentServiceType6Code> additionalService) {
+		this.additionalService = Objects.requireNonNull(additionalService);
+		return this;
 	}
 
-	@XmlElement(name = "SvcAttr")
-	public CardPaymentServiceType3Code getServiceAttribute() {
-		return serviceAttribute;
+	public Optional<CardPaymentServiceType3Code> getServiceAttribute() {
+		return serviceAttribute == null ? Optional.empty() : Optional.of(serviceAttribute);
 	}
 
-	public void setServiceAttribute(CardPaymentServiceType3Code serviceAttribute) {
+	public CardPaymentTransaction21 setServiceAttribute(CardPaymentServiceType3Code serviceAttribute) {
 		this.serviceAttribute = serviceAttribute;
+		return this;
 	}
 
-	@XmlElement(name = "TxRslt")
-	public CardPaymentTransactionResult1 getTransactionResult() {
-		return transactionResult;
+	public Optional<CardPaymentTransactionResult1> getTransactionResult() {
+		return transactionResult == null ? Optional.empty() : Optional.of(transactionResult);
 	}
 
-	public void setTransactionResult(com.tools20022.repository.msg.CardPaymentTransactionResult1 transactionResult) {
+	public CardPaymentTransaction21 setTransactionResult(com.tools20022.repository.msg.CardPaymentTransactionResult1 transactionResult) {
 		this.transactionResult = transactionResult;
+		return this;
 	}
 }

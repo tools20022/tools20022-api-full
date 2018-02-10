@@ -29,9 +29,8 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.AcceptorConfiguration;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -114,8 +113,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,17 +129,18 @@ import javax.xml.bind.annotation.XmlType;
  * AcquirerProtocolParameters9}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcquirerProtocolParameters10", propOrder = {"actionType", "acquirerIdentification", "version", "applicationIdentification", "host", "onLineTransaction", "offLineTransaction", "reconciliationExchange",
 		"reconciliationByAcquirer", "totalsPerCurrency", "splitTotals", "reconciliationError", "cardDataVerification", "notifyOffLineCancellation", "batchTransferContent", "fileTransferBatch", "batchDigitalSignature", "messageItem",
 		"protectCardData", "mandatorySecurityTrailer"})
 public class AcquirerProtocolParameters10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ActnTp", required = true)
 	protected TerminalManagementAction3Code actionType;
 	/**
-	 * Type of action for the configuration parameters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +173,7 @@ public class AcquirerProtocolParameters10 {
 	 */
 	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "ActnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,10 +185,11 @@ public class AcquirerProtocolParameters10 {
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AcqrrId", required = true)
 	protected List<com.tools20022.repository.msg.GenericIdentification53> acquirerIdentification;
 	/**
-	 * Identification of the acquirer using this protocol.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -226,7 +227,7 @@ public class AcquirerProtocolParameters10 {
 	public static final MMMessageAssociationEnd mmAcquirerIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "AcqrrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,10 +239,11 @@ public class AcquirerProtocolParameters10 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification53.mmObject();
 		}
 	};
+	@XmlElement(name = "Vrsn", required = true)
 	protected Max256Text version;
 	/**
-	 * Version of the acquirer protocol parameters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -273,7 +275,7 @@ public class AcquirerProtocolParameters10 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,10 +287,11 @@ public class AcquirerProtocolParameters10 {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ApplId")
 	protected List<Max35Text> applicationIdentification;
 	/**
-	 * Identification of the payment application, user of the acquirer protocol.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -328,7 +331,7 @@ public class AcquirerProtocolParameters10 {
 	public static final MMMessageAttribute mmApplicationIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmApplicationIdentification;
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "ApplId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -339,10 +342,11 @@ public class AcquirerProtocolParameters10 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Hst")
 	protected List<com.tools20022.repository.msg.AcquirerHostConfiguration4> host;
 	/**
-	 * Acquirer host configuration.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -380,7 +384,7 @@ public class AcquirerProtocolParameters10 {
 	public static final MMMessageAssociationEnd mmHost = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmTerminalManagementSystem;
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "Hst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -392,11 +396,11 @@ public class AcquirerProtocolParameters10 {
 			type_lazy = () -> com.tools20022.repository.msg.AcquirerHostConfiguration4.mmObject();
 		}
 	};
+	@XmlElement(name = "OnLineTx")
 	protected AcquirerProtocolParameters8 onLineTransaction;
 	/**
-	 * Acquirer protocol parameters of transactions performing an online
-	 * authorisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -436,7 +440,7 @@ public class AcquirerProtocolParameters10 {
 	public static final MMMessageAssociationEnd mmOnLineTransaction = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> AcceptorConfiguration.mmObject();
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "OnLineTx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -449,11 +453,11 @@ public class AcquirerProtocolParameters10 {
 			type_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters8.mmObject();
 		}
 	};
+	@XmlElement(name = "OffLineTx")
 	protected AcquirerProtocolParameters8 offLineTransaction;
 	/**
-	 * Acquirer protocol parameters of transactions performing an offline
-	 * authorisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -487,7 +491,7 @@ public class AcquirerProtocolParameters10 {
 	 */
 	public static final MMMessageAssociationEnd mmOffLineTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "OffLineTx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -500,10 +504,11 @@ public class AcquirerProtocolParameters10 {
 			type_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters8.mmObject();
 		}
 	};
+	@XmlElement(name = "RcncltnXchg")
 	protected ExchangeConfiguration6 reconciliationExchange;
 	/**
-	 * Configuration parameters of reconciliation exchanges.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -534,7 +539,7 @@ public class AcquirerProtocolParameters10 {
 	 */
 	public static final MMMessageAssociationEnd mmReconciliationExchange = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnXchg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -547,11 +552,11 @@ public class AcquirerProtocolParameters10 {
 			type_lazy = () -> com.tools20022.repository.msg.ExchangeConfiguration6.mmObject();
 		}
 	};
+	@XmlElement(name = "RcncltnByAcqrr")
 	protected TrueFalseIndicator reconciliationByAcquirer;
 	/**
-	 * Indicates the reconciliation period is assigned by the acquirer instead
-	 * of the acceptor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -592,7 +597,7 @@ public class AcquirerProtocolParameters10 {
 	public static final MMMessageAttribute mmReconciliationByAcquirer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmReconciliationByAcquirer;
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnByAcqrr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -604,10 +609,11 @@ public class AcquirerProtocolParameters10 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlsPerCcy")
 	protected TrueFalseIndicator totalsPerCurrency;
 	/**
-	 * Indicates the reconciliation total amounts are computed per currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -647,7 +653,7 @@ public class AcquirerProtocolParameters10 {
 	public static final MMMessageAttribute mmTotalsPerCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmTotalsPerCurrency;
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "TtlsPerCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -659,12 +665,11 @@ public class AcquirerProtocolParameters10 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "SpltTtls")
 	protected TrueFalseIndicator splitTotals;
 	/**
-	 * Indicates that totals in reconciliation or batch must be split per group
-	 * of points of interaction and card product profiles when these information
-	 * are present in the transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -699,7 +704,7 @@ public class AcquirerProtocolParameters10 {
 	 */
 	public static final MMMessageAttribute mmSplitTotals = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "SpltTtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -711,11 +716,11 @@ public class AcquirerProtocolParameters10 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RcncltnErr")
 	protected TrueFalseIndicator reconciliationError;
 	/**
-	 * After an error in a totals of the Reconciliation, the POI sends
-	 * transactions in error in the BatchTransfer messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -750,7 +755,7 @@ public class AcquirerProtocolParameters10 {
 	 */
 	public static final MMMessageAttribute mmReconciliationError = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "RcncltnErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -762,11 +767,11 @@ public class AcquirerProtocolParameters10 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CardDataVrfctn")
 	protected TrueFalseIndicator cardDataVerification;
 	/**
-	 * True if the POI must send card data (protected or plain card data) in the
-	 * AcceptorCompletionAdvice message following an authorisation exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -801,7 +806,7 @@ public class AcquirerProtocolParameters10 {
 	 */
 	public static final MMMessageAttribute mmCardDataVerification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "CardDataVrfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -813,10 +818,11 @@ public class AcquirerProtocolParameters10 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NtfyOffLineCxl")
 	protected TrueFalseIndicator notifyOffLineCancellation;
 	/**
-	 * Send a cancellation advice for offline transactions not yet captured.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -850,7 +856,7 @@ public class AcquirerProtocolParameters10 {
 	 */
 	public static final MMMessageAttribute mmNotifyOffLineCancellation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "NtfyOffLineCxl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -862,10 +868,11 @@ public class AcquirerProtocolParameters10 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "BtchTrfCntt")
 	protected List<BatchTransactionType1Code> batchTransferContent;
 	/**
-	 * Types of transaction to include in the batch.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -904,7 +911,7 @@ public class AcquirerProtocolParameters10 {
 	public static final MMMessageAttribute mmBatchTransferContent = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmBatchTransferContent;
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "BtchTrfCntt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -915,11 +922,11 @@ public class AcquirerProtocolParameters10 {
 			simpleType_lazy = () -> BatchTransactionType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "FileTrfBtch")
 	protected TrueFalseIndicator fileTransferBatch;
 	/**
-	 * BatchTransfer are exchanged per file transfer protocol rather than per
-	 * message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -954,7 +961,7 @@ public class AcquirerProtocolParameters10 {
 	 */
 	public static final MMMessageAttribute mmFileTransferBatch = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "FileTrfBtch";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -966,11 +973,11 @@ public class AcquirerProtocolParameters10 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "BtchDgtlSgntr")
 	protected TrueFalseIndicator batchDigitalSignature;
 	/**
-	 * BatchTransfer are authenticated by digital signature rather than a MAC
-	 * (Message Authentication Code).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1005,7 +1012,7 @@ public class AcquirerProtocolParameters10 {
 	 */
 	public static final MMMessageAttribute mmBatchDigitalSignature = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "BtchDgtlSgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1017,10 +1024,11 @@ public class AcquirerProtocolParameters10 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgItm")
 	protected List<com.tools20022.repository.msg.MessageItemCondition1> messageItem;
 	/**
-	 * Configuration of a message item.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1051,7 +1059,7 @@ public class AcquirerProtocolParameters10 {
 	 */
 	public static final MMMessageAssociationEnd mmMessageItem = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "MsgItm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1063,10 +1071,11 @@ public class AcquirerProtocolParameters10 {
 			type_lazy = () -> com.tools20022.repository.msg.MessageItemCondition1.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctCardData", required = true)
 	protected TrueFalseIndicator protectCardData;
 	/**
-	 * Indicator to require protection of sensitive card data in messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1106,7 +1115,7 @@ public class AcquirerProtocolParameters10 {
 	public static final MMMessageAttribute mmProtectCardData = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AcceptorConfiguration.mmProtectCardData;
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctCardData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1118,10 +1127,11 @@ public class AcquirerProtocolParameters10 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "MndtrySctyTrlr")
 	protected TrueFalseIndicator mandatorySecurityTrailer;
 	/**
-	 * A security trailer is mandatory in the messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1154,7 +1164,7 @@ public class AcquirerProtocolParameters10 {
 	 */
 	public static final MMMessageAttribute mmMandatorySecurityTrailer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AcquirerProtocolParameters10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerProtocolParameters10.mmObject();
 			isDerived = false;
 			xmlTag = "MndtrySctyTrlr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1170,14 +1180,18 @@ public class AcquirerProtocolParameters10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AcquirerProtocolParameters10.mmActionType, AcquirerProtocolParameters10.mmAcquirerIdentification, AcquirerProtocolParameters10.mmVersion,
-						AcquirerProtocolParameters10.mmApplicationIdentification, AcquirerProtocolParameters10.mmHost, AcquirerProtocolParameters10.mmOnLineTransaction, AcquirerProtocolParameters10.mmOffLineTransaction,
-						AcquirerProtocolParameters10.mmReconciliationExchange, AcquirerProtocolParameters10.mmReconciliationByAcquirer, AcquirerProtocolParameters10.mmTotalsPerCurrency, AcquirerProtocolParameters10.mmSplitTotals,
-						AcquirerProtocolParameters10.mmReconciliationError, AcquirerProtocolParameters10.mmCardDataVerification, AcquirerProtocolParameters10.mmNotifyOffLineCancellation, AcquirerProtocolParameters10.mmBatchTransferContent,
-						AcquirerProtocolParameters10.mmFileTransferBatch, AcquirerProtocolParameters10.mmBatchDigitalSignature, AcquirerProtocolParameters10.mmMessageItem, AcquirerProtocolParameters10.mmProtectCardData,
-						AcquirerProtocolParameters10.mmMandatorySecurityTrailer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerProtocolParameters10.mmActionType, com.tools20022.repository.msg.AcquirerProtocolParameters10.mmAcquirerIdentification,
+						com.tools20022.repository.msg.AcquirerProtocolParameters10.mmVersion, com.tools20022.repository.msg.AcquirerProtocolParameters10.mmApplicationIdentification,
+						com.tools20022.repository.msg.AcquirerProtocolParameters10.mmHost, com.tools20022.repository.msg.AcquirerProtocolParameters10.mmOnLineTransaction,
+						com.tools20022.repository.msg.AcquirerProtocolParameters10.mmOffLineTransaction, com.tools20022.repository.msg.AcquirerProtocolParameters10.mmReconciliationExchange,
+						com.tools20022.repository.msg.AcquirerProtocolParameters10.mmReconciliationByAcquirer, com.tools20022.repository.msg.AcquirerProtocolParameters10.mmTotalsPerCurrency,
+						com.tools20022.repository.msg.AcquirerProtocolParameters10.mmSplitTotals, com.tools20022.repository.msg.AcquirerProtocolParameters10.mmReconciliationError,
+						com.tools20022.repository.msg.AcquirerProtocolParameters10.mmCardDataVerification, com.tools20022.repository.msg.AcquirerProtocolParameters10.mmNotifyOffLineCancellation,
+						com.tools20022.repository.msg.AcquirerProtocolParameters10.mmBatchTransferContent, com.tools20022.repository.msg.AcquirerProtocolParameters10.mmFileTransferBatch,
+						com.tools20022.repository.msg.AcquirerProtocolParameters10.mmBatchDigitalSignature, com.tools20022.repository.msg.AcquirerProtocolParameters10.mmMessageItem,
+						com.tools20022.repository.msg.AcquirerProtocolParameters10.mmProtectCardData, com.tools20022.repository.msg.AcquirerProtocolParameters10.mmMandatorySecurityTrailer);
 				trace_lazy = () -> AcceptorConfiguration.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcquirerProtocolParameters10";
 				definition = "Acceptor parameters dedicated to the acquirer protocol.";
@@ -1187,183 +1201,183 @@ public class AcquirerProtocolParameters10 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ActnTp", required = true)
 	public TerminalManagementAction3Code getActionType() {
 		return actionType;
 	}
 
-	public void setActionType(TerminalManagementAction3Code actionType) {
-		this.actionType = actionType;
+	public AcquirerProtocolParameters10 setActionType(TerminalManagementAction3Code actionType) {
+		this.actionType = Objects.requireNonNull(actionType);
+		return this;
 	}
 
-	@XmlElement(name = "AcqrrId", required = true)
 	public List<GenericIdentification53> getAcquirerIdentification() {
-		return acquirerIdentification;
+		return acquirerIdentification == null ? acquirerIdentification = new ArrayList<>() : acquirerIdentification;
 	}
 
-	public void setAcquirerIdentification(List<com.tools20022.repository.msg.GenericIdentification53> acquirerIdentification) {
-		this.acquirerIdentification = acquirerIdentification;
+	public AcquirerProtocolParameters10 setAcquirerIdentification(List<com.tools20022.repository.msg.GenericIdentification53> acquirerIdentification) {
+		this.acquirerIdentification = Objects.requireNonNull(acquirerIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Vrsn", required = true)
 	public Max256Text getVersion() {
 		return version;
 	}
 
-	public void setVersion(Max256Text version) {
-		this.version = version;
+	public AcquirerProtocolParameters10 setVersion(Max256Text version) {
+		this.version = Objects.requireNonNull(version);
+		return this;
 	}
 
-	@XmlElement(name = "ApplId")
 	public List<Max35Text> getApplicationIdentification() {
-		return applicationIdentification;
+		return applicationIdentification == null ? applicationIdentification = new ArrayList<>() : applicationIdentification;
 	}
 
-	public void setApplicationIdentification(List<Max35Text> applicationIdentification) {
-		this.applicationIdentification = applicationIdentification;
+	public AcquirerProtocolParameters10 setApplicationIdentification(List<Max35Text> applicationIdentification) {
+		this.applicationIdentification = Objects.requireNonNull(applicationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Hst")
 	public List<AcquirerHostConfiguration4> getHost() {
-		return host;
+		return host == null ? host = new ArrayList<>() : host;
 	}
 
-	public void setHost(List<com.tools20022.repository.msg.AcquirerHostConfiguration4> host) {
-		this.host = host;
+	public AcquirerProtocolParameters10 setHost(List<com.tools20022.repository.msg.AcquirerHostConfiguration4> host) {
+		this.host = Objects.requireNonNull(host);
+		return this;
 	}
 
-	@XmlElement(name = "OnLineTx")
-	public AcquirerProtocolParameters8 getOnLineTransaction() {
-		return onLineTransaction;
+	public Optional<AcquirerProtocolParameters8> getOnLineTransaction() {
+		return onLineTransaction == null ? Optional.empty() : Optional.of(onLineTransaction);
 	}
 
-	public void setOnLineTransaction(com.tools20022.repository.msg.AcquirerProtocolParameters8 onLineTransaction) {
+	public AcquirerProtocolParameters10 setOnLineTransaction(com.tools20022.repository.msg.AcquirerProtocolParameters8 onLineTransaction) {
 		this.onLineTransaction = onLineTransaction;
+		return this;
 	}
 
-	@XmlElement(name = "OffLineTx")
-	public AcquirerProtocolParameters8 getOffLineTransaction() {
-		return offLineTransaction;
+	public Optional<AcquirerProtocolParameters8> getOffLineTransaction() {
+		return offLineTransaction == null ? Optional.empty() : Optional.of(offLineTransaction);
 	}
 
-	public void setOffLineTransaction(com.tools20022.repository.msg.AcquirerProtocolParameters8 offLineTransaction) {
+	public AcquirerProtocolParameters10 setOffLineTransaction(com.tools20022.repository.msg.AcquirerProtocolParameters8 offLineTransaction) {
 		this.offLineTransaction = offLineTransaction;
+		return this;
 	}
 
-	@XmlElement(name = "RcncltnXchg")
-	public ExchangeConfiguration6 getReconciliationExchange() {
-		return reconciliationExchange;
+	public Optional<ExchangeConfiguration6> getReconciliationExchange() {
+		return reconciliationExchange == null ? Optional.empty() : Optional.of(reconciliationExchange);
 	}
 
-	public void setReconciliationExchange(com.tools20022.repository.msg.ExchangeConfiguration6 reconciliationExchange) {
+	public AcquirerProtocolParameters10 setReconciliationExchange(com.tools20022.repository.msg.ExchangeConfiguration6 reconciliationExchange) {
 		this.reconciliationExchange = reconciliationExchange;
+		return this;
 	}
 
-	@XmlElement(name = "RcncltnByAcqrr")
-	public TrueFalseIndicator getReconciliationByAcquirer() {
-		return reconciliationByAcquirer;
+	public Optional<TrueFalseIndicator> getReconciliationByAcquirer() {
+		return reconciliationByAcquirer == null ? Optional.empty() : Optional.of(reconciliationByAcquirer);
 	}
 
-	public void setReconciliationByAcquirer(TrueFalseIndicator reconciliationByAcquirer) {
+	public AcquirerProtocolParameters10 setReconciliationByAcquirer(TrueFalseIndicator reconciliationByAcquirer) {
 		this.reconciliationByAcquirer = reconciliationByAcquirer;
+		return this;
 	}
 
-	@XmlElement(name = "TtlsPerCcy")
-	public TrueFalseIndicator getTotalsPerCurrency() {
-		return totalsPerCurrency;
+	public Optional<TrueFalseIndicator> getTotalsPerCurrency() {
+		return totalsPerCurrency == null ? Optional.empty() : Optional.of(totalsPerCurrency);
 	}
 
-	public void setTotalsPerCurrency(TrueFalseIndicator totalsPerCurrency) {
+	public AcquirerProtocolParameters10 setTotalsPerCurrency(TrueFalseIndicator totalsPerCurrency) {
 		this.totalsPerCurrency = totalsPerCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "SpltTtls")
-	public TrueFalseIndicator getSplitTotals() {
-		return splitTotals;
+	public Optional<TrueFalseIndicator> getSplitTotals() {
+		return splitTotals == null ? Optional.empty() : Optional.of(splitTotals);
 	}
 
-	public void setSplitTotals(TrueFalseIndicator splitTotals) {
+	public AcquirerProtocolParameters10 setSplitTotals(TrueFalseIndicator splitTotals) {
 		this.splitTotals = splitTotals;
+		return this;
 	}
 
-	@XmlElement(name = "RcncltnErr")
-	public TrueFalseIndicator getReconciliationError() {
-		return reconciliationError;
+	public Optional<TrueFalseIndicator> getReconciliationError() {
+		return reconciliationError == null ? Optional.empty() : Optional.of(reconciliationError);
 	}
 
-	public void setReconciliationError(TrueFalseIndicator reconciliationError) {
+	public AcquirerProtocolParameters10 setReconciliationError(TrueFalseIndicator reconciliationError) {
 		this.reconciliationError = reconciliationError;
+		return this;
 	}
 
-	@XmlElement(name = "CardDataVrfctn")
-	public TrueFalseIndicator getCardDataVerification() {
-		return cardDataVerification;
+	public Optional<TrueFalseIndicator> getCardDataVerification() {
+		return cardDataVerification == null ? Optional.empty() : Optional.of(cardDataVerification);
 	}
 
-	public void setCardDataVerification(TrueFalseIndicator cardDataVerification) {
+	public AcquirerProtocolParameters10 setCardDataVerification(TrueFalseIndicator cardDataVerification) {
 		this.cardDataVerification = cardDataVerification;
+		return this;
 	}
 
-	@XmlElement(name = "NtfyOffLineCxl")
-	public TrueFalseIndicator getNotifyOffLineCancellation() {
-		return notifyOffLineCancellation;
+	public Optional<TrueFalseIndicator> getNotifyOffLineCancellation() {
+		return notifyOffLineCancellation == null ? Optional.empty() : Optional.of(notifyOffLineCancellation);
 	}
 
-	public void setNotifyOffLineCancellation(TrueFalseIndicator notifyOffLineCancellation) {
+	public AcquirerProtocolParameters10 setNotifyOffLineCancellation(TrueFalseIndicator notifyOffLineCancellation) {
 		this.notifyOffLineCancellation = notifyOffLineCancellation;
+		return this;
 	}
 
-	@XmlElement(name = "BtchTrfCntt")
 	public List<BatchTransactionType1Code> getBatchTransferContent() {
-		return batchTransferContent;
+		return batchTransferContent == null ? batchTransferContent = new ArrayList<>() : batchTransferContent;
 	}
 
-	public void setBatchTransferContent(List<BatchTransactionType1Code> batchTransferContent) {
-		this.batchTransferContent = batchTransferContent;
+	public AcquirerProtocolParameters10 setBatchTransferContent(List<BatchTransactionType1Code> batchTransferContent) {
+		this.batchTransferContent = Objects.requireNonNull(batchTransferContent);
+		return this;
 	}
 
-	@XmlElement(name = "FileTrfBtch")
-	public TrueFalseIndicator getFileTransferBatch() {
-		return fileTransferBatch;
+	public Optional<TrueFalseIndicator> getFileTransferBatch() {
+		return fileTransferBatch == null ? Optional.empty() : Optional.of(fileTransferBatch);
 	}
 
-	public void setFileTransferBatch(TrueFalseIndicator fileTransferBatch) {
+	public AcquirerProtocolParameters10 setFileTransferBatch(TrueFalseIndicator fileTransferBatch) {
 		this.fileTransferBatch = fileTransferBatch;
+		return this;
 	}
 
-	@XmlElement(name = "BtchDgtlSgntr")
-	public TrueFalseIndicator getBatchDigitalSignature() {
-		return batchDigitalSignature;
+	public Optional<TrueFalseIndicator> getBatchDigitalSignature() {
+		return batchDigitalSignature == null ? Optional.empty() : Optional.of(batchDigitalSignature);
 	}
 
-	public void setBatchDigitalSignature(TrueFalseIndicator batchDigitalSignature) {
+	public AcquirerProtocolParameters10 setBatchDigitalSignature(TrueFalseIndicator batchDigitalSignature) {
 		this.batchDigitalSignature = batchDigitalSignature;
+		return this;
 	}
 
-	@XmlElement(name = "MsgItm")
 	public List<MessageItemCondition1> getMessageItem() {
-		return messageItem;
+		return messageItem == null ? messageItem = new ArrayList<>() : messageItem;
 	}
 
-	public void setMessageItem(List<com.tools20022.repository.msg.MessageItemCondition1> messageItem) {
-		this.messageItem = messageItem;
+	public AcquirerProtocolParameters10 setMessageItem(List<com.tools20022.repository.msg.MessageItemCondition1> messageItem) {
+		this.messageItem = Objects.requireNonNull(messageItem);
+		return this;
 	}
 
-	@XmlElement(name = "PrtctCardData", required = true)
 	public TrueFalseIndicator getProtectCardData() {
 		return protectCardData;
 	}
 
-	public void setProtectCardData(TrueFalseIndicator protectCardData) {
-		this.protectCardData = protectCardData;
+	public AcquirerProtocolParameters10 setProtectCardData(TrueFalseIndicator protectCardData) {
+		this.protectCardData = Objects.requireNonNull(protectCardData);
+		return this;
 	}
 
-	@XmlElement(name = "MndtrySctyTrlr")
-	public TrueFalseIndicator getMandatorySecurityTrailer() {
-		return mandatorySecurityTrailer;
+	public Optional<TrueFalseIndicator> getMandatorySecurityTrailer() {
+		return mandatorySecurityTrailer == null ? Optional.empty() : Optional.of(mandatorySecurityTrailer);
 	}
 
-	public void setMandatorySecurityTrailer(TrueFalseIndicator mandatorySecurityTrailer) {
+	public AcquirerProtocolParameters10 setMandatorySecurityTrailer(TrueFalseIndicator mandatorySecurityTrailer) {
 		this.mandatorySecurityTrailer = mandatorySecurityTrailer;
+		return this;
 	}
 }

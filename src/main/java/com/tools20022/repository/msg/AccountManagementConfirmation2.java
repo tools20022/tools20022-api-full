@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,16 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * AccountManagementConfirmation1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountManagementConfirmation2", propOrder = {"confirmationType", "accountApplicationIdentification", "clientReference", "counterpartyReference"})
 public class AccountManagementConfirmation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ConfTp", required = true)
 	protected AccountManagementType2Code confirmationType;
 	/**
-	 * Specifies if the confirmation message applies to an account opening, an
-	 * account modification request or to a get account details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +145,7 @@ public class AccountManagementConfirmation2 {
 	 */
 	public static final MMMessageAttribute mmConfirmationType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountManagementConfirmation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation2.mmObject();
 			isDerived = false;
 			xmlTag = "ConfTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,11 +158,11 @@ public class AccountManagementConfirmation2 {
 			simpleType_lazy = () -> AccountManagementType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctApplId")
 	protected Max35Text accountApplicationIdentification;
 	/**
-	 * Unique and unambiguous identifier of the account opening or modification
-	 * instruction at application level.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,7 +204,7 @@ public class AccountManagementConfirmation2 {
 	 */
 	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountManagementConfirmation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctApplId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,10 +217,11 @@ public class AccountManagementConfirmation2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntRef")
 	protected Max35Text clientReference;
 	/**
-	 * Unique and unambiguous investor's identification of a transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -260,7 +263,7 @@ public class AccountManagementConfirmation2 {
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
-			componentContext_lazy = () -> AccountManagementConfirmation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation2.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,11 +275,11 @@ public class AccountManagementConfirmation2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrPtyRef")
 	protected AdditionalReference2 counterpartyReference;
 	/**
-	 * Unambiguous identification of the transfer as allocated by the
-	 * counterparty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -320,7 +323,7 @@ public class AccountManagementConfirmation2 {
 	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCounterpartyReference;
-			componentContext_lazy = () -> AccountManagementConfirmation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementConfirmation2.mmObject();
 			isDerived = false;
 			xmlTag = "CtrPtyRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -336,10 +339,10 @@ public class AccountManagementConfirmation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountManagementConfirmation2.mmConfirmationType, AccountManagementConfirmation2.mmAccountApplicationIdentification, AccountManagementConfirmation2.mmClientReference,
-						AccountManagementConfirmation2.mmCounterpartyReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementConfirmation2.mmConfirmationType, com.tools20022.repository.msg.AccountManagementConfirmation2.mmAccountApplicationIdentification,
+						com.tools20022.repository.msg.AccountManagementConfirmation2.mmClientReference, com.tools20022.repository.msg.AccountManagementConfirmation2.mmCounterpartyReference);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV05.mmConfirmationDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountManagementConfirmation2";
 				definition = "Information about the type of request or instruction.";
@@ -350,39 +353,39 @@ public class AccountManagementConfirmation2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ConfTp", required = true)
 	public AccountManagementType2Code getConfirmationType() {
 		return confirmationType;
 	}
 
-	public void setConfirmationType(AccountManagementType2Code confirmationType) {
-		this.confirmationType = confirmationType;
+	public AccountManagementConfirmation2 setConfirmationType(AccountManagementType2Code confirmationType) {
+		this.confirmationType = Objects.requireNonNull(confirmationType);
+		return this;
 	}
 
-	@XmlElement(name = "AcctApplId")
-	public Max35Text getAccountApplicationIdentification() {
-		return accountApplicationIdentification;
+	public Optional<Max35Text> getAccountApplicationIdentification() {
+		return accountApplicationIdentification == null ? Optional.empty() : Optional.of(accountApplicationIdentification);
 	}
 
-	public void setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
+	public AccountManagementConfirmation2 setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
 		this.accountApplicationIdentification = accountApplicationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ClntRef")
-	public Max35Text getClientReference() {
-		return clientReference;
+	public Optional<Max35Text> getClientReference() {
+		return clientReference == null ? Optional.empty() : Optional.of(clientReference);
 	}
 
-	public void setClientReference(Max35Text clientReference) {
+	public AccountManagementConfirmation2 setClientReference(Max35Text clientReference) {
 		this.clientReference = clientReference;
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtyRef")
-	public AdditionalReference2 getCounterpartyReference() {
-		return counterpartyReference;
+	public Optional<AdditionalReference2> getCounterpartyReference() {
+		return counterpartyReference == null ? Optional.empty() : Optional.of(counterpartyReference);
 	}
 
-	public void setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference2 counterpartyReference) {
+	public AccountManagementConfirmation2 setCounterpartyReference(com.tools20022.repository.msg.AdditionalReference2 counterpartyReference) {
 		this.counterpartyReference = counterpartyReference;
+		return this;
 	}
 }

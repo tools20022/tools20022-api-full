@@ -20,46 +20,50 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode;
+import com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Further sub product code list for commodity derivative Grains Oil Seeds.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode
- * AssetClassDetailedSubProductTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code#mmFeedWheat
- * AssetClassDetailedSubProductType1Code.mmFeedWheat}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code#FeedWheat
+ * AssetClassDetailedSubProductType1Code.FeedWheat}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code#mmSoybeans
- * AssetClassDetailedSubProductType1Code.mmSoybeans}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code#Soybeans
+ * AssetClassDetailedSubProductType1Code.Soybeans}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code#mmRapeseed
- * AssetClassDetailedSubProductType1Code.mmRapeseed}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code#Rapeseed
+ * AssetClassDetailedSubProductType1Code.Rapeseed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code#mmOther
- * AssetClassDetailedSubProductType1Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code#Other
+ * AssetClassDetailedSubProductType1Code.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code#mmMaize
- * AssetClassDetailedSubProductType1Code.mmMaize}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code#Maize
+ * AssetClassDetailedSubProductType1Code.Maize}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code#mmRice
- * AssetClassDetailedSubProductType1Code.mmRice}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code#Rice
+ * AssetClassDetailedSubProductType1Code.Rice}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode
+ * AssetClassDetailedSubProductTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Further sub product code list for commodity derivative Grains Oil Seeds."</li>
  * </ul>
  */
-public class AssetClassDetailedSubProductType1Code extends AssetClassDetailedSubProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AssetClassDetailedSubProductType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,11 +95,12 @@ public class AssetClassDetailedSubProductType1Code extends AssetClassDetailedSub
 	 * name} = "FeedWheat"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFeedWheat = new MMCode() {
+	public static final AssetClassDetailedSubProductType1Code FeedWheat = new AssetClassDetailedSubProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FeedWheat";
-			owner_lazy = () -> AssetClassDetailedSubProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.FeedWheat.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -113,11 +119,12 @@ public class AssetClassDetailedSubProductType1Code extends AssetClassDetailedSub
 	 * name} = "Soybeans"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSoybeans = new MMCode() {
+	public static final AssetClassDetailedSubProductType1Code Soybeans = new AssetClassDetailedSubProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Soybeans";
-			owner_lazy = () -> AssetClassDetailedSubProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.Soybeans.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -136,11 +143,12 @@ public class AssetClassDetailedSubProductType1Code extends AssetClassDetailedSub
 	 * name} = "Rapeseed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRapeseed = new MMCode() {
+	public static final AssetClassDetailedSubProductType1Code Rapeseed = new AssetClassDetailedSubProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rapeseed";
-			owner_lazy = () -> AssetClassDetailedSubProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.Rapeseed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -159,11 +167,12 @@ public class AssetClassDetailedSubProductType1Code extends AssetClassDetailedSub
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final AssetClassDetailedSubProductType1Code Other = new AssetClassDetailedSubProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> AssetClassDetailedSubProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.Other.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -182,11 +191,12 @@ public class AssetClassDetailedSubProductType1Code extends AssetClassDetailedSub
 	 * name} = "Maize"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMaize = new MMCode() {
+	public static final AssetClassDetailedSubProductType1Code Maize = new AssetClassDetailedSubProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Maize";
-			owner_lazy = () -> AssetClassDetailedSubProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.Maize.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -205,26 +215,62 @@ public class AssetClassDetailedSubProductType1Code extends AssetClassDetailedSub
 	 * name} = "Rice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRice = new MMCode() {
+	public static final AssetClassDetailedSubProductType1Code Rice = new AssetClassDetailedSubProductType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rice";
-			owner_lazy = () -> AssetClassDetailedSubProductType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.Rice.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AssetClassDetailedSubProductType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AssetClassDetailedSubProductType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassDetailedSubProductType1Code";
 				definition = "Further sub product code list for commodity derivative Grains Oil Seeds.";
-				code_lazy = () -> Arrays.asList(AssetClassDetailedSubProductType1Code.mmFeedWheat, AssetClassDetailedSubProductType1Code.mmSoybeans, AssetClassDetailedSubProductType1Code.mmRapeseed,
-						AssetClassDetailedSubProductType1Code.mmOther, AssetClassDetailedSubProductType1Code.mmMaize, AssetClassDetailedSubProductType1Code.mmRice);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.FeedWheat, com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.Soybeans,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.Rapeseed, com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.Other,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.Maize, com.tools20022.repository.codeset.AssetClassDetailedSubProductType1Code.Rice);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(FeedWheat.getCodeName().get(), FeedWheat);
+		codesByName.put(Soybeans.getCodeName().get(), Soybeans);
+		codesByName.put(Rapeseed.getCodeName().get(), Rapeseed);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(Maize.getCodeName().get(), Maize);
+		codesByName.put(Rice.getCodeName().get(), Rice);
+	}
+
+	public static AssetClassDetailedSubProductType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AssetClassDetailedSubProductType1Code[] values() {
+		AssetClassDetailedSubProductType1Code[] values = new AssetClassDetailedSubProductType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AssetClassDetailedSubProductType1Code> {
+		@Override
+		public AssetClassDetailedSubProductType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AssetClassDetailedSubProductType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

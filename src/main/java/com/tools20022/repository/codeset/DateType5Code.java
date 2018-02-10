@@ -20,29 +20,33 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DateTypeCode;
+import com.tools20022.repository.codeset.DateType5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies a type of date.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DateTypeCode DateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DateType5Code#mmOpen
- * DateType5Code.mmOpen}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateType5Code#Open
+ * DateType5Code.Open}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DateTypeCode DateTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -59,7 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies a type of date."</li>
  * </ul>
  */
-public class DateType5Code extends DateTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DateType5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -78,26 +83,56 @@ public class DateType5Code extends DateTypeCode {
 	 * name} = "Open"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpen = new MMCode() {
+	public static final DateType5Code Open = new DateType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Open";
-			owner_lazy = () -> DateType5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DateType5Code.mmObject();
+			codeName = DateTypeCode.Open.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DateType5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DateType5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("OPEN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateType5Code";
 				definition = "Specifies a type of date.";
-				code_lazy = () -> Arrays.asList(DateType5Code.mmOpen);
 				trace_lazy = () -> DateTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DateType5Code.Open);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Open.getCodeName().get(), Open);
+	}
+
+	public static DateType5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DateType5Code[] values() {
+		DateType5Code[] values = new DateType5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DateType5Code> {
+		@Override
+		public DateType5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DateType5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

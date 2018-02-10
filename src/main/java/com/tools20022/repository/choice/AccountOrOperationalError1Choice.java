@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountReport13;
 import com.tools20022.repository.msg.ErrorHandling3;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountOrOperationalError1Choice", propOrder = {"accountReport", "operationalError"})
 public class AccountOrOperationalError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctRpt", required = true)
 	protected List<AccountReport13> accountReport;
 	/**
-	 * Reports either on the account information or on a business error.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -117,7 +120,7 @@ public class AccountOrOperationalError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAccountReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountOrOperationalError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AcctRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,11 +132,11 @@ public class AccountOrOperationalError1Choice {
 			type_lazy = () -> AccountReport13.mmObject();
 		}
 	};
+	@XmlElement(name = "OprlErr", required = true)
 	protected List<ErrorHandling3> operationalError;
 	/**
-	 * Indicates that an operational error has been issued during the processing
-	 * of the related request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -169,7 +172,7 @@ public class AccountOrOperationalError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountOrOperationalError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AccountOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,8 +188,8 @@ public class AccountOrOperationalError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountOrOperationalError1Choice.mmAccountReport, AccountOrOperationalError1Choice.mmOperationalError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountOrOperationalError1Choice.mmAccountReport, com.tools20022.repository.choice.AccountOrOperationalError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountOrOperationalError1Choice";
 				definition = "Choice between account details or an operational error when the requested data cannot be retrieved.";
@@ -196,21 +199,21 @@ public class AccountOrOperationalError1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctRpt", required = true)
 	public List<AccountReport13> getAccountReport() {
-		return accountReport;
+		return accountReport == null ? accountReport = new ArrayList<>() : accountReport;
 	}
 
-	public void setAccountReport(List<AccountReport13> accountReport) {
-		this.accountReport = accountReport;
+	public AccountOrOperationalError1Choice setAccountReport(List<AccountReport13> accountReport) {
+		this.accountReport = Objects.requireNonNull(accountReport);
+		return this;
 	}
 
-	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
-		return operationalError;
+		return operationalError == null ? operationalError = new ArrayList<>() : operationalError;
 	}
 
-	public void setOperationalError(List<ErrorHandling3> operationalError) {
-		this.operationalError = operationalError;
+	public AccountOrOperationalError1Choice setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = Objects.requireNonNull(operationalError);
+		return this;
 	}
 }

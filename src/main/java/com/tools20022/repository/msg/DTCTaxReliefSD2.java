@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * "DTC (The Depository Trust Company) Tax Relief service election details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "DTCTaxReliefSD2", propOrder = {"placeAndName", "DTCTaxReliefCategory", "instructionQuantity"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "DTCTaxReliefSD2", propOrder = {"placeAndName", "dTCTaxReliefCategory", "instructionQuantity"})
 public class DTCTaxReliefSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +103,7 @@ public class DTCTaxReliefSD2 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DTCTaxReliefSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DTCTaxReliefSD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,11 +114,11 @@ public class DTCTaxReliefSD2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCTaxRlfCtgy", required = true)
 	protected DTCTaxReliefSD1 dTCTaxReliefCategory;
 	/**
-	 * Provides information about the defined tax relief categories used by DTC
-	 * (The Depository Trust Corporation).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -129,6 +132,9 @@ public class DTCTaxReliefSD2 {
 	 * DTCTaxReliefSD2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCTaxRlfCtgy"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Tax Relief Category Description</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -144,9 +150,10 @@ public class DTCTaxReliefSD2 {
 	 */
 	public static final MMMessageAttribute mmDTCTaxReliefCategory = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DTCTaxReliefSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DTCTaxReliefSD2.mmObject();
 			isDerived = false;
 			xmlTag = "DTCTaxRlfCtgy";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Tax Relief Category Description"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCTaxReliefCategory";
 			definition = "Provides information about the defined tax relief categories used by DTC (The Depository Trust Corporation).";
@@ -155,10 +162,11 @@ public class DTCTaxReliefSD2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.DTCTaxReliefSD1.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrQty", required = true)
 	protected FinancialInstrumentQuantity15Choice instructionQuantity;
 	/**
-	 * Instructed quantity for DTC Tax Relief service elections.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,6 +182,9 @@ public class DTCTaxReliefSD2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InstrQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Tax Relief Elected Quantity</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -187,9 +198,10 @@ public class DTCTaxReliefSD2 {
 	 */
 	public static final MMMessageAttribute mmInstructionQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DTCTaxReliefSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DTCTaxReliefSD2.mmObject();
 			isDerived = false;
 			xmlTag = "InstrQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Tax Relief Elected Quantity"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionQuantity";
 			definition = "Instructed quantity for DTC Tax Relief service elections.";
@@ -202,8 +214,9 @@ public class DTCTaxReliefSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DTCTaxReliefSD2.mmPlaceAndName, DTCTaxReliefSD2.mmDTCTaxReliefCategory, DTCTaxReliefSD2.mmInstructionQuantity);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DTCTaxReliefSD2.mmPlaceAndName, com.tools20022.repository.msg.DTCTaxReliefSD2.mmDTCTaxReliefCategory,
+						com.tools20022.repository.msg.DTCTaxReliefSD2.mmInstructionQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DTCTaxReliefSD2";
 				definition = "DTC (The Depository Trust Company) Tax Relief service election details.";
@@ -212,30 +225,30 @@ public class DTCTaxReliefSD2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public DTCTaxReliefSD2 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "DTCTaxRlfCtgy", required = true)
 	public DTCTaxReliefSD1 getDTCTaxReliefCategory() {
 		return dTCTaxReliefCategory;
 	}
 
-	public void setDTCTaxReliefCategory(com.tools20022.repository.msg.DTCTaxReliefSD1 dTCTaxReliefCategory) {
-		this.dTCTaxReliefCategory = dTCTaxReliefCategory;
+	public DTCTaxReliefSD2 setDTCTaxReliefCategory(com.tools20022.repository.msg.DTCTaxReliefSD1 dTCTaxReliefCategory) {
+		this.dTCTaxReliefCategory = Objects.requireNonNull(dTCTaxReliefCategory);
+		return this;
 	}
 
-	@XmlElement(name = "InstrQty", required = true)
 	public FinancialInstrumentQuantity15Choice getInstructionQuantity() {
 		return instructionQuantity;
 	}
 
-	public void setInstructionQuantity(FinancialInstrumentQuantity15Choice instructionQuantity) {
-		this.instructionQuantity = instructionQuantity;
+	public DTCTaxReliefSD2 setInstructionQuantity(FinancialInstrumentQuantity15Choice instructionQuantity) {
+		this.instructionQuantity = Objects.requireNonNull(instructionQuantity);
+		return this;
 	}
 }

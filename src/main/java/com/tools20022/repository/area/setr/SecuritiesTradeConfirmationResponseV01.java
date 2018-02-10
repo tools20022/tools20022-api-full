@@ -26,9 +26,8 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion;
 import com.tools20022.repository.msgset.PostTradeMatchingISOPreviousversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -58,25 +57,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
- * SecuritiesTradeLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeMatchingISOPreviousversion
- * PostTradeMatchingISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion
- * PostTradeMatchingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesTradConfRspn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -101,6 +81,25 @@ import javax.xml.bind.annotation.*;
  * SecuritiesTradeConfirmationResponseV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeMatchingISOPreviousversion
+ * PostTradeMatchingISOPreviousversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion
+ * PostTradeMatchingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesTradConfRspn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
+ * SecuritiesTradeLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code setr.030.001.01}</li>
@@ -116,17 +115,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesTradeConfirmationResponseV01", propOrder = {"identification", "references", "status", "clearingDetails", "confirmationParties", "supplementaryData"})
 public class SecuritiesTradeConfirmationResponseV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected TransactiontIdentification4 identification;
 	/**
-	 * Information that unambiguously identifies an
-	 * SecuritiesTradeConfirmationResponse message as known by the account owner
-	 * (or the instructing party acting on its behalf).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,11 +166,11 @@ public class SecuritiesTradeConfirmationResponseV01 {
 			}
 		}
 	};
+	@XmlElement(name = "Refs", required = true)
 	protected List<Linkages15> references;
 	/**
-	 * Link to another transaction that must be processed after, before or at
-	 * the same time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -212,10 +210,11 @@ public class SecuritiesTradeConfirmationResponseV01 {
 			}
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected StatusAndReason10 status;
 	/**
-	 * Provides details on the processing status of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -255,10 +254,11 @@ public class SecuritiesTradeConfirmationResponseV01 {
 			}
 		}
 	};
+	@XmlElement(name = "ClrDtls")
 	protected Clearing3 clearingDetails;
 	/**
-	 * Provides clearing member information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,10 +297,11 @@ public class SecuritiesTradeConfirmationResponseV01 {
 			}
 		}
 	};
+	@XmlElement(name = "ConfPties")
 	protected List<ConfirmationParties3> confirmationParties;
 	/**
-	 * Parties involved in the confirmation of the details of a trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -340,11 +341,11 @@ public class SecuritiesTradeConfirmationResponseV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -418,61 +419,61 @@ public class SecuritiesTradeConfirmationResponseV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public TransactiontIdentification4 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(TransactiontIdentification4 identification) {
-		this.identification = identification;
+	public SecuritiesTradeConfirmationResponseV01 setIdentification(TransactiontIdentification4 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Refs", required = true)
 	public List<Linkages15> getReferences() {
-		return references;
+		return references == null ? references = new ArrayList<>() : references;
 	}
 
-	public void setReferences(List<Linkages15> references) {
-		this.references = references;
+	public SecuritiesTradeConfirmationResponseV01 setReferences(List<Linkages15> references) {
+		this.references = Objects.requireNonNull(references);
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public StatusAndReason10 getStatus() {
 		return status;
 	}
 
-	public void setStatus(StatusAndReason10 status) {
-		this.status = status;
+	public SecuritiesTradeConfirmationResponseV01 setStatus(StatusAndReason10 status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "ClrDtls")
-	public Clearing3 getClearingDetails() {
-		return clearingDetails;
+	public Optional<Clearing3> getClearingDetails() {
+		return clearingDetails == null ? Optional.empty() : Optional.of(clearingDetails);
 	}
 
-	public void setClearingDetails(Clearing3 clearingDetails) {
+	public SecuritiesTradeConfirmationResponseV01 setClearingDetails(Clearing3 clearingDetails) {
 		this.clearingDetails = clearingDetails;
+		return this;
 	}
 
-	@XmlElement(name = "ConfPties")
 	public List<ConfirmationParties3> getConfirmationParties() {
-		return confirmationParties;
+		return confirmationParties == null ? confirmationParties = new ArrayList<>() : confirmationParties;
 	}
 
-	public void setConfirmationParties(List<ConfirmationParties3> confirmationParties) {
-		this.confirmationParties = confirmationParties;
+	public SecuritiesTradeConfirmationResponseV01 setConfirmationParties(List<ConfirmationParties3> confirmationParties) {
+		this.confirmationParties = Objects.requireNonNull(confirmationParties);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuritiesTradeConfirmationResponseV01 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.030.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:setr.030.001.01")
 	static public class Document {
 		@XmlElement(name = "SctiesTradConfRspn", required = true)
 		public SecuritiesTradeConfirmationResponseV01 messageBody;

@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteris
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -83,8 +85,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,17 +97,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Investment restrictions linked to the instrument."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvestmentRestrictions2", propOrder = {"minimumInitialSubscriptionAmount", "minimumInitialSubscriptionUnits", "minimumSubsequentSubscriptionAmount", "minimumSubsequentSubscriptionUnits", "maximumRedemptionAmount",
 		"maximumRedemptionUnits", "otherRedemptionRestrictions", "minimumHoldingAmount", "minimumHoldingUnits", "minimumHoldingPeriod", "holdingTransferable"})
 public class InvestmentRestrictions2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MinInitlSbcptAmt")
 	protected ActiveCurrencyAndAmount minimumInitialSubscriptionAmount;
 	/**
-	 * Minimum initial quantity of securities, expressed as an amount that must
-	 * be purchased at subscription.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +144,7 @@ public class InvestmentRestrictions2 {
 	public static final MMMessageAttribute mmMinimumInitialSubscriptionAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumInitialSubscriptionAmount;
-			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MinInitlSbcptAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,10 +155,11 @@ public class InvestmentRestrictions2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "MinInitlSbcptUnits")
 	protected Number minimumInitialSubscriptionUnits;
 	/**
-	 * Minimum initial number of units/shares that must be purchased.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,7 +194,7 @@ public class InvestmentRestrictions2 {
 	public static final MMMessageAttribute mmMinimumInitialSubscriptionUnits = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumInitialSubscriptionUnits;
-			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MinInitlSbcptUnits";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,11 +205,11 @@ public class InvestmentRestrictions2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "MinSbsqntSbcptAmt")
 	protected ActiveCurrencyAndAmount minimumSubsequentSubscriptionAmount;
 	/**
-	 * Minimum quantity of securities, expressed as an amount that must be
-	 * purchased.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -243,7 +246,7 @@ public class InvestmentRestrictions2 {
 	public static final MMMessageAttribute mmMinimumSubsequentSubscriptionAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumSubscriptionAmount;
-			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MinSbsqntSbcptAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,11 +257,11 @@ public class InvestmentRestrictions2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "MinSbsqntSbcptUnits")
 	protected Number minimumSubsequentSubscriptionUnits;
 	/**
-	 * Minimum quantity of securities, expressed as number of units/shares that
-	 * must be purchased.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -293,7 +296,7 @@ public class InvestmentRestrictions2 {
 	public static final MMMessageAttribute mmMinimumSubsequentSubscriptionUnits = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumSubscriptionUnits;
-			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MinSbsqntSbcptUnits";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -304,10 +307,11 @@ public class InvestmentRestrictions2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxRedAmt")
 	protected ActiveCurrencyAndAmount maximumRedemptionAmount;
 	/**
-	 * Maximum quantity of securities, expressed as an amount that can be sold.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -343,7 +347,7 @@ public class InvestmentRestrictions2 {
 	public static final MMMessageAttribute mmMaximumRedemptionAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMaximumRedemptionAmount;
-			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxRedAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -354,11 +358,11 @@ public class InvestmentRestrictions2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxRedUnits")
 	protected Number maximumRedemptionUnits;
 	/**
-	 * Maximum number of shares/units that may be redeemed on a single dealing
-	 * day.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -393,7 +397,7 @@ public class InvestmentRestrictions2 {
 	public static final MMMessageAttribute mmMaximumRedemptionUnits = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMaximumRedemptionUnits;
-			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxRedUnits";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -404,11 +408,11 @@ public class InvestmentRestrictions2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrRedRstrctns")
 	protected Max350Text otherRedemptionRestrictions;
 	/**
-	 * Specifies any other restrictions that may limit an investor's ability to
-	 * redeem.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -437,7 +441,7 @@ public class InvestmentRestrictions2 {
 	 */
 	public static final MMMessageAttribute mmOtherRedemptionRestrictions = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrRedRstrctns";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -448,11 +452,11 @@ public class InvestmentRestrictions2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MinHldgAmt")
 	protected ActiveCurrencyAndAmount minimumHoldingAmount;
 	/**
-	 * Minimum value of units that must be maintained to avoid automatic
-	 * redemption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -488,7 +492,7 @@ public class InvestmentRestrictions2 {
 	public static final MMMessageAttribute mmMinimumHoldingAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumHoldingAmount;
-			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MinHldgAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -499,11 +503,11 @@ public class InvestmentRestrictions2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "MinHldgUnits")
 	protected DecimalNumber minimumHoldingUnits;
 	/**
-	 * Minimum number of units that must be maintained to avoid automatic
-	 * redemption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -539,7 +543,7 @@ public class InvestmentRestrictions2 {
 	public static final MMMessageAttribute mmMinimumHoldingUnits = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumHoldingUnits;
-			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MinHldgUnits";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -550,12 +554,11 @@ public class InvestmentRestrictions2 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "MinHldgPrd")
 	protected Max70Text minimumHoldingPeriod;
 	/**
-	 * Description of a period, that may be a number of days, weeks or
-	 * descriptive period during which the units/shares must be held following
-	 * their issue before redemption will be permitted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -590,7 +593,7 @@ public class InvestmentRestrictions2 {
 	public static final MMMessageAttribute mmMinimumHoldingPeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmMinimumHoldingPeriod;
-			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "MinHldgPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -601,11 +604,11 @@ public class InvestmentRestrictions2 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "HldgTrfbl", required = true)
 	protected HoldingTransferable1Code holdingTransferable;
 	/**
-	 * Indicates whether registered investors are able to transfer some or all
-	 * of their holdings to third parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -641,7 +644,7 @@ public class InvestmentRestrictions2 {
 	public static final MMMessageAttribute mmHoldingTransferable = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmHoldingTransferable;
-			componentContext_lazy = () -> InvestmentRestrictions2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentRestrictions2.mmObject();
 			isDerived = false;
 			xmlTag = "HldgTrfbl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -656,12 +659,14 @@ public class InvestmentRestrictions2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InvestmentRestrictions2.mmMinimumInitialSubscriptionAmount, InvestmentRestrictions2.mmMinimumInitialSubscriptionUnits, InvestmentRestrictions2.mmMinimumSubsequentSubscriptionAmount,
-						InvestmentRestrictions2.mmMinimumSubsequentSubscriptionUnits, InvestmentRestrictions2.mmMaximumRedemptionAmount, InvestmentRestrictions2.mmMaximumRedemptionUnits,
-						InvestmentRestrictions2.mmOtherRedemptionRestrictions, InvestmentRestrictions2.mmMinimumHoldingAmount, InvestmentRestrictions2.mmMinimumHoldingUnits, InvestmentRestrictions2.mmMinimumHoldingPeriod,
-						InvestmentRestrictions2.mmHoldingTransferable);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentRestrictions2.mmMinimumInitialSubscriptionAmount, com.tools20022.repository.msg.InvestmentRestrictions2.mmMinimumInitialSubscriptionUnits,
+						com.tools20022.repository.msg.InvestmentRestrictions2.mmMinimumSubsequentSubscriptionAmount, com.tools20022.repository.msg.InvestmentRestrictions2.mmMinimumSubsequentSubscriptionUnits,
+						com.tools20022.repository.msg.InvestmentRestrictions2.mmMaximumRedemptionAmount, com.tools20022.repository.msg.InvestmentRestrictions2.mmMaximumRedemptionUnits,
+						com.tools20022.repository.msg.InvestmentRestrictions2.mmOtherRedemptionRestrictions, com.tools20022.repository.msg.InvestmentRestrictions2.mmMinimumHoldingAmount,
+						com.tools20022.repository.msg.InvestmentRestrictions2.mmMinimumHoldingUnits, com.tools20022.repository.msg.InvestmentRestrictions2.mmMinimumHoldingPeriod,
+						com.tools20022.repository.msg.InvestmentRestrictions2.mmHoldingTransferable);
 				trace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentRestrictions2";
 				definition = "Investment restrictions linked to the instrument.";
@@ -670,102 +675,102 @@ public class InvestmentRestrictions2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MinInitlSbcptAmt")
-	public ActiveCurrencyAndAmount getMinimumInitialSubscriptionAmount() {
-		return minimumInitialSubscriptionAmount;
+	public Optional<ActiveCurrencyAndAmount> getMinimumInitialSubscriptionAmount() {
+		return minimumInitialSubscriptionAmount == null ? Optional.empty() : Optional.of(minimumInitialSubscriptionAmount);
 	}
 
-	public void setMinimumInitialSubscriptionAmount(ActiveCurrencyAndAmount minimumInitialSubscriptionAmount) {
+	public InvestmentRestrictions2 setMinimumInitialSubscriptionAmount(ActiveCurrencyAndAmount minimumInitialSubscriptionAmount) {
 		this.minimumInitialSubscriptionAmount = minimumInitialSubscriptionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "MinInitlSbcptUnits")
-	public Number getMinimumInitialSubscriptionUnits() {
-		return minimumInitialSubscriptionUnits;
+	public Optional<Number> getMinimumInitialSubscriptionUnits() {
+		return minimumInitialSubscriptionUnits == null ? Optional.empty() : Optional.of(minimumInitialSubscriptionUnits);
 	}
 
-	public void setMinimumInitialSubscriptionUnits(Number minimumInitialSubscriptionUnits) {
+	public InvestmentRestrictions2 setMinimumInitialSubscriptionUnits(Number minimumInitialSubscriptionUnits) {
 		this.minimumInitialSubscriptionUnits = minimumInitialSubscriptionUnits;
+		return this;
 	}
 
-	@XmlElement(name = "MinSbsqntSbcptAmt")
-	public ActiveCurrencyAndAmount getMinimumSubsequentSubscriptionAmount() {
-		return minimumSubsequentSubscriptionAmount;
+	public Optional<ActiveCurrencyAndAmount> getMinimumSubsequentSubscriptionAmount() {
+		return minimumSubsequentSubscriptionAmount == null ? Optional.empty() : Optional.of(minimumSubsequentSubscriptionAmount);
 	}
 
-	public void setMinimumSubsequentSubscriptionAmount(ActiveCurrencyAndAmount minimumSubsequentSubscriptionAmount) {
+	public InvestmentRestrictions2 setMinimumSubsequentSubscriptionAmount(ActiveCurrencyAndAmount minimumSubsequentSubscriptionAmount) {
 		this.minimumSubsequentSubscriptionAmount = minimumSubsequentSubscriptionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "MinSbsqntSbcptUnits")
-	public Number getMinimumSubsequentSubscriptionUnits() {
-		return minimumSubsequentSubscriptionUnits;
+	public Optional<Number> getMinimumSubsequentSubscriptionUnits() {
+		return minimumSubsequentSubscriptionUnits == null ? Optional.empty() : Optional.of(minimumSubsequentSubscriptionUnits);
 	}
 
-	public void setMinimumSubsequentSubscriptionUnits(Number minimumSubsequentSubscriptionUnits) {
+	public InvestmentRestrictions2 setMinimumSubsequentSubscriptionUnits(Number minimumSubsequentSubscriptionUnits) {
 		this.minimumSubsequentSubscriptionUnits = minimumSubsequentSubscriptionUnits;
+		return this;
 	}
 
-	@XmlElement(name = "MaxRedAmt")
-	public ActiveCurrencyAndAmount getMaximumRedemptionAmount() {
-		return maximumRedemptionAmount;
+	public Optional<ActiveCurrencyAndAmount> getMaximumRedemptionAmount() {
+		return maximumRedemptionAmount == null ? Optional.empty() : Optional.of(maximumRedemptionAmount);
 	}
 
-	public void setMaximumRedemptionAmount(ActiveCurrencyAndAmount maximumRedemptionAmount) {
+	public InvestmentRestrictions2 setMaximumRedemptionAmount(ActiveCurrencyAndAmount maximumRedemptionAmount) {
 		this.maximumRedemptionAmount = maximumRedemptionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "MaxRedUnits")
-	public Number getMaximumRedemptionUnits() {
-		return maximumRedemptionUnits;
+	public Optional<Number> getMaximumRedemptionUnits() {
+		return maximumRedemptionUnits == null ? Optional.empty() : Optional.of(maximumRedemptionUnits);
 	}
 
-	public void setMaximumRedemptionUnits(Number maximumRedemptionUnits) {
+	public InvestmentRestrictions2 setMaximumRedemptionUnits(Number maximumRedemptionUnits) {
 		this.maximumRedemptionUnits = maximumRedemptionUnits;
+		return this;
 	}
 
-	@XmlElement(name = "OthrRedRstrctns")
-	public Max350Text getOtherRedemptionRestrictions() {
-		return otherRedemptionRestrictions;
+	public Optional<Max350Text> getOtherRedemptionRestrictions() {
+		return otherRedemptionRestrictions == null ? Optional.empty() : Optional.of(otherRedemptionRestrictions);
 	}
 
-	public void setOtherRedemptionRestrictions(Max350Text otherRedemptionRestrictions) {
+	public InvestmentRestrictions2 setOtherRedemptionRestrictions(Max350Text otherRedemptionRestrictions) {
 		this.otherRedemptionRestrictions = otherRedemptionRestrictions;
+		return this;
 	}
 
-	@XmlElement(name = "MinHldgAmt")
-	public ActiveCurrencyAndAmount getMinimumHoldingAmount() {
-		return minimumHoldingAmount;
+	public Optional<ActiveCurrencyAndAmount> getMinimumHoldingAmount() {
+		return minimumHoldingAmount == null ? Optional.empty() : Optional.of(minimumHoldingAmount);
 	}
 
-	public void setMinimumHoldingAmount(ActiveCurrencyAndAmount minimumHoldingAmount) {
+	public InvestmentRestrictions2 setMinimumHoldingAmount(ActiveCurrencyAndAmount minimumHoldingAmount) {
 		this.minimumHoldingAmount = minimumHoldingAmount;
+		return this;
 	}
 
-	@XmlElement(name = "MinHldgUnits")
-	public DecimalNumber getMinimumHoldingUnits() {
-		return minimumHoldingUnits;
+	public Optional<DecimalNumber> getMinimumHoldingUnits() {
+		return minimumHoldingUnits == null ? Optional.empty() : Optional.of(minimumHoldingUnits);
 	}
 
-	public void setMinimumHoldingUnits(DecimalNumber minimumHoldingUnits) {
+	public InvestmentRestrictions2 setMinimumHoldingUnits(DecimalNumber minimumHoldingUnits) {
 		this.minimumHoldingUnits = minimumHoldingUnits;
+		return this;
 	}
 
-	@XmlElement(name = "MinHldgPrd")
-	public Max70Text getMinimumHoldingPeriod() {
-		return minimumHoldingPeriod;
+	public Optional<Max70Text> getMinimumHoldingPeriod() {
+		return minimumHoldingPeriod == null ? Optional.empty() : Optional.of(minimumHoldingPeriod);
 	}
 
-	public void setMinimumHoldingPeriod(Max70Text minimumHoldingPeriod) {
+	public InvestmentRestrictions2 setMinimumHoldingPeriod(Max70Text minimumHoldingPeriod) {
 		this.minimumHoldingPeriod = minimumHoldingPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "HldgTrfbl", required = true)
 	public HoldingTransferable1Code getHoldingTransferable() {
 		return holdingTransferable;
 	}
 
-	public void setHoldingTransferable(HoldingTransferable1Code holdingTransferable) {
-		this.holdingTransferable = holdingTransferable;
+	public InvestmentRestrictions2 setHoldingTransferable(HoldingTransferable1Code holdingTransferable) {
+		this.holdingTransferable = Objects.requireNonNull(holdingTransferable);
+		return this;
 	}
 }

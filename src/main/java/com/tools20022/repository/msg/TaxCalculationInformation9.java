@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * TaxCalculationInformation8}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TaxCalculationInformation9", propOrder = "basis")
 public class TaxCalculationInformation9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Bsis", required = true)
 	protected TaxBasis1Choice basis;
 	/**
-	 * Form of the rebate, for example, cash.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +115,7 @@ public class TaxCalculationInformation9 {
 	public static final MMMessageAttribute mmBasis = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmBasis;
-			componentContext_lazy = () -> TaxCalculationInformation9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation9.mmObject();
 			isDerived = false;
 			xmlTag = "Bsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,9 +131,9 @@ public class TaxCalculationInformation9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TaxCalculationInformation9.mmBasis);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation9.mmBasis);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxCalculationInformation9";
 				definition = "Information used to calculate the tax.";
@@ -141,12 +143,12 @@ public class TaxCalculationInformation9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Bsis", required = true)
 	public TaxBasis1Choice getBasis() {
 		return basis;
 	}
 
-	public void setBasis(TaxBasis1Choice basis) {
-		this.basis = basis;
+	public TaxCalculationInformation9 setBasis(TaxBasis1Choice basis) {
+		this.basis = Objects.requireNonNull(basis);
+		return this;
 	}
 }

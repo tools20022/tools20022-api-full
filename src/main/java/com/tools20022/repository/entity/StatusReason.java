@@ -24,9 +24,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Specifies the underlying reason for the status of an object.
@@ -71,6 +70,118 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.StatusReason#mmRelatedClosureReason
  * StatusReason.mmRelatedClosureReason}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedStatusReason
+ * GenericIdentification.mmRelatedStatusReason}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Status#mmStatusReason
+ * Status.mmStatusReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegisteredContract#mmClosureReason
+ * RegisteredContract.mmClosureReason}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryReason1#mmReason
+ * ProprietaryReason1.mmReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryReason2#mmReason
+ * ProprietaryReason2.mmReason}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ReturnReason1Choice#mmCode
+ * ReturnReason1Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ReturnReason1Choice#mmProprietary
+ * ReturnReason1Choice.mmProprietary}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ReturnReason5Choice#mmCode
+ * ReturnReason5Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ReturnReason5Choice#mmProprietary
+ * ReturnReason5Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReversalReasonInformation6#mmReason
+ * ReversalReasonInformation6.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentReversalReason7#mmReason
+ * PaymentReversalReason7.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AmendmentReasonInformation1#mmReason
+ * AmendmentReasonInformation1.mmReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentReturnReason1#mmReason
+ * PaymentReturnReason1.mmReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InRepairStatusReason3#mmReason
+ * InRepairStatusReason3.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TransferUnmatchedStatus#mmReason
+ * TransferUnmatchedStatus.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatus2#mmReason
+ * TransferUnmatchedStatus2.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatus2#mmExtendedReason
+ * TransferUnmatchedStatus2.mmExtendedReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FailedSettlementStatus1#mmDataSourceScheme
+ * FailedSettlementStatus1.mmDataSourceScheme}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RejectionReason1Choice#mmGlobalRejectionReason
+ * RejectionReason1Choice.mmGlobalRejectionReason}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ReturnReason3Choice#mmCode
+ * ReturnReason3Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ReturnReason3Choice#mmProprietary
+ * ReturnReason3Choice.mmProprietary}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ReturnReason4Choice#mmCode
+ * ReturnReason4Choice.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ReturnReason4Choice#mmProprietary
+ * ReturnReason4Choice.mmProprietary}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Reason3#mmReason
+ * Reason3.mmReason}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reason3Choice#mmReason
+ * Reason3Choice.mmReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryReason4#mmReason
+ * ProprietaryReason4.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#mmStatus
+ * CancellationStatusAndReason3.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TransferUnmatchedStatus3Choice#mmReason
+ * TransferUnmatchedStatus3Choice.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TransferUnmatchedStatus3Choice#mmExtendedReason
+ * TransferUnmatchedStatus3Choice.mmExtendedReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FailedSettlementStatus2Choice#mmDataSourceScheme
+ * FailedSettlementStatus2Choice.mmDataSourceScheme}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Status21Choice#mmRejected
+ * Status21Choice.mmRejected}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Status21Choice#mmComplete
+ * Status21Choice.mmComplete}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CancelledCompleteReason1#mmAdditionalReasonInformation
+ * CancelledCompleteReason1.mmAdditionalReasonInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryReason5#mmReason
+ * ProprietaryReason5.mmReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ClosedStatusReason1#mmCode
+ * ClosedStatusReason1.mmCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProformaStatusReason1#mmCode
+ * ProformaStatusReason1.mmCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DisabledStatusReason1#mmCode
+ * DisabledStatusReason1.mmCode}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EnabledStatusReason1#mmCode
+ * EnabledStatusReason1.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason4#mmReason
+ * SuspendedStatusReason4.mmReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InRepairStatusReason4#mmReason
+ * InRepairStatusReason4.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -216,122 +327,10 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.GenericIdentification#mmRelatedStatusReason
- * GenericIdentification.mmRelatedStatusReason}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Status#mmStatusReason
- * Status.mmStatusReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RegisteredContract#mmClosureReason
- * RegisteredContract.mmClosureReason}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryReason1#mmReason
- * ProprietaryReason1.mmReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryReason2#mmReason
- * ProprietaryReason2.mmReason}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ReturnReason1Choice#mmCode
- * ReturnReason1Choice.mmCode}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ReturnReason1Choice#mmProprietary
- * ReturnReason1Choice.mmProprietary}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ReturnReason5Choice#mmCode
- * ReturnReason5Choice.mmCode}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ReturnReason5Choice#mmProprietary
- * ReturnReason5Choice.mmProprietary}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.ReversalReasonInformation6#mmReason
- * ReversalReasonInformation6.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.PaymentReversalReason7#mmReason
- * PaymentReversalReason7.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AmendmentReasonInformation1#mmReason
- * AmendmentReasonInformation1.mmReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PaymentReturnReason1#mmReason
- * PaymentReturnReason1.mmReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InRepairStatusReason3#mmReason
- * InRepairStatusReason3.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.TransferUnmatchedStatus#mmReason
- * TransferUnmatchedStatus.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatus2#mmReason
- * TransferUnmatchedStatus2.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TransferUnmatchedStatus2#mmExtendedReason
- * TransferUnmatchedStatus2.mmExtendedReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FailedSettlementStatus1#mmDataSourceScheme
- * FailedSettlementStatus1.mmDataSourceScheme}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.RejectionReason1Choice#mmGlobalRejectionReason
- * RejectionReason1Choice.mmGlobalRejectionReason}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ReturnReason3Choice#mmCode
- * ReturnReason3Choice.mmCode}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ReturnReason3Choice#mmProprietary
- * ReturnReason3Choice.mmProprietary}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ReturnReason4Choice#mmCode
- * ReturnReason4Choice.mmCode}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.ReturnReason4Choice#mmProprietary
- * ReturnReason4Choice.mmProprietary}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Reason3#mmReason
- * Reason3.mmReason}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Reason3Choice#mmReason
- * Reason3Choice.mmReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryReason4#mmReason
- * ProprietaryReason4.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason3#mmStatus
- * CancellationStatusAndReason3.mmStatus}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.TransferUnmatchedStatus3Choice#mmReason
- * TransferUnmatchedStatus3Choice.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.TransferUnmatchedStatus3Choice#mmExtendedReason
- * TransferUnmatchedStatus3Choice.mmExtendedReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.FailedSettlementStatus2Choice#mmDataSourceScheme
- * FailedSettlementStatus2Choice.mmDataSourceScheme}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Status21Choice#mmRejected
- * Status21Choice.mmRejected}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Status21Choice#mmComplete
- * Status21Choice.mmComplete}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CancelledCompleteReason1#mmAdditionalReasonInformation
- * CancelledCompleteReason1.mmAdditionalReasonInformation}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProprietaryReason5#mmReason
- * ProprietaryReason5.mmReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ClosedStatusReason1#mmCode
- * ClosedStatusReason1.mmCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ProformaStatusReason1#mmCode
- * ProformaStatusReason1.mmCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DisabledStatusReason1#mmCode
- * DisabledStatusReason1.mmCode}</li>
- * <li>{@linkplain com.tools20022.repository.msg.EnabledStatusReason1#mmCode
- * EnabledStatusReason1.mmCode}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SuspendedStatusReason4#mmReason
- * SuspendedStatusReason4.mmReason}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InRepairStatusReason4#mmReason
- * InRepairStatusReason4.mmReason}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -347,8 +346,8 @@ public class StatusReason {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Status status;
 	/**
-	 * Status for which a reason is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -407,8 +406,8 @@ public class StatusReason {
 		{
 			derivation_lazy = () -> Arrays.asList(IntraPositionProcessingStatus1Choice.mmProprietary, IntraPositionProcessingStatus2Choice.mmProprietary, IntraPositionProcessingStatus3Choice.mmProprietary,
 					IntraPositionProcessingStatus4Choice.mmProprietary, SecuritiesCollateralResponse1.mmResponseType, IntraPositionProcessingStatus5Choice.mmProprietary, IntraPositionProcessingStatus6Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
 			definition = "Status for which a reason is provided.";
@@ -421,8 +420,8 @@ public class StatusReason {
 	};
 	protected Max35Text reason;
 	/**
-	 * Reason provided for the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1735,8 +1734,8 @@ public class StatusReason {
 					PartiallySettledStatus10.mmAdditionalInformation, BlockedReason2Choice.mmCode, BlockedReason2Choice.mmProprietary, RejectedStatus10.mmAdditionalInformation,
 					PendingCancellationStatusReason7.mmAdditionalReasonInformation, RejectedStatusReason21.mmAdditionalReasonInformation, PendingStatusReason13.mmAdditionalReasonInformation, TradeAgreement15.mmAmendOrCancelReason,
 					RejectedStatusReason22.mmAdditionalReasonInformation, PendingCancellationStatusReason8.mmAdditionalReasonInformation, PendingStatusReason15.mmAdditionalReasonInformation);
-			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reason";
 			definition = "Reason provided for the status.";
@@ -1755,8 +1754,8 @@ public class StatusReason {
 	};
 	protected NoReasonCode noSpecifiedReason;
 	/**
-	 * Indicates that there is no reason available or to report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2831,8 +2830,8 @@ public class StatusReason {
 					PendingStatus47Choice.mmNoSpecifiedReason, SuspendedStatusReason4Choice.mmNoSpecifiedReason, ConditionallyAcceptedStatus3Choice.mmNoSpecifiedReason, InRepairStatusReason4Choice.mmNoSpecifiedReason,
 					CancelledReason12Choice.mmNoSpecifiedReason, PendingCancellationStatus7Choice.mmNotSpecifiedReason, RejectedStatus23Choice.mmNoSpecifiedReason, PendingStatus52Choice.mmNoSpecifiedReason,
 					PendingCancellationStatus8Choice.mmNotSpecifiedReason, RejectedStatus24Choice.mmNoSpecifiedReason, PendingStatus53Choice.mmNoSpecifiedReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
@@ -2851,8 +2850,8 @@ public class StatusReason {
 	};
 	protected List<com.tools20022.repository.entity.GenericIdentification> dataSourceScheme;
 	/**
-	 * Proprietary identification of the reason for the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3000,8 +2999,8 @@ public class StatusReason {
 					RejectedStatus3Choice.mmDataSourceScheme, PendingSettlementStatus2.mmDataSourceScheme, TransferUnmatchedStatus2.mmDataSourceScheme, InRepairStatus3.mmDataSourceScheme, RejectedStatus8Choice.mmDataSourceScheme,
 					CancelledStatus3.mmDataSourceScheme, CancellationPendingStatus1.mmDataSourceScheme, RejectedStatusReason9Choice.mmDataSourceScheme, TransferUnmatchedStatus3Choice.mmDataSourceScheme,
 					CancelledStatus13Choice.mmDataSourceScheme, InRepairStatus4Choice.mmDataSourceScheme, PendingSettlementStatus3Choice.mmDataSourceScheme, CancellationPendingStatus7Choice.mmDataSourceScheme);
-			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DataSourceScheme";
 			definition = "Proprietary identification of the reason for the status.";
@@ -3013,8 +3012,8 @@ public class StatusReason {
 	};
 	protected RejectedStatusReasonCode rejectedStatusReason;
 	/**
-	 * Reason for the rejected status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3200,8 +3199,8 @@ public class StatusReason {
 					RejectedStatus16Choice.mmReason, RejectedStatus19Choice.mmReason, TransferStatus2Choice.mmRejected, RejectionReason32.mmReason, RejectionReason33.mmReason, RejectedReason17Choice.mmCode,
 					RejectedReason17Choice.mmProprietary, Status20Choice.mmRejected, RejectedReason16Choice.mmCode, RejectedReason16Choice.mmProprietary, RejectionReason31.mmReason, RejectedReason15Choice.mmCode,
 					RejectedReason15Choice.mmProprietary, RejectedStatus21Choice.mmReason, CancellationStatus22Choice.mmRejected, Status25Choice.mmRejected, RejectedStatus23Choice.mmReason, RejectedStatus24Choice.mmReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RejectedStatusReason";
 			definition = "Reason for the rejected status.";
@@ -3220,8 +3219,8 @@ public class StatusReason {
 	};
 	protected PendingFailingReasonCode failingReason;
 	/**
-	 * Reason why a transaction has a failing status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3418,8 +3417,8 @@ public class StatusReason {
 					FailingStatus10Choice.mmReason, FailingReason8.mmCode, Reason16Choice.mmFailingReason, FailingStatus9Choice.mmReason, Reason17Choice.mmFailingReason, FailingReason15Choice.mmCode, FailingReason15Choice.mmProprietary,
 					FailingReason9.mmCode, FailingReason10Choice.mmCode, FailingReason10Choice.mmProprietary, FailingReason11Choice.mmCode, FailingReason11Choice.mmProprietary, FailingStatus11Choice.mmReason, FailingReason10.mmCode,
 					FailingStatus12Choice.mmReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FailingReason";
 			definition = "Reason why a transaction has a failing status.";
@@ -3438,9 +3437,8 @@ public class StatusReason {
 	};
 	protected CancelledStatusReasonV2Code cancellationReason;
 	/**
-	 * Specifies the reason why the related instruction is cancelled, or the
-	 * related cancellation request is executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4234,8 +4232,8 @@ public class StatusReason {
 					CancellationStatus17Choice.mmReason, CancellationReason19.mmCode, CancellationReason31Choice.mmCode, CancellationReason31Choice.mmProprietary, CancelledStatusReason16.mmReason, CancelledReason12Choice.mmCode,
 					CancelledReason12Choice.mmProprietary, CancellationReason32Choice.mmCode, CancellationReason32Choice.mmProprietary, InstructionCancellationRequestStatus11Choice.mmCancellationCompleted,
 					InstructionProcessingStatus29Choice.mmCancelled, InstructionCancellationRequestStatus12Choice.mmCancellationCompleted, InstructionProcessingStatus30Choice.mmCancelled);
-			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CancellationReason";
 			definition = "Specifies the reason why the related instruction is cancelled, or the related cancellation request is executed.";
@@ -4254,8 +4252,8 @@ public class StatusReason {
 	};
 	protected PendingFailingReasonCode pendingReason;
 	/**
-	 * Specifies the reason why the instruction processing is pending.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5545,8 +5543,8 @@ public class StatusReason {
 					PendingReason48Choice.mmProprietary, PendingStatus52Choice.mmReason, PendingCancellationStatusReason7.mmReasonCode, PendingStatusReason13.mmReasonCode, InstructionCancellationRequestStatus12Choice.mmPendingCancellation,
 					InstructionProcessingStatus30Choice.mmPending, PendingCancellationStatus8Choice.mmReason, PendingCancellationStatusReason8.mmReasonCode, PendingStatus53Choice.mmReason, PendingReason49Choice.mmCode,
 					PendingReason49Choice.mmProprietary, PendingStatusReason15.mmReasonCode);
-			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PendingReason";
 			definition = "Specifies the reason why the instruction processing is pending.";
@@ -5565,9 +5563,8 @@ public class StatusReason {
 	};
 	protected RejectionReasonV2Code rejectionReason;
 	/**
-	 * Specifies the reason why the instruction/request has a repair or
-	 * rejection status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6815,8 +6812,8 @@ public class StatusReason {
 					PendingCancellationReason5Choice.mmProprietary, RejectedStatusReason21.mmReasonCode, RejectedReason22Choice.mmCode, RejectedReason22Choice.mmProprietary, OtherCollateralResponse2.mmRejectionReason,
 					CashCollateralResponse2.mmRejectionReason, InstructionCancellationRequestStatus12Choice.mmRejected, InstructionProcessingStatus30Choice.mmRejected, RejectedStatusReason22.mmReasonCode, RejectedReason23Choice.mmCode,
 					RejectedReason23Choice.mmProprietary, PendingCancellationReason6Choice.mmCode, PendingCancellationReason6Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RejectionReason";
 			definition = "Specifies the reason why the instruction/request has a repair or rejection status.";
@@ -6835,8 +6832,8 @@ public class StatusReason {
 	};
 	protected AcknowledgementReasonCode acknowledgedAcceptedReason;
 	/**
-	 * Specifies additional information about the processed instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -7458,8 +7455,8 @@ public class StatusReason {
 					AcknowledgedAcceptedStatus31Choice.mmReason, AcknowledgementReason13.mmCode, AcknowledgementReason16Choice.mmCode, AcknowledgementReason16Choice.mmProprietary, AcknowledgedAcceptedStatus25Choice.mmReason,
 					AcknowledgedAcceptedStatus27Choice.mmReason, ProcessingStatus60Choice.mmAcknowledgedAccepted, AcknowledgementReason22Choice.mmCode, AcknowledgementReason22Choice.mmProprietary, AcknowledgementReason19.mmCode,
 					ConditionallyAcceptedStatusReason3.mmReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AcknowledgedAcceptedReason";
 			definition = "Specifies additional information about the processed instruction.";
@@ -7478,8 +7475,8 @@ public class StatusReason {
 	};
 	protected RegisteredContract relatedClosureReason;
 	/**
-	 * Related reason of closure of the contract.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -7511,8 +7508,8 @@ public class StatusReason {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedClosureReason = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedClosureReason";
 			definition = "Related reason of closure of the contract. ";
@@ -7527,7 +7524,7 @@ public class StatusReason {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusReason";
 				definition = "Specifies the underlying reason for the status of an object.";
@@ -7566,91 +7563,102 @@ public class StatusReason {
 		return mmObject_lazy.get();
 	}
 
-	public Status getStatus() {
-		return status;
+	public Optional<Status> getStatus() {
+		return status == null ? Optional.empty() : Optional.of(status);
 	}
 
-	public void setStatus(com.tools20022.repository.entity.Status status) {
+	public StatusReason setStatus(com.tools20022.repository.entity.Status status) {
 		this.status = status;
+		return this;
 	}
 
 	public Max35Text getReason() {
 		return reason;
 	}
 
-	public void setReason(Max35Text reason) {
-		this.reason = reason;
+	public StatusReason setReason(Max35Text reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}
 
-	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
-		this.noSpecifiedReason = noSpecifiedReason;
+	public StatusReason setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = Objects.requireNonNull(noSpecifiedReason);
+		return this;
 	}
 
 	public List<GenericIdentification> getDataSourceScheme() {
-		return dataSourceScheme;
+		return dataSourceScheme == null ? dataSourceScheme = new ArrayList<>() : dataSourceScheme;
 	}
 
-	public void setDataSourceScheme(List<com.tools20022.repository.entity.GenericIdentification> dataSourceScheme) {
-		this.dataSourceScheme = dataSourceScheme;
+	public StatusReason setDataSourceScheme(List<com.tools20022.repository.entity.GenericIdentification> dataSourceScheme) {
+		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
+		return this;
 	}
 
 	public RejectedStatusReasonCode getRejectedStatusReason() {
 		return rejectedStatusReason;
 	}
 
-	public void setRejectedStatusReason(RejectedStatusReasonCode rejectedStatusReason) {
-		this.rejectedStatusReason = rejectedStatusReason;
+	public StatusReason setRejectedStatusReason(RejectedStatusReasonCode rejectedStatusReason) {
+		this.rejectedStatusReason = Objects.requireNonNull(rejectedStatusReason);
+		return this;
 	}
 
 	public PendingFailingReasonCode getFailingReason() {
 		return failingReason;
 	}
 
-	public void setFailingReason(PendingFailingReasonCode failingReason) {
-		this.failingReason = failingReason;
+	public StatusReason setFailingReason(PendingFailingReasonCode failingReason) {
+		this.failingReason = Objects.requireNonNull(failingReason);
+		return this;
 	}
 
 	public CancelledStatusReasonV2Code getCancellationReason() {
 		return cancellationReason;
 	}
 
-	public void setCancellationReason(CancelledStatusReasonV2Code cancellationReason) {
-		this.cancellationReason = cancellationReason;
+	public StatusReason setCancellationReason(CancelledStatusReasonV2Code cancellationReason) {
+		this.cancellationReason = Objects.requireNonNull(cancellationReason);
+		return this;
 	}
 
 	public PendingFailingReasonCode getPendingReason() {
 		return pendingReason;
 	}
 
-	public void setPendingReason(PendingFailingReasonCode pendingReason) {
-		this.pendingReason = pendingReason;
+	public StatusReason setPendingReason(PendingFailingReasonCode pendingReason) {
+		this.pendingReason = Objects.requireNonNull(pendingReason);
+		return this;
 	}
 
 	public RejectionReasonV2Code getRejectionReason() {
 		return rejectionReason;
 	}
 
-	public void setRejectionReason(RejectionReasonV2Code rejectionReason) {
-		this.rejectionReason = rejectionReason;
+	public StatusReason setRejectionReason(RejectionReasonV2Code rejectionReason) {
+		this.rejectionReason = Objects.requireNonNull(rejectionReason);
+		return this;
 	}
 
 	public AcknowledgementReasonCode getAcknowledgedAcceptedReason() {
 		return acknowledgedAcceptedReason;
 	}
 
-	public void setAcknowledgedAcceptedReason(AcknowledgementReasonCode acknowledgedAcceptedReason) {
-		this.acknowledgedAcceptedReason = acknowledgedAcceptedReason;
+	public StatusReason setAcknowledgedAcceptedReason(AcknowledgementReasonCode acknowledgedAcceptedReason) {
+		this.acknowledgedAcceptedReason = Objects.requireNonNull(acknowledgedAcceptedReason);
+		return this;
 	}
 
 	public RegisteredContract getRelatedClosureReason() {
 		return relatedClosureReason;
 	}
 
-	public void setRelatedClosureReason(com.tools20022.repository.entity.RegisteredContract relatedClosureReason) {
-		this.relatedClosureReason = relatedClosureReason;
+	public StatusReason setRelatedClosureReason(com.tools20022.repository.entity.RegisteredContract relatedClosureReason) {
+		this.relatedClosureReason = Objects.requireNonNull(relatedClosureReason);
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ReportIndicatorCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the nature of the report, ie, standard or proprietary.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportIndicatorCode#mmStandard
- * ReportIndicatorCode.mmStandard}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportIndicatorCode#Standard
+ * ReportIndicatorCode.Standard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportIndicatorCode#mmProprietary
- * ReportIndicatorCode.mmProprietary}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportIndicatorCode#Proprietary
+ * ReportIndicatorCode.Proprietary}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the nature of the report, ie, standard or proprietary."</li>
  * </ul>
  */
-public class ReportIndicatorCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ReportIndicatorCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -94,12 +100,12 @@ public class ReportIndicatorCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmStandard = new MMCode() {
+	public static final ReportIndicatorCode Standard = new ReportIndicatorCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Standard";
 			definition = "Requested report must contain information in the format of a statement.";
-			owner_lazy = () -> ReportIndicatorCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportIndicatorCode.mmObject();
 			codeName = "STND";
 		}
 	};
@@ -126,28 +132,58 @@ public class ReportIndicatorCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmProprietary = new MMCode() {
+	public static final ReportIndicatorCode Proprietary = new ReportIndicatorCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Requested report must contain information in a bilaterally agreed format.";
-			owner_lazy = () -> ReportIndicatorCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportIndicatorCode.mmObject();
 			codeName = "PRPR";
 		}
 	};
+	final static private LinkedHashMap<String, ReportIndicatorCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ReportIndicatorCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("STND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportIndicatorCode";
 				definition = "Specifies the nature of the report, ie, standard or proprietary.";
-				code_lazy = () -> Arrays.asList(ReportIndicatorCode.mmStandard, ReportIndicatorCode.mmProprietary);
 				derivation_lazy = () -> Arrays.asList(ReportIndicator1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportIndicatorCode.Standard, com.tools20022.repository.codeset.ReportIndicatorCode.Proprietary);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Standard.getCodeName().get(), Standard);
+		codesByName.put(Proprietary.getCodeName().get(), Proprietary);
+	}
+
+	public static ReportIndicatorCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ReportIndicatorCode[] values() {
+		ReportIndicatorCode[] values = new ReportIndicatorCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ReportIndicatorCode> {
+		@Override
+		public ReportIndicatorCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ReportIndicatorCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

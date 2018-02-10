@@ -32,6 +32,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -119,8 +121,25 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPostingAmountRule#forTransactionDetails98
+ * ConstraintPostingAmountRule.forTransactionDetails98}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule#forTransactionDetails98
+ * ConstraintAdditionalDetailsRule.forTransactionDetails98}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing1Rule#forTransactionDetails98
+ * ConstraintTwoLegTransactionOpeningClosing1Rule.forTransactionDetails98}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forTransactionDetails98
+ * ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails98}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -131,17 +150,18 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the details of the transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionDetails98", propOrder = {"transactionActivity", "settlementTransactionOrCorporateActionEventType", "securitiesMovementType", "payment", "settlementParameters", "placeOfTrade", "safekeepingPlace",
 		"placeOfClearing", "postingQuantity", "numberOfDaysAccrued", "postingAmount", "accruedInterestAmount", "tradeDate", "effectiveSettlementDate", "settlementDate", "valueDate", "acknowledgedStatusTimeStamp", "matchedStatusTimeStamp",
 		"deliveringSettlementParties", "receivingSettlementParties", "reversalIndicator", "transactionAdditionalDetails"})
 public class TransactionDetails98 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxActvty", required = true)
 	protected TransactionActivity4Choice transactionActivity;
 	/**
-	 * Specifies the type of activity to which this instruction relates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -175,7 +195,7 @@ public class TransactionDetails98 {
 	public static final MMMessageAssociationEnd mmTransactionActivity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmActivity;
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "TxActvty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,10 +207,11 @@ public class TransactionDetails98 {
 			type_lazy = () -> TransactionActivity4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmTxOrCorpActnEvtTp")
 	protected SettlementOrCorporateActionEvent20Choice settlementTransactionOrCorporateActionEventType;
 	/**
-	 * Choice of type for the transaction reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -217,7 +238,7 @@ public class TransactionDetails98 {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementTransactionOrCorporateActionEventType = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTxOrCorpActnEvtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,11 +250,11 @@ public class TransactionDetails98 {
 			type_lazy = () -> SettlementOrCorporateActionEvent20Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesMvmntTp", required = true)
 	protected ReceiveDelivery1Code securitiesMovementType;
 	/**
-	 * Specifies if the movement on a securities account results from a deliver
-	 * or a receive instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,7 +290,7 @@ public class TransactionDetails98 {
 	public static final MMMessageAttribute mmSecuritiesMovementType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesMovementType;
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesMvmntTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,11 +301,11 @@ public class TransactionDetails98 {
 			simpleType_lazy = () -> ReceiveDelivery1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Pmt", required = true)
 	protected DeliveryReceiptType2Code payment;
 	/**
-	 * Specifies how the transaction is to be settled, for example, against
-	 * payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -320,7 +341,7 @@ public class TransactionDetails98 {
 	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementType;
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "Pmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -331,10 +352,11 @@ public class TransactionDetails98 {
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmParams")
 	protected SettlementDetails139 settlementParameters;
 	/**
-	 * Parameters applied to the settlement of a security transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -367,7 +389,7 @@ public class TransactionDetails98 {
 	public static final MMMessageAssociationEnd mmSettlementParameters = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -379,10 +401,11 @@ public class TransactionDetails98 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementDetails139.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfTrad")
 	protected PlaceOfTradeIdentification2 placeOfTrade;
 	/**
-	 * Market in which a trade transaction has been executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -415,7 +438,7 @@ public class TransactionDetails98 {
 	public static final MMMessageAssociationEnd mmPlaceOfTrade = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmTradingMarket;
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -427,13 +450,11 @@ public class TransactionDetails98 {
 			type_lazy = () -> com.tools20022.repository.msg.PlaceOfTradeIdentification2.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgPlc")
 	protected SafeKeepingPlace2 safekeepingPlace;
 	/**
-	 * Place where the securities are safe-kept, physically or notionally. This
-	 * place can be, for example, a local custodian, a Central Securities
-	 * Depository (CSD) or an International Central Securities Depository
-	 * (ICSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -467,7 +488,7 @@ public class TransactionDetails98 {
 	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -479,13 +500,11 @@ public class TransactionDetails98 {
 			type_lazy = () -> com.tools20022.repository.msg.SafeKeepingPlace2.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfClr")
 	protected PlaceOfClearingIdentification1 placeOfClearing;
 	/**
-	 * Infrastructure which may be a component of a clearing house and which
-	 * facilitates clearing and settlement for its members by standing between
-	 * the buyer and the seller. It may net transactions and it substitutes
-	 * itself as settlement counterparty for each position.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -521,7 +540,7 @@ public class TransactionDetails98 {
 	public static final MMMessageAttribute mmPlaceOfClearing = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmAnyBIC;
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfClr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -532,11 +551,11 @@ public class TransactionDetails98 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PlaceOfClearingIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "PstngQty", required = true)
 	protected Quantity10Choice postingQuantity;
 	/**
-	 * Quantity of financial instrument (to be) posted to the safekeeping
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -570,7 +589,7 @@ public class TransactionDetails98 {
 	public static final MMMessageAssociationEnd mmPostingQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementQuantity;
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "PstngQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -582,10 +601,11 @@ public class TransactionDetails98 {
 			type_lazy = () -> Quantity10Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfDaysAcrd")
 	protected Max3Number numberOfDaysAccrued;
 	/**
-	 * Number of days on which the interest rate accrues (daily accrual note).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -620,7 +640,7 @@ public class TransactionDetails98 {
 	public static final MMMessageAttribute mmNumberOfDaysAccrued = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfDaysAcrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -631,10 +651,11 @@ public class TransactionDetails98 {
 			simpleType_lazy = () -> Max3Number.mmObject();
 		}
 	};
+	@XmlElement(name = "PstngAmt")
 	protected AmountAndDirection18 postingAmount;
 	/**
-	 * Amount of money that is to be/was posted to the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -666,7 +687,7 @@ public class TransactionDetails98 {
 	public static final MMMessageAssociationEnd mmPostingAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementAmount;
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "PstngAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -678,10 +699,11 @@ public class TransactionDetails98 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection18.mmObject();
 		}
 	};
+	@XmlElement(name = "AcrdIntrstAmt")
 	protected AmountAndDirection59 accruedInterestAmount;
 	/**
-	 * Interest amount that has accrued in between coupon payment periods.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -714,7 +736,7 @@ public class TransactionDetails98 {
 	public static final MMMessageAssociationEnd mmAccruedInterestAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -726,10 +748,11 @@ public class TransactionDetails98 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection59.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDt")
 	protected TradeDate6Choice tradeDate;
 	/**
-	 * Specifies the date/time on which the trade was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -761,7 +784,7 @@ public class TransactionDetails98 {
 	public static final MMMessageAssociationEnd mmTradeDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -773,11 +796,11 @@ public class TransactionDetails98 {
 			type_lazy = () -> TradeDate6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FctvSttlmDt", required = true)
 	protected DateAndDateTimeChoice effectiveSettlementDate;
 	/**
-	 * Date and time at which a transaction is completed and cleared, that is,
-	 * payment is effected and securities are delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -812,7 +835,7 @@ public class TransactionDetails98 {
 	public static final MMMessageAssociationEnd mmEffectiveSettlementDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "FctvSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -824,10 +847,11 @@ public class TransactionDetails98 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmDt")
 	protected SettlementDate12Choice settlementDate;
 	/**
-	 * Date and time at which the securities are to be delivered or received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -861,7 +885,7 @@ public class TransactionDetails98 {
 	public static final MMMessageAssociationEnd mmSettlementDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -873,11 +897,11 @@ public class TransactionDetails98 {
 			type_lazy = () -> SettlementDate12Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDt")
 	protected DateAndDateTimeChoice valueDate;
 	/**
-	 * Date and time assets become available to the account owner (in a credit
-	 * entry), or cease to be available to the account owner (in a debit entry).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -912,7 +936,7 @@ public class TransactionDetails98 {
 	public static final MMMessageAssociationEnd mmValueDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmValueDate;
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -924,10 +948,11 @@ public class TransactionDetails98 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "AckdStsTmStmp")
 	protected ISODateTime acknowledgedStatusTimeStamp;
 	/**
-	 * Time stamp on when the transaction is acknowledged.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -954,7 +979,7 @@ public class TransactionDetails98 {
 	 */
 	public static final MMMessageAttribute mmAcknowledgedStatusTimeStamp = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "AckdStsTmStmp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -965,10 +990,11 @@ public class TransactionDetails98 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "MtchdStsTmStmp")
 	protected ISODateTime matchedStatusTimeStamp;
 	/**
-	 * Time stamp on when the transaction is matched.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -995,7 +1021,7 @@ public class TransactionDetails98 {
 	 */
 	public static final MMMessageAttribute mmMatchedStatusTimeStamp = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "MtchdStsTmStmp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1006,10 +1032,11 @@ public class TransactionDetails98 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvrgSttlmPties")
 	protected SettlementParties49 deliveringSettlementParties;
 	/**
-	 * Identifies the chain of delivering settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1041,7 +1068,7 @@ public class TransactionDetails98 {
 	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1053,10 +1080,11 @@ public class TransactionDetails98 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementParties49.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvgSttlmPties")
 	protected SettlementParties49 receivingSettlementParties;
 	/**
-	 * Identifies the chain of receiving settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1088,7 +1116,7 @@ public class TransactionDetails98 {
 	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmPartyRole;
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1100,10 +1128,11 @@ public class TransactionDetails98 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementParties49.mmObject();
 		}
 	};
+	@XmlElement(name = "RvslInd")
 	protected YesNoIndicator reversalIndicator;
 	/**
-	 * Specifies whether it is the reversal of a previously reported movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1133,7 +1162,7 @@ public class TransactionDetails98 {
 	 */
 	public static final MMMessageAttribute mmReversalIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "RvslInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1144,11 +1173,11 @@ public class TransactionDetails98 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "TxAddtlDtls")
 	protected RestrictedFINXMax350Text transactionAdditionalDetails;
 	/**
-	 * Provides additional details on the transaction which can not be included
-	 * within the structured fields of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1178,7 +1207,7 @@ public class TransactionDetails98 {
 	 */
 	public static final MMMessageAttribute mmTransactionAdditionalDetails = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionDetails98.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionDetails98.mmObject();
 			isDerived = false;
 			xmlTag = "TxAddtlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1193,14 +1222,20 @@ public class TransactionDetails98 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionDetails98.mmTransactionActivity, TransactionDetails98.mmSettlementTransactionOrCorporateActionEventType, TransactionDetails98.mmSecuritiesMovementType,
-						TransactionDetails98.mmPayment, TransactionDetails98.mmSettlementParameters, TransactionDetails98.mmPlaceOfTrade, TransactionDetails98.mmSafekeepingPlace, TransactionDetails98.mmPlaceOfClearing,
-						TransactionDetails98.mmPostingQuantity, TransactionDetails98.mmNumberOfDaysAccrued, TransactionDetails98.mmPostingAmount, TransactionDetails98.mmAccruedInterestAmount, TransactionDetails98.mmTradeDate,
-						TransactionDetails98.mmEffectiveSettlementDate, TransactionDetails98.mmSettlementDate, TransactionDetails98.mmValueDate, TransactionDetails98.mmAcknowledgedStatusTimeStamp,
-						TransactionDetails98.mmMatchedStatusTimeStamp, TransactionDetails98.mmDeliveringSettlementParties, TransactionDetails98.mmReceivingSettlementParties, TransactionDetails98.mmReversalIndicator,
-						TransactionDetails98.mmTransactionAdditionalDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionDetails98.mmTransactionActivity, com.tools20022.repository.msg.TransactionDetails98.mmSettlementTransactionOrCorporateActionEventType,
+						com.tools20022.repository.msg.TransactionDetails98.mmSecuritiesMovementType, com.tools20022.repository.msg.TransactionDetails98.mmPayment, com.tools20022.repository.msg.TransactionDetails98.mmSettlementParameters,
+						com.tools20022.repository.msg.TransactionDetails98.mmPlaceOfTrade, com.tools20022.repository.msg.TransactionDetails98.mmSafekeepingPlace, com.tools20022.repository.msg.TransactionDetails98.mmPlaceOfClearing,
+						com.tools20022.repository.msg.TransactionDetails98.mmPostingQuantity, com.tools20022.repository.msg.TransactionDetails98.mmNumberOfDaysAccrued, com.tools20022.repository.msg.TransactionDetails98.mmPostingAmount,
+						com.tools20022.repository.msg.TransactionDetails98.mmAccruedInterestAmount, com.tools20022.repository.msg.TransactionDetails98.mmTradeDate,
+						com.tools20022.repository.msg.TransactionDetails98.mmEffectiveSettlementDate, com.tools20022.repository.msg.TransactionDetails98.mmSettlementDate, com.tools20022.repository.msg.TransactionDetails98.mmValueDate,
+						com.tools20022.repository.msg.TransactionDetails98.mmAcknowledgedStatusTimeStamp, com.tools20022.repository.msg.TransactionDetails98.mmMatchedStatusTimeStamp,
+						com.tools20022.repository.msg.TransactionDetails98.mmDeliveringSettlementParties, com.tools20022.repository.msg.TransactionDetails98.mmReceivingSettlementParties,
+						com.tools20022.repository.msg.TransactionDetails98.mmReversalIndicator, com.tools20022.repository.msg.TransactionDetails98.mmTransactionAdditionalDetails);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPostingAmountRule.forTransactionDetails98, com.tools20022.repository.constraints.ConstraintAdditionalDetailsRule.forTransactionDetails98,
+						com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing1Rule.forTransactionDetails98,
+						com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails98);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionDetails98";
 				definition = "Specifies the details of the transaction.";
@@ -1209,201 +1244,201 @@ public class TransactionDetails98 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxActvty", required = true)
 	public TransactionActivity4Choice getTransactionActivity() {
 		return transactionActivity;
 	}
 
-	public void setTransactionActivity(TransactionActivity4Choice transactionActivity) {
-		this.transactionActivity = transactionActivity;
+	public TransactionDetails98 setTransactionActivity(TransactionActivity4Choice transactionActivity) {
+		this.transactionActivity = Objects.requireNonNull(transactionActivity);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmTxOrCorpActnEvtTp")
-	public SettlementOrCorporateActionEvent20Choice getSettlementTransactionOrCorporateActionEventType() {
-		return settlementTransactionOrCorporateActionEventType;
+	public Optional<SettlementOrCorporateActionEvent20Choice> getSettlementTransactionOrCorporateActionEventType() {
+		return settlementTransactionOrCorporateActionEventType == null ? Optional.empty() : Optional.of(settlementTransactionOrCorporateActionEventType);
 	}
 
-	public void setSettlementTransactionOrCorporateActionEventType(SettlementOrCorporateActionEvent20Choice settlementTransactionOrCorporateActionEventType) {
+	public TransactionDetails98 setSettlementTransactionOrCorporateActionEventType(SettlementOrCorporateActionEvent20Choice settlementTransactionOrCorporateActionEventType) {
 		this.settlementTransactionOrCorporateActionEventType = settlementTransactionOrCorporateActionEventType;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesMvmntTp", required = true)
 	public ReceiveDelivery1Code getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
 
-	public void setSecuritiesMovementType(ReceiveDelivery1Code securitiesMovementType) {
-		this.securitiesMovementType = securitiesMovementType;
+	public TransactionDetails98 setSecuritiesMovementType(ReceiveDelivery1Code securitiesMovementType) {
+		this.securitiesMovementType = Objects.requireNonNull(securitiesMovementType);
+		return this;
 	}
 
-	@XmlElement(name = "Pmt", required = true)
 	public DeliveryReceiptType2Code getPayment() {
 		return payment;
 	}
 
-	public void setPayment(DeliveryReceiptType2Code payment) {
-		this.payment = payment;
+	public TransactionDetails98 setPayment(DeliveryReceiptType2Code payment) {
+		this.payment = Objects.requireNonNull(payment);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmParams")
-	public SettlementDetails139 getSettlementParameters() {
-		return settlementParameters;
+	public Optional<SettlementDetails139> getSettlementParameters() {
+		return settlementParameters == null ? Optional.empty() : Optional.of(settlementParameters);
 	}
 
-	public void setSettlementParameters(com.tools20022.repository.msg.SettlementDetails139 settlementParameters) {
+	public TransactionDetails98 setSettlementParameters(com.tools20022.repository.msg.SettlementDetails139 settlementParameters) {
 		this.settlementParameters = settlementParameters;
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfTrad")
-	public PlaceOfTradeIdentification2 getPlaceOfTrade() {
-		return placeOfTrade;
+	public Optional<PlaceOfTradeIdentification2> getPlaceOfTrade() {
+		return placeOfTrade == null ? Optional.empty() : Optional.of(placeOfTrade);
 	}
 
-	public void setPlaceOfTrade(com.tools20022.repository.msg.PlaceOfTradeIdentification2 placeOfTrade) {
+	public TransactionDetails98 setPlaceOfTrade(com.tools20022.repository.msg.PlaceOfTradeIdentification2 placeOfTrade) {
 		this.placeOfTrade = placeOfTrade;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgPlc")
-	public SafeKeepingPlace2 getSafekeepingPlace() {
-		return safekeepingPlace;
+	public Optional<SafeKeepingPlace2> getSafekeepingPlace() {
+		return safekeepingPlace == null ? Optional.empty() : Optional.of(safekeepingPlace);
 	}
 
-	public void setSafekeepingPlace(com.tools20022.repository.msg.SafeKeepingPlace2 safekeepingPlace) {
+	public TransactionDetails98 setSafekeepingPlace(com.tools20022.repository.msg.SafeKeepingPlace2 safekeepingPlace) {
 		this.safekeepingPlace = safekeepingPlace;
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfClr")
-	public PlaceOfClearingIdentification1 getPlaceOfClearing() {
-		return placeOfClearing;
+	public Optional<PlaceOfClearingIdentification1> getPlaceOfClearing() {
+		return placeOfClearing == null ? Optional.empty() : Optional.of(placeOfClearing);
 	}
 
-	public void setPlaceOfClearing(com.tools20022.repository.msg.PlaceOfClearingIdentification1 placeOfClearing) {
+	public TransactionDetails98 setPlaceOfClearing(com.tools20022.repository.msg.PlaceOfClearingIdentification1 placeOfClearing) {
 		this.placeOfClearing = placeOfClearing;
+		return this;
 	}
 
-	@XmlElement(name = "PstngQty", required = true)
 	public Quantity10Choice getPostingQuantity() {
 		return postingQuantity;
 	}
 
-	public void setPostingQuantity(Quantity10Choice postingQuantity) {
-		this.postingQuantity = postingQuantity;
+	public TransactionDetails98 setPostingQuantity(Quantity10Choice postingQuantity) {
+		this.postingQuantity = Objects.requireNonNull(postingQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "NbOfDaysAcrd")
-	public Max3Number getNumberOfDaysAccrued() {
-		return numberOfDaysAccrued;
+	public Optional<Max3Number> getNumberOfDaysAccrued() {
+		return numberOfDaysAccrued == null ? Optional.empty() : Optional.of(numberOfDaysAccrued);
 	}
 
-	public void setNumberOfDaysAccrued(Max3Number numberOfDaysAccrued) {
+	public TransactionDetails98 setNumberOfDaysAccrued(Max3Number numberOfDaysAccrued) {
 		this.numberOfDaysAccrued = numberOfDaysAccrued;
+		return this;
 	}
 
-	@XmlElement(name = "PstngAmt")
-	public AmountAndDirection18 getPostingAmount() {
-		return postingAmount;
+	public Optional<AmountAndDirection18> getPostingAmount() {
+		return postingAmount == null ? Optional.empty() : Optional.of(postingAmount);
 	}
 
-	public void setPostingAmount(com.tools20022.repository.msg.AmountAndDirection18 postingAmount) {
+	public TransactionDetails98 setPostingAmount(com.tools20022.repository.msg.AmountAndDirection18 postingAmount) {
 		this.postingAmount = postingAmount;
+		return this;
 	}
 
-	@XmlElement(name = "AcrdIntrstAmt")
-	public AmountAndDirection59 getAccruedInterestAmount() {
-		return accruedInterestAmount;
+	public Optional<AmountAndDirection59> getAccruedInterestAmount() {
+		return accruedInterestAmount == null ? Optional.empty() : Optional.of(accruedInterestAmount);
 	}
 
-	public void setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection59 accruedInterestAmount) {
+	public TransactionDetails98 setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection59 accruedInterestAmount) {
 		this.accruedInterestAmount = accruedInterestAmount;
+		return this;
 	}
 
-	@XmlElement(name = "TradDt")
-	public TradeDate6Choice getTradeDate() {
-		return tradeDate;
+	public Optional<TradeDate6Choice> getTradeDate() {
+		return tradeDate == null ? Optional.empty() : Optional.of(tradeDate);
 	}
 
-	public void setTradeDate(TradeDate6Choice tradeDate) {
+	public TransactionDetails98 setTradeDate(TradeDate6Choice tradeDate) {
 		this.tradeDate = tradeDate;
+		return this;
 	}
 
-	@XmlElement(name = "FctvSttlmDt", required = true)
 	public DateAndDateTimeChoice getEffectiveSettlementDate() {
 		return effectiveSettlementDate;
 	}
 
-	public void setEffectiveSettlementDate(DateAndDateTimeChoice effectiveSettlementDate) {
-		this.effectiveSettlementDate = effectiveSettlementDate;
+	public TransactionDetails98 setEffectiveSettlementDate(DateAndDateTimeChoice effectiveSettlementDate) {
+		this.effectiveSettlementDate = Objects.requireNonNull(effectiveSettlementDate);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDt")
-	public SettlementDate12Choice getSettlementDate() {
-		return settlementDate;
+	public Optional<SettlementDate12Choice> getSettlementDate() {
+		return settlementDate == null ? Optional.empty() : Optional.of(settlementDate);
 	}
 
-	public void setSettlementDate(SettlementDate12Choice settlementDate) {
+	public TransactionDetails98 setSettlementDate(SettlementDate12Choice settlementDate) {
 		this.settlementDate = settlementDate;
+		return this;
 	}
 
-	@XmlElement(name = "ValDt")
-	public DateAndDateTimeChoice getValueDate() {
-		return valueDate;
+	public Optional<DateAndDateTimeChoice> getValueDate() {
+		return valueDate == null ? Optional.empty() : Optional.of(valueDate);
 	}
 
-	public void setValueDate(DateAndDateTimeChoice valueDate) {
+	public TransactionDetails98 setValueDate(DateAndDateTimeChoice valueDate) {
 		this.valueDate = valueDate;
+		return this;
 	}
 
-	@XmlElement(name = "AckdStsTmStmp")
-	public ISODateTime getAcknowledgedStatusTimeStamp() {
-		return acknowledgedStatusTimeStamp;
+	public Optional<ISODateTime> getAcknowledgedStatusTimeStamp() {
+		return acknowledgedStatusTimeStamp == null ? Optional.empty() : Optional.of(acknowledgedStatusTimeStamp);
 	}
 
-	public void setAcknowledgedStatusTimeStamp(ISODateTime acknowledgedStatusTimeStamp) {
+	public TransactionDetails98 setAcknowledgedStatusTimeStamp(ISODateTime acknowledgedStatusTimeStamp) {
 		this.acknowledgedStatusTimeStamp = acknowledgedStatusTimeStamp;
+		return this;
 	}
 
-	@XmlElement(name = "MtchdStsTmStmp")
-	public ISODateTime getMatchedStatusTimeStamp() {
-		return matchedStatusTimeStamp;
+	public Optional<ISODateTime> getMatchedStatusTimeStamp() {
+		return matchedStatusTimeStamp == null ? Optional.empty() : Optional.of(matchedStatusTimeStamp);
 	}
 
-	public void setMatchedStatusTimeStamp(ISODateTime matchedStatusTimeStamp) {
+	public TransactionDetails98 setMatchedStatusTimeStamp(ISODateTime matchedStatusTimeStamp) {
 		this.matchedStatusTimeStamp = matchedStatusTimeStamp;
+		return this;
 	}
 
-	@XmlElement(name = "DlvrgSttlmPties")
-	public SettlementParties49 getDeliveringSettlementParties() {
-		return deliveringSettlementParties;
+	public Optional<SettlementParties49> getDeliveringSettlementParties() {
+		return deliveringSettlementParties == null ? Optional.empty() : Optional.of(deliveringSettlementParties);
 	}
 
-	public void setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties49 deliveringSettlementParties) {
+	public TransactionDetails98 setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties49 deliveringSettlementParties) {
 		this.deliveringSettlementParties = deliveringSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "RcvgSttlmPties")
-	public SettlementParties49 getReceivingSettlementParties() {
-		return receivingSettlementParties;
+	public Optional<SettlementParties49> getReceivingSettlementParties() {
+		return receivingSettlementParties == null ? Optional.empty() : Optional.of(receivingSettlementParties);
 	}
 
-	public void setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties49 receivingSettlementParties) {
+	public TransactionDetails98 setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties49 receivingSettlementParties) {
 		this.receivingSettlementParties = receivingSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "RvslInd")
-	public YesNoIndicator getReversalIndicator() {
-		return reversalIndicator;
+	public Optional<YesNoIndicator> getReversalIndicator() {
+		return reversalIndicator == null ? Optional.empty() : Optional.of(reversalIndicator);
 	}
 
-	public void setReversalIndicator(YesNoIndicator reversalIndicator) {
+	public TransactionDetails98 setReversalIndicator(YesNoIndicator reversalIndicator) {
 		this.reversalIndicator = reversalIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "TxAddtlDtls")
-	public RestrictedFINXMax350Text getTransactionAdditionalDetails() {
-		return transactionAdditionalDetails;
+	public Optional<RestrictedFINXMax350Text> getTransactionAdditionalDetails() {
+		return transactionAdditionalDetails == null ? Optional.empty() : Optional.of(transactionAdditionalDetails);
 	}
 
-	public void setTransactionAdditionalDetails(RestrictedFINXMax350Text transactionAdditionalDetails) {
+	public TransactionDetails98 setTransactionAdditionalDetails(RestrictedFINXMax350Text transactionAdditionalDetails) {
 		this.transactionAdditionalDetails = transactionAdditionalDetails;
+		return this;
 	}
 }

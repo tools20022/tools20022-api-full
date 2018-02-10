@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.KnowYourCustomerCheckTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of Know Your Customer (KYC) or anti-money laundering due
@@ -33,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.KnowYourCustomerCheckTypeCode#mmOrdinary
- * KnowYourCustomerCheckTypeCode.mmOrdinary}</li>
+ * {@linkplain com.tools20022.repository.codeset.KnowYourCustomerCheckTypeCode#Ordinary
+ * KnowYourCustomerCheckTypeCode.Ordinary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.KnowYourCustomerCheckTypeCode#mmSimple
- * KnowYourCustomerCheckTypeCode.mmSimple}</li>
+ * {@linkplain com.tools20022.repository.codeset.KnowYourCustomerCheckTypeCode#Simple
+ * KnowYourCustomerCheckTypeCode.Simple}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.KnowYourCustomerCheckTypeCode#mmEnhanced
- * KnowYourCustomerCheckTypeCode.mmEnhanced}</li>
+ * {@linkplain com.tools20022.repository.codeset.KnowYourCustomerCheckTypeCode#Enhanced
+ * KnowYourCustomerCheckTypeCode.Enhanced}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class KnowYourCustomerCheckTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class KnowYourCustomerCheckTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,12 +99,12 @@ public class KnowYourCustomerCheckTypeCode {
 	 * "Ordinary check, typically carried out on standard accounts."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOrdinary = new MMCode() {
+	public static final KnowYourCustomerCheckTypeCode Ordinary = new KnowYourCustomerCheckTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ordinary";
 			definition = "Ordinary check, typically carried out on standard accounts.";
-			owner_lazy = () -> KnowYourCustomerCheckTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.KnowYourCustomerCheckTypeCode.mmObject();
 			codeName = "ORDN";
 		}
 	};
@@ -127,12 +133,12 @@ public class KnowYourCustomerCheckTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSimple = new MMCode() {
+	public static final KnowYourCustomerCheckTypeCode Simple = new KnowYourCustomerCheckTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Simple";
 			definition = "Simple check, typically carried out on accounts that have a low risk of anti-money laundering, such as an account owned by a financial institution.";
-			owner_lazy = () -> KnowYourCustomerCheckTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.KnowYourCustomerCheckTypeCode.mmObject();
 			codeName = "SIMP";
 		}
 	};
@@ -160,27 +166,59 @@ public class KnowYourCustomerCheckTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEnhanced = new MMCode() {
+	public static final KnowYourCustomerCheckTypeCode Enhanced = new KnowYourCustomerCheckTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enhanced";
 			definition = "Enhanced check, typically carried out on accounts that are considered high risk. ";
-			owner_lazy = () -> KnowYourCustomerCheckTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.KnowYourCustomerCheckTypeCode.mmObject();
 			codeName = "ENHA";
 		}
 	};
+	final static private LinkedHashMap<String, KnowYourCustomerCheckTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected KnowYourCustomerCheckTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "KnowYourCustomerCheckTypeCode";
 				definition = "Specifies the type of Know Your Customer (KYC) or anti-money laundering due diligence to which the investor has been subjected.";
-				code_lazy = () -> Arrays.asList(KnowYourCustomerCheckTypeCode.mmOrdinary, KnowYourCustomerCheckTypeCode.mmSimple, KnowYourCustomerCheckTypeCode.mmEnhanced);
 				derivation_lazy = () -> Arrays.asList(KnowYourCustomerCheckType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.KnowYourCustomerCheckTypeCode.Ordinary, com.tools20022.repository.codeset.KnowYourCustomerCheckTypeCode.Simple,
+						com.tools20022.repository.codeset.KnowYourCustomerCheckTypeCode.Enhanced);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Ordinary.getCodeName().get(), Ordinary);
+		codesByName.put(Simple.getCodeName().get(), Simple);
+		codesByName.put(Enhanced.getCodeName().get(), Enhanced);
+	}
+
+	public static KnowYourCustomerCheckTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static KnowYourCustomerCheckTypeCode[] values() {
+		KnowYourCustomerCheckTypeCode[] values = new KnowYourCustomerCheckTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, KnowYourCustomerCheckTypeCode> {
+		@Override
+		public KnowYourCustomerCheckTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(KnowYourCustomerCheckTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

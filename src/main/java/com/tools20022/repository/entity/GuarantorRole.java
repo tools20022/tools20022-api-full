@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.GuaranteeDetails1;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Legal entity, other than the issuer, who gives a guarantee. The guarantor
@@ -38,6 +39,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.GuaranteePartyRole
+ * GuaranteePartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -45,14 +49,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * GuarantorRole.mmPosition}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.GuaranteePartyRole
- * GuaranteePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,8 +71,8 @@ public class GuarantorRole extends GuaranteePartyRole {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected positiveInteger position;
 	/**
-	 * Rank of this guarantor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,8 +107,8 @@ public class GuarantorRole extends GuaranteePartyRole {
 	public static final MMBusinessAttribute mmPosition = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(GuaranteeDetails1.mmPosition);
-			elementContext_lazy = () -> com.tools20022.repository.entity.GuarantorRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.GuarantorRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Position";
 			definition = "Rank of this guarantor.";
@@ -128,7 +129,7 @@ public class GuarantorRole extends GuaranteePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GuarantorRole";
 				definition = "Legal entity, other than the issuer, who gives a guarantee. The guarantor becomes liable in case of default.";
@@ -148,7 +149,8 @@ public class GuarantorRole extends GuaranteePartyRole {
 		return position;
 	}
 
-	public void setPosition(positiveInteger position) {
-		this.position = position;
+	public GuarantorRole setPosition(positiveInteger position) {
+		this.position = Objects.requireNonNull(position);
+		return this;
 	}
 }

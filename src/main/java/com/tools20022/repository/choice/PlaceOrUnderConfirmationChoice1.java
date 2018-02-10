@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PlaceOfPresentation1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between a location and codified form."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PlaceOrUnderConfirmationChoice1", propOrder = {"placeOfPresentation", "presentationUnderConfirmation"})
 public class PlaceOrUnderConfirmationChoice1 {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcOfPresntn", required = true)
 	protected PlaceOfPresentation1 placeOfPresentation;
 	/**
-	 * Party to which the presentation is to be made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -108,7 +110,7 @@ public class PlaceOrUnderConfirmationChoice1 {
 	public static final MMMessageAssociationEnd mmPlaceOfPresentation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingPlaceOfPresentation.mmObject();
-			componentContext_lazy = () -> PlaceOrUnderConfirmationChoice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfPresntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +122,11 @@ public class PlaceOrUnderConfirmationChoice1 {
 			type_lazy = () -> PlaceOfPresentation1.mmObject();
 		}
 	};
+	@XmlElement(name = "PresntnUdrConf", required = true)
 	protected PresentationParty1Code presentationUnderConfirmation;
 	/**
-	 * Place of presentation when there is a confirmation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,7 +154,7 @@ public class PlaceOrUnderConfirmationChoice1 {
 	 */
 	public static final MMMessageAttribute mmPresentationUnderConfirmation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PlaceOrUnderConfirmationChoice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1.mmObject();
 			isDerived = false;
 			xmlTag = "PresntnUdrConf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,9 +169,10 @@ public class PlaceOrUnderConfirmationChoice1 {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PlaceOrUnderConfirmationChoice1.mmPlaceOfPresentation, PlaceOrUnderConfirmationChoice1.mmPresentationUnderConfirmation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1.mmPlaceOfPresentation,
+						com.tools20022.repository.choice.PlaceOrUnderConfirmationChoice1.mmPresentationUnderConfirmation);
 				trace_lazy = () -> UndertakingPlaceOfPresentation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PlaceOrUnderConfirmationChoice1";
 				definition = "Choice between a location and codified form.";
@@ -177,21 +181,21 @@ public class PlaceOrUnderConfirmationChoice1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcOfPresntn", required = true)
 	public PlaceOfPresentation1 getPlaceOfPresentation() {
 		return placeOfPresentation;
 	}
 
-	public void setPlaceOfPresentation(PlaceOfPresentation1 placeOfPresentation) {
-		this.placeOfPresentation = placeOfPresentation;
+	public PlaceOrUnderConfirmationChoice1 setPlaceOfPresentation(PlaceOfPresentation1 placeOfPresentation) {
+		this.placeOfPresentation = Objects.requireNonNull(placeOfPresentation);
+		return this;
 	}
 
-	@XmlElement(name = "PresntnUdrConf", required = true)
 	public PresentationParty1Code getPresentationUnderConfirmation() {
 		return presentationUnderConfirmation;
 	}
 
-	public void setPresentationUnderConfirmation(PresentationParty1Code presentationUnderConfirmation) {
-		this.presentationUnderConfirmation = presentationUnderConfirmation;
+	public PlaceOrUnderConfirmationChoice1 setPresentationUnderConfirmation(PresentationParty1Code presentationUnderConfirmation) {
+		this.presentationUnderConfirmation = Objects.requireNonNull(presentationUnderConfirmation);
+		return this;
 	}
 }

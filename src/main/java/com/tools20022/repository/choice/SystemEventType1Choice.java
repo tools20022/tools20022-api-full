@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SystemEventInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between a code and a free format."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemEventType1Choice", propOrder = {"code", "proprietaryEvent"})
 public class SystemEventType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected SystemEventType2Code code;
 	/**
-	 * Nature of the event that has occurred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +107,7 @@ public class SystemEventType1Choice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemEventInformation.mmType;
-			componentContext_lazy = () -> SystemEventType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SystemEventType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +118,11 @@ public class SystemEventType1Choice {
 			simpleType_lazy = () -> SystemEventType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryEvt", required = true)
 	protected Max140Text proprietaryEvent;
 	/**
-	 * Type of event, expressed as free text or a bilaterally agreed code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,7 +150,7 @@ public class SystemEventType1Choice {
 	 */
 	public static final MMMessageAttribute mmProprietaryEvent = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemEventType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SystemEventType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryEvt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,8 +165,8 @@ public class SystemEventType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SystemEventType1Choice.mmCode, SystemEventType1Choice.mmProprietaryEvent);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SystemEventType1Choice.mmCode, com.tools20022.repository.choice.SystemEventType1Choice.mmProprietaryEvent);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemEventType1Choice";
 				definition = "Choice between a code and a free format.";
@@ -172,21 +175,21 @@ public class SystemEventType1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public SystemEventType2Code getCode() {
 		return code;
 	}
 
-	public void setCode(SystemEventType2Code code) {
-		this.code = code;
+	public SystemEventType1Choice setCode(SystemEventType2Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryEvt", required = true)
 	public Max140Text getProprietaryEvent() {
 		return proprietaryEvent;
 	}
 
-	public void setProprietaryEvent(Max140Text proprietaryEvent) {
-		this.proprietaryEvent = proprietaryEvent;
+	public SystemEventType1Choice setProprietaryEvent(Max140Text proprietaryEvent) {
+		this.proprietaryEvent = Objects.requireNonNull(proprietaryEvent);
+		return this;
 	}
 }

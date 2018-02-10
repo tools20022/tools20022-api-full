@@ -24,6 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SecurityAttributes2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between action to request on a security."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UpdateType7Choice", propOrder = {"add", "delete", "modify"})
 public class UpdateType7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Add", required = true)
 	protected SecurityAttributes2 add;
 	/**
-	 * Set of data requested to enrich a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -95,7 +97,7 @@ public class UpdateType7Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAdd = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UpdateType7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Add";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -107,10 +109,11 @@ public class UpdateType7Choice {
 			type_lazy = () -> SecurityAttributes2.mmObject();
 		}
 	};
+	@XmlElement(name = "Del", required = true)
 	protected SecurityAttributes2 delete;
 	/**
-	 * Set of data requested for deletion from a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -136,7 +139,7 @@ public class UpdateType7Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDelete = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UpdateType7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Del";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,10 +151,11 @@ public class UpdateType7Choice {
 			type_lazy = () -> SecurityAttributes2.mmObject();
 		}
 	};
+	@XmlElement(name = "Modfy", required = true)
 	protected SecurityAttributes2 modify;
 	/**
-	 * Set of data requested to modify a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -177,7 +181,7 @@ public class UpdateType7Choice {
 	 */
 	public static final MMMessageAssociationEnd mmModify = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> UpdateType7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UpdateType7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Modfy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -193,8 +197,8 @@ public class UpdateType7Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UpdateType7Choice.mmAdd, UpdateType7Choice.mmDelete, UpdateType7Choice.mmModify);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UpdateType7Choice.mmAdd, com.tools20022.repository.choice.UpdateType7Choice.mmDelete, com.tools20022.repository.choice.UpdateType7Choice.mmModify);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UpdateType7Choice";
 				definition = "Choice between action to request on a security.";
@@ -203,30 +207,30 @@ public class UpdateType7Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Add", required = true)
 	public SecurityAttributes2 getAdd() {
 		return add;
 	}
 
-	public void setAdd(SecurityAttributes2 add) {
-		this.add = add;
+	public UpdateType7Choice setAdd(SecurityAttributes2 add) {
+		this.add = Objects.requireNonNull(add);
+		return this;
 	}
 
-	@XmlElement(name = "Del", required = true)
 	public SecurityAttributes2 getDelete() {
 		return delete;
 	}
 
-	public void setDelete(SecurityAttributes2 delete) {
-		this.delete = delete;
+	public UpdateType7Choice setDelete(SecurityAttributes2 delete) {
+		this.delete = Objects.requireNonNull(delete);
+		return this;
 	}
 
-	@XmlElement(name = "Modfy", required = true)
 	public SecurityAttributes2 getModify() {
 		return modify;
 	}
 
-	public void setModify(SecurityAttributes2 modify) {
-		this.modify = modify;
+	public UpdateType7Choice setModify(SecurityAttributes2 modify) {
+		this.modify = Objects.requireNonNull(modify);
+		return this;
 	}
 }

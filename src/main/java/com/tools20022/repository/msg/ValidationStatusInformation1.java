@@ -25,9 +25,8 @@ import com.tools20022.repository.codeset.TechnicalValidationStatus1Code;
 import com.tools20022.repository.datatype.Max105Text;
 import com.tools20022.repository.entity.InvoiceFinancingStatus;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about the status of a specific message."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ValidationStatusInformation1", propOrder = {"status", "statusReason", "additionalStatusReasonInformation"})
 public class ValidationStatusInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected TechnicalValidationStatus1Code status;
 	/**
-	 * The result of the technical validation (e.g. Accepted, Reception error)
-	 * executed on the request message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +115,7 @@ public class ValidationStatusInformation1 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingStatus.mmValidationStatus;
-			componentContext_lazy = () -> ValidationStatusInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValidationStatusInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +126,11 @@ public class ValidationStatusInformation1 {
 			simpleType_lazy = () -> TechnicalValidationStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StsRsn")
 	protected StatusReason4Choice statusReason;
 	/**
-	 * The reason for the validation status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +164,7 @@ public class ValidationStatusInformation1 {
 	public static final MMMessageAttribute mmStatusReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingStatus.mmValidationStatusReason;
-			componentContext_lazy = () -> ValidationStatusInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValidationStatusInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,10 +175,11 @@ public class ValidationStatusInformation1 {
 			complexType_lazy = () -> StatusReason4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlStsRsnInf")
 	protected List<Max105Text> additionalStatusReasonInformation;
 	/**
-	 * Further details on the validation status reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,7 +206,7 @@ public class ValidationStatusInformation1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalStatusReasonInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ValidationStatusInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValidationStatusInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlStsRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,9 +220,10 @@ public class ValidationStatusInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ValidationStatusInformation1.mmStatus, ValidationStatusInformation1.mmStatusReason, ValidationStatusInformation1.mmAdditionalStatusReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValidationStatusInformation1.mmStatus, com.tools20022.repository.msg.ValidationStatusInformation1.mmStatusReason,
+						com.tools20022.repository.msg.ValidationStatusInformation1.mmAdditionalStatusReasonInformation);
 				trace_lazy = () -> InvoiceFinancingStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ValidationStatusInformation1";
 				definition = "Information about the status of a specific message.";
@@ -230,30 +232,30 @@ public class ValidationStatusInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public TechnicalValidationStatus1Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(TechnicalValidationStatus1Code status) {
-		this.status = status;
+	public ValidationStatusInformation1 setStatus(TechnicalValidationStatus1Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "StsRsn")
-	public StatusReason4Choice getStatusReason() {
-		return statusReason;
+	public Optional<StatusReason4Choice> getStatusReason() {
+		return statusReason == null ? Optional.empty() : Optional.of(statusReason);
 	}
 
-	public void setStatusReason(StatusReason4Choice statusReason) {
+	public ValidationStatusInformation1 setStatusReason(StatusReason4Choice statusReason) {
 		this.statusReason = statusReason;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlStsRsnInf")
 	public List<Max105Text> getAdditionalStatusReasonInformation() {
-		return additionalStatusReasonInformation;
+		return additionalStatusReasonInformation == null ? additionalStatusReasonInformation = new ArrayList<>() : additionalStatusReasonInformation;
 	}
 
-	public void setAdditionalStatusReasonInformation(List<Max105Text> additionalStatusReasonInformation) {
-		this.additionalStatusReasonInformation = additionalStatusReasonInformation;
+	public ValidationStatusInformation1 setAdditionalStatusReasonInformation(List<Max105Text> additionalStatusReasonInformation) {
+		this.additionalStatusReasonInformation = Objects.requireNonNull(additionalStatusReasonInformation);
+		return this;
 	}
 }

@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SafekeepingPlaceCode;
+import com.tools20022.repository.codeset.SafekeepingPlace2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of place of safekeeping.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SafekeepingPlaceCode
- * SafekeepingPlaceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SafekeepingPlace2Code#mmSharesHeldElsewhere
- * SafekeepingPlace2Code.mmSharesHeldElsewhere}</li>
+ * {@linkplain com.tools20022.repository.codeset.SafekeepingPlace2Code#SharesHeldElsewhere
+ * SafekeepingPlace2Code.SharesHeldElsewhere}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SafekeepingPlace2Code#mmAllPlaces
- * SafekeepingPlace2Code.mmAllPlaces}</li>
+ * {@linkplain com.tools20022.repository.codeset.SafekeepingPlace2Code#AllPlaces
+ * SafekeepingPlace2Code.AllPlaces}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SafekeepingPlaceCode
+ * SafekeepingPlaceCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of place of safekeeping."</li>
  * </ul>
  */
-public class SafekeepingPlace2Code extends SafekeepingPlaceCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SafekeepingPlace2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class SafekeepingPlace2Code extends SafekeepingPlaceCode {
 	 * name} = "SharesHeldElsewhere"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSharesHeldElsewhere = new MMCode() {
+	public static final SafekeepingPlace2Code SharesHeldElsewhere = new SafekeepingPlace2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharesHeldElsewhere";
-			owner_lazy = () -> SafekeepingPlace2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SafekeepingPlace2Code.mmObject();
+			codeName = SafekeepingPlaceCode.SharesHeldElsewhere.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class SafekeepingPlace2Code extends SafekeepingPlaceCode {
 	 * name} = "AllPlaces"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAllPlaces = new MMCode() {
+	public static final SafekeepingPlace2Code AllPlaces = new SafekeepingPlace2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllPlaces";
-			owner_lazy = () -> SafekeepingPlace2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SafekeepingPlace2Code.mmObject();
+			codeName = SafekeepingPlaceCode.AllPlaces.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SafekeepingPlace2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SafekeepingPlace2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SHHE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingPlace2Code";
 				definition = "Specifies the type of place of safekeeping.";
-				code_lazy = () -> Arrays.asList(SafekeepingPlace2Code.mmSharesHeldElsewhere, SafekeepingPlace2Code.mmAllPlaces);
 				trace_lazy = () -> SafekeepingPlaceCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SafekeepingPlace2Code.SharesHeldElsewhere, com.tools20022.repository.codeset.SafekeepingPlace2Code.AllPlaces);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SharesHeldElsewhere.getCodeName().get(), SharesHeldElsewhere);
+		codesByName.put(AllPlaces.getCodeName().get(), AllPlaces);
+	}
+
+	public static SafekeepingPlace2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SafekeepingPlace2Code[] values() {
+		SafekeepingPlace2Code[] values = new SafekeepingPlace2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SafekeepingPlace2Code> {
+		@Override
+		public SafekeepingPlace2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SafekeepingPlace2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

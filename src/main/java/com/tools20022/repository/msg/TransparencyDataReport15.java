@@ -28,9 +28,8 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -84,8 +83,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValidISINRule#forTransparencyDataReport15
+ * ConstraintValidISINRule.forTransparencyDataReport15}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValidMICRule#forTransparencyDataReport15
+ * ConstraintValidMICRule.forTransparencyDataReport15}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,19 +108,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransparencyDataReport15", propOrder = {"technicalRecordIdentification", "identification", "reportingDate", "tradingVenue", "suspension", "numberTransactions", "aggregatedQuantitativeData"})
 public class TransparencyDataReport15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TechRcrdId")
 	protected Max35Text technicalRecordIdentification;
 	/**
-	 * Unique identifier of a record in a message used as part of error
-	 * management and status advice messages.<br>
-	 * <br>
-	 * Usage:<br>
-	 * This identification will be used in the status advice report sent back.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +146,7 @@ public class TransparencyDataReport15 {
 	 */
 	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransparencyDataReport15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport15.mmObject();
 			isDerived = false;
 			xmlTag = "TechRcrdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,10 +157,11 @@ public class TransparencyDataReport15 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected ISINOct2015Identifier identification;
 	/**
-	 * Identifies the financial instrument using an ISIN.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,7 +195,7 @@ public class TransparencyDataReport15 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
-			componentContext_lazy = () -> TransparencyDataReport15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport15.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,10 +206,11 @@ public class TransparencyDataReport15 {
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	@XmlElement(name = "RptgDt")
 	protected ISODate reportingDate;
 	/**
-	 * Date to which the quantitative data fields below relate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,7 +243,7 @@ public class TransparencyDataReport15 {
 	public static final MMMessageAttribute mmReportingDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> TransparencyDataReport15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport15.mmObject();
 			isDerived = false;
 			xmlTag = "RptgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -245,11 +254,11 @@ public class TransparencyDataReport15 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgVn")
 	protected MICIdentifier tradingVenue;
 	/**
-	 * Segment MIC for the trading venue where applicable, otherwise the
-	 * operational MIC.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -285,7 +294,7 @@ public class TransparencyDataReport15 {
 	public static final MMMessageAttribute mmTradingVenue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
-			componentContext_lazy = () -> TransparencyDataReport15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport15.mmObject();
 			isDerived = false;
 			xmlTag = "TradgVn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -296,11 +305,11 @@ public class TransparencyDataReport15 {
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Sspnsn", required = true)
 	protected TrueFalseIndicator suspension;
 	/**
-	 * Indicates whether the instrument was suspended for trading on that
-	 * trading venue on the reporting day.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -330,7 +339,7 @@ public class TransparencyDataReport15 {
 	 */
 	public static final MMMessageAttribute mmSuspension = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransparencyDataReport15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport15.mmObject();
 			isDerived = false;
 			xmlTag = "Sspnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -341,11 +350,11 @@ public class TransparencyDataReport15 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NbTxs")
 	protected Number numberTransactions;
 	/**
-	 * Total number of transactions executed on the reporting day for the
-	 * instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -374,7 +383,7 @@ public class TransparencyDataReport15 {
 	 */
 	public static final MMMessageAttribute mmNumberTransactions = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransparencyDataReport15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport15.mmObject();
 			isDerived = false;
 			xmlTag = "NbTxs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -385,13 +394,11 @@ public class TransparencyDataReport15 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "AggtdQttvData")
 	protected List<com.tools20022.repository.msg.TransactionsBin2> aggregatedQuantitativeData;
 	/**
-	 * Aggregated quantitative data on the non-equity instrument being reported.
-	 * Details aggregated against the specific range that is defined.
-	 * Transactions that have been cancelled should be excluded from the
-	 * reported figure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -419,7 +426,7 @@ public class TransparencyDataReport15 {
 	 */
 	public static final MMMessageAssociationEnd mmAggregatedQuantitativeData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransparencyDataReport15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport15.mmObject();
 			isDerived = false;
 			xmlTag = "AggtdQttvData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -434,11 +441,13 @@ public class TransparencyDataReport15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransparencyDataReport15.mmTechnicalRecordIdentification, TransparencyDataReport15.mmIdentification, TransparencyDataReport15.mmReportingDate,
-						TransparencyDataReport15.mmTradingVenue, TransparencyDataReport15.mmSuspension, TransparencyDataReport15.mmNumberTransactions, TransparencyDataReport15.mmAggregatedQuantitativeData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransparencyDataReport15.mmTechnicalRecordIdentification, com.tools20022.repository.msg.TransparencyDataReport15.mmIdentification,
+						com.tools20022.repository.msg.TransparencyDataReport15.mmReportingDate, com.tools20022.repository.msg.TransparencyDataReport15.mmTradingVenue, com.tools20022.repository.msg.TransparencyDataReport15.mmSuspension,
+						com.tools20022.repository.msg.TransparencyDataReport15.mmNumberTransactions, com.tools20022.repository.msg.TransparencyDataReport15.mmAggregatedQuantitativeData);
 				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingNonEquityTradingActivityReportV01.mmNonEquityTransparencyData);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintValidISINRule.forTransparencyDataReport15, com.tools20022.repository.constraints.ConstraintValidMICRule.forTransparencyDataReport15);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransparencyDataReport15";
 				definition = "Provides for reporting quantitative data of non-equity instruments for transparency calculations.";
@@ -447,66 +456,66 @@ public class TransparencyDataReport15 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TechRcrdId")
-	public Max35Text getTechnicalRecordIdentification() {
-		return technicalRecordIdentification;
+	public Optional<Max35Text> getTechnicalRecordIdentification() {
+		return technicalRecordIdentification == null ? Optional.empty() : Optional.of(technicalRecordIdentification);
 	}
 
-	public void setTechnicalRecordIdentification(Max35Text technicalRecordIdentification) {
+	public TransparencyDataReport15 setTechnicalRecordIdentification(Max35Text technicalRecordIdentification) {
 		this.technicalRecordIdentification = technicalRecordIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public ISINOct2015Identifier getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(ISINOct2015Identifier identification) {
-		this.identification = identification;
+	public TransparencyDataReport15 setIdentification(ISINOct2015Identifier identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "RptgDt")
-	public ISODate getReportingDate() {
-		return reportingDate;
+	public Optional<ISODate> getReportingDate() {
+		return reportingDate == null ? Optional.empty() : Optional.of(reportingDate);
 	}
 
-	public void setReportingDate(ISODate reportingDate) {
+	public TransparencyDataReport15 setReportingDate(ISODate reportingDate) {
 		this.reportingDate = reportingDate;
+		return this;
 	}
 
-	@XmlElement(name = "TradgVn")
-	public MICIdentifier getTradingVenue() {
-		return tradingVenue;
+	public Optional<MICIdentifier> getTradingVenue() {
+		return tradingVenue == null ? Optional.empty() : Optional.of(tradingVenue);
 	}
 
-	public void setTradingVenue(MICIdentifier tradingVenue) {
+	public TransparencyDataReport15 setTradingVenue(MICIdentifier tradingVenue) {
 		this.tradingVenue = tradingVenue;
+		return this;
 	}
 
-	@XmlElement(name = "Sspnsn", required = true)
 	public TrueFalseIndicator getSuspension() {
 		return suspension;
 	}
 
-	public void setSuspension(TrueFalseIndicator suspension) {
-		this.suspension = suspension;
+	public TransparencyDataReport15 setSuspension(TrueFalseIndicator suspension) {
+		this.suspension = Objects.requireNonNull(suspension);
+		return this;
 	}
 
-	@XmlElement(name = "NbTxs")
-	public Number getNumberTransactions() {
-		return numberTransactions;
+	public Optional<Number> getNumberTransactions() {
+		return numberTransactions == null ? Optional.empty() : Optional.of(numberTransactions);
 	}
 
-	public void setNumberTransactions(Number numberTransactions) {
+	public TransparencyDataReport15 setNumberTransactions(Number numberTransactions) {
 		this.numberTransactions = numberTransactions;
+		return this;
 	}
 
-	@XmlElement(name = "AggtdQttvData")
 	public List<TransactionsBin2> getAggregatedQuantitativeData() {
-		return aggregatedQuantitativeData;
+		return aggregatedQuantitativeData == null ? aggregatedQuantitativeData = new ArrayList<>() : aggregatedQuantitativeData;
 	}
 
-	public void setAggregatedQuantitativeData(List<com.tools20022.repository.msg.TransactionsBin2> aggregatedQuantitativeData) {
-		this.aggregatedQuantitativeData = aggregatedQuantitativeData;
+	public TransparencyDataReport15 setAggregatedQuantitativeData(List<com.tools20022.repository.msg.TransactionsBin2> aggregatedQuantitativeData) {
+		this.aggregatedQuantitativeData = Objects.requireNonNull(aggregatedQuantitativeData);
+		return this;
 	}
 }

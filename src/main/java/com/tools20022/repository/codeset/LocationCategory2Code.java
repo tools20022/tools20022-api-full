@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.LocationCategoryCode;
+import com.tools20022.repository.codeset.LocationCategory2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Location category of the place where the transaction is actually performed. <br>
@@ -31,30 +35,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.LocationCategoryCode
- * LocationCategoryCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LocationCategory2Code#mmAboard
- * LocationCategory2Code.mmAboard}</li>
+ * {@linkplain com.tools20022.repository.codeset.LocationCategory2Code#Aboard
+ * LocationCategory2Code.Aboard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LocationCategory2Code#mmFixed
- * LocationCategory2Code.mmFixed}</li>
+ * {@linkplain com.tools20022.repository.codeset.LocationCategory2Code#Fixed
+ * LocationCategory2Code.Fixed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LocationCategory2Code#Home
+ * LocationCategory2Code.Home}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LocationCategory2Code#mmHome
- * LocationCategory2Code.mmHome}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.LocationCategory2Code#mmNomadic
- * LocationCategory2Code.mmNomadic}</li>
+ * {@linkplain com.tools20022.repository.codeset.LocationCategory2Code#Nomadic
+ * LocationCategory2Code.Nomadic}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.LocationCategoryCode
+ * LocationCategoryCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class LocationCategory2Code extends LocationCategoryCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class LocationCategory2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +90,12 @@ public class LocationCategory2Code extends LocationCategoryCode {
 	 * name} = "Aboard"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAboard = new MMCode() {
+	public static final LocationCategory2Code Aboard = new LocationCategory2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aboard";
-			owner_lazy = () -> LocationCategory2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LocationCategory2Code.mmObject();
+			codeName = LocationCategoryCode.Aboard.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +114,12 @@ public class LocationCategory2Code extends LocationCategoryCode {
 	 * name} = "Fixed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFixed = new MMCode() {
+	public static final LocationCategory2Code Fixed = new LocationCategory2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
-			owner_lazy = () -> LocationCategory2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LocationCategory2Code.mmObject();
+			codeName = LocationCategoryCode.Fixed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,11 +138,12 @@ public class LocationCategory2Code extends LocationCategoryCode {
 	 * name} = "Home"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHome = new MMCode() {
+	public static final LocationCategory2Code Home = new LocationCategory2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Home";
-			owner_lazy = () -> LocationCategory2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LocationCategory2Code.mmObject();
+			codeName = LocationCategoryCode.Home.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -155,25 +162,59 @@ public class LocationCategory2Code extends LocationCategoryCode {
 	 * name} = "Nomadic"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNomadic = new MMCode() {
+	public static final LocationCategory2Code Nomadic = new LocationCategory2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Nomadic";
-			owner_lazy = () -> LocationCategory2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LocationCategory2Code.mmObject();
+			codeName = LocationCategoryCode.Nomadic.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, LocationCategory2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected LocationCategory2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LocationCategory2Code";
 				definition = "Location category of the place where the transaction is actually performed. \r\nIt correspond partially to the ISO 8583:1993, field number 22-4.";
-				code_lazy = () -> Arrays.asList(LocationCategory2Code.mmAboard, LocationCategory2Code.mmFixed, LocationCategory2Code.mmHome, LocationCategory2Code.mmNomadic);
 				trace_lazy = () -> LocationCategoryCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LocationCategory2Code.Aboard, com.tools20022.repository.codeset.LocationCategory2Code.Fixed, com.tools20022.repository.codeset.LocationCategory2Code.Home,
+						com.tools20022.repository.codeset.LocationCategory2Code.Nomadic);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Aboard.getCodeName().get(), Aboard);
+		codesByName.put(Fixed.getCodeName().get(), Fixed);
+		codesByName.put(Home.getCodeName().get(), Home);
+		codesByName.put(Nomadic.getCodeName().get(), Nomadic);
+	}
+
+	public static LocationCategory2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static LocationCategory2Code[] values() {
+		LocationCategory2Code[] values = new LocationCategory2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, LocationCategory2Code> {
+		@Override
+		public LocationCategory2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(LocationCategory2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

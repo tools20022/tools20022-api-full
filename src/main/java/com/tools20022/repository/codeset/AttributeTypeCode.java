@@ -17,12 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AttributeTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of attribute of a distinguished name (DN).
@@ -32,26 +38,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#mmCommonName
- * AttributeTypeCode.mmCommonName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#CommonName
+ * AttributeTypeCode.CommonName}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AttributeTypeCode#Locality
+ * AttributeTypeCode.Locality}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#mmLocality
- * AttributeTypeCode.mmLocality}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#OrganisationName
+ * AttributeTypeCode.OrganisationName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#mmOrganisationName
- * AttributeTypeCode.mmOrganisationName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#OrganisationUnitName
+ * AttributeTypeCode.OrganisationUnitName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#mmOrganisationUnitName
- * AttributeTypeCode.mmOrganisationUnitName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#CountryName
+ * AttributeTypeCode.CountryName}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#mmCountryName
- * AttributeTypeCode.mmCountryName}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#EmailAddress
+ * AttributeTypeCode.EmailAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#mmEmailAddress
- * AttributeTypeCode.mmEmailAddress}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#mmChallengePassword
- * AttributeTypeCode.mmChallengePassword}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttributeTypeCode#ChallengePassword
+ * AttributeTypeCode.ChallengePassword}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -66,8 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -84,7 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of attribute of a distinguished name (DN)."</li>
  * </ul>
  */
-public class AttributeTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AttributeTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,6 +104,9 @@ public class AttributeTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CNAT"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=Synonym, context=ASN.1, value=id-at-commonName</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -110,12 +119,13 @@ public class AttributeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommonName = new MMCode() {
+	public static final AttributeTypeCode CommonName = new AttributeTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "ASN.1"}, new String[]{"value", "id-at-commonName"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommonName";
 			definition = "Common name of the attribute (ASN.1 Object Identifier: id-at-commonName).";
-			owner_lazy = () -> AttributeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttributeTypeCode.mmObject();
 			codeName = "CNAT";
 		}
 	};
@@ -130,6 +140,9 @@ public class AttributeTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "LATT"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=Synonym, context=ASN.1, value=id-at-localityName</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -142,12 +155,13 @@ public class AttributeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmLocality = new MMCode() {
+	public static final AttributeTypeCode Locality = new AttributeTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "ASN.1"}, new String[]{"value", "id-at-localityName"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Locality";
 			definition = "Locality of the attribute (ASN.1 Object Identifier: id-at-localityName).";
-			owner_lazy = () -> AttributeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttributeTypeCode.mmObject();
 			codeName = "LATT";
 		}
 	};
@@ -163,6 +177,10 @@ public class AttributeTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "OATT"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=Synonym, context=ASN.1,
+	 * value=id-at-organizationName</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -175,12 +193,13 @@ public class AttributeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOrganisationName = new MMCode() {
+	public static final AttributeTypeCode OrganisationName = new AttributeTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "ASN.1"}, new String[]{"value", "id-at-organizationName"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrganisationName";
 			definition = "Organization name of the attribute  (ASN.1 Object Identifier: id-at-organizationName).";
-			owner_lazy = () -> AttributeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttributeTypeCode.mmObject();
 			codeName = "OATT";
 		}
 	};
@@ -196,6 +215,10 @@ public class AttributeTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "OUAT"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=Synonym, context=ASN.1,
+	 * value=id-at-organizationalUnitName</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -208,12 +231,13 @@ public class AttributeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOrganisationUnitName = new MMCode() {
+	public static final AttributeTypeCode OrganisationUnitName = new AttributeTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "ASN.1"}, new String[]{"value", "id-at-organizationalUnitName"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrganisationUnitName";
 			definition = "Organization unit name of the attribute (ASN.1 Object Identifier: id-at-organizationalUnitName).";
-			owner_lazy = () -> AttributeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttributeTypeCode.mmObject();
 			codeName = "OUAT";
 		}
 	};
@@ -229,6 +253,9 @@ public class AttributeTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "CATT"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=Synonym, context=ASN.1, value=id-at-countryName</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -241,12 +268,13 @@ public class AttributeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCountryName = new MMCode() {
+	public static final AttributeTypeCode CountryName = new AttributeTypeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "ASN.1"}, new String[]{"value", "id-at-countryName"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CountryName";
 			definition = "Country name of the attribute (ASN.1 Object Identifier: id-at-countryName).";
-			owner_lazy = () -> AttributeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttributeTypeCode.mmObject();
 			codeName = "CATT";
 		}
 	};
@@ -271,12 +299,12 @@ public class AttributeTypeCode {
 	 * definition} = "Email address of the certificate subject."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEmailAddress = new MMCode() {
+	public static final AttributeTypeCode EmailAddress = new AttributeTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmailAddress";
 			definition = "Email address of the certificate subject.";
-			owner_lazy = () -> AttributeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttributeTypeCode.mmObject();
 			codeName = "EMAL";
 		}
 	};
@@ -302,29 +330,65 @@ public class AttributeTypeCode {
 	 * "Password by which an entity may request certificate revocation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmChallengePassword = new MMCode() {
+	public static final AttributeTypeCode ChallengePassword = new AttributeTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChallengePassword";
 			definition = "Password by which an entity may request certificate revocation";
-			owner_lazy = () -> AttributeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttributeTypeCode.mmObject();
 			codeName = "CHLG";
 		}
 	};
+	final static private LinkedHashMap<String, AttributeTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AttributeTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CNAT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AttributeTypeCode";
 				definition = "Type of attribute of a distinguished name (DN).";
-				code_lazy = () -> Arrays.asList(AttributeTypeCode.mmCommonName, AttributeTypeCode.mmLocality, AttributeTypeCode.mmOrganisationName, AttributeTypeCode.mmOrganisationUnitName, AttributeTypeCode.mmCountryName,
-						AttributeTypeCode.mmEmailAddress, AttributeTypeCode.mmChallengePassword);
 				derivation_lazy = () -> Arrays.asList(AttributeType1Code.mmObject(), AttributeType2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttributeTypeCode.CommonName, com.tools20022.repository.codeset.AttributeTypeCode.Locality,
+						com.tools20022.repository.codeset.AttributeTypeCode.OrganisationName, com.tools20022.repository.codeset.AttributeTypeCode.OrganisationUnitName, com.tools20022.repository.codeset.AttributeTypeCode.CountryName,
+						com.tools20022.repository.codeset.AttributeTypeCode.EmailAddress, com.tools20022.repository.codeset.AttributeTypeCode.ChallengePassword);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CommonName.getCodeName().get(), CommonName);
+		codesByName.put(Locality.getCodeName().get(), Locality);
+		codesByName.put(OrganisationName.getCodeName().get(), OrganisationName);
+		codesByName.put(OrganisationUnitName.getCodeName().get(), OrganisationUnitName);
+		codesByName.put(CountryName.getCodeName().get(), CountryName);
+		codesByName.put(EmailAddress.getCodeName().get(), EmailAddress);
+		codesByName.put(ChallengePassword.getCodeName().get(), ChallengePassword);
+	}
+
+	public static AttributeTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AttributeTypeCode[] values() {
+		AttributeTypeCode[] values = new AttributeTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AttributeTypeCode> {
+		@Override
+		public AttributeTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AttributeTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

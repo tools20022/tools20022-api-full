@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -27,6 +28,7 @@ import com.tools20022.repository.entity.LotBreakdown;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of breakdown of a quantity."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QuantityBreakdown11", propOrder = {"lotNumber", "lotQuantity", "lotDateTime", "lotPrice"})
 public class QuantityBreakdown11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LotNb")
 	protected GenericIdentification37 lotNumber;
 	/**
-	 * Identification, for tax purposes, of a lot of identical securities that
-	 * are bought at a certain date and at a certain price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,6 +104,9 @@ public class QuantityBreakdown11 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LotNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13a::LOTS</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -117,9 +122,10 @@ public class QuantityBreakdown11 {
 	public static final MMMessageAttribute mmLotNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotNumber;
-			componentContext_lazy = () -> QuantityBreakdown11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown11.mmObject();
 			isDerived = false;
 			xmlTag = "LotNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13a::LOTS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotNumber";
 			definition = "Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price.";
@@ -128,10 +134,11 @@ public class QuantityBreakdown11 {
 			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification37.mmObject();
 		}
 	};
+	@XmlElement(name = "LotQty")
 	protected FinancialInstrumentQuantity1Choice lotQuantity;
 	/**
-	 * Quantity of financial instruments that is part of the lot described.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -151,6 +158,9 @@ public class QuantityBreakdown11 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LotQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::LOTS</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -165,9 +175,10 @@ public class QuantityBreakdown11 {
 	public static final MMMessageAssociationEnd mmLotQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmSecuritiesQuantity;
-			componentContext_lazy = () -> QuantityBreakdown11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown11.mmObject();
 			isDerived = false;
 			xmlTag = "LotQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::LOTS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotQuantity";
 			definition = "Quantity of financial instruments that is part of the lot described.";
@@ -177,10 +188,11 @@ public class QuantityBreakdown11 {
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LotDtTm")
 	protected DateAndDateTime1Choice lotDateTime;
 	/**
-	 * Date/time at which the lot was purchased.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,6 +213,9 @@ public class QuantityBreakdown11 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LotDtTm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::LOTS</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -214,9 +229,10 @@ public class QuantityBreakdown11 {
 	public static final MMMessageAttribute mmLotDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotDateTime;
-			componentContext_lazy = () -> QuantityBreakdown11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown11.mmObject();
 			isDerived = false;
 			xmlTag = "LotDtTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::LOTS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotDateTime";
 			definition = "Date/time at which the lot was purchased.";
@@ -225,10 +241,11 @@ public class QuantityBreakdown11 {
 			complexType_lazy = () -> DateAndDateTime1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LotPric")
 	protected Price4 lotPrice;
 	/**
-	 * Price at which the lot was purchased.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -246,6 +263,9 @@ public class QuantityBreakdown11 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LotPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::LOTS</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -259,9 +279,10 @@ public class QuantityBreakdown11 {
 	public static final MMMessageAssociationEnd mmLotPrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotPrice;
-			componentContext_lazy = () -> QuantityBreakdown11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityBreakdown11.mmObject();
 			isDerived = false;
 			xmlTag = "LotPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::LOTS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotPrice";
 			definition = "Price at which the lot was purchased.";
@@ -275,9 +296,10 @@ public class QuantityBreakdown11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QuantityBreakdown11.mmLotNumber, QuantityBreakdown11.mmLotQuantity, QuantityBreakdown11.mmLotDateTime, QuantityBreakdown11.mmLotPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityBreakdown11.mmLotNumber, com.tools20022.repository.msg.QuantityBreakdown11.mmLotQuantity,
+						com.tools20022.repository.msg.QuantityBreakdown11.mmLotDateTime, com.tools20022.repository.msg.QuantityBreakdown11.mmLotPrice);
 				trace_lazy = () -> LotBreakdown.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuantityBreakdown11";
 				definition = "Details of breakdown of a quantity.";
@@ -286,39 +308,39 @@ public class QuantityBreakdown11 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LotNb")
-	public GenericIdentification37 getLotNumber() {
-		return lotNumber;
+	public Optional<GenericIdentification37> getLotNumber() {
+		return lotNumber == null ? Optional.empty() : Optional.of(lotNumber);
 	}
 
-	public void setLotNumber(com.tools20022.repository.msg.GenericIdentification37 lotNumber) {
+	public QuantityBreakdown11 setLotNumber(com.tools20022.repository.msg.GenericIdentification37 lotNumber) {
 		this.lotNumber = lotNumber;
+		return this;
 	}
 
-	@XmlElement(name = "LotQty")
-	public FinancialInstrumentQuantity1Choice getLotQuantity() {
-		return lotQuantity;
+	public Optional<FinancialInstrumentQuantity1Choice> getLotQuantity() {
+		return lotQuantity == null ? Optional.empty() : Optional.of(lotQuantity);
 	}
 
-	public void setLotQuantity(FinancialInstrumentQuantity1Choice lotQuantity) {
+	public QuantityBreakdown11 setLotQuantity(FinancialInstrumentQuantity1Choice lotQuantity) {
 		this.lotQuantity = lotQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "LotDtTm")
-	public DateAndDateTime1Choice getLotDateTime() {
-		return lotDateTime;
+	public Optional<DateAndDateTime1Choice> getLotDateTime() {
+		return lotDateTime == null ? Optional.empty() : Optional.of(lotDateTime);
 	}
 
-	public void setLotDateTime(DateAndDateTime1Choice lotDateTime) {
+	public QuantityBreakdown11 setLotDateTime(DateAndDateTime1Choice lotDateTime) {
 		this.lotDateTime = lotDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "LotPric")
-	public Price4 getLotPrice() {
-		return lotPrice;
+	public Optional<Price4> getLotPrice() {
+		return lotPrice == null ? Optional.empty() : Optional.of(lotPrice);
 	}
 
-	public void setLotPrice(com.tools20022.repository.msg.Price4 lotPrice) {
+	public QuantityBreakdown11 setLotPrice(com.tools20022.repository.msg.Price4 lotPrice) {
 		this.lotPrice = lotPrice;
+		return this;
 	}
 }

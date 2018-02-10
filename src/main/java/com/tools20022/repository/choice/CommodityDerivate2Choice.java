@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.CommodityDerivate5;
 import com.tools20022.repository.msg.CommodityDerivate6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Choice for transparency calculation specific details on commodities."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CommodityDerivate2Choice", propOrder = {"freight", "energy"})
 public class CommodityDerivate2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Frght", required = true)
 	protected CommodityDerivate5 freight;
 	/**
-	 * Details specific to freight derivatives.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,7 +108,7 @@ public class CommodityDerivate2Choice {
 	public static final MMMessageAssociationEnd mmFreight = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Commodity.mmObject();
-			componentContext_lazy = () -> CommodityDerivate2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CommodityDerivate2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Frght";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +120,11 @@ public class CommodityDerivate2Choice {
 			type_lazy = () -> CommodityDerivate5.mmObject();
 		}
 	};
+	@XmlElement(name = "Nrgy", required = true)
 	protected CommodityDerivate6 energy;
 	/**
-	 * Details specific to energy derivatives.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -152,7 +155,7 @@ public class CommodityDerivate2Choice {
 	public static final MMMessageAssociationEnd mmEnergy = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Commodity.mmObject();
-			componentContext_lazy = () -> CommodityDerivate2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CommodityDerivate2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Nrgy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,9 +171,9 @@ public class CommodityDerivate2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CommodityDerivate2Choice.mmFreight, CommodityDerivate2Choice.mmEnergy);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CommodityDerivate2Choice.mmFreight, com.tools20022.repository.choice.CommodityDerivate2Choice.mmEnergy);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommodityDerivate2Choice";
 				definition = "Choice for transparency calculation specific details on commodities.";
@@ -179,21 +182,21 @@ public class CommodityDerivate2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Frght", required = true)
 	public CommodityDerivate5 getFreight() {
 		return freight;
 	}
 
-	public void setFreight(CommodityDerivate5 freight) {
-		this.freight = freight;
+	public CommodityDerivate2Choice setFreight(CommodityDerivate5 freight) {
+		this.freight = Objects.requireNonNull(freight);
+		return this;
 	}
 
-	@XmlElement(name = "Nrgy", required = true)
 	public CommodityDerivate6 getEnergy() {
 		return energy;
 	}
 
-	public void setEnergy(CommodityDerivate6 energy) {
-		this.energy = energy;
+	public CommodityDerivate2Choice setEnergy(CommodityDerivate6 energy) {
+		this.energy = Objects.requireNonNull(energy);
+		return this;
 	}
 }

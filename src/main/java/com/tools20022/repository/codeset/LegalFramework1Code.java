@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.LegalFrameworkCode;
+import com.tools20022.repository.codeset.LegalFramework1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies the legal framework of the transaction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.LegalFrameworkCode
- * LegalFrameworkCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LegalFramework1Code#mmPensionLivree
- * LegalFramework1Code.mmPensionLivree}</li>
+ * {@linkplain com.tools20022.repository.codeset.LegalFramework1Code#PensionLivree
+ * LegalFramework1Code.PensionLivree}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.LegalFrameworkCode
+ * LegalFrameworkCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies the legal framework of the transaction."</li>
  * </ul>
  */
-public class LegalFramework1Code extends LegalFrameworkCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class LegalFramework1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,26 +85,56 @@ public class LegalFramework1Code extends LegalFrameworkCode {
 	 * name} = "PensionLivree"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPensionLivree = new MMCode() {
+	public static final LegalFramework1Code PensionLivree = new LegalFramework1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PensionLivree";
-			owner_lazy = () -> LegalFramework1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LegalFramework1Code.mmObject();
+			codeName = LegalFrameworkCode.PensionLivree.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, LegalFramework1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected LegalFramework1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FRAN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LegalFramework1Code";
 				definition = "Identifies the legal framework of the transaction.";
-				code_lazy = () -> Arrays.asList(LegalFramework1Code.mmPensionLivree);
 				trace_lazy = () -> LegalFrameworkCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LegalFramework1Code.PensionLivree);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PensionLivree.getCodeName().get(), PensionLivree);
+	}
+
+	public static LegalFramework1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static LegalFramework1Code[] values() {
+		LegalFramework1Code[] values = new LegalFramework1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, LegalFramework1Code> {
+		@Override
+		public LegalFramework1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(LegalFramework1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -27,9 +27,8 @@ import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * RejectionOrRepairStatus14Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReportItemStatus1", propOrder = {"exception", "additionalReasonInformation", "reportItem"})
 public class ReportItemStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Xcptn", required = true)
 	protected ReportItemRejectionReason1Choice exception;
 	/**
-	 * Reason for the exception status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -117,7 +117,7 @@ public class ReportItemStatus1 {
 	public static final MMMessageAssociationEnd mmException = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-			componentContext_lazy = () -> ReportItemStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportItemStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Xcptn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,11 +129,11 @@ public class ReportItemStatus1 {
 			type_lazy = () -> ReportItemRejectionReason1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRsnInf")
 	protected Max210Text additionalReasonInformation;
 	/**
-	 * Additional information about the reason for the status that cannot be
-	 * provided in a structured field.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,7 +168,7 @@ public class ReportItemStatus1 {
 	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> ReportItemStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportItemStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,10 +179,11 @@ public class ReportItemStatus1 {
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RptItm")
 	protected List<com.tools20022.repository.msg.ReportItem1> reportItem;
 	/**
-	 * Details of the report item.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -208,7 +209,7 @@ public class ReportItemStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmReportItem = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReportItemStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportItemStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "RptItm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,9 +224,10 @@ public class ReportItemStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReportItemStatus1.mmException, ReportItemStatus1.mmAdditionalReasonInformation, ReportItemStatus1.mmReportItem);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportItemStatus1.mmException, com.tools20022.repository.msg.ReportItemStatus1.mmAdditionalReasonInformation,
+						com.tools20022.repository.msg.ReportItemStatus1.mmReportItem);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportItemStatus1";
 				definition = "Status information of the report item.";
@@ -235,30 +237,30 @@ public class ReportItemStatus1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Xcptn", required = true)
 	public ReportItemRejectionReason1Choice getException() {
 		return exception;
 	}
 
-	public void setException(ReportItemRejectionReason1Choice exception) {
-		this.exception = exception;
+	public ReportItemStatus1 setException(ReportItemRejectionReason1Choice exception) {
+		this.exception = Objects.requireNonNull(exception);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRsnInf")
-	public Max210Text getAdditionalReasonInformation() {
-		return additionalReasonInformation;
+	public Optional<Max210Text> getAdditionalReasonInformation() {
+		return additionalReasonInformation == null ? Optional.empty() : Optional.of(additionalReasonInformation);
 	}
 
-	public void setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
+	public ReportItemStatus1 setAdditionalReasonInformation(Max210Text additionalReasonInformation) {
 		this.additionalReasonInformation = additionalReasonInformation;
+		return this;
 	}
 
-	@XmlElement(name = "RptItm")
 	public List<ReportItem1> getReportItem() {
-		return reportItem;
+		return reportItem == null ? reportItem = new ArrayList<>() : reportItem;
 	}
 
-	public void setReportItem(List<com.tools20022.repository.msg.ReportItem1> reportItem) {
-		this.reportItem = reportItem;
+	public ReportItemStatus1 setReportItem(List<com.tools20022.repository.msg.ReportItem1> reportItem) {
+		this.reportItem = Objects.requireNonNull(reportItem);
+		return this;
 	}
 }

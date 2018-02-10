@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.PortfolioTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CurrentYearType2Choice", propOrder = {"currentYearType", "extendedCurrentYearType"})
 public class CurrentYearType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CurYrTp", required = true)
 	protected ISAType2Code currentYearType;
 	/**
-	 * Current year ISA is an ISA that was issued during the current fiscal
-	 * year.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +114,7 @@ public class CurrentYearType2Choice {
 	public static final MMMessageAttribute mmCurrentYearType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmCurrentYearISAType;
-			componentContext_lazy = () -> CurrentYearType2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CurrentYearType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CurYrTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,11 +125,11 @@ public class CurrentYearType2Choice {
 			simpleType_lazy = () -> ISAType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedCurYrTp", required = true)
 	protected Extended350Code extendedCurrentYearType;
 	/**
-	 * Current year ISA is an ISA that was issued during the current fiscal
-	 * year.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +165,7 @@ public class CurrentYearType2Choice {
 	public static final MMMessageAttribute mmExtendedCurrentYearType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmCurrentYearISAType;
-			componentContext_lazy = () -> CurrentYearType2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CurrentYearType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedCurYrTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,9 +180,9 @@ public class CurrentYearType2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CurrentYearType2Choice.mmCurrentYearType, CurrentYearType2Choice.mmExtendedCurrentYearType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CurrentYearType2Choice.mmCurrentYearType, com.tools20022.repository.choice.CurrentYearType2Choice.mmExtendedCurrentYearType);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrentYearType2Choice";
 				definition = "Choice between the selections of individual saving accounts issued during the current fiscal year.";
@@ -190,21 +191,21 @@ public class CurrentYearType2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CurYrTp", required = true)
 	public ISAType2Code getCurrentYearType() {
 		return currentYearType;
 	}
 
-	public void setCurrentYearType(ISAType2Code currentYearType) {
-		this.currentYearType = currentYearType;
+	public CurrentYearType2Choice setCurrentYearType(ISAType2Code currentYearType) {
+		this.currentYearType = Objects.requireNonNull(currentYearType);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedCurYrTp", required = true)
 	public Extended350Code getExtendedCurrentYearType() {
 		return extendedCurrentYearType;
 	}
 
-	public void setExtendedCurrentYearType(Extended350Code extendedCurrentYearType) {
-		this.extendedCurrentYearType = extendedCurrentYearType;
+	public CurrentYearType2Choice setExtendedCurrentYearType(Extended350Code extendedCurrentYearType) {
+		this.extendedCurrentYearType = Objects.requireNonNull(extendedCurrentYearType);
+		return this;
 	}
 }

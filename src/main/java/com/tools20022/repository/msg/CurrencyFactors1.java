@@ -31,6 +31,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -80,16 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Currency specific Factors."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CurrencyFactors1", propOrder = {"currency", "shortPositionLimit", "minimumPayInAmount", "volatilityMargin", "rate"})
 public class CurrencyFactors1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ccy", required = true)
 	protected CurrencyCode currency;
 	/**
-	 * Currency of the underlying currency specific amounts and ratios used in
-	 * the pay-in schedule calculation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +126,7 @@ public class CurrencyFactors1 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmCurrency;
-			componentContext_lazy = () -> CurrencyFactors1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyFactors1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +137,11 @@ public class CurrencyFactors1 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "ShrtPosLmt", required = true)
 	protected ImpliedCurrencyAndAmount shortPositionLimit;
 	/**
-	 * Maximum allowed short position in the currency during settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +176,7 @@ public class CurrencyFactors1 {
 	public static final MMMessageAttribute mmShortPositionLimit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAmount;
-			componentContext_lazy = () -> CurrencyFactors1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyFactors1.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtPosLmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,11 +187,11 @@ public class CurrencyFactors1 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "MinPayInAmt", required = true)
 	protected ImpliedCurrencyAndAmount minimumPayInAmount;
 	/**
-	 * Minimum amount paid in one payment unless the short position is less than
-	 * the minimum.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,7 +221,7 @@ public class CurrencyFactors1 {
 	 */
 	public static final MMMessageAttribute mmMinimumPayInAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyFactors1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyFactors1.mmObject();
 			isDerived = false;
 			xmlTag = "MinPayInAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,11 +232,11 @@ public class CurrencyFactors1 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "VoltlyMrgn", required = true)
 	protected PercentageRate volatilityMargin;
 	/**
-	 * Margin used to decrease long positions and increase short positions
-	 * during the risk calculation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,7 +272,7 @@ public class CurrencyFactors1 {
 	public static final MMMessageAttribute mmVolatilityMargin = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LiquidityManagementLimit.mmVolatilityMargin;
-			componentContext_lazy = () -> CurrencyFactors1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyFactors1.mmObject();
 			isDerived = false;
 			xmlTag = "VoltlyMrgn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,10 +283,11 @@ public class CurrencyFactors1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate")
 	protected AgreedRate2 rate;
 	/**
-	 * Exchange rate used in the calculation of the pay-in schedule.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -317,7 +321,7 @@ public class CurrencyFactors1 {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LiquidityManagementLimit.mmCurrencyExchange;
-			componentContext_lazy = () -> CurrencyFactors1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyFactors1.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -332,9 +336,10 @@ public class CurrencyFactors1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CurrencyFactors1.mmCurrency, CurrencyFactors1.mmShortPositionLimit, CurrencyFactors1.mmMinimumPayInAmount, CurrencyFactors1.mmVolatilityMargin, CurrencyFactors1.mmRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyFactors1.mmCurrency, com.tools20022.repository.msg.CurrencyFactors1.mmShortPositionLimit,
+						com.tools20022.repository.msg.CurrencyFactors1.mmMinimumPayInAmount, com.tools20022.repository.msg.CurrencyFactors1.mmVolatilityMargin, com.tools20022.repository.msg.CurrencyFactors1.mmRate);
 				trace_lazy = () -> LiquidityManagementLimit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -350,48 +355,48 @@ public class CurrencyFactors1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ccy", required = true)
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(CurrencyCode currency) {
-		this.currency = currency;
+	public CurrencyFactors1 setCurrency(CurrencyCode currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 
-	@XmlElement(name = "ShrtPosLmt", required = true)
 	public ImpliedCurrencyAndAmount getShortPositionLimit() {
 		return shortPositionLimit;
 	}
 
-	public void setShortPositionLimit(ImpliedCurrencyAndAmount shortPositionLimit) {
-		this.shortPositionLimit = shortPositionLimit;
+	public CurrencyFactors1 setShortPositionLimit(ImpliedCurrencyAndAmount shortPositionLimit) {
+		this.shortPositionLimit = Objects.requireNonNull(shortPositionLimit);
+		return this;
 	}
 
-	@XmlElement(name = "MinPayInAmt", required = true)
 	public ImpliedCurrencyAndAmount getMinimumPayInAmount() {
 		return minimumPayInAmount;
 	}
 
-	public void setMinimumPayInAmount(ImpliedCurrencyAndAmount minimumPayInAmount) {
-		this.minimumPayInAmount = minimumPayInAmount;
+	public CurrencyFactors1 setMinimumPayInAmount(ImpliedCurrencyAndAmount minimumPayInAmount) {
+		this.minimumPayInAmount = Objects.requireNonNull(minimumPayInAmount);
+		return this;
 	}
 
-	@XmlElement(name = "VoltlyMrgn", required = true)
 	public PercentageRate getVolatilityMargin() {
 		return volatilityMargin;
 	}
 
-	public void setVolatilityMargin(PercentageRate volatilityMargin) {
-		this.volatilityMargin = volatilityMargin;
+	public CurrencyFactors1 setVolatilityMargin(PercentageRate volatilityMargin) {
+		this.volatilityMargin = Objects.requireNonNull(volatilityMargin);
+		return this;
 	}
 
-	@XmlElement(name = "Rate")
-	public AgreedRate2 getRate() {
-		return rate;
+	public Optional<AgreedRate2> getRate() {
+		return rate == null ? Optional.empty() : Optional.of(rate);
 	}
 
-	public void setRate(com.tools20022.repository.msg.AgreedRate2 rate) {
+	public CurrencyFactors1 setRate(com.tools20022.repository.msg.AgreedRate2 rate) {
 		this.rate = rate;
+		return this;
 	}
 }

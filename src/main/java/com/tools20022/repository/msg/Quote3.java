@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -31,11 +32,9 @@ import com.tools20022.repository.entity.QuoteRequestor;
 import com.tools20022.repository.entity.SecuritiesQuoteVariable;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -80,8 +79,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -93,16 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Proposition of price for a financial instrument."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Quote3", propOrder = {"type", "qualifier", "validUntilDateTime", "previousClosingPrice", "priceType", "requestedPrice", "currency", "quoteOriginator", "quoteOriginatorRole", "requestorEligibility", "sourceOfQuote"})
 public class Quote3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp")
 	protected QuoteType1Code type;
 	/**
-	 * Indicates the scenario in which the quote is (requested to be) used (ie,
-	 * indicative, firm, restricted tradeable or counter).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,6 +121,9 @@ public class Quote3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Tp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 537</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -137,9 +139,10 @@ public class Quote3 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmType;
-			componentContext_lazy = () -> Quote3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "537"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Indicates the scenario in which the quote is (requested to be) used (ie, indicative, firm, restricted tradeable or counter).";
@@ -148,10 +151,11 @@ public class Quote3 {
 			simpleType_lazy = () -> QuoteType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Qlfr")
 	protected List<Qualifier1Code> qualifier;
 	/**
-	 * Qualifies the use of the quote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,6 +175,9 @@ public class Quote3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Qlfr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 695</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -184,9 +191,10 @@ public class Quote3 {
 	public static final MMMessageAttribute mmQualifier = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmQualifier;
-			componentContext_lazy = () -> Quote3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
 			isDerived = false;
 			xmlTag = "Qlfr";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "695"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Qualifier";
 			definition = "Qualifies the use of the quote.";
@@ -194,10 +202,11 @@ public class Quote3 {
 			simpleType_lazy = () -> Qualifier1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "VldUntilDtTm")
 	protected ISODateTime validUntilDateTime;
 	/**
-	 * Expresses the validity date and time of the Quote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -216,6 +225,9 @@ public class Quote3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "VldUntilDtTm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 62</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -229,9 +241,10 @@ public class Quote3 {
 	public static final MMMessageAttribute mmValidUntilDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmValidUntilDateTime;
-			componentContext_lazy = () -> Quote3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
 			isDerived = false;
 			xmlTag = "VldUntilDtTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "62"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidUntilDateTime";
 			definition = "Expresses the validity date and time of the Quote.";
@@ -240,11 +253,11 @@ public class Quote3 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsClsgPric")
 	protected Price1 previousClosingPrice;
 	/**
-	 * Previous closing price of the financial instrument - Useful for verifying
-	 * its identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,7 +290,7 @@ public class Quote3 {
 	public static final MMMessageAttribute mmPreviousClosingPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmPreviousClosingPrice;
-			componentContext_lazy = () -> Quote3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsClsgPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,11 +301,11 @@ public class Quote3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	@XmlElement(name = "PricTp")
 	protected PriceValueType3Code priceType;
 	/**
-	 * Initiator can specify the price type the quote needs to be quoted at. If
-	 * not specified, the respondent has option to specify how quote is quoted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -312,6 +325,9 @@ public class Quote3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PricTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 692</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -327,9 +343,10 @@ public class Quote3 {
 	public static final MMMessageAttribute mmPriceType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuoteVariable.mmPriceType;
-			componentContext_lazy = () -> Quote3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
 			isDerived = false;
 			xmlTag = "PricTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "692"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceType";
 			definition = "Initiator can specify the price type the quote needs to be quoted at. If not specified, the respondent has option to specify how quote is quoted.";
@@ -338,12 +355,11 @@ public class Quote3 {
 			simpleType_lazy = () -> PriceValueType3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdPric")
 	protected Price1 requestedPrice;
 	/**
-	 * Is used to specify the desired currency of the quoted price when they
-	 * differ from the normal trading currency of the instrument being quote
-	 * requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -361,6 +377,9 @@ public class Quote3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ReqdPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 44, FIXSynonym: 423</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -376,9 +395,10 @@ public class Quote3 {
 	public static final MMMessageAttribute mmRequestedPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmRequestedPrice;
-			componentContext_lazy = () -> Quote3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "44"), new FIXSynonym(this, "423"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedPrice";
 			definition = "Is used to specify the desired currency of the quoted price when they differ from the normal trading currency of the instrument being quote requested.";
@@ -387,12 +407,11 @@ public class Quote3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected CurrencyCode currency;
 	/**
-	 * Can be used to specify the desired currency of the quoted price that may
-	 * differ from the normal trading currency of the instrument being quote
-	 * requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -426,7 +445,7 @@ public class Quote3 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmCurrency;
-			componentContext_lazy = () -> Quote3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -437,10 +456,11 @@ public class Quote3 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "QtOrgtr")
 	protected PartyIdentification24Choice quoteOriginator;
 	/**
-	 * Originator of the quote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -467,7 +487,7 @@ public class Quote3 {
 	 */
 	public static final MMMessageAttribute mmQuoteOriginator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Quote3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
 			isDerived = false;
 			xmlTag = "QtOrgtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -478,10 +498,11 @@ public class Quote3 {
 			complexType_lazy = () -> PartyIdentification24Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "QtOrgtrRole")
 	protected OriginatorRole1Code quoteOriginatorRole;
 	/**
-	 * Identifies in what capacity(role) the originator of the quote is acting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -516,7 +537,7 @@ public class Quote3 {
 	public static final MMMessageAttribute mmQuoteOriginatorRole = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> QuoteOriginator.mmQuoteOriginatorType;
-			componentContext_lazy = () -> Quote3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
 			isDerived = false;
 			xmlTag = "QtOrgtrRole";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -527,10 +548,11 @@ public class Quote3 {
 			simpleType_lazy = () -> OriginatorRole1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RqstrElgblty")
 	protected Eligibility1Code requestorEligibility;
 	/**
-	 * Identifies if the requestor of the quote is an elligible counterparty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -564,7 +586,7 @@ public class Quote3 {
 	public static final MMMessageAttribute mmRequestorEligibility = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> QuoteRequestor.mmRequestorEligibility;
-			componentContext_lazy = () -> Quote3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
 			isDerived = false;
 			xmlTag = "RqstrElgblty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -575,10 +597,11 @@ public class Quote3 {
 			simpleType_lazy = () -> Eligibility1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SrcOfQt")
 	protected PartyIdentification25Choice sourceOfQuote;
 	/**
-	 * Identifies the source of the quote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -604,7 +627,7 @@ public class Quote3 {
 	 */
 	public static final MMMessageAssociationEnd mmSourceOfQuote = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Quote3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Quote3.mmObject();
 			isDerived = false;
 			xmlTag = "SrcOfQt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -620,10 +643,12 @@ public class Quote3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Quote3.mmType, Quote3.mmQualifier, Quote3.mmValidUntilDateTime, Quote3.mmPreviousClosingPrice, Quote3.mmPriceType, Quote3.mmRequestedPrice, Quote3.mmCurrency,
-						Quote3.mmQuoteOriginator, Quote3.mmQuoteOriginatorRole, Quote3.mmRequestorEligibility, Quote3.mmSourceOfQuote);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Quote3.mmType, com.tools20022.repository.msg.Quote3.mmQualifier, com.tools20022.repository.msg.Quote3.mmValidUntilDateTime,
+						com.tools20022.repository.msg.Quote3.mmPreviousClosingPrice, com.tools20022.repository.msg.Quote3.mmPriceType, com.tools20022.repository.msg.Quote3.mmRequestedPrice, com.tools20022.repository.msg.Quote3.mmCurrency,
+						com.tools20022.repository.msg.Quote3.mmQuoteOriginator, com.tools20022.repository.msg.Quote3.mmQuoteOriginatorRole, com.tools20022.repository.msg.Quote3.mmRequestorEligibility,
+						com.tools20022.repository.msg.Quote3.mmSourceOfQuote);
 				trace_lazy = () -> SecuritiesQuoteVariable.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -639,102 +664,102 @@ public class Quote3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp")
-	public QuoteType1Code getType() {
-		return type;
+	public Optional<QuoteType1Code> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(QuoteType1Code type) {
+	public Quote3 setType(QuoteType1Code type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Qlfr")
 	public List<Qualifier1Code> getQualifier() {
-		return qualifier;
+		return qualifier == null ? qualifier = new ArrayList<>() : qualifier;
 	}
 
-	public void setQualifier(List<Qualifier1Code> qualifier) {
-		this.qualifier = qualifier;
+	public Quote3 setQualifier(List<Qualifier1Code> qualifier) {
+		this.qualifier = Objects.requireNonNull(qualifier);
+		return this;
 	}
 
-	@XmlElement(name = "VldUntilDtTm")
-	public ISODateTime getValidUntilDateTime() {
-		return validUntilDateTime;
+	public Optional<ISODateTime> getValidUntilDateTime() {
+		return validUntilDateTime == null ? Optional.empty() : Optional.of(validUntilDateTime);
 	}
 
-	public void setValidUntilDateTime(ISODateTime validUntilDateTime) {
+	public Quote3 setValidUntilDateTime(ISODateTime validUntilDateTime) {
 		this.validUntilDateTime = validUntilDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsClsgPric")
-	public Price1 getPreviousClosingPrice() {
-		return previousClosingPrice;
+	public Optional<Price1> getPreviousClosingPrice() {
+		return previousClosingPrice == null ? Optional.empty() : Optional.of(previousClosingPrice);
 	}
 
-	public void setPreviousClosingPrice(com.tools20022.repository.msg.Price1 previousClosingPrice) {
+	public Quote3 setPreviousClosingPrice(com.tools20022.repository.msg.Price1 previousClosingPrice) {
 		this.previousClosingPrice = previousClosingPrice;
+		return this;
 	}
 
-	@XmlElement(name = "PricTp")
-	public PriceValueType3Code getPriceType() {
-		return priceType;
+	public Optional<PriceValueType3Code> getPriceType() {
+		return priceType == null ? Optional.empty() : Optional.of(priceType);
 	}
 
-	public void setPriceType(PriceValueType3Code priceType) {
+	public Quote3 setPriceType(PriceValueType3Code priceType) {
 		this.priceType = priceType;
+		return this;
 	}
 
-	@XmlElement(name = "ReqdPric")
-	public Price1 getRequestedPrice() {
-		return requestedPrice;
+	public Optional<Price1> getRequestedPrice() {
+		return requestedPrice == null ? Optional.empty() : Optional.of(requestedPrice);
 	}
 
-	public void setRequestedPrice(com.tools20022.repository.msg.Price1 requestedPrice) {
+	public Quote3 setRequestedPrice(com.tools20022.repository.msg.Price1 requestedPrice) {
 		this.requestedPrice = requestedPrice;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public CurrencyCode getCurrency() {
-		return currency;
+	public Optional<CurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(CurrencyCode currency) {
+	public Quote3 setCurrency(CurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "QtOrgtr")
-	public PartyIdentification24Choice getQuoteOriginator() {
-		return quoteOriginator;
+	public Optional<PartyIdentification24Choice> getQuoteOriginator() {
+		return quoteOriginator == null ? Optional.empty() : Optional.of(quoteOriginator);
 	}
 
-	public void setQuoteOriginator(PartyIdentification24Choice quoteOriginator) {
+	public Quote3 setQuoteOriginator(PartyIdentification24Choice quoteOriginator) {
 		this.quoteOriginator = quoteOriginator;
+		return this;
 	}
 
-	@XmlElement(name = "QtOrgtrRole")
-	public OriginatorRole1Code getQuoteOriginatorRole() {
-		return quoteOriginatorRole;
+	public Optional<OriginatorRole1Code> getQuoteOriginatorRole() {
+		return quoteOriginatorRole == null ? Optional.empty() : Optional.of(quoteOriginatorRole);
 	}
 
-	public void setQuoteOriginatorRole(OriginatorRole1Code quoteOriginatorRole) {
+	public Quote3 setQuoteOriginatorRole(OriginatorRole1Code quoteOriginatorRole) {
 		this.quoteOriginatorRole = quoteOriginatorRole;
+		return this;
 	}
 
-	@XmlElement(name = "RqstrElgblty")
-	public Eligibility1Code getRequestorEligibility() {
-		return requestorEligibility;
+	public Optional<Eligibility1Code> getRequestorEligibility() {
+		return requestorEligibility == null ? Optional.empty() : Optional.of(requestorEligibility);
 	}
 
-	public void setRequestorEligibility(Eligibility1Code requestorEligibility) {
+	public Quote3 setRequestorEligibility(Eligibility1Code requestorEligibility) {
 		this.requestorEligibility = requestorEligibility;
+		return this;
 	}
 
-	@XmlElement(name = "SrcOfQt")
-	public PartyIdentification25Choice getSourceOfQuote() {
-		return sourceOfQuote;
+	public Optional<PartyIdentification25Choice> getSourceOfQuote() {
+		return sourceOfQuote == null ? Optional.empty() : Optional.of(sourceOfQuote);
 	}
 
-	public void setSourceOfQuote(PartyIdentification25Choice sourceOfQuote) {
+	public Quote3 setSourceOfQuote(PartyIdentification25Choice sourceOfQuote) {
 		this.sourceOfQuote = sourceOfQuote;
+		return this;
 	}
 }

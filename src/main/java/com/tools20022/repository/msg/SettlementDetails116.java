@@ -25,9 +25,8 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.SettlementTransactionCondition5Code;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -104,8 +103,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails116
+ * ConstraintSettlementDetailsRule.forSettlementDetails116}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCashClearingSystemRule#forSettlementDetails116
+ * ConstraintCashClearingSystemRule.forSettlementDetails116}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,16 +126,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of settlement of a transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementDetails116", propOrder = {"holdIndicator", "settlementTransactionCondition", "settlingCapacity", "stampDutyTaxBasis", "securitiesRTGS", "registration", "beneficialOwnership", "cashClearingSystem", "taxCapacity",
-		"repurchaseType", "marketClientSide", "blockTrade", "legalRestrictions", "settlementSystemMethod", "nettingEligibility", "CCPEligibility", "letterOfGuarantee", "partialSettlementIndicator"})
+		"repurchaseType", "marketClientSide", "blockTrade", "legalRestrictions", "settlementSystemMethod", "nettingEligibility", "cCPEligibility", "letterOfGuarantee", "partialSettlementIndicator"})
 public class SettlementDetails116 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "HldInd")
 	protected HoldIndicator7 holdIndicator;
 	/**
-	 * Specifies whether the transaction is on hold/blocked/frozen.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +170,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAttribute mmHoldIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmHoldIndicator;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "HldInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,10 +181,11 @@ public class SettlementDetails116 {
 			complexType_lazy = () -> com.tools20022.repository.msg.HoldIndicator7.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmTxCond")
 	protected List<SettlementTransactionCondition28Choice> settlementTransactionCondition;
 	/**
-	 * Conditions under which the order/trade is to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -206,7 +218,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAssociationEnd mmSettlementTransactionCondition = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmTxCond";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,10 +229,11 @@ public class SettlementDetails116 {
 			type_lazy = () -> SettlementTransactionCondition28Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlgCpcty")
 	protected SettlingCapacity8Choice settlingCapacity;
 	/**
-	 * Role of a party in the settlement of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -253,7 +266,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAssociationEnd mmSettlingCapacity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlementPartyRole.mmSettlingCapacity;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "SttlgCpcty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -265,11 +278,11 @@ public class SettlementDetails116 {
 			type_lazy = () -> SettlingCapacity8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "StmpDtyTaxBsis")
 	protected GenericIdentification47 stampDutyTaxBasis;
 	/**
-	 * Specifies the stamp duty type or exemption reason applicable to the
-	 * settlement transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -304,7 +317,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAssociationEnd mmStampDutyTaxBasis = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmStampDutyTaxBasis;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "StmpDtyTaxBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -316,11 +329,11 @@ public class SettlementDetails116 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification47.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesRTGS")
 	protected SecuritiesRTGS5Choice securitiesRTGS;
 	/**
-	 * Specifies whether the settlement transaction is to be settled through an
-	 * RTGS or a non RTGS system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -355,7 +368,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAssociationEnd mmSecuritiesRTGS = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesRTGS";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -367,10 +380,11 @@ public class SettlementDetails116 {
 			type_lazy = () -> SecuritiesRTGS5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Regn")
 	protected Registration11Choice registration;
 	/**
-	 * Specifies whether registration should occur upon receipt.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -404,7 +418,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAssociationEnd mmRegistration = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRegistration;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "Regn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -416,10 +430,11 @@ public class SettlementDetails116 {
 			type_lazy = () -> Registration11Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "BnfclOwnrsh")
 	protected BeneficialOwnership5Choice beneficialOwnership;
 	/**
-	 * Specifies whether there is change of beneficial ownership.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -453,7 +468,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAssociationEnd mmBeneficialOwnership = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmBeneficialOwnershipIndicator;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "BnfclOwnrsh";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -465,11 +480,11 @@ public class SettlementDetails116 {
 			type_lazy = () -> BeneficialOwnership5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CshClrSys")
 	protected CashSettlementSystem5Choice cashClearingSystem;
 	/**
-	 * Specifies the category of cash clearing system, for example, cheque
-	 * clearing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -504,7 +519,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAssociationEnd mmCashClearingSystem = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SettlementInstructionSystemRole.mmSystem;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "CshClrSys";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -516,10 +531,11 @@ public class SettlementDetails116 {
 			type_lazy = () -> CashSettlementSystem5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxCpcty")
 	protected TaxCapacityParty5Choice taxCapacity;
 	/**
-	 * Tax role capacity of the instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -552,7 +568,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAssociationEnd mmTaxCapacity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlementPartyRole.mmTaxCapacity;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "TaxCpcty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -564,10 +580,11 @@ public class SettlementDetails116 {
 			type_lazy = () -> TaxCapacityParty5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RpTp")
 	protected RepurchaseType19Choice repurchaseType;
 	/**
-	 * Specifies whether the rate is fixed, variable or a forfeit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -601,7 +618,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAssociationEnd mmRepurchaseType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesFinancing.mmRepurchaseType;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "RpTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -613,11 +630,11 @@ public class SettlementDetails116 {
 			type_lazy = () -> RepurchaseType19Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MktClntSd")
 	protected MarketClientSide5Choice marketClientSide;
 	/**
-	 * Specifies if an instruction is for a market side or a client side
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -652,7 +669,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAssociationEnd mmMarketClientSide = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmMarketClientSide;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "MktClntSd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -664,10 +681,11 @@ public class SettlementDetails116 {
 			type_lazy = () -> MarketClientSide5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "BlckTrad")
 	protected BlockTrade5Choice blockTrade;
 	/**
-	 * Specifies whether the settlement instruction is a block parent or child.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -701,7 +719,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAssociationEnd mmBlockTrade = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmBlockTrade;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "BlckTrad";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -713,10 +731,11 @@ public class SettlementDetails116 {
 			type_lazy = () -> BlockTrade5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LglRstrctns")
 	protected Restriction6Choice legalRestrictions;
 	/**
-	 * Regulatory restrictions applicable to a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -748,7 +767,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAssociationEnd mmLegalRestrictions = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRestriction;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "LglRstrctns";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -760,11 +779,11 @@ public class SettlementDetails116 {
 			type_lazy = () -> Restriction6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmSysMtd")
 	protected SettlementSystemMethod5Choice settlementSystemMethod;
 	/**
-	 * Specifies whether the settlement instruction is to be settled through the
-	 * default or the alternate settlement system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -799,7 +818,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAssociationEnd mmSettlementSystemMethod = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementSystemMethod;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmSysMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -811,10 +830,11 @@ public class SettlementDetails116 {
 			type_lazy = () -> SettlementSystemMethod5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NetgElgblty")
 	protected NettingEligibility5Choice nettingEligibility;
 	/**
-	 * Specifies whether the settlement transaction is eligible for netting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -848,7 +868,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAssociationEnd mmNettingEligibility = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesDeliveryObligation.mmNettingEligibility;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "NetgElgblty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -860,11 +880,11 @@ public class SettlementDetails116 {
 			type_lazy = () -> NettingEligibility5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CCPElgblty")
 	protected CentralCounterPartyEligibility5Choice cCPEligibility;
 	/**
-	 * Specifies whether the settlement transaction is CCP (Central
-	 * Counterparty) eligible.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -899,7 +919,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAssociationEnd mmCCPEligibility = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesDeliveryObligation.mmCCPEligibility;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "CCPElgblty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -911,11 +931,11 @@ public class SettlementDetails116 {
 			type_lazy = () -> CentralCounterPartyEligibility5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LttrOfGrnt")
 	protected LetterOfGuarantee5Choice letterOfGuarantee;
 	/**
-	 * Specifies whether physical settlement may be executed using a letter of
-	 * guarantee or if the physical certificates should be used.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -950,7 +970,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAssociationEnd mmLetterOfGuarantee = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmLetterOfGuarantee;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "LttrOfGrnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -962,10 +982,11 @@ public class SettlementDetails116 {
 			type_lazy = () -> LetterOfGuarantee5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtlSttlmInd")
 	protected SettlementTransactionCondition5Code partialSettlementIndicator;
 	/**
-	 * Specifies whether partial settlement is allowed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -999,7 +1020,7 @@ public class SettlementDetails116 {
 	public static final MMMessageAttribute mmPartialSettlementIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
-			componentContext_lazy = () -> SettlementDetails116.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementDetails116.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlSttlmInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1014,12 +1035,17 @@ public class SettlementDetails116 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementDetails116.mmHoldIndicator, SettlementDetails116.mmSettlementTransactionCondition, SettlementDetails116.mmSettlingCapacity, SettlementDetails116.mmStampDutyTaxBasis,
-						SettlementDetails116.mmSecuritiesRTGS, SettlementDetails116.mmRegistration, SettlementDetails116.mmBeneficialOwnership, SettlementDetails116.mmCashClearingSystem, SettlementDetails116.mmTaxCapacity,
-						SettlementDetails116.mmRepurchaseType, SettlementDetails116.mmMarketClientSide, SettlementDetails116.mmBlockTrade, SettlementDetails116.mmLegalRestrictions, SettlementDetails116.mmSettlementSystemMethod,
-						SettlementDetails116.mmNettingEligibility, SettlementDetails116.mmCCPEligibility, SettlementDetails116.mmLetterOfGuarantee, SettlementDetails116.mmPartialSettlementIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementDetails116.mmHoldIndicator, com.tools20022.repository.msg.SettlementDetails116.mmSettlementTransactionCondition,
+						com.tools20022.repository.msg.SettlementDetails116.mmSettlingCapacity, com.tools20022.repository.msg.SettlementDetails116.mmStampDutyTaxBasis, com.tools20022.repository.msg.SettlementDetails116.mmSecuritiesRTGS,
+						com.tools20022.repository.msg.SettlementDetails116.mmRegistration, com.tools20022.repository.msg.SettlementDetails116.mmBeneficialOwnership, com.tools20022.repository.msg.SettlementDetails116.mmCashClearingSystem,
+						com.tools20022.repository.msg.SettlementDetails116.mmTaxCapacity, com.tools20022.repository.msg.SettlementDetails116.mmRepurchaseType, com.tools20022.repository.msg.SettlementDetails116.mmMarketClientSide,
+						com.tools20022.repository.msg.SettlementDetails116.mmBlockTrade, com.tools20022.repository.msg.SettlementDetails116.mmLegalRestrictions, com.tools20022.repository.msg.SettlementDetails116.mmSettlementSystemMethod,
+						com.tools20022.repository.msg.SettlementDetails116.mmNettingEligibility, com.tools20022.repository.msg.SettlementDetails116.mmCCPEligibility, com.tools20022.repository.msg.SettlementDetails116.mmLetterOfGuarantee,
+						com.tools20022.repository.msg.SettlementDetails116.mmPartialSettlementIndicator);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails116,
+						com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails116);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementDetails116";
 				definition = "Details of settlement of a transaction.";
@@ -1028,165 +1054,165 @@ public class SettlementDetails116 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "HldInd")
-	public HoldIndicator7 getHoldIndicator() {
-		return holdIndicator;
+	public Optional<HoldIndicator7> getHoldIndicator() {
+		return holdIndicator == null ? Optional.empty() : Optional.of(holdIndicator);
 	}
 
-	public void setHoldIndicator(com.tools20022.repository.msg.HoldIndicator7 holdIndicator) {
+	public SettlementDetails116 setHoldIndicator(com.tools20022.repository.msg.HoldIndicator7 holdIndicator) {
 		this.holdIndicator = holdIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmTxCond")
 	public List<SettlementTransactionCondition28Choice> getSettlementTransactionCondition() {
-		return settlementTransactionCondition;
+		return settlementTransactionCondition == null ? settlementTransactionCondition = new ArrayList<>() : settlementTransactionCondition;
 	}
 
-	public void setSettlementTransactionCondition(List<SettlementTransactionCondition28Choice> settlementTransactionCondition) {
-		this.settlementTransactionCondition = settlementTransactionCondition;
+	public SettlementDetails116 setSettlementTransactionCondition(List<SettlementTransactionCondition28Choice> settlementTransactionCondition) {
+		this.settlementTransactionCondition = Objects.requireNonNull(settlementTransactionCondition);
+		return this;
 	}
 
-	@XmlElement(name = "SttlgCpcty")
-	public SettlingCapacity8Choice getSettlingCapacity() {
-		return settlingCapacity;
+	public Optional<SettlingCapacity8Choice> getSettlingCapacity() {
+		return settlingCapacity == null ? Optional.empty() : Optional.of(settlingCapacity);
 	}
 
-	public void setSettlingCapacity(SettlingCapacity8Choice settlingCapacity) {
+	public SettlementDetails116 setSettlingCapacity(SettlingCapacity8Choice settlingCapacity) {
 		this.settlingCapacity = settlingCapacity;
+		return this;
 	}
 
-	@XmlElement(name = "StmpDtyTaxBsis")
-	public GenericIdentification47 getStampDutyTaxBasis() {
-		return stampDutyTaxBasis;
+	public Optional<GenericIdentification47> getStampDutyTaxBasis() {
+		return stampDutyTaxBasis == null ? Optional.empty() : Optional.of(stampDutyTaxBasis);
 	}
 
-	public void setStampDutyTaxBasis(com.tools20022.repository.msg.GenericIdentification47 stampDutyTaxBasis) {
+	public SettlementDetails116 setStampDutyTaxBasis(com.tools20022.repository.msg.GenericIdentification47 stampDutyTaxBasis) {
 		this.stampDutyTaxBasis = stampDutyTaxBasis;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesRTGS")
-	public SecuritiesRTGS5Choice getSecuritiesRTGS() {
-		return securitiesRTGS;
+	public Optional<SecuritiesRTGS5Choice> getSecuritiesRTGS() {
+		return securitiesRTGS == null ? Optional.empty() : Optional.of(securitiesRTGS);
 	}
 
-	public void setSecuritiesRTGS(SecuritiesRTGS5Choice securitiesRTGS) {
+	public SettlementDetails116 setSecuritiesRTGS(SecuritiesRTGS5Choice securitiesRTGS) {
 		this.securitiesRTGS = securitiesRTGS;
+		return this;
 	}
 
-	@XmlElement(name = "Regn")
-	public Registration11Choice getRegistration() {
-		return registration;
+	public Optional<Registration11Choice> getRegistration() {
+		return registration == null ? Optional.empty() : Optional.of(registration);
 	}
 
-	public void setRegistration(Registration11Choice registration) {
+	public SettlementDetails116 setRegistration(Registration11Choice registration) {
 		this.registration = registration;
+		return this;
 	}
 
-	@XmlElement(name = "BnfclOwnrsh")
-	public BeneficialOwnership5Choice getBeneficialOwnership() {
-		return beneficialOwnership;
+	public Optional<BeneficialOwnership5Choice> getBeneficialOwnership() {
+		return beneficialOwnership == null ? Optional.empty() : Optional.of(beneficialOwnership);
 	}
 
-	public void setBeneficialOwnership(BeneficialOwnership5Choice beneficialOwnership) {
+	public SettlementDetails116 setBeneficialOwnership(BeneficialOwnership5Choice beneficialOwnership) {
 		this.beneficialOwnership = beneficialOwnership;
+		return this;
 	}
 
-	@XmlElement(name = "CshClrSys")
-	public CashSettlementSystem5Choice getCashClearingSystem() {
-		return cashClearingSystem;
+	public Optional<CashSettlementSystem5Choice> getCashClearingSystem() {
+		return cashClearingSystem == null ? Optional.empty() : Optional.of(cashClearingSystem);
 	}
 
-	public void setCashClearingSystem(CashSettlementSystem5Choice cashClearingSystem) {
+	public SettlementDetails116 setCashClearingSystem(CashSettlementSystem5Choice cashClearingSystem) {
 		this.cashClearingSystem = cashClearingSystem;
+		return this;
 	}
 
-	@XmlElement(name = "TaxCpcty")
-	public TaxCapacityParty5Choice getTaxCapacity() {
-		return taxCapacity;
+	public Optional<TaxCapacityParty5Choice> getTaxCapacity() {
+		return taxCapacity == null ? Optional.empty() : Optional.of(taxCapacity);
 	}
 
-	public void setTaxCapacity(TaxCapacityParty5Choice taxCapacity) {
+	public SettlementDetails116 setTaxCapacity(TaxCapacityParty5Choice taxCapacity) {
 		this.taxCapacity = taxCapacity;
+		return this;
 	}
 
-	@XmlElement(name = "RpTp")
-	public RepurchaseType19Choice getRepurchaseType() {
-		return repurchaseType;
+	public Optional<RepurchaseType19Choice> getRepurchaseType() {
+		return repurchaseType == null ? Optional.empty() : Optional.of(repurchaseType);
 	}
 
-	public void setRepurchaseType(RepurchaseType19Choice repurchaseType) {
+	public SettlementDetails116 setRepurchaseType(RepurchaseType19Choice repurchaseType) {
 		this.repurchaseType = repurchaseType;
+		return this;
 	}
 
-	@XmlElement(name = "MktClntSd")
-	public MarketClientSide5Choice getMarketClientSide() {
-		return marketClientSide;
+	public Optional<MarketClientSide5Choice> getMarketClientSide() {
+		return marketClientSide == null ? Optional.empty() : Optional.of(marketClientSide);
 	}
 
-	public void setMarketClientSide(MarketClientSide5Choice marketClientSide) {
+	public SettlementDetails116 setMarketClientSide(MarketClientSide5Choice marketClientSide) {
 		this.marketClientSide = marketClientSide;
+		return this;
 	}
 
-	@XmlElement(name = "BlckTrad")
-	public BlockTrade5Choice getBlockTrade() {
-		return blockTrade;
+	public Optional<BlockTrade5Choice> getBlockTrade() {
+		return blockTrade == null ? Optional.empty() : Optional.of(blockTrade);
 	}
 
-	public void setBlockTrade(BlockTrade5Choice blockTrade) {
+	public SettlementDetails116 setBlockTrade(BlockTrade5Choice blockTrade) {
 		this.blockTrade = blockTrade;
+		return this;
 	}
 
-	@XmlElement(name = "LglRstrctns")
-	public Restriction6Choice getLegalRestrictions() {
-		return legalRestrictions;
+	public Optional<Restriction6Choice> getLegalRestrictions() {
+		return legalRestrictions == null ? Optional.empty() : Optional.of(legalRestrictions);
 	}
 
-	public void setLegalRestrictions(Restriction6Choice legalRestrictions) {
+	public SettlementDetails116 setLegalRestrictions(Restriction6Choice legalRestrictions) {
 		this.legalRestrictions = legalRestrictions;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmSysMtd")
-	public SettlementSystemMethod5Choice getSettlementSystemMethod() {
-		return settlementSystemMethod;
+	public Optional<SettlementSystemMethod5Choice> getSettlementSystemMethod() {
+		return settlementSystemMethod == null ? Optional.empty() : Optional.of(settlementSystemMethod);
 	}
 
-	public void setSettlementSystemMethod(SettlementSystemMethod5Choice settlementSystemMethod) {
+	public SettlementDetails116 setSettlementSystemMethod(SettlementSystemMethod5Choice settlementSystemMethod) {
 		this.settlementSystemMethod = settlementSystemMethod;
+		return this;
 	}
 
-	@XmlElement(name = "NetgElgblty")
-	public NettingEligibility5Choice getNettingEligibility() {
-		return nettingEligibility;
+	public Optional<NettingEligibility5Choice> getNettingEligibility() {
+		return nettingEligibility == null ? Optional.empty() : Optional.of(nettingEligibility);
 	}
 
-	public void setNettingEligibility(NettingEligibility5Choice nettingEligibility) {
+	public SettlementDetails116 setNettingEligibility(NettingEligibility5Choice nettingEligibility) {
 		this.nettingEligibility = nettingEligibility;
+		return this;
 	}
 
-	@XmlElement(name = "CCPElgblty")
-	public CentralCounterPartyEligibility5Choice getCCPEligibility() {
-		return cCPEligibility;
+	public Optional<CentralCounterPartyEligibility5Choice> getCCPEligibility() {
+		return cCPEligibility == null ? Optional.empty() : Optional.of(cCPEligibility);
 	}
 
-	public void setCCPEligibility(CentralCounterPartyEligibility5Choice cCPEligibility) {
+	public SettlementDetails116 setCCPEligibility(CentralCounterPartyEligibility5Choice cCPEligibility) {
 		this.cCPEligibility = cCPEligibility;
+		return this;
 	}
 
-	@XmlElement(name = "LttrOfGrnt")
-	public LetterOfGuarantee5Choice getLetterOfGuarantee() {
-		return letterOfGuarantee;
+	public Optional<LetterOfGuarantee5Choice> getLetterOfGuarantee() {
+		return letterOfGuarantee == null ? Optional.empty() : Optional.of(letterOfGuarantee);
 	}
 
-	public void setLetterOfGuarantee(LetterOfGuarantee5Choice letterOfGuarantee) {
+	public SettlementDetails116 setLetterOfGuarantee(LetterOfGuarantee5Choice letterOfGuarantee) {
 		this.letterOfGuarantee = letterOfGuarantee;
+		return this;
 	}
 
-	@XmlElement(name = "PrtlSttlmInd")
-	public SettlementTransactionCondition5Code getPartialSettlementIndicator() {
-		return partialSettlementIndicator;
+	public Optional<SettlementTransactionCondition5Code> getPartialSettlementIndicator() {
+		return partialSettlementIndicator == null ? Optional.empty() : Optional.of(partialSettlementIndicator);
 	}
 
-	public void setPartialSettlementIndicator(SettlementTransactionCondition5Code partialSettlementIndicator) {
+	public SettlementDetails116 setPartialSettlementIndicator(SettlementTransactionCondition5Code partialSettlementIndicator) {
 		this.partialSettlementIndicator = partialSettlementIndicator;
+		return this;
 	}
 }

@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +28,7 @@ import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OptionalDividendAccountQuantitySD1", propOrder = {"placeAndName", "safekeepingAccount", "beneficialOwnerQuantity"})
 public class OptionalDividendAccountQuantitySD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +115,7 @@ public class OptionalDividendAccountQuantitySD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionalDividendAccountQuantitySD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionalDividendAccountQuantitySD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +126,11 @@ public class OptionalDividendAccountQuantitySD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgAcct", required = true)
 	protected RestrictedFINXMax35Text safekeepingAccount;
 	/**
-	 * Account where financial instruments are maintained.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,6 +146,9 @@ public class OptionalDividendAccountQuantitySD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SfkpgAcct"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :97A::SAFE, DTCCSynonym: Account ID</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -153,9 +161,10 @@ public class OptionalDividendAccountQuantitySD1 {
 	 */
 	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionalDividendAccountQuantitySD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionalDividendAccountQuantitySD1.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":97A::SAFE"), new DTCCSynonym(this, "Account ID"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account where financial instruments are maintained.";
@@ -164,10 +173,11 @@ public class OptionalDividendAccountQuantitySD1 {
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BnfclOwnrQty", required = true)
 	protected FinancialInstrumentQuantity15Choice beneficialOwnerQuantity;
 	/**
-	 * Beneficial owner quantity to be paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,6 +193,9 @@ public class OptionalDividendAccountQuantitySD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BnfclOwnrQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Beneficial Owner Quantity</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -195,9 +208,10 @@ public class OptionalDividendAccountQuantitySD1 {
 	 */
 	public static final MMMessageAttribute mmBeneficialOwnerQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OptionalDividendAccountQuantitySD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OptionalDividendAccountQuantitySD1.mmObject();
 			isDerived = false;
 			xmlTag = "BnfclOwnrQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Beneficial Owner Quantity"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerQuantity";
 			definition = "Beneficial owner quantity to be paid.";
@@ -210,8 +224,9 @@ public class OptionalDividendAccountQuantitySD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OptionalDividendAccountQuantitySD1.mmPlaceAndName, OptionalDividendAccountQuantitySD1.mmSafekeepingAccount, OptionalDividendAccountQuantitySD1.mmBeneficialOwnerQuantity);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OptionalDividendAccountQuantitySD1.mmPlaceAndName, com.tools20022.repository.msg.OptionalDividendAccountQuantitySD1.mmSafekeepingAccount,
+						com.tools20022.repository.msg.OptionalDividendAccountQuantitySD1.mmBeneficialOwnerQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OptionalDividendAccountQuantitySD1";
 				definition = "Provides additional information regarding optional dividend election details.";
@@ -221,30 +236,30 @@ public class OptionalDividendAccountQuantitySD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public OptionalDividendAccountQuantitySD1 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct", required = true)
 	public RestrictedFINXMax35Text getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(RestrictedFINXMax35Text safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public OptionalDividendAccountQuantitySD1 setSafekeepingAccount(RestrictedFINXMax35Text safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "BnfclOwnrQty", required = true)
 	public FinancialInstrumentQuantity15Choice getBeneficialOwnerQuantity() {
 		return beneficialOwnerQuantity;
 	}
 
-	public void setBeneficialOwnerQuantity(FinancialInstrumentQuantity15Choice beneficialOwnerQuantity) {
-		this.beneficialOwnerQuantity = beneficialOwnerQuantity;
+	public OptionalDividendAccountQuantitySD1 setBeneficialOwnerQuantity(FinancialInstrumentQuantity15Choice beneficialOwnerQuantity) {
+		this.beneficialOwnerQuantity = Objects.requireNonNull(beneficialOwnerQuantity);
+		return this;
 	}
 }

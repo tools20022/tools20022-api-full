@@ -28,9 +28,8 @@ import com.tools20022.repository.msg.OriginalTransactionReference18;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ChangeorVerifyAccountIdentificationISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -55,22 +54,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AccountManagementLatestVersion
- * AccountManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ChangeorVerifyAccountIdentificationISOLatestversion
- * ChangeorVerifyAccountIdentificationISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "IdModAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -89,6 +72,22 @@ import javax.xml.bind.annotation.*;
  * IdentificationModificationAdviceV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ChangeorVerifyAccountIdentificationISOLatestversion
+ * ChangeorVerifyAccountIdentificationISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "IdModAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AccountManagementLatestVersion
+ * AccountManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code acmt.022.001.02}</li>
@@ -108,15 +107,16 @@ import javax.xml.bind.annotation.*;
  * IdentificationModificationAdviceV01}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IdentificationModificationAdviceV02", propOrder = {"assignment", "originalTransactionReference", "modification", "supplementaryData"})
 public class IdentificationModificationAdviceV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Assgnmt", required = true)
 	protected IdentificationAssignment2 assignment;
 	/**
-	 * Identifies the identification assignment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,10 +156,11 @@ public class IdentificationModificationAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgnlTxRef")
 	protected OriginalTransactionReference18 originalTransactionReference;
 	/**
-	 * Provides reference information on the original message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,11 +200,11 @@ public class IdentificationModificationAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Mod", required = true)
 	protected List<IdentificationModification2> modification;
 	/**
-	 * Information concerning the identification data that is advised to be
-	 * modified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,11 +245,11 @@ public class IdentificationModificationAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -322,43 +323,43 @@ public class IdentificationModificationAdviceV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Assgnmt", required = true)
 	public IdentificationAssignment2 getAssignment() {
 		return assignment;
 	}
 
-	public void setAssignment(IdentificationAssignment2 assignment) {
-		this.assignment = assignment;
+	public IdentificationModificationAdviceV02 setAssignment(IdentificationAssignment2 assignment) {
+		this.assignment = Objects.requireNonNull(assignment);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlTxRef")
-	public OriginalTransactionReference18 getOriginalTransactionReference() {
-		return originalTransactionReference;
+	public Optional<OriginalTransactionReference18> getOriginalTransactionReference() {
+		return originalTransactionReference == null ? Optional.empty() : Optional.of(originalTransactionReference);
 	}
 
-	public void setOriginalTransactionReference(OriginalTransactionReference18 originalTransactionReference) {
+	public IdentificationModificationAdviceV02 setOriginalTransactionReference(OriginalTransactionReference18 originalTransactionReference) {
 		this.originalTransactionReference = originalTransactionReference;
+		return this;
 	}
 
-	@XmlElement(name = "Mod", required = true)
 	public List<IdentificationModification2> getModification() {
-		return modification;
+		return modification == null ? modification = new ArrayList<>() : modification;
 	}
 
-	public void setModification(List<IdentificationModification2> modification) {
-		this.modification = modification;
+	public IdentificationModificationAdviceV02 setModification(List<IdentificationModification2> modification) {
+		this.modification = Objects.requireNonNull(modification);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public IdentificationModificationAdviceV02 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.022.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.022.001.02")
 	static public class Document {
 		@XmlElement(name = "IdModAdvc", required = true)
 		public IdentificationModificationAdviceV02 messageBody;

@@ -28,9 +28,8 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -76,8 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintChequeMaturityDateRule#forCheque6
+ * ConstraintChequeMaturityDateRule.forCheque6}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,15 +97,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Cheque6", propOrder = {"chequeType", "chequeNumber", "chequeFrom", "deliveryMethod", "deliverTo", "instructionPriority", "chequeMaturityDate", "formsCode", "memoField", "regionalClearingZone", "printLocation"})
 public class Cheque6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ChqTp")
 	protected ChequeType2Code chequeType;
 	/**
-	 * Specifies the type of cheque to be issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,7 +139,7 @@ public class Cheque6 {
 	public static final MMMessageAttribute mmChequeType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Cheque.mmChequeType;
-			componentContext_lazy = () -> Cheque6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque6.mmObject();
 			isDerived = false;
 			xmlTag = "ChqTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,10 +150,11 @@ public class Cheque6 {
 			simpleType_lazy = () -> ChequeType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ChqNb")
 	protected Max35Text chequeNumber;
 	/**
-	 * Unique and unambiguous identifier for a cheque as assigned by the agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,7 +188,7 @@ public class Cheque6 {
 	public static final MMMessageAttribute mmChequeNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CreditInstrument.mmCreditInstrumentIdentification;
-			componentContext_lazy = () -> Cheque6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque6.mmObject();
 			isDerived = false;
 			xmlTag = "ChqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,10 +199,11 @@ public class Cheque6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ChqFr")
 	protected NameAndAddress10 chequeFrom;
 	/**
-	 * Identifies the party that ordered the issuance of the cheque.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -225,7 +235,7 @@ public class Cheque6 {
 	public static final MMMessageAssociationEnd mmChequeFrom = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Cheque6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque6.mmObject();
 			isDerived = false;
 			xmlTag = "ChqFr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,10 +247,11 @@ public class Cheque6 {
 			type_lazy = () -> com.tools20022.repository.msg.NameAndAddress10.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvryMtd")
 	protected ChequeDeliveryMethod1Choice deliveryMethod;
 	/**
-	 * Specifies the delivery method of the cheque by the debtor's agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -273,7 +284,7 @@ public class Cheque6 {
 	public static final MMMessageAssociationEnd mmDeliveryMethod = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ChequeIssue.mmDeliveryMethod;
-			componentContext_lazy = () -> Cheque6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque6.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,10 +296,11 @@ public class Cheque6 {
 			type_lazy = () -> ChequeDeliveryMethod1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvrTo")
 	protected NameAndAddress10 deliverTo;
 	/**
-	 * Party to whom the debtor's agent needs to send the cheque.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -320,7 +332,7 @@ public class Cheque6 {
 	public static final MMMessageAssociationEnd mmDeliverTo = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ChequeIssue.mmDeliverTo;
-			componentContext_lazy = () -> Cheque6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque6.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrTo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -332,12 +344,11 @@ public class Cheque6 {
 			type_lazy = () -> com.tools20022.repository.msg.NameAndAddress10.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrPrty")
 	protected Priority2Code instructionPriority;
 	/**
-	 * Urgency or order of importance that the originator would like the
-	 * recipient of the payment instruction to apply to the processing of the
-	 * payment instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -372,7 +383,7 @@ public class Cheque6 {
 	public static final MMMessageAttribute mmInstructionPriority = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPriority;
-			componentContext_lazy = () -> Cheque6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque6.mmObject();
 			isDerived = false;
 			xmlTag = "InstrPrty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -383,10 +394,11 @@ public class Cheque6 {
 			simpleType_lazy = () -> Priority2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ChqMtrtyDt")
 	protected ISODate chequeMaturityDate;
 	/**
-	 * Date when the draft becomes payable and the debtor's account is debited.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -420,7 +432,7 @@ public class Cheque6 {
 	public static final MMMessageAttribute mmChequeMaturityDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Cheque.mmMaturityDate;
-			componentContext_lazy = () -> Cheque6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque6.mmObject();
 			isDerived = false;
 			xmlTag = "ChqMtrtyDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -431,12 +443,11 @@ public class Cheque6 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "FrmsCd")
 	protected Max35Text formsCode;
 	/**
-	 * Identifies, in a coded form, the cheque layout, company logo and
-	 * digitised signature to be used to print the cheque, as agreed between the
-	 * initiating party and the debtor's agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -470,7 +481,7 @@ public class Cheque6 {
 	public static final MMMessageAttribute mmFormsCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Cheque.mmFormsCode;
-			componentContext_lazy = () -> Cheque6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque6.mmObject();
 			isDerived = false;
 			xmlTag = "FrmsCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -481,11 +492,11 @@ public class Cheque6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MemoFld")
 	protected List<Max35Text> memoField;
 	/**
-	 * Information that needs to be printed on a cheque, used by the payer to
-	 * add miscellaneous information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -519,7 +530,7 @@ public class Cheque6 {
 	public static final MMMessageAttribute mmMemoField = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Cheque.mmMemoField;
-			componentContext_lazy = () -> Cheque6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque6.mmObject();
 			isDerived = false;
 			xmlTag = "MemoFld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -530,11 +541,11 @@ public class Cheque6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RgnlClrZone")
 	protected Max35Text regionalClearingZone;
 	/**
-	 * Regional area in which the cheque can be cleared, when a country has no
-	 * nation-wide cheque clearing organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -568,7 +579,7 @@ public class Cheque6 {
 	public static final MMMessageAttribute mmRegionalClearingZone = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Cheque.mmRegionalClearingZone;
-			componentContext_lazy = () -> Cheque6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque6.mmObject();
 			isDerived = false;
 			xmlTag = "RgnlClrZone";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -579,10 +590,11 @@ public class Cheque6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtLctn")
 	protected Max35Text printLocation;
 	/**
-	 * Specifies the print location of the cheque.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -614,7 +626,7 @@ public class Cheque6 {
 	public static final MMMessageAttribute mmPrintLocation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ChequeIssue.mmPrintLocation;
-			componentContext_lazy = () -> Cheque6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque6.mmObject();
 			isDerived = false;
 			xmlTag = "PrtLctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -629,10 +641,13 @@ public class Cheque6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Cheque6.mmChequeType, Cheque6.mmChequeNumber, Cheque6.mmChequeFrom, Cheque6.mmDeliveryMethod, Cheque6.mmDeliverTo, Cheque6.mmInstructionPriority, Cheque6.mmChequeMaturityDate,
-						Cheque6.mmFormsCode, Cheque6.mmMemoField, Cheque6.mmRegionalClearingZone, Cheque6.mmPrintLocation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque6.mmChequeType, com.tools20022.repository.msg.Cheque6.mmChequeNumber, com.tools20022.repository.msg.Cheque6.mmChequeFrom,
+						com.tools20022.repository.msg.Cheque6.mmDeliveryMethod, com.tools20022.repository.msg.Cheque6.mmDeliverTo, com.tools20022.repository.msg.Cheque6.mmInstructionPriority,
+						com.tools20022.repository.msg.Cheque6.mmChequeMaturityDate, com.tools20022.repository.msg.Cheque6.mmFormsCode, com.tools20022.repository.msg.Cheque6.mmMemoField,
+						com.tools20022.repository.msg.Cheque6.mmRegionalClearingZone, com.tools20022.repository.msg.Cheque6.mmPrintLocation);
 				trace_lazy = () -> ChequeIssue.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeMaturityDateRule.forCheque6);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Cheque6";
 				definition = "Set of characteristics related to a cheque instruction, such as cheque type or cheque number.";
@@ -641,102 +656,102 @@ public class Cheque6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ChqTp")
-	public ChequeType2Code getChequeType() {
-		return chequeType;
+	public Optional<ChequeType2Code> getChequeType() {
+		return chequeType == null ? Optional.empty() : Optional.of(chequeType);
 	}
 
-	public void setChequeType(ChequeType2Code chequeType) {
+	public Cheque6 setChequeType(ChequeType2Code chequeType) {
 		this.chequeType = chequeType;
+		return this;
 	}
 
-	@XmlElement(name = "ChqNb")
-	public Max35Text getChequeNumber() {
-		return chequeNumber;
+	public Optional<Max35Text> getChequeNumber() {
+		return chequeNumber == null ? Optional.empty() : Optional.of(chequeNumber);
 	}
 
-	public void setChequeNumber(Max35Text chequeNumber) {
+	public Cheque6 setChequeNumber(Max35Text chequeNumber) {
 		this.chequeNumber = chequeNumber;
+		return this;
 	}
 
-	@XmlElement(name = "ChqFr")
-	public NameAndAddress10 getChequeFrom() {
-		return chequeFrom;
+	public Optional<NameAndAddress10> getChequeFrom() {
+		return chequeFrom == null ? Optional.empty() : Optional.of(chequeFrom);
 	}
 
-	public void setChequeFrom(com.tools20022.repository.msg.NameAndAddress10 chequeFrom) {
+	public Cheque6 setChequeFrom(com.tools20022.repository.msg.NameAndAddress10 chequeFrom) {
 		this.chequeFrom = chequeFrom;
+		return this;
 	}
 
-	@XmlElement(name = "DlvryMtd")
-	public ChequeDeliveryMethod1Choice getDeliveryMethod() {
-		return deliveryMethod;
+	public Optional<ChequeDeliveryMethod1Choice> getDeliveryMethod() {
+		return deliveryMethod == null ? Optional.empty() : Optional.of(deliveryMethod);
 	}
 
-	public void setDeliveryMethod(ChequeDeliveryMethod1Choice deliveryMethod) {
+	public Cheque6 setDeliveryMethod(ChequeDeliveryMethod1Choice deliveryMethod) {
 		this.deliveryMethod = deliveryMethod;
+		return this;
 	}
 
-	@XmlElement(name = "DlvrTo")
-	public NameAndAddress10 getDeliverTo() {
-		return deliverTo;
+	public Optional<NameAndAddress10> getDeliverTo() {
+		return deliverTo == null ? Optional.empty() : Optional.of(deliverTo);
 	}
 
-	public void setDeliverTo(com.tools20022.repository.msg.NameAndAddress10 deliverTo) {
+	public Cheque6 setDeliverTo(com.tools20022.repository.msg.NameAndAddress10 deliverTo) {
 		this.deliverTo = deliverTo;
+		return this;
 	}
 
-	@XmlElement(name = "InstrPrty")
-	public Priority2Code getInstructionPriority() {
-		return instructionPriority;
+	public Optional<Priority2Code> getInstructionPriority() {
+		return instructionPriority == null ? Optional.empty() : Optional.of(instructionPriority);
 	}
 
-	public void setInstructionPriority(Priority2Code instructionPriority) {
+	public Cheque6 setInstructionPriority(Priority2Code instructionPriority) {
 		this.instructionPriority = instructionPriority;
+		return this;
 	}
 
-	@XmlElement(name = "ChqMtrtyDt")
-	public ISODate getChequeMaturityDate() {
-		return chequeMaturityDate;
+	public Optional<ISODate> getChequeMaturityDate() {
+		return chequeMaturityDate == null ? Optional.empty() : Optional.of(chequeMaturityDate);
 	}
 
-	public void setChequeMaturityDate(ISODate chequeMaturityDate) {
+	public Cheque6 setChequeMaturityDate(ISODate chequeMaturityDate) {
 		this.chequeMaturityDate = chequeMaturityDate;
+		return this;
 	}
 
-	@XmlElement(name = "FrmsCd")
-	public Max35Text getFormsCode() {
-		return formsCode;
+	public Optional<Max35Text> getFormsCode() {
+		return formsCode == null ? Optional.empty() : Optional.of(formsCode);
 	}
 
-	public void setFormsCode(Max35Text formsCode) {
+	public Cheque6 setFormsCode(Max35Text formsCode) {
 		this.formsCode = formsCode;
+		return this;
 	}
 
-	@XmlElement(name = "MemoFld")
 	public List<Max35Text> getMemoField() {
-		return memoField;
+		return memoField == null ? memoField = new ArrayList<>() : memoField;
 	}
 
-	public void setMemoField(List<Max35Text> memoField) {
-		this.memoField = memoField;
+	public Cheque6 setMemoField(List<Max35Text> memoField) {
+		this.memoField = Objects.requireNonNull(memoField);
+		return this;
 	}
 
-	@XmlElement(name = "RgnlClrZone")
-	public Max35Text getRegionalClearingZone() {
-		return regionalClearingZone;
+	public Optional<Max35Text> getRegionalClearingZone() {
+		return regionalClearingZone == null ? Optional.empty() : Optional.of(regionalClearingZone);
 	}
 
-	public void setRegionalClearingZone(Max35Text regionalClearingZone) {
+	public Cheque6 setRegionalClearingZone(Max35Text regionalClearingZone) {
 		this.regionalClearingZone = regionalClearingZone;
+		return this;
 	}
 
-	@XmlElement(name = "PrtLctn")
-	public Max35Text getPrintLocation() {
-		return printLocation;
+	public Optional<Max35Text> getPrintLocation() {
+		return printLocation == null ? Optional.empty() : Optional.of(printLocation);
 	}
 
-	public void setPrintLocation(Max35Text printLocation) {
+	public Cheque6 setPrintLocation(Max35Text printLocation) {
 		this.printLocation = printLocation;
+		return this;
 	}
 }

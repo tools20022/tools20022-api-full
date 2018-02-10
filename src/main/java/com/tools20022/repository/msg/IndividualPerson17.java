@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,15 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IndividualPerson17", propOrder = {"birthName", "givenName", "identification", "address", "employingParty", "attendanceCardDetails"})
 public class IndividualPerson17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BirthNm", required = true)
 	protected Max35Text birthName;
 	/**
-	 * Name received at birth, eg, maiden name.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +138,7 @@ public class IndividualPerson17 {
 	public static final MMMessageAttribute mmBirthName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmBirthName;
-			componentContext_lazy = () -> IndividualPerson17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson17.mmObject();
 			isDerived = false;
 			xmlTag = "BirthNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,10 +150,11 @@ public class IndividualPerson17 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "GvnNm")
 	protected Max35Text givenName;
 	/**
-	 * First name of a person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,7 +195,7 @@ public class IndividualPerson17 {
 	public static final MMMessageAttribute mmGivenName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmGivenName;
-			componentContext_lazy = () -> IndividualPerson17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson17.mmObject();
 			isDerived = false;
 			xmlTag = "GvnNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,10 +207,11 @@ public class IndividualPerson17 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Id")
 	protected PersonIdentification6 identification;
 	/**
-	 * Unique and unambiguous identification of a person, eg, passport.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -247,7 +252,7 @@ public class IndividualPerson17 {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Person.mmPersonIdentification;
-			componentContext_lazy = () -> IndividualPerson17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson17.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -260,10 +265,11 @@ public class IndividualPerson17 {
 			type_lazy = () -> com.tools20022.repository.msg.PersonIdentification6.mmObject();
 		}
 	};
+	@XmlElement(name = "Adr")
 	protected LongPostalAddress2Choice address;
 	/**
-	 * Postal address of a party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -304,7 +310,7 @@ public class IndividualPerson17 {
 	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
-			componentContext_lazy = () -> IndividualPerson17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson17.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -317,10 +323,11 @@ public class IndividualPerson17 {
 			type_lazy = () -> LongPostalAddress2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "EmplngPty")
 	protected PartyIdentification9Choice employingParty;
 	/**
-	 * Organisation represented by a person, or for which a person works.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -362,7 +369,7 @@ public class IndividualPerson17 {
 	public static final MMMessageAssociationEnd mmEmployingParty = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> EmployingPartyRole.mmObject();
-			componentContext_lazy = () -> IndividualPerson17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson17.mmObject();
 			isDerived = false;
 			xmlTag = "EmplngPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -375,10 +382,11 @@ public class IndividualPerson17 {
 			type_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AttndncCardDtls", required = true)
 	protected AttendanceCard2 attendanceCardDetails;
 	/**
-	 * Specifies details related to the attendance card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -418,7 +426,7 @@ public class IndividualPerson17 {
 	public static final MMMessageAssociationEnd mmAttendanceCardDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> MeetingAttendance.mmAttendanceCard;
-			componentContext_lazy = () -> IndividualPerson17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson17.mmObject();
 			isDerived = false;
 			xmlTag = "AttndncCardDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -435,10 +443,11 @@ public class IndividualPerson17 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IndividualPerson17.mmBirthName, IndividualPerson17.mmGivenName, IndividualPerson17.mmIdentification, IndividualPerson17.mmAddress, IndividualPerson17.mmEmployingParty,
-						IndividualPerson17.mmAttendanceCardDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson17.mmBirthName, com.tools20022.repository.msg.IndividualPerson17.mmGivenName,
+						com.tools20022.repository.msg.IndividualPerson17.mmIdentification, com.tools20022.repository.msg.IndividualPerson17.mmAddress, com.tools20022.repository.msg.IndividualPerson17.mmEmployingParty,
+						com.tools20022.repository.msg.IndividualPerson17.mmAttendanceCardDetails);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IndividualPerson17";
 				definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
@@ -448,57 +457,57 @@ public class IndividualPerson17 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BirthNm", required = true)
 	public Max35Text getBirthName() {
 		return birthName;
 	}
 
-	public void setBirthName(Max35Text birthName) {
-		this.birthName = birthName;
+	public IndividualPerson17 setBirthName(Max35Text birthName) {
+		this.birthName = Objects.requireNonNull(birthName);
+		return this;
 	}
 
-	@XmlElement(name = "GvnNm")
-	public Max35Text getGivenName() {
-		return givenName;
+	public Optional<Max35Text> getGivenName() {
+		return givenName == null ? Optional.empty() : Optional.of(givenName);
 	}
 
-	public void setGivenName(Max35Text givenName) {
+	public IndividualPerson17 setGivenName(Max35Text givenName) {
 		this.givenName = givenName;
+		return this;
 	}
 
-	@XmlElement(name = "Id")
-	public PersonIdentification6 getIdentification() {
-		return identification;
+	public Optional<PersonIdentification6> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.PersonIdentification6 identification) {
+	public IndividualPerson17 setIdentification(com.tools20022.repository.msg.PersonIdentification6 identification) {
 		this.identification = identification;
+		return this;
 	}
 
-	@XmlElement(name = "Adr")
-	public LongPostalAddress2Choice getAddress() {
-		return address;
+	public Optional<LongPostalAddress2Choice> getAddress() {
+		return address == null ? Optional.empty() : Optional.of(address);
 	}
 
-	public void setAddress(LongPostalAddress2Choice address) {
+	public IndividualPerson17 setAddress(LongPostalAddress2Choice address) {
 		this.address = address;
+		return this;
 	}
 
-	@XmlElement(name = "EmplngPty")
-	public PartyIdentification9Choice getEmployingParty() {
-		return employingParty;
+	public Optional<PartyIdentification9Choice> getEmployingParty() {
+		return employingParty == null ? Optional.empty() : Optional.of(employingParty);
 	}
 
-	public void setEmployingParty(PartyIdentification9Choice employingParty) {
+	public IndividualPerson17 setEmployingParty(PartyIdentification9Choice employingParty) {
 		this.employingParty = employingParty;
+		return this;
 	}
 
-	@XmlElement(name = "AttndncCardDtls", required = true)
 	public AttendanceCard2 getAttendanceCardDetails() {
 		return attendanceCardDetails;
 	}
 
-	public void setAttendanceCardDetails(com.tools20022.repository.msg.AttendanceCard2 attendanceCardDetails) {
-		this.attendanceCardDetails = attendanceCardDetails;
+	public IndividualPerson17 setAttendanceCardDetails(com.tools20022.repository.msg.AttendanceCard2 attendanceCardDetails) {
+		this.attendanceCardDetails = Objects.requireNonNull(attendanceCardDetails);
+		return this;
 	}
 }

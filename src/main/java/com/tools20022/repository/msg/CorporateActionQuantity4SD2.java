@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +69,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUseOfMaximumQuantityCodeRule#forCorporateActionQuantity4SD2
+ * ConstraintUseOfMaximumQuantityCodeRule.forCorporateActionQuantity4SD2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUseOfMinimumQuantityCodeRule#forCorporateActionQuantity4SD2
+ * ConstraintUseOfMinimumQuantityCodeRule.forCorporateActionQuantity4SD2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUseOfPlannedQuantityRule#forCorporateActionQuantity4SD2
+ * ConstraintUseOfPlannedQuantityRule.forCorporateActionQuantity4SD2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,18 +95,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Extension to specify corporate action quantities."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionQuantity4SD2", propOrder = {"placeAndName", "plannedQuantity", "plannedExcessPurchaseQuantity", "minimumQuantityCode", "maximumQuantityCode", "oldShareUnitQuantity", "newShareUnitQuantity"})
 public class CorporateActionQuantity4SD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm")
 	protected Max350Text placeAndName;
 	/**
-	 * Unambiguous reference to the location where the supplementary data must
-	 * be inserted in the message instance. <br>
-	 * <br>
-	 * In the case of XML, this is expressed by a valid XPath.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +133,7 @@ public class CorporateActionQuantity4SD2 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,11 +144,11 @@ public class CorporateActionQuantity4SD2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PlandQty")
 	protected PlannedQuantity1Choice plannedQuantity;
 	/**
-	 * Planned number of shares to be purchased.<br>
-	 * 買付予定株式数
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +176,7 @@ public class CorporateActionQuantity4SD2 {
 	 */
 	public static final MMMessageAttribute mmPlannedQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlandQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,11 +187,11 @@ public class CorporateActionQuantity4SD2 {
 			complexType_lazy = () -> PlannedQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PlandXcssPurchsQty")
 	protected PlannedQuantity1Choice plannedExcessPurchaseQuantity;
 	/**
-	 * Planned excess quantity of share purchase.<br>
-	 * 買付超過予定数<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -206,7 +219,7 @@ public class CorporateActionQuantity4SD2 {
 	 */
 	public static final MMMessageAssociationEnd mmPlannedExcessPurchaseQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlandXcssPurchsQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,12 +231,11 @@ public class CorporateActionQuantity4SD2 {
 			type_lazy = () -> PlannedQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MinQtyCd")
 	protected SecuritiesQuantity1Code minimumQuantityCode;
 	/**
-	 * TSE/JASDEC code for the minimum number of shares to be purchased when the
-	 * corporate action event type code is TEND or BIDS.<br>
-	 * 買付株数に係る下限設定が「下限設定あり」「未定」
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -253,7 +265,7 @@ public class CorporateActionQuantity4SD2 {
 	 */
 	public static final MMMessageAttribute mmMinimumQuantityCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
 			xmlTag = "MinQtyCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,12 +276,11 @@ public class CorporateActionQuantity4SD2 {
 			simpleType_lazy = () -> SecuritiesQuantity1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxQtyCd")
 	protected SecuritiesQuantity1Code maximumQuantityCode;
 	/**
-	 * TSE/JASDEC code for the maximum number of shares to be purchased when the
-	 * corporate action event type code is TEND or BIDS.<br>
-	 * 買付株数に係る上限設定が「上限設定あり」「未定」
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -299,7 +310,7 @@ public class CorporateActionQuantity4SD2 {
 	 */
 	public static final MMMessageAttribute mmMaximumQuantityCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxQtyCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -310,10 +321,11 @@ public class CorporateActionQuantity4SD2 {
 			simpleType_lazy = () -> SecuritiesQuantity1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OdShrUnitQty")
 	protected FinancialInstrumentQuantity15Choice oldShareUnitQuantity;
 	/**
-	 * Old share unit quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -341,7 +353,7 @@ public class CorporateActionQuantity4SD2 {
 	 */
 	public static final MMMessageAttribute mmOldShareUnitQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
 			xmlTag = "OdShrUnitQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -352,10 +364,11 @@ public class CorporateActionQuantity4SD2 {
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NewShrUnitQty")
 	protected FinancialInstrumentQuantity15Choice newShareUnitQuantity;
 	/**
-	 * New share unit quantity.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -382,7 +395,7 @@ public class CorporateActionQuantity4SD2 {
 	 */
 	public static final MMMessageAssociationEnd mmNewShareUnitQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionQuantity4SD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmObject();
 			isDerived = false;
 			xmlTag = "NewShrUnitQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -398,9 +411,13 @@ public class CorporateActionQuantity4SD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionQuantity4SD2.mmPlaceAndName, CorporateActionQuantity4SD2.mmPlannedQuantity, CorporateActionQuantity4SD2.mmPlannedExcessPurchaseQuantity,
-						CorporateActionQuantity4SD2.mmMinimumQuantityCode, CorporateActionQuantity4SD2.mmMaximumQuantityCode, CorporateActionQuantity4SD2.mmOldShareUnitQuantity, CorporateActionQuantity4SD2.mmNewShareUnitQuantity);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmPlannedQuantity,
+						com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmPlannedExcessPurchaseQuantity, com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmMinimumQuantityCode,
+						com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmMaximumQuantityCode, com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmOldShareUnitQuantity,
+						com.tools20022.repository.msg.CorporateActionQuantity4SD2.mmNewShareUnitQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUseOfMaximumQuantityCodeRule.forCorporateActionQuantity4SD2,
+						com.tools20022.repository.constraints.ConstraintUseOfMinimumQuantityCodeRule.forCorporateActionQuantity4SD2, com.tools20022.repository.constraints.ConstraintUseOfPlannedQuantityRule.forCorporateActionQuantity4SD2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionQuantity4SD2";
 				definition = "Extension to specify corporate action quantities.";
@@ -409,66 +426,66 @@ public class CorporateActionQuantity4SD2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm")
-	public Max350Text getPlaceAndName() {
-		return placeAndName;
+	public Optional<Max350Text> getPlaceAndName() {
+		return placeAndName == null ? Optional.empty() : Optional.of(placeAndName);
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
+	public CorporateActionQuantity4SD2 setPlaceAndName(Max350Text placeAndName) {
 		this.placeAndName = placeAndName;
+		return this;
 	}
 
-	@XmlElement(name = "PlandQty")
-	public PlannedQuantity1Choice getPlannedQuantity() {
-		return plannedQuantity;
+	public Optional<PlannedQuantity1Choice> getPlannedQuantity() {
+		return plannedQuantity == null ? Optional.empty() : Optional.of(plannedQuantity);
 	}
 
-	public void setPlannedQuantity(PlannedQuantity1Choice plannedQuantity) {
+	public CorporateActionQuantity4SD2 setPlannedQuantity(PlannedQuantity1Choice plannedQuantity) {
 		this.plannedQuantity = plannedQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "PlandXcssPurchsQty")
-	public PlannedQuantity1Choice getPlannedExcessPurchaseQuantity() {
-		return plannedExcessPurchaseQuantity;
+	public Optional<PlannedQuantity1Choice> getPlannedExcessPurchaseQuantity() {
+		return plannedExcessPurchaseQuantity == null ? Optional.empty() : Optional.of(plannedExcessPurchaseQuantity);
 	}
 
-	public void setPlannedExcessPurchaseQuantity(PlannedQuantity1Choice plannedExcessPurchaseQuantity) {
+	public CorporateActionQuantity4SD2 setPlannedExcessPurchaseQuantity(PlannedQuantity1Choice plannedExcessPurchaseQuantity) {
 		this.plannedExcessPurchaseQuantity = plannedExcessPurchaseQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "MinQtyCd")
-	public SecuritiesQuantity1Code getMinimumQuantityCode() {
-		return minimumQuantityCode;
+	public Optional<SecuritiesQuantity1Code> getMinimumQuantityCode() {
+		return minimumQuantityCode == null ? Optional.empty() : Optional.of(minimumQuantityCode);
 	}
 
-	public void setMinimumQuantityCode(SecuritiesQuantity1Code minimumQuantityCode) {
+	public CorporateActionQuantity4SD2 setMinimumQuantityCode(SecuritiesQuantity1Code minimumQuantityCode) {
 		this.minimumQuantityCode = minimumQuantityCode;
+		return this;
 	}
 
-	@XmlElement(name = "MaxQtyCd")
-	public SecuritiesQuantity1Code getMaximumQuantityCode() {
-		return maximumQuantityCode;
+	public Optional<SecuritiesQuantity1Code> getMaximumQuantityCode() {
+		return maximumQuantityCode == null ? Optional.empty() : Optional.of(maximumQuantityCode);
 	}
 
-	public void setMaximumQuantityCode(SecuritiesQuantity1Code maximumQuantityCode) {
+	public CorporateActionQuantity4SD2 setMaximumQuantityCode(SecuritiesQuantity1Code maximumQuantityCode) {
 		this.maximumQuantityCode = maximumQuantityCode;
+		return this;
 	}
 
-	@XmlElement(name = "OdShrUnitQty")
-	public FinancialInstrumentQuantity15Choice getOldShareUnitQuantity() {
-		return oldShareUnitQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getOldShareUnitQuantity() {
+		return oldShareUnitQuantity == null ? Optional.empty() : Optional.of(oldShareUnitQuantity);
 	}
 
-	public void setOldShareUnitQuantity(FinancialInstrumentQuantity15Choice oldShareUnitQuantity) {
+	public CorporateActionQuantity4SD2 setOldShareUnitQuantity(FinancialInstrumentQuantity15Choice oldShareUnitQuantity) {
 		this.oldShareUnitQuantity = oldShareUnitQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "NewShrUnitQty")
-	public FinancialInstrumentQuantity15Choice getNewShareUnitQuantity() {
-		return newShareUnitQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getNewShareUnitQuantity() {
+		return newShareUnitQuantity == null ? Optional.empty() : Optional.of(newShareUnitQuantity);
 	}
 
-	public void setNewShareUnitQuantity(FinancialInstrumentQuantity15Choice newShareUnitQuantity) {
+	public CorporateActionQuantity4SD2 setNewShareUnitQuantity(FinancialInstrumentQuantity15Choice newShareUnitQuantity) {
 		this.newShareUnitQuantity = newShareUnitQuantity;
+		return this;
 	}
 }

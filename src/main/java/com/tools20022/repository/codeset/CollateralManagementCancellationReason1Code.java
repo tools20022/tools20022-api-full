@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CollateralManagementCancellationReasonCode;
+import com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason why the instruction/request has been cancelled.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CollateralManagementCancellationReasonCode
- * CollateralManagementCancellationReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code#mmProcessingError
- * CollateralManagementCancellationReason1Code.mmProcessingError}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code#ProcessingError
+ * CollateralManagementCancellationReason1Code.ProcessingError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code#mmPendingNewSubmission
- * CollateralManagementCancellationReason1Code.mmPendingNewSubmission}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code#PendingNewSubmission
+ * CollateralManagementCancellationReason1Code.PendingNewSubmission}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CollateralManagementCancellationReasonCode
+ * CollateralManagementCancellationReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the reason why the instruction/request has been cancelled."</li>
  * </ul>
  */
-public class CollateralManagementCancellationReason1Code extends CollateralManagementCancellationReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CollateralManagementCancellationReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +89,12 @@ public class CollateralManagementCancellationReason1Code extends CollateralManag
 	 * name} = "ProcessingError"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProcessingError = new MMCode() {
+	public static final CollateralManagementCancellationReason1Code ProcessingError = new CollateralManagementCancellationReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingError";
-			owner_lazy = () -> CollateralManagementCancellationReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code.mmObject();
+			codeName = CollateralManagementCancellationReasonCode.ProcessingError.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,26 +113,58 @@ public class CollateralManagementCancellationReason1Code extends CollateralManag
 	 * name} = "PendingNewSubmission"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingNewSubmission = new MMCode() {
+	public static final CollateralManagementCancellationReason1Code PendingNewSubmission = new CollateralManagementCancellationReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingNewSubmission";
-			owner_lazy = () -> CollateralManagementCancellationReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code.mmObject();
+			codeName = CollateralManagementCancellationReasonCode.PendingNewSubmission.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CollateralManagementCancellationReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CollateralManagementCancellationReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PRER");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralManagementCancellationReason1Code";
 				definition = "Specifies the reason why the instruction/request has been cancelled.";
-				code_lazy = () -> Arrays.asList(CollateralManagementCancellationReason1Code.mmProcessingError, CollateralManagementCancellationReason1Code.mmPendingNewSubmission);
 				trace_lazy = () -> CollateralManagementCancellationReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code.ProcessingError,
+						com.tools20022.repository.codeset.CollateralManagementCancellationReason1Code.PendingNewSubmission);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ProcessingError.getCodeName().get(), ProcessingError);
+		codesByName.put(PendingNewSubmission.getCodeName().get(), PendingNewSubmission);
+	}
+
+	public static CollateralManagementCancellationReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CollateralManagementCancellationReason1Code[] values() {
+		CollateralManagementCancellationReason1Code[] values = new CollateralManagementCancellationReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CollateralManagementCancellationReason1Code> {
+		@Override
+		public CollateralManagementCancellationReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CollateralManagementCancellationReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,88 +20,92 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.InstrumentSubStructureTypeCode;
+import com.tools20022.repository.codeset.InstrumentSubStructureType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the type of deal for structured finance.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureTypeCode
- * InstrumentSubStructureTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmAssetBackedSecurity
- * InstrumentSubStructureType1Code.mmAssetBackedSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#AssetBackedSecurity
+ * InstrumentSubStructureType1Code.AssetBackedSecurity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmAirlineTrust
- * InstrumentSubStructureType1Code.mmAirlineTrust}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#AirlineTrust
+ * InstrumentSubStructureType1Code.AirlineTrust}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmAutoTrust
- * InstrumentSubStructureType1Code.mmAutoTrust}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#AutoTrust
+ * InstrumentSubStructureType1Code.AutoTrust}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmCollateralBondObligation
- * InstrumentSubStructureType1Code.mmCollateralBondObligation}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#CollateralBondObligation
+ * InstrumentSubStructureType1Code.CollateralBondObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmCollateralDebtObligation
- * InstrumentSubStructureType1Code.mmCollateralDebtObligation}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#CollateralDebtObligation
+ * InstrumentSubStructureType1Code.CollateralDebtObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmCreditLinkedNotes
- * InstrumentSubStructureType1Code.mmCreditLinkedNotes}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#CreditLinkedNotes
+ * InstrumentSubStructureType1Code.CreditLinkedNotes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmCollateralLoanObligation
- * InstrumentSubStructureType1Code.mmCollateralLoanObligation}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#CollateralLoanObligation
+ * InstrumentSubStructureType1Code.CollateralLoanObligation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmCommercialMortgage
- * InstrumentSubStructureType1Code.mmCommercialMortgage}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#CommercialMortgage
+ * InstrumentSubStructureType1Code.CommercialMortgage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmConsumer
- * InstrumentSubStructureType1Code.mmConsumer}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#Consumer
+ * InstrumentSubStructureType1Code.Consumer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmCreditCardTrust
- * InstrumentSubStructureType1Code.mmCreditCardTrust}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#CreditCardTrust
+ * InstrumentSubStructureType1Code.CreditCardTrust}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmHomeEquityLoans
- * InstrumentSubStructureType1Code.mmHomeEquityLoans}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#HomeEquityLoans
+ * InstrumentSubStructureType1Code.HomeEquityLoans}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmLoanParticipationNote
- * InstrumentSubStructureType1Code.mmLoanParticipationNote}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#LoanParticipationNote
+ * InstrumentSubStructureType1Code.LoanParticipationNote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmCoveredBond
- * InstrumentSubStructureType1Code.mmCoveredBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#CoveredBond
+ * InstrumentSubStructureType1Code.CoveredBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmPaymentRight
- * InstrumentSubStructureType1Code.mmPaymentRight}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#PaymentRight
+ * InstrumentSubStructureType1Code.PaymentRight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmRepackagings
- * InstrumentSubStructureType1Code.mmRepackagings}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#Repackagings
+ * InstrumentSubStructureType1Code.Repackagings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmResidentialMortgage
- * InstrumentSubStructureType1Code.mmResidentialMortgage}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#ResidentialMortgage
+ * InstrumentSubStructureType1Code.ResidentialMortgage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmStructuredCoveredBond
- * InstrumentSubStructureType1Code.mmStructuredCoveredBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#StructuredCoveredBond
+ * InstrumentSubStructureType1Code.StructuredCoveredBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmStraightBond
- * InstrumentSubStructureType1Code.mmStraightBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#StraightBond
+ * InstrumentSubStructureType1Code.StraightBond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmStudentLoanTrust
- * InstrumentSubStructureType1Code.mmStudentLoanTrust}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#StudentLoanTrust
+ * InstrumentSubStructureType1Code.StudentLoanTrust}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#mmWholeBusinessSecurity
- * InstrumentSubStructureType1Code.mmWholeBusinessSecurity}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureType1Code#WholeBusinessSecurity
+ * InstrumentSubStructureType1Code.WholeBusinessSecurity}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.InstrumentSubStructureTypeCode
+ * InstrumentSubStructureTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -118,7 +122,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates the type of deal for structured finance."</li>
  * </ul>
  */
-public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InstrumentSubStructureType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -137,11 +142,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "AssetBackedSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAssetBackedSecurity = new MMCode() {
+	public static final InstrumentSubStructureType1Code AssetBackedSecurity = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssetBackedSecurity";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.AssetBackedSecurity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -160,11 +166,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "AirlineTrust"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAirlineTrust = new MMCode() {
+	public static final InstrumentSubStructureType1Code AirlineTrust = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AirlineTrust";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.AirlineTrust.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -183,11 +190,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "AutoTrust"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAutoTrust = new MMCode() {
+	public static final InstrumentSubStructureType1Code AutoTrust = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutoTrust";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.AutoTrust.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -206,11 +214,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "CollateralBondObligation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralBondObligation = new MMCode() {
+	public static final InstrumentSubStructureType1Code CollateralBondObligation = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralBondObligation";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.CollateralBondObligation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -229,11 +238,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "CollateralDebtObligation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralDebtObligation = new MMCode() {
+	public static final InstrumentSubStructureType1Code CollateralDebtObligation = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralDebtObligation";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.CollateralDebtObligation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -252,11 +262,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "CreditLinkedNotes"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreditLinkedNotes = new MMCode() {
+	public static final InstrumentSubStructureType1Code CreditLinkedNotes = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditLinkedNotes";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.CreditLinkedNotes.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -275,11 +286,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "CollateralLoanObligation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralLoanObligation = new MMCode() {
+	public static final InstrumentSubStructureType1Code CollateralLoanObligation = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralLoanObligation";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.CollateralLoanObligation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -298,11 +310,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "CommercialMortgage"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommercialMortgage = new MMCode() {
+	public static final InstrumentSubStructureType1Code CommercialMortgage = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialMortgage";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.CommercialMortgage.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -321,11 +334,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "Consumer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsumer = new MMCode() {
+	public static final InstrumentSubStructureType1Code Consumer = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consumer";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.Consumer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -344,11 +358,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "CreditCardTrust"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreditCardTrust = new MMCode() {
+	public static final InstrumentSubStructureType1Code CreditCardTrust = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditCardTrust";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.CreditCardTrust.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -367,11 +382,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "HomeEquityLoans"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHomeEquityLoans = new MMCode() {
+	public static final InstrumentSubStructureType1Code HomeEquityLoans = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HomeEquityLoans";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.HomeEquityLoans.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -390,11 +406,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "LoanParticipationNote"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLoanParticipationNote = new MMCode() {
+	public static final InstrumentSubStructureType1Code LoanParticipationNote = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LoanParticipationNote";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.LoanParticipationNote.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -413,11 +430,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "CoveredBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCoveredBond = new MMCode() {
+	public static final InstrumentSubStructureType1Code CoveredBond = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoveredBond";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.CoveredBond.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -436,11 +454,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "PaymentRight"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPaymentRight = new MMCode() {
+	public static final InstrumentSubStructureType1Code PaymentRight = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentRight";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.PaymentRight.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -459,11 +478,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "Repackagings"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRepackagings = new MMCode() {
+	public static final InstrumentSubStructureType1Code Repackagings = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repackagings";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.Repackagings.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -482,11 +502,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "ResidentialMortgage"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmResidentialMortgage = new MMCode() {
+	public static final InstrumentSubStructureType1Code ResidentialMortgage = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResidentialMortgage";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.ResidentialMortgage.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -505,11 +526,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "StructuredCoveredBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStructuredCoveredBond = new MMCode() {
+	public static final InstrumentSubStructureType1Code StructuredCoveredBond = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StructuredCoveredBond";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.StructuredCoveredBond.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -528,11 +550,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "StraightBond"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStraightBond = new MMCode() {
+	public static final InstrumentSubStructureType1Code StraightBond = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StraightBond";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.StraightBond.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -551,11 +574,12 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "StudentLoanTrust"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStudentLoanTrust = new MMCode() {
+	public static final InstrumentSubStructureType1Code StudentLoanTrust = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StudentLoanTrust";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.StudentLoanTrust.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -574,31 +598,84 @@ public class InstrumentSubStructureType1Code extends InstrumentSubStructureTypeC
 	 * name} = "WholeBusinessSecurity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWholeBusinessSecurity = new MMCode() {
+	public static final InstrumentSubStructureType1Code WholeBusinessSecurity = new InstrumentSubStructureType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WholeBusinessSecurity";
-			owner_lazy = () -> InstrumentSubStructureType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureType1Code.mmObject();
+			codeName = InstrumentSubStructureTypeCode.WholeBusinessSecurity.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, InstrumentSubStructureType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InstrumentSubStructureType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ABSE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstrumentSubStructureType1Code";
 				definition = "Indicates the type of deal for structured finance.";
-				code_lazy = () -> Arrays.asList(InstrumentSubStructureType1Code.mmAssetBackedSecurity, InstrumentSubStructureType1Code.mmAirlineTrust, InstrumentSubStructureType1Code.mmAutoTrust,
-						InstrumentSubStructureType1Code.mmCollateralBondObligation, InstrumentSubStructureType1Code.mmCollateralDebtObligation, InstrumentSubStructureType1Code.mmCreditLinkedNotes,
-						InstrumentSubStructureType1Code.mmCollateralLoanObligation, InstrumentSubStructureType1Code.mmCommercialMortgage, InstrumentSubStructureType1Code.mmConsumer, InstrumentSubStructureType1Code.mmCreditCardTrust,
-						InstrumentSubStructureType1Code.mmHomeEquityLoans, InstrumentSubStructureType1Code.mmLoanParticipationNote, InstrumentSubStructureType1Code.mmCoveredBond, InstrumentSubStructureType1Code.mmPaymentRight,
-						InstrumentSubStructureType1Code.mmRepackagings, InstrumentSubStructureType1Code.mmResidentialMortgage, InstrumentSubStructureType1Code.mmStructuredCoveredBond, InstrumentSubStructureType1Code.mmStraightBond,
-						InstrumentSubStructureType1Code.mmStudentLoanTrust, InstrumentSubStructureType1Code.mmWholeBusinessSecurity);
 				trace_lazy = () -> InstrumentSubStructureTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstrumentSubStructureType1Code.AssetBackedSecurity, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.AirlineTrust,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.AutoTrust, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.CollateralBondObligation,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.CollateralDebtObligation, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.CreditLinkedNotes,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.CollateralLoanObligation, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.CommercialMortgage,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.Consumer, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.CreditCardTrust,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.HomeEquityLoans, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.LoanParticipationNote,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.CoveredBond, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.PaymentRight,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.Repackagings, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.ResidentialMortgage,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.StructuredCoveredBond, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.StraightBond,
+						com.tools20022.repository.codeset.InstrumentSubStructureType1Code.StudentLoanTrust, com.tools20022.repository.codeset.InstrumentSubStructureType1Code.WholeBusinessSecurity);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AssetBackedSecurity.getCodeName().get(), AssetBackedSecurity);
+		codesByName.put(AirlineTrust.getCodeName().get(), AirlineTrust);
+		codesByName.put(AutoTrust.getCodeName().get(), AutoTrust);
+		codesByName.put(CollateralBondObligation.getCodeName().get(), CollateralBondObligation);
+		codesByName.put(CollateralDebtObligation.getCodeName().get(), CollateralDebtObligation);
+		codesByName.put(CreditLinkedNotes.getCodeName().get(), CreditLinkedNotes);
+		codesByName.put(CollateralLoanObligation.getCodeName().get(), CollateralLoanObligation);
+		codesByName.put(CommercialMortgage.getCodeName().get(), CommercialMortgage);
+		codesByName.put(Consumer.getCodeName().get(), Consumer);
+		codesByName.put(CreditCardTrust.getCodeName().get(), CreditCardTrust);
+		codesByName.put(HomeEquityLoans.getCodeName().get(), HomeEquityLoans);
+		codesByName.put(LoanParticipationNote.getCodeName().get(), LoanParticipationNote);
+		codesByName.put(CoveredBond.getCodeName().get(), CoveredBond);
+		codesByName.put(PaymentRight.getCodeName().get(), PaymentRight);
+		codesByName.put(Repackagings.getCodeName().get(), Repackagings);
+		codesByName.put(ResidentialMortgage.getCodeName().get(), ResidentialMortgage);
+		codesByName.put(StructuredCoveredBond.getCodeName().get(), StructuredCoveredBond);
+		codesByName.put(StraightBond.getCodeName().get(), StraightBond);
+		codesByName.put(StudentLoanTrust.getCodeName().get(), StudentLoanTrust);
+		codesByName.put(WholeBusinessSecurity.getCodeName().get(), WholeBusinessSecurity);
+	}
+
+	public static InstrumentSubStructureType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InstrumentSubStructureType1Code[] values() {
+		InstrumentSubStructureType1Code[] values = new InstrumentSubStructureType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InstrumentSubStructureType1Code> {
+		@Override
+		public InstrumentSubStructureType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InstrumentSubStructureType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

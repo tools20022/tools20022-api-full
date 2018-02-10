@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +28,8 @@ import com.tools20022.repository.datatype.Max8Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountBalanceSD5", propOrder = {"placeAndName", "transactionPosition", "asOfDate", "contraParticipantNumber"})
 public class AccountBalanceSD5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +127,7 @@ public class AccountBalanceSD5 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountBalanceSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD5.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +139,11 @@ public class AccountBalanceSD5 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TxPos")
 	protected AdjustedBalanceTypeSD1Choice transactionPosition;
 	/**
-	 * Position that is concerned in transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,6 +158,9 @@ public class AccountBalanceSD5 {
 	 * AccountBalanceSD5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TxPos"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Transaction Position</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -174,9 +182,10 @@ public class AccountBalanceSD5 {
 	 */
 	public static final MMMessageAttribute mmTransactionPosition = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountBalanceSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD5.mmObject();
 			isDerived = false;
 			xmlTag = "TxPos";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Transaction Position"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionPosition";
 			definition = "Position that is concerned in transaction.";
@@ -186,10 +195,11 @@ public class AccountBalanceSD5 {
 			complexType_lazy = () -> AdjustedBalanceTypeSD1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AsOfDt")
 	protected ISODate asOfDate;
 	/**
-	 * Effective date of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,6 +214,9 @@ public class AccountBalanceSD5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AsOfDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: As Of Date</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -216,9 +229,10 @@ public class AccountBalanceSD5 {
 	 */
 	public static final MMMessageAttribute mmAsOfDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountBalanceSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD5.mmObject();
 			isDerived = false;
 			xmlTag = "AsOfDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "As Of Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsOfDate";
 			definition = "Effective date of the transaction. ";
@@ -227,11 +241,11 @@ public class AccountBalanceSD5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ContraPtcptNb")
 	protected Max8Text contraParticipantNumber;
 	/**
-	 * Transaction contra participant identification for stock loans, repurchase
-	 * agreements (REPOs).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,6 +259,9 @@ public class AccountBalanceSD5 {
 	 * AccountBalanceSD5}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ContraPtcptNb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Contra Participant Number</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -268,9 +285,10 @@ public class AccountBalanceSD5 {
 	 */
 	public static final MMMessageAttribute mmContraParticipantNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountBalanceSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceSD5.mmObject();
 			isDerived = false;
 			xmlTag = "ContraPtcptNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Contra Participant Number"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Transaction contra participant identification for stock loans, repurchase agreements (REPOs).";
@@ -284,8 +302,9 @@ public class AccountBalanceSD5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountBalanceSD5.mmPlaceAndName, AccountBalanceSD5.mmTransactionPosition, AccountBalanceSD5.mmAsOfDate, AccountBalanceSD5.mmContraParticipantNumber);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceSD5.mmPlaceAndName, com.tools20022.repository.msg.AccountBalanceSD5.mmTransactionPosition,
+						com.tools20022.repository.msg.AccountBalanceSD5.mmAsOfDate, com.tools20022.repository.msg.AccountBalanceSD5.mmContraParticipantNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountBalanceSD5";
 				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  ";
@@ -295,39 +314,39 @@ public class AccountBalanceSD5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public AccountBalanceSD5 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "TxPos")
-	public AdjustedBalanceTypeSD1Choice getTransactionPosition() {
-		return transactionPosition;
+	public Optional<AdjustedBalanceTypeSD1Choice> getTransactionPosition() {
+		return transactionPosition == null ? Optional.empty() : Optional.of(transactionPosition);
 	}
 
-	public void setTransactionPosition(AdjustedBalanceTypeSD1Choice transactionPosition) {
+	public AccountBalanceSD5 setTransactionPosition(AdjustedBalanceTypeSD1Choice transactionPosition) {
 		this.transactionPosition = transactionPosition;
+		return this;
 	}
 
-	@XmlElement(name = "AsOfDt")
-	public ISODate getAsOfDate() {
-		return asOfDate;
+	public Optional<ISODate> getAsOfDate() {
+		return asOfDate == null ? Optional.empty() : Optional.of(asOfDate);
 	}
 
-	public void setAsOfDate(ISODate asOfDate) {
+	public AccountBalanceSD5 setAsOfDate(ISODate asOfDate) {
 		this.asOfDate = asOfDate;
+		return this;
 	}
 
-	@XmlElement(name = "ContraPtcptNb")
-	public Max8Text getContraParticipantNumber() {
-		return contraParticipantNumber;
+	public Optional<Max8Text> getContraParticipantNumber() {
+		return contraParticipantNumber == null ? Optional.empty() : Optional.of(contraParticipantNumber);
 	}
 
-	public void setContraParticipantNumber(Max8Text contraParticipantNumber) {
+	public AccountBalanceSD5 setContraParticipantNumber(Max8Text contraParticipantNumber) {
 		this.contraParticipantNumber = contraParticipantNumber;
+		return this;
 	}
 }

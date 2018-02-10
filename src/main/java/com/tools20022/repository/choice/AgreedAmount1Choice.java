@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.AgreedAmount1;
 import com.tools20022.repository.msg.Amount1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,16 +89,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AgreedAmount1Choice", propOrder = {"agreedAmountDetails", "segregatedIndependentAmount"})
 public class AgreedAmount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AgrdAmtDtls", required = true)
 	protected AgreedAmount1 agreedAmountDetails;
 	/**
-	 * Provides details about the agreed amount for the variation margin and
-	 * optionaly the segregated independent amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -131,7 +132,7 @@ public class AgreedAmount1Choice {
 	public static final MMMessageAssociationEnd mmAgreedAmountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmAgreedAmount;
-			componentContext_lazy = () -> AgreedAmount1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AgreedAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AgrdAmtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,11 +144,11 @@ public class AgreedAmount1Choice {
 			type_lazy = () -> AgreedAmount1.mmObject();
 		}
 	};
+	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
 	protected Amount1 segregatedIndependentAmount;
 	/**
-	 * Provides details about the agreed amount for the segregated independent
-	 * amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -180,7 +181,7 @@ public class AgreedAmount1Choice {
 	public static final MMMessageAssociationEnd mmSegregatedIndependentAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> MarginCall.mmSegregatedIndependentAmount;
-			componentContext_lazy = () -> AgreedAmount1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AgreedAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SgrtdIndpdntAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -196,10 +197,10 @@ public class AgreedAmount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AgreedAmount1Choice.mmAgreedAmountDetails, AgreedAmount1Choice.mmSegregatedIndependentAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AgreedAmount1Choice.mmAgreedAmountDetails, com.tools20022.repository.choice.AgreedAmount1Choice.mmSegregatedIndependentAmount);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MarginCallResponseV03.mmAgreedAmountDueToA, MarginCallResponseV03.mmAgreedAmountDueToB, MarginCallResponseV04.mmAgreedAmountDueToA, MarginCallResponseV04.mmAgreedAmountDueToB);
 				trace_lazy = () -> MarginCall.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgreedAmount1Choice";
 				definition = "Provides details about the agreed amount for the variation margin and the segregated independent amount, or the segregated independent amount only.";
@@ -208,21 +209,21 @@ public class AgreedAmount1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AgrdAmtDtls", required = true)
 	public AgreedAmount1 getAgreedAmountDetails() {
 		return agreedAmountDetails;
 	}
 
-	public void setAgreedAmountDetails(AgreedAmount1 agreedAmountDetails) {
-		this.agreedAmountDetails = agreedAmountDetails;
+	public AgreedAmount1Choice setAgreedAmountDetails(AgreedAmount1 agreedAmountDetails) {
+		this.agreedAmountDetails = Objects.requireNonNull(agreedAmountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SgrtdIndpdntAmt", required = true)
 	public Amount1 getSegregatedIndependentAmount() {
 		return segregatedIndependentAmount;
 	}
 
-	public void setSegregatedIndependentAmount(Amount1 segregatedIndependentAmount) {
-		this.segregatedIndependentAmount = segregatedIndependentAmount;
+	public AgreedAmount1Choice setSegregatedIndependentAmount(Amount1 segregatedIndependentAmount) {
+		this.segregatedIndependentAmount = Objects.requireNonNull(segregatedIndependentAmount);
+		return this;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * DisplayCapabilities1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DisplayCapabilities2", propOrder = {"displayType", "numberOfLines", "lineWidth"})
 public class DisplayCapabilities2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DispTp", required = true)
 	protected UserInterface2Code displayType;
 	/**
-	 * Type of display (for example merchant or cardholder).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +120,7 @@ public class DisplayCapabilities2 {
 	 */
 	public static final MMMessageAttribute mmDisplayType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DisplayCapabilities2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities2.mmObject();
 			isDerived = false;
 			xmlTag = "DispTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +132,11 @@ public class DisplayCapabilities2 {
 			simpleType_lazy = () -> UserInterface2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfLines", required = true)
 	protected Number numberOfLines;
 	/**
-	 * Number of lines of the display component.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +176,7 @@ public class DisplayCapabilities2 {
 	 */
 	public static final MMMessageAttribute mmNumberOfLines = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DisplayCapabilities2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities2.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfLines";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,10 +189,11 @@ public class DisplayCapabilities2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "LineWidth", required = true)
 	protected Number lineWidth;
 	/**
-	 * Number of columns of the display component.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -229,7 +233,7 @@ public class DisplayCapabilities2 {
 	 */
 	public static final MMMessageAttribute mmLineWidth = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DisplayCapabilities2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DisplayCapabilities2.mmObject();
 			isDerived = false;
 			xmlTag = "LineWidth";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -246,8 +250,9 @@ public class DisplayCapabilities2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DisplayCapabilities2.mmDisplayType, DisplayCapabilities2.mmNumberOfLines, DisplayCapabilities2.mmLineWidth);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DisplayCapabilities2.mmDisplayType, com.tools20022.repository.msg.DisplayCapabilities2.mmNumberOfLines,
+						com.tools20022.repository.msg.DisplayCapabilities2.mmLineWidth);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DisplayCapabilities2";
 				definition = "The capabilities of the display components performing the transaction.";
@@ -258,30 +263,30 @@ public class DisplayCapabilities2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DispTp", required = true)
 	public UserInterface2Code getDisplayType() {
 		return displayType;
 	}
 
-	public void setDisplayType(UserInterface2Code displayType) {
-		this.displayType = displayType;
+	public DisplayCapabilities2 setDisplayType(UserInterface2Code displayType) {
+		this.displayType = Objects.requireNonNull(displayType);
+		return this;
 	}
 
-	@XmlElement(name = "NbOfLines", required = true)
 	public Number getNumberOfLines() {
 		return numberOfLines;
 	}
 
-	public void setNumberOfLines(Number numberOfLines) {
-		this.numberOfLines = numberOfLines;
+	public DisplayCapabilities2 setNumberOfLines(Number numberOfLines) {
+		this.numberOfLines = Objects.requireNonNull(numberOfLines);
+		return this;
 	}
 
-	@XmlElement(name = "LineWidth", required = true)
 	public Number getLineWidth() {
 		return lineWidth;
 	}
 
-	public void setLineWidth(Number lineWidth) {
-		this.lineWidth = lineWidth;
+	public DisplayCapabilities2 setLineWidth(Number lineWidth) {
+		this.lineWidth = Objects.requireNonNull(lineWidth);
+		return this;
 	}
 }

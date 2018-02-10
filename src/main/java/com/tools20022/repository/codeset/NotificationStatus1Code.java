@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.NotificationStatusCode;
+import com.tools20022.repository.codeset.NotificationStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Status to define the completeness of information contained in the
@@ -31,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.NotificationStatusCode
- * NotificationStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NotificationStatus1Code#mmComplete
- * NotificationStatus1Code.mmComplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.NotificationStatus1Code#Complete
+ * NotificationStatus1Code.Complete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NotificationStatus1Code#mmPreliminaryEventConfirmed
- * NotificationStatus1Code.mmPreliminaryEventConfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.NotificationStatus1Code#PreliminaryEventConfirmed
+ * NotificationStatus1Code.PreliminaryEventConfirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NotificationStatus1Code#mmPreliminaryEventUnconfirmed
- * NotificationStatus1Code.mmPreliminaryEventUnconfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.NotificationStatus1Code#PreliminaryEventUnconfirmed
+ * NotificationStatus1Code.PreliminaryEventUnconfirmed}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.NotificationStatusCode
+ * NotificationStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class NotificationStatus1Code extends NotificationStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class NotificationStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class NotificationStatus1Code extends NotificationStatusCode {
 	 * name} = "Complete"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmComplete = new MMCode() {
+	public static final NotificationStatus1Code Complete = new NotificationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Complete";
-			owner_lazy = () -> NotificationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NotificationStatus1Code.mmObject();
+			codeName = NotificationStatusCode.Complete.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class NotificationStatus1Code extends NotificationStatusCode {
 	 * name} = "PreliminaryEventConfirmed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreliminaryEventConfirmed = new MMCode() {
+	public static final NotificationStatus1Code PreliminaryEventConfirmed = new NotificationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreliminaryEventConfirmed";
-			owner_lazy = () -> NotificationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NotificationStatus1Code.mmObject();
+			codeName = NotificationStatusCode.PreliminaryEventConfirmed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,26 +142,59 @@ public class NotificationStatus1Code extends NotificationStatusCode {
 	 * name} = "PreliminaryEventUnconfirmed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreliminaryEventUnconfirmed = new MMCode() {
+	public static final NotificationStatus1Code PreliminaryEventUnconfirmed = new NotificationStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreliminaryEventUnconfirmed";
-			owner_lazy = () -> NotificationStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NotificationStatus1Code.mmObject();
+			codeName = NotificationStatusCode.PreliminaryEventUnconfirmed.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, NotificationStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected NotificationStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NotificationStatus1Code";
 				definition = "Status to define the completeness of information contained in the notification.";
-				code_lazy = () -> Arrays.asList(NotificationStatus1Code.mmComplete, NotificationStatus1Code.mmPreliminaryEventConfirmed, NotificationStatus1Code.mmPreliminaryEventUnconfirmed);
 				trace_lazy = () -> NotificationStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NotificationStatus1Code.Complete, com.tools20022.repository.codeset.NotificationStatus1Code.PreliminaryEventConfirmed,
+						com.tools20022.repository.codeset.NotificationStatus1Code.PreliminaryEventUnconfirmed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Complete.getCodeName().get(), Complete);
+		codesByName.put(PreliminaryEventConfirmed.getCodeName().get(), PreliminaryEventConfirmed);
+		codesByName.put(PreliminaryEventUnconfirmed.getCodeName().get(), PreliminaryEventUnconfirmed);
+	}
+
+	public static NotificationStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static NotificationStatus1Code[] values() {
+		NotificationStatus1Code[] values = new NotificationStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, NotificationStatus1Code> {
+		@Override
+		public NotificationStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(NotificationStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

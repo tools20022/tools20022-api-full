@@ -28,9 +28,11 @@ import com.tools20022.repository.area.reda.StandingSettlementInstructionV01;
 import com.tools20022.repository.codeset.ExternalMarketArea1Code;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.MarketIdentification87;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -75,8 +77,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,17 +89,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of cash purpose or a securities market identifier."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MarketIdentificationOrCashPurpose1Choice", propOrder = {"settlementInstructionMarketIdentification", "cashSSIPurpose"})
 public class MarketIdentificationOrCashPurpose1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SttlmInstrMktId", required = true)
 	protected MarketIdentification87 settlementInstructionMarketIdentification;
 	/**
-	 * Identifies the market for the settlement. This consists of the country
-	 * code and the asset class. For example, if the SSI is for equities in the
-	 * DTCC, the country code is ‘US’ and the classification type is ‘equity’.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -125,7 +126,7 @@ public class MarketIdentificationOrCashPurpose1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSettlementInstructionMarketIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MarketIdentificationOrCashPurpose1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmInstrMktId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,10 +138,11 @@ public class MarketIdentificationOrCashPurpose1Choice {
 			type_lazy = () -> MarketIdentification87.mmObject();
 		}
 	};
+	@XmlElement(name = "CshSSIPurp", required = true)
 	protected List<ExternalMarketArea1Code> cashSSIPurpose;
 	/**
-	 * Underlying reason for the payment SSI instruction, expressed as a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,7 +172,7 @@ public class MarketIdentificationOrCashPurpose1Choice {
 	 */
 	public static final MMMessageAttribute mmCashSSIPurpose = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MarketIdentificationOrCashPurpose1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CshSSIPurp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,10 +186,11 @@ public class MarketIdentificationOrCashPurpose1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MarketIdentificationOrCashPurpose1Choice.mmSettlementInstructionMarketIdentification, MarketIdentificationOrCashPurpose1Choice.mmCashSSIPurpose);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice.mmSettlementInstructionMarketIdentification,
+						com.tools20022.repository.choice.MarketIdentificationOrCashPurpose1Choice.mmCashSSIPurpose);
 				messageBuildingBlock_lazy = () -> Arrays.asList(StandingSettlementInstructionV01.mmMarketIdentification, StandingSettlementInstructionCancellationV01.mmMarketIdentification,
 						StandingSettlementInstructionStatusAdviceV01.mmMarketIdentification, StandingSettlementInstructionDeletionV01.mmMarketIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketIdentificationOrCashPurpose1Choice";
 				definition = "Choice of cash purpose or a securities market identifier.";
@@ -196,21 +199,21 @@ public class MarketIdentificationOrCashPurpose1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SttlmInstrMktId", required = true)
 	public MarketIdentification87 getSettlementInstructionMarketIdentification() {
 		return settlementInstructionMarketIdentification;
 	}
 
-	public void setSettlementInstructionMarketIdentification(MarketIdentification87 settlementInstructionMarketIdentification) {
-		this.settlementInstructionMarketIdentification = settlementInstructionMarketIdentification;
+	public MarketIdentificationOrCashPurpose1Choice setSettlementInstructionMarketIdentification(MarketIdentification87 settlementInstructionMarketIdentification) {
+		this.settlementInstructionMarketIdentification = Objects.requireNonNull(settlementInstructionMarketIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CshSSIPurp", required = true)
 	public List<ExternalMarketArea1Code> getCashSSIPurpose() {
-		return cashSSIPurpose;
+		return cashSSIPurpose == null ? cashSSIPurpose = new ArrayList<>() : cashSSIPurpose;
 	}
 
-	public void setCashSSIPurpose(List<ExternalMarketArea1Code> cashSSIPurpose) {
-		this.cashSSIPurpose = cashSSIPurpose;
+	public MarketIdentificationOrCashPurpose1Choice setCashSSIPurpose(List<ExternalMarketArea1Code> cashSSIPurpose) {
+		this.cashSSIPurpose = Objects.requireNonNull(cashSSIPurpose);
+		return this;
 	}
 }

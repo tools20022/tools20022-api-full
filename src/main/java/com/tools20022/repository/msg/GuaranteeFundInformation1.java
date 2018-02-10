@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,15 +61,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Owner and account number of the guarantee fund."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GuaranteeFundInformation1", propOrder = {"guaranteeFundAccount", "guaranteeFundAccountOwner"})
 public class GuaranteeFundInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrntFndAcct", required = true)
 	protected CashAccount24 guaranteeFundAccount;
 	/**
-	 * Guarantee fund account identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -94,7 +96,7 @@ public class GuaranteeFundInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmGuaranteeFundAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> GuaranteeFundInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GuaranteeFundInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "GrntFndAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -106,10 +108,11 @@ public class GuaranteeFundInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "GrntFndAcctOwnr", required = true)
 	protected FinancialInstitutionIdentification9 guaranteeFundAccountOwner;
 	/**
-	 * Owner identification of the guarantee fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -136,7 +139,7 @@ public class GuaranteeFundInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmGuaranteeFundAccountOwner = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> GuaranteeFundInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GuaranteeFundInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "GrntFndAcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,8 +155,8 @@ public class GuaranteeFundInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GuaranteeFundInformation1.mmGuaranteeFundAccount, GuaranteeFundInformation1.mmGuaranteeFundAccountOwner);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GuaranteeFundInformation1.mmGuaranteeFundAccount, com.tools20022.repository.msg.GuaranteeFundInformation1.mmGuaranteeFundAccountOwner);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GuaranteeFundInformation1";
 				definition = "Owner and account number of the guarantee fund.";
@@ -162,21 +165,21 @@ public class GuaranteeFundInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrntFndAcct", required = true)
 	public CashAccount24 getGuaranteeFundAccount() {
 		return guaranteeFundAccount;
 	}
 
-	public void setGuaranteeFundAccount(com.tools20022.repository.msg.CashAccount24 guaranteeFundAccount) {
-		this.guaranteeFundAccount = guaranteeFundAccount;
+	public GuaranteeFundInformation1 setGuaranteeFundAccount(com.tools20022.repository.msg.CashAccount24 guaranteeFundAccount) {
+		this.guaranteeFundAccount = Objects.requireNonNull(guaranteeFundAccount);
+		return this;
 	}
 
-	@XmlElement(name = "GrntFndAcctOwnr", required = true)
 	public FinancialInstitutionIdentification9 getGuaranteeFundAccountOwner() {
 		return guaranteeFundAccountOwner;
 	}
 
-	public void setGuaranteeFundAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification9 guaranteeFundAccountOwner) {
-		this.guaranteeFundAccountOwner = guaranteeFundAccountOwner;
+	public GuaranteeFundInformation1 setGuaranteeFundAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification9 guaranteeFundAccountOwner) {
+		this.guaranteeFundAccountOwner = Objects.requireNonNull(guaranteeFundAccountOwner);
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +28,7 @@ import com.tools20022.repository.entity.SecuritiesOrderExecutionInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -140,8 +142,11 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = FIXSynonym: 18</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -152,20 +157,18 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identifies the instructions for order handling."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesExecutionInstructions1", propOrder = {"allOrNone", "callFirst", "cross", "customerDisplay", "hold", "increase", "institutionsOnly", "nonNegotiable", "overTheDay", "participateDontInitiate", "percentOfVolume",
 		"scale", "stayOnSide", "work", "goAlong", "tryScale", "doNotReduce", "cancelOnSystemFailure", "cancelOnTradingHalt", "tradeAlong", "strictLimit", "ignorePriceValidityChecks", "reinstateOnSystemFailure", "reinstateOnTradingHalt",
 		"cancelIfNotBest", "externalRoutingAllowed", "externalRoutingNotAllowed", "imbalanceOnly", "intermarketSweep", "netting"})
 public class SecuritiesExecutionInstructions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AllOrNn")
 	protected AllOrNoneIndicator allOrNone;
 	/**
-	 * Round-lot market or limit-price order that must be executed in its
-	 * entirety or not at all; unlike Fill or Kill orders, AON orders are not
-	 * treated as canceled if they are not executed as soon as represented in
-	 * the Trading Crowd.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,7 +204,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmAllOrNone = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmAllOrNone;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "AllOrNn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,12 +215,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> AllOrNoneIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CallFrst")
 	protected YesNoIndicator callFirst;
 	/**
-	 * Refers to the client before trading in order to catch all verbal
-	 * instructions on trading strategy usually because the strategy is too
-	 * complex or cannot be represented in the trading application.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -253,7 +255,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmCallFirst = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmCallFirst;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "CallFrst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,10 +266,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Cross")
 	protected YesNoIndicator cross;
 	/**
-	 * Allow crossing of an order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -301,7 +304,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmCross = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmCross;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "Cross";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -312,12 +315,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CstmrDisp")
 	protected YesNoIndicator customerDisplay;
 	/**
-	 * Exchange or ECN required by the SEC to display limit orders in the public
-	 * order book. A customer can choose not to have his limit order displayed
-	 * to the public.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -353,7 +355,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmCustomerDisplay = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmCustomerDisplay;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrDisp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -364,11 +366,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Hld")
 	protected YesNoIndicator hold;
 	/**
-	 * Indicates whether the firm executing the order is held to best execution
-	 * requirements and may be able to make some discretionary decisions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -404,7 +406,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmHold = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmHold;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "Hld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -415,11 +417,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Incr")
 	protected YesNoIndicator increase;
 	/**
-	 * Indicates whether the order is to be increased in shares on the
-	 * ex-dividend date as a result of a stock dividend or distribution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -455,7 +457,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmIncrease = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmIncrease;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "Incr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -466,11 +468,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "InstnsOnly")
 	protected YesNoIndicator institutionsOnly;
 	/**
-	 * Identifies that the broker is restricted to dealing with other buy side
-	 * firms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -506,7 +508,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmInstitutionsOnly = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmInstitutionsOnly;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "InstnsOnly";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -517,11 +519,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NonNgtbl")
 	protected YesNoIndicator nonNegotiable;
 	/**
-	 * Qualifies an asset (usually a payment instrument) of which rights cannot
-	 * be transferred to a party other then the original debtor and creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -557,7 +559,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmNonNegotiable = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmNonNegotiable;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "NonNgtbl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -568,11 +570,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "OverTheDay")
 	protected YesNoIndicator overTheDay;
 	/**
-	 * Indicates whether to execute parts of the order over the course of the
-	 * day. Usually done with large block orders.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -608,7 +610,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmOverTheDay = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmOverTheDay;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "OverTheDay";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -619,11 +621,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PtcpDontInit")
 	protected YesNoIndicator participateDontInitiate;
 	/**
-	 * An order that may participate in a transaction initiated by another
-	 * party, but may not initiate a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -659,7 +661,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmParticipateDontInitiate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmParticipateDontInitiate;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcpDontInit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -670,10 +672,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PctOfVol")
 	protected YesNoIndicator percentOfVolume;
 	/**
-	 * Indicates that the Sender does not want all of the volume on the floor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -709,7 +712,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmPercentOfVolume = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmPercentOfVolume;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "PctOfVol";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -720,12 +723,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Scale")
 	protected YesNoIndicator scale;
 	/**
-	 * An order to buy (or sell) a financial instrument which specifies the
-	 * total amount to be bought (or sold) and the amount to be bought (or sold)
-	 * at specified price variations.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -761,7 +763,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmScale = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmScale;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "Scale";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -772,11 +774,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "StayOnSd")
 	protected StayOnSideType1Code stayOnSide;
 	/**
-	 * Specifies the order limit based on the offer/bid at the time of the order
-	 * submission.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -812,7 +814,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmStayOnSide = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmStayOnSide;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "StayOnSd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -823,10 +825,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> StayOnSideType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Work")
 	protected YesNoIndicator work;
 	/**
-	 * Make the order active until notified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -860,7 +863,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmWork = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmWork;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "Work";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -871,12 +874,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "GoAlong")
 	protected YesNoIndicator goAlong;
 	/**
-	 * Used for listed equity securities. Buy or sell at prices that randomly
-	 * occur on the floor, participating in what trades the specialist and other
-	 * players will allow.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -912,7 +914,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmGoAlong = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmGoAlong;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "GoAlong";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -923,13 +925,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "TryScale")
 	protected YesNoIndicator tryScale;
 	/**
-	 * Order to buy (sell) a security that specifies the total amount to be
-	 * bought (sold) and the amount to be bought (sold) at successively
-	 * decreasing (increasing) price intervals; often placed in order to average
-	 * the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -965,7 +965,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmTryScale = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmTryScale;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "TryScale";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -976,14 +976,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "DoNotRdc")
 	protected YesNoIndicator doNotReduce;
 	/**
-	 * Indicates whether to buy, to stop order to sell, or to stop limit order
-	 * to sell that is not to be reduced in price by the amount of an ordinary
-	 * cash dividend on the ex-dividend date. A "do not reduce" order applies
-	 * only to ordinary cash dividends; it should be reduced for other
-	 * distributions - such as when a stock goes ex stock dividend or ex rights.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1019,7 +1016,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmDoNotReduce = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmDoNotReduce;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "DoNotRdc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1030,13 +1027,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CclOnSysFailr")
 	protected YesNoIndicator cancelOnSystemFailure;
 	/**
-	 * If a system failure interrupts trading or order routing, attempt to
-	 * cancel this order and attempt to reinstate this order, subject to time in
-	 * force limitations. Note that depending on the type and severity of the
-	 * failure, this might not be possible.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1072,7 +1067,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmCancelOnSystemFailure = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmCancelOnSystemFailure;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "CclOnSysFailr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1083,11 +1078,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CclOnTradgHalt")
 	protected YesNoIndicator cancelOnTradingHalt;
 	/**
-	 * If trading in this instrument is halted, cancel this order and reinstate
-	 * this order when/if trading resumes, subject to time in force limitations.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1123,7 +1118,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmCancelOnTradingHalt = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmCancelOnTradingHalt;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "CclOnTradgHalt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1134,12 +1129,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "TradAlong")
 	protected YesNoIndicator tradeAlong;
 	/**
-	 * Indicates whether the broker has permission to handle and place the order
-	 * in the market even if the broker already has its own proprietary orders
-	 * for the same financial instrument placed in the market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1175,7 +1169,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmTradeAlong = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmTradeAlong;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "TradAlong";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1186,11 +1180,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "StrctLmt")
 	protected YesNoIndicator strictLimit;
 	/**
-	 * Limit order that must be traded at the exact limit price specified
-	 * without any price improvement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1226,7 +1220,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmStrictLimit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmStrictLimit;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "StrctLmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1237,11 +1231,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "IgnrPricVldtyChcks")
 	protected YesNoIndicator ignorePriceValidityChecks;
 	/**
-	 * Disables validity checking of price fields for an order or change
-	 * request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1277,7 +1271,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmIgnorePriceValidityChecks = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmIgnorePriceValidityChecks;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "IgnrPricVldtyChcks";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1288,12 +1282,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RinsttOnSysFailr")
 	protected YesNoIndicator reinstateOnSystemFailure;
 	/**
-	 * If a system failure interrupts trading or order routing, attempt to
-	 * reinstate this order, subject to time in force limitations. Depending on
-	 * the type and severity of the failure, this might not be possible.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1329,7 +1322,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmReinstateOnSystemFailure = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmReinstateOnSystemFailure;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "RinsttOnSysFailr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1340,11 +1333,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RinsttOnTradgHalt")
 	protected YesNoIndicator reinstateOnTradingHalt;
 	/**
-	 * If trading in this instrument is halted, reinstate this order when/if
-	 * trading resumes, subject to time in force limitations.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1380,7 +1373,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmReinstateOnTradingHalt = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmReinstateOnTradingHalt;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "RinsttOnTradgHalt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1391,11 +1384,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CclIfNotBest")
 	protected YesNoIndicator cancelIfNotBest;
 	/**
-	 * Indicates that an order should be cancelled if it is no longer the best
-	 * bid if buying, or the best offer if selling.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1431,7 +1424,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmCancelIfNotBest = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmCancelIfNotBest;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "CclIfNotBest";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1442,15 +1435,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "XtrnlRtgAllwd")
 	protected YesNoIndicator externalRoutingAllowed;
 	/**
-	 * Indicates that an order sent to one market may be routed by that market
-	 * to other external markets, especially in cases where the order locks or
-	 * crosses the market and it can be executed against another markets
-	 * superior price. The absence of this instruction does not imply that an
-	 * order should not be routed externally; rather, the order receivers
-	 * default will apply.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1486,7 +1475,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmExternalRoutingAllowed = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmExternalRoutingAllowed;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "XtrnlRtgAllwd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1497,16 +1486,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "XtrnlRtgNotAllwd")
 	protected YesNoIndicator externalRoutingNotAllowed;
 	/**
-	 * Indicates that an order sent to one market may never be routed by that
-	 * market to other external markets. Should the order lock or cross the
-	 * market but be unable to execute due to price protection reasons, a market
-	 * may have to take alternate action, which might include rejecting the
-	 * order, depending on the markets rules.The absence of this instruction
-	 * does not imply that an order should be routed externally; rather, the
-	 * order receivers default will apply.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1542,7 +1526,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmExternalRoutingNotAllowed = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmExternalRoutingNotAllowed;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "XtrnlRtgNotAllwd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1553,12 +1537,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ImbalOnly")
 	protected YesNoIndicator imbalanceOnly;
 	/**
-	 * Indicates that the order can only hit the imbalance during a call
-	 * auction. The imbalance is the remaining quantity when other buy and sell
-	 * orders are matched at the auction clearing price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1594,7 +1577,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmImbalanceOnly = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmImbalanceOnly;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "ImbalOnly";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1605,15 +1588,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrmktSweep")
 	protected YesNoIndicator intermarketSweep;
 	/**
-	 * Indicates that the party sending the order has taken responsibility for
-	 * price protection, and the recipient of the order should execute it, if
-	 * possible, without regard to protection of other markets prices. While
-	 * the term "Intermarket sweep" is specific to the United States, it may be
-	 * used in other markets, where appropriate, to indicate an order that
-	 * should be executed without regard to price protection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1649,7 +1628,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmIntermarketSweep = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmIntermarketSweep;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmktSweep";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1660,11 +1639,11 @@ public class SecuritiesExecutionInstructions1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Netg")
 	protected YesNoIndicator netting;
 	/**
-	 * Used when sending multiple orders indicating that you would be 'netting'
-	 * the F/X later.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1700,7 +1679,7 @@ public class SecuritiesExecutionInstructions1 {
 	public static final MMMessageAttribute mmNetting = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderExecutionInstruction.mmNetting;
-			componentContext_lazy = () -> SecuritiesExecutionInstructions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmObject();
 			isDerived = false;
 			xmlTag = "Netg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1715,17 +1694,24 @@ public class SecuritiesExecutionInstructions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesExecutionInstructions1.mmAllOrNone, SecuritiesExecutionInstructions1.mmCallFirst, SecuritiesExecutionInstructions1.mmCross,
-						SecuritiesExecutionInstructions1.mmCustomerDisplay, SecuritiesExecutionInstructions1.mmHold, SecuritiesExecutionInstructions1.mmIncrease, SecuritiesExecutionInstructions1.mmInstitutionsOnly,
-						SecuritiesExecutionInstructions1.mmNonNegotiable, SecuritiesExecutionInstructions1.mmOverTheDay, SecuritiesExecutionInstructions1.mmParticipateDontInitiate, SecuritiesExecutionInstructions1.mmPercentOfVolume,
-						SecuritiesExecutionInstructions1.mmScale, SecuritiesExecutionInstructions1.mmStayOnSide, SecuritiesExecutionInstructions1.mmWork, SecuritiesExecutionInstructions1.mmGoAlong,
-						SecuritiesExecutionInstructions1.mmTryScale, SecuritiesExecutionInstructions1.mmDoNotReduce, SecuritiesExecutionInstructions1.mmCancelOnSystemFailure, SecuritiesExecutionInstructions1.mmCancelOnTradingHalt,
-						SecuritiesExecutionInstructions1.mmTradeAlong, SecuritiesExecutionInstructions1.mmStrictLimit, SecuritiesExecutionInstructions1.mmIgnorePriceValidityChecks,
-						SecuritiesExecutionInstructions1.mmReinstateOnSystemFailure, SecuritiesExecutionInstructions1.mmReinstateOnTradingHalt, SecuritiesExecutionInstructions1.mmCancelIfNotBest,
-						SecuritiesExecutionInstructions1.mmExternalRoutingAllowed, SecuritiesExecutionInstructions1.mmExternalRoutingNotAllowed, SecuritiesExecutionInstructions1.mmImbalanceOnly,
-						SecuritiesExecutionInstructions1.mmIntermarketSweep, SecuritiesExecutionInstructions1.mmNetting);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmAllOrNone, com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmCallFirst,
+						com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmCross, com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmCustomerDisplay,
+						com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmHold, com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmIncrease,
+						com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmInstitutionsOnly, com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmNonNegotiable,
+						com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmOverTheDay, com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmParticipateDontInitiate,
+						com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmPercentOfVolume, com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmScale,
+						com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmStayOnSide, com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmWork,
+						com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmGoAlong, com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmTryScale,
+						com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmDoNotReduce, com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmCancelOnSystemFailure,
+						com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmCancelOnTradingHalt, com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmTradeAlong,
+						com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmStrictLimit, com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmIgnorePriceValidityChecks,
+						com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmReinstateOnSystemFailure, com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmReinstateOnTradingHalt,
+						com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmCancelIfNotBest, com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmExternalRoutingAllowed,
+						com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmExternalRoutingNotAllowed, com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmImbalanceOnly,
+						com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmIntermarketSweep, com.tools20022.repository.msg.SecuritiesExecutionInstructions1.mmNetting);
 				trace_lazy = () -> SecuritiesOrderExecutionInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "18"));
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesExecutionInstructions1";
 				definition = "Identifies the instructions for order handling.";
@@ -1734,273 +1720,273 @@ public class SecuritiesExecutionInstructions1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AllOrNn")
-	public AllOrNoneIndicator getAllOrNone() {
-		return allOrNone;
+	public Optional<AllOrNoneIndicator> getAllOrNone() {
+		return allOrNone == null ? Optional.empty() : Optional.of(allOrNone);
 	}
 
-	public void setAllOrNone(AllOrNoneIndicator allOrNone) {
+	public SecuritiesExecutionInstructions1 setAllOrNone(AllOrNoneIndicator allOrNone) {
 		this.allOrNone = allOrNone;
+		return this;
 	}
 
-	@XmlElement(name = "CallFrst")
-	public YesNoIndicator getCallFirst() {
-		return callFirst;
+	public Optional<YesNoIndicator> getCallFirst() {
+		return callFirst == null ? Optional.empty() : Optional.of(callFirst);
 	}
 
-	public void setCallFirst(YesNoIndicator callFirst) {
+	public SecuritiesExecutionInstructions1 setCallFirst(YesNoIndicator callFirst) {
 		this.callFirst = callFirst;
+		return this;
 	}
 
-	@XmlElement(name = "Cross")
-	public YesNoIndicator getCross() {
-		return cross;
+	public Optional<YesNoIndicator> getCross() {
+		return cross == null ? Optional.empty() : Optional.of(cross);
 	}
 
-	public void setCross(YesNoIndicator cross) {
+	public SecuritiesExecutionInstructions1 setCross(YesNoIndicator cross) {
 		this.cross = cross;
+		return this;
 	}
 
-	@XmlElement(name = "CstmrDisp")
-	public YesNoIndicator getCustomerDisplay() {
-		return customerDisplay;
+	public Optional<YesNoIndicator> getCustomerDisplay() {
+		return customerDisplay == null ? Optional.empty() : Optional.of(customerDisplay);
 	}
 
-	public void setCustomerDisplay(YesNoIndicator customerDisplay) {
+	public SecuritiesExecutionInstructions1 setCustomerDisplay(YesNoIndicator customerDisplay) {
 		this.customerDisplay = customerDisplay;
+		return this;
 	}
 
-	@XmlElement(name = "Hld")
-	public YesNoIndicator getHold() {
-		return hold;
+	public Optional<YesNoIndicator> getHold() {
+		return hold == null ? Optional.empty() : Optional.of(hold);
 	}
 
-	public void setHold(YesNoIndicator hold) {
+	public SecuritiesExecutionInstructions1 setHold(YesNoIndicator hold) {
 		this.hold = hold;
+		return this;
 	}
 
-	@XmlElement(name = "Incr")
-	public YesNoIndicator getIncrease() {
-		return increase;
+	public Optional<YesNoIndicator> getIncrease() {
+		return increase == null ? Optional.empty() : Optional.of(increase);
 	}
 
-	public void setIncrease(YesNoIndicator increase) {
+	public SecuritiesExecutionInstructions1 setIncrease(YesNoIndicator increase) {
 		this.increase = increase;
+		return this;
 	}
 
-	@XmlElement(name = "InstnsOnly")
-	public YesNoIndicator getInstitutionsOnly() {
-		return institutionsOnly;
+	public Optional<YesNoIndicator> getInstitutionsOnly() {
+		return institutionsOnly == null ? Optional.empty() : Optional.of(institutionsOnly);
 	}
 
-	public void setInstitutionsOnly(YesNoIndicator institutionsOnly) {
+	public SecuritiesExecutionInstructions1 setInstitutionsOnly(YesNoIndicator institutionsOnly) {
 		this.institutionsOnly = institutionsOnly;
+		return this;
 	}
 
-	@XmlElement(name = "NonNgtbl")
-	public YesNoIndicator getNonNegotiable() {
-		return nonNegotiable;
+	public Optional<YesNoIndicator> getNonNegotiable() {
+		return nonNegotiable == null ? Optional.empty() : Optional.of(nonNegotiable);
 	}
 
-	public void setNonNegotiable(YesNoIndicator nonNegotiable) {
+	public SecuritiesExecutionInstructions1 setNonNegotiable(YesNoIndicator nonNegotiable) {
 		this.nonNegotiable = nonNegotiable;
+		return this;
 	}
 
-	@XmlElement(name = "OverTheDay")
-	public YesNoIndicator getOverTheDay() {
-		return overTheDay;
+	public Optional<YesNoIndicator> getOverTheDay() {
+		return overTheDay == null ? Optional.empty() : Optional.of(overTheDay);
 	}
 
-	public void setOverTheDay(YesNoIndicator overTheDay) {
+	public SecuritiesExecutionInstructions1 setOverTheDay(YesNoIndicator overTheDay) {
 		this.overTheDay = overTheDay;
+		return this;
 	}
 
-	@XmlElement(name = "PtcpDontInit")
-	public YesNoIndicator getParticipateDontInitiate() {
-		return participateDontInitiate;
+	public Optional<YesNoIndicator> getParticipateDontInitiate() {
+		return participateDontInitiate == null ? Optional.empty() : Optional.of(participateDontInitiate);
 	}
 
-	public void setParticipateDontInitiate(YesNoIndicator participateDontInitiate) {
+	public SecuritiesExecutionInstructions1 setParticipateDontInitiate(YesNoIndicator participateDontInitiate) {
 		this.participateDontInitiate = participateDontInitiate;
+		return this;
 	}
 
-	@XmlElement(name = "PctOfVol")
-	public YesNoIndicator getPercentOfVolume() {
-		return percentOfVolume;
+	public Optional<YesNoIndicator> getPercentOfVolume() {
+		return percentOfVolume == null ? Optional.empty() : Optional.of(percentOfVolume);
 	}
 
-	public void setPercentOfVolume(YesNoIndicator percentOfVolume) {
+	public SecuritiesExecutionInstructions1 setPercentOfVolume(YesNoIndicator percentOfVolume) {
 		this.percentOfVolume = percentOfVolume;
+		return this;
 	}
 
-	@XmlElement(name = "Scale")
-	public YesNoIndicator getScale() {
-		return scale;
+	public Optional<YesNoIndicator> getScale() {
+		return scale == null ? Optional.empty() : Optional.of(scale);
 	}
 
-	public void setScale(YesNoIndicator scale) {
+	public SecuritiesExecutionInstructions1 setScale(YesNoIndicator scale) {
 		this.scale = scale;
+		return this;
 	}
 
-	@XmlElement(name = "StayOnSd")
-	public StayOnSideType1Code getStayOnSide() {
-		return stayOnSide;
+	public Optional<StayOnSideType1Code> getStayOnSide() {
+		return stayOnSide == null ? Optional.empty() : Optional.of(stayOnSide);
 	}
 
-	public void setStayOnSide(StayOnSideType1Code stayOnSide) {
+	public SecuritiesExecutionInstructions1 setStayOnSide(StayOnSideType1Code stayOnSide) {
 		this.stayOnSide = stayOnSide;
+		return this;
 	}
 
-	@XmlElement(name = "Work")
-	public YesNoIndicator getWork() {
-		return work;
+	public Optional<YesNoIndicator> getWork() {
+		return work == null ? Optional.empty() : Optional.of(work);
 	}
 
-	public void setWork(YesNoIndicator work) {
+	public SecuritiesExecutionInstructions1 setWork(YesNoIndicator work) {
 		this.work = work;
+		return this;
 	}
 
-	@XmlElement(name = "GoAlong")
-	public YesNoIndicator getGoAlong() {
-		return goAlong;
+	public Optional<YesNoIndicator> getGoAlong() {
+		return goAlong == null ? Optional.empty() : Optional.of(goAlong);
 	}
 
-	public void setGoAlong(YesNoIndicator goAlong) {
+	public SecuritiesExecutionInstructions1 setGoAlong(YesNoIndicator goAlong) {
 		this.goAlong = goAlong;
+		return this;
 	}
 
-	@XmlElement(name = "TryScale")
-	public YesNoIndicator getTryScale() {
-		return tryScale;
+	public Optional<YesNoIndicator> getTryScale() {
+		return tryScale == null ? Optional.empty() : Optional.of(tryScale);
 	}
 
-	public void setTryScale(YesNoIndicator tryScale) {
+	public SecuritiesExecutionInstructions1 setTryScale(YesNoIndicator tryScale) {
 		this.tryScale = tryScale;
+		return this;
 	}
 
-	@XmlElement(name = "DoNotRdc")
-	public YesNoIndicator getDoNotReduce() {
-		return doNotReduce;
+	public Optional<YesNoIndicator> getDoNotReduce() {
+		return doNotReduce == null ? Optional.empty() : Optional.of(doNotReduce);
 	}
 
-	public void setDoNotReduce(YesNoIndicator doNotReduce) {
+	public SecuritiesExecutionInstructions1 setDoNotReduce(YesNoIndicator doNotReduce) {
 		this.doNotReduce = doNotReduce;
+		return this;
 	}
 
-	@XmlElement(name = "CclOnSysFailr")
-	public YesNoIndicator getCancelOnSystemFailure() {
-		return cancelOnSystemFailure;
+	public Optional<YesNoIndicator> getCancelOnSystemFailure() {
+		return cancelOnSystemFailure == null ? Optional.empty() : Optional.of(cancelOnSystemFailure);
 	}
 
-	public void setCancelOnSystemFailure(YesNoIndicator cancelOnSystemFailure) {
+	public SecuritiesExecutionInstructions1 setCancelOnSystemFailure(YesNoIndicator cancelOnSystemFailure) {
 		this.cancelOnSystemFailure = cancelOnSystemFailure;
+		return this;
 	}
 
-	@XmlElement(name = "CclOnTradgHalt")
-	public YesNoIndicator getCancelOnTradingHalt() {
-		return cancelOnTradingHalt;
+	public Optional<YesNoIndicator> getCancelOnTradingHalt() {
+		return cancelOnTradingHalt == null ? Optional.empty() : Optional.of(cancelOnTradingHalt);
 	}
 
-	public void setCancelOnTradingHalt(YesNoIndicator cancelOnTradingHalt) {
+	public SecuritiesExecutionInstructions1 setCancelOnTradingHalt(YesNoIndicator cancelOnTradingHalt) {
 		this.cancelOnTradingHalt = cancelOnTradingHalt;
+		return this;
 	}
 
-	@XmlElement(name = "TradAlong")
-	public YesNoIndicator getTradeAlong() {
-		return tradeAlong;
+	public Optional<YesNoIndicator> getTradeAlong() {
+		return tradeAlong == null ? Optional.empty() : Optional.of(tradeAlong);
 	}
 
-	public void setTradeAlong(YesNoIndicator tradeAlong) {
+	public SecuritiesExecutionInstructions1 setTradeAlong(YesNoIndicator tradeAlong) {
 		this.tradeAlong = tradeAlong;
+		return this;
 	}
 
-	@XmlElement(name = "StrctLmt")
-	public YesNoIndicator getStrictLimit() {
-		return strictLimit;
+	public Optional<YesNoIndicator> getStrictLimit() {
+		return strictLimit == null ? Optional.empty() : Optional.of(strictLimit);
 	}
 
-	public void setStrictLimit(YesNoIndicator strictLimit) {
+	public SecuritiesExecutionInstructions1 setStrictLimit(YesNoIndicator strictLimit) {
 		this.strictLimit = strictLimit;
+		return this;
 	}
 
-	@XmlElement(name = "IgnrPricVldtyChcks")
-	public YesNoIndicator getIgnorePriceValidityChecks() {
-		return ignorePriceValidityChecks;
+	public Optional<YesNoIndicator> getIgnorePriceValidityChecks() {
+		return ignorePriceValidityChecks == null ? Optional.empty() : Optional.of(ignorePriceValidityChecks);
 	}
 
-	public void setIgnorePriceValidityChecks(YesNoIndicator ignorePriceValidityChecks) {
+	public SecuritiesExecutionInstructions1 setIgnorePriceValidityChecks(YesNoIndicator ignorePriceValidityChecks) {
 		this.ignorePriceValidityChecks = ignorePriceValidityChecks;
+		return this;
 	}
 
-	@XmlElement(name = "RinsttOnSysFailr")
-	public YesNoIndicator getReinstateOnSystemFailure() {
-		return reinstateOnSystemFailure;
+	public Optional<YesNoIndicator> getReinstateOnSystemFailure() {
+		return reinstateOnSystemFailure == null ? Optional.empty() : Optional.of(reinstateOnSystemFailure);
 	}
 
-	public void setReinstateOnSystemFailure(YesNoIndicator reinstateOnSystemFailure) {
+	public SecuritiesExecutionInstructions1 setReinstateOnSystemFailure(YesNoIndicator reinstateOnSystemFailure) {
 		this.reinstateOnSystemFailure = reinstateOnSystemFailure;
+		return this;
 	}
 
-	@XmlElement(name = "RinsttOnTradgHalt")
-	public YesNoIndicator getReinstateOnTradingHalt() {
-		return reinstateOnTradingHalt;
+	public Optional<YesNoIndicator> getReinstateOnTradingHalt() {
+		return reinstateOnTradingHalt == null ? Optional.empty() : Optional.of(reinstateOnTradingHalt);
 	}
 
-	public void setReinstateOnTradingHalt(YesNoIndicator reinstateOnTradingHalt) {
+	public SecuritiesExecutionInstructions1 setReinstateOnTradingHalt(YesNoIndicator reinstateOnTradingHalt) {
 		this.reinstateOnTradingHalt = reinstateOnTradingHalt;
+		return this;
 	}
 
-	@XmlElement(name = "CclIfNotBest")
-	public YesNoIndicator getCancelIfNotBest() {
-		return cancelIfNotBest;
+	public Optional<YesNoIndicator> getCancelIfNotBest() {
+		return cancelIfNotBest == null ? Optional.empty() : Optional.of(cancelIfNotBest);
 	}
 
-	public void setCancelIfNotBest(YesNoIndicator cancelIfNotBest) {
+	public SecuritiesExecutionInstructions1 setCancelIfNotBest(YesNoIndicator cancelIfNotBest) {
 		this.cancelIfNotBest = cancelIfNotBest;
+		return this;
 	}
 
-	@XmlElement(name = "XtrnlRtgAllwd")
-	public YesNoIndicator getExternalRoutingAllowed() {
-		return externalRoutingAllowed;
+	public Optional<YesNoIndicator> getExternalRoutingAllowed() {
+		return externalRoutingAllowed == null ? Optional.empty() : Optional.of(externalRoutingAllowed);
 	}
 
-	public void setExternalRoutingAllowed(YesNoIndicator externalRoutingAllowed) {
+	public SecuritiesExecutionInstructions1 setExternalRoutingAllowed(YesNoIndicator externalRoutingAllowed) {
 		this.externalRoutingAllowed = externalRoutingAllowed;
+		return this;
 	}
 
-	@XmlElement(name = "XtrnlRtgNotAllwd")
-	public YesNoIndicator getExternalRoutingNotAllowed() {
-		return externalRoutingNotAllowed;
+	public Optional<YesNoIndicator> getExternalRoutingNotAllowed() {
+		return externalRoutingNotAllowed == null ? Optional.empty() : Optional.of(externalRoutingNotAllowed);
 	}
 
-	public void setExternalRoutingNotAllowed(YesNoIndicator externalRoutingNotAllowed) {
+	public SecuritiesExecutionInstructions1 setExternalRoutingNotAllowed(YesNoIndicator externalRoutingNotAllowed) {
 		this.externalRoutingNotAllowed = externalRoutingNotAllowed;
+		return this;
 	}
 
-	@XmlElement(name = "ImbalOnly")
-	public YesNoIndicator getImbalanceOnly() {
-		return imbalanceOnly;
+	public Optional<YesNoIndicator> getImbalanceOnly() {
+		return imbalanceOnly == null ? Optional.empty() : Optional.of(imbalanceOnly);
 	}
 
-	public void setImbalanceOnly(YesNoIndicator imbalanceOnly) {
+	public SecuritiesExecutionInstructions1 setImbalanceOnly(YesNoIndicator imbalanceOnly) {
 		this.imbalanceOnly = imbalanceOnly;
+		return this;
 	}
 
-	@XmlElement(name = "IntrmktSweep")
-	public YesNoIndicator getIntermarketSweep() {
-		return intermarketSweep;
+	public Optional<YesNoIndicator> getIntermarketSweep() {
+		return intermarketSweep == null ? Optional.empty() : Optional.of(intermarketSweep);
 	}
 
-	public void setIntermarketSweep(YesNoIndicator intermarketSweep) {
+	public SecuritiesExecutionInstructions1 setIntermarketSweep(YesNoIndicator intermarketSweep) {
 		this.intermarketSweep = intermarketSweep;
+		return this;
 	}
 
-	@XmlElement(name = "Netg")
-	public YesNoIndicator getNetting() {
-		return netting;
+	public Optional<YesNoIndicator> getNetting() {
+		return netting == null ? Optional.empty() : Optional.of(netting);
 	}
 
-	public void setNetting(YesNoIndicator netting) {
+	public SecuritiesExecutionInstructions1 setNetting(YesNoIndicator netting) {
 		this.netting = netting;
+		return this;
 	}
 }

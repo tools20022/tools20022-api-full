@@ -27,9 +27,8 @@ import com.tools20022.repository.choice.PartyIdentification47Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -65,20 +64,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
- * SecuritiesEventsArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CorpActnNtfctn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -151,9 +136,85 @@ import javax.xml.bind.annotation.*;
  * CorporateActionNotificationV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CorpActnNtfctn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
+ * SecuritiesEventsArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.031.001.03}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInterestPaymentRule#forCorporateActionNotificationV03
+ * ConstraintInterestPaymentRule.forCorporateActionNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingAccount1Rule#forCorporateActionNotificationV03
+ * ConstraintSafekeepingAccount1Rule.forCorporateActionNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingAccount2Rule#forCorporateActionNotificationV03
+ * ConstraintSafekeepingAccount2Rule.forCorporateActionNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintQuantityOfIntermediateSecuritiesRule#forCorporateActionNotificationV03
+ * ConstraintQuantityOfIntermediateSecuritiesRule.
+ * forCorporateActionNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherEventRule#forCorporateActionNotificationV03
+ * ConstraintOtherEventRule.forCorporateActionNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecurity1Rule#forCorporateActionNotificationV03
+ * ConstraintIntermediateSecurity1Rule.forCorporateActionNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecurity2Rule#forCorporateActionNotificationV03
+ * ConstraintIntermediateSecurity2Rule.forCorporateActionNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNotificationIdentificationRule#forCorporateActionNotificationV03
+ * ConstraintNotificationIdentificationRule.forCorporateActionNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistribution1Rule#forCorporateActionNotificationV03
+ * ConstraintIntermediateSecuritiesDistribution1Rule.
+ * forCorporateActionNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPaymentDateRule#forCorporateActionNotificationV03
+ * ConstraintPaymentDateRule.forCorporateActionNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNameChangeRule#forCorporateActionNotificationV03
+ * ConstraintNameChangeRule.forCorporateActionNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRateAndCorporateActionEventRule#forCorporateActionNotificationV03
+ * ConstraintRateAndCorporateActionEventRule.forCorporateActionNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalEligibleBalanceRule#forCorporateActionNotificationV03
+ * ConstraintTotalEligibleBalanceRule.forCorporateActionNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMinimumExercisableQuantityGuideline#forCorporateActionNotificationV03
+ * ConstraintMinimumExercisableQuantityGuideline.
+ * forCorporateActionNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionNotificationV03
+ * ConstraintIssuerAgentGuideline.forCorporateActionNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forCorporateActionNotificationV03
+ * ConstraintCoexistenceCharacterSetXRule.forCorporateActionNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forCorporateActionNotificationV03
+ * ConstraintCoexistenceIdentificationRule.forCorporateActionNotificationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMaturityDateRule#forCorporateActionNotificationV03
+ * ConstraintMaturityDateRule.forCorporateActionNotificationV03}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -178,19 +239,18 @@ import javax.xml.bind.annotation.*;
  * CorporateActionNotificationV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionNotificationV03", propOrder = {"pagination", "notificationGeneralInformation", "previousNotificationIdentification", "instructionIdentification", "otherDocumentIdentification", "eventsLinkage",
 		"corporateActionGeneralInformation", "accountDetails", "intermediateSecurity", "corporateActionDetails", "corporateActionOptionDetails", "additionalInformation", "issuerAgent", "payingAgent", "subPayingAgent", "registrar",
 		"resellingAgent", "physicalSecuritiesAgent", "dropAgent", "solicitationAgent", "informationAgent", "supplementaryData"})
 public class CorporateActionNotificationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pgntn")
 	protected Pagination pagination;
 	/**
-	 * Page number of the message and continuation indicator to indicate that
-	 * the multi-parts notification is to continue or that the message is the
-	 * last page of the multi-parts notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -231,11 +291,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "NtfctnGnlInf", required = true)
 	protected CorporateActionNotification3 notificationGeneralInformation;
 	/**
-	 * General information about the event notification type, status and
-	 * contents.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,10 +337,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsNtfctnId")
 	protected DocumentIdentification15 previousNotificationIdentification;
 	/**
-	 * Identification of a previously sent notification document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -321,10 +382,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "InstrId")
 	protected DocumentIdentification9 instructionIdentification;
 	/**
-	 * Identification of a related instruction document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -364,10 +426,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrDocId")
 	protected List<DocumentIdentification13> otherDocumentIdentification;
 	/**
-	 * Identification of other documents as well as the document number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -407,11 +470,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "EvtsLkg")
 	protected List<CorporateActionEventReference1> eventsLinkage;
 	/**
-	 * Identification of an other corporate action event that needs to be
-	 * closely linked to the processing of the event notified in this document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -452,10 +515,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	protected CorporateActionGeneralInformation37 corporateActionGeneralInformation;
 	/**
-	 * General information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -495,11 +559,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected AccountIdentification18Choice accountDetails;
 	/**
-	 * General information about the safekeeping account, owner and account
-	 * balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -541,11 +605,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "IntrmdtScty")
 	protected FinancialInstrumentAttributes17 intermediateSecurity;
 	/**
-	 * Provides details on rights credited to the account as for instance
-	 * trading period, expiry date, renounceability.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -587,10 +651,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnDtls")
 	protected CorporateAction7 corporateActionDetails;
 	/**
-	 * Information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -630,10 +695,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnOptnDtls")
 	protected List<CorporateActionOption36> corporateActionOptionDetails;
 	/**
-	 * Information about the corporate action option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -672,10 +738,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected CorporateActionNarrative11 additionalInformation;
 	/**
-	 * Provides additional information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -715,12 +782,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "IssrAgt")
 	protected List<PartyIdentification47Choice> issuerAgent;
 	/**
-	 * Party appointed to administer the event on behalf of the issuer
-	 * company/offeror. The party may be contacted for more information about
-	 * the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -761,11 +827,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PngAgt")
 	protected List<PartyIdentification47Choice> payingAgent;
 	/**
-	 * Agent (principal or fiscal paying agent) appointed to execute the payment
-	 * for the corporate action event on behalf of the issuer company/offeror.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -806,11 +872,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SubPngAgt")
 	protected List<PartyIdentification47Choice> subPayingAgent;
 	/**
-	 * Sub-agent appointed to execute the payment for the corporate action event
-	 * on behalf of the issuer company/offeror.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -851,10 +917,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Regar")
 	protected PartyIdentification47Choice registrar;
 	/**
-	 * Party/agent responsible for maintaining the register of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -895,11 +962,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RsellngAgt")
 	protected List<PartyIdentification47Choice> resellingAgent;
 	/**
-	 * A broker-dealer responsible for reselling to new investors securities
-	 * (usually bonds) that have been tendered for purchase by their owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -940,12 +1007,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "PhysSctiesAgt")
 	protected PartyIdentification47Choice physicalSecuritiesAgent;
 	/**
-	 * A trust company, bank or similar financial institution assigned by an
-	 * issuer to accept presentations of instruments, usually bonds, for
-	 * transfer and or exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -987,12 +1053,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "DrpAgt")
 	protected PartyIdentification47Choice dropAgent;
 	/**
-	 * A trust company, bank or similar financial institution who acts on behalf
-	 * of an out of town agent or event agent where securities can be delivered
-	 * in person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1034,12 +1099,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SlctnAgt")
 	protected List<PartyIdentification47Choice> solicitationAgent;
 	/**
-	 * A trust company, bank or similar financial institution assigned by an
-	 * issuer to maintain records of investors and account balances and
-	 * transactions for the consent of a material change.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1080,11 +1144,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "InfAgt")
 	protected PartyIdentification47Choice informationAgent;
 	/**
-	 * A trust company, bank or similar financial institution assigned by an
-	 * Issuer to provide information and copies of the offering documentation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1126,11 +1190,11 @@ public class CorporateActionNotificationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1175,6 +1239,19 @@ public class CorporateActionNotificationV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInterestPaymentRule.forCorporateActionNotificationV03,
+						com.tools20022.repository.constraints.ConstraintSafekeepingAccount1Rule.forCorporateActionNotificationV03, com.tools20022.repository.constraints.ConstraintSafekeepingAccount2Rule.forCorporateActionNotificationV03,
+						com.tools20022.repository.constraints.ConstraintQuantityOfIntermediateSecuritiesRule.forCorporateActionNotificationV03,
+						com.tools20022.repository.constraints.ConstraintOtherEventRule.forCorporateActionNotificationV03, com.tools20022.repository.constraints.ConstraintIntermediateSecurity1Rule.forCorporateActionNotificationV03,
+						com.tools20022.repository.constraints.ConstraintIntermediateSecurity2Rule.forCorporateActionNotificationV03,
+						com.tools20022.repository.constraints.ConstraintNotificationIdentificationRule.forCorporateActionNotificationV03,
+						com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistribution1Rule.forCorporateActionNotificationV03,
+						com.tools20022.repository.constraints.ConstraintPaymentDateRule.forCorporateActionNotificationV03, com.tools20022.repository.constraints.ConstraintNameChangeRule.forCorporateActionNotificationV03,
+						com.tools20022.repository.constraints.ConstraintRateAndCorporateActionEventRule.forCorporateActionNotificationV03,
+						com.tools20022.repository.constraints.ConstraintTotalEligibleBalanceRule.forCorporateActionNotificationV03,
+						com.tools20022.repository.constraints.ConstraintMinimumExercisableQuantityGuideline.forCorporateActionNotificationV03,
+						com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionNotificationV03, com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forCorporateActionNotificationV03,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forCorporateActionNotificationV03, com.tools20022.repository.constraints.ConstraintMaturityDateRule.forCorporateActionNotificationV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotificationV03";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionNotification message to an account owner or its designated agent to notify details of a corporate action event and optionally account information, eligible balance and entitlements. It may also include possible elections or choices available to the account owner.\r\nThe account servicer can initially send the CorporateActionNotification message as a preliminary advice, subsequently replaced by another CorporateActionNotification message with complete or confirmed information.\r\nIt may also be sent to an account owner or its designated agent, to remind of event details and/or of missing or incomplete instructions for a corporate action event.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).\nISO 15022 - 20022 COEXISTENCE\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
@@ -1214,205 +1291,205 @@ public class CorporateActionNotificationV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pgntn")
-	public Pagination getPagination() {
-		return pagination;
+	public Optional<Pagination> getPagination() {
+		return pagination == null ? Optional.empty() : Optional.of(pagination);
 	}
 
-	public void setPagination(Pagination pagination) {
+	public CorporateActionNotificationV03 setPagination(Pagination pagination) {
 		this.pagination = pagination;
+		return this;
 	}
 
-	@XmlElement(name = "NtfctnGnlInf", required = true)
 	public CorporateActionNotification3 getNotificationGeneralInformation() {
 		return notificationGeneralInformation;
 	}
 
-	public void setNotificationGeneralInformation(CorporateActionNotification3 notificationGeneralInformation) {
-		this.notificationGeneralInformation = notificationGeneralInformation;
+	public CorporateActionNotificationV03 setNotificationGeneralInformation(CorporateActionNotification3 notificationGeneralInformation) {
+		this.notificationGeneralInformation = Objects.requireNonNull(notificationGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "PrvsNtfctnId")
-	public DocumentIdentification15 getPreviousNotificationIdentification() {
-		return previousNotificationIdentification;
+	public Optional<DocumentIdentification15> getPreviousNotificationIdentification() {
+		return previousNotificationIdentification == null ? Optional.empty() : Optional.of(previousNotificationIdentification);
 	}
 
-	public void setPreviousNotificationIdentification(DocumentIdentification15 previousNotificationIdentification) {
+	public CorporateActionNotificationV03 setPreviousNotificationIdentification(DocumentIdentification15 previousNotificationIdentification) {
 		this.previousNotificationIdentification = previousNotificationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "InstrId")
-	public DocumentIdentification9 getInstructionIdentification() {
-		return instructionIdentification;
+	public Optional<DocumentIdentification9> getInstructionIdentification() {
+		return instructionIdentification == null ? Optional.empty() : Optional.of(instructionIdentification);
 	}
 
-	public void setInstructionIdentification(DocumentIdentification9 instructionIdentification) {
+	public CorporateActionNotificationV03 setInstructionIdentification(DocumentIdentification9 instructionIdentification) {
 		this.instructionIdentification = instructionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "OthrDocId")
 	public List<DocumentIdentification13> getOtherDocumentIdentification() {
-		return otherDocumentIdentification;
+		return otherDocumentIdentification == null ? otherDocumentIdentification = new ArrayList<>() : otherDocumentIdentification;
 	}
 
-	public void setOtherDocumentIdentification(List<DocumentIdentification13> otherDocumentIdentification) {
-		this.otherDocumentIdentification = otherDocumentIdentification;
+	public CorporateActionNotificationV03 setOtherDocumentIdentification(List<DocumentIdentification13> otherDocumentIdentification) {
+		this.otherDocumentIdentification = Objects.requireNonNull(otherDocumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "EvtsLkg")
 	public List<CorporateActionEventReference1> getEventsLinkage() {
-		return eventsLinkage;
+		return eventsLinkage == null ? eventsLinkage = new ArrayList<>() : eventsLinkage;
 	}
 
-	public void setEventsLinkage(List<CorporateActionEventReference1> eventsLinkage) {
-		this.eventsLinkage = eventsLinkage;
+	public CorporateActionNotificationV03 setEventsLinkage(List<CorporateActionEventReference1> eventsLinkage) {
+		this.eventsLinkage = Objects.requireNonNull(eventsLinkage);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionGeneralInformation37 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
 
-	public void setCorporateActionGeneralInformation(CorporateActionGeneralInformation37 corporateActionGeneralInformation) {
-		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	public CorporateActionNotificationV03 setCorporateActionGeneralInformation(CorporateActionGeneralInformation37 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = Objects.requireNonNull(corporateActionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public AccountIdentification18Choice getAccountDetails() {
 		return accountDetails;
 	}
 
-	public void setAccountDetails(AccountIdentification18Choice accountDetails) {
-		this.accountDetails = accountDetails;
+	public CorporateActionNotificationV03 setAccountDetails(AccountIdentification18Choice accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "IntrmdtScty")
-	public FinancialInstrumentAttributes17 getIntermediateSecurity() {
-		return intermediateSecurity;
+	public Optional<FinancialInstrumentAttributes17> getIntermediateSecurity() {
+		return intermediateSecurity == null ? Optional.empty() : Optional.of(intermediateSecurity);
 	}
 
-	public void setIntermediateSecurity(FinancialInstrumentAttributes17 intermediateSecurity) {
+	public CorporateActionNotificationV03 setIntermediateSecurity(FinancialInstrumentAttributes17 intermediateSecurity) {
 		this.intermediateSecurity = intermediateSecurity;
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnDtls")
-	public CorporateAction7 getCorporateActionDetails() {
-		return corporateActionDetails;
+	public Optional<CorporateAction7> getCorporateActionDetails() {
+		return corporateActionDetails == null ? Optional.empty() : Optional.of(corporateActionDetails);
 	}
 
-	public void setCorporateActionDetails(CorporateAction7 corporateActionDetails) {
+	public CorporateActionNotificationV03 setCorporateActionDetails(CorporateAction7 corporateActionDetails) {
 		this.corporateActionDetails = corporateActionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnOptnDtls")
 	public List<CorporateActionOption36> getCorporateActionOptionDetails() {
-		return corporateActionOptionDetails;
+		return corporateActionOptionDetails == null ? corporateActionOptionDetails = new ArrayList<>() : corporateActionOptionDetails;
 	}
 
-	public void setCorporateActionOptionDetails(List<CorporateActionOption36> corporateActionOptionDetails) {
-		this.corporateActionOptionDetails = corporateActionOptionDetails;
+	public CorporateActionNotificationV03 setCorporateActionOptionDetails(List<CorporateActionOption36> corporateActionOptionDetails) {
+		this.corporateActionOptionDetails = Objects.requireNonNull(corporateActionOptionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public CorporateActionNarrative11 getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<CorporateActionNarrative11> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(CorporateActionNarrative11 additionalInformation) {
+	public CorporateActionNotificationV03 setAdditionalInformation(CorporateActionNarrative11 additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 
-	@XmlElement(name = "IssrAgt")
 	public List<PartyIdentification47Choice> getIssuerAgent() {
-		return issuerAgent;
+		return issuerAgent == null ? issuerAgent = new ArrayList<>() : issuerAgent;
 	}
 
-	public void setIssuerAgent(List<PartyIdentification47Choice> issuerAgent) {
-		this.issuerAgent = issuerAgent;
+	public CorporateActionNotificationV03 setIssuerAgent(List<PartyIdentification47Choice> issuerAgent) {
+		this.issuerAgent = Objects.requireNonNull(issuerAgent);
+		return this;
 	}
 
-	@XmlElement(name = "PngAgt")
 	public List<PartyIdentification47Choice> getPayingAgent() {
-		return payingAgent;
+		return payingAgent == null ? payingAgent = new ArrayList<>() : payingAgent;
 	}
 
-	public void setPayingAgent(List<PartyIdentification47Choice> payingAgent) {
-		this.payingAgent = payingAgent;
+	public CorporateActionNotificationV03 setPayingAgent(List<PartyIdentification47Choice> payingAgent) {
+		this.payingAgent = Objects.requireNonNull(payingAgent);
+		return this;
 	}
 
-	@XmlElement(name = "SubPngAgt")
 	public List<PartyIdentification47Choice> getSubPayingAgent() {
-		return subPayingAgent;
+		return subPayingAgent == null ? subPayingAgent = new ArrayList<>() : subPayingAgent;
 	}
 
-	public void setSubPayingAgent(List<PartyIdentification47Choice> subPayingAgent) {
-		this.subPayingAgent = subPayingAgent;
+	public CorporateActionNotificationV03 setSubPayingAgent(List<PartyIdentification47Choice> subPayingAgent) {
+		this.subPayingAgent = Objects.requireNonNull(subPayingAgent);
+		return this;
 	}
 
-	@XmlElement(name = "Regar")
-	public PartyIdentification47Choice getRegistrar() {
-		return registrar;
+	public Optional<PartyIdentification47Choice> getRegistrar() {
+		return registrar == null ? Optional.empty() : Optional.of(registrar);
 	}
 
-	public void setRegistrar(PartyIdentification47Choice registrar) {
+	public CorporateActionNotificationV03 setRegistrar(PartyIdentification47Choice registrar) {
 		this.registrar = registrar;
+		return this;
 	}
 
-	@XmlElement(name = "RsellngAgt")
 	public List<PartyIdentification47Choice> getResellingAgent() {
-		return resellingAgent;
+		return resellingAgent == null ? resellingAgent = new ArrayList<>() : resellingAgent;
 	}
 
-	public void setResellingAgent(List<PartyIdentification47Choice> resellingAgent) {
-		this.resellingAgent = resellingAgent;
+	public CorporateActionNotificationV03 setResellingAgent(List<PartyIdentification47Choice> resellingAgent) {
+		this.resellingAgent = Objects.requireNonNull(resellingAgent);
+		return this;
 	}
 
-	@XmlElement(name = "PhysSctiesAgt")
-	public PartyIdentification47Choice getPhysicalSecuritiesAgent() {
-		return physicalSecuritiesAgent;
+	public Optional<PartyIdentification47Choice> getPhysicalSecuritiesAgent() {
+		return physicalSecuritiesAgent == null ? Optional.empty() : Optional.of(physicalSecuritiesAgent);
 	}
 
-	public void setPhysicalSecuritiesAgent(PartyIdentification47Choice physicalSecuritiesAgent) {
+	public CorporateActionNotificationV03 setPhysicalSecuritiesAgent(PartyIdentification47Choice physicalSecuritiesAgent) {
 		this.physicalSecuritiesAgent = physicalSecuritiesAgent;
+		return this;
 	}
 
-	@XmlElement(name = "DrpAgt")
-	public PartyIdentification47Choice getDropAgent() {
-		return dropAgent;
+	public Optional<PartyIdentification47Choice> getDropAgent() {
+		return dropAgent == null ? Optional.empty() : Optional.of(dropAgent);
 	}
 
-	public void setDropAgent(PartyIdentification47Choice dropAgent) {
+	public CorporateActionNotificationV03 setDropAgent(PartyIdentification47Choice dropAgent) {
 		this.dropAgent = dropAgent;
+		return this;
 	}
 
-	@XmlElement(name = "SlctnAgt")
 	public List<PartyIdentification47Choice> getSolicitationAgent() {
-		return solicitationAgent;
+		return solicitationAgent == null ? solicitationAgent = new ArrayList<>() : solicitationAgent;
 	}
 
-	public void setSolicitationAgent(List<PartyIdentification47Choice> solicitationAgent) {
-		this.solicitationAgent = solicitationAgent;
+	public CorporateActionNotificationV03 setSolicitationAgent(List<PartyIdentification47Choice> solicitationAgent) {
+		this.solicitationAgent = Objects.requireNonNull(solicitationAgent);
+		return this;
 	}
 
-	@XmlElement(name = "InfAgt")
-	public PartyIdentification47Choice getInformationAgent() {
-		return informationAgent;
+	public Optional<PartyIdentification47Choice> getInformationAgent() {
+		return informationAgent == null ? Optional.empty() : Optional.of(informationAgent);
 	}
 
-	public void setInformationAgent(PartyIdentification47Choice informationAgent) {
+	public CorporateActionNotificationV03 setInformationAgent(PartyIdentification47Choice informationAgent) {
 		this.informationAgent = informationAgent;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CorporateActionNotificationV03 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.031.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.031.001.03")
 	static public class Document {
 		@XmlElement(name = "CorpActnNtfctn", required = true)
 		public CorporateActionNotificationV03 messageBody;

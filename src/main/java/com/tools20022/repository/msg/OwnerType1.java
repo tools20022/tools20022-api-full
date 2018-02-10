@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the owner type and mandate type."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OwnerType1", propOrder = {"type", "mandateType", "proprietary"})
 public class OwnerType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected AccountOwnerType1Code type;
 	/**
-	 * Type of ownership.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +114,7 @@ public class OwnerType1 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Role.mmPlayer;
-			componentContext_lazy = () -> OwnerType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OwnerType1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +125,11 @@ public class OwnerType1 {
 			simpleType_lazy = () -> AccountOwnerType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MndtTp")
 	protected AccountPermissionType1Code mandateType;
 	/**
-	 * Type of mandate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +162,7 @@ public class OwnerType1 {
 	public static final MMMessageAttribute mmMandateType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MandatePartyRole.mmMandate;
-			componentContext_lazy = () -> OwnerType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OwnerType1.mmObject();
 			isDerived = false;
 			xmlTag = "MndtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,11 +173,11 @@ public class OwnerType1 {
 			simpleType_lazy = () -> AccountPermissionType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry")
 	protected GenericIdentification1 proprietary;
 	/**
-	 * Additional information about owner type or mandate type in proprietary
-	 * format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -206,7 +210,7 @@ public class OwnerType1 {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> OwnerType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OwnerType1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,9 +226,9 @@ public class OwnerType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OwnerType1.mmType, OwnerType1.mmMandateType, OwnerType1.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OwnerType1.mmType, com.tools20022.repository.msg.OwnerType1.mmMandateType, com.tools20022.repository.msg.OwnerType1.mmProprietary);
 				trace_lazy = () -> AccountOwnerRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OwnerType1";
 				definition = "Specifies the owner type and mandate type.";
@@ -233,30 +237,30 @@ public class OwnerType1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public AccountOwnerType1Code getType() {
 		return type;
 	}
 
-	public void setType(AccountOwnerType1Code type) {
-		this.type = type;
+	public OwnerType1 setType(AccountOwnerType1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "MndtTp")
-	public AccountPermissionType1Code getMandateType() {
-		return mandateType;
+	public Optional<AccountPermissionType1Code> getMandateType() {
+		return mandateType == null ? Optional.empty() : Optional.of(mandateType);
 	}
 
-	public void setMandateType(AccountPermissionType1Code mandateType) {
+	public OwnerType1 setMandateType(AccountPermissionType1Code mandateType) {
 		this.mandateType = mandateType;
+		return this;
 	}
 
-	@XmlElement(name = "Prtry")
-	public GenericIdentification1 getProprietary() {
-		return proprietary;
+	public Optional<GenericIdentification1> getProprietary() {
+		return proprietary == null ? Optional.empty() : Optional.of(proprietary);
 	}
 
-	public void setProprietary(com.tools20022.repository.msg.GenericIdentification1 proprietary) {
+	public OwnerType1 setProprietary(com.tools20022.repository.msg.GenericIdentification1 proprietary) {
 		this.proprietary = proprietary;
+		return this;
 	}
 }

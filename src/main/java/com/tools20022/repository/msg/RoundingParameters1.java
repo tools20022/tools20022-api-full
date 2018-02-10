@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.RoundingParameters;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,17 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Parameters applied to a fractional number."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RoundingParameters1", propOrder = {"roundingModulus", "roundingDirection"})
 public class RoundingParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RndgMdlus")
 	protected DecimalNumber roundingModulus;
 	/**
-	 * Float value specifying the value to which rounding is required, eg, 10
-	 * means round to a multiple of 10 units/shares, 0.5 means round to a
-	 * multiple of 0.5 units/shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +113,7 @@ public class RoundingParameters1 {
 	public static final MMMessageAttribute mmRoundingModulus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RoundingParameters.mmRoundingModulus;
-			componentContext_lazy = () -> RoundingParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RoundingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "RndgMdlus";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +124,11 @@ public class RoundingParameters1 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "RndgDrctn", required = true)
 	protected RoundingDirection1Code roundingDirection;
 	/**
-	 * Rounding direction applied to fractional numbers, eg, round up.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +163,7 @@ public class RoundingParameters1 {
 	public static final MMMessageAttribute mmRoundingDirection = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RoundingParameters.mmRoundingDirection;
-			componentContext_lazy = () -> RoundingParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RoundingParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "RndgDrctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,9 +178,9 @@ public class RoundingParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RoundingParameters1.mmRoundingModulus, RoundingParameters1.mmRoundingDirection);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RoundingParameters1.mmRoundingModulus, com.tools20022.repository.msg.RoundingParameters1.mmRoundingDirection);
 				trace_lazy = () -> RoundingParameters.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RoundingParameters1";
 				definition = "Parameters applied to a fractional number.";
@@ -187,21 +189,21 @@ public class RoundingParameters1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RndgMdlus")
-	public DecimalNumber getRoundingModulus() {
-		return roundingModulus;
+	public Optional<DecimalNumber> getRoundingModulus() {
+		return roundingModulus == null ? Optional.empty() : Optional.of(roundingModulus);
 	}
 
-	public void setRoundingModulus(DecimalNumber roundingModulus) {
+	public RoundingParameters1 setRoundingModulus(DecimalNumber roundingModulus) {
 		this.roundingModulus = roundingModulus;
+		return this;
 	}
 
-	@XmlElement(name = "RndgDrctn", required = true)
 	public RoundingDirection1Code getRoundingDirection() {
 		return roundingDirection;
 	}
 
-	public void setRoundingDirection(RoundingDirection1Code roundingDirection) {
-		this.roundingDirection = roundingDirection;
+	public RoundingParameters1 setRoundingDirection(RoundingDirection1Code roundingDirection) {
+		this.roundingDirection = Objects.requireNonNull(roundingDirection);
+		return this;
 	}
 }

@@ -20,34 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.InterestMethodCode;
+import com.tools20022.repository.codeset.InterestMethod1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the interest will be setlled in cash or rolled in.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.InterestMethodCode
- * InterestMethodCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestMethod1Code#mmPhysicalSettlement
- * InterestMethod1Code.mmPhysicalSettlement}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestMethod1Code#mmRollIn
- * InterestMethod1Code.mmRollIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestMethod1Code#PhysicalSettlement
+ * InterestMethod1Code.PhysicalSettlement}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InterestMethod1Code#RollIn
+ * InterestMethod1Code.RollIn}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.InterestMethodCode
+ * InterestMethodCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies whether the interest will be setlled in cash or rolled in."</li>
  * </ul>
  */
-public class InterestMethod1Code extends InterestMethodCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InterestMethod1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +88,12 @@ public class InterestMethod1Code extends InterestMethodCode {
 	 * name} = "PhysicalSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPhysicalSettlement = new MMCode() {
+	public static final InterestMethod1Code PhysicalSettlement = new InterestMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalSettlement";
-			owner_lazy = () -> InterestMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InterestMethod1Code.mmObject();
+			codeName = InterestMethodCode.PhysicalSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,26 +112,57 @@ public class InterestMethod1Code extends InterestMethodCode {
 	 * name} = "RollIn"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRollIn = new MMCode() {
+	public static final InterestMethod1Code RollIn = new InterestMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RollIn";
-			owner_lazy = () -> InterestMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InterestMethod1Code.mmObject();
+			codeName = InterestMethodCode.RollIn.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, InterestMethod1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InterestMethod1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PHYS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestMethod1Code";
 				definition = "Specifies whether the interest will be setlled in cash or rolled in.";
-				code_lazy = () -> Arrays.asList(InterestMethod1Code.mmPhysicalSettlement, InterestMethod1Code.mmRollIn);
 				trace_lazy = () -> InterestMethodCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestMethod1Code.PhysicalSettlement, com.tools20022.repository.codeset.InterestMethod1Code.RollIn);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PhysicalSettlement.getCodeName().get(), PhysicalSettlement);
+		codesByName.put(RollIn.getCodeName().get(), RollIn);
+	}
+
+	public static InterestMethod1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InterestMethod1Code[] values() {
+		InterestMethod1Code[] values = new InterestMethod1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InterestMethod1Code> {
+		@Override
+		public InterestMethod1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InterestMethod1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

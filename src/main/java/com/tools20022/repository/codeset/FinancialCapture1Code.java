@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.FinancialCaptureCode;
+import com.tools20022.repository.codeset.FinancialCapture1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Mode for the financial capture of the transaction by the acquirer.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.FinancialCaptureCode
- * FinancialCaptureCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialCapture1Code#mmAuthorisation
- * FinancialCapture1Code.mmAuthorisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialCapture1Code#Authorisation
+ * FinancialCapture1Code.Authorisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialCapture1Code#mmCompletion
- * FinancialCapture1Code.mmCompletion}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialCapture1Code#Completion
+ * FinancialCapture1Code.Completion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FinancialCapture1Code#mmBatch
- * FinancialCapture1Code.mmBatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialCapture1Code#Batch
+ * FinancialCapture1Code.Batch}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.FinancialCaptureCode
+ * FinancialCaptureCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Mode for the financial capture of the transaction by the acquirer."</li>
  * </ul>
  */
-public class FinancialCapture1Code extends FinancialCaptureCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FinancialCapture1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +92,12 @@ public class FinancialCapture1Code extends FinancialCaptureCode {
 	 * name} = "Authorisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuthorisation = new MMCode() {
+	public static final FinancialCapture1Code Authorisation = new FinancialCapture1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authorisation";
-			owner_lazy = () -> FinancialCapture1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialCapture1Code.mmObject();
+			codeName = FinancialCaptureCode.Authorisation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +116,12 @@ public class FinancialCapture1Code extends FinancialCaptureCode {
 	 * name} = "Completion"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompletion = new MMCode() {
+	public static final FinancialCapture1Code Completion = new FinancialCapture1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completion";
-			owner_lazy = () -> FinancialCapture1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialCapture1Code.mmObject();
+			codeName = FinancialCaptureCode.Completion.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,26 +140,59 @@ public class FinancialCapture1Code extends FinancialCaptureCode {
 	 * name} = "Batch"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBatch = new MMCode() {
+	public static final FinancialCapture1Code Batch = new FinancialCapture1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Batch";
-			owner_lazy = () -> FinancialCapture1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FinancialCapture1Code.mmObject();
+			codeName = FinancialCaptureCode.Batch.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, FinancialCapture1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FinancialCapture1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AUTH");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialCapture1Code";
 				definition = "Mode for the financial capture of the transaction by the acquirer.";
-				code_lazy = () -> Arrays.asList(FinancialCapture1Code.mmAuthorisation, FinancialCapture1Code.mmCompletion, FinancialCapture1Code.mmBatch);
 				trace_lazy = () -> FinancialCaptureCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialCapture1Code.Authorisation, com.tools20022.repository.codeset.FinancialCapture1Code.Completion,
+						com.tools20022.repository.codeset.FinancialCapture1Code.Batch);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Authorisation.getCodeName().get(), Authorisation);
+		codesByName.put(Completion.getCodeName().get(), Completion);
+		codesByName.put(Batch.getCodeName().get(), Batch);
+	}
+
+	public static FinancialCapture1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FinancialCapture1Code[] values() {
+		FinancialCapture1Code[] values = new FinancialCapture1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FinancialCapture1Code> {
+		@Override
+		public FinancialCapture1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FinancialCapture1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

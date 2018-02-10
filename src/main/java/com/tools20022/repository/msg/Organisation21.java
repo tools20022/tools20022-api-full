@@ -34,6 +34,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -124,8 +126,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -141,16 +143,16 @@ import javax.xml.bind.annotation.XmlType;
  * Organisation4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Organisation21", propOrder = {"name", "identification", "purpose", "taxationCountry", "registrationCountry", "registrationDate", "taxIdentificationNumber", "nationalRegistrationNumber", "corporateInvestorAddress"})
 public class Organisation21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nm", required = true)
 	protected Max140Text name;
 	/**
-	 * Name by which a party is known and which is usually used to identify that
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,7 +191,7 @@ public class Organisation21 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmOrganisationName;
-			componentContext_lazy = () -> Organisation21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation21.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,10 +203,11 @@ public class Organisation21 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Id")
 	protected PartyIdentification72Choice identification;
 	/**
-	 * Unique and unambiguous identifier for the organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -242,7 +245,7 @@ public class Organisation21 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Organisation21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation21.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,10 +257,11 @@ public class Organisation21 {
 			complexType_lazy = () -> PartyIdentification72Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Purp")
 	protected Max35Text purpose;
 	/**
-	 * Purpose of the organisation, for example,, charity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -294,7 +298,7 @@ public class Organisation21 {
 	public static final MMMessageAttribute mmPurpose = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmPurpose;
-			componentContext_lazy = () -> Organisation21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation21.mmObject();
 			isDerived = false;
 			xmlTag = "Purp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -306,10 +310,11 @@ public class Organisation21 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxtnCtry")
 	protected CountryCode taxationCountry;
 	/**
-	 * Country of taxation of an organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -346,7 +351,7 @@ public class Organisation21 {
 	public static final MMMessageAttribute mmTaxationCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> Organisation21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation21.mmObject();
 			isDerived = false;
 			xmlTag = "TaxtnCtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -358,10 +363,11 @@ public class Organisation21 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "RegnCtry")
 	protected CountryCode registrationCountry;
 	/**
-	 * Country in which the organisation is registered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -398,7 +404,7 @@ public class Organisation21 {
 	public static final MMMessageAttribute mmRegistrationCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> Organisation21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation21.mmObject();
 			isDerived = false;
 			xmlTag = "RegnCtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -410,10 +416,11 @@ public class Organisation21 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "RegnDt")
 	protected ISODate registrationDate;
 	/**
-	 * Date and time at which a given organisation was officially registered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -451,7 +458,7 @@ public class Organisation21 {
 	public static final MMMessageAttribute mmRegistrationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmRegistrationDate;
-			componentContext_lazy = () -> Organisation21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation21.mmObject();
 			isDerived = false;
 			xmlTag = "RegnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -463,10 +470,11 @@ public class Organisation21 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxIdNb")
 	protected Max35Text taxIdentificationNumber;
 	/**
-	 * Number assigned by a tax authority to an entity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -503,7 +511,7 @@ public class Organisation21 {
 	public static final MMMessageAttribute mmTaxIdentificationNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
-			componentContext_lazy = () -> Organisation21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation21.mmObject();
 			isDerived = false;
 			xmlTag = "TaxIdNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -515,10 +523,11 @@ public class Organisation21 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NtlRegnNb")
 	protected Max35Text nationalRegistrationNumber;
 	/**
-	 * Number assigned by a national registration authority to an entity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -556,7 +565,7 @@ public class Organisation21 {
 	public static final MMMessageAttribute mmNationalRegistrationNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmNationalRegistrationNumber;
-			componentContext_lazy = () -> Organisation21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation21.mmObject();
 			isDerived = false;
 			xmlTag = "NtlRegnNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -568,10 +577,11 @@ public class Organisation21 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CorpInvstrAdr", required = true)
 	protected PostalAddress1 corporateInvestorAddress;
 	/**
-	 * Postal address of a party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -607,7 +617,7 @@ public class Organisation21 {
 	public static final MMMessageAssociationEnd mmCorporateInvestorAddress = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
-			componentContext_lazy = () -> Organisation21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation21.mmObject();
 			isDerived = false;
 			xmlTag = "CorpInvstrAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -624,15 +634,17 @@ public class Organisation21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Organisation21.mmName, Organisation21.mmIdentification, Organisation21.mmPurpose, Organisation21.mmTaxationCountry, Organisation21.mmRegistrationCountry,
-						Organisation21.mmRegistrationDate, Organisation21.mmTaxIdentificationNumber, Organisation21.mmNationalRegistrationNumber, Organisation21.mmCorporateInvestorAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation21.mmName, com.tools20022.repository.msg.Organisation21.mmIdentification, com.tools20022.repository.msg.Organisation21.mmPurpose,
+						com.tools20022.repository.msg.Organisation21.mmTaxationCountry, com.tools20022.repository.msg.Organisation21.mmRegistrationCountry, com.tools20022.repository.msg.Organisation21.mmRegistrationDate,
+						com.tools20022.repository.msg.Organisation21.mmTaxIdentificationNumber, com.tools20022.repository.msg.Organisation21.mmNationalRegistrationNumber,
+						com.tools20022.repository.msg.Organisation21.mmCorporateInvestorAddress);
 				messageBuildingBlock_lazy = () -> Arrays.asList(PortfolioTransferInstructionV07.mmPrimaryCorporateInvestor, PortfolioTransferInstructionV07.mmSecondaryCorporateInvestor,
 						PortfolioTransferInstructionV07.mmOtherCorporateInvestor, AccountHoldingInformationV05.mmPrimaryCorporateInvestor, AccountHoldingInformationV05.mmSecondaryCorporateInvestor,
 						AccountHoldingInformationV05.mmOtherCorporateInvestor, PortfolioTransferConfirmationV07.mmPrimaryCorporateInvestor, PortfolioTransferConfirmationV07.mmSecondaryCorporateInvestor,
 						PortfolioTransferConfirmationV07.mmOtherCorporateInvestor, AccountHoldingInformationRequestV04.mmPrimaryCorporateInvestor, AccountHoldingInformationRequestV04.mmSecondaryCorporateInvestor,
 						AccountHoldingInformationRequestV04.mmOtherCorporateInvestor);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Organisation21";
 				definition = "Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.";
@@ -642,84 +654,84 @@ public class Organisation21 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nm", required = true)
 	public Max140Text getName() {
 		return name;
 	}
 
-	public void setName(Max140Text name) {
-		this.name = name;
+	public Organisation21 setName(Max140Text name) {
+		this.name = Objects.requireNonNull(name);
+		return this;
 	}
 
-	@XmlElement(name = "Id")
-	public PartyIdentification72Choice getIdentification() {
-		return identification;
+	public Optional<PartyIdentification72Choice> getIdentification() {
+		return identification == null ? Optional.empty() : Optional.of(identification);
 	}
 
-	public void setIdentification(PartyIdentification72Choice identification) {
+	public Organisation21 setIdentification(PartyIdentification72Choice identification) {
 		this.identification = identification;
+		return this;
 	}
 
-	@XmlElement(name = "Purp")
-	public Max35Text getPurpose() {
-		return purpose;
+	public Optional<Max35Text> getPurpose() {
+		return purpose == null ? Optional.empty() : Optional.of(purpose);
 	}
 
-	public void setPurpose(Max35Text purpose) {
+	public Organisation21 setPurpose(Max35Text purpose) {
 		this.purpose = purpose;
+		return this;
 	}
 
-	@XmlElement(name = "TaxtnCtry")
-	public CountryCode getTaxationCountry() {
-		return taxationCountry;
+	public Optional<CountryCode> getTaxationCountry() {
+		return taxationCountry == null ? Optional.empty() : Optional.of(taxationCountry);
 	}
 
-	public void setTaxationCountry(CountryCode taxationCountry) {
+	public Organisation21 setTaxationCountry(CountryCode taxationCountry) {
 		this.taxationCountry = taxationCountry;
+		return this;
 	}
 
-	@XmlElement(name = "RegnCtry")
-	public CountryCode getRegistrationCountry() {
-		return registrationCountry;
+	public Optional<CountryCode> getRegistrationCountry() {
+		return registrationCountry == null ? Optional.empty() : Optional.of(registrationCountry);
 	}
 
-	public void setRegistrationCountry(CountryCode registrationCountry) {
+	public Organisation21 setRegistrationCountry(CountryCode registrationCountry) {
 		this.registrationCountry = registrationCountry;
+		return this;
 	}
 
-	@XmlElement(name = "RegnDt")
-	public ISODate getRegistrationDate() {
-		return registrationDate;
+	public Optional<ISODate> getRegistrationDate() {
+		return registrationDate == null ? Optional.empty() : Optional.of(registrationDate);
 	}
 
-	public void setRegistrationDate(ISODate registrationDate) {
+	public Organisation21 setRegistrationDate(ISODate registrationDate) {
 		this.registrationDate = registrationDate;
+		return this;
 	}
 
-	@XmlElement(name = "TaxIdNb")
-	public Max35Text getTaxIdentificationNumber() {
-		return taxIdentificationNumber;
+	public Optional<Max35Text> getTaxIdentificationNumber() {
+		return taxIdentificationNumber == null ? Optional.empty() : Optional.of(taxIdentificationNumber);
 	}
 
-	public void setTaxIdentificationNumber(Max35Text taxIdentificationNumber) {
+	public Organisation21 setTaxIdentificationNumber(Max35Text taxIdentificationNumber) {
 		this.taxIdentificationNumber = taxIdentificationNumber;
+		return this;
 	}
 
-	@XmlElement(name = "NtlRegnNb")
-	public Max35Text getNationalRegistrationNumber() {
-		return nationalRegistrationNumber;
+	public Optional<Max35Text> getNationalRegistrationNumber() {
+		return nationalRegistrationNumber == null ? Optional.empty() : Optional.of(nationalRegistrationNumber);
 	}
 
-	public void setNationalRegistrationNumber(Max35Text nationalRegistrationNumber) {
+	public Organisation21 setNationalRegistrationNumber(Max35Text nationalRegistrationNumber) {
 		this.nationalRegistrationNumber = nationalRegistrationNumber;
+		return this;
 	}
 
-	@XmlElement(name = "CorpInvstrAdr", required = true)
 	public PostalAddress1 getCorporateInvestorAddress() {
 		return corporateInvestorAddress;
 	}
 
-	public void setCorporateInvestorAddress(com.tools20022.repository.msg.PostalAddress1 corporateInvestorAddress) {
-		this.corporateInvestorAddress = corporateInvestorAddress;
+	public Organisation21 setCorporateInvestorAddress(com.tools20022.repository.msg.PostalAddress1 corporateInvestorAddress) {
+		this.corporateInvestorAddress = Objects.requireNonNull(corporateInvestorAddress);
+		return this;
 	}
 }

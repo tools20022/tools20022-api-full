@@ -20,44 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ATMMediaTypeCode;
+import com.tools20022.repository.codeset.ATMMediaType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Category of media items.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode
- * ATMMediaTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#mmCounterfeit
- * ATMMediaType3Code.mmCounterfeit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#mmFit
- * ATMMediaType3Code.mmFit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#Counterfeit
+ * ATMMediaType3Code.Counterfeit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#Fit
+ * ATMMediaType3Code.Fit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#mmFitAndUnfit
- * ATMMediaType3Code.mmFitAndUnfit}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#FitAndUnfit
+ * ATMMediaType3Code.FitAndUnfit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#Suspect
+ * ATMMediaType3Code.Suspect}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#Unfit
+ * ATMMediaType3Code.Unfit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#mmSuspect
- * ATMMediaType3Code.mmSuspect}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#mmUnfit
- * ATMMediaType3Code.mmUnfit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#mmUnrecognised
- * ATMMediaType3Code.mmUnrecognised}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMMediaType3Code#Unrecognised
+ * ATMMediaType3Code.Unrecognised}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ATMMediaTypeCode
+ * ATMMediaTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Category of media items."</li>
  * </ul>
  */
-public class ATMMediaType3Code extends ATMMediaTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ATMMediaType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +91,12 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 * name} = "Counterfeit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCounterfeit = new MMCode() {
+	public static final ATMMediaType3Code Counterfeit = new ATMMediaType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counterfeit";
-			owner_lazy = () -> ATMMediaType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMMediaType3Code.mmObject();
+			codeName = ATMMediaTypeCode.Counterfeit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +115,12 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 * name} = "Fit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFit = new MMCode() {
+	public static final ATMMediaType3Code Fit = new ATMMediaType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fit";
-			owner_lazy = () -> ATMMediaType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMMediaType3Code.mmObject();
+			codeName = ATMMediaTypeCode.Fit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,11 +139,12 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 * name} = "FitAndUnfit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFitAndUnfit = new MMCode() {
+	public static final ATMMediaType3Code FitAndUnfit = new ATMMediaType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FitAndUnfit";
-			owner_lazy = () -> ATMMediaType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMMediaType3Code.mmObject();
+			codeName = ATMMediaTypeCode.FitAndUnfit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -156,11 +163,12 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 * name} = "Suspect"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuspect = new MMCode() {
+	public static final ATMMediaType3Code Suspect = new ATMMediaType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspect";
-			owner_lazy = () -> ATMMediaType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMMediaType3Code.mmObject();
+			codeName = ATMMediaTypeCode.Suspect.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -179,11 +187,12 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 * name} = "Unfit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnfit = new MMCode() {
+	public static final ATMMediaType3Code Unfit = new ATMMediaType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unfit";
-			owner_lazy = () -> ATMMediaType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMMediaType3Code.mmObject();
+			codeName = ATMMediaTypeCode.Unfit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -202,25 +211,61 @@ public class ATMMediaType3Code extends ATMMediaTypeCode {
 	 * name} = "Unrecognised"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnrecognised = new MMCode() {
+	public static final ATMMediaType3Code Unrecognised = new ATMMediaType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unrecognised";
-			owner_lazy = () -> ATMMediaType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMMediaType3Code.mmObject();
+			codeName = ATMMediaTypeCode.Unrecognised.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ATMMediaType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ATMMediaType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMMediaType3Code";
 				definition = "Category of media items.";
-				code_lazy = () -> Arrays.asList(ATMMediaType3Code.mmCounterfeit, ATMMediaType3Code.mmFit, ATMMediaType3Code.mmFitAndUnfit, ATMMediaType3Code.mmSuspect, ATMMediaType3Code.mmUnfit, ATMMediaType3Code.mmUnrecognised);
 				trace_lazy = () -> ATMMediaTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMMediaType3Code.Counterfeit, com.tools20022.repository.codeset.ATMMediaType3Code.Fit, com.tools20022.repository.codeset.ATMMediaType3Code.FitAndUnfit,
+						com.tools20022.repository.codeset.ATMMediaType3Code.Suspect, com.tools20022.repository.codeset.ATMMediaType3Code.Unfit, com.tools20022.repository.codeset.ATMMediaType3Code.Unrecognised);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Counterfeit.getCodeName().get(), Counterfeit);
+		codesByName.put(Fit.getCodeName().get(), Fit);
+		codesByName.put(FitAndUnfit.getCodeName().get(), FitAndUnfit);
+		codesByName.put(Suspect.getCodeName().get(), Suspect);
+		codesByName.put(Unfit.getCodeName().get(), Unfit);
+		codesByName.put(Unrecognised.getCodeName().get(), Unrecognised);
+	}
+
+	public static ATMMediaType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ATMMediaType3Code[] values() {
+		ATMMediaType3Code[] values = new ATMMediaType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ATMMediaType3Code> {
+		@Override
+		public ATMMediaType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ATMMediaType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

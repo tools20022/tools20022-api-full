@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PreAllocationMethodCode;
+import com.tools20022.repository.codeset.PreAllocationMethod1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the method of preallocation.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PreAllocationMethodCode
- * PreAllocationMethodCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreAllocationMethod1Code#mmProrata
- * PreAllocationMethod1Code.mmProrata}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreAllocationMethod1Code#Prorata
+ * PreAllocationMethod1Code.Prorata}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreAllocationMethod1Code#mmSpeakFirst
- * PreAllocationMethod1Code.mmSpeakFirst}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreAllocationMethod1Code#SpeakFirst
+ * PreAllocationMethod1Code.SpeakFirst}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PreAllocationMethodCode
+ * PreAllocationMethodCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates the method of preallocation."</li>
  * </ul>
  */
-public class PreAllocationMethod1Code extends PreAllocationMethodCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PreAllocationMethod1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class PreAllocationMethod1Code extends PreAllocationMethodCode {
 	 * name} = "Prorata"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProrata = new MMCode() {
+	public static final PreAllocationMethod1Code Prorata = new PreAllocationMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prorata";
-			owner_lazy = () -> PreAllocationMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PreAllocationMethod1Code.mmObject();
+			codeName = PreAllocationMethodCode.Prorata.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class PreAllocationMethod1Code extends PreAllocationMethodCode {
 	 * name} = "SpeakFirst"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpeakFirst = new MMCode() {
+	public static final PreAllocationMethod1Code SpeakFirst = new PreAllocationMethod1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpeakFirst";
-			owner_lazy = () -> PreAllocationMethod1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PreAllocationMethod1Code.mmObject();
+			codeName = PreAllocationMethodCode.SpeakFirst.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PreAllocationMethod1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PreAllocationMethod1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PROR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PreAllocationMethod1Code";
 				definition = "Indicates the method of preallocation.";
-				code_lazy = () -> Arrays.asList(PreAllocationMethod1Code.mmProrata, PreAllocationMethod1Code.mmSpeakFirst);
 				trace_lazy = () -> PreAllocationMethodCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PreAllocationMethod1Code.Prorata, com.tools20022.repository.codeset.PreAllocationMethod1Code.SpeakFirst);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Prorata.getCodeName().get(), Prorata);
+		codesByName.put(SpeakFirst.getCodeName().get(), SpeakFirst);
+	}
+
+	public static PreAllocationMethod1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PreAllocationMethod1Code[] values() {
+		PreAllocationMethod1Code[] values = new PreAllocationMethod1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PreAllocationMethod1Code> {
+		@Override
+		public PreAllocationMethod1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PreAllocationMethod1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

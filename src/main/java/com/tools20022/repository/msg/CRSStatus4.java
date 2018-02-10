@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.CRSStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Common Reporting Standard (CRS) status information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CRSStatus4", propOrder = {"type", "source", "exceptionalReportingCountry"})
 public class CRSStatus4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected CRSStatus3Choice type;
 	/**
-	 * Common Reporting Standard (CRS) status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -107,7 +110,7 @@ public class CRSStatus4 {
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CRSStatus.mmCRSStatus;
-			componentContext_lazy = () -> CRSStatus4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CRSStatus4.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +122,11 @@ public class CRSStatus4 {
 			type_lazy = () -> CRSStatus3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Src")
 	protected CRSSource1Choice source;
 	/**
-	 * Source of the Common Reporting Standard (CRS) status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -153,7 +157,7 @@ public class CRSStatus4 {
 	public static final MMMessageAssociationEnd mmSource = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CRSStatus.mmCRSSourceStatus;
-			componentContext_lazy = () -> CRSStatus4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CRSStatus4.mmObject();
 			isDerived = false;
 			xmlTag = "Src";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,11 +169,11 @@ public class CRSStatus4 {
 			type_lazy = () -> CRSSource1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "XcptnlRptgCtry")
 	protected CountryCode exceptionalReportingCountry;
 	/**
-	 * Reporting country for the CRS status when there is an exception at the
-	 * country level.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,7 +207,7 @@ public class CRSStatus4 {
 	public static final MMMessageAttribute mmExceptionalReportingCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CRSStatus.mmExceptionalReportingCountry;
-			componentContext_lazy = () -> CRSStatus4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CRSStatus4.mmObject();
 			isDerived = false;
 			xmlTag = "XcptnlRptgCtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,9 +222,9 @@ public class CRSStatus4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CRSStatus4.mmType, CRSStatus4.mmSource, CRSStatus4.mmExceptionalReportingCountry);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CRSStatus4.mmType, com.tools20022.repository.msg.CRSStatus4.mmSource, com.tools20022.repository.msg.CRSStatus4.mmExceptionalReportingCountry);
 				trace_lazy = () -> CRSStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CRSStatus4";
 				definition = "Common Reporting Standard (CRS) status information.";
@@ -229,30 +233,30 @@ public class CRSStatus4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public CRSStatus3Choice getType() {
 		return type;
 	}
 
-	public void setType(CRSStatus3Choice type) {
-		this.type = type;
+	public CRSStatus4 setType(CRSStatus3Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Src")
-	public CRSSource1Choice getSource() {
-		return source;
+	public Optional<CRSSource1Choice> getSource() {
+		return source == null ? Optional.empty() : Optional.of(source);
 	}
 
-	public void setSource(CRSSource1Choice source) {
+	public CRSStatus4 setSource(CRSSource1Choice source) {
 		this.source = source;
+		return this;
 	}
 
-	@XmlElement(name = "XcptnlRptgCtry")
-	public CountryCode getExceptionalReportingCountry() {
-		return exceptionalReportingCountry;
+	public Optional<CountryCode> getExceptionalReportingCountry() {
+		return exceptionalReportingCountry == null ? Optional.empty() : Optional.of(exceptionalReportingCountry);
 	}
 
-	public void setExceptionalReportingCountry(CountryCode exceptionalReportingCountry) {
+	public CRSStatus4 setExceptionalReportingCountry(CountryCode exceptionalReportingCountry) {
 		this.exceptionalReportingCountry = exceptionalReportingCountry;
+		return this;
 	}
 }

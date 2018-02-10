@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines the tax calculation method to be used for the billing of the
@@ -33,23 +38,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethodCode#mmNoTaxes
- * BillingTaxCalculationMethodCode.mmNoTaxes}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethodCode#NoTaxes
+ * BillingTaxCalculationMethodCode.NoTaxes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethodCode#mmMethodA
- * BillingTaxCalculationMethodCode.mmMethodA}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethodCode#MethodA
+ * BillingTaxCalculationMethodCode.MethodA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethodCode#mmMethodB
- * BillingTaxCalculationMethodCode.mmMethodB}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethodCode#MethodB
+ * BillingTaxCalculationMethodCode.MethodB}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethodCode#mmMethodC
- * BillingTaxCalculationMethodCode.mmMethodC}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethodCode#MethodC
+ * BillingTaxCalculationMethodCode.MethodC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethodCode#mmMethodD
- * BillingTaxCalculationMethodCode.mmMethodD}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethodCode#MethodD
+ * BillingTaxCalculationMethodCode.MethodD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethodCode#mmUndefined
- * BillingTaxCalculationMethodCode.mmUndefined}</li>
+ * {@linkplain com.tools20022.repository.codeset.BillingTaxCalculationMethodCode#Undefined
+ * BillingTaxCalculationMethodCode.Undefined}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -63,8 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -83,7 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class BillingTaxCalculationMethodCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BillingTaxCalculationMethodCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -107,12 +113,12 @@ public class BillingTaxCalculationMethodCode {
 	 * definition} = "No taxes are calculated or due on this account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoTaxes = new MMCode() {
+	public static final BillingTaxCalculationMethodCode NoTaxes = new BillingTaxCalculationMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoTaxes";
 			definition = "No taxes are calculated or due on this account.";
-			owner_lazy = () -> BillingTaxCalculationMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.mmObject();
 			codeName = "NTAX";
 		}
 	};
@@ -139,12 +145,12 @@ public class BillingTaxCalculationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMethodA = new MMCode() {
+	public static final BillingTaxCalculationMethodCode MethodA = new BillingTaxCalculationMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodA";
 			definition = "Line-by-line per service calculation and settlement currency translation.";
-			owner_lazy = () -> BillingTaxCalculationMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.mmObject();
 			codeName = "MTDA";
 		}
 	};
@@ -172,12 +178,12 @@ public class BillingTaxCalculationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMethodB = new MMCode() {
+	public static final BillingTaxCalculationMethodCode MethodB = new BillingTaxCalculationMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodB";
 			definition = "Line-by-line per service calculation with settlement currency translation performed on the statement tax total.";
-			owner_lazy = () -> BillingTaxCalculationMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.mmObject();
 			codeName = "MTDB";
 		}
 	};
@@ -203,12 +209,12 @@ public class BillingTaxCalculationMethodCode {
 	 * "Group tax calculation with group settlement currency translation."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMethodC = new MMCode() {
+	public static final BillingTaxCalculationMethodCode MethodC = new BillingTaxCalculationMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodC";
 			definition = "Group tax calculation with group settlement currency translation.";
-			owner_lazy = () -> BillingTaxCalculationMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.mmObject();
 			codeName = "MTDC";
 		}
 	};
@@ -236,12 +242,12 @@ public class BillingTaxCalculationMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMethodD = new MMCode() {
+	public static final BillingTaxCalculationMethodCode MethodD = new BillingTaxCalculationMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodD";
 			definition = "Line-by-line per service calculation with all charges and taxes due in the pricing currency.";
-			owner_lazy = () -> BillingTaxCalculationMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.mmObject();
 			codeName = "MTDD";
 		}
 	};
@@ -266,29 +272,64 @@ public class BillingTaxCalculationMethodCode {
 	 * definition} = "Tax calculation method is not defined or unknown."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUndefined = new MMCode() {
+	public static final BillingTaxCalculationMethodCode Undefined = new BillingTaxCalculationMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undefined";
 			definition = "Tax calculation method is not defined or unknown.";
-			owner_lazy = () -> BillingTaxCalculationMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.mmObject();
 			codeName = "UDFD";
 		}
 	};
+	final static private LinkedHashMap<String, BillingTaxCalculationMethodCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BillingTaxCalculationMethodCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NTAX");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BillingTaxCalculationMethodCode";
 				definition = "Defines the tax calculation method to be used for the billing of the services.";
-				code_lazy = () -> Arrays.asList(BillingTaxCalculationMethodCode.mmNoTaxes, BillingTaxCalculationMethodCode.mmMethodA, BillingTaxCalculationMethodCode.mmMethodB, BillingTaxCalculationMethodCode.mmMethodC,
-						BillingTaxCalculationMethodCode.mmMethodD, BillingTaxCalculationMethodCode.mmUndefined);
 				derivation_lazy = () -> Arrays.asList(BillingTaxCalculationMethod1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.NoTaxes, com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.MethodA,
+						com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.MethodB, com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.MethodC,
+						com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.MethodD, com.tools20022.repository.codeset.BillingTaxCalculationMethodCode.Undefined);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NoTaxes.getCodeName().get(), NoTaxes);
+		codesByName.put(MethodA.getCodeName().get(), MethodA);
+		codesByName.put(MethodB.getCodeName().get(), MethodB);
+		codesByName.put(MethodC.getCodeName().get(), MethodC);
+		codesByName.put(MethodD.getCodeName().get(), MethodD);
+		codesByName.put(Undefined.getCodeName().get(), Undefined);
+	}
+
+	public static BillingTaxCalculationMethodCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BillingTaxCalculationMethodCode[] values() {
+		BillingTaxCalculationMethodCode[] values = new BillingTaxCalculationMethodCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BillingTaxCalculationMethodCode> {
+		@Override
+		public BillingTaxCalculationMethodCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BillingTaxCalculationMethodCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

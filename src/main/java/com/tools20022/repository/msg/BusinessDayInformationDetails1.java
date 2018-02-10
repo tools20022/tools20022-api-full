@@ -21,9 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,16 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BusinessDayInformationDetails1", propOrder = {"systemStatus", "systemInformationPerCurrency"})
 public class BusinessDayInformationDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SysSts")
 	protected SystemStatusDetails1 systemStatus;
 	/**
-	 * Status of a system and the period of time during which the status is
-	 * valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -101,7 +100,7 @@ public class BusinessDayInformationDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmSystemStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BusinessDayInformationDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SysSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,11 +112,11 @@ public class BusinessDayInformationDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.SystemStatusDetails1.mmObject();
 		}
 	};
+	@XmlElement(name = "SysInfPerCcy")
 	protected List<com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1> systemInformationPerCurrency;
 	/**
-	 * Information relating to system operations and foreseen events relating to
-	 * the operation of the system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -146,7 +145,7 @@ public class BusinessDayInformationDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmSystemInformationPerCurrency = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BusinessDayInformationDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDayInformationDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SysInfPerCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,8 +160,8 @@ public class BusinessDayInformationDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BusinessDayInformationDetails1.mmSystemStatus, BusinessDayInformationDetails1.mmSystemInformationPerCurrency);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDayInformationDetails1.mmSystemStatus, com.tools20022.repository.msg.BusinessDayInformationDetails1.mmSystemInformationPerCurrency);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDayInformationDetails1";
 				definition = "Payment system operational information, eg, opening, closure, session period or events. given per currency.";
@@ -171,21 +170,21 @@ public class BusinessDayInformationDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SysSts")
-	public SystemStatusDetails1 getSystemStatus() {
-		return systemStatus;
+	public Optional<SystemStatusDetails1> getSystemStatus() {
+		return systemStatus == null ? Optional.empty() : Optional.of(systemStatus);
 	}
 
-	public void setSystemStatus(com.tools20022.repository.msg.SystemStatusDetails1 systemStatus) {
+	public BusinessDayInformationDetails1 setSystemStatus(com.tools20022.repository.msg.SystemStatusDetails1 systemStatus) {
 		this.systemStatus = systemStatus;
+		return this;
 	}
 
-	@XmlElement(name = "SysInfPerCcy")
 	public List<SystemAvailabilityAndEventsDetails1> getSystemInformationPerCurrency() {
-		return systemInformationPerCurrency;
+		return systemInformationPerCurrency == null ? systemInformationPerCurrency = new ArrayList<>() : systemInformationPerCurrency;
 	}
 
-	public void setSystemInformationPerCurrency(List<com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1> systemInformationPerCurrency) {
-		this.systemInformationPerCurrency = systemInformationPerCurrency;
+	public BusinessDayInformationDetails1 setSystemInformationPerCurrency(List<com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1> systemInformationPerCurrency) {
+		this.systemInformationPerCurrency = Objects.requireNonNull(systemInformationPerCurrency);
+		return this;
 	}
 }

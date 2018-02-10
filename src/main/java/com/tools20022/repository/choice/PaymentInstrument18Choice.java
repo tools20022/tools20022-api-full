@@ -31,6 +31,7 @@ import com.tools20022.repository.msg.DirectDebitMandate5;
 import com.tools20022.repository.msg.PaymentCard18;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * PaymentInstrument17Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentInstrument18Choice", propOrder = {"paymentCardDetails", "directDebitDetails", "cheque", "bankersDraft"})
 public class PaymentInstrument18Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtCardDtls", required = true)
 	protected PaymentCard18 paymentCardDetails;
 	/**
-	 * Settlement instructions for a payment by card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -125,7 +127,7 @@ public class PaymentInstrument18Choice {
 	public static final MMMessageAssociationEnd mmPaymentCardDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
-			componentContext_lazy = () -> PaymentInstrument18Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PmtCardDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,10 +140,11 @@ public class PaymentInstrument18Choice {
 			type_lazy = () -> PaymentCard18.mmObject();
 		}
 	};
+	@XmlElement(name = "DrctDbtDtls", required = true)
 	protected DirectDebitMandate5 directDebitDetails;
 	/**
-	 * Settlement instructions for a payment by direct debit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -177,7 +180,7 @@ public class PaymentInstrument18Choice {
 	public static final MMMessageAssociationEnd mmDirectDebitDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebit.mmObject();
-			componentContext_lazy = () -> PaymentInstrument18Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DrctDbtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,10 +193,11 @@ public class PaymentInstrument18Choice {
 			type_lazy = () -> DirectDebitMandate5.mmObject();
 		}
 	};
+	@XmlElement(name = "Chq", required = true)
 	protected YesNoIndicator cheque;
 	/**
-	 * Indicates whether the payment is done via cheque.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -232,7 +236,7 @@ public class PaymentInstrument18Choice {
 	public static final MMMessageAttribute mmCheque = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> ChequePayment.mmObject();
-			componentContext_lazy = () -> PaymentInstrument18Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Chq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,10 +248,11 @@ public class PaymentInstrument18Choice {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "BkrsDrft", required = true)
 	protected YesNoIndicator bankersDraft;
 	/**
-	 * Indicates whether the payment is done via draft.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -286,7 +291,7 @@ public class PaymentInstrument18Choice {
 	public static final MMMessageAttribute mmBankersDraft = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> ChequePayment.mmObject();
-			componentContext_lazy = () -> PaymentInstrument18Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument18Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BkrsDrft";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -302,9 +307,10 @@ public class PaymentInstrument18Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentInstrument18Choice.mmPaymentCardDetails, PaymentInstrument18Choice.mmDirectDebitDetails, PaymentInstrument18Choice.mmCheque, PaymentInstrument18Choice.mmBankersDraft);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument18Choice.mmPaymentCardDetails, com.tools20022.repository.choice.PaymentInstrument18Choice.mmDirectDebitDetails,
+						com.tools20022.repository.choice.PaymentInstrument18Choice.mmCheque, com.tools20022.repository.choice.PaymentInstrument18Choice.mmBankersDraft);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrument18Choice";
 				definition = "Choice of payment instruments.";
@@ -314,39 +320,39 @@ public class PaymentInstrument18Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtCardDtls", required = true)
 	public PaymentCard18 getPaymentCardDetails() {
 		return paymentCardDetails;
 	}
 
-	public void setPaymentCardDetails(PaymentCard18 paymentCardDetails) {
-		this.paymentCardDetails = paymentCardDetails;
+	public PaymentInstrument18Choice setPaymentCardDetails(PaymentCard18 paymentCardDetails) {
+		this.paymentCardDetails = Objects.requireNonNull(paymentCardDetails);
+		return this;
 	}
 
-	@XmlElement(name = "DrctDbtDtls", required = true)
 	public DirectDebitMandate5 getDirectDebitDetails() {
 		return directDebitDetails;
 	}
 
-	public void setDirectDebitDetails(DirectDebitMandate5 directDebitDetails) {
-		this.directDebitDetails = directDebitDetails;
+	public PaymentInstrument18Choice setDirectDebitDetails(DirectDebitMandate5 directDebitDetails) {
+		this.directDebitDetails = Objects.requireNonNull(directDebitDetails);
+		return this;
 	}
 
-	@XmlElement(name = "Chq", required = true)
 	public YesNoIndicator getCheque() {
 		return cheque;
 	}
 
-	public void setCheque(YesNoIndicator cheque) {
-		this.cheque = cheque;
+	public PaymentInstrument18Choice setCheque(YesNoIndicator cheque) {
+		this.cheque = Objects.requireNonNull(cheque);
+		return this;
 	}
 
-	@XmlElement(name = "BkrsDrft", required = true)
 	public YesNoIndicator getBankersDraft() {
 		return bankersDraft;
 	}
 
-	public void setBankersDraft(YesNoIndicator bankersDraft) {
-		this.bankersDraft = bankersDraft;
+	public PaymentInstrument18Choice setBankersDraft(YesNoIndicator bankersDraft) {
+		this.bankersDraft = Objects.requireNonNull(bankersDraft);
+		return this;
 	}
 }

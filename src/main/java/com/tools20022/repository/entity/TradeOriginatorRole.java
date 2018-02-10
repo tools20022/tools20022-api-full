@@ -31,6 +31,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Specifies the trading party at the source of the transaction.
@@ -41,29 +42,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
+ * TradePartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
  * <li>
  * {@linkplain com.tools20022.repository.entity.TradeOriginatorRole#mmOriginatorRole
  * TradeOriginatorRole.mmOriginatorRole}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
- * TradePartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.TradeOriginator1Choice
- * TradeOriginator1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TradeOriginator2Choice
- * TradeOriginator2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TradeOriginator3Choice
- * TradeOriginator3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TradeOriginator4Choice
- * TradeOriginator4Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -187,10 +174,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.TradeOriginator1Choice
+ * TradeOriginator1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TradeOriginator2Choice
+ * TradeOriginator2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TradeOriginator3Choice
+ * TradeOriginator3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TradeOriginator4Choice
+ * TradeOriginator4Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -207,8 +208,8 @@ public class TradeOriginatorRole extends TradePartyRole {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected OriginatorRoleCode originatorRole;
 	/**
-	 * Specifies the role of the trading party in the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -266,8 +267,8 @@ public class TradeOriginatorRole extends TradePartyRole {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeOriginator1Choice.mmCode, TradeOriginator1Choice.mmProprietary, TradeOriginator2Choice.mmCode, TradeOriginator2Choice.mmProprietary, TradeOriginator3Choice.mmCode,
 					TradeOriginator3Choice.mmProprietary, TradeOriginator4Choice.mmCode, TradeOriginator4Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TradeOriginatorRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TradeOriginatorRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OriginatorRole";
 			definition = "Specifies the role of the trading party in the transaction.";
@@ -288,7 +289,7 @@ public class TradeOriginatorRole extends TradePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeOriginatorRole";
 				definition = "Specifies the trading party at the source of the transaction.";
@@ -319,7 +320,8 @@ public class TradeOriginatorRole extends TradePartyRole {
 		return originatorRole;
 	}
 
-	public void setOriginatorRole(OriginatorRoleCode originatorRole) {
-		this.originatorRole = originatorRole;
+	public TradeOriginatorRole setOriginatorRole(OriginatorRoleCode originatorRole) {
+		this.originatorRole = Objects.requireNonNull(originatorRole);
+		return this;
 	}
 }

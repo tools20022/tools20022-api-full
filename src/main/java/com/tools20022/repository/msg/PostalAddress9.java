@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +72,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PostalAddress9", propOrder = {"streetName", "buildingNumber", "postCode", "townName", "countrySubDivision", "country", "validFrom"})
 public class PostalAddress9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StrtNm")
 	protected Max70Text streetName;
 	/**
-	 * Name of a street or thoroughfare.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +127,7 @@ public class PostalAddress9 {
 	public static final MMMessageAttribute mmStreetName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmStreetName;
-			componentContext_lazy = () -> PostalAddress9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress9.mmObject();
 			isDerived = false;
 			xmlTag = "StrtNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +138,11 @@ public class PostalAddress9 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BldgNb")
 	protected Max16Text buildingNumber;
 	/**
-	 * Number that identifies the position of a building on a street.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +175,7 @@ public class PostalAddress9 {
 	public static final MMMessageAttribute mmBuildingNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmStreetBuildingIdentification;
-			componentContext_lazy = () -> PostalAddress9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress9.mmObject();
 			isDerived = false;
 			xmlTag = "BldgNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,11 +186,11 @@ public class PostalAddress9 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PstCd")
 	protected Max16Text postCode;
 	/**
-	 * Identifier consisting of a group of letters and/or numbers that is added
-	 * to a postal address to assist the sorting of mail.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -220,7 +224,7 @@ public class PostalAddress9 {
 	public static final MMMessageAttribute mmPostCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmPostCodeIdentification;
-			componentContext_lazy = () -> PostalAddress9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress9.mmObject();
 			isDerived = false;
 			xmlTag = "PstCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,10 +235,11 @@ public class PostalAddress9 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TwnNm")
 	protected Max35Text townName;
 	/**
-	 * Name of a built-up area, with defined boundaries, and a local government.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -268,7 +273,7 @@ public class PostalAddress9 {
 	public static final MMMessageAttribute mmTownName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmTownName;
-			componentContext_lazy = () -> PostalAddress9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress9.mmObject();
 			isDerived = false;
 			xmlTag = "TwnNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,10 +284,11 @@ public class PostalAddress9 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrySubDvsn")
 	protected Max35Text countrySubDivision;
 	/**
-	 * Identifies a subdivision of a country such as state, region, county.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -315,7 +321,7 @@ public class PostalAddress9 {
 	public static final MMMessageAttribute mmCountrySubDivision = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmState;
-			componentContext_lazy = () -> PostalAddress9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress9.mmObject();
 			isDerived = false;
 			xmlTag = "CtrySubDvsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -326,10 +332,11 @@ public class PostalAddress9 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Ctry")
 	protected CountryCode country;
 	/**
-	 * Nation with its own government.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -361,7 +368,7 @@ public class PostalAddress9 {
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> PostalAddress9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress9.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -372,10 +379,11 @@ public class PostalAddress9 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "VldFr", required = true)
 	protected ISODate validFrom;
 	/**
-	 * Starting date from which the address is valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -407,7 +415,7 @@ public class PostalAddress9 {
 	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> PostalAddress9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PostalAddress9.mmObject();
 			isDerived = false;
 			xmlTag = "VldFr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -422,10 +430,11 @@ public class PostalAddress9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PostalAddress9.mmStreetName, PostalAddress9.mmBuildingNumber, PostalAddress9.mmPostCode, PostalAddress9.mmTownName, PostalAddress9.mmCountrySubDivision, PostalAddress9.mmCountry,
-						PostalAddress9.mmValidFrom);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PostalAddress9.mmStreetName, com.tools20022.repository.msg.PostalAddress9.mmBuildingNumber, com.tools20022.repository.msg.PostalAddress9.mmPostCode,
+						com.tools20022.repository.msg.PostalAddress9.mmTownName, com.tools20022.repository.msg.PostalAddress9.mmCountrySubDivision, com.tools20022.repository.msg.PostalAddress9.mmCountry,
+						com.tools20022.repository.msg.PostalAddress9.mmValidFrom);
 				trace_lazy = () -> PostalAddress.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PostalAddress9";
 				definition = "Information that locates and identifies a specific address, as defined by postal services.";
@@ -434,66 +443,66 @@ public class PostalAddress9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StrtNm")
-	public Max70Text getStreetName() {
-		return streetName;
+	public Optional<Max70Text> getStreetName() {
+		return streetName == null ? Optional.empty() : Optional.of(streetName);
 	}
 
-	public void setStreetName(Max70Text streetName) {
+	public PostalAddress9 setStreetName(Max70Text streetName) {
 		this.streetName = streetName;
+		return this;
 	}
 
-	@XmlElement(name = "BldgNb")
-	public Max16Text getBuildingNumber() {
-		return buildingNumber;
+	public Optional<Max16Text> getBuildingNumber() {
+		return buildingNumber == null ? Optional.empty() : Optional.of(buildingNumber);
 	}
 
-	public void setBuildingNumber(Max16Text buildingNumber) {
+	public PostalAddress9 setBuildingNumber(Max16Text buildingNumber) {
 		this.buildingNumber = buildingNumber;
+		return this;
 	}
 
-	@XmlElement(name = "PstCd")
-	public Max16Text getPostCode() {
-		return postCode;
+	public Optional<Max16Text> getPostCode() {
+		return postCode == null ? Optional.empty() : Optional.of(postCode);
 	}
 
-	public void setPostCode(Max16Text postCode) {
+	public PostalAddress9 setPostCode(Max16Text postCode) {
 		this.postCode = postCode;
+		return this;
 	}
 
-	@XmlElement(name = "TwnNm")
-	public Max35Text getTownName() {
-		return townName;
+	public Optional<Max35Text> getTownName() {
+		return townName == null ? Optional.empty() : Optional.of(townName);
 	}
 
-	public void setTownName(Max35Text townName) {
+	public PostalAddress9 setTownName(Max35Text townName) {
 		this.townName = townName;
+		return this;
 	}
 
-	@XmlElement(name = "CtrySubDvsn")
-	public Max35Text getCountrySubDivision() {
-		return countrySubDivision;
+	public Optional<Max35Text> getCountrySubDivision() {
+		return countrySubDivision == null ? Optional.empty() : Optional.of(countrySubDivision);
 	}
 
-	public void setCountrySubDivision(Max35Text countrySubDivision) {
+	public PostalAddress9 setCountrySubDivision(Max35Text countrySubDivision) {
 		this.countrySubDivision = countrySubDivision;
+		return this;
 	}
 
-	@XmlElement(name = "Ctry")
-	public CountryCode getCountry() {
-		return country;
+	public Optional<CountryCode> getCountry() {
+		return country == null ? Optional.empty() : Optional.of(country);
 	}
 
-	public void setCountry(CountryCode country) {
+	public PostalAddress9 setCountry(CountryCode country) {
 		this.country = country;
+		return this;
 	}
 
-	@XmlElement(name = "VldFr", required = true)
 	public ISODate getValidFrom() {
 		return validFrom;
 	}
 
-	public void setValidFrom(ISODate validFrom) {
-		this.validFrom = validFrom;
+	public PostalAddress9 setValidFrom(ISODate validFrom) {
+		this.validFrom = Objects.requireNonNull(validFrom);
+		return this;
 	}
 }

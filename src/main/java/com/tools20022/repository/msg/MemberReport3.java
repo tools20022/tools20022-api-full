@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SystemMemberRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reports either on a member or a business error."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MemberReport3", propOrder = {"memberIdentification", "memberOrError"})
 public class MemberReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MmbId", required = true)
 	protected MemberIdentification2Choice memberIdentification;
 	/**
-	 * Unique and unambiguous identification of a member within a system,
-	 * assigned using the member identification scheme of the system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +111,7 @@ public class MemberReport3 {
 	public static final MMMessageAttribute mmMemberIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SystemMemberRole.mmObject();
-			componentContext_lazy = () -> MemberReport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReport3.mmObject();
 			isDerived = false;
 			xmlTag = "MmbId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +122,11 @@ public class MemberReport3 {
 			complexType_lazy = () -> MemberIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MmbOrErr", required = true)
 	protected MemberReportOrError2Choice memberOrError;
 	/**
-	 * Reports either on a member or a business error.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -156,7 +158,7 @@ public class MemberReport3 {
 	public static final MMMessageAssociationEnd mmMemberOrError = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SystemMemberRole.mmObject();
-			componentContext_lazy = () -> MemberReport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberReport3.mmObject();
 			isDerived = false;
 			xmlTag = "MmbOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +174,9 @@ public class MemberReport3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MemberReport3.mmMemberIdentification, MemberReport3.mmMemberOrError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberReport3.mmMemberIdentification, com.tools20022.repository.msg.MemberReport3.mmMemberOrError);
 				trace_lazy = () -> SystemMemberRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberReport3";
 				definition = "Reports either on a member or a business error.";
@@ -183,21 +185,21 @@ public class MemberReport3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MmbId", required = true)
 	public MemberIdentification2Choice getMemberIdentification() {
 		return memberIdentification;
 	}
 
-	public void setMemberIdentification(MemberIdentification2Choice memberIdentification) {
-		this.memberIdentification = memberIdentification;
+	public MemberReport3 setMemberIdentification(MemberIdentification2Choice memberIdentification) {
+		this.memberIdentification = Objects.requireNonNull(memberIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "MmbOrErr", required = true)
 	public MemberReportOrError2Choice getMemberOrError() {
 		return memberOrError;
 	}
 
-	public void setMemberOrError(MemberReportOrError2Choice memberOrError) {
-		this.memberOrError = memberOrError;
+	public MemberReport3 setMemberOrError(MemberReportOrError2Choice memberOrError) {
+		this.memberOrError = Objects.requireNonNull(memberOrError);
+		return this;
 	}
 }

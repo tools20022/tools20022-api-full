@@ -31,9 +31,8 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.Order;
 import com.tools20022.repository.entity.PortfolioTransfer;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -85,8 +84,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintISARule#forISATransfer2
+ * ConstraintISARule.forISATransfer2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forISATransfer2
+ * ConstraintDesignationRule.forISATransfer2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,17 +117,16 @@ import javax.xml.bind.annotation.XmlType;
  * PEPISATransfer4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ISATransfer2", propOrder = {"masterReference", "transferConfirmationIdentification", "transferInstructionReference", "actualTransferDate", "residualCash", "portfolio", "allOtherCash", "financialInstrumentAssetForTransfer"})
 public class ISATransfer2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MstrRef")
 	protected Max35Text masterReference;
 	/**
-	 * Unique and unambiguous identifier for a group of individual transfers as
-	 * assigned by the instructing party. This identifier links the individual
-	 * transfers together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,7 +160,7 @@ public class ISATransfer2 {
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
-			componentContext_lazy = () -> ISATransfer2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer2.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,11 +171,11 @@ public class ISATransfer2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfConfId", required = true)
 	protected Max35Text transferConfirmationIdentification;
 	/**
-	 * Identification of the confirmation assigned by the old plan manager to
-	 * the transfer of account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -194,7 +203,7 @@ public class ISATransfer2 {
 	 */
 	public static final MMMessageAttribute mmTransferConfirmationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ISATransfer2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer2.mmObject();
 			isDerived = false;
 			xmlTag = "TrfConfId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,11 +214,11 @@ public class ISATransfer2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfInstrRef", required = true)
 	protected Max35Text transferInstructionReference;
 	/**
-	 * Identification received by the old plan manager and assigned by the new
-	 * plan manager to the transfer of account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -237,7 +246,7 @@ public class ISATransfer2 {
 	 */
 	public static final MMMessageAttribute mmTransferInstructionReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ISATransfer2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer2.mmObject();
 			isDerived = false;
 			xmlTag = "TrfInstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,10 +257,11 @@ public class ISATransfer2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ActlTrfDt", required = true)
 	protected ISODate actualTransferDate;
 	/**
-	 * Date when the transfer instruction was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -283,7 +293,7 @@ public class ISATransfer2 {
 	public static final MMMessageAttribute mmActualTransferDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmTransferDate;
-			componentContext_lazy = () -> ISATransfer2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer2.mmObject();
 			isDerived = false;
 			xmlTag = "ActlTrfDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -294,11 +304,11 @@ public class ISATransfer2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "RsdlCsh")
 	protected ResidualCash1Code residualCash;
 	/**
-	 * Indicates whether there is cash in the account that is awaiting
-	 * investment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -327,7 +337,7 @@ public class ISATransfer2 {
 	 */
 	public static final MMMessageAttribute mmResidualCash = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ISATransfer2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer2.mmObject();
 			isDerived = false;
 			xmlTag = "RsdlCsh";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -338,11 +348,11 @@ public class ISATransfer2 {
 			simpleType_lazy = () -> ResidualCash1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtfl", required = true)
 	protected ISAPortfolio2Choice portfolio;
 	/**
-	 * Specifies portfolio information or government schemes, for example
-	 * Individual Savings Account (ISA) in the UK.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -375,7 +385,7 @@ public class ISATransfer2 {
 	public static final MMMessageAssociationEnd mmPortfolio = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmTransferredPortfolio;
-			componentContext_lazy = () -> ISATransfer2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer2.mmObject();
 			isDerived = false;
 			xmlTag = "Prtfl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -387,11 +397,11 @@ public class ISATransfer2 {
 			type_lazy = () -> ISAPortfolio2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AllOthrCsh", required = true)
 	protected YesNoIndicator allOtherCash;
 	/**
-	 * Indicator that all remaining assets in a portfolio not listed for
-	 * transfer should be liquidated and transferred as cash.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -420,7 +430,7 @@ public class ISATransfer2 {
 	 */
 	public static final MMMessageAttribute mmAllOtherCash = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ISATransfer2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer2.mmObject();
 			isDerived = false;
 			xmlTag = "AllOthrCsh";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -431,10 +441,11 @@ public class ISATransfer2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmAsstForTrf")
 	protected List<com.tools20022.repository.msg.FinancialInstrument24> financialInstrumentAssetForTransfer;
 	/**
-	 * Specifies the underlying assets for the ISA or portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -466,7 +477,7 @@ public class ISATransfer2 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentAssetForTransfer = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
-			componentContext_lazy = () -> ISATransfer2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ISATransfer2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmAsstForTrf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -481,11 +492,13 @@ public class ISATransfer2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ISATransfer2.mmMasterReference, ISATransfer2.mmTransferConfirmationIdentification, ISATransfer2.mmTransferInstructionReference, ISATransfer2.mmActualTransferDate,
-						ISATransfer2.mmResidualCash, ISATransfer2.mmPortfolio, ISATransfer2.mmAllOtherCash, ISATransfer2.mmFinancialInstrumentAssetForTransfer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISATransfer2.mmMasterReference, com.tools20022.repository.msg.ISATransfer2.mmTransferConfirmationIdentification,
+						com.tools20022.repository.msg.ISATransfer2.mmTransferInstructionReference, com.tools20022.repository.msg.ISATransfer2.mmActualTransferDate, com.tools20022.repository.msg.ISATransfer2.mmResidualCash,
+						com.tools20022.repository.msg.ISATransfer2.mmPortfolio, com.tools20022.repository.msg.ISATransfer2.mmAllOtherCash, com.tools20022.repository.msg.ISATransfer2.mmFinancialInstrumentAssetForTransfer);
 				messageBuildingBlock_lazy = () -> Arrays.asList(PortfolioTransferConfirmationV03.mmProductTransfer);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISARule.forISATransfer2, com.tools20022.repository.constraints.ConstraintDesignationRule.forISATransfer2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ISATransfer2";
 				definition = "Describes the type of product and the assets to be transferred.";
@@ -496,75 +509,75 @@ public class ISATransfer2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MstrRef")
-	public Max35Text getMasterReference() {
-		return masterReference;
+	public Optional<Max35Text> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(Max35Text masterReference) {
+	public ISATransfer2 setMasterReference(Max35Text masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "TrfConfId", required = true)
 	public Max35Text getTransferConfirmationIdentification() {
 		return transferConfirmationIdentification;
 	}
 
-	public void setTransferConfirmationIdentification(Max35Text transferConfirmationIdentification) {
-		this.transferConfirmationIdentification = transferConfirmationIdentification;
+	public ISATransfer2 setTransferConfirmationIdentification(Max35Text transferConfirmationIdentification) {
+		this.transferConfirmationIdentification = Objects.requireNonNull(transferConfirmationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TrfInstrRef", required = true)
 	public Max35Text getTransferInstructionReference() {
 		return transferInstructionReference;
 	}
 
-	public void setTransferInstructionReference(Max35Text transferInstructionReference) {
-		this.transferInstructionReference = transferInstructionReference;
+	public ISATransfer2 setTransferInstructionReference(Max35Text transferInstructionReference) {
+		this.transferInstructionReference = Objects.requireNonNull(transferInstructionReference);
+		return this;
 	}
 
-	@XmlElement(name = "ActlTrfDt", required = true)
 	public ISODate getActualTransferDate() {
 		return actualTransferDate;
 	}
 
-	public void setActualTransferDate(ISODate actualTransferDate) {
-		this.actualTransferDate = actualTransferDate;
+	public ISATransfer2 setActualTransferDate(ISODate actualTransferDate) {
+		this.actualTransferDate = Objects.requireNonNull(actualTransferDate);
+		return this;
 	}
 
-	@XmlElement(name = "RsdlCsh")
-	public ResidualCash1Code getResidualCash() {
-		return residualCash;
+	public Optional<ResidualCash1Code> getResidualCash() {
+		return residualCash == null ? Optional.empty() : Optional.of(residualCash);
 	}
 
-	public void setResidualCash(ResidualCash1Code residualCash) {
+	public ISATransfer2 setResidualCash(ResidualCash1Code residualCash) {
 		this.residualCash = residualCash;
+		return this;
 	}
 
-	@XmlElement(name = "Prtfl", required = true)
 	public ISAPortfolio2Choice getPortfolio() {
 		return portfolio;
 	}
 
-	public void setPortfolio(ISAPortfolio2Choice portfolio) {
-		this.portfolio = portfolio;
+	public ISATransfer2 setPortfolio(ISAPortfolio2Choice portfolio) {
+		this.portfolio = Objects.requireNonNull(portfolio);
+		return this;
 	}
 
-	@XmlElement(name = "AllOthrCsh", required = true)
 	public YesNoIndicator getAllOtherCash() {
 		return allOtherCash;
 	}
 
-	public void setAllOtherCash(YesNoIndicator allOtherCash) {
-		this.allOtherCash = allOtherCash;
+	public ISATransfer2 setAllOtherCash(YesNoIndicator allOtherCash) {
+		this.allOtherCash = Objects.requireNonNull(allOtherCash);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmAsstForTrf")
 	public List<FinancialInstrument24> getFinancialInstrumentAssetForTransfer() {
-		return financialInstrumentAssetForTransfer;
+		return financialInstrumentAssetForTransfer == null ? financialInstrumentAssetForTransfer = new ArrayList<>() : financialInstrumentAssetForTransfer;
 	}
 
-	public void setFinancialInstrumentAssetForTransfer(List<com.tools20022.repository.msg.FinancialInstrument24> financialInstrumentAssetForTransfer) {
-		this.financialInstrumentAssetForTransfer = financialInstrumentAssetForTransfer;
+	public ISATransfer2 setFinancialInstrumentAssetForTransfer(List<com.tools20022.repository.msg.FinancialInstrument24> financialInstrumentAssetForTransfer) {
+		this.financialInstrumentAssetForTransfer = Objects.requireNonNull(financialInstrumentAssetForTransfer);
+		return this;
 	}
 }

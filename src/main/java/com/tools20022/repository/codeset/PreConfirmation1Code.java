@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PreConfirmationCode;
+import com.tools20022.repository.codeset.PreConfirmation1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies if there is a pre-confirmation of cash or securities.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PreConfirmationCode
- * PreConfirmationCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreConfirmation1Code#mmPreConfirmCash
- * PreConfirmation1Code.mmPreConfirmCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreConfirmation1Code#PreConfirmCash
+ * PreConfirmation1Code.PreConfirmCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PreConfirmation1Code#mmPreConfirmSecurities
- * PreConfirmation1Code.mmPreConfirmSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PreConfirmation1Code#PreConfirmSecurities
+ * PreConfirmation1Code.PreConfirmSecurities}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PreConfirmationCode
+ * PreConfirmationCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies if there is a pre-confirmation of cash or securities."</li>
  * </ul>
  */
-public class PreConfirmation1Code extends PreConfirmationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PreConfirmation1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +89,12 @@ public class PreConfirmation1Code extends PreConfirmationCode {
 	 * name} = "PreConfirmCash"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreConfirmCash = new MMCode() {
+	public static final PreConfirmation1Code PreConfirmCash = new PreConfirmation1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreConfirmCash";
-			owner_lazy = () -> PreConfirmation1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PreConfirmation1Code.mmObject();
+			codeName = PreConfirmationCode.PreConfirmCash.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,26 +113,57 @@ public class PreConfirmation1Code extends PreConfirmationCode {
 	 * name} = "PreConfirmSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreConfirmSecurities = new MMCode() {
+	public static final PreConfirmation1Code PreConfirmSecurities = new PreConfirmation1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreConfirmSecurities";
-			owner_lazy = () -> PreConfirmation1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PreConfirmation1Code.mmObject();
+			codeName = PreConfirmationCode.PreConfirmSecurities.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PreConfirmation1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PreConfirmation1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PRCA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PreConfirmation1Code";
 				definition = "Specifies if there is a pre-confirmation of cash or securities.";
-				code_lazy = () -> Arrays.asList(PreConfirmation1Code.mmPreConfirmCash, PreConfirmation1Code.mmPreConfirmSecurities);
 				trace_lazy = () -> PreConfirmationCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PreConfirmation1Code.PreConfirmCash, com.tools20022.repository.codeset.PreConfirmation1Code.PreConfirmSecurities);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PreConfirmCash.getCodeName().get(), PreConfirmCash);
+		codesByName.put(PreConfirmSecurities.getCodeName().get(), PreConfirmSecurities);
+	}
+
+	public static PreConfirmation1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PreConfirmation1Code[] values() {
+		PreConfirmation1Code[] values = new PreConfirmation1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PreConfirmation1Code> {
+		@Override
+		public PreConfirmation1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PreConfirmation1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

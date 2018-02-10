@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RepairReasonCode;
+import com.tools20022.repository.codeset.RepairReason3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason why the instruction is in repair.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RepairReasonCode
- * RepairReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepairReason3Code#mmSettlementDate
- * RepairReason3Code.mmSettlementDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepairReason3Code#SettlementDate
+ * RepairReason3Code.SettlementDate}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RepairReasonCode
+ * RepairReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason why the instruction is in repair."</li>
  * </ul>
  */
-public class RepairReason3Code extends RepairReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RepairReason3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,26 +85,56 @@ public class RepairReason3Code extends RepairReasonCode {
 	 * name} = "SettlementDate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementDate = new MMCode() {
+	public static final RepairReason3Code SettlementDate = new RepairReason3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
-			owner_lazy = () -> RepairReason3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepairReason3Code.mmObject();
+			codeName = RepairReasonCode.SettlementDate.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RepairReason3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RepairReason3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DDAT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RepairReason3Code";
 				definition = "Specifies the reason why the instruction is in repair.";
-				code_lazy = () -> Arrays.asList(RepairReason3Code.mmSettlementDate);
 				trace_lazy = () -> RepairReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepairReason3Code.SettlementDate);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SettlementDate.getCodeName().get(), SettlementDate);
+	}
+
+	public static RepairReason3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RepairReason3Code[] values() {
+		RepairReason3Code[] values = new RepairReason3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RepairReason3Code> {
+		@Override
+		public RepairReason3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RepairReason3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

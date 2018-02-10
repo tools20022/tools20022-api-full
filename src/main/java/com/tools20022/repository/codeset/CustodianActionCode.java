@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CustodianActionCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies custodian activity codes.
@@ -32,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianActionCode#mmResearch
- * CustodianActionCode.mmResearch}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianActionCode#Research
+ * CustodianActionCode.Research}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianActionCode#mmSendInfo
- * CustodianActionCode.mmSendInfo}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianActionCode#SendInfo
+ * CustodianActionCode.SendInfo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianActionCode#mmDisagrees
- * CustodianActionCode.mmDisagrees}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianActionCode#Disagrees
+ * CustodianActionCode.Disagrees}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianActionCode#mmNoAction
- * CustodianActionCode.mmNoAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianActionCode#NoAction
+ * CustodianActionCode.NoAction}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies custodian activity codes."</li>
  * </ul>
  */
-public class CustodianActionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CustodianActionCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -99,12 +105,12 @@ public class CustodianActionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmResearch = new MMCode() {
+	public static final CustodianActionCode Research = new CustodianActionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Research";
 			definition = "Custodian is researching pending issues raised by the validation service.";
-			owner_lazy = () -> CustodianActionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CustodianActionCode.mmObject();
 			codeName = "RSCH";
 		}
 	};
@@ -129,12 +135,12 @@ public class CustodianActionCode {
 	 * definition} = "Custodian is expected to send updated information."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSendInfo = new MMCode() {
+	public static final CustodianActionCode SendInfo = new CustodianActionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendInfo";
 			definition = "Custodian is expected to send updated information.";
-			owner_lazy = () -> CustodianActionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CustodianActionCode.mmObject();
 			codeName = "SEND";
 		}
 	};
@@ -162,12 +168,12 @@ public class CustodianActionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisagrees = new MMCode() {
+	public static final CustodianActionCode Disagrees = new CustodianActionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disagrees";
 			definition = "Custodian disagrees with the validation service and will take no further action.";
-			owner_lazy = () -> CustodianActionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CustodianActionCode.mmObject();
 			codeName = "DISS";
 		}
 	};
@@ -192,28 +198,61 @@ public class CustodianActionCode {
 	 * definition} = "No action required by the custodian."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoAction = new MMCode() {
+	public static final CustodianActionCode NoAction = new CustodianActionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAction";
 			definition = "No action required by the custodian.";
-			owner_lazy = () -> CustodianActionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CustodianActionCode.mmObject();
 			codeName = "NOAC";
 		}
 	};
+	final static private LinkedHashMap<String, CustodianActionCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CustodianActionCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RSCH");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustodianActionCode";
 				definition = "Specifies custodian activity codes.";
-				code_lazy = () -> Arrays.asList(CustodianActionCode.mmResearch, CustodianActionCode.mmSendInfo, CustodianActionCode.mmDisagrees, CustodianActionCode.mmNoAction);
 				derivation_lazy = () -> Arrays.asList(CustodianAction1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CustodianActionCode.Research, com.tools20022.repository.codeset.CustodianActionCode.SendInfo,
+						com.tools20022.repository.codeset.CustodianActionCode.Disagrees, com.tools20022.repository.codeset.CustodianActionCode.NoAction);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Research.getCodeName().get(), Research);
+		codesByName.put(SendInfo.getCodeName().get(), SendInfo);
+		codesByName.put(Disagrees.getCodeName().get(), Disagrees);
+		codesByName.put(NoAction.getCodeName().get(), NoAction);
+	}
+
+	public static CustodianActionCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CustodianActionCode[] values() {
+		CustodianActionCode[] values = new CustodianActionCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CustodianActionCode> {
+		@Override
+		public CustodianActionCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CustodianActionCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

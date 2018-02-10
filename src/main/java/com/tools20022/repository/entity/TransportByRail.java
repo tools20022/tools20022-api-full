@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Information related to the transportation of goods by rail.
@@ -37,31 +38,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Transport
+ * Transport}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
  * <li>
  * {@linkplain com.tools20022.repository.entity.TransportByRail#mmCarriageIdentification
  * TransportByRail.mmCarriageIdentification}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Transport
- * Transport}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TransportByRail1
- * TransportByRail1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportByRail3
- * TransportByRail3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportByRail2
- * TransportByRail2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportByRail4
- * TransportByRail4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransportByRail5
- * TransportByRail5}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,10 +80,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportByRail1
+ * TransportByRail1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportByRail3
+ * TransportByRail3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportByRail2
+ * TransportByRail2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportByRail4
+ * TransportByRail4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransportByRail5
+ * TransportByRail5}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,8 +115,8 @@ public class TransportByRail extends Transport {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Max35Text carriageIdentification;
 	/**
-	 * Identifies the carriage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,8 +141,8 @@ public class TransportByRail extends Transport {
 	 */
 	public static final MMBusinessAttribute mmCarriageIdentification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.TransportByRail.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TransportByRail.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CarriageIdentification";
 			definition = "Identifies the carriage.";
@@ -162,7 +163,7 @@ public class TransportByRail extends Transport {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransportByRail";
 				definition = "Information related to the transportation of goods by rail.";
@@ -185,7 +186,8 @@ public class TransportByRail extends Transport {
 		return carriageIdentification;
 	}
 
-	public void setCarriageIdentification(Max35Text carriageIdentification) {
-		this.carriageIdentification = carriageIdentification;
+	public TransportByRail setCarriageIdentification(Max35Text carriageIdentification) {
+		this.carriageIdentification = Objects.requireNonNull(carriageIdentification);
+		return this;
 	}
 }

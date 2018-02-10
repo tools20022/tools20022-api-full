@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ReservationTypeCode;
+import com.tools20022.repository.codeset.ReservationType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the precise type of reservation.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ReservationTypeCode
- * ReservationTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationType1Code#mmCashReservation
- * ReservationType1Code.mmCashReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationType1Code#CashReservation
+ * ReservationType1Code.CashReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationType1Code#mmUrgentPaymentReservation
- * ReservationType1Code.mmUrgentPaymentReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationType1Code#UrgentPaymentReservation
+ * ReservationType1Code.UrgentPaymentReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationType1Code#mmNetSSSReservation
- * ReservationType1Code.mmNetSSSReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationType1Code#NetSSSReservation
+ * ReservationType1Code.NetSSSReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationType1Code#mmHighlyUrgentPaymentReservation
- * ReservationType1Code.mmHighlyUrgentPaymentReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationType1Code#HighlyUrgentPaymentReservation
+ * ReservationType1Code.HighlyUrgentPaymentReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReservationType1Code#mmThresholdForInvestment
- * ReservationType1Code.mmThresholdForInvestment}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReservationType1Code#ThresholdForInvestment
+ * ReservationType1Code.ThresholdForInvestment}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ReservationTypeCode
+ * ReservationTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the precise type of reservation."</li>
  * </ul>
  */
-public class ReservationType1Code extends ReservationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ReservationType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class ReservationType1Code extends ReservationTypeCode {
 	 * name} = "CashReservation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashReservation = new MMCode() {
+	public static final ReservationType1Code CashReservation = new ReservationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashReservation";
-			owner_lazy = () -> ReservationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReservationType1Code.mmObject();
+			codeName = ReservationTypeCode.CashReservation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class ReservationType1Code extends ReservationTypeCode {
 	 * name} = "UrgentPaymentReservation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUrgentPaymentReservation = new MMCode() {
+	public static final ReservationType1Code UrgentPaymentReservation = new ReservationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UrgentPaymentReservation";
-			owner_lazy = () -> ReservationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReservationType1Code.mmObject();
+			codeName = ReservationTypeCode.UrgentPaymentReservation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class ReservationType1Code extends ReservationTypeCode {
 	 * name} = "NetSSSReservation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNetSSSReservation = new MMCode() {
+	public static final ReservationType1Code NetSSSReservation = new ReservationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetSSSReservation";
-			owner_lazy = () -> ReservationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReservationType1Code.mmObject();
+			codeName = ReservationTypeCode.NetSSSReservation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +169,12 @@ public class ReservationType1Code extends ReservationTypeCode {
 	 * name} = "HighlyUrgentPaymentReservation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHighlyUrgentPaymentReservation = new MMCode() {
+	public static final ReservationType1Code HighlyUrgentPaymentReservation = new ReservationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighlyUrgentPaymentReservation";
-			owner_lazy = () -> ReservationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReservationType1Code.mmObject();
+			codeName = ReservationTypeCode.HighlyUrgentPaymentReservation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,27 +193,62 @@ public class ReservationType1Code extends ReservationTypeCode {
 	 * name} = "ThresholdForInvestment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmThresholdForInvestment = new MMCode() {
+	public static final ReservationType1Code ThresholdForInvestment = new ReservationType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThresholdForInvestment";
-			owner_lazy = () -> ReservationType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReservationType1Code.mmObject();
+			codeName = ReservationTypeCode.ThresholdForInvestment.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ReservationType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ReservationType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CARE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReservationType1Code";
 				definition = "Specifies the precise type of reservation.";
-				code_lazy = () -> Arrays.asList(ReservationType1Code.mmCashReservation, ReservationType1Code.mmUrgentPaymentReservation, ReservationType1Code.mmNetSSSReservation, ReservationType1Code.mmHighlyUrgentPaymentReservation,
-						ReservationType1Code.mmThresholdForInvestment);
 				trace_lazy = () -> ReservationTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReservationType1Code.CashReservation, com.tools20022.repository.codeset.ReservationType1Code.UrgentPaymentReservation,
+						com.tools20022.repository.codeset.ReservationType1Code.NetSSSReservation, com.tools20022.repository.codeset.ReservationType1Code.HighlyUrgentPaymentReservation,
+						com.tools20022.repository.codeset.ReservationType1Code.ThresholdForInvestment);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CashReservation.getCodeName().get(), CashReservation);
+		codesByName.put(UrgentPaymentReservation.getCodeName().get(), UrgentPaymentReservation);
+		codesByName.put(NetSSSReservation.getCodeName().get(), NetSSSReservation);
+		codesByName.put(HighlyUrgentPaymentReservation.getCodeName().get(), HighlyUrgentPaymentReservation);
+		codesByName.put(ThresholdForInvestment.getCodeName().get(), ThresholdForInvestment);
+	}
+
+	public static ReservationType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ReservationType1Code[] values() {
+		ReservationType1Code[] values = new ReservationType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ReservationType1Code> {
+		@Override
+		public ReservationType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ReservationType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

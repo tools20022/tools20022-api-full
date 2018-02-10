@@ -24,6 +24,8 @@ import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "TerminalManagementDataSet7", propOrder = {"identification", "POIChallenge", "TMChallenge", "encryptedKey"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "TerminalManagementDataSet7", propOrder = {"identification", "pOIChallenge", "tMChallenge", "encryptedKey"})
 public class TerminalManagementDataSet7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected DataSetIdentification3 identification;
 	/**
-	 * Identification of the required data set.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +121,7 @@ public class TerminalManagementDataSet7 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TerminalManagementDataSet7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet7.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +133,11 @@ public class TerminalManagementDataSet7 {
 			complexType_lazy = () -> com.tools20022.repository.msg.DataSetIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "POIChllng")
 	protected Max140Binary pOIChallenge;
 	/**
-	 * Point of interaction challenge for cryptographic key injection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,7 +174,7 @@ public class TerminalManagementDataSet7 {
 	 */
 	public static final MMMessageAttribute mmPOIChallenge = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TerminalManagementDataSet7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet7.mmObject();
 			isDerived = false;
 			xmlTag = "POIChllng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,10 +186,11 @@ public class TerminalManagementDataSet7 {
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "TMChllng")
 	protected Max140Binary tMChallenge;
 	/**
-	 * Terminal manager challenge for cryptographic key injection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,7 +227,7 @@ public class TerminalManagementDataSet7 {
 	 */
 	public static final MMMessageAttribute mmTMChallenge = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TerminalManagementDataSet7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet7.mmObject();
 			isDerived = false;
 			xmlTag = "TMChllng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,10 +239,11 @@ public class TerminalManagementDataSet7 {
 			simpleType_lazy = () -> Max140Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "NcrptdKey")
 	protected ContentInformationType5 encryptedKey;
 	/**
-	 * Transport key encrypted by the TM key encryption RSA key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -274,7 +280,7 @@ public class TerminalManagementDataSet7 {
 	 */
 	public static final MMMessageAttribute mmEncryptedKey = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TerminalManagementDataSet7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TerminalManagementDataSet7.mmObject();
 			isDerived = false;
 			xmlTag = "NcrptdKey";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -290,8 +296,9 @@ public class TerminalManagementDataSet7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TerminalManagementDataSet7.mmIdentification, TerminalManagementDataSet7.mmPOIChallenge, TerminalManagementDataSet7.mmTMChallenge, TerminalManagementDataSet7.mmEncryptedKey);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TerminalManagementDataSet7.mmIdentification, com.tools20022.repository.msg.TerminalManagementDataSet7.mmPOIChallenge,
+						com.tools20022.repository.msg.TerminalManagementDataSet7.mmTMChallenge, com.tools20022.repository.msg.TerminalManagementDataSet7.mmEncryptedKey);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementDataSet7";
 				definition = "Identification of requested data set.";
@@ -301,39 +308,39 @@ public class TerminalManagementDataSet7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DataSetIdentification3 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.DataSetIdentification3 identification) {
-		this.identification = identification;
+	public TerminalManagementDataSet7 setIdentification(com.tools20022.repository.msg.DataSetIdentification3 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "POIChllng")
-	public Max140Binary getPOIChallenge() {
-		return pOIChallenge;
+	public Optional<Max140Binary> getPOIChallenge() {
+		return pOIChallenge == null ? Optional.empty() : Optional.of(pOIChallenge);
 	}
 
-	public void setPOIChallenge(Max140Binary pOIChallenge) {
+	public TerminalManagementDataSet7 setPOIChallenge(Max140Binary pOIChallenge) {
 		this.pOIChallenge = pOIChallenge;
+		return this;
 	}
 
-	@XmlElement(name = "TMChllng")
-	public Max140Binary getTMChallenge() {
-		return tMChallenge;
+	public Optional<Max140Binary> getTMChallenge() {
+		return tMChallenge == null ? Optional.empty() : Optional.of(tMChallenge);
 	}
 
-	public void setTMChallenge(Max140Binary tMChallenge) {
+	public TerminalManagementDataSet7 setTMChallenge(Max140Binary tMChallenge) {
 		this.tMChallenge = tMChallenge;
+		return this;
 	}
 
-	@XmlElement(name = "NcrptdKey")
-	public ContentInformationType5 getEncryptedKey() {
-		return encryptedKey;
+	public Optional<ContentInformationType5> getEncryptedKey() {
+		return encryptedKey == null ? Optional.empty() : Optional.of(encryptedKey);
 	}
 
-	public void setEncryptedKey(com.tools20022.repository.msg.ContentInformationType5 encryptedKey) {
+	public TerminalManagementDataSet7 setEncryptedKey(com.tools20022.repository.msg.ContentInformationType5 encryptedKey) {
 		this.encryptedKey = encryptedKey;
+		return this;
 	}
 }

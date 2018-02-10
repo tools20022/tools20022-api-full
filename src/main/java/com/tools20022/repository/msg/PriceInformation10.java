@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,8 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Amount of money for which goods or services are offered, sold, or bought."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PriceInformation10", propOrder = {"currentPrice", "type", "previousPrice", "amountOfChange"})
 public class PriceInformation10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CurPric", required = true)
 	protected ActiveOrHistoricCurrencyAnd13DecimalAmount currentPrice;
 	/**
-	 * Current value of the price, eg, as a currency and value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,6 +105,9 @@ public class PriceInformation10 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CurPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -114,9 +121,10 @@ public class PriceInformation10 {
 	public static final MMMessageAttribute mmCurrentPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
-			componentContext_lazy = () -> PriceInformation10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation10.mmObject();
 			isDerived = false;
 			xmlTag = "CurPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentPrice";
 			definition = "Current value of the price, eg, as a currency and value.";
@@ -125,10 +133,11 @@ public class PriceInformation10 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected TypeOfPrice27Choice type;
 	/**
-	 * Specifies the type of price and information about the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,6 +158,9 @@ public class PriceInformation10 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Tp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::4!c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -163,9 +175,10 @@ public class PriceInformation10 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceType;
-			componentContext_lazy = () -> PriceInformation10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation10.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of price and information about the price.";
@@ -174,10 +187,11 @@ public class PriceInformation10 {
 			complexType_lazy = () -> TypeOfPrice27Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsPric")
 	protected ActiveOrHistoricCurrencyAnd13DecimalAmount previousPrice;
 	/**
-	 * Previous value of the price, eg, as a currency and value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,6 +212,9 @@ public class PriceInformation10 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrvsPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -212,9 +229,10 @@ public class PriceInformation10 {
 	public static final MMMessageAttribute mmPreviousPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
-			componentContext_lazy = () -> PriceInformation10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation10.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousPrice";
 			definition = "Previous value of the price, eg, as a currency and value.";
@@ -223,11 +241,11 @@ public class PriceInformation10 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtOfChng")
 	protected PriceValueAndRate4 amountOfChange;
 	/**
-	 * Difference or change between the previous price value and the current
-	 * price value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -248,6 +266,9 @@ public class PriceInformation10 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AmtOfChng"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::4!c//4!c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -263,9 +284,10 @@ public class PriceInformation10 {
 	public static final MMMessageAttribute mmAmountOfChange = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
-			componentContext_lazy = () -> PriceInformation10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceInformation10.mmObject();
 			isDerived = false;
 			xmlTag = "AmtOfChng";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::4!c//4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountOfChange";
 			definition = "Difference or change between the previous price value and the current price value.";
@@ -278,9 +300,10 @@ public class PriceInformation10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PriceInformation10.mmCurrentPrice, PriceInformation10.mmType, PriceInformation10.mmPreviousPrice, PriceInformation10.mmAmountOfChange);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceInformation10.mmCurrentPrice, com.tools20022.repository.msg.PriceInformation10.mmType,
+						com.tools20022.repository.msg.PriceInformation10.mmPreviousPrice, com.tools20022.repository.msg.PriceInformation10.mmAmountOfChange);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceInformation10";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
@@ -289,39 +312,39 @@ public class PriceInformation10 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CurPric", required = true)
 	public ActiveOrHistoricCurrencyAnd13DecimalAmount getCurrentPrice() {
 		return currentPrice;
 	}
 
-	public void setCurrentPrice(ActiveOrHistoricCurrencyAnd13DecimalAmount currentPrice) {
-		this.currentPrice = currentPrice;
+	public PriceInformation10 setCurrentPrice(ActiveOrHistoricCurrencyAnd13DecimalAmount currentPrice) {
+		this.currentPrice = Objects.requireNonNull(currentPrice);
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public TypeOfPrice27Choice getType() {
 		return type;
 	}
 
-	public void setType(TypeOfPrice27Choice type) {
-		this.type = type;
+	public PriceInformation10 setType(TypeOfPrice27Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "PrvsPric")
-	public ActiveOrHistoricCurrencyAnd13DecimalAmount getPreviousPrice() {
-		return previousPrice;
+	public Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> getPreviousPrice() {
+		return previousPrice == null ? Optional.empty() : Optional.of(previousPrice);
 	}
 
-	public void setPreviousPrice(ActiveOrHistoricCurrencyAnd13DecimalAmount previousPrice) {
+	public PriceInformation10 setPreviousPrice(ActiveOrHistoricCurrencyAnd13DecimalAmount previousPrice) {
 		this.previousPrice = previousPrice;
+		return this;
 	}
 
-	@XmlElement(name = "AmtOfChng")
-	public PriceValueAndRate4 getAmountOfChange() {
-		return amountOfChange;
+	public Optional<PriceValueAndRate4> getAmountOfChange() {
+		return amountOfChange == null ? Optional.empty() : Optional.of(amountOfChange);
 	}
 
-	public void setAmountOfChange(com.tools20022.repository.msg.PriceValueAndRate4 amountOfChange) {
+	public PriceInformation10 setAmountOfChange(com.tools20022.repository.msg.PriceValueAndRate4 amountOfChange) {
 		this.amountOfChange = amountOfChange;
+		return this;
 	}
 }

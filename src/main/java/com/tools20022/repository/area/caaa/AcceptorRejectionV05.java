@@ -30,6 +30,7 @@ import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerI
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -39,10 +40,18 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVersion
- * AcceptortoAcquirerCardTransactionLatestVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV05#mmHeader
+ * AcceptorRejectionV05.mmHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV05#mmReject
+ * AcceptorRejectionV05.mmReject}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
  * messageSet} =
  * <ul>
@@ -57,22 +66,14 @@ import javax.xml.bind.annotation.*;
  * CAPEAcceptortoAcquirerMaintenance20162017}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AccptrRjctn"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
  * rootElement} = "Document"</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
- * messageBuildingBlock} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV05#mmHeader
- * AcceptorRejectionV05.mmHeader}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.caaa.AcceptorRejectionV05#mmReject
- * AcceptorRejectionV05.mmReject}</li>
- * </ul>
- * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AccptrRjctn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVersion
+ * AcceptortoAcquirerCardTransactionLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code caaa.015.001.05}</li>
@@ -92,15 +93,16 @@ import javax.xml.bind.annotation.*;
  * AcceptorRejectionV04}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcceptorRejectionV05", propOrder = {"header", "reject"})
 public class AcceptorRejectionV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header26 header;
 	/**
-	 * Rejection message management information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,10 +147,11 @@ public class AcceptorRejectionV05 {
 			}
 		}
 	};
+	@XmlElement(name = "Rjct", required = true)
 	protected AcceptorRejection2 reject;
 	/**
-	 * Information related to the reject.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,25 +228,25 @@ public class AcceptorRejectionV05 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header26 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header26 header) {
-		this.header = header;
+	public AcceptorRejectionV05 setHeader(Header26 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "Rjct", required = true)
 	public AcceptorRejection2 getReject() {
 		return reject;
 	}
 
-	public void setReject(AcceptorRejection2 reject) {
-		this.reject = reject;
+	public AcceptorRejectionV05 setReject(AcceptorRejection2 reject) {
+		this.reject = Objects.requireNonNull(reject);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.015.05.05")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.015.001.05")
 	static public class Document {
 		@XmlElement(name = "AccptrRjctn", required = true)
 		public AcceptorRejectionV05 messageBody;

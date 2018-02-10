@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMConfigurationParameter1", propOrder = {"type", "version"})
 public class ATMConfigurationParameter1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected DataSetCategory7Code type;
 	/**
-	 * Type of the ATM configuration.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +107,7 @@ public class ATMConfigurationParameter1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMConfigurationParameter1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMConfigurationParameter1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +118,11 @@ public class ATMConfigurationParameter1 {
 			simpleType_lazy = () -> DataSetCategory7Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Vrsn", required = true)
 	protected Max35Text version;
 	/**
-	 * Active version of the configuration.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +149,7 @@ public class ATMConfigurationParameter1 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMConfigurationParameter1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMConfigurationParameter1.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,8 +164,8 @@ public class ATMConfigurationParameter1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMConfigurationParameter1.mmType, ATMConfigurationParameter1.mmVersion);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMConfigurationParameter1.mmType, com.tools20022.repository.msg.ATMConfigurationParameter1.mmVersion);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMConfigurationParameter1";
 				definition = "Configuration parameter version of the ATM.";
@@ -172,21 +175,21 @@ public class ATMConfigurationParameter1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public DataSetCategory7Code getType() {
 		return type;
 	}
 
-	public void setType(DataSetCategory7Code type) {
-		this.type = type;
+	public ATMConfigurationParameter1 setType(DataSetCategory7Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Vrsn", required = true)
 	public Max35Text getVersion() {
 		return version;
 	}
 
-	public void setVersion(Max35Text version) {
-		this.version = version;
+	public ATMConfigurationParameter1 setVersion(Max35Text version) {
+		this.version = Objects.requireNonNull(version);
+		return this;
 	}
 }

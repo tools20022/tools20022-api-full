@@ -27,9 +27,11 @@ import com.tools20022.repository.area.tsmt.InitialBaselineSubmissionV05;
 import com.tools20022.repository.entity.ContactPersonRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ContactIdentification1;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -76,8 +78,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,15 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Contact person details in a bank."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BankContactPerson1Choice", propOrder = {"buyerBankContactPerson", "sellerBankContactPerson"})
 public class BankContactPerson1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BuyrBkCtctPrsn", required = true)
 	protected List<ContactIdentification1> buyerBankContactPerson;
 	/**
-	 * Person to be contacted in the buyer's bank.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -128,7 +131,7 @@ public class BankContactPerson1Choice {
 	public static final MMMessageAssociationEnd mmBuyerBankContactPerson = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ContactPersonRole.mmObject();
-			componentContext_lazy = () -> BankContactPerson1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.BankContactPerson1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrBkCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +142,11 @@ public class BankContactPerson1Choice {
 			type_lazy = () -> ContactIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "SellrBkCtctPrsn", required = true)
 	protected List<ContactIdentification1> sellerBankContactPerson;
 	/**
-	 * Person to be contacted in the seller's bank.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -174,7 +178,7 @@ public class BankContactPerson1Choice {
 	public static final MMMessageAssociationEnd mmSellerBankContactPerson = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ContactPersonRole.mmObject();
-			componentContext_lazy = () -> BankContactPerson1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.BankContactPerson1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SellrBkCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,11 +193,11 @@ public class BankContactPerson1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BankContactPerson1Choice.mmBuyerBankContactPerson, BankContactPerson1Choice.mmSellerBankContactPerson);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BankContactPerson1Choice.mmBuyerBankContactPerson, com.tools20022.repository.choice.BankContactPerson1Choice.mmSellerBankContactPerson);
 				messageBuildingBlock_lazy = () -> Arrays.asList(BaselineReSubmissionV04.mmBankContactPerson, InitialBaselineSubmissionV04.mmBankContactPerson, InitialBaselineSubmissionV05.mmBankContactPerson,
 						BaselineReSubmissionV05.mmBankContactPerson);
 				trace_lazy = () -> ContactPersonRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BankContactPerson1Choice";
 				definition = "Contact person details in a bank.";
@@ -202,21 +206,21 @@ public class BankContactPerson1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BuyrBkCtctPrsn", required = true)
 	public List<ContactIdentification1> getBuyerBankContactPerson() {
-		return buyerBankContactPerson;
+		return buyerBankContactPerson == null ? buyerBankContactPerson = new ArrayList<>() : buyerBankContactPerson;
 	}
 
-	public void setBuyerBankContactPerson(List<ContactIdentification1> buyerBankContactPerson) {
-		this.buyerBankContactPerson = buyerBankContactPerson;
+	public BankContactPerson1Choice setBuyerBankContactPerson(List<ContactIdentification1> buyerBankContactPerson) {
+		this.buyerBankContactPerson = Objects.requireNonNull(buyerBankContactPerson);
+		return this;
 	}
 
-	@XmlElement(name = "SellrBkCtctPrsn", required = true)
 	public List<ContactIdentification1> getSellerBankContactPerson() {
-		return sellerBankContactPerson;
+		return sellerBankContactPerson == null ? sellerBankContactPerson = new ArrayList<>() : sellerBankContactPerson;
 	}
 
-	public void setSellerBankContactPerson(List<ContactIdentification1> sellerBankContactPerson) {
-		this.sellerBankContactPerson = sellerBankContactPerson;
+	public BankContactPerson1Choice setSellerBankContactPerson(List<ContactIdentification1> sellerBankContactPerson) {
+		this.sellerBankContactPerson = Objects.requireNonNull(sellerBankContactPerson);
+		return this;
 	}
 }

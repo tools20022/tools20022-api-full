@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ProcessingPositionCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies when an transaction/instruction is to be executed relative to a
@@ -33,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPositionCode#mmAfter
- * ProcessingPositionCode.mmAfter}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPositionCode#After
+ * ProcessingPositionCode.After}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPositionCode#mmWith
- * ProcessingPositionCode.mmWith}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPositionCode#With
+ * ProcessingPositionCode.With}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPositionCode#mmBefore
- * ProcessingPositionCode.mmBefore}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPositionCode#Before
+ * ProcessingPositionCode.Before}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPositionCode#mmInformation
- * ProcessingPositionCode.mmInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPositionCode#Information
+ * ProcessingPositionCode.Information}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -62,8 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ProcessingPositionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProcessingPositionCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -109,12 +115,12 @@ public class ProcessingPositionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAfter = new MMCode() {
+	public static final ProcessingPositionCode After = new ProcessingPositionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "After";
 			definition = "Specifies that the transaction/instruction is to be executed after the linked transaction/instruction.";
-			owner_lazy = () -> ProcessingPositionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingPositionCode.mmObject();
 			codeName = "AFTE";
 		}
 	};
@@ -142,12 +148,12 @@ public class ProcessingPositionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmWith = new MMCode() {
+	public static final ProcessingPositionCode With = new ProcessingPositionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "With";
 			definition = "Specifies that the transaction/instruction is to be executed with the linked transaction/instruction.";
-			owner_lazy = () -> ProcessingPositionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingPositionCode.mmObject();
 			codeName = "WITH";
 		}
 	};
@@ -175,12 +181,12 @@ public class ProcessingPositionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBefore = new MMCode() {
+	public static final ProcessingPositionCode Before = new ProcessingPositionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Before";
 			definition = "Specifies that the transaction/instruction is to be executed before the linked transaction/instruction.";
-			owner_lazy = () -> ProcessingPositionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingPositionCode.mmObject();
 			codeName = "BEFO";
 		}
 	};
@@ -208,28 +214,61 @@ public class ProcessingPositionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInformation = new MMCode() {
+	public static final ProcessingPositionCode Information = new ProcessingPositionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Information";
 			definition = "Specifies that the transactions/instructions are linked for information purposes only.";
-			owner_lazy = () -> ProcessingPositionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingPositionCode.mmObject();
 			codeName = "INFO";
 		}
 	};
+	final static private LinkedHashMap<String, ProcessingPositionCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProcessingPositionCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AFTE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingPositionCode";
 				definition = "Specifies when an transaction/instruction is to be executed relative to a linked transaction/instruction.";
-				code_lazy = () -> Arrays.asList(ProcessingPositionCode.mmAfter, ProcessingPositionCode.mmWith, ProcessingPositionCode.mmBefore, ProcessingPositionCode.mmInformation);
 				derivation_lazy = () -> Arrays.asList(ProcessingPosition3Code.mmObject(), ProcessingPosition4Code.mmObject(), ProcessingPosition2Code.mmObject(), ProcessingPosition5Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingPositionCode.After, com.tools20022.repository.codeset.ProcessingPositionCode.With, com.tools20022.repository.codeset.ProcessingPositionCode.Before,
+						com.tools20022.repository.codeset.ProcessingPositionCode.Information);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(After.getCodeName().get(), After);
+		codesByName.put(With.getCodeName().get(), With);
+		codesByName.put(Before.getCodeName().get(), Before);
+		codesByName.put(Information.getCodeName().get(), Information);
+	}
+
+	public static ProcessingPositionCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProcessingPositionCode[] values() {
+		ProcessingPositionCode[] values = new ProcessingPositionCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProcessingPositionCode> {
+		@Override
+		public ProcessingPositionCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProcessingPositionCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.InvestorRestrictionTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies to whom or what the restriction applies.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorRestrictionTypeCode#mmLegalResident
- * InvestorRestrictionTypeCode.mmLegalResident}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorRestrictionTypeCode#LegalResident
+ * InvestorRestrictionTypeCode.LegalResident}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorRestrictionTypeCode#mmCitizen
- * InvestorRestrictionTypeCode.mmCitizen}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorRestrictionTypeCode#Citizen
+ * InvestorRestrictionTypeCode.Citizen}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InvestorRestrictionTypeCode#mmIndividual
- * InvestorRestrictionTypeCode.mmIndividual}</li>
+ * {@linkplain com.tools20022.repository.codeset.InvestorRestrictionTypeCode#Individual
+ * InvestorRestrictionTypeCode.Individual}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies to whom or what the restriction applies."</li>
  * </ul>
  */
-public class InvestorRestrictionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InvestorRestrictionTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,12 +101,12 @@ public class InvestorRestrictionTypeCode {
 	 * definition} = "Restriction applies to a legal resident."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLegalResident = new MMCode() {
+	public static final InvestorRestrictionTypeCode LegalResident = new InvestorRestrictionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LegalResident";
 			definition = "Restriction applies to a legal resident.";
-			owner_lazy = () -> InvestorRestrictionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestorRestrictionTypeCode.mmObject();
 			codeName = "LERE";
 		}
 	};
@@ -125,12 +131,12 @@ public class InvestorRestrictionTypeCode {
 	 * definition} = "Restriction applies to a citizen."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCitizen = new MMCode() {
+	public static final InvestorRestrictionTypeCode Citizen = new InvestorRestrictionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Citizen";
 			definition = "Restriction applies to a citizen.";
-			owner_lazy = () -> InvestorRestrictionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestorRestrictionTypeCode.mmObject();
 			codeName = "CITI";
 		}
 	};
@@ -155,28 +161,60 @@ public class InvestorRestrictionTypeCode {
 	 * definition} = "Restriction applies to an individual."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIndividual = new MMCode() {
+	public static final InvestorRestrictionTypeCode Individual = new InvestorRestrictionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Individual";
 			definition = "Restriction applies to an individual.";
-			owner_lazy = () -> InvestorRestrictionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InvestorRestrictionTypeCode.mmObject();
 			codeName = "INDV";
 		}
 	};
+	final static private LinkedHashMap<String, InvestorRestrictionTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InvestorRestrictionTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("LERE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestorRestrictionTypeCode";
 				definition = "Specifies to whom or what the restriction applies.";
-				code_lazy = () -> Arrays.asList(InvestorRestrictionTypeCode.mmLegalResident, InvestorRestrictionTypeCode.mmCitizen, InvestorRestrictionTypeCode.mmIndividual);
 				derivation_lazy = () -> Arrays.asList(InvestorRestrictionType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestorRestrictionTypeCode.LegalResident, com.tools20022.repository.codeset.InvestorRestrictionTypeCode.Citizen,
+						com.tools20022.repository.codeset.InvestorRestrictionTypeCode.Individual);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(LegalResident.getCodeName().get(), LegalResident);
+		codesByName.put(Citizen.getCodeName().get(), Citizen);
+		codesByName.put(Individual.getCodeName().get(), Individual);
+	}
+
+	public static InvestorRestrictionTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InvestorRestrictionTypeCode[] values() {
+		InvestorRestrictionTypeCode[] values = new InvestorRestrictionTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InvestorRestrictionTypeCode> {
+		@Override
+		public InvestorRestrictionTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InvestorRestrictionTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

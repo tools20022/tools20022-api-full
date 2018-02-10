@@ -29,6 +29,8 @@ import com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestver
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -37,22 +39,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AcquirertoIssuerCardTransactionLatestVersion
- * AcquirertoIssuerCardTransactionLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestversion
- * AcquirertoIssuerCardMessagesISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AcqrrAuthstnRspn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -68,6 +54,22 @@ import javax.xml.bind.annotation.*;
  * AcquirerAuthorisationResponse.mmSecurityTrailer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.AcquirertoIssuerCardMessagesISOLatestversion
+ * AcquirertoIssuerCardMessagesISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AcqrrAuthstnRspn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AcquirertoIssuerCardTransactionLatestVersion
+ * AcquirertoIssuerCardTransactionLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code cain.002.001.01}</li>
@@ -83,15 +85,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcquirerAuthorisationResponse", propOrder = {"header", "authorisationResponse", "securityTrailer"})
 public class AcquirerAuthorisationResponse {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header17 header;
 	/**
-	 * Information related to the protocol management.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,10 +133,11 @@ public class AcquirerAuthorisationResponse {
 			}
 		}
 	};
+	@XmlElement(name = "AuthstnRspn", required = true)
 	protected AcquirerAuthorisationResponse1 authorisationResponse;
 	/**
-	 * Information related to the response of an authorisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,10 +177,11 @@ public class AcquirerAuthorisationResponse {
 			}
 		}
 	};
+	@XmlElement(name = "SctyTrlr")
 	protected ContentInformationType15 securityTrailer;
 	/**
-	 * Trailer of the message containing a MAC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -247,34 +252,34 @@ public class AcquirerAuthorisationResponse {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header17 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header17 header) {
-		this.header = header;
+	public AcquirerAuthorisationResponse setHeader(Header17 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "AuthstnRspn", required = true)
 	public AcquirerAuthorisationResponse1 getAuthorisationResponse() {
 		return authorisationResponse;
 	}
 
-	public void setAuthorisationResponse(AcquirerAuthorisationResponse1 authorisationResponse) {
-		this.authorisationResponse = authorisationResponse;
+	public AcquirerAuthorisationResponse setAuthorisationResponse(AcquirerAuthorisationResponse1 authorisationResponse) {
+		this.authorisationResponse = Objects.requireNonNull(authorisationResponse);
+		return this;
 	}
 
-	@XmlElement(name = "SctyTrlr")
-	public ContentInformationType15 getSecurityTrailer() {
-		return securityTrailer;
+	public Optional<ContentInformationType15> getSecurityTrailer() {
+		return securityTrailer == null ? Optional.empty() : Optional.of(securityTrailer);
 	}
 
-	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+	public AcquirerAuthorisationResponse setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:cain.002.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:cain.002.001.01")
 	static public class Document {
 		@XmlElement(name = "AcqrrAuthstnRspn", required = true)
 		public AcquirerAuthorisationResponse messageBody;

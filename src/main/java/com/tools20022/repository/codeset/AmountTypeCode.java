@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AmountTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason why an amount is not specified.
@@ -31,19 +36,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.AmountTypeCode#mmOpen
- * AmountTypeCode.mmOpen}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AmountTypeCode#mmUnknown
- * AmountTypeCode.mmUnknown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AmountTypeCode#Open
+ * AmountTypeCode.Open}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AmountTypeCode#Unknown
+ * AmountTypeCode.Unknown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AmountTypeCode#FixedAmount
+ * AmountTypeCode.FixedAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountTypeCode#mmFixedAmount
- * AmountTypeCode.mmFixedAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountTypeCode#MinimumAmount
+ * AmountTypeCode.MinimumAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountTypeCode#mmMinimumAmount
- * AmountTypeCode.mmMinimumAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AmountTypeCode#mmMaximumAmount
- * AmountTypeCode.mmMaximumAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.AmountTypeCode#MaximumAmount
+ * AmountTypeCode.MaximumAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -58,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -76,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason why an amount is not specified."</li>
  * </ul>
  */
-public class AmountTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AmountTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -100,12 +105,12 @@ public class AmountTypeCode {
 	 * definition} = "The amount is open."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpen = new MMCode() {
+	public static final AmountTypeCode Open = new AmountTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Open";
 			definition = "The amount is open.";
-			owner_lazy = () -> AmountTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountTypeCode.mmObject();
 			codeName = "OPEN";
 		}
 	};
@@ -130,12 +135,12 @@ public class AmountTypeCode {
 	 * definition} = "The amount is unkown."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknown = new MMCode() {
+	public static final AmountTypeCode Unknown = new AmountTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Unknown";
 			definition = "The amount is unkown.";
-			owner_lazy = () -> AmountTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountTypeCode.mmObject();
 			codeName = "UKWN";
 		}
 	};
@@ -160,12 +165,12 @@ public class AmountTypeCode {
 	 * definition} = "The amount represents a fixed value."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFixedAmount = new MMCode() {
+	public static final AmountTypeCode FixedAmount = new AmountTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixedAmount";
 			definition = "The amount represents a fixed value.";
-			owner_lazy = () -> AmountTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountTypeCode.mmObject();
 			codeName = "FIXD";
 		}
 	};
@@ -190,12 +195,12 @@ public class AmountTypeCode {
 	 * definition} = "The amount represents the minimum value."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMinimumAmount = new MMCode() {
+	public static final AmountTypeCode MinimumAmount = new AmountTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumAmount";
 			definition = "The amount represents the minimum value.";
-			owner_lazy = () -> AmountTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountTypeCode.mmObject();
 			codeName = "MINI";
 		}
 	};
@@ -220,28 +225,62 @@ public class AmountTypeCode {
 	 * definition} = "The amount represents the maximum value."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMaximumAmount = new MMCode() {
+	public static final AmountTypeCode MaximumAmount = new AmountTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAmount";
 			definition = "The amount represents the maximum value.";
-			owner_lazy = () -> AmountTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AmountTypeCode.mmObject();
 			codeName = "MAXI";
 		}
 	};
+	final static private LinkedHashMap<String, AmountTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AmountTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("OPEN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountTypeCode";
 				definition = "Specifies the reason why an amount is not specified.";
-				code_lazy = () -> Arrays.asList(AmountTypeCode.mmOpen, AmountTypeCode.mmUnknown, AmountTypeCode.mmFixedAmount, AmountTypeCode.mmMinimumAmount, AmountTypeCode.mmMaximumAmount);
 				derivation_lazy = () -> Arrays.asList(AmountType2Code.mmObject(), AmountType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountTypeCode.Open, com.tools20022.repository.codeset.AmountTypeCode.Unknown, com.tools20022.repository.codeset.AmountTypeCode.FixedAmount,
+						com.tools20022.repository.codeset.AmountTypeCode.MinimumAmount, com.tools20022.repository.codeset.AmountTypeCode.MaximumAmount);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Open.getCodeName().get(), Open);
+		codesByName.put(Unknown.getCodeName().get(), Unknown);
+		codesByName.put(FixedAmount.getCodeName().get(), FixedAmount);
+		codesByName.put(MinimumAmount.getCodeName().get(), MinimumAmount);
+		codesByName.put(MaximumAmount.getCodeName().get(), MaximumAmount);
+	}
+
+	public static AmountTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AmountTypeCode[] values() {
+		AmountTypeCode[] values = new AmountTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AmountTypeCode> {
+		@Override
+		public AmountTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AmountTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

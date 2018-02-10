@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.CorporateActionMovementProcessingStatus1;
 import com.tools20022.repository.msg.CorporateActionMovementRejectionStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between the different statuses of a movement."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionMovementStatus1Choice", propOrder = {"processedStatus", "failedStatus", "rejectedStatus"})
 public class CorporateActionMovementStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrcdSts", required = true)
 	protected CorporateActionMovementProcessingStatus1 processedStatus;
 	/**
-	 * Provides information about the processing status of the movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -122,7 +124,7 @@ public class CorporateActionMovementStatus1Choice {
 	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
-			componentContext_lazy = () -> CorporateActionMovementStatus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrcdSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +136,11 @@ public class CorporateActionMovementStatus1Choice {
 			type_lazy = () -> CorporateActionMovementProcessingStatus1.mmObject();
 		}
 	};
+	@XmlElement(name = "FaildSts", required = true)
 	protected CorporateActionMovementFailedStatus1 failedStatus;
 	/**
-	 * Provides information about the settlement failure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -170,7 +173,7 @@ public class CorporateActionMovementStatus1Choice {
 	public static final MMMessageAssociationEnd mmFailedStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
-			componentContext_lazy = () -> CorporateActionMovementStatus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FaildSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,10 +185,11 @@ public class CorporateActionMovementStatus1Choice {
 			type_lazy = () -> CorporateActionMovementFailedStatus1.mmObject();
 		}
 	};
+	@XmlElement(name = "RjctdSts", required = true)
 	protected CorporateActionMovementRejectionStatus1 rejectedStatus;
 	/**
-	 * Provides information about the rejection status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -218,7 +222,7 @@ public class CorporateActionMovementStatus1Choice {
 	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
-			componentContext_lazy = () -> CorporateActionMovementStatus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,10 +238,11 @@ public class CorporateActionMovementStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionMovementStatus1Choice.mmProcessedStatus, CorporateActionMovementStatus1Choice.mmFailedStatus, CorporateActionMovementStatus1Choice.mmRejectedStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.mmProcessedStatus, com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.mmFailedStatus,
+						com.tools20022.repository.choice.CorporateActionMovementStatus1Choice.mmRejectedStatus);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAMovementStatusAdviceV01.mmMovementStatusDetails);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMovementStatus1Choice";
 				definition = "Choice between the different statuses of a movement.";
@@ -246,30 +251,30 @@ public class CorporateActionMovementStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrcdSts", required = true)
 	public CorporateActionMovementProcessingStatus1 getProcessedStatus() {
 		return processedStatus;
 	}
 
-	public void setProcessedStatus(CorporateActionMovementProcessingStatus1 processedStatus) {
-		this.processedStatus = processedStatus;
+	public CorporateActionMovementStatus1Choice setProcessedStatus(CorporateActionMovementProcessingStatus1 processedStatus) {
+		this.processedStatus = Objects.requireNonNull(processedStatus);
+		return this;
 	}
 
-	@XmlElement(name = "FaildSts", required = true)
 	public CorporateActionMovementFailedStatus1 getFailedStatus() {
 		return failedStatus;
 	}
 
-	public void setFailedStatus(CorporateActionMovementFailedStatus1 failedStatus) {
-		this.failedStatus = failedStatus;
+	public CorporateActionMovementStatus1Choice setFailedStatus(CorporateActionMovementFailedStatus1 failedStatus) {
+		this.failedStatus = Objects.requireNonNull(failedStatus);
+		return this;
 	}
 
-	@XmlElement(name = "RjctdSts", required = true)
 	public CorporateActionMovementRejectionStatus1 getRejectedStatus() {
 		return rejectedStatus;
 	}
 
-	public void setRejectedStatus(CorporateActionMovementRejectionStatus1 rejectedStatus) {
-		this.rejectedStatus = rejectedStatus;
+	public CorporateActionMovementStatus1Choice setRejectedStatus(CorporateActionMovementRejectionStatus1 rejectedStatus) {
+		this.rejectedStatus = Objects.requireNonNull(rejectedStatus);
+		return this;
 	}
 }

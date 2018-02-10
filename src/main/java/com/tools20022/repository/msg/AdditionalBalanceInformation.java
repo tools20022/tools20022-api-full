@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AdditionalBalanceInformation", propOrder = {"quantity", "subBalanceType"})
 public class AdditionalBalanceInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Qty", required = true)
 	protected SubBalanceQuantity1Choice quantity;
 	/**
-	 * Quantity of securities in the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class AdditionalBalanceInformation {
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
-			componentContext_lazy = () -> AdditionalBalanceInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,12 +124,11 @@ public class AdditionalBalanceInformation {
 			complexType_lazy = () -> SubBalanceQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SubBalTp", required = true)
 	protected SecuritiesBalanceType2Code subBalanceType;
 	/**
-	 * Reason a security is not available or additional information about the
-	 * financial instrument for which the balance is given, for example,
-	 * unregistered, registered in nominee name.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +164,7 @@ public class AdditionalBalanceInformation {
 	public static final MMMessageAttribute mmSubBalanceType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesBalanceType;
-			componentContext_lazy = () -> AdditionalBalanceInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation.mmObject();
 			isDerived = false;
 			xmlTag = "SubBalTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,9 +179,9 @@ public class AdditionalBalanceInformation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AdditionalBalanceInformation.mmQuantity, AdditionalBalanceInformation.mmSubBalanceType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalBalanceInformation.mmQuantity, com.tools20022.repository.msg.AdditionalBalanceInformation.mmSubBalanceType);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalBalanceInformation";
 				definition = "Net position of a segregated holding of a single security within the overall position held in the securities account, eg, sub-balance per status.";
@@ -189,21 +190,21 @@ public class AdditionalBalanceInformation {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public SubBalanceQuantity1Choice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(SubBalanceQuantity1Choice quantity) {
-		this.quantity = quantity;
+	public AdditionalBalanceInformation setQuantity(SubBalanceQuantity1Choice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "SubBalTp", required = true)
 	public SecuritiesBalanceType2Code getSubBalanceType() {
 		return subBalanceType;
 	}
 
-	public void setSubBalanceType(SecuritiesBalanceType2Code subBalanceType) {
-		this.subBalanceType = subBalanceType;
+	public AdditionalBalanceInformation setSubBalanceType(SecuritiesBalanceType2Code subBalanceType) {
+		this.subBalanceType = Objects.requireNonNull(subBalanceType);
+		return this;
 	}
 }

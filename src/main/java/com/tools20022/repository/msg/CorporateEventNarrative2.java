@@ -24,9 +24,11 @@ import com.tools20022.repository.area.seev.MeetingNotificationV04;
 import com.tools20022.repository.area.seev.MeetingNotificationV05;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,16 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides additional narrative information about the corporate event."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateEventNarrative2", propOrder = "disclaimer")
 public class CorporateEventNarrative2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dsclmr")
 	protected List<Max350Text> disclaimer;
 	/**
-	 * Issuer’s disclaimer notice relative to the meeting announcement
-	 * information provided. It may be ignored for automated processing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +114,7 @@ public class CorporateEventNarrative2 {
 	 */
 	public static final MMMessageAttribute mmDisclaimer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateEventNarrative2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateEventNarrative2.mmObject();
 			isDerived = false;
 			xmlTag = "Dsclmr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,9 +128,9 @@ public class CorporateEventNarrative2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateEventNarrative2.mmDisclaimer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateEventNarrative2.mmDisclaimer);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV04.mmAdditionalInformation, MeetingNotificationV05.mmAdditionalInformation);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateEventNarrative2";
 				definition = "Provides additional narrative information about the corporate event.";
@@ -137,12 +139,12 @@ public class CorporateEventNarrative2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dsclmr")
 	public List<Max350Text> getDisclaimer() {
-		return disclaimer;
+		return disclaimer == null ? disclaimer = new ArrayList<>() : disclaimer;
 	}
 
-	public void setDisclaimer(List<Max350Text> disclaimer) {
-		this.disclaimer = disclaimer;
+	public CorporateEventNarrative2 setDisclaimer(List<Max350Text> disclaimer) {
+		this.disclaimer = Objects.requireNonNull(disclaimer);
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.InterestRejectionReasonCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates whether the interest request is rejected due a value date or an
@@ -33,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestRejectionReasonCode#mmValueDate
- * InterestRejectionReasonCode.mmValueDate}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestRejectionReasonCode#ValueDate
+ * InterestRejectionReasonCode.ValueDate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestRejectionReasonCode#mmDisputeAmount
- * InterestRejectionReasonCode.mmDisputeAmount}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestRejectionReasonCode#DisputeAmount
+ * InterestRejectionReasonCode.DisputeAmount}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -51,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class InterestRejectionReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InterestRejectionReasonCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,12 +104,12 @@ public class InterestRejectionReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmValueDate = new MMCode() {
+	public static final InterestRejectionReasonCode ValueDate = new InterestRejectionReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Indicates whether the interest request is rejected due a value date difference.";
-			owner_lazy = () -> InterestRejectionReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InterestRejectionReasonCode.mmObject();
 			codeName = "VADA";
 		}
 	};
@@ -131,28 +137,58 @@ public class InterestRejectionReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisputeAmount = new MMCode() {
+	public static final InterestRejectionReasonCode DisputeAmount = new InterestRejectionReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisputeAmount";
 			definition = "Indicates whether the interest request is rejected due an interest amount difference.";
-			owner_lazy = () -> InterestRejectionReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InterestRejectionReasonCode.mmObject();
 			codeName = "DIAM";
 		}
 	};
+	final static private LinkedHashMap<String, InterestRejectionReasonCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InterestRejectionReasonCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("VADA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestRejectionReasonCode";
 				definition = "Indicates whether the interest request is rejected due a value date or an interest amount difference.";
-				code_lazy = () -> Arrays.asList(InterestRejectionReasonCode.mmValueDate, InterestRejectionReasonCode.mmDisputeAmount);
 				derivation_lazy = () -> Arrays.asList(InterestRejectionReason1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestRejectionReasonCode.ValueDate, com.tools20022.repository.codeset.InterestRejectionReasonCode.DisputeAmount);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ValueDate.getCodeName().get(), ValueDate);
+		codesByName.put(DisputeAmount.getCodeName().get(), DisputeAmount);
+	}
+
+	public static InterestRejectionReasonCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InterestRejectionReasonCode[] values() {
+		InterestRejectionReasonCode[] values = new InterestRejectionReasonCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InterestRejectionReasonCode> {
+		@Override
+		public InterestRejectionReasonCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InterestRejectionReasonCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

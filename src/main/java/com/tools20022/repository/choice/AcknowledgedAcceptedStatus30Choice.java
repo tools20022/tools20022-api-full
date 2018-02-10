@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,9 +26,11 @@ import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AcknowledgementReason18;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Specifies whether the status is provided with a reason or not."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcknowledgedAcceptedStatus30Choice", propOrder = {"noSpecifiedReason", "reason"})
 public class AcknowledgedAcceptedStatus30Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	protected NoReasonCode noSpecifiedReason;
 	/**
-	 * Indicates that there is no reason available or to report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,6 +102,9 @@ public class AcknowledgedAcceptedStatus30Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NoSpcfdRsn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :24B: not present</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -112,9 +119,10 @@ public class AcknowledgedAcceptedStatus30Choice {
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
-			componentContext_lazy = () -> AcknowledgedAcceptedStatus30Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgedAcceptedStatus30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":24B: not present"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
@@ -123,10 +131,11 @@ public class AcknowledgedAcceptedStatus30Choice {
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn", required = true)
 	protected List<AcknowledgementReason18> reason;
 	/**
-	 * Specifies the reason of the acknowledged accepted status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +170,7 @@ public class AcknowledgedAcceptedStatus30Choice {
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmAcknowledgedAcceptedReason;
-			componentContext_lazy = () -> AcknowledgedAcceptedStatus30Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AcknowledgedAcceptedStatus30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,9 +184,9 @@ public class AcknowledgedAcceptedStatus30Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AcknowledgedAcceptedStatus30Choice.mmNoSpecifiedReason, AcknowledgedAcceptedStatus30Choice.mmReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AcknowledgedAcceptedStatus30Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.AcknowledgedAcceptedStatus30Choice.mmReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcknowledgedAcceptedStatus30Choice";
 				definition = "Specifies whether the status is provided with a reason or not.";
@@ -186,21 +195,21 @@ public class AcknowledgedAcceptedStatus30Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}
 
-	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
-		this.noSpecifiedReason = noSpecifiedReason;
+	public AcknowledgedAcceptedStatus30Choice setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = Objects.requireNonNull(noSpecifiedReason);
+		return this;
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public List<AcknowledgementReason18> getReason() {
-		return reason;
+		return reason == null ? reason = new ArrayList<>() : reason;
 	}
 
-	public void setReason(List<AcknowledgementReason18> reason) {
-		this.reason = reason;
+	public AcknowledgedAcceptedStatus30Choice setReason(List<AcknowledgementReason18> reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 }

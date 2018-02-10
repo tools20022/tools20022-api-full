@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,16 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Amount may be defined with or without the currency."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountChoice", propOrder = {"amountWithCurrency", "amountWithoutCurrency"})
 public class AmountChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AmtWthCcy", required = true)
 	protected CurrencyAndAmount amountWithCurrency;
 	/**
-	 * Number of monetary units specified in a currency where the unit of
-	 * currency is explicit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -100,7 +101,7 @@ public class AmountChoice {
 	 */
 	public static final MMMessageAttribute mmAmountWithCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AmountChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AmountChoice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtWthCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,11 +112,11 @@ public class AmountChoice {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtWthtCcy", required = true)
 	protected ImpliedCurrencyAndAmount amountWithoutCurrency;
 	/**
-	 * Number of monetary units specified in a currency where the unit of
-	 * currency is implied by the context.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +145,7 @@ public class AmountChoice {
 	 */
 	public static final MMMessageAttribute mmAmountWithoutCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AmountChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AmountChoice.mmObject();
 			isDerived = false;
 			xmlTag = "AmtWthtCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,8 +160,8 @@ public class AmountChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountChoice.mmAmountWithCurrency, AmountChoice.mmAmountWithoutCurrency);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AmountChoice.mmAmountWithCurrency, com.tools20022.repository.choice.AmountChoice.mmAmountWithoutCurrency);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AmountChoice";
 				definition = "Amount may be defined with or without the currency.";
@@ -169,21 +170,21 @@ public class AmountChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AmtWthCcy", required = true)
 	public CurrencyAndAmount getAmountWithCurrency() {
 		return amountWithCurrency;
 	}
 
-	public void setAmountWithCurrency(CurrencyAndAmount amountWithCurrency) {
-		this.amountWithCurrency = amountWithCurrency;
+	public AmountChoice setAmountWithCurrency(CurrencyAndAmount amountWithCurrency) {
+		this.amountWithCurrency = Objects.requireNonNull(amountWithCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "AmtWthtCcy", required = true)
 	public ImpliedCurrencyAndAmount getAmountWithoutCurrency() {
 		return amountWithoutCurrency;
 	}
 
-	public void setAmountWithoutCurrency(ImpliedCurrencyAndAmount amountWithoutCurrency) {
-		this.amountWithoutCurrency = amountWithoutCurrency;
+	public AmountChoice setAmountWithoutCurrency(ImpliedCurrencyAndAmount amountWithoutCurrency) {
+		this.amountWithoutCurrency = Objects.requireNonNull(amountWithoutCurrency);
+		return this;
 	}
 }

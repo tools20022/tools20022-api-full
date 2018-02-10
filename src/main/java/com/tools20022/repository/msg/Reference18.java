@@ -24,6 +24,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,16 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * "References linked to the trade leg notification cancellation message."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Reference18", propOrder = {"tradeLegIdentification", "previousMessageIdentification"})
 public class Reference18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradLegId", required = true)
 	protected Max35Text tradeLegIdentification;
 	/**
-	 * Allocated by the central counterparty - central counterparty trade leg
-	 * reference identification that uniquely identifies the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +101,7 @@ public class Reference18 {
 	 */
 	public static final MMMessageAttribute mmTradeLegIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference18.mmObject();
 			isDerived = false;
 			xmlTag = "TradLegId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,11 +112,11 @@ public class Reference18 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsMsgId")
 	protected Max35Text previousMessageIdentification;
 	/**
-	 * Identification of the message previously sent by the central
-	 * counterparty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +144,7 @@ public class Reference18 {
 	 */
 	public static final MMMessageAttribute mmPreviousMessageIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference18.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsMsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,8 +159,8 @@ public class Reference18 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Reference18.mmTradeLegIdentification, Reference18.mmPreviousMessageIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference18.mmTradeLegIdentification, com.tools20022.repository.msg.Reference18.mmPreviousMessageIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference18";
 				definition = "References linked to the trade leg notification cancellation message.";
@@ -167,21 +169,21 @@ public class Reference18 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradLegId", required = true)
 	public Max35Text getTradeLegIdentification() {
 		return tradeLegIdentification;
 	}
 
-	public void setTradeLegIdentification(Max35Text tradeLegIdentification) {
-		this.tradeLegIdentification = tradeLegIdentification;
+	public Reference18 setTradeLegIdentification(Max35Text tradeLegIdentification) {
+		this.tradeLegIdentification = Objects.requireNonNull(tradeLegIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PrvsMsgId")
-	public Max35Text getPreviousMessageIdentification() {
-		return previousMessageIdentification;
+	public Optional<Max35Text> getPreviousMessageIdentification() {
+		return previousMessageIdentification == null ? Optional.empty() : Optional.of(previousMessageIdentification);
 	}
 
-	public void setPreviousMessageIdentification(Max35Text previousMessageIdentification) {
+	public Reference18 setPreviousMessageIdentification(Max35Text previousMessageIdentification) {
 		this.previousMessageIdentification = previousMessageIdentification;
+		return this;
 	}
 }

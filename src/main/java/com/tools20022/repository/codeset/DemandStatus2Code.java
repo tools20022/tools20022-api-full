@@ -20,31 +20,34 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DemandStatusCode;
+import com.tools20022.repository.codeset.DemandStatus2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of the demand for payment.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DemandStatus2Code#Refused
+ * DemandStatus2Code.Refused}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.DemandStatusCode
  * DemandStatusCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.DemandStatus2Code#mmRefused
- * DemandStatus2Code.mmRefused}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -61,7 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of the demand for payment."</li>
  * </ul>
  */
-public class DemandStatus2Code extends DemandStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DemandStatus2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,26 +84,56 @@ public class DemandStatus2Code extends DemandStatusCode {
 	 * name} = "Refused"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRefused = new MMCode() {
+	public static final DemandStatus2Code Refused = new DemandStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Refused";
-			owner_lazy = () -> DemandStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DemandStatus2Code.mmObject();
+			codeName = DemandStatusCode.Refused.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DemandStatus2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DemandStatus2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REFD");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DemandStatus2Code";
 				definition = "Specifies the status of the demand for payment.";
-				code_lazy = () -> Arrays.asList(DemandStatus2Code.mmRefused);
 				trace_lazy = () -> DemandStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DemandStatus2Code.Refused);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Refused.getCodeName().get(), Refused);
+	}
+
+	public static DemandStatus2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DemandStatus2Code[] values() {
+		DemandStatus2Code[] values = new DemandStatus2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DemandStatus2Code> {
+		@Override
+		public DemandStatus2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DemandStatus2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

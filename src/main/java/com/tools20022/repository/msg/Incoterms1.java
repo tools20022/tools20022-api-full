@@ -30,6 +30,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -42,8 +44,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Incoterms1#mmCodeOrOtherRule
- * Incoterms1.mmCodeOrOtherRule}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Incoterms1#CodeOrOtherRule
+ * Incoterms1.CodeOrOtherRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -76,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the applicable Incoterm and associated location."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Incoterms1", propOrder = {"code", "other", "location"})
 public class Incoterms1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected Incoterms1Code code;
 	/**
-	 * Specifies the applicable Incoterm by means of a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +120,7 @@ public class Incoterms1 {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Incoterms.mmCode;
-			componentContext_lazy = () -> Incoterms1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Incoterms1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +131,11 @@ public class Incoterms1 {
 			simpleType_lazy = () -> Incoterms1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Othr", required = true)
 	protected Max35Text other;
 	/**
-	 * Specifies Incoterm not present in code list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +167,7 @@ public class Incoterms1 {
 	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Incoterms.mmCode;
-			componentContext_lazy = () -> Incoterms1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Incoterms1.mmObject();
 			isDerived = false;
 			xmlTag = "Othr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +178,11 @@ public class Incoterms1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Lctn")
 	protected Max35Text location;
 	/**
-	 * Location where the Incoterms are actioned.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -209,7 +214,7 @@ public class Incoterms1 {
 	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Incoterms.mmLocation;
-			componentContext_lazy = () -> Incoterms1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Incoterms1.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,22 +256,22 @@ public class Incoterms1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmCodeOrOtherRule = new MMXor() {
+	public static final MMXor CodeOrOtherRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CodeOrOtherRule";
 			definition = "If Code is present, then Other is not allowed. If Code is not present, then Other is mandatory.";
-			messageComponent_lazy = () -> Incoterms1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(Incoterms1.mmCode, Incoterms1.mmOther);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.Incoterms1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms1.mmCode, com.tools20022.repository.msg.Incoterms1.mmOther);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Incoterms1.mmCode, Incoterms1.mmOther, Incoterms1.mmLocation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms1.mmCode, com.tools20022.repository.msg.Incoterms1.mmOther, com.tools20022.repository.msg.Incoterms1.mmLocation);
 				trace_lazy = () -> Incoterms.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -277,36 +282,36 @@ public class Incoterms1 {
 				})).get();
 				name = "Incoterms1";
 				definition = "Specifies the applicable Incoterm and associated location.";
-				xors_lazy = () -> Arrays.asList(Incoterms1.mmCodeOrOtherRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Incoterms1.CodeOrOtherRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public Incoterms1Code getCode() {
 		return code;
 	}
 
-	public void setCode(Incoterms1Code code) {
-		this.code = code;
+	public Incoterms1 setCode(Incoterms1Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Othr", required = true)
 	public Max35Text getOther() {
 		return other;
 	}
 
-	public void setOther(Max35Text other) {
-		this.other = other;
+	public Incoterms1 setOther(Max35Text other) {
+		this.other = Objects.requireNonNull(other);
+		return this;
 	}
 
-	@XmlElement(name = "Lctn")
-	public Max35Text getLocation() {
-		return location;
+	public Optional<Max35Text> getLocation() {
+		return location == null ? Optional.empty() : Optional.of(location);
 	}
 
-	public void setLocation(Max35Text location) {
+	public Incoterms1 setLocation(Max35Text location) {
 		this.location = location;
+		return this;
 	}
 }

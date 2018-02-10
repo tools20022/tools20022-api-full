@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ISINIdentifier;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,16 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the eligibility details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EligibilityIdentification1Choice", propOrder = {"country", "financialInstrumentIdentification", "issuerCSDIdentification"})
 public class EligibilityIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ctry", required = true)
 	protected CountryCode country;
 	/**
-	 * Country code used to identify the issuance country to be defined as
-	 * eligible.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -103,7 +104,7 @@ public class EligibilityIdentification1Choice {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EligibilityIdentification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.EligibilityIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,10 +115,11 @@ public class EligibilityIdentification1Choice {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmId", required = true)
 	protected ISINIdentifier financialInstrumentIdentification;
 	/**
-	 * ISIN used to identify the security to be defined as eligible.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +148,7 @@ public class EligibilityIdentification1Choice {
 	 */
 	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EligibilityIdentification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.EligibilityIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,11 +159,11 @@ public class EligibilityIdentification1Choice {
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "IssrCSDId", required = true)
 	protected SystemPartyIdentification1Choice issuerCSDIdentification;
 	/**
-	 * Issuer CSD identification used to identify the securities to be defined
-	 * as eligible.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,7 +193,7 @@ public class EligibilityIdentification1Choice {
 	 */
 	public static final MMMessageAttribute mmIssuerCSDIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EligibilityIdentification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.EligibilityIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IssrCSDId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,8 +208,9 @@ public class EligibilityIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EligibilityIdentification1Choice.mmCountry, EligibilityIdentification1Choice.mmFinancialInstrumentIdentification, EligibilityIdentification1Choice.mmIssuerCSDIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EligibilityIdentification1Choice.mmCountry, com.tools20022.repository.choice.EligibilityIdentification1Choice.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.choice.EligibilityIdentification1Choice.mmIssuerCSDIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EligibilityIdentification1Choice";
 				definition = "Specifies the eligibility details.";
@@ -216,30 +219,30 @@ public class EligibilityIdentification1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
 
-	public void setCountry(CountryCode country) {
-		this.country = country;
+	public EligibilityIdentification1Choice setCountry(CountryCode country) {
+		this.country = Objects.requireNonNull(country);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId", required = true)
 	public ISINIdentifier getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(ISINIdentifier financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public EligibilityIdentification1Choice setFinancialInstrumentIdentification(ISINIdentifier financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "IssrCSDId", required = true)
 	public SystemPartyIdentification1Choice getIssuerCSDIdentification() {
 		return issuerCSDIdentification;
 	}
 
-	public void setIssuerCSDIdentification(com.tools20022.repository.choice.SystemPartyIdentification1Choice issuerCSDIdentification) {
-		this.issuerCSDIdentification = issuerCSDIdentification;
+	public EligibilityIdentification1Choice setIssuerCSDIdentification(com.tools20022.repository.choice.SystemPartyIdentification1Choice issuerCSDIdentification) {
+		this.issuerCSDIdentification = Objects.requireNonNull(issuerCSDIdentification);
+		return this;
 	}
 }

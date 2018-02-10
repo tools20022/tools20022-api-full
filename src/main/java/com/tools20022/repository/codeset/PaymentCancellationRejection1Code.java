@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PaymentCancellationRejectionCode;
+import com.tools20022.repository.codeset.PaymentCancellationRejection1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Returned when a request for cancellation cannot be executed.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejectionCode
- * PaymentCancellationRejectionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejection1Code#mmLegalDecision
- * PaymentCancellationRejection1Code.mmLegalDecision}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejection1Code#LegalDecision
+ * PaymentCancellationRejection1Code.LegalDecision}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejection1Code#mmAgentDecision
- * PaymentCancellationRejection1Code.mmAgentDecision}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejection1Code#AgentDecision
+ * PaymentCancellationRejection1Code.AgentDecision}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejection1Code#mmCustomerDecision
- * PaymentCancellationRejection1Code.mmCustomerDecision}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejection1Code#CustomerDecision
+ * PaymentCancellationRejection1Code.CustomerDecision}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PaymentCancellationRejectionCode
+ * PaymentCancellationRejectionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Returned when a request for cancellation cannot be executed."</li>
  * </ul>
  */
-public class PaymentCancellationRejection1Code extends PaymentCancellationRejectionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PaymentCancellationRejection1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class PaymentCancellationRejection1Code extends PaymentCancellationReject
 	 * name} = "LegalDecision"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLegalDecision = new MMCode() {
+	public static final PaymentCancellationRejection1Code LegalDecision = new PaymentCancellationRejection1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalDecision";
-			owner_lazy = () -> PaymentCancellationRejection1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentCancellationRejection1Code.mmObject();
+			codeName = PaymentCancellationRejectionCode.LegalDecision.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class PaymentCancellationRejection1Code extends PaymentCancellationReject
 	 * name} = "AgentDecision"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgentDecision = new MMCode() {
+	public static final PaymentCancellationRejection1Code AgentDecision = new PaymentCancellationRejection1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentDecision";
-			owner_lazy = () -> PaymentCancellationRejection1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentCancellationRejection1Code.mmObject();
+			codeName = PaymentCancellationRejectionCode.AgentDecision.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class PaymentCancellationRejection1Code extends PaymentCancellationReject
 	 * name} = "CustomerDecision"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustomerDecision = new MMCode() {
+	public static final PaymentCancellationRejection1Code CustomerDecision = new PaymentCancellationRejection1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerDecision";
-			owner_lazy = () -> PaymentCancellationRejection1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentCancellationRejection1Code.mmObject();
+			codeName = PaymentCancellationRejectionCode.CustomerDecision.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PaymentCancellationRejection1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PaymentCancellationRejection1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("LEGL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentCancellationRejection1Code";
 				definition = "Returned when a request for cancellation cannot be executed.";
-				code_lazy = () -> Arrays.asList(PaymentCancellationRejection1Code.mmLegalDecision, PaymentCancellationRejection1Code.mmAgentDecision, PaymentCancellationRejection1Code.mmCustomerDecision);
 				trace_lazy = () -> PaymentCancellationRejectionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentCancellationRejection1Code.LegalDecision, com.tools20022.repository.codeset.PaymentCancellationRejection1Code.AgentDecision,
+						com.tools20022.repository.codeset.PaymentCancellationRejection1Code.CustomerDecision);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(LegalDecision.getCodeName().get(), LegalDecision);
+		codesByName.put(AgentDecision.getCodeName().get(), AgentDecision);
+		codesByName.put(CustomerDecision.getCodeName().get(), CustomerDecision);
+	}
+
+	public static PaymentCancellationRejection1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PaymentCancellationRejection1Code[] values() {
+		PaymentCancellationRejection1Code[] values = new PaymentCancellationRejection1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PaymentCancellationRejection1Code> {
+		@Override
+		public PaymentCancellationRejection1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PaymentCancellationRejection1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

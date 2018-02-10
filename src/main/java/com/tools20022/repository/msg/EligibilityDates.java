@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SecuritiesRegistrationDeadline;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,8 +40,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.EligibilityDates#mmRecordDatexorSecuritiesRegistrationDate
- * EligibilityDates.mmRecordDatexorSecuritiesRegistrationDate}</li>
+ * {@linkplain com.tools20022.repository.msg.EligibilityDates#RecordDatexorSecuritiesRegistrationDate
+ * EligibilityDates.RecordDatexorSecuritiesRegistrationDate}</li>
  * </ul>
  * </li>
  * <li>
@@ -63,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,16 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Dates determining the entitlement."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EligibilityDates", propOrder = {"recordDate", "securitiesRegistrationDate", "blockingPeriod"})
 public class EligibilityDates {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RcrdDt")
 	protected ISODate recordDate;
 	/**
-	 * Date at which the positions are struck to note which parties will receive
-	 * the entitlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +120,7 @@ public class EligibilityDates {
 	public static final MMMessageAttribute mmRecordDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDeadline.mmRecordDate;
-			componentContext_lazy = () -> EligibilityDates.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EligibilityDates.mmObject();
 			isDerived = false;
 			xmlTag = "RcrdDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +131,11 @@ public class EligibilityDates {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesRegnDt")
 	protected ISODate securitiesRegistrationDate;
 	/**
-	 * Date at which the voting positions are established (in some countries).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,7 +170,7 @@ public class EligibilityDates {
 	public static final MMMessageAttribute mmSecuritiesRegistrationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesRegistrationDeadline.mmRegistrationDate;
-			componentContext_lazy = () -> EligibilityDates.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EligibilityDates.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesRegnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,10 +181,11 @@ public class EligibilityDates {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "BlckgPrd")
 	protected DateTimePeriodDetails1 blockingPeriod;
 	/**
-	 * Period during which the securities are blocked.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -214,7 +217,7 @@ public class EligibilityDates {
 	public static final MMMessageAssociationEnd mmBlockingPeriod = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBlockingDeadline.mmBlockingPeriod;
-			componentContext_lazy = () -> EligibilityDates.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EligibilityDates.mmObject();
 			isDerived = false;
 			xmlTag = "BlckgPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -260,55 +263,56 @@ public class EligibilityDates {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmRecordDatexorSecuritiesRegistrationDate = new MMXor() {
+	public static final MMXor RecordDatexorSecuritiesRegistrationDate = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDatexorSecuritiesRegistrationDate";
 			definition = "Either RecordDate or SecuritiesRegistrationDate may be present but not both.";
-			messageComponent_lazy = () -> EligibilityDates.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(EligibilityDates.mmRecordDate, EligibilityDates.mmSecuritiesRegistrationDate);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.EligibilityDates.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EligibilityDates.mmRecordDate, com.tools20022.repository.msg.EligibilityDates.mmSecuritiesRegistrationDate);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EligibilityDates.mmRecordDate, EligibilityDates.mmSecuritiesRegistrationDate, EligibilityDates.mmBlockingPeriod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EligibilityDates.mmRecordDate, com.tools20022.repository.msg.EligibilityDates.mmSecuritiesRegistrationDate,
+						com.tools20022.repository.msg.EligibilityDates.mmBlockingPeriod);
 				trace_lazy = () -> MeetingNotice.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EligibilityDates";
 				definition = "Dates determining the entitlement.";
-				xors_lazy = () -> Arrays.asList(EligibilityDates.mmRecordDatexorSecuritiesRegistrationDate);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EligibilityDates.RecordDatexorSecuritiesRegistrationDate);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RcrdDt")
-	public ISODate getRecordDate() {
-		return recordDate;
+	public Optional<ISODate> getRecordDate() {
+		return recordDate == null ? Optional.empty() : Optional.of(recordDate);
 	}
 
-	public void setRecordDate(ISODate recordDate) {
+	public EligibilityDates setRecordDate(ISODate recordDate) {
 		this.recordDate = recordDate;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesRegnDt")
-	public ISODate getSecuritiesRegistrationDate() {
-		return securitiesRegistrationDate;
+	public Optional<ISODate> getSecuritiesRegistrationDate() {
+		return securitiesRegistrationDate == null ? Optional.empty() : Optional.of(securitiesRegistrationDate);
 	}
 
-	public void setSecuritiesRegistrationDate(ISODate securitiesRegistrationDate) {
+	public EligibilityDates setSecuritiesRegistrationDate(ISODate securitiesRegistrationDate) {
 		this.securitiesRegistrationDate = securitiesRegistrationDate;
+		return this;
 	}
 
-	@XmlElement(name = "BlckgPrd")
-	public DateTimePeriodDetails1 getBlockingPeriod() {
-		return blockingPeriod;
+	public Optional<DateTimePeriodDetails1> getBlockingPeriod() {
+		return blockingPeriod == null ? Optional.empty() : Optional.of(blockingPeriod);
 	}
 
-	public void setBlockingPeriod(com.tools20022.repository.msg.DateTimePeriodDetails1 blockingPeriod) {
+	public EligibilityDates setBlockingPeriod(com.tools20022.repository.msg.DateTimePeriodDetails1 blockingPeriod) {
 		this.blockingPeriod = blockingPeriod;
+		return this;
 	}
 }

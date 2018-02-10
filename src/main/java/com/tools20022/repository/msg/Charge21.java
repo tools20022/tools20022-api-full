@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Amount of money associated with a service."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Charge21", propOrder = {"chargeType", "chargeAmountOrRate", "recipientIdentification"})
 public class Charge21 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ChrgTp", required = true)
 	protected ChargeType1Choice chargeType;
 	/**
-	 * Type of charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -108,7 +111,7 @@ public class Charge21 {
 	public static final MMMessageAssociationEnd mmChargeType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
-			componentContext_lazy = () -> Charge21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge21.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +123,11 @@ public class Charge21 {
 			type_lazy = () -> ChargeType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgAmtOrRate", required = true)
 	protected AmountRate1Choice chargeAmountOrRate;
 	/**
-	 * Amount or rate of the charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -153,7 +157,7 @@ public class Charge21 {
 	public static final MMMessageAssociationEnd mmChargeAmountOrRate = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Charges.mmObject();
-			componentContext_lazy = () -> Charge21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge21.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgAmtOrRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,10 +169,11 @@ public class Charge21 {
 			type_lazy = () -> AmountRate1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RcptId")
 	protected PartyIdentification2Choice recipientIdentification;
 	/**
-	 * Party entitled to the amount of money resulting from a charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,7 +207,7 @@ public class Charge21 {
 	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Charge21.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge21.mmObject();
 			isDerived = false;
 			xmlTag = "RcptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,9 +222,9 @@ public class Charge21 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Charge21.mmChargeType, Charge21.mmChargeAmountOrRate, Charge21.mmRecipientIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge21.mmChargeType, com.tools20022.repository.msg.Charge21.mmChargeAmountOrRate, com.tools20022.repository.msg.Charge21.mmRecipientIdentification);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Charge21";
 				definition = "Amount of money associated with a service.";
@@ -228,30 +233,30 @@ public class Charge21 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ChrgTp", required = true)
 	public ChargeType1Choice getChargeType() {
 		return chargeType;
 	}
 
-	public void setChargeType(ChargeType1Choice chargeType) {
-		this.chargeType = chargeType;
+	public Charge21 setChargeType(ChargeType1Choice chargeType) {
+		this.chargeType = Objects.requireNonNull(chargeType);
+		return this;
 	}
 
-	@XmlElement(name = "ChrgAmtOrRate", required = true)
 	public AmountRate1Choice getChargeAmountOrRate() {
 		return chargeAmountOrRate;
 	}
 
-	public void setChargeAmountOrRate(AmountRate1Choice chargeAmountOrRate) {
-		this.chargeAmountOrRate = chargeAmountOrRate;
+	public Charge21 setChargeAmountOrRate(AmountRate1Choice chargeAmountOrRate) {
+		this.chargeAmountOrRate = Objects.requireNonNull(chargeAmountOrRate);
+		return this;
 	}
 
-	@XmlElement(name = "RcptId")
-	public PartyIdentification2Choice getRecipientIdentification() {
-		return recipientIdentification;
+	public Optional<PartyIdentification2Choice> getRecipientIdentification() {
+		return recipientIdentification == null ? Optional.empty() : Optional.of(recipientIdentification);
 	}
 
-	public void setRecipientIdentification(PartyIdentification2Choice recipientIdentification) {
+	public Charge21 setRecipientIdentification(PartyIdentification2Choice recipientIdentification) {
 		this.recipientIdentification = recipientIdentification;
+		return this;
 	}
 }

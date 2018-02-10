@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrumentAttributesSD5", propOrder = {"placeAndName", "securityOfInterestMatchingSecurity"})
 public class FinancialInstrumentAttributesSD5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +103,7 @@ public class FinancialInstrumentAttributesSD5 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD5.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,12 +114,11 @@ public class FinancialInstrumentAttributesSD5 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyOfIntrstMtchgScty")
 	protected SecurityIdentification15 securityOfInterestMatchingSecurity;
 	/**
-	 * Matching security identifier for the disbursed security that is used to
-	 * match the customer's SOI (Security of Interest) to the GCA VS Security
-	 * Cross Reference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,6 +134,10 @@ public class FinancialInstrumentAttributesSD5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctyOfIntrstMtchgScty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Disbursed Security SOI Matching Security
+	 * ID, DTCCSynonym: Disbursed Security SOI Matching Security ID Type</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -145,9 +152,10 @@ public class FinancialInstrumentAttributesSD5 {
 	 */
 	public static final MMMessageAttribute mmSecurityOfInterestMatchingSecurity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD5.mmObject();
 			isDerived = false;
 			xmlTag = "SctyOfIntrstMtchgScty";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Disbursed Security SOI Matching Security ID"), new DTCCSynonym(this, "Disbursed Security SOI Matching Security ID Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityOfInterestMatchingSecurity";
 			definition = "Matching security identifier for  the disbursed security that is used to match the customer's SOI (Security of Interest) to the GCA VS Security Cross Reference.";
@@ -160,8 +168,8 @@ public class FinancialInstrumentAttributesSD5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD5.mmPlaceAndName, FinancialInstrumentAttributesSD5.mmSecurityOfInterestMatchingSecurity);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD5.mmPlaceAndName, com.tools20022.repository.msg.FinancialInstrumentAttributesSD5.mmSecurityOfInterestMatchingSecurity);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentAttributesSD5";
 				definition = "Provides additional information regarding corporate action option securities movement security details.";
@@ -170,21 +178,21 @@ public class FinancialInstrumentAttributesSD5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public FinancialInstrumentAttributesSD5 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "SctyOfIntrstMtchgScty")
-	public SecurityIdentification15 getSecurityOfInterestMatchingSecurity() {
-		return securityOfInterestMatchingSecurity;
+	public Optional<SecurityIdentification15> getSecurityOfInterestMatchingSecurity() {
+		return securityOfInterestMatchingSecurity == null ? Optional.empty() : Optional.of(securityOfInterestMatchingSecurity);
 	}
 
-	public void setSecurityOfInterestMatchingSecurity(com.tools20022.repository.msg.SecurityIdentification15 securityOfInterestMatchingSecurity) {
+	public FinancialInstrumentAttributesSD5 setSecurityOfInterestMatchingSecurity(com.tools20022.repository.msg.SecurityIdentification15 securityOfInterestMatchingSecurity) {
 		this.securityOfInterestMatchingSecurity = securityOfInterestMatchingSecurity;
+		return this;
 	}
 }

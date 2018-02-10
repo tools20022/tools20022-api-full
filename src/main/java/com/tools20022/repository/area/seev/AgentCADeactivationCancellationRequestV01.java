@@ -29,6 +29,8 @@ import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversi
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -48,22 +50,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
- * IssuersAgentsCommunicationISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AgtCADeactvtnCxlReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -84,6 +70,22 @@ import javax.xml.bind.annotation.*;
  * AgentCADeactivationCancellationRequestV01.mmDeactivationInstructionDetails}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
+ * IssuersAgentsCommunicationISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AgtCADeactvtnCxlReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
+ * SecuritiesEventsLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.029.001.01}</li>
@@ -99,16 +101,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AgentCADeactivationCancellationRequestV01", propOrder = {"identification", "agentCADeactivationInstructionIdentification", "corporateActionGeneralInformation", "deactivationInstructionDetails"})
 public class AgentCADeactivationCancellationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected DocumentIdentification8 identification;
 	/**
-	 * Identification assigned by the Sender to unambiguously identify the
-	 * cancellation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,10 +152,11 @@ public class AgentCADeactivationCancellationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AgtCADeactvtnInstrId", required = true)
 	protected DocumentIdentification8 agentCADeactivationInstructionIdentification;
 	/**
-	 * Identification of the Agent CA Deactivation Instruction to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,10 +198,11 @@ public class AgentCADeactivationCancellationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
-	 * General information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -238,10 +242,11 @@ public class AgentCADeactivationCancellationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "DeactvtnInstrDtls")
 	protected CorporateActionDeactivationInstruction1 deactivationInstructionDetails;
 	/**
-	 * Details of the deactivation instruction to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -314,43 +319,43 @@ public class AgentCADeactivationCancellationRequestV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(DocumentIdentification8 identification) {
-		this.identification = identification;
+	public AgentCADeactivationCancellationRequestV01 setIdentification(DocumentIdentification8 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "AgtCADeactvtnInstrId", required = true)
 	public DocumentIdentification8 getAgentCADeactivationInstructionIdentification() {
 		return agentCADeactivationInstructionIdentification;
 	}
 
-	public void setAgentCADeactivationInstructionIdentification(DocumentIdentification8 agentCADeactivationInstructionIdentification) {
-		this.agentCADeactivationInstructionIdentification = agentCADeactivationInstructionIdentification;
+	public AgentCADeactivationCancellationRequestV01 setAgentCADeactivationInstructionIdentification(DocumentIdentification8 agentCADeactivationInstructionIdentification) {
+		this.agentCADeactivationInstructionIdentification = Objects.requireNonNull(agentCADeactivationInstructionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
 
-	public void setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
-		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	public AgentCADeactivationCancellationRequestV01 setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = Objects.requireNonNull(corporateActionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "DeactvtnInstrDtls")
-	public CorporateActionDeactivationInstruction1 getDeactivationInstructionDetails() {
-		return deactivationInstructionDetails;
+	public Optional<CorporateActionDeactivationInstruction1> getDeactivationInstructionDetails() {
+		return deactivationInstructionDetails == null ? Optional.empty() : Optional.of(deactivationInstructionDetails);
 	}
 
-	public void setDeactivationInstructionDetails(CorporateActionDeactivationInstruction1 deactivationInstructionDetails) {
+	public AgentCADeactivationCancellationRequestV01 setDeactivationInstructionDetails(CorporateActionDeactivationInstruction1 deactivationInstructionDetails) {
 		this.deactivationInstructionDetails = deactivationInstructionDetails;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.029.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.029.001.01")
 	static public class Document {
 		@XmlElement(name = "AgtCADeactvtnCxlReq", required = true)
 		public AgentCADeactivationCancellationRequestV01 messageBody;

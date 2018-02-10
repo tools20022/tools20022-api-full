@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.BankRoleCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the role of the bank in the transaction.
@@ -31,15 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BankRoleCode#mmBuyersBank
- * BankRoleCode.mmBuyersBank}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BankRoleCode#mmSellersBank
- * BankRoleCode.mmSellersBank}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.BankRoleCode#mmObligorBank
- * BankRoleCode.mmObligorBank}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BankRoleCode#mmRecipientBank
- * BankRoleCode.mmRecipientBank}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BankRoleCode#BuyersBank
+ * BankRoleCode.BuyersBank}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BankRoleCode#SellersBank
+ * BankRoleCode.SellersBank}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BankRoleCode#ObligorBank
+ * BankRoleCode.ObligorBank}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.BankRoleCode#RecipientBank
+ * BankRoleCode.RecipientBank}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the role of the bank in the transaction."</li>
  * </ul>
  */
-public class BankRoleCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BankRoleCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,12 +92,12 @@ public class BankRoleCode {
 	 * definition} = "Bank of the buyer."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBuyersBank = new MMCode() {
+	public static final BankRoleCode BuyersBank = new BankRoleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyersBank";
 			definition = "Bank of the buyer.";
-			owner_lazy = () -> BankRoleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BankRoleCode.mmObject();
 			codeName = "BUYB";
 		}
 	};
@@ -116,12 +121,12 @@ public class BankRoleCode {
 	 * definition} = "Bank of the seller."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSellersBank = new MMCode() {
+	public static final BankRoleCode SellersBank = new BankRoleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellersBank";
 			definition = "Bank of the seller.";
-			owner_lazy = () -> BankRoleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BankRoleCode.mmObject();
 			codeName = "SELB";
 		}
 	};
@@ -145,12 +150,12 @@ public class BankRoleCode {
 	 * definition} = "Obligor bank"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmObligorBank = new MMCode() {
+	public static final BankRoleCode ObligorBank = new BankRoleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligorBank";
 			definition = "Obligor bank";
-			owner_lazy = () -> BankRoleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BankRoleCode.mmObject();
 			codeName = "OBLB";
 		}
 	};
@@ -174,27 +179,60 @@ public class BankRoleCode {
 	 * definition} = "Recipient bank."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRecipientBank = new MMCode() {
+	public static final BankRoleCode RecipientBank = new BankRoleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientBank";
 			definition = "Recipient bank.";
-			owner_lazy = () -> BankRoleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BankRoleCode.mmObject();
 			codeName = "RECB";
 		}
 	};
+	final static private LinkedHashMap<String, BankRoleCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BankRoleCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BankRoleCode";
 				definition = "Specifies the role of the bank in the transaction.";
-				code_lazy = () -> Arrays.asList(BankRoleCode.mmBuyersBank, BankRoleCode.mmSellersBank, BankRoleCode.mmObligorBank, BankRoleCode.mmRecipientBank);
 				derivation_lazy = () -> Arrays.asList(BankRole1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BankRoleCode.BuyersBank, com.tools20022.repository.codeset.BankRoleCode.SellersBank, com.tools20022.repository.codeset.BankRoleCode.ObligorBank,
+						com.tools20022.repository.codeset.BankRoleCode.RecipientBank);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BuyersBank.getCodeName().get(), BuyersBank);
+		codesByName.put(SellersBank.getCodeName().get(), SellersBank);
+		codesByName.put(ObligorBank.getCodeName().get(), ObligorBank);
+		codesByName.put(RecipientBank.getCodeName().get(), RecipientBank);
+	}
+
+	public static BankRoleCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BankRoleCode[] values() {
+		BankRoleCode[] values = new BankRoleCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BankRoleCode> {
+		@Override
+		public BankRoleCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BankRoleCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

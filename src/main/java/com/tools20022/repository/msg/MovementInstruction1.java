@@ -22,9 +22,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.AgentCAMovementCancellationRequestV01;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of the movement instructions."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MovementInstruction1", propOrder = {"movementGeneralInformation", "underlyingSecuritiesMovementDetails", "underlyingCashMovementDetails", "proceedsMovementDetails"})
 public class MovementInstruction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MvmntGnlInf", required = true)
 	protected CorporateActionMovement1 movementGeneralInformation;
 	/**
-	 * Provides general information about the movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -112,7 +115,7 @@ public class MovementInstruction1 {
 	 */
 	public static final MMMessageAssociationEnd mmMovementGeneralInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MovementInstruction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MovementInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "MvmntGnlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +127,11 @@ public class MovementInstruction1 {
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionMovement1.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygSctiesMvmntDtls")
 	protected List<com.tools20022.repository.msg.UnderlyingSecurityMovement1> underlyingSecuritiesMovementDetails;
 	/**
-	 * Provides information about the underlying securities movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +159,7 @@ public class MovementInstruction1 {
 	 */
 	public static final MMMessageAssociationEnd mmUnderlyingSecuritiesMovementDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MovementInstruction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MovementInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygSctiesMvmntDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,10 +170,11 @@ public class MovementInstruction1 {
 			type_lazy = () -> com.tools20022.repository.msg.UnderlyingSecurityMovement1.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygCshMvmntDtls")
 	protected List<com.tools20022.repository.msg.CashMovement2> underlyingCashMovementDetails;
 	/**
-	 * Provides information about the underlying cash movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -195,7 +200,7 @@ public class MovementInstruction1 {
 	 */
 	public static final MMMessageAssociationEnd mmUnderlyingCashMovementDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MovementInstruction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MovementInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygCshMvmntDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,10 +211,11 @@ public class MovementInstruction1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashMovement2.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcdsMvmntDtls")
 	protected List<com.tools20022.repository.msg.ProceedsMovement1> proceedsMovementDetails;
 	/**
-	 * Provides information about the proceeds, ie, outturned resources.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -236,7 +242,7 @@ public class MovementInstruction1 {
 	 */
 	public static final MMMessageAssociationEnd mmProceedsMovementDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MovementInstruction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MovementInstruction1.mmObject();
 			isDerived = false;
 			xmlTag = "PrcdsMvmntDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,10 +257,10 @@ public class MovementInstruction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MovementInstruction1.mmMovementGeneralInformation, MovementInstruction1.mmUnderlyingSecuritiesMovementDetails, MovementInstruction1.mmUnderlyingCashMovementDetails,
-						MovementInstruction1.mmProceedsMovementDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MovementInstruction1.mmMovementGeneralInformation, com.tools20022.repository.msg.MovementInstruction1.mmUnderlyingSecuritiesMovementDetails,
+						com.tools20022.repository.msg.MovementInstruction1.mmUnderlyingCashMovementDetails, com.tools20022.repository.msg.MovementInstruction1.mmProceedsMovementDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAMovementCancellationRequestV01.mmMovementDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MovementInstruction1";
 				definition = "Details of the movement instructions.";
@@ -263,39 +269,39 @@ public class MovementInstruction1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MvmntGnlInf", required = true)
 	public CorporateActionMovement1 getMovementGeneralInformation() {
 		return movementGeneralInformation;
 	}
 
-	public void setMovementGeneralInformation(com.tools20022.repository.msg.CorporateActionMovement1 movementGeneralInformation) {
-		this.movementGeneralInformation = movementGeneralInformation;
+	public MovementInstruction1 setMovementGeneralInformation(com.tools20022.repository.msg.CorporateActionMovement1 movementGeneralInformation) {
+		this.movementGeneralInformation = Objects.requireNonNull(movementGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygSctiesMvmntDtls")
 	public List<UnderlyingSecurityMovement1> getUnderlyingSecuritiesMovementDetails() {
-		return underlyingSecuritiesMovementDetails;
+		return underlyingSecuritiesMovementDetails == null ? underlyingSecuritiesMovementDetails = new ArrayList<>() : underlyingSecuritiesMovementDetails;
 	}
 
-	public void setUnderlyingSecuritiesMovementDetails(List<com.tools20022.repository.msg.UnderlyingSecurityMovement1> underlyingSecuritiesMovementDetails) {
-		this.underlyingSecuritiesMovementDetails = underlyingSecuritiesMovementDetails;
+	public MovementInstruction1 setUnderlyingSecuritiesMovementDetails(List<com.tools20022.repository.msg.UnderlyingSecurityMovement1> underlyingSecuritiesMovementDetails) {
+		this.underlyingSecuritiesMovementDetails = Objects.requireNonNull(underlyingSecuritiesMovementDetails);
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygCshMvmntDtls")
 	public List<CashMovement2> getUnderlyingCashMovementDetails() {
-		return underlyingCashMovementDetails;
+		return underlyingCashMovementDetails == null ? underlyingCashMovementDetails = new ArrayList<>() : underlyingCashMovementDetails;
 	}
 
-	public void setUnderlyingCashMovementDetails(List<com.tools20022.repository.msg.CashMovement2> underlyingCashMovementDetails) {
-		this.underlyingCashMovementDetails = underlyingCashMovementDetails;
+	public MovementInstruction1 setUnderlyingCashMovementDetails(List<com.tools20022.repository.msg.CashMovement2> underlyingCashMovementDetails) {
+		this.underlyingCashMovementDetails = Objects.requireNonNull(underlyingCashMovementDetails);
+		return this;
 	}
 
-	@XmlElement(name = "PrcdsMvmntDtls")
 	public List<ProceedsMovement1> getProceedsMovementDetails() {
-		return proceedsMovementDetails;
+		return proceedsMovementDetails == null ? proceedsMovementDetails = new ArrayList<>() : proceedsMovementDetails;
 	}
 
-	public void setProceedsMovementDetails(List<com.tools20022.repository.msg.ProceedsMovement1> proceedsMovementDetails) {
-		this.proceedsMovementDetails = proceedsMovementDetails;
+	public MovementInstruction1 setProceedsMovementDetails(List<com.tools20022.repository.msg.ProceedsMovement1> proceedsMovementDetails) {
+		this.proceedsMovementDetails = Objects.requireNonNull(proceedsMovementDetails);
+		return this;
 	}
 }

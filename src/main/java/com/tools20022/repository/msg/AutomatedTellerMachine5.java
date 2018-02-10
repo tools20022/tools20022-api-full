@@ -27,9 +27,8 @@ import com.tools20022.repository.codeset.MessageProtection1Code;
 import com.tools20022.repository.codeset.TransactionEnvironment2Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -76,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,15 +98,16 @@ import javax.xml.bind.annotation.XmlType;
  * AutomatedTellerMachine4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AutomatedTellerMachine5", propOrder = {"identification", "additionalIdentification", "sequenceNumber", "baseCurrency", "location", "locationCategory", "equipment", "outOfServiceDevice", "messageProtection"})
 public class AutomatedTellerMachine5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * ATM terminal device identification for the acquirer and the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +148,7 @@ public class AutomatedTellerMachine5 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine5.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,10 +161,11 @@ public class AutomatedTellerMachine5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlId")
 	protected Max35Text additionalIdentification;
 	/**
-	 * ATM terminal device identification for the ATM manager.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,7 +205,7 @@ public class AutomatedTellerMachine5 {
 	 */
 	public static final MMMessageAttribute mmAdditionalIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine5.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,10 +218,11 @@ public class AutomatedTellerMachine5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SeqNb")
 	protected Max35Text sequenceNumber;
 	/**
-	 * ATM terminal device identification for the branch.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -260,7 +262,7 @@ public class AutomatedTellerMachine5 {
 	 */
 	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine5.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,10 +275,11 @@ public class AutomatedTellerMachine5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BaseCcy", required = true)
 	protected ActiveCurrencyCode baseCurrency;
 	/**
-	 * Reference currency of the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -317,7 +320,7 @@ public class AutomatedTellerMachine5 {
 	 */
 	public static final MMMessageAttribute mmBaseCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine5.mmObject();
 			isDerived = false;
 			xmlTag = "BaseCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -330,10 +333,11 @@ public class AutomatedTellerMachine5 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Lctn")
 	protected PostalAddress17 location;
 	/**
-	 * Location of the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -372,7 +376,7 @@ public class AutomatedTellerMachine5 {
 	 */
 	public static final MMMessageAssociationEnd mmLocation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine5.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -386,10 +390,11 @@ public class AutomatedTellerMachine5 {
 			type_lazy = () -> com.tools20022.repository.msg.PostalAddress17.mmObject();
 		}
 	};
+	@XmlElement(name = "LctnCtgy")
 	protected TransactionEnvironment2Code locationCategory;
 	/**
-	 * Indicates the environment of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -430,7 +435,7 @@ public class AutomatedTellerMachine5 {
 	 */
 	public static final MMMessageAttribute mmLocationCategory = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine5.mmObject();
 			isDerived = false;
 			xmlTag = "LctnCtgy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -443,10 +448,11 @@ public class AutomatedTellerMachine5 {
 			simpleType_lazy = () -> TransactionEnvironment2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Eqpmnt")
 	protected ATMEquipment1 equipment;
 	/**
-	 * ATM terminal equipment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -485,7 +491,7 @@ public class AutomatedTellerMachine5 {
 	 */
 	public static final MMMessageAssociationEnd mmEquipment = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine5.mmObject();
 			isDerived = false;
 			xmlTag = "Eqpmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -499,10 +505,11 @@ public class AutomatedTellerMachine5 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMEquipment1.mmObject();
 		}
 	};
+	@XmlElement(name = "OutOfSvcDvc")
 	protected List<ATMDevice2Code> outOfServiceDevice;
 	/**
-	 * List of ATM devices out of service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -535,7 +542,7 @@ public class AutomatedTellerMachine5 {
 	 */
 	public static final MMMessageAttribute mmOutOfServiceDevice = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine5.mmObject();
 			isDerived = false;
 			xmlTag = "OutOfSvcDvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -546,10 +553,11 @@ public class AutomatedTellerMachine5 {
 			simpleType_lazy = () -> ATMDevice2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgPrtcn")
 	protected MessageProtection1Code messageProtection;
 	/**
-	 * Mechanism used to protect the message of the ATM protocol.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -578,7 +586,7 @@ public class AutomatedTellerMachine5 {
 	 */
 	public static final MMMessageAttribute mmMessageProtection = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AutomatedTellerMachine5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AutomatedTellerMachine5.mmObject();
 			isDerived = false;
 			xmlTag = "MsgPrtcn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -593,9 +601,11 @@ public class AutomatedTellerMachine5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AutomatedTellerMachine5.mmIdentification, AutomatedTellerMachine5.mmAdditionalIdentification, AutomatedTellerMachine5.mmSequenceNumber, AutomatedTellerMachine5.mmBaseCurrency,
-						AutomatedTellerMachine5.mmLocation, AutomatedTellerMachine5.mmLocationCategory, AutomatedTellerMachine5.mmEquipment, AutomatedTellerMachine5.mmOutOfServiceDevice, AutomatedTellerMachine5.mmMessageProtection);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AutomatedTellerMachine5.mmIdentification, com.tools20022.repository.msg.AutomatedTellerMachine5.mmAdditionalIdentification,
+						com.tools20022.repository.msg.AutomatedTellerMachine5.mmSequenceNumber, com.tools20022.repository.msg.AutomatedTellerMachine5.mmBaseCurrency, com.tools20022.repository.msg.AutomatedTellerMachine5.mmLocation,
+						com.tools20022.repository.msg.AutomatedTellerMachine5.mmLocationCategory, com.tools20022.repository.msg.AutomatedTellerMachine5.mmEquipment,
+						com.tools20022.repository.msg.AutomatedTellerMachine5.mmOutOfServiceDevice, com.tools20022.repository.msg.AutomatedTellerMachine5.mmMessageProtection);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AutomatedTellerMachine5";
 				definition = "ATM information.";
@@ -606,84 +616,84 @@ public class AutomatedTellerMachine5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public AutomatedTellerMachine5 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlId")
-	public Max35Text getAdditionalIdentification() {
-		return additionalIdentification;
+	public Optional<Max35Text> getAdditionalIdentification() {
+		return additionalIdentification == null ? Optional.empty() : Optional.of(additionalIdentification);
 	}
 
-	public void setAdditionalIdentification(Max35Text additionalIdentification) {
+	public AutomatedTellerMachine5 setAdditionalIdentification(Max35Text additionalIdentification) {
 		this.additionalIdentification = additionalIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "SeqNb")
-	public Max35Text getSequenceNumber() {
-		return sequenceNumber;
+	public Optional<Max35Text> getSequenceNumber() {
+		return sequenceNumber == null ? Optional.empty() : Optional.of(sequenceNumber);
 	}
 
-	public void setSequenceNumber(Max35Text sequenceNumber) {
+	public AutomatedTellerMachine5 setSequenceNumber(Max35Text sequenceNumber) {
 		this.sequenceNumber = sequenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "BaseCcy", required = true)
 	public ActiveCurrencyCode getBaseCurrency() {
 		return baseCurrency;
 	}
 
-	public void setBaseCurrency(ActiveCurrencyCode baseCurrency) {
-		this.baseCurrency = baseCurrency;
+	public AutomatedTellerMachine5 setBaseCurrency(ActiveCurrencyCode baseCurrency) {
+		this.baseCurrency = Objects.requireNonNull(baseCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "Lctn")
-	public PostalAddress17 getLocation() {
-		return location;
+	public Optional<PostalAddress17> getLocation() {
+		return location == null ? Optional.empty() : Optional.of(location);
 	}
 
-	public void setLocation(com.tools20022.repository.msg.PostalAddress17 location) {
+	public AutomatedTellerMachine5 setLocation(com.tools20022.repository.msg.PostalAddress17 location) {
 		this.location = location;
+		return this;
 	}
 
-	@XmlElement(name = "LctnCtgy")
-	public TransactionEnvironment2Code getLocationCategory() {
-		return locationCategory;
+	public Optional<TransactionEnvironment2Code> getLocationCategory() {
+		return locationCategory == null ? Optional.empty() : Optional.of(locationCategory);
 	}
 
-	public void setLocationCategory(TransactionEnvironment2Code locationCategory) {
+	public AutomatedTellerMachine5 setLocationCategory(TransactionEnvironment2Code locationCategory) {
 		this.locationCategory = locationCategory;
+		return this;
 	}
 
-	@XmlElement(name = "Eqpmnt")
-	public ATMEquipment1 getEquipment() {
-		return equipment;
+	public Optional<ATMEquipment1> getEquipment() {
+		return equipment == null ? Optional.empty() : Optional.of(equipment);
 	}
 
-	public void setEquipment(com.tools20022.repository.msg.ATMEquipment1 equipment) {
+	public AutomatedTellerMachine5 setEquipment(com.tools20022.repository.msg.ATMEquipment1 equipment) {
 		this.equipment = equipment;
+		return this;
 	}
 
-	@XmlElement(name = "OutOfSvcDvc")
 	public List<ATMDevice2Code> getOutOfServiceDevice() {
-		return outOfServiceDevice;
+		return outOfServiceDevice == null ? outOfServiceDevice = new ArrayList<>() : outOfServiceDevice;
 	}
 
-	public void setOutOfServiceDevice(List<ATMDevice2Code> outOfServiceDevice) {
-		this.outOfServiceDevice = outOfServiceDevice;
+	public AutomatedTellerMachine5 setOutOfServiceDevice(List<ATMDevice2Code> outOfServiceDevice) {
+		this.outOfServiceDevice = Objects.requireNonNull(outOfServiceDevice);
+		return this;
 	}
 
-	@XmlElement(name = "MsgPrtcn")
-	public MessageProtection1Code getMessageProtection() {
-		return messageProtection;
+	public Optional<MessageProtection1Code> getMessageProtection() {
+		return messageProtection == null ? Optional.empty() : Optional.of(messageProtection);
 	}
 
-	public void setMessageProtection(MessageProtection1Code messageProtection) {
+	public AutomatedTellerMachine5 setMessageProtection(MessageProtection1Code messageProtection) {
 		this.messageProtection = messageProtection;
+		return this;
 	}
 }

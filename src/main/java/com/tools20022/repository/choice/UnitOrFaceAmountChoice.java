@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnitOrFaceAmountChoice", propOrder = {"unit", "faceAmount"})
 public class UnitOrFaceAmountChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Unit", required = true)
 	protected DecimalNumber unit;
 	/**
-	 * Quantity expressed as a number, eg, a number of shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +114,7 @@ public class UnitOrFaceAmountChoice {
 	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
-			componentContext_lazy = () -> UnitOrFaceAmountChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UnitOrFaceAmountChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Unit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,11 +125,11 @@ public class UnitOrFaceAmountChoice {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "FaceAmt", required = true)
 	protected CurrencyAndAmount faceAmount;
 	/**
-	 * Quantity expressed as an amount representing the face amount, ie, the
-	 * principal, of a debt instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +165,7 @@ public class UnitOrFaceAmountChoice {
 	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
-			componentContext_lazy = () -> UnitOrFaceAmountChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.UnitOrFaceAmountChoice.mmObject();
 			isDerived = false;
 			xmlTag = "FaceAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,9 +180,9 @@ public class UnitOrFaceAmountChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnitOrFaceAmountChoice.mmUnit, UnitOrFaceAmountChoice.mmFaceAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnitOrFaceAmountChoice.mmUnit, com.tools20022.repository.choice.UnitOrFaceAmountChoice.mmFaceAmount);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnitOrFaceAmountChoice";
 				definition = "Choice between a unit in decimal number or a face amount in currency and amount.";
@@ -189,21 +191,21 @@ public class UnitOrFaceAmountChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Unit", required = true)
 	public DecimalNumber getUnit() {
 		return unit;
 	}
 
-	public void setUnit(DecimalNumber unit) {
-		this.unit = unit;
+	public UnitOrFaceAmountChoice setUnit(DecimalNumber unit) {
+		this.unit = Objects.requireNonNull(unit);
+		return this;
 	}
 
-	@XmlElement(name = "FaceAmt", required = true)
 	public CurrencyAndAmount getFaceAmount() {
 		return faceAmount;
 	}
 
-	public void setFaceAmount(CurrencyAndAmount faceAmount) {
-		this.faceAmount = faceAmount;
+	public UnitOrFaceAmountChoice setFaceAmount(CurrencyAndAmount faceAmount) {
+		this.faceAmount = Objects.requireNonNull(faceAmount);
+		return this;
 	}
 }

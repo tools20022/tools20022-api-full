@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OpeningConditions1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NDFOpeningFixing1Choice", propOrder = {"openingConditions", "openingConfirmationReference"})
 public class NDFOpeningFixing1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OpngConds", required = true)
 	protected OpeningConditions1 openingConditions;
 	/**
-	 * Used to provide the opening information associated with an NDF trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -101,7 +103,7 @@ public class NDFOpeningFixing1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOpeningConditions = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> NDFOpeningFixing1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.NDFOpeningFixing1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OpngConds";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,11 +115,11 @@ public class NDFOpeningFixing1Choice {
 			type_lazy = () -> OpeningConditions1.mmObject();
 		}
 	};
+	@XmlElement(name = "OpngConfRef", required = true)
 	protected Max35Text openingConfirmationReference;
 	/**
-	 * Reference of the opening confirmation provided on an NDF fixing
-	 * instruction to link back to the original NDF opening confirmation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +148,7 @@ public class NDFOpeningFixing1Choice {
 	 */
 	public static final MMMessageAttribute mmOpeningConfirmationReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NDFOpeningFixing1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.NDFOpeningFixing1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OpngConfRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,8 +163,8 @@ public class NDFOpeningFixing1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NDFOpeningFixing1Choice.mmOpeningConditions, NDFOpeningFixing1Choice.mmOpeningConfirmationReference);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.NDFOpeningFixing1Choice.mmOpeningConditions, com.tools20022.repository.choice.NDFOpeningFixing1Choice.mmOpeningConfirmationReference);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NDFOpeningFixing1Choice";
 				definition = "Choice of providing the opening conditions or fixing conditions for an NDF instruction.";
@@ -171,21 +173,21 @@ public class NDFOpeningFixing1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OpngConds", required = true)
 	public OpeningConditions1 getOpeningConditions() {
 		return openingConditions;
 	}
 
-	public void setOpeningConditions(OpeningConditions1 openingConditions) {
-		this.openingConditions = openingConditions;
+	public NDFOpeningFixing1Choice setOpeningConditions(OpeningConditions1 openingConditions) {
+		this.openingConditions = Objects.requireNonNull(openingConditions);
+		return this;
 	}
 
-	@XmlElement(name = "OpngConfRef", required = true)
 	public Max35Text getOpeningConfirmationReference() {
 		return openingConfirmationReference;
 	}
 
-	public void setOpeningConfirmationReference(Max35Text openingConfirmationReference) {
-		this.openingConfirmationReference = openingConfirmationReference;
+	public NDFOpeningFixing1Choice setOpeningConfirmationReference(Max35Text openingConfirmationReference) {
+		this.openingConfirmationReference = Objects.requireNonNull(openingConfirmationReference);
+		return this;
 	}
 }

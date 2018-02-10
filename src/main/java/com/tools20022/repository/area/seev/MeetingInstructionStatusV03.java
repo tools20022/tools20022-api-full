@@ -32,6 +32,7 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -63,20 +64,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
- * SecuritiesEventsArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "MtgInstrSts"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -101,9 +88,37 @@ import javax.xml.bind.annotation.*;
  * MeetingInstructionStatusV03.mmInstructionTypeStatus}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "MtgInstrSts"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
+ * SecuritiesEventsArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.006.001.03}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStatus1Rule#forMeetingInstructionStatusV03
+ * ConstraintStatus1Rule.forMeetingInstructionStatusV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStatus2Rule#forMeetingInstructionStatusV03
+ * ConstraintStatus2Rule.forMeetingInstructionStatusV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReminder1Rule#forMeetingInstructionStatusV03
+ * ConstraintReminder1Rule.forMeetingInstructionStatusV03}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -128,15 +143,16 @@ import javax.xml.bind.annotation.*;
  * MeetingInstructionStatusV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MeetingInstructionStatusV03", propOrder = {"identification", "instructionType", "meetingReference", "reportingParty", "securityIdentification", "instructionTypeStatus"})
 public class MeetingInstructionStatusV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected MessageIdentification1 identification;
 	/**
-	 * Identifies the meeting instruction status message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,10 +192,11 @@ public class MeetingInstructionStatusV03 {
 			}
 		}
 	};
+	@XmlElement(name = "InstrTp", required = true)
 	protected InstructionType1Choice instructionType;
 	/**
-	 * Type of instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -219,10 +236,11 @@ public class MeetingInstructionStatusV03 {
 			}
 		}
 	};
+	@XmlElement(name = "MtgRef", required = true)
 	protected MeetingReference4 meetingReference;
 	/**
-	 * Series of elements which allow to identify a meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -262,10 +280,11 @@ public class MeetingInstructionStatusV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RptgPty", required = true)
 	protected PartyIdentification9Choice reportingParty;
 	/**
-	 * Party reporting the status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -305,10 +324,11 @@ public class MeetingInstructionStatusV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SctyId", required = true)
 	protected SecurityIdentification11 securityIdentification;
 	/**
-	 * Identifies the securities for which the meeting is organised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -349,10 +369,11 @@ public class MeetingInstructionStatusV03 {
 			}
 		}
 	};
+	@XmlElement(name = "InstrTpSts", required = true)
 	protected InstructionTypeStatus1Choice instructionTypeStatus;
 	/**
-	 * Type of instruction status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -396,6 +417,8 @@ public class MeetingInstructionStatusV03 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatus1Rule.forMeetingInstructionStatusV03, com.tools20022.repository.constraints.ConstraintStatus2Rule.forMeetingInstructionStatusV03,
+						com.tools20022.repository.constraints.ConstraintReminder1Rule.forMeetingInstructionStatusV03);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingInstructionStatusV03";
 				definition = "Scope\r\nThe Receiver of the MeetingInstruction or MeetingInstructionCancellationRequest sends the MeetingInstructionStatus message to the Sender of these messages.\r\nThe message gives the status of a complete message or of one or more specific instructions within the message.\r\nUsage\r\nThe MeetingInstructionStatus message is used for four purposes.\r\nFirst, it provides the status on the processing of a MeetingInstructionCancellationRequest message, for example, whether the request message is rejected or accepted.\r\nSecond, it is used to provide a global processing or rejection status of a MeetingInstruction message.\r\nThird, it is used to provide a detailed processing or rejection status of a MeetingInstruction message, for example, for each instruction in the MeetingInstruction message the processing or rejection status is individually reported by using the InstructionIdentification element. This identification allows the receiver of the status message to link the status confirmation to its original instruction.\r\nThe blocking of securities should be confirmed via an MT 508 (Intra-Position Advice).\r\nFourth, it is used as a reminder to request voting instructions. This is done by indicating NONREF in the Identification element of the InstructionIdentification component and by using the status code NotReceived in the ProcessingStatus.";
@@ -426,61 +449,61 @@ public class MeetingInstructionStatusV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public MessageIdentification1 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(MessageIdentification1 identification) {
-		this.identification = identification;
+	public MeetingInstructionStatusV03 setIdentification(MessageIdentification1 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "InstrTp", required = true)
 	public InstructionType1Choice getInstructionType() {
 		return instructionType;
 	}
 
-	public void setInstructionType(InstructionType1Choice instructionType) {
-		this.instructionType = instructionType;
+	public MeetingInstructionStatusV03 setInstructionType(InstructionType1Choice instructionType) {
+		this.instructionType = Objects.requireNonNull(instructionType);
+		return this;
 	}
 
-	@XmlElement(name = "MtgRef", required = true)
 	public MeetingReference4 getMeetingReference() {
 		return meetingReference;
 	}
 
-	public void setMeetingReference(MeetingReference4 meetingReference) {
-		this.meetingReference = meetingReference;
+	public MeetingInstructionStatusV03 setMeetingReference(MeetingReference4 meetingReference) {
+		this.meetingReference = Objects.requireNonNull(meetingReference);
+		return this;
 	}
 
-	@XmlElement(name = "RptgPty", required = true)
 	public PartyIdentification9Choice getReportingParty() {
 		return reportingParty;
 	}
 
-	public void setReportingParty(PartyIdentification9Choice reportingParty) {
-		this.reportingParty = reportingParty;
+	public MeetingInstructionStatusV03 setReportingParty(PartyIdentification9Choice reportingParty) {
+		this.reportingParty = Objects.requireNonNull(reportingParty);
+		return this;
 	}
 
-	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification11 getSecurityIdentification() {
 		return securityIdentification;
 	}
 
-	public void setSecurityIdentification(SecurityIdentification11 securityIdentification) {
-		this.securityIdentification = securityIdentification;
+	public MeetingInstructionStatusV03 setSecurityIdentification(SecurityIdentification11 securityIdentification) {
+		this.securityIdentification = Objects.requireNonNull(securityIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "InstrTpSts", required = true)
 	public InstructionTypeStatus1Choice getInstructionTypeStatus() {
 		return instructionTypeStatus;
 	}
 
-	public void setInstructionTypeStatus(InstructionTypeStatus1Choice instructionTypeStatus) {
-		this.instructionTypeStatus = instructionTypeStatus;
+	public MeetingInstructionStatusV03 setInstructionTypeStatus(InstructionTypeStatus1Choice instructionTypeStatus) {
+		this.instructionTypeStatus = Objects.requireNonNull(instructionTypeStatus);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.006.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.006.001.03")
 	static public class Document {
 		@XmlElement(name = "MtgInstrSts", required = true)
 		public MeetingInstructionStatusV03 messageBody;

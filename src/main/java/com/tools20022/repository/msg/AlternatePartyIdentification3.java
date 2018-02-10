@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -33,6 +34,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistence35to30TextFieldRule#forAlternatePartyIdentification3
+ * ConstraintCoexistence35to30TextFieldRule.forAlternatePartyIdentification3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -81,15 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AlternatePartyIdentification3", propOrder = {"identificationType", "country", "alternateIdentification"})
 public class AlternatePartyIdentification3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IdTp", required = true)
 	protected IdentificationType5Choice identificationType;
 	/**
-	 * Specifies the type of alternate identification of the party identified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,6 +120,9 @@ public class AlternatePartyIdentification3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IdTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE/[4!c[4c]]/4!c</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -124,9 +138,10 @@ public class AlternatePartyIdentification3 {
 	public static final MMMessageAssociationEnd mmIdentificationType = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> AlternatePartyIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "IdTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE/[4!c[4c]]/4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationType";
 			definition = "Specifies the type of alternate identification of the party identified.";
@@ -136,12 +151,11 @@ public class AlternatePartyIdentification3 {
 			type_lazy = () -> IdentificationType5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Ctry", required = true)
 	protected CountryCode country;
 	/**
-	 * Country in which a person resides (the place of a person's home). In the
-	 * case of a company, it is the country from which the affairs of that
-	 * company are directed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,6 +175,9 @@ public class AlternatePartyIdentification3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Ctry"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE/[4!c[4c]]/4!c/2!a</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -176,9 +193,10 @@ public class AlternatePartyIdentification3 {
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> AlternatePartyIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE/[4!c[4c]]/4!c/2!a"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country in which a person resides (the place of a person's home). In the case of a company, it is the country from which the affairs of that company are directed.";
@@ -187,10 +205,11 @@ public class AlternatePartyIdentification3 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "AltrnId", required = true)
 	protected RestrictedFINXMax30Text alternateIdentification;
 	/**
-	 * Alternate identification for a party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,6 +230,9 @@ public class AlternatePartyIdentification3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AltrnId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE/[4!c[4c]]/4!c/2!a/30x</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -224,9 +246,10 @@ public class AlternatePartyIdentification3 {
 	public static final MMMessageAttribute mmAlternateIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> AlternatePartyIdentification3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification3.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE/[4!c[4c]]/4!c/2!a/30x"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Alternate identification for a party.";
@@ -239,9 +262,11 @@ public class AlternatePartyIdentification3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AlternatePartyIdentification3.mmIdentificationType, AlternatePartyIdentification3.mmCountry, AlternatePartyIdentification3.mmAlternateIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternatePartyIdentification3.mmIdentificationType, com.tools20022.repository.msg.AlternatePartyIdentification3.mmCountry,
+						com.tools20022.repository.msg.AlternatePartyIdentification3.mmAlternateIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistence35to30TextFieldRule.forAlternatePartyIdentification3);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -257,30 +282,30 @@ public class AlternatePartyIdentification3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IdTp", required = true)
 	public IdentificationType5Choice getIdentificationType() {
 		return identificationType;
 	}
 
-	public void setIdentificationType(IdentificationType5Choice identificationType) {
-		this.identificationType = identificationType;
+	public AlternatePartyIdentification3 setIdentificationType(IdentificationType5Choice identificationType) {
+		this.identificationType = Objects.requireNonNull(identificationType);
+		return this;
 	}
 
-	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
 
-	public void setCountry(CountryCode country) {
-		this.country = country;
+	public AlternatePartyIdentification3 setCountry(CountryCode country) {
+		this.country = Objects.requireNonNull(country);
+		return this;
 	}
 
-	@XmlElement(name = "AltrnId", required = true)
 	public RestrictedFINXMax30Text getAlternateIdentification() {
 		return alternateIdentification;
 	}
 
-	public void setAlternateIdentification(RestrictedFINXMax30Text alternateIdentification) {
-		this.alternateIdentification = alternateIdentification;
+	public AlternatePartyIdentification3 setAlternateIdentification(RestrictedFINXMax30Text alternateIdentification) {
+		this.alternateIdentification = Objects.requireNonNull(alternateIdentification);
+		return this;
 	}
 }

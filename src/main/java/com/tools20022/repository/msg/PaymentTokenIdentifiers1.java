@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identifier of a token provider requestor."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentTokenIdentifiers1", propOrder = {"providerIdentification", "requestorIdentification"})
 public class PaymentTokenIdentifiers1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrvdrId", required = true)
 	protected Max35Text providerIdentification;
 	/**
-	 * Identifier of the token provider.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -96,7 +98,7 @@ public class PaymentTokenIdentifiers1 {
 	 */
 	public static final MMMessageAttribute mmProviderIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentTokenIdentifiers1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTokenIdentifiers1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvdrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -107,10 +109,11 @@ public class PaymentTokenIdentifiers1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RqstrId", required = true)
 	protected Max35Text requestorIdentification;
 	/**
-	 * Identifier of the token requestor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,7 +140,7 @@ public class PaymentTokenIdentifiers1 {
 	 */
 	public static final MMMessageAttribute mmRequestorIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentTokenIdentifiers1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTokenIdentifiers1.mmObject();
 			isDerived = false;
 			xmlTag = "RqstrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,8 +155,8 @@ public class PaymentTokenIdentifiers1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentTokenIdentifiers1.mmProviderIdentification, PaymentTokenIdentifiers1.mmRequestorIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTokenIdentifiers1.mmProviderIdentification, com.tools20022.repository.msg.PaymentTokenIdentifiers1.mmRequestorIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentTokenIdentifiers1";
 				definition = "Identifier of a token provider requestor.";
@@ -162,21 +165,21 @@ public class PaymentTokenIdentifiers1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrvdrId", required = true)
 	public Max35Text getProviderIdentification() {
 		return providerIdentification;
 	}
 
-	public void setProviderIdentification(Max35Text providerIdentification) {
-		this.providerIdentification = providerIdentification;
+	public PaymentTokenIdentifiers1 setProviderIdentification(Max35Text providerIdentification) {
+		this.providerIdentification = Objects.requireNonNull(providerIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RqstrId", required = true)
 	public Max35Text getRequestorIdentification() {
 		return requestorIdentification;
 	}
 
-	public void setRequestorIdentification(Max35Text requestorIdentification) {
-		this.requestorIdentification = requestorIdentification;
+	public PaymentTokenIdentifiers1 setRequestorIdentification(Max35Text requestorIdentification) {
+		this.requestorIdentification = Objects.requireNonNull(requestorIdentification);
+		return this;
 	}
 }

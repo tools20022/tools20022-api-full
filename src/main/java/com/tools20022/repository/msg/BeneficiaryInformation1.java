@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintERISAEligibilityRule#forBeneficiaryInformation1
+ * ConstraintERISAEligibilityRule.forBeneficiaryInformation1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about the beneficial owner."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "BeneficiaryInformation1", propOrder = {"beneficiaryIdentification", "ERISAEligibility", "ERISARate", "benefitPlanDeclarationIndicator", "noChangeToBeneficiaryDetailsIndicator"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "BeneficiaryInformation1", propOrder = {"beneficiaryIdentification", "eRISAEligibility", "eRISARate", "benefitPlanDeclarationIndicator", "noChangeToBeneficiaryDetailsIndicator"})
 public class BeneficiaryInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BnfcryId")
 	protected IndividualPerson15 beneficiaryIdentification;
 	/**
-	 * Identification of the beneficial owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -117,7 +128,7 @@ public class BeneficiaryInformation1 {
 	public static final MMMessageAssociationEnd mmBeneficiaryIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
-			componentContext_lazy = () -> BeneficiaryInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficiaryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +140,11 @@ public class BeneficiaryInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson15.mmObject();
 		}
 	};
+	@XmlElement(name = "ERISAElgblty", required = true)
 	protected ERISAEligibility1Code eRISAEligibility;
 	/**
-	 * Eligibility to federal Employee Retirement Income Security Act.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +179,7 @@ public class BeneficiaryInformation1 {
 	public static final MMMessageAttribute mmERISAEligibility = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmERISAEligibility;
-			componentContext_lazy = () -> BeneficiaryInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficiaryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ERISAElgblty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +190,11 @@ public class BeneficiaryInformation1 {
 			simpleType_lazy = () -> ERISAEligibility1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ERISARate")
 	protected PercentageRate eRISARate;
 	/**
-	 * Federal Employee Retirement Income Security Act (ERISA) rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -216,7 +229,7 @@ public class BeneficiaryInformation1 {
 	public static final MMMessageAttribute mmERISARate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmERISARate;
-			componentContext_lazy = () -> BeneficiaryInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficiaryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ERISARate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,10 +240,11 @@ public class BeneficiaryInformation1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "BnftPlanDclrtnInd", required = true)
 	protected YesNoIndicator benefitPlanDeclarationIndicator;
 	/**
-	 * Indicates whether the investor is a benefit plan investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -265,7 +279,7 @@ public class BeneficiaryInformation1 {
 	public static final MMMessageAttribute mmBenefitPlanDeclarationIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BeneficialOwner.mmBenefitPlanDeclarationIndicator;
-			componentContext_lazy = () -> BeneficiaryInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficiaryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "BnftPlanDclrtnInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,12 +290,11 @@ public class BeneficiaryInformation1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NoChngToBnfcryDtlsInd", required = true)
 	protected YesNoIndicator noChangeToBeneficiaryDetailsIndicator;
 	/**
-	 * Indicates that there has been no change to the beneficiary's details,
-	 * such as domicile, investor status, etc, as represented in the initial
-	 * subscription document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -311,7 +324,7 @@ public class BeneficiaryInformation1 {
 	 */
 	public static final MMMessageAttribute mmNoChangeToBeneficiaryDetailsIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BeneficiaryInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BeneficiaryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "NoChngToBnfcryDtlsInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -326,10 +339,12 @@ public class BeneficiaryInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BeneficiaryInformation1.mmBeneficiaryIdentification, BeneficiaryInformation1.mmERISAEligibility, BeneficiaryInformation1.mmERISARate,
-						BeneficiaryInformation1.mmBenefitPlanDeclarationIndicator, BeneficiaryInformation1.mmNoChangeToBeneficiaryDetailsIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BeneficiaryInformation1.mmBeneficiaryIdentification, com.tools20022.repository.msg.BeneficiaryInformation1.mmERISAEligibility,
+						com.tools20022.repository.msg.BeneficiaryInformation1.mmERISARate, com.tools20022.repository.msg.BeneficiaryInformation1.mmBenefitPlanDeclarationIndicator,
+						com.tools20022.repository.msg.BeneficiaryInformation1.mmNoChangeToBeneficiaryDetailsIndicator);
 				trace_lazy = () -> BeneficialOwner.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintERISAEligibilityRule.forBeneficiaryInformation1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BeneficiaryInformation1";
 				definition = "Information about the beneficial owner.";
@@ -338,48 +353,48 @@ public class BeneficiaryInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BnfcryId")
-	public IndividualPerson15 getBeneficiaryIdentification() {
-		return beneficiaryIdentification;
+	public Optional<IndividualPerson15> getBeneficiaryIdentification() {
+		return beneficiaryIdentification == null ? Optional.empty() : Optional.of(beneficiaryIdentification);
 	}
 
-	public void setBeneficiaryIdentification(com.tools20022.repository.msg.IndividualPerson15 beneficiaryIdentification) {
+	public BeneficiaryInformation1 setBeneficiaryIdentification(com.tools20022.repository.msg.IndividualPerson15 beneficiaryIdentification) {
 		this.beneficiaryIdentification = beneficiaryIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ERISAElgblty", required = true)
 	public ERISAEligibility1Code getERISAEligibility() {
 		return eRISAEligibility;
 	}
 
-	public void setERISAEligibility(ERISAEligibility1Code eRISAEligibility) {
-		this.eRISAEligibility = eRISAEligibility;
+	public BeneficiaryInformation1 setERISAEligibility(ERISAEligibility1Code eRISAEligibility) {
+		this.eRISAEligibility = Objects.requireNonNull(eRISAEligibility);
+		return this;
 	}
 
-	@XmlElement(name = "ERISARate")
-	public PercentageRate getERISARate() {
-		return eRISARate;
+	public Optional<PercentageRate> getERISARate() {
+		return eRISARate == null ? Optional.empty() : Optional.of(eRISARate);
 	}
 
-	public void setERISARate(PercentageRate eRISARate) {
+	public BeneficiaryInformation1 setERISARate(PercentageRate eRISARate) {
 		this.eRISARate = eRISARate;
+		return this;
 	}
 
-	@XmlElement(name = "BnftPlanDclrtnInd", required = true)
 	public YesNoIndicator getBenefitPlanDeclarationIndicator() {
 		return benefitPlanDeclarationIndicator;
 	}
 
-	public void setBenefitPlanDeclarationIndicator(YesNoIndicator benefitPlanDeclarationIndicator) {
-		this.benefitPlanDeclarationIndicator = benefitPlanDeclarationIndicator;
+	public BeneficiaryInformation1 setBenefitPlanDeclarationIndicator(YesNoIndicator benefitPlanDeclarationIndicator) {
+		this.benefitPlanDeclarationIndicator = Objects.requireNonNull(benefitPlanDeclarationIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "NoChngToBnfcryDtlsInd", required = true)
 	public YesNoIndicator getNoChangeToBeneficiaryDetailsIndicator() {
 		return noChangeToBeneficiaryDetailsIndicator;
 	}
 
-	public void setNoChangeToBeneficiaryDetailsIndicator(YesNoIndicator noChangeToBeneficiaryDetailsIndicator) {
-		this.noChangeToBeneficiaryDetailsIndicator = noChangeToBeneficiaryDetailsIndicator;
+	public BeneficiaryInformation1 setNoChangeToBeneficiaryDetailsIndicator(YesNoIndicator noChangeToBeneficiaryDetailsIndicator) {
+		this.noChangeToBeneficiaryDetailsIndicator = Objects.requireNonNull(noChangeToBeneficiaryDetailsIndicator);
+		return this;
 	}
 }

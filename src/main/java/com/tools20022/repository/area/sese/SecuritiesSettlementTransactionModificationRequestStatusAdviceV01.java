@@ -27,9 +27,8 @@ import com.tools20022.repository.choice.PartyIdentification36Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -58,20 +57,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
- * SecuritiesSettlementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesSttlmTxModReqStsAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -106,6 +91,20 @@ import javax.xml.bind.annotation.*;
  * mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesSttlmTxModReqStsAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
+ * SecuritiesSettlementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.039.001.01}</li>
@@ -129,17 +128,17 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesSettlementTransactionModificationRequestStatusAdviceV01", propOrder = {"modificationRequestReference", "accountOwner", "safekeepingAccount", "transactionIdentification", "modificationProcessingStatus",
 		"transactionDetails", "supplementaryData"})
 public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ModReqRef", required = true)
 	protected Identification1 modificationRequestReference;
 	/**
-	 * Reference to the unambiguous identification of the cancellation request
-	 * as per the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,10 +189,11 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification36Choice accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -243,10 +243,11 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SfkpgAcct", required = true)
 	protected SecuritiesAccount13 safekeepingAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -296,10 +297,11 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "TxId")
 	protected TransactionIdentifications18 transactionIdentification;
 	/**
-	 * Provides unambiguous transaction identification information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -350,10 +352,11 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "ModPrcgSts", required = true)
 	protected ModificationProcessingStatus2Choice modificationProcessingStatus;
 	/**
-	 * Provides details on the processing status of the request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -404,10 +407,11 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "TxDtls")
 	protected TransactionDetails45 transactionDetails;
 	/**
-	 * Identifies the details of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -457,11 +461,11 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -549,70 +553,70 @@ public class SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ModReqRef", required = true)
 	public Identification1 getModificationRequestReference() {
 		return modificationRequestReference;
 	}
 
-	public void setModificationRequestReference(Identification1 modificationRequestReference) {
-		this.modificationRequestReference = modificationRequestReference;
+	public SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 setModificationRequestReference(Identification1 modificationRequestReference) {
+		this.modificationRequestReference = Objects.requireNonNull(modificationRequestReference);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification36Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification36Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification36Choice accountOwner) {
+	public SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 setAccountOwner(PartyIdentification36Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount13 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(SecuritiesAccount13 safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 setSafekeepingAccount(SecuritiesAccount13 safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "TxId")
-	public TransactionIdentifications18 getTransactionIdentification() {
-		return transactionIdentification;
+	public Optional<TransactionIdentifications18> getTransactionIdentification() {
+		return transactionIdentification == null ? Optional.empty() : Optional.of(transactionIdentification);
 	}
 
-	public void setTransactionIdentification(TransactionIdentifications18 transactionIdentification) {
+	public SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 setTransactionIdentification(TransactionIdentifications18 transactionIdentification) {
 		this.transactionIdentification = transactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ModPrcgSts", required = true)
 	public ModificationProcessingStatus2Choice getModificationProcessingStatus() {
 		return modificationProcessingStatus;
 	}
 
-	public void setModificationProcessingStatus(ModificationProcessingStatus2Choice modificationProcessingStatus) {
-		this.modificationProcessingStatus = modificationProcessingStatus;
+	public SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 setModificationProcessingStatus(ModificationProcessingStatus2Choice modificationProcessingStatus) {
+		this.modificationProcessingStatus = Objects.requireNonNull(modificationProcessingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "TxDtls")
-	public TransactionDetails45 getTransactionDetails() {
-		return transactionDetails;
+	public Optional<TransactionDetails45> getTransactionDetails() {
+		return transactionDetails == null ? Optional.empty() : Optional.of(transactionDetails);
 	}
 
-	public void setTransactionDetails(TransactionDetails45 transactionDetails) {
+	public SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 setTransactionDetails(TransactionDetails45 transactionDetails) {
 		this.transactionDetails = transactionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.039.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.039.001.01")
 	static public class Document {
 		@XmlElement(name = "SctiesSttlmTxModReqStsAdvc", required = true)
 		public SecuritiesSettlementTransactionModificationRequestStatusAdviceV01 messageBody;

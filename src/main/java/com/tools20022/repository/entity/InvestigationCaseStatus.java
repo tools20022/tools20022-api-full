@@ -26,6 +26,8 @@ import com.tools20022.repository.msg.CaseStatus2;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Status of an investigation case.
@@ -37,6 +39,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -48,8 +52,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestigationCaseStatus.mmInvestigationCase}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestigationCase#mmStatus
+ * InvestigationCase.mmStatus}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -61,18 +71,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InvestigationCase#mmStatus
- * InvestigationCase.mmStatus}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,8 +90,8 @@ public class InvestigationCaseStatus extends Status {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CaseStatusCode caseStatus;
 	/**
-	 * Status of the case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,8 +127,8 @@ public class InvestigationCaseStatus extends Status {
 	public static final MMBusinessAttribute mmCaseStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CaseStatus.mmCaseStatus, CaseStatus2.mmCaseStatus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCaseStatus.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCaseStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CaseStatus";
 			definition = "Status of the case.";
@@ -145,8 +147,8 @@ public class InvestigationCaseStatus extends Status {
 	};
 	protected InvestigationCase investigationCase;
 	/**
-	 * Case for which a status is reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,8 +181,8 @@ public class InvestigationCaseStatus extends Status {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestigationCase = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCaseStatus.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCaseStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestigationCase";
 			definition = "Case for which a status is reported.";
@@ -195,7 +197,7 @@ public class InvestigationCaseStatus extends Status {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestigationCaseStatus";
 				definition = "Status of an investigation case.";
@@ -217,15 +219,17 @@ public class InvestigationCaseStatus extends Status {
 		return caseStatus;
 	}
 
-	public void setCaseStatus(CaseStatusCode caseStatus) {
-		this.caseStatus = caseStatus;
+	public InvestigationCaseStatus setCaseStatus(CaseStatusCode caseStatus) {
+		this.caseStatus = Objects.requireNonNull(caseStatus);
+		return this;
 	}
 
-	public InvestigationCase getInvestigationCase() {
-		return investigationCase;
+	public Optional<InvestigationCase> getInvestigationCase() {
+		return investigationCase == null ? Optional.empty() : Optional.of(investigationCase);
 	}
 
-	public void setInvestigationCase(com.tools20022.repository.entity.InvestigationCase investigationCase) {
+	public InvestigationCaseStatus setInvestigationCase(com.tools20022.repository.entity.InvestigationCase investigationCase) {
 		this.investigationCase = investigationCase;
+		return this;
 	}
 }

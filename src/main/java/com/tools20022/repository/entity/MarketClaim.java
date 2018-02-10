@@ -25,6 +25,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Processes that reallocate corporate action proceeds to the entitled party and
@@ -63,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,8 +84,8 @@ public class MarketClaim {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyAndAmount marketClaimAmount;
 	/**
-	 * Amount of money resulting from a market claim.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,8 +197,8 @@ public class MarketClaim {
 					CorporateActionAmounts1.mmMarketClaimAmount, CorporateActionAmounts29.mmMarketClaimAmount, CorporateActionAmounts28.mmMarketClaimAmount, CorporateActionAmounts33.mmMarketClaimAmount,
 					CorporateActionAmounts35.mmMarketClaimAmount, CorporateActionAmounts37.mmMarketClaimAmount, CorporateActionAmounts38.mmMarketClaimAmount, CorporateActionAmounts39.mmMarketClaimAmount,
 					CorporateActionAmounts40.mmMarketClaimAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.MarketClaim.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.MarketClaim.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketClaimAmount";
 			definition = "Amount of money resulting from a market claim.";
@@ -215,9 +217,8 @@ public class MarketClaim {
 	};
 	protected ISODateTime marketClaimTrackingEndDate;
 	/**
-	 * Date by which the depository stops monitoring activities of the event,
-	 * for instance, accounting and tracking activities for due bills end.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -281,8 +282,8 @@ public class MarketClaim {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmMarketClaimTrackingEndDate, CorporateActionDate13.mmMarketClaimTrackingEndDate, CorporateActionDate14.mmMarketClaimTrackingEndDate,
 					CorporateActionDate21.mmMarketClaimTrackingEndDate, CorporateActionDate22.mmMarketClaimTrackingEndDate, CorporateActionDate25.mmMarketClaimTrackingEndDate, CorporateActionDate27.mmMarketClaimTrackingEndDate,
 					CorporateActionDate28.mmMarketClaimTrackingEndDate, CorporateActionDate44.mmMarketClaimTrackingEndDate, CorporateActionDate58.mmMarketClaimTrackingEndDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.MarketClaim.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.MarketClaim.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketClaimTrackingEndDate";
 			definition = "Date by which the depository stops monitoring activities of the event, for instance, accounting and tracking activities for due bills end.";
@@ -301,8 +302,8 @@ public class MarketClaim {
 	};
 	protected CorporateActionEvent relatedCorporateEvent;
 	/**
-	 * Corporate event for which market claim information is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -336,8 +337,8 @@ public class MarketClaim {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCorporateEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.MarketClaim.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.MarketClaim.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCorporateEvent";
 			definition = "Corporate event for which market claim information is provided.";
@@ -352,7 +353,7 @@ public class MarketClaim {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketClaim";
 				definition = "Processes that reallocate corporate action proceeds to the entitled party and that compensate financial penalties or indirect costs due to late delivery or payment.";
@@ -373,23 +374,26 @@ public class MarketClaim {
 		return marketClaimAmount;
 	}
 
-	public void setMarketClaimAmount(CurrencyAndAmount marketClaimAmount) {
-		this.marketClaimAmount = marketClaimAmount;
+	public MarketClaim setMarketClaimAmount(CurrencyAndAmount marketClaimAmount) {
+		this.marketClaimAmount = Objects.requireNonNull(marketClaimAmount);
+		return this;
 	}
 
 	public ISODateTime getMarketClaimTrackingEndDate() {
 		return marketClaimTrackingEndDate;
 	}
 
-	public void setMarketClaimTrackingEndDate(ISODateTime marketClaimTrackingEndDate) {
-		this.marketClaimTrackingEndDate = marketClaimTrackingEndDate;
+	public MarketClaim setMarketClaimTrackingEndDate(ISODateTime marketClaimTrackingEndDate) {
+		this.marketClaimTrackingEndDate = Objects.requireNonNull(marketClaimTrackingEndDate);
+		return this;
 	}
 
-	public CorporateActionEvent getRelatedCorporateEvent() {
-		return relatedCorporateEvent;
+	public Optional<CorporateActionEvent> getRelatedCorporateEvent() {
+		return relatedCorporateEvent == null ? Optional.empty() : Optional.of(relatedCorporateEvent);
 	}
 
-	public void setRelatedCorporateEvent(com.tools20022.repository.entity.CorporateActionEvent relatedCorporateEvent) {
+	public MarketClaim setRelatedCorporateEvent(com.tools20022.repository.entity.CorporateActionEvent relatedCorporateEvent) {
 		this.relatedCorporateEvent = relatedCorporateEvent;
+		return this;
 	}
 }

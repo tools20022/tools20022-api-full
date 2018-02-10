@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * TMSActionIdentification1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TMSActionIdentification2", propOrder = {"actionType", "dataSetIdentification"})
 public class TMSActionIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ActnTp", required = true)
 	protected TerminalManagementAction1Code actionType;
 	/**
-	 * Types of terminal management action performed by a point of interaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,7 +136,7 @@ public class TMSActionIdentification2 {
 	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmType;
-			componentContext_lazy = () -> TMSActionIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSActionIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "ActnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -145,10 +148,11 @@ public class TMSActionIdentification2 {
 			simpleType_lazy = () -> TerminalManagementAction1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DataSetId")
 	protected DataSetIdentification3 dataSetIdentification;
 	/**
-	 * Data set on which the action has been performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -182,7 +186,7 @@ public class TMSActionIdentification2 {
 	 */
 	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TMSActionIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TMSActionIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,9 +203,9 @@ public class TMSActionIdentification2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TMSActionIdentification2.mmActionType, TMSActionIdentification2.mmDataSetIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TMSActionIdentification2.mmActionType, com.tools20022.repository.msg.TMSActionIdentification2.mmDataSetIdentification);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TMSActionIdentification2";
 				definition = "Result of an individual terminal management action by the point of interaction.";
@@ -212,21 +216,21 @@ public class TMSActionIdentification2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ActnTp", required = true)
 	public TerminalManagementAction1Code getActionType() {
 		return actionType;
 	}
 
-	public void setActionType(TerminalManagementAction1Code actionType) {
-		this.actionType = actionType;
+	public TMSActionIdentification2 setActionType(TerminalManagementAction1Code actionType) {
+		this.actionType = Objects.requireNonNull(actionType);
+		return this;
 	}
 
-	@XmlElement(name = "DataSetId")
-	public DataSetIdentification3 getDataSetIdentification() {
-		return dataSetIdentification;
+	public Optional<DataSetIdentification3> getDataSetIdentification() {
+		return dataSetIdentification == null ? Optional.empty() : Optional.of(dataSetIdentification);
 	}
 
-	public void setDataSetIdentification(com.tools20022.repository.msg.DataSetIdentification3 dataSetIdentification) {
+	public TMSActionIdentification2 setDataSetIdentification(com.tools20022.repository.msg.DataSetIdentification3 dataSetIdentification) {
 		this.dataSetIdentification = dataSetIdentification;
+		return this;
 	}
 }

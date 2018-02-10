@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Set of elements providing the identification of a message."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MessageIdentification6", propOrder = {"messageNameIdentification", "messageIdentification"})
 public class MessageIdentification6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgNmId")
 	protected Max35Text messageNameIdentification;
 	/**
-	 * Specifies the message name identifier of the referenced message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -97,7 +99,7 @@ public class MessageIdentification6 {
 	 */
 	public static final MMMessageAttribute mmMessageNameIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MessageIdentification6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,10 +110,11 @@ public class MessageIdentification6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgId")
 	protected Max35Text messageIdentification;
 	/**
-	 * Specifies the identification of the referenced message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -138,7 +141,7 @@ public class MessageIdentification6 {
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MessageIdentification6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MessageIdentification6.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,8 +156,8 @@ public class MessageIdentification6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MessageIdentification6.mmMessageNameIdentification, MessageIdentification6.mmMessageIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageIdentification6.mmMessageNameIdentification, com.tools20022.repository.msg.MessageIdentification6.mmMessageIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MessageIdentification6";
 				definition = "Set of elements providing the identification of a message.";
@@ -163,21 +166,21 @@ public class MessageIdentification6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgNmId")
-	public Max35Text getMessageNameIdentification() {
-		return messageNameIdentification;
+	public Optional<Max35Text> getMessageNameIdentification() {
+		return messageNameIdentification == null ? Optional.empty() : Optional.of(messageNameIdentification);
 	}
 
-	public void setMessageNameIdentification(Max35Text messageNameIdentification) {
+	public MessageIdentification6 setMessageNameIdentification(Max35Text messageNameIdentification) {
 		this.messageNameIdentification = messageNameIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "MsgId")
-	public Max35Text getMessageIdentification() {
-		return messageIdentification;
+	public Optional<Max35Text> getMessageIdentification() {
+		return messageIdentification == null ? Optional.empty() : Optional.of(messageIdentification);
 	}
 
-	public void setMessageIdentification(Max35Text messageIdentification) {
+	public MessageIdentification6 setMessageIdentification(Max35Text messageIdentification) {
 		this.messageIdentification = messageIdentification;
+		return this;
 	}
 }

@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Status6Code;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +51,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStatusReasonRule#forPartyStatus1
+ * ConstraintStatusReasonRule.forPartyStatus1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPartyPresenceRule#forPartyStatus1
+ * ConstraintPartyPresenceRule.forPartyStatus1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Business status of the party for processing in the system. "</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyStatus1", propOrder = {"status", "statusReason", "systemPartyIdentification"})
 public class PartyStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected Status6Code status;
 	/**
-	 * Status of the party maintenance instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +109,7 @@ public class PartyStatus1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +120,11 @@ public class PartyStatus1 {
 			simpleType_lazy = () -> Status6Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StsRsn")
 	protected List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason;
 	/**
-	 * Specifies the underlying reason for the status of an object.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -139,7 +151,7 @@ public class PartyStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,10 +162,11 @@ public class PartyStatus1 {
 			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation10.mmObject();
 		}
 	};
+	@XmlElement(name = "SysPtyId")
 	protected SystemPartyIdentification3 systemPartyIdentification;
 	/**
-	 * Specifications of a party defined within a system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -179,7 +192,7 @@ public class PartyStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmSystemPartyIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "SysPtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,8 +208,10 @@ public class PartyStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyStatus1.mmStatus, PartyStatus1.mmStatusReason, PartyStatus1.mmSystemPartyIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyStatus1.mmStatus, com.tools20022.repository.msg.PartyStatus1.mmStatusReason,
+						com.tools20022.repository.msg.PartyStatus1.mmSystemPartyIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusReasonRule.forPartyStatus1, com.tools20022.repository.constraints.ConstraintPartyPresenceRule.forPartyStatus1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyStatus1";
 				definition = "Business status of the party for processing in the system. ";
@@ -205,30 +220,30 @@ public class PartyStatus1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public Status6Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(Status6Code status) {
-		this.status = status;
+	public PartyStatus1 setStatus(Status6Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "StsRsn")
 	public List<StatusReasonInformation10> getStatusReason() {
-		return statusReason;
+		return statusReason == null ? statusReason = new ArrayList<>() : statusReason;
 	}
 
-	public void setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason) {
-		this.statusReason = statusReason;
+	public PartyStatus1 setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason) {
+		this.statusReason = Objects.requireNonNull(statusReason);
+		return this;
 	}
 
-	@XmlElement(name = "SysPtyId")
-	public SystemPartyIdentification3 getSystemPartyIdentification() {
-		return systemPartyIdentification;
+	public Optional<SystemPartyIdentification3> getSystemPartyIdentification() {
+		return systemPartyIdentification == null ? Optional.empty() : Optional.of(systemPartyIdentification);
 	}
 
-	public void setSystemPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 systemPartyIdentification) {
+	public PartyStatus1 setSystemPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 systemPartyIdentification) {
 		this.systemPartyIdentification = systemPartyIdentification;
+		return this;
 	}
 }

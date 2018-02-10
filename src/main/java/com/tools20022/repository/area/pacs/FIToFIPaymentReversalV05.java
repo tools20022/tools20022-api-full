@@ -28,9 +28,8 @@ import com.tools20022.repository.msg.PaymentTransaction51;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -53,20 +52,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementArchive
- * PaymentsClearingandSettlementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "FIToFIPmtRvsl"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -85,9 +70,74 @@ import javax.xml.bind.annotation.*;
  * FIToFIPaymentReversalV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "FIToFIPmtRvsl"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementArchive
+ * PaymentsClearingandSettlementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pacs.007.001.05}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndTransactionInformationNotPresentRule#forFIToFIPaymentReversalV05
+ * ConstraintGroupReversalAndTransactionInformationNotPresentRule.
+ * forFIToFIPaymentReversalV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndTransactionInformationPresentRule#forFIToFIPaymentReversalV05
+ * ConstraintGroupReversalAndTransactionInformationPresentRule.
+ * forFIToFIPaymentReversalV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndReasonRule#forFIToFIPaymentReversalV05
+ * ConstraintGroupReversalAndReasonRule.forFIToFIPaymentReversalV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#forFIToFIPaymentReversalV05
+ * ConstraintInstructedAgentRule.forFIToFIPaymentReversalV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#forFIToFIPaymentReversalV05
+ * ConstraintInstructingAgentRule.forFIToFIPaymentReversalV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupHeaderInterbankSettlementDateRule#forFIToFIPaymentReversalV05
+ * ConstraintGroupHeaderInterbankSettlementDateRule.forFIToFIPaymentReversalV05}
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionInterbankSettlementDateRule#forFIToFIPaymentReversalV05
+ * ConstraintTransactionInterbankSettlementDateRule.forFIToFIPaymentReversalV05}
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsRule#forFIToFIPaymentReversalV05
+ * ConstraintGroupReversalAndNumberOfTransactionsRule.
+ * forFIToFIPaymentReversalV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalReversedInterbankSettlementAmountRule#forFIToFIPaymentReversalV05
+ * ConstraintTotalReversedInterbankSettlementAmountRule.
+ * forFIToFIPaymentReversalV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalReversedInterbankSettlementAmountAndSumRule#forFIToFIPaymentReversalV05
+ * ConstraintTotalReversedInterbankSettlementAmountAndSumRule.
+ * forFIToFIPaymentReversalV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNoCoverSettlementMethodRule#forFIToFIPaymentReversalV05
+ * ConstraintNoCoverSettlementMethodRule.forFIToFIPaymentReversalV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#forFIToFIPaymentReversalV05
+ * ConstraintSupplementaryDataRule.forFIToFIPaymentReversalV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationRule#forFIToFIPaymentReversalV05
+ * ConstraintOriginalGroupInformationRule.forFIToFIPaymentReversalV05}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,16 +161,16 @@ import javax.xml.bind.annotation.*;
  * FIToFIPaymentReversalV04}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FIToFIPaymentReversalV05", propOrder = {"groupHeader", "originalGroupInformation", "transactionInformation", "supplementaryData"})
 public class FIToFIPaymentReversalV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader57 groupHeader;
 	/**
-	 * Set of characteristics shared by all individual transactions included in
-	 * the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,11 +226,11 @@ public class FIToFIPaymentReversalV05 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgnlGrpInf")
 	protected OriginalGroupHeader3 originalGroupInformation;
 	/**
-	 * Information concerning the original group of transactions, to which the
-	 * message refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -237,11 +287,11 @@ public class FIToFIPaymentReversalV05 {
 			}
 		}
 	};
+	@XmlElement(name = "TxInf")
 	protected List<PaymentTransaction51> transactionInformation;
 	/**
-	 * Information concerning the original transactions, to which the reversal
-	 * message refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,11 +347,11 @@ public class FIToFIPaymentReversalV05 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -361,6 +411,16 @@ public class FIToFIPaymentReversalV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReversalAndTransactionInformationNotPresentRule.forFIToFIPaymentReversalV05,
+						com.tools20022.repository.constraints.ConstraintGroupReversalAndTransactionInformationPresentRule.forFIToFIPaymentReversalV05,
+						com.tools20022.repository.constraints.ConstraintGroupReversalAndReasonRule.forFIToFIPaymentReversalV05, com.tools20022.repository.constraints.ConstraintInstructedAgentRule.forFIToFIPaymentReversalV05,
+						com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFIToFIPaymentReversalV05, com.tools20022.repository.constraints.ConstraintGroupHeaderInterbankSettlementDateRule.forFIToFIPaymentReversalV05,
+						com.tools20022.repository.constraints.ConstraintTransactionInterbankSettlementDateRule.forFIToFIPaymentReversalV05,
+						com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsRule.forFIToFIPaymentReversalV05,
+						com.tools20022.repository.constraints.ConstraintTotalReversedInterbankSettlementAmountRule.forFIToFIPaymentReversalV05,
+						com.tools20022.repository.constraints.ConstraintTotalReversedInterbankSettlementAmountAndSumRule.forFIToFIPaymentReversalV05,
+						com.tools20022.repository.constraints.ConstraintNoCoverSettlementMethodRule.forFIToFIPaymentReversalV05, com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFIToFIPaymentReversalV05,
+						com.tools20022.repository.constraints.ConstraintOriginalGroupInformationRule.forFIToFIPaymentReversalV05);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FIToFIPaymentReversalV05";
 				definition = "Scope\r\nThe FinancialInstitutionToFinancialInstitutionPaymentReversal message is sent by an agent to the next party in the payment chain. It is used to reverse a payment previously executed.\r\nUsage\r\nThe FIToFIPaymentReversal message is exchanged between agents to reverse a payment message that has been settled. The result will be a credit on the debtor account (when the reversed payment was a Direct Debit) or a debit on the creditor account (when the reversed payment was a Credit Transfer).\r\nThe FIToFIPaymentReversal message may or may not be the follow-up of a payment message.\r\nThe FIToFIPaymentReversal message refers to the original payment message by means of references only or by means of references and a set of elements from the original instruction.\r\nThe FIToFIPaymentReversal message can be used in domestic and cross-border scenarios.";
@@ -390,43 +450,43 @@ public class FIToFIPaymentReversalV05 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader57 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader57 groupHeader) {
-		this.groupHeader = groupHeader;
+	public FIToFIPaymentReversalV05 setGroupHeader(GroupHeader57 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlGrpInf")
-	public OriginalGroupHeader3 getOriginalGroupInformation() {
-		return originalGroupInformation;
+	public Optional<OriginalGroupHeader3> getOriginalGroupInformation() {
+		return originalGroupInformation == null ? Optional.empty() : Optional.of(originalGroupInformation);
 	}
 
-	public void setOriginalGroupInformation(OriginalGroupHeader3 originalGroupInformation) {
+	public FIToFIPaymentReversalV05 setOriginalGroupInformation(OriginalGroupHeader3 originalGroupInformation) {
 		this.originalGroupInformation = originalGroupInformation;
+		return this;
 	}
 
-	@XmlElement(name = "TxInf")
 	public List<PaymentTransaction51> getTransactionInformation() {
-		return transactionInformation;
+		return transactionInformation == null ? transactionInformation = new ArrayList<>() : transactionInformation;
 	}
 
-	public void setTransactionInformation(List<PaymentTransaction51> transactionInformation) {
-		this.transactionInformation = transactionInformation;
+	public FIToFIPaymentReversalV05 setTransactionInformation(List<PaymentTransaction51> transactionInformation) {
+		this.transactionInformation = Objects.requireNonNull(transactionInformation);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public FIToFIPaymentReversalV05 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.007.05.05")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.007.001.05")
 	static public class Document {
 		@XmlElement(name = "FIToFIPmtRvsl", required = true)
 		public FIToFIPaymentReversalV05 messageBody;

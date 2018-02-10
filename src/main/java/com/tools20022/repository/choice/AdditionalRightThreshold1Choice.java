@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.AdditionalRight;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of additional right threshold."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AdditionalRightThreshold1Choice", propOrder = {"additionalRightThreshold", "additionalRightThresholdPercentage"})
 public class AdditionalRightThreshold1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AddtlRghtThrshld", required = true)
 	protected Max35Text additionalRightThreshold;
 	/**
-	 * Additional right granted to specify the minimum stake in share capital or
-	 * cash value or number of security holders required to table resolutions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +111,7 @@ public class AdditionalRightThreshold1Choice {
 	public static final MMMessageAttribute mmAdditionalRightThreshold = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AdditionalRight.mmAdditionalRightThreshold;
-			componentContext_lazy = () -> AdditionalRightThreshold1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AdditionalRightThreshold1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRghtThrshld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,12 +122,11 @@ public class AdditionalRightThreshold1Choice {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRghtThrshldPctg", required = true)
 	protected PercentageRate additionalRightThresholdPercentage;
 	/**
-	 * Additional right granted to specify the minimum stake in share capital or
-	 * cash value or number of security holders required to table resolutions.
-	 * This minimum is expressed as a percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +162,7 @@ public class AdditionalRightThreshold1Choice {
 	public static final MMMessageAttribute mmAdditionalRightThresholdPercentage = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AdditionalRight.mmAdditionalRightThresholdPercentage;
-			componentContext_lazy = () -> AdditionalRightThreshold1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AdditionalRightThreshold1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRghtThrshldPctg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,9 +177,10 @@ public class AdditionalRightThreshold1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AdditionalRightThreshold1Choice.mmAdditionalRightThreshold, AdditionalRightThreshold1Choice.mmAdditionalRightThresholdPercentage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalRightThreshold1Choice.mmAdditionalRightThreshold,
+						com.tools20022.repository.choice.AdditionalRightThreshold1Choice.mmAdditionalRightThresholdPercentage);
 				trace_lazy = () -> AdditionalRight.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalRightThreshold1Choice";
 				definition = "Choice of additional right threshold.";
@@ -188,21 +189,21 @@ public class AdditionalRightThreshold1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AddtlRghtThrshld", required = true)
 	public Max35Text getAdditionalRightThreshold() {
 		return additionalRightThreshold;
 	}
 
-	public void setAdditionalRightThreshold(Max35Text additionalRightThreshold) {
-		this.additionalRightThreshold = additionalRightThreshold;
+	public AdditionalRightThreshold1Choice setAdditionalRightThreshold(Max35Text additionalRightThreshold) {
+		this.additionalRightThreshold = Objects.requireNonNull(additionalRightThreshold);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRghtThrshldPctg", required = true)
 	public PercentageRate getAdditionalRightThresholdPercentage() {
 		return additionalRightThresholdPercentage;
 	}
 
-	public void setAdditionalRightThresholdPercentage(PercentageRate additionalRightThresholdPercentage) {
-		this.additionalRightThresholdPercentage = additionalRightThresholdPercentage;
+	public AdditionalRightThreshold1Choice setAdditionalRightThresholdPercentage(PercentageRate additionalRightThresholdPercentage) {
+		this.additionalRightThresholdPercentage = Objects.requireNonNull(additionalRightThresholdPercentage);
+		return this;
 	}
 }

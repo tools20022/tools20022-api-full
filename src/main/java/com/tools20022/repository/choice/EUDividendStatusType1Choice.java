@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification13;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,18 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "EUDividendStatusType1Choice", propOrder = {"EUDividendStatus", "proprietary"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "EUDividendStatusType1Choice", propOrder = {"eUDividendStatus", "proprietary"})
 public class EUDividendStatusType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "EUDvddSts", required = true)
 	protected EUDividendStatus1Code eUDividendStatus;
 	/**
-	 * Specifies whether dividend is in the scope of the European directive on
-	 * taxation of savings income in the form of interest payments (Council
-	 * Directive 2003/48/EC 3 June), or an income realised upon sale, a refund
-	 * or redemption of shares and units, etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +127,7 @@ public class EUDividendStatusType1Choice {
 	public static final MMMessageAttribute mmEUDividendStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUDividendStatus;
-			componentContext_lazy = () -> EUDividendStatusType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.EUDividendStatusType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EUDvddSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,13 +139,11 @@ public class EUDividendStatusType1Choice {
 			simpleType_lazy = () -> EUDividendStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification13 proprietary;
 	/**
-	 * Specifies whether dividend is in the scope of the European directive on
-	 * taxation of savings income in the form of interest payments (Council
-	 * Directive 2003/48/EC 3 June), or an income realised upon sale, a refund
-	 * or redemption of shares and units, etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +187,7 @@ public class EUDividendStatusType1Choice {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUDividendStatus;
-			componentContext_lazy = () -> EUDividendStatusType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.EUDividendStatusType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,9 +203,9 @@ public class EUDividendStatusType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EUDividendStatusType1Choice.mmEUDividendStatus, EUDividendStatusType1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.EUDividendStatusType1Choice.mmEUDividendStatus, com.tools20022.repository.choice.EUDividendStatusType1Choice.mmProprietary);
 				trace_lazy = () -> SecuritiesTax.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EUDividendStatusType1Choice";
 				definition = "Choice of an EU dividen status type.";
@@ -218,21 +215,21 @@ public class EUDividendStatusType1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "EUDvddSts", required = true)
 	public EUDividendStatus1Code getEUDividendStatus() {
 		return eUDividendStatus;
 	}
 
-	public void setEUDividendStatus(EUDividendStatus1Code eUDividendStatus) {
-		this.eUDividendStatus = eUDividendStatus;
+	public EUDividendStatusType1Choice setEUDividendStatus(EUDividendStatus1Code eUDividendStatus) {
+		this.eUDividendStatus = Objects.requireNonNull(eUDividendStatus);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification13 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification13 proprietary) {
-		this.proprietary = proprietary;
+	public EUDividendStatusType1Choice setProprietary(GenericIdentification13 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

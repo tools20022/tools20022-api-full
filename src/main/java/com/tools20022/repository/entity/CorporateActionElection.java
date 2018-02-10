@@ -28,9 +28,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Decision taken by the account holder regarding the corporate action event.
@@ -69,18 +68,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionElection3
- * CorporateActionElection3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionElection1
- * CorporateActionElection1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CorporateActionElection2
- * CorporateActionElection2}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -99,10 +86,22 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionElection3
+ * CorporateActionElection3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionElection1
+ * CorporateActionElection1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionElection2
+ * CorporateActionElection2}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -119,9 +118,8 @@ public class CorporateActionElection {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected ISODateTime executionRequestedDateTime;
 	/**
-	 * Date/time at which the instructing party requests the instruction to be
-	 * executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,8 +197,8 @@ public class CorporateActionElection {
 					CorporateActionOption30.mmExecutionRequestedDateTime, CorporateActionOption38.mmExecutionRequestedDateTime, CorporateActionOption47.mmExecutionRequestedDateTime, CorporateActionOption57.mmExecutionRequestedDateTime,
 					CorporateActionOption58.mmExecutionRequestedDateTime, CorporateActionOption103.mmExecutionRequestedDateTime, CorporateActionOption107.mmExecutionRequestedDateTime, CorporateActionOption118.mmExecutionRequestedDateTime,
 					CorporateActionOption123.mmExecutionRequestedDateTime, CorporateActionOption131.mmExecutionRequestedDateTime, CorporateActionOption134.mmExecutionRequestedDateTime);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExecutionRequestedDateTime";
 			definition = "Date/time at which the instructing party requests the instruction to be executed.";
@@ -219,8 +217,8 @@ public class CorporateActionElection {
 	};
 	protected List<com.tools20022.repository.entity.CorporateActionOption> option;
 	/**
-	 * Option on which the investor makes its decision.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -254,8 +252,8 @@ public class CorporateActionElection {
 	 */
 	public static final MMBusinessAssociationEnd mmOption = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Option";
 			definition = "Option on which the investor makes its decision.";
@@ -267,8 +265,8 @@ public class CorporateActionElection {
 	};
 	protected List<com.tools20022.repository.entity.CashAccount> cashAccount;
 	/**
-	 * Specifies the account(s) used in relation with the election of an option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -355,8 +353,8 @@ public class CorporateActionElection {
 			derivation_lazy = () -> Arrays.asList(CashOption2.mmAccount, CashOption9.mmAccount, CashOption12.mmAccount, CashOption13.mmAccount, CashOption18.mmAccount, CashOption22.mmAccount, CashOption26.mmAccount, CashOption27.mmAccount,
 					CashOption5.mmAccount, CashOption7.mmAccount, CashOption19.mmAccount, CashOption23.mmAccount, CashOption30.mmAccount, CashOption38.mmAccount, CashOption39.mmAccount, CashOption41.mmAccount, CashOption44.mmAccount,
 					CashOption45.mmAccount, CashOption46.mmAccount, CashOption48.mmAccount, CashOption52.mmAccount, CashOption55.mmAccount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
 			definition = "Specifies the account(s) used in relation with the election of an option.";
@@ -368,10 +366,8 @@ public class CorporateActionElection {
 	};
 	protected ElectionMovementTypeCode electionType;
 	/**
-	 * Specifies whether the election results in a change of balance type that
-	 * transfers control of the underlying securities or the transfer of
-	 * underlying securities themselves.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -471,8 +467,8 @@ public class CorporateActionElection {
 					CorporateAction4.mmElectionType, CorporateAction5.mmElectionType, CorporateAction6.mmElectionType, CorporateAction7.mmElectionType, CorporateAction8.mmElectionType, CorporateAction10.mmElectionType,
 					CorporateAction11.mmElectionType, CorporateAction2.mmElectionType, CorporateAction12.mmElectionType, CorporateAction17.mmElectionType, CorporateAction31.mmElectionType, ElectionTypeFormat3Choice.mmCode,
 					ElectionTypeFormat3Choice.mmProprietary, CorporateAction40.mmElectionType, ElectionTypeFormat4Choice.mmCode, ElectionTypeFormat4Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ElectionType";
 			definition = "Specifies whether the election results in a change of balance type that transfers control of the underlying securities or the transfer of underlying securities themselves.";
@@ -491,8 +487,8 @@ public class CorporateActionElection {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesQuantity> quantity;
 	/**
-	 * Specifies the quantity of securities elected for the associated option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -549,8 +545,8 @@ public class CorporateActionElection {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionElection3.mmInstructedUnderlyingSecuritiesQuantity, CorporateActionElection3.mmInstructedSecuritiesQuantityToReceive, CorporateActionElection1.mmOriginalInstructedQuantity,
 					CorporateActionElection1.mmRemainingQuantity, CorporateActionElection2.mmNewInstructedQuantity);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quantity";
 			definition = "Specifies the quantity of securities elected for the associated option.";
@@ -562,8 +558,8 @@ public class CorporateActionElection {
 	};
 	protected Max350Text amendmentReason;
 	/**
-	 * Reason explaining the amendment of the election.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -597,8 +593,8 @@ public class CorporateActionElection {
 	public static final MMBusinessAttribute mmAmendmentReason = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionElection2.mmReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AmendmentReason";
 			definition = "Reason explaining the amendment of the election.";
@@ -617,9 +613,8 @@ public class CorporateActionElection {
 	};
 	protected CorporateActionServicing relatedServicing;
 	/**
-	 * Process which groups the activities related to corporate action
-	 * servicing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -655,8 +650,8 @@ public class CorporateActionElection {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedServicing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedServicing";
 			definition = "Process which groups the activities related to corporate action servicing.";
@@ -671,7 +666,7 @@ public class CorporateActionElection {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionElection";
 				definition = "Decision taken by the account holder regarding the corporate action event.";
@@ -695,55 +690,62 @@ public class CorporateActionElection {
 		return executionRequestedDateTime;
 	}
 
-	public void setExecutionRequestedDateTime(ISODateTime executionRequestedDateTime) {
-		this.executionRequestedDateTime = executionRequestedDateTime;
+	public CorporateActionElection setExecutionRequestedDateTime(ISODateTime executionRequestedDateTime) {
+		this.executionRequestedDateTime = Objects.requireNonNull(executionRequestedDateTime);
+		return this;
 	}
 
 	public List<CorporateActionOption> getOption() {
-		return option;
+		return option == null ? option = new ArrayList<>() : option;
 	}
 
-	public void setOption(List<com.tools20022.repository.entity.CorporateActionOption> option) {
-		this.option = option;
+	public CorporateActionElection setOption(List<com.tools20022.repository.entity.CorporateActionOption> option) {
+		this.option = Objects.requireNonNull(option);
+		return this;
 	}
 
 	public List<CashAccount> getCashAccount() {
-		return cashAccount;
+		return cashAccount == null ? cashAccount = new ArrayList<>() : cashAccount;
 	}
 
-	public void setCashAccount(List<com.tools20022.repository.entity.CashAccount> cashAccount) {
-		this.cashAccount = cashAccount;
+	public CorporateActionElection setCashAccount(List<com.tools20022.repository.entity.CashAccount> cashAccount) {
+		this.cashAccount = Objects.requireNonNull(cashAccount);
+		return this;
 	}
 
 	public ElectionMovementTypeCode getElectionType() {
 		return electionType;
 	}
 
-	public void setElectionType(ElectionMovementTypeCode electionType) {
-		this.electionType = electionType;
+	public CorporateActionElection setElectionType(ElectionMovementTypeCode electionType) {
+		this.electionType = Objects.requireNonNull(electionType);
+		return this;
 	}
 
 	public List<SecuritiesQuantity> getQuantity() {
-		return quantity;
+		return quantity == null ? quantity = new ArrayList<>() : quantity;
 	}
 
-	public void setQuantity(List<com.tools20022.repository.entity.SecuritiesQuantity> quantity) {
-		this.quantity = quantity;
+	public CorporateActionElection setQuantity(List<com.tools20022.repository.entity.SecuritiesQuantity> quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
 	public Max350Text getAmendmentReason() {
 		return amendmentReason;
 	}
 
-	public void setAmendmentReason(Max350Text amendmentReason) {
-		this.amendmentReason = amendmentReason;
+	public CorporateActionElection setAmendmentReason(Max350Text amendmentReason) {
+		this.amendmentReason = Objects.requireNonNull(amendmentReason);
+		return this;
 	}
 
-	public CorporateActionServicing getRelatedServicing() {
-		return relatedServicing;
+	public Optional<CorporateActionServicing> getRelatedServicing() {
+		return relatedServicing == null ? Optional.empty() : Optional.of(relatedServicing);
 	}
 
-	public void setRelatedServicing(com.tools20022.repository.entity.CorporateActionServicing relatedServicing) {
+	public CorporateActionElection setRelatedServicing(com.tools20022.repository.entity.CorporateActionServicing relatedServicing) {
 		this.relatedServicing = relatedServicing;
+		return this;
 	}
 }

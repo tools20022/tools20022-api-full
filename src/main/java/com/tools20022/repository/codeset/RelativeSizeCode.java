@@ -17,12 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.RelativeSizeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * A type of quantity of financial instrument expressed in a relative size.
@@ -31,15 +37,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RelativeSizeCode#mmSmall
- * RelativeSizeCode.mmSmall}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RelativeSizeCode#mmMedium
- * RelativeSizeCode.mmMedium}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RelativeSizeCode#mmLarge
- * RelativeSizeCode.mmLarge}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RelativeSizeCode#Small
+ * RelativeSizeCode.Small}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RelativeSizeCode#Medium
+ * RelativeSizeCode.Medium}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RelativeSizeCode#Large
+ * RelativeSizeCode.Large}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RelativeSizeCode#mmUndisclosed
- * RelativeSizeCode.mmUndisclosed}</li>
+ * {@linkplain com.tools20022.repository.codeset.RelativeSizeCode#Undisclosed
+ * RelativeSizeCode.Undisclosed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +58,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = FIXSynonym: 27</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "A type of quantity of financial instrument expressed in a relative size."</li>
  * </ul>
  */
-public class RelativeSizeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RelativeSizeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,6 +95,9 @@ public class RelativeSizeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SMAL"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 27</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -95,12 +108,13 @@ public class RelativeSizeCode {
 	 * definition} = "Indicates that the relative size is small."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSmall = new MMCode() {
+	public static final RelativeSizeCode Small = new RelativeSizeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "27"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Small";
 			definition = "Indicates that the relative size is small.";
-			owner_lazy = () -> RelativeSizeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RelativeSizeCode.mmObject();
 			codeName = "SMAL";
 		}
 	};
@@ -115,6 +129,9 @@ public class RelativeSizeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "MEDI"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 27</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -125,12 +142,13 @@ public class RelativeSizeCode {
 	 * definition} = "Indicates that the relative size is medium."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMedium = new MMCode() {
+	public static final RelativeSizeCode Medium = new RelativeSizeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "27"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Medium";
 			definition = "Indicates that the relative size is medium.";
-			owner_lazy = () -> RelativeSizeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RelativeSizeCode.mmObject();
 			codeName = "MEDI";
 		}
 	};
@@ -145,6 +163,9 @@ public class RelativeSizeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "LARG"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 27</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -155,12 +176,13 @@ public class RelativeSizeCode {
 	 * definition} = "Indicates that the relative size is large."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLarge = new MMCode() {
+	public static final RelativeSizeCode Large = new RelativeSizeCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "27"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Large";
 			definition = "Indicates that the relative size is large.";
-			owner_lazy = () -> RelativeSizeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RelativeSizeCode.mmObject();
 			codeName = "LARG";
 		}
 	};
@@ -185,28 +207,62 @@ public class RelativeSizeCode {
 	 * definition} = "Indicates that the quantity is undisclosed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUndisclosed = new MMCode() {
+	public static final RelativeSizeCode Undisclosed = new RelativeSizeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Undisclosed";
 			definition = "Indicates that the quantity is undisclosed.";
-			owner_lazy = () -> RelativeSizeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RelativeSizeCode.mmObject();
 			codeName = "UNDI";
 		}
 	};
+	final static private LinkedHashMap<String, RelativeSizeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RelativeSizeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "27"));
 				example = Arrays.asList("SMAL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RelativeSizeCode";
 				definition = "A type of quantity of financial instrument expressed in a relative size.";
-				code_lazy = () -> Arrays.asList(RelativeSizeCode.mmSmall, RelativeSizeCode.mmMedium, RelativeSizeCode.mmLarge, RelativeSizeCode.mmUndisclosed);
 				derivation_lazy = () -> Arrays.asList(RelativeSize1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RelativeSizeCode.Small, com.tools20022.repository.codeset.RelativeSizeCode.Medium, com.tools20022.repository.codeset.RelativeSizeCode.Large,
+						com.tools20022.repository.codeset.RelativeSizeCode.Undisclosed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Small.getCodeName().get(), Small);
+		codesByName.put(Medium.getCodeName().get(), Medium);
+		codesByName.put(Large.getCodeName().get(), Large);
+		codesByName.put(Undisclosed.getCodeName().get(), Undisclosed);
+	}
+
+	public static RelativeSizeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RelativeSizeCode[] values() {
+		RelativeSizeCode[] values = new RelativeSizeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RelativeSizeCode> {
+		@Override
+		public RelativeSizeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RelativeSizeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

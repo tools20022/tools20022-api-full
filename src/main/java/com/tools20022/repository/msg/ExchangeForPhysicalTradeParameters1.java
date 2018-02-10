@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.entity.ExchangeForPhysicalTrade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,17 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ExchangeForPhysicalTradeParameters1", propOrder = {"outsideIndex", "fairValue", "valueForFutures"})
 public class ExchangeForPhysicalTradeParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OutsdIndx")
 	protected PercentageRate outsideIndex;
 	/**
-	 * Unexpected divergence between the price behaviour of an underlying
-	 * position or portfolio and the price behaviour of a hedging position or
-	 * benchmark.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,6 +105,9 @@ public class ExchangeForPhysicalTradeParameters1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OutsdIndx"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 407</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -119,9 +123,10 @@ public class ExchangeForPhysicalTradeParameters1 {
 	public static final MMMessageAttribute mmOutsideIndex = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ExchangeForPhysicalTrade.mmOutsideIndex;
-			componentContext_lazy = () -> ExchangeForPhysicalTradeParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "OutsdIndx";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "407"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutsideIndex";
 			definition = "Unexpected divergence between the price behaviour of an underlying position or portfolio and the price behaviour of a hedging position or benchmark.";
@@ -130,12 +135,11 @@ public class ExchangeForPhysicalTradeParameters1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "FairVal")
 	protected ActiveCurrencyAndAmount fairValue;
 	/**
-	 * Difference between the value of a future and the value of the underlying
-	 * equities after allowing for the discounted cash flows associated with the
-	 * underlying stocks.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,6 +160,9 @@ public class ExchangeForPhysicalTradeParameters1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FairVal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 406</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -171,9 +178,10 @@ public class ExchangeForPhysicalTradeParameters1 {
 	public static final MMMessageAttribute mmFairValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ExchangeForPhysicalTrade.mmFairValue;
-			componentContext_lazy = () -> ExchangeForPhysicalTradeParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "FairVal";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "406"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FairValue";
 			definition = "Difference between the value of a future and the value of the underlying equities after allowing for the discounted cash flows associated with the underlying stocks.";
@@ -182,10 +190,11 @@ public class ExchangeForPhysicalTradeParameters1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ValForFutrs")
 	protected ActiveCurrencyAndAmount valueForFutures;
 	/**
-	 * Value of a futures position involved in an Exchange For Physical trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,6 +215,9 @@ public class ExchangeForPhysicalTradeParameters1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ValForFutrs"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 408</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -221,9 +233,10 @@ public class ExchangeForPhysicalTradeParameters1 {
 	public static final MMMessageAttribute mmValueForFutures = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ExchangeForPhysicalTrade.mmValueForFutures;
-			componentContext_lazy = () -> ExchangeForPhysicalTradeParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "ValForFutrs";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "408"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueForFutures";
 			definition = "Value of a futures position involved in an Exchange For Physical trade.";
@@ -236,9 +249,10 @@ public class ExchangeForPhysicalTradeParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ExchangeForPhysicalTradeParameters1.mmOutsideIndex, ExchangeForPhysicalTradeParameters1.mmFairValue, ExchangeForPhysicalTradeParameters1.mmValueForFutures);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.mmOutsideIndex, com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.mmFairValue,
+						com.tools20022.repository.msg.ExchangeForPhysicalTradeParameters1.mmValueForFutures);
 				trace_lazy = () -> ExchangeForPhysicalTrade.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExchangeForPhysicalTradeParameters1";
 				definition = "Technique whereby a position in the underlying is traded for a futures position in the physical commodity markets.";
@@ -247,30 +261,30 @@ public class ExchangeForPhysicalTradeParameters1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OutsdIndx")
-	public PercentageRate getOutsideIndex() {
-		return outsideIndex;
+	public Optional<PercentageRate> getOutsideIndex() {
+		return outsideIndex == null ? Optional.empty() : Optional.of(outsideIndex);
 	}
 
-	public void setOutsideIndex(PercentageRate outsideIndex) {
+	public ExchangeForPhysicalTradeParameters1 setOutsideIndex(PercentageRate outsideIndex) {
 		this.outsideIndex = outsideIndex;
+		return this;
 	}
 
-	@XmlElement(name = "FairVal")
-	public ActiveCurrencyAndAmount getFairValue() {
-		return fairValue;
+	public Optional<ActiveCurrencyAndAmount> getFairValue() {
+		return fairValue == null ? Optional.empty() : Optional.of(fairValue);
 	}
 
-	public void setFairValue(ActiveCurrencyAndAmount fairValue) {
+	public ExchangeForPhysicalTradeParameters1 setFairValue(ActiveCurrencyAndAmount fairValue) {
 		this.fairValue = fairValue;
+		return this;
 	}
 
-	@XmlElement(name = "ValForFutrs")
-	public ActiveCurrencyAndAmount getValueForFutures() {
-		return valueForFutures;
+	public Optional<ActiveCurrencyAndAmount> getValueForFutures() {
+		return valueForFutures == null ? Optional.empty() : Optional.of(valueForFutures);
 	}
 
-	public void setValueForFutures(ActiveCurrencyAndAmount valueForFutures) {
+	public ExchangeForPhysicalTradeParameters1 setValueForFutures(ActiveCurrencyAndAmount valueForFutures) {
 		this.valueForFutures = valueForFutures;
+		return this;
 	}
 }

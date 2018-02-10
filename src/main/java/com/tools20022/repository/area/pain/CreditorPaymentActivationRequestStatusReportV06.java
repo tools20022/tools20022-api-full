@@ -30,9 +30,11 @@ import com.tools20022.repository.msgset.CreditorPaymentActivationRequestISOLates
 import com.tools20022.repository.msgset.CreditorPaymentActivationRequestMaintenance20162017;
 import com.tools20022.repository.msgset.MX_Payment_Maintenance_2016_2017;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -43,28 +45,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsInitiationLatestVersion
- * PaymentsInitiationLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CreditorPaymentActivationRequestISOLatestversion
- * CreditorPaymentActivationRequestISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.MX_Payment_Maintenance_2016_2017
- * MX_Payment_Maintenance_2016_2017}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CreditorPaymentActivationRequestMaintenance20162017
- * CreditorPaymentActivationRequestMaintenance20162017}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CdtrPmtActvtnReqStsRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -85,9 +65,56 @@ import javax.xml.bind.annotation.*;
  * CreditorPaymentActivationRequestStatusReportV06.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CreditorPaymentActivationRequestISOLatestversion
+ * CreditorPaymentActivationRequestISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.MX_Payment_Maintenance_2016_2017
+ * MX_Payment_Maintenance_2016_2017}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CreditorPaymentActivationRequestMaintenance20162017
+ * CreditorPaymentActivationRequestMaintenance20162017}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CdtrPmtActvtnReqStsRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.PaymentsInitiationLatestVersion
+ * PaymentsInitiationLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pain.014.001.06}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus1Rule#forCreditorPaymentActivationRequestStatusReportV06
+ * ConstraintGroupAndTransactionStatus1Rule.
+ * forCreditorPaymentActivationRequestStatusReportV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#forCreditorPaymentActivationRequestStatusReportV06
+ * ConstraintGroupAndTransactionStatus2Rule.
+ * forCreditorPaymentActivationRequestStatusReportV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus3Rule#forCreditorPaymentActivationRequestStatusReportV06
+ * ConstraintGroupAndTransactionStatus3Rule.
+ * forCreditorPaymentActivationRequestStatusReportV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus4Rule#forCreditorPaymentActivationRequestStatusReportV06
+ * ConstraintGroupAndTransactionStatus4Rule.
+ * forCreditorPaymentActivationRequestStatusReportV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#forCreditorPaymentActivationRequestStatusReportV06
+ * ConstraintSupplementaryDataRule.
+ * forCreditorPaymentActivationRequestStatusReportV06}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,16 +131,16 @@ import javax.xml.bind.annotation.*;
  * CreditorPaymentActivationRequestStatusReportV05}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CreditorPaymentActivationRequestStatusReportV06", propOrder = {"groupHeader", "originalGroupInformationAndStatus", "originalPaymentInformationAndStatus", "supplementaryData"})
 public class CreditorPaymentActivationRequestStatusReportV06 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader46 groupHeader;
 	/**
-	 * Set of characteristics shared by all individual transactions included in
-	 * the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,11 +187,11 @@ public class CreditorPaymentActivationRequestStatusReportV06 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgnlGrpInfAndSts", required = true)
 	protected OriginalGroupInformation28 originalGroupInformationAndStatus;
 	/**
-	 * Original group information concerning the group of transactions, to which
-	 * the status report message refers to.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,11 +240,11 @@ public class CreditorPaymentActivationRequestStatusReportV06 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgnlPmtInfAndSts")
 	protected List<OriginalPaymentInstruction24> originalPaymentInformationAndStatus;
 	/**
-	 * Information concerning the original payment information, to which the
-	 * status report message refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -265,11 +292,11 @@ public class CreditorPaymentActivationRequestStatusReportV06 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -320,6 +347,11 @@ public class CreditorPaymentActivationRequestStatusReportV06 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus1Rule.forCreditorPaymentActivationRequestStatusReportV06,
+						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.forCreditorPaymentActivationRequestStatusReportV06,
+						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus3Rule.forCreditorPaymentActivationRequestStatusReportV06,
+						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus4Rule.forCreditorPaymentActivationRequestStatusReportV06,
+						com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCreditorPaymentActivationRequestStatusReportV06);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditorPaymentActivationRequestStatusReportV06";
 				definition = "The CreditorPaymentActivationRequestStatusReport message is sent by a party to the next party in the creditor payment activation request chain. It is used to inform the latter about the positive or negative status of a creditor payment activation request (either single or file).";
@@ -350,43 +382,43 @@ public class CreditorPaymentActivationRequestStatusReportV06 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader46 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader46 groupHeader) {
-		this.groupHeader = groupHeader;
+	public CreditorPaymentActivationRequestStatusReportV06 setGroupHeader(GroupHeader46 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlGrpInfAndSts", required = true)
 	public OriginalGroupInformation28 getOriginalGroupInformationAndStatus() {
 		return originalGroupInformationAndStatus;
 	}
 
-	public void setOriginalGroupInformationAndStatus(OriginalGroupInformation28 originalGroupInformationAndStatus) {
-		this.originalGroupInformationAndStatus = originalGroupInformationAndStatus;
+	public CreditorPaymentActivationRequestStatusReportV06 setOriginalGroupInformationAndStatus(OriginalGroupInformation28 originalGroupInformationAndStatus) {
+		this.originalGroupInformationAndStatus = Objects.requireNonNull(originalGroupInformationAndStatus);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlPmtInfAndSts")
 	public List<OriginalPaymentInstruction24> getOriginalPaymentInformationAndStatus() {
-		return originalPaymentInformationAndStatus;
+		return originalPaymentInformationAndStatus == null ? originalPaymentInformationAndStatus = new ArrayList<>() : originalPaymentInformationAndStatus;
 	}
 
-	public void setOriginalPaymentInformationAndStatus(List<OriginalPaymentInstruction24> originalPaymentInformationAndStatus) {
-		this.originalPaymentInformationAndStatus = originalPaymentInformationAndStatus;
+	public CreditorPaymentActivationRequestStatusReportV06 setOriginalPaymentInformationAndStatus(List<OriginalPaymentInstruction24> originalPaymentInformationAndStatus) {
+		this.originalPaymentInformationAndStatus = Objects.requireNonNull(originalPaymentInformationAndStatus);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CreditorPaymentActivationRequestStatusReportV06 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.014.06.06")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:pain.014.001.06")
 	static public class Document {
 		@XmlElement(name = "CdtrPmtActvtnReqStsRpt", required = true)
 		public CreditorPaymentActivationRequestStatusReportV06 messageBody;

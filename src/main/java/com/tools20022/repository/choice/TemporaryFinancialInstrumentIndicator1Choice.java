@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
@@ -27,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification20;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,16 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TemporaryFinancialInstrumentIndicator1Choice", propOrder = {"temporaryIndicator", "proprietary"})
 public class TemporaryFinancialInstrumentIndicator1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TempInd", required = true)
 	protected YesNoIndicator temporaryIndicator;
 	/**
-	 * Temporary financial instrument identification used for processing
-	 * reasons.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,6 +108,9 @@ public class TemporaryFinancialInstrumentIndicator1Choice {
 	 * TemporaryFinancialInstrumentIndicator1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TempInd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::TEMP</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -130,9 +135,10 @@ public class TemporaryFinancialInstrumentIndicator1Choice {
 	public static final MMMessageAttribute mmTemporaryIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmTemporaryFinancialInstrumentIndicator;
-			componentContext_lazy = () -> TemporaryFinancialInstrumentIndicator1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TempInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::TEMP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TemporaryIndicator";
 			definition = "Temporary financial instrument identification used for processing reasons.";
@@ -142,10 +148,11 @@ public class TemporaryFinancialInstrumentIndicator1Choice {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected GenericIdentification20 proprietary;
 	/**
-	 * Proprietary code to specify whether the security is a temporary security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -188,7 +195,7 @@ public class TemporaryFinancialInstrumentIndicator1Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmTemporaryFinancialInstrumentIndicator;
-			componentContext_lazy = () -> TemporaryFinancialInstrumentIndicator1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,9 +212,10 @@ public class TemporaryFinancialInstrumentIndicator1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TemporaryFinancialInstrumentIndicator1Choice.mmTemporaryIndicator, TemporaryFinancialInstrumentIndicator1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator1Choice.mmTemporaryIndicator,
+						com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator1Choice.mmProprietary);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TemporaryFinancialInstrumentIndicator1Choice";
 				definition = "Choice between an indicator or a proprietary code to specify whether the security is a temporary security.";
@@ -217,21 +225,21 @@ public class TemporaryFinancialInstrumentIndicator1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TempInd", required = true)
 	public YesNoIndicator getTemporaryIndicator() {
 		return temporaryIndicator;
 	}
 
-	public void setTemporaryIndicator(YesNoIndicator temporaryIndicator) {
-		this.temporaryIndicator = temporaryIndicator;
+	public TemporaryFinancialInstrumentIndicator1Choice setTemporaryIndicator(YesNoIndicator temporaryIndicator) {
+		this.temporaryIndicator = Objects.requireNonNull(temporaryIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public GenericIdentification20 getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(GenericIdentification20 proprietary) {
-		this.proprietary = proprietary;
+	public TemporaryFinancialInstrumentIndicator1Choice setProprietary(GenericIdentification20 proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

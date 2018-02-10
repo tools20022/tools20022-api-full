@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ProformaStatusReasonCode;
+import com.tools20022.repository.codeset.ProformaStatusReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for proforma status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ProformaStatusReasonCode
- * ProformaStatusReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProformaStatusReason1Code#mmModificationInProcess
- * ProformaStatusReason1Code.mmModificationInProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProformaStatusReason1Code#ModificationInProcess
+ * ProformaStatusReason1Code.ModificationInProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProformaStatusReason1Code#mmRights
- * ProformaStatusReason1Code.mmRights}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProformaStatusReason1Code#Rights
+ * ProformaStatusReason1Code.Rights}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ProformaStatusReasonCode
+ * ProformaStatusReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason for proforma status."</li>
  * </ul>
  */
-public class ProformaStatusReason1Code extends ProformaStatusReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProformaStatusReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class ProformaStatusReason1Code extends ProformaStatusReasonCode {
 	 * name} = "ModificationInProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmModificationInProcess = new MMCode() {
+	public static final ProformaStatusReason1Code ModificationInProcess = new ProformaStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationInProcess";
-			owner_lazy = () -> ProformaStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProformaStatusReason1Code.mmObject();
+			codeName = ProformaStatusReasonCode.ModificationInProcess.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class ProformaStatusReason1Code extends ProformaStatusReasonCode {
 	 * name} = "Rights"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRights = new MMCode() {
+	public static final ProformaStatusReason1Code Rights = new ProformaStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rights";
-			owner_lazy = () -> ProformaStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProformaStatusReason1Code.mmObject();
+			codeName = ProformaStatusReasonCode.Rights.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ProformaStatusReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProformaStatusReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProformaStatusReason1Code";
 				definition = "Specifies the reason for proforma status.";
-				code_lazy = () -> Arrays.asList(ProformaStatusReason1Code.mmModificationInProcess, ProformaStatusReason1Code.mmRights);
 				trace_lazy = () -> ProformaStatusReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProformaStatusReason1Code.ModificationInProcess, com.tools20022.repository.codeset.ProformaStatusReason1Code.Rights);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ModificationInProcess.getCodeName().get(), ModificationInProcess);
+		codesByName.put(Rights.getCodeName().get(), Rights);
+	}
+
+	public static ProformaStatusReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProformaStatusReason1Code[] values() {
+		ProformaStatusReason1Code[] values = new ProformaStatusReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProformaStatusReason1Code> {
+		@Override
+		public ProformaStatusReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProformaStatusReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

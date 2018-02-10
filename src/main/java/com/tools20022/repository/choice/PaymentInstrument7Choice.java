@@ -30,6 +30,7 @@ import com.tools20022.repository.msg.CreditTransfer3;
 import com.tools20022.repository.msg.InvestmentAccount15;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,16 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentInstrument7Choice", propOrder = {"creditTransferDetails", "chequeDetails", "accountDetails"})
 public class PaymentInstrument7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CdtTrfDtls", required = true)
 	protected CreditTransfer3 creditTransferDetails;
 	/**
-	 * Payment instrument between a debtor and a creditor, which flows through
-	 * one or more financial institutions or systems.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,7 +119,7 @@ public class PaymentInstrument7Choice {
 	public static final MMMessageAssociationEnd mmCreditTransferDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CreditTransfer.mmObject();
-			componentContext_lazy = () -> PaymentInstrument7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CdtTrfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,12 +131,11 @@ public class PaymentInstrument7Choice {
 			type_lazy = () -> CreditTransfer3.mmObject();
 		}
 	};
+	@XmlElement(name = "ChqDtls", required = true)
 	protected Cheque3 chequeDetails;
 	/**
-	 * Written order on which instructions are given to an account holder (a
-	 * financial institution) to pay a stated sum to a named recipient (the
-	 * payee).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -167,7 +167,7 @@ public class PaymentInstrument7Choice {
 	public static final MMMessageAssociationEnd mmChequeDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ChequeIssue.mmObject();
-			componentContext_lazy = () -> PaymentInstrument7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ChqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,10 +179,11 @@ public class PaymentInstrument7Choice {
 			type_lazy = () -> Cheque3.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected InvestmentAccount15 accountDetails;
 	/**
-	 * Part of the investment account to or from which cash entries are made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -215,7 +216,7 @@ public class PaymentInstrument7Choice {
 	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
-			componentContext_lazy = () -> PaymentInstrument7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,9 +232,10 @@ public class PaymentInstrument7Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentInstrument7Choice.mmCreditTransferDetails, PaymentInstrument7Choice.mmChequeDetails, PaymentInstrument7Choice.mmAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument7Choice.mmCreditTransferDetails, com.tools20022.repository.choice.PaymentInstrument7Choice.mmChequeDetails,
+						com.tools20022.repository.choice.PaymentInstrument7Choice.mmAccountDetails);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrument7Choice";
 				definition = "Choice between types of payment instrument, ie, cheque, credit transfer or investment account.";
@@ -242,30 +244,30 @@ public class PaymentInstrument7Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CdtTrfDtls", required = true)
 	public CreditTransfer3 getCreditTransferDetails() {
 		return creditTransferDetails;
 	}
 
-	public void setCreditTransferDetails(CreditTransfer3 creditTransferDetails) {
-		this.creditTransferDetails = creditTransferDetails;
+	public PaymentInstrument7Choice setCreditTransferDetails(CreditTransfer3 creditTransferDetails) {
+		this.creditTransferDetails = Objects.requireNonNull(creditTransferDetails);
+		return this;
 	}
 
-	@XmlElement(name = "ChqDtls", required = true)
 	public Cheque3 getChequeDetails() {
 		return chequeDetails;
 	}
 
-	public void setChequeDetails(Cheque3 chequeDetails) {
-		this.chequeDetails = chequeDetails;
+	public PaymentInstrument7Choice setChequeDetails(Cheque3 chequeDetails) {
+		this.chequeDetails = Objects.requireNonNull(chequeDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public InvestmentAccount15 getAccountDetails() {
 		return accountDetails;
 	}
 
-	public void setAccountDetails(InvestmentAccount15 accountDetails) {
-		this.accountDetails = accountDetails;
+	public PaymentInstrument7Choice setAccountDetails(InvestmentAccount15 accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 }

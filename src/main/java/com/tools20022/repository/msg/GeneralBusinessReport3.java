@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SystemBusinessInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GeneralBusinessReport3", propOrder = {"businessInformationReference", "generalBusinessOrError"})
 public class GeneralBusinessReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BizInfRef", required = true)
 	protected Max35Text businessInformationReference;
 	/**
-	 * Unique and unambiguous identification of a general business information
-	 * system, as assigned by the system transaction administrator.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +129,7 @@ public class GeneralBusinessReport3 {
 	public static final MMMessageAttribute mmBusinessInformationReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemBusinessInformation.mmIdentification;
-			componentContext_lazy = () -> GeneralBusinessReport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessReport3.mmObject();
 			isDerived = false;
 			xmlTag = "BizInfRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,10 +141,11 @@ public class GeneralBusinessReport3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "GnlBizOrErr", required = true)
 	protected GeneralBusinessOrError2Choice generalBusinessOrError;
 	/**
-	 * Requested business information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -184,7 +186,7 @@ public class GeneralBusinessReport3 {
 	public static final MMMessageAssociationEnd mmGeneralBusinessOrError = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SystemBusinessInformation.mmObject();
-			componentContext_lazy = () -> GeneralBusinessReport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralBusinessReport3.mmObject();
 			isDerived = false;
 			xmlTag = "GnlBizOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,9 +203,9 @@ public class GeneralBusinessReport3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GeneralBusinessReport3.mmBusinessInformationReference, GeneralBusinessReport3.mmGeneralBusinessOrError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessReport3.mmBusinessInformationReference, com.tools20022.repository.msg.GeneralBusinessReport3.mmGeneralBusinessOrError);
 				trace_lazy = () -> SystemBusinessInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "GeneralBusinessReport3";
 				definition = "Reports either on the business information or on a business error.";
@@ -213,21 +215,21 @@ public class GeneralBusinessReport3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BizInfRef", required = true)
 	public Max35Text getBusinessInformationReference() {
 		return businessInformationReference;
 	}
 
-	public void setBusinessInformationReference(Max35Text businessInformationReference) {
-		this.businessInformationReference = businessInformationReference;
+	public GeneralBusinessReport3 setBusinessInformationReference(Max35Text businessInformationReference) {
+		this.businessInformationReference = Objects.requireNonNull(businessInformationReference);
+		return this;
 	}
 
-	@XmlElement(name = "GnlBizOrErr", required = true)
 	public GeneralBusinessOrError2Choice getGeneralBusinessOrError() {
 		return generalBusinessOrError;
 	}
 
-	public void setGeneralBusinessOrError(GeneralBusinessOrError2Choice generalBusinessOrError) {
-		this.generalBusinessOrError = generalBusinessOrError;
+	public GeneralBusinessReport3 setGeneralBusinessOrError(GeneralBusinessOrError2Choice generalBusinessOrError) {
+		this.generalBusinessOrError = Objects.requireNonNull(generalBusinessOrError);
+		return this;
 	}
 }

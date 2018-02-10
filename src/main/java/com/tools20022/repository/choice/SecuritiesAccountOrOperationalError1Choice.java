@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling3;
 import com.tools20022.repository.msg.SecuritiesAccountReport1;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAccountOrOperationalError1Choice", propOrder = {"securitiesAccountReport", "operationalError"})
 public class SecuritiesAccountOrOperationalError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesAcctRpt", required = true)
 	protected List<SecuritiesAccountReport1> securitiesAccountReport;
 	/**
-	 * Report information about securities account reference data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -102,7 +105,7 @@ public class SecuritiesAccountOrOperationalError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccountReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountOrOperationalError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +116,11 @@ public class SecuritiesAccountOrOperationalError1Choice {
 			type_lazy = () -> SecuritiesAccountReport1.mmObject();
 		}
 	};
+	@XmlElement(name = "OprlErr", required = true)
 	protected List<ErrorHandling3> operationalError;
 	/**
-	 * Operational error resulting from a rejection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -142,7 +146,7 @@ public class SecuritiesAccountOrOperationalError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountOrOperationalError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuritiesAccountOrOperationalError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,8 +161,9 @@ public class SecuritiesAccountOrOperationalError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountOrOperationalError1Choice.mmSecuritiesAccountReport, SecuritiesAccountOrOperationalError1Choice.mmOperationalError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuritiesAccountOrOperationalError1Choice.mmSecuritiesAccountReport,
+						com.tools20022.repository.choice.SecuritiesAccountOrOperationalError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountOrOperationalError1Choice";
 				definition = "Set of elements used to report between the securities account reference data or an operational error.";
@@ -167,21 +172,21 @@ public class SecuritiesAccountOrOperationalError1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesAcctRpt", required = true)
 	public List<SecuritiesAccountReport1> getSecuritiesAccountReport() {
-		return securitiesAccountReport;
+		return securitiesAccountReport == null ? securitiesAccountReport = new ArrayList<>() : securitiesAccountReport;
 	}
 
-	public void setSecuritiesAccountReport(List<SecuritiesAccountReport1> securitiesAccountReport) {
-		this.securitiesAccountReport = securitiesAccountReport;
+	public SecuritiesAccountOrOperationalError1Choice setSecuritiesAccountReport(List<SecuritiesAccountReport1> securitiesAccountReport) {
+		this.securitiesAccountReport = Objects.requireNonNull(securitiesAccountReport);
+		return this;
 	}
 
-	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
-		return operationalError;
+		return operationalError == null ? operationalError = new ArrayList<>() : operationalError;
 	}
 
-	public void setOperationalError(List<ErrorHandling3> operationalError) {
-		this.operationalError = operationalError;
+	public SecuritiesAccountOrOperationalError1Choice setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = Objects.requireNonNull(operationalError);
+		return this;
 	}
 }

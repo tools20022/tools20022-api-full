@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Time constraints for processing corporate actions.
@@ -38,6 +39,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Deadline Deadline}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -109,8 +112,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionDeadline.mmGuaranteedParticipationDate}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Deadline Deadline}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -124,8 +125,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -141,9 +142,8 @@ public class CorporateActionDeadline extends Deadline {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected DateTimePeriod revocabilityPeriod;
 	/**
-	 * Period during which the shareholder can revoke, change or withdraw its
-	 * instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,8 +193,8 @@ public class CorporateActionDeadline extends Deadline {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod5.mmRevocabilityPeriod, CorporateActionPeriod5.mmAccountServicerRevocabilityPeriod, CorporateActionPeriod7.mmRevocabilityPeriod,
 					CorporateActionPeriod7.mmAccountServicerRevocabilityPeriod, CorporateActionPeriod2.mmRevocabilityPeriod);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RevocabilityPeriod";
 			definition = "Period during which the shareholder can revoke, change or withdraw its instruction.";
@@ -213,9 +213,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime protectDate;
 	/**
-	 * Last date a holder can request to defer delivery of securities pursuant
-	 * to a notice of guaranteed delivery or other required documentation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -295,8 +294,8 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate6.mmProtectDate, CorporateActionDate10.mmProtectDate, CorporateActionDate18.mmProtectDate, CorporateActionDate19.mmProtectDate, CorporateActionDate8.mmProtectDate,
 					CorporateActionDate11.mmProtectDate, CorporateActionDate15.mmProtectDate, CorporateActionDate16.mmProtectDate, CorporateActionDate2.mmProtectDate, CorporateActionDate29.mmProtectDate,
 					CorporateActionDate33.mmProtectDate, CorporateActionDate46.mmProtectDate, CorporateActionDate48.mmProtectDate, CorporateActionDate52.mmProtectDate, CorporateActionDate55.mmProtectDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProtectDate";
 			definition = "Last date a holder can request to defer delivery of securities pursuant to a notice of guaranteed delivery or other required documentation.";
@@ -315,9 +314,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime tradingSuspendedDate;
 	/**
-	 * Date on which trading of a security is suspended as the result of an
-	 * event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -385,8 +383,8 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmTradingSuspendedDate, CorporateActionDate13.mmTradingSuspendedDate, CorporateActionDate14.mmTradingSuspendedDate, CorporateActionDate21.mmTradingSuspendedDate,
 					CorporateActionDate22.mmTradingSuspendedDate, CorporateActionDate25.mmTradingSuspendedDate, CorporateActionDate27.mmTradingSuspendedDate, CorporateActionDate28.mmTradingSuspendedDate,
 					CorporateActionDate2.mmTradingSuspendedDate, CorporateActionDate44.mmTradingSuspendedDate, CorporateActionDate58.mmTradingSuspendedDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingSuspendedDate";
 			definition = "Date on which trading of a security is suspended as the result of an event.";
@@ -405,9 +403,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime thirdPartyDeadline;
 	/**
-	 * Date/Time by which the account owner must instruct directly another
-	 * party, for example to provide documentation to an issuer agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -472,8 +469,8 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmThirdPartyDeadline, CorporateActionDate13.mmThirdPartyDeadline, CorporateActionDate14.mmThirdPartyDeadline, CorporateActionDate21.mmThirdPartyDeadline,
 					CorporateActionDate22.mmThirdPartyDeadline, CorporateActionDate25.mmThirdPartyDeadline, CorporateActionDate27.mmThirdPartyDeadline, CorporateActionDate28.mmThirdPartyDeadline, CorporateActionDate44.mmThirdPartyDeadline,
 					CorporateActionDate58.mmThirdPartyDeadline);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ThirdPartyDeadline";
 			definition = "Date/Time by which the account owner must instruct directly another party, for example to provide documentation to an issuer agent.";
@@ -492,9 +489,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime certificationDeadline;
 	/**
-	 * Deadline by which the beneficial ownership of securities must be
-	 * declared.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -562,8 +558,8 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmCertificationDeadline, CorporateActionDate13.mmCertificationDeadline, CorporateActionDate14.mmCertificationDeadline, CorporateActionDate21.mmCertificationDeadline,
 					CorporateActionDate22.mmCertificationDeadline, CorporateActionDate25.mmCertificationDeadline, CorporateActionDate27.mmCertificationDeadline, CorporateActionDate28.mmCertificationDeadline,
 					CorporateActionDate2.mmCertificationDeadline, CorporateActionDate44.mmCertificationDeadline, CorporateActionDate58.mmCertificationDeadline);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificationDeadline";
 			definition = "Deadline by which the beneficial ownership of securities must be declared.";
@@ -582,9 +578,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime deadlineToSplit;
 	/**
-	 * Deadline by which instructions must be received to split securities, that
-	 * is, of physical certificates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -652,8 +647,8 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmDeadlineToSplit, CorporateActionDate13.mmDeadlineToSplit, CorporateActionDate14.mmDeadlineToSplit, CorporateActionDate21.mmDeadlineToSplit,
 					CorporateActionDate22.mmDeadlineToSplit, CorporateActionDate25.mmDeadlineToSplit, CorporateActionDate27.mmDeadlineToSplit, CorporateActionDate28.mmDeadlineToSplit, CorporateActionDate4.mmDeadlineToSplit,
 					CorporateActionDate44.mmDeadlineToSplit, CorporateActionDate58.mmDeadlineToSplit);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeadlineToSplit";
 			definition = "Deadline by which instructions must be received to split securities, that is, of physical certificates.";
@@ -672,13 +667,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime specialExDate;
 	/**
-	 * Date/time as from which 'special processing' can start to be used by
-	 * participants for that event. Special processing is a means of marking a
-	 * transaction, that would normally be traded ex or cum, as being traded cum
-	 * or ex respectively, for example, a transaction dealt 'special' after the
-	 * ex date would result in the buyer being eligible for the entitlement.
-	 * This is typically used in the UK and Irish markets.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -746,8 +736,8 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmSpecialExDate, CorporateActionDate13.mmSpecialExDate, CorporateActionDate14.mmSpecialExDate, CorporateActionDate21.mmSpecialExDate,
 					CorporateActionDate22.mmSpecialExDate, CorporateActionDate25.mmSpecialExDate, CorporateActionDate27.mmSpecialExDate, CorporateActionDate28.mmSpecialExDate, CorporateActionDate2.mmSpecialExDate,
 					CorporateActionDate44.mmSpecialExDate, CorporateActionDate58.mmSpecialExDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecialExDate";
 			definition = "Date/time as from which 'special processing' can start to be used by participants for that event. Special processing is a means of marking a transaction, that would normally be traded ex or cum, as being traded cum or ex respectively,  for example, a transaction dealt 'special' after the ex date would result in the buyer being eligible for the entitlement. This is typically used in the UK and Irish markets.";
@@ -766,8 +756,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime deadlineForTaxBreakdownInstruction;
 	/**
-	 * Date until which tax breakdown instructions will be accepted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -835,8 +825,8 @@ public class CorporateActionDeadline extends Deadline {
 					CorporateActionDate21.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate22.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate25.mmDeadlineForTaxBreakdownInstruction,
 					CorporateActionDate27.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate28.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate2.mmDeadlineForTaxBreakdownInstruction,
 					CorporateActionDate44.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate58.mmDeadlineForTaxBreakdownInstruction);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeadlineForTaxBreakdownInstruction";
 			definition = "Date until which tax breakdown instructions will be accepted.";
@@ -855,9 +845,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime earlyClosingDate;
 	/**
-	 * First possible early closing date of an offer if different from the
-	 * expiry date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -925,8 +914,8 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmEarlyClosingDate, CorporateActionDate13.mmEarlyClosingDate, CorporateActionDate14.mmEarlyClosingDate, CorporateActionDate21.mmEarlyClosingDate,
 					CorporateActionDate22.mmEarlyClosingDate, CorporateActionDate25.mmEarlyClosingDate, CorporateActionDate27.mmEarlyClosingDate, CorporateActionDate28.mmEarlyClosingDate, CorporateActionDate2.mmEarlyClosingDate,
 					CorporateActionDate44.mmEarlyClosingDate, CorporateActionDate58.mmEarlyClosingDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarlyClosingDate";
 			definition = "First possible early closing date of an offer if different from the expiry date.";
@@ -945,9 +934,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime recordDate;
 	/**
-	 * Date at which the positions are struck to note which parties will receive
-	 * the entitlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1056,8 +1044,8 @@ public class CorporateActionDeadline extends Deadline {
 					EntitlementAdvice1.mmRecordDate, GlobalDistributionRequest1.mmRecordDate, CommonFinancialInstrumentAttributes1.mmRecordDate, CorporateActionDate30.mmRecordDate, CorporateActionDate34.mmRecordDate,
 					CorporateActionDate41.mmRecordDate, CorporateActionDate43.mmRecordDate, CorporateActionDate49.mmRecordDate, CorporateActionDate45.mmRecordDate, CorporateActionDate44.mmRecordDate, CorporateActionDate54.mmRecordDate,
 					CorporateActionDate50.mmRecordDate, CorporateActionDate58.mmRecordDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RecordDate";
 			definition = "Date at which the positions are struck to note which parties will receive the entitlement.";
@@ -1076,9 +1064,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime coverExpirationDate;
 	/**
-	 * Last day a holder can deliver the securities that it had previously
-	 * protected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1159,8 +1146,8 @@ public class CorporateActionDeadline extends Deadline {
 					CorporateActionDate8.mmCoverExpirationDate, CorporateActionDate11.mmCoverExpirationDate, CorporateActionDate15.mmCoverExpirationDate, CorporateActionDate16.mmCoverExpirationDate,
 					CorporateActionDate2.mmCoverExpirationDate, CorporateActionDate29.mmCoverExpirationDate, CorporateActionDate33.mmCoverExpirationDate, CorporateActionDate46.mmCoverExpirationDate,
 					CorporateActionDate48.mmCoverExpirationDate, CorporateActionDate52.mmCoverExpirationDate, CorporateActionDate55.mmCoverExpirationDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CoverExpirationDate";
 			definition = "Last day a holder can deliver the securities that it had previously protected.";
@@ -1179,9 +1166,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime electionToCounterpartyDeadline;
 	/**
-	 * Deadline by which an entitled holder needs to advise their counterparty
-	 * to a transaction of their election for a corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1257,8 +1243,8 @@ public class CorporateActionDeadline extends Deadline {
 					CorporateActionDate27.mmElectionToCounterpartyDeadline, CorporateActionDate28.mmElectionToCounterpartyDeadline, CorporateActionDate2.mmElectionToCounterpartyDeadline,
 					CorporateActionDate44.mmElectionToCounterpartyMarketDeadline, CorporateActionDate44.mmElectionToCounterpartyResponseDeadline, CorporateActionDate58.mmElectionToCounterpartyMarketDeadline,
 					CorporateActionDate58.mmElectionToCounterpartyResponseDeadline);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ElectionToCounterpartyDeadline";
 			definition = "Deadline by which an entitled holder needs to advise their counterparty to a transaction of their election for a corporate action event.";
@@ -1277,8 +1263,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime expiryDate;
 	/**
-	 * Date on which the offer terminates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1356,8 +1342,8 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate6.mmExpiryDate, CorporateActionDate10.mmExpiryDate, CorporateActionDate18.mmExpiryDate, CorporateActionDate19.mmExpiryDate, CorporateActionDate8.mmExpiryDate,
 					CorporateActionDate11.mmExpiryDate, CorporateActionDate15.mmExpiryDate, CorporateActionDate16.mmExpiryDate, CorporateActionDate4.mmExpiryDate, CorporateActionDate29.mmExpiryDate, CorporateActionDate33.mmExpiryDate,
 					CorporateActionDate46.mmExpiryDate, CorporateActionDate48.mmExpiryDate, CorporateActionDate52.mmExpiryDate, CorporateActionDate55.mmExpiryDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date on which the offer terminates.";
@@ -1376,11 +1362,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime earlyThirdPartyDeadline;
 	/**
-	 * Date/Time set by the issuer agent as a first early deadline by which the
-	 * account owner must instruct directly another party, possibly giving the
-	 * holder eligibility to incentives. For example, to provide documentation
-	 * to an issuer agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1407,8 +1390,8 @@ public class CorporateActionDeadline extends Deadline {
 	 */
 	public static final MMBusinessAttribute mmEarlyThirdPartyDeadline = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarlyThirdPartyDeadline";
 			definition = "Date/Time set by the issuer agent as a first early deadline by which the account owner must instruct directly another party, possibly giving the holder eligibility to incentives. For example, to provide documentation to an issuer agent.";
@@ -1427,9 +1410,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime depositoryCoverExpirationDate;
 	/**
-	 * The last date/tiime that a participant of the depository can deliver
-	 * securities that it had elected on and/or previously protected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1488,8 +1470,8 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate8.mmDepositoryCoverExpirationDate, CorporateActionDate11.mmDepositoryCoverExpirationDate, CorporateActionDate15.mmDepositoryCoverExpirationDate,
 					CorporateActionDate16.mmDepositoryCoverExpirationDate, CorporateActionDate29.mmDepositoryCoverExpirationDate, CorporateActionDate33.mmDepositoryCoverExpirationDate, CorporateActionDate48.mmDepositoryCoverExpirationDate,
 					CorporateActionDate55.mmDepositoryCoverExpirationDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DepositoryCoverExpirationDate";
 			definition = "The last date/tiime that a participant of the depository can deliver securities that it had elected on and/or previously protected.";
@@ -1508,10 +1490,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime responseDeadline;
 	/**
-	 * Date on which the account servicer has set as the deadline to respond,
-	 * with instructions, to an outstanding event. This time is dependent on the
-	 * reference time zone of the account servicer as specified in an SLA.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1595,8 +1575,8 @@ public class CorporateActionDeadline extends Deadline {
 					CorporateActionDate8.mmResponseDeadline, CorporateActionDate11.mmResponseDeadline, CorporateActionDate15.mmResponseDeadline, CorporateActionDate16.mmResponseDeadline, CorporateActionDate4.mmResponseDeadline,
 					CorporateActionOption11.mmResponseDeadline, CorporateActionDate29.mmResponseDeadline, CorporateActionDate33.mmResponseDeadline, CorporateActionDate46.mmResponseDeadline, CorporateActionDate48.mmResponseDeadline,
 					CorporateActionDate52.mmResponseDeadline, CorporateActionDate55.mmResponseDeadline);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResponseDeadline";
 			definition = "Date on which the account servicer has set as the deadline to respond, with instructions, to an outstanding event. This time is dependent on the reference time zone of the account servicer as specified in an SLA.";
@@ -1615,9 +1595,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime consentExpirationDate;
 	/**
-	 * Last date on which a holder can consent to the changes sought by the
-	 * corporation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1653,8 +1632,8 @@ public class CorporateActionDeadline extends Deadline {
 	public static final MMBusinessAttribute mmConsentExpirationDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate4.mmConsentExpirationDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConsentExpirationDate";
 			definition = "Last date on which a holder can consent to the changes sought by the corporation.";
@@ -1673,9 +1652,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime registrationDeadline;
 	/**
-	 * Date on which instructions to register or registration details will be
-	 * accepted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1743,8 +1721,8 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmRegistrationDeadline, CorporateActionDate13.mmRegistrationDeadline, CorporateActionDate14.mmRegistrationDeadline, CorporateActionDate21.mmRegistrationDeadline,
 					CorporateActionDate22.mmRegistrationDeadline, CorporateActionDate25.mmRegistrationDeadline, CorporateActionDate27.mmRegistrationDeadline, CorporateActionDate28.mmRegistrationDeadline,
 					CorporateActionDate2.mmRegistrationDeadline, CorporateActionDate44.mmRegistrationDeadline, CorporateActionDate58.mmRegistrationDeadline);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationDeadline";
 			definition = "Date on which instructions to register or registration details will be accepted.";
@@ -1763,10 +1741,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime stockLendingDeadline;
 	/**
-	 * Date or date and time that the account servicer has set as the deadline
-	 * to respond with instructions to an event for which the underlying
-	 * security is out on loan.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1818,8 +1794,8 @@ public class CorporateActionDeadline extends Deadline {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate29.mmStockLendingDeadline, CorporateActionDate33.mmStockLendingDeadline, CorporateActionDate48.mmStockLendingDeadline, BorrowerLendingDeadline1.mmStockLendingDeadline,
 					CorporateActionDate55.mmStockLendingDeadline, BorrowerLendingDeadline2.mmStockLendingDeadline);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StockLendingDeadline";
 			definition = "Date or date and time that the account servicer has set as the deadline to respond with instructions to an event for which the underlying security is out on loan. ";
@@ -1838,14 +1814,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime consentRecordDate;
 	/**
-	 * Date used by the offeror to determine the beneficiary eligible to
-	 * participate in a consent based on the registered owner of the securities,
-	 * eg, beneficial owner of consent record. The consent record date qualifier
-	 * is used to indicate that a record date only applies to a certain part of
-	 * the offer, not the entire offer.<br>
-	 * The consent record date is used to indicate that a record date only
-	 * applies to a certain part of the offer, not the entire offer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1881,8 +1851,8 @@ public class CorporateActionDeadline extends Deadline {
 	public static final MMBusinessAttribute mmConsentRecordDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate4.mmConsentRecordDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConsentRecordDate";
 			definition = "Date used by the offeror to determine the beneficiary eligible to participate in a consent based on the registered owner of the securities, eg, beneficial owner of consent record. The consent record date qualifier is used to indicate that a record date only applies to a certain part of the offer, not the entire offer.\r\nThe consent record date is used to indicate that a record date only applies to a certain part of the offer, not the entire offer.";
@@ -1901,11 +1871,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime earlyResponseDeadline;
 	/**
-	 * Date/time that the account servicer has set as the deadline to respond,
-	 * with instructions, to an outstanding event, giving the holder eligibility
-	 * to incentives. This time is dependent on the reference time zone of the
-	 * account servicer as specified in an SLA.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1996,8 +1963,8 @@ public class CorporateActionDeadline extends Deadline {
 					CorporateActionDate22.mmEarlyThirdPartyDeadline, CorporateActionDate25.mmEarlyThirdPartyDeadline, CorporateActionDate27.mmEarlyThirdPartyDeadline, CorporateActionDate28.mmEarlyThirdPartyDeadline,
 					CorporateActionDate29.mmEarlyResponseDeadline, CorporateActionDate33.mmEarlyResponseDeadline, CorporateActionDate48.mmEarlyResponseDeadline, CorporateActionDate44.mmEarlyThirdPartyDeadline,
 					CorporateActionDate55.mmEarlyResponseDeadline, CorporateActionDate58.mmEarlyThirdPartyDeadline);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarlyResponseDeadline";
 			definition = "Date/time that the account servicer has set as the deadline to respond, with instructions, to an outstanding event, giving the holder eligibility to incentives. This time is dependent on the reference time zone of the account servicer as specified in an SLA.";
@@ -2016,9 +1983,8 @@ public class CorporateActionDeadline extends Deadline {
 	};
 	protected ISODateTime guaranteedParticipationDate;
 	/**
-	 * Last date/time by which a buying counterparty to a trade can be sure that
-	 * it will have the right to participate in an event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2086,8 +2052,8 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmGuaranteedParticipationDate, CorporateActionDate13.mmGuaranteedParticipationDate, CorporateActionDate14.mmGuaranteedParticipationDate,
 					CorporateActionDate21.mmGuaranteedParticipationDate, CorporateActionDate22.mmGuaranteedParticipationDate, CorporateActionDate25.mmGuaranteedParticipationDate, CorporateActionDate27.mmGuaranteedParticipationDate,
 					CorporateActionDate28.mmGuaranteedParticipationDate, CorporateActionDate2.mmGuaranteedParticipationDate, CorporateActionDate44.mmGuaranteedParticipationDate, CorporateActionDate58.mmGuaranteedParticipationDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GuaranteedParticipationDate";
 			definition = "Last date/time by which a buying counterparty to a trade can be sure that it will have the right to participate in an event.";
@@ -2108,7 +2074,7 @@ public class CorporateActionDeadline extends Deadline {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDeadline";
 				definition = "Time constraints for processing corporate actions.";
@@ -2139,175 +2105,197 @@ public class CorporateActionDeadline extends Deadline {
 		return revocabilityPeriod;
 	}
 
-	public void setRevocabilityPeriod(com.tools20022.repository.entity.DateTimePeriod revocabilityPeriod) {
-		this.revocabilityPeriod = revocabilityPeriod;
+	public CorporateActionDeadline setRevocabilityPeriod(com.tools20022.repository.entity.DateTimePeriod revocabilityPeriod) {
+		this.revocabilityPeriod = Objects.requireNonNull(revocabilityPeriod);
+		return this;
 	}
 
 	public ISODateTime getProtectDate() {
 		return protectDate;
 	}
 
-	public void setProtectDate(ISODateTime protectDate) {
-		this.protectDate = protectDate;
+	public CorporateActionDeadline setProtectDate(ISODateTime protectDate) {
+		this.protectDate = Objects.requireNonNull(protectDate);
+		return this;
 	}
 
 	public ISODateTime getTradingSuspendedDate() {
 		return tradingSuspendedDate;
 	}
 
-	public void setTradingSuspendedDate(ISODateTime tradingSuspendedDate) {
-		this.tradingSuspendedDate = tradingSuspendedDate;
+	public CorporateActionDeadline setTradingSuspendedDate(ISODateTime tradingSuspendedDate) {
+		this.tradingSuspendedDate = Objects.requireNonNull(tradingSuspendedDate);
+		return this;
 	}
 
 	public ISODateTime getThirdPartyDeadline() {
 		return thirdPartyDeadline;
 	}
 
-	public void setThirdPartyDeadline(ISODateTime thirdPartyDeadline) {
-		this.thirdPartyDeadline = thirdPartyDeadline;
+	public CorporateActionDeadline setThirdPartyDeadline(ISODateTime thirdPartyDeadline) {
+		this.thirdPartyDeadline = Objects.requireNonNull(thirdPartyDeadline);
+		return this;
 	}
 
 	public ISODateTime getCertificationDeadline() {
 		return certificationDeadline;
 	}
 
-	public void setCertificationDeadline(ISODateTime certificationDeadline) {
-		this.certificationDeadline = certificationDeadline;
+	public CorporateActionDeadline setCertificationDeadline(ISODateTime certificationDeadline) {
+		this.certificationDeadline = Objects.requireNonNull(certificationDeadline);
+		return this;
 	}
 
 	public ISODateTime getDeadlineToSplit() {
 		return deadlineToSplit;
 	}
 
-	public void setDeadlineToSplit(ISODateTime deadlineToSplit) {
-		this.deadlineToSplit = deadlineToSplit;
+	public CorporateActionDeadline setDeadlineToSplit(ISODateTime deadlineToSplit) {
+		this.deadlineToSplit = Objects.requireNonNull(deadlineToSplit);
+		return this;
 	}
 
 	public ISODateTime getSpecialExDate() {
 		return specialExDate;
 	}
 
-	public void setSpecialExDate(ISODateTime specialExDate) {
-		this.specialExDate = specialExDate;
+	public CorporateActionDeadline setSpecialExDate(ISODateTime specialExDate) {
+		this.specialExDate = Objects.requireNonNull(specialExDate);
+		return this;
 	}
 
 	public ISODateTime getDeadlineForTaxBreakdownInstruction() {
 		return deadlineForTaxBreakdownInstruction;
 	}
 
-	public void setDeadlineForTaxBreakdownInstruction(ISODateTime deadlineForTaxBreakdownInstruction) {
-		this.deadlineForTaxBreakdownInstruction = deadlineForTaxBreakdownInstruction;
+	public CorporateActionDeadline setDeadlineForTaxBreakdownInstruction(ISODateTime deadlineForTaxBreakdownInstruction) {
+		this.deadlineForTaxBreakdownInstruction = Objects.requireNonNull(deadlineForTaxBreakdownInstruction);
+		return this;
 	}
 
 	public ISODateTime getEarlyClosingDate() {
 		return earlyClosingDate;
 	}
 
-	public void setEarlyClosingDate(ISODateTime earlyClosingDate) {
-		this.earlyClosingDate = earlyClosingDate;
+	public CorporateActionDeadline setEarlyClosingDate(ISODateTime earlyClosingDate) {
+		this.earlyClosingDate = Objects.requireNonNull(earlyClosingDate);
+		return this;
 	}
 
 	public ISODateTime getRecordDate() {
 		return recordDate;
 	}
 
-	public void setRecordDate(ISODateTime recordDate) {
-		this.recordDate = recordDate;
+	public CorporateActionDeadline setRecordDate(ISODateTime recordDate) {
+		this.recordDate = Objects.requireNonNull(recordDate);
+		return this;
 	}
 
 	public ISODateTime getCoverExpirationDate() {
 		return coverExpirationDate;
 	}
 
-	public void setCoverExpirationDate(ISODateTime coverExpirationDate) {
-		this.coverExpirationDate = coverExpirationDate;
+	public CorporateActionDeadline setCoverExpirationDate(ISODateTime coverExpirationDate) {
+		this.coverExpirationDate = Objects.requireNonNull(coverExpirationDate);
+		return this;
 	}
 
 	public ISODateTime getElectionToCounterpartyDeadline() {
 		return electionToCounterpartyDeadline;
 	}
 
-	public void setElectionToCounterpartyDeadline(ISODateTime electionToCounterpartyDeadline) {
-		this.electionToCounterpartyDeadline = electionToCounterpartyDeadline;
+	public CorporateActionDeadline setElectionToCounterpartyDeadline(ISODateTime electionToCounterpartyDeadline) {
+		this.electionToCounterpartyDeadline = Objects.requireNonNull(electionToCounterpartyDeadline);
+		return this;
 	}
 
 	public ISODateTime getExpiryDate() {
 		return expiryDate;
 	}
 
-	public void setExpiryDate(ISODateTime expiryDate) {
-		this.expiryDate = expiryDate;
+	public CorporateActionDeadline setExpiryDate(ISODateTime expiryDate) {
+		this.expiryDate = Objects.requireNonNull(expiryDate);
+		return this;
 	}
 
 	public ISODateTime getEarlyThirdPartyDeadline() {
 		return earlyThirdPartyDeadline;
 	}
 
-	public void setEarlyThirdPartyDeadline(ISODateTime earlyThirdPartyDeadline) {
-		this.earlyThirdPartyDeadline = earlyThirdPartyDeadline;
+	public CorporateActionDeadline setEarlyThirdPartyDeadline(ISODateTime earlyThirdPartyDeadline) {
+		this.earlyThirdPartyDeadline = Objects.requireNonNull(earlyThirdPartyDeadline);
+		return this;
 	}
 
 	public ISODateTime getDepositoryCoverExpirationDate() {
 		return depositoryCoverExpirationDate;
 	}
 
-	public void setDepositoryCoverExpirationDate(ISODateTime depositoryCoverExpirationDate) {
-		this.depositoryCoverExpirationDate = depositoryCoverExpirationDate;
+	public CorporateActionDeadline setDepositoryCoverExpirationDate(ISODateTime depositoryCoverExpirationDate) {
+		this.depositoryCoverExpirationDate = Objects.requireNonNull(depositoryCoverExpirationDate);
+		return this;
 	}
 
 	public ISODateTime getResponseDeadline() {
 		return responseDeadline;
 	}
 
-	public void setResponseDeadline(ISODateTime responseDeadline) {
-		this.responseDeadline = responseDeadline;
+	public CorporateActionDeadline setResponseDeadline(ISODateTime responseDeadline) {
+		this.responseDeadline = Objects.requireNonNull(responseDeadline);
+		return this;
 	}
 
 	public ISODateTime getConsentExpirationDate() {
 		return consentExpirationDate;
 	}
 
-	public void setConsentExpirationDate(ISODateTime consentExpirationDate) {
-		this.consentExpirationDate = consentExpirationDate;
+	public CorporateActionDeadline setConsentExpirationDate(ISODateTime consentExpirationDate) {
+		this.consentExpirationDate = Objects.requireNonNull(consentExpirationDate);
+		return this;
 	}
 
 	public ISODateTime getRegistrationDeadline() {
 		return registrationDeadline;
 	}
 
-	public void setRegistrationDeadline(ISODateTime registrationDeadline) {
-		this.registrationDeadline = registrationDeadline;
+	public CorporateActionDeadline setRegistrationDeadline(ISODateTime registrationDeadline) {
+		this.registrationDeadline = Objects.requireNonNull(registrationDeadline);
+		return this;
 	}
 
 	public ISODateTime getStockLendingDeadline() {
 		return stockLendingDeadline;
 	}
 
-	public void setStockLendingDeadline(ISODateTime stockLendingDeadline) {
-		this.stockLendingDeadline = stockLendingDeadline;
+	public CorporateActionDeadline setStockLendingDeadline(ISODateTime stockLendingDeadline) {
+		this.stockLendingDeadline = Objects.requireNonNull(stockLendingDeadline);
+		return this;
 	}
 
 	public ISODateTime getConsentRecordDate() {
 		return consentRecordDate;
 	}
 
-	public void setConsentRecordDate(ISODateTime consentRecordDate) {
-		this.consentRecordDate = consentRecordDate;
+	public CorporateActionDeadline setConsentRecordDate(ISODateTime consentRecordDate) {
+		this.consentRecordDate = Objects.requireNonNull(consentRecordDate);
+		return this;
 	}
 
 	public ISODateTime getEarlyResponseDeadline() {
 		return earlyResponseDeadline;
 	}
 
-	public void setEarlyResponseDeadline(ISODateTime earlyResponseDeadline) {
-		this.earlyResponseDeadline = earlyResponseDeadline;
+	public CorporateActionDeadline setEarlyResponseDeadline(ISODateTime earlyResponseDeadline) {
+		this.earlyResponseDeadline = Objects.requireNonNull(earlyResponseDeadline);
+		return this;
 	}
 
 	public ISODateTime getGuaranteedParticipationDate() {
 		return guaranteedParticipationDate;
 	}
 
-	public void setGuaranteedParticipationDate(ISODateTime guaranteedParticipationDate) {
-		this.guaranteedParticipationDate = guaranteedParticipationDate;
+	public CorporateActionDeadline setGuaranteedParticipationDate(ISODateTime guaranteedParticipationDate) {
+		this.guaranteedParticipationDate = Objects.requireNonNull(guaranteedParticipationDate);
+		return this;
 	}
 }

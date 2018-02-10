@@ -20,32 +20,36 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.EntryStatusCode;
+import com.tools20022.repository.codeset.EntryStatus4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of an entry.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus4Code#Booked
+ * EntryStatus4Code.Booked}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus4Code#Pending
+ * EntryStatus4Code.Pending}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.EntryStatusCode
  * EntryStatusCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus4Code#mmBooked
- * EntryStatus4Code.mmBooked}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EntryStatus4Code#mmPending
- * EntryStatus4Code.mmPending}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -62,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of an entry."</li>
  * </ul>
  */
-public class EntryStatus4Code extends EntryStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EntryStatus4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,11 +86,12 @@ public class EntryStatus4Code extends EntryStatusCode {
 	 * name} = "Booked"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBooked = new MMCode() {
+	public static final EntryStatus4Code Booked = new EntryStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Booked";
-			owner_lazy = () -> EntryStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EntryStatus4Code.mmObject();
+			codeName = EntryStatusCode.Booked.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -104,26 +110,57 @@ public class EntryStatus4Code extends EntryStatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPending = new MMCode() {
+	public static final EntryStatus4Code Pending = new EntryStatus4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
-			owner_lazy = () -> EntryStatus4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EntryStatus4Code.mmObject();
+			codeName = EntryStatusCode.Pending.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, EntryStatus4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EntryStatus4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BOOK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EntryStatus4Code";
 				definition = "Specifies the status of an entry.";
-				code_lazy = () -> Arrays.asList(EntryStatus4Code.mmBooked, EntryStatus4Code.mmPending);
 				trace_lazy = () -> EntryStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryStatus4Code.Booked, com.tools20022.repository.codeset.EntryStatus4Code.Pending);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Booked.getCodeName().get(), Booked);
+		codesByName.put(Pending.getCodeName().get(), Pending);
+	}
+
+	public static EntryStatus4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EntryStatus4Code[] values() {
+		EntryStatus4Code[] values = new EntryStatus4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EntryStatus4Code> {
+		@Override
+		public EntryStatus4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EntryStatus4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

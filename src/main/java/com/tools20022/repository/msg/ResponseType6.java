@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.Response;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * ResponseType5}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ResponseType6", propOrder = {"response", "responseDetail", "additionalResponse"})
 public class ResponseType6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rspn", required = true)
 	protected Response2Code response;
 	/**
-	 * Response of the terminal manager.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +113,7 @@ public class ResponseType6 {
 	 */
 	public static final MMMessageAttribute mmResponse = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ResponseType6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseType6.mmObject();
 			isDerived = false;
 			xmlTag = "Rspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +125,11 @@ public class ResponseType6 {
 			simpleType_lazy = () -> Response2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RspnDtl")
 	protected ResultDetail3Code responseDetail;
 	/**
-	 * Detail of the response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +167,7 @@ public class ResponseType6 {
 	public static final MMMessageAttribute mmResponseDetail = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Response.mmResponseReason;
-			componentContext_lazy = () -> ResponseType6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseType6.mmObject();
 			isDerived = false;
 			xmlTag = "RspnDtl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,10 +179,11 @@ public class ResponseType6 {
 			simpleType_lazy = () -> ResultDetail3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRspn")
 	protected Max140Text additionalResponse;
 	/**
-	 * Additional information on the response for further examination.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +215,7 @@ public class ResponseType6 {
 	 */
 	public static final MMMessageAttribute mmAdditionalResponse = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ResponseType6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseType6.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,9 +231,10 @@ public class ResponseType6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ResponseType6.mmResponse, ResponseType6.mmResponseDetail, ResponseType6.mmAdditionalResponse);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResponseType6.mmResponse, com.tools20022.repository.msg.ResponseType6.mmResponseDetail,
+						com.tools20022.repository.msg.ResponseType6.mmAdditionalResponse);
 				trace_lazy = () -> Response.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResponseType6";
 				definition = "Response of a requested service.";
@@ -238,30 +244,30 @@ public class ResponseType6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rspn", required = true)
 	public Response2Code getResponse() {
 		return response;
 	}
 
-	public void setResponse(Response2Code response) {
-		this.response = response;
+	public ResponseType6 setResponse(Response2Code response) {
+		this.response = Objects.requireNonNull(response);
+		return this;
 	}
 
-	@XmlElement(name = "RspnDtl")
-	public ResultDetail3Code getResponseDetail() {
-		return responseDetail;
+	public Optional<ResultDetail3Code> getResponseDetail() {
+		return responseDetail == null ? Optional.empty() : Optional.of(responseDetail);
 	}
 
-	public void setResponseDetail(ResultDetail3Code responseDetail) {
+	public ResponseType6 setResponseDetail(ResultDetail3Code responseDetail) {
 		this.responseDetail = responseDetail;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRspn")
-	public Max140Text getAdditionalResponse() {
-		return additionalResponse;
+	public Optional<Max140Text> getAdditionalResponse() {
+		return additionalResponse == null ? Optional.empty() : Optional.of(additionalResponse);
 	}
 
-	public void setAdditionalResponse(Max140Text additionalResponse) {
+	public ResponseType6 setAdditionalResponse(Max140Text additionalResponse) {
 		this.additionalResponse = additionalResponse;
+		return this;
 	}
 }

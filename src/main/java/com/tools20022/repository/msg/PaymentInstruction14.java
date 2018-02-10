@@ -25,9 +25,8 @@ import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -94,8 +93,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,18 +109,17 @@ import javax.xml.bind.annotation.XmlType;
  * PaymentInstruction1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentInstruction14", propOrder = {"messageIdentification", "requestedExecutionDate", "status", "instructedAmount", "interbankSettlementAmount", "purpose", "paymentMethod", "priority", "processingValidityTime",
 		"instructionCopy", "type", "generatedOrder", "transactionIdentification", "interbankSettlementDate", "endToEndIdentification", "parties"})
 public class PaymentInstruction14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId")
 	protected Max35Text messageIdentification;
 	/**
-	 * Point to point reference, as assigned by the original initiating party,
-	 * to unambiguously identify the original payment transaction message Usage:
-	 * this is the former TransactionReference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +159,7 @@ public class PaymentInstruction14 {
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
-			componentContext_lazy = () -> PaymentInstruction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,11 +171,11 @@ public class PaymentInstruction14 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdExctnDt")
 	protected DateAndDateTimeChoice requestedExecutionDate;
 	/**
-	 * Date and time at which the cash is at the disposal of the credit account
-	 * owner, or ceases to be at the disposal of the debit account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,7 +216,7 @@ public class PaymentInstruction14 {
 	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRequestedExecutionDate;
-			componentContext_lazy = () -> PaymentInstruction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,10 +228,11 @@ public class PaymentInstruction14 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts")
 	protected List<com.tools20022.repository.msg.PaymentStatus2> status;
 	/**
-	 * Detailed information about the status of a transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -270,7 +269,7 @@ public class PaymentInstruction14 {
 	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPaymentStatus;
-			componentContext_lazy = () -> PaymentInstruction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -282,12 +281,11 @@ public class PaymentInstruction14 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentStatus2.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdAmt")
 	protected Amount3Choice instructedAmount;
 	/**
-	 * Amount of money to be moved between the debtor and creditor, before
-	 * deduction of charges, expressed in the currency as ordered by the
-	 * initiating party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -328,7 +326,7 @@ public class PaymentInstruction14 {
 	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
-			componentContext_lazy = () -> PaymentInstruction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -340,11 +338,11 @@ public class PaymentInstruction14 {
 			complexType_lazy = () -> Amount3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmAmt")
 	protected Amount2Choice interbankSettlementAmount;
 	/**
-	 * Amount of money moved between the instructing agent and the instructed
-	 * agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -385,7 +383,7 @@ public class PaymentInstruction14 {
 	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
-			componentContext_lazy = () -> PaymentInstruction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -397,10 +395,11 @@ public class PaymentInstruction14 {
 			complexType_lazy = () -> Amount2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Purp")
 	protected Max10Text purpose;
 	/**
-	 * Underlying reason for the payment transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -438,7 +437,7 @@ public class PaymentInstruction14 {
 	public static final MMMessageAttribute mmPurpose = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPurpose;
-			componentContext_lazy = () -> PaymentInstruction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 			isDerived = false;
 			xmlTag = "Purp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -450,11 +449,11 @@ public class PaymentInstruction14 {
 			simpleType_lazy = () -> Max10Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtMtd")
 	protected PaymentOrigin1Choice paymentMethod;
 	/**
-	 * Indicates the message or event from which an instruction has been
-	 * initiated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -494,7 +493,7 @@ public class PaymentInstruction14 {
 	public static final MMMessageAssociationEnd mmPaymentMethod = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CreditInstrument.mmMethod;
-			componentContext_lazy = () -> PaymentInstruction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 			isDerived = false;
 			xmlTag = "PmtMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -507,12 +506,11 @@ public class PaymentInstruction14 {
 			type_lazy = () -> PaymentOrigin1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Prty")
 	protected PriorityCode3Choice priority;
 	/**
-	 * Urgency or order of importance that the originator would like the
-	 * recipient of the payment instruction to apply to the processing of the
-	 * payment instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -553,7 +551,7 @@ public class PaymentInstruction14 {
 	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPriority;
-			componentContext_lazy = () -> PaymentInstruction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 			isDerived = false;
 			xmlTag = "Prty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -565,11 +563,11 @@ public class PaymentInstruction14 {
 			complexType_lazy = () -> PriorityCode3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcgVldtyTm")
 	protected DateTimePeriodChoice processingValidityTime;
 	/**
-	 * Date and time range within which the payment instruction must be
-	 * processed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -610,7 +608,7 @@ public class PaymentInstruction14 {
 	public static final MMMessageAttribute mmProcessingValidityTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmProcessingValidityTime;
-			componentContext_lazy = () -> PaymentInstruction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgVldtyTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -622,10 +620,11 @@ public class PaymentInstruction14 {
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrCpy")
 	protected Max20000Text instructionCopy;
 	/**
-	 * Copy of the original instruction, in free form text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -658,7 +657,7 @@ public class PaymentInstruction14 {
 	 */
 	public static final MMMessageAttribute mmInstructionCopy = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentInstruction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 			isDerived = false;
 			xmlTag = "InstrCpy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -670,10 +669,11 @@ public class PaymentInstruction14 {
 			simpleType_lazy = () -> Max20000Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected PaymentType4Choice type;
 	/**
-	 * Type, or nature, of the payment, such as express payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -711,7 +711,7 @@ public class PaymentInstruction14 {
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmType;
-			componentContext_lazy = () -> PaymentInstruction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -724,11 +724,11 @@ public class PaymentInstruction14 {
 			type_lazy = () -> PaymentType4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "GnrtdOrdr")
 	protected TrueFalseIndicator generatedOrder;
 	/**
-	 * Payment is a liquidity transfer order that has been executed
-	 * automatically following a predefined or standing order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -763,7 +763,7 @@ public class PaymentInstruction14 {
 	 */
 	public static final MMMessageAttribute mmGeneratedOrder = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentInstruction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 			isDerived = false;
 			xmlTag = "GnrtdOrdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -775,17 +775,11 @@ public class PaymentInstruction14 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "TxId")
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unique identification, as assigned by the first instructing agent, to
-	 * unambiguously identify the transaction that is passed on, unchanged,
-	 * throughout the entire interbank chain.<br>
-	 * Usage: The transaction identification can be used for reconciliation,
-	 * tracking or to link tasks relating to the transaction on the interbank
-	 * level. The instructing agent has to make sure that the transaction
-	 * identification is unique for a pre-agreed period.<br>
-	 * Usage: This is the former PaymentInstructionReference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -825,7 +819,7 @@ public class PaymentInstruction14 {
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmTransactionIdentification;
-			componentContext_lazy = () -> PaymentInstruction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -837,12 +831,11 @@ public class PaymentInstruction14 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmDt")
 	protected ISODate interbankSettlementDate;
 	/**
-	 * Date on which the amount of money ceases to be available to the agent
-	 * that owes it and when the amount of money becomes available to the agent
-	 * to which it is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -882,7 +875,7 @@ public class PaymentInstruction14 {
 	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
-			componentContext_lazy = () -> PaymentInstruction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -894,16 +887,11 @@ public class PaymentInstruction14 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "EndToEndId")
 	protected Max35Text endToEndIdentification;
 	/**
-	 * Unique identification, as assigned by the initiating party, to
-	 * unambiguously identify the transaction. This identification is passed on,
-	 * unchanged, throughout the entire end-to-end chain.<br>
-	 * Usage: The end-to-end identification can be used for reconciliation or to
-	 * link tasks relating to the transaction.<br>
-	 * It can be included in several messages related to the transaction.<br>
-	 * Usage: This is the former related reference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -943,7 +931,7 @@ public class PaymentInstruction14 {
 	public static final MMMessageAttribute mmEndToEndIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
-			componentContext_lazy = () -> PaymentInstruction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 			isDerived = false;
 			xmlTag = "EndToEndId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -955,10 +943,11 @@ public class PaymentInstruction14 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Pties")
 	protected PaymentTransactionParty2 parties;
 	/**
-	 * Defines the party fields used to search for a payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -996,7 +985,7 @@ public class PaymentInstruction14 {
 	public static final MMMessageAssociationEnd mmParties = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPartyRole;
-			componentContext_lazy = () -> PaymentInstruction14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction14.mmObject();
 			isDerived = false;
 			xmlTag = "Pties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1013,12 +1002,16 @@ public class PaymentInstruction14 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentInstruction14.mmMessageIdentification, PaymentInstruction14.mmRequestedExecutionDate, PaymentInstruction14.mmStatus, PaymentInstruction14.mmInstructedAmount,
-						PaymentInstruction14.mmInterbankSettlementAmount, PaymentInstruction14.mmPurpose, PaymentInstruction14.mmPaymentMethod, PaymentInstruction14.mmPriority, PaymentInstruction14.mmProcessingValidityTime,
-						PaymentInstruction14.mmInstructionCopy, PaymentInstruction14.mmType, PaymentInstruction14.mmGeneratedOrder, PaymentInstruction14.mmTransactionIdentification, PaymentInstruction14.mmInterbankSettlementDate,
-						PaymentInstruction14.mmEndToEndIdentification, PaymentInstruction14.mmParties);
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.msg.PaymentInstruction14.mmMessageIdentification, com.tools20022.repository.msg.PaymentInstruction14.mmRequestedExecutionDate,
+								com.tools20022.repository.msg.PaymentInstruction14.mmStatus, com.tools20022.repository.msg.PaymentInstruction14.mmInstructedAmount,
+								com.tools20022.repository.msg.PaymentInstruction14.mmInterbankSettlementAmount, com.tools20022.repository.msg.PaymentInstruction14.mmPurpose,
+								com.tools20022.repository.msg.PaymentInstruction14.mmPaymentMethod, com.tools20022.repository.msg.PaymentInstruction14.mmPriority, com.tools20022.repository.msg.PaymentInstruction14.mmProcessingValidityTime,
+								com.tools20022.repository.msg.PaymentInstruction14.mmInstructionCopy, com.tools20022.repository.msg.PaymentInstruction14.mmType, com.tools20022.repository.msg.PaymentInstruction14.mmGeneratedOrder,
+								com.tools20022.repository.msg.PaymentInstruction14.mmTransactionIdentification, com.tools20022.repository.msg.PaymentInstruction14.mmInterbankSettlementDate,
+								com.tools20022.repository.msg.PaymentInstruction14.mmEndToEndIdentification, com.tools20022.repository.msg.PaymentInstruction14.mmParties);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstruction14";
 				definition = "Provides details on the payment instruction.";
@@ -1028,147 +1021,147 @@ public class PaymentInstruction14 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId")
-	public Max35Text getMessageIdentification() {
-		return messageIdentification;
+	public Optional<Max35Text> getMessageIdentification() {
+		return messageIdentification == null ? Optional.empty() : Optional.of(messageIdentification);
 	}
 
-	public void setMessageIdentification(Max35Text messageIdentification) {
+	public PaymentInstruction14 setMessageIdentification(Max35Text messageIdentification) {
 		this.messageIdentification = messageIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ReqdExctnDt")
-	public DateAndDateTimeChoice getRequestedExecutionDate() {
-		return requestedExecutionDate;
+	public Optional<DateAndDateTimeChoice> getRequestedExecutionDate() {
+		return requestedExecutionDate == null ? Optional.empty() : Optional.of(requestedExecutionDate);
 	}
 
-	public void setRequestedExecutionDate(DateAndDateTimeChoice requestedExecutionDate) {
+	public PaymentInstruction14 setRequestedExecutionDate(DateAndDateTimeChoice requestedExecutionDate) {
 		this.requestedExecutionDate = requestedExecutionDate;
+		return this;
 	}
 
-	@XmlElement(name = "Sts")
 	public List<PaymentStatus2> getStatus() {
-		return status;
+		return status == null ? status = new ArrayList<>() : status;
 	}
 
-	public void setStatus(List<com.tools20022.repository.msg.PaymentStatus2> status) {
-		this.status = status;
+	public PaymentInstruction14 setStatus(List<com.tools20022.repository.msg.PaymentStatus2> status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "InstdAmt")
-	public Amount3Choice getInstructedAmount() {
-		return instructedAmount;
+	public Optional<Amount3Choice> getInstructedAmount() {
+		return instructedAmount == null ? Optional.empty() : Optional.of(instructedAmount);
 	}
 
-	public void setInstructedAmount(Amount3Choice instructedAmount) {
+	public PaymentInstruction14 setInstructedAmount(Amount3Choice instructedAmount) {
 		this.instructedAmount = instructedAmount;
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmAmt")
-	public Amount2Choice getInterbankSettlementAmount() {
-		return interbankSettlementAmount;
+	public Optional<Amount2Choice> getInterbankSettlementAmount() {
+		return interbankSettlementAmount == null ? Optional.empty() : Optional.of(interbankSettlementAmount);
 	}
 
-	public void setInterbankSettlementAmount(Amount2Choice interbankSettlementAmount) {
+	public PaymentInstruction14 setInterbankSettlementAmount(Amount2Choice interbankSettlementAmount) {
 		this.interbankSettlementAmount = interbankSettlementAmount;
+		return this;
 	}
 
-	@XmlElement(name = "Purp")
-	public Max10Text getPurpose() {
-		return purpose;
+	public Optional<Max10Text> getPurpose() {
+		return purpose == null ? Optional.empty() : Optional.of(purpose);
 	}
 
-	public void setPurpose(Max10Text purpose) {
+	public PaymentInstruction14 setPurpose(Max10Text purpose) {
 		this.purpose = purpose;
+		return this;
 	}
 
-	@XmlElement(name = "PmtMtd")
-	public PaymentOrigin1Choice getPaymentMethod() {
-		return paymentMethod;
+	public Optional<PaymentOrigin1Choice> getPaymentMethod() {
+		return paymentMethod == null ? Optional.empty() : Optional.of(paymentMethod);
 	}
 
-	public void setPaymentMethod(PaymentOrigin1Choice paymentMethod) {
+	public PaymentInstruction14 setPaymentMethod(PaymentOrigin1Choice paymentMethod) {
 		this.paymentMethod = paymentMethod;
+		return this;
 	}
 
-	@XmlElement(name = "Prty")
-	public PriorityCode3Choice getPriority() {
-		return priority;
+	public Optional<PriorityCode3Choice> getPriority() {
+		return priority == null ? Optional.empty() : Optional.of(priority);
 	}
 
-	public void setPriority(PriorityCode3Choice priority) {
+	public PaymentInstruction14 setPriority(PriorityCode3Choice priority) {
 		this.priority = priority;
+		return this;
 	}
 
-	@XmlElement(name = "PrcgVldtyTm")
-	public DateTimePeriodChoice getProcessingValidityTime() {
-		return processingValidityTime;
+	public Optional<DateTimePeriodChoice> getProcessingValidityTime() {
+		return processingValidityTime == null ? Optional.empty() : Optional.of(processingValidityTime);
 	}
 
-	public void setProcessingValidityTime(DateTimePeriodChoice processingValidityTime) {
+	public PaymentInstruction14 setProcessingValidityTime(DateTimePeriodChoice processingValidityTime) {
 		this.processingValidityTime = processingValidityTime;
+		return this;
 	}
 
-	@XmlElement(name = "InstrCpy")
-	public Max20000Text getInstructionCopy() {
-		return instructionCopy;
+	public Optional<Max20000Text> getInstructionCopy() {
+		return instructionCopy == null ? Optional.empty() : Optional.of(instructionCopy);
 	}
 
-	public void setInstructionCopy(Max20000Text instructionCopy) {
+	public PaymentInstruction14 setInstructionCopy(Max20000Text instructionCopy) {
 		this.instructionCopy = instructionCopy;
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public PaymentType4Choice getType() {
-		return type;
+	public Optional<PaymentType4Choice> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(PaymentType4Choice type) {
+	public PaymentInstruction14 setType(PaymentType4Choice type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "GnrtdOrdr")
-	public TrueFalseIndicator getGeneratedOrder() {
-		return generatedOrder;
+	public Optional<TrueFalseIndicator> getGeneratedOrder() {
+		return generatedOrder == null ? Optional.empty() : Optional.of(generatedOrder);
 	}
 
-	public void setGeneratedOrder(TrueFalseIndicator generatedOrder) {
+	public PaymentInstruction14 setGeneratedOrder(TrueFalseIndicator generatedOrder) {
 		this.generatedOrder = generatedOrder;
+		return this;
 	}
 
-	@XmlElement(name = "TxId")
-	public Max35Text getTransactionIdentification() {
-		return transactionIdentification;
+	public Optional<Max35Text> getTransactionIdentification() {
+		return transactionIdentification == null ? Optional.empty() : Optional.of(transactionIdentification);
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
+	public PaymentInstruction14 setTransactionIdentification(Max35Text transactionIdentification) {
 		this.transactionIdentification = transactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmDt")
-	public ISODate getInterbankSettlementDate() {
-		return interbankSettlementDate;
+	public Optional<ISODate> getInterbankSettlementDate() {
+		return interbankSettlementDate == null ? Optional.empty() : Optional.of(interbankSettlementDate);
 	}
 
-	public void setInterbankSettlementDate(ISODate interbankSettlementDate) {
+	public PaymentInstruction14 setInterbankSettlementDate(ISODate interbankSettlementDate) {
 		this.interbankSettlementDate = interbankSettlementDate;
+		return this;
 	}
 
-	@XmlElement(name = "EndToEndId")
-	public Max35Text getEndToEndIdentification() {
-		return endToEndIdentification;
+	public Optional<Max35Text> getEndToEndIdentification() {
+		return endToEndIdentification == null ? Optional.empty() : Optional.of(endToEndIdentification);
 	}
 
-	public void setEndToEndIdentification(Max35Text endToEndIdentification) {
+	public PaymentInstruction14 setEndToEndIdentification(Max35Text endToEndIdentification) {
 		this.endToEndIdentification = endToEndIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Pties")
-	public PaymentTransactionParty2 getParties() {
-		return parties;
+	public Optional<PaymentTransactionParty2> getParties() {
+		return parties == null ? Optional.empty() : Optional.of(parties);
 	}
 
-	public void setParties(com.tools20022.repository.msg.PaymentTransactionParty2 parties) {
+	public PaymentInstruction14 setParties(com.tools20022.repository.msg.PaymentTransactionParty2 parties) {
 		this.parties = parties;
+		return this;
 	}
 }

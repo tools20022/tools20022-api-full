@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionConfirmationDetailsSD1", propOrder = {"placeAndName", "prorationRoundingIndicator", "prorationFraction"})
 public class CorporateActionConfirmationDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +108,7 @@ public class CorporateActionConfirmationDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionConfirmationDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,11 +119,11 @@ public class CorporateActionConfirmationDetailsSD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrratnRndgInd")
 	protected FractionDispositionType12Code prorationRoundingIndicator;
 	/**
-	 * Indicates how fractional positions will be handled for events with
-	 * prorated options.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,7 +153,7 @@ public class CorporateActionConfirmationDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmProrationRoundingIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionConfirmationDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrratnRndgInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,11 +164,11 @@ public class CorporateActionConfirmationDetailsSD1 {
 			simpleType_lazy = () -> FractionDispositionType12Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrratnFrctn")
 	protected DecimalNumber prorationFraction;
 	/**
-	 * Decimal above which numbers are rounded for prorated options. (e.g., if
-	 * the rounding factor is 0.5, numbers of 0.5 and above will be rounded up).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,6 +184,9 @@ public class CorporateActionConfirmationDetailsSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrratnFrctn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Allocated Cash Value</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -194,9 +201,10 @@ public class CorporateActionConfirmationDetailsSD1 {
 	 */
 	public static final MMMessageAttribute mmProrationFraction = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionConfirmationDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionConfirmationDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrratnFrctn";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Allocated Cash Value"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProrationFraction";
 			definition = "Decimal above which numbers are rounded for prorated options.  (e.g., if the rounding factor is 0.5, numbers of 0.5 and above will be rounded up).";
@@ -209,8 +217,9 @@ public class CorporateActionConfirmationDetailsSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionConfirmationDetailsSD1.mmPlaceAndName, CorporateActionConfirmationDetailsSD1.mmProrationRoundingIndicator, CorporateActionConfirmationDetailsSD1.mmProrationFraction);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionConfirmationDetailsSD1.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionConfirmationDetailsSD1.mmProrationRoundingIndicator,
+						com.tools20022.repository.msg.CorporateActionConfirmationDetailsSD1.mmProrationFraction);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionConfirmationDetailsSD1";
 				definition = "Provides additional information regarding corporate action confirmation details.";
@@ -219,30 +228,30 @@ public class CorporateActionConfirmationDetailsSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionConfirmationDetailsSD1 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "PrratnRndgInd")
-	public FractionDispositionType12Code getProrationRoundingIndicator() {
-		return prorationRoundingIndicator;
+	public Optional<FractionDispositionType12Code> getProrationRoundingIndicator() {
+		return prorationRoundingIndicator == null ? Optional.empty() : Optional.of(prorationRoundingIndicator);
 	}
 
-	public void setProrationRoundingIndicator(FractionDispositionType12Code prorationRoundingIndicator) {
+	public CorporateActionConfirmationDetailsSD1 setProrationRoundingIndicator(FractionDispositionType12Code prorationRoundingIndicator) {
 		this.prorationRoundingIndicator = prorationRoundingIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PrratnFrctn")
-	public DecimalNumber getProrationFraction() {
-		return prorationFraction;
+	public Optional<DecimalNumber> getProrationFraction() {
+		return prorationFraction == null ? Optional.empty() : Optional.of(prorationFraction);
 	}
 
-	public void setProrationFraction(DecimalNumber prorationFraction) {
+	public CorporateActionConfirmationDetailsSD1 setProrationFraction(DecimalNumber prorationFraction) {
 		this.prorationFraction = prorationFraction;
+		return this;
 	}
 }

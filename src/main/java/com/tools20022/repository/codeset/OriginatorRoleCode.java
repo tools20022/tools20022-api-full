@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.OriginatorRoleCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies in what capacity (role) the originator of a quote is acting.
@@ -32,23 +37,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OriginatorRoleCode#mmSystematicInternaliser
- * OriginatorRoleCode.mmSystematicInternaliser}</li>
+ * {@linkplain com.tools20022.repository.codeset.OriginatorRoleCode#SystematicInternaliser
+ * OriginatorRoleCode.SystematicInternaliser}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OriginatorRoleCode#mmMultilateralTradingFacility
- * OriginatorRoleCode.mmMultilateralTradingFacility}</li>
+ * {@linkplain com.tools20022.repository.codeset.OriginatorRoleCode#MultilateralTradingFacility
+ * OriginatorRoleCode.MultilateralTradingFacility}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OriginatorRoleCode#mmRegulatedMarket
- * OriginatorRoleCode.mmRegulatedMarket}</li>
+ * {@linkplain com.tools20022.repository.codeset.OriginatorRoleCode#RegulatedMarket
+ * OriginatorRoleCode.RegulatedMarket}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OriginatorRoleCode#mmMarketMaker
- * OriginatorRoleCode.mmMarketMaker}</li>
+ * {@linkplain com.tools20022.repository.codeset.OriginatorRoleCode#MarketMaker
+ * OriginatorRoleCode.MarketMaker}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OriginatorRoleCode#mmInvestor
- * OriginatorRoleCode.mmInvestor}</li>
+ * {@linkplain com.tools20022.repository.codeset.OriginatorRoleCode#Investor
+ * OriginatorRoleCode.Investor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OriginatorRoleCode#mmTransfertAgent
- * OriginatorRoleCode.mmTransfertAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.OriginatorRoleCode#TransfertAgent
+ * OriginatorRoleCode.TransfertAgent}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -63,8 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies in what capacity (role) the originator of a quote is acting."</li>
  * </ul>
  */
-public class OriginatorRoleCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OriginatorRoleCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -112,12 +118,12 @@ public class OriginatorRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSystematicInternaliser = new MMCode() {
+	public static final OriginatorRoleCode SystematicInternaliser = new OriginatorRoleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystematicInternaliser";
 			definition = "Firms which, on an organised, frequent and systematic basis deal on their own account by executing client orders outside a regulated market or a Multilateral Trading Facility. SI's will have the obligation to provide, and make public, a definite bid and offer quote for liquid securities. They act as \"mini\"exchanges.";
-			owner_lazy = () -> OriginatorRoleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OriginatorRoleCode.mmObject();
 			codeName = "SINT";
 		}
 	};
@@ -146,12 +152,12 @@ public class OriginatorRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMultilateralTradingFacility = new MMCode() {
+	public static final OriginatorRoleCode MultilateralTradingFacility = new OriginatorRoleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MultilateralTradingFacility";
 			definition = "Multilateral system which brings together multiple third-party buying and selling interests in financial instruments in a way that results in a contract.";
-			owner_lazy = () -> OriginatorRoleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OriginatorRoleCode.mmObject();
 			codeName = "MLTF";
 		}
 	};
@@ -179,12 +185,12 @@ public class OriginatorRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegulatedMarket = new MMCode() {
+	public static final OriginatorRoleCode RegulatedMarket = new OriginatorRoleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegulatedMarket";
 			definition = "Market on which financial instruments can be traded according to rules defined by the stock exchange.";
-			owner_lazy = () -> OriginatorRoleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OriginatorRoleCode.mmObject();
 			codeName = "RMKT";
 		}
 	};
@@ -213,12 +219,12 @@ public class OriginatorRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarketMaker = new MMCode() {
+	public static final OriginatorRoleCode MarketMaker = new OriginatorRoleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketMaker";
 			definition = "Dealer or specialist that is trading for their own account in the OTC market. Market makers are expected to maintain an orderly market by being available to buy or sell.";
-			owner_lazy = () -> OriginatorRoleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OriginatorRoleCode.mmObject();
 			codeName = "MKTM";
 		}
 	};
@@ -246,12 +252,12 @@ public class OriginatorRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestor = new MMCode() {
+	public static final OriginatorRoleCode Investor = new OriginatorRoleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Investor";
 			definition = "Party, either an individual or organisation, whose assets are being invested.";
-			owner_lazy = () -> OriginatorRoleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OriginatorRoleCode.mmObject();
 			codeName = "INVE";
 		}
 	};
@@ -286,29 +292,64 @@ public class OriginatorRoleCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransfertAgent = new MMCode() {
+	public static final OriginatorRoleCode TransfertAgent = new OriginatorRoleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransfertAgent";
 			definition = "Party appointed by the fund management company. It updates records of investor accounts to reflect the daily investor purchases, redemptions, switches, transfers, and re-registrations. It ensures the timely settlement of transactions, and may provide tax information to the investor and/or to its intermediaries. It may calculate, collect, and rebate commissions. It prepares and distributes confirmations reflecting transactions, resulting in unit or cash account movements to the investor or the investor's intermediary. It responds to inquiries concerning account status, and processes the income distribution.";
-			owner_lazy = () -> OriginatorRoleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OriginatorRoleCode.mmObject();
 			codeName = "TAGT";
 		}
 	};
+	final static private LinkedHashMap<String, OriginatorRoleCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OriginatorRoleCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SINT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginatorRoleCode";
 				definition = "Specifies in what capacity (role) the originator of a quote is acting.";
-				code_lazy = () -> Arrays.asList(OriginatorRoleCode.mmSystematicInternaliser, OriginatorRoleCode.mmMultilateralTradingFacility, OriginatorRoleCode.mmRegulatedMarket, OriginatorRoleCode.mmMarketMaker,
-						OriginatorRoleCode.mmInvestor, OriginatorRoleCode.mmTransfertAgent);
 				derivation_lazy = () -> Arrays.asList(OriginatorRole2Code.mmObject(), OriginatorRole1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OriginatorRoleCode.SystematicInternaliser, com.tools20022.repository.codeset.OriginatorRoleCode.MultilateralTradingFacility,
+						com.tools20022.repository.codeset.OriginatorRoleCode.RegulatedMarket, com.tools20022.repository.codeset.OriginatorRoleCode.MarketMaker, com.tools20022.repository.codeset.OriginatorRoleCode.Investor,
+						com.tools20022.repository.codeset.OriginatorRoleCode.TransfertAgent);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SystematicInternaliser.getCodeName().get(), SystematicInternaliser);
+		codesByName.put(MultilateralTradingFacility.getCodeName().get(), MultilateralTradingFacility);
+		codesByName.put(RegulatedMarket.getCodeName().get(), RegulatedMarket);
+		codesByName.put(MarketMaker.getCodeName().get(), MarketMaker);
+		codesByName.put(Investor.getCodeName().get(), Investor);
+		codesByName.put(TransfertAgent.getCodeName().get(), TransfertAgent);
+	}
+
+	public static OriginatorRoleCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OriginatorRoleCode[] values() {
+		OriginatorRoleCode[] values = new OriginatorRoleCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OriginatorRoleCode> {
+		@Override
+		public OriginatorRoleCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OriginatorRoleCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

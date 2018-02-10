@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "FinancialInstrumentIdentificationValidity1", propOrder = {"financialInstrumentIdentification", "ISINValidFrom"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "FinancialInstrumentIdentificationValidity1", propOrder = {"financialInstrumentIdentification", "iSINValidFrom"})
 public class FinancialInstrumentIdentificationValidity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FinInstrmId")
 	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
-	 * Way(s) of identifying the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -113,7 +115,7 @@ public class FinancialInstrumentIdentificationValidity1 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
-			componentContext_lazy = () -> FinancialInstrumentIdentificationValidity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentIdentificationValidity1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,12 +127,11 @@ public class FinancialInstrumentIdentificationValidity1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	@XmlElement(name = "ISINVldFr")
 	protected ISODate iSINValidFrom;
 	/**
-	 * Defines the date from which the instrument code is valid. This date can
-	 * be before the actual issue date of an instrument for 'when-issued'
-	 * securities, but may not be a date in the future for a new security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +166,7 @@ public class FinancialInstrumentIdentificationValidity1 {
 	public static final MMMessageAttribute mmISINValidFrom = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> FinancialInstrumentIdentificationValidity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentIdentificationValidity1.mmObject();
 			isDerived = false;
 			xmlTag = "ISINVldFr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,9 +181,10 @@ public class FinancialInstrumentIdentificationValidity1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentIdentificationValidity1.mmFinancialInstrumentIdentification, FinancialInstrumentIdentificationValidity1.mmISINValidFrom);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentIdentificationValidity1.mmFinancialInstrumentIdentification,
+						com.tools20022.repository.msg.FinancialInstrumentIdentificationValidity1.mmISINValidFrom);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentIdentificationValidity1";
 				definition = "Specifies the date from which the financial instrument identification is valid.";
@@ -191,21 +193,21 @@ public class FinancialInstrumentIdentificationValidity1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FinInstrmId")
-	public SecurityIdentification14 getFinancialInstrumentIdentification() {
-		return financialInstrumentIdentification;
+	public Optional<SecurityIdentification14> getFinancialInstrumentIdentification() {
+		return financialInstrumentIdentification == null ? Optional.empty() : Optional.of(financialInstrumentIdentification);
 	}
 
-	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+	public FinancialInstrumentIdentificationValidity1 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
 		this.financialInstrumentIdentification = financialInstrumentIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ISINVldFr")
-	public ISODate getISINValidFrom() {
-		return iSINValidFrom;
+	public Optional<ISODate> getISINValidFrom() {
+		return iSINValidFrom == null ? Optional.empty() : Optional.of(iSINValidFrom);
 	}
 
-	public void setISINValidFrom(ISODate iSINValidFrom) {
+	public FinancialInstrumentIdentificationValidity1 setISINValidFrom(ISODate iSINValidFrom) {
 		this.iSINValidFrom = iSINValidFrom;
+		return this;
 	}
 }

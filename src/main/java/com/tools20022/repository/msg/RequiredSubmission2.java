@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.SubmittingPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,16 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Specifies the details relative to the submission of a data set."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RequiredSubmission2", propOrder = "submitter")
 public class RequiredSubmission2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Submitr", required = true)
 	protected List<com.tools20022.repository.msg.BICIdentification1> submitter;
 	/**
-	 * Specifies with party(ies) is authorised to submit the data set as part of
-	 * the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -107,7 +109,7 @@ public class RequiredSubmission2 {
 	public static final MMMessageAssociationEnd mmSubmitter = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> RequiredSubmission2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequiredSubmission2.mmObject();
 			isDerived = false;
 			xmlTag = "Submitr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,9 +124,9 @@ public class RequiredSubmission2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RequiredSubmission2.mmSubmitter);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequiredSubmission2.mmSubmitter);
 				trace_lazy = () -> SubmittingPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequiredSubmission2";
 				definition = "Specifies the details relative to the submission of a data set.";
@@ -133,12 +135,12 @@ public class RequiredSubmission2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Submitr", required = true)
 	public List<BICIdentification1> getSubmitter() {
-		return submitter;
+		return submitter == null ? submitter = new ArrayList<>() : submitter;
 	}
 
-	public void setSubmitter(List<com.tools20022.repository.msg.BICIdentification1> submitter) {
-		this.submitter = submitter;
+	public RequiredSubmission2 setSubmitter(List<com.tools20022.repository.msg.BICIdentification1> submitter) {
+		this.submitter = Objects.requireNonNull(submitter);
+		return this;
 	}
 }

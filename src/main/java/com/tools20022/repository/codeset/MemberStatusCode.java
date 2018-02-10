@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.MemberStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the live status of a member of a system.
@@ -31,15 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberStatusCode#mmEnabled
- * MemberStatusCode.mmEnabled}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.MemberStatusCode#mmDisabled
- * MemberStatusCode.mmDisabled}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberStatusCode#mmDeleted
- * MemberStatusCode.mmDeleted}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.MemberStatusCode#mmJoining
- * MemberStatusCode.mmJoining}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberStatusCode#Enabled
+ * MemberStatusCode.Enabled}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberStatusCode#Disabled
+ * MemberStatusCode.Disabled}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberStatusCode#Deleted
+ * MemberStatusCode.Deleted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MemberStatusCode#Joining
+ * MemberStatusCode.Joining}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the live status of a member of a system."</li>
  * </ul>
  */
-public class MemberStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MemberStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -94,12 +99,12 @@ public class MemberStatusCode {
 	 * definition} = "Member is live on the system."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEnabled = new MMCode() {
+	public static final MemberStatusCode Enabled = new MemberStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
 			definition = "Member is live on the system.";
-			owner_lazy = () -> MemberStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MemberStatusCode.mmObject();
 			codeName = "ENBL";
 		}
 	};
@@ -124,12 +129,12 @@ public class MemberStatusCode {
 	 * definition} = "Member is temporarily not live on the system."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisabled = new MMCode() {
+	public static final MemberStatusCode Disabled = new MemberStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabled";
 			definition = "Member is temporarily not live on the system.";
-			owner_lazy = () -> MemberStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MemberStatusCode.mmObject();
 			codeName = "DSBL";
 		}
 	};
@@ -154,12 +159,12 @@ public class MemberStatusCode {
 	 * definition} = "Member is no longer live on the system."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeleted = new MMCode() {
+	public static final MemberStatusCode Deleted = new MemberStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
 			definition = "Member is no longer live on the system.";
-			owner_lazy = () -> MemberStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MemberStatusCode.mmObject();
 			codeName = "DLTD";
 		}
 	};
@@ -185,28 +190,61 @@ public class MemberStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmJoining = new MMCode() {
+	public static final MemberStatusCode Joining = new MemberStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Joining";
 			definition = "Member is joining and will soon be enabled on the system.";
-			owner_lazy = () -> MemberStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MemberStatusCode.mmObject();
 			codeName = "JOIN";
 		}
 	};
+	final static private LinkedHashMap<String, MemberStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MemberStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ENBL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MemberStatusCode";
 				definition = "Specifies the live status of a member of a system.";
-				code_lazy = () -> Arrays.asList(MemberStatusCode.mmEnabled, MemberStatusCode.mmDisabled, MemberStatusCode.mmDeleted, MemberStatusCode.mmJoining);
 				derivation_lazy = () -> Arrays.asList(MemberStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MemberStatusCode.Enabled, com.tools20022.repository.codeset.MemberStatusCode.Disabled, com.tools20022.repository.codeset.MemberStatusCode.Deleted,
+						com.tools20022.repository.codeset.MemberStatusCode.Joining);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Enabled.getCodeName().get(), Enabled);
+		codesByName.put(Disabled.getCodeName().get(), Disabled);
+		codesByName.put(Deleted.getCodeName().get(), Deleted);
+		codesByName.put(Joining.getCodeName().get(), Joining);
+	}
+
+	public static MemberStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MemberStatusCode[] values() {
+		MemberStatusCode[] values = new MemberStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MemberStatusCode> {
+		@Override
+		public MemberStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MemberStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
@@ -27,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.RateTypeAndPercentageRate3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Choice between a rate or a rate type and rate or an unspecified rate."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RateFormat17Choice", propOrder = {"rate", "rateTypeAndRate"})
 public class RateFormat17Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rate", required = true)
 	protected PercentageRate rate;
 	/**
-	 * Value is expressed as a rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -96,6 +99,9 @@ public class RateFormat17Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Rate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92A:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -109,9 +115,10 @@ public class RateFormat17Choice {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmRate;
-			componentContext_lazy = () -> RateFormat17Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RateFormat17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92A:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Value is expressed as a rate.";
@@ -120,10 +127,11 @@ public class RateFormat17Choice {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "RateTpAndRate", required = true)
 	protected RateTypeAndPercentageRate3 rateTypeAndRate;
 	/**
-	 * Value is expressed as a rate type and a percentage rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -150,7 +158,7 @@ public class RateFormat17Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRateTypeAndRate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RateFormat17Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RateFormat17Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RateTpAndRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,9 +174,9 @@ public class RateFormat17Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RateFormat17Choice.mmRate, RateFormat17Choice.mmRateTypeAndRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateFormat17Choice.mmRate, com.tools20022.repository.choice.RateFormat17Choice.mmRateTypeAndRate);
 				trace_lazy = () -> RateAndAmount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateFormat17Choice";
 				definition = "Choice between a rate or a rate type and rate or an unspecified rate.";
@@ -177,21 +185,21 @@ public class RateFormat17Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rate", required = true)
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public RateFormat17Choice setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 
-	@XmlElement(name = "RateTpAndRate", required = true)
 	public RateTypeAndPercentageRate3 getRateTypeAndRate() {
 		return rateTypeAndRate;
 	}
 
-	public void setRateTypeAndRate(RateTypeAndPercentageRate3 rateTypeAndRate) {
-		this.rateTypeAndRate = rateTypeAndRate;
+	public RateFormat17Choice setRateTypeAndRate(RateTypeAndPercentageRate3 rateTypeAndRate) {
+		this.rateTypeAndRate = Objects.requireNonNull(rateTypeAndRate);
+		return this;
 	}
 }

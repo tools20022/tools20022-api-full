@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PersonIdentification4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyPrivate1", propOrder = "privateIdentification")
 public class PartyPrivate1 {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrvtId", required = true)
 	protected PersonIdentification4 privateIdentification;
 	/**
-	 * Unique and unambiguous identification of a person, eg, passport.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -108,7 +110,7 @@ public class PartyPrivate1 {
 	public static final MMMessageAssociationEnd mmPrivateIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
-			componentContext_lazy = () -> PartyPrivate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyPrivate1.mmObject();
 			isDerived = false;
 			xmlTag = "PrvtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,9 +126,9 @@ public class PartyPrivate1 {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyPrivate1.mmPrivateIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyPrivate1.mmPrivateIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyPrivate1";
 				definition = "Choice between the identification of a person and the identification of a non-financial institution.";
@@ -135,12 +137,12 @@ public class PartyPrivate1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrvtId", required = true)
 	public PersonIdentification4 getPrivateIdentification() {
 		return privateIdentification;
 	}
 
-	public void setPrivateIdentification(PersonIdentification4 privateIdentification) {
-		this.privateIdentification = privateIdentification;
+	public PartyPrivate1 setPrivateIdentification(PersonIdentification4 privateIdentification) {
+		this.privateIdentification = Objects.requireNonNull(privateIdentification);
+		return this;
 	}
 }

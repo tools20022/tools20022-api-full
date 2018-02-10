@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ClosurePendingStatusReasonCode;
+import com.tools20022.repository.codeset.ClosurePendingStatusReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for the closure pending status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ClosurePendingStatusReasonCode
- * ClosurePendingStatusReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ClosurePendingStatusReason1Code#mmAccountClosingInProcess
- * ClosurePendingStatusReason1Code.mmAccountClosingInProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.ClosurePendingStatusReason1Code#AccountClosingInProcess
+ * ClosurePendingStatusReason1Code.AccountClosingInProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ClosurePendingStatusReason1Code#mmPendingConditions
- * ClosurePendingStatusReason1Code.mmPendingConditions}</li>
+ * {@linkplain com.tools20022.repository.codeset.ClosurePendingStatusReason1Code#PendingConditions
+ * ClosurePendingStatusReason1Code.PendingConditions}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ClosurePendingStatusReasonCode
+ * ClosurePendingStatusReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason for the closure pending status."</li>
  * </ul>
  */
-public class ClosurePendingStatusReason1Code extends ClosurePendingStatusReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ClosurePendingStatusReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class ClosurePendingStatusReason1Code extends ClosurePendingStatusReasonC
 	 * name} = "AccountClosingInProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountClosingInProcess = new MMCode() {
+	public static final ClosurePendingStatusReason1Code AccountClosingInProcess = new ClosurePendingStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountClosingInProcess";
-			owner_lazy = () -> ClosurePendingStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ClosurePendingStatusReason1Code.mmObject();
+			codeName = ClosurePendingStatusReasonCode.AccountClosingInProcess.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class ClosurePendingStatusReason1Code extends ClosurePendingStatusReasonC
 	 * name} = "PendingConditions"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingConditions = new MMCode() {
+	public static final ClosurePendingStatusReason1Code PendingConditions = new ClosurePendingStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingConditions";
-			owner_lazy = () -> ClosurePendingStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ClosurePendingStatusReason1Code.mmObject();
+			codeName = ClosurePendingStatusReasonCode.PendingConditions.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ClosurePendingStatusReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ClosurePendingStatusReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClosurePendingStatusReason1Code";
 				definition = "Specifies the reason for the closure pending status.";
-				code_lazy = () -> Arrays.asList(ClosurePendingStatusReason1Code.mmAccountClosingInProcess, ClosurePendingStatusReason1Code.mmPendingConditions);
 				trace_lazy = () -> ClosurePendingStatusReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClosurePendingStatusReason1Code.AccountClosingInProcess, com.tools20022.repository.codeset.ClosurePendingStatusReason1Code.PendingConditions);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccountClosingInProcess.getCodeName().get(), AccountClosingInProcess);
+		codesByName.put(PendingConditions.getCodeName().get(), PendingConditions);
+	}
+
+	public static ClosurePendingStatusReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ClosurePendingStatusReason1Code[] values() {
+		ClosurePendingStatusReason1Code[] values = new ClosurePendingStatusReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ClosurePendingStatusReason1Code> {
+		@Override
+		public ClosurePendingStatusReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ClosurePendingStatusReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

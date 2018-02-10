@@ -20,39 +20,39 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AlgorithmCode;
+import com.tools20022.repository.codeset.Algorithm15Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Cryptographic algorithms for encryptions with a symmetric cryptographic key.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AlgorithmCode AlgorithmCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm15Code#mmAES128CBC
- * Algorithm15Code.mmAES128CBC}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm15Code#mmDES112CBC
- * Algorithm15Code.mmDES112CBC}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm15Code#mmAES192CBC
- * Algorithm15Code.mmAES192CBC}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm15Code#mmAES256CBC
- * Algorithm15Code.mmAES256CBC}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm15Code#AES128CBC
+ * Algorithm15Code.AES128CBC}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm15Code#DES112CBC
+ * Algorithm15Code.DES112CBC}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm15Code#AES192CBC
+ * Algorithm15Code.AES192CBC}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm15Code#AES256CBC
+ * Algorithm15Code.AES256CBC}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode AlgorithmCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.Algorithm6Code Algorithm6Code}</li>
  * </ul>
  */
-public class Algorithm15Code extends AlgorithmCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Algorithm15Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -94,16 +95,17 @@ public class Algorithm15Code extends AlgorithmCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm6Code#mmAES128CBC
-	 * Algorithm6Code.mmAES128CBC}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm6Code#AES128CBC
+	 * Algorithm6Code.AES128CBC}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAES128CBC = new MMCode() {
+	public static final Algorithm15Code AES128CBC = new Algorithm15Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES128CBC";
-			previousVersion_lazy = () -> Algorithm6Code.mmAES128CBC;
-			owner_lazy = () -> Algorithm15Code.mmObject();
+			previousVersion_lazy = () -> Algorithm6Code.AES128CBC;
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm15Code.mmObject();
+			codeName = AlgorithmCode.AES128CBC.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -123,16 +125,17 @@ public class Algorithm15Code extends AlgorithmCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm6Code#mmDES112CBC
-	 * Algorithm6Code.mmDES112CBC}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm6Code#DES112CBC
+	 * Algorithm6Code.DES112CBC}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDES112CBC = new MMCode() {
+	public static final Algorithm15Code DES112CBC = new Algorithm15Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DES112CBC";
-			previousVersion_lazy = () -> Algorithm6Code.mmDES112CBC;
-			owner_lazy = () -> Algorithm15Code.mmObject();
+			previousVersion_lazy = () -> Algorithm6Code.DES112CBC;
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm15Code.mmObject();
+			codeName = AlgorithmCode.DES112CBC.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -151,11 +154,12 @@ public class Algorithm15Code extends AlgorithmCode {
 	 * name} = "AES192CBC"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAES192CBC = new MMCode() {
+	public static final Algorithm15Code AES192CBC = new Algorithm15Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES192CBC";
-			owner_lazy = () -> Algorithm15Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm15Code.mmObject();
+			codeName = AlgorithmCode.AES192CBC.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -174,27 +178,61 @@ public class Algorithm15Code extends AlgorithmCode {
 	 * name} = "AES256CBC"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAES256CBC = new MMCode() {
+	public static final Algorithm15Code AES256CBC = new Algorithm15Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES256CBC";
-			owner_lazy = () -> Algorithm15Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm15Code.mmObject();
+			codeName = AlgorithmCode.AES256CBC.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Algorithm15Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Algorithm15Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("EA2C");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Algorithm15Code";
 				definition = "Cryptographic algorithms for encryptions with a symmetric cryptographic key.";
 				previousVersion_lazy = () -> Algorithm6Code.mmObject();
-				code_lazy = () -> Arrays.asList(Algorithm15Code.mmAES128CBC, Algorithm15Code.mmDES112CBC, Algorithm15Code.mmAES192CBC, Algorithm15Code.mmAES256CBC);
 				trace_lazy = () -> AlgorithmCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm15Code.AES128CBC, com.tools20022.repository.codeset.Algorithm15Code.DES112CBC, com.tools20022.repository.codeset.Algorithm15Code.AES192CBC,
+						com.tools20022.repository.codeset.Algorithm15Code.AES256CBC);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AES128CBC.getCodeName().get(), AES128CBC);
+		codesByName.put(DES112CBC.getCodeName().get(), DES112CBC);
+		codesByName.put(AES192CBC.getCodeName().get(), AES192CBC);
+		codesByName.put(AES256CBC.getCodeName().get(), AES256CBC);
+	}
+
+	public static Algorithm15Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Algorithm15Code[] values() {
+		Algorithm15Code[] values = new Algorithm15Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Algorithm15Code> {
+		@Override
+		public Algorithm15Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Algorithm15Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

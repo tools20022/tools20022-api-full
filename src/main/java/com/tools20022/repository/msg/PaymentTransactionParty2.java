@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,17 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the party fields used to search for a payment."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentTransactionParty2", propOrder = {"debtor", "debtorAgent", "instructingReimbursementAgent", "instructedReimbursementAgent", "intermediaryAgent", "creditorAgent", "creditor"})
 public class PaymentTransactionParty2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dbtr")
 	protected BranchAndFinancialInstitutionIdentification5 debtor;
 	/**
-	 * Party that owes assets to the creditor, such as a result of receipt of
-	 * goods or services, gifts, or charity payments. The debtor may also be the
-	 * debit account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -125,7 +125,7 @@ public class PaymentTransactionParty2 {
 	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> PaymentTransactionParty2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty2.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,11 +137,11 @@ public class PaymentTransactionParty2 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "DbtrAgt")
 	protected BranchAndFinancialInstitutionIdentification5 debtorAgent;
 	/**
-	 * Financial institution that receives the payment transaction from the
-	 * account owner, or other authorised party, and processes the instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -176,7 +176,7 @@ public class PaymentTransactionParty2 {
 	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> PaymentTransactionParty2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty2.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,11 +188,11 @@ public class PaymentTransactionParty2 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "InstgRmbrsmntAgt")
 	protected BranchAndFinancialInstitutionIdentification5 instructingReimbursementAgent;
 	/**
-	 * Specifies the agent through which the instructing agent will reimburse
-	 * the instructed agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -227,7 +227,7 @@ public class PaymentTransactionParty2 {
 	public static final MMMessageAssociationEnd mmInstructingReimbursementAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> PaymentTransactionParty2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty2.mmObject();
 			isDerived = false;
 			xmlTag = "InstgRmbrsmntAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,10 +239,11 @@ public class PaymentTransactionParty2 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdRmbrsmntAgt")
 	protected BranchAndFinancialInstitutionIdentification5 instructedReimbursementAgent;
 	/**
-	 * Agent at which the instructed agent will be reimbursed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -275,7 +276,7 @@ public class PaymentTransactionParty2 {
 	public static final MMMessageAssociationEnd mmInstructedReimbursementAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> PaymentTransactionParty2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty2.mmObject();
 			isDerived = false;
 			xmlTag = "InstdRmbrsmntAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -287,10 +288,11 @@ public class PaymentTransactionParty2 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrmyAgt")
 	protected BranchAndFinancialInstitutionIdentification5 intermediaryAgent;
 	/**
-	 * Party within the settlement chain between the debtor and creditor agents.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -325,7 +327,7 @@ public class PaymentTransactionParty2 {
 	public static final MMMessageAssociationEnd mmIntermediaryAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> PaymentTransactionParty2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -337,11 +339,11 @@ public class PaymentTransactionParty2 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrAgt")
 	protected BranchAndFinancialInstitutionIdentification5 creditorAgent;
 	/**
-	 * Financial institution that receives the payment transaction on behalf of
-	 * an account owner, or other nominated party, and credits the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -376,7 +378,7 @@ public class PaymentTransactionParty2 {
 	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> PaymentTransactionParty2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty2.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -388,11 +390,11 @@ public class PaymentTransactionParty2 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "Cdtr")
 	protected BranchAndFinancialInstitutionIdentification5 creditor;
 	/**
-	 * Party that receives an amount of money from the debtor. In the context of
-	 * the payment model, the creditor is also the credit account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -427,7 +429,7 @@ public class PaymentTransactionParty2 {
 	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> PaymentTransactionParty2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransactionParty2.mmObject();
 			isDerived = false;
 			xmlTag = "Cdtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -443,10 +445,11 @@ public class PaymentTransactionParty2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentTransactionParty2.mmDebtor, PaymentTransactionParty2.mmDebtorAgent, PaymentTransactionParty2.mmInstructingReimbursementAgent,
-						PaymentTransactionParty2.mmInstructedReimbursementAgent, PaymentTransactionParty2.mmIntermediaryAgent, PaymentTransactionParty2.mmCreditorAgent, PaymentTransactionParty2.mmCreditor);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransactionParty2.mmDebtor, com.tools20022.repository.msg.PaymentTransactionParty2.mmDebtorAgent,
+						com.tools20022.repository.msg.PaymentTransactionParty2.mmInstructingReimbursementAgent, com.tools20022.repository.msg.PaymentTransactionParty2.mmInstructedReimbursementAgent,
+						com.tools20022.repository.msg.PaymentTransactionParty2.mmIntermediaryAgent, com.tools20022.repository.msg.PaymentTransactionParty2.mmCreditorAgent, com.tools20022.repository.msg.PaymentTransactionParty2.mmCreditor);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentTransactionParty2";
 				definition = "Defines the party fields used to search for a payment.";
@@ -455,66 +458,66 @@ public class PaymentTransactionParty2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dbtr")
-	public BranchAndFinancialInstitutionIdentification5 getDebtor() {
-		return debtor;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getDebtor() {
+		return debtor == null ? Optional.empty() : Optional.of(debtor);
 	}
 
-	public void setDebtor(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtor) {
+	public PaymentTransactionParty2 setDebtor(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtor) {
 		this.debtor = debtor;
+		return this;
 	}
 
-	@XmlElement(name = "DbtrAgt")
-	public BranchAndFinancialInstitutionIdentification5 getDebtorAgent() {
-		return debtorAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getDebtorAgent() {
+		return debtorAgent == null ? Optional.empty() : Optional.of(debtorAgent);
 	}
 
-	public void setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtorAgent) {
+	public PaymentTransactionParty2 setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtorAgent) {
 		this.debtorAgent = debtorAgent;
+		return this;
 	}
 
-	@XmlElement(name = "InstgRmbrsmntAgt")
-	public BranchAndFinancialInstitutionIdentification5 getInstructingReimbursementAgent() {
-		return instructingReimbursementAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getInstructingReimbursementAgent() {
+		return instructingReimbursementAgent == null ? Optional.empty() : Optional.of(instructingReimbursementAgent);
 	}
 
-	public void setInstructingReimbursementAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructingReimbursementAgent) {
+	public PaymentTransactionParty2 setInstructingReimbursementAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructingReimbursementAgent) {
 		this.instructingReimbursementAgent = instructingReimbursementAgent;
+		return this;
 	}
 
-	@XmlElement(name = "InstdRmbrsmntAgt")
-	public BranchAndFinancialInstitutionIdentification5 getInstructedReimbursementAgent() {
-		return instructedReimbursementAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getInstructedReimbursementAgent() {
+		return instructedReimbursementAgent == null ? Optional.empty() : Optional.of(instructedReimbursementAgent);
 	}
 
-	public void setInstructedReimbursementAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructedReimbursementAgent) {
+	public PaymentTransactionParty2 setInstructedReimbursementAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructedReimbursementAgent) {
 		this.instructedReimbursementAgent = instructedReimbursementAgent;
+		return this;
 	}
 
-	@XmlElement(name = "IntrmyAgt")
-	public BranchAndFinancialInstitutionIdentification5 getIntermediaryAgent() {
-		return intermediaryAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getIntermediaryAgent() {
+		return intermediaryAgent == null ? Optional.empty() : Optional.of(intermediaryAgent);
 	}
 
-	public void setIntermediaryAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 intermediaryAgent) {
+	public PaymentTransactionParty2 setIntermediaryAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 intermediaryAgent) {
 		this.intermediaryAgent = intermediaryAgent;
+		return this;
 	}
 
-	@XmlElement(name = "CdtrAgt")
-	public BranchAndFinancialInstitutionIdentification5 getCreditorAgent() {
-		return creditorAgent;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getCreditorAgent() {
+		return creditorAgent == null ? Optional.empty() : Optional.of(creditorAgent);
 	}
 
-	public void setCreditorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 creditorAgent) {
+	public PaymentTransactionParty2 setCreditorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 creditorAgent) {
 		this.creditorAgent = creditorAgent;
+		return this;
 	}
 
-	@XmlElement(name = "Cdtr")
-	public BranchAndFinancialInstitutionIdentification5 getCreditor() {
-		return creditor;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getCreditor() {
+		return creditor == null ? Optional.empty() : Optional.of(creditor);
 	}
 
-	public void setCreditor(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 creditor) {
+	public PaymentTransactionParty2 setCreditor(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 creditor) {
 		this.creditor = creditor;
+		return this;
 	}
 }

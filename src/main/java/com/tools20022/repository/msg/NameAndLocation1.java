@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Sector;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * ReportedPartyIdentification1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NameAndLocation1", propOrder = {"name", "location"})
 public class NameAndLocation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nm", required = true)
 	protected Max70Text name;
 	/**
-	 * Internal name of the counterparty of the reporting agent used by the
-	 * reporting agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +118,7 @@ public class NameAndLocation1 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Sector.mmIdentification;
-			componentContext_lazy = () -> NameAndLocation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NameAndLocation1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +129,11 @@ public class NameAndLocation1 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Lctn", required = true)
 	protected CountryCode location;
 	/**
-	 * Location of the country in which the counterparty is incorporated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,7 +172,7 @@ public class NameAndLocation1 {
 	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
-			componentContext_lazy = () -> NameAndLocation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NameAndLocation1.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,9 +188,9 @@ public class NameAndLocation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NameAndLocation1.mmName, NameAndLocation1.mmLocation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NameAndLocation1.mmName, com.tools20022.repository.msg.NameAndLocation1.mmLocation);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NameAndLocation1";
 				definition = "Provides the identification of the reported party through the name and the location.";
@@ -198,21 +200,21 @@ public class NameAndLocation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nm", required = true)
 	public Max70Text getName() {
 		return name;
 	}
 
-	public void setName(Max70Text name) {
-		this.name = name;
+	public NameAndLocation1 setName(Max70Text name) {
+		this.name = Objects.requireNonNull(name);
+		return this;
 	}
 
-	@XmlElement(name = "Lctn", required = true)
 	public CountryCode getLocation() {
 		return location;
 	}
 
-	public void setLocation(CountryCode location) {
-		this.location = location;
+	public NameAndLocation1 setLocation(CountryCode location) {
+		this.location = Objects.requireNonNull(location);
+		return this;
 	}
 }

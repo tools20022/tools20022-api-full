@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.BasicSecuritiesRegistration;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * RegistrationReason2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RegistrationReason4", propOrder = {"code", "additionalInformation"})
 public class RegistrationReason4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected Registration8Choice code;
 	/**
-	 * Specifies the reaoson of the holding status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,7 +114,7 @@ public class RegistrationReason4 {
 	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BasicSecuritiesRegistration.mmRegistrationInstruction;
-			componentContext_lazy = () -> RegistrationReason4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationReason4.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,11 +126,11 @@ public class RegistrationReason4 {
 			type_lazy = () -> Registration8Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected RestrictedFINXMax210Text additionalInformation;
 	/**
-	 * Provides additional reason information that cannot be provided in a
-	 * structured field.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +160,7 @@ public class RegistrationReason4 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RegistrationReason4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RegistrationReason4.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +175,9 @@ public class RegistrationReason4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RegistrationReason4.mmCode, RegistrationReason4.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RegistrationReason4.mmCode, com.tools20022.repository.msg.RegistrationReason4.mmAdditionalInformation);
 				trace_lazy = () -> BasicSecuritiesRegistration.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegistrationReason4";
 				definition = "Reason of registration.";
@@ -184,21 +187,21 @@ public class RegistrationReason4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public Registration8Choice getCode() {
 		return code;
 	}
 
-	public void setCode(Registration8Choice code) {
-		this.code = code;
+	public RegistrationReason4 setCode(Registration8Choice code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public RestrictedFINXMax210Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<RestrictedFINXMax210Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(RestrictedFINXMax210Text additionalInformation) {
+	public RegistrationReason4 setAdditionalInformation(RestrictedFINXMax210Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 }

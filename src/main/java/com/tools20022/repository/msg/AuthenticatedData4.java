@@ -25,9 +25,8 @@ import com.tools20022.repository.choice.Recipient4Choice;
 import com.tools20022.repository.datatype.Max140Binary;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * AuthenticatedData3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "AuthenticatedData4", propOrder = {"version", "recipient", "MACAlgorithm", "encapsulatedContent", "MAC"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "AuthenticatedData4", propOrder = {"version", "recipient", "mACAlgorithm", "encapsulatedContent", "mAC"})
 public class AuthenticatedData4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Vrsn")
 	protected Number version;
 	/**
-	 * Version of the data structure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +118,7 @@ public class AuthenticatedData4 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AuthenticatedData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData4.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +130,11 @@ public class AuthenticatedData4 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Rcpt", required = true)
 	protected List<Recipient4Choice> recipient;
 	/**
-	 * Session key or protection key identification used by the recipient.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -165,7 +166,7 @@ public class AuthenticatedData4 {
 	 */
 	public static final MMMessageAssociationEnd mmRecipient = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AuthenticatedData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData4.mmObject();
 			isDerived = false;
 			xmlTag = "Rcpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,10 +178,11 @@ public class AuthenticatedData4 {
 			type_lazy = () -> Recipient4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MACAlgo", required = true)
 	protected AlgorithmIdentification15 mACAlgorithm;
 	/**
-	 * Algorithm to compute message authentication code (MAC).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -212,7 +214,7 @@ public class AuthenticatedData4 {
 	 */
 	public static final MMMessageAssociationEnd mmMACAlgorithm = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AuthenticatedData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData4.mmObject();
 			isDerived = false;
 			xmlTag = "MACAlgo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,10 +227,11 @@ public class AuthenticatedData4 {
 			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification15.mmObject();
 		}
 	};
+	@XmlElement(name = "NcpsltdCntt", required = true)
 	protected EncapsulatedContent3 encapsulatedContent;
 	/**
-	 * Data to authenticate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -259,7 +262,7 @@ public class AuthenticatedData4 {
 	 */
 	public static final MMMessageAssociationEnd mmEncapsulatedContent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AuthenticatedData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData4.mmObject();
 			isDerived = false;
 			xmlTag = "NcpsltdCntt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,10 +275,11 @@ public class AuthenticatedData4 {
 			type_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent3.mmObject();
 		}
 	};
+	@XmlElement(name = "MAC", required = true)
 	protected Max140Binary mAC;
 	/**
-	 * Message authentication code value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -308,7 +312,7 @@ public class AuthenticatedData4 {
 	 */
 	public static final MMMessageAttribute mmMAC = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AuthenticatedData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuthenticatedData4.mmObject();
 			isDerived = false;
 			xmlTag = "MAC";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,8 +328,9 @@ public class AuthenticatedData4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AuthenticatedData4.mmVersion, AuthenticatedData4.mmRecipient, AuthenticatedData4.mmMACAlgorithm, AuthenticatedData4.mmEncapsulatedContent, AuthenticatedData4.mmMAC);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthenticatedData4.mmVersion, com.tools20022.repository.msg.AuthenticatedData4.mmRecipient,
+						com.tools20022.repository.msg.AuthenticatedData4.mmMACAlgorithm, com.tools20022.repository.msg.AuthenticatedData4.mmEncapsulatedContent, com.tools20022.repository.msg.AuthenticatedData4.mmMAC);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AuthenticatedData4";
 				definition = "Message authentication code (MAC), computed on the data to protect with an encryption key.";
@@ -335,48 +340,48 @@ public class AuthenticatedData4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Vrsn")
-	public Number getVersion() {
-		return version;
+	public Optional<Number> getVersion() {
+		return version == null ? Optional.empty() : Optional.of(version);
 	}
 
-	public void setVersion(Number version) {
+	public AuthenticatedData4 setVersion(Number version) {
 		this.version = version;
+		return this;
 	}
 
-	@XmlElement(name = "Rcpt", required = true)
 	public List<Recipient4Choice> getRecipient() {
-		return recipient;
+		return recipient == null ? recipient = new ArrayList<>() : recipient;
 	}
 
-	public void setRecipient(List<Recipient4Choice> recipient) {
-		this.recipient = recipient;
+	public AuthenticatedData4 setRecipient(List<Recipient4Choice> recipient) {
+		this.recipient = Objects.requireNonNull(recipient);
+		return this;
 	}
 
-	@XmlElement(name = "MACAlgo", required = true)
 	public AlgorithmIdentification15 getMACAlgorithm() {
 		return mACAlgorithm;
 	}
 
-	public void setMACAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification15 mACAlgorithm) {
-		this.mACAlgorithm = mACAlgorithm;
+	public AuthenticatedData4 setMACAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification15 mACAlgorithm) {
+		this.mACAlgorithm = Objects.requireNonNull(mACAlgorithm);
+		return this;
 	}
 
-	@XmlElement(name = "NcpsltdCntt", required = true)
 	public EncapsulatedContent3 getEncapsulatedContent() {
 		return encapsulatedContent;
 	}
 
-	public void setEncapsulatedContent(com.tools20022.repository.msg.EncapsulatedContent3 encapsulatedContent) {
-		this.encapsulatedContent = encapsulatedContent;
+	public AuthenticatedData4 setEncapsulatedContent(com.tools20022.repository.msg.EncapsulatedContent3 encapsulatedContent) {
+		this.encapsulatedContent = Objects.requireNonNull(encapsulatedContent);
+		return this;
 	}
 
-	@XmlElement(name = "MAC", required = true)
 	public Max140Binary getMAC() {
 		return mAC;
 	}
 
-	public void setMAC(Max140Binary mAC) {
-		this.mAC = mAC;
+	public AuthenticatedData4 setMAC(Max140Binary mAC) {
+		this.mAC = Objects.requireNonNull(mAC);
+		return this;
 	}
 }

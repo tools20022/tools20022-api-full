@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ATMCommandReasonCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Reason for sending or requesting a maintenance command.
@@ -32,20 +37,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#mmDiagnostic
- * ATMCommandReasonCode.mmDiagnostic}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#Diagnostic
+ * ATMCommandReasonCode.Diagnostic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#mmMonitoring
- * ATMCommandReasonCode.mmMonitoring}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#Monitoring
+ * ATMCommandReasonCode.Monitoring}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#mmSecurityError
- * ATMCommandReasonCode.mmSecurityError}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#SecurityError
+ * ATMCommandReasonCode.SecurityError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#mmSynchronisation
- * ATMCommandReasonCode.mmSynchronisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#Synchronisation
+ * ATMCommandReasonCode.Synchronisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#mmUpdate
- * ATMCommandReasonCode.mmUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandReasonCode#Update
+ * ATMCommandReasonCode.Update}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -58,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Reason for sending or requesting a maintenance command."</li>
  * </ul>
  */
-public class ATMCommandReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ATMCommandReasonCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,12 +101,12 @@ public class ATMCommandReasonCode {
 	 * "Request the status of or action from the ATM to perform a diagnostic."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiagnostic = new MMCode() {
+	public static final ATMCommandReasonCode Diagnostic = new ATMCommandReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Diagnostic";
 			definition = "Request the status of or action from the ATM to perform a diagnostic.";
-			owner_lazy = () -> ATMCommandReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandReasonCode.mmObject();
 			codeName = "DIAG";
 		}
 	};
@@ -125,12 +131,12 @@ public class ATMCommandReasonCode {
 	 * definition} = "Supervise the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMonitoring = new MMCode() {
+	public static final ATMCommandReasonCode Monitoring = new ATMCommandReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Monitoring";
 			definition = "Supervise the ATM.";
-			owner_lazy = () -> ATMCommandReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandReasonCode.mmObject();
 			codeName = "MONI";
 		}
 	};
@@ -155,12 +161,12 @@ public class ATMCommandReasonCode {
 	 * definition} = "Security error."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecurityError = new MMCode() {
+	public static final ATMCommandReasonCode SecurityError = new ATMCommandReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityError";
 			definition = "Security error.";
-			owner_lazy = () -> ATMCommandReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandReasonCode.mmObject();
 			codeName = "SECU";
 		}
 	};
@@ -185,12 +191,12 @@ public class ATMCommandReasonCode {
 	 * definition} = "Desynchronisation of dialogue between entities."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSynchronisation = new MMCode() {
+	public static final ATMCommandReasonCode Synchronisation = new ATMCommandReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Synchronisation";
 			definition = "Desynchronisation of dialogue between entities.";
-			owner_lazy = () -> ATMCommandReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandReasonCode.mmObject();
 			codeName = "SYNC";
 		}
 	};
@@ -215,27 +221,61 @@ public class ATMCommandReasonCode {
 	 * definition} = "Update the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUpdate = new MMCode() {
+	public static final ATMCommandReasonCode Update = new ATMCommandReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Update";
 			definition = "Update the ATM.";
-			owner_lazy = () -> ATMCommandReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandReasonCode.mmObject();
 			codeName = "UPDT";
 		}
 	};
+	final static private LinkedHashMap<String, ATMCommandReasonCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ATMCommandReasonCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommandReasonCode";
 				definition = "Reason for sending or requesting a maintenance command.";
-				code_lazy = () -> Arrays.asList(ATMCommandReasonCode.mmDiagnostic, ATMCommandReasonCode.mmMonitoring, ATMCommandReasonCode.mmSecurityError, ATMCommandReasonCode.mmSynchronisation, ATMCommandReasonCode.mmUpdate);
 				derivation_lazy = () -> Arrays.asList(ATMCommandReason1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCommandReasonCode.Diagnostic, com.tools20022.repository.codeset.ATMCommandReasonCode.Monitoring,
+						com.tools20022.repository.codeset.ATMCommandReasonCode.SecurityError, com.tools20022.repository.codeset.ATMCommandReasonCode.Synchronisation, com.tools20022.repository.codeset.ATMCommandReasonCode.Update);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Diagnostic.getCodeName().get(), Diagnostic);
+		codesByName.put(Monitoring.getCodeName().get(), Monitoring);
+		codesByName.put(SecurityError.getCodeName().get(), SecurityError);
+		codesByName.put(Synchronisation.getCodeName().get(), Synchronisation);
+		codesByName.put(Update.getCodeName().get(), Update);
+	}
+
+	public static ATMCommandReasonCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ATMCommandReasonCode[] values() {
+		ATMCommandReasonCode[] values = new ATMCommandReasonCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ATMCommandReasonCode> {
+		@Override
+		public ATMCommandReasonCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ATMCommandReasonCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

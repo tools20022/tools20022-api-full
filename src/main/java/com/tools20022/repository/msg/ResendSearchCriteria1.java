@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,16 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Defines the criteria to extract the message(s) which should be resent."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ResendSearchCriteria1", propOrder = {"businessDate", "sequenceNumber", "originalMessageNameIdentification", "fileReference", "recipient"})
 public class ResendSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BizDt")
 	protected ISODate businessDate;
 	/**
-	 * Date of the business day of the requested messages the resend function is
-	 * used for.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +114,7 @@ public class ResendSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmBusinessDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ResendSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ResendSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "BizDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,12 +125,11 @@ public class ResendSearchCriteria1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SeqNb")
 	protected Max35Text sequenceNumber;
 	/**
-	 * Independent counter for message sequence, which is available once per
-	 * party technical address. Specifies the identification sequence number for
-	 * a specific couple sender/receiver.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +158,7 @@ public class ResendSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ResendSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ResendSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,11 +169,11 @@ public class ResendSearchCriteria1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlMsgNmId")
 	protected Max35Text originalMessageNameIdentification;
 	/**
-	 * Unambiguously identifies the original bsiness message, which was
-	 * delivered by the business sender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,7 +202,7 @@ public class ResendSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ResendSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ResendSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgNmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,11 +213,11 @@ public class ResendSearchCriteria1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FileRef")
 	protected Max35Text fileReference;
 	/**
-	 * String of characters that uniquely identifies the file, which was
-	 * delivered by the sender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,7 +246,7 @@ public class ResendSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmFileReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ResendSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ResendSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "FileRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,11 +257,11 @@ public class ResendSearchCriteria1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Rcpt", required = true)
 	protected PartyIdentification71Choice recipient;
 	/**
-	 * Unique identification to unambiguously identify the recipient of the
-	 * report message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -289,7 +290,7 @@ public class ResendSearchCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmRecipient = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ResendSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ResendSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Rcpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -305,9 +306,10 @@ public class ResendSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ResendSearchCriteria1.mmBusinessDate, ResendSearchCriteria1.mmSequenceNumber, ResendSearchCriteria1.mmOriginalMessageNameIdentification, ResendSearchCriteria1.mmFileReference,
-						ResendSearchCriteria1.mmRecipient);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResendSearchCriteria1.mmBusinessDate, com.tools20022.repository.msg.ResendSearchCriteria1.mmSequenceNumber,
+						com.tools20022.repository.msg.ResendSearchCriteria1.mmOriginalMessageNameIdentification, com.tools20022.repository.msg.ResendSearchCriteria1.mmFileReference,
+						com.tools20022.repository.msg.ResendSearchCriteria1.mmRecipient);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ResendSearchCriteria1";
 				definition = "Defines the criteria to extract the message(s) which should be resent.";
@@ -316,48 +318,48 @@ public class ResendSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BizDt")
-	public ISODate getBusinessDate() {
-		return businessDate;
+	public Optional<ISODate> getBusinessDate() {
+		return businessDate == null ? Optional.empty() : Optional.of(businessDate);
 	}
 
-	public void setBusinessDate(ISODate businessDate) {
+	public ResendSearchCriteria1 setBusinessDate(ISODate businessDate) {
 		this.businessDate = businessDate;
+		return this;
 	}
 
-	@XmlElement(name = "SeqNb")
-	public Max35Text getSequenceNumber() {
-		return sequenceNumber;
+	public Optional<Max35Text> getSequenceNumber() {
+		return sequenceNumber == null ? Optional.empty() : Optional.of(sequenceNumber);
 	}
 
-	public void setSequenceNumber(Max35Text sequenceNumber) {
+	public ResendSearchCriteria1 setSequenceNumber(Max35Text sequenceNumber) {
 		this.sequenceNumber = sequenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlMsgNmId")
-	public Max35Text getOriginalMessageNameIdentification() {
-		return originalMessageNameIdentification;
+	public Optional<Max35Text> getOriginalMessageNameIdentification() {
+		return originalMessageNameIdentification == null ? Optional.empty() : Optional.of(originalMessageNameIdentification);
 	}
 
-	public void setOriginalMessageNameIdentification(Max35Text originalMessageNameIdentification) {
+	public ResendSearchCriteria1 setOriginalMessageNameIdentification(Max35Text originalMessageNameIdentification) {
 		this.originalMessageNameIdentification = originalMessageNameIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "FileRef")
-	public Max35Text getFileReference() {
-		return fileReference;
+	public Optional<Max35Text> getFileReference() {
+		return fileReference == null ? Optional.empty() : Optional.of(fileReference);
 	}
 
-	public void setFileReference(Max35Text fileReference) {
+	public ResendSearchCriteria1 setFileReference(Max35Text fileReference) {
 		this.fileReference = fileReference;
+		return this;
 	}
 
-	@XmlElement(name = "Rcpt", required = true)
 	public PartyIdentification71Choice getRecipient() {
 		return recipient;
 	}
 
-	public void setRecipient(PartyIdentification71Choice recipient) {
-		this.recipient = recipient;
+	public ResendSearchCriteria1 setRecipient(PartyIdentification71Choice recipient) {
+		this.recipient = Objects.requireNonNull(recipient);
+		return this;
 	}
 }

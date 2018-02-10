@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * PaymentInstrument9}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentInstrument10", propOrder = {"settlementCurrency", "paymentInstrument", "dividendPercentage"})
 public class PaymentInstrument10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SttlmCcy", required = true)
 	protected ActiveCurrencyCode settlementCurrency;
 	/**
-	 * Currency associated with the payment instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,7 +137,7 @@ public class PaymentInstrument10 {
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
-			componentContext_lazy = () -> PaymentInstrument10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument10.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,10 +149,11 @@ public class PaymentInstrument10 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtInstrm", required = true)
 	protected PaymentInstrument16Choice paymentInstrument;
 	/**
-	 * Choice of payment instruments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,7 +195,7 @@ public class PaymentInstrument10 {
 	public static final MMMessageAttribute mmPaymentInstrument = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCreditMethod;
-			componentContext_lazy = () -> PaymentInstrument10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument10.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,10 +207,11 @@ public class PaymentInstrument10 {
 			complexType_lazy = () -> PaymentInstrument16Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DvddPctg")
 	protected PercentageBoundedRate dividendPercentage;
 	/**
-	 * Percentage of the dividend payment not to be reinvested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -248,7 +253,7 @@ public class PaymentInstrument10 {
 	public static final MMMessageAttribute mmDividendPercentage = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
-			componentContext_lazy = () -> PaymentInstrument10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstrument10.mmObject();
 			isDerived = false;
 			xmlTag = "DvddPctg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,9 +269,10 @@ public class PaymentInstrument10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentInstrument10.mmSettlementCurrency, PaymentInstrument10.mmPaymentInstrument, PaymentInstrument10.mmDividendPercentage);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument10.mmSettlementCurrency, com.tools20022.repository.msg.PaymentInstrument10.mmPaymentInstrument,
+						com.tools20022.repository.msg.PaymentInstrument10.mmDividendPercentage);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrument10";
 				definition = "Instrument that has or represents monetary value and is used to process a payment instruction.";
@@ -277,30 +283,30 @@ public class PaymentInstrument10 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SttlmCcy", required = true)
 	public ActiveCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
 
-	public void setSettlementCurrency(ActiveCurrencyCode settlementCurrency) {
-		this.settlementCurrency = settlementCurrency;
+	public PaymentInstrument10 setSettlementCurrency(ActiveCurrencyCode settlementCurrency) {
+		this.settlementCurrency = Objects.requireNonNull(settlementCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "PmtInstrm", required = true)
 	public PaymentInstrument16Choice getPaymentInstrument() {
 		return paymentInstrument;
 	}
 
-	public void setPaymentInstrument(PaymentInstrument16Choice paymentInstrument) {
-		this.paymentInstrument = paymentInstrument;
+	public PaymentInstrument10 setPaymentInstrument(PaymentInstrument16Choice paymentInstrument) {
+		this.paymentInstrument = Objects.requireNonNull(paymentInstrument);
+		return this;
 	}
 
-	@XmlElement(name = "DvddPctg")
-	public PercentageBoundedRate getDividendPercentage() {
-		return dividendPercentage;
+	public Optional<PercentageBoundedRate> getDividendPercentage() {
+		return dividendPercentage == null ? Optional.empty() : Optional.of(dividendPercentage);
 	}
 
-	public void setDividendPercentage(PercentageBoundedRate dividendPercentage) {
+	public PaymentInstrument10 setDividendPercentage(PercentageBoundedRate dividendPercentage) {
 		this.dividendPercentage = dividendPercentage;
+		return this;
 	}
 }

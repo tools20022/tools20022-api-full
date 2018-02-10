@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemSecuritiesAccount2", propOrder = {"closingDate", "holdIndicator", "negativePosition", "endInvestorFlag", "pricingScheme"})
 public class SystemSecuritiesAccount2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ClsgDt")
 	protected ISODate closingDate;
 	/**
-	 * Legal closing date for the securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +116,7 @@ public class SystemSecuritiesAccount2 {
 	 */
 	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemSecuritiesAccount2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount2.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,11 +127,11 @@ public class SystemSecuritiesAccount2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "HldInd")
 	protected TrueFalseIndicator holdIndicator;
 	/**
-	 * Meaning when true : Account is in Hold status.<br>
-	 * Meaning when false : Account is in Release status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +161,7 @@ public class SystemSecuritiesAccount2 {
 	 */
 	public static final MMMessageAttribute mmHoldIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemSecuritiesAccount2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount2.mmObject();
 			isDerived = false;
 			xmlTag = "HldInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,11 +172,11 @@ public class SystemSecuritiesAccount2 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "NegPos")
 	protected YesNoIndicator negativePosition;
 	/**
-	 * Specifies whether the securities account can hold a negative position in
-	 * a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,7 +206,7 @@ public class SystemSecuritiesAccount2 {
 	 */
 	public static final MMMessageAttribute mmNegativePosition = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemSecuritiesAccount2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount2.mmObject();
 			isDerived = false;
 			xmlTag = "NegPos";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,11 +217,11 @@ public class SystemSecuritiesAccount2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "EndInvstrFlg")
 	protected Exact4AlphaNumericText endInvestorFlag;
 	/**
-	 * Specifies information to identify securities accounts where allocation
-	 * instructions are posted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,7 +251,7 @@ public class SystemSecuritiesAccount2 {
 	 */
 	public static final MMMessageAttribute mmEndInvestorFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemSecuritiesAccount2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount2.mmObject();
 			isDerived = false;
 			xmlTag = "EndInvstrFlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -260,10 +262,11 @@ public class SystemSecuritiesAccount2 {
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "PricgSchme")
 	protected Exact4AlphaNumericText pricingScheme;
 	/**
-	 * Defines how the price is applied to the securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -292,7 +295,7 @@ public class SystemSecuritiesAccount2 {
 	 */
 	public static final MMMessageAttribute mmPricingScheme = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemSecuritiesAccount2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSecuritiesAccount2.mmObject();
 			isDerived = false;
 			xmlTag = "PricgSchme";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -307,9 +310,10 @@ public class SystemSecuritiesAccount2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SystemSecuritiesAccount2.mmClosingDate, SystemSecuritiesAccount2.mmHoldIndicator, SystemSecuritiesAccount2.mmNegativePosition, SystemSecuritiesAccount2.mmEndInvestorFlag,
-						SystemSecuritiesAccount2.mmPricingScheme);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemSecuritiesAccount2.mmClosingDate, com.tools20022.repository.msg.SystemSecuritiesAccount2.mmHoldIndicator,
+						com.tools20022.repository.msg.SystemSecuritiesAccount2.mmNegativePosition, com.tools20022.repository.msg.SystemSecuritiesAccount2.mmEndInvestorFlag,
+						com.tools20022.repository.msg.SystemSecuritiesAccount2.mmPricingScheme);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemSecuritiesAccount2";
 				definition = "Account to or from which a securities entry is made.\nIt holds information such as opening and closing date and whether it can hold negative positions.\nDefinition of the entity includes the default setting for holding of settlement instructions involving positions related to the account.\nSet of MarketSpecificAttributes define specific properties for the account.";
@@ -318,48 +322,48 @@ public class SystemSecuritiesAccount2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ClsgDt")
-	public ISODate getClosingDate() {
-		return closingDate;
+	public Optional<ISODate> getClosingDate() {
+		return closingDate == null ? Optional.empty() : Optional.of(closingDate);
 	}
 
-	public void setClosingDate(ISODate closingDate) {
+	public SystemSecuritiesAccount2 setClosingDate(ISODate closingDate) {
 		this.closingDate = closingDate;
+		return this;
 	}
 
-	@XmlElement(name = "HldInd")
-	public TrueFalseIndicator getHoldIndicator() {
-		return holdIndicator;
+	public Optional<TrueFalseIndicator> getHoldIndicator() {
+		return holdIndicator == null ? Optional.empty() : Optional.of(holdIndicator);
 	}
 
-	public void setHoldIndicator(TrueFalseIndicator holdIndicator) {
+	public SystemSecuritiesAccount2 setHoldIndicator(TrueFalseIndicator holdIndicator) {
 		this.holdIndicator = holdIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "NegPos")
-	public YesNoIndicator getNegativePosition() {
-		return negativePosition;
+	public Optional<YesNoIndicator> getNegativePosition() {
+		return negativePosition == null ? Optional.empty() : Optional.of(negativePosition);
 	}
 
-	public void setNegativePosition(YesNoIndicator negativePosition) {
+	public SystemSecuritiesAccount2 setNegativePosition(YesNoIndicator negativePosition) {
 		this.negativePosition = negativePosition;
+		return this;
 	}
 
-	@XmlElement(name = "EndInvstrFlg")
-	public Exact4AlphaNumericText getEndInvestorFlag() {
-		return endInvestorFlag;
+	public Optional<Exact4AlphaNumericText> getEndInvestorFlag() {
+		return endInvestorFlag == null ? Optional.empty() : Optional.of(endInvestorFlag);
 	}
 
-	public void setEndInvestorFlag(Exact4AlphaNumericText endInvestorFlag) {
+	public SystemSecuritiesAccount2 setEndInvestorFlag(Exact4AlphaNumericText endInvestorFlag) {
 		this.endInvestorFlag = endInvestorFlag;
+		return this;
 	}
 
-	@XmlElement(name = "PricgSchme")
-	public Exact4AlphaNumericText getPricingScheme() {
-		return pricingScheme;
+	public Optional<Exact4AlphaNumericText> getPricingScheme() {
+		return pricingScheme == null ? Optional.empty() : Optional.of(pricingScheme);
 	}
 
-	public void setPricingScheme(Exact4AlphaNumericText pricingScheme) {
+	public SystemSecuritiesAccount2 setPricingScheme(Exact4AlphaNumericText pricingScheme) {
 		this.pricingScheme = pricingScheme;
+		return this;
 	}
 }

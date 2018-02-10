@@ -27,9 +27,8 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Security that is a sub-set of an investment fund, and is governed by the same
@@ -41,6 +40,8 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -131,119 +132,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InvestmentFundClass#mmOutstandingUnits
  * InvestmentFundClass.mmOutstandingUnits}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Security Security}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument16
- * FinancialInstrument16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument20
- * FinancialInstrument20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument17
- * FinancialInstrument17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument6
- * FinancialInstrument6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument10
- * FinancialInstrument10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BlockedHoldingDetails1
- * BlockedHoldingDetails1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument29
- * FinancialInstrument29}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Repartition2 Repartition2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument7
- * FinancialInstrument7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument12
- * FinancialInstrument12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument26
- * FinancialInstrument26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument30
- * FinancialInstrument30}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument11
- * FinancialInstrument11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument25
- * FinancialInstrument25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument27
- * FinancialInstrument27}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument32
- * FinancialInstrument32}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument24
- * FinancialInstrument24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument33
- * FinancialInstrument33}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument23
- * FinancialInstrument23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument31
- * FinancialInstrument31}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument3
- * FinancialInstrument3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument5
- * FinancialInstrument5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument8
- * FinancialInstrument8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument13
- * FinancialInstrument13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument21
- * FinancialInstrument21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument22
- * FinancialInstrument22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument4
- * FinancialInstrument4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument9
- * FinancialInstrument9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.InvestmentFund1
- * InvestmentFund1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument18
- * FinancialInstrument18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.HoldBackInformation1
- * HoldBackInformation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument19
- * FinancialInstrument19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument37
- * FinancialInstrument37}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument35
- * FinancialInstrument35}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument34
- * FinancialInstrument34}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument36
- * FinancialInstrument36}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument40
- * FinancialInstrument40}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Repartition3 Repartition3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument39
- * FinancialInstrument39}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument51
- * FinancialInstrument51}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument50
- * FinancialInstrument50}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Repartition4 Repartition4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument45
- * FinancialInstrument45}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument49
- * FinancialInstrument49}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument48
- * FinancialInstrument48}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BlockedHoldingDetails2
- * BlockedHoldingDetails2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument47
- * FinancialInstrument47}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument46
- * FinancialInstrument46}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Series1 Series1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument57
- * FinancialInstrument57}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Repartition5 Repartition5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument56
- * FinancialInstrument56}</li>
- * <li>{@linkplain com.tools20022.repository.msg.HoldBackInformation2
- * HoldBackInformation2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument55
- * FinancialInstrument55}</li>
- * <li>{@linkplain com.tools20022.repository.msg.HoldBackInformation3
- * HoldBackInformation3}</li>
  * </ul>
  * </li>
  * <li>
@@ -650,10 +538,121 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument16
+ * FinancialInstrument16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument20
+ * FinancialInstrument20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument17
+ * FinancialInstrument17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument6
+ * FinancialInstrument6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument10
+ * FinancialInstrument10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BlockedHoldingDetails1
+ * BlockedHoldingDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument29
+ * FinancialInstrument29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Repartition2 Repartition2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument7
+ * FinancialInstrument7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument12
+ * FinancialInstrument12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument26
+ * FinancialInstrument26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument30
+ * FinancialInstrument30}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument11
+ * FinancialInstrument11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument25
+ * FinancialInstrument25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument27
+ * FinancialInstrument27}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument32
+ * FinancialInstrument32}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument24
+ * FinancialInstrument24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument33
+ * FinancialInstrument33}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument23
+ * FinancialInstrument23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument31
+ * FinancialInstrument31}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument3
+ * FinancialInstrument3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument5
+ * FinancialInstrument5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument8
+ * FinancialInstrument8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument13
+ * FinancialInstrument13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument21
+ * FinancialInstrument21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument22
+ * FinancialInstrument22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument4
+ * FinancialInstrument4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument9
+ * FinancialInstrument9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentFund1
+ * InvestmentFund1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument18
+ * FinancialInstrument18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.HoldBackInformation1
+ * HoldBackInformation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument19
+ * FinancialInstrument19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument37
+ * FinancialInstrument37}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument35
+ * FinancialInstrument35}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument34
+ * FinancialInstrument34}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument36
+ * FinancialInstrument36}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument40
+ * FinancialInstrument40}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Repartition3 Repartition3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument39
+ * FinancialInstrument39}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument51
+ * FinancialInstrument51}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument50
+ * FinancialInstrument50}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Repartition4 Repartition4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument45
+ * FinancialInstrument45}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument49
+ * FinancialInstrument49}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument48
+ * FinancialInstrument48}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BlockedHoldingDetails2
+ * BlockedHoldingDetails2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument47
+ * FinancialInstrument47}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument46
+ * FinancialInstrument46}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Series1 Series1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument57
+ * FinancialInstrument57}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Repartition5 Repartition5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument56
+ * FinancialInstrument56}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.HoldBackInformation2
+ * HoldBackInformation2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument55
+ * FinancialInstrument55}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.HoldBackInformation3
+ * HoldBackInformation3}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -671,12 +670,8 @@ public class InvestmentFundClass extends Security {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Max35Text classType;
 	/**
-	 * Features of units offered by a fund. For example, a unit may have a
-	 * specific load structure, eg, front end or back end, an income policy, eg,
-	 * pay out or accumulate, or a trailer policy, eg, with or without. Fund
-	 * classes are typically denoted by a single character, eg, 'Class A',
-	 * 'Class 2'.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -788,8 +783,8 @@ public class InvestmentFundClass extends Security {
 					FinancialInstrument22.mmClassType, FinancialInstrument4.mmClassType, FinancialInstrument9.mmClassType, InvestmentFundTransactionsByFund1.mmClassType, InvestmentFundTransactionsByFund2.mmClassType,
 					InvestmentFund1.mmClassType, FinancialInstrument19.mmClassType, InvestmentFundTransactionsByFund3.mmClassType, FinancialInstrument51.mmClassType, FinancialInstrument45.mmClassType, FinancialInstrument49.mmClassType,
 					FinancialInstrument57.mmClassType, FinancialInstrument56.mmClassType, FinancialInstrument55.mmClassType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClassType";
 			definition = "Features of units offered by a fund. For example, a unit may have a specific load structure, eg, front end or back end, an income policy, eg, pay out or accumulate, or a trailer policy, eg, with or without. Fund classes are typically denoted by a single character, eg, 'Class A', 'Class 2'.";
@@ -808,9 +803,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected DistributionPolicyCode distributionPolicy;
 	/**
-	 * Income policy relating to a class type, ie, if income is paid out or
-	 * retained in the fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -917,8 +911,8 @@ public class InvestmentFundClass extends Security {
 					FinancialInstrument13.mmDistributionPolicy, FinancialInstrument21.mmDistributionPolicy, FinancialInstrument22.mmDistributionPolicy, FinancialInstrument4.mmDistributionPolicy, FinancialInstrument9.mmDistributionPolicy,
 					InvestmentFundTransactionsByFund1.mmDistributionPolicy, InvestmentFundTransactionsByFund2.mmDistributionPolicy, InvestmentFundTransactionsByFund3.mmDistributionPolicy, FinancialInstrument51.mmDistributionPolicy,
 					FinancialInstrument45.mmDistributionPolicy, FinancialInstrument49.mmDistributionPolicy, FinancialInstrument57.mmDistributionPolicy, FinancialInstrument56.mmDistributionPolicy, FinancialInstrument55.mmDistributionPolicy);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DistributionPolicy";
 			definition = "Income policy relating to a class type, ie, if income is paid out or retained in the fund.";
@@ -937,8 +931,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected DividendPolicyCode dividendPolicy;
 	/**
-	 * Dividend policy of the fund, eg, cash, units.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -976,8 +970,8 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmDividendPolicy = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmDividendPolicy, FinancialInstrument20.mmDividendPolicy);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendPolicy";
 			definition = "Dividend policy of the fund, eg, cash, units.";
@@ -996,8 +990,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected YesNoIndicator dualFundIndicator;
 	/**
-	 * Indicates whether the fund has two prices.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1051,8 +1045,8 @@ public class InvestmentFundClass extends Security {
 		{
 			derivation_lazy = () -> Arrays.asList(ValuationDealingProcessingCharacteristics.mmDualFundIndicator, ValuationDealingProcessingCharacteristics2.mmDualFundIndicator, FinancialInstrument5.mmDualFundIndicator,
 					FinancialInstrument8.mmDualFundIndicator, FinancialInstrument21.mmDualFundIndicator, FinancialInstrument22.mmDualFundIndicator, FinancialInstrument9.mmDualFundIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DualFundIndicator";
 			definition = "Indicates whether the fund has two prices.";
@@ -1071,10 +1065,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected CurrencyCode requestedNAVCurrency;
 	/**
-	 * Currency to be used for pricing the fund. This currency must be among the
-	 * set of currencies in which the price may be expressed, as stated in the
-	 * prospectus.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1282,8 +1274,8 @@ public class InvestmentFundClass extends Security {
 					RedemptionOrder14.mmRequestedNAVCurrency, SwitchSubscriptionLegOrder6.mmRequestedNAVCurrency, SubscriptionExecution13.mmRequestedNAVCurrency, Reinvestment3.mmRequestedNAVCurrency,
 					SwitchRedemptionLegOrder6.mmRequestedNAVCurrency, SubscriptionOrder14.mmRequestedNAVCurrency, SwitchSubscriptionLegExecution4.mmRequestedNAVCurrency, RedemptionExecution15.mmRequestedNAVCurrency,
 					SwitchRedemptionLegExecution4.mmRequestedNAVCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedNAVCurrency";
 			definition = "Currency to be used for pricing the fund. This currency must be among the set of currencies in which the price may be expressed, as stated in the prospectus.";
@@ -1302,8 +1294,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected CurrencyCode tradingCurrency;
 	/**
-	 * Currency of the investment fund class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1390,8 +1382,8 @@ public class InvestmentFundClass extends Security {
 					FundCashForecast3.mmInvestmentCurrency, FundCashForecast2.mmInvestmentCurrency, FundCashForecast4.mmInvestmentCurrency, EstimatedFundCashForecast2.mmInvestmentCurrency, EstimatedFundCashForecast4.mmInvestmentCurrency,
 					EstimatedFundCashForecast1.mmInvestmentCurrency, EstimatedFundCashForecast3.mmInvestmentCurrency, FundCashForecast7.mmInvestmentCurrency, Fund2.mmCurrency, EstimatedFundCashForecast6.mmInvestmentCurrency,
 					Fund1.mmCurrency, FundCashForecast6.mmInvestmentCurrency, EstimatedFundCashForecast5.mmInvestmentCurrency, Fund3.mmCurrency, Fund4.mmCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingCurrency";
 			definition = "Currency of the investment fund class.";
@@ -1410,8 +1402,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected InvestmentFund investmentFund;
 	/**
-	 * Investment fund which is related to the investment fund class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1490,8 +1482,8 @@ public class InvestmentFundClass extends Security {
 					FundCashForecast4.mmFinancialInstrumentDetails, EstimatedFundCashForecast2.mmFinancialInstrumentDetails, EstimatedFundCashForecast4.mmFinancialInstrumentDetails, EstimatedFundCashForecast1.mmFinancialInstrumentDetails,
 					EstimatedFundCashForecast3.mmFinancialInstrumentDetails, FundCashForecast7.mmFinancialInstrumentDetails, EstimatedFundCashForecast6.mmFinancialInstrumentDetails, FundCashForecast6.mmFinancialInstrumentDetails,
 					EstimatedFundCashForecast5.mmFinancialInstrumentDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFund";
 			definition = "Investment fund which is related to the investment fund class.";
@@ -1504,9 +1496,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected YesNoIndicator physicalBearerSecurities;
 	/**
-	 * Indicates whether or not it is possible to hold bearer units/shares in
-	 * this class in certified form
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1543,8 +1534,8 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmPhysicalBearerSecurities = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument20.mmPhysicalBearerSecurities);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhysicalBearerSecurities";
 			definition = "Indicates whether or not it is possible to hold bearer units/shares in this class in certified form";
@@ -1563,9 +1554,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected YesNoIndicator dematerialisedBearerSecurities;
 	/**
-	 * Indicate whether or not it is possible to hold bearer units/shares in
-	 * paperless form
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1602,8 +1592,8 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmDematerialisedBearerSecurities = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument20.mmDematerialisedBearerSecurities);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DematerialisedBearerSecurities";
 			definition = "Indicate whether or not it is possible to hold bearer units/shares in paperless form";
@@ -1622,9 +1612,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected YesNoIndicator physicalRegisteredSecurities;
 	/**
-	 * Indicate whether or not it is possible to hold registered units/shares in
-	 * this class in paperless form
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1661,8 +1650,8 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmPhysicalRegisteredSecurities = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument20.mmPhysicalRegisteredSecurities);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhysicalRegisteredSecurities";
 			definition = "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form";
@@ -1681,9 +1670,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected YesNoIndicator dematerialisedRegisteredSecurities;
 	/**
-	 * Indicate whether or not it is possible to hold registered units/shares in
-	 * this class in paperless form
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1720,8 +1708,8 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmDematerialisedRegisteredSecurities = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument20.mmDematerialisedRegisteredSecurities);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DematerialisedRegisteredSecurities";
 			definition = "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form";
@@ -1740,9 +1728,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected List<com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics> processingCharacteristics;
 	/**
-	 * Processing characteristics linked to the investment fund class, ie, not
-	 * to the market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1800,8 +1787,8 @@ public class InvestmentFundClass extends Security {
 		{
 			derivation_lazy = () -> Arrays.asList(LocalMarketAnnex2.mmSubscriptionProcessingCharacteristics, LocalMarketAnnex2.mmRedemptionProcessingCharacteristics, FundProcessingPassport1.mmValuationDealingCharacteristics,
 					FundProcessingPassport1.mmSubscriptionProcessingCharacteristics, FundProcessingPassport1.mmRedemptionProcessingCharacteristics);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProcessingCharacteristics";
 			definition = "Processing characteristics linked to the investment fund class, ie, not to  the market.";
@@ -1813,8 +1800,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected Max140Text productGroup;
 	/**
-	 * Company specific description of a group of funds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1880,8 +1867,8 @@ public class InvestmentFundClass extends Security {
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument17.mmProductGroup, FinancialInstrument6.mmProductGroup, FinancialInstrument10.mmProductGroup, FinancialInstrument29.mmProductGroup, FinancialInstrument21.mmProductGroup,
 					FinancialInstrument22.mmProductGroup, FinancialInstrument51.mmProductGroup, FinancialInstrument45.mmProductGroup, FinancialInstrument57.mmProductGroup, FinancialInstrument56.mmProductGroup,
 					FinancialInstrument55.mmProductGroup);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProductGroup";
 			definition = "Company specific description of a group of funds.";
@@ -1900,8 +1887,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected List<com.tools20022.repository.entity.InvestmentAccount> investmentAccount;
 	/**
-	 * Account which holds investment fund classes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2032,8 +2019,8 @@ public class InvestmentFundClass extends Security {
 					FinancialInstrument34.mmSubAccountDetails, FinancialInstrument36.mmTransfereeAccount, FinancialInstrument36.mmSubAccountDetails, FinancialInstrument40.mmTransfereeAccount, FinancialInstrument40.mmSubAccountDetails,
 					FinancialInstrument39.mmTransfereeAccount, FinancialInstrument39.mmSubAccountDetails, FinancialInstrument50.mmTransfereeAccount, FinancialInstrument50.mmSubAccountDetails, FinancialInstrument48.mmTransfereeAccount,
 					FinancialInstrument48.mmSubAccountDetails, FinancialInstrument47.mmTransfereeAccount, FinancialInstrument47.mmSubAccountDetails, FinancialInstrument46.mmTransfereeAccount, FinancialInstrument46.mmSubAccountDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccount";
 			definition = "Account which holds investment fund classes.";
@@ -2045,8 +2032,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected NetAssetValueCalculation netAssetValueCalculation;
 	/**
-	 * Calculation of the value of the fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2080,8 +2067,8 @@ public class InvestmentFundClass extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmNetAssetValueCalculation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAssetValueCalculation";
 			definition = "Calculation of the value of the fund.";
@@ -2094,8 +2081,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected List<com.tools20022.repository.entity.InvestmentFundTransaction> investmentFundTransaction;
 	/**
-	 * Transaction which is related to the fund class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2129,8 +2116,8 @@ public class InvestmentFundClass extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentFundTransaction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFundTransaction";
 			definition = "Transaction which is related to the fund class.";
@@ -2142,10 +2129,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected ISODate seriesIssueIdentificationDate;
 	/**
-	 * Date that identifies the issue of a fund series. Typically applicable to
-	 * a redemption or order confirmation, but may be specified in the
-	 * subscription, if known.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2189,8 +2174,8 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmSeriesIssueIdentificationDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument18.mmSeriesIssueIdentificationDate, Series1.mmSeriesDate, DateFormat42Choice.mmYearMonth, DateFormat42Choice.mmYearMonthDay);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SeriesIssueIdentificationDate";
 			definition = "Date that identifies the issue of a fund series. Typically applicable to a redemption or order confirmation, but may be specified in the subscription, if known.";
@@ -2209,10 +2194,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected Max35Text seriesName;
 	/**
-	 * Identifies the name of a fund series. Typically applicable to a
-	 * redemption or order confirmation, but may be specified in the
-	 * subscription, if known.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2253,8 +2236,8 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmSeriesName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument18.mmSeriesName, Series1.mmSeriesName, FinancialInstrument57.mmSeriesIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SeriesName";
 			definition = "Identifies the name of a fund series. Typically applicable to a redemption or order confirmation, but may be specified in the subscription, if known.";
@@ -2273,9 +2256,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected YesNoIndicator newIssueIndicator;
 	/**
-	 * Indicates that the financial instrument and/or series included in the
-	 * message is a new issue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2312,8 +2294,8 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmNewIssueIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument18.mmNewIssueIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewIssueIndicator";
 			definition = "Indicates that the financial instrument and/or series included in the message is a new issue.";
@@ -2332,9 +2314,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected Equalisation equalisation;
 	/**
-	 * Part of an investor's subscription amount that is held by the fund in
-	 * order to pay incentive / performance fees at the end of the fiscal year.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2473,8 +2454,8 @@ public class InvestmentFundClass extends Security {
 					AggregateBalanceInformation5.mmEqualisationBalance, RedemptionExecution10.mmEqualisation, SubscriptionExecution7.mmEqualisation, RedemptionOrder14.mmEqualisation, SwitchSubscriptionLegOrder6.mmEqualisation,
 					SubscriptionExecution13.mmEqualisation, SubscriptionExecution12.mmEqualisation, SubscriptionOrder15.mmEqualisation, SwitchRedemptionLegOrder6.mmEqualisation, RedemptionOrder15.mmEqualisation,
 					RedemptionExecution16.mmEqualisation, SubscriptionOrder14.mmEqualisation, SwitchSubscriptionLegExecution4.mmEqualisation, RedemptionExecution15.mmEqualisation, SwitchRedemptionLegExecution4.mmEqualisation);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Equalisation";
 			definition = "Part of an investor's subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year.";
@@ -2487,9 +2468,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected CurrencyAndAmount topUpAmount;
 	/**
-	 * Additional amount of money (top-up amount) required to meet the minimum
-	 * subscription amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2526,8 +2506,8 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmTopUpAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ExpectedExecutionDetails3.mmTopUpAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TopUpAmount";
 			definition = "Additional amount of money (top-up amount) required to meet the minimum subscription amount.";
@@ -2546,8 +2526,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected CurrencyAndAmount holdBackAmount;
 	/**
-	 * Value of the redemption amount subject to hold back.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2588,8 +2568,8 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmHoldBackAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(HoldBackInformation1.mmHoldBackAmount, HoldBackInformation2.mmAmount, HoldBackInformation3.mmAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HoldBackAmount";
 			definition = "Value of the redemption amount subject to hold back.";
@@ -2608,8 +2588,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected ISODate holdBackReleaseDate;
 	/**
-	 * Date on which the hold back amount is to be released.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2649,8 +2629,8 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmHoldBackReleaseDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(HoldBackInformation1.mmHoldBackReleaseDate, HoldBackInformation2.mmExpectedReleaseDate, HoldBackInformation3.mmExpectedReleaseDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HoldBackReleaseDate";
 			definition = "Date on which the hold back amount is to be released.";
@@ -2669,8 +2649,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected Max350Text lotDescription;
 	/**
-	 * Description of the lot.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2695,8 +2675,8 @@ public class InvestmentFundClass extends Security {
 	 */
 	public static final MMBusinessAttribute mmLotDescription = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LotDescription";
 			definition = "Description of the lot.";
@@ -2715,8 +2695,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected GenericIdentification fundClassification;
 	/**
-	 * Method of classifying a fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2750,8 +2730,8 @@ public class InvestmentFundClass extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmFundClassification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundClassification";
 			definition = "Method of classifying a fund.";
@@ -2764,8 +2744,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected FinancialInstrumentProductTypeCode underlyingAssetType;
 	/**
-	 * Specifies the type of assets in which the fund invests.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2791,8 +2771,8 @@ public class InvestmentFundClass extends Security {
 	 */
 	public static final MMBusinessAttribute mmUnderlyingAssetType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnderlyingAssetType";
 			definition = "Specifies the type of assets in which the fund invests.";
@@ -2811,8 +2791,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected InvestorTypeCode investorType;
 	/**
-	 * Type of investor that can invest in the fund class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2838,8 +2818,8 @@ public class InvestmentFundClass extends Security {
 	 */
 	public static final MMBusinessAttribute mmInvestorType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestorType";
 			definition = "Type of investor that can invest in the fund class.";
@@ -2858,8 +2838,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected Reinvestment reinvestment;
 	/**
-	 * Reinvestment information which involves this investment fund class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2893,8 +2873,8 @@ public class InvestmentFundClass extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmReinvestment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reinvestment";
 			definition = "Reinvestment information which involves this investment fund class.";
@@ -2907,8 +2887,8 @@ public class InvestmentFundClass extends Security {
 	};
 	protected DecimalNumber outstandingUnits;
 	/**
-	 * Investment fund class currently held by shareholders.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2943,8 +2923,8 @@ public class InvestmentFundClass extends Security {
 	public static final MMBusinessAttribute mmOutstandingUnits = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentFund1.mmTotalUnitsOutstanding);
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OutstandingUnits";
 			definition = "Investment fund class currently held by shareholders.";
@@ -2965,7 +2945,7 @@ public class InvestmentFundClass extends Security {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundClass";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, for example, a dividend option or valuation currency.";
@@ -3045,231 +3025,260 @@ public class InvestmentFundClass extends Security {
 		return classType;
 	}
 
-	public void setClassType(Max35Text classType) {
-		this.classType = classType;
+	public InvestmentFundClass setClassType(Max35Text classType) {
+		this.classType = Objects.requireNonNull(classType);
+		return this;
 	}
 
 	public DistributionPolicyCode getDistributionPolicy() {
 		return distributionPolicy;
 	}
 
-	public void setDistributionPolicy(DistributionPolicyCode distributionPolicy) {
-		this.distributionPolicy = distributionPolicy;
+	public InvestmentFundClass setDistributionPolicy(DistributionPolicyCode distributionPolicy) {
+		this.distributionPolicy = Objects.requireNonNull(distributionPolicy);
+		return this;
 	}
 
 	public DividendPolicyCode getDividendPolicy() {
 		return dividendPolicy;
 	}
 
-	public void setDividendPolicy(DividendPolicyCode dividendPolicy) {
-		this.dividendPolicy = dividendPolicy;
+	public InvestmentFundClass setDividendPolicy(DividendPolicyCode dividendPolicy) {
+		this.dividendPolicy = Objects.requireNonNull(dividendPolicy);
+		return this;
 	}
 
 	public YesNoIndicator getDualFundIndicator() {
 		return dualFundIndicator;
 	}
 
-	public void setDualFundIndicator(YesNoIndicator dualFundIndicator) {
-		this.dualFundIndicator = dualFundIndicator;
+	public InvestmentFundClass setDualFundIndicator(YesNoIndicator dualFundIndicator) {
+		this.dualFundIndicator = Objects.requireNonNull(dualFundIndicator);
+		return this;
 	}
 
 	public CurrencyCode getRequestedNAVCurrency() {
 		return requestedNAVCurrency;
 	}
 
-	public void setRequestedNAVCurrency(CurrencyCode requestedNAVCurrency) {
-		this.requestedNAVCurrency = requestedNAVCurrency;
+	public InvestmentFundClass setRequestedNAVCurrency(CurrencyCode requestedNAVCurrency) {
+		this.requestedNAVCurrency = Objects.requireNonNull(requestedNAVCurrency);
+		return this;
 	}
 
 	public CurrencyCode getTradingCurrency() {
 		return tradingCurrency;
 	}
 
-	public void setTradingCurrency(CurrencyCode tradingCurrency) {
-		this.tradingCurrency = tradingCurrency;
+	public InvestmentFundClass setTradingCurrency(CurrencyCode tradingCurrency) {
+		this.tradingCurrency = Objects.requireNonNull(tradingCurrency);
+		return this;
 	}
 
 	public InvestmentFund getInvestmentFund() {
 		return investmentFund;
 	}
 
-	public void setInvestmentFund(com.tools20022.repository.entity.InvestmentFund investmentFund) {
-		this.investmentFund = investmentFund;
+	public InvestmentFundClass setInvestmentFund(com.tools20022.repository.entity.InvestmentFund investmentFund) {
+		this.investmentFund = Objects.requireNonNull(investmentFund);
+		return this;
 	}
 
 	public YesNoIndicator getPhysicalBearerSecurities() {
 		return physicalBearerSecurities;
 	}
 
-	public void setPhysicalBearerSecurities(YesNoIndicator physicalBearerSecurities) {
-		this.physicalBearerSecurities = physicalBearerSecurities;
+	public InvestmentFundClass setPhysicalBearerSecurities(YesNoIndicator physicalBearerSecurities) {
+		this.physicalBearerSecurities = Objects.requireNonNull(physicalBearerSecurities);
+		return this;
 	}
 
 	public YesNoIndicator getDematerialisedBearerSecurities() {
 		return dematerialisedBearerSecurities;
 	}
 
-	public void setDematerialisedBearerSecurities(YesNoIndicator dematerialisedBearerSecurities) {
-		this.dematerialisedBearerSecurities = dematerialisedBearerSecurities;
+	public InvestmentFundClass setDematerialisedBearerSecurities(YesNoIndicator dematerialisedBearerSecurities) {
+		this.dematerialisedBearerSecurities = Objects.requireNonNull(dematerialisedBearerSecurities);
+		return this;
 	}
 
 	public YesNoIndicator getPhysicalRegisteredSecurities() {
 		return physicalRegisteredSecurities;
 	}
 
-	public void setPhysicalRegisteredSecurities(YesNoIndicator physicalRegisteredSecurities) {
-		this.physicalRegisteredSecurities = physicalRegisteredSecurities;
+	public InvestmentFundClass setPhysicalRegisteredSecurities(YesNoIndicator physicalRegisteredSecurities) {
+		this.physicalRegisteredSecurities = Objects.requireNonNull(physicalRegisteredSecurities);
+		return this;
 	}
 
 	public YesNoIndicator getDematerialisedRegisteredSecurities() {
 		return dematerialisedRegisteredSecurities;
 	}
 
-	public void setDematerialisedRegisteredSecurities(YesNoIndicator dematerialisedRegisteredSecurities) {
-		this.dematerialisedRegisteredSecurities = dematerialisedRegisteredSecurities;
+	public InvestmentFundClass setDematerialisedRegisteredSecurities(YesNoIndicator dematerialisedRegisteredSecurities) {
+		this.dematerialisedRegisteredSecurities = Objects.requireNonNull(dematerialisedRegisteredSecurities);
+		return this;
 	}
 
 	public List<InvestmentFundClassProcessingCharacteristics> getProcessingCharacteristics() {
-		return processingCharacteristics;
+		return processingCharacteristics == null ? processingCharacteristics = new ArrayList<>() : processingCharacteristics;
 	}
 
-	public void setProcessingCharacteristics(List<com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics> processingCharacteristics) {
-		this.processingCharacteristics = processingCharacteristics;
+	public InvestmentFundClass setProcessingCharacteristics(List<com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics> processingCharacteristics) {
+		this.processingCharacteristics = Objects.requireNonNull(processingCharacteristics);
+		return this;
 	}
 
 	public Max140Text getProductGroup() {
 		return productGroup;
 	}
 
-	public void setProductGroup(Max140Text productGroup) {
-		this.productGroup = productGroup;
+	public InvestmentFundClass setProductGroup(Max140Text productGroup) {
+		this.productGroup = Objects.requireNonNull(productGroup);
+		return this;
 	}
 
 	public List<InvestmentAccount> getInvestmentAccount() {
-		return investmentAccount;
+		return investmentAccount == null ? investmentAccount = new ArrayList<>() : investmentAccount;
 	}
 
-	public void setInvestmentAccount(List<com.tools20022.repository.entity.InvestmentAccount> investmentAccount) {
-		this.investmentAccount = investmentAccount;
+	public InvestmentFundClass setInvestmentAccount(List<com.tools20022.repository.entity.InvestmentAccount> investmentAccount) {
+		this.investmentAccount = Objects.requireNonNull(investmentAccount);
+		return this;
 	}
 
-	public NetAssetValueCalculation getNetAssetValueCalculation() {
-		return netAssetValueCalculation;
+	public Optional<NetAssetValueCalculation> getNetAssetValueCalculation() {
+		return netAssetValueCalculation == null ? Optional.empty() : Optional.of(netAssetValueCalculation);
 	}
 
-	public void setNetAssetValueCalculation(com.tools20022.repository.entity.NetAssetValueCalculation netAssetValueCalculation) {
+	public InvestmentFundClass setNetAssetValueCalculation(com.tools20022.repository.entity.NetAssetValueCalculation netAssetValueCalculation) {
 		this.netAssetValueCalculation = netAssetValueCalculation;
+		return this;
 	}
 
 	public List<InvestmentFundTransaction> getInvestmentFundTransaction() {
-		return investmentFundTransaction;
+		return investmentFundTransaction == null ? investmentFundTransaction = new ArrayList<>() : investmentFundTransaction;
 	}
 
-	public void setInvestmentFundTransaction(List<com.tools20022.repository.entity.InvestmentFundTransaction> investmentFundTransaction) {
-		this.investmentFundTransaction = investmentFundTransaction;
+	public InvestmentFundClass setInvestmentFundTransaction(List<com.tools20022.repository.entity.InvestmentFundTransaction> investmentFundTransaction) {
+		this.investmentFundTransaction = Objects.requireNonNull(investmentFundTransaction);
+		return this;
 	}
 
 	public ISODate getSeriesIssueIdentificationDate() {
 		return seriesIssueIdentificationDate;
 	}
 
-	public void setSeriesIssueIdentificationDate(ISODate seriesIssueIdentificationDate) {
-		this.seriesIssueIdentificationDate = seriesIssueIdentificationDate;
+	public InvestmentFundClass setSeriesIssueIdentificationDate(ISODate seriesIssueIdentificationDate) {
+		this.seriesIssueIdentificationDate = Objects.requireNonNull(seriesIssueIdentificationDate);
+		return this;
 	}
 
 	public Max35Text getSeriesName() {
 		return seriesName;
 	}
 
-	public void setSeriesName(Max35Text seriesName) {
-		this.seriesName = seriesName;
+	public InvestmentFundClass setSeriesName(Max35Text seriesName) {
+		this.seriesName = Objects.requireNonNull(seriesName);
+		return this;
 	}
 
 	public YesNoIndicator getNewIssueIndicator() {
 		return newIssueIndicator;
 	}
 
-	public void setNewIssueIndicator(YesNoIndicator newIssueIndicator) {
-		this.newIssueIndicator = newIssueIndicator;
+	public InvestmentFundClass setNewIssueIndicator(YesNoIndicator newIssueIndicator) {
+		this.newIssueIndicator = Objects.requireNonNull(newIssueIndicator);
+		return this;
 	}
 
-	public Equalisation getEqualisation() {
-		return equalisation;
+	public Optional<Equalisation> getEqualisation() {
+		return equalisation == null ? Optional.empty() : Optional.of(equalisation);
 	}
 
-	public void setEqualisation(com.tools20022.repository.entity.Equalisation equalisation) {
+	public InvestmentFundClass setEqualisation(com.tools20022.repository.entity.Equalisation equalisation) {
 		this.equalisation = equalisation;
+		return this;
 	}
 
 	public CurrencyAndAmount getTopUpAmount() {
 		return topUpAmount;
 	}
 
-	public void setTopUpAmount(CurrencyAndAmount topUpAmount) {
-		this.topUpAmount = topUpAmount;
+	public InvestmentFundClass setTopUpAmount(CurrencyAndAmount topUpAmount) {
+		this.topUpAmount = Objects.requireNonNull(topUpAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getHoldBackAmount() {
 		return holdBackAmount;
 	}
 
-	public void setHoldBackAmount(CurrencyAndAmount holdBackAmount) {
-		this.holdBackAmount = holdBackAmount;
+	public InvestmentFundClass setHoldBackAmount(CurrencyAndAmount holdBackAmount) {
+		this.holdBackAmount = Objects.requireNonNull(holdBackAmount);
+		return this;
 	}
 
 	public ISODate getHoldBackReleaseDate() {
 		return holdBackReleaseDate;
 	}
 
-	public void setHoldBackReleaseDate(ISODate holdBackReleaseDate) {
-		this.holdBackReleaseDate = holdBackReleaseDate;
+	public InvestmentFundClass setHoldBackReleaseDate(ISODate holdBackReleaseDate) {
+		this.holdBackReleaseDate = Objects.requireNonNull(holdBackReleaseDate);
+		return this;
 	}
 
 	public Max350Text getLotDescription() {
 		return lotDescription;
 	}
 
-	public void setLotDescription(Max350Text lotDescription) {
-		this.lotDescription = lotDescription;
+	public InvestmentFundClass setLotDescription(Max350Text lotDescription) {
+		this.lotDescription = Objects.requireNonNull(lotDescription);
+		return this;
 	}
 
 	public GenericIdentification getFundClassification() {
 		return fundClassification;
 	}
 
-	public void setFundClassification(com.tools20022.repository.entity.GenericIdentification fundClassification) {
-		this.fundClassification = fundClassification;
+	public InvestmentFundClass setFundClassification(com.tools20022.repository.entity.GenericIdentification fundClassification) {
+		this.fundClassification = Objects.requireNonNull(fundClassification);
+		return this;
 	}
 
 	public FinancialInstrumentProductTypeCode getUnderlyingAssetType() {
 		return underlyingAssetType;
 	}
 
-	public void setUnderlyingAssetType(FinancialInstrumentProductTypeCode underlyingAssetType) {
-		this.underlyingAssetType = underlyingAssetType;
+	public InvestmentFundClass setUnderlyingAssetType(FinancialInstrumentProductTypeCode underlyingAssetType) {
+		this.underlyingAssetType = Objects.requireNonNull(underlyingAssetType);
+		return this;
 	}
 
 	public InvestorTypeCode getInvestorType() {
 		return investorType;
 	}
 
-	public void setInvestorType(InvestorTypeCode investorType) {
-		this.investorType = investorType;
+	public InvestmentFundClass setInvestorType(InvestorTypeCode investorType) {
+		this.investorType = Objects.requireNonNull(investorType);
+		return this;
 	}
 
 	public Reinvestment getReinvestment() {
 		return reinvestment;
 	}
 
-	public void setReinvestment(com.tools20022.repository.entity.Reinvestment reinvestment) {
-		this.reinvestment = reinvestment;
+	public InvestmentFundClass setReinvestment(com.tools20022.repository.entity.Reinvestment reinvestment) {
+		this.reinvestment = Objects.requireNonNull(reinvestment);
+		return this;
 	}
 
 	public DecimalNumber getOutstandingUnits() {
 		return outstandingUnits;
 	}
 
-	public void setOutstandingUnits(DecimalNumber outstandingUnits) {
-		this.outstandingUnits = outstandingUnits;
+	public InvestmentFundClass setOutstandingUnits(DecimalNumber outstandingUnits) {
+		this.outstandingUnits = Objects.requireNonNull(outstandingUnits);
+		return this;
 	}
 }

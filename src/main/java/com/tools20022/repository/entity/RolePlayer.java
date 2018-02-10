@@ -17,15 +17,15 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Type of entity that plays a specific role in a specific context.
@@ -43,21 +43,6 @@ import java.util.List;
  * RolePlayer.mmRole}</li>
  * <li>{@linkplain com.tools20022.repository.entity.RolePlayer#mmValidityPeriod
  * RolePlayer.mmValidityPeriod}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Party Party}</li>
- * <li>{@linkplain com.tools20022.repository.entity.System System}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification79
- * PartyIdentification79}</li>
  * </ul>
  * </li>
  * <li>
@@ -89,11 +74,26 @@ import java.util.List;
  * AccountParties16.mmRegisteredShareholderName}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Party Party}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.System System}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification79
+ * PartyIdentification79}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,8 +110,8 @@ public class RolePlayer {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.Role> role;
 	/**
-	 * Role of the entity in the activity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,6 +166,9 @@ public class RolePlayer {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.RolePlayer RolePlayer}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=BusinessComment, BusinessComment=TODO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -181,8 +184,9 @@ public class RolePlayer {
 			derivation_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation2.mmExtendedPartyRole, ExtendedParty2.mmExtendedPartyRole, InvestmentAccountOwnershipInformation3.mmExtendedPartyRole,
 					ExtendedParty1.mmExtendedPartyRole, ContactIdentification4.mmRole, ContactIdentification3.mmRole, Intermediary26.mmRole, Intermediary25.mmRole, SingleQualifiedPartyIdentification1.mmBaseParty,
 					QualifiedPartyIdentification1.mmRole, Intermediary34.mmRole, Intermediary35.mmRole);
-			elementContext_lazy = () -> com.tools20022.repository.entity.RolePlayer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RolePlayer.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "BusinessComment", new String[]{"BusinessComment", "TODO"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Role";
 			definition = "Role of the entity in the activity.";
@@ -194,8 +198,8 @@ public class RolePlayer {
 	};
 	protected DateTimePeriod validityPeriod;
 	/**
-	 * Specifies the period during which a role player is valid
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -227,8 +231,8 @@ public class RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmValidityPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RolePlayer.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RolePlayer.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
 			definition = "Specifies the period during which a role player is valid";
@@ -243,7 +247,7 @@ public class RolePlayer {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RolePlayer";
 				definition = "Type of entity that plays a specific role in a specific context.";
@@ -264,18 +268,20 @@ public class RolePlayer {
 	}
 
 	public List<Role> getRole() {
-		return role;
+		return role == null ? role = new ArrayList<>() : role;
 	}
 
-	public void setRole(List<com.tools20022.repository.entity.Role> role) {
-		this.role = role;
+	public RolePlayer setRole(List<com.tools20022.repository.entity.Role> role) {
+		this.role = Objects.requireNonNull(role);
+		return this;
 	}
 
-	public DateTimePeriod getValidityPeriod() {
-		return validityPeriod;
+	public Optional<DateTimePeriod> getValidityPeriod() {
+		return validityPeriod == null ? Optional.empty() : Optional.of(validityPeriod);
 	}
 
-	public void setValidityPeriod(com.tools20022.repository.entity.DateTimePeriod validityPeriod) {
+	public RolePlayer setValidityPeriod(com.tools20022.repository.entity.DateTimePeriod validityPeriod) {
 		this.validityPeriod = validityPeriod;
+		return this;
 	}
 }

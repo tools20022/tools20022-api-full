@@ -27,6 +27,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Modification of the reference data of a security or of the organisation that
@@ -63,6 +65,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmModification
+ * Security.mmModification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Organisation#mmSecuritiesModification
+ * Organisation.mmSecuritiesModification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmSecuritiesModification
+ * CorporateActionEvent.mmSecuritiesModification}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
  * <ul>
@@ -96,24 +112,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmModification
- * Security.mmModification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Organisation#mmSecuritiesModification
- * Organisation.mmSecuritiesModification}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmSecuritiesModification
- * CorporateActionEvent.mmSecuritiesModification}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -131,8 +133,8 @@ public class SecuritiesModification {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CorporateActionChangeTypeCode changeType;
 	/**
-	 * Type of changes affecting the security form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -308,8 +310,8 @@ public class SecuritiesModification {
 					CorporateActionChangeTypeFormat6Choice.mmCode, CorporateActionChangeTypeFormat6Choice.mmProprietary, CorporateActionOption123.mmChangeType, CorporateAction40.mmChangeType, CorporateActionChangeTypeFormat8Choice.mmCode,
 					CorporateActionChangeTypeFormat8Choice.mmProprietary, CorporateActionChangeTypeFormat7Choice.mmCode, CorporateActionChangeTypeFormat7Choice.mmProprietary, CorporateActionOption131.mmChangeType,
 					CorporateActionOption134.mmChangeType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChangeType";
 			definition = "Type of changes affecting the security form.";
@@ -328,8 +330,8 @@ public class SecuritiesModification {
 	};
 	protected Organisation newOrganisationInformation;
 	/**
-	 * New name of a company following a name change.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -410,8 +412,8 @@ public class SecuritiesModification {
 					CorporateAction7.mmNewPlaceOfIncorporation, CorporateAction8.mmNewPlaceOfIncorporation, CorporateAction10.mmNewPlaceOfIncorporation, CorporateAction11.mmNewPlaceOfIncorporation,
 					CorporateAction2.mmNewPlaceOfIncorporation, CorporateAction12.mmNewPlaceOfIncorporation, CorporateAction17.mmNewPlaceOfIncorporation, CorporateAction31.mmNewPlaceOfIncorporation,
 					CorporateAction40.mmNewPlaceOfIncorporation);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewOrganisationInformation";
 			definition = "New name of a company following a name change.";
@@ -424,9 +426,8 @@ public class SecuritiesModification {
 	};
 	protected CorporateActionEvent relatedCorporateEvent;
 	/**
-	 * Specifies the parameters of the event related to the modification of the
-	 * securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -462,8 +463,8 @@ public class SecuritiesModification {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCorporateEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCorporateEvent";
 			definition = "Specifies the parameters of the event related to the modification of the securities.";
@@ -476,8 +477,8 @@ public class SecuritiesModification {
 	};
 	protected Security newSecurityReferenceData;
 	/**
-	 * Specifies the updated information of the new security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -509,8 +510,8 @@ public class SecuritiesModification {
 	 */
 	public static final MMBusinessAssociationEnd mmNewSecurityReferenceData = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NewSecurityReferenceData";
 			definition = "Specifies the updated information of the new security.";
@@ -523,8 +524,8 @@ public class SecuritiesModification {
 	};
 	protected Number numberOfSharesIssued;
 	/**
-	 * The number of shares the issuer is creating as part of the event
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -550,8 +551,8 @@ public class SecuritiesModification {
 	 */
 	public static final MMBusinessAttribute mmNumberOfSharesIssued = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfSharesIssued";
 			definition = "The number of shares the issuer is creating as part of the event";
@@ -570,9 +571,8 @@ public class SecuritiesModification {
 	};
 	protected ISODateTime lastTradingDate;
 	/**
-	 * Date/time at which the securities to be reorganised will cease to be
-	 * tradeable.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -599,8 +599,8 @@ public class SecuritiesModification {
 	 */
 	public static final MMBusinessAttribute mmLastTradingDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LastTradingDate";
 			definition = "Date/time at which the securities to be reorganised will cease to be tradeable.";
@@ -621,7 +621,7 @@ public class SecuritiesModification {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesModification";
 				definition = "Modification of the reference data of a security or of the organisation that issued it.";
@@ -647,47 +647,53 @@ public class SecuritiesModification {
 		return changeType;
 	}
 
-	public void setChangeType(CorporateActionChangeTypeCode changeType) {
-		this.changeType = changeType;
+	public SecuritiesModification setChangeType(CorporateActionChangeTypeCode changeType) {
+		this.changeType = Objects.requireNonNull(changeType);
+		return this;
 	}
 
 	public Organisation getNewOrganisationInformation() {
 		return newOrganisationInformation;
 	}
 
-	public void setNewOrganisationInformation(com.tools20022.repository.entity.Organisation newOrganisationInformation) {
-		this.newOrganisationInformation = newOrganisationInformation;
+	public SecuritiesModification setNewOrganisationInformation(com.tools20022.repository.entity.Organisation newOrganisationInformation) {
+		this.newOrganisationInformation = Objects.requireNonNull(newOrganisationInformation);
+		return this;
 	}
 
 	public CorporateActionEvent getRelatedCorporateEvent() {
 		return relatedCorporateEvent;
 	}
 
-	public void setRelatedCorporateEvent(com.tools20022.repository.entity.CorporateActionEvent relatedCorporateEvent) {
-		this.relatedCorporateEvent = relatedCorporateEvent;
+	public SecuritiesModification setRelatedCorporateEvent(com.tools20022.repository.entity.CorporateActionEvent relatedCorporateEvent) {
+		this.relatedCorporateEvent = Objects.requireNonNull(relatedCorporateEvent);
+		return this;
 	}
 
-	public Security getNewSecurityReferenceData() {
-		return newSecurityReferenceData;
+	public Optional<Security> getNewSecurityReferenceData() {
+		return newSecurityReferenceData == null ? Optional.empty() : Optional.of(newSecurityReferenceData);
 	}
 
-	public void setNewSecurityReferenceData(com.tools20022.repository.entity.Security newSecurityReferenceData) {
+	public SecuritiesModification setNewSecurityReferenceData(com.tools20022.repository.entity.Security newSecurityReferenceData) {
 		this.newSecurityReferenceData = newSecurityReferenceData;
+		return this;
 	}
 
 	public Number getNumberOfSharesIssued() {
 		return numberOfSharesIssued;
 	}
 
-	public void setNumberOfSharesIssued(Number numberOfSharesIssued) {
-		this.numberOfSharesIssued = numberOfSharesIssued;
+	public SecuritiesModification setNumberOfSharesIssued(Number numberOfSharesIssued) {
+		this.numberOfSharesIssued = Objects.requireNonNull(numberOfSharesIssued);
+		return this;
 	}
 
 	public ISODateTime getLastTradingDate() {
 		return lastTradingDate;
 	}
 
-	public void setLastTradingDate(ISODateTime lastTradingDate) {
-		this.lastTradingDate = lastTradingDate;
+	public SecuritiesModification setLastTradingDate(ISODateTime lastTradingDate) {
+		this.lastTradingDate = Objects.requireNonNull(lastTradingDate);
+		return this;
 	}
 }

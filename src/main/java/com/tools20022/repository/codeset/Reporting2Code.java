@@ -20,36 +20,40 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ReportingCode;
+import com.tools20022.repository.codeset.Reporting2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies information with regards to reporting.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ReportingCode ReportingCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Reporting2Code#mmStockExchange
- * Reporting2Code.mmStockExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.Reporting2Code#StockExchange
+ * Reporting2Code.StockExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Reporting2Code#mmRegulatoryOrganisation
- * Reporting2Code.mmRegulatoryOrganisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.Reporting2Code#RegulatoryOrganisation
+ * Reporting2Code.RegulatoryOrganisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Reporting2Code#mmDeferredReport
- * Reporting2Code.mmDeferredReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.Reporting2Code#DeferredReport
+ * Reporting2Code.DeferredReport}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ReportingCode ReportingCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies information with regards to reporting."</li>
  * </ul>
  */
-public class Reporting2Code extends ReportingCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Reporting2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,11 +90,12 @@ public class Reporting2Code extends ReportingCode {
 	 * name} = "StockExchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockExchange = new MMCode() {
+	public static final Reporting2Code StockExchange = new Reporting2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchange";
-			owner_lazy = () -> Reporting2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Reporting2Code.mmObject();
+			codeName = ReportingCode.StockExchange.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -108,11 +114,12 @@ public class Reporting2Code extends ReportingCode {
 	 * name} = "RegulatoryOrganisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegulatoryOrganisation = new MMCode() {
+	public static final Reporting2Code RegulatoryOrganisation = new Reporting2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryOrganisation";
-			owner_lazy = () -> Reporting2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Reporting2Code.mmObject();
+			codeName = ReportingCode.RegulatoryOrganisation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -131,26 +138,59 @@ public class Reporting2Code extends ReportingCode {
 	 * name} = "DeferredReport"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeferredReport = new MMCode() {
+	public static final Reporting2Code DeferredReport = new Reporting2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeferredReport";
-			owner_lazy = () -> Reporting2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Reporting2Code.mmObject();
+			codeName = ReportingCode.DeferredReport.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Reporting2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Reporting2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("STEX");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reporting2Code";
 				definition = "Specifies information with regards to reporting.";
-				code_lazy = () -> Arrays.asList(Reporting2Code.mmStockExchange, Reporting2Code.mmRegulatoryOrganisation, Reporting2Code.mmDeferredReport);
 				trace_lazy = () -> ReportingCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Reporting2Code.StockExchange, com.tools20022.repository.codeset.Reporting2Code.RegulatoryOrganisation,
+						com.tools20022.repository.codeset.Reporting2Code.DeferredReport);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(StockExchange.getCodeName().get(), StockExchange);
+		codesByName.put(RegulatoryOrganisation.getCodeName().get(), RegulatoryOrganisation);
+		codesByName.put(DeferredReport.getCodeName().get(), DeferredReport);
+	}
+
+	public static Reporting2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Reporting2Code[] values() {
+		Reporting2Code[] values = new Reporting2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Reporting2Code> {
+		@Override
+		public Reporting2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Reporting2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

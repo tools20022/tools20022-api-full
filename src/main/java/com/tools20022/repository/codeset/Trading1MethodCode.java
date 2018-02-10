@@ -20,36 +20,39 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TradingMethodCode;
+import com.tools20022.repository.codeset.Trading1MethodCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the method used for the negotiation and execution of the trade.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TradingMethodCode
- * TradingMethodCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Trading1MethodCode#mmElectronic
- * Trading1MethodCode.mmElectronic}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Trading1MethodCode#mmPhone
- * Trading1MethodCode.mmPhone}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Trading1MethodCode#mmBroker
- * Trading1MethodCode.mmBroker}</li>
+ * {@linkplain com.tools20022.repository.codeset.Trading1MethodCode#Electronic
+ * Trading1MethodCode.Electronic}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Trading1MethodCode#Phone
+ * Trading1MethodCode.Phone}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Trading1MethodCode#Broker
+ * Trading1MethodCode.Broker}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TradingMethodCode
+ * TradingMethodCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the method used for the negotiation and execution of the trade."</li>
  * </ul>
  */
-public class Trading1MethodCode extends TradingMethodCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Trading1MethodCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +90,12 @@ public class Trading1MethodCode extends TradingMethodCode {
 	 * name} = "Electronic"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmElectronic = new MMCode() {
+	public static final Trading1MethodCode Electronic = new Trading1MethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electronic";
-			owner_lazy = () -> Trading1MethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Trading1MethodCode.mmObject();
+			codeName = TradingMethodCode.Electronic.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +114,12 @@ public class Trading1MethodCode extends TradingMethodCode {
 	 * name} = "Phone"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPhone = new MMCode() {
+	public static final Trading1MethodCode Phone = new Trading1MethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Phone";
-			owner_lazy = () -> Trading1MethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Trading1MethodCode.mmObject();
+			codeName = TradingMethodCode.Phone.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +138,58 @@ public class Trading1MethodCode extends TradingMethodCode {
 	 * name} = "Broker"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBroker = new MMCode() {
+	public static final Trading1MethodCode Broker = new Trading1MethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Broker";
-			owner_lazy = () -> Trading1MethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Trading1MethodCode.mmObject();
+			codeName = TradingMethodCode.Broker.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Trading1MethodCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Trading1MethodCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ELEC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Trading1MethodCode";
 				definition = "Specifies the method used for the negotiation and execution of the trade.";
-				code_lazy = () -> Arrays.asList(Trading1MethodCode.mmElectronic, Trading1MethodCode.mmPhone, Trading1MethodCode.mmBroker);
 				trace_lazy = () -> TradingMethodCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Trading1MethodCode.Electronic, com.tools20022.repository.codeset.Trading1MethodCode.Phone, com.tools20022.repository.codeset.Trading1MethodCode.Broker);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Electronic.getCodeName().get(), Electronic);
+		codesByName.put(Phone.getCodeName().get(), Phone);
+		codesByName.put(Broker.getCodeName().get(), Broker);
+	}
+
+	public static Trading1MethodCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Trading1MethodCode[] values() {
+		Trading1MethodCode[] values = new Trading1MethodCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Trading1MethodCode> {
+		@Override
+		public Trading1MethodCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Trading1MethodCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

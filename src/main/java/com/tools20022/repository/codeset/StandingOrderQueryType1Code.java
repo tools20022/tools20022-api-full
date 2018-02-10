@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.StandingOrderQueryTypeCode;
+import com.tools20022.repository.codeset.StandingOrderQueryType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines the query type for standing orders queries, that identifies the
@@ -31,33 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryTypeCode
- * StandingOrderQueryTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#mmStandingOrderList
- * StandingOrderQueryType1Code.mmStandingOrderList}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#StandingOrderList
+ * StandingOrderQueryType1Code.StandingOrderList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#mmStandingOrderDetails
- * StandingOrderQueryType1Code.mmStandingOrderDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#StandingOrderDetails
+ * StandingOrderQueryType1Code.StandingOrderDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#mmTotalAmountPerStandingOrder
- * StandingOrderQueryType1Code.mmTotalAmountPerStandingOrder}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#TotalAmountPerStandingOrder
+ * StandingOrderQueryType1Code.TotalAmountPerStandingOrder}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#mmStandingOrderLinkSetList
- * StandingOrderQueryType1Code.mmStandingOrderLinkSetList}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#StandingOrderLinkSetList
+ * StandingOrderQueryType1Code.StandingOrderLinkSetList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#mmStandingOrderDetailsWithinLinkSet
- * StandingOrderQueryType1Code.mmStandingOrderDetailsWithinLinkSet}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryType1Code#StandingOrderDetailsWithinLinkSet
+ * StandingOrderQueryType1Code.StandingOrderDetailsWithinLinkSet}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.StandingOrderQueryTypeCode
+ * StandingOrderQueryTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -76,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class StandingOrderQueryType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,11 +100,12 @@ public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
 	 * name} = "StandingOrderList"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStandingOrderList = new MMCode() {
+	public static final StandingOrderQueryType1Code StandingOrderList = new StandingOrderQueryType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderList";
-			owner_lazy = () -> StandingOrderQueryType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StandingOrderQueryType1Code.mmObject();
+			codeName = StandingOrderQueryTypeCode.StandingOrderList.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -118,11 +124,12 @@ public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
 	 * name} = "StandingOrderDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStandingOrderDetails = new MMCode() {
+	public static final StandingOrderQueryType1Code StandingOrderDetails = new StandingOrderQueryType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderDetails";
-			owner_lazy = () -> StandingOrderQueryType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StandingOrderQueryType1Code.mmObject();
+			codeName = StandingOrderQueryTypeCode.StandingOrderDetails.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -141,11 +148,12 @@ public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
 	 * name} = "TotalAmountPerStandingOrder"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTotalAmountPerStandingOrder = new MMCode() {
+	public static final StandingOrderQueryType1Code TotalAmountPerStandingOrder = new StandingOrderQueryType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountPerStandingOrder";
-			owner_lazy = () -> StandingOrderQueryType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StandingOrderQueryType1Code.mmObject();
+			codeName = StandingOrderQueryTypeCode.TotalAmountPerStandingOrder.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -164,11 +172,12 @@ public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
 	 * name} = "StandingOrderLinkSetList"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStandingOrderLinkSetList = new MMCode() {
+	public static final StandingOrderQueryType1Code StandingOrderLinkSetList = new StandingOrderQueryType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderLinkSetList";
-			owner_lazy = () -> StandingOrderQueryType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StandingOrderQueryType1Code.mmObject();
+			codeName = StandingOrderQueryTypeCode.StandingOrderLinkSetList.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -187,27 +196,62 @@ public class StandingOrderQueryType1Code extends StandingOrderQueryTypeCode {
 	 * name} = "StandingOrderDetailsWithinLinkSet"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStandingOrderDetailsWithinLinkSet = new MMCode() {
+	public static final StandingOrderQueryType1Code StandingOrderDetailsWithinLinkSet = new StandingOrderQueryType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderDetailsWithinLinkSet";
-			owner_lazy = () -> StandingOrderQueryType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StandingOrderQueryType1Code.mmObject();
+			codeName = StandingOrderQueryTypeCode.StandingOrderDetailsWithinLinkSet.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, StandingOrderQueryType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected StandingOrderQueryType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SLST");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingOrderQueryType1Code";
 				definition = "Defines the query type for standing orders queries, that identifies the predefined key attributes expected in the response to the query.";
-				code_lazy = () -> Arrays.asList(StandingOrderQueryType1Code.mmStandingOrderList, StandingOrderQueryType1Code.mmStandingOrderDetails, StandingOrderQueryType1Code.mmTotalAmountPerStandingOrder,
-						StandingOrderQueryType1Code.mmStandingOrderLinkSetList, StandingOrderQueryType1Code.mmStandingOrderDetailsWithinLinkSet);
 				trace_lazy = () -> StandingOrderQueryTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandingOrderQueryType1Code.StandingOrderList, com.tools20022.repository.codeset.StandingOrderQueryType1Code.StandingOrderDetails,
+						com.tools20022.repository.codeset.StandingOrderQueryType1Code.TotalAmountPerStandingOrder, com.tools20022.repository.codeset.StandingOrderQueryType1Code.StandingOrderLinkSetList,
+						com.tools20022.repository.codeset.StandingOrderQueryType1Code.StandingOrderDetailsWithinLinkSet);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(StandingOrderList.getCodeName().get(), StandingOrderList);
+		codesByName.put(StandingOrderDetails.getCodeName().get(), StandingOrderDetails);
+		codesByName.put(TotalAmountPerStandingOrder.getCodeName().get(), TotalAmountPerStandingOrder);
+		codesByName.put(StandingOrderLinkSetList.getCodeName().get(), StandingOrderLinkSetList);
+		codesByName.put(StandingOrderDetailsWithinLinkSet.getCodeName().get(), StandingOrderDetailsWithinLinkSet);
+	}
+
+	public static StandingOrderQueryType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static StandingOrderQueryType1Code[] values() {
+		StandingOrderQueryType1Code[] values = new StandingOrderQueryType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, StandingOrderQueryType1Code> {
+		@Override
+		public StandingOrderQueryType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(StandingOrderQueryType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

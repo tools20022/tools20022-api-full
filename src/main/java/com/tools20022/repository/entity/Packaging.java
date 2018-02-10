@@ -23,9 +23,11 @@ import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Physical packaging of goods for transport.
@@ -62,15 +64,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Packaging1 Packaging1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Consignment1 Consignment1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Consignment3 Consignment3}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -104,10 +97,19 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Packaging1 Packaging1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Consignment1 Consignment1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Consignment3 Consignment3}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -123,8 +125,8 @@ public class Packaging {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected ProductQuantity quantity;
 	/**
-	 * Number of packages for a supply chain trade delivery.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,8 +170,8 @@ public class Packaging {
 	public static final MMBusinessAssociationEnd mmQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItem10.mmPackageQuantity, LineItem16.mmPackageQuantity);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quantity";
 			definition = "Number of packages for a  supply chain trade delivery.";
@@ -182,8 +184,8 @@ public class Packaging {
 	};
 	protected ProductQuantity perPackageUnitQuantity;
 	/**
-	 * Number of units per package for a supply chain trade delivery.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,8 +230,8 @@ public class Packaging {
 	public static final MMBusinessAssociationEnd mmPerPackageUnitQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItem10.mmPerPackageUnitQuantity, LineItem16.mmPerPackageUnitQuantity);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PerPackageUnitQuantity";
 			definition = "Number of units per package  for a supply chain trade delivery.";
@@ -242,8 +244,8 @@ public class Packaging {
 	};
 	protected Transport transport;
 	/**
-	 * Transport process which uses a specific packaging.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -275,8 +277,8 @@ public class Packaging {
 	 */
 	public static final MMBusinessAssociationEnd mmTransport = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Transport";
 			definition = "Transport process which uses a specific packaging.";
@@ -289,9 +291,8 @@ public class Packaging {
 	};
 	protected Max350Text packagingName;
 	/**
-	 * Name given to the type of supply chain packaging. For instance
-	 * Halogenated Resin (PVC).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -325,8 +326,8 @@ public class Packaging {
 	public static final MMBusinessAttribute mmPackagingName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Packaging1.mmName);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PackagingName";
 			definition = "Name given to the type of supply chain packaging. For instance Halogenated Resin (PVC).";
@@ -345,9 +346,8 @@ public class Packaging {
 	};
 	protected ProductQuantity totalConsignmentQuantity;
 	/**
-	 * Total quantity of packaging units, eg number of boxes, containers,
-	 * pallets, etc
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -393,8 +393,8 @@ public class Packaging {
 	public static final MMBusinessAssociationEnd mmTotalConsignmentQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Consignment1.mmTotalQuantity, Consignment3.mmTotalQuantity);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalConsignmentQuantity";
 			definition = "Total quantity of packaging units, eg number of boxes, containers, pallets, etc";
@@ -407,8 +407,8 @@ public class Packaging {
 	};
 	protected ProductQuantity totalVolume;
 	/**
-	 * Total volume of goods shipped, eg number of cubic meters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -451,8 +451,8 @@ public class Packaging {
 	public static final MMBusinessAssociationEnd mmTotalVolume = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Consignment1.mmTotalVolume, Consignment3.mmTotalVolume);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalVolume";
 			definition = "Total volume of goods shipped, eg number of cubic meters.";
@@ -465,8 +465,8 @@ public class Packaging {
 	};
 	protected ProductQuantity totalWeight;
 	/**
-	 * Total weight of goods shipped, eg number of kg, tons.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -508,8 +508,8 @@ public class Packaging {
 	public static final MMBusinessAssociationEnd mmTotalWeight = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Consignment1.mmTotalWeight, Consignment3.mmTotalWeight);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalWeight";
 			definition = "Total weight of goods shipped, eg number of kg, tons.";
@@ -522,8 +522,8 @@ public class Packaging {
 	};
 	protected List<com.tools20022.repository.entity.LineItem> relatedLineItem;
 	/**
-	 * Line item information for the package goods.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -554,8 +554,8 @@ public class Packaging {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedLineItem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedLineItem";
 			definition = "Line item information for the package goods.";
@@ -567,9 +567,8 @@ public class Packaging {
 	};
 	protected Max4Text packageType;
 	/**
-	 * Code specifying the properties of packaging for the supply chain delivery
-	 * of goods.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -595,8 +594,8 @@ public class Packaging {
 	 */
 	public static final MMBusinessAttribute mmPackageType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PackageType";
 			definition = "Code specifying the properties of packaging for the supply chain delivery of goods.";
@@ -617,7 +616,7 @@ public class Packaging {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Packaging";
 				definition = "Physical packaging of goods for transport.";
@@ -643,71 +642,80 @@ public class Packaging {
 		return quantity;
 	}
 
-	public void setQuantity(com.tools20022.repository.entity.ProductQuantity quantity) {
-		this.quantity = quantity;
+	public Packaging setQuantity(com.tools20022.repository.entity.ProductQuantity quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
 	public ProductQuantity getPerPackageUnitQuantity() {
 		return perPackageUnitQuantity;
 	}
 
-	public void setPerPackageUnitQuantity(com.tools20022.repository.entity.ProductQuantity perPackageUnitQuantity) {
-		this.perPackageUnitQuantity = perPackageUnitQuantity;
+	public Packaging setPerPackageUnitQuantity(com.tools20022.repository.entity.ProductQuantity perPackageUnitQuantity) {
+		this.perPackageUnitQuantity = Objects.requireNonNull(perPackageUnitQuantity);
+		return this;
 	}
 
 	public Transport getTransport() {
 		return transport;
 	}
 
-	public void setTransport(com.tools20022.repository.entity.Transport transport) {
-		this.transport = transport;
+	public Packaging setTransport(com.tools20022.repository.entity.Transport transport) {
+		this.transport = Objects.requireNonNull(transport);
+		return this;
 	}
 
 	public Max350Text getPackagingName() {
 		return packagingName;
 	}
 
-	public void setPackagingName(Max350Text packagingName) {
-		this.packagingName = packagingName;
+	public Packaging setPackagingName(Max350Text packagingName) {
+		this.packagingName = Objects.requireNonNull(packagingName);
+		return this;
 	}
 
 	public ProductQuantity getTotalConsignmentQuantity() {
 		return totalConsignmentQuantity;
 	}
 
-	public void setTotalConsignmentQuantity(com.tools20022.repository.entity.ProductQuantity totalConsignmentQuantity) {
-		this.totalConsignmentQuantity = totalConsignmentQuantity;
+	public Packaging setTotalConsignmentQuantity(com.tools20022.repository.entity.ProductQuantity totalConsignmentQuantity) {
+		this.totalConsignmentQuantity = Objects.requireNonNull(totalConsignmentQuantity);
+		return this;
 	}
 
 	public ProductQuantity getTotalVolume() {
 		return totalVolume;
 	}
 
-	public void setTotalVolume(com.tools20022.repository.entity.ProductQuantity totalVolume) {
-		this.totalVolume = totalVolume;
+	public Packaging setTotalVolume(com.tools20022.repository.entity.ProductQuantity totalVolume) {
+		this.totalVolume = Objects.requireNonNull(totalVolume);
+		return this;
 	}
 
 	public ProductQuantity getTotalWeight() {
 		return totalWeight;
 	}
 
-	public void setTotalWeight(com.tools20022.repository.entity.ProductQuantity totalWeight) {
-		this.totalWeight = totalWeight;
+	public Packaging setTotalWeight(com.tools20022.repository.entity.ProductQuantity totalWeight) {
+		this.totalWeight = Objects.requireNonNull(totalWeight);
+		return this;
 	}
 
 	public List<LineItem> getRelatedLineItem() {
-		return relatedLineItem;
+		return relatedLineItem == null ? relatedLineItem = new ArrayList<>() : relatedLineItem;
 	}
 
-	public void setRelatedLineItem(List<com.tools20022.repository.entity.LineItem> relatedLineItem) {
-		this.relatedLineItem = relatedLineItem;
+	public Packaging setRelatedLineItem(List<com.tools20022.repository.entity.LineItem> relatedLineItem) {
+		this.relatedLineItem = Objects.requireNonNull(relatedLineItem);
+		return this;
 	}
 
 	public Max4Text getPackageType() {
 		return packageType;
 	}
 
-	public void setPackageType(Max4Text packageType) {
-		this.packageType = packageType;
+	public Packaging setPackageType(Max4Text packageType) {
+		this.packageType = Objects.requireNonNull(packageType);
+		return this;
 	}
 }

@@ -31,6 +31,7 @@ import com.tools20022.repository.entity.PersonName;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,16 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IndividualPerson15", propOrder = {"name", "birthDate", "countryAndResidentialStatus", "otherIdentification", "beneficiaryCertificationCompletion"})
 public class IndividualPerson15 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nm")
 	protected Max350Text name;
 	/**
-	 * Name by which a party is known and which is usually used to identify that
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +125,7 @@ public class IndividualPerson15 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonName.mmBirthName;
-			componentContext_lazy = () -> IndividualPerson15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson15.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +136,11 @@ public class IndividualPerson15 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BirthDt")
 	protected ISODate birthDate;
 	/**
-	 * Date on which a person is born.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +173,7 @@ public class IndividualPerson15 {
 	public static final MMMessageAttribute mmBirthDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Person.mmBirthDate;
-			componentContext_lazy = () -> IndividualPerson15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson15.mmObject();
 			isDerived = false;
 			xmlTag = "BirthDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,11 +184,11 @@ public class IndividualPerson15 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "CtryAndResdtlSts")
 	protected CountryAndResidentialStatusType1 countryAndResidentialStatus;
 	/**
-	 * Country and residential status of an individual, for example,
-	 * non-permanent resident.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,7 +224,7 @@ public class IndividualPerson15 {
 	public static final MMMessageAttribute mmCountryAndResidentialStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Person.mmResidentialStatus;
-			componentContext_lazy = () -> IndividualPerson15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson15.mmObject();
 			isDerived = false;
 			xmlTag = "CtryAndResdtlSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,11 +235,11 @@ public class IndividualPerson15 {
 			complexType_lazy = () -> com.tools20022.repository.msg.CountryAndResidentialStatusType1.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrId")
 	protected GenericIdentification12 otherIdentification;
 	/**
-	 * Information related to an identification, eg, party identification or
-	 * account identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -272,7 +274,7 @@ public class IndividualPerson15 {
 	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> IndividualPerson15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson15.mmObject();
 			isDerived = false;
 			xmlTag = "OthrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,11 +286,11 @@ public class IndividualPerson15 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification12.mmObject();
 		}
 	};
+	@XmlElement(name = "BnfcryCertfctnCmpltn")
 	protected BeneficiaryCertificationCompletion1Code beneficiaryCertificationCompletion;
 	/**
-	 * Beneficial owner or its designated agent certifies that it complies with
-	 * any holding or investment restrictions or requirements of the fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -324,7 +326,7 @@ public class IndividualPerson15 {
 	public static final MMMessageAttribute mmBeneficiaryCertificationCompletion = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountService.mmBeneficiaryCertificationCompletion;
-			componentContext_lazy = () -> IndividualPerson15.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IndividualPerson15.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryCertfctnCmpltn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -339,10 +341,11 @@ public class IndividualPerson15 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IndividualPerson15.mmName, IndividualPerson15.mmBirthDate, IndividualPerson15.mmCountryAndResidentialStatus, IndividualPerson15.mmOtherIdentification,
-						IndividualPerson15.mmBeneficiaryCertificationCompletion);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IndividualPerson15.mmName, com.tools20022.repository.msg.IndividualPerson15.mmBirthDate,
+						com.tools20022.repository.msg.IndividualPerson15.mmCountryAndResidentialStatus, com.tools20022.repository.msg.IndividualPerson15.mmOtherIdentification,
+						com.tools20022.repository.msg.IndividualPerson15.mmBeneficiaryCertificationCompletion);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IndividualPerson15";
 				definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
@@ -351,48 +354,48 @@ public class IndividualPerson15 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nm")
-	public Max350Text getName() {
-		return name;
+	public Optional<Max350Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max350Text name) {
+	public IndividualPerson15 setName(Max350Text name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "BirthDt")
-	public ISODate getBirthDate() {
-		return birthDate;
+	public Optional<ISODate> getBirthDate() {
+		return birthDate == null ? Optional.empty() : Optional.of(birthDate);
 	}
 
-	public void setBirthDate(ISODate birthDate) {
+	public IndividualPerson15 setBirthDate(ISODate birthDate) {
 		this.birthDate = birthDate;
+		return this;
 	}
 
-	@XmlElement(name = "CtryAndResdtlSts")
-	public CountryAndResidentialStatusType1 getCountryAndResidentialStatus() {
-		return countryAndResidentialStatus;
+	public Optional<CountryAndResidentialStatusType1> getCountryAndResidentialStatus() {
+		return countryAndResidentialStatus == null ? Optional.empty() : Optional.of(countryAndResidentialStatus);
 	}
 
-	public void setCountryAndResidentialStatus(com.tools20022.repository.msg.CountryAndResidentialStatusType1 countryAndResidentialStatus) {
+	public IndividualPerson15 setCountryAndResidentialStatus(com.tools20022.repository.msg.CountryAndResidentialStatusType1 countryAndResidentialStatus) {
 		this.countryAndResidentialStatus = countryAndResidentialStatus;
+		return this;
 	}
 
-	@XmlElement(name = "OthrId")
-	public GenericIdentification12 getOtherIdentification() {
-		return otherIdentification;
+	public Optional<GenericIdentification12> getOtherIdentification() {
+		return otherIdentification == null ? Optional.empty() : Optional.of(otherIdentification);
 	}
 
-	public void setOtherIdentification(com.tools20022.repository.msg.GenericIdentification12 otherIdentification) {
+	public IndividualPerson15 setOtherIdentification(com.tools20022.repository.msg.GenericIdentification12 otherIdentification) {
 		this.otherIdentification = otherIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "BnfcryCertfctnCmpltn")
-	public BeneficiaryCertificationCompletion1Code getBeneficiaryCertificationCompletion() {
-		return beneficiaryCertificationCompletion;
+	public Optional<BeneficiaryCertificationCompletion1Code> getBeneficiaryCertificationCompletion() {
+		return beneficiaryCertificationCompletion == null ? Optional.empty() : Optional.of(beneficiaryCertificationCompletion);
 	}
 
-	public void setBeneficiaryCertificationCompletion(BeneficiaryCertificationCompletion1Code beneficiaryCertificationCompletion) {
+	public IndividualPerson15 setBeneficiaryCertificationCompletion(BeneficiaryCertificationCompletion1Code beneficiaryCertificationCompletion) {
 		this.beneficiaryCertificationCompletion = beneficiaryCertificationCompletion;
+		return this;
 	}
 }

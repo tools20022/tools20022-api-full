@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -34,6 +35,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -79,8 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forDocumentIdentification12
+ * ConstraintCoexistenceIdentificationRule.forDocumentIdentification12}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -92,16 +103,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information about identification of the document."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DocumentIdentification12", propOrder = {"identification", "creationDateTime", "copyDuplicate", "changeInstructionIndicator"})
 public class DocumentIdentification12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Unique identifier of the document (message) assigned by the sender of the
-	 * document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,6 +132,9 @@ public class DocumentIdentification12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Id"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -136,9 +150,10 @@ public class DocumentIdentification12 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> DocumentIdentification12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification12.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of the document (message) assigned by the sender of the document.";
@@ -147,10 +162,11 @@ public class DocumentIdentification12 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm")
 	protected DateAndDateTimeChoice creationDateTime;
 	/**
-	 * Date and time at which the document (message) was created by the sender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,6 +187,9 @@ public class DocumentIdentification12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CreDtTm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::PREP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -186,9 +205,10 @@ public class DocumentIdentification12 {
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
-			componentContext_lazy = () -> DocumentIdentification12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification12.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::PREP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the document (message) was created by the sender.";
@@ -197,11 +217,11 @@ public class DocumentIdentification12 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "CpyDplct")
 	protected CopyDuplicate1Code copyDuplicate;
 	/**
-	 * Specifies if this document is a copy, a duplicate, or a duplicate of a
-	 * copy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,6 +242,9 @@ public class DocumentIdentification12 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CpyDplct"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :23G::4!c/COPY, CODU, DUPL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -237,9 +260,10 @@ public class DocumentIdentification12 {
 	public static final MMMessageAttribute mmCopyDuplicate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Document.mmCopyDuplicate;
-			componentContext_lazy = () -> DocumentIdentification12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification12.mmObject();
 			isDerived = false;
 			xmlTag = "CpyDplct";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":23G::4!c/COPY, CODU, DUPL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDuplicate";
 			definition = "Specifies if this document is a copy, a duplicate, or a duplicate of a copy.";
@@ -248,14 +272,11 @@ public class DocumentIdentification12 {
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ChngInstrInd")
 	protected YesNoIndicator changeInstructionIndicator;
 	/**
-	 * When used in a corporate action instruction, indicates that the current
-	 * instruction is replacing a previous one that was cancelled earlier. When
-	 * used in a corporate action instruction cancellation request, indicates
-	 * that cancelled instruction will be replaced by a new corporate action
-	 * instruction to be sent later.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -285,7 +306,7 @@ public class DocumentIdentification12 {
 	 */
 	public static final MMMessageAttribute mmChangeInstructionIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DocumentIdentification12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentIdentification12.mmObject();
 			isDerived = false;
 			xmlTag = "ChngInstrInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -300,11 +321,12 @@ public class DocumentIdentification12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DocumentIdentification12.mmIdentification, DocumentIdentification12.mmCreationDateTime, DocumentIdentification12.mmCopyDuplicate,
-						DocumentIdentification12.mmChangeInstructionIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification12.mmIdentification, com.tools20022.repository.msg.DocumentIdentification12.mmCreationDateTime,
+						com.tools20022.repository.msg.DocumentIdentification12.mmCopyDuplicate, com.tools20022.repository.msg.DocumentIdentification12.mmChangeInstructionIndicator);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV01.mmIdentification, CorporateActionInstructionCancellationRequestV01.mmIdentification);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forDocumentIdentification12);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -320,39 +342,39 @@ public class DocumentIdentification12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public DocumentIdentification12 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm")
-	public DateAndDateTimeChoice getCreationDateTime() {
-		return creationDateTime;
+	public Optional<DateAndDateTimeChoice> getCreationDateTime() {
+		return creationDateTime == null ? Optional.empty() : Optional.of(creationDateTime);
 	}
 
-	public void setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
+	public DocumentIdentification12 setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
 		this.creationDateTime = creationDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "CpyDplct")
-	public CopyDuplicate1Code getCopyDuplicate() {
-		return copyDuplicate;
+	public Optional<CopyDuplicate1Code> getCopyDuplicate() {
+		return copyDuplicate == null ? Optional.empty() : Optional.of(copyDuplicate);
 	}
 
-	public void setCopyDuplicate(CopyDuplicate1Code copyDuplicate) {
+	public DocumentIdentification12 setCopyDuplicate(CopyDuplicate1Code copyDuplicate) {
 		this.copyDuplicate = copyDuplicate;
+		return this;
 	}
 
-	@XmlElement(name = "ChngInstrInd")
-	public YesNoIndicator getChangeInstructionIndicator() {
-		return changeInstructionIndicator;
+	public Optional<YesNoIndicator> getChangeInstructionIndicator() {
+		return changeInstructionIndicator == null ? Optional.empty() : Optional.of(changeInstructionIndicator);
 	}
 
-	public void setChangeInstructionIndicator(YesNoIndicator changeInstructionIndicator) {
+	public DocumentIdentification12 setChangeInstructionIndicator(YesNoIndicator changeInstructionIndicator) {
 		this.changeInstructionIndicator = changeInstructionIndicator;
+		return this;
 	}
 }

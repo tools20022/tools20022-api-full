@@ -28,9 +28,8 @@ import com.tools20022.repository.codeset.EntryStatus2Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -98,8 +97,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReferenceGuideline#forReportEntry7
+ * ConstraintReferenceGuideline.forReportEntry7}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -119,16 +126,17 @@ import javax.xml.bind.annotation.XmlType;
  * ReportEntry4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReportEntry7", propOrder = {"entryReference", "amount", "creditDebitIndicator", "reversalIndicator", "status", "bookingDate", "valueDate", "accountServicerReference", "availability", "bankTransactionCode",
 		"commissionWaiverIndicator", "additionalInformationIndicator", "amountDetails", "charges", "technicalInputChannel", "interest", "cardTransaction", "entryDetails", "additionalEntryInformation"})
 public class ReportEntry7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NtryRef")
 	protected Max35Text entryReference;
 	/**
-	 * Unique reference for the entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +181,7 @@ public class ReportEntry7 {
 	public static final MMMessageAttribute mmEntryReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmIdentification;
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "NtryRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,10 +194,11 @@ public class ReportEntry7 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount amount;
 	/**
-	 * Amount of money in the cash entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,7 +243,7 @@ public class ReportEntry7 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -247,10 +256,11 @@ public class ReportEntry7 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd", required = true)
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates whether the entry is a credit or a debit entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,7 +307,7 @@ public class ReportEntry7 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmCreditDebitIndicator;
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -310,15 +320,11 @@ public class ReportEntry7 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "RvslInd")
 	protected TrueFalseIndicator reversalIndicator;
 	/**
-	 * Indicates whether or not the entry is the result of a reversal. Usage:
-	 * This element should only be present if the entry is the result of a
-	 * reversal. If the CreditDebitIndicator is CRDT and ReversalIndicator is
-	 * Yes, the original operation was a debit entry. If the
-	 * CreditDebitIndicator is DBIT and ReversalIndicator is Yes, the original
-	 * operation was a credit entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -366,7 +372,7 @@ public class ReportEntry7 {
 	public static final MMMessageAttribute mmReversalIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmReversalIndicator;
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "RvslInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -379,10 +385,11 @@ public class ReportEntry7 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected EntryStatus2Code status;
 	/**
-	 * Status of an entry on the books of the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -427,7 +434,7 @@ public class ReportEntry7 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmEntryStatus;
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -440,14 +447,11 @@ public class ReportEntry7 {
 			simpleType_lazy = () -> EntryStatus2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "BookgDt")
 	protected DateAndDateTimeChoice bookingDate;
 	/**
-	 * Date and time when an entry is posted to an account on the account
-	 * servicer's books.
 	 * 
-	 * Usage: Booking date is the expected booking date, unless the status is
-	 * booked, in which case it is the actual booking date.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -493,7 +497,7 @@ public class ReportEntry7 {
 	public static final MMMessageAssociationEnd mmBookingDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "BookgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -507,17 +511,11 @@ public class ReportEntry7 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDt")
 	protected DateAndDateTimeChoice valueDate;
 	/**
-	 * Date and time at which assets become available to the account owner in
-	 * case of a credit entry, or cease to be available to the account owner in
-	 * case of a debit entry. Usage: If entry status is pending and value date
-	 * is present, then the value date refers to an expected/requested value
-	 * date. For entries subject to availability/float and for which
-	 * availability information is provided, the value date must not be used. In
-	 * this case the availability component identifies the number of
-	 * availability days.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -563,7 +561,7 @@ public class ReportEntry7 {
 	public static final MMMessageAssociationEnd mmValueDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmValueDate;
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -577,11 +575,11 @@ public class ReportEntry7 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcrRef")
 	protected Max35Text accountServicerReference;
 	/**
-	 * Unique reference as assigned by the account servicing institution to
-	 * unambiguously identify the entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -628,7 +626,7 @@ public class ReportEntry7 {
 	public static final MMMessageAttribute mmAccountServicerReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmAccountServicerTransactionIdentification;
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -641,17 +639,11 @@ public class ReportEntry7 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Avlbty")
 	protected List<com.tools20022.repository.msg.CashBalanceAvailability2> availability;
 	/**
-	 * Indicates when the booked amount of money will become available, that is
-	 * can be accessed and starts generating interest.
 	 * 
-	 * Usage: This type of information is used in the US and is linked to
-	 * particular instruments such as cheques. Example: When a cheque is
-	 * deposited, it will be booked on the deposit day, but the amount of money
-	 * will only be accessible as of the indicated availability day (according
-	 * to national banking regulations).
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -698,7 +690,7 @@ public class ReportEntry7 {
 	public static final MMMessageAssociationEnd mmAvailability = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmAvailability;
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "Avlbty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -711,11 +703,11 @@ public class ReportEntry7 {
 			type_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailability2.mmObject();
 		}
 	};
+	@XmlElement(name = "BkTxCd", required = true)
 	protected BankTransactionCodeStructure4 bankTransactionCode;
 	/**
-	 * Set of elements used to fully identify the type of underlying transaction
-	 * resulting in an entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -762,7 +754,7 @@ public class ReportEntry7 {
 	public static final MMMessageAssociationEnd mmBankTransactionCode = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmBankTransactionCode;
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "BkTxCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -776,10 +768,11 @@ public class ReportEntry7 {
 			type_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure4.mmObject();
 		}
 	};
+	@XmlElement(name = "ComssnWvrInd")
 	protected YesNoIndicator commissionWaiverIndicator;
 	/**
-	 * Indicates whether the transaction is exempt from commission.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -826,7 +819,7 @@ public class ReportEntry7 {
 	public static final MMMessageAttribute mmCommissionWaiverIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmCommissionWaiverIndicator;
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnWvrInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -839,11 +832,11 @@ public class ReportEntry7 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInfInd")
 	protected MessageIdentification2 additionalInformationIndicator;
 	/**
-	 * Indicates whether the underlying transaction details are provided through
-	 * a separate message, as in the case of aggregate bookings.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -883,7 +876,7 @@ public class ReportEntry7 {
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalInformationIndicator = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInfInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -897,15 +890,11 @@ public class ReportEntry7 {
 			type_lazy = () -> com.tools20022.repository.msg.MessageIdentification2.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtDtls")
 	protected AmountAndCurrencyExchange3 amountDetails;
 	/**
-	 * Provides information on the original amount.
 	 * 
-	 * Usage: This component (on entry level) should be used when a total
-	 * original batch or aggregate amount has to be provided. If required, the
-	 * individual original amounts can be included in the same component on
-	 * transaction details level.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -952,7 +941,7 @@ public class ReportEntry7 {
 	public static final MMMessageAssociationEnd mmAmountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "AmtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -966,14 +955,11 @@ public class ReportEntry7 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndCurrencyExchange3.mmObject();
 		}
 	};
+	@XmlElement(name = "Chrgs")
 	protected Charges4 charges;
 	/**
-	 * Provides information on the charges, pre-advised or included in the entry
-	 * amount .<br>
-	 * <br>
-	 * Usage: This component is used on entry level in case of batch or
-	 * aggregate bookings.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1017,7 +1003,7 @@ public class ReportEntry7 {
 	public static final MMMessageAssociationEnd mmCharges = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCharges;
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "Chrgs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1031,10 +1017,11 @@ public class ReportEntry7 {
 			type_lazy = () -> com.tools20022.repository.msg.Charges4.mmObject();
 		}
 	};
+	@XmlElement(name = "TechInptChanl")
 	protected TechnicalInputChannel1Choice technicalInputChannel;
 	/**
-	 * Channel used to technically input the instruction related to the entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1075,7 +1062,7 @@ public class ReportEntry7 {
 	 */
 	public static final MMMessageAssociationEnd mmTechnicalInputChannel = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "TechInptChanl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1089,13 +1076,11 @@ public class ReportEntry7 {
 			type_lazy = () -> TechnicalInputChannel1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Intrst")
 	protected TransactionInterest3 interest;
 	/**
-	 * Provides details of the interest amount included in the entry amount.
 	 * 
-	 * Usage: This component is used on entry level in the case of batch or
-	 * aggregate bookings.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1140,7 +1125,7 @@ public class ReportEntry7 {
 	public static final MMMessageAssociationEnd mmInterest = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "Intrst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1154,11 +1139,11 @@ public class ReportEntry7 {
 			type_lazy = () -> com.tools20022.repository.msg.TransactionInterest3.mmObject();
 		}
 	};
+	@XmlElement(name = "CardTx")
 	protected CardEntry2 cardTransaction;
 	/**
-	 * Provides details of the card transaction included in the entry amount,
-	 * when globalised by the account servicer .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1202,7 +1187,7 @@ public class ReportEntry7 {
 	public static final MMMessageAssociationEnd mmCardTransaction = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "CardTx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1216,10 +1201,11 @@ public class ReportEntry7 {
 			type_lazy = () -> com.tools20022.repository.msg.CardEntry2.mmObject();
 		}
 	};
+	@XmlElement(name = "NtryDtls")
 	protected List<com.tools20022.repository.msg.EntryDetails6> entryDetails;
 	/**
-	 * Provides details on the entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1262,7 +1248,7 @@ public class ReportEntry7 {
 	public static final MMMessageAssociationEnd mmEntryDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashEntry.mmObject();
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "NtryDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1275,10 +1261,11 @@ public class ReportEntry7 {
 			type_lazy = () -> com.tools20022.repository.msg.EntryDetails6.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlNtryInf")
 	protected Max500Text additionalEntryInformation;
 	/**
-	 * Further details of the entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1317,7 +1304,7 @@ public class ReportEntry7 {
 	 */
 	public static final MMMessageAttribute mmAdditionalEntryInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportEntry7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportEntry7.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlNtryInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1334,12 +1321,16 @@ public class ReportEntry7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReportEntry7.mmEntryReference, ReportEntry7.mmAmount, ReportEntry7.mmCreditDebitIndicator, ReportEntry7.mmReversalIndicator, ReportEntry7.mmStatus, ReportEntry7.mmBookingDate,
-						ReportEntry7.mmValueDate, ReportEntry7.mmAccountServicerReference, ReportEntry7.mmAvailability, ReportEntry7.mmBankTransactionCode, ReportEntry7.mmCommissionWaiverIndicator,
-						ReportEntry7.mmAdditionalInformationIndicator, ReportEntry7.mmAmountDetails, ReportEntry7.mmCharges, ReportEntry7.mmTechnicalInputChannel, ReportEntry7.mmInterest, ReportEntry7.mmCardTransaction,
-						ReportEntry7.mmEntryDetails, ReportEntry7.mmAdditionalEntryInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportEntry7.mmEntryReference, com.tools20022.repository.msg.ReportEntry7.mmAmount, com.tools20022.repository.msg.ReportEntry7.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.ReportEntry7.mmReversalIndicator, com.tools20022.repository.msg.ReportEntry7.mmStatus, com.tools20022.repository.msg.ReportEntry7.mmBookingDate,
+						com.tools20022.repository.msg.ReportEntry7.mmValueDate, com.tools20022.repository.msg.ReportEntry7.mmAccountServicerReference, com.tools20022.repository.msg.ReportEntry7.mmAvailability,
+						com.tools20022.repository.msg.ReportEntry7.mmBankTransactionCode, com.tools20022.repository.msg.ReportEntry7.mmCommissionWaiverIndicator, com.tools20022.repository.msg.ReportEntry7.mmAdditionalInformationIndicator,
+						com.tools20022.repository.msg.ReportEntry7.mmAmountDetails, com.tools20022.repository.msg.ReportEntry7.mmCharges, com.tools20022.repository.msg.ReportEntry7.mmTechnicalInputChannel,
+						com.tools20022.repository.msg.ReportEntry7.mmInterest, com.tools20022.repository.msg.ReportEntry7.mmCardTransaction, com.tools20022.repository.msg.ReportEntry7.mmEntryDetails,
+						com.tools20022.repository.msg.ReportEntry7.mmAdditionalEntryInformation);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReferenceGuideline.forReportEntry7);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportEntry7";
 				definition = "Provides further details on an entry in the report.";
@@ -1350,174 +1341,174 @@ public class ReportEntry7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NtryRef")
-	public Max35Text getEntryReference() {
-		return entryReference;
+	public Optional<Max35Text> getEntryReference() {
+		return entryReference == null ? Optional.empty() : Optional.of(entryReference);
 	}
 
-	public void setEntryReference(Max35Text entryReference) {
+	public ReportEntry7 setEntryReference(Max35Text entryReference) {
 		this.entryReference = entryReference;
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
-		this.amount = amount;
+	public ReportEntry7 setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
-		this.creditDebitIndicator = creditDebitIndicator;
+	public ReportEntry7 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = Objects.requireNonNull(creditDebitIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "RvslInd")
-	public TrueFalseIndicator getReversalIndicator() {
-		return reversalIndicator;
+	public Optional<TrueFalseIndicator> getReversalIndicator() {
+		return reversalIndicator == null ? Optional.empty() : Optional.of(reversalIndicator);
 	}
 
-	public void setReversalIndicator(TrueFalseIndicator reversalIndicator) {
+	public ReportEntry7 setReversalIndicator(TrueFalseIndicator reversalIndicator) {
 		this.reversalIndicator = reversalIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public EntryStatus2Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(EntryStatus2Code status) {
-		this.status = status;
+	public ReportEntry7 setStatus(EntryStatus2Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "BookgDt")
-	public DateAndDateTimeChoice getBookingDate() {
-		return bookingDate;
+	public Optional<DateAndDateTimeChoice> getBookingDate() {
+		return bookingDate == null ? Optional.empty() : Optional.of(bookingDate);
 	}
 
-	public void setBookingDate(DateAndDateTimeChoice bookingDate) {
+	public ReportEntry7 setBookingDate(DateAndDateTimeChoice bookingDate) {
 		this.bookingDate = bookingDate;
+		return this;
 	}
 
-	@XmlElement(name = "ValDt")
-	public DateAndDateTimeChoice getValueDate() {
-		return valueDate;
+	public Optional<DateAndDateTimeChoice> getValueDate() {
+		return valueDate == null ? Optional.empty() : Optional.of(valueDate);
 	}
 
-	public void setValueDate(DateAndDateTimeChoice valueDate) {
+	public ReportEntry7 setValueDate(DateAndDateTimeChoice valueDate) {
 		this.valueDate = valueDate;
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcrRef")
-	public Max35Text getAccountServicerReference() {
-		return accountServicerReference;
+	public Optional<Max35Text> getAccountServicerReference() {
+		return accountServicerReference == null ? Optional.empty() : Optional.of(accountServicerReference);
 	}
 
-	public void setAccountServicerReference(Max35Text accountServicerReference) {
+	public ReportEntry7 setAccountServicerReference(Max35Text accountServicerReference) {
 		this.accountServicerReference = accountServicerReference;
+		return this;
 	}
 
-	@XmlElement(name = "Avlbty")
 	public List<CashBalanceAvailability2> getAvailability() {
-		return availability;
+		return availability == null ? availability = new ArrayList<>() : availability;
 	}
 
-	public void setAvailability(List<com.tools20022.repository.msg.CashBalanceAvailability2> availability) {
-		this.availability = availability;
+	public ReportEntry7 setAvailability(List<com.tools20022.repository.msg.CashBalanceAvailability2> availability) {
+		this.availability = Objects.requireNonNull(availability);
+		return this;
 	}
 
-	@XmlElement(name = "BkTxCd", required = true)
 	public BankTransactionCodeStructure4 getBankTransactionCode() {
 		return bankTransactionCode;
 	}
 
-	public void setBankTransactionCode(com.tools20022.repository.msg.BankTransactionCodeStructure4 bankTransactionCode) {
-		this.bankTransactionCode = bankTransactionCode;
+	public ReportEntry7 setBankTransactionCode(com.tools20022.repository.msg.BankTransactionCodeStructure4 bankTransactionCode) {
+		this.bankTransactionCode = Objects.requireNonNull(bankTransactionCode);
+		return this;
 	}
 
-	@XmlElement(name = "ComssnWvrInd")
-	public YesNoIndicator getCommissionWaiverIndicator() {
-		return commissionWaiverIndicator;
+	public Optional<YesNoIndicator> getCommissionWaiverIndicator() {
+		return commissionWaiverIndicator == null ? Optional.empty() : Optional.of(commissionWaiverIndicator);
 	}
 
-	public void setCommissionWaiverIndicator(YesNoIndicator commissionWaiverIndicator) {
+	public ReportEntry7 setCommissionWaiverIndicator(YesNoIndicator commissionWaiverIndicator) {
 		this.commissionWaiverIndicator = commissionWaiverIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInfInd")
-	public MessageIdentification2 getAdditionalInformationIndicator() {
-		return additionalInformationIndicator;
+	public Optional<MessageIdentification2> getAdditionalInformationIndicator() {
+		return additionalInformationIndicator == null ? Optional.empty() : Optional.of(additionalInformationIndicator);
 	}
 
-	public void setAdditionalInformationIndicator(com.tools20022.repository.msg.MessageIdentification2 additionalInformationIndicator) {
+	public ReportEntry7 setAdditionalInformationIndicator(com.tools20022.repository.msg.MessageIdentification2 additionalInformationIndicator) {
 		this.additionalInformationIndicator = additionalInformationIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "AmtDtls")
-	public AmountAndCurrencyExchange3 getAmountDetails() {
-		return amountDetails;
+	public Optional<AmountAndCurrencyExchange3> getAmountDetails() {
+		return amountDetails == null ? Optional.empty() : Optional.of(amountDetails);
 	}
 
-	public void setAmountDetails(com.tools20022.repository.msg.AmountAndCurrencyExchange3 amountDetails) {
+	public ReportEntry7 setAmountDetails(com.tools20022.repository.msg.AmountAndCurrencyExchange3 amountDetails) {
 		this.amountDetails = amountDetails;
+		return this;
 	}
 
-	@XmlElement(name = "Chrgs")
-	public Charges4 getCharges() {
-		return charges;
+	public Optional<Charges4> getCharges() {
+		return charges == null ? Optional.empty() : Optional.of(charges);
 	}
 
-	public void setCharges(com.tools20022.repository.msg.Charges4 charges) {
+	public ReportEntry7 setCharges(com.tools20022.repository.msg.Charges4 charges) {
 		this.charges = charges;
+		return this;
 	}
 
-	@XmlElement(name = "TechInptChanl")
-	public TechnicalInputChannel1Choice getTechnicalInputChannel() {
-		return technicalInputChannel;
+	public Optional<TechnicalInputChannel1Choice> getTechnicalInputChannel() {
+		return technicalInputChannel == null ? Optional.empty() : Optional.of(technicalInputChannel);
 	}
 
-	public void setTechnicalInputChannel(TechnicalInputChannel1Choice technicalInputChannel) {
+	public ReportEntry7 setTechnicalInputChannel(TechnicalInputChannel1Choice technicalInputChannel) {
 		this.technicalInputChannel = technicalInputChannel;
+		return this;
 	}
 
-	@XmlElement(name = "Intrst")
-	public TransactionInterest3 getInterest() {
-		return interest;
+	public Optional<TransactionInterest3> getInterest() {
+		return interest == null ? Optional.empty() : Optional.of(interest);
 	}
 
-	public void setInterest(com.tools20022.repository.msg.TransactionInterest3 interest) {
+	public ReportEntry7 setInterest(com.tools20022.repository.msg.TransactionInterest3 interest) {
 		this.interest = interest;
+		return this;
 	}
 
-	@XmlElement(name = "CardTx")
-	public CardEntry2 getCardTransaction() {
-		return cardTransaction;
+	public Optional<CardEntry2> getCardTransaction() {
+		return cardTransaction == null ? Optional.empty() : Optional.of(cardTransaction);
 	}
 
-	public void setCardTransaction(com.tools20022.repository.msg.CardEntry2 cardTransaction) {
+	public ReportEntry7 setCardTransaction(com.tools20022.repository.msg.CardEntry2 cardTransaction) {
 		this.cardTransaction = cardTransaction;
+		return this;
 	}
 
-	@XmlElement(name = "NtryDtls")
 	public List<EntryDetails6> getEntryDetails() {
-		return entryDetails;
+		return entryDetails == null ? entryDetails = new ArrayList<>() : entryDetails;
 	}
 
-	public void setEntryDetails(List<com.tools20022.repository.msg.EntryDetails6> entryDetails) {
-		this.entryDetails = entryDetails;
+	public ReportEntry7 setEntryDetails(List<com.tools20022.repository.msg.EntryDetails6> entryDetails) {
+		this.entryDetails = Objects.requireNonNull(entryDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlNtryInf")
-	public Max500Text getAdditionalEntryInformation() {
-		return additionalEntryInformation;
+	public Optional<Max500Text> getAdditionalEntryInformation() {
+		return additionalEntryInformation == null ? Optional.empty() : Optional.of(additionalEntryInformation);
 	}
 
-	public void setAdditionalEntryInformation(Max500Text additionalEntryInformation) {
+	public ReportEntry7 setAdditionalEntryInformation(Max500Text additionalEntryInformation) {
 		this.additionalEntryInformation = additionalEntryInformation;
+		return this;
 	}
 }

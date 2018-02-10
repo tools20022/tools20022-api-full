@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TransactionStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the processing status of an investment fund transaction.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionStatusCode#mmReversal
- * TransactionStatusCode.mmReversal}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionStatusCode#Reversal
+ * TransactionStatusCode.Reversal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionStatusCode#mmRebooked
- * TransactionStatusCode.mmRebooked}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionStatusCode#Rebooked
+ * TransactionStatusCode.Rebooked}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionStatusCode#mmCancelled
- * TransactionStatusCode.mmCancelled}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionStatusCode#Cancelled
+ * TransactionStatusCode.Cancelled}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the processing status of an investment fund transaction."</li>
  * </ul>
  */
-public class TransactionStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransactionStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,12 +101,12 @@ public class TransactionStatusCode {
 	 * definition} = "Transaction has been reversed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReversal = new MMCode() {
+	public static final TransactionStatusCode Reversal = new TransactionStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reversal";
 			definition = "Transaction has been reversed.";
-			owner_lazy = () -> TransactionStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionStatusCode.mmObject();
 			codeName = "RVSL";
 		}
 	};
@@ -125,12 +131,12 @@ public class TransactionStatusCode {
 	 * definition} = "Transaction has been rebooked."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRebooked = new MMCode() {
+	public static final TransactionStatusCode Rebooked = new TransactionStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rebooked";
 			definition = "Transaction has been rebooked.";
-			owner_lazy = () -> TransactionStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionStatusCode.mmObject();
 			codeName = "REBO";
 		}
 	};
@@ -155,28 +161,60 @@ public class TransactionStatusCode {
 	 * definition} = "Transaction has been cancelled."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelled = new MMCode() {
+	public static final TransactionStatusCode Cancelled = new TransactionStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cancelled";
 			definition = "Transaction has been cancelled.";
-			owner_lazy = () -> TransactionStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionStatusCode.mmObject();
 			codeName = "CANC";
 		}
 	};
+	final static private LinkedHashMap<String, TransactionStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransactionStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RVSL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionStatusCode";
 				definition = "Specifies the processing status of an investment fund transaction.";
-				code_lazy = () -> Arrays.asList(TransactionStatusCode.mmReversal, TransactionStatusCode.mmRebooked, TransactionStatusCode.mmCancelled);
 				derivation_lazy = () -> Arrays.asList(TransactionStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionStatusCode.Reversal, com.tools20022.repository.codeset.TransactionStatusCode.Rebooked,
+						com.tools20022.repository.codeset.TransactionStatusCode.Cancelled);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Reversal.getCodeName().get(), Reversal);
+		codesByName.put(Rebooked.getCodeName().get(), Rebooked);
+		codesByName.put(Cancelled.getCodeName().get(), Cancelled);
+	}
+
+	public static TransactionStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransactionStatusCode[] values() {
+		TransactionStatusCode[] values = new TransactionStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransactionStatusCode> {
+		@Override
+		public TransactionStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransactionStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

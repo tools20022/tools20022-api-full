@@ -25,9 +25,11 @@ import com.tools20022.repository.area.TradeServicesInitiationLatestVersion;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.FinancialInvoiceISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -59,21 +61,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesInitiationLatestVersion
- * TradeServicesInitiationLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.FinancialInvoiceISOArchive
- * FinancialInvoiceISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "FinInvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -95,6 +82,21 @@ import javax.xml.bind.annotation.*;
  * FinancialInvoiceV01.mmLineItem}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.FinancialInvoiceISOArchive
+ * FinancialInvoiceISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "FinInvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesInitiationLatestVersion
+ * TradeServicesInitiationLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code tsin.004.001.01}</li>
@@ -110,18 +112,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInvoiceV01", propOrder = {"invoiceHeader", "tradeAgreement", "tradeDelivery", "tradeSettlement", "lineItem"})
 public class FinancialInvoiceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InvcHdr", required = true)
 	protected InvoiceHeader1 invoiceHeader;
 	/**
-	 * Collection of data that is exchanged between two or more parties in
-	 * written, printed or electronic form. It contains general data relevant to
-	 * the main body of the invoice such as date of issue, currency code and
-	 * identification number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,12 +162,11 @@ public class FinancialInvoiceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "TradAgrmt", required = true)
 	protected TradeAgreement6 tradeAgreement;
 	/**
-	 * Commercial information such as terms of commerce, parties, and
-	 * documentation, related to the trading agreement under which this invoice
-	 * is issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,11 +207,11 @@ public class FinancialInvoiceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "TradDlvry", required = true)
 	protected TradeDelivery1 tradeDelivery;
 	/**
-	 * Supply chain shipping arrangements for delivery of invoiced products
-	 * and/or services.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -253,11 +252,11 @@ public class FinancialInvoiceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "TradSttlm", required = true)
 	protected TradeSettlement1 tradeSettlement;
 	/**
-	 * Settlement information that enables the financial reconciliation and
-	 * payment of this invoice.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -299,14 +298,11 @@ public class FinancialInvoiceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "LineItm")
 	protected List<LineItem10> lineItem;
 	/**
-	 * Unit of information in this invoice showning the related provision of
-	 * products and/or services and monetary summations reported as a discrete
-	 * line item.<br>
-	 * <br>
-	 * <br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -377,52 +373,52 @@ public class FinancialInvoiceV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InvcHdr", required = true)
 	public InvoiceHeader1 getInvoiceHeader() {
 		return invoiceHeader;
 	}
 
-	public void setInvoiceHeader(InvoiceHeader1 invoiceHeader) {
-		this.invoiceHeader = invoiceHeader;
+	public FinancialInvoiceV01 setInvoiceHeader(InvoiceHeader1 invoiceHeader) {
+		this.invoiceHeader = Objects.requireNonNull(invoiceHeader);
+		return this;
 	}
 
-	@XmlElement(name = "TradAgrmt", required = true)
 	public TradeAgreement6 getTradeAgreement() {
 		return tradeAgreement;
 	}
 
-	public void setTradeAgreement(TradeAgreement6 tradeAgreement) {
-		this.tradeAgreement = tradeAgreement;
+	public FinancialInvoiceV01 setTradeAgreement(TradeAgreement6 tradeAgreement) {
+		this.tradeAgreement = Objects.requireNonNull(tradeAgreement);
+		return this;
 	}
 
-	@XmlElement(name = "TradDlvry", required = true)
 	public TradeDelivery1 getTradeDelivery() {
 		return tradeDelivery;
 	}
 
-	public void setTradeDelivery(TradeDelivery1 tradeDelivery) {
-		this.tradeDelivery = tradeDelivery;
+	public FinancialInvoiceV01 setTradeDelivery(TradeDelivery1 tradeDelivery) {
+		this.tradeDelivery = Objects.requireNonNull(tradeDelivery);
+		return this;
 	}
 
-	@XmlElement(name = "TradSttlm", required = true)
 	public TradeSettlement1 getTradeSettlement() {
 		return tradeSettlement;
 	}
 
-	public void setTradeSettlement(TradeSettlement1 tradeSettlement) {
-		this.tradeSettlement = tradeSettlement;
+	public FinancialInvoiceV01 setTradeSettlement(TradeSettlement1 tradeSettlement) {
+		this.tradeSettlement = Objects.requireNonNull(tradeSettlement);
+		return this;
 	}
 
-	@XmlElement(name = "LineItm")
 	public List<LineItem10> getLineItem() {
-		return lineItem;
+		return lineItem == null ? lineItem = new ArrayList<>() : lineItem;
 	}
 
-	public void setLineItem(List<LineItem10> lineItem) {
-		this.lineItem = lineItem;
+	public FinancialInvoiceV01 setLineItem(List<LineItem10> lineItem) {
+		this.lineItem = Objects.requireNonNull(lineItem);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsin.004.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:tsin.004.001.01")
 	static public class Document {
 		@XmlElement(name = "FinInvc", required = true)
 		public FinancialInvoiceV01 messageBody;

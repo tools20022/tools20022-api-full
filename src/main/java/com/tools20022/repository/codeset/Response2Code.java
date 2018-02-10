@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ResponseCode;
+import com.tools20022.repository.codeset.Response2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Response to a request of service.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ResponseCode ResponseCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Response2Code#mmApproved
- * Response2Code.mmApproved}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Response2Code#mmDeclined
- * Response2Code.mmDeclined}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Response2Code#Approved
+ * Response2Code.Approved}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Response2Code#Declined
+ * Response2Code.Declined}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ResponseCode ResponseCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -55,7 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Response to a request of service."</li>
  * </ul>
  */
-public class Response2Code extends ResponseCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Response2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -74,11 +79,12 @@ public class Response2Code extends ResponseCode {
 	 * name} = "Approved"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmApproved = new MMCode() {
+	public static final Response2Code Approved = new Response2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Approved";
-			owner_lazy = () -> Response2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Response2Code.mmObject();
+			codeName = ResponseCode.Approved.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -97,25 +103,56 @@ public class Response2Code extends ResponseCode {
 	 * name} = "Declined"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeclined = new MMCode() {
+	public static final Response2Code Declined = new Response2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Declined";
-			owner_lazy = () -> Response2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Response2Code.mmObject();
+			codeName = ResponseCode.Declined.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Response2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Response2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Response2Code";
 				definition = "Response to a request of service.";
-				code_lazy = () -> Arrays.asList(Response2Code.mmApproved, Response2Code.mmDeclined);
 				trace_lazy = () -> ResponseCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Response2Code.Approved, com.tools20022.repository.codeset.Response2Code.Declined);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Approved.getCodeName().get(), Approved);
+		codesByName.put(Declined.getCodeName().get(), Declined);
+	}
+
+	public static Response2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Response2Code[] values() {
+		Response2Code[] values = new Response2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Response2Code> {
+		@Override
+		public Response2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Response2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

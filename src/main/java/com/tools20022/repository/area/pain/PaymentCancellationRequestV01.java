@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.OriginalGroupInformation4;
 import com.tools20022.repository.msg.PaymentTransactionInformation3;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -57,22 +59,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
- * PaymentsInitiationArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "pain.006.001.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "pain.006.001.01"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -88,9 +74,49 @@ import javax.xml.bind.annotation.*;
  * PaymentCancellationRequestV01.mmTransactionInformation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "pain.006.001.01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
+ * PaymentsInitiationArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "pain.006.001.01"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pain.006.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#forPaymentCancellationRequestV01
+ * ConstraintInstructedAgentRule.forPaymentCancellationRequestV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#forPaymentCancellationRequestV01
+ * ConstraintInstructingAgentRule.forPaymentCancellationRequestV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalInterbankSettlementAmountRule#forPaymentCancellationRequestV01
+ * ConstraintOriginalInterbankSettlementAmountRule.
+ * forPaymentCancellationRequestV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupCancellation1Rule#forPaymentCancellationRequestV01
+ * ConstraintGroupCancellation1Rule.forPaymentCancellationRequestV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupCancellation2Rule#forPaymentCancellationRequestV01
+ * ConstraintGroupCancellation2Rule.forPaymentCancellationRequestV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupCancellation3Rule#forPaymentCancellationRequestV01
+ * ConstraintGroupCancellation3Rule.forPaymentCancellationRequestV01}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,16 +137,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "pain.006.001.01", propOrder = {"groupHeader", "originalGroupInformation", "transactionInformation"})
 public class PaymentCancellationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader7 groupHeader;
 	/**
-	 * Set of characteristics shared by all individual transactions included in
-	 * the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,11 +187,11 @@ public class PaymentCancellationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgnlGrpInf", required = true)
 	protected OriginalGroupInformation4 originalGroupInformation;
 	/**
-	 * Information concerning the original group of transactions, to which the
-	 * message refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -207,11 +233,11 @@ public class PaymentCancellationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "TxInf")
 	protected List<PaymentTransactionInformation3> transactionInformation;
 	/**
-	 * Information concerning the original transactions, to which the
-	 * cancellation request message refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -256,6 +282,11 @@ public class PaymentCancellationRequestV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructedAgentRule.forPaymentCancellationRequestV01,
+						com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forPaymentCancellationRequestV01,
+						com.tools20022.repository.constraints.ConstraintOriginalInterbankSettlementAmountRule.forPaymentCancellationRequestV01,
+						com.tools20022.repository.constraints.ConstraintGroupCancellation1Rule.forPaymentCancellationRequestV01, com.tools20022.repository.constraints.ConstraintGroupCancellation2Rule.forPaymentCancellationRequestV01,
+						com.tools20022.repository.constraints.ConstraintGroupCancellation3Rule.forPaymentCancellationRequestV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentCancellationRequestV01";
 				definition = "Scope\r\nThe PaymentCancellationRequest message is sent by the initiating party or any agent, to the next party in the payment chain. It is used to request the cancellation of an instruction previously sent.\r\nUsage\r\nThe PaymentCancellationRequest message is exchanged between non-financial institution customers and agents to request the cancellation of a payment initiation message previously sent (i.e. the CustomerCreditTransferInitiation message and the CustomerDirectDebitInitiation messages).\r\nThe PaymentCancellationRequest message can be used to request the cancellation of single instructions or multiple instructions, from one or multiple files.\r\nThe PaymentCancellationRequest message can be used in domestic and cross-border scenarios.\r\nThe PaymentCancellationRequest message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe PaymentCancellationRequest message exchanged between non-financial institution customers and agents is identified in the schema as follows: urn:iso:std:iso:20022:tech:xsd:pain.006.001.01";
@@ -285,34 +316,34 @@ public class PaymentCancellationRequestV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader7 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader7 groupHeader) {
-		this.groupHeader = groupHeader;
+	public PaymentCancellationRequestV01 setGroupHeader(GroupHeader7 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlGrpInf", required = true)
 	public OriginalGroupInformation4 getOriginalGroupInformation() {
 		return originalGroupInformation;
 	}
 
-	public void setOriginalGroupInformation(OriginalGroupInformation4 originalGroupInformation) {
-		this.originalGroupInformation = originalGroupInformation;
+	public PaymentCancellationRequestV01 setOriginalGroupInformation(OriginalGroupInformation4 originalGroupInformation) {
+		this.originalGroupInformation = Objects.requireNonNull(originalGroupInformation);
+		return this;
 	}
 
-	@XmlElement(name = "TxInf")
 	public List<PaymentTransactionInformation3> getTransactionInformation() {
-		return transactionInformation;
+		return transactionInformation == null ? transactionInformation = new ArrayList<>() : transactionInformation;
 	}
 
-	public void setTransactionInformation(List<PaymentTransactionInformation3> transactionInformation) {
-		this.transactionInformation = transactionInformation;
+	public PaymentCancellationRequestV01 setTransactionInformation(List<PaymentTransactionInformation3> transactionInformation) {
+		this.transactionInformation = Objects.requireNonNull(transactionInformation);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pain.006.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:pain.006.001.01")
 	static public class Document {
 		@XmlElement(name = "pain.006.001.01", required = true)
 		public PaymentCancellationRequestV01 messageBody;

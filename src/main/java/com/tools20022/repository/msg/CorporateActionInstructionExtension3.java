@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -27,9 +28,8 @@ import com.tools20022.repository.codeset.DTCServiceType1Code;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -95,8 +95,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -108,16 +108,17 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides additional information regarding corporate action instruction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionInstructionExtension3", propOrder = {"placeAndName", "status", "instructionType", "serviceTypeIndicator", "protectIdentification", "protectDate", "accountTransactionProcessorRelativeBlockNumber",
-		"conditionalQuantity", "tenderBidPrice", "oddLotFlag", "acknowledgementFlag", "conditionsAcceptance", "DTCDisbursedSecurity", "DTCDisbursedSecurityDescription", "payingAgent"})
+		"conditionalQuantity", "tenderBidPrice", "oddLotFlag", "acknowledgementFlag", "conditionsAcceptance", "dTCDisbursedSecurity", "dTCDisbursedSecurityDescription", "payingAgent"})
 public class CorporateActionInstructionExtension3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +145,7 @@ public class CorporateActionInstructionExtension3 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructionExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,10 +156,11 @@ public class CorporateActionInstructionExtension3 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts")
 	protected DTCInstructionStatus1Code status;
 	/**
-	 * Instruction status at DTC (The Depository Trust Corporation).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,6 +176,9 @@ public class CorporateActionInstructionExtension3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Sts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Status</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -187,9 +192,10 @@ public class CorporateActionInstructionExtension3 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructionExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Status"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Instruction status at DTC  (The Depository Trust Corporation).";
@@ -198,10 +204,11 @@ public class CorporateActionInstructionExtension3 {
 			simpleType_lazy = () -> DTCInstructionStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrTp")
 	protected DTCCorporateActionInstructionType1Code instructionType;
 	/**
-	 * Type of instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,6 +224,9 @@ public class CorporateActionInstructionExtension3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InstrTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Instruction Type</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -229,9 +239,10 @@ public class CorporateActionInstructionExtension3 {
 	 */
 	public static final MMMessageAttribute mmInstructionType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructionExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "InstrTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Instruction Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionType";
 			definition = "Type of instruction.";
@@ -240,10 +251,11 @@ public class CorporateActionInstructionExtension3 {
 			simpleType_lazy = () -> DTCCorporateActionInstructionType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SvcTpInd")
 	protected DTCServiceType1Code serviceTypeIndicator;
 	/**
-	 * Type of specific DTC service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,6 +271,9 @@ public class CorporateActionInstructionExtension3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SvcTpInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Service Type</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -271,9 +286,10 @@ public class CorporateActionInstructionExtension3 {
 	 */
 	public static final MMMessageAttribute mmServiceTypeIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructionExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "SvcTpInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Service Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceTypeIndicator";
 			definition = "Type of specific DTC service.";
@@ -282,14 +298,11 @@ public class CorporateActionInstructionExtension3 {
 			simpleType_lazy = () -> DTCServiceType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctId")
 	protected Max16Text protectIdentification;
 	/**
-	 * Identifies the protect that was submitted. Required when instruction type
-	 * is Cover Protect. This identification is either from DTC system which was
-	 * assigned upon the submission of the protect instruction or is an
-	 * identification that pertains to a cover protect submitted directly to the
-	 * agent (indicated by instruction type).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -303,6 +316,9 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrtctId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Protect Identification</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -318,9 +334,10 @@ public class CorporateActionInstructionExtension3 {
 	 */
 	public static final MMMessageAttribute mmProtectIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructionExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctId";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Protect Identification"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectIdentification";
 			definition = "Identifies the protect that was submitted. Required when instruction type is Cover Protect. This identification is either from DTC system which was assigned upon the submission of the protect instruction or is an identification that pertains to a cover protect submitted directly to the agent (indicated by instruction type).";
@@ -329,10 +346,11 @@ public class CorporateActionInstructionExtension3 {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctDt")
 	protected ISODate protectDate;
 	/**
-	 * Date at which the protect was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -347,6 +365,9 @@ public class CorporateActionInstructionExtension3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrtctDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Protect Date</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -359,9 +380,10 @@ public class CorporateActionInstructionExtension3 {
 	 */
 	public static final MMMessageAttribute mmProtectDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructionExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Protect Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectDate";
 			definition = "Date at which the protect was created.";
@@ -370,12 +392,11 @@ public class CorporateActionInstructionExtension3 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctTxPrcrRltvBlckNb")
 	protected Number accountTransactionProcessorRelativeBlockNumber;
 	/**
-	 * Account Transaction Processor Relative Block Number. DTCC (The Depository
-	 * Trust and Clearing Corporation). reference identification to the share
-	 * movement on an instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -389,6 +410,9 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctTxPrcrRltvBlckNb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: ATP RBN Number</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -404,9 +428,10 @@ public class CorporateActionInstructionExtension3 {
 	 */
 	public static final MMMessageAttribute mmAccountTransactionProcessorRelativeBlockNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructionExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctTxPrcrRltvBlckNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "ATP RBN Number"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountTransactionProcessorRelativeBlockNumber";
 			definition = "Account Transaction Processor Relative Block Number. DTCC (The Depository Trust and Clearing Corporation). reference identification to the share movement on  an instruction.";
@@ -415,12 +440,11 @@ public class CorporateActionInstructionExtension3 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "CondlQty")
 	protected RestrictedFINDecimalNumber conditionalQuantity;
 	/**
-	 * Minimum quantity of securities to be accepted (used in the framework of
-	 * conditional privilege on election). In case of proration, if this minimum
-	 * quantity is not reached then the instruction is void.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -436,6 +460,9 @@ public class CorporateActionInstructionExtension3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CondlQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Conditional Quantity</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -450,9 +477,10 @@ public class CorporateActionInstructionExtension3 {
 	 */
 	public static final MMMessageAttribute mmConditionalQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructionExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "CondlQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Conditional Quantity"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalQuantity";
 			definition = "Minimum quantity of securities to be accepted (used in the framework of conditional privilege on election).\nIn case of proration, if this minimum quantity is not reached then the instruction is void.";
@@ -461,11 +489,11 @@ public class CorporateActionInstructionExtension3 {
 			simpleType_lazy = () -> RestrictedFINDecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "TndrBidPric")
 	protected RestrictedFINActiveCurrencyAnd13DecimalAmount tenderBidPrice;
 	/**
-	 * Required only if tender offer accepts bid prices; price must fall between
-	 * the maximum and minimum price acceptable to the offer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -481,6 +509,9 @@ public class CorporateActionInstructionExtension3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TndrBidPric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Tender Bid Price</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -495,9 +526,10 @@ public class CorporateActionInstructionExtension3 {
 	 */
 	public static final MMMessageAttribute mmTenderBidPrice = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructionExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "TndrBidPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Tender Bid Price"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderBidPrice";
 			definition = "Required only if tender offer accepts bid prices; price must fall between the maximum and minimum price acceptable to the offer.";
@@ -506,10 +538,11 @@ public class CorporateActionInstructionExtension3 {
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "OddLotFlg")
 	protected YesNoIndicator oddLotFlag;
 	/**
-	 * Indicates whether the odd lot is accepted for tender offers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -525,6 +558,9 @@ public class CorporateActionInstructionExtension3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OddLotFlg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Odd Lot Flag</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -538,9 +574,10 @@ public class CorporateActionInstructionExtension3 {
 	 */
 	public static final MMMessageAttribute mmOddLotFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructionExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "OddLotFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Odd Lot Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OddLotFlag";
 			definition = "Indicates whether the odd lot is accepted for tender offers.";
@@ -549,10 +586,11 @@ public class CorporateActionInstructionExtension3 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AckFlg")
 	protected YesNoIndicator acknowledgementFlag;
 	/**
-	 * Indicates that submitter has agreed to all terms and conditions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -568,6 +606,9 @@ public class CorporateActionInstructionExtension3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AckFlg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Acknowledgement Flag</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -581,9 +622,10 @@ public class CorporateActionInstructionExtension3 {
 	 */
 	public static final MMMessageAttribute mmAcknowledgementFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructionExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "AckFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Acknowledgement Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementFlag";
 			definition = "Indicates that submitter has agreed to all terms and conditions.";
@@ -592,10 +634,11 @@ public class CorporateActionInstructionExtension3 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CondsAccptnc")
 	protected List<com.tools20022.repository.msg.ConditionAcceptance1> conditionsAcceptance;
 	/**
-	 * Provides an acceptance flag for the identified conditions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -608,6 +651,9 @@ public class CorporateActionInstructionExtension3 {
 	 * CorporateActionInstructionExtension3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CondsAccptnc"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Conditions Acceptance</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -622,9 +668,10 @@ public class CorporateActionInstructionExtension3 {
 	 */
 	public static final MMMessageAssociationEnd mmConditionsAcceptance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructionExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "CondsAccptnc";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Conditions Acceptance"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionsAcceptance";
 			definition = "Provides an acceptance flag for the identified conditions.";
@@ -634,12 +681,11 @@ public class CorporateActionInstructionExtension3 {
 			type_lazy = () -> com.tools20022.repository.msg.ConditionAcceptance1.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCDsbrsdScty")
 	protected CUSIPIdentification1 dTCDisbursedSecurity;
 	/**
-	 * Security identification that DTC (The Depository Trust Corporation) will
-	 * distribute as part of the entitlement. This can be the DTC contra CUSIP
-	 * in cases where the payout security is a contra CUSIP.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -655,6 +701,9 @@ public class CorporateActionInstructionExtension3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCDsbrsdScty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Disbursed Security ID</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -669,9 +718,10 @@ public class CorporateActionInstructionExtension3 {
 	 */
 	public static final MMMessageAttribute mmDTCDisbursedSecurity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructionExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "DTCDsbrsdScty";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Disbursed Security ID"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCDisbursedSecurity";
 			definition = "Security identification that DTC (The Depository Trust Corporation) will distribute as part of the entitlement. This can be the DTC contra CUSIP in cases where the payout security is a contra CUSIP.";
@@ -680,11 +730,11 @@ public class CorporateActionInstructionExtension3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.CUSIPIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCDsbrsdSctyDesc")
 	protected RestrictedFINMax31Text dTCDisbursedSecurityDescription;
 	/**
-	 * Description of the security that will be disbursed by DTC (The Depository
-	 * Trust Corporation) as entitlement for the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -700,6 +750,10 @@ public class CorporateActionInstructionExtension3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCDsbrsdSctyDesc"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Security Description (DTC Disbursed
+	 * Security)</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -714,9 +768,10 @@ public class CorporateActionInstructionExtension3 {
 	 */
 	public static final MMMessageAttribute mmDTCDisbursedSecurityDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructionExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "DTCDsbrsdSctyDesc";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Security Description (DTC Disbursed Security)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCDisbursedSecurityDescription";
 			definition = "Description of the security that will be disbursed by DTC (The Depository Trust Corporation) as entitlement for the corporate action event.";
@@ -725,10 +780,11 @@ public class CorporateActionInstructionExtension3 {
 			simpleType_lazy = () -> RestrictedFINMax31Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PngAgt")
 	protected Max8Text payingAgent;
 	/**
-	 * Paying agent for this corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -743,6 +799,9 @@ public class CorporateActionInstructionExtension3 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PngAgt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Paying Agent</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -755,9 +814,10 @@ public class CorporateActionInstructionExtension3 {
 	 */
 	public static final MMMessageAttribute mmPayingAgent = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructionExtension3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmObject();
 			isDerived = false;
 			xmlTag = "PngAgt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Paying Agent"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayingAgent";
 			definition = "Paying agent for this corporate action event. ";
@@ -770,12 +830,15 @@ public class CorporateActionInstructionExtension3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionInstructionExtension3.mmPlaceAndName, CorporateActionInstructionExtension3.mmStatus, CorporateActionInstructionExtension3.mmInstructionType,
-						CorporateActionInstructionExtension3.mmServiceTypeIndicator, CorporateActionInstructionExtension3.mmProtectIdentification, CorporateActionInstructionExtension3.mmProtectDate,
-						CorporateActionInstructionExtension3.mmAccountTransactionProcessorRelativeBlockNumber, CorporateActionInstructionExtension3.mmConditionalQuantity, CorporateActionInstructionExtension3.mmTenderBidPrice,
-						CorporateActionInstructionExtension3.mmOddLotFlag, CorporateActionInstructionExtension3.mmAcknowledgementFlag, CorporateActionInstructionExtension3.mmConditionsAcceptance,
-						CorporateActionInstructionExtension3.mmDTCDisbursedSecurity, CorporateActionInstructionExtension3.mmDTCDisbursedSecurityDescription, CorporateActionInstructionExtension3.mmPayingAgent);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmStatus,
+						com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmInstructionType, com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmServiceTypeIndicator,
+						com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmProtectIdentification, com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmProtectDate,
+						com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmAccountTransactionProcessorRelativeBlockNumber, com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmConditionalQuantity,
+						com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmTenderBidPrice, com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmOddLotFlag,
+						com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmAcknowledgementFlag, com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmConditionsAcceptance,
+						com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmDTCDisbursedSecurity, com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmDTCDisbursedSecurityDescription,
+						com.tools20022.repository.msg.CorporateActionInstructionExtension3.mmPayingAgent);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionInstructionExtension3";
 				definition = "Provides additional information regarding corporate action instruction.";
@@ -784,138 +847,138 @@ public class CorporateActionInstructionExtension3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionInstructionExtension3 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "Sts")
-	public DTCInstructionStatus1Code getStatus() {
-		return status;
+	public Optional<DTCInstructionStatus1Code> getStatus() {
+		return status == null ? Optional.empty() : Optional.of(status);
 	}
 
-	public void setStatus(DTCInstructionStatus1Code status) {
+	public CorporateActionInstructionExtension3 setStatus(DTCInstructionStatus1Code status) {
 		this.status = status;
+		return this;
 	}
 
-	@XmlElement(name = "InstrTp")
-	public DTCCorporateActionInstructionType1Code getInstructionType() {
-		return instructionType;
+	public Optional<DTCCorporateActionInstructionType1Code> getInstructionType() {
+		return instructionType == null ? Optional.empty() : Optional.of(instructionType);
 	}
 
-	public void setInstructionType(DTCCorporateActionInstructionType1Code instructionType) {
+	public CorporateActionInstructionExtension3 setInstructionType(DTCCorporateActionInstructionType1Code instructionType) {
 		this.instructionType = instructionType;
+		return this;
 	}
 
-	@XmlElement(name = "SvcTpInd")
-	public DTCServiceType1Code getServiceTypeIndicator() {
-		return serviceTypeIndicator;
+	public Optional<DTCServiceType1Code> getServiceTypeIndicator() {
+		return serviceTypeIndicator == null ? Optional.empty() : Optional.of(serviceTypeIndicator);
 	}
 
-	public void setServiceTypeIndicator(DTCServiceType1Code serviceTypeIndicator) {
+	public CorporateActionInstructionExtension3 setServiceTypeIndicator(DTCServiceType1Code serviceTypeIndicator) {
 		this.serviceTypeIndicator = serviceTypeIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PrtctId")
-	public Max16Text getProtectIdentification() {
-		return protectIdentification;
+	public Optional<Max16Text> getProtectIdentification() {
+		return protectIdentification == null ? Optional.empty() : Optional.of(protectIdentification);
 	}
 
-	public void setProtectIdentification(Max16Text protectIdentification) {
+	public CorporateActionInstructionExtension3 setProtectIdentification(Max16Text protectIdentification) {
 		this.protectIdentification = protectIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PrtctDt")
-	public ISODate getProtectDate() {
-		return protectDate;
+	public Optional<ISODate> getProtectDate() {
+		return protectDate == null ? Optional.empty() : Optional.of(protectDate);
 	}
 
-	public void setProtectDate(ISODate protectDate) {
+	public CorporateActionInstructionExtension3 setProtectDate(ISODate protectDate) {
 		this.protectDate = protectDate;
+		return this;
 	}
 
-	@XmlElement(name = "AcctTxPrcrRltvBlckNb")
-	public Number getAccountTransactionProcessorRelativeBlockNumber() {
-		return accountTransactionProcessorRelativeBlockNumber;
+	public Optional<Number> getAccountTransactionProcessorRelativeBlockNumber() {
+		return accountTransactionProcessorRelativeBlockNumber == null ? Optional.empty() : Optional.of(accountTransactionProcessorRelativeBlockNumber);
 	}
 
-	public void setAccountTransactionProcessorRelativeBlockNumber(Number accountTransactionProcessorRelativeBlockNumber) {
+	public CorporateActionInstructionExtension3 setAccountTransactionProcessorRelativeBlockNumber(Number accountTransactionProcessorRelativeBlockNumber) {
 		this.accountTransactionProcessorRelativeBlockNumber = accountTransactionProcessorRelativeBlockNumber;
+		return this;
 	}
 
-	@XmlElement(name = "CondlQty")
-	public RestrictedFINDecimalNumber getConditionalQuantity() {
-		return conditionalQuantity;
+	public Optional<RestrictedFINDecimalNumber> getConditionalQuantity() {
+		return conditionalQuantity == null ? Optional.empty() : Optional.of(conditionalQuantity);
 	}
 
-	public void setConditionalQuantity(RestrictedFINDecimalNumber conditionalQuantity) {
+	public CorporateActionInstructionExtension3 setConditionalQuantity(RestrictedFINDecimalNumber conditionalQuantity) {
 		this.conditionalQuantity = conditionalQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "TndrBidPric")
-	public RestrictedFINActiveCurrencyAnd13DecimalAmount getTenderBidPrice() {
-		return tenderBidPrice;
+	public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getTenderBidPrice() {
+		return tenderBidPrice == null ? Optional.empty() : Optional.of(tenderBidPrice);
 	}
 
-	public void setTenderBidPrice(RestrictedFINActiveCurrencyAnd13DecimalAmount tenderBidPrice) {
+	public CorporateActionInstructionExtension3 setTenderBidPrice(RestrictedFINActiveCurrencyAnd13DecimalAmount tenderBidPrice) {
 		this.tenderBidPrice = tenderBidPrice;
+		return this;
 	}
 
-	@XmlElement(name = "OddLotFlg")
-	public YesNoIndicator getOddLotFlag() {
-		return oddLotFlag;
+	public Optional<YesNoIndicator> getOddLotFlag() {
+		return oddLotFlag == null ? Optional.empty() : Optional.of(oddLotFlag);
 	}
 
-	public void setOddLotFlag(YesNoIndicator oddLotFlag) {
+	public CorporateActionInstructionExtension3 setOddLotFlag(YesNoIndicator oddLotFlag) {
 		this.oddLotFlag = oddLotFlag;
+		return this;
 	}
 
-	@XmlElement(name = "AckFlg")
-	public YesNoIndicator getAcknowledgementFlag() {
-		return acknowledgementFlag;
+	public Optional<YesNoIndicator> getAcknowledgementFlag() {
+		return acknowledgementFlag == null ? Optional.empty() : Optional.of(acknowledgementFlag);
 	}
 
-	public void setAcknowledgementFlag(YesNoIndicator acknowledgementFlag) {
+	public CorporateActionInstructionExtension3 setAcknowledgementFlag(YesNoIndicator acknowledgementFlag) {
 		this.acknowledgementFlag = acknowledgementFlag;
+		return this;
 	}
 
-	@XmlElement(name = "CondsAccptnc")
 	public List<ConditionAcceptance1> getConditionsAcceptance() {
-		return conditionsAcceptance;
+		return conditionsAcceptance == null ? conditionsAcceptance = new ArrayList<>() : conditionsAcceptance;
 	}
 
-	public void setConditionsAcceptance(List<com.tools20022.repository.msg.ConditionAcceptance1> conditionsAcceptance) {
-		this.conditionsAcceptance = conditionsAcceptance;
+	public CorporateActionInstructionExtension3 setConditionsAcceptance(List<com.tools20022.repository.msg.ConditionAcceptance1> conditionsAcceptance) {
+		this.conditionsAcceptance = Objects.requireNonNull(conditionsAcceptance);
+		return this;
 	}
 
-	@XmlElement(name = "DTCDsbrsdScty")
-	public CUSIPIdentification1 getDTCDisbursedSecurity() {
-		return dTCDisbursedSecurity;
+	public Optional<CUSIPIdentification1> getDTCDisbursedSecurity() {
+		return dTCDisbursedSecurity == null ? Optional.empty() : Optional.of(dTCDisbursedSecurity);
 	}
 
-	public void setDTCDisbursedSecurity(com.tools20022.repository.msg.CUSIPIdentification1 dTCDisbursedSecurity) {
+	public CorporateActionInstructionExtension3 setDTCDisbursedSecurity(com.tools20022.repository.msg.CUSIPIdentification1 dTCDisbursedSecurity) {
 		this.dTCDisbursedSecurity = dTCDisbursedSecurity;
+		return this;
 	}
 
-	@XmlElement(name = "DTCDsbrsdSctyDesc")
-	public RestrictedFINMax31Text getDTCDisbursedSecurityDescription() {
-		return dTCDisbursedSecurityDescription;
+	public Optional<RestrictedFINMax31Text> getDTCDisbursedSecurityDescription() {
+		return dTCDisbursedSecurityDescription == null ? Optional.empty() : Optional.of(dTCDisbursedSecurityDescription);
 	}
 
-	public void setDTCDisbursedSecurityDescription(RestrictedFINMax31Text dTCDisbursedSecurityDescription) {
+	public CorporateActionInstructionExtension3 setDTCDisbursedSecurityDescription(RestrictedFINMax31Text dTCDisbursedSecurityDescription) {
 		this.dTCDisbursedSecurityDescription = dTCDisbursedSecurityDescription;
+		return this;
 	}
 
-	@XmlElement(name = "PngAgt")
-	public Max8Text getPayingAgent() {
-		return payingAgent;
+	public Optional<Max8Text> getPayingAgent() {
+		return payingAgent == null ? Optional.empty() : Optional.of(payingAgent);
 	}
 
-	public void setPayingAgent(Max8Text payingAgent) {
+	public CorporateActionInstructionExtension3 setPayingAgent(Max8Text payingAgent) {
 		this.payingAgent = payingAgent;
+		return this;
 	}
 }

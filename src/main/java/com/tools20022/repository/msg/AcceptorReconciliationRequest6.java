@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.ReconciliationTransaction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * AcceptorReconciliationRequest5}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcceptorReconciliationRequest6", propOrder = {"environment", "transaction"})
 public class AcceptorReconciliationRequest6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Envt", required = true)
 	protected CardPaymentEnvironment67 environment;
 	/**
-	 * Environment of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -125,7 +127,7 @@ public class AcceptorReconciliationRequest6 {
 	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ReconciliationTransaction.mmCardPaymentTotal;
-			componentContext_lazy = () -> AcceptorReconciliationRequest6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorReconciliationRequest6.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,10 +140,11 @@ public class AcceptorReconciliationRequest6 {
 			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment67.mmObject();
 		}
 	};
+	@XmlElement(name = "Tx", required = true)
 	protected TransactionReconciliation4 transaction;
 	/**
-	 * Reconciliation transaction between an acceptor an acquirer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -180,7 +183,7 @@ public class AcceptorReconciliationRequest6 {
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ReconciliationTransaction.mmObject();
-			componentContext_lazy = () -> AcceptorReconciliationRequest6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorReconciliationRequest6.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,10 +200,10 @@ public class AcceptorReconciliationRequest6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AcceptorReconciliationRequest6.mmEnvironment, AcceptorReconciliationRequest6.mmTransaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorReconciliationRequest6.mmEnvironment, com.tools20022.repository.msg.AcceptorReconciliationRequest6.mmTransaction);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorReconciliationRequestV06.mmReconciliationRequest);
 				trace_lazy = () -> ReconciliationTransaction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorReconciliationRequest6";
 				definition = "Reconciliation request from an acceptor.";
@@ -210,21 +213,21 @@ public class AcceptorReconciliationRequest6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment67 getEnvironment() {
 		return environment;
 	}
 
-	public void setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment67 environment) {
-		this.environment = environment;
+	public AcceptorReconciliationRequest6 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment67 environment) {
+		this.environment = Objects.requireNonNull(environment);
+		return this;
 	}
 
-	@XmlElement(name = "Tx", required = true)
 	public TransactionReconciliation4 getTransaction() {
 		return transaction;
 	}
 
-	public void setTransaction(com.tools20022.repository.msg.TransactionReconciliation4 transaction) {
-		this.transaction = transaction;
+	public AcceptorReconciliationRequest6 setTransaction(com.tools20022.repository.msg.TransactionReconciliation4 transaction) {
+		this.transaction = Objects.requireNonNull(transaction);
+		return this;
 	}
 }

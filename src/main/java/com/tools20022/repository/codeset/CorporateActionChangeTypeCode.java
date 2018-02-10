@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CorporateActionChangeTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of changes.
@@ -32,38 +37,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#mmBearToRegistered
- * CorporateActionChangeTypeCode.mmBearToRegistered}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#BearToRegistered
+ * CorporateActionChangeTypeCode.BearToRegistered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#mmCertificates
- * CorporateActionChangeTypeCode.mmCertificates}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#Certificates
+ * CorporateActionChangeTypeCode.Certificates}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#mmDematerialisedToPhysical
- * CorporateActionChangeTypeCode.mmDematerialisedToPhysical}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#DematerialisedToPhysical
+ * CorporateActionChangeTypeCode.DematerialisedToPhysical}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#mmGlobalPermanentToPhysical
- * CorporateActionChangeTypeCode.mmGlobalPermanentToPhysical}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#GlobalPermanentToPhysical
+ * CorporateActionChangeTypeCode.GlobalPermanentToPhysical}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#mmGlobalTemporaryToGlobalPermanent
- * CorporateActionChangeTypeCode.mmGlobalTemporaryToGlobalPermanent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#GlobalTemporaryToGlobalPermanent
+ * CorporateActionChangeTypeCode.GlobalTemporaryToGlobalPermanent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#mmGlobalTemporaryToPhysical
- * CorporateActionChangeTypeCode.mmGlobalTemporaryToPhysical}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#GlobalTemporaryToPhysical
+ * CorporateActionChangeTypeCode.GlobalTemporaryToPhysical}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#mmName
- * CorporateActionChangeTypeCode.mmName}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#Name
+ * CorporateActionChangeTypeCode.Name}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#mmPhysicalToDematerialised
- * CorporateActionChangeTypeCode.mmPhysicalToDematerialised}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#PhysicalToDematerialised
+ * CorporateActionChangeTypeCode.PhysicalToDematerialised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#mmRegisteredToBearer
- * CorporateActionChangeTypeCode.mmRegisteredToBearer}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#RegisteredToBearer
+ * CorporateActionChangeTypeCode.RegisteredToBearer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#mmTerms
- * CorporateActionChangeTypeCode.mmTerms}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#Terms
+ * CorporateActionChangeTypeCode.Terms}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#mmDecimalisation
- * CorporateActionChangeTypeCode.mmDecimalisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionChangeTypeCode#Decimalisation
+ * CorporateActionChangeTypeCode.Decimalisation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -80,8 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -98,7 +103,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of changes."</li>
  * </ul>
  */
-public class CorporateActionChangeTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionChangeTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -122,12 +128,12 @@ public class CorporateActionChangeTypeCode {
 	 * definition} = "Change from bearer into registered form."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBearToRegistered = new MMCode() {
+	public static final CorporateActionChangeTypeCode BearToRegistered = new CorporateActionChangeTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BearToRegistered";
 			definition = "Change from bearer into registered form.";
-			owner_lazy = () -> CorporateActionChangeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionChangeTypeCode.mmObject();
 			codeName = "BERE";
 		}
 	};
@@ -152,12 +158,12 @@ public class CorporateActionChangeTypeCode {
 	 * definition} = "Change of all instruments into certificates."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificates = new MMCode() {
+	public static final CorporateActionChangeTypeCode Certificates = new CorporateActionChangeTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Certificates";
 			definition = "Change of all instruments into certificates.";
-			owner_lazy = () -> CorporateActionChangeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionChangeTypeCode.mmObject();
 			codeName = "CERT";
 		}
 	};
@@ -182,12 +188,12 @@ public class CorporateActionChangeTypeCode {
 	 * definition} = "Change from dematerialised into physical form."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDematerialisedToPhysical = new MMCode() {
+	public static final CorporateActionChangeTypeCode DematerialisedToPhysical = new CorporateActionChangeTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DematerialisedToPhysical";
 			definition = "Change from dematerialised into physical form.";
-			owner_lazy = () -> CorporateActionChangeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionChangeTypeCode.mmObject();
 			codeName = "DEPH";
 		}
 	};
@@ -212,12 +218,12 @@ public class CorporateActionChangeTypeCode {
 	 * definition} = "Change from global permanent to physical form."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGlobalPermanentToPhysical = new MMCode() {
+	public static final CorporateActionChangeTypeCode GlobalPermanentToPhysical = new CorporateActionChangeTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GlobalPermanentToPhysical";
 			definition = "Change from global permanent to physical form.";
-			owner_lazy = () -> CorporateActionChangeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionChangeTypeCode.mmObject();
 			codeName = "GPPH";
 		}
 	};
@@ -242,12 +248,12 @@ public class CorporateActionChangeTypeCode {
 	 * definition} = "Change from global temporary to global permanent form."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGlobalTemporaryToGlobalPermanent = new MMCode() {
+	public static final CorporateActionChangeTypeCode GlobalTemporaryToGlobalPermanent = new CorporateActionChangeTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GlobalTemporaryToGlobalPermanent";
 			definition = "Change from global temporary to global permanent form.";
-			owner_lazy = () -> CorporateActionChangeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionChangeTypeCode.mmObject();
 			codeName = "GTGP";
 		}
 	};
@@ -272,12 +278,12 @@ public class CorporateActionChangeTypeCode {
 	 * definition} = "Change from global temporary to physical form."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGlobalTemporaryToPhysical = new MMCode() {
+	public static final CorporateActionChangeTypeCode GlobalTemporaryToPhysical = new CorporateActionChangeTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GlobalTemporaryToPhysical";
 			definition = "Change from global temporary to physical form.";
-			owner_lazy = () -> CorporateActionChangeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionChangeTypeCode.mmObject();
 			codeName = "GTPH";
 		}
 	};
@@ -306,12 +312,12 @@ public class CorporateActionChangeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmName = new MMCode() {
+	public static final CorporateActionChangeTypeCode Name = new CorporateActionChangeTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Name";
 			definition = "The issuing company changes its name. CA event shows the change from old name to new name and may involve surrendering physical shares with the old name to the registrar.";
-			owner_lazy = () -> CorporateActionChangeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionChangeTypeCode.mmObject();
 			codeName = "NAME";
 		}
 	};
@@ -336,12 +342,12 @@ public class CorporateActionChangeTypeCode {
 	 * definition} = "Change from physical into dematerialised form."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPhysicalToDematerialised = new MMCode() {
+	public static final CorporateActionChangeTypeCode PhysicalToDematerialised = new CorporateActionChangeTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhysicalToDematerialised";
 			definition = "Change from physical into dematerialised form.";
-			owner_lazy = () -> CorporateActionChangeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionChangeTypeCode.mmObject();
 			codeName = "PHDE";
 		}
 	};
@@ -366,12 +372,12 @@ public class CorporateActionChangeTypeCode {
 	 * definition} = "Change from registered into bearer form."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegisteredToBearer = new MMCode() {
+	public static final CorporateActionChangeTypeCode RegisteredToBearer = new CorporateActionChangeTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegisteredToBearer";
 			definition = "Change from registered into bearer form.";
-			owner_lazy = () -> CorporateActionChangeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionChangeTypeCode.mmObject();
 			codeName = "REBE";
 		}
 	};
@@ -396,12 +402,12 @@ public class CorporateActionChangeTypeCode {
 	 * definition} = "Change in the terms of the security."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTerms = new MMCode() {
+	public static final CorporateActionChangeTypeCode Terms = new CorporateActionChangeTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Terms";
 			definition = "Change in the terms of the security.";
-			owner_lazy = () -> CorporateActionChangeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionChangeTypeCode.mmObject();
 			codeName = "TERM";
 		}
 	};
@@ -429,31 +435,72 @@ public class CorporateActionChangeTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDecimalisation = new MMCode() {
+	public static final CorporateActionChangeTypeCode Decimalisation = new CorporateActionChangeTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Decimalisation";
 			definition = "Process of changing the accounting method of a security, eg, mutual fund, from units to a quantity with decimals.";
-			owner_lazy = () -> CorporateActionChangeTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionChangeTypeCode.mmObject();
 			codeName = "DECI";
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionChangeTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionChangeTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BERE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionChangeTypeCode";
 				definition = "Specifies the type of changes.";
-				code_lazy = () -> Arrays.asList(CorporateActionChangeTypeCode.mmBearToRegistered, CorporateActionChangeTypeCode.mmCertificates, CorporateActionChangeTypeCode.mmDematerialisedToPhysical,
-						CorporateActionChangeTypeCode.mmGlobalPermanentToPhysical, CorporateActionChangeTypeCode.mmGlobalTemporaryToGlobalPermanent, CorporateActionChangeTypeCode.mmGlobalTemporaryToPhysical,
-						CorporateActionChangeTypeCode.mmName, CorporateActionChangeTypeCode.mmPhysicalToDematerialised, CorporateActionChangeTypeCode.mmRegisteredToBearer, CorporateActionChangeTypeCode.mmTerms,
-						CorporateActionChangeTypeCode.mmDecimalisation);
 				derivation_lazy = () -> Arrays.asList(CorporateActionChangeType2Code.mmObject(), CorporateActionChangeType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionChangeTypeCode.BearToRegistered, com.tools20022.repository.codeset.CorporateActionChangeTypeCode.Certificates,
+						com.tools20022.repository.codeset.CorporateActionChangeTypeCode.DematerialisedToPhysical, com.tools20022.repository.codeset.CorporateActionChangeTypeCode.GlobalPermanentToPhysical,
+						com.tools20022.repository.codeset.CorporateActionChangeTypeCode.GlobalTemporaryToGlobalPermanent, com.tools20022.repository.codeset.CorporateActionChangeTypeCode.GlobalTemporaryToPhysical,
+						com.tools20022.repository.codeset.CorporateActionChangeTypeCode.Name, com.tools20022.repository.codeset.CorporateActionChangeTypeCode.PhysicalToDematerialised,
+						com.tools20022.repository.codeset.CorporateActionChangeTypeCode.RegisteredToBearer, com.tools20022.repository.codeset.CorporateActionChangeTypeCode.Terms,
+						com.tools20022.repository.codeset.CorporateActionChangeTypeCode.Decimalisation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BearToRegistered.getCodeName().get(), BearToRegistered);
+		codesByName.put(Certificates.getCodeName().get(), Certificates);
+		codesByName.put(DematerialisedToPhysical.getCodeName().get(), DematerialisedToPhysical);
+		codesByName.put(GlobalPermanentToPhysical.getCodeName().get(), GlobalPermanentToPhysical);
+		codesByName.put(GlobalTemporaryToGlobalPermanent.getCodeName().get(), GlobalTemporaryToGlobalPermanent);
+		codesByName.put(GlobalTemporaryToPhysical.getCodeName().get(), GlobalTemporaryToPhysical);
+		codesByName.put(Name.getCodeName().get(), Name);
+		codesByName.put(PhysicalToDematerialised.getCodeName().get(), PhysicalToDematerialised);
+		codesByName.put(RegisteredToBearer.getCodeName().get(), RegisteredToBearer);
+		codesByName.put(Terms.getCodeName().get(), Terms);
+		codesByName.put(Decimalisation.getCodeName().get(), Decimalisation);
+	}
+
+	public static CorporateActionChangeTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionChangeTypeCode[] values() {
+		CorporateActionChangeTypeCode[] values = new CorporateActionChangeTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionChangeTypeCode> {
+		@Override
+		public CorporateActionChangeTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionChangeTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

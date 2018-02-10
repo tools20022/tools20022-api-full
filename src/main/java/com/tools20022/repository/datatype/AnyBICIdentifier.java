@@ -19,9 +19,13 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMIdentifierSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.datatype.AnyBICIdentifier.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Code allocated to a financial or non-financial institution by the ISO 9362
@@ -39,8 +43,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAnyBIC#forAnyBICIdentifier
+ * ConstraintAnyBIC.forAnyBICIdentifier}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -59,14 +71,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
 public class AnyBICIdentifier {
 
 	final static private AtomicReference<MMIdentifierSet> mmObject_lazy = new AtomicReference<>();
+	protected String value;
 
 	final static public MMIdentifierSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMIdentifierSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAnyBIC.forAnyBICIdentifier);
 				example = Arrays.asList("CHASUS33");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AnyBICIdentifier";
@@ -76,5 +91,26 @@ public class AnyBICIdentifier {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public AnyBICIdentifier(String value) {
+		this.value = value;
+	}
+
+	@Override
+	public String toString() {
+		return value;
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AnyBICIdentifier> {
+		@Override
+		public AnyBICIdentifier unmarshal(String value) {
+			return new AnyBICIdentifier(value);
+		}
+
+		@Override
+		public String marshal(AnyBICIdentifier typedData) {
+			return typedData.value;
+		}
 	}
 }

@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Item that is offered for sale. Products can be services or goods.
@@ -77,36 +76,6 @@ import java.util.List;
  * </li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Service Service}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Goods Goods}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FinancialProduct
- * FinancialProduct}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Product2 Product2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Product1 Product1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeProduct1 TradeProduct1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice
- * CertifiedCharacteristics1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ServiceItemTotals1
- * ServiceItemTotals1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice
- * CertifiedCharacteristics2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Product3 Product3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Product4 Product4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Product5 Product5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TradeProduct2 TradeProduct2}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -141,11 +110,41 @@ import java.util.List;
  * PurchaseOrder.mmProduct}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Service Service}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Goods Goods}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FinancialProduct
+ * FinancialProduct}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Product2 Product2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Product1 Product1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeProduct1 TradeProduct1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics1Choice
+ * CertifiedCharacteristics1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ServiceItemTotals1
+ * ServiceItemTotals1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CertifiedCharacteristics2Choice
+ * CertifiedCharacteristics2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Product3 Product3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Product4 Product4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Product5 Product5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeProduct2 TradeProduct2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -162,8 +161,8 @@ public class Product {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CardPayment cardPayment;
 	/**
-	 * Card payment for which a product was specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,8 +194,8 @@ public class Product {
 	 */
 	public static final MMBusinessAssociationEnd mmCardPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardPayment";
 			definition = "Card payment for which a product was specified.";
@@ -209,8 +208,8 @@ public class Product {
 	};
 	protected List<com.tools20022.repository.entity.Price> unitPrice;
 	/**
-	 * Price per unit of product.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -308,8 +307,8 @@ public class Product {
 					BillingServicesAmount1.mmPricingAmount, BillingServicesAmount2.mmPricingAmount, BillingService1.mmPrice, BillingService1.mmOriginalChargePrice, BillingServiceParameters2.mmUnitPrice,
 					BillingServiceAdjustment1.mmPriceChange, BillingServiceAdjustment1.mmOriginalPrice, BillingServiceAdjustment1.mmNewPrice, LineItemDetails10.mmUnitPrice, LineItemDetails11.mmUnitPrice, LineItemDetails13.mmUnitPrice,
 					LineItemDetails14.mmUnitPrice, BillingService2.mmPrice, BillingService2.mmOriginalChargePrice, Product3.mmUnitPrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnitPrice";
 			definition = "Price per unit of product.";
@@ -321,8 +320,8 @@ public class Product {
 	};
 	protected List<com.tools20022.repository.entity.ProductCategory> productCategory;
 	/**
-	 * Category of the product.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -407,8 +406,8 @@ public class Product {
 			derivation_lazy = () -> Arrays.asList(TradeData4.mmProductType, TradeData5.mmProductType, TradeData6.mmProductType, TradeProduct1.mmProductCategory, LineItemDetails4.mmProductCategory, LineItemDetails7.mmProductCategory,
 					LineItemDetails5.mmProductCategory, LineItemDetails8.mmProductCategory, LineItemDetails6.mmProductCategory, LineItemDetails9.mmProductCategory, LineItemDetails10.mmProductCategory, LineItemDetails11.mmProductCategory,
 					LineItemDetails13.mmProductCategory, LineItemDetails12.mmProductCategory, LineItemDetails14.mmProductCategory, TradeProduct2.mmProductCategory);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProductCategory";
 			definition = "Category of the product.";
@@ -420,8 +419,8 @@ public class Product {
 	};
 	protected LineItem lineItem;
 	/**
-	 * Specifies the line item in which the product is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -453,8 +452,8 @@ public class Product {
 	 */
 	public static final MMBusinessAssociationEnd mmLineItem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LineItem";
 			definition = "Specifies the line item in which the product is specified.";
@@ -467,8 +466,8 @@ public class Product {
 	};
 	protected List<com.tools20022.repository.entity.ProductIdentification> productIdentification;
 	/**
-	 * Identification of the product.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -548,8 +547,8 @@ public class Product {
 			derivation_lazy = () -> Arrays.asList(TradeProduct1.mmIdentification, LineItemDetails4.mmProductIdentifier, LineItemDetails7.mmProductIdentifier, LineItemDetails5.mmProductIdentifier, LineItemDetails8.mmProductIdentifier,
 					LineItemDetails6.mmProductIdentifier, LineItemDetails9.mmProductIdentifier, LineItemDetails10.mmProductIdentifier, LineItemDetails11.mmProductIdentifier, LineItemDetails13.mmProductIdentifier,
 					LineItemDetails12.mmProductIdentifier, LineItemDetails14.mmProductIdentifier, TradeProduct2.mmIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProductIdentification";
 			definition = "Identification of the product.";
@@ -561,8 +560,8 @@ public class Product {
 	};
 	protected Max35Text name;
 	/**
-	 * Name of a product.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -637,8 +636,8 @@ public class Product {
 			derivation_lazy = () -> Arrays.asList(TradeProduct1.mmName, LineItemDetails4.mmProductName, LineItemDetails7.mmProductName, LineItemDetails5.mmProductName, LineItemDetails8.mmProductName, LineItemDetails6.mmProductName,
 					LineItemDetails9.mmProductName, BillingServiceIdentification1.mmIdentification, LineItemDetails10.mmProductName, LineItemDetails11.mmProductName, LineItemDetails13.mmProductName, LineItemDetails12.mmProductName,
 					LineItemDetails14.mmProductName, BillingServiceIdentification3.mmIdentification, TradeProduct2.mmName);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Name";
 			definition = "Name of a product.";
@@ -657,8 +656,8 @@ public class Product {
 	};
 	protected Max140Text description;
 	/**
-	 * Information about the goods and/or services of a trade transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -720,8 +719,8 @@ public class Product {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeProduct1.mmDescription, LineItem5.mmGoodsDescription, LineItem7.mmGoodsDescription, TransportedGoods1.mmGoodsDescription, InsuranceDataSet1.mmInsuredGoodsDescription,
 					CertificateDataSet1.mmGoodsDescription, LineItem11.mmGoodsDescription, CertificateDataSet2.mmGoodsDescription, LineItem13.mmGoodsAndOrServicesDescription, TradeProduct2.mmDescription);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Description";
 			definition = "Information about the goods and/or services of a trade transaction.";
@@ -740,8 +739,8 @@ public class Product {
 	};
 	protected Country origin;
 	/**
-	 * Country from which the product originates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -790,8 +789,8 @@ public class Product {
 	public static final MMBusinessAssociationEnd mmOrigin = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeProduct1.mmCountryOfOrigin, CertifiedCharacteristics1Choice.mmOrigin, CertifiedCharacteristics2Choice.mmOrigin, TradeProduct2.mmCountryOfOrigin);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Origin";
 			definition = "Country from which the product originates.";
@@ -804,8 +803,8 @@ public class Product {
 	};
 	protected List<com.tools20022.repository.entity.ProductCharacteristics> characteristics;
 	/**
-	 * Characteristics of the product.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -885,8 +884,8 @@ public class Product {
 			derivation_lazy = () -> Arrays.asList(TradeProduct1.mmProductCharacteristics, LineItemDetails4.mmProductCharacteristics, LineItemDetails7.mmProductCharacteristics, LineItemDetails5.mmProductCharacteristics,
 					LineItemDetails8.mmProductCharacteristics, LineItemDetails6.mmProductCharacteristics, LineItemDetails9.mmProductCharacteristics, LineItemDetails10.mmProductCharacteristics, LineItemDetails11.mmProductCharacteristics,
 					LineItemDetails13.mmProductCharacteristics, LineItemDetails12.mmProductCharacteristics, LineItemDetails14.mmProductCharacteristics, TradeProduct2.mmProductCharacteristics);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Characteristics";
 			definition = "Characteristics of the product.";
@@ -898,8 +897,8 @@ public class Product {
 	};
 	protected Price netPrice;
 	/**
-	 * Net price of the goods and/or service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -940,8 +939,8 @@ public class Product {
 	public static final MMBusinessAssociationEnd mmNetPrice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItem10.mmNetPrice, LineItem16.mmNetPrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetPrice";
 			definition = "Net price of the goods and/or service.";
@@ -954,8 +953,8 @@ public class Product {
 	};
 	protected List<com.tools20022.repository.entity.ProductQuantity> quantity;
 	/**
-	 * Specifies the quantity of the product.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1054,8 +1053,8 @@ public class Product {
 					LineItemDetails8.mmOrderedQuantity, LineItemDetails6.mmQuantity, LineItemDetails9.mmQuantity, CertifiedCharacteristics1Choice.mmWeight, CertifiedCharacteristics1Choice.mmQuantity, LineItemDetails10.mmQuantity,
 					LineItemDetails11.mmQuantity, CertifiedCharacteristics2Choice.mmWeight, CertifiedCharacteristics2Choice.mmQuantity, LineItemDetails13.mmQuantity, LineItemDetails12.mmOrderedQuantity, LineItemDetails14.mmQuantity,
 					LineItem16.mmNetPriceQuantity, LineItem16.mmGrossPriceQuantity, LineItem16.mmGrossWeight);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quantity";
 			definition = "Specifies the quantity of the product.";
@@ -1067,8 +1066,8 @@ public class Product {
 	};
 	protected Price grossPrice;
 	/**
-	 * Gross price of the goods and/or service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1109,8 +1108,8 @@ public class Product {
 	public static final MMBusinessAssociationEnd mmGrossPrice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItem10.mmGrossPrice, LineItem16.mmGrossPrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossPrice";
 			definition = "Gross price of the goods and/or service.";
@@ -1123,8 +1122,8 @@ public class Product {
 	};
 	protected Max70Text quality;
 	/**
-	 * Quality of the product.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1160,8 +1159,8 @@ public class Product {
 	public static final MMBusinessAttribute mmQuality = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CertifiedCharacteristics1Choice.mmQuality, CertifiedCharacteristics2Choice.mmQuality);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quality";
 			definition = "Quality of the product.";
@@ -1180,8 +1179,8 @@ public class Product {
 	};
 	protected ProductDelivery delivery;
 	/**
-	 * Delivery process of a product
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1213,8 +1212,8 @@ public class Product {
 	 */
 	public static final MMBusinessAssociationEnd mmDelivery = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Delivery";
 			definition = "Delivery process of a product";
@@ -1227,8 +1226,8 @@ public class Product {
 	};
 	protected List<com.tools20022.repository.entity.PurchaseOrder> purchaseOrder;
 	/**
-	 * Specifies the purchase order in which a specific product is ordered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1261,8 +1260,8 @@ public class Product {
 	 */
 	public static final MMBusinessAssociationEnd mmPurchaseOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PurchaseOrder";
 			definition = "Specifies the purchase order in which a specific product is ordered.";
@@ -1274,10 +1273,8 @@ public class Product {
 	};
 	protected List<com.tools20022.repository.entity.Tax> tax;
 	/**
-	 * Amount of money due to the government or tax authority, according to
-	 * various pre-defined parameters linked to the value of the goods and
-	 * services in a trade transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1364,8 +1361,8 @@ public class Product {
 			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmTax, TradeSettlement1.mmSubTotalCalculatedTax, LineItem10.mmTax, LineItemDetails4.mmTax, LineItem5.mmTax, LineItemDetails7.mmTax, LineItem7.mmTax, LineItemDetails6.mmTax,
 					LineItem4.mmTax, LineItemDetails9.mmTax, LineItem9.mmTax, BillingService1.mmTaxCalculation, LineItem11.mmTax, LineItemDetails10.mmTax, LineItem12.mmTax, LineItemDetails11.mmTax, LineItemDetails13.mmTax,
 					LineItem13.mmTax, LineItem15.mmTax, LineItemDetails14.mmTax, BillingService2.mmTaxCalculation, LineItem16.mmTax);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Product.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Tax";
 			definition = "Amount of money due to the government or tax authority, according to various pre-defined parameters linked to the value of the goods and services in a trade transaction.";
@@ -1379,7 +1376,7 @@ public class Product {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Product";
 				definition = "Item that is offered for sale. Products can be services or goods.";
@@ -1410,127 +1407,143 @@ public class Product {
 		return cardPayment;
 	}
 
-	public void setCardPayment(com.tools20022.repository.entity.CardPayment cardPayment) {
-		this.cardPayment = cardPayment;
+	public Product setCardPayment(com.tools20022.repository.entity.CardPayment cardPayment) {
+		this.cardPayment = Objects.requireNonNull(cardPayment);
+		return this;
 	}
 
 	public List<Price> getUnitPrice() {
-		return unitPrice;
+		return unitPrice == null ? unitPrice = new ArrayList<>() : unitPrice;
 	}
 
-	public void setUnitPrice(List<com.tools20022.repository.entity.Price> unitPrice) {
-		this.unitPrice = unitPrice;
+	public Product setUnitPrice(List<com.tools20022.repository.entity.Price> unitPrice) {
+		this.unitPrice = Objects.requireNonNull(unitPrice);
+		return this;
 	}
 
 	public List<ProductCategory> getProductCategory() {
-		return productCategory;
+		return productCategory == null ? productCategory = new ArrayList<>() : productCategory;
 	}
 
-	public void setProductCategory(List<com.tools20022.repository.entity.ProductCategory> productCategory) {
-		this.productCategory = productCategory;
+	public Product setProductCategory(List<com.tools20022.repository.entity.ProductCategory> productCategory) {
+		this.productCategory = Objects.requireNonNull(productCategory);
+		return this;
 	}
 
-	public LineItem getLineItem() {
-		return lineItem;
+	public Optional<LineItem> getLineItem() {
+		return lineItem == null ? Optional.empty() : Optional.of(lineItem);
 	}
 
-	public void setLineItem(com.tools20022.repository.entity.LineItem lineItem) {
+	public Product setLineItem(com.tools20022.repository.entity.LineItem lineItem) {
 		this.lineItem = lineItem;
+		return this;
 	}
 
 	public List<ProductIdentification> getProductIdentification() {
-		return productIdentification;
+		return productIdentification == null ? productIdentification = new ArrayList<>() : productIdentification;
 	}
 
-	public void setProductIdentification(List<com.tools20022.repository.entity.ProductIdentification> productIdentification) {
-		this.productIdentification = productIdentification;
+	public Product setProductIdentification(List<com.tools20022.repository.entity.ProductIdentification> productIdentification) {
+		this.productIdentification = Objects.requireNonNull(productIdentification);
+		return this;
 	}
 
 	public Max35Text getName() {
 		return name;
 	}
 
-	public void setName(Max35Text name) {
-		this.name = name;
+	public Product setName(Max35Text name) {
+		this.name = Objects.requireNonNull(name);
+		return this;
 	}
 
 	public Max140Text getDescription() {
 		return description;
 	}
 
-	public void setDescription(Max140Text description) {
-		this.description = description;
+	public Product setDescription(Max140Text description) {
+		this.description = Objects.requireNonNull(description);
+		return this;
 	}
 
 	public Country getOrigin() {
 		return origin;
 	}
 
-	public void setOrigin(com.tools20022.repository.entity.Country origin) {
-		this.origin = origin;
+	public Product setOrigin(com.tools20022.repository.entity.Country origin) {
+		this.origin = Objects.requireNonNull(origin);
+		return this;
 	}
 
 	public List<ProductCharacteristics> getCharacteristics() {
-		return characteristics;
+		return characteristics == null ? characteristics = new ArrayList<>() : characteristics;
 	}
 
-	public void setCharacteristics(List<com.tools20022.repository.entity.ProductCharacteristics> characteristics) {
-		this.characteristics = characteristics;
+	public Product setCharacteristics(List<com.tools20022.repository.entity.ProductCharacteristics> characteristics) {
+		this.characteristics = Objects.requireNonNull(characteristics);
+		return this;
 	}
 
-	public Price getNetPrice() {
-		return netPrice;
+	public Optional<Price> getNetPrice() {
+		return netPrice == null ? Optional.empty() : Optional.of(netPrice);
 	}
 
-	public void setNetPrice(com.tools20022.repository.entity.Price netPrice) {
+	public Product setNetPrice(com.tools20022.repository.entity.Price netPrice) {
 		this.netPrice = netPrice;
+		return this;
 	}
 
 	public List<ProductQuantity> getQuantity() {
-		return quantity;
+		return quantity == null ? quantity = new ArrayList<>() : quantity;
 	}
 
-	public void setQuantity(List<com.tools20022.repository.entity.ProductQuantity> quantity) {
-		this.quantity = quantity;
+	public Product setQuantity(List<com.tools20022.repository.entity.ProductQuantity> quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	public Price getGrossPrice() {
-		return grossPrice;
+	public Optional<Price> getGrossPrice() {
+		return grossPrice == null ? Optional.empty() : Optional.of(grossPrice);
 	}
 
-	public void setGrossPrice(com.tools20022.repository.entity.Price grossPrice) {
+	public Product setGrossPrice(com.tools20022.repository.entity.Price grossPrice) {
 		this.grossPrice = grossPrice;
+		return this;
 	}
 
 	public Max70Text getQuality() {
 		return quality;
 	}
 
-	public void setQuality(Max70Text quality) {
-		this.quality = quality;
+	public Product setQuality(Max70Text quality) {
+		this.quality = Objects.requireNonNull(quality);
+		return this;
 	}
 
 	public ProductDelivery getDelivery() {
 		return delivery;
 	}
 
-	public void setDelivery(com.tools20022.repository.entity.ProductDelivery delivery) {
-		this.delivery = delivery;
+	public Product setDelivery(com.tools20022.repository.entity.ProductDelivery delivery) {
+		this.delivery = Objects.requireNonNull(delivery);
+		return this;
 	}
 
 	public List<PurchaseOrder> getPurchaseOrder() {
-		return purchaseOrder;
+		return purchaseOrder == null ? purchaseOrder = new ArrayList<>() : purchaseOrder;
 	}
 
-	public void setPurchaseOrder(List<com.tools20022.repository.entity.PurchaseOrder> purchaseOrder) {
-		this.purchaseOrder = purchaseOrder;
+	public Product setPurchaseOrder(List<com.tools20022.repository.entity.PurchaseOrder> purchaseOrder) {
+		this.purchaseOrder = Objects.requireNonNull(purchaseOrder);
+		return this;
 	}
 
 	public List<Tax> getTax() {
-		return tax;
+		return tax == null ? tax = new ArrayList<>() : tax;
 	}
 
-	public void setTax(List<com.tools20022.repository.entity.Tax> tax) {
-		this.tax = tax;
+	public Product setTax(List<com.tools20022.repository.entity.Tax> tax) {
+		this.tax = Objects.requireNonNull(tax);
+		return this;
 	}
 }

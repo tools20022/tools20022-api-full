@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,16 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details about praticipant's liquidity."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountLiquidityReport1", propOrder = {"account", "accountOverdueIndicator", "limitInformation", "liquidityInformation", "arrestInformation", "debitQueuedTransactions", "creditQueuedTransactions"})
 public class AccountLiquidityReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Acct", required = true)
 	protected CashAccount25 account;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -115,7 +114,7 @@ public class AccountLiquidityReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLiquidityReport1.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +126,11 @@ public class AccountLiquidityReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount25.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOvrdueInd", required = true)
 	protected YesNoIndicator accountOverdueIndicator;
 	/**
-	 * Indicates overdue FTI queue on the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +158,7 @@ public class AccountLiquidityReport1 {
 	 */
 	public static final MMMessageAttribute mmAccountOverdueIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLiquidityReport1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOvrdueInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,10 +169,11 @@ public class AccountLiquidityReport1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "LmtInf")
 	protected List<com.tools20022.repository.msg.AccountLimits1> limitInformation;
 	/**
-	 * Information about funds limits set on the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -198,7 +199,7 @@ public class AccountLiquidityReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmLimitInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLiquidityReport1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,10 +210,11 @@ public class AccountLiquidityReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.AccountLimits1.mmObject();
 		}
 	};
+	@XmlElement(name = "LqdtyInf")
 	protected LiquidityDetails1 liquidityInformation;
 	/**
-	 * Information about liquidity of the funds of the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -238,7 +240,7 @@ public class AccountLiquidityReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmLiquidityInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLiquidityReport1.mmObject();
 			isDerived = false;
 			xmlTag = "LqdtyInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -250,10 +252,11 @@ public class AccountLiquidityReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.LiquidityDetails1.mmObject();
 		}
 	};
+	@XmlElement(name = "ArrstInf", required = true)
 	protected ArrestedFunds1 arrestInformation;
 	/**
-	 * Information about restricted (arrested) funds on the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -280,7 +283,7 @@ public class AccountLiquidityReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmArrestInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLiquidityReport1.mmObject();
 			isDerived = false;
 			xmlTag = "ArrstInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -292,10 +295,11 @@ public class AccountLiquidityReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.ArrestedFunds1.mmObject();
 		}
 	};
+	@XmlElement(name = "DbtQdTxs")
 	protected List<com.tools20022.repository.msg.QueuedTransactionsReport1> debitQueuedTransactions;
 	/**
-	 * Information about queued debit transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -322,7 +326,7 @@ public class AccountLiquidityReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmDebitQueuedTransactions = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLiquidityReport1.mmObject();
 			isDerived = false;
 			xmlTag = "DbtQdTxs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,10 +338,11 @@ public class AccountLiquidityReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.QueuedTransactionsReport1.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtQdTxs")
 	protected List<com.tools20022.repository.msg.QueuedTransactionsReport1> creditQueuedTransactions;
 	/**
-	 * Information about queued credit transactions
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -364,7 +369,7 @@ public class AccountLiquidityReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmCreditQueuedTransactions = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountLiquidityReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLiquidityReport1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtQdTxs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -380,9 +385,11 @@ public class AccountLiquidityReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountLiquidityReport1.mmAccount, AccountLiquidityReport1.mmAccountOverdueIndicator, AccountLiquidityReport1.mmLimitInformation, AccountLiquidityReport1.mmLiquidityInformation,
-						AccountLiquidityReport1.mmArrestInformation, AccountLiquidityReport1.mmDebitQueuedTransactions, AccountLiquidityReport1.mmCreditQueuedTransactions);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLiquidityReport1.mmAccount, com.tools20022.repository.msg.AccountLiquidityReport1.mmAccountOverdueIndicator,
+						com.tools20022.repository.msg.AccountLiquidityReport1.mmLimitInformation, com.tools20022.repository.msg.AccountLiquidityReport1.mmLiquidityInformation,
+						com.tools20022.repository.msg.AccountLiquidityReport1.mmArrestInformation, com.tools20022.repository.msg.AccountLiquidityReport1.mmDebitQueuedTransactions,
+						com.tools20022.repository.msg.AccountLiquidityReport1.mmCreditQueuedTransactions);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountLiquidityReport1";
 				definition = "Details about praticipant's liquidity.";
@@ -391,66 +398,66 @@ public class AccountLiquidityReport1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Acct", required = true)
 	public CashAccount25 getAccount() {
 		return account;
 	}
 
-	public void setAccount(com.tools20022.repository.msg.CashAccount25 account) {
-		this.account = account;
+	public AccountLiquidityReport1 setAccount(com.tools20022.repository.msg.CashAccount25 account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOvrdueInd", required = true)
 	public YesNoIndicator getAccountOverdueIndicator() {
 		return accountOverdueIndicator;
 	}
 
-	public void setAccountOverdueIndicator(YesNoIndicator accountOverdueIndicator) {
-		this.accountOverdueIndicator = accountOverdueIndicator;
+	public AccountLiquidityReport1 setAccountOverdueIndicator(YesNoIndicator accountOverdueIndicator) {
+		this.accountOverdueIndicator = Objects.requireNonNull(accountOverdueIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "LmtInf")
 	public List<AccountLimits1> getLimitInformation() {
-		return limitInformation;
+		return limitInformation == null ? limitInformation = new ArrayList<>() : limitInformation;
 	}
 
-	public void setLimitInformation(List<com.tools20022.repository.msg.AccountLimits1> limitInformation) {
-		this.limitInformation = limitInformation;
+	public AccountLiquidityReport1 setLimitInformation(List<com.tools20022.repository.msg.AccountLimits1> limitInformation) {
+		this.limitInformation = Objects.requireNonNull(limitInformation);
+		return this;
 	}
 
-	@XmlElement(name = "LqdtyInf")
-	public LiquidityDetails1 getLiquidityInformation() {
-		return liquidityInformation;
+	public Optional<LiquidityDetails1> getLiquidityInformation() {
+		return liquidityInformation == null ? Optional.empty() : Optional.of(liquidityInformation);
 	}
 
-	public void setLiquidityInformation(com.tools20022.repository.msg.LiquidityDetails1 liquidityInformation) {
+	public AccountLiquidityReport1 setLiquidityInformation(com.tools20022.repository.msg.LiquidityDetails1 liquidityInformation) {
 		this.liquidityInformation = liquidityInformation;
+		return this;
 	}
 
-	@XmlElement(name = "ArrstInf", required = true)
 	public ArrestedFunds1 getArrestInformation() {
 		return arrestInformation;
 	}
 
-	public void setArrestInformation(com.tools20022.repository.msg.ArrestedFunds1 arrestInformation) {
-		this.arrestInformation = arrestInformation;
+	public AccountLiquidityReport1 setArrestInformation(com.tools20022.repository.msg.ArrestedFunds1 arrestInformation) {
+		this.arrestInformation = Objects.requireNonNull(arrestInformation);
+		return this;
 	}
 
-	@XmlElement(name = "DbtQdTxs")
 	public List<QueuedTransactionsReport1> getDebitQueuedTransactions() {
-		return debitQueuedTransactions;
+		return debitQueuedTransactions == null ? debitQueuedTransactions = new ArrayList<>() : debitQueuedTransactions;
 	}
 
-	public void setDebitQueuedTransactions(List<com.tools20022.repository.msg.QueuedTransactionsReport1> debitQueuedTransactions) {
-		this.debitQueuedTransactions = debitQueuedTransactions;
+	public AccountLiquidityReport1 setDebitQueuedTransactions(List<com.tools20022.repository.msg.QueuedTransactionsReport1> debitQueuedTransactions) {
+		this.debitQueuedTransactions = Objects.requireNonNull(debitQueuedTransactions);
+		return this;
 	}
 
-	@XmlElement(name = "CdtQdTxs")
 	public List<QueuedTransactionsReport1> getCreditQueuedTransactions() {
-		return creditQueuedTransactions;
+		return creditQueuedTransactions == null ? creditQueuedTransactions = new ArrayList<>() : creditQueuedTransactions;
 	}
 
-	public void setCreditQueuedTransactions(List<com.tools20022.repository.msg.QueuedTransactionsReport1> creditQueuedTransactions) {
-		this.creditQueuedTransactions = creditQueuedTransactions;
+	public AccountLiquidityReport1 setCreditQueuedTransactions(List<com.tools20022.repository.msg.QueuedTransactionsReport1> creditQueuedTransactions) {
+		this.creditQueuedTransactions = Objects.requireNonNull(creditQueuedTransactions);
+		return this;
 	}
 }

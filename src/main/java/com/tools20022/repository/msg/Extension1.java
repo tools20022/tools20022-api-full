@@ -34,6 +34,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -517,8 +518,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintExtensionRule#forExtension1
+ * ConstraintExtensionRule.forExtension1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -531,16 +540,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Extension1", propOrder = {"placeAndName", "text"})
 public class Extension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * Name qualifying the information provided in the Text field, and place
-	 * where this information should be inserted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -568,7 +577,7 @@ public class Extension1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Extension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -579,10 +588,11 @@ public class Extension1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Txt", required = true)
 	protected Max350Text text;
 	/**
-	 * Text of the extension.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -608,7 +618,7 @@ public class Extension1 {
 	 */
 	public static final MMMessageAttribute mmText = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Extension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Extension1.mmObject();
 			isDerived = false;
 			xmlTag = "Txt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -623,7 +633,7 @@ public class Extension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Extension1.mmPlaceAndName, Extension1.mmText);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Extension1.mmPlaceAndName, com.tools20022.repository.msg.Extension1.mmText);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV02.mmExtension, AccountDetailsConfirmationV03.mmExtension, PEPOrISAOrPortfolioInformationV01.mmExtension, AccountHoldingInformationV02.mmExtension,
 						AccountHoldingInformationV03.mmExtension, AccountModificationInstructionV02.mmExtension, AccountModificationInstructionV03.mmExtension, AccountOpeningInstructionV02.mmExtension,
 						AccountOpeningInstructionV03.mmExtension, PEPOrISAOrPortfolioTransferConfirmationV02.mmExtension, PortfolioTransferConfirmationV03.mmExtension, PortfolioTransferConfirmationV04.mmExtension,
@@ -659,7 +669,8 @@ public class Extension1 {
 						OrderCancellationStatusReportV04.mmExtension, SwitchOrderV04.mmExtension, RedemptionOrderConfirmationV04.mmExtension, OrderInstructionStatusReportV04.mmExtension,
 						RequestForOrderConfirmationStatusReportV02.mmExtension, SubscriptionBulkOrderV04.mmExtension, OrderConfirmationStatusReportV02.mmExtension, SubscriptionOrderV04.mmExtension,
 						AccountDetailsConfirmationV07.mmExtension, AccountModificationInstructionV07.mmExtension, AccountOpeningInstructionV07.mmExtension, AccountManagementStatusReportV06.mmExtension);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExtensionRule.forExtension1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Extension1";
 				definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
@@ -668,21 +679,21 @@ public class Extension1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public Extension1 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "Txt", required = true)
 	public Max350Text getText() {
 		return text;
 	}
 
-	public void setText(Max350Text text) {
-		this.text = text;
+	public Extension1 setText(Max350Text text) {
+		this.text = Objects.requireNonNull(text);
+		return this;
 	}
 }

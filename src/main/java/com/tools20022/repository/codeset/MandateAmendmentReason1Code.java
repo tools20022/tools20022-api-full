@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MandateReasonCode;
+import com.tools20022.repository.codeset.MandateAmendmentReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for requesting the amendment of a mandate.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MandateReasonCode
- * MandateReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code#mmIncorrectAgent
- * MandateAmendmentReason1Code.mmIncorrectAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code#IncorrectAgent
+ * MandateAmendmentReason1Code.IncorrectAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code#mmIncorrectCurrency
- * MandateAmendmentReason1Code.mmIncorrectCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code#IncorrectCurrency
+ * MandateAmendmentReason1Code.IncorrectCurrency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code#mmRequestedByCustomer
- * MandateAmendmentReason1Code.mmRequestedByCustomer}</li>
+ * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code#RequestedByCustomer
+ * MandateAmendmentReason1Code.RequestedByCustomer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code#mmIncorrectAccount
- * MandateAmendmentReason1Code.mmIncorrectAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.MandateAmendmentReason1Code#IncorrectAccount
+ * MandateAmendmentReason1Code.IncorrectAccount}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MandateReasonCode
+ * MandateReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the reason for requesting the amendment of a mandate."</li>
  * </ul>
  */
-public class MandateAmendmentReason1Code extends MandateReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MandateAmendmentReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,11 +95,12 @@ public class MandateAmendmentReason1Code extends MandateReasonCode {
 	 * name} = "IncorrectAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectAgent = new MMCode() {
+	public static final MandateAmendmentReason1Code IncorrectAgent = new MandateAmendmentReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAgent";
-			owner_lazy = () -> MandateAmendmentReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MandateAmendmentReason1Code.mmObject();
+			codeName = MandateReasonCode.IncorrectAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -113,11 +119,12 @@ public class MandateAmendmentReason1Code extends MandateReasonCode {
 	 * name} = "IncorrectCurrency"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectCurrency = new MMCode() {
+	public static final MandateAmendmentReason1Code IncorrectCurrency = new MandateAmendmentReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectCurrency";
-			owner_lazy = () -> MandateAmendmentReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MandateAmendmentReason1Code.mmObject();
+			codeName = MandateReasonCode.IncorrectCurrency.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -136,11 +143,12 @@ public class MandateAmendmentReason1Code extends MandateReasonCode {
 	 * name} = "RequestedByCustomer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRequestedByCustomer = new MMCode() {
+	public static final MandateAmendmentReason1Code RequestedByCustomer = new MandateAmendmentReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedByCustomer";
-			owner_lazy = () -> MandateAmendmentReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MandateAmendmentReason1Code.mmObject();
+			codeName = MandateReasonCode.RequestedByCustomer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -159,27 +167,60 @@ public class MandateAmendmentReason1Code extends MandateReasonCode {
 	 * name} = "IncorrectAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncorrectAccount = new MMCode() {
+	public static final MandateAmendmentReason1Code IncorrectAccount = new MandateAmendmentReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectAccount";
-			owner_lazy = () -> MandateAmendmentReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MandateAmendmentReason1Code.mmObject();
+			codeName = MandateReasonCode.IncorrectAccount.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MandateAmendmentReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MandateAmendmentReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AGNT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MandateAmendmentReason1Code";
 				definition = "Specifies the reason for requesting the amendment of a mandate.";
-				code_lazy = () -> Arrays.asList(MandateAmendmentReason1Code.mmIncorrectAgent, MandateAmendmentReason1Code.mmIncorrectCurrency, MandateAmendmentReason1Code.mmRequestedByCustomer,
-						MandateAmendmentReason1Code.mmIncorrectAccount);
 				trace_lazy = () -> MandateReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MandateAmendmentReason1Code.IncorrectAgent, com.tools20022.repository.codeset.MandateAmendmentReason1Code.IncorrectCurrency,
+						com.tools20022.repository.codeset.MandateAmendmentReason1Code.RequestedByCustomer, com.tools20022.repository.codeset.MandateAmendmentReason1Code.IncorrectAccount);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(IncorrectAgent.getCodeName().get(), IncorrectAgent);
+		codesByName.put(IncorrectCurrency.getCodeName().get(), IncorrectCurrency);
+		codesByName.put(RequestedByCustomer.getCodeName().get(), RequestedByCustomer);
+		codesByName.put(IncorrectAccount.getCodeName().get(), IncorrectAccount);
+	}
+
+	public static MandateAmendmentReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MandateAmendmentReason1Code[] values() {
+		MandateAmendmentReason1Code[] values = new MandateAmendmentReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MandateAmendmentReason1Code> {
+		@Override
+		public MandateAmendmentReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MandateAmendmentReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

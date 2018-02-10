@@ -17,13 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OrderTypeCode;
+import com.tools20022.repository.codeset.OrderType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies a type of order based on the Financial Information Exchange
@@ -31,59 +36,62 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.OrderTypeCode OrderTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmMarket
- * OrderType2Code.mmMarket}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmLimit
- * OrderType2Code.mmLimit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmStop
- * OrderType2Code.mmStop}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmLimitWith
- * OrderType2Code.mmLimitWith}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#Market
+ * OrderType2Code.Market}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#Limit
+ * OrderType2Code.Limit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#Stop
+ * OrderType2Code.Stop}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#LimitWith
+ * OrderType2Code.LimitWith}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderType2Code#mmLimitWithout
- * OrderType2Code.mmLimitWithout}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderType2Code#LimitWithout
+ * OrderType2Code.LimitWithout}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderType2Code#mmOnBasisPrice
- * OrderType2Code.mmOnBasisPrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderType2Code#OnBasisPrice
+ * OrderType2Code.OnBasisPrice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderType2Code#mmMarketTouched
- * OrderType2Code.mmMarketTouched}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderType2Code#MarketTouched
+ * OrderType2Code.MarketTouched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderType2Code#mmWithOrWithout
- * OrderType2Code.mmWithOrWithout}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderType2Code#WithOrWithout
+ * OrderType2Code.WithOrWithout}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderType2Code#mmPreviouslyQuoted
- * OrderType2Code.mmPreviouslyQuoted}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderType2Code#PreviouslyQuoted
+ * OrderType2Code.PreviouslyQuoted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderType2Code#mmPreviouslyIndicated
- * OrderType2Code.mmPreviouslyIndicated}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmForexSwap
- * OrderType2Code.mmForexSwap}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmFunari
- * OrderType2Code.mmFunari}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderType2Code#PreviouslyIndicated
+ * OrderType2Code.PreviouslyIndicated}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#ForexSwap
+ * OrderType2Code.ForexSwap}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#Funari
+ * OrderType2Code.Funari}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderType2Code#mmMarketWithLeftover
- * OrderType2Code.mmMarketWithLeftover}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmPegged
- * OrderType2Code.mmPegged}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmStopLoss
- * OrderType2Code.mmStopLoss}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#mmStopLimit
- * OrderType2Code.mmStopLimit}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderType2Code#MarketWithLeftover
+ * OrderType2Code.MarketWithLeftover}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#Pegged
+ * OrderType2Code.Pegged}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#StopLoss
+ * OrderType2Code.StopLoss}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderType2Code#StopLimit
+ * OrderType2Code.StopLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderType2Code#mmCounterOrderSelection
- * OrderType2Code.mmCounterOrderSelection}</li>
+ * {@linkplain com.tools20022.repository.codeset.OrderType2Code#CounterOrderSelection
+ * OrderType2Code.CounterOrderSelection}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.OrderTypeCode OrderTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = FIXSynonym: field tag 40</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -102,7 +110,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class OrderType2Code extends OrderTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OrderType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -121,11 +130,12 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "Market"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarket = new MMCode() {
+	public static final OrderType2Code Market = new OrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Market";
-			owner_lazy = () -> OrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderType2Code.mmObject();
+			codeName = OrderTypeCode.Market.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -144,11 +154,12 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "Limit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLimit = new MMCode() {
+	public static final OrderType2Code Limit = new OrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
-			owner_lazy = () -> OrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderType2Code.mmObject();
+			codeName = OrderTypeCode.Limit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -167,11 +178,12 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "Stop"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStop = new MMCode() {
+	public static final OrderType2Code Stop = new OrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Stop";
-			owner_lazy = () -> OrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderType2Code.mmObject();
+			codeName = OrderTypeCode.Stop.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -190,11 +202,12 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "LimitWith"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLimitWith = new MMCode() {
+	public static final OrderType2Code LimitWith = new OrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitWith";
-			owner_lazy = () -> OrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderType2Code.mmObject();
+			codeName = OrderTypeCode.LimitWith.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -213,11 +226,12 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "LimitWithout"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLimitWithout = new MMCode() {
+	public static final OrderType2Code LimitWithout = new OrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitWithout";
-			owner_lazy = () -> OrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderType2Code.mmObject();
+			codeName = OrderTypeCode.LimitWithout.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -236,11 +250,12 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "OnBasisPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOnBasisPrice = new MMCode() {
+	public static final OrderType2Code OnBasisPrice = new OrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnBasisPrice";
-			owner_lazy = () -> OrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderType2Code.mmObject();
+			codeName = OrderTypeCode.OnBasisPrice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -259,11 +274,12 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "MarketTouched"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarketTouched = new MMCode() {
+	public static final OrderType2Code MarketTouched = new OrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketTouched";
-			owner_lazy = () -> OrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderType2Code.mmObject();
+			codeName = OrderTypeCode.MarketTouched.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -282,11 +298,12 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "WithOrWithout"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithOrWithout = new MMCode() {
+	public static final OrderType2Code WithOrWithout = new OrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithOrWithout";
-			owner_lazy = () -> OrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderType2Code.mmObject();
+			codeName = OrderTypeCode.WithOrWithout.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -305,11 +322,12 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "PreviouslyQuoted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreviouslyQuoted = new MMCode() {
+	public static final OrderType2Code PreviouslyQuoted = new OrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslyQuoted";
-			owner_lazy = () -> OrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderType2Code.mmObject();
+			codeName = OrderTypeCode.PreviouslyQuoted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -328,11 +346,12 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "PreviouslyIndicated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreviouslyIndicated = new MMCode() {
+	public static final OrderType2Code PreviouslyIndicated = new OrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslyIndicated";
-			owner_lazy = () -> OrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderType2Code.mmObject();
+			codeName = OrderTypeCode.PreviouslyIndicated.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -351,11 +370,12 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "ForexSwap"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForexSwap = new MMCode() {
+	public static final OrderType2Code ForexSwap = new OrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForexSwap";
-			owner_lazy = () -> OrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderType2Code.mmObject();
+			codeName = OrderTypeCode.ForexSwap.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -374,11 +394,12 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "Funari"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFunari = new MMCode() {
+	public static final OrderType2Code Funari = new OrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Funari";
-			owner_lazy = () -> OrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderType2Code.mmObject();
+			codeName = OrderTypeCode.Funari.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -397,11 +418,12 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "MarketWithLeftover"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarketWithLeftover = new MMCode() {
+	public static final OrderType2Code MarketWithLeftover = new OrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketWithLeftover";
-			owner_lazy = () -> OrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderType2Code.mmObject();
+			codeName = OrderTypeCode.MarketWithLeftover.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -420,11 +442,12 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "Pegged"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPegged = new MMCode() {
+	public static final OrderType2Code Pegged = new OrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pegged";
-			owner_lazy = () -> OrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderType2Code.mmObject();
+			codeName = OrderTypeCode.Pegged.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -443,11 +466,12 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "StopLoss"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStopLoss = new MMCode() {
+	public static final OrderType2Code StopLoss = new OrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StopLoss";
-			owner_lazy = () -> OrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderType2Code.mmObject();
+			codeName = OrderTypeCode.StopLoss.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -466,11 +490,12 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "StopLimit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStopLimit = new MMCode() {
+	public static final OrderType2Code StopLimit = new OrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StopLimit";
-			owner_lazy = () -> OrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderType2Code.mmObject();
+			codeName = OrderTypeCode.StopLimit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -489,28 +514,78 @@ public class OrderType2Code extends OrderTypeCode {
 	 * name} = "CounterOrderSelection"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCounterOrderSelection = new MMCode() {
+	public static final OrderType2Code CounterOrderSelection = new OrderType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterOrderSelection";
-			owner_lazy = () -> OrderType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderType2Code.mmObject();
+			codeName = OrderTypeCode.CounterOrderSelection.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OrderType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OrderType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "field tag 40"));
 				example = Arrays.asList("MRKT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderType2Code";
 				definition = "Specifies a type of order based on the Financial Information Exchange Protocol.";
-				code_lazy = () -> Arrays.asList(OrderType2Code.mmMarket, OrderType2Code.mmLimit, OrderType2Code.mmStop, OrderType2Code.mmLimitWith, OrderType2Code.mmLimitWithout, OrderType2Code.mmOnBasisPrice,
-						OrderType2Code.mmMarketTouched, OrderType2Code.mmWithOrWithout, OrderType2Code.mmPreviouslyQuoted, OrderType2Code.mmPreviouslyIndicated, OrderType2Code.mmForexSwap, OrderType2Code.mmFunari,
-						OrderType2Code.mmMarketWithLeftover, OrderType2Code.mmPegged, OrderType2Code.mmStopLoss, OrderType2Code.mmStopLimit, OrderType2Code.mmCounterOrderSelection);
 				trace_lazy = () -> OrderTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderType2Code.Market, com.tools20022.repository.codeset.OrderType2Code.Limit, com.tools20022.repository.codeset.OrderType2Code.Stop,
+						com.tools20022.repository.codeset.OrderType2Code.LimitWith, com.tools20022.repository.codeset.OrderType2Code.LimitWithout, com.tools20022.repository.codeset.OrderType2Code.OnBasisPrice,
+						com.tools20022.repository.codeset.OrderType2Code.MarketTouched, com.tools20022.repository.codeset.OrderType2Code.WithOrWithout, com.tools20022.repository.codeset.OrderType2Code.PreviouslyQuoted,
+						com.tools20022.repository.codeset.OrderType2Code.PreviouslyIndicated, com.tools20022.repository.codeset.OrderType2Code.ForexSwap, com.tools20022.repository.codeset.OrderType2Code.Funari,
+						com.tools20022.repository.codeset.OrderType2Code.MarketWithLeftover, com.tools20022.repository.codeset.OrderType2Code.Pegged, com.tools20022.repository.codeset.OrderType2Code.StopLoss,
+						com.tools20022.repository.codeset.OrderType2Code.StopLimit, com.tools20022.repository.codeset.OrderType2Code.CounterOrderSelection);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Market.getCodeName().get(), Market);
+		codesByName.put(Limit.getCodeName().get(), Limit);
+		codesByName.put(Stop.getCodeName().get(), Stop);
+		codesByName.put(LimitWith.getCodeName().get(), LimitWith);
+		codesByName.put(LimitWithout.getCodeName().get(), LimitWithout);
+		codesByName.put(OnBasisPrice.getCodeName().get(), OnBasisPrice);
+		codesByName.put(MarketTouched.getCodeName().get(), MarketTouched);
+		codesByName.put(WithOrWithout.getCodeName().get(), WithOrWithout);
+		codesByName.put(PreviouslyQuoted.getCodeName().get(), PreviouslyQuoted);
+		codesByName.put(PreviouslyIndicated.getCodeName().get(), PreviouslyIndicated);
+		codesByName.put(ForexSwap.getCodeName().get(), ForexSwap);
+		codesByName.put(Funari.getCodeName().get(), Funari);
+		codesByName.put(MarketWithLeftover.getCodeName().get(), MarketWithLeftover);
+		codesByName.put(Pegged.getCodeName().get(), Pegged);
+		codesByName.put(StopLoss.getCodeName().get(), StopLoss);
+		codesByName.put(StopLimit.getCodeName().get(), StopLimit);
+		codesByName.put(CounterOrderSelection.getCodeName().get(), CounterOrderSelection);
+	}
+
+	public static OrderType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OrderType2Code[] values() {
+		OrderType2Code[] values = new OrderType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OrderType2Code> {
+		@Override
+		public OrderType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OrderType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

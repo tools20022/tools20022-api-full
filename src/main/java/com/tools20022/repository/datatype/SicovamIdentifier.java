@@ -19,9 +19,13 @@ package com.tools20022.repository.datatype;
 
 import com.tools20022.metamodel.MMIdentifierSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.datatype.SicovamIdentifier.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifier for French securities assigned by the Societe Interprofessionnelle
@@ -36,8 +40,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -56,14 +60,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
 public class SicovamIdentifier {
 
 	final static private AtomicReference<MMIdentifierSet> mmObject_lazy = new AtomicReference<>();
+	protected String value;
 
 	final static public MMIdentifierSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMIdentifierSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("12777");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SicovamIdentifier";
@@ -72,5 +78,26 @@ public class SicovamIdentifier {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public SicovamIdentifier(String value) {
+		this.value = value;
+	}
+
+	@Override
+	public String toString() {
+		return value;
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SicovamIdentifier> {
+		@Override
+		public SicovamIdentifier unmarshal(String value) {
+			return new SicovamIdentifier(value);
+		}
+
+		@Override
+		public String marshal(SicovamIdentifier typedData) {
+			return typedData.value;
+		}
 	}
 }

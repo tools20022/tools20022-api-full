@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.InformationTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the coded type of additional information provided.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InformationTypeCode#mmProcessingInstructions
- * InformationTypeCode.mmProcessingInstructions}</li>
+ * {@linkplain com.tools20022.repository.codeset.InformationTypeCode#ProcessingInstructions
+ * InformationTypeCode.ProcessingInstructions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InformationTypeCode#mmRelayInstructions
- * InformationTypeCode.mmRelayInstructions}</li>
+ * {@linkplain com.tools20022.repository.codeset.InformationTypeCode#RelayInstructions
+ * InformationTypeCode.RelayInstructions}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the coded type of additional information provided."</li>
  * </ul>
  */
-public class InformationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InformationTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,12 +97,12 @@ public class InformationTypeCode {
 	 * definition} = "Instructions used to ease automatic request processing."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProcessingInstructions = new MMCode() {
+	public static final InformationTypeCode ProcessingInstructions = new InformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingInstructions";
 			definition = "Instructions used to ease automatic request processing.";
-			owner_lazy = () -> InformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InformationTypeCode.mmObject();
 			codeName = "INST";
 		}
 	};
@@ -121,28 +127,58 @@ public class InformationTypeCode {
 	 * definition} = "Instructions used to ease automatic request relay."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRelayInstructions = new MMCode() {
+	public static final InformationTypeCode RelayInstructions = new InformationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelayInstructions";
 			definition = "Instructions used to ease automatic request relay.";
-			owner_lazy = () -> InformationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InformationTypeCode.mmObject();
 			codeName = "RELY";
 		}
 	};
+	final static private LinkedHashMap<String, InformationTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InformationTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("INST");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InformationTypeCode";
 				definition = "Specifies the coded type of additional information provided.";
-				code_lazy = () -> Arrays.asList(InformationTypeCode.mmProcessingInstructions, InformationTypeCode.mmRelayInstructions);
 				derivation_lazy = () -> Arrays.asList(InformationType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InformationTypeCode.ProcessingInstructions, com.tools20022.repository.codeset.InformationTypeCode.RelayInstructions);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ProcessingInstructions.getCodeName().get(), ProcessingInstructions);
+		codesByName.put(RelayInstructions.getCodeName().get(), RelayInstructions);
+	}
+
+	public static InformationTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InformationTypeCode[] values() {
+		InformationTypeCode[] values = new InformationTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InformationTypeCode> {
+		@Override
+		public InformationTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InformationTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

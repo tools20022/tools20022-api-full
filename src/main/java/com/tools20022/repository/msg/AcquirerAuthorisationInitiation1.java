@@ -24,6 +24,7 @@ import com.tools20022.repository.area.cain.AcquirerAuthorisationInitiation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information related to the authorisation initiation."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcquirerAuthorisationInitiation1", propOrder = {"environment", "context", "transaction"})
 public class AcquirerAuthorisationInitiation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Envt", required = true)
 	protected CardTransactionEnvironment1 environment;
 	/**
-	 * Environment of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -108,7 +110,7 @@ public class AcquirerAuthorisationInitiation1 {
 	 */
 	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcquirerAuthorisationInitiation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerAuthorisationInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +122,11 @@ public class AcquirerAuthorisationInitiation1 {
 			type_lazy = () -> com.tools20022.repository.msg.CardTransactionEnvironment1.mmObject();
 		}
 	};
+	@XmlElement(name = "Cntxt", required = true)
 	protected CardTransactionContext1 context;
 	/**
-	 * Context in which the transaction is performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -150,7 +153,7 @@ public class AcquirerAuthorisationInitiation1 {
 	 */
 	public static final MMMessageAssociationEnd mmContext = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcquirerAuthorisationInitiation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerAuthorisationInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "Cntxt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,10 +165,11 @@ public class AcquirerAuthorisationInitiation1 {
 			type_lazy = () -> com.tools20022.repository.msg.CardTransactionContext1.mmObject();
 		}
 	};
+	@XmlElement(name = "Tx", required = true)
 	protected CardTransaction15 transaction;
 	/**
-	 * Card transaction for which the authorisation is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -192,7 +196,7 @@ public class AcquirerAuthorisationInitiation1 {
 	 */
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AcquirerAuthorisationInitiation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcquirerAuthorisationInitiation1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,9 +212,10 @@ public class AcquirerAuthorisationInitiation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AcquirerAuthorisationInitiation1.mmEnvironment, AcquirerAuthorisationInitiation1.mmContext, AcquirerAuthorisationInitiation1.mmTransaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcquirerAuthorisationInitiation1.mmEnvironment, com.tools20022.repository.msg.AcquirerAuthorisationInitiation1.mmContext,
+						com.tools20022.repository.msg.AcquirerAuthorisationInitiation1.mmTransaction);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcquirerAuthorisationInitiation.mmAuthorisationInitiation);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcquirerAuthorisationInitiation1";
 				definition = "Information related to the authorisation initiation.";
@@ -219,30 +224,30 @@ public class AcquirerAuthorisationInitiation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Envt", required = true)
 	public CardTransactionEnvironment1 getEnvironment() {
 		return environment;
 	}
 
-	public void setEnvironment(com.tools20022.repository.msg.CardTransactionEnvironment1 environment) {
-		this.environment = environment;
+	public AcquirerAuthorisationInitiation1 setEnvironment(com.tools20022.repository.msg.CardTransactionEnvironment1 environment) {
+		this.environment = Objects.requireNonNull(environment);
+		return this;
 	}
 
-	@XmlElement(name = "Cntxt", required = true)
 	public CardTransactionContext1 getContext() {
 		return context;
 	}
 
-	public void setContext(com.tools20022.repository.msg.CardTransactionContext1 context) {
-		this.context = context;
+	public AcquirerAuthorisationInitiation1 setContext(com.tools20022.repository.msg.CardTransactionContext1 context) {
+		this.context = Objects.requireNonNull(context);
+		return this;
 	}
 
-	@XmlElement(name = "Tx", required = true)
 	public CardTransaction15 getTransaction() {
 		return transaction;
 	}
 
-	public void setTransaction(com.tools20022.repository.msg.CardTransaction15 transaction) {
-		this.transaction = transaction;
+	public AcquirerAuthorisationInitiation1 setTransaction(com.tools20022.repository.msg.CardTransaction15 transaction) {
+		this.transaction = Objects.requireNonNull(transaction);
+		return this;
 	}
 }

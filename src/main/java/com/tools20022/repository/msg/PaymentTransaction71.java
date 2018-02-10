@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * PaymentTransaction25}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentTransaction71", propOrder = "cashInOrOut")
 public class PaymentTransaction71 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CshInOrOut", required = true)
 	protected CashInOrOut7Choice cashInOrOut;
 	/**
-	 * Choice between cash-in or cash-out.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,7 +113,7 @@ public class PaymentTransaction71 {
 	public static final MMMessageAssociationEnd mmCashInOrOut = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
-			componentContext_lazy = () -> PaymentTransaction71.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransaction71.mmObject();
 			isDerived = false;
 			xmlTag = "CshInOrOut";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,9 +130,9 @@ public class PaymentTransaction71 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentTransaction71.mmCashInOrOut);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction71.mmCashInOrOut);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentTransaction71";
 				definition = "Payment processes required to transfer cash from the debtor to the creditor.";
@@ -140,12 +142,12 @@ public class PaymentTransaction71 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CshInOrOut", required = true)
 	public CashInOrOut7Choice getCashInOrOut() {
 		return cashInOrOut;
 	}
 
-	public void setCashInOrOut(CashInOrOut7Choice cashInOrOut) {
-		this.cashInOrOut = cashInOrOut;
+	public PaymentTransaction71 setCashInOrOut(CashInOrOut7Choice cashInOrOut) {
+		this.cashInOrOut = Objects.requireNonNull(cashInOrOut);
+		return this;
 	}
 }

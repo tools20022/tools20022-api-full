@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DTCCPayoutTypeCode;
+import com.tools20022.repository.codeset.DTCCPayoutType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies DTCC (The Depository Trust and Clearing Corporation) defined payout
@@ -31,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DTCCPayoutTypeCode
- * DTCCPayoutTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType2Code#mmSecurities
- * DTCCPayoutType2Code.mmSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCPayoutType2Code#Securities
+ * DTCCPayoutType2Code.Securities}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DTCCPayoutTypeCode
+ * DTCCPayoutTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class DTCCPayoutType2Code extends DTCCPayoutTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DTCCPayoutType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,26 +88,56 @@ public class DTCCPayoutType2Code extends DTCCPayoutTypeCode {
 	 * name} = "Securities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecurities = new MMCode() {
+	public static final DTCCPayoutType2Code Securities = new DTCCPayoutType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
-			owner_lazy = () -> DTCCPayoutType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCPayoutType2Code.mmObject();
+			codeName = DTCCPayoutTypeCode.Securities.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DTCCPayoutType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DTCCPayoutType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SECU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCCPayoutType2Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined payout types.";
-				code_lazy = () -> Arrays.asList(DTCCPayoutType2Code.mmSecurities);
 				trace_lazy = () -> DTCCPayoutTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCPayoutType2Code.Securities);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Securities.getCodeName().get(), Securities);
+	}
+
+	public static DTCCPayoutType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DTCCPayoutType2Code[] values() {
+		DTCCPayoutType2Code[] values = new DTCCPayoutType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DTCCPayoutType2Code> {
+		@Override
+		public DTCCPayoutType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DTCCPayoutType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.CardPaymentValidation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,15 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "AcceptorCompletionAdviceResponse1", propOrder = {"environment", "transaction", "TMSTrigger"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "AcceptorCompletionAdviceResponse1", propOrder = {"environment", "transaction", "tMSTrigger"})
 public class AcceptorCompletionAdviceResponse1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Envt", required = true)
 	protected CardPaymentEnvironment3 environment;
 	/**
-	 * Environment of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -130,7 +133,7 @@ public class AcceptorCompletionAdviceResponse1 {
 	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> AcceptorCompletionAdviceResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdviceResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,10 +145,11 @@ public class AcceptorCompletionAdviceResponse1 {
 			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment3.mmObject();
 		}
 	};
+	@XmlElement(name = "Tx", required = true)
 	protected CardPaymentTransactionAdviceResponse1 transaction;
 	/**
-	 * Card payment transaction between an acceptor and an acquirer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -179,7 +183,7 @@ public class AcceptorCompletionAdviceResponse1 {
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmResponse;
-			componentContext_lazy = () -> AcceptorCompletionAdviceResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdviceResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,10 +195,11 @@ public class AcceptorCompletionAdviceResponse1 {
 			type_lazy = () -> com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse1.mmObject();
 		}
 	};
+	@XmlElement(name = "TMSTrggr")
 	protected TMSTrigger1 tMSTrigger;
 	/**
-	 * Instructions for contacting the terminal management host.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -227,7 +232,7 @@ public class AcceptorCompletionAdviceResponse1 {
 	public static final MMMessageAssociationEnd mmTMSTrigger = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTMSTrigger;
-			componentContext_lazy = () -> AcceptorCompletionAdviceResponse1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorCompletionAdviceResponse1.mmObject();
 			isDerived = false;
 			xmlTag = "TMSTrggr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,10 +248,11 @@ public class AcceptorCompletionAdviceResponse1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AcceptorCompletionAdviceResponse1.mmEnvironment, AcceptorCompletionAdviceResponse1.mmTransaction, AcceptorCompletionAdviceResponse1.mmTMSTrigger);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorCompletionAdviceResponse1.mmEnvironment, com.tools20022.repository.msg.AcceptorCompletionAdviceResponse1.mmTransaction,
+						com.tools20022.repository.msg.AcceptorCompletionAdviceResponse1.mmTMSTrigger);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorCompletionAdviceResponseV01.mmCompletionAdviceResponse);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCompletionAdviceResponse1";
 				definition = "Acknowledgement by the acquirer, of the completion advice of the card payment at the acceptor.";
@@ -256,30 +262,30 @@ public class AcceptorCompletionAdviceResponse1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment3 getEnvironment() {
 		return environment;
 	}
 
-	public void setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment3 environment) {
-		this.environment = environment;
+	public AcceptorCompletionAdviceResponse1 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment3 environment) {
+		this.environment = Objects.requireNonNull(environment);
+		return this;
 	}
 
-	@XmlElement(name = "Tx", required = true)
 	public CardPaymentTransactionAdviceResponse1 getTransaction() {
 		return transaction;
 	}
 
-	public void setTransaction(com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse1 transaction) {
-		this.transaction = transaction;
+	public AcceptorCompletionAdviceResponse1 setTransaction(com.tools20022.repository.msg.CardPaymentTransactionAdviceResponse1 transaction) {
+		this.transaction = Objects.requireNonNull(transaction);
+		return this;
 	}
 
-	@XmlElement(name = "TMSTrggr")
-	public TMSTrigger1 getTMSTrigger() {
-		return tMSTrigger;
+	public Optional<TMSTrigger1> getTMSTrigger() {
+		return tMSTrigger == null ? Optional.empty() : Optional.of(tMSTrigger);
 	}
 
-	public void setTMSTrigger(com.tools20022.repository.msg.TMSTrigger1 tMSTrigger) {
+	public AcceptorCompletionAdviceResponse1 setTMSTrigger(com.tools20022.repository.msg.TMSTrigger1 tMSTrigger) {
 		this.tMSTrigger = tMSTrigger;
+		return this;
 	}
 }

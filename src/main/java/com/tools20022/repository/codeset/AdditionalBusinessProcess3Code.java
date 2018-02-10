@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AdditionalBusinessProcessCode;
+import com.tools20022.repository.codeset.AdditionalBusinessProcess3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the additional business process linked to a corporate action event.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcessCode
- * AdditionalBusinessProcessCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess3Code#mmClaimOrCompensation
- * AdditionalBusinessProcess3Code.mmClaimOrCompensation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess3Code#ClaimOrCompensation
+ * AdditionalBusinessProcess3Code.ClaimOrCompensation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess3Code#mmTaxRefund
- * AdditionalBusinessProcess3Code.mmTaxRefund}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess3Code#TaxRefund
+ * AdditionalBusinessProcess3Code.TaxRefund}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcessCode
+ * AdditionalBusinessProcessCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class AdditionalBusinessProcess3Code extends AdditionalBusinessProcessCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AdditionalBusinessProcess3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,11 +98,12 @@ public class AdditionalBusinessProcess3Code extends AdditionalBusinessProcessCod
 	 * name} = "ClaimOrCompensation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClaimOrCompensation = new MMCode() {
+	public static final AdditionalBusinessProcess3Code ClaimOrCompensation = new AdditionalBusinessProcess3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClaimOrCompensation";
-			owner_lazy = () -> AdditionalBusinessProcess3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess3Code.mmObject();
+			codeName = AdditionalBusinessProcessCode.ClaimOrCompensation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -116,27 +122,58 @@ public class AdditionalBusinessProcess3Code extends AdditionalBusinessProcessCod
 	 * name} = "TaxRefund"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxRefund = new MMCode() {
+	public static final AdditionalBusinessProcess3Code TaxRefund = new AdditionalBusinessProcess3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRefund";
-			owner_lazy = () -> AdditionalBusinessProcess3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess3Code.mmObject();
+			codeName = AdditionalBusinessProcessCode.TaxRefund.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AdditionalBusinessProcess3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AdditionalBusinessProcess3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CLAI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalBusinessProcess3Code";
 				definition = "Specifies the additional business process linked to a corporate action event.";
 				nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess4Code.mmObject());
-				code_lazy = () -> Arrays.asList(AdditionalBusinessProcess3Code.mmClaimOrCompensation, AdditionalBusinessProcess3Code.mmTaxRefund);
 				trace_lazy = () -> AdditionalBusinessProcessCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess3Code.ClaimOrCompensation, com.tools20022.repository.codeset.AdditionalBusinessProcess3Code.TaxRefund);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ClaimOrCompensation.getCodeName().get(), ClaimOrCompensation);
+		codesByName.put(TaxRefund.getCodeName().get(), TaxRefund);
+	}
+
+	public static AdditionalBusinessProcess3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AdditionalBusinessProcess3Code[] values() {
+		AdditionalBusinessProcess3Code[] values = new AdditionalBusinessProcess3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AdditionalBusinessProcess3Code> {
+		@Override
+		public AdditionalBusinessProcess3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AdditionalBusinessProcess3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

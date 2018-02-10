@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,17 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Additional references linked to the cross order cancel request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Reference13", propOrder = {"originalCrossOrderIdentification", "hostCrossIdentification"})
 public class Reference13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgnlCrossOrdrId", required = true)
 	protected Max35Text originalCrossOrderIdentification;
 	/**
-	 * Cross Identifier of the previous cross order (not the initial cross order
-	 * of the day) as assigned by the institution, used to identify the previous
-	 * cross order in CrossOrdercancelRequest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -85,6 +86,9 @@ public class Reference13 {
 	 * {@linkplain com.tools20022.repository.msg.Reference13 Reference13}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrgnlCrossOrdrId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 551</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -100,9 +104,10 @@ public class Reference13 {
 	 */
 	public static final MMMessageAttribute mmOriginalCrossOrderIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference13.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCrossOrdrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "551"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCrossOrderIdentification";
 			definition = "Cross Identifier of the previous cross order (not the initial cross order of the day) as assigned by the institution, used to identify the previous cross order in CrossOrdercancelRequest.";
@@ -111,15 +116,11 @@ public class Reference13 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "HstCrossId", required = true)
 	protected Max35Text hostCrossIdentification;
 	/**
-	 * Host assigned entity identification that can be used to reference all
-	 * components of a cross; sides + strategy + legs. Used as the primary key
-	 * with which to refer to the Cross Order for cancellation. The HostCrossId
-	 * will also be used to link together components of the cross order. For
-	 * example, each individual Notice of Execution associated with the order
-	 * will carry HostCrossID in order to tie back to the original cross order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,6 +133,9 @@ public class Reference13 {
 	 * {@linkplain com.tools20022.repository.msg.Reference13 Reference13}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "HstCrossId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 961</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -147,9 +151,10 @@ public class Reference13 {
 	 */
 	public static final MMMessageAttribute mmHostCrossIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference13.mmObject();
 			isDerived = false;
 			xmlTag = "HstCrossId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "961"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostCrossIdentification";
 			definition = "Host assigned entity identification that can be used to reference all components of a cross; sides + strategy + legs. Used as the primary key with which to refer to the Cross Order for cancellation. The HostCrossId will also be used to link together components of the cross order. For example, each individual Notice of Execution associated with the order will carry HostCrossID in order to tie back to the original cross order.";
@@ -162,8 +167,8 @@ public class Reference13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Reference13.mmOriginalCrossOrderIdentification, Reference13.mmHostCrossIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference13.mmOriginalCrossOrderIdentification, com.tools20022.repository.msg.Reference13.mmHostCrossIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference13";
 				definition = "Additional references linked to the cross order cancel request.";
@@ -172,21 +177,21 @@ public class Reference13 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgnlCrossOrdrId", required = true)
 	public Max35Text getOriginalCrossOrderIdentification() {
 		return originalCrossOrderIdentification;
 	}
 
-	public void setOriginalCrossOrderIdentification(Max35Text originalCrossOrderIdentification) {
-		this.originalCrossOrderIdentification = originalCrossOrderIdentification;
+	public Reference13 setOriginalCrossOrderIdentification(Max35Text originalCrossOrderIdentification) {
+		this.originalCrossOrderIdentification = Objects.requireNonNull(originalCrossOrderIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "HstCrossId", required = true)
 	public Max35Text getHostCrossIdentification() {
 		return hostCrossIdentification;
 	}
 
-	public void setHostCrossIdentification(Max35Text hostCrossIdentification) {
-		this.hostCrossIdentification = hostCrossIdentification;
+	public Reference13 setHostCrossIdentification(Max35Text hostCrossIdentification) {
+		this.hostCrossIdentification = Objects.requireNonNull(hostCrossIdentification);
+		return this;
 	}
 }

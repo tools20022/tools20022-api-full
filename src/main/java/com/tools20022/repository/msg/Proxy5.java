@@ -24,9 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ProxyType2Code;
 import com.tools20022.repository.entity.ProxyAppointment;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Proxy3 Proxy3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Proxy5", propOrder = {"proxyType", "preassignedProxy"})
 public class Proxy5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrxyTp", required = true)
 	protected List<ProxyType2Code> proxyType;
 	/**
-	 * Specifies the type of proxy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +116,7 @@ public class Proxy5 {
 	public static final MMMessageAttribute mmProxyType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProxyAppointment.mmProxyType;
-			componentContext_lazy = () -> Proxy5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Proxy5.mmObject();
 			isDerived = false;
 			xmlTag = "PrxyTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,11 +128,11 @@ public class Proxy5 {
 			simpleType_lazy = () -> ProxyType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrssgndPrxy")
 	protected IndividualPerson25 preassignedProxy;
 	/**
-	 * Identifies an authorized proxy that has been assigned by the issuer of
-	 * the meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -164,7 +164,7 @@ public class Proxy5 {
 	 */
 	public static final MMMessageAssociationEnd mmPreassignedProxy = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Proxy5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Proxy5.mmObject();
 			isDerived = false;
 			xmlTag = "PrssgndPrxy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,9 +181,9 @@ public class Proxy5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Proxy5.mmProxyType, Proxy5.mmPreassignedProxy);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Proxy5.mmProxyType, com.tools20022.repository.msg.Proxy5.mmPreassignedProxy);
 				trace_lazy = () -> ProxyAppointment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Proxy5";
 				definition = "Specifies the elements that identify a proxy appointed to represent a party authorised to vote at a shareholders meeting.";
@@ -193,21 +193,21 @@ public class Proxy5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrxyTp", required = true)
 	public List<ProxyType2Code> getProxyType() {
-		return proxyType;
+		return proxyType == null ? proxyType = new ArrayList<>() : proxyType;
 	}
 
-	public void setProxyType(List<ProxyType2Code> proxyType) {
-		this.proxyType = proxyType;
+	public Proxy5 setProxyType(List<ProxyType2Code> proxyType) {
+		this.proxyType = Objects.requireNonNull(proxyType);
+		return this;
 	}
 
-	@XmlElement(name = "PrssgndPrxy")
-	public IndividualPerson25 getPreassignedProxy() {
-		return preassignedProxy;
+	public Optional<IndividualPerson25> getPreassignedProxy() {
+		return preassignedProxy == null ? Optional.empty() : Optional.of(preassignedProxy);
 	}
 
-	public void setPreassignedProxy(com.tools20022.repository.msg.IndividualPerson25 preassignedProxy) {
+	public Proxy5 setPreassignedProxy(com.tools20022.repository.msg.IndividualPerson25 preassignedProxy) {
 		this.preassignedProxy = preassignedProxy;
+		return this;
 	}
 }

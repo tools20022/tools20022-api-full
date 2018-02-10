@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,8 @@ import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OrderQuantity1", propOrder = {"quantity", "quantityType", "price"})
 public class OrderQuantity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Qty", required = true)
 	protected QuantityOrAmount1Choice quantity;
 	/**
-	 * Quantity of financial instrument to be ordered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -95,6 +99,9 @@ public class OrderQuantity1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Qty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 38</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -108,9 +115,10 @@ public class OrderQuantity1 {
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
-			componentContext_lazy = () -> OrderQuantity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderQuantity1.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "38"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of financial instrument to be ordered.";
@@ -119,10 +127,11 @@ public class OrderQuantity1 {
 			complexType_lazy = () -> QuantityOrAmount1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "QtyTp")
 	protected OrderQuantityType3Code quantityType;
 	/**
-	 * Quantity of financial instrument to be ordered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,6 +151,9 @@ public class OrderQuantity1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtyTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 38</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -155,9 +167,10 @@ public class OrderQuantity1 {
 	public static final MMMessageAttribute mmQuantityType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmQuantityType;
-			componentContext_lazy = () -> OrderQuantity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderQuantity1.mmObject();
 			isDerived = false;
 			xmlTag = "QtyTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "38"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityType";
 			definition = "Quantity of financial instrument to be ordered.";
@@ -166,10 +179,11 @@ public class OrderQuantity1 {
 			simpleType_lazy = () -> OrderQuantityType3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Pric")
 	protected Price1 price;
 	/**
-	 * Amount of money for which goods or services are offered, sold, or bought.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,6 +201,9 @@ public class OrderQuantity1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Pric"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 423, FIXSynonym: 44</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -202,9 +219,10 @@ public class OrderQuantity1 {
 	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderPrice;
-			componentContext_lazy = () -> OrderQuantity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderQuantity1.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "423"), new FIXSynonym(this, "44"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "Amount of money for which goods or services are offered, sold, or bought.";
@@ -217,9 +235,9 @@ public class OrderQuantity1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OrderQuantity1.mmQuantity, OrderQuantity1.mmQuantityType, OrderQuantity1.mmPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderQuantity1.mmQuantity, com.tools20022.repository.msg.OrderQuantity1.mmQuantityType, com.tools20022.repository.msg.OrderQuantity1.mmPrice);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OrderQuantity1";
 				definition = "Intention to transfer an ownership of a financial instrument.";
@@ -228,30 +246,30 @@ public class OrderQuantity1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public QuantityOrAmount1Choice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(QuantityOrAmount1Choice quantity) {
-		this.quantity = quantity;
+	public OrderQuantity1 setQuantity(QuantityOrAmount1Choice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "QtyTp")
-	public OrderQuantityType3Code getQuantityType() {
-		return quantityType;
+	public Optional<OrderQuantityType3Code> getQuantityType() {
+		return quantityType == null ? Optional.empty() : Optional.of(quantityType);
 	}
 
-	public void setQuantityType(OrderQuantityType3Code quantityType) {
+	public OrderQuantity1 setQuantityType(OrderQuantityType3Code quantityType) {
 		this.quantityType = quantityType;
+		return this;
 	}
 
-	@XmlElement(name = "Pric")
-	public Price1 getPrice() {
-		return price;
+	public Optional<Price1> getPrice() {
+		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public void setPrice(com.tools20022.repository.msg.Price1 price) {
+	public OrderQuantity1 setPrice(com.tools20022.repository.msg.Price1 price) {
 		this.price = price;
+		return this;
 	}
 }

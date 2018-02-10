@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Date parameters."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DateInformation1", propOrder = {"startDate", "frequency", "number"})
 public class DateInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StartDt", required = true)
 	protected ISODate startDate;
 	/**
-	 * Date on which a recurrent date will commence.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +100,7 @@ public class DateInformation1 {
 	 */
 	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +111,11 @@ public class DateInformation1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "Frqcy", required = true)
 	protected ExternalDateFrequency1Code frequency;
 	/**
-	 * Specifies the regularity of the trigger date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,7 +143,7 @@ public class DateInformation1 {
 	 */
 	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,10 +154,11 @@ public class DateInformation1 {
 			simpleType_lazy = () -> ExternalDateFrequency1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Nb", required = true)
 	protected Number number;
 	/**
-	 * Maximum number of trigger date occurrence cycles.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -181,7 +185,7 @@ public class DateInformation1 {
 	 */
 	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DateInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -196,8 +200,8 @@ public class DateInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DateInformation1.mmStartDate, DateInformation1.mmFrequency, DateInformation1.mmNumber);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DateInformation1.mmStartDate, com.tools20022.repository.msg.DateInformation1.mmFrequency, com.tools20022.repository.msg.DateInformation1.mmNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateInformation1";
 				definition = "Date parameters.";
@@ -206,30 +210,30 @@ public class DateInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StartDt", required = true)
 	public ISODate getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(ISODate startDate) {
-		this.startDate = startDate;
+	public DateInformation1 setStartDate(ISODate startDate) {
+		this.startDate = Objects.requireNonNull(startDate);
+		return this;
 	}
 
-	@XmlElement(name = "Frqcy", required = true)
 	public ExternalDateFrequency1Code getFrequency() {
 		return frequency;
 	}
 
-	public void setFrequency(ExternalDateFrequency1Code frequency) {
-		this.frequency = frequency;
+	public DateInformation1 setFrequency(ExternalDateFrequency1Code frequency) {
+		this.frequency = Objects.requireNonNull(frequency);
+		return this;
 	}
 
-	@XmlElement(name = "Nb", required = true)
 	public Number getNumber() {
 		return number;
 	}
 
-	public void setNumber(Number number) {
-		this.number = number;
+	public DateInformation1 setNumber(Number number) {
+		this.number = Objects.requireNonNull(number);
+		return this;
 	}
 }

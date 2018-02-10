@@ -28,9 +28,8 @@ import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -107,8 +106,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule#forAggregateBalanceInformation1
+ * ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAggregateQuantityGuideline#forAggregateBalanceInformation1
+ * ConstraintAggregateQuantityGuideline.forAggregateBalanceInformation1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,16 +131,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AggregateBalanceInformation1", propOrder = {"aggregateQuantity", "availableQuantity", "notAvailableQuantity", "daysAccrued", "holdingValue", "accruedInterestAmount", "bookValue", "safekeepingPlace",
 		"financialInstrumentDetails", "priceDetails", "foreignExchangeDetails", "balanceBreakdownDetails", "additionalBalanceBreakdownDetails", "balanceAtSafekeepingPlace"})
 public class AggregateBalanceInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AggtQty", required = true)
 	protected BalanceQuantity1Choice aggregateQuantity;
 	/**
-	 * Total quantity of financial instrument for the referenced holding.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +176,7 @@ public class AggregateBalanceInformation1 {
 	public static final MMMessageAttribute mmAggregateQuantity = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
-			componentContext_lazy = () -> AggregateBalanceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "AggtQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,11 +187,11 @@ public class AggregateBalanceInformation1 {
 			complexType_lazy = () -> BalanceQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AvlblQty")
 	protected BalanceQuantity1Choice availableQuantity;
 	/**
-	 * Total quantity of financial instrument for the referenced holding that is
-	 * available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -216,7 +227,7 @@ public class AggregateBalanceInformation1 {
 	public static final MMMessageAttribute mmAvailableQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAvailableQuantity;
-			componentContext_lazy = () -> AggregateBalanceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "AvlblQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,11 +238,11 @@ public class AggregateBalanceInformation1 {
 			complexType_lazy = () -> BalanceQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NotAvlblQty")
 	protected BalanceQuantity1Choice notAvailableQuantity;
 	/**
-	 * Total quantity of financial instrument for the referenced holding that is
-	 * not available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -267,7 +278,7 @@ public class AggregateBalanceInformation1 {
 	public static final MMMessageAttribute mmNotAvailableQuantity = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
-			componentContext_lazy = () -> AggregateBalanceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "NotAvlblQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -278,11 +289,11 @@ public class AggregateBalanceInformation1 {
 			complexType_lazy = () -> BalanceQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DaysAcrd")
 	protected Number daysAccrued;
 	/**
-	 * Specifies the number of days used for calculating the accrued interest
-	 * amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -317,7 +328,7 @@ public class AggregateBalanceInformation1 {
 	public static final MMMessageAttribute mmDaysAccrued = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmNumberOfDays;
-			componentContext_lazy = () -> AggregateBalanceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "DaysAcrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -328,11 +339,11 @@ public class AggregateBalanceInformation1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "HldgVal")
 	protected List<ActiveOrHistoricCurrencyAndAmount> holdingValue;
 	/**
-	 * Total value of a balance of the securities account for a specific
-	 * financial instrument, expressed in one or more currencies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -368,7 +379,7 @@ public class AggregateBalanceInformation1 {
 	public static final MMMessageAttribute mmHoldingValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmHoldingValue;
-			componentContext_lazy = () -> AggregateBalanceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "HldgVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -378,10 +389,11 @@ public class AggregateBalanceInformation1 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AcrdIntrstAmt")
 	protected ActiveOrHistoricCurrencyAndAmount accruedInterestAmount;
 	/**
-	 * Interest amount that has accrued in between coupon payment periods.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -416,7 +428,7 @@ public class AggregateBalanceInformation1 {
 	public static final MMMessageAttribute mmAccruedInterestAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccruedInterestAmount;
-			componentContext_lazy = () -> AggregateBalanceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -427,11 +439,11 @@ public class AggregateBalanceInformation1 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "BookVal")
 	protected ActiveOrHistoricCurrencyAndAmount bookValue;
 	/**
-	 * Value of a security, as booked in an account. Book value is often
-	 * different from the current market value of the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -467,7 +479,7 @@ public class AggregateBalanceInformation1 {
 	public static final MMMessageAttribute mmBookValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmBookValue;
-			componentContext_lazy = () -> AggregateBalanceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "BookVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -478,13 +490,11 @@ public class AggregateBalanceInformation1 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgPlc")
 	protected SafekeepingPlaceFormatChoice safekeepingPlace;
 	/**
-	 * Place where the securities are safe-kept, physically or notionally. This
-	 * place can be, for example, a local custodian, a Central Securities
-	 * Depository (CSD) or an International Central Securities Depository
-	 * (ICSD).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -520,7 +530,7 @@ public class AggregateBalanceInformation1 {
 	public static final MMMessageAttribute mmSafekeepingPlace = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
-			componentContext_lazy = () -> AggregateBalanceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -531,10 +541,11 @@ public class AggregateBalanceInformation1 {
 			complexType_lazy = () -> SafekeepingPlaceFormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	protected FinancialInstrument4 financialInstrumentDetails;
 	/**
-	 * Security held on the account for which the balance is calculated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -567,7 +578,7 @@ public class AggregateBalanceInformation1 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
-			componentContext_lazy = () -> AggregateBalanceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -579,10 +590,11 @@ public class AggregateBalanceInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument4.mmObject();
 		}
 	};
+	@XmlElement(name = "PricDtls")
 	protected List<com.tools20022.repository.msg.PriceInformation1> priceDetails;
 	/**
-	 * Price of the financial instrument in one or more currencies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -615,7 +627,7 @@ public class AggregateBalanceInformation1 {
 	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPricing;
-			componentContext_lazy = () -> AggregateBalanceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PricDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -626,10 +638,11 @@ public class AggregateBalanceInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.PriceInformation1.mmObject();
 		}
 	};
+	@XmlElement(name = "FrgnXchgDtls")
 	protected ForeignExchangeTerms3 foreignExchangeDetails;
 	/**
-	 * Currency exchange related to a securities order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -661,7 +674,7 @@ public class AggregateBalanceInformation1 {
 	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmExchangeRate;
-			componentContext_lazy = () -> AggregateBalanceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "FrgnXchgDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -673,12 +686,11 @@ public class AggregateBalanceInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.ForeignExchangeTerms3.mmObject();
 		}
 	};
+	@XmlElement(name = "BalBrkdwnDtls")
 	protected List<com.tools20022.repository.msg.SubBalanceInformation1> balanceBreakdownDetails;
 	/**
-	 * Net position of a segregated holding of a single security within the
-	 * overall position held in a securities account, eg, sub-balance per
-	 * status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -712,7 +724,7 @@ public class AggregateBalanceInformation1 {
 	public static final MMMessageAssociationEnd mmBalanceBreakdownDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
-			componentContext_lazy = () -> AggregateBalanceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "BalBrkdwnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -723,12 +735,11 @@ public class AggregateBalanceInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.SubBalanceInformation1.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlBalBrkdwnDtls")
 	protected List<com.tools20022.repository.msg.AdditionalBalanceInformation> additionalBalanceBreakdownDetails;
 	/**
-	 * Net position of a segregated holding of a single security within the
-	 * overall position held in a securities account, eg, sub-balance per
-	 * status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -763,7 +774,7 @@ public class AggregateBalanceInformation1 {
 	public static final MMMessageAssociationEnd mmAdditionalBalanceBreakdownDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
-			componentContext_lazy = () -> AggregateBalanceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlBalBrkdwnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -774,12 +785,11 @@ public class AggregateBalanceInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation.mmObject();
 		}
 	};
+	@XmlElement(name = "BalAtSfkpgPlc")
 	protected List<com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1> balanceAtSafekeepingPlace;
 	/**
-	 * Net position of a segregated holding, in a single security, within the
-	 * overall position held in a securities account at a specified place of
-	 * safekeeping.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -814,7 +824,7 @@ public class AggregateBalanceInformation1 {
 	public static final MMMessageAssociationEnd mmBalanceAtSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
-			componentContext_lazy = () -> AggregateBalanceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "BalAtSfkpgPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -829,13 +839,18 @@ public class AggregateBalanceInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AggregateBalanceInformation1.mmAggregateQuantity, AggregateBalanceInformation1.mmAvailableQuantity, AggregateBalanceInformation1.mmNotAvailableQuantity,
-						AggregateBalanceInformation1.mmDaysAccrued, AggregateBalanceInformation1.mmHoldingValue, AggregateBalanceInformation1.mmAccruedInterestAmount, AggregateBalanceInformation1.mmBookValue,
-						AggregateBalanceInformation1.mmSafekeepingPlace, AggregateBalanceInformation1.mmFinancialInstrumentDetails, AggregateBalanceInformation1.mmPriceDetails, AggregateBalanceInformation1.mmForeignExchangeDetails,
-						AggregateBalanceInformation1.mmBalanceBreakdownDetails, AggregateBalanceInformation1.mmAdditionalBalanceBreakdownDetails, AggregateBalanceInformation1.mmBalanceAtSafekeepingPlace);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AggregateBalanceInformation1.mmAggregateQuantity, com.tools20022.repository.msg.AggregateBalanceInformation1.mmAvailableQuantity,
+						com.tools20022.repository.msg.AggregateBalanceInformation1.mmNotAvailableQuantity, com.tools20022.repository.msg.AggregateBalanceInformation1.mmDaysAccrued,
+						com.tools20022.repository.msg.AggregateBalanceInformation1.mmHoldingValue, com.tools20022.repository.msg.AggregateBalanceInformation1.mmAccruedInterestAmount,
+						com.tools20022.repository.msg.AggregateBalanceInformation1.mmBookValue, com.tools20022.repository.msg.AggregateBalanceInformation1.mmSafekeepingPlace,
+						com.tools20022.repository.msg.AggregateBalanceInformation1.mmFinancialInstrumentDetails, com.tools20022.repository.msg.AggregateBalanceInformation1.mmPriceDetails,
+						com.tools20022.repository.msg.AggregateBalanceInformation1.mmForeignExchangeDetails, com.tools20022.repository.msg.AggregateBalanceInformation1.mmBalanceBreakdownDetails,
+						com.tools20022.repository.msg.AggregateBalanceInformation1.mmAdditionalBalanceBreakdownDetails, com.tools20022.repository.msg.AggregateBalanceInformation1.mmBalanceAtSafekeepingPlace);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CustodyStatementOfHoldings.mmBalanceForAccount);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceAtSafekeepingPlaceRule.forAggregateBalanceInformation1,
+						com.tools20022.repository.constraints.ConstraintAggregateQuantityGuideline.forAggregateBalanceInformation1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AggregateBalanceInformation1";
 				definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account. A securities balance is calculated from the sum of securities' receipts minus the sum of securities' deliveries.";
@@ -844,129 +859,129 @@ public class AggregateBalanceInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AggtQty", required = true)
 	public BalanceQuantity1Choice getAggregateQuantity() {
 		return aggregateQuantity;
 	}
 
-	public void setAggregateQuantity(BalanceQuantity1Choice aggregateQuantity) {
-		this.aggregateQuantity = aggregateQuantity;
+	public AggregateBalanceInformation1 setAggregateQuantity(BalanceQuantity1Choice aggregateQuantity) {
+		this.aggregateQuantity = Objects.requireNonNull(aggregateQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "AvlblQty")
-	public BalanceQuantity1Choice getAvailableQuantity() {
-		return availableQuantity;
+	public Optional<BalanceQuantity1Choice> getAvailableQuantity() {
+		return availableQuantity == null ? Optional.empty() : Optional.of(availableQuantity);
 	}
 
-	public void setAvailableQuantity(BalanceQuantity1Choice availableQuantity) {
+	public AggregateBalanceInformation1 setAvailableQuantity(BalanceQuantity1Choice availableQuantity) {
 		this.availableQuantity = availableQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "NotAvlblQty")
-	public BalanceQuantity1Choice getNotAvailableQuantity() {
-		return notAvailableQuantity;
+	public Optional<BalanceQuantity1Choice> getNotAvailableQuantity() {
+		return notAvailableQuantity == null ? Optional.empty() : Optional.of(notAvailableQuantity);
 	}
 
-	public void setNotAvailableQuantity(BalanceQuantity1Choice notAvailableQuantity) {
+	public AggregateBalanceInformation1 setNotAvailableQuantity(BalanceQuantity1Choice notAvailableQuantity) {
 		this.notAvailableQuantity = notAvailableQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "DaysAcrd")
-	public Number getDaysAccrued() {
-		return daysAccrued;
+	public Optional<Number> getDaysAccrued() {
+		return daysAccrued == null ? Optional.empty() : Optional.of(daysAccrued);
 	}
 
-	public void setDaysAccrued(Number daysAccrued) {
+	public AggregateBalanceInformation1 setDaysAccrued(Number daysAccrued) {
 		this.daysAccrued = daysAccrued;
+		return this;
 	}
 
-	@XmlElement(name = "HldgVal")
 	public List<ActiveOrHistoricCurrencyAndAmount> getHoldingValue() {
-		return holdingValue;
+		return holdingValue == null ? holdingValue = new ArrayList<>() : holdingValue;
 	}
 
-	public void setHoldingValue(List<ActiveOrHistoricCurrencyAndAmount> holdingValue) {
-		this.holdingValue = holdingValue;
+	public AggregateBalanceInformation1 setHoldingValue(List<ActiveOrHistoricCurrencyAndAmount> holdingValue) {
+		this.holdingValue = Objects.requireNonNull(holdingValue);
+		return this;
 	}
 
-	@XmlElement(name = "AcrdIntrstAmt")
-	public ActiveOrHistoricCurrencyAndAmount getAccruedInterestAmount() {
-		return accruedInterestAmount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getAccruedInterestAmount() {
+		return accruedInterestAmount == null ? Optional.empty() : Optional.of(accruedInterestAmount);
 	}
 
-	public void setAccruedInterestAmount(ActiveOrHistoricCurrencyAndAmount accruedInterestAmount) {
+	public AggregateBalanceInformation1 setAccruedInterestAmount(ActiveOrHistoricCurrencyAndAmount accruedInterestAmount) {
 		this.accruedInterestAmount = accruedInterestAmount;
+		return this;
 	}
 
-	@XmlElement(name = "BookVal")
-	public ActiveOrHistoricCurrencyAndAmount getBookValue() {
-		return bookValue;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getBookValue() {
+		return bookValue == null ? Optional.empty() : Optional.of(bookValue);
 	}
 
-	public void setBookValue(ActiveOrHistoricCurrencyAndAmount bookValue) {
+	public AggregateBalanceInformation1 setBookValue(ActiveOrHistoricCurrencyAndAmount bookValue) {
 		this.bookValue = bookValue;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgPlc")
-	public SafekeepingPlaceFormatChoice getSafekeepingPlace() {
-		return safekeepingPlace;
+	public Optional<SafekeepingPlaceFormatChoice> getSafekeepingPlace() {
+		return safekeepingPlace == null ? Optional.empty() : Optional.of(safekeepingPlace);
 	}
 
-	public void setSafekeepingPlace(SafekeepingPlaceFormatChoice safekeepingPlace) {
+	public AggregateBalanceInformation1 setSafekeepingPlace(SafekeepingPlaceFormatChoice safekeepingPlace) {
 		this.safekeepingPlace = safekeepingPlace;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument4 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
 
-	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument4 financialInstrumentDetails) {
-		this.financialInstrumentDetails = financialInstrumentDetails;
+	public AggregateBalanceInformation1 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument4 financialInstrumentDetails) {
+		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
+		return this;
 	}
 
-	@XmlElement(name = "PricDtls")
 	public List<PriceInformation1> getPriceDetails() {
-		return priceDetails;
+		return priceDetails == null ? priceDetails = new ArrayList<>() : priceDetails;
 	}
 
-	public void setPriceDetails(List<com.tools20022.repository.msg.PriceInformation1> priceDetails) {
-		this.priceDetails = priceDetails;
+	public AggregateBalanceInformation1 setPriceDetails(List<com.tools20022.repository.msg.PriceInformation1> priceDetails) {
+		this.priceDetails = Objects.requireNonNull(priceDetails);
+		return this;
 	}
 
-	@XmlElement(name = "FrgnXchgDtls")
-	public ForeignExchangeTerms3 getForeignExchangeDetails() {
-		return foreignExchangeDetails;
+	public Optional<ForeignExchangeTerms3> getForeignExchangeDetails() {
+		return foreignExchangeDetails == null ? Optional.empty() : Optional.of(foreignExchangeDetails);
 	}
 
-	public void setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms3 foreignExchangeDetails) {
+	public AggregateBalanceInformation1 setForeignExchangeDetails(com.tools20022.repository.msg.ForeignExchangeTerms3 foreignExchangeDetails) {
 		this.foreignExchangeDetails = foreignExchangeDetails;
+		return this;
 	}
 
-	@XmlElement(name = "BalBrkdwnDtls")
 	public List<SubBalanceInformation1> getBalanceBreakdownDetails() {
-		return balanceBreakdownDetails;
+		return balanceBreakdownDetails == null ? balanceBreakdownDetails = new ArrayList<>() : balanceBreakdownDetails;
 	}
 
-	public void setBalanceBreakdownDetails(List<com.tools20022.repository.msg.SubBalanceInformation1> balanceBreakdownDetails) {
-		this.balanceBreakdownDetails = balanceBreakdownDetails;
+	public AggregateBalanceInformation1 setBalanceBreakdownDetails(List<com.tools20022.repository.msg.SubBalanceInformation1> balanceBreakdownDetails) {
+		this.balanceBreakdownDetails = Objects.requireNonNull(balanceBreakdownDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlBalBrkdwnDtls")
 	public List<AdditionalBalanceInformation> getAdditionalBalanceBreakdownDetails() {
-		return additionalBalanceBreakdownDetails;
+		return additionalBalanceBreakdownDetails == null ? additionalBalanceBreakdownDetails = new ArrayList<>() : additionalBalanceBreakdownDetails;
 	}
 
-	public void setAdditionalBalanceBreakdownDetails(List<com.tools20022.repository.msg.AdditionalBalanceInformation> additionalBalanceBreakdownDetails) {
-		this.additionalBalanceBreakdownDetails = additionalBalanceBreakdownDetails;
+	public AggregateBalanceInformation1 setAdditionalBalanceBreakdownDetails(List<com.tools20022.repository.msg.AdditionalBalanceInformation> additionalBalanceBreakdownDetails) {
+		this.additionalBalanceBreakdownDetails = Objects.requireNonNull(additionalBalanceBreakdownDetails);
+		return this;
 	}
 
-	@XmlElement(name = "BalAtSfkpgPlc")
 	public List<AggregateBalancePerSafekeepingPlace1> getBalanceAtSafekeepingPlace() {
-		return balanceAtSafekeepingPlace;
+		return balanceAtSafekeepingPlace == null ? balanceAtSafekeepingPlace = new ArrayList<>() : balanceAtSafekeepingPlace;
 	}
 
-	public void setBalanceAtSafekeepingPlace(List<com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1> balanceAtSafekeepingPlace) {
-		this.balanceAtSafekeepingPlace = balanceAtSafekeepingPlace;
+	public AggregateBalanceInformation1 setBalanceAtSafekeepingPlace(List<com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace1> balanceAtSafekeepingPlace) {
+		this.balanceAtSafekeepingPlace = Objects.requireNonNull(balanceAtSafekeepingPlace);
+		return this;
 	}
 }

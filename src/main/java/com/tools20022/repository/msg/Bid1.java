@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -29,6 +30,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -84,8 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStrikeTime#forBid1
+ * ConstraintStrikeTime.forBid1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,17 +109,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Bid1", propOrder = {"clientBidIdentification", "listName", "bidIdentification", "totalNumberSecurities", "exchangeForPhysicalIndicator", "foreignExchangeExecutionRequestedIndicator", "tradeType", "totalNumberTickets",
 		"progressReportIndicator", "progressPeriodInterval", "totalNumberOfBidders", "tradeDate", "strikeTime", "basisPriceType", "liquidityAndStatistics"})
 public class Bid1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ClntBidId", required = true)
 	protected Max35Text clientBidIdentification;
 	/**
-	 * Unique identifier for a Bid Request as assigned by institution.
-	 * Uniqueness must be guaranteed within a single trading day.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,6 +131,9 @@ public class Bid1 {
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Bid1 Bid1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClntBidId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 391</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -135,9 +149,10 @@ public class Bid1 {
 	 */
 	public static final MMMessageAttribute mmClientBidIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Bid1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "ClntBidId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "391"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientBidIdentification";
 			definition = "Unique identifier for a Bid Request as assigned by institution. Uniqueness must be guaranteed within a single trading day.";
@@ -146,10 +161,11 @@ public class Bid1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ListNm")
 	protected Max128Text listName;
 	/**
-	 * Provides the name of the order list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,6 +183,9 @@ public class Bid1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ListNm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 392</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -180,9 +199,10 @@ public class Bid1 {
 	public static final MMMessageAttribute mmListName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListName;
-			componentContext_lazy = () -> Bid1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "ListNm";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "392"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListName";
 			definition = "Provides the name of the order list.";
@@ -191,10 +211,11 @@ public class Bid1 {
 			simpleType_lazy = () -> Max128Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BidId")
 	protected Max35Text bidIdentification;
 	/**
-	 * Unique and unambiguous identification of the bid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,6 +227,9 @@ public class Bid1 {
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Bid1 Bid1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BidId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 390</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -219,9 +243,10 @@ public class Bid1 {
 	 */
 	public static final MMMessageAttribute mmBidIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Bid1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "BidId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "390"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidIdentification";
 			definition = "Unique and unambiguous identification of the bid.";
@@ -230,11 +255,11 @@ public class Bid1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNbScties", required = true)
 	protected Number totalNumberSecurities;
 	/**
-	 * Total number of distinct financial instruments for which the bid is
-	 * applicable.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -252,6 +277,9 @@ public class Bid1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlNbScties"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 393</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -267,9 +295,10 @@ public class Bid1 {
 	public static final MMMessageAttribute mmTotalNumberSecurities = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
-			componentContext_lazy = () -> Bid1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbScties";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "393"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberSecurities";
 			definition = "Total number of distinct financial instruments for which the bid is applicable.";
@@ -278,10 +307,11 @@ public class Bid1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "XchgForPhysInd", required = true)
 	protected YesNoIndicator exchangeForPhysicalIndicator;
 	/**
-	 * Indicates whether or not to exchange for physical.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -300,6 +330,9 @@ public class Bid1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XchgForPhysInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 411</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -313,9 +346,10 @@ public class Bid1 {
 	public static final MMMessageAttribute mmExchangeForPhysicalIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmExchangeForPhysicalTrade;
-			componentContext_lazy = () -> Bid1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "XchgForPhysInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "411"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeForPhysicalIndicator";
 			definition = "Indicates whether or not to exchange for physical.";
@@ -324,11 +358,11 @@ public class Bid1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "FrgnXchgExctnReqdInd", required = true)
 	protected YesNoIndicator foreignExchangeExecutionRequestedIndicator;
 	/**
-	 * Indicates a request for a foreign exchange accommodation trade to be
-	 * executed along with security transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -347,6 +381,9 @@ public class Bid1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FrgnXchgExctnReqdInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 121</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -362,9 +399,10 @@ public class Bid1 {
 	public static final MMMessageAttribute mmForeignExchangeExecutionRequestedIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmForeignExchangeExecutionRequested;
-			componentContext_lazy = () -> Bid1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "FrgnXchgExctnReqdInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "121"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeExecutionRequestedIndicator";
 			definition = "Indicates a request for a foreign exchange accommodation trade to be executed along with security transaction.";
@@ -373,10 +411,11 @@ public class Bid1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "TradTp", required = true)
 	protected TradeType2Code tradeType;
 	/**
-	 * Indicates the type of transaction of which the order is a component.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -395,6 +434,9 @@ public class Bid1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 418</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -409,9 +451,10 @@ public class Bid1 {
 	public static final MMMessageAttribute mmTradeType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTransactionType;
-			componentContext_lazy = () -> Bid1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "TradTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "418"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeType";
 			definition = "Indicates the type of transaction of which the order is a component.";
@@ -420,10 +463,11 @@ public class Bid1 {
 			simpleType_lazy = () -> TradeType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNbTckts")
 	protected Number totalNumberTickets;
 	/**
-	 * Expected total number of tickets/allocations to be fully executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -441,6 +485,9 @@ public class Bid1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TtlNbTckts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 395</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -455,9 +502,10 @@ public class Bid1 {
 	public static final MMMessageAttribute mmTotalNumberTickets = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSecuritiesOrderAllocation;
-			componentContext_lazy = () -> Bid1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbTckts";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "395"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberTickets";
 			definition = "Expected total number of tickets/allocations to be fully executed.";
@@ -466,14 +514,11 @@ public class Bid1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "PrgrsRptInd")
 	protected YesNoIndicator progressReportIndicator;
 	/**
-	 * Identifies the request to receive a report on the progress of the order
-	 * or not.
 	 * 
-	 * A 'Yes' value means a request for regular status messages to be sent. A
-	 * 'No' value means no request to receive regular status messages.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -486,6 +531,9 @@ public class Bid1 {
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Bid1 Bid1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrgrsRptInd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 414</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -501,9 +549,10 @@ public class Bid1 {
 	 */
 	public static final MMMessageAttribute mmProgressReportIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Bid1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "PrgrsRptInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "414"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProgressReportIndicator";
 			definition = "Identifies the request to receive a report on the progress of the order or not.\n\nA 'Yes' value means a request for regular status messages to be sent.\nA 'No' value means no request to receive regular status messages.";
@@ -512,11 +561,11 @@ public class Bid1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PrgrsPrdIntrvl")
 	protected ISOTime progressPeriodInterval;
 	/**
-	 * Identifies the interval period in minutes between each ListStatus you
-	 * wish to receive.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -528,6 +577,9 @@ public class Bid1 {
 	 * componentContext} = {@linkplain com.tools20022.repository.msg.Bid1 Bid1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrgrsPrdIntrvl"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 415</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -543,9 +595,10 @@ public class Bid1 {
 	 */
 	public static final MMMessageAttribute mmProgressPeriodInterval = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Bid1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "PrgrsPrdIntrvl";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "415"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProgressPeriodInterval";
 			definition = "Identifies the interval period in minutes between each ListStatus you wish to receive.";
@@ -554,10 +607,11 @@ public class Bid1 {
 			simpleType_lazy = () -> ISOTime.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNbOfBddrs")
 	protected Number totalNumberOfBidders;
 	/**
-	 * Indicates the total number of bidders participating to a list trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -589,7 +643,7 @@ public class Bid1 {
 	public static final MMMessageAttribute mmTotalNumberOfBidders = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NonDisclosedListTrading.mmNumberOfBidders;
-			componentContext_lazy = () -> Bid1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfBddrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -600,10 +654,11 @@ public class Bid1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDt")
 	protected ISODateTime tradeDate;
 	/**
-	 * Specifies the date/time on which the trade was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -621,6 +676,9 @@ public class Bid1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TradDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 75</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -634,9 +692,10 @@ public class Bid1 {
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> Bid1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "75"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
@@ -645,11 +704,11 @@ public class Bid1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "StrkTm")
 	protected ISODateTime strikeTime;
 	/**
-	 * Time at which current market prices are used to determine the value of a
-	 * basket.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -667,6 +726,9 @@ public class Bid1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StrkTm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 443</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -682,9 +744,10 @@ public class Bid1 {
 	public static final MMMessageAttribute mmStrikeTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmStrikeTime;
-			componentContext_lazy = () -> Bid1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "StrkTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "443"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikeTime";
 			definition = "Time at which current market prices are used to determine the value of a basket.";
@@ -693,10 +756,11 @@ public class Bid1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "BsisPricTp", required = true)
 	protected BasisPriceType1Choice basisPriceType;
 	/**
-	 * Represents the basis price type in a bid order (list trading).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -728,7 +792,7 @@ public class Bid1 {
 	public static final MMMessageAssociationEnd mmBasisPriceType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmBasisPriceType;
-			componentContext_lazy = () -> Bid1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "BsisPricTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -740,10 +804,11 @@ public class Bid1 {
 			type_lazy = () -> BasisPriceType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LqdtyAndSttstcs", required = true)
 	protected LiquidityAndStatistics1 liquidityAndStatistics;
 	/**
-	 * General details about the liquidity of the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -775,7 +840,7 @@ public class Bid1 {
 	public static final MMMessageAssociationEnd mmLiquidityAndStatistics = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmLiquidity;
-			componentContext_lazy = () -> Bid1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Bid1.mmObject();
 			isDerived = false;
 			xmlTag = "LqdtyAndSttstcs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -791,11 +856,14 @@ public class Bid1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Bid1.mmClientBidIdentification, Bid1.mmListName, Bid1.mmBidIdentification, Bid1.mmTotalNumberSecurities, Bid1.mmExchangeForPhysicalIndicator,
-						Bid1.mmForeignExchangeExecutionRequestedIndicator, Bid1.mmTradeType, Bid1.mmTotalNumberTickets, Bid1.mmProgressReportIndicator, Bid1.mmProgressPeriodInterval, Bid1.mmTotalNumberOfBidders, Bid1.mmTradeDate,
-						Bid1.mmStrikeTime, Bid1.mmBasisPriceType, Bid1.mmLiquidityAndStatistics);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Bid1.mmClientBidIdentification, com.tools20022.repository.msg.Bid1.mmListName, com.tools20022.repository.msg.Bid1.mmBidIdentification,
+						com.tools20022.repository.msg.Bid1.mmTotalNumberSecurities, com.tools20022.repository.msg.Bid1.mmExchangeForPhysicalIndicator, com.tools20022.repository.msg.Bid1.mmForeignExchangeExecutionRequestedIndicator,
+						com.tools20022.repository.msg.Bid1.mmTradeType, com.tools20022.repository.msg.Bid1.mmTotalNumberTickets, com.tools20022.repository.msg.Bid1.mmProgressReportIndicator,
+						com.tools20022.repository.msg.Bid1.mmProgressPeriodInterval, com.tools20022.repository.msg.Bid1.mmTotalNumberOfBidders, com.tools20022.repository.msg.Bid1.mmTradeDate,
+						com.tools20022.repository.msg.Bid1.mmStrikeTime, com.tools20022.repository.msg.Bid1.mmBasisPriceType, com.tools20022.repository.msg.Bid1.mmLiquidityAndStatistics);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStrikeTime.forBid1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Bid1";
 				definition = "Attempt to buy or sell a large number of financial instruments contained in or comprising a portfolio.";
@@ -804,138 +872,138 @@ public class Bid1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ClntBidId", required = true)
 	public Max35Text getClientBidIdentification() {
 		return clientBidIdentification;
 	}
 
-	public void setClientBidIdentification(Max35Text clientBidIdentification) {
-		this.clientBidIdentification = clientBidIdentification;
+	public Bid1 setClientBidIdentification(Max35Text clientBidIdentification) {
+		this.clientBidIdentification = Objects.requireNonNull(clientBidIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ListNm")
-	public Max128Text getListName() {
-		return listName;
+	public Optional<Max128Text> getListName() {
+		return listName == null ? Optional.empty() : Optional.of(listName);
 	}
 
-	public void setListName(Max128Text listName) {
+	public Bid1 setListName(Max128Text listName) {
 		this.listName = listName;
+		return this;
 	}
 
-	@XmlElement(name = "BidId")
-	public Max35Text getBidIdentification() {
-		return bidIdentification;
+	public Optional<Max35Text> getBidIdentification() {
+		return bidIdentification == null ? Optional.empty() : Optional.of(bidIdentification);
 	}
 
-	public void setBidIdentification(Max35Text bidIdentification) {
+	public Bid1 setBidIdentification(Max35Text bidIdentification) {
 		this.bidIdentification = bidIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TtlNbScties", required = true)
 	public Number getTotalNumberSecurities() {
 		return totalNumberSecurities;
 	}
 
-	public void setTotalNumberSecurities(Number totalNumberSecurities) {
-		this.totalNumberSecurities = totalNumberSecurities;
+	public Bid1 setTotalNumberSecurities(Number totalNumberSecurities) {
+		this.totalNumberSecurities = Objects.requireNonNull(totalNumberSecurities);
+		return this;
 	}
 
-	@XmlElement(name = "XchgForPhysInd", required = true)
 	public YesNoIndicator getExchangeForPhysicalIndicator() {
 		return exchangeForPhysicalIndicator;
 	}
 
-	public void setExchangeForPhysicalIndicator(YesNoIndicator exchangeForPhysicalIndicator) {
-		this.exchangeForPhysicalIndicator = exchangeForPhysicalIndicator;
+	public Bid1 setExchangeForPhysicalIndicator(YesNoIndicator exchangeForPhysicalIndicator) {
+		this.exchangeForPhysicalIndicator = Objects.requireNonNull(exchangeForPhysicalIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "FrgnXchgExctnReqdInd", required = true)
 	public YesNoIndicator getForeignExchangeExecutionRequestedIndicator() {
 		return foreignExchangeExecutionRequestedIndicator;
 	}
 
-	public void setForeignExchangeExecutionRequestedIndicator(YesNoIndicator foreignExchangeExecutionRequestedIndicator) {
-		this.foreignExchangeExecutionRequestedIndicator = foreignExchangeExecutionRequestedIndicator;
+	public Bid1 setForeignExchangeExecutionRequestedIndicator(YesNoIndicator foreignExchangeExecutionRequestedIndicator) {
+		this.foreignExchangeExecutionRequestedIndicator = Objects.requireNonNull(foreignExchangeExecutionRequestedIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "TradTp", required = true)
 	public TradeType2Code getTradeType() {
 		return tradeType;
 	}
 
-	public void setTradeType(TradeType2Code tradeType) {
-		this.tradeType = tradeType;
+	public Bid1 setTradeType(TradeType2Code tradeType) {
+		this.tradeType = Objects.requireNonNull(tradeType);
+		return this;
 	}
 
-	@XmlElement(name = "TtlNbTckts")
-	public Number getTotalNumberTickets() {
-		return totalNumberTickets;
+	public Optional<Number> getTotalNumberTickets() {
+		return totalNumberTickets == null ? Optional.empty() : Optional.of(totalNumberTickets);
 	}
 
-	public void setTotalNumberTickets(Number totalNumberTickets) {
+	public Bid1 setTotalNumberTickets(Number totalNumberTickets) {
 		this.totalNumberTickets = totalNumberTickets;
+		return this;
 	}
 
-	@XmlElement(name = "PrgrsRptInd")
-	public YesNoIndicator getProgressReportIndicator() {
-		return progressReportIndicator;
+	public Optional<YesNoIndicator> getProgressReportIndicator() {
+		return progressReportIndicator == null ? Optional.empty() : Optional.of(progressReportIndicator);
 	}
 
-	public void setProgressReportIndicator(YesNoIndicator progressReportIndicator) {
+	public Bid1 setProgressReportIndicator(YesNoIndicator progressReportIndicator) {
 		this.progressReportIndicator = progressReportIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PrgrsPrdIntrvl")
-	public ISOTime getProgressPeriodInterval() {
-		return progressPeriodInterval;
+	public Optional<ISOTime> getProgressPeriodInterval() {
+		return progressPeriodInterval == null ? Optional.empty() : Optional.of(progressPeriodInterval);
 	}
 
-	public void setProgressPeriodInterval(ISOTime progressPeriodInterval) {
+	public Bid1 setProgressPeriodInterval(ISOTime progressPeriodInterval) {
 		this.progressPeriodInterval = progressPeriodInterval;
+		return this;
 	}
 
-	@XmlElement(name = "TtlNbOfBddrs")
-	public Number getTotalNumberOfBidders() {
-		return totalNumberOfBidders;
+	public Optional<Number> getTotalNumberOfBidders() {
+		return totalNumberOfBidders == null ? Optional.empty() : Optional.of(totalNumberOfBidders);
 	}
 
-	public void setTotalNumberOfBidders(Number totalNumberOfBidders) {
+	public Bid1 setTotalNumberOfBidders(Number totalNumberOfBidders) {
 		this.totalNumberOfBidders = totalNumberOfBidders;
+		return this;
 	}
 
-	@XmlElement(name = "TradDt")
-	public ISODateTime getTradeDate() {
-		return tradeDate;
+	public Optional<ISODateTime> getTradeDate() {
+		return tradeDate == null ? Optional.empty() : Optional.of(tradeDate);
 	}
 
-	public void setTradeDate(ISODateTime tradeDate) {
+	public Bid1 setTradeDate(ISODateTime tradeDate) {
 		this.tradeDate = tradeDate;
+		return this;
 	}
 
-	@XmlElement(name = "StrkTm")
-	public ISODateTime getStrikeTime() {
-		return strikeTime;
+	public Optional<ISODateTime> getStrikeTime() {
+		return strikeTime == null ? Optional.empty() : Optional.of(strikeTime);
 	}
 
-	public void setStrikeTime(ISODateTime strikeTime) {
+	public Bid1 setStrikeTime(ISODateTime strikeTime) {
 		this.strikeTime = strikeTime;
+		return this;
 	}
 
-	@XmlElement(name = "BsisPricTp", required = true)
 	public BasisPriceType1Choice getBasisPriceType() {
 		return basisPriceType;
 	}
 
-	public void setBasisPriceType(BasisPriceType1Choice basisPriceType) {
-		this.basisPriceType = basisPriceType;
+	public Bid1 setBasisPriceType(BasisPriceType1Choice basisPriceType) {
+		this.basisPriceType = Objects.requireNonNull(basisPriceType);
+		return this;
 	}
 
-	@XmlElement(name = "LqdtyAndSttstcs", required = true)
 	public LiquidityAndStatistics1 getLiquidityAndStatistics() {
 		return liquidityAndStatistics;
 	}
 
-	public void setLiquidityAndStatistics(com.tools20022.repository.msg.LiquidityAndStatistics1 liquidityAndStatistics) {
-		this.liquidityAndStatistics = liquidityAndStatistics;
+	public Bid1 setLiquidityAndStatistics(com.tools20022.repository.msg.LiquidityAndStatistics1 liquidityAndStatistics) {
+		this.liquidityAndStatistics = Objects.requireNonNull(liquidityAndStatistics);
+		return this;
 	}
 }

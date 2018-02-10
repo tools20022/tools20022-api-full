@@ -29,9 +29,8 @@ import com.tools20022.repository.msg.TransactionDetails30;
 import com.tools20022.repository.msg.TransactionIdentifications11;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -63,20 +62,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
- * SecuritiesSettlementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesTxCxlReqStsAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -101,9 +86,40 @@ import javax.xml.bind.annotation.*;
  * SecuritiesTransactionCancellationRequestStatusAdviceV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesTxCxlReqStsAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
+ * SecuritiesSettlementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.027.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule#forSecuritiesTransactionCancellationRequestStatusAdviceV02
+ * ConstraintCoexistenceCharacterSetXRule.
+ * forSecuritiesTransactionCancellationRequestStatusAdviceV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forSecuritiesTransactionCancellationRequestStatusAdviceV02
+ * ConstraintCoexistenceIdentificationRule.
+ * forSecuritiesTransactionCancellationRequestStatusAdviceV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionCancellationRequestStatusAdviceV02
+ * ConstraintSecuritiesMarketPracticeGroupGuideline.
+ * forSecuritiesTransactionCancellationRequestStatusAdviceV02}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -128,16 +144,16 @@ import javax.xml.bind.annotation.*;
  * SecuritiesTransactionCancellationRequestStatusAdviceV01}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesTransactionCancellationRequestStatusAdviceV02", propOrder = {"cancellationRequestReference", "transactionIdentification", "processingStatus", "transactionDetails", "supplementaryData"})
 public class SecuritiesTransactionCancellationRequestStatusAdviceV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CxlReqRef", required = true)
 	protected Identification1 cancellationRequestReference;
 	/**
-	 * Reference to the unambiguous identification of the cancellation request
-	 * as per the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,11 +194,11 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "TxId")
 	protected TransactionIdentifications11 transactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as known by the account
-	 * servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,10 +240,11 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PrcgSts", required = true)
 	protected ProcessingStatus13Choice processingStatus;
 	/**
-	 * Provides details on the processing status of the request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -268,10 +285,11 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "TxDtls")
 	protected TransactionDetails30 transactionDetails;
 	/**
-	 * Identifies the details of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -311,11 +329,11 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -360,6 +378,9 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceCharacterSetXRule.forSecuritiesTransactionCancellationRequestStatusAdviceV02,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTransactionCancellationRequestStatusAdviceV02,
+						com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionCancellationRequestStatusAdviceV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionCancellationRequestStatusAdviceV02";
 				definition = "Scope\r\nAn account servicer sends an SecuritiesTransactionCancellationRequestStatusAdvice to an account owner to advise the status of a securities transaction cancellation request previously sent by the account owner.\r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\r\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\r\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\r\nusing the relevant elements in the Business Application Header.\r\nUsage\nThe message may also be used to:\n- re-send a message previously sent,\n- provide a third party with a copy of a message for information,\n- re-send to a third party a copy of a message for information.\nusing the relevant elements in the Business Application Header.\nISO 15022 - 20022 Coexistence\nThis ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment.  The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows:  “CoexistenceXxxxRule”.";
@@ -392,52 +413,52 @@ public class SecuritiesTransactionCancellationRequestStatusAdviceV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CxlReqRef", required = true)
 	public Identification1 getCancellationRequestReference() {
 		return cancellationRequestReference;
 	}
 
-	public void setCancellationRequestReference(Identification1 cancellationRequestReference) {
-		this.cancellationRequestReference = cancellationRequestReference;
+	public SecuritiesTransactionCancellationRequestStatusAdviceV02 setCancellationRequestReference(Identification1 cancellationRequestReference) {
+		this.cancellationRequestReference = Objects.requireNonNull(cancellationRequestReference);
+		return this;
 	}
 
-	@XmlElement(name = "TxId")
-	public TransactionIdentifications11 getTransactionIdentification() {
-		return transactionIdentification;
+	public Optional<TransactionIdentifications11> getTransactionIdentification() {
+		return transactionIdentification == null ? Optional.empty() : Optional.of(transactionIdentification);
 	}
 
-	public void setTransactionIdentification(TransactionIdentifications11 transactionIdentification) {
+	public SecuritiesTransactionCancellationRequestStatusAdviceV02 setTransactionIdentification(TransactionIdentifications11 transactionIdentification) {
 		this.transactionIdentification = transactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PrcgSts", required = true)
 	public ProcessingStatus13Choice getProcessingStatus() {
 		return processingStatus;
 	}
 
-	public void setProcessingStatus(ProcessingStatus13Choice processingStatus) {
-		this.processingStatus = processingStatus;
+	public SecuritiesTransactionCancellationRequestStatusAdviceV02 setProcessingStatus(ProcessingStatus13Choice processingStatus) {
+		this.processingStatus = Objects.requireNonNull(processingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "TxDtls")
-	public TransactionDetails30 getTransactionDetails() {
-		return transactionDetails;
+	public Optional<TransactionDetails30> getTransactionDetails() {
+		return transactionDetails == null ? Optional.empty() : Optional.of(transactionDetails);
 	}
 
-	public void setTransactionDetails(TransactionDetails30 transactionDetails) {
+	public SecuritiesTransactionCancellationRequestStatusAdviceV02 setTransactionDetails(TransactionDetails30 transactionDetails) {
 		this.transactionDetails = transactionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuritiesTransactionCancellationRequestStatusAdviceV02 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.027.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.027.001.02")
 	static public class Document {
 		@XmlElement(name = "SctiesTxCxlReqStsAdvc", required = true)
 		public SecuritiesTransactionCancellationRequestStatusAdviceV02 messageBody;

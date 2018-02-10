@@ -29,6 +29,8 @@ import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversi
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -43,22 +45,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
- * IssuersAgentsCommunicationISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AgtCAStgInstrCxlReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -80,6 +66,22 @@ import javax.xml.bind.annotation.*;
  * }</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
+ * IssuersAgentsCommunicationISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AgtCAStgInstrCxlReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
+ * SecuritiesEventsLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.026.001.01}</li>
@@ -95,16 +97,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AgentCAStandingInstructionCancellationRequestV01", propOrder = {"identification", "agentCAStandingInstructionRequestIdentification", "standingInstructionGeneralInformation", "standingInstructionDetails"})
 public class AgentCAStandingInstructionCancellationRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected DocumentIdentification8 identification;
 	/**
-	 * Identification assigned by the Sender to unambiguously identify the
-	 * cancellation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,11 +148,11 @@ public class AgentCAStandingInstructionCancellationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AgtCAStgInstrReqId", required = true)
 	protected DocumentIdentification8 agentCAStandingInstructionRequestIdentification;
 	/**
-	 * Identification of the Agent CA Standing Instruction Request to be
-	 * cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,10 +194,11 @@ public class AgentCAStandingInstructionCancellationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "StgInstrGnlInf", required = true)
 	protected CorporateActionStandingInstructionGeneralInformation1 standingInstructionGeneralInformation;
 	/**
-	 * General information about the standing instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -235,10 +238,11 @@ public class AgentCAStandingInstructionCancellationRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "StgInstrDtls")
 	protected CorporateActionStandingInstruction1 standingInstructionDetails;
 	/**
-	 * Information related to the standing instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -311,43 +315,43 @@ public class AgentCAStandingInstructionCancellationRequestV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(DocumentIdentification8 identification) {
-		this.identification = identification;
+	public AgentCAStandingInstructionCancellationRequestV01 setIdentification(DocumentIdentification8 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "AgtCAStgInstrReqId", required = true)
 	public DocumentIdentification8 getAgentCAStandingInstructionRequestIdentification() {
 		return agentCAStandingInstructionRequestIdentification;
 	}
 
-	public void setAgentCAStandingInstructionRequestIdentification(DocumentIdentification8 agentCAStandingInstructionRequestIdentification) {
-		this.agentCAStandingInstructionRequestIdentification = agentCAStandingInstructionRequestIdentification;
+	public AgentCAStandingInstructionCancellationRequestV01 setAgentCAStandingInstructionRequestIdentification(DocumentIdentification8 agentCAStandingInstructionRequestIdentification) {
+		this.agentCAStandingInstructionRequestIdentification = Objects.requireNonNull(agentCAStandingInstructionRequestIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "StgInstrGnlInf", required = true)
 	public CorporateActionStandingInstructionGeneralInformation1 getStandingInstructionGeneralInformation() {
 		return standingInstructionGeneralInformation;
 	}
 
-	public void setStandingInstructionGeneralInformation(CorporateActionStandingInstructionGeneralInformation1 standingInstructionGeneralInformation) {
-		this.standingInstructionGeneralInformation = standingInstructionGeneralInformation;
+	public AgentCAStandingInstructionCancellationRequestV01 setStandingInstructionGeneralInformation(CorporateActionStandingInstructionGeneralInformation1 standingInstructionGeneralInformation) {
+		this.standingInstructionGeneralInformation = Objects.requireNonNull(standingInstructionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "StgInstrDtls")
-	public CorporateActionStandingInstruction1 getStandingInstructionDetails() {
-		return standingInstructionDetails;
+	public Optional<CorporateActionStandingInstruction1> getStandingInstructionDetails() {
+		return standingInstructionDetails == null ? Optional.empty() : Optional.of(standingInstructionDetails);
 	}
 
-	public void setStandingInstructionDetails(CorporateActionStandingInstruction1 standingInstructionDetails) {
+	public AgentCAStandingInstructionCancellationRequestV01 setStandingInstructionDetails(CorporateActionStandingInstruction1 standingInstructionDetails) {
 		this.standingInstructionDetails = standingInstructionDetails;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.026.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.026.001.01")
 	static public class Document {
 		@XmlElement(name = "AgtCAStgInstrCxlReq", required = true)
 		public AgentCAStandingInstructionCancellationRequestV01 messageBody;

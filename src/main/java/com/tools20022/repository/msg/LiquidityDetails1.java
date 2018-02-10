@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information regarding liquidity valuation."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LiquidityDetails1", propOrder = {"balance", "netAvailableLiquidity", "nonCashReservedAmount", "cashReservedAmount"})
 public class LiquidityDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Bal", required = true)
 	protected CashBalance6 balance;
 	/**
-	 * Current balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -101,7 +103,7 @@ public class LiquidityDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LiquidityDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +115,11 @@ public class LiquidityDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmObject();
 		}
 	};
+	@XmlElement(name = "NetAvlblLqdty", required = true)
 	protected ActiveCurrencyAndAmount netAvailableLiquidity;
 	/**
-	 * Net available liquidity on the account(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +147,7 @@ public class LiquidityDetails1 {
 	 */
 	public static final MMMessageAttribute mmNetAvailableLiquidity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LiquidityDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "NetAvlblLqdty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,11 +158,11 @@ public class LiquidityDetails1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "NonCshRsvdAmt", required = true)
 	protected ActiveCurrencyAndAmount nonCashReservedAmount;
 	/**
-	 * Total amount of liquidity reserved for operations other than cash
-	 * withdrawal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,7 +192,7 @@ public class LiquidityDetails1 {
 	 */
 	public static final MMMessageAttribute mmNonCashReservedAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LiquidityDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "NonCshRsvdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,10 +203,11 @@ public class LiquidityDetails1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CshRsvdAmt", required = true)
 	protected ActiveCurrencyAndAmount cashReservedAmount;
 	/**
-	 * Total amount of liquidity reserved for cash withdrawal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -231,7 +235,7 @@ public class LiquidityDetails1 {
 	 */
 	public static final MMMessageAttribute mmCashReservedAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LiquidityDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "CshRsvdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -246,8 +250,9 @@ public class LiquidityDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LiquidityDetails1.mmBalance, LiquidityDetails1.mmNetAvailableLiquidity, LiquidityDetails1.mmNonCashReservedAmount, LiquidityDetails1.mmCashReservedAmount);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityDetails1.mmBalance, com.tools20022.repository.msg.LiquidityDetails1.mmNetAvailableLiquidity,
+						com.tools20022.repository.msg.LiquidityDetails1.mmNonCashReservedAmount, com.tools20022.repository.msg.LiquidityDetails1.mmCashReservedAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LiquidityDetails1";
 				definition = "Information regarding liquidity valuation.";
@@ -256,39 +261,39 @@ public class LiquidityDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Bal", required = true)
 	public CashBalance6 getBalance() {
 		return balance;
 	}
 
-	public void setBalance(com.tools20022.repository.msg.CashBalance6 balance) {
-		this.balance = balance;
+	public LiquidityDetails1 setBalance(com.tools20022.repository.msg.CashBalance6 balance) {
+		this.balance = Objects.requireNonNull(balance);
+		return this;
 	}
 
-	@XmlElement(name = "NetAvlblLqdty", required = true)
 	public ActiveCurrencyAndAmount getNetAvailableLiquidity() {
 		return netAvailableLiquidity;
 	}
 
-	public void setNetAvailableLiquidity(ActiveCurrencyAndAmount netAvailableLiquidity) {
-		this.netAvailableLiquidity = netAvailableLiquidity;
+	public LiquidityDetails1 setNetAvailableLiquidity(ActiveCurrencyAndAmount netAvailableLiquidity) {
+		this.netAvailableLiquidity = Objects.requireNonNull(netAvailableLiquidity);
+		return this;
 	}
 
-	@XmlElement(name = "NonCshRsvdAmt", required = true)
 	public ActiveCurrencyAndAmount getNonCashReservedAmount() {
 		return nonCashReservedAmount;
 	}
 
-	public void setNonCashReservedAmount(ActiveCurrencyAndAmount nonCashReservedAmount) {
-		this.nonCashReservedAmount = nonCashReservedAmount;
+	public LiquidityDetails1 setNonCashReservedAmount(ActiveCurrencyAndAmount nonCashReservedAmount) {
+		this.nonCashReservedAmount = Objects.requireNonNull(nonCashReservedAmount);
+		return this;
 	}
 
-	@XmlElement(name = "CshRsvdAmt", required = true)
 	public ActiveCurrencyAndAmount getCashReservedAmount() {
 		return cashReservedAmount;
 	}
 
-	public void setCashReservedAmount(ActiveCurrencyAndAmount cashReservedAmount) {
-		this.cashReservedAmount = cashReservedAmount;
+	public LiquidityDetails1 setCashReservedAmount(ActiveCurrencyAndAmount cashReservedAmount) {
+		this.cashReservedAmount = Objects.requireNonNull(cashReservedAmount);
+		return this;
 	}
 }

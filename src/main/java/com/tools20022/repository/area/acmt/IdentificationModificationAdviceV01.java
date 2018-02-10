@@ -28,9 +28,8 @@ import com.tools20022.repository.msg.OriginalTransactionReference14;
 import com.tools20022.repository.msgset.ChangeorVerifyAccountIdentificationISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -55,23 +54,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AccountManagementPreviousVersion
- * AccountManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ChangeorVerifyAccountIdentificationISOPreviousversion
- * ChangeorVerifyAccountIdentificationISOPreviousversion}</li>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "IdModAdvc"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -87,6 +69,23 @@ import javax.xml.bind.annotation.*;
  * IdentificationModificationAdviceV01.mmModification}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ChangeorVerifyAccountIdentificationISOPreviousversion
+ * ChangeorVerifyAccountIdentificationISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "IdModAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AccountManagementPreviousVersion
+ * AccountManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code acmt.022.001.01}</li>
@@ -110,15 +109,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IdentificationModificationAdviceV01", propOrder = {"assignment", "originalTransactionReference", "modification"})
 public class IdentificationModificationAdviceV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Assgnmt", required = true)
 	protected IdentificationAssignment1 assignment;
 	/**
-	 * Identifies the identification assignment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,10 +158,11 @@ public class IdentificationModificationAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgnlTxRef")
 	protected OriginalTransactionReference14 originalTransactionReference;
 	/**
-	 * Provides reference information on the original message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,11 +202,11 @@ public class IdentificationModificationAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "Mod", required = true)
 	protected List<IdentificationModification1> modification;
 	/**
-	 * Information concerning the identification data that is advised to be
-	 * modified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -278,34 +279,34 @@ public class IdentificationModificationAdviceV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Assgnmt", required = true)
 	public IdentificationAssignment1 getAssignment() {
 		return assignment;
 	}
 
-	public void setAssignment(IdentificationAssignment1 assignment) {
-		this.assignment = assignment;
+	public IdentificationModificationAdviceV01 setAssignment(IdentificationAssignment1 assignment) {
+		this.assignment = Objects.requireNonNull(assignment);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlTxRef")
-	public OriginalTransactionReference14 getOriginalTransactionReference() {
-		return originalTransactionReference;
+	public Optional<OriginalTransactionReference14> getOriginalTransactionReference() {
+		return originalTransactionReference == null ? Optional.empty() : Optional.of(originalTransactionReference);
 	}
 
-	public void setOriginalTransactionReference(OriginalTransactionReference14 originalTransactionReference) {
+	public IdentificationModificationAdviceV01 setOriginalTransactionReference(OriginalTransactionReference14 originalTransactionReference) {
 		this.originalTransactionReference = originalTransactionReference;
+		return this;
 	}
 
-	@XmlElement(name = "Mod", required = true)
 	public List<IdentificationModification1> getModification() {
-		return modification;
+		return modification == null ? modification = new ArrayList<>() : modification;
 	}
 
-	public void setModification(List<IdentificationModification1> modification) {
-		this.modification = modification;
+	public IdentificationModificationAdviceV01 setModification(List<IdentificationModification1> modification) {
+		this.modification = Objects.requireNonNull(modification);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.022.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:acmt.022.001.01")
 	static public class Document {
 		@XmlElement(name = "IdModAdvc", required = true)
 		public IdentificationModificationAdviceV01 messageBody;

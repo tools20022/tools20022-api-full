@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ATMServiceType8Code;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMService17", propOrder = {"serviceType", "serviceVariant", "limits", "preferredWithdrawal"})
 public class ATMService17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SvcTp", required = true)
 	protected ATMServiceType8Code serviceType;
 	/**
-	 * Describes the type of inquiry selected by the customer or the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +115,7 @@ public class ATMService17 {
 	 */
 	public static final MMMessageAttribute mmServiceType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMService17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService17.mmObject();
 			isDerived = false;
 			xmlTag = "SvcTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +127,11 @@ public class ATMService17 {
 			simpleType_lazy = () -> ATMServiceType8Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SvcVarnt")
 	protected List<com.tools20022.repository.msg.ATMService18> serviceVariant;
 	/**
-	 * Variant of the service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -163,7 +164,7 @@ public class ATMService17 {
 	 */
 	public static final MMMessageAssociationEnd mmServiceVariant = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMService17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService17.mmObject();
 			isDerived = false;
 			xmlTag = "SvcVarnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,10 +176,11 @@ public class ATMService17 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMService18.mmObject();
 		}
 	};
+	@XmlElement(name = "Lmts")
 	protected List<com.tools20022.repository.msg.ATMTransactionAmounts6> limits;
 	/**
-	 * Limits of amounts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -210,7 +212,7 @@ public class ATMService17 {
 	 */
 	public static final MMMessageAssociationEnd mmLimits = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMService17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService17.mmObject();
 			isDerived = false;
 			xmlTag = "Lmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,10 +224,11 @@ public class ATMService17 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts6.mmObject();
 		}
 	};
+	@XmlElement(name = "PrefrdWdrwl")
 	protected ATMTransaction8 preferredWithdrawal;
 	/**
-	 * Preferred withdrawal transaction chosen by the customer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -250,7 +253,7 @@ public class ATMService17 {
 	 */
 	public static final MMMessageAssociationEnd mmPreferredWithdrawal = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMService17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMService17.mmObject();
 			isDerived = false;
 			xmlTag = "PrefrdWdrwl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,8 +269,9 @@ public class ATMService17 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMService17.mmServiceType, ATMService17.mmServiceVariant, ATMService17.mmLimits, ATMService17.mmPreferredWithdrawal);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMService17.mmServiceType, com.tools20022.repository.msg.ATMService17.mmServiceVariant, com.tools20022.repository.msg.ATMService17.mmLimits,
+						com.tools20022.repository.msg.ATMService17.mmPreferredWithdrawal);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMService17";
 				definition = "Services allowed for the customer's profile.";
@@ -277,39 +281,39 @@ public class ATMService17 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SvcTp", required = true)
 	public ATMServiceType8Code getServiceType() {
 		return serviceType;
 	}
 
-	public void setServiceType(ATMServiceType8Code serviceType) {
-		this.serviceType = serviceType;
+	public ATMService17 setServiceType(ATMServiceType8Code serviceType) {
+		this.serviceType = Objects.requireNonNull(serviceType);
+		return this;
 	}
 
-	@XmlElement(name = "SvcVarnt")
 	public List<ATMService18> getServiceVariant() {
-		return serviceVariant;
+		return serviceVariant == null ? serviceVariant = new ArrayList<>() : serviceVariant;
 	}
 
-	public void setServiceVariant(List<com.tools20022.repository.msg.ATMService18> serviceVariant) {
-		this.serviceVariant = serviceVariant;
+	public ATMService17 setServiceVariant(List<com.tools20022.repository.msg.ATMService18> serviceVariant) {
+		this.serviceVariant = Objects.requireNonNull(serviceVariant);
+		return this;
 	}
 
-	@XmlElement(name = "Lmts")
 	public List<ATMTransactionAmounts6> getLimits() {
-		return limits;
+		return limits == null ? limits = new ArrayList<>() : limits;
 	}
 
-	public void setLimits(List<com.tools20022.repository.msg.ATMTransactionAmounts6> limits) {
-		this.limits = limits;
+	public ATMService17 setLimits(List<com.tools20022.repository.msg.ATMTransactionAmounts6> limits) {
+		this.limits = Objects.requireNonNull(limits);
+		return this;
 	}
 
-	@XmlElement(name = "PrefrdWdrwl")
-	public ATMTransaction8 getPreferredWithdrawal() {
-		return preferredWithdrawal;
+	public Optional<ATMTransaction8> getPreferredWithdrawal() {
+		return preferredWithdrawal == null ? Optional.empty() : Optional.of(preferredWithdrawal);
 	}
 
-	public void setPreferredWithdrawal(com.tools20022.repository.msg.ATMTransaction8 preferredWithdrawal) {
+	public ATMService17 setPreferredWithdrawal(com.tools20022.repository.msg.ATMTransaction8 preferredWithdrawal) {
 		this.preferredWithdrawal = preferredWithdrawal;
+		return this;
 	}
 }

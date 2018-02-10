@@ -26,6 +26,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Document signed by the beneficiary demanding payment under a demand guarantee
@@ -57,18 +59,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Demand2 Demand2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Demand3 Demand3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UndertakingDemandWithdrawal1
- * UndertakingDemandWithdrawal1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Demand4 Demand4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Demand1 Demand1}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -92,10 +82,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand2 Demand2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand3 Demand3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UndertakingDemandWithdrawal1
+ * UndertakingDemandWithdrawal1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand4 Demand4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Demand1 Demand1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -113,9 +115,8 @@ public class Demand {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Undertaking undertaking;
 	/**
-	 * Undertaking for which a document signed by the beneficiary demanding
-	 * payment is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,8 +159,8 @@ public class Demand {
 	public static final MMBusinessAssociationEnd mmUndertaking = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(UndertakingDemandWithdrawal1.mmUndertakingIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Undertaking";
 			definition = "Undertaking for which a document signed by the beneficiary demanding payment is specified.";
@@ -172,8 +173,8 @@ public class Demand {
 	};
 	protected ISODateTime submissionDateTime;
 	/**
-	 * Date and time the demand is submitted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -209,8 +210,8 @@ public class Demand {
 	public static final MMBusinessAttribute mmSubmissionDateTime = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Demand2.mmSubmissionDateTime, Demand3.mmSubmissionDateTime);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubmissionDateTime";
 			definition = "Date and time the demand is submitted.";
@@ -229,8 +230,8 @@ public class Demand {
 	};
 	protected CurrencyAndAmount demandAmount;
 	/**
-	 * Amount to be paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -269,8 +270,8 @@ public class Demand {
 	public static final MMBusinessAttribute mmDemandAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Demand2.mmAmount, Demand3.mmAmount, Demand4.mmAmount, Demand1.mmDemandAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DemandAmount";
 			definition = "Amount to be paid.";
@@ -289,8 +290,8 @@ public class Demand {
 	};
 	protected DemandTypeCode type;
 	/**
-	 * Type of demand, for example, pay or extend.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -323,8 +324,8 @@ public class Demand {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Demand1.mmType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Type of demand, for example, pay or extend.";
@@ -343,9 +344,8 @@ public class Demand {
 	};
 	protected CurrencyAndAmount totalClaimAmount;
 	/**
-	 * Amount and currency of the total amount claimed (sum of the demand amount
-	 * plus counterparty commission and charges).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -372,8 +372,8 @@ public class Demand {
 	 */
 	public static final MMBusinessAttribute mmTotalClaimAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalClaimAmount";
 			definition = "Amount and currency of the total amount claimed (sum of the demand amount plus counterparty commission and charges).";
@@ -392,8 +392,8 @@ public class Demand {
 	};
 	protected PaymentObligation payment;
 	/**
-	 * Payment of the demand.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -425,8 +425,8 @@ public class Demand {
 	 */
 	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
 			definition = "Payment of the demand.";
@@ -439,8 +439,8 @@ public class Demand {
 	};
 	protected UndertakingDocument associatedDocument;
 	/**
-	 * Documents which are associated with a demand.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -472,8 +472,8 @@ public class Demand {
 	 */
 	public static final MMBusinessAssociationEnd mmAssociatedDocument = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Demand.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssociatedDocument";
 			definition = "Documents which are associated with a demand.";
@@ -488,7 +488,7 @@ public class Demand {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Demand";
 				definition = "Document signed by the beneficiary demanding payment under a demand guarantee or standby letter of credit.";
@@ -513,55 +513,62 @@ public class Demand {
 		return undertaking;
 	}
 
-	public void setUndertaking(com.tools20022.repository.entity.Undertaking undertaking) {
-		this.undertaking = undertaking;
+	public Demand setUndertaking(com.tools20022.repository.entity.Undertaking undertaking) {
+		this.undertaking = Objects.requireNonNull(undertaking);
+		return this;
 	}
 
 	public ISODateTime getSubmissionDateTime() {
 		return submissionDateTime;
 	}
 
-	public void setSubmissionDateTime(ISODateTime submissionDateTime) {
-		this.submissionDateTime = submissionDateTime;
+	public Demand setSubmissionDateTime(ISODateTime submissionDateTime) {
+		this.submissionDateTime = Objects.requireNonNull(submissionDateTime);
+		return this;
 	}
 
 	public CurrencyAndAmount getDemandAmount() {
 		return demandAmount;
 	}
 
-	public void setDemandAmount(CurrencyAndAmount demandAmount) {
-		this.demandAmount = demandAmount;
+	public Demand setDemandAmount(CurrencyAndAmount demandAmount) {
+		this.demandAmount = Objects.requireNonNull(demandAmount);
+		return this;
 	}
 
 	public DemandTypeCode getType() {
 		return type;
 	}
 
-	public void setType(DemandTypeCode type) {
-		this.type = type;
+	public Demand setType(DemandTypeCode type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
 	public CurrencyAndAmount getTotalClaimAmount() {
 		return totalClaimAmount;
 	}
 
-	public void setTotalClaimAmount(CurrencyAndAmount totalClaimAmount) {
-		this.totalClaimAmount = totalClaimAmount;
+	public Demand setTotalClaimAmount(CurrencyAndAmount totalClaimAmount) {
+		this.totalClaimAmount = Objects.requireNonNull(totalClaimAmount);
+		return this;
 	}
 
-	public PaymentObligation getPayment() {
-		return payment;
+	public Optional<PaymentObligation> getPayment() {
+		return payment == null ? Optional.empty() : Optional.of(payment);
 	}
 
-	public void setPayment(com.tools20022.repository.entity.PaymentObligation payment) {
+	public Demand setPayment(com.tools20022.repository.entity.PaymentObligation payment) {
 		this.payment = payment;
+		return this;
 	}
 
 	public UndertakingDocument getAssociatedDocument() {
 		return associatedDocument;
 	}
 
-	public void setAssociatedDocument(com.tools20022.repository.entity.UndertakingDocument associatedDocument) {
-		this.associatedDocument = associatedDocument;
+	public Demand setAssociatedDocument(com.tools20022.repository.entity.UndertakingDocument associatedDocument) {
+		this.associatedDocument = Objects.requireNonNull(associatedDocument);
+		return this;
 	}
 }

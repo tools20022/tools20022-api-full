@@ -30,9 +30,8 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -103,8 +102,31 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementAmountCurrencyRule#forPaymentSearch5
+ * ConstraintSettlementAmountCurrencyRule.forPaymentSearch5}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAmountCurrencyRule#forPaymentSearch5
+ * ConstraintInstructedAmountCurrencyRule.forPaymentSearch5}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAmountCreditDebitIndicator1Rule#forPaymentSearch5
+ * ConstraintInstructedAmountCreditDebitIndicator1Rule.forPaymentSearch5}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAmountCreditDebitIndicator2Rule#forPaymentSearch5
+ * ConstraintInstructedAmountCreditDebitIndicator2Rule.forPaymentSearch5}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementAmountCreditDebitIndicator1Rule#forPaymentSearch5
+ * ConstraintSettlementAmountCreditDebitIndicator1Rule.forPaymentSearch5}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementAmountCreditDebitIndicator2Rule#forPaymentSearch5
+ * ConstraintSettlementAmountCreditDebitIndicator2Rule.forPaymentSearch5}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -118,18 +140,17 @@ import javax.xml.bind.annotation.XmlType;
  * PaymentSearch4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentSearch5", propOrder = {"messageIdentification", "requestedExecutionDate", "paymentIdentification", "status", "instructedAmount", "instructedAmountCurrency", "creditDebitIndicator", "interbankSettlementAmount",
 		"interbankSettlementAmountCurrency", "paymentMethod", "paymentType", "priority", "processingValidityTime", "instruction", "transactionIdentification", "interbankSettlementDate", "endToEndIdentification", "parties"})
 public class PaymentSearch5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId")
 	protected List<Max35Text> messageIdentification;
 	/**
-	 * Point to point reference, as assigned by the original initiating party,
-	 * to unambiguously identify the original payment transaction message.
-	 * Usage: this is the former transaction reference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,7 +189,7 @@ public class PaymentSearch5 {
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,11 +200,11 @@ public class PaymentSearch5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdExctnDt")
 	protected List<DateAndDateTimeSearchChoice> requestedExecutionDate;
 	/**
-	 * Date and time at which the cash is at the disposal of the credit account
-	 * owner, or ceases to be at the disposal of the debit account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -223,7 +244,7 @@ public class PaymentSearch5 {
 	public static final MMMessageAttribute mmRequestedExecutionDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,11 +255,11 @@ public class PaymentSearch5 {
 			complexType_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtId")
 	protected List<PaymentIdentification4Choice> paymentIdentification;
 	/**
-	 * Unique and unambiguous identifier for a payment instruction, as assigned
-	 * by the clearing agent or the initiating party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -277,7 +298,7 @@ public class PaymentSearch5 {
 	public static final MMMessageAssociationEnd mmPaymentIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "PmtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -289,10 +310,11 @@ public class PaymentSearch5 {
 			type_lazy = () -> PaymentIdentification4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts")
 	protected List<com.tools20022.repository.msg.InstructionStatusSearch3> status;
 	/**
-	 * Detailed information about the status of a transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -329,7 +351,7 @@ public class PaymentSearch5 {
 	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentStatus.mmObject();
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -341,10 +363,11 @@ public class PaymentSearch5 {
 			type_lazy = () -> com.tools20022.repository.msg.InstructionStatusSearch3.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdAmt")
 	protected List<AmountRange2Choice> instructedAmount;
 	/**
-	 * Specifies the instructed amount(s) on which the query is performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -383,7 +406,7 @@ public class PaymentSearch5 {
 	public static final MMMessageAttribute mmInstructedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -394,10 +417,11 @@ public class PaymentSearch5 {
 			complexType_lazy = () -> AmountRange2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdAmtCcy")
 	protected List<ActiveOrHistoricCurrencyCode> instructedAmountCurrency;
 	/**
-	 * Currency in which the instructed amount is expressed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -429,7 +453,7 @@ public class PaymentSearch5 {
 	 */
 	public static final MMMessageAttribute mmInstructedAmountCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAmtCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -440,10 +464,11 @@ public class PaymentSearch5 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd")
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates whether the payment instruction is a debit or a credit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -482,7 +507,7 @@ public class PaymentSearch5 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreditDebitIndicator;
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -494,11 +519,11 @@ public class PaymentSearch5 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmAmt")
 	protected List<ActiveAmountRange1Choice> interbankSettlementAmount;
 	/**
-	 * Specifies the interbank settlement amount(s) on which the query is
-	 * performed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -538,7 +563,7 @@ public class PaymentSearch5 {
 	public static final MMMessageAttribute mmInterbankSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -549,10 +574,11 @@ public class PaymentSearch5 {
 			complexType_lazy = () -> ActiveAmountRange1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmAmtCcy")
 	protected List<ActiveCurrencyCode> interbankSettlementAmountCurrency;
 	/**
-	 * Currency in which the interbank settlement amount is expressed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -585,7 +611,7 @@ public class PaymentSearch5 {
 	 */
 	public static final MMMessageAttribute mmInterbankSettlementAmountCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmAmtCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -596,11 +622,11 @@ public class PaymentSearch5 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtMtd")
 	protected List<PaymentOrigin1Choice> paymentMethod;
 	/**
-	 * Indicates the message or event from which an instruction has been
-	 * initiated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -633,7 +659,7 @@ public class PaymentSearch5 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentMethod = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "PmtMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -645,12 +671,11 @@ public class PaymentSearch5 {
 			type_lazy = () -> PaymentOrigin1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtTp")
 	protected List<PaymentType4Choice> paymentType;
 	/**
-	 * Instruction to pay an amount of money to an ultimate beneficiary, on
-	 * behalf of an originator. This instruction may have to be forwarded
-	 * several times to complete the settlement chain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -690,7 +715,7 @@ public class PaymentSearch5 {
 	public static final MMMessageAttribute mmPaymentType = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -701,12 +726,11 @@ public class PaymentSearch5 {
 			complexType_lazy = () -> PaymentType4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Prty")
 	protected List<PriorityCode3Choice> priority;
 	/**
-	 * Urgency or order of importance that the originator would like the
-	 * recipient of the payment instruction to apply to the processing of the
-	 * payment instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -746,7 +770,7 @@ public class PaymentSearch5 {
 	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPriority;
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "Prty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -757,11 +781,11 @@ public class PaymentSearch5 {
 			complexType_lazy = () -> PriorityCode3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcgVldtyTm")
 	protected List<DateTimePeriodChoice> processingValidityTime;
 	/**
-	 * Date and time range within which the payment instruction must be
-	 * processed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -801,7 +825,7 @@ public class PaymentSearch5 {
 	public static final MMMessageAttribute mmProcessingValidityTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmProcessingValidityTime;
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgVldtyTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -812,13 +836,11 @@ public class PaymentSearch5 {
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Instr")
 	protected List<Instruction1Code> instruction;
 	/**
-	 * Further information related to the processing of the payment instruction.
-	 * The instruction can relate to a level of service between the bank and the
-	 * customer, or give instructions to and for specific parties in the payment
-	 * chain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -858,7 +880,7 @@ public class PaymentSearch5 {
 	public static final MMMessageAttribute mmInstruction = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmInstructionForNextAgent;
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "Instr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -869,16 +891,11 @@ public class PaymentSearch5 {
 			simpleType_lazy = () -> Instruction1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TxId")
 	protected List<Max35Text> transactionIdentification;
 	/**
-	 * Unique identification, as assigned by the first instructing agent, to
-	 * unambiguously identify the transaction that is passed on, unchanged,
-	 * throughout the entire interbank chain. Usage: The transaction
-	 * identification can be used for reconciliation, tracking or to link tasks
-	 * relating to the transaction on the interbank level. The instructing agent
-	 * has to make sure that the transaction identification is unique for a
-	 * pre-agreed period. Usage: this is the former PaymentInstructionReference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -917,7 +934,7 @@ public class PaymentSearch5 {
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -928,12 +945,11 @@ public class PaymentSearch5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmDt")
 	protected List<ISODate> interbankSettlementDate;
 	/**
-	 * Date on which the amount of money ceases to be available to the agent
-	 * that owes it and when the amount of money becomes available to the agent
-	 * to which it is due. Usage: this is the former InterbankValueDate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -972,7 +988,7 @@ public class PaymentSearch5 {
 	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -983,15 +999,11 @@ public class PaymentSearch5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "EndToEndId")
 	protected List<Max35Text> endToEndIdentification;
 	/**
-	 * Unique identification, as assigned by the initiating party, to
-	 * unambiguously identify the transaction. This identification is passed on,
-	 * unchanged, throughout the entire end-to-end chain. Usage: The end-to-end
-	 * identification can be used for reconciliation or to link tasks relating
-	 * to the transaction. It can be included in several messages related to the
-	 * transaction. Usage: this is the former RelatedReference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1030,7 +1042,7 @@ public class PaymentSearch5 {
 	public static final MMMessageAttribute mmEndToEndIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "EndToEndId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1041,10 +1053,11 @@ public class PaymentSearch5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Pties")
 	protected PaymentTransactionParty2 parties;
 	/**
-	 * Defines the party fields used to search for a payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1081,7 +1094,7 @@ public class PaymentSearch5 {
 	public static final MMMessageAssociationEnd mmParties = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentPartyRole.mmObject();
-			componentContext_lazy = () -> PaymentSearch5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 			isDerived = false;
 			xmlTag = "Pties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1098,12 +1111,20 @@ public class PaymentSearch5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentSearch5.mmMessageIdentification, PaymentSearch5.mmRequestedExecutionDate, PaymentSearch5.mmPaymentIdentification, PaymentSearch5.mmStatus, PaymentSearch5.mmInstructedAmount,
-						PaymentSearch5.mmInstructedAmountCurrency, PaymentSearch5.mmCreditDebitIndicator, PaymentSearch5.mmInterbankSettlementAmount, PaymentSearch5.mmInterbankSettlementAmountCurrency, PaymentSearch5.mmPaymentMethod,
-						PaymentSearch5.mmPaymentType, PaymentSearch5.mmPriority, PaymentSearch5.mmProcessingValidityTime, PaymentSearch5.mmInstruction, PaymentSearch5.mmTransactionIdentification, PaymentSearch5.mmInterbankSettlementDate,
-						PaymentSearch5.mmEndToEndIdentification, PaymentSearch5.mmParties);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentSearch5.mmMessageIdentification, com.tools20022.repository.msg.PaymentSearch5.mmRequestedExecutionDate,
+						com.tools20022.repository.msg.PaymentSearch5.mmPaymentIdentification, com.tools20022.repository.msg.PaymentSearch5.mmStatus, com.tools20022.repository.msg.PaymentSearch5.mmInstructedAmount,
+						com.tools20022.repository.msg.PaymentSearch5.mmInstructedAmountCurrency, com.tools20022.repository.msg.PaymentSearch5.mmCreditDebitIndicator, com.tools20022.repository.msg.PaymentSearch5.mmInterbankSettlementAmount,
+						com.tools20022.repository.msg.PaymentSearch5.mmInterbankSettlementAmountCurrency, com.tools20022.repository.msg.PaymentSearch5.mmPaymentMethod, com.tools20022.repository.msg.PaymentSearch5.mmPaymentType,
+						com.tools20022.repository.msg.PaymentSearch5.mmPriority, com.tools20022.repository.msg.PaymentSearch5.mmProcessingValidityTime, com.tools20022.repository.msg.PaymentSearch5.mmInstruction,
+						com.tools20022.repository.msg.PaymentSearch5.mmTransactionIdentification, com.tools20022.repository.msg.PaymentSearch5.mmInterbankSettlementDate,
+						com.tools20022.repository.msg.PaymentSearch5.mmEndToEndIdentification, com.tools20022.repository.msg.PaymentSearch5.mmParties);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementAmountCurrencyRule.forPaymentSearch5,
+						com.tools20022.repository.constraints.ConstraintInstructedAmountCurrencyRule.forPaymentSearch5, com.tools20022.repository.constraints.ConstraintInstructedAmountCreditDebitIndicator1Rule.forPaymentSearch5,
+						com.tools20022.repository.constraints.ConstraintInstructedAmountCreditDebitIndicator2Rule.forPaymentSearch5,
+						com.tools20022.repository.constraints.ConstraintSettlementAmountCreditDebitIndicator1Rule.forPaymentSearch5,
+						com.tools20022.repository.constraints.ConstraintSettlementAmountCreditDebitIndicator2Rule.forPaymentSearch5);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentSearch5";
 				definition = "Defines the criteria used to search for a payment.";
@@ -1113,165 +1134,165 @@ public class PaymentSearch5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId")
 	public List<Max35Text> getMessageIdentification() {
-		return messageIdentification;
+		return messageIdentification == null ? messageIdentification = new ArrayList<>() : messageIdentification;
 	}
 
-	public void setMessageIdentification(List<Max35Text> messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public PaymentSearch5 setMessageIdentification(List<Max35Text> messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ReqdExctnDt")
 	public List<DateAndDateTimeSearchChoice> getRequestedExecutionDate() {
-		return requestedExecutionDate;
+		return requestedExecutionDate == null ? requestedExecutionDate = new ArrayList<>() : requestedExecutionDate;
 	}
 
-	public void setRequestedExecutionDate(List<DateAndDateTimeSearchChoice> requestedExecutionDate) {
-		this.requestedExecutionDate = requestedExecutionDate;
+	public PaymentSearch5 setRequestedExecutionDate(List<DateAndDateTimeSearchChoice> requestedExecutionDate) {
+		this.requestedExecutionDate = Objects.requireNonNull(requestedExecutionDate);
+		return this;
 	}
 
-	@XmlElement(name = "PmtId")
 	public List<PaymentIdentification4Choice> getPaymentIdentification() {
-		return paymentIdentification;
+		return paymentIdentification == null ? paymentIdentification = new ArrayList<>() : paymentIdentification;
 	}
 
-	public void setPaymentIdentification(List<PaymentIdentification4Choice> paymentIdentification) {
-		this.paymentIdentification = paymentIdentification;
+	public PaymentSearch5 setPaymentIdentification(List<PaymentIdentification4Choice> paymentIdentification) {
+		this.paymentIdentification = Objects.requireNonNull(paymentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Sts")
 	public List<InstructionStatusSearch3> getStatus() {
-		return status;
+		return status == null ? status = new ArrayList<>() : status;
 	}
 
-	public void setStatus(List<com.tools20022.repository.msg.InstructionStatusSearch3> status) {
-		this.status = status;
+	public PaymentSearch5 setStatus(List<com.tools20022.repository.msg.InstructionStatusSearch3> status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "InstdAmt")
 	public List<AmountRange2Choice> getInstructedAmount() {
-		return instructedAmount;
+		return instructedAmount == null ? instructedAmount = new ArrayList<>() : instructedAmount;
 	}
 
-	public void setInstructedAmount(List<AmountRange2Choice> instructedAmount) {
-		this.instructedAmount = instructedAmount;
+	public PaymentSearch5 setInstructedAmount(List<AmountRange2Choice> instructedAmount) {
+		this.instructedAmount = Objects.requireNonNull(instructedAmount);
+		return this;
 	}
 
-	@XmlElement(name = "InstdAmtCcy")
 	public List<ActiveOrHistoricCurrencyCode> getInstructedAmountCurrency() {
-		return instructedAmountCurrency;
+		return instructedAmountCurrency == null ? instructedAmountCurrency = new ArrayList<>() : instructedAmountCurrency;
 	}
 
-	public void setInstructedAmountCurrency(List<ActiveOrHistoricCurrencyCode> instructedAmountCurrency) {
-		this.instructedAmountCurrency = instructedAmountCurrency;
+	public PaymentSearch5 setInstructedAmountCurrency(List<ActiveOrHistoricCurrencyCode> instructedAmountCurrency) {
+		this.instructedAmountCurrency = Objects.requireNonNull(instructedAmountCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd")
-	public CreditDebitCode getCreditDebitIndicator() {
-		return creditDebitIndicator;
+	public Optional<CreditDebitCode> getCreditDebitIndicator() {
+		return creditDebitIndicator == null ? Optional.empty() : Optional.of(creditDebitIndicator);
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+	public PaymentSearch5 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
 		this.creditDebitIndicator = creditDebitIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmAmt")
 	public List<ActiveAmountRange1Choice> getInterbankSettlementAmount() {
-		return interbankSettlementAmount;
+		return interbankSettlementAmount == null ? interbankSettlementAmount = new ArrayList<>() : interbankSettlementAmount;
 	}
 
-	public void setInterbankSettlementAmount(List<ActiveAmountRange1Choice> interbankSettlementAmount) {
-		this.interbankSettlementAmount = interbankSettlementAmount;
+	public PaymentSearch5 setInterbankSettlementAmount(List<ActiveAmountRange1Choice> interbankSettlementAmount) {
+		this.interbankSettlementAmount = Objects.requireNonNull(interbankSettlementAmount);
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmAmtCcy")
 	public List<ActiveCurrencyCode> getInterbankSettlementAmountCurrency() {
-		return interbankSettlementAmountCurrency;
+		return interbankSettlementAmountCurrency == null ? interbankSettlementAmountCurrency = new ArrayList<>() : interbankSettlementAmountCurrency;
 	}
 
-	public void setInterbankSettlementAmountCurrency(List<ActiveCurrencyCode> interbankSettlementAmountCurrency) {
-		this.interbankSettlementAmountCurrency = interbankSettlementAmountCurrency;
+	public PaymentSearch5 setInterbankSettlementAmountCurrency(List<ActiveCurrencyCode> interbankSettlementAmountCurrency) {
+		this.interbankSettlementAmountCurrency = Objects.requireNonNull(interbankSettlementAmountCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "PmtMtd")
 	public List<PaymentOrigin1Choice> getPaymentMethod() {
-		return paymentMethod;
+		return paymentMethod == null ? paymentMethod = new ArrayList<>() : paymentMethod;
 	}
 
-	public void setPaymentMethod(List<PaymentOrigin1Choice> paymentMethod) {
-		this.paymentMethod = paymentMethod;
+	public PaymentSearch5 setPaymentMethod(List<PaymentOrigin1Choice> paymentMethod) {
+		this.paymentMethod = Objects.requireNonNull(paymentMethod);
+		return this;
 	}
 
-	@XmlElement(name = "PmtTp")
 	public List<PaymentType4Choice> getPaymentType() {
-		return paymentType;
+		return paymentType == null ? paymentType = new ArrayList<>() : paymentType;
 	}
 
-	public void setPaymentType(List<PaymentType4Choice> paymentType) {
-		this.paymentType = paymentType;
+	public PaymentSearch5 setPaymentType(List<PaymentType4Choice> paymentType) {
+		this.paymentType = Objects.requireNonNull(paymentType);
+		return this;
 	}
 
-	@XmlElement(name = "Prty")
 	public List<PriorityCode3Choice> getPriority() {
-		return priority;
+		return priority == null ? priority = new ArrayList<>() : priority;
 	}
 
-	public void setPriority(List<PriorityCode3Choice> priority) {
-		this.priority = priority;
+	public PaymentSearch5 setPriority(List<PriorityCode3Choice> priority) {
+		this.priority = Objects.requireNonNull(priority);
+		return this;
 	}
 
-	@XmlElement(name = "PrcgVldtyTm")
 	public List<DateTimePeriodChoice> getProcessingValidityTime() {
-		return processingValidityTime;
+		return processingValidityTime == null ? processingValidityTime = new ArrayList<>() : processingValidityTime;
 	}
 
-	public void setProcessingValidityTime(List<DateTimePeriodChoice> processingValidityTime) {
-		this.processingValidityTime = processingValidityTime;
+	public PaymentSearch5 setProcessingValidityTime(List<DateTimePeriodChoice> processingValidityTime) {
+		this.processingValidityTime = Objects.requireNonNull(processingValidityTime);
+		return this;
 	}
 
-	@XmlElement(name = "Instr")
 	public List<Instruction1Code> getInstruction() {
-		return instruction;
+		return instruction == null ? instruction = new ArrayList<>() : instruction;
 	}
 
-	public void setInstruction(List<Instruction1Code> instruction) {
-		this.instruction = instruction;
+	public PaymentSearch5 setInstruction(List<Instruction1Code> instruction) {
+		this.instruction = Objects.requireNonNull(instruction);
+		return this;
 	}
 
-	@XmlElement(name = "TxId")
 	public List<Max35Text> getTransactionIdentification() {
-		return transactionIdentification;
+		return transactionIdentification == null ? transactionIdentification = new ArrayList<>() : transactionIdentification;
 	}
 
-	public void setTransactionIdentification(List<Max35Text> transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public PaymentSearch5 setTransactionIdentification(List<Max35Text> transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmDt")
 	public List<ISODate> getInterbankSettlementDate() {
-		return interbankSettlementDate;
+		return interbankSettlementDate == null ? interbankSettlementDate = new ArrayList<>() : interbankSettlementDate;
 	}
 
-	public void setInterbankSettlementDate(List<ISODate> interbankSettlementDate) {
-		this.interbankSettlementDate = interbankSettlementDate;
+	public PaymentSearch5 setInterbankSettlementDate(List<ISODate> interbankSettlementDate) {
+		this.interbankSettlementDate = Objects.requireNonNull(interbankSettlementDate);
+		return this;
 	}
 
-	@XmlElement(name = "EndToEndId")
 	public List<Max35Text> getEndToEndIdentification() {
-		return endToEndIdentification;
+		return endToEndIdentification == null ? endToEndIdentification = new ArrayList<>() : endToEndIdentification;
 	}
 
-	public void setEndToEndIdentification(List<Max35Text> endToEndIdentification) {
-		this.endToEndIdentification = endToEndIdentification;
+	public PaymentSearch5 setEndToEndIdentification(List<Max35Text> endToEndIdentification) {
+		this.endToEndIdentification = Objects.requireNonNull(endToEndIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Pties")
-	public PaymentTransactionParty2 getParties() {
-		return parties;
+	public Optional<PaymentTransactionParty2> getParties() {
+		return parties == null ? Optional.empty() : Optional.of(parties);
 	}
 
-	public void setParties(com.tools20022.repository.msg.PaymentTransactionParty2 parties) {
+	public PaymentSearch5 setParties(com.tools20022.repository.msg.PaymentTransactionParty2 parties) {
 		this.parties = parties;
+		return this;
 	}
 }

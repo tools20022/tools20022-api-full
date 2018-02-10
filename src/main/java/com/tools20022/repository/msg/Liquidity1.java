@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +28,7 @@ import com.tools20022.repository.entity.Liquidity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,16 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Liquidity1", propOrder = {"value", "numberOfSecurities", "upper", "lower"})
 public class Liquidity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Val")
 	protected ActiveCurrencyAndAmount value;
 	/**
-	 * Market value of the securities position for which liquidity details are
-	 * provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,6 +103,9 @@ public class Liquidity1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Val"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 404</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -116,9 +121,10 @@ public class Liquidity1 {
 	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Liquidity.mmValue;
-			componentContext_lazy = () -> Liquidity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Liquidity1.mmObject();
 			isDerived = false;
 			xmlTag = "Val";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "404"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Market value of the securities position for which liquidity details are provided.";
@@ -127,10 +133,11 @@ public class Liquidity1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfScties")
 	protected DecimalNumber numberOfSecurities;
 	/**
-	 * Number of securities for which liquidity range details are provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,6 +152,9 @@ public class Liquidity1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NbOfScties"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 441</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -158,9 +168,10 @@ public class Liquidity1 {
 	 */
 	public static final MMMessageAttribute mmNumberOfSecurities = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Liquidity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Liquidity1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfScties";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "441"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfSecurities";
 			definition = "Number of securities for which liquidity range details are provided.";
@@ -169,11 +180,11 @@ public class Liquidity1 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "Upper")
 	protected PercentageRate upper;
 	/**
-	 * Upper liquidity indicator, represented as a percentage of the average
-	 * trade daily volume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,6 +204,9 @@ public class Liquidity1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Upper"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 403</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -208,9 +222,10 @@ public class Liquidity1 {
 	public static final MMMessageAttribute mmUpper = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Liquidity.mmUpper;
-			componentContext_lazy = () -> Liquidity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Liquidity1.mmObject();
 			isDerived = false;
 			xmlTag = "Upper";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "403"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Upper";
 			definition = "Upper liquidity indicator, represented as a percentage of the average trade daily volume.";
@@ -219,11 +234,11 @@ public class Liquidity1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "Lwr")
 	protected PercentageRate lower;
 	/**
-	 * Lower liquidity indicator, represented as a percentage of the average
-	 * trade daily volume.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -243,6 +258,9 @@ public class Liquidity1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Lwr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 402</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -258,9 +276,10 @@ public class Liquidity1 {
 	public static final MMMessageAttribute mmLower = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Liquidity.mmLower;
-			componentContext_lazy = () -> Liquidity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Liquidity1.mmObject();
 			isDerived = false;
 			xmlTag = "Lwr";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "402"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lower";
 			definition = "Lower liquidity indicator, represented as a percentage of the average trade daily volume.";
@@ -273,9 +292,10 @@ public class Liquidity1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Liquidity1.mmValue, Liquidity1.mmNumberOfSecurities, Liquidity1.mmUpper, Liquidity1.mmLower);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Liquidity1.mmValue, com.tools20022.repository.msg.Liquidity1.mmNumberOfSecurities, com.tools20022.repository.msg.Liquidity1.mmUpper,
+						com.tools20022.repository.msg.Liquidity1.mmLower);
 				trace_lazy = () -> Liquidity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Liquidity1";
 				definition = "Ability of a financial instrument to be easily traded and converted to cash, at conditions that do not affect its price.";
@@ -284,39 +304,39 @@ public class Liquidity1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Val")
-	public ActiveCurrencyAndAmount getValue() {
-		return value;
+	public Optional<ActiveCurrencyAndAmount> getValue() {
+		return value == null ? Optional.empty() : Optional.of(value);
 	}
 
-	public void setValue(ActiveCurrencyAndAmount value) {
+	public Liquidity1 setValue(ActiveCurrencyAndAmount value) {
 		this.value = value;
+		return this;
 	}
 
-	@XmlElement(name = "NbOfScties")
-	public DecimalNumber getNumberOfSecurities() {
-		return numberOfSecurities;
+	public Optional<DecimalNumber> getNumberOfSecurities() {
+		return numberOfSecurities == null ? Optional.empty() : Optional.of(numberOfSecurities);
 	}
 
-	public void setNumberOfSecurities(DecimalNumber numberOfSecurities) {
+	public Liquidity1 setNumberOfSecurities(DecimalNumber numberOfSecurities) {
 		this.numberOfSecurities = numberOfSecurities;
+		return this;
 	}
 
-	@XmlElement(name = "Upper")
-	public PercentageRate getUpper() {
-		return upper;
+	public Optional<PercentageRate> getUpper() {
+		return upper == null ? Optional.empty() : Optional.of(upper);
 	}
 
-	public void setUpper(PercentageRate upper) {
+	public Liquidity1 setUpper(PercentageRate upper) {
 		this.upper = upper;
+		return this;
 	}
 
-	@XmlElement(name = "Lwr")
-	public PercentageRate getLower() {
-		return lower;
+	public Optional<PercentageRate> getLower() {
+		return lower == null ? Optional.empty() : Optional.of(lower);
 	}
 
-	public void setLower(PercentageRate lower) {
+	public Liquidity1 setLower(PercentageRate lower) {
 		this.lower = lower;
+		return this;
 	}
 }

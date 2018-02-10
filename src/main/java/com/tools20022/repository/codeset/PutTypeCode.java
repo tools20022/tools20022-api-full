@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.PutTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines the type of execution of the put feature.
@@ -31,12 +36,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PutTypeCode#mmMandatory
- * PutTypeCode.mmMandatory}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PutTypeCode#mmOptional
- * PutTypeCode.mmOptional}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PutTypeCode#mmBoth
- * PutTypeCode.mmBoth}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PutTypeCode#Mandatory
+ * PutTypeCode.Mandatory}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PutTypeCode#Optional
+ * PutTypeCode.Optional}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PutTypeCode#Both
+ * PutTypeCode.Both}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the type of execution of the put feature."</li>
  * </ul>
  */
-public class PutTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PutTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,12 +95,12 @@ public class PutTypeCode {
 	 * definition} = "Type of execution of the put feature is mandatory."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMandatory = new MMCode() {
+	public static final PutTypeCode Mandatory = new PutTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandatory";
 			definition = "Type of execution of the put feature is mandatory.";
-			owner_lazy = () -> PutTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PutTypeCode.mmObject();
 			codeName = "MAND";
 		}
 	};
@@ -118,12 +124,12 @@ public class PutTypeCode {
 	 * definition} = "Type of execution of the put feature is optional."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOptional = new MMCode() {
+	public static final PutTypeCode Optional = new PutTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Optional";
 			definition = "Type of execution of the put feature is optional.";
-			owner_lazy = () -> PutTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PutTypeCode.mmObject();
 			codeName = "OPTI";
 		}
 	};
@@ -148,28 +154,59 @@ public class PutTypeCode {
 	 * "Type of execution of the put feature could be optional or mandatory."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBoth = new MMCode() {
+	public static final PutTypeCode Both = new PutTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Both";
 			definition = "Type of execution of the put feature could be optional or mandatory.";
-			owner_lazy = () -> PutTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PutTypeCode.mmObject();
 			codeName = "TWOS";
 		}
 	};
+	final static private LinkedHashMap<String, PutTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PutTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MAND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PutTypeCode";
 				definition = "Defines the type of execution of the put feature.";
-				code_lazy = () -> Arrays.asList(PutTypeCode.mmMandatory, PutTypeCode.mmOptional, PutTypeCode.mmBoth);
 				derivation_lazy = () -> Arrays.asList(PutType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PutTypeCode.Mandatory, com.tools20022.repository.codeset.PutTypeCode.Optional, com.tools20022.repository.codeset.PutTypeCode.Both);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Mandatory.getCodeName().get(), Mandatory);
+		codesByName.put(Optional.getCodeName().get(), Optional);
+		codesByName.put(Both.getCodeName().get(), Both);
+	}
+
+	public static PutTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PutTypeCode[] values() {
+		PutTypeCode[] values = new PutTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PutTypeCode> {
+		@Override
+		public PutTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PutTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -26,9 +26,11 @@ import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.TransferOut17;
 import com.tools20022.repository.msg.TransferReference9;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * Cancellation8Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Cancellation12Choice", propOrder = {"references", "transferOutDetails"})
 public class Cancellation12Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Refs", required = true)
 	protected List<TransferReference9> references;
 	/**
-	 * Reference of the transfer to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +133,7 @@ public class Cancellation12Choice {
 	public static final MMMessageAttribute mmReferences = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeRelatedIdentifications;
-			componentContext_lazy = () -> Cancellation12Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Cancellation12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Refs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,10 +144,11 @@ public class Cancellation12Choice {
 			complexType_lazy = () -> TransferReference9.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfOutDtls", required = true)
 	protected TransferOut17 transferOutDetails;
 	/**
-	 * Details of the transfer out request to cancel.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,7 +186,7 @@ public class Cancellation12Choice {
 	public static final MMMessageAttribute mmTransferOutDetails = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlement.mmObject();
-			componentContext_lazy = () -> Cancellation12Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Cancellation12Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TrfOutDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,10 +202,10 @@ public class Cancellation12Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Cancellation12Choice.mmReferences, Cancellation12Choice.mmTransferOutDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Cancellation12Choice.mmReferences, com.tools20022.repository.choice.Cancellation12Choice.mmTransferOutDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(TransferOutCancellationRequestV07.mmCancellation);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Cancellation12Choice";
 				definition = "Choice between cancellation by reference or by transfer details.";
@@ -211,21 +215,21 @@ public class Cancellation12Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Refs", required = true)
 	public List<TransferReference9> getReferences() {
-		return references;
+		return references == null ? references = new ArrayList<>() : references;
 	}
 
-	public void setReferences(List<TransferReference9> references) {
-		this.references = references;
+	public Cancellation12Choice setReferences(List<TransferReference9> references) {
+		this.references = Objects.requireNonNull(references);
+		return this;
 	}
 
-	@XmlElement(name = "TrfOutDtls", required = true)
 	public TransferOut17 getTransferOutDetails() {
 		return transferOutDetails;
 	}
 
-	public void setTransferOutDetails(TransferOut17 transferOutDetails) {
-		this.transferOutDetails = transferOutDetails;
+	public Cancellation12Choice setTransferOutDetails(TransferOut17 transferOutDetails) {
+		this.transferOutDetails = Objects.requireNonNull(transferOutDetails);
+		return this;
 	}
 }

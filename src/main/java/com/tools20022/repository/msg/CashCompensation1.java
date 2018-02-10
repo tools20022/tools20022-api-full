@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashCompensation1", propOrder = {"settlementAmount", "fees", "valueDate"})
 public class CashCompensation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SttlmAmt", required = true)
 	protected AmountAndDirection20 settlementAmount;
 	/**
-	 * Provides the original amount to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,7 +114,7 @@ public class CashCompensation1 {
 	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
-			componentContext_lazy = () -> CashCompensation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashCompensation1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +126,11 @@ public class CashCompensation1 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
 		}
 	};
+	@XmlElement(name = "Fees")
 	protected AmountAndDirection20 fees;
 	/**
-	 * Amount of fees linked to the cash compensation process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -157,7 +161,7 @@ public class CashCompensation1 {
 	public static final MMMessageAssociationEnd mmFees = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BuyIn.mmFees;
-			componentContext_lazy = () -> CashCompensation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashCompensation1.mmObject();
 			isDerived = false;
 			xmlTag = "Fees";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,10 +173,11 @@ public class CashCompensation1 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection20.mmObject();
 		}
 	};
+	@XmlElement(name = "ValDt")
 	protected ISODate valueDate;
 	/**
-	 * Indicates the value date of the cash compensation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,7 +210,7 @@ public class CashCompensation1 {
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
-			componentContext_lazy = () -> CashCompensation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashCompensation1.mmObject();
 			isDerived = false;
 			xmlTag = "ValDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,9 +225,10 @@ public class CashCompensation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashCompensation1.mmSettlementAmount, CashCompensation1.mmFees, CashCompensation1.mmValueDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashCompensation1.mmSettlementAmount, com.tools20022.repository.msg.CashCompensation1.mmFees,
+						com.tools20022.repository.msg.CashCompensation1.mmValueDate);
 				trace_lazy = () -> BuyIn.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashCompensation1";
 				definition = "Provides details about the cash compensation such as the fees and the total settlement amount.";
@@ -231,30 +237,30 @@ public class CashCompensation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SttlmAmt", required = true)
 	public AmountAndDirection20 getSettlementAmount() {
 		return settlementAmount;
 	}
 
-	public void setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection20 settlementAmount) {
-		this.settlementAmount = settlementAmount;
+	public CashCompensation1 setSettlementAmount(com.tools20022.repository.msg.AmountAndDirection20 settlementAmount) {
+		this.settlementAmount = Objects.requireNonNull(settlementAmount);
+		return this;
 	}
 
-	@XmlElement(name = "Fees")
-	public AmountAndDirection20 getFees() {
-		return fees;
+	public Optional<AmountAndDirection20> getFees() {
+		return fees == null ? Optional.empty() : Optional.of(fees);
 	}
 
-	public void setFees(com.tools20022.repository.msg.AmountAndDirection20 fees) {
+	public CashCompensation1 setFees(com.tools20022.repository.msg.AmountAndDirection20 fees) {
 		this.fees = fees;
+		return this;
 	}
 
-	@XmlElement(name = "ValDt")
-	public ISODate getValueDate() {
-		return valueDate;
+	public Optional<ISODate> getValueDate() {
+		return valueDate == null ? Optional.empty() : Optional.of(valueDate);
 	}
 
-	public void setValueDate(ISODate valueDate) {
+	public CashCompensation1 setValueDate(ISODate valueDate) {
 		this.valueDate = valueDate;
+		return this;
 	}
 }

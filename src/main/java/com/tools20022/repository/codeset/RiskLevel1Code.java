@@ -20,33 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RiskLevelCode;
+import com.tools20022.repository.codeset.RiskLevel1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the risk level.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RiskLevelCode RiskLevelCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RiskLevel1Code#mmHigh
- * RiskLevel1Code.mmHigh}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RiskLevel1Code#mmLow
- * RiskLevel1Code.mmLow}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RiskLevel1Code#mmMedium
- * RiskLevel1Code.mmMedium}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RiskLevel1Code#High
+ * RiskLevel1Code.High}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RiskLevel1Code#Low
+ * RiskLevel1Code.Low}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RiskLevel1Code#Medium
+ * RiskLevel1Code.Medium}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RiskLevelCode RiskLevelCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -63,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the risk level."</li>
  * </ul>
  */
-public class RiskLevel1Code extends RiskLevelCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RiskLevel1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,11 +87,12 @@ public class RiskLevel1Code extends RiskLevelCode {
 	 * name} = "High"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHigh = new MMCode() {
+	public static final RiskLevel1Code High = new RiskLevel1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "High";
-			owner_lazy = () -> RiskLevel1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RiskLevel1Code.mmObject();
+			codeName = RiskLevelCode.High.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -105,11 +111,12 @@ public class RiskLevel1Code extends RiskLevelCode {
 	 * name} = "Low"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLow = new MMCode() {
+	public static final RiskLevel1Code Low = new RiskLevel1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Low";
-			owner_lazy = () -> RiskLevel1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RiskLevel1Code.mmObject();
+			codeName = RiskLevelCode.Low.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -128,26 +135,58 @@ public class RiskLevel1Code extends RiskLevelCode {
 	 * name} = "Medium"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMedium = new MMCode() {
+	public static final RiskLevel1Code Medium = new RiskLevel1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Medium";
-			owner_lazy = () -> RiskLevel1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RiskLevel1Code.mmObject();
+			codeName = RiskLevelCode.Medium.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RiskLevel1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RiskLevel1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("HIGH");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RiskLevel1Code";
 				definition = "Specifies the risk level.";
-				code_lazy = () -> Arrays.asList(RiskLevel1Code.mmHigh, RiskLevel1Code.mmLow, RiskLevel1Code.mmMedium);
 				trace_lazy = () -> RiskLevelCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RiskLevel1Code.High, com.tools20022.repository.codeset.RiskLevel1Code.Low, com.tools20022.repository.codeset.RiskLevel1Code.Medium);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(High.getCodeName().get(), High);
+		codesByName.put(Low.getCodeName().get(), Low);
+		codesByName.put(Medium.getCodeName().get(), Medium);
+	}
+
+	public static RiskLevel1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RiskLevel1Code[] values() {
+		RiskLevel1Code[] values = new RiskLevel1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RiskLevel1Code> {
+		@Override
+		public RiskLevel1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RiskLevel1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

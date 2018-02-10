@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,8 @@ import com.tools20022.repository.codeset.RejectionReason3Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +51,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRejectionReason#forQuoteStatus1
+ * ConstraintRejectionReason.forQuoteStatus1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Identifies the status of a quote and the rejection reason if required."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QuoteStatus1", propOrder = {"quoteStatus", "rejectionReason"})
 public class QuoteStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QtSts", required = true)
 	protected QuoteStatus1Code quoteStatus;
 	/**
-	 * Provides information related to the status of a quote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -84,6 +96,9 @@ public class QuoteStatus1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtSts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 297</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -96,9 +111,10 @@ public class QuoteStatus1 {
 	 */
 	public static final MMMessageAttribute mmQuoteStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QuoteStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "QtSts";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "297"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteStatus";
 			definition = "Provides information related to the status of a quote.";
@@ -107,10 +123,11 @@ public class QuoteStatus1 {
 			simpleType_lazy = () -> QuoteStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RjctnRsn")
 	protected RejectionReason3Code rejectionReason;
 	/**
-	 * Provides information related to the rejection of the quote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -138,7 +155,7 @@ public class QuoteStatus1 {
 	 */
 	public static final MMMessageAttribute mmRejectionReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QuoteStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuoteStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "RjctnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,8 +170,9 @@ public class QuoteStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QuoteStatus1.mmQuoteStatus, QuoteStatus1.mmRejectionReason);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuoteStatus1.mmQuoteStatus, com.tools20022.repository.msg.QuoteStatus1.mmRejectionReason);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRejectionReason.forQuoteStatus1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuoteStatus1";
 				definition = "Identifies the status of a quote and the rejection reason if required.";
@@ -163,21 +181,21 @@ public class QuoteStatus1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QtSts", required = true)
 	public QuoteStatus1Code getQuoteStatus() {
 		return quoteStatus;
 	}
 
-	public void setQuoteStatus(QuoteStatus1Code quoteStatus) {
-		this.quoteStatus = quoteStatus;
+	public QuoteStatus1 setQuoteStatus(QuoteStatus1Code quoteStatus) {
+		this.quoteStatus = Objects.requireNonNull(quoteStatus);
+		return this;
 	}
 
-	@XmlElement(name = "RjctnRsn")
-	public RejectionReason3Code getRejectionReason() {
-		return rejectionReason;
+	public Optional<RejectionReason3Code> getRejectionReason() {
+		return rejectionReason == null ? Optional.empty() : Optional.of(rejectionReason);
 	}
 
-	public void setRejectionReason(RejectionReason3Code rejectionReason) {
+	public QuoteStatus1 setRejectionReason(RejectionReason3Code rejectionReason) {
 		this.rejectionReason = rejectionReason;
+		return this;
 	}
 }

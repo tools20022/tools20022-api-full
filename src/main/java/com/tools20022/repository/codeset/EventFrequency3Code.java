@@ -20,43 +20,45 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.EventFrequencyCode;
+import com.tools20022.repository.codeset.EventFrequency3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the regularity of an event.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency3Code#Annual
+ * EventFrequency3Code.Annual}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency3Code#Monthly
+ * EventFrequency3Code.Monthly}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency3Code#Quarterly
+ * EventFrequency3Code.Quarterly}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.EventFrequency3Code#SemiAnnual
+ * EventFrequency3Code.SemiAnnual}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EventFrequency3Code#Weekly
+ * EventFrequency3Code.Weekly}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.EventFrequencyCode
  * EventFrequencyCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency3Code#mmAnnual
- * EventFrequency3Code.mmAnnual}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency3Code#mmMonthly
- * EventFrequency3Code.mmMonthly}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency3Code#mmQuarterly
- * EventFrequency3Code.mmQuarterly}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency3Code#mmSemiAnnual
- * EventFrequency3Code.mmSemiAnnual}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.EventFrequency3Code#mmWeekly
- * EventFrequency3Code.mmWeekly}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the regularity of an event."</li>
  * </ul>
  */
-public class EventFrequency3Code extends EventFrequencyCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EventFrequency3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +95,12 @@ public class EventFrequency3Code extends EventFrequencyCode {
 	 * name} = "Annual"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAnnual = new MMCode() {
+	public static final EventFrequency3Code Annual = new EventFrequency3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Annual";
-			owner_lazy = () -> EventFrequency3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency3Code.mmObject();
+			codeName = EventFrequencyCode.Annual.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +119,12 @@ public class EventFrequency3Code extends EventFrequencyCode {
 	 * name} = "Monthly"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMonthly = new MMCode() {
+	public static final EventFrequency3Code Monthly = new EventFrequency3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Monthly";
-			owner_lazy = () -> EventFrequency3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency3Code.mmObject();
+			codeName = EventFrequencyCode.Monthly.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +143,12 @@ public class EventFrequency3Code extends EventFrequencyCode {
 	 * name} = "Quarterly"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQuarterly = new MMCode() {
+	public static final EventFrequency3Code Quarterly = new EventFrequency3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quarterly";
-			owner_lazy = () -> EventFrequency3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency3Code.mmObject();
+			codeName = EventFrequencyCode.Quarterly.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +167,12 @@ public class EventFrequency3Code extends EventFrequencyCode {
 	 * name} = "SemiAnnual"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSemiAnnual = new MMCode() {
+	public static final EventFrequency3Code SemiAnnual = new EventFrequency3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SemiAnnual";
-			owner_lazy = () -> EventFrequency3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency3Code.mmObject();
+			codeName = EventFrequencyCode.SemiAnnual.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,26 +191,61 @@ public class EventFrequency3Code extends EventFrequencyCode {
 	 * name} = "Weekly"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWeekly = new MMCode() {
+	public static final EventFrequency3Code Weekly = new EventFrequency3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Weekly";
-			owner_lazy = () -> EventFrequency3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EventFrequency3Code.mmObject();
+			codeName = EventFrequencyCode.Weekly.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, EventFrequency3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EventFrequency3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("YEAR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventFrequency3Code";
 				definition = "Specifies the regularity of an event.";
-				code_lazy = () -> Arrays.asList(EventFrequency3Code.mmAnnual, EventFrequency3Code.mmMonthly, EventFrequency3Code.mmQuarterly, EventFrequency3Code.mmSemiAnnual, EventFrequency3Code.mmWeekly);
 				trace_lazy = () -> EventFrequencyCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EventFrequency3Code.Annual, com.tools20022.repository.codeset.EventFrequency3Code.Monthly, com.tools20022.repository.codeset.EventFrequency3Code.Quarterly,
+						com.tools20022.repository.codeset.EventFrequency3Code.SemiAnnual, com.tools20022.repository.codeset.EventFrequency3Code.Weekly);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Annual.getCodeName().get(), Annual);
+		codesByName.put(Monthly.getCodeName().get(), Monthly);
+		codesByName.put(Quarterly.getCodeName().get(), Quarterly);
+		codesByName.put(SemiAnnual.getCodeName().get(), SemiAnnual);
+		codesByName.put(Weekly.getCodeName().get(), Weekly);
+	}
+
+	public static EventFrequency3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EventFrequency3Code[] values() {
+		EventFrequency3Code[] values = new EventFrequency3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EventFrequency3Code> {
+		@Override
+		public EventFrequency3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EventFrequency3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

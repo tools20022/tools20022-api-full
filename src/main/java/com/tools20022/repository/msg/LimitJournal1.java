@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,16 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LimitJournal1", propOrder = {"limit", "journalActivityDate", "journalEntry"})
 public class LimitJournal1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Lmt", required = true)
 	protected LimitAmount1 limit;
 	/**
-	 * Maximum value used for risk containment in a system or towards
-	 * counterparts. The limit may be a current limit or a default limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -103,7 +105,7 @@ public class LimitJournal1 {
 	 */
 	public static final MMMessageAssociationEnd mmLimit = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitJournal1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournal1.mmObject();
 			isDerived = false;
 			xmlTag = "Lmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +117,11 @@ public class LimitJournal1 {
 			type_lazy = () -> com.tools20022.repository.msg.LimitAmount1.mmObject();
 		}
 	};
+	@XmlElement(name = "JrnlActvtyDt", required = true)
 	protected ISODate journalActivityDate;
 	/**
-	 * Date upon which journal activity takes place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +147,7 @@ public class LimitJournal1 {
 	 */
 	public static final MMMessageAttribute mmJournalActivityDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LimitJournal1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournal1.mmObject();
 			isDerived = false;
 			xmlTag = "JrnlActvtyDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,10 +158,11 @@ public class LimitJournal1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "JrnlNtry")
 	protected List<com.tools20022.repository.msg.LimitJournalEntry1> journalEntry;
 	/**
-	 * Recording of transaction data pertaining to a transaction in a journal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -185,7 +189,7 @@ public class LimitJournal1 {
 	 */
 	public static final MMMessageAssociationEnd mmJournalEntry = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitJournal1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LimitJournal1.mmObject();
 			isDerived = false;
 			xmlTag = "JrnlNtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,8 +204,8 @@ public class LimitJournal1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LimitJournal1.mmLimit, LimitJournal1.mmJournalActivityDate, LimitJournal1.mmJournalEntry);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitJournal1.mmLimit, com.tools20022.repository.msg.LimitJournal1.mmJournalActivityDate, com.tools20022.repository.msg.LimitJournal1.mmJournalEntry);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitJournal1";
 				definition = "Record where all transactions are originally entered.  The journal details which transactions occurred and what accounts were affected.";
@@ -210,30 +214,30 @@ public class LimitJournal1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Lmt", required = true)
 	public LimitAmount1 getLimit() {
 		return limit;
 	}
 
-	public void setLimit(com.tools20022.repository.msg.LimitAmount1 limit) {
-		this.limit = limit;
+	public LimitJournal1 setLimit(com.tools20022.repository.msg.LimitAmount1 limit) {
+		this.limit = Objects.requireNonNull(limit);
+		return this;
 	}
 
-	@XmlElement(name = "JrnlActvtyDt", required = true)
 	public ISODate getJournalActivityDate() {
 		return journalActivityDate;
 	}
 
-	public void setJournalActivityDate(ISODate journalActivityDate) {
-		this.journalActivityDate = journalActivityDate;
+	public LimitJournal1 setJournalActivityDate(ISODate journalActivityDate) {
+		this.journalActivityDate = Objects.requireNonNull(journalActivityDate);
+		return this;
 	}
 
-	@XmlElement(name = "JrnlNtry")
 	public List<LimitJournalEntry1> getJournalEntry() {
-		return journalEntry;
+		return journalEntry == null ? journalEntry = new ArrayList<>() : journalEntry;
 	}
 
-	public void setJournalEntry(List<com.tools20022.repository.msg.LimitJournalEntry1> journalEntry) {
-		this.journalEntry = journalEntry;
+	public LimitJournal1 setJournalEntry(List<com.tools20022.repository.msg.LimitJournalEntry1> journalEntry) {
+		this.journalEntry = Objects.requireNonNull(journalEntry);
+		return this;
 	}
 }

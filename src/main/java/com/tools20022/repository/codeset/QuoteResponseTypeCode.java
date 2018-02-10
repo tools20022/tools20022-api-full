@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.QuoteResponseTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Qualifies the nature of response to a previoulsy addressed quote.
@@ -32,23 +37,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#mmHitLift
- * QuoteResponseTypeCode.mmHitLift}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#HitLift
+ * QuoteResponseTypeCode.HitLift}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#mmCounterQuote
- * QuoteResponseTypeCode.mmCounterQuote}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#CounterQuote
+ * QuoteResponseTypeCode.CounterQuote}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#mmExpired
- * QuoteResponseTypeCode.mmExpired}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#Expired
+ * QuoteResponseTypeCode.Expired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#mmCover
- * QuoteResponseTypeCode.mmCover}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#Cover
+ * QuoteResponseTypeCode.Cover}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#mmDoneAway
- * QuoteResponseTypeCode.mmDoneAway}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#mmPass
- * QuoteResponseTypeCode.mmPass}</li>
+ * {@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#DoneAway
+ * QuoteResponseTypeCode.DoneAway}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QuoteResponseTypeCode#Pass
+ * QuoteResponseTypeCode.Pass}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -61,8 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Qualifies the nature of response to a previoulsy addressed quote."</li>
  * </ul>
  */
-public class QuoteResponseTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class QuoteResponseTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -104,12 +109,12 @@ public class QuoteResponseTypeCode {
 	 * definition} = "Acceptance by a party of the conditions of a quote."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHitLift = new MMCode() {
+	public static final QuoteResponseTypeCode HitLift = new QuoteResponseTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HitLift";
 			definition = "Acceptance by a party of the conditions of a quote.";
-			owner_lazy = () -> QuoteResponseTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QuoteResponseTypeCode.mmObject();
 			codeName = "HILI";
 		}
 	};
@@ -137,12 +142,12 @@ public class QuoteResponseTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCounterQuote = new MMCode() {
+	public static final QuoteResponseTypeCode CounterQuote = new QuoteResponseTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterQuote";
 			definition = "Rejection of the conditions of a quote and proposition of new quote details.";
-			owner_lazy = () -> QuoteResponseTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QuoteResponseTypeCode.mmObject();
 			codeName = "COUN";
 		}
 	};
@@ -168,12 +173,12 @@ public class QuoteResponseTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmExpired = new MMCode() {
+	public static final QuoteResponseTypeCode Expired = new QuoteResponseTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
 			definition = "Rejection of the conditions of a quote due to its expiry.";
-			owner_lazy = () -> QuoteResponseTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QuoteResponseTypeCode.mmObject();
 			codeName = "EXPI";
 		}
 	};
@@ -200,12 +205,12 @@ public class QuoteResponseTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCover = new MMCode() {
+	public static final QuoteResponseTypeCode Cover = new QuoteResponseTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cover";
 			definition = "Purchase of a contract to offset a previously established short position.";
-			owner_lazy = () -> QuoteResponseTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QuoteResponseTypeCode.mmObject();
 			codeName = "COVE";
 		}
 	};
@@ -230,12 +235,12 @@ public class QuoteResponseTypeCode {
 	 * definition} = "Trade completed with a third party, counter-party."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDoneAway = new MMCode() {
+	public static final QuoteResponseTypeCode DoneAway = new QuoteResponseTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DoneAway";
 			definition = "Trade completed with a third party, counter-party.";
-			owner_lazy = () -> QuoteResponseTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QuoteResponseTypeCode.mmObject();
 			codeName = "DONE";
 		}
 	};
@@ -263,29 +268,64 @@ public class QuoteResponseTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPass = new MMCode() {
+	public static final QuoteResponseTypeCode Pass = new QuoteResponseTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pass";
 			definition = "Rejection of the conditions of a quote because the offer is being declined";
-			owner_lazy = () -> QuoteResponseTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QuoteResponseTypeCode.mmObject();
 			codeName = "PASS";
 		}
 	};
+	final static private LinkedHashMap<String, QuoteResponseTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected QuoteResponseTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("HILI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuoteResponseTypeCode";
 				definition = "Qualifies the nature of response to a previoulsy addressed quote.";
-				code_lazy = () -> Arrays.asList(QuoteResponseTypeCode.mmHitLift, QuoteResponseTypeCode.mmCounterQuote, QuoteResponseTypeCode.mmExpired, QuoteResponseTypeCode.mmCover, QuoteResponseTypeCode.mmDoneAway,
-						QuoteResponseTypeCode.mmPass);
 				derivation_lazy = () -> Arrays.asList(QuoteResponseType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QuoteResponseTypeCode.HitLift, com.tools20022.repository.codeset.QuoteResponseTypeCode.CounterQuote,
+						com.tools20022.repository.codeset.QuoteResponseTypeCode.Expired, com.tools20022.repository.codeset.QuoteResponseTypeCode.Cover, com.tools20022.repository.codeset.QuoteResponseTypeCode.DoneAway,
+						com.tools20022.repository.codeset.QuoteResponseTypeCode.Pass);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(HitLift.getCodeName().get(), HitLift);
+		codesByName.put(CounterQuote.getCodeName().get(), CounterQuote);
+		codesByName.put(Expired.getCodeName().get(), Expired);
+		codesByName.put(Cover.getCodeName().get(), Cover);
+		codesByName.put(DoneAway.getCodeName().get(), DoneAway);
+		codesByName.put(Pass.getCodeName().get(), Pass);
+	}
+
+	public static QuoteResponseTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static QuoteResponseTypeCode[] values() {
+		QuoteResponseTypeCode[] values = new QuoteResponseTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, QuoteResponseTypeCode> {
+		@Override
+		public QuoteResponseTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(QuoteResponseTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

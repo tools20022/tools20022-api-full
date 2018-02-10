@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ClearingMethodCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the value is net (inclusive of tax) or gross.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ClearingMethodCode#mmNetNegotiation
- * ClearingMethodCode.mmNetNegotiation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ClearingMethodCode#NetNegotiation
+ * ClearingMethodCode.NetNegotiation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ClearingMethodCode#mmGrossNegotiation
- * ClearingMethodCode.mmGrossNegotiation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ClearingMethodCode#GrossNegotiation
+ * ClearingMethodCode.GrossNegotiation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ClearingMethodCode#mmNetMatch
- * ClearingMethodCode.mmNetMatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.ClearingMethodCode#NetMatch
+ * ClearingMethodCode.NetMatch}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies whether the value is net (inclusive of tax) or gross."</li>
  * </ul>
  */
-public class ClearingMethodCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ClearingMethodCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,12 +98,12 @@ public class ClearingMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNetNegotiation = new MMCode() {
+	public static final ClearingMethodCode NetNegotiation = new ClearingMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetNegotiation";
 			definition = "Settlement done by netting amounts (for trades in the same currency and for the same value date).";
-			owner_lazy = () -> ClearingMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ClearingMethodCode.mmObject();
 			codeName = "NENE";
 		}
 	};
@@ -125,12 +131,12 @@ public class ClearingMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmGrossNegotiation = new MMCode() {
+	public static final ClearingMethodCode GrossNegotiation = new ClearingMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossNegotiation";
 			definition = "Each trade is settled by a single entry to the account of the beneficiary.";
-			owner_lazy = () -> ClearingMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ClearingMethodCode.mmObject();
 			codeName = "GRNE";
 		}
 	};
@@ -158,27 +164,59 @@ public class ClearingMethodCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNetMatch = new MMCode() {
+	public static final ClearingMethodCode NetMatch = new ClearingMethodCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetMatch";
 			definition = "In a foreign exchange transaction, the third party as a central clearing counterparty will settle the transaction for both sides respectively.";
-			owner_lazy = () -> ClearingMethodCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ClearingMethodCode.mmObject();
 			codeName = "NEMA";
 		}
 	};
+	final static private LinkedHashMap<String, ClearingMethodCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ClearingMethodCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClearingMethodCode";
 				definition = "Specifies whether the value is net (inclusive of tax) or gross.";
-				code_lazy = () -> Arrays.asList(ClearingMethodCode.mmNetNegotiation, ClearingMethodCode.mmGrossNegotiation, ClearingMethodCode.mmNetMatch);
 				derivation_lazy = () -> Arrays.asList(ClearingMethod1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClearingMethodCode.NetNegotiation, com.tools20022.repository.codeset.ClearingMethodCode.GrossNegotiation,
+						com.tools20022.repository.codeset.ClearingMethodCode.NetMatch);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NetNegotiation.getCodeName().get(), NetNegotiation);
+		codesByName.put(GrossNegotiation.getCodeName().get(), GrossNegotiation);
+		codesByName.put(NetMatch.getCodeName().get(), NetMatch);
+	}
+
+	public static ClearingMethodCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ClearingMethodCode[] values() {
+		ClearingMethodCode[] values = new ClearingMethodCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ClearingMethodCode> {
+		@Override
+		public ClearingMethodCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ClearingMethodCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

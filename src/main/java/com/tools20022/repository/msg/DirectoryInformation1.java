@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Participant details from National BIC directory."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DirectoryInformation1", propOrder = {"participantInformation", "participantSWIFTIdentifiersList", "accounts"})
 public class DirectoryInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtcptInf", required = true)
 	protected DirectoryParticipantInformation1 participantInformation;
 	/**
-	 * Information about participant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -101,7 +104,7 @@ public class DirectoryInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmParticipantInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DirectoryInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +116,11 @@ public class DirectoryInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.DirectoryParticipantInformation1.mmObject();
 		}
 	};
+	@XmlElement(name = "PtcptSwiftIdrsList")
 	protected List<BICFIIdentifier> participantSWIFTIdentifiersList;
 	/**
-	 * SWIFT assigned BIC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +148,7 @@ public class DirectoryInformation1 {
 	 */
 	public static final MMMessageAttribute mmParticipantSWIFTIdentifiersList = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DirectoryInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PtcptSwiftIdrsList";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,10 +158,11 @@ public class DirectoryInformation1 {
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Accts")
 	protected List<com.tools20022.repository.msg.DirectoryAccountInformation1> accounts;
 	/**
-	 * Account information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -184,7 +189,7 @@ public class DirectoryInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccounts = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DirectoryInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DirectoryInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Accts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,8 +204,9 @@ public class DirectoryInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DirectoryInformation1.mmParticipantInformation, DirectoryInformation1.mmParticipantSWIFTIdentifiersList, DirectoryInformation1.mmAccounts);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DirectoryInformation1.mmParticipantInformation, com.tools20022.repository.msg.DirectoryInformation1.mmParticipantSWIFTIdentifiersList,
+						com.tools20022.repository.msg.DirectoryInformation1.mmAccounts);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DirectoryInformation1";
 				definition = "Participant details from National BIC directory.";
@@ -209,30 +215,30 @@ public class DirectoryInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtcptInf", required = true)
 	public DirectoryParticipantInformation1 getParticipantInformation() {
 		return participantInformation;
 	}
 
-	public void setParticipantInformation(com.tools20022.repository.msg.DirectoryParticipantInformation1 participantInformation) {
-		this.participantInformation = participantInformation;
+	public DirectoryInformation1 setParticipantInformation(com.tools20022.repository.msg.DirectoryParticipantInformation1 participantInformation) {
+		this.participantInformation = Objects.requireNonNull(participantInformation);
+		return this;
 	}
 
-	@XmlElement(name = "PtcptSwiftIdrsList")
 	public List<BICFIIdentifier> getParticipantSWIFTIdentifiersList() {
-		return participantSWIFTIdentifiersList;
+		return participantSWIFTIdentifiersList == null ? participantSWIFTIdentifiersList = new ArrayList<>() : participantSWIFTIdentifiersList;
 	}
 
-	public void setParticipantSWIFTIdentifiersList(List<BICFIIdentifier> participantSWIFTIdentifiersList) {
-		this.participantSWIFTIdentifiersList = participantSWIFTIdentifiersList;
+	public DirectoryInformation1 setParticipantSWIFTIdentifiersList(List<BICFIIdentifier> participantSWIFTIdentifiersList) {
+		this.participantSWIFTIdentifiersList = Objects.requireNonNull(participantSWIFTIdentifiersList);
+		return this;
 	}
 
-	@XmlElement(name = "Accts")
 	public List<DirectoryAccountInformation1> getAccounts() {
-		return accounts;
+		return accounts == null ? accounts = new ArrayList<>() : accounts;
 	}
 
-	public void setAccounts(List<com.tools20022.repository.msg.DirectoryAccountInformation1> accounts) {
-		this.accounts = accounts;
+	public DirectoryInformation1 setAccounts(List<com.tools20022.repository.msg.DirectoryAccountInformation1> accounts) {
+		this.accounts = Objects.requireNonNull(accounts);
+		return this;
 	}
 }

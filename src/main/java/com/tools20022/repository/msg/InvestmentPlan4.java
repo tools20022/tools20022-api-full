@@ -28,11 +28,9 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -47,8 +45,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.InvestmentPlan4#mmFrequencyOrExtendedFrequencyRule
- * InvestmentPlan4.mmFrequencyOrExtendedFrequencyRule}</li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentPlan4#FrequencyOrExtendedFrequencyRule
+ * InvestmentPlan4.FrequencyOrExtendedFrequencyRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -113,8 +111,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -135,16 +133,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvestmentPlan4", propOrder = {"frequency", "extendedFrequency", "startDate", "endDate", "amount", "grossAmountIndicator", "incomePreference", "initialNumberOfInstalment", "totalNumberOfInstalment", "roundingDirection",
 		"securityDetails", "cashSettlement"})
 public class InvestmentPlan4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Frqcy", required = true)
 	protected EventFrequency1Code frequency;
 	/**
-	 * Frequency of the investment or divestment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,7 +177,7 @@ public class InvestmentPlan4 {
 	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentPlan.mmFrequency;
-			componentContext_lazy = () -> InvestmentPlan4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan4.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,10 +188,11 @@ public class InvestmentPlan4 {
 			simpleType_lazy = () -> EventFrequency1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedFrqcy", required = true)
 	protected Extended350Code extendedFrequency;
 	/**
-	 * Frequency of the investment or divestment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -226,7 +226,7 @@ public class InvestmentPlan4 {
 	public static final MMMessageAttribute mmExtendedFrequency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentPlan.mmFrequency;
-			componentContext_lazy = () -> InvestmentPlan4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan4.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,10 +237,11 @@ public class InvestmentPlan4 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StartDt", required = true)
 	protected ISODate startDate;
 	/**
-	 * Date the investment plan starts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -273,7 +274,7 @@ public class InvestmentPlan4 {
 	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> InvestmentPlan4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan4.mmObject();
 			isDerived = false;
 			xmlTag = "StartDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,10 +285,11 @@ public class InvestmentPlan4 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "EndDt")
 	protected ISODate endDate;
 	/**
-	 * Date the investment plan stops.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -320,7 +322,7 @@ public class InvestmentPlan4 {
 	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
-			componentContext_lazy = () -> InvestmentPlan4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan4.mmObject();
 			isDerived = false;
 			xmlTag = "EndDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -331,10 +333,11 @@ public class InvestmentPlan4 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Currency and amount of the periodical payments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -368,7 +371,7 @@ public class InvestmentPlan4 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentPlan.mmAmount;
-			componentContext_lazy = () -> InvestmentPlan4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan4.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -379,13 +382,11 @@ public class InvestmentPlan4 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "GrssAmtInd")
 	protected YesNoIndicator grossAmountIndicator;
 	/**
-	 * Indicates whether an ordered amount is a gross amount (including all
-	 * charges, commissions, tax). If it is not a gross amount, the ordered
-	 * amount is a net amount (amount to be invested or redeemed from the fund
-	 * to which other elements will be added).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -421,7 +422,7 @@ public class InvestmentPlan4 {
 	public static final MMMessageAttribute mmGrossAmountIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmGrossAmountIndicator;
-			componentContext_lazy = () -> InvestmentPlan4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan4.mmObject();
 			isDerived = false;
 			xmlTag = "GrssAmtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -432,11 +433,11 @@ public class InvestmentPlan4 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "IncmPref")
 	protected IncomePreference1Code incomePreference;
 	/**
-	 * Dividend option chosen by the account owner based on the options offered
-	 * in the prospectus.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -472,7 +473,7 @@ public class InvestmentPlan4 {
 	public static final MMMessageAttribute mmIncomePreference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentAccountService.mmIncomePreference;
-			componentContext_lazy = () -> InvestmentPlan4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan4.mmObject();
 			isDerived = false;
 			xmlTag = "IncmPref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -483,11 +484,11 @@ public class InvestmentPlan4 {
 			simpleType_lazy = () -> IncomePreference1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "InitlNbOfInstlmt")
 	protected Number initialNumberOfInstalment;
 	/**
-	 * Number of pre-paid instalment periods at the time the investment plan is
-	 * created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -522,7 +523,7 @@ public class InvestmentPlan4 {
 	public static final MMMessageAttribute mmInitialNumberOfInstalment = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmInitialNumberOfInstalment;
-			componentContext_lazy = () -> InvestmentPlan4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan4.mmObject();
 			isDerived = false;
 			xmlTag = "InitlNbOfInstlmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -533,11 +534,11 @@ public class InvestmentPlan4 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNbOfInstlmt")
 	protected Number totalNumberOfInstalment;
 	/**
-	 * Total number of times the amount must be invested at the predefined
-	 * frequency as of the start date of the investment plan.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -572,7 +573,7 @@ public class InvestmentPlan4 {
 	public static final MMMessageAttribute mmTotalNumberOfInstalment = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmTotalNumberOfInstalment;
-			componentContext_lazy = () -> InvestmentPlan4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfInstlmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -583,11 +584,11 @@ public class InvestmentPlan4 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "RndgDrctn")
 	protected RoundingDirection1Code roundingDirection;
 	/**
-	 * Indicates the rounding direction when an amount is to be spread over
-	 * several funds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -623,7 +624,7 @@ public class InvestmentPlan4 {
 	public static final MMMessageAttribute mmRoundingDirection = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RoundingParameters.mmRoundingDirection;
-			componentContext_lazy = () -> InvestmentPlan4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan4.mmObject();
 			isDerived = false;
 			xmlTag = "RndgDrctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -634,11 +635,11 @@ public class InvestmentPlan4 {
 			simpleType_lazy = () -> RoundingDirection1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SctyDtls", required = true)
 	protected List<com.tools20022.repository.msg.Repartition1> securityDetails;
 	/**
-	 * Security that an investment plan invests in, or from which the investment
-	 * plan divests.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -672,7 +673,7 @@ public class InvestmentPlan4 {
 	public static final MMMessageAssociationEnd mmSecurityDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
-			componentContext_lazy = () -> InvestmentPlan4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan4.mmObject();
 			isDerived = false;
 			xmlTag = "SctyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -684,10 +685,11 @@ public class InvestmentPlan4 {
 			type_lazy = () -> com.tools20022.repository.msg.Repartition1.mmObject();
 		}
 	};
+	@XmlElement(name = "CshSttlm")
 	protected InvestmentFundCashSettlementInformation3 cashSettlement;
 	/**
-	 * Cash settlement standing instruction associated to the investment plan.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -722,7 +724,7 @@ public class InvestmentPlan4 {
 	public static final MMMessageAssociationEnd mmCashSettlement = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentOffset;
-			componentContext_lazy = () -> InvestmentPlan4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentPlan4.mmObject();
 			isDerived = false;
 			xmlTag = "CshSttlm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -766,26 +768,28 @@ public class InvestmentPlan4 {
 	 * "Either Frequency or ExtendedFrequency must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmFrequencyOrExtendedFrequencyRule = new MMXor() {
+	public static final MMXor FrequencyOrExtendedFrequencyRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrequencyOrExtendedFrequencyRule";
 			definition = "Either Frequency or ExtendedFrequency must be present, but not both.";
-			messageComponent_lazy = () -> InvestmentPlan4.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(InvestmentPlan4.mmFrequency, InvestmentPlan4.mmExtendedFrequency);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.InvestmentPlan4.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan4.mmFrequency, com.tools20022.repository.msg.InvestmentPlan4.mmExtendedFrequency);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InvestmentPlan4.mmFrequency, InvestmentPlan4.mmExtendedFrequency, InvestmentPlan4.mmStartDate, InvestmentPlan4.mmEndDate, InvestmentPlan4.mmAmount,
-						InvestmentPlan4.mmGrossAmountIndicator, InvestmentPlan4.mmIncomePreference, InvestmentPlan4.mmInitialNumberOfInstalment, InvestmentPlan4.mmTotalNumberOfInstalment, InvestmentPlan4.mmRoundingDirection,
-						InvestmentPlan4.mmSecurityDetails, InvestmentPlan4.mmCashSettlement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan4.mmFrequency, com.tools20022.repository.msg.InvestmentPlan4.mmExtendedFrequency,
+						com.tools20022.repository.msg.InvestmentPlan4.mmStartDate, com.tools20022.repository.msg.InvestmentPlan4.mmEndDate, com.tools20022.repository.msg.InvestmentPlan4.mmAmount,
+						com.tools20022.repository.msg.InvestmentPlan4.mmGrossAmountIndicator, com.tools20022.repository.msg.InvestmentPlan4.mmIncomePreference, com.tools20022.repository.msg.InvestmentPlan4.mmInitialNumberOfInstalment,
+						com.tools20022.repository.msg.InvestmentPlan4.mmTotalNumberOfInstalment, com.tools20022.repository.msg.InvestmentPlan4.mmRoundingDirection, com.tools20022.repository.msg.InvestmentPlan4.mmSecurityDetails,
+						com.tools20022.repository.msg.InvestmentPlan4.mmCashSettlement);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV02.mmSavingsInvestmentPlan, AccountDetailsConfirmationV02.mmWithdrawalInvestmentPlan, AccountOpeningInstructionV02.mmSavingsInvestmentPlan,
 						AccountOpeningInstructionV02.mmWithdrawalInvestmentPlan);
 				trace_lazy = () -> InvestmentPlan.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -797,117 +801,117 @@ public class InvestmentPlan4 {
 				name = "InvestmentPlan4";
 				definition = "Plan that allows investors to schedule periodical investments or divestments, according to pre-defined criteria.";
 				nextVersions_lazy = () -> Arrays.asList(InvestmentPlan6.mmObject());
-				xors_lazy = () -> Arrays.asList(InvestmentPlan4.mmFrequencyOrExtendedFrequencyRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentPlan4.FrequencyOrExtendedFrequencyRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Frqcy", required = true)
 	public EventFrequency1Code getFrequency() {
 		return frequency;
 	}
 
-	public void setFrequency(EventFrequency1Code frequency) {
-		this.frequency = frequency;
+	public InvestmentPlan4 setFrequency(EventFrequency1Code frequency) {
+		this.frequency = Objects.requireNonNull(frequency);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedFrqcy", required = true)
 	public Extended350Code getExtendedFrequency() {
 		return extendedFrequency;
 	}
 
-	public void setExtendedFrequency(Extended350Code extendedFrequency) {
-		this.extendedFrequency = extendedFrequency;
+	public InvestmentPlan4 setExtendedFrequency(Extended350Code extendedFrequency) {
+		this.extendedFrequency = Objects.requireNonNull(extendedFrequency);
+		return this;
 	}
 
-	@XmlElement(name = "StartDt", required = true)
 	public ISODate getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(ISODate startDate) {
-		this.startDate = startDate;
+	public InvestmentPlan4 setStartDate(ISODate startDate) {
+		this.startDate = Objects.requireNonNull(startDate);
+		return this;
 	}
 
-	@XmlElement(name = "EndDt")
-	public ISODate getEndDate() {
-		return endDate;
+	public Optional<ISODate> getEndDate() {
+		return endDate == null ? Optional.empty() : Optional.of(endDate);
 	}
 
-	public void setEndDate(ISODate endDate) {
+	public InvestmentPlan4 setEndDate(ISODate endDate) {
 		this.endDate = endDate;
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public InvestmentPlan4 setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "GrssAmtInd")
-	public YesNoIndicator getGrossAmountIndicator() {
-		return grossAmountIndicator;
+	public Optional<YesNoIndicator> getGrossAmountIndicator() {
+		return grossAmountIndicator == null ? Optional.empty() : Optional.of(grossAmountIndicator);
 	}
 
-	public void setGrossAmountIndicator(YesNoIndicator grossAmountIndicator) {
+	public InvestmentPlan4 setGrossAmountIndicator(YesNoIndicator grossAmountIndicator) {
 		this.grossAmountIndicator = grossAmountIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "IncmPref")
-	public IncomePreference1Code getIncomePreference() {
-		return incomePreference;
+	public Optional<IncomePreference1Code> getIncomePreference() {
+		return incomePreference == null ? Optional.empty() : Optional.of(incomePreference);
 	}
 
-	public void setIncomePreference(IncomePreference1Code incomePreference) {
+	public InvestmentPlan4 setIncomePreference(IncomePreference1Code incomePreference) {
 		this.incomePreference = incomePreference;
+		return this;
 	}
 
-	@XmlElement(name = "InitlNbOfInstlmt")
-	public Number getInitialNumberOfInstalment() {
-		return initialNumberOfInstalment;
+	public Optional<Number> getInitialNumberOfInstalment() {
+		return initialNumberOfInstalment == null ? Optional.empty() : Optional.of(initialNumberOfInstalment);
 	}
 
-	public void setInitialNumberOfInstalment(Number initialNumberOfInstalment) {
+	public InvestmentPlan4 setInitialNumberOfInstalment(Number initialNumberOfInstalment) {
 		this.initialNumberOfInstalment = initialNumberOfInstalment;
+		return this;
 	}
 
-	@XmlElement(name = "TtlNbOfInstlmt")
-	public Number getTotalNumberOfInstalment() {
-		return totalNumberOfInstalment;
+	public Optional<Number> getTotalNumberOfInstalment() {
+		return totalNumberOfInstalment == null ? Optional.empty() : Optional.of(totalNumberOfInstalment);
 	}
 
-	public void setTotalNumberOfInstalment(Number totalNumberOfInstalment) {
+	public InvestmentPlan4 setTotalNumberOfInstalment(Number totalNumberOfInstalment) {
 		this.totalNumberOfInstalment = totalNumberOfInstalment;
+		return this;
 	}
 
-	@XmlElement(name = "RndgDrctn")
-	public RoundingDirection1Code getRoundingDirection() {
-		return roundingDirection;
+	public Optional<RoundingDirection1Code> getRoundingDirection() {
+		return roundingDirection == null ? Optional.empty() : Optional.of(roundingDirection);
 	}
 
-	public void setRoundingDirection(RoundingDirection1Code roundingDirection) {
+	public InvestmentPlan4 setRoundingDirection(RoundingDirection1Code roundingDirection) {
 		this.roundingDirection = roundingDirection;
+		return this;
 	}
 
-	@XmlElement(name = "SctyDtls", required = true)
 	public List<Repartition1> getSecurityDetails() {
-		return securityDetails;
+		return securityDetails == null ? securityDetails = new ArrayList<>() : securityDetails;
 	}
 
-	public void setSecurityDetails(List<com.tools20022.repository.msg.Repartition1> securityDetails) {
-		this.securityDetails = securityDetails;
+	public InvestmentPlan4 setSecurityDetails(List<com.tools20022.repository.msg.Repartition1> securityDetails) {
+		this.securityDetails = Objects.requireNonNull(securityDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CshSttlm")
-	public InvestmentFundCashSettlementInformation3 getCashSettlement() {
-		return cashSettlement;
+	public Optional<InvestmentFundCashSettlementInformation3> getCashSettlement() {
+		return cashSettlement == null ? Optional.empty() : Optional.of(cashSettlement);
 	}
 
-	public void setCashSettlement(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3 cashSettlement) {
+	public InvestmentPlan4 setCashSettlement(com.tools20022.repository.msg.InvestmentFundCashSettlementInformation3 cashSettlement) {
 		this.cashSettlement = cashSettlement;
+		return this;
 	}
 }

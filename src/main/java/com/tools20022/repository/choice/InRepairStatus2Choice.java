@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.GenericIdentification1;
 import com.tools20022.repository.msg.InRepairStatusReason2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Status is in repair status."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InRepairStatus2Choice", propOrder = {"reason", "dataSourceScheme", "noReason"})
 public class InRepairStatus2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rsn", required = true)
 	protected InRepairStatusReason2 reason;
 	/**
-	 * Reason for an in repair status in the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -101,7 +103,7 @@ public class InRepairStatus2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InRepairStatus2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InRepairStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,11 +115,11 @@ public class InRepairStatus2Choice {
 			type_lazy = () -> InRepairStatusReason2.mmObject();
 		}
 	};
+	@XmlElement(name = "DataSrcSchme", required = true)
 	protected GenericIdentification1 dataSourceScheme;
 	/**
-	 * Proprietary identification for a reason of a specific status in the
-	 * report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -145,7 +147,7 @@ public class InRepairStatus2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmDataSourceScheme = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InRepairStatus2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InRepairStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DataSrcSchme";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +159,11 @@ public class InRepairStatus2Choice {
 			type_lazy = () -> GenericIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "NoRsn", required = true)
 	protected NoReasonCode noReason;
 	/**
-	 * Indicates that there is no reason available or to report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,7 +191,7 @@ public class InRepairStatus2Choice {
 	 */
 	public static final MMMessageAttribute mmNoReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InRepairStatus2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InRepairStatus2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,8 +206,9 @@ public class InRepairStatus2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InRepairStatus2Choice.mmReason, InRepairStatus2Choice.mmDataSourceScheme, InRepairStatus2Choice.mmNoReason);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InRepairStatus2Choice.mmReason, com.tools20022.repository.choice.InRepairStatus2Choice.mmDataSourceScheme,
+						com.tools20022.repository.choice.InRepairStatus2Choice.mmNoReason);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InRepairStatus2Choice";
 				definition = "Status is in repair status.";
@@ -213,30 +217,30 @@ public class InRepairStatus2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public InRepairStatusReason2 getReason() {
 		return reason;
 	}
 
-	public void setReason(InRepairStatusReason2 reason) {
-		this.reason = reason;
+	public InRepairStatus2Choice setReason(InRepairStatusReason2 reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	@XmlElement(name = "DataSrcSchme", required = true)
 	public GenericIdentification1 getDataSourceScheme() {
 		return dataSourceScheme;
 	}
 
-	public void setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
-		this.dataSourceScheme = dataSourceScheme;
+	public InRepairStatus2Choice setDataSourceScheme(GenericIdentification1 dataSourceScheme) {
+		this.dataSourceScheme = Objects.requireNonNull(dataSourceScheme);
+		return this;
 	}
 
-	@XmlElement(name = "NoRsn", required = true)
 	public NoReasonCode getNoReason() {
 		return noReason;
 	}
 
-	public void setNoReason(NoReasonCode noReason) {
-		this.noReason = noReason;
+	public InRepairStatus2Choice setNoReason(NoReasonCode noReason) {
+		this.noReason = Objects.requireNonNull(noReason);
+		return this;
 	}
 }

@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,17 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about an order confirmation."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvestmentFundOrderExecution3", propOrder = {"masterReference", "orderReference", "clientReference", "dealReference", "confirmationType", "amendmentIndicator", "orderExecutionDetails"})
 public class InvestmentFundOrderExecution3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MstrRef")
 	protected Max35Text masterReference;
 	/**
-	 * Unique and unambiguous identifier for a group of individual orders, as
-	 * assigned by the instructing party. This identifier links the individual
-	 * orders together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +131,7 @@ public class InvestmentFundOrderExecution3 {
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
-			componentContext_lazy = () -> InvestmentFundOrderExecution3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,11 +142,11 @@ public class InvestmentFundOrderExecution3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrRef")
 	protected Max35Text orderReference;
 	/**
-	 * Unique and unambiguous identifier for an order, as assigned by the
-	 * instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,7 +181,7 @@ public class InvestmentFundOrderExecution3 {
 	public static final MMMessageAttribute mmOrderReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmIdentification;
-			componentContext_lazy = () -> InvestmentFundOrderExecution3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -191,12 +192,11 @@ public class InvestmentFundOrderExecution3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntRef")
 	protected Max35Text clientReference;
 	/**
-	 * Unique and unambiguous investor's identification of an order. This
-	 * reference can typically be used in a hub scenario to give the reference
-	 * of the order as assigned by the underlying client.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -231,7 +231,7 @@ public class InvestmentFundOrderExecution3 {
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmClientReference;
-			componentContext_lazy = () -> InvestmentFundOrderExecution3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "ClntRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -242,11 +242,11 @@ public class InvestmentFundOrderExecution3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DealRef")
 	protected Max35Text dealReference;
 	/**
-	 * Unique and unambiguous identifier for an order execution, as assigned by
-	 * the executing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -281,7 +281,7 @@ public class InvestmentFundOrderExecution3 {
 	public static final MMMessageAttribute mmDealReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmDealIdentification;
-			componentContext_lazy = () -> InvestmentFundOrderExecution3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "DealRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -292,10 +292,11 @@ public class InvestmentFundOrderExecution3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ConfTp", required = true)
 	protected FundOrderType1Code confirmationType;
 	/**
-	 * Specifies the kind of order confirmation for the cancellation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -330,7 +331,7 @@ public class InvestmentFundOrderExecution3 {
 	public static final MMMessageAttribute mmConfirmationType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderType;
-			componentContext_lazy = () -> InvestmentFundOrderExecution3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "ConfTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -341,11 +342,11 @@ public class InvestmentFundOrderExecution3 {
 			simpleType_lazy = () -> FundOrderType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AmdmntInd")
 	protected YesNoIndicator amendmentIndicator;
 	/**
-	 * Indicates whether a new message, as a replacement for the confirmation
-	 * being cancelled, will follow the cancellation or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -375,7 +376,7 @@ public class InvestmentFundOrderExecution3 {
 	 */
 	public static final MMMessageAttribute mmAmendmentIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentFundOrderExecution3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -386,11 +387,11 @@ public class InvestmentFundOrderExecution3 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrExctnDtls")
 	protected SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice orderExecutionDetails;
 	/**
-	 * Extract of subscription execution, redemption execution or switch
-	 * execution order data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -425,7 +426,7 @@ public class InvestmentFundOrderExecution3 {
 	public static final MMMessageAssociationEnd mmOrderExecutionDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrderExecution.mmInvestmentFundTransaction;
-			componentContext_lazy = () -> InvestmentFundOrderExecution3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrExctnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -441,10 +442,12 @@ public class InvestmentFundOrderExecution3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InvestmentFundOrderExecution3.mmMasterReference, InvestmentFundOrderExecution3.mmOrderReference, InvestmentFundOrderExecution3.mmClientReference,
-						InvestmentFundOrderExecution3.mmDealReference, InvestmentFundOrderExecution3.mmConfirmationType, InvestmentFundOrderExecution3.mmAmendmentIndicator, InvestmentFundOrderExecution3.mmOrderExecutionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmMasterReference, com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmOrderReference,
+						com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmClientReference, com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmDealReference,
+						com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmConfirmationType, com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmAmendmentIndicator,
+						com.tools20022.repository.msg.InvestmentFundOrderExecution3.mmOrderExecutionDetails);
 				trace_lazy = () -> InvestmentFundOrderExecution.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvestmentFundOrderExecution3";
 				definition = "Information about an order confirmation.";
@@ -453,66 +456,66 @@ public class InvestmentFundOrderExecution3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MstrRef")
-	public Max35Text getMasterReference() {
-		return masterReference;
+	public Optional<Max35Text> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(Max35Text masterReference) {
+	public InvestmentFundOrderExecution3 setMasterReference(Max35Text masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "OrdrRef")
-	public Max35Text getOrderReference() {
-		return orderReference;
+	public Optional<Max35Text> getOrderReference() {
+		return orderReference == null ? Optional.empty() : Optional.of(orderReference);
 	}
 
-	public void setOrderReference(Max35Text orderReference) {
+	public InvestmentFundOrderExecution3 setOrderReference(Max35Text orderReference) {
 		this.orderReference = orderReference;
+		return this;
 	}
 
-	@XmlElement(name = "ClntRef")
-	public Max35Text getClientReference() {
-		return clientReference;
+	public Optional<Max35Text> getClientReference() {
+		return clientReference == null ? Optional.empty() : Optional.of(clientReference);
 	}
 
-	public void setClientReference(Max35Text clientReference) {
+	public InvestmentFundOrderExecution3 setClientReference(Max35Text clientReference) {
 		this.clientReference = clientReference;
+		return this;
 	}
 
-	@XmlElement(name = "DealRef")
-	public Max35Text getDealReference() {
-		return dealReference;
+	public Optional<Max35Text> getDealReference() {
+		return dealReference == null ? Optional.empty() : Optional.of(dealReference);
 	}
 
-	public void setDealReference(Max35Text dealReference) {
+	public InvestmentFundOrderExecution3 setDealReference(Max35Text dealReference) {
 		this.dealReference = dealReference;
+		return this;
 	}
 
-	@XmlElement(name = "ConfTp", required = true)
 	public FundOrderType1Code getConfirmationType() {
 		return confirmationType;
 	}
 
-	public void setConfirmationType(FundOrderType1Code confirmationType) {
-		this.confirmationType = confirmationType;
+	public InvestmentFundOrderExecution3 setConfirmationType(FundOrderType1Code confirmationType) {
+		this.confirmationType = Objects.requireNonNull(confirmationType);
+		return this;
 	}
 
-	@XmlElement(name = "AmdmntInd")
-	public YesNoIndicator getAmendmentIndicator() {
-		return amendmentIndicator;
+	public Optional<YesNoIndicator> getAmendmentIndicator() {
+		return amendmentIndicator == null ? Optional.empty() : Optional.of(amendmentIndicator);
 	}
 
-	public void setAmendmentIndicator(YesNoIndicator amendmentIndicator) {
+	public InvestmentFundOrderExecution3 setAmendmentIndicator(YesNoIndicator amendmentIndicator) {
 		this.amendmentIndicator = amendmentIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "OrdrExctnDtls")
-	public SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice getOrderExecutionDetails() {
-		return orderExecutionDetails;
+	public Optional<SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice> getOrderExecutionDetails() {
+		return orderExecutionDetails == null ? Optional.empty() : Optional.of(orderExecutionDetails);
 	}
 
-	public void setOrderExecutionDetails(SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice orderExecutionDetails) {
+	public InvestmentFundOrderExecution3 setOrderExecutionDetails(SubscriptionOrRedemptionOrSwitchOrderExecutionDataChoice orderExecutionDetails) {
 		this.orderExecutionDetails = orderExecutionDetails;
+		return this;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "HoldBackInformation1", propOrder = {"holdBackAmount", "holdBackReleaseDate"})
 public class HoldBackInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "HldBckAmt")
 	protected ActiveCurrencyAndAmount holdBackAmount;
 	/**
-	 * Value of the redemption amount subject to hold back.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +125,7 @@ public class HoldBackInformation1 {
 	public static final MMMessageAttribute mmHoldBackAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmHoldBackAmount;
-			componentContext_lazy = () -> HoldBackInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.HoldBackInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "HldBckAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +137,11 @@ public class HoldBackInformation1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "HldBckRlsDt")
 	protected ISODate holdBackReleaseDate;
 	/**
-	 * Date on which the hold back amount is to be released.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,7 +182,7 @@ public class HoldBackInformation1 {
 	public static final MMMessageAttribute mmHoldBackReleaseDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmHoldBackReleaseDate;
-			componentContext_lazy = () -> HoldBackInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.HoldBackInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "HldBckRlsDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,9 +198,9 @@ public class HoldBackInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(HoldBackInformation1.mmHoldBackAmount, HoldBackInformation1.mmHoldBackReleaseDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.HoldBackInformation1.mmHoldBackAmount, com.tools20022.repository.msg.HoldBackInformation1.mmHoldBackReleaseDate);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "HoldBackInformation1";
 				definition = "Information about hold back.";
@@ -207,21 +210,21 @@ public class HoldBackInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "HldBckAmt")
-	public ActiveCurrencyAndAmount getHoldBackAmount() {
-		return holdBackAmount;
+	public Optional<ActiveCurrencyAndAmount> getHoldBackAmount() {
+		return holdBackAmount == null ? Optional.empty() : Optional.of(holdBackAmount);
 	}
 
-	public void setHoldBackAmount(ActiveCurrencyAndAmount holdBackAmount) {
+	public HoldBackInformation1 setHoldBackAmount(ActiveCurrencyAndAmount holdBackAmount) {
 		this.holdBackAmount = holdBackAmount;
+		return this;
 	}
 
-	@XmlElement(name = "HldBckRlsDt")
-	public ISODate getHoldBackReleaseDate() {
-		return holdBackReleaseDate;
+	public Optional<ISODate> getHoldBackReleaseDate() {
+		return holdBackReleaseDate == null ? Optional.empty() : Optional.of(holdBackReleaseDate);
 	}
 
-	public void setHoldBackReleaseDate(ISODate holdBackReleaseDate) {
+	public HoldBackInformation1 setHoldBackReleaseDate(ISODate holdBackReleaseDate) {
 		this.holdBackReleaseDate = holdBackReleaseDate;
+		return this;
 	}
 }

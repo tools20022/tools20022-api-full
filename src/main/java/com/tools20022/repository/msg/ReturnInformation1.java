@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.PaymentProcessing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,16 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReturnInformation1", propOrder = {"returnedInterbankSettlementAmount", "interbankSettlementDate", "clearingChannel"})
 public class ReturnInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RtrdIntrBkSttlmAmt")
 	protected CurrencyAndAmount returnedInterbankSettlementAmount;
 	/**
-	 * Returned amount of money moved between the instructing agent and the
-	 * instructed agent in the return transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +120,7 @@ public class ReturnInformation1 {
 	public static final MMMessageAttribute mmReturnedInterbankSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
-			componentContext_lazy = () -> ReturnInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "RtrdIntrBkSttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,12 +131,11 @@ public class ReturnInformation1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmDt")
 	protected ISODate interbankSettlementDate;
 	/**
-	 * Date on which the amount of money ceases to be available to the agent
-	 * that owes it and when the amount of money becomes available to the agent
-	 * to which it is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,7 +170,7 @@ public class ReturnInformation1 {
 	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
-			componentContext_lazy = () -> ReturnInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,11 +181,11 @@ public class ReturnInformation1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ClrChanl")
 	protected ClearingChannel2Code clearingChannel;
 	/**
-	 * Specifies the clearing channel to be used to process the payment
-	 * instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -221,7 +221,7 @@ public class ReturnInformation1 {
 	public static final MMMessageAttribute mmClearingChannel = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmClearingChannel;
-			componentContext_lazy = () -> ReturnInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReturnInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrChanl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,9 +236,10 @@ public class ReturnInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReturnInformation1.mmReturnedInterbankSettlementAmount, ReturnInformation1.mmInterbankSettlementDate, ReturnInformation1.mmClearingChannel);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReturnInformation1.mmReturnedInterbankSettlementAmount, com.tools20022.repository.msg.ReturnInformation1.mmInterbankSettlementDate,
+						com.tools20022.repository.msg.ReturnInformation1.mmClearingChannel);
 				trace_lazy = () -> CashSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReturnInformation1";
 				definition = "Details on the returns expected by the debtor side after cancellation or modification.";
@@ -247,30 +248,30 @@ public class ReturnInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RtrdIntrBkSttlmAmt")
-	public CurrencyAndAmount getReturnedInterbankSettlementAmount() {
-		return returnedInterbankSettlementAmount;
+	public Optional<CurrencyAndAmount> getReturnedInterbankSettlementAmount() {
+		return returnedInterbankSettlementAmount == null ? Optional.empty() : Optional.of(returnedInterbankSettlementAmount);
 	}
 
-	public void setReturnedInterbankSettlementAmount(CurrencyAndAmount returnedInterbankSettlementAmount) {
+	public ReturnInformation1 setReturnedInterbankSettlementAmount(CurrencyAndAmount returnedInterbankSettlementAmount) {
 		this.returnedInterbankSettlementAmount = returnedInterbankSettlementAmount;
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmDt")
-	public ISODate getInterbankSettlementDate() {
-		return interbankSettlementDate;
+	public Optional<ISODate> getInterbankSettlementDate() {
+		return interbankSettlementDate == null ? Optional.empty() : Optional.of(interbankSettlementDate);
 	}
 
-	public void setInterbankSettlementDate(ISODate interbankSettlementDate) {
+	public ReturnInformation1 setInterbankSettlementDate(ISODate interbankSettlementDate) {
 		this.interbankSettlementDate = interbankSettlementDate;
+		return this;
 	}
 
-	@XmlElement(name = "ClrChanl")
-	public ClearingChannel2Code getClearingChannel() {
-		return clearingChannel;
+	public Optional<ClearingChannel2Code> getClearingChannel() {
+		return clearingChannel == null ? Optional.empty() : Optional.of(clearingChannel);
 	}
 
-	public void setClearingChannel(ClearingChannel2Code clearingChannel) {
+	public ReturnInformation1 setClearingChannel(ClearingChannel2Code clearingChannel) {
 		this.clearingChannel = clearingChannel;
+		return this;
 	}
 }

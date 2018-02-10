@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +69,17 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline#forFinancialInstrument32
+ * ConstraintFinancialInstrumentIdentificationGuideline.forFinancialInstrument32
+ * }</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,16 +96,16 @@ import javax.xml.bind.annotation.XmlType;
  * FinancialInstrument27}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrument32", propOrder = {"identification", "name", "transferType", "transfereeAccount", "receivingAgentDetails", "deliveringAgentDetails"})
 public class FinancialInstrument32 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected SecurityIdentification3Choice identification;
 	/**
-	 * Unique and unambiguous identifier of a security, assigned under a formal
-	 * or proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +141,7 @@ public class FinancialInstrument32 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> FinancialInstrument32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument32.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,10 +152,11 @@ public class FinancialInstrument32 {
 			complexType_lazy = () -> SecurityIdentification3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Nm")
 	protected Max350Text name;
 	/**
-	 * Name of the financial instrument in free format text.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,7 +189,7 @@ public class FinancialInstrument32 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
-			componentContext_lazy = () -> FinancialInstrument32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument32.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,11 +200,11 @@ public class FinancialInstrument32 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfTp", required = true)
 	protected TransferType1Code transferType;
 	/**
-	 * Specifies whether the financial instrument is transferred as an asset or
-	 * as cash.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,7 +240,7 @@ public class FinancialInstrument32 {
 	public static final MMMessageAttribute mmTransferType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferType;
-			componentContext_lazy = () -> FinancialInstrument32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument32.mmObject();
 			isDerived = false;
 			xmlTag = "TrfTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,11 +251,11 @@ public class FinancialInstrument32 {
 			simpleType_lazy = () -> TransferType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfeeAcct")
 	protected Account6 transfereeAccount;
 	/**
-	 * Account held in the name of a party that is not the name of the
-	 * beneficial owner of the shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -278,7 +290,7 @@ public class FinancialInstrument32 {
 	public static final MMMessageAttribute mmTransfereeAccount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmInvestmentAccount;
-			componentContext_lazy = () -> FinancialInstrument32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument32.mmObject();
 			isDerived = false;
 			xmlTag = "TrfeeAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -289,11 +301,11 @@ public class FinancialInstrument32 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Account6.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvgAgtDtls")
 	protected PartyIdentificationAndAccount93 receivingAgentDetails;
 	/**
-	 * Party that receives securities from the delivering agent via the place of
-	 * settlement, for example, securities central depository.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -329,7 +341,7 @@ public class FinancialInstrument32 {
 	public static final MMMessageAttribute mmReceivingAgentDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> FinancialInstrument32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument32.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgAgtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -340,11 +352,11 @@ public class FinancialInstrument32 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount93.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvrgAgtDtls")
 	protected PartyIdentificationAndAccount93 deliveringAgentDetails;
 	/**
-	 * Party that delivers securities to the receiving agent at the place of
-	 * settlement, for example, a central securities depository.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -380,7 +392,7 @@ public class FinancialInstrument32 {
 	public static final MMMessageAttribute mmDeliveringAgentDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> FinancialInstrument32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument32.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgAgtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -395,10 +407,12 @@ public class FinancialInstrument32 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrument32.mmIdentification, FinancialInstrument32.mmName, FinancialInstrument32.mmTransferType, FinancialInstrument32.mmTransfereeAccount,
-						FinancialInstrument32.mmReceivingAgentDetails, FinancialInstrument32.mmDeliveringAgentDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument32.mmIdentification, com.tools20022.repository.msg.FinancialInstrument32.mmName,
+						com.tools20022.repository.msg.FinancialInstrument32.mmTransferType, com.tools20022.repository.msg.FinancialInstrument32.mmTransfereeAccount,
+						com.tools20022.repository.msg.FinancialInstrument32.mmReceivingAgentDetails, com.tools20022.repository.msg.FinancialInstrument32.mmDeliveringAgentDetails);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline.forFinancialInstrument32);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument32";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.";
@@ -408,57 +422,57 @@ public class FinancialInstrument32 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification3Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(SecurityIdentification3Choice identification) {
-		this.identification = identification;
+	public FinancialInstrument32 setIdentification(SecurityIdentification3Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Nm")
-	public Max350Text getName() {
-		return name;
+	public Optional<Max350Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max350Text name) {
+	public FinancialInstrument32 setName(Max350Text name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "TrfTp", required = true)
 	public TransferType1Code getTransferType() {
 		return transferType;
 	}
 
-	public void setTransferType(TransferType1Code transferType) {
-		this.transferType = transferType;
+	public FinancialInstrument32 setTransferType(TransferType1Code transferType) {
+		this.transferType = Objects.requireNonNull(transferType);
+		return this;
 	}
 
-	@XmlElement(name = "TrfeeAcct")
-	public Account6 getTransfereeAccount() {
-		return transfereeAccount;
+	public Optional<Account6> getTransfereeAccount() {
+		return transfereeAccount == null ? Optional.empty() : Optional.of(transfereeAccount);
 	}
 
-	public void setTransfereeAccount(com.tools20022.repository.msg.Account6 transfereeAccount) {
+	public FinancialInstrument32 setTransfereeAccount(com.tools20022.repository.msg.Account6 transfereeAccount) {
 		this.transfereeAccount = transfereeAccount;
+		return this;
 	}
 
-	@XmlElement(name = "RcvgAgtDtls")
-	public PartyIdentificationAndAccount93 getReceivingAgentDetails() {
-		return receivingAgentDetails;
+	public Optional<PartyIdentificationAndAccount93> getReceivingAgentDetails() {
+		return receivingAgentDetails == null ? Optional.empty() : Optional.of(receivingAgentDetails);
 	}
 
-	public void setReceivingAgentDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount93 receivingAgentDetails) {
+	public FinancialInstrument32 setReceivingAgentDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount93 receivingAgentDetails) {
 		this.receivingAgentDetails = receivingAgentDetails;
+		return this;
 	}
 
-	@XmlElement(name = "DlvrgAgtDtls")
-	public PartyIdentificationAndAccount93 getDeliveringAgentDetails() {
-		return deliveringAgentDetails;
+	public Optional<PartyIdentificationAndAccount93> getDeliveringAgentDetails() {
+		return deliveringAgentDetails == null ? Optional.empty() : Optional.of(deliveringAgentDetails);
 	}
 
-	public void setDeliveringAgentDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount93 deliveringAgentDetails) {
+	public FinancialInstrument32 setDeliveringAgentDetails(com.tools20022.repository.msg.PartyIdentificationAndAccount93 deliveringAgentDetails) {
 		this.deliveringAgentDetails = deliveringAgentDetails;
+		return this;
 	}
 }

@@ -32,6 +32,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,8 +47,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.DocumentToSend1#mmMethodOfTransmissionXorExtendedMethodOfTransmissionRule
- * DocumentToSend1.mmMethodOfTransmissionXorExtendedMethodOfTransmissionRule}</li>
+ * {@linkplain com.tools20022.repository.msg.DocumentToSend1#MethodOfTransmissionXorExtendedMethodOfTransmissionRule
+ * DocumentToSend1.MethodOfTransmissionXorExtendedMethodOfTransmissionRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,8 +94,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -115,15 +116,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DocumentToSend1", propOrder = {"type", "recipient", "methodOfTransmission", "extendedMethodOfTransmission"})
 public class DocumentToSend1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected Max140Text type;
 	/**
-	 * Type of document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +159,7 @@ public class DocumentToSend1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DocumentToSend1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentToSend1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,10 +171,11 @@ public class DocumentToSend1 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Rcpt", required = true)
 	protected PartyIdentification2Choice recipient;
 	/**
-	 * Party that should receive the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,7 +211,7 @@ public class DocumentToSend1 {
 	 */
 	public static final MMMessageAttribute mmRecipient = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DocumentToSend1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentToSend1.mmObject();
 			isDerived = false;
 			xmlTag = "Rcpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,10 +223,11 @@ public class DocumentToSend1 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MtdOfTrnsmssn", required = true)
 	protected CommunicationMethod1Code methodOfTransmission;
 	/**
-	 * Communication method to be used.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,7 +255,7 @@ public class DocumentToSend1 {
 	 */
 	public static final MMMessageAttribute mmMethodOfTransmission = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DocumentToSend1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentToSend1.mmObject();
 			isDerived = false;
 			xmlTag = "MtdOfTrnsmssn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,10 +266,11 @@ public class DocumentToSend1 {
 			simpleType_lazy = () -> CommunicationMethod1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedMtdOfTrnsmssn", required = true)
 	protected Extended350Code extendedMethodOfTransmission;
 	/**
-	 * Communication means used to send information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -293,7 +298,7 @@ public class DocumentToSend1 {
 	 */
 	public static final MMMessageAttribute mmExtendedMethodOfTransmission = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DocumentToSend1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DocumentToSend1.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedMtdOfTrnsmssn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -338,23 +343,24 @@ public class DocumentToSend1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmMethodOfTransmissionXorExtendedMethodOfTransmissionRule = new MMXor() {
+	public static final MMXor MethodOfTransmissionXorExtendedMethodOfTransmissionRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MethodOfTransmissionXorExtendedMethodOfTransmissionRule";
 			definition = "Either MethodOfTransmission or ExtendedMethodOfTransmission must be present, but not both.";
-			messageComponent_lazy = () -> DocumentToSend1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(DocumentToSend1.mmMethodOfTransmission, DocumentToSend1.mmExtendedMethodOfTransmission);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.DocumentToSend1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentToSend1.mmMethodOfTransmission, com.tools20022.repository.msg.DocumentToSend1.mmExtendedMethodOfTransmission);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DocumentToSend1.mmType, DocumentToSend1.mmRecipient, DocumentToSend1.mmMethodOfTransmission, DocumentToSend1.mmExtendedMethodOfTransmission);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentToSend1.mmType, com.tools20022.repository.msg.DocumentToSend1.mmRecipient,
+						com.tools20022.repository.msg.DocumentToSend1.mmMethodOfTransmission, com.tools20022.repository.msg.DocumentToSend1.mmExtendedMethodOfTransmission);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AccountDetailsConfirmationV02.mmServiceLevelAgreement, AccountDetailsConfirmationV03.mmServiceLevelAgreement, AccountOpeningInstructionV02.mmServiceLevelAgreement,
 						AccountOpeningInstructionV03.mmServiceLevelAgreement, AccountDetailsConfirmationV04.mmServiceLevelAgreement, AccountOpeningInstructionV04.mmServiceLevelAgreement);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -366,45 +372,45 @@ public class DocumentToSend1 {
 				name = "DocumentToSend1";
 				definition = "Determine the type of document and the type of communication method to be used to notify a Party.";
 				nextVersions_lazy = () -> Arrays.asList(DocumentToSend2.mmObject());
-				xors_lazy = () -> Arrays.asList(DocumentToSend1.mmMethodOfTransmissionXorExtendedMethodOfTransmissionRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentToSend1.MethodOfTransmissionXorExtendedMethodOfTransmissionRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public Max140Text getType() {
 		return type;
 	}
 
-	public void setType(Max140Text type) {
-		this.type = type;
+	public DocumentToSend1 setType(Max140Text type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Rcpt", required = true)
 	public PartyIdentification2Choice getRecipient() {
 		return recipient;
 	}
 
-	public void setRecipient(PartyIdentification2Choice recipient) {
-		this.recipient = recipient;
+	public DocumentToSend1 setRecipient(PartyIdentification2Choice recipient) {
+		this.recipient = Objects.requireNonNull(recipient);
+		return this;
 	}
 
-	@XmlElement(name = "MtdOfTrnsmssn", required = true)
 	public CommunicationMethod1Code getMethodOfTransmission() {
 		return methodOfTransmission;
 	}
 
-	public void setMethodOfTransmission(CommunicationMethod1Code methodOfTransmission) {
-		this.methodOfTransmission = methodOfTransmission;
+	public DocumentToSend1 setMethodOfTransmission(CommunicationMethod1Code methodOfTransmission) {
+		this.methodOfTransmission = Objects.requireNonNull(methodOfTransmission);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedMtdOfTrnsmssn", required = true)
 	public Extended350Code getExtendedMethodOfTransmission() {
 		return extendedMethodOfTransmission;
 	}
 
-	public void setExtendedMethodOfTransmission(Extended350Code extendedMethodOfTransmission) {
-		this.extendedMethodOfTransmission = extendedMethodOfTransmission;
+	public DocumentToSend1 setExtendedMethodOfTransmission(Extended350Code extendedMethodOfTransmission) {
+		this.extendedMethodOfTransmission = Objects.requireNonNull(extendedMethodOfTransmission);
+		return this;
 	}
 }

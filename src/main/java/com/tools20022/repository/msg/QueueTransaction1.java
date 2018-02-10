@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Transaction summmary details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QueueTransaction1", propOrder = {"accountOwner", "account", "numberOfTransactions", "totalAmount"})
 public class QueueTransaction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctOwnr", required = true)
 	protected FinancialInstitutionIdentification8 accountOwner;
 	/**
-	 * Account owner identification such as BIC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -104,7 +107,7 @@ public class QueueTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> QueueTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QueueTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +119,11 @@ public class QueueTransaction1 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification8.mmObject();
 		}
 	};
+	@XmlElement(name = "Acct", required = true)
 	protected AccountIdentification4Choice account;
 	/**
-	 * Identification of the account such as IBAN or local identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -147,7 +151,7 @@ public class QueueTransaction1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> QueueTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QueueTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,10 +163,11 @@ public class QueueTransaction1 {
 			type_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfTxs")
 	protected Number numberOfTransactions;
 	/**
-	 * Number of transaction per counterparty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,7 +194,7 @@ public class QueueTransaction1 {
 	 */
 	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QueueTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QueueTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfTxs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,10 +205,11 @@ public class QueueTransaction1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlAmt", required = true)
 	protected ActiveCurrencyAndAmount totalAmount;
 	/**
-	 * Aggregated amount of the transactions per counterparty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -231,7 +237,7 @@ public class QueueTransaction1 {
 	 */
 	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QueueTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QueueTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -246,8 +252,9 @@ public class QueueTransaction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QueueTransaction1.mmAccountOwner, QueueTransaction1.mmAccount, QueueTransaction1.mmNumberOfTransactions, QueueTransaction1.mmTotalAmount);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QueueTransaction1.mmAccountOwner, com.tools20022.repository.msg.QueueTransaction1.mmAccount,
+						com.tools20022.repository.msg.QueueTransaction1.mmNumberOfTransactions, com.tools20022.repository.msg.QueueTransaction1.mmTotalAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QueueTransaction1";
 				definition = "Transaction summmary details.";
@@ -256,39 +263,39 @@ public class QueueTransaction1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctOwnr", required = true)
 	public FinancialInstitutionIdentification8 getAccountOwner() {
 		return accountOwner;
 	}
 
-	public void setAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification8 accountOwner) {
-		this.accountOwner = accountOwner;
+	public QueueTransaction1 setAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification8 accountOwner) {
+		this.accountOwner = Objects.requireNonNull(accountOwner);
+		return this;
 	}
 
-	@XmlElement(name = "Acct", required = true)
 	public AccountIdentification4Choice getAccount() {
 		return account;
 	}
 
-	public void setAccount(AccountIdentification4Choice account) {
-		this.account = account;
+	public QueueTransaction1 setAccount(AccountIdentification4Choice account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 
-	@XmlElement(name = "NbOfTxs")
-	public Number getNumberOfTransactions() {
-		return numberOfTransactions;
+	public Optional<Number> getNumberOfTransactions() {
+		return numberOfTransactions == null ? Optional.empty() : Optional.of(numberOfTransactions);
 	}
 
-	public void setNumberOfTransactions(Number numberOfTransactions) {
+	public QueueTransaction1 setNumberOfTransactions(Number numberOfTransactions) {
 		this.numberOfTransactions = numberOfTransactions;
+		return this;
 	}
 
-	@XmlElement(name = "TtlAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalAmount() {
 		return totalAmount;
 	}
 
-	public void setTotalAmount(ActiveCurrencyAndAmount totalAmount) {
-		this.totalAmount = totalAmount;
+	public QueueTransaction1 setTotalAmount(ActiveCurrencyAndAmount totalAmount) {
+		this.totalAmount = Objects.requireNonNull(totalAmount);
+		return this;
 	}
 }

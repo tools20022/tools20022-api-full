@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CompanyLinkCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of links to a company.
@@ -31,21 +36,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CompanyLinkCode#mmBroker
- * CompanyLinkCode.mmBroker}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CompanyLinkCode#mmAgent
- * CompanyLinkCode.mmAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CompanyLinkCode#Broker
+ * CompanyLinkCode.Broker}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CompanyLinkCode#Agent
+ * CompanyLinkCode.Agent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CompanyLinkCode#mmBrokeragePartner
- * CompanyLinkCode.mmBrokeragePartner}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CompanyLinkCode#mmRelative
- * CompanyLinkCode.mmRelative}</li>
+ * {@linkplain com.tools20022.repository.codeset.CompanyLinkCode#BrokeragePartner
+ * CompanyLinkCode.BrokeragePartner}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CompanyLinkCode#Relative
+ * CompanyLinkCode.Relative}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CompanyLinkCode#mmParentCompany
- * CompanyLinkCode.mmParentCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.CompanyLinkCode#ParentCompany
+ * CompanyLinkCode.ParentCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CompanyLinkCode#mmMemberBroker
- * CompanyLinkCode.mmMemberBroker}</li>
+ * {@linkplain com.tools20022.repository.codeset.CompanyLinkCode#MemberBroker
+ * CompanyLinkCode.MemberBroker}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -58,8 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of links to a company."</li>
  * </ul>
  */
-public class CompanyLinkCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CompanyLinkCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -94,12 +100,12 @@ public class CompanyLinkCode {
 	 * definition} = "Employee, operator or agent of the broker."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBroker = new MMCode() {
+	public static final CompanyLinkCode Broker = new CompanyLinkCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Broker";
 			definition = "Employee, operator or agent of the broker.";
-			owner_lazy = () -> CompanyLinkCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CompanyLinkCode.mmObject();
 			codeName = "BROK";
 		}
 	};
@@ -124,12 +130,12 @@ public class CompanyLinkCode {
 	 * definition} = "Autonomous agent accredited by the broker."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgent = new MMCode() {
+	public static final CompanyLinkCode Agent = new CompanyLinkCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
 			definition = "Autonomous agent accredited by the broker.";
-			owner_lazy = () -> CompanyLinkCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CompanyLinkCode.mmObject();
 			codeName = "AGEN";
 		}
 	};
@@ -158,12 +164,12 @@ public class CompanyLinkCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBrokeragePartner = new MMCode() {
+	public static final CompanyLinkCode BrokeragePartner = new CompanyLinkCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BrokeragePartner";
 			definition = "Brokerage partner or shareholder, individual or entity who holds a direct or an indirect control function and the holder of a management or an administration position.";
-			owner_lazy = () -> CompanyLinkCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CompanyLinkCode.mmObject();
 			codeName = "PART";
 		}
 	};
@@ -193,12 +199,12 @@ public class CompanyLinkCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRelative = new MMCode() {
+	public static final CompanyLinkCode Relative = new CompanyLinkCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Relative";
 			definition = "Spouse or partner and child of an employee, operator or agent of the broker; agent of the broker; brokerage partners or shareholders; individual or entity who holds a direct or an indirect control function and the holder of a management or an administration position.";
-			owner_lazy = () -> CompanyLinkCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CompanyLinkCode.mmObject();
 			codeName = "RELA";
 		}
 	};
@@ -223,12 +229,12 @@ public class CompanyLinkCode {
 	 * definition} = "Parent company of the broker."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmParentCompany = new MMCode() {
+	public static final CompanyLinkCode ParentCompany = new CompanyLinkCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParentCompany";
 			definition = "Parent company of the broker.";
-			owner_lazy = () -> CompanyLinkCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CompanyLinkCode.mmObject();
 			codeName = "PCOM";
 		}
 	};
@@ -256,27 +262,62 @@ public class CompanyLinkCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMemberBroker = new MMCode() {
+	public static final CompanyLinkCode MemberBroker = new CompanyLinkCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberBroker";
 			definition = "Member broker of a financial conglomerate (person is a board member, director, officer and employee of a member company of the conglomerate).";
-			owner_lazy = () -> CompanyLinkCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CompanyLinkCode.mmObject();
 			codeName = "MEMB";
 		}
 	};
+	final static private LinkedHashMap<String, CompanyLinkCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CompanyLinkCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CompanyLinkCode";
 				definition = "Specifies the type of links to a company.";
-				code_lazy = () -> Arrays.asList(CompanyLinkCode.mmBroker, CompanyLinkCode.mmAgent, CompanyLinkCode.mmBrokeragePartner, CompanyLinkCode.mmRelative, CompanyLinkCode.mmParentCompany, CompanyLinkCode.mmMemberBroker);
 				derivation_lazy = () -> Arrays.asList(CompanyLink1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CompanyLinkCode.Broker, com.tools20022.repository.codeset.CompanyLinkCode.Agent, com.tools20022.repository.codeset.CompanyLinkCode.BrokeragePartner,
+						com.tools20022.repository.codeset.CompanyLinkCode.Relative, com.tools20022.repository.codeset.CompanyLinkCode.ParentCompany, com.tools20022.repository.codeset.CompanyLinkCode.MemberBroker);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Broker.getCodeName().get(), Broker);
+		codesByName.put(Agent.getCodeName().get(), Agent);
+		codesByName.put(BrokeragePartner.getCodeName().get(), BrokeragePartner);
+		codesByName.put(Relative.getCodeName().get(), Relative);
+		codesByName.put(ParentCompany.getCodeName().get(), ParentCompany);
+		codesByName.put(MemberBroker.getCodeName().get(), MemberBroker);
+	}
+
+	public static CompanyLinkCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CompanyLinkCode[] values() {
+		CompanyLinkCode[] values = new CompanyLinkCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CompanyLinkCode> {
+		@Override
+		public CompanyLinkCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CompanyLinkCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

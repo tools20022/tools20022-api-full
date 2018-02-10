@@ -26,9 +26,11 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OperationMandate1;
 import com.tools20022.repository.msg.OperationMandate2;
 import com.tools20022.repository.msg.OperationMandate3;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Authorisation given to a mandate holder to perform some operation on an
@@ -40,6 +42,8 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Mandate Mandate}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -49,20 +53,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CashAccountMandate#mmCashAccountContract
  * CashAccountMandate.mmCashAccountContract}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Mandate Mandate}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.OperationMandate1
- * OperationMandate1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OperationMandate2
- * OperationMandate2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.OperationMandate3
- * OperationMandate3}</li>
  * </ul>
  * </li>
  * <li>
@@ -78,10 +68,22 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.OperationMandate1
+ * OperationMandate1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OperationMandate2
+ * OperationMandate2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OperationMandate3
+ * OperationMandate3}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,8 +101,8 @@ public class CashAccountMandate extends Mandate {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.CashAccountService> services;
 	/**
-	 * Services that the holder of an account mandate can exercise.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,8 +136,8 @@ public class CashAccountMandate extends Mandate {
 	 */
 	public static final MMBusinessAssociationEnd mmServices = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountMandate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountMandate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Services";
 			definition = "Services that the holder of an account mandate can exercise.";
@@ -147,8 +149,8 @@ public class CashAccountMandate extends Mandate {
 	};
 	protected List<com.tools20022.repository.entity.CashAccountContract> cashAccountContract;
 	/**
-	 * Contract to which a mandate applies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -181,8 +183,8 @@ public class CashAccountMandate extends Mandate {
 	 */
 	public static final MMBusinessAssociationEnd mmCashAccountContract = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountMandate.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountMandate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccountContract";
 			definition = "Contract to which a mandate applies.";
@@ -196,7 +198,7 @@ public class CashAccountMandate extends Mandate {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccountMandate";
 				definition = "Authorisation given to a mandate holder to perform some operation on an account.";
@@ -215,18 +217,20 @@ public class CashAccountMandate extends Mandate {
 	}
 
 	public List<CashAccountService> getServices() {
-		return services;
+		return services == null ? services = new ArrayList<>() : services;
 	}
 
-	public void setServices(List<com.tools20022.repository.entity.CashAccountService> services) {
-		this.services = services;
+	public CashAccountMandate setServices(List<com.tools20022.repository.entity.CashAccountService> services) {
+		this.services = Objects.requireNonNull(services);
+		return this;
 	}
 
 	public List<CashAccountContract> getCashAccountContract() {
-		return cashAccountContract;
+		return cashAccountContract == null ? cashAccountContract = new ArrayList<>() : cashAccountContract;
 	}
 
-	public void setCashAccountContract(List<com.tools20022.repository.entity.CashAccountContract> cashAccountContract) {
-		this.cashAccountContract = cashAccountContract;
+	public CashAccountMandate setCashAccountContract(List<com.tools20022.repository.entity.CashAccountContract> cashAccountContract) {
+		this.cashAccountContract = Objects.requireNonNull(cashAccountContract);
+		return this;
 	}
 }

@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PegTypeCode;
+import com.tools20022.repository.codeset.PegType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates a type of instruction to a broker or dealer to buy or sell a
@@ -31,32 +35,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PegTypeCode PegTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#mmFixed
- * PegType1Code.mmFixed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#mmLast
- * PegType1Code.mmLast}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#mmMarket
- * PegType1Code.mmMarket}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#mmMidPrice
- * PegType1Code.mmMidPrice}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#mmOpening
- * PegType1Code.mmOpening}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#mmPrimary
- * PegType1Code.mmPrimary}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#Fixed
+ * PegType1Code.Fixed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#Last
+ * PegType1Code.Last}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#Market
+ * PegType1Code.Market}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#MidPrice
+ * PegType1Code.MidPrice}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#Opening
+ * PegType1Code.Opening}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PegType1Code#Primary
+ * PegType1Code.Primary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PegType1Code#mmVolumeWeightAveragePrice
- * PegType1Code.mmVolumeWeightAveragePrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.PegType1Code#VolumeWeightAveragePrice
+ * PegType1Code.VolumeWeightAveragePrice}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PegTypeCode PegTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -75,7 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PegType1Code extends PegTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PegType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,11 +98,12 @@ public class PegType1Code extends PegTypeCode {
 	 * name} = "Fixed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFixed = new MMCode() {
+	public static final PegType1Code Fixed = new PegType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
-			owner_lazy = () -> PegType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PegType1Code.mmObject();
+			codeName = PegTypeCode.Fixed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class PegType1Code extends PegTypeCode {
 	 * name} = "Last"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLast = new MMCode() {
+	public static final PegType1Code Last = new PegType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Last";
-			owner_lazy = () -> PegType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PegType1Code.mmObject();
+			codeName = PegTypeCode.Last.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -137,11 +144,12 @@ public class PegType1Code extends PegTypeCode {
 	 * name} = "Market"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarket = new MMCode() {
+	public static final PegType1Code Market = new PegType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Market";
-			owner_lazy = () -> PegType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PegType1Code.mmObject();
+			codeName = PegTypeCode.Market.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -159,11 +167,12 @@ public class PegType1Code extends PegTypeCode {
 	 * name} = "MidPrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMidPrice = new MMCode() {
+	public static final PegType1Code MidPrice = new PegType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidPrice";
-			owner_lazy = () -> PegType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PegType1Code.mmObject();
+			codeName = PegTypeCode.MidPrice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -181,11 +190,12 @@ public class PegType1Code extends PegTypeCode {
 	 * name} = "Opening"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpening = new MMCode() {
+	public static final PegType1Code Opening = new PegType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Opening";
-			owner_lazy = () -> PegType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PegType1Code.mmObject();
+			codeName = PegTypeCode.Opening.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -203,11 +213,12 @@ public class PegType1Code extends PegTypeCode {
 	 * name} = "Primary"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrimary = new MMCode() {
+	public static final PegType1Code Primary = new PegType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Primary";
-			owner_lazy = () -> PegType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PegType1Code.mmObject();
+			codeName = PegTypeCode.Primary.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -225,26 +236,64 @@ public class PegType1Code extends PegTypeCode {
 	 * name} = "VolumeWeightAveragePrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVolumeWeightAveragePrice = new MMCode() {
+	public static final PegType1Code VolumeWeightAveragePrice = new PegType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VolumeWeightAveragePrice";
-			owner_lazy = () -> PegType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PegType1Code.mmObject();
+			codeName = PegTypeCode.VolumeWeightAveragePrice.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PegType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PegType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FIXE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PegType1Code";
 				definition = "Indicates a type of instruction to a broker or dealer to buy or sell a financial instrument which is pegged against a certain value.";
-				code_lazy = () -> Arrays.asList(PegType1Code.mmFixed, PegType1Code.mmLast, PegType1Code.mmMarket, PegType1Code.mmMidPrice, PegType1Code.mmOpening, PegType1Code.mmPrimary, PegType1Code.mmVolumeWeightAveragePrice);
 				trace_lazy = () -> PegTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PegType1Code.Fixed, com.tools20022.repository.codeset.PegType1Code.Last, com.tools20022.repository.codeset.PegType1Code.Market,
+						com.tools20022.repository.codeset.PegType1Code.MidPrice, com.tools20022.repository.codeset.PegType1Code.Opening, com.tools20022.repository.codeset.PegType1Code.Primary,
+						com.tools20022.repository.codeset.PegType1Code.VolumeWeightAveragePrice);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Fixed.getCodeName().get(), Fixed);
+		codesByName.put(Last.getCodeName().get(), Last);
+		codesByName.put(Market.getCodeName().get(), Market);
+		codesByName.put(MidPrice.getCodeName().get(), MidPrice);
+		codesByName.put(Opening.getCodeName().get(), Opening);
+		codesByName.put(Primary.getCodeName().get(), Primary);
+		codesByName.put(VolumeWeightAveragePrice.getCodeName().get(), VolumeWeightAveragePrice);
+	}
+
+	public static PegType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PegType1Code[] values() {
+		PegType1Code[] values = new PegType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PegType1Code> {
+		@Override
+		public PegType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PegType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

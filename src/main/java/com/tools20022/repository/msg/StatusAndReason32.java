@@ -24,9 +24,11 @@ import com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV08
 import com.tools20022.repository.choice.Status18Choice;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * StatusAndReason27}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StatusAndReason32", propOrder = {"statusAndReason", "transaction"})
 public class StatusAndReason32 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StsAndRsn", required = true)
 	protected Status18Choice statusAndReason;
 	/**
-	 * Status and reason for the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -123,7 +126,7 @@ public class StatusAndReason32 {
 	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Status.mmObject();
-			componentContext_lazy = () -> StatusAndReason32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason32.mmObject();
 			isDerived = false;
 			xmlTag = "StsAndRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +139,11 @@ public class StatusAndReason32 {
 			type_lazy = () -> Status18Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Tx")
 	protected List<com.tools20022.repository.msg.Transaction54> transaction;
 	/**
-	 * Details of the transactions reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -170,7 +174,7 @@ public class StatusAndReason32 {
 	 */
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StatusAndReason32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StatusAndReason32.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,10 +190,10 @@ public class StatusAndReason32 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StatusAndReason32.mmStatusAndReason, StatusAndReason32.mmTransaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason32.mmStatusAndReason, com.tools20022.repository.msg.StatusAndReason32.mmTransaction);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTransactionPendingReportV08.mmStatus);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusAndReason32";
 				definition = "Status and reason of an instructed order.";
@@ -199,21 +203,21 @@ public class StatusAndReason32 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StsAndRsn", required = true)
 	public Status18Choice getStatusAndReason() {
 		return statusAndReason;
 	}
 
-	public void setStatusAndReason(Status18Choice statusAndReason) {
-		this.statusAndReason = statusAndReason;
+	public StatusAndReason32 setStatusAndReason(Status18Choice statusAndReason) {
+		this.statusAndReason = Objects.requireNonNull(statusAndReason);
+		return this;
 	}
 
-	@XmlElement(name = "Tx")
 	public List<Transaction54> getTransaction() {
-		return transaction;
+		return transaction == null ? transaction = new ArrayList<>() : transaction;
 	}
 
-	public void setTransaction(List<com.tools20022.repository.msg.Transaction54> transaction) {
-		this.transaction = transaction;
+	public StatusAndReason32 setTransaction(List<com.tools20022.repository.msg.Transaction54> transaction) {
+		this.transaction = Objects.requireNonNull(transaction);
+		return this;
 	}
 }

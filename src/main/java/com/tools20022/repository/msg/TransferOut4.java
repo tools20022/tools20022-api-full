@@ -26,9 +26,11 @@ import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,16 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about the transfer to be cancelled."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransferOut4", propOrder = {"investor", "investorAddress", "clientAccount", "cashAccount", "newPlanManager", "productTransfer", "extension"})
 public class TransferOut4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Invstr", required = true)
 	protected IndividualPerson3 investor;
 	/**
-	 * Information identifying the investor, eg name, address, social security
-	 * number and date of birth..
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,7 +120,7 @@ public class TransferOut4 {
 	public static final MMMessageAssociationEnd mmInvestor = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Person.mmObject();
-			componentContext_lazy = () -> TransferOut4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut4.mmObject();
 			isDerived = false;
 			xmlTag = "Invstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +132,11 @@ public class TransferOut4 {
 			type_lazy = () -> com.tools20022.repository.msg.IndividualPerson3.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstrAdr", required = true)
 	protected PostalAddress1 investorAddress;
 	/**
-	 * Information that locates the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -164,7 +167,7 @@ public class TransferOut4 {
 	public static final MMMessageAssociationEnd mmInvestorAddress = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
-			componentContext_lazy = () -> TransferOut4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut4.mmObject();
 			isDerived = false;
 			xmlTag = "InvstrAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,11 +179,11 @@ public class TransferOut4 {
 			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntAcct", required = true)
 	protected Account4 clientAccount;
 	/**
-	 * Identification of an account owned by the investor at the old plan
-	 * manager (account servicer).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -212,7 +215,7 @@ public class TransferOut4 {
 	public static final MMMessageAssociationEnd mmClientAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmAccount;
-			componentContext_lazy = () -> TransferOut4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut4.mmObject();
 			isDerived = false;
 			xmlTag = "ClntAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,12 +227,11 @@ public class TransferOut4 {
 			type_lazy = () -> com.tools20022.repository.msg.Account4.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAcct", required = true)
 	protected CashAccount6 cashAccount;
 	/**
-	 * Identification of an account owned by the investor and held by the new
-	 * plan manager to which a cash entry is made based on the transfer (sale)
-	 * of asset(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -261,7 +263,7 @@ public class TransferOut4 {
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
-			componentContext_lazy = () -> TransferOut4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut4.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,11 +275,11 @@ public class TransferOut4 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount6.mmObject();
 		}
 	};
+	@XmlElement(name = "NewPlanMgr", required = true)
 	protected PartyIdentification2Choice newPlanManager;
 	/**
-	 * Information related to the institution to which the proceeds of the sale
-	 * of the financial instrument is to be deposited.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -305,7 +307,7 @@ public class TransferOut4 {
 	 */
 	public static final MMMessageAssociationEnd mmNewPlanManager = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransferOut4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut4.mmObject();
 			isDerived = false;
 			xmlTag = "NewPlanMgr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -317,10 +319,11 @@ public class TransferOut4 {
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PdctTrf")
 	protected List<com.tools20022.repository.msg.PEPISACashTransfer1> productTransfer;
 	/**
-	 * Provides information related to the asset(s) transferred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -352,7 +355,7 @@ public class TransferOut4 {
 	public static final MMMessageAssociationEnd mmProductTransfer = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
-			componentContext_lazy = () -> TransferOut4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut4.mmObject();
 			isDerived = false;
 			xmlTag = "PdctTrf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -363,11 +366,11 @@ public class TransferOut4 {
 			type_lazy = () -> com.tools20022.repository.msg.PEPISACashTransfer1.mmObject();
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -393,7 +396,7 @@ public class TransferOut4 {
 	 */
 	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransferOut4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferOut4.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -408,10 +411,11 @@ public class TransferOut4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransferOut4.mmInvestor, TransferOut4.mmInvestorAddress, TransferOut4.mmClientAccount, TransferOut4.mmCashAccount, TransferOut4.mmNewPlanManager, TransferOut4.mmProductTransfer,
-						TransferOut4.mmExtension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferOut4.mmInvestor, com.tools20022.repository.msg.TransferOut4.mmInvestorAddress, com.tools20022.repository.msg.TransferOut4.mmClientAccount,
+						com.tools20022.repository.msg.TransferOut4.mmCashAccount, com.tools20022.repository.msg.TransferOut4.mmNewPlanManager, com.tools20022.repository.msg.TransferOut4.mmProductTransfer,
+						com.tools20022.repository.msg.TransferOut4.mmExtension);
 				trace_lazy = () -> SecuritiesTransfer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransferOut4";
 				definition = "Information about the transfer to be cancelled.";
@@ -420,66 +424,66 @@ public class TransferOut4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Invstr", required = true)
 	public IndividualPerson3 getInvestor() {
 		return investor;
 	}
 
-	public void setInvestor(com.tools20022.repository.msg.IndividualPerson3 investor) {
-		this.investor = investor;
+	public TransferOut4 setInvestor(com.tools20022.repository.msg.IndividualPerson3 investor) {
+		this.investor = Objects.requireNonNull(investor);
+		return this;
 	}
 
-	@XmlElement(name = "InvstrAdr", required = true)
 	public PostalAddress1 getInvestorAddress() {
 		return investorAddress;
 	}
 
-	public void setInvestorAddress(com.tools20022.repository.msg.PostalAddress1 investorAddress) {
-		this.investorAddress = investorAddress;
+	public TransferOut4 setInvestorAddress(com.tools20022.repository.msg.PostalAddress1 investorAddress) {
+		this.investorAddress = Objects.requireNonNull(investorAddress);
+		return this;
 	}
 
-	@XmlElement(name = "ClntAcct", required = true)
 	public Account4 getClientAccount() {
 		return clientAccount;
 	}
 
-	public void setClientAccount(com.tools20022.repository.msg.Account4 clientAccount) {
-		this.clientAccount = clientAccount;
+	public TransferOut4 setClientAccount(com.tools20022.repository.msg.Account4 clientAccount) {
+		this.clientAccount = Objects.requireNonNull(clientAccount);
+		return this;
 	}
 
-	@XmlElement(name = "CshAcct", required = true)
 	public CashAccount6 getCashAccount() {
 		return cashAccount;
 	}
 
-	public void setCashAccount(com.tools20022.repository.msg.CashAccount6 cashAccount) {
-		this.cashAccount = cashAccount;
+	public TransferOut4 setCashAccount(com.tools20022.repository.msg.CashAccount6 cashAccount) {
+		this.cashAccount = Objects.requireNonNull(cashAccount);
+		return this;
 	}
 
-	@XmlElement(name = "NewPlanMgr", required = true)
 	public PartyIdentification2Choice getNewPlanManager() {
 		return newPlanManager;
 	}
 
-	public void setNewPlanManager(PartyIdentification2Choice newPlanManager) {
-		this.newPlanManager = newPlanManager;
+	public TransferOut4 setNewPlanManager(PartyIdentification2Choice newPlanManager) {
+		this.newPlanManager = Objects.requireNonNull(newPlanManager);
+		return this;
 	}
 
-	@XmlElement(name = "PdctTrf")
 	public List<PEPISACashTransfer1> getProductTransfer() {
-		return productTransfer;
+		return productTransfer == null ? productTransfer = new ArrayList<>() : productTransfer;
 	}
 
-	public void setProductTransfer(List<com.tools20022.repository.msg.PEPISACashTransfer1> productTransfer) {
-		this.productTransfer = productTransfer;
+	public TransferOut4 setProductTransfer(List<com.tools20022.repository.msg.PEPISACashTransfer1> productTransfer) {
+		this.productTransfer = Objects.requireNonNull(productTransfer);
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
-		this.extension = extension;
+	public TransferOut4 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 }

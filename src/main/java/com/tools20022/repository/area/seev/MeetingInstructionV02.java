@@ -29,9 +29,11 @@ import com.tools20022.repository.msg.MessageIdentification1;
 import com.tools20022.repository.msg.SecurityIdentification3;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -53,20 +55,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
- * SecuritiesEventsArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "MtgInstr"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -88,6 +76,20 @@ import javax.xml.bind.annotation.*;
  * MeetingInstructionV02.mmInstruction}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "MtgInstr"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
+ * SecuritiesEventsArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.004.001.02}</li>
@@ -110,15 +112,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MeetingInstructionV02", propOrder = {"meetingInstructionIdentification", "meetingReference", "instructingParty", "securityIdentification", "instruction"})
 public class MeetingInstructionV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MtgInstrId", required = true)
 	protected MessageIdentification1 meetingInstructionIdentification;
 	/**
-	 * Identifies the meeting instruction message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,10 +161,11 @@ public class MeetingInstructionV02 {
 			}
 		}
 	};
+	@XmlElement(name = "MtgRef", required = true)
 	protected MeetingReference3 meetingReference;
 	/**
-	 * Series of elements which allow to identify a meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,10 +205,11 @@ public class MeetingInstructionV02 {
 			}
 		}
 	};
+	@XmlElement(name = "InstgPty", required = true)
 	protected PartyIdentification9Choice instructingParty;
 	/**
-	 * Party notifying the instructions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,10 +249,11 @@ public class MeetingInstructionV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SctyId", required = true)
 	protected SecurityIdentification3 securityIdentification;
 	/**
-	 * Identifies the security for which the meeting is organised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -288,11 +294,11 @@ public class MeetingInstructionV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Instr", required = true)
 	protected List<Instruction1> instruction;
 	/**
-	 * Identifies the position of the instructing party and the action that they
-	 * want to take.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -365,52 +371,52 @@ public class MeetingInstructionV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MtgInstrId", required = true)
 	public MessageIdentification1 getMeetingInstructionIdentification() {
 		return meetingInstructionIdentification;
 	}
 
-	public void setMeetingInstructionIdentification(MessageIdentification1 meetingInstructionIdentification) {
-		this.meetingInstructionIdentification = meetingInstructionIdentification;
+	public MeetingInstructionV02 setMeetingInstructionIdentification(MessageIdentification1 meetingInstructionIdentification) {
+		this.meetingInstructionIdentification = Objects.requireNonNull(meetingInstructionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "MtgRef", required = true)
 	public MeetingReference3 getMeetingReference() {
 		return meetingReference;
 	}
 
-	public void setMeetingReference(MeetingReference3 meetingReference) {
-		this.meetingReference = meetingReference;
+	public MeetingInstructionV02 setMeetingReference(MeetingReference3 meetingReference) {
+		this.meetingReference = Objects.requireNonNull(meetingReference);
+		return this;
 	}
 
-	@XmlElement(name = "InstgPty", required = true)
 	public PartyIdentification9Choice getInstructingParty() {
 		return instructingParty;
 	}
 
-	public void setInstructingParty(PartyIdentification9Choice instructingParty) {
-		this.instructingParty = instructingParty;
+	public MeetingInstructionV02 setInstructingParty(PartyIdentification9Choice instructingParty) {
+		this.instructingParty = Objects.requireNonNull(instructingParty);
+		return this;
 	}
 
-	@XmlElement(name = "SctyId", required = true)
 	public SecurityIdentification3 getSecurityIdentification() {
 		return securityIdentification;
 	}
 
-	public void setSecurityIdentification(SecurityIdentification3 securityIdentification) {
-		this.securityIdentification = securityIdentification;
+	public MeetingInstructionV02 setSecurityIdentification(SecurityIdentification3 securityIdentification) {
+		this.securityIdentification = Objects.requireNonNull(securityIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Instr", required = true)
 	public List<Instruction1> getInstruction() {
-		return instruction;
+		return instruction == null ? instruction = new ArrayList<>() : instruction;
 	}
 
-	public void setInstruction(List<Instruction1> instruction) {
-		this.instruction = instruction;
+	public MeetingInstructionV02 setInstruction(List<Instruction1> instruction) {
+		this.instruction = Objects.requireNonNull(instruction);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.004.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.004.001.02")
 	static public class Document {
 		@XmlElement(name = "MtgInstr", required = true)
 		public MeetingInstructionV02 messageBody;

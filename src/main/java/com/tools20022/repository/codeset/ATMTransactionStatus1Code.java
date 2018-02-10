@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ATMTransactionStatusCode;
+import com.tools20022.repository.codeset.ATMTransactionStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Outcome of the financial ATM transaction for the customer.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatusCode
- * ATMTransactionStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatus1Code#mmDoubt
- * ATMTransactionStatus1Code.mmDoubt}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatus1Code#Doubt
+ * ATMTransactionStatus1Code.Doubt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatus1Code#mmFailure
- * ATMTransactionStatus1Code.mmFailure}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatus1Code#Failure
+ * ATMTransactionStatus1Code.Failure}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatus1Code#mmSuccess
- * ATMTransactionStatus1Code.mmSuccess}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatus1Code#Success
+ * ATMTransactionStatus1Code.Success}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ATMTransactionStatusCode
+ * ATMTransactionStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Outcome of the financial ATM transaction for the customer."</li>
  * </ul>
  */
-public class ATMTransactionStatus1Code extends ATMTransactionStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ATMTransactionStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,11 +85,12 @@ public class ATMTransactionStatus1Code extends ATMTransactionStatusCode {
 	 * name} = "Doubt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDoubt = new MMCode() {
+	public static final ATMTransactionStatus1Code Doubt = new ATMTransactionStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Doubt";
-			owner_lazy = () -> ATMTransactionStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMTransactionStatus1Code.mmObject();
+			codeName = ATMTransactionStatusCode.Doubt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,11 +109,12 @@ public class ATMTransactionStatus1Code extends ATMTransactionStatusCode {
 	 * name} = "Failure"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFailure = new MMCode() {
+	public static final ATMTransactionStatus1Code Failure = new ATMTransactionStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failure";
-			owner_lazy = () -> ATMTransactionStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMTransactionStatus1Code.mmObject();
+			codeName = ATMTransactionStatusCode.Failure.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -126,25 +133,58 @@ public class ATMTransactionStatus1Code extends ATMTransactionStatusCode {
 	 * name} = "Success"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuccess = new MMCode() {
+	public static final ATMTransactionStatus1Code Success = new ATMTransactionStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Success";
-			owner_lazy = () -> ATMTransactionStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMTransactionStatus1Code.mmObject();
+			codeName = ATMTransactionStatusCode.Success.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ATMTransactionStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ATMTransactionStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTransactionStatus1Code";
 				definition = "Outcome of the financial ATM transaction for the customer.";
-				code_lazy = () -> Arrays.asList(ATMTransactionStatus1Code.mmDoubt, ATMTransactionStatus1Code.mmFailure, ATMTransactionStatus1Code.mmSuccess);
 				trace_lazy = () -> ATMTransactionStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMTransactionStatus1Code.Doubt, com.tools20022.repository.codeset.ATMTransactionStatus1Code.Failure,
+						com.tools20022.repository.codeset.ATMTransactionStatus1Code.Success);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Doubt.getCodeName().get(), Doubt);
+		codesByName.put(Failure.getCodeName().get(), Failure);
+		codesByName.put(Success.getCodeName().get(), Success);
+	}
+
+	public static ATMTransactionStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ATMTransactionStatus1Code[] values() {
+		ATMTransactionStatus1Code[] values = new ATMTransactionStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ATMTransactionStatus1Code> {
+		@Override
+		public ATMTransactionStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ATMTransactionStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

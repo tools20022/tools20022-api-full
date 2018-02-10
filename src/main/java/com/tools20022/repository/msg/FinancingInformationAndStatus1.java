@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.tsin.InvoiceFinancingRequestStatusV01;
 import com.tools20022.repository.entity.InvoiceFinancingAgreement;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Financing information and status."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancingInformationAndStatus1", propOrder = {"financingAllowedSummary", "invoiceFinancingDetails"})
 public class FinancingInformationAndStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FincgAllwdSummry", required = true)
 	protected FinancingAllowedSummary1 financingAllowedSummary;
 	/**
-	 * Specifies summary information about invoices/instalments financed, such
-	 * as total amount financed, number of single requests accepted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -120,7 +122,7 @@ public class FinancingInformationAndStatus1 {
 	public static final MMMessageAssociationEnd mmFinancingAllowedSummary = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvoiceFinancingAgreement.mmObject();
-			componentContext_lazy = () -> FinancingInformationAndStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingInformationAndStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "FincgAllwdSummry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,12 +134,11 @@ public class FinancingInformationAndStatus1 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancingAllowedSummary1.mmObject();
 		}
 	};
+	@XmlElement(name = "InvcFincgDtls", required = true)
 	protected List<com.tools20022.repository.msg.InvoiceFinancingDetails1> invoiceFinancingDetails;
 	/**
-	 * Specifies detailed information about single invoice/instalment financing
-	 * result, such as result of request (financed or not financed), amount,
-	 * percentage applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -172,7 +173,7 @@ public class FinancingInformationAndStatus1 {
 	public static final MMMessageAssociationEnd mmInvoiceFinancingDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvoiceFinancingAgreement.mmObject();
-			componentContext_lazy = () -> FinancingInformationAndStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancingInformationAndStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "InvcFincgDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,10 +188,10 @@ public class FinancingInformationAndStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancingInformationAndStatus1.mmFinancingAllowedSummary, FinancingInformationAndStatus1.mmInvoiceFinancingDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancingInformationAndStatus1.mmFinancingAllowedSummary, com.tools20022.repository.msg.FinancingInformationAndStatus1.mmInvoiceFinancingDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(InvoiceFinancingRequestStatusV01.mmFinancingInformationAndStatus);
 				trace_lazy = () -> InvoiceFinancingAgreement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancingInformationAndStatus1";
 				definition = "Financing information and status.";
@@ -199,21 +200,21 @@ public class FinancingInformationAndStatus1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FincgAllwdSummry", required = true)
 	public FinancingAllowedSummary1 getFinancingAllowedSummary() {
 		return financingAllowedSummary;
 	}
 
-	public void setFinancingAllowedSummary(com.tools20022.repository.msg.FinancingAllowedSummary1 financingAllowedSummary) {
-		this.financingAllowedSummary = financingAllowedSummary;
+	public FinancingInformationAndStatus1 setFinancingAllowedSummary(com.tools20022.repository.msg.FinancingAllowedSummary1 financingAllowedSummary) {
+		this.financingAllowedSummary = Objects.requireNonNull(financingAllowedSummary);
+		return this;
 	}
 
-	@XmlElement(name = "InvcFincgDtls", required = true)
 	public List<InvoiceFinancingDetails1> getInvoiceFinancingDetails() {
-		return invoiceFinancingDetails;
+		return invoiceFinancingDetails == null ? invoiceFinancingDetails = new ArrayList<>() : invoiceFinancingDetails;
 	}
 
-	public void setInvoiceFinancingDetails(List<com.tools20022.repository.msg.InvoiceFinancingDetails1> invoiceFinancingDetails) {
-		this.invoiceFinancingDetails = invoiceFinancingDetails;
+	public FinancingInformationAndStatus1 setInvoiceFinancingDetails(List<com.tools20022.repository.msg.InvoiceFinancingDetails1> invoiceFinancingDetails) {
+		this.invoiceFinancingDetails = Objects.requireNonNull(invoiceFinancingDetails);
+		return this;
 	}
 }

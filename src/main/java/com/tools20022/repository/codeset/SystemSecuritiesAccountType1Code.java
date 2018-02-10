@@ -20,46 +20,50 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SystemSecuritiesAccountTypeCode;
+import com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Lists the type of the securities account specific for a system.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SystemSecuritiesAccountTypeCode
- * SystemSecuritiesAccountTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code#mmCSDParticipantAccount
- * SystemSecuritiesAccountType1Code.mmCSDParticipantAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code#CSDParticipantAccount
+ * SystemSecuritiesAccountType1Code.CSDParticipantAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code#mmCSDMirrorAccount
- * SystemSecuritiesAccountType1Code.mmCSDMirrorAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code#CSDMirrorAccount
+ * SystemSecuritiesAccountType1Code.CSDMirrorAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code#mmInterCSDAccount
- * SystemSecuritiesAccountType1Code.mmInterCSDAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code#InterCSDAccount
+ * SystemSecuritiesAccountType1Code.InterCSDAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code#mmTechnicalOffsetAccount
- * SystemSecuritiesAccountType1Code.mmTechnicalOffsetAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code#TechnicalOffsetAccount
+ * SystemSecuritiesAccountType1Code.TechnicalOffsetAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code#mmCSDOmnibusAccount
- * SystemSecuritiesAccountType1Code.mmCSDOmnibusAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code#CSDOmnibusAccount
+ * SystemSecuritiesAccountType1Code.CSDOmnibusAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code#mmIssuanceAccount
- * SystemSecuritiesAccountType1Code.mmIssuanceAccount}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code#IssuanceAccount
+ * SystemSecuritiesAccountType1Code.IssuanceAccount}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SystemSecuritiesAccountTypeCode
+ * SystemSecuritiesAccountTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Lists the type of the securities account specific for a system."</li>
  * </ul>
  */
-public class SystemSecuritiesAccountType1Code extends SystemSecuritiesAccountTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SystemSecuritiesAccountType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -96,11 +101,12 @@ public class SystemSecuritiesAccountType1Code extends SystemSecuritiesAccountTyp
 	 * name} = "CSDParticipantAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCSDParticipantAccount = new MMCode() {
+	public static final SystemSecuritiesAccountType1Code CSDParticipantAccount = new SystemSecuritiesAccountType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDParticipantAccount";
-			owner_lazy = () -> SystemSecuritiesAccountType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.mmObject();
+			codeName = SystemSecuritiesAccountTypeCode.CSDParticipantAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -119,11 +125,12 @@ public class SystemSecuritiesAccountType1Code extends SystemSecuritiesAccountTyp
 	 * name} = "CSDMirrorAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCSDMirrorAccount = new MMCode() {
+	public static final SystemSecuritiesAccountType1Code CSDMirrorAccount = new SystemSecuritiesAccountType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDMirrorAccount";
-			owner_lazy = () -> SystemSecuritiesAccountType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.mmObject();
+			codeName = SystemSecuritiesAccountTypeCode.CSDMirrorAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -142,11 +149,12 @@ public class SystemSecuritiesAccountType1Code extends SystemSecuritiesAccountTyp
 	 * name} = "InterCSDAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterCSDAccount = new MMCode() {
+	public static final SystemSecuritiesAccountType1Code InterCSDAccount = new SystemSecuritiesAccountType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterCSDAccount";
-			owner_lazy = () -> SystemSecuritiesAccountType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.mmObject();
+			codeName = SystemSecuritiesAccountTypeCode.InterCSDAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -165,11 +173,12 @@ public class SystemSecuritiesAccountType1Code extends SystemSecuritiesAccountTyp
 	 * name} = "TechnicalOffsetAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTechnicalOffsetAccount = new MMCode() {
+	public static final SystemSecuritiesAccountType1Code TechnicalOffsetAccount = new SystemSecuritiesAccountType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalOffsetAccount";
-			owner_lazy = () -> SystemSecuritiesAccountType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.mmObject();
+			codeName = SystemSecuritiesAccountTypeCode.TechnicalOffsetAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -188,11 +197,12 @@ public class SystemSecuritiesAccountType1Code extends SystemSecuritiesAccountTyp
 	 * name} = "CSDOmnibusAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCSDOmnibusAccount = new MMCode() {
+	public static final SystemSecuritiesAccountType1Code CSDOmnibusAccount = new SystemSecuritiesAccountType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDOmnibusAccount";
-			owner_lazy = () -> SystemSecuritiesAccountType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.mmObject();
+			codeName = SystemSecuritiesAccountTypeCode.CSDOmnibusAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -211,27 +221,63 @@ public class SystemSecuritiesAccountType1Code extends SystemSecuritiesAccountTyp
 	 * name} = "IssuanceAccount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuanceAccount = new MMCode() {
+	public static final SystemSecuritiesAccountType1Code IssuanceAccount = new SystemSecuritiesAccountType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceAccount";
-			owner_lazy = () -> SystemSecuritiesAccountType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.mmObject();
+			codeName = SystemSecuritiesAccountTypeCode.IssuanceAccount.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SystemSecuritiesAccountType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SystemSecuritiesAccountType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CSDP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemSecuritiesAccountType1Code";
 				definition = "Lists the type of the securities account specific for a system.";
-				code_lazy = () -> Arrays.asList(SystemSecuritiesAccountType1Code.mmCSDParticipantAccount, SystemSecuritiesAccountType1Code.mmCSDMirrorAccount, SystemSecuritiesAccountType1Code.mmInterCSDAccount,
-						SystemSecuritiesAccountType1Code.mmTechnicalOffsetAccount, SystemSecuritiesAccountType1Code.mmCSDOmnibusAccount, SystemSecuritiesAccountType1Code.mmIssuanceAccount);
 				trace_lazy = () -> SystemSecuritiesAccountTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.CSDParticipantAccount, com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.CSDMirrorAccount,
+						com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.InterCSDAccount, com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.TechnicalOffsetAccount,
+						com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.CSDOmnibusAccount, com.tools20022.repository.codeset.SystemSecuritiesAccountType1Code.IssuanceAccount);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CSDParticipantAccount.getCodeName().get(), CSDParticipantAccount);
+		codesByName.put(CSDMirrorAccount.getCodeName().get(), CSDMirrorAccount);
+		codesByName.put(InterCSDAccount.getCodeName().get(), InterCSDAccount);
+		codesByName.put(TechnicalOffsetAccount.getCodeName().get(), TechnicalOffsetAccount);
+		codesByName.put(CSDOmnibusAccount.getCodeName().get(), CSDOmnibusAccount);
+		codesByName.put(IssuanceAccount.getCodeName().get(), IssuanceAccount);
+	}
+
+	public static SystemSecuritiesAccountType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SystemSecuritiesAccountType1Code[] values() {
+		SystemSecuritiesAccountType1Code[] values = new SystemSecuritiesAccountType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SystemSecuritiesAccountType1Code> {
+		@Override
+		public SystemSecuritiesAccountType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SystemSecuritiesAccountType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

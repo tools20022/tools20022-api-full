@@ -28,6 +28,8 @@ import com.tools20022.repository.msg.PremiumAmount3;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Specifies the amount of a premium on a currency option together with its
@@ -59,17 +61,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.PremiumQuote1Choice
- * PremiumQuote1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount1 PremiumAmount1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount2 PremiumAmount2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount3 PremiumAmount3}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -89,10 +80,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.PremiumQuote1Choice
+ * PremiumQuote1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount1 PremiumAmount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount2 PremiumAmount2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PremiumAmount3 PremiumAmount3}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,8 +112,8 @@ public class PremiumCalculation {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyOption option;
 	/**
-	 * Option for which a premium is calculated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,8 +146,8 @@ public class PremiumCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmOption = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Option";
 			definition = "Option for which a premium is calculated.";
@@ -158,8 +160,8 @@ public class PremiumCalculation {
 	};
 	protected PercentageRate percentageOfCallAmount;
 	/**
-	 * Premium calculation is based on a percentage of the call amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -195,8 +197,8 @@ public class PremiumCalculation {
 	public static final MMBusinessAttribute mmPercentageOfCallAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PremiumQuote1Choice.mmPercentageOfCallAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PercentageOfCallAmount";
 			definition = "Premium calculation is based on a percentage of the call amount.";
@@ -215,8 +217,8 @@ public class PremiumCalculation {
 	};
 	protected PercentageRate percentageOfPutAmount;
 	/**
-	 * Premium calculation is based on a percentage of the put amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -252,8 +254,8 @@ public class PremiumCalculation {
 	public static final MMBusinessAttribute mmPercentageOfPutAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PremiumQuote1Choice.mmPercentageOfPutAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PercentageOfPutAmount";
 			definition = "Premium calculation is based on a percentage of the put amount.";
@@ -272,8 +274,8 @@ public class PremiumCalculation {
 	};
 	protected BaseOneRate pointsOfCallAmount;
 	/**
-	 * Premium calculation is based on points of the call amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -308,8 +310,8 @@ public class PremiumCalculation {
 	public static final MMBusinessAttribute mmPointsOfCallAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PremiumQuote1Choice.mmPointsOfCallAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PointsOfCallAmount";
 			definition = "Premium calculation is based on points of the call amount.";
@@ -328,8 +330,8 @@ public class PremiumCalculation {
 	};
 	protected BaseOneRate pointsOfPutAmount;
 	/**
-	 * Premium calculation is based on points of the put amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -364,8 +366,8 @@ public class PremiumCalculation {
 	public static final MMBusinessAttribute mmPointsOfPutAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PremiumQuote1Choice.mmPointsOfPutAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PremiumCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PointsOfPutAmount";
 			definition = "Premium calculation is based on points of the put amount.";
@@ -386,7 +388,7 @@ public class PremiumCalculation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PremiumCalculation";
 				definition = "Specifies the amount of a premium on a currency option together with its calculation method.";
@@ -406,43 +408,48 @@ public class PremiumCalculation {
 		return mmObject_lazy.get();
 	}
 
-	public CurrencyOption getOption() {
-		return option;
+	public Optional<CurrencyOption> getOption() {
+		return option == null ? Optional.empty() : Optional.of(option);
 	}
 
-	public void setOption(com.tools20022.repository.entity.CurrencyOption option) {
+	public PremiumCalculation setOption(com.tools20022.repository.entity.CurrencyOption option) {
 		this.option = option;
+		return this;
 	}
 
 	public PercentageRate getPercentageOfCallAmount() {
 		return percentageOfCallAmount;
 	}
 
-	public void setPercentageOfCallAmount(PercentageRate percentageOfCallAmount) {
-		this.percentageOfCallAmount = percentageOfCallAmount;
+	public PremiumCalculation setPercentageOfCallAmount(PercentageRate percentageOfCallAmount) {
+		this.percentageOfCallAmount = Objects.requireNonNull(percentageOfCallAmount);
+		return this;
 	}
 
 	public PercentageRate getPercentageOfPutAmount() {
 		return percentageOfPutAmount;
 	}
 
-	public void setPercentageOfPutAmount(PercentageRate percentageOfPutAmount) {
-		this.percentageOfPutAmount = percentageOfPutAmount;
+	public PremiumCalculation setPercentageOfPutAmount(PercentageRate percentageOfPutAmount) {
+		this.percentageOfPutAmount = Objects.requireNonNull(percentageOfPutAmount);
+		return this;
 	}
 
 	public BaseOneRate getPointsOfCallAmount() {
 		return pointsOfCallAmount;
 	}
 
-	public void setPointsOfCallAmount(BaseOneRate pointsOfCallAmount) {
-		this.pointsOfCallAmount = pointsOfCallAmount;
+	public PremiumCalculation setPointsOfCallAmount(BaseOneRate pointsOfCallAmount) {
+		this.pointsOfCallAmount = Objects.requireNonNull(pointsOfCallAmount);
+		return this;
 	}
 
 	public BaseOneRate getPointsOfPutAmount() {
 		return pointsOfPutAmount;
 	}
 
-	public void setPointsOfPutAmount(BaseOneRate pointsOfPutAmount) {
-		this.pointsOfPutAmount = pointsOfPutAmount;
+	public PremiumCalculation setPointsOfPutAmount(BaseOneRate pointsOfPutAmount) {
+		this.pointsOfPutAmount = Objects.requireNonNull(pointsOfPutAmount);
+		return this;
 	}
 }

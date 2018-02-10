@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,16 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NumberOfTransactionsPerStatus3", propOrder = {"detailedNumberOfTransactions", "detailedStatus", "detailedControlSum"})
 public class NumberOfTransactionsPerStatus3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DtldNbOfTxs", required = true)
 	protected Max15NumericText detailedNumberOfTransactions;
 	/**
-	 * Number of individual transactions contained in the message, detailed per
-	 * status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +130,7 @@ public class NumberOfTransactionsPerStatus3 {
 	 */
 	public static final MMMessageAttribute mmDetailedNumberOfTransactions = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NumberOfTransactionsPerStatus3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.mmObject();
 			isDerived = false;
 			xmlTag = "DtldNbOfTxs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,10 +142,11 @@ public class NumberOfTransactionsPerStatus3 {
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "DtldSts", required = true)
 	protected TransactionIndividualStatus3Code detailedStatus;
 	/**
-	 * Common transaction status for all individual transactions reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,7 +186,7 @@ public class NumberOfTransactionsPerStatus3 {
 	 */
 	public static final MMMessageAttribute mmDetailedStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NumberOfTransactionsPerStatus3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.mmObject();
 			isDerived = false;
 			xmlTag = "DtldSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,11 +198,11 @@ public class NumberOfTransactionsPerStatus3 {
 			simpleType_lazy = () -> TransactionIndividualStatus3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DtldCtrlSum")
 	protected DecimalNumber detailedControlSum;
 	/**
-	 * Total of all individual amounts included in the message, irrespective of
-	 * currencies, detailed per status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -237,7 +240,7 @@ public class NumberOfTransactionsPerStatus3 {
 	 */
 	public static final MMMessageAttribute mmDetailedControlSum = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NumberOfTransactionsPerStatus3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.mmObject();
 			isDerived = false;
 			xmlTag = "DtldCtrlSum";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -253,8 +256,9 @@ public class NumberOfTransactionsPerStatus3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NumberOfTransactionsPerStatus3.mmDetailedNumberOfTransactions, NumberOfTransactionsPerStatus3.mmDetailedStatus, NumberOfTransactionsPerStatus3.mmDetailedControlSum);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.mmDetailedNumberOfTransactions, com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.mmDetailedStatus,
+						com.tools20022.repository.msg.NumberOfTransactionsPerStatus3.mmDetailedControlSum);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NumberOfTransactionsPerStatus3";
 				definition = "Set of elements used to provide detailed information on the number of transactions that are reported with a specific transaction status.";
@@ -264,30 +268,30 @@ public class NumberOfTransactionsPerStatus3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DtldNbOfTxs", required = true)
 	public Max15NumericText getDetailedNumberOfTransactions() {
 		return detailedNumberOfTransactions;
 	}
 
-	public void setDetailedNumberOfTransactions(Max15NumericText detailedNumberOfTransactions) {
-		this.detailedNumberOfTransactions = detailedNumberOfTransactions;
+	public NumberOfTransactionsPerStatus3 setDetailedNumberOfTransactions(Max15NumericText detailedNumberOfTransactions) {
+		this.detailedNumberOfTransactions = Objects.requireNonNull(detailedNumberOfTransactions);
+		return this;
 	}
 
-	@XmlElement(name = "DtldSts", required = true)
 	public TransactionIndividualStatus3Code getDetailedStatus() {
 		return detailedStatus;
 	}
 
-	public void setDetailedStatus(TransactionIndividualStatus3Code detailedStatus) {
-		this.detailedStatus = detailedStatus;
+	public NumberOfTransactionsPerStatus3 setDetailedStatus(TransactionIndividualStatus3Code detailedStatus) {
+		this.detailedStatus = Objects.requireNonNull(detailedStatus);
+		return this;
 	}
 
-	@XmlElement(name = "DtldCtrlSum")
-	public DecimalNumber getDetailedControlSum() {
-		return detailedControlSum;
+	public Optional<DecimalNumber> getDetailedControlSum() {
+		return detailedControlSum == null ? Optional.empty() : Optional.of(detailedControlSum);
 	}
 
-	public void setDetailedControlSum(DecimalNumber detailedControlSum) {
+	public NumberOfTransactionsPerStatus3 setDetailedControlSum(DecimalNumber detailedControlSum) {
 		this.detailedControlSum = detailedControlSum;
+		return this;
 	}
 }

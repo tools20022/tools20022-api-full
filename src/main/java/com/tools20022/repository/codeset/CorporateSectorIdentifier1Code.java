@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateSectorIdentifierCode;
+import com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies the corporate sector of the counterparty for reporting to trade
@@ -31,42 +35,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifierCode
- * CorporateSectorIdentifierCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code#mmAlternativeInvestmentFund
- * CorporateSectorIdentifier1Code.mmAlternativeInvestmentFund}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code#AlternativeInvestmentFund
+ * CorporateSectorIdentifier1Code.AlternativeInvestmentFund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code#mmAssurance
- * CorporateSectorIdentifier1Code.mmAssurance}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code#Assurance
+ * CorporateSectorIdentifier1Code.Assurance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code#mmCreditInstitution
- * CorporateSectorIdentifier1Code.mmCreditInstitution}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code#CreditInstitution
+ * CorporateSectorIdentifier1Code.CreditInstitution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code#mmInsurance
- * CorporateSectorIdentifier1Code.mmInsurance}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code#Insurance
+ * CorporateSectorIdentifier1Code.Insurance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code#mmInvestmentFirm
- * CorporateSectorIdentifier1Code.mmInvestmentFirm}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code#InvestmentFirm
+ * CorporateSectorIdentifier1Code.InvestmentFirm}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code#mmOccupationalRetirementProvision
- * CorporateSectorIdentifier1Code.mmOccupationalRetirementProvision}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code#OccupationalRetirementProvision
+ * CorporateSectorIdentifier1Code.OccupationalRetirementProvision}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code#mmReinsurance
- * CorporateSectorIdentifier1Code.mmReinsurance}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code#Reinsurance
+ * CorporateSectorIdentifier1Code.Reinsurance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code#mmUCITS
- * CorporateSectorIdentifier1Code.mmUCITS}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifier1Code#UCITS
+ * CorporateSectorIdentifier1Code.UCITS}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateSectorIdentifierCode
+ * CorporateSectorIdentifierCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,7 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateSectorIdentifier1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,11 +103,12 @@ public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCod
 	 * name} = "AlternativeInvestmentFund"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAlternativeInvestmentFund = new MMCode() {
+	public static final CorporateSectorIdentifier1Code AlternativeInvestmentFund = new CorporateSectorIdentifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternativeInvestmentFund";
-			owner_lazy = () -> CorporateSectorIdentifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.mmObject();
+			codeName = CorporateSectorIdentifierCode.AlternativeInvestmentFund.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -121,11 +127,12 @@ public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCod
 	 * name} = "Assurance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAssurance = new MMCode() {
+	public static final CorporateSectorIdentifier1Code Assurance = new CorporateSectorIdentifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assurance";
-			owner_lazy = () -> CorporateSectorIdentifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.mmObject();
+			codeName = CorporateSectorIdentifierCode.Assurance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -144,11 +151,12 @@ public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCod
 	 * name} = "CreditInstitution"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreditInstitution = new MMCode() {
+	public static final CorporateSectorIdentifier1Code CreditInstitution = new CorporateSectorIdentifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditInstitution";
-			owner_lazy = () -> CorporateSectorIdentifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.mmObject();
+			codeName = CorporateSectorIdentifierCode.CreditInstitution.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -167,11 +175,12 @@ public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCod
 	 * name} = "Insurance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInsurance = new MMCode() {
+	public static final CorporateSectorIdentifier1Code Insurance = new CorporateSectorIdentifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Insurance";
-			owner_lazy = () -> CorporateSectorIdentifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.mmObject();
+			codeName = CorporateSectorIdentifierCode.Insurance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -190,11 +199,12 @@ public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCod
 	 * name} = "InvestmentFirm"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestmentFirm = new MMCode() {
+	public static final CorporateSectorIdentifier1Code InvestmentFirm = new CorporateSectorIdentifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFirm";
-			owner_lazy = () -> CorporateSectorIdentifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.mmObject();
+			codeName = CorporateSectorIdentifierCode.InvestmentFirm.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -213,11 +223,12 @@ public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCod
 	 * name} = "OccupationalRetirementProvision"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOccupationalRetirementProvision = new MMCode() {
+	public static final CorporateSectorIdentifier1Code OccupationalRetirementProvision = new CorporateSectorIdentifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OccupationalRetirementProvision";
-			owner_lazy = () -> CorporateSectorIdentifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.mmObject();
+			codeName = CorporateSectorIdentifierCode.OccupationalRetirementProvision.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -236,11 +247,12 @@ public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCod
 	 * name} = "Reinsurance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReinsurance = new MMCode() {
+	public static final CorporateSectorIdentifier1Code Reinsurance = new CorporateSectorIdentifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reinsurance";
-			owner_lazy = () -> CorporateSectorIdentifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.mmObject();
+			codeName = CorporateSectorIdentifierCode.Reinsurance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -259,27 +271,65 @@ public class CorporateSectorIdentifier1Code extends CorporateSectorIdentifierCod
 	 * name} = "UCITS"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUCITS = new MMCode() {
+	public static final CorporateSectorIdentifier1Code UCITS = new CorporateSectorIdentifier1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UCITS";
-			owner_lazy = () -> CorporateSectorIdentifier1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.mmObject();
+			codeName = CorporateSectorIdentifierCode.UCITS.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CorporateSectorIdentifier1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateSectorIdentifier1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateSectorIdentifier1Code";
 				definition = "Identifies the corporate sector of the counterparty for reporting to trade repositories.";
-				code_lazy = () -> Arrays.asList(CorporateSectorIdentifier1Code.mmAlternativeInvestmentFund, CorporateSectorIdentifier1Code.mmAssurance, CorporateSectorIdentifier1Code.mmCreditInstitution,
-						CorporateSectorIdentifier1Code.mmInsurance, CorporateSectorIdentifier1Code.mmInvestmentFirm, CorporateSectorIdentifier1Code.mmOccupationalRetirementProvision, CorporateSectorIdentifier1Code.mmReinsurance,
-						CorporateSectorIdentifier1Code.mmUCITS);
 				trace_lazy = () -> CorporateSectorIdentifierCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.AlternativeInvestmentFund, com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.Assurance,
+						com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.CreditInstitution, com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.Insurance,
+						com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.InvestmentFirm, com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.OccupationalRetirementProvision,
+						com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.Reinsurance, com.tools20022.repository.codeset.CorporateSectorIdentifier1Code.UCITS);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AlternativeInvestmentFund.getCodeName().get(), AlternativeInvestmentFund);
+		codesByName.put(Assurance.getCodeName().get(), Assurance);
+		codesByName.put(CreditInstitution.getCodeName().get(), CreditInstitution);
+		codesByName.put(Insurance.getCodeName().get(), Insurance);
+		codesByName.put(InvestmentFirm.getCodeName().get(), InvestmentFirm);
+		codesByName.put(OccupationalRetirementProvision.getCodeName().get(), OccupationalRetirementProvision);
+		codesByName.put(Reinsurance.getCodeName().get(), Reinsurance);
+		codesByName.put(UCITS.getCodeName().get(), UCITS);
+	}
+
+	public static CorporateSectorIdentifier1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateSectorIdentifier1Code[] values() {
+		CorporateSectorIdentifier1Code[] values = new CorporateSectorIdentifier1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateSectorIdentifier1Code> {
+		@Override
+		public CorporateSectorIdentifier1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateSectorIdentifier1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

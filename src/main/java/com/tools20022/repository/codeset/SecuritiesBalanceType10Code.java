@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.BalanceTypeCode;
+import com.tools20022.repository.codeset.SecuritiesBalanceType10Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of securities balance.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode
- * BalanceTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType10Code#mmAvailable
- * SecuritiesBalanceType10Code.mmAvailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType10Code#Available
+ * SecuritiesBalanceType10Code.Available}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType10Code#mmRestricted
- * SecuritiesBalanceType10Code.mmRestricted}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType10Code#Restricted
+ * SecuritiesBalanceType10Code.Restricted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType10Code#mmReservedForDistribution
- * SecuritiesBalanceType10Code.mmReservedForDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType10Code#ReservedForDistribution
+ * SecuritiesBalanceType10Code.ReservedForDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType10Code#mmReservedForRemoval
- * SecuritiesBalanceType10Code.mmReservedForRemoval}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesBalanceType10Code#ReservedForRemoval
+ * SecuritiesBalanceType10Code.ReservedForRemoval}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.BalanceTypeCode
+ * BalanceTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of securities balance."</li>
  * </ul>
  */
-public class SecuritiesBalanceType10Code extends BalanceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecuritiesBalanceType10Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class SecuritiesBalanceType10Code extends BalanceTypeCode {
 	 * name} = "Available"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAvailable = new MMCode() {
+	public static final SecuritiesBalanceType10Code Available = new SecuritiesBalanceType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Available";
-			owner_lazy = () -> SecuritiesBalanceType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType10Code.mmObject();
+			codeName = BalanceTypeCode.Available.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class SecuritiesBalanceType10Code extends BalanceTypeCode {
 	 * name} = "Restricted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRestricted = new MMCode() {
+	public static final SecuritiesBalanceType10Code Restricted = new SecuritiesBalanceType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restricted";
-			owner_lazy = () -> SecuritiesBalanceType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType10Code.mmObject();
+			codeName = BalanceTypeCode.Restricted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class SecuritiesBalanceType10Code extends BalanceTypeCode {
 	 * name} = "ReservedForDistribution"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReservedForDistribution = new MMCode() {
+	public static final SecuritiesBalanceType10Code ReservedForDistribution = new SecuritiesBalanceType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReservedForDistribution";
-			owner_lazy = () -> SecuritiesBalanceType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType10Code.mmObject();
+			codeName = BalanceTypeCode.ReservedForDistribution.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,26 +166,60 @@ public class SecuritiesBalanceType10Code extends BalanceTypeCode {
 	 * name} = "ReservedForRemoval"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReservedForRemoval = new MMCode() {
+	public static final SecuritiesBalanceType10Code ReservedForRemoval = new SecuritiesBalanceType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReservedForRemoval";
-			owner_lazy = () -> SecuritiesBalanceType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceType10Code.mmObject();
+			codeName = BalanceTypeCode.ReservedForRemoval.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SecuritiesBalanceType10Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecuritiesBalanceType10Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AVLB");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceType10Code";
 				definition = "Specifies the type of securities balance.";
-				code_lazy = () -> Arrays.asList(SecuritiesBalanceType10Code.mmAvailable, SecuritiesBalanceType10Code.mmRestricted, SecuritiesBalanceType10Code.mmReservedForDistribution, SecuritiesBalanceType10Code.mmReservedForRemoval);
 				trace_lazy = () -> BalanceTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesBalanceType10Code.Available, com.tools20022.repository.codeset.SecuritiesBalanceType10Code.Restricted,
+						com.tools20022.repository.codeset.SecuritiesBalanceType10Code.ReservedForDistribution, com.tools20022.repository.codeset.SecuritiesBalanceType10Code.ReservedForRemoval);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Available.getCodeName().get(), Available);
+		codesByName.put(Restricted.getCodeName().get(), Restricted);
+		codesByName.put(ReservedForDistribution.getCodeName().get(), ReservedForDistribution);
+		codesByName.put(ReservedForRemoval.getCodeName().get(), ReservedForRemoval);
+	}
+
+	public static SecuritiesBalanceType10Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecuritiesBalanceType10Code[] values() {
+		SecuritiesBalanceType10Code[] values = new SecuritiesBalanceType10Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecuritiesBalanceType10Code> {
+		@Override
+		public SecuritiesBalanceType10Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecuritiesBalanceType10Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

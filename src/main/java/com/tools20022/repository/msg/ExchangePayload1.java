@@ -24,6 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.other.LaxProcessing;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -45,8 +46,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,15 +58,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "This component includes the exchanged ISO20022 documents."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ExchangePayload1", propOrder = "any")
 public class ExchangePayload1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Any", required = true)
 	protected LaxProcessing any;
 	/**
-	 * The respective ISO 20022 standard document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -92,7 +94,7 @@ public class ExchangePayload1 {
 	 */
 	public static final MMMessageAttribute mmAny = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ExchangePayload1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExchangePayload1.mmObject();
 			isDerived = false;
 			xmlTag = "Any";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -107,8 +109,8 @@ public class ExchangePayload1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ExchangePayload1.mmAny);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExchangePayload1.mmAny);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExchangePayload1";
 				definition = "This component includes the exchanged ISO20022 documents.";
@@ -117,12 +119,12 @@ public class ExchangePayload1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Any", required = true)
 	public LaxProcessing getAny() {
 		return any;
 	}
 
-	public void setAny(LaxProcessing any) {
-		this.any = any;
+	public ExchangePayload1 setAny(LaxProcessing any) {
+		this.any = Objects.requireNonNull(any);
+		return this;
 	}
 }

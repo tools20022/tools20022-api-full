@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAmountAndOrRateRule#forPriceValueChange1
+ * ConstraintAmountAndOrRateRule.forPriceValueChange1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAmountSignRule#forPriceValueChange1
+ * ConstraintAmountSignRule.forPriceValueChange1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Value given to a positive or negative price change."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PriceValueChange1", propOrder = {"amount", "amountSign", "rate"})
 public class PriceValueChange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt")
 	protected ActiveOrHistoricCurrencyAnd13DecimalAmount amount;
 	/**
-	 * Amount by which the price has changed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +122,7 @@ public class PriceValueChange1 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Price.mmAmount;
-			componentContext_lazy = () -> PriceValueChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValueChange1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +133,11 @@ public class PriceValueChange1 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtSgn")
 	protected PlusOrMinusIndicator amountSign;
 	/**
-	 * Indicates a positive or negative amount change.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,7 +165,7 @@ public class PriceValueChange1 {
 	 */
 	public static final MMMessageAttribute mmAmountSign = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PriceValueChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValueChange1.mmObject();
 			isDerived = false;
 			xmlTag = "AmtSgn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,10 +176,11 @@ public class PriceValueChange1 {
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate")
 	protected PercentageRate rate;
 	/**
-	 * Rate by which the price has changed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,7 +214,7 @@ public class PriceValueChange1 {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmRate;
-			componentContext_lazy = () -> PriceValueChange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceValueChange1.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,9 +229,10 @@ public class PriceValueChange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PriceValueChange1.mmAmount, PriceValueChange1.mmAmountSign, PriceValueChange1.mmRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceValueChange1.mmAmount, com.tools20022.repository.msg.PriceValueChange1.mmAmountSign, com.tools20022.repository.msg.PriceValueChange1.mmRate);
 				trace_lazy = () -> Price.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAmountAndOrRateRule.forPriceValueChange1, com.tools20022.repository.constraints.ConstraintAmountSignRule.forPriceValueChange1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceValueChange1";
 				definition = "Value given to a positive or negative price change.";
@@ -225,30 +241,30 @@ public class PriceValueChange1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt")
-	public ActiveOrHistoricCurrencyAnd13DecimalAmount getAmount() {
-		return amount;
+	public Optional<ActiveOrHistoricCurrencyAnd13DecimalAmount> getAmount() {
+		return amount == null ? Optional.empty() : Optional.of(amount);
 	}
 
-	public void setAmount(ActiveOrHistoricCurrencyAnd13DecimalAmount amount) {
+	public PriceValueChange1 setAmount(ActiveOrHistoricCurrencyAnd13DecimalAmount amount) {
 		this.amount = amount;
+		return this;
 	}
 
-	@XmlElement(name = "AmtSgn")
-	public PlusOrMinusIndicator getAmountSign() {
-		return amountSign;
+	public Optional<PlusOrMinusIndicator> getAmountSign() {
+		return amountSign == null ? Optional.empty() : Optional.of(amountSign);
 	}
 
-	public void setAmountSign(PlusOrMinusIndicator amountSign) {
+	public PriceValueChange1 setAmountSign(PlusOrMinusIndicator amountSign) {
 		this.amountSign = amountSign;
+		return this;
 	}
 
-	@XmlElement(name = "Rate")
-	public PercentageRate getRate() {
-		return rate;
+	public Optional<PercentageRate> getRate() {
+		return rate == null ? Optional.empty() : Optional.of(rate);
 	}
 
-	public void setRate(PercentageRate rate) {
+	public PriceValueChange1 setRate(PercentageRate rate) {
 		this.rate = rate;
+		return this;
 	}
 }

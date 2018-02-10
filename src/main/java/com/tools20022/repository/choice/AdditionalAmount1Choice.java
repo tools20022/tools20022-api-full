@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.SwitchOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,16 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between additional cash in or resulting cash out."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AdditionalAmount1Choice", propOrder = {"additionalCashIn", "resultingCashOut"})
 public class AdditionalAmount1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AddtlCshIn", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount additionalCashIn;
 	/**
-	 * Additional amount of money paid by the investor in addition to the switch
-	 * redemption amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +108,7 @@ public class AdditionalAmount1Choice {
 	public static final MMMessageAttribute mmAdditionalCashIn = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmAdditionalCashIn;
-			componentContext_lazy = () -> AdditionalAmount1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AdditionalAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlCshIn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,11 +119,11 @@ public class AdditionalAmount1Choice {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RsltgCshOut", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount resultingCashOut;
 	/**
-	 * Amount of money that results from a switch-out, that is not reinvested in
-	 * another investment fund, and is repaid to the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +159,7 @@ public class AdditionalAmount1Choice {
 	public static final MMMessageAttribute mmResultingCashOut = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SwitchOrder.mmResultingCashOut;
-			componentContext_lazy = () -> AdditionalAmount1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AdditionalAmount1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RsltgCshOut";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,8 +174,8 @@ public class AdditionalAmount1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AdditionalAmount1Choice.mmAdditionalCashIn, AdditionalAmount1Choice.mmResultingCashOut);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdditionalAmount1Choice.mmAdditionalCashIn, com.tools20022.repository.choice.AdditionalAmount1Choice.mmResultingCashOut);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalAmount1Choice";
 				definition = "Choice between additional cash in or resulting cash out.";
@@ -183,21 +184,21 @@ public class AdditionalAmount1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AddtlCshIn", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAdditionalCashIn() {
 		return additionalCashIn;
 	}
 
-	public void setAdditionalCashIn(ActiveOrHistoricCurrencyAndAmount additionalCashIn) {
-		this.additionalCashIn = additionalCashIn;
+	public AdditionalAmount1Choice setAdditionalCashIn(ActiveOrHistoricCurrencyAndAmount additionalCashIn) {
+		this.additionalCashIn = Objects.requireNonNull(additionalCashIn);
+		return this;
 	}
 
-	@XmlElement(name = "RsltgCshOut", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getResultingCashOut() {
 		return resultingCashOut;
 	}
 
-	public void setResultingCashOut(ActiveOrHistoricCurrencyAndAmount resultingCashOut) {
-		this.resultingCashOut = resultingCashOut;
+	public AdditionalAmount1Choice setResultingCashOut(ActiveOrHistoricCurrencyAndAmount resultingCashOut) {
+		this.resultingCashOut = Objects.requireNonNull(resultingCashOut);
+		return this;
 	}
 }

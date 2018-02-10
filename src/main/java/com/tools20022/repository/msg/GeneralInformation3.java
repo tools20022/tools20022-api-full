@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,16 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GeneralInformation3", propOrder = {"messageIdentification", "messageFunction", "requestReference"})
 public class GeneralInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
 	protected Max35Text messageIdentification;
 	/**
-	 * Unique and unambiguous identifier for the message, as assigned by the
-	 * sender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +106,7 @@ public class GeneralInformation3 {
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GeneralInformation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +117,11 @@ public class GeneralInformation3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgFctn", required = true)
 	protected MessageFunction2Code messageFunction;
 	/**
-	 * Indicates whether the message is sent as a request or as a response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,7 +150,7 @@ public class GeneralInformation3 {
 	 */
 	public static final MMMessageAttribute mmMessageFunction = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GeneralInformation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "MsgFctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,10 +161,11 @@ public class GeneralInformation3 {
 			simpleType_lazy = () -> MessageFunction2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqRef")
 	protected Max35Text requestReference;
 	/**
-	 * Reference to the request message for which the notification is sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,7 +193,7 @@ public class GeneralInformation3 {
 	 */
 	public static final MMMessageAttribute mmRequestReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GeneralInformation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GeneralInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "ReqRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,8 +208,9 @@ public class GeneralInformation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GeneralInformation3.mmMessageIdentification, GeneralInformation3.mmMessageFunction, GeneralInformation3.mmRequestReference);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralInformation3.mmMessageIdentification, com.tools20022.repository.msg.GeneralInformation3.mmMessageFunction,
+						com.tools20022.repository.msg.GeneralInformation3.mmRequestReference);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GeneralInformation3";
 				definition = "General Information, indicating the function of the  message.";
@@ -214,30 +219,30 @@ public class GeneralInformation3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId", required = true)
 	public Max35Text getMessageIdentification() {
 		return messageIdentification;
 	}
 
-	public void setMessageIdentification(Max35Text messageIdentification) {
-		this.messageIdentification = messageIdentification;
+	public GeneralInformation3 setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "MsgFctn", required = true)
 	public MessageFunction2Code getMessageFunction() {
 		return messageFunction;
 	}
 
-	public void setMessageFunction(MessageFunction2Code messageFunction) {
-		this.messageFunction = messageFunction;
+	public GeneralInformation3 setMessageFunction(MessageFunction2Code messageFunction) {
+		this.messageFunction = Objects.requireNonNull(messageFunction);
+		return this;
 	}
 
-	@XmlElement(name = "ReqRef")
-	public Max35Text getRequestReference() {
-		return requestReference;
+	public Optional<Max35Text> getRequestReference() {
+		return requestReference == null ? Optional.empty() : Optional.of(requestReference);
 	}
 
-	public void setRequestReference(Max35Text requestReference) {
+	public GeneralInformation3 setRequestReference(Max35Text requestReference) {
 		this.requestReference = requestReference;
+		return this;
 	}
 }

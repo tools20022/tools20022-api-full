@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +49,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,15 +61,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides the date."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DateFormat15Choice", propOrder = {"date", "dateCode"})
 public class DateFormat15Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dt", required = true)
 	protected ISODate date;
 	/**
-	 * Date expressed as a calendar date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -95,7 +97,7 @@ public class DateFormat15Choice {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateFormat15Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat15Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -106,10 +108,11 @@ public class DateFormat15Choice {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DtCd", required = true)
 	protected DateCode3Choice dateCode;
 	/**
-	 * Date is expressed using a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,7 +140,7 @@ public class DateFormat15Choice {
 	 */
 	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateFormat15Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateFormat15Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DtCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -152,8 +155,8 @@ public class DateFormat15Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DateFormat15Choice.mmDate, DateFormat15Choice.mmDateCode);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateFormat15Choice.mmDate, com.tools20022.repository.choice.DateFormat15Choice.mmDateCode);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateFormat15Choice";
 				definition = "Provides the date.";
@@ -162,21 +165,21 @@ public class DateFormat15Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dt", required = true)
 	public ISODate getDate() {
 		return date;
 	}
 
-	public void setDate(ISODate date) {
-		this.date = date;
+	public DateFormat15Choice setDate(ISODate date) {
+		this.date = Objects.requireNonNull(date);
+		return this;
 	}
 
-	@XmlElement(name = "DtCd", required = true)
 	public DateCode3Choice getDateCode() {
 		return dateCode;
 	}
 
-	public void setDateCode(com.tools20022.repository.choice.DateCode3Choice dateCode) {
-		this.dateCode = dateCode;
+	public DateFormat15Choice setDateCode(com.tools20022.repository.choice.DateCode3Choice dateCode) {
+		this.dateCode = Objects.requireNonNull(dateCode);
+		return this;
 	}
 }

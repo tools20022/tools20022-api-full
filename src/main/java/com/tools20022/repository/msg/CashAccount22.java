@@ -34,6 +34,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Account to or from which a cash entry is made."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashAccount22", propOrder = {"currency", "servicer", "identification", "secondaryAccount", "accountTypeDescription"})
 public class CashAccount22 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ccy")
 	protected CurrencyCode currency;
 	/**
-	 * Medium of exchange of value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +124,7 @@ public class CashAccount22 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
-			componentContext_lazy = () -> CashAccount22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount22.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,13 +135,11 @@ public class CashAccount22 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Svcr", required = true)
 	protected BICIdentifier servicer;
 	/**
-	 * Party that manages the account on behalf of the account owner, that is
-	 * manages the registration and booking of entries on the account,
-	 * calculates balances on the account and provides information about the
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +174,7 @@ public class CashAccount22 {
 	public static final MMMessageAttribute mmServicer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> CashAccount22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount22.mmObject();
 			isDerived = false;
 			xmlTag = "Svcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,11 +185,11 @@ public class CashAccount22 {
 			simpleType_lazy = () -> BICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected AccountIdentification5Choice identification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -223,7 +224,7 @@ public class CashAccount22 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> CashAccount22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount22.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,10 +235,11 @@ public class CashAccount22 {
 			complexType_lazy = () -> AccountIdentification5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ScndryAcct")
 	protected CashAccount21 secondaryAccount;
 	/**
-	 * Sub-division of a master or omnibus cash account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -268,7 +270,7 @@ public class CashAccount22 {
 	public static final MMMessageAssociationEnd mmSecondaryAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmSubAccount;
-			componentContext_lazy = () -> CashAccount22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount22.mmObject();
 			isDerived = false;
 			xmlTag = "ScndryAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -280,12 +282,11 @@ public class CashAccount22 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount21.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctTpDesc", required = true)
 	protected Max35Text accountTypeDescription;
 	/**
-	 * Name of the account. It provides an additional means of identification,
-	 * and is designated by the account servicer in agreement with the account
-	 * owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -319,7 +320,7 @@ public class CashAccount22 {
 	public static final MMMessageAttribute mmAccountTypeDescription = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
-			componentContext_lazy = () -> CashAccount22.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount22.mmObject();
 			isDerived = false;
 			xmlTag = "AcctTpDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,9 +335,10 @@ public class CashAccount22 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashAccount22.mmCurrency, CashAccount22.mmServicer, CashAccount22.mmIdentification, CashAccount22.mmSecondaryAccount, CashAccount22.mmAccountTypeDescription);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount22.mmCurrency, com.tools20022.repository.msg.CashAccount22.mmServicer, com.tools20022.repository.msg.CashAccount22.mmIdentification,
+						com.tools20022.repository.msg.CashAccount22.mmSecondaryAccount, com.tools20022.repository.msg.CashAccount22.mmAccountTypeDescription);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -352,48 +354,48 @@ public class CashAccount22 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ccy")
-	public CurrencyCode getCurrency() {
-		return currency;
+	public Optional<CurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(CurrencyCode currency) {
+	public CashAccount22 setCurrency(CurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "Svcr", required = true)
 	public BICIdentifier getServicer() {
 		return servicer;
 	}
 
-	public void setServicer(BICIdentifier servicer) {
-		this.servicer = servicer;
+	public CashAccount22 setServicer(BICIdentifier servicer) {
+		this.servicer = Objects.requireNonNull(servicer);
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public AccountIdentification5Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(AccountIdentification5Choice identification) {
-		this.identification = identification;
+	public CashAccount22 setIdentification(AccountIdentification5Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "ScndryAcct")
-	public CashAccount21 getSecondaryAccount() {
-		return secondaryAccount;
+	public Optional<CashAccount21> getSecondaryAccount() {
+		return secondaryAccount == null ? Optional.empty() : Optional.of(secondaryAccount);
 	}
 
-	public void setSecondaryAccount(com.tools20022.repository.msg.CashAccount21 secondaryAccount) {
+	public CashAccount22 setSecondaryAccount(com.tools20022.repository.msg.CashAccount21 secondaryAccount) {
 		this.secondaryAccount = secondaryAccount;
+		return this;
 	}
 
-	@XmlElement(name = "AcctTpDesc", required = true)
 	public Max35Text getAccountTypeDescription() {
 		return accountTypeDescription;
 	}
 
-	public void setAccountTypeDescription(Max35Text accountTypeDescription) {
-		this.accountTypeDescription = accountTypeDescription;
+	public CashAccount22 setAccountTypeDescription(Max35Text accountTypeDescription) {
+		this.accountTypeDescription = Objects.requireNonNull(accountTypeDescription);
+		return this;
 	}
 }

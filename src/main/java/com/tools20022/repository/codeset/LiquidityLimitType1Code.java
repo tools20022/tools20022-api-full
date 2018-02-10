@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.LiquidityLimitTypeCode;
+import com.tools20022.repository.codeset.LiquidityLimitType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the precise type of liquidity management limit.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.LiquidityLimitTypeCode
- * LiquidityLimitTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code#mmGlobal
- * LiquidityLimitType1Code.mmGlobal}</li>
+ * {@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code#Global
+ * LiquidityLimitType1Code.Global}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code#mmCashReservation
- * LiquidityLimitType1Code.mmCashReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code#CashReservation
+ * LiquidityLimitType1Code.CashReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code#mmCriticalPaymentReservation
- * LiquidityLimitType1Code.mmCriticalPaymentReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code#CriticalPaymentReservation
+ * LiquidityLimitType1Code.CriticalPaymentReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code#mmNetSSSReservation
- * LiquidityLimitType1Code.mmNetSSSReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.LiquidityLimitType1Code#NetSSSReservation
+ * LiquidityLimitType1Code.NetSSSReservation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.LiquidityLimitTypeCode
+ * LiquidityLimitTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the precise type of liquidity management limit."</li>
  * </ul>
  */
-public class LiquidityLimitType1Code extends LiquidityLimitTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class LiquidityLimitType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class LiquidityLimitType1Code extends LiquidityLimitTypeCode {
 	 * name} = "Global"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGlobal = new MMCode() {
+	public static final LiquidityLimitType1Code Global = new LiquidityLimitType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Global";
-			owner_lazy = () -> LiquidityLimitType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LiquidityLimitType1Code.mmObject();
+			codeName = LiquidityLimitTypeCode.Global.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class LiquidityLimitType1Code extends LiquidityLimitTypeCode {
 	 * name} = "CashReservation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashReservation = new MMCode() {
+	public static final LiquidityLimitType1Code CashReservation = new LiquidityLimitType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashReservation";
-			owner_lazy = () -> LiquidityLimitType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LiquidityLimitType1Code.mmObject();
+			codeName = LiquidityLimitTypeCode.CashReservation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class LiquidityLimitType1Code extends LiquidityLimitTypeCode {
 	 * name} = "CriticalPaymentReservation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCriticalPaymentReservation = new MMCode() {
+	public static final LiquidityLimitType1Code CriticalPaymentReservation = new LiquidityLimitType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CriticalPaymentReservation";
-			owner_lazy = () -> LiquidityLimitType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LiquidityLimitType1Code.mmObject();
+			codeName = LiquidityLimitTypeCode.CriticalPaymentReservation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,26 +166,60 @@ public class LiquidityLimitType1Code extends LiquidityLimitTypeCode {
 	 * name} = "NetSSSReservation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNetSSSReservation = new MMCode() {
+	public static final LiquidityLimitType1Code NetSSSReservation = new LiquidityLimitType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetSSSReservation";
-			owner_lazy = () -> LiquidityLimitType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LiquidityLimitType1Code.mmObject();
+			codeName = LiquidityLimitTypeCode.NetSSSReservation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, LiquidityLimitType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected LiquidityLimitType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("GLBL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LiquidityLimitType1Code";
 				definition = "Specifies the precise type of liquidity management limit.";
-				code_lazy = () -> Arrays.asList(LiquidityLimitType1Code.mmGlobal, LiquidityLimitType1Code.mmCashReservation, LiquidityLimitType1Code.mmCriticalPaymentReservation, LiquidityLimitType1Code.mmNetSSSReservation);
 				trace_lazy = () -> LiquidityLimitTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LiquidityLimitType1Code.Global, com.tools20022.repository.codeset.LiquidityLimitType1Code.CashReservation,
+						com.tools20022.repository.codeset.LiquidityLimitType1Code.CriticalPaymentReservation, com.tools20022.repository.codeset.LiquidityLimitType1Code.NetSSSReservation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Global.getCodeName().get(), Global);
+		codesByName.put(CashReservation.getCodeName().get(), CashReservation);
+		codesByName.put(CriticalPaymentReservation.getCodeName().get(), CriticalPaymentReservation);
+		codesByName.put(NetSSSReservation.getCodeName().get(), NetSSSReservation);
+	}
+
+	public static LiquidityLimitType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static LiquidityLimitType1Code[] values() {
+		LiquidityLimitType1Code[] values = new LiquidityLimitType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, LiquidityLimitType1Code> {
+		@Override
+		public LiquidityLimitType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(LiquidityLimitType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

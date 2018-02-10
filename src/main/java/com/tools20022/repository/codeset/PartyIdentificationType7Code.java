@@ -17,13 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PersonIdentificationTypeCode;
+import com.tools20022.repository.codeset.PartyIdentificationType7Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies an alternative identification of a party, for example, national
@@ -32,72 +37,72 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PersonIdentificationTypeCode
- * PersonIdentificationTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmAdoptionTaxpayerIdentificationNumber
- * PartyIdentificationType7Code.mmAdoptionTaxpayerIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#AdoptionTaxpayerIdentificationNumber
+ * PartyIdentificationType7Code.AdoptionTaxpayerIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmIdentityCardNumber
- * PartyIdentificationType7Code.mmIdentityCardNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#IdentityCardNumber
+ * PartyIdentificationType7Code.IdentityCardNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmNationalRegistrationIdentificationNumber
- * PartyIdentificationType7Code.mmNationalRegistrationIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#NationalRegistrationIdentificationNumber
+ * PartyIdentificationType7Code.NationalRegistrationIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmOther
- * PartyIdentificationType7Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#Other
+ * PartyIdentificationType7Code.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmPassportNumber
- * PartyIdentificationType7Code.mmPassportNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#PassportNumber
+ * PartyIdentificationType7Code.PassportNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmPostOfficeCardNumber
- * PartyIdentificationType7Code.mmPostOfficeCardNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#PostOfficeCardNumber
+ * PartyIdentificationType7Code.PostOfficeCardNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmSocialSecurityNumber
- * PartyIdentificationType7Code.mmSocialSecurityNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#SocialSecurityNumber
+ * PartyIdentificationType7Code.SocialSecurityNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmSRSAccountNumber
- * PartyIdentificationType7Code.mmSRSAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#SRSAccountNumber
+ * PartyIdentificationType7Code.SRSAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmGunLicenseNumber
- * PartyIdentificationType7Code.mmGunLicenseNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#GunLicenseNumber
+ * PartyIdentificationType7Code.GunLicenseNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmGenericTaxIdentificationNumber
- * PartyIdentificationType7Code.mmGenericTaxIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#GenericTaxIdentificationNumber
+ * PartyIdentificationType7Code.GenericTaxIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmIndividualTaxpayerIdentificationNumber
- * PartyIdentificationType7Code.mmIndividualTaxpayerIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#IndividualTaxpayerIdentificationNumber
+ * PartyIdentificationType7Code.IndividualTaxpayerIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmCPFAccountNumber
- * PartyIdentificationType7Code.mmCPFAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#CPFAccountNumber
+ * PartyIdentificationType7Code.CPFAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmAlienRegistrationNumber
- * PartyIdentificationType7Code.mmAlienRegistrationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#AlienRegistrationNumber
+ * PartyIdentificationType7Code.AlienRegistrationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmDriversLicenseNumber
- * PartyIdentificationType7Code.mmDriversLicenseNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#DriversLicenseNumber
+ * PartyIdentificationType7Code.DriversLicenseNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmEmployerIdentificationNumber
- * PartyIdentificationType7Code.mmEmployerIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#EmployerIdentificationNumber
+ * PartyIdentificationType7Code.EmployerIdentificationNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmNonResidentInvestor
- * PartyIdentificationType7Code.mmNonResidentInvestor}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#NonResidentInvestor
+ * PartyIdentificationType7Code.NonResidentInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmIndustryClassification
- * PartyIdentificationType7Code.mmIndustryClassification}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#IndustryClassification
+ * PartyIdentificationType7Code.IndustryClassification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#mmGlobalIntermediaryIdentificationNumber
- * PartyIdentificationType7Code.mmGlobalIntermediaryIdentificationNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code#GlobalIntermediaryIdentificationNumber
+ * PartyIdentificationType7Code.GlobalIntermediaryIdentificationNumber}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PersonIdentificationTypeCode
+ * PersonIdentificationTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,7 +115,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PartyIdentificationType7Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -129,11 +135,12 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "AdoptionTaxpayerIdentificationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAdoptionTaxpayerIdentificationNumber = new MMCode() {
+	public static final PartyIdentificationType7Code AdoptionTaxpayerIdentificationNumber = new PartyIdentificationType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdoptionTaxpayerIdentificationNumber";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.AdoptionTaxpayerIdentificationNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -152,11 +159,12 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "IdentityCardNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIdentityCardNumber = new MMCode() {
+	public static final PartyIdentificationType7Code IdentityCardNumber = new PartyIdentificationType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentityCardNumber";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.IdentityCardNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -175,11 +183,12 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "NationalRegistrationIdentificationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNationalRegistrationIdentificationNumber = new MMCode() {
+	public static final PartyIdentificationType7Code NationalRegistrationIdentificationNumber = new PartyIdentificationType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalRegistrationIdentificationNumber";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.NationalRegistrationIdentificationNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -198,11 +207,12 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final PartyIdentificationType7Code Other = new PartyIdentificationType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.Other.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -221,11 +231,12 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "PassportNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPassportNumber = new MMCode() {
+	public static final PartyIdentificationType7Code PassportNumber = new PartyIdentificationType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassportNumber";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.PassportNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -244,11 +255,12 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "PostOfficeCardNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPostOfficeCardNumber = new MMCode() {
+	public static final PartyIdentificationType7Code PostOfficeCardNumber = new PartyIdentificationType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostOfficeCardNumber";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.PostOfficeCardNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -260,6 +272,9 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code
 	 * PartyIdentificationType7Code}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE//SSNX</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -267,11 +282,13 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "SocialSecurityNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSocialSecurityNumber = new MMCode() {
+	public static final PartyIdentificationType7Code SocialSecurityNumber = new PartyIdentificationType7Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE//SSNX"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SocialSecurityNumber";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.SocialSecurityNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -290,11 +307,12 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "SRSAccountNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSRSAccountNumber = new MMCode() {
+	public static final PartyIdentificationType7Code SRSAccountNumber = new PartyIdentificationType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SRSAccountNumber";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.SRSAccountNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -313,11 +331,12 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "GunLicenseNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGunLicenseNumber = new MMCode() {
+	public static final PartyIdentificationType7Code GunLicenseNumber = new PartyIdentificationType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GunLicenseNumber";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.GunLicenseNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -336,11 +355,12 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "GenericTaxIdentificationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGenericTaxIdentificationNumber = new MMCode() {
+	public static final PartyIdentificationType7Code GenericTaxIdentificationNumber = new PartyIdentificationType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericTaxIdentificationNumber";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.GenericTaxIdentificationNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -359,11 +379,12 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "IndividualTaxpayerIdentificationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIndividualTaxpayerIdentificationNumber = new MMCode() {
+	public static final PartyIdentificationType7Code IndividualTaxpayerIdentificationNumber = new PartyIdentificationType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualTaxpayerIdentificationNumber";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.IndividualTaxpayerIdentificationNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -382,11 +403,12 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "CPFAccountNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCPFAccountNumber = new MMCode() {
+	public static final PartyIdentificationType7Code CPFAccountNumber = new PartyIdentificationType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CPFAccountNumber";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.CPFAccountNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -397,6 +419,9 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code
 	 * PartyIdentificationType7Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE//ARNU</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -405,11 +430,13 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "AlienRegistrationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAlienRegistrationNumber = new MMCode() {
+	public static final PartyIdentificationType7Code AlienRegistrationNumber = new PartyIdentificationType7Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE//ARNU"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlienRegistrationNumber";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.AlienRegistrationNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -420,6 +447,9 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code
 	 * PartyIdentificationType7Code}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE//DRLC</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -428,11 +458,13 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "DriversLicenseNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDriversLicenseNumber = new MMCode() {
+	public static final PartyIdentificationType7Code DriversLicenseNumber = new PartyIdentificationType7Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE//DRLC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriversLicenseNumber";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.DriversLicenseNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -444,6 +476,9 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * {@linkplain com.tools20022.repository.codeset.PartyIdentificationType7Code
 	 * PartyIdentificationType7Code}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE//EINX</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -451,11 +486,13 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "EmployerIdentificationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEmployerIdentificationNumber = new MMCode() {
+	public static final PartyIdentificationType7Code EmployerIdentificationNumber = new PartyIdentificationType7Code() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE//EINX"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployerIdentificationNumber";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.EmployerIdentificationNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -474,11 +511,12 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "NonResidentInvestor"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonResidentInvestor = new MMCode() {
+	public static final PartyIdentificationType7Code NonResidentInvestor = new PartyIdentificationType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonResidentInvestor";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.NonResidentInvestor.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -497,11 +535,12 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "IndustryClassification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIndustryClassification = new MMCode() {
+	public static final PartyIdentificationType7Code IndustryClassification = new PartyIdentificationType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndustryClassification";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.IndustryClassification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -520,30 +559,80 @@ public class PartyIdentificationType7Code extends PersonIdentificationTypeCode {
 	 * name} = "GlobalIntermediaryIdentificationNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGlobalIntermediaryIdentificationNumber = new MMCode() {
+	public static final PartyIdentificationType7Code GlobalIntermediaryIdentificationNumber = new PartyIdentificationType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalIntermediaryIdentificationNumber";
-			owner_lazy = () -> PartyIdentificationType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationType7Code.mmObject();
+			codeName = PersonIdentificationTypeCode.GlobalIntermediaryIdentificationNumber.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PartyIdentificationType7Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PartyIdentificationType7Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationType7Code";
 				definition = "Specifies an alternative identification of a party, for example, national registration identification number, passport number, tax identification number.";
-				code_lazy = () -> Arrays.asList(PartyIdentificationType7Code.mmAdoptionTaxpayerIdentificationNumber, PartyIdentificationType7Code.mmIdentityCardNumber,
-						PartyIdentificationType7Code.mmNationalRegistrationIdentificationNumber, PartyIdentificationType7Code.mmOther, PartyIdentificationType7Code.mmPassportNumber, PartyIdentificationType7Code.mmPostOfficeCardNumber,
-						PartyIdentificationType7Code.mmSocialSecurityNumber, PartyIdentificationType7Code.mmSRSAccountNumber, PartyIdentificationType7Code.mmGunLicenseNumber, PartyIdentificationType7Code.mmGenericTaxIdentificationNumber,
-						PartyIdentificationType7Code.mmIndividualTaxpayerIdentificationNumber, PartyIdentificationType7Code.mmCPFAccountNumber, PartyIdentificationType7Code.mmAlienRegistrationNumber,
-						PartyIdentificationType7Code.mmDriversLicenseNumber, PartyIdentificationType7Code.mmEmployerIdentificationNumber, PartyIdentificationType7Code.mmNonResidentInvestor,
-						PartyIdentificationType7Code.mmIndustryClassification, PartyIdentificationType7Code.mmGlobalIntermediaryIdentificationNumber);
 				trace_lazy = () -> PersonIdentificationTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyIdentificationType7Code.AdoptionTaxpayerIdentificationNumber, com.tools20022.repository.codeset.PartyIdentificationType7Code.IdentityCardNumber,
+						com.tools20022.repository.codeset.PartyIdentificationType7Code.NationalRegistrationIdentificationNumber, com.tools20022.repository.codeset.PartyIdentificationType7Code.Other,
+						com.tools20022.repository.codeset.PartyIdentificationType7Code.PassportNumber, com.tools20022.repository.codeset.PartyIdentificationType7Code.PostOfficeCardNumber,
+						com.tools20022.repository.codeset.PartyIdentificationType7Code.SocialSecurityNumber, com.tools20022.repository.codeset.PartyIdentificationType7Code.SRSAccountNumber,
+						com.tools20022.repository.codeset.PartyIdentificationType7Code.GunLicenseNumber, com.tools20022.repository.codeset.PartyIdentificationType7Code.GenericTaxIdentificationNumber,
+						com.tools20022.repository.codeset.PartyIdentificationType7Code.IndividualTaxpayerIdentificationNumber, com.tools20022.repository.codeset.PartyIdentificationType7Code.CPFAccountNumber,
+						com.tools20022.repository.codeset.PartyIdentificationType7Code.AlienRegistrationNumber, com.tools20022.repository.codeset.PartyIdentificationType7Code.DriversLicenseNumber,
+						com.tools20022.repository.codeset.PartyIdentificationType7Code.EmployerIdentificationNumber, com.tools20022.repository.codeset.PartyIdentificationType7Code.NonResidentInvestor,
+						com.tools20022.repository.codeset.PartyIdentificationType7Code.IndustryClassification, com.tools20022.repository.codeset.PartyIdentificationType7Code.GlobalIntermediaryIdentificationNumber);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AdoptionTaxpayerIdentificationNumber.getCodeName().get(), AdoptionTaxpayerIdentificationNumber);
+		codesByName.put(IdentityCardNumber.getCodeName().get(), IdentityCardNumber);
+		codesByName.put(NationalRegistrationIdentificationNumber.getCodeName().get(), NationalRegistrationIdentificationNumber);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(PassportNumber.getCodeName().get(), PassportNumber);
+		codesByName.put(PostOfficeCardNumber.getCodeName().get(), PostOfficeCardNumber);
+		codesByName.put(SocialSecurityNumber.getCodeName().get(), SocialSecurityNumber);
+		codesByName.put(SRSAccountNumber.getCodeName().get(), SRSAccountNumber);
+		codesByName.put(GunLicenseNumber.getCodeName().get(), GunLicenseNumber);
+		codesByName.put(GenericTaxIdentificationNumber.getCodeName().get(), GenericTaxIdentificationNumber);
+		codesByName.put(IndividualTaxpayerIdentificationNumber.getCodeName().get(), IndividualTaxpayerIdentificationNumber);
+		codesByName.put(CPFAccountNumber.getCodeName().get(), CPFAccountNumber);
+		codesByName.put(AlienRegistrationNumber.getCodeName().get(), AlienRegistrationNumber);
+		codesByName.put(DriversLicenseNumber.getCodeName().get(), DriversLicenseNumber);
+		codesByName.put(EmployerIdentificationNumber.getCodeName().get(), EmployerIdentificationNumber);
+		codesByName.put(NonResidentInvestor.getCodeName().get(), NonResidentInvestor);
+		codesByName.put(IndustryClassification.getCodeName().get(), IndustryClassification);
+		codesByName.put(GlobalIntermediaryIdentificationNumber.getCodeName().get(), GlobalIntermediaryIdentificationNumber);
+	}
+
+	public static PartyIdentificationType7Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PartyIdentificationType7Code[] values() {
+		PartyIdentificationType7Code[] values = new PartyIdentificationType7Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PartyIdentificationType7Code> {
+		@Override
+		public PartyIdentificationType7Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PartyIdentificationType7Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

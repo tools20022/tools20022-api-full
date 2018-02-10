@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * DigestedData3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DigestedData4", propOrder = {"version", "digestAlgorithm", "encapsulatedContent", "digest"})
 public class DigestedData4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Vrsn")
 	protected Number version;
 	/**
-	 * Version of the data structure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +112,7 @@ public class DigestedData4 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DigestedData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DigestedData4.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +124,11 @@ public class DigestedData4 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "DgstAlgo", required = true)
 	protected AlgorithmIdentification16 digestAlgorithm;
 	/**
-	 * Identification of the digest algorithm.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +159,7 @@ public class DigestedData4 {
 	 */
 	public static final MMMessageAssociationEnd mmDigestAlgorithm = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DigestedData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DigestedData4.mmObject();
 			isDerived = false;
 			xmlTag = "DgstAlgo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,10 +172,11 @@ public class DigestedData4 {
 			type_lazy = () -> com.tools20022.repository.msg.AlgorithmIdentification16.mmObject();
 		}
 	};
+	@XmlElement(name = "NcpsltdCntt", required = true)
 	protected EncapsulatedContent3 encapsulatedContent;
 	/**
-	 * Data on which the digest is computed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -201,7 +206,7 @@ public class DigestedData4 {
 	 */
 	public static final MMMessageAssociationEnd mmEncapsulatedContent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DigestedData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DigestedData4.mmObject();
 			isDerived = false;
 			xmlTag = "NcpsltdCntt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,10 +219,11 @@ public class DigestedData4 {
 			type_lazy = () -> com.tools20022.repository.msg.EncapsulatedContent3.mmObject();
 		}
 	};
+	@XmlElement(name = "Dgst", required = true)
 	protected Max140Binary digest;
 	/**
-	 * Result of data-digesting process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,7 +255,7 @@ public class DigestedData4 {
 	 */
 	public static final MMMessageAttribute mmDigest = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DigestedData4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DigestedData4.mmObject();
 			isDerived = false;
 			xmlTag = "Dgst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -265,8 +271,9 @@ public class DigestedData4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DigestedData4.mmVersion, DigestedData4.mmDigestAlgorithm, DigestedData4.mmEncapsulatedContent, DigestedData4.mmDigest);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DigestedData4.mmVersion, com.tools20022.repository.msg.DigestedData4.mmDigestAlgorithm,
+						com.tools20022.repository.msg.DigestedData4.mmEncapsulatedContent, com.tools20022.repository.msg.DigestedData4.mmDigest);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DigestedData4";
 				definition = "Digest computed on the identified data.";
@@ -276,39 +283,39 @@ public class DigestedData4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Vrsn")
-	public Number getVersion() {
-		return version;
+	public Optional<Number> getVersion() {
+		return version == null ? Optional.empty() : Optional.of(version);
 	}
 
-	public void setVersion(Number version) {
+	public DigestedData4 setVersion(Number version) {
 		this.version = version;
+		return this;
 	}
 
-	@XmlElement(name = "DgstAlgo", required = true)
 	public AlgorithmIdentification16 getDigestAlgorithm() {
 		return digestAlgorithm;
 	}
 
-	public void setDigestAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification16 digestAlgorithm) {
-		this.digestAlgorithm = digestAlgorithm;
+	public DigestedData4 setDigestAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification16 digestAlgorithm) {
+		this.digestAlgorithm = Objects.requireNonNull(digestAlgorithm);
+		return this;
 	}
 
-	@XmlElement(name = "NcpsltdCntt", required = true)
 	public EncapsulatedContent3 getEncapsulatedContent() {
 		return encapsulatedContent;
 	}
 
-	public void setEncapsulatedContent(com.tools20022.repository.msg.EncapsulatedContent3 encapsulatedContent) {
-		this.encapsulatedContent = encapsulatedContent;
+	public DigestedData4 setEncapsulatedContent(com.tools20022.repository.msg.EncapsulatedContent3 encapsulatedContent) {
+		this.encapsulatedContent = Objects.requireNonNull(encapsulatedContent);
+		return this;
 	}
 
-	@XmlElement(name = "Dgst", required = true)
 	public Max140Binary getDigest() {
 		return digest;
 	}
 
-	public void setDigest(Max140Binary digest) {
-		this.digest = digest;
+	public DigestedData4 setDigest(Max140Binary digest) {
+		this.digest = Objects.requireNonNull(digest);
+		return this;
 	}
 }

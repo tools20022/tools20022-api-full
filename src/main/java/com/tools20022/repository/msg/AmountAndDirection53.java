@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.CashEntry;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * AmountAndDirection34}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountAndDirection53", propOrder = {"amount", "sign"})
 public class AmountAndDirection53 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount amount;
 	/**
-	 * Amount of money that results in an increase (positively signed) or
-	 * decrease (negatively signed), with specification of the currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +122,7 @@ public class AmountAndDirection53 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
-			componentContext_lazy = () -> AmountAndDirection53.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection53.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,12 +134,11 @@ public class AmountAndDirection53 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Sgn")
 	protected PlusOrMinusIndicator sign;
 	/**
-	 * Indicates that the amount value is positive or negative.<br>
-	 * <br>
-	 * Usage: When absent, the amount is positive.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,7 +173,7 @@ public class AmountAndDirection53 {
 	 */
 	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AmountAndDirection53.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountAndDirection53.mmObject();
 			isDerived = false;
 			xmlTag = "Sgn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,9 +189,9 @@ public class AmountAndDirection53 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountAndDirection53.mmAmount, AmountAndDirection53.mmSign);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountAndDirection53.mmAmount, com.tools20022.repository.msg.AmountAndDirection53.mmSign);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndDirection53";
 				definition = "Amount of money expressed with an optional currency code and debit/credit indicator.";
@@ -200,21 +201,21 @@ public class AmountAndDirection53 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
-		this.amount = amount;
+	public AmountAndDirection53 setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "Sgn")
-	public PlusOrMinusIndicator getSign() {
-		return sign;
+	public Optional<PlusOrMinusIndicator> getSign() {
+		return sign == null ? Optional.empty() : Optional.of(sign);
 	}
 
-	public void setSign(PlusOrMinusIndicator sign) {
+	public AmountAndDirection53 setSign(PlusOrMinusIndicator sign) {
 		this.sign = sign;
+		return this;
 	}
 }

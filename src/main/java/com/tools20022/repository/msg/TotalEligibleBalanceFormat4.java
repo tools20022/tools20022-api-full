@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TotalEligibleBalanceFormat4", propOrder = {"balance", "fullPeriodUnits", "partWayPeriodUnits"})
 public class TotalEligibleBalanceFormat4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Bal")
 	protected Quantity15Choice balance;
 	/**
-	 * Provides information about balance related to a corporate action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -113,7 +115,7 @@ public class TotalEligibleBalanceFormat4 {
 	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmAggregateQuantity;
-			componentContext_lazy = () -> TotalEligibleBalanceFormat4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalEligibleBalanceFormat4.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,12 +127,11 @@ public class TotalEligibleBalanceFormat4 {
 			type_lazy = () -> Quantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FullPrdUnits")
 	protected SignedQuantityFormat5 fullPeriodUnits;
 	/**
-	 * Number of units of a fund that were purchased in a previous distribution
-	 * period and/or held at the beginning of a distribution period, for example
-	 * Group I Units in the UK.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,7 +167,7 @@ public class TotalEligibleBalanceFormat4 {
 	public static final MMMessageAttribute mmFullPeriodUnits = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
-			componentContext_lazy = () -> TotalEligibleBalanceFormat4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalEligibleBalanceFormat4.mmObject();
 			isDerived = false;
 			xmlTag = "FullPrdUnits";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,11 +178,11 @@ public class TotalEligibleBalanceFormat4 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat5.mmObject();
 		}
 	};
+	@XmlElement(name = "PartWayPrdUnits")
 	protected SignedQuantityFormat5 partWayPeriodUnits;
 	/**
-	 * Number of units of a fund that were purchased part way throughout a
-	 * distribution period, for example Group II Units in the U.K.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,7 +218,7 @@ public class TotalEligibleBalanceFormat4 {
 	public static final MMMessageAttribute mmPartWayPeriodUnits = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
-			componentContext_lazy = () -> TotalEligibleBalanceFormat4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TotalEligibleBalanceFormat4.mmObject();
 			isDerived = false;
 			xmlTag = "PartWayPrdUnits";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,9 +233,10 @@ public class TotalEligibleBalanceFormat4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TotalEligibleBalanceFormat4.mmBalance, TotalEligibleBalanceFormat4.mmFullPeriodUnits, TotalEligibleBalanceFormat4.mmPartWayPeriodUnits);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TotalEligibleBalanceFormat4.mmBalance, com.tools20022.repository.msg.TotalEligibleBalanceFormat4.mmFullPeriodUnits,
+						com.tools20022.repository.msg.TotalEligibleBalanceFormat4.mmPartWayPeriodUnits);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalEligibleBalanceFormat4";
 				definition = "Total eligible balance for the corporate action and full and part way period units. ";
@@ -243,30 +245,30 @@ public class TotalEligibleBalanceFormat4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Bal")
-	public Quantity15Choice getBalance() {
-		return balance;
+	public Optional<Quantity15Choice> getBalance() {
+		return balance == null ? Optional.empty() : Optional.of(balance);
 	}
 
-	public void setBalance(Quantity15Choice balance) {
+	public TotalEligibleBalanceFormat4 setBalance(Quantity15Choice balance) {
 		this.balance = balance;
+		return this;
 	}
 
-	@XmlElement(name = "FullPrdUnits")
-	public SignedQuantityFormat5 getFullPeriodUnits() {
-		return fullPeriodUnits;
+	public Optional<SignedQuantityFormat5> getFullPeriodUnits() {
+		return fullPeriodUnits == null ? Optional.empty() : Optional.of(fullPeriodUnits);
 	}
 
-	public void setFullPeriodUnits(com.tools20022.repository.msg.SignedQuantityFormat5 fullPeriodUnits) {
+	public TotalEligibleBalanceFormat4 setFullPeriodUnits(com.tools20022.repository.msg.SignedQuantityFormat5 fullPeriodUnits) {
 		this.fullPeriodUnits = fullPeriodUnits;
+		return this;
 	}
 
-	@XmlElement(name = "PartWayPrdUnits")
-	public SignedQuantityFormat5 getPartWayPeriodUnits() {
-		return partWayPeriodUnits;
+	public Optional<SignedQuantityFormat5> getPartWayPeriodUnits() {
+		return partWayPeriodUnits == null ? Optional.empty() : Optional.of(partWayPeriodUnits);
 	}
 
-	public void setPartWayPeriodUnits(com.tools20022.repository.msg.SignedQuantityFormat5 partWayPeriodUnits) {
+	public TotalEligibleBalanceFormat4 setPartWayPeriodUnits(com.tools20022.repository.msg.SignedQuantityFormat5 partWayPeriodUnits) {
 		this.partWayPeriodUnits = partWayPeriodUnits;
+		return this;
 	}
 }

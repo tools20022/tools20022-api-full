@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvestmentAccountInformationType", propOrder = {"investmentAccount", "accountParties", "intermediaries", "investmentPlan", "cashSettlement"})
 public class InvestmentAccountInformationType {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InvstmtAcct", required = true)
 	protected YesNoIndicator investmentAccount;
 	/**
-	 * Indicates if the core investment account information must be selected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +112,7 @@ public class InvestmentAccountInformationType {
 	 */
 	public static final MMMessageAttribute mmInvestmentAccount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentAccountInformationType.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountInformationType.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +123,11 @@ public class InvestmentAccountInformationType {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctPties", required = true)
 	protected YesNoIndicator accountParties;
 	/**
-	 * Indicates if the information about account parties must be selected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,7 +156,7 @@ public class InvestmentAccountInformationType {
 	 */
 	public static final MMMessageAttribute mmAccountParties = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentAccountInformationType.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountInformationType.mmObject();
 			isDerived = false;
 			xmlTag = "AcctPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,10 +167,11 @@ public class InvestmentAccountInformationType {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Intrmies", required = true)
 	protected YesNoIndicator intermediaries;
 	/**
-	 * Indicates if the information about the intermediaries must be selected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,7 +201,7 @@ public class InvestmentAccountInformationType {
 	 */
 	public static final MMMessageAttribute mmIntermediaries = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentAccountInformationType.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountInformationType.mmObject();
 			isDerived = false;
 			xmlTag = "Intrmies";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,11 +212,11 @@ public class InvestmentAccountInformationType {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtPlan", required = true)
 	protected YesNoIndicator investmentPlan;
 	/**
-	 * Indicates if the information about the investment plan(s) must be
-	 * selected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -242,7 +246,7 @@ public class InvestmentAccountInformationType {
 	 */
 	public static final MMMessageAttribute mmInvestmentPlan = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentAccountInformationType.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountInformationType.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtPlan";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -253,10 +257,11 @@ public class InvestmentAccountInformationType {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CshSttlm", required = true)
 	protected YesNoIndicator cashSettlement;
 	/**
-	 * Indicates if the cash settlement information must be selected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -285,7 +290,7 @@ public class InvestmentAccountInformationType {
 	 */
 	public static final MMMessageAttribute mmCashSettlement = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InvestmentAccountInformationType.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvestmentAccountInformationType.mmObject();
 			isDerived = false;
 			xmlTag = "CshSttlm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -300,9 +305,10 @@ public class InvestmentAccountInformationType {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InvestmentAccountInformationType.mmInvestmentAccount, InvestmentAccountInformationType.mmAccountParties, InvestmentAccountInformationType.mmIntermediaries,
-						InvestmentAccountInformationType.mmInvestmentPlan, InvestmentAccountInformationType.mmCashSettlement);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestmentAccountInformationType.mmInvestmentAccount, com.tools20022.repository.msg.InvestmentAccountInformationType.mmAccountParties,
+						com.tools20022.repository.msg.InvestmentAccountInformationType.mmIntermediaries, com.tools20022.repository.msg.InvestmentAccountInformationType.mmInvestmentPlan,
+						com.tools20022.repository.msg.InvestmentAccountInformationType.mmCashSettlement);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvestmentAccountInformationType";
 				definition = "Select the type(s) of information to be retrieved about a registered investment account.";
@@ -311,48 +317,48 @@ public class InvestmentAccountInformationType {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InvstmtAcct", required = true)
 	public YesNoIndicator getInvestmentAccount() {
 		return investmentAccount;
 	}
 
-	public void setInvestmentAccount(YesNoIndicator investmentAccount) {
-		this.investmentAccount = investmentAccount;
+	public InvestmentAccountInformationType setInvestmentAccount(YesNoIndicator investmentAccount) {
+		this.investmentAccount = Objects.requireNonNull(investmentAccount);
+		return this;
 	}
 
-	@XmlElement(name = "AcctPties", required = true)
 	public YesNoIndicator getAccountParties() {
 		return accountParties;
 	}
 
-	public void setAccountParties(YesNoIndicator accountParties) {
-		this.accountParties = accountParties;
+	public InvestmentAccountInformationType setAccountParties(YesNoIndicator accountParties) {
+		this.accountParties = Objects.requireNonNull(accountParties);
+		return this;
 	}
 
-	@XmlElement(name = "Intrmies", required = true)
 	public YesNoIndicator getIntermediaries() {
 		return intermediaries;
 	}
 
-	public void setIntermediaries(YesNoIndicator intermediaries) {
-		this.intermediaries = intermediaries;
+	public InvestmentAccountInformationType setIntermediaries(YesNoIndicator intermediaries) {
+		this.intermediaries = Objects.requireNonNull(intermediaries);
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtPlan", required = true)
 	public YesNoIndicator getInvestmentPlan() {
 		return investmentPlan;
 	}
 
-	public void setInvestmentPlan(YesNoIndicator investmentPlan) {
-		this.investmentPlan = investmentPlan;
+	public InvestmentAccountInformationType setInvestmentPlan(YesNoIndicator investmentPlan) {
+		this.investmentPlan = Objects.requireNonNull(investmentPlan);
+		return this;
 	}
 
-	@XmlElement(name = "CshSttlm", required = true)
 	public YesNoIndicator getCashSettlement() {
 		return cashSettlement;
 	}
 
-	public void setCashSettlement(YesNoIndicator cashSettlement) {
-		this.cashSettlement = cashSettlement;
+	public InvestmentAccountInformationType setCashSettlement(YesNoIndicator cashSettlement) {
+		this.cashSettlement = Objects.requireNonNull(cashSettlement);
+		return this;
 	}
 }

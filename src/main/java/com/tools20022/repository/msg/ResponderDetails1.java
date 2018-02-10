@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SystemEventInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Details of the Financial Institution responding to the request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ResponderDetails1", propOrder = {"dateTimeStamp", "responder"})
 public class ResponderDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DtTmStmp", required = true)
 	protected ISODateTime dateTimeStamp;
 	/**
-	 * Date and time at which the response was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +106,7 @@ public class ResponderDetails1 {
 	public static final MMMessageAttribute mmDateTimeStamp = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemEventInformation.mmTime;
-			componentContext_lazy = () -> ResponderDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ResponderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "DtTmStmp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +117,11 @@ public class ResponderDetails1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "Rspndr", required = true)
 	protected AnyBICIdentifier responder;
 	/**
-	 * Identification of the responder.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +149,7 @@ public class ResponderDetails1 {
 	 */
 	public static final MMMessageAttribute mmResponder = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ResponderDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ResponderDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Rspndr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,8 +164,8 @@ public class ResponderDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ResponderDetails1.mmDateTimeStamp, ResponderDetails1.mmResponder);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResponderDetails1.mmDateTimeStamp, com.tools20022.repository.msg.ResponderDetails1.mmResponder);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResponderDetails1";
 				definition = "Details of the Financial Institution responding to the request.";
@@ -171,21 +174,21 @@ public class ResponderDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DtTmStmp", required = true)
 	public ISODateTime getDateTimeStamp() {
 		return dateTimeStamp;
 	}
 
-	public void setDateTimeStamp(ISODateTime dateTimeStamp) {
-		this.dateTimeStamp = dateTimeStamp;
+	public ResponderDetails1 setDateTimeStamp(ISODateTime dateTimeStamp) {
+		this.dateTimeStamp = Objects.requireNonNull(dateTimeStamp);
+		return this;
 	}
 
-	@XmlElement(name = "Rspndr", required = true)
 	public AnyBICIdentifier getResponder() {
 		return responder;
 	}
 
-	public void setResponder(AnyBICIdentifier responder) {
-		this.responder = responder;
+	public ResponderDetails1 setResponder(AnyBICIdentifier responder) {
+		this.responder = Objects.requireNonNull(responder);
+		return this;
 	}
 }

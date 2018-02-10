@@ -29,9 +29,8 @@ import com.tools20022.repository.entity.SecuritiesEntry;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Unit3 Unit3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Unit6", propOrder = {"unitsNumber", "acquisitionDate", "certificateNumber", "group1Or2Units", "priceDetails"})
 public class Unit6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UnitsNb", required = true)
 	protected FinancialInstrumentQuantity1 unitsNumber;
 	/**
-	 * Total quantity of securities to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +124,7 @@ public class Unit6 {
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
-			componentContext_lazy = () -> Unit6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Unit6.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +136,11 @@ public class Unit6 {
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	@XmlElement(name = "AcqstnDt")
 	protected ISODate acquisitionDate;
 	/**
-	 * Date upon which the investor purchased the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,7 +178,7 @@ public class Unit6 {
 	public static final MMMessageAttribute mmAcquisitionDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesEntry.mmAcquisitionDate;
-			componentContext_lazy = () -> Unit6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Unit6.mmObject();
 			isDerived = false;
 			xmlTag = "AcqstnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,10 +190,11 @@ public class Unit6 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "CertNb")
 	protected List<Max35Text> certificateNumber;
 	/**
-	 * Certificate representing the security that is delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -229,7 +231,7 @@ public class Unit6 {
 	public static final MMMessageAttribute mmCertificateNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesCertificate.mmNumber;
-			componentContext_lazy = () -> Unit6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Unit6.mmObject();
 			isDerived = false;
 			xmlTag = "CertNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -240,12 +242,11 @@ public class Unit6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Grp1Or2Units")
 	protected UKTaxGroupUnitCode group1Or2Units;
 	/**
-	 * Tax group to which the purchased investment fund units belong. The
-	 * investor indicates to the intermediary operating pooled nominees, which
-	 * type of unit is to be sold.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -285,7 +286,7 @@ public class Unit6 {
 	public static final MMMessageAttribute mmGroup1Or2Units = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmGroup1Or2Units;
-			componentContext_lazy = () -> Unit6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Unit6.mmObject();
 			isDerived = false;
 			xmlTag = "Grp1Or2Units";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -297,10 +298,11 @@ public class Unit6 {
 			simpleType_lazy = () -> UKTaxGroupUnitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "PricDtls")
 	protected UnitPrice21 priceDetails;
 	/**
-	 * Information related to the price of the transferred units.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -337,7 +339,7 @@ public class Unit6 {
 	public static final MMMessageAssociationEnd mmPriceDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPricing;
-			componentContext_lazy = () -> Unit6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Unit6.mmObject();
 			isDerived = false;
 			xmlTag = "PricDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -354,9 +356,10 @@ public class Unit6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Unit6.mmUnitsNumber, Unit6.mmAcquisitionDate, Unit6.mmCertificateNumber, Unit6.mmGroup1Or2Units, Unit6.mmPriceDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit6.mmUnitsNumber, com.tools20022.repository.msg.Unit6.mmAcquisitionDate, com.tools20022.repository.msg.Unit6.mmCertificateNumber,
+						com.tools20022.repository.msg.Unit6.mmGroup1Or2Units, com.tools20022.repository.msg.Unit6.mmPriceDetails);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Unit6";
 				definition = "Information about the units to settle.";
@@ -366,48 +369,48 @@ public class Unit6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getUnitsNumber() {
 		return unitsNumber;
 	}
 
-	public void setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
-		this.unitsNumber = unitsNumber;
+	public Unit6 setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
+		this.unitsNumber = Objects.requireNonNull(unitsNumber);
+		return this;
 	}
 
-	@XmlElement(name = "AcqstnDt")
-	public ISODate getAcquisitionDate() {
-		return acquisitionDate;
+	public Optional<ISODate> getAcquisitionDate() {
+		return acquisitionDate == null ? Optional.empty() : Optional.of(acquisitionDate);
 	}
 
-	public void setAcquisitionDate(ISODate acquisitionDate) {
+	public Unit6 setAcquisitionDate(ISODate acquisitionDate) {
 		this.acquisitionDate = acquisitionDate;
+		return this;
 	}
 
-	@XmlElement(name = "CertNb")
 	public List<Max35Text> getCertificateNumber() {
-		return certificateNumber;
+		return certificateNumber == null ? certificateNumber = new ArrayList<>() : certificateNumber;
 	}
 
-	public void setCertificateNumber(List<Max35Text> certificateNumber) {
-		this.certificateNumber = certificateNumber;
+	public Unit6 setCertificateNumber(List<Max35Text> certificateNumber) {
+		this.certificateNumber = Objects.requireNonNull(certificateNumber);
+		return this;
 	}
 
-	@XmlElement(name = "Grp1Or2Units")
-	public UKTaxGroupUnitCode getGroup1Or2Units() {
-		return group1Or2Units;
+	public Optional<UKTaxGroupUnitCode> getGroup1Or2Units() {
+		return group1Or2Units == null ? Optional.empty() : Optional.of(group1Or2Units);
 	}
 
-	public void setGroup1Or2Units(UKTaxGroupUnitCode group1Or2Units) {
+	public Unit6 setGroup1Or2Units(UKTaxGroupUnitCode group1Or2Units) {
 		this.group1Or2Units = group1Or2Units;
+		return this;
 	}
 
-	@XmlElement(name = "PricDtls")
-	public UnitPrice21 getPriceDetails() {
-		return priceDetails;
+	public Optional<UnitPrice21> getPriceDetails() {
+		return priceDetails == null ? Optional.empty() : Optional.of(priceDetails);
 	}
 
-	public void setPriceDetails(com.tools20022.repository.msg.UnitPrice21 priceDetails) {
+	public Unit6 setPriceDetails(com.tools20022.repository.msg.UnitPrice21 priceDetails) {
 		this.priceDetails = priceDetails;
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -33,6 +34,8 @@ import com.tools20022.repository.entity.CorporateActionOption;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -105,8 +108,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -119,17 +122,18 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1", propOrder = {"placeAndName", "protectIdentification", "protectSequenceNumber", "optionNumber", "protectDate", "coverProtectDate",
 		"protectIdentificationQuantity", "protectIdentificationUncoveredQuantity", "protectIdentificationOversubscriptionQuantity", "protectIdentificationStatus", "protectConditionalQuantity", "protectTenderBidPrice",
 		"customerReferenceIdentification"})
 public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +160,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,11 +171,11 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctId", required = true)
 	protected Max15Text protectIdentification;
 	/**
-	 * Instruction reference number assigned by DTC to the uncovered protect
-	 * instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,7 +204,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 */
 	public static final MMMessageAttribute mmProtectIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,11 +215,11 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			simpleType_lazy = () -> Max15Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctSeqNb")
 	protected Max3NumericText protectSequenceNumber;
 	/**
-	 * Additional Reference number used to uniquely identify uncovered protect
-	 * instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,7 +249,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 */
 	public static final MMMessageAttribute mmProtectSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctSeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,10 +260,11 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			simpleType_lazy = () -> Max3NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnNb", required = true)
 	protected OptionNumber1Choice optionNumber;
 	/**
-	 * Option number of the protect instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -278,6 +283,9 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OptnNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13A::CAON</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -291,9 +299,10 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	public static final MMMessageAssociationEnd mmOptionNumber = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmOptionNumber;
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "OptnNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13A::CAON"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Option number of the protect instruction.";
@@ -303,10 +312,11 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			type_lazy = () -> OptionNumber1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctDt", required = true)
 	protected ISODateTime protectDate;
 	/**
-	 * Date and time of the protect instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -333,7 +343,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 */
 	public static final MMMessageAttribute mmProtectDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -344,11 +354,11 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "CoverPrtctDt")
 	protected ISODateTime coverProtectDate;
 	/**
-	 * Date and time of the cover protect. Will be the latest cover date if
-	 * partial cover transaction occurs.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -377,7 +387,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 */
 	public static final MMMessageAttribute mmCoverProtectDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CoverPrtctDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -388,11 +398,11 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctIdQty", required = true)
 	protected FinancialInstrumentQuantity15Choice protectIdentificationQuantity;
 	/**
-	 * Quantity of the protect instruction. For protects which are partially
-	 * covered, the quanitity will be reduced by the amount partially covered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -421,7 +431,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 */
 	public static final MMMessageAssociationEnd mmProtectIdentificationQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctIdQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -433,10 +443,11 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctIdUcvrdQty")
 	protected FinancialInstrumentQuantity15Choice protectIdentificationUncoveredQuantity;
 	/**
-	 * Quantity of the Protect instruction which has not been covered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -464,7 +475,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 */
 	public static final MMMessageAssociationEnd mmProtectIdentificationUncoveredQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctIdUcvrdQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -476,10 +487,11 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctIdOvrsbcptQty")
 	protected FinancialInstrumentQuantity15Choice protectIdentificationOversubscriptionQuantity;
 	/**
-	 * Protect oversubscription quantity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -506,7 +518,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 */
 	public static final MMMessageAssociationEnd mmProtectIdentificationOversubscriptionQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctIdOvrsbcptQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -518,10 +530,11 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctIdSts")
 	protected DTCProtectInstructionStatus1Code protectIdentificationStatus;
 	/**
-	 * Status of the Protect Instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -549,7 +562,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 */
 	public static final MMMessageAttribute mmProtectIdentificationStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctIdSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -560,10 +573,11 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			simpleType_lazy = () -> DTCProtectInstructionStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctCondlQty")
 	protected FinancialInstrumentQuantity15Choice protectConditionalQuantity;
 	/**
-	 * Conditional Quantity for the Protect Instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -590,7 +604,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 */
 	public static final MMMessageAssociationEnd mmProtectConditionalQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctCondlQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -602,10 +616,11 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctTndrBidPric")
 	protected PriceFormat57Choice protectTenderBidPrice;
 	/**
-	 * Tender bid price of the protect instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -631,7 +646,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 */
 	public static final MMMessageAssociationEnd mmProtectTenderBidPrice = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctTndrBidPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -643,10 +658,11 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			type_lazy = () -> PriceFormat57Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CstmrRefId")
 	protected Max15Text customerReferenceIdentification;
 	/**
-	 * Customer identification entered by client upon instruction submission.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -674,7 +690,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 */
 	public static final MMMessageAttribute mmCustomerReferenceIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrRefId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -689,14 +705,20 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmPlaceAndName, CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectIdentification,
-						CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectSequenceNumber, CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmOptionNumber,
-						CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectDate, CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmCoverProtectDate,
-						CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectIdentificationQuantity, CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectIdentificationUncoveredQuantity,
-						CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectIdentificationOversubscriptionQuantity, CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectIdentificationStatus,
-						CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectConditionalQuantity, CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectTenderBidPrice,
-						CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmCustomerReferenceIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectIdentification,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectSequenceNumber,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmOptionNumber,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectDate,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmCoverProtectDate,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectIdentificationQuantity,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectIdentificationUncoveredQuantity,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectIdentificationOversubscriptionQuantity,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectIdentificationStatus,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectConditionalQuantity,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmProtectTenderBidPrice,
+						com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmCustomerReferenceIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1";
 				definition = "Provides additional information regarding corporate action instructed balance details at option protect level.";
@@ -705,120 +727,120 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "PrtctId", required = true)
 	public Max15Text getProtectIdentification() {
 		return protectIdentification;
 	}
 
-	public void setProtectIdentification(Max15Text protectIdentification) {
-		this.protectIdentification = protectIdentification;
+	public CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 setProtectIdentification(Max15Text protectIdentification) {
+		this.protectIdentification = Objects.requireNonNull(protectIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PrtctSeqNb")
-	public Max3NumericText getProtectSequenceNumber() {
-		return protectSequenceNumber;
+	public Optional<Max3NumericText> getProtectSequenceNumber() {
+		return protectSequenceNumber == null ? Optional.empty() : Optional.of(protectSequenceNumber);
 	}
 
-	public void setProtectSequenceNumber(Max3NumericText protectSequenceNumber) {
+	public CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 setProtectSequenceNumber(Max3NumericText protectSequenceNumber) {
 		this.protectSequenceNumber = protectSequenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "OptnNb", required = true)
 	public OptionNumber1Choice getOptionNumber() {
 		return optionNumber;
 	}
 
-	public void setOptionNumber(OptionNumber1Choice optionNumber) {
-		this.optionNumber = optionNumber;
+	public CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 setOptionNumber(OptionNumber1Choice optionNumber) {
+		this.optionNumber = Objects.requireNonNull(optionNumber);
+		return this;
 	}
 
-	@XmlElement(name = "PrtctDt", required = true)
 	public ISODateTime getProtectDate() {
 		return protectDate;
 	}
 
-	public void setProtectDate(ISODateTime protectDate) {
-		this.protectDate = protectDate;
+	public CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 setProtectDate(ISODateTime protectDate) {
+		this.protectDate = Objects.requireNonNull(protectDate);
+		return this;
 	}
 
-	@XmlElement(name = "CoverPrtctDt")
-	public ISODateTime getCoverProtectDate() {
-		return coverProtectDate;
+	public Optional<ISODateTime> getCoverProtectDate() {
+		return coverProtectDate == null ? Optional.empty() : Optional.of(coverProtectDate);
 	}
 
-	public void setCoverProtectDate(ISODateTime coverProtectDate) {
+	public CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 setCoverProtectDate(ISODateTime coverProtectDate) {
 		this.coverProtectDate = coverProtectDate;
+		return this;
 	}
 
-	@XmlElement(name = "PrtctIdQty", required = true)
 	public FinancialInstrumentQuantity15Choice getProtectIdentificationQuantity() {
 		return protectIdentificationQuantity;
 	}
 
-	public void setProtectIdentificationQuantity(FinancialInstrumentQuantity15Choice protectIdentificationQuantity) {
-		this.protectIdentificationQuantity = protectIdentificationQuantity;
+	public CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 setProtectIdentificationQuantity(FinancialInstrumentQuantity15Choice protectIdentificationQuantity) {
+		this.protectIdentificationQuantity = Objects.requireNonNull(protectIdentificationQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "PrtctIdUcvrdQty")
-	public FinancialInstrumentQuantity15Choice getProtectIdentificationUncoveredQuantity() {
-		return protectIdentificationUncoveredQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getProtectIdentificationUncoveredQuantity() {
+		return protectIdentificationUncoveredQuantity == null ? Optional.empty() : Optional.of(protectIdentificationUncoveredQuantity);
 	}
 
-	public void setProtectIdentificationUncoveredQuantity(FinancialInstrumentQuantity15Choice protectIdentificationUncoveredQuantity) {
+	public CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 setProtectIdentificationUncoveredQuantity(FinancialInstrumentQuantity15Choice protectIdentificationUncoveredQuantity) {
 		this.protectIdentificationUncoveredQuantity = protectIdentificationUncoveredQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "PrtctIdOvrsbcptQty")
-	public FinancialInstrumentQuantity15Choice getProtectIdentificationOversubscriptionQuantity() {
-		return protectIdentificationOversubscriptionQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getProtectIdentificationOversubscriptionQuantity() {
+		return protectIdentificationOversubscriptionQuantity == null ? Optional.empty() : Optional.of(protectIdentificationOversubscriptionQuantity);
 	}
 
-	public void setProtectIdentificationOversubscriptionQuantity(FinancialInstrumentQuantity15Choice protectIdentificationOversubscriptionQuantity) {
+	public CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 setProtectIdentificationOversubscriptionQuantity(FinancialInstrumentQuantity15Choice protectIdentificationOversubscriptionQuantity) {
 		this.protectIdentificationOversubscriptionQuantity = protectIdentificationOversubscriptionQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "PrtctIdSts")
-	public DTCProtectInstructionStatus1Code getProtectIdentificationStatus() {
-		return protectIdentificationStatus;
+	public Optional<DTCProtectInstructionStatus1Code> getProtectIdentificationStatus() {
+		return protectIdentificationStatus == null ? Optional.empty() : Optional.of(protectIdentificationStatus);
 	}
 
-	public void setProtectIdentificationStatus(DTCProtectInstructionStatus1Code protectIdentificationStatus) {
+	public CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 setProtectIdentificationStatus(DTCProtectInstructionStatus1Code protectIdentificationStatus) {
 		this.protectIdentificationStatus = protectIdentificationStatus;
+		return this;
 	}
 
-	@XmlElement(name = "PrtctCondlQty")
-	public FinancialInstrumentQuantity15Choice getProtectConditionalQuantity() {
-		return protectConditionalQuantity;
+	public Optional<FinancialInstrumentQuantity15Choice> getProtectConditionalQuantity() {
+		return protectConditionalQuantity == null ? Optional.empty() : Optional.of(protectConditionalQuantity);
 	}
 
-	public void setProtectConditionalQuantity(FinancialInstrumentQuantity15Choice protectConditionalQuantity) {
+	public CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 setProtectConditionalQuantity(FinancialInstrumentQuantity15Choice protectConditionalQuantity) {
 		this.protectConditionalQuantity = protectConditionalQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "PrtctTndrBidPric")
-	public PriceFormat57Choice getProtectTenderBidPrice() {
-		return protectTenderBidPrice;
+	public Optional<PriceFormat57Choice> getProtectTenderBidPrice() {
+		return protectTenderBidPrice == null ? Optional.empty() : Optional.of(protectTenderBidPrice);
 	}
 
-	public void setProtectTenderBidPrice(PriceFormat57Choice protectTenderBidPrice) {
+	public CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 setProtectTenderBidPrice(PriceFormat57Choice protectTenderBidPrice) {
 		this.protectTenderBidPrice = protectTenderBidPrice;
+		return this;
 	}
 
-	@XmlElement(name = "CstmrRefId")
-	public Max15Text getCustomerReferenceIdentification() {
-		return customerReferenceIdentification;
+	public Optional<Max15Text> getCustomerReferenceIdentification() {
+		return customerReferenceIdentification == null ? Optional.empty() : Optional.of(customerReferenceIdentification);
 	}
 
-	public void setCustomerReferenceIdentification(Max15Text customerReferenceIdentification) {
+	public CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 setCustomerReferenceIdentification(Max15Text customerReferenceIdentification) {
 		this.customerReferenceIdentification = customerReferenceIdentification;
+		return this;
 	}
 }

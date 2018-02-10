@@ -33,6 +33,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -45,9 +46,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Commission14#mmAmountOrRateRule
- * Commission14.mmAmountOrRateRule}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Commission14#AmountOrRateRule
+ * Commission14.AmountOrRateRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -70,8 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTypeAmountRateRule#forCommission14
+ * ConstraintTypeAmountRateRule.forCommission14}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -84,15 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Commission14", propOrder = {"type", "amount", "rate", "commercialAgreementReference"})
 public class Commission14 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp")
 	protected CommissionType6Code type;
 	/**
-	 * Service for which the commission is asked or paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,7 +134,7 @@ public class Commission14 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
-			componentContext_lazy = () -> Commission14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission14.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +145,11 @@ public class Commission14 {
 			simpleType_lazy = () -> CommissionType6Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt")
 	protected RestrictedFINActiveCurrencyAnd13DecimalAmount amount;
 	/**
-	 * Commission expressed as an amount of money.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,7 +182,7 @@ public class Commission14 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> Commission14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission14.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,10 +193,11 @@ public class Commission14 {
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate")
 	protected PercentageRate rate;
 	/**
-	 * Commission expressed as a percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -219,7 +230,7 @@ public class Commission14 {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmRate;
-			componentContext_lazy = () -> Commission14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission14.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,12 +241,11 @@ public class Commission14 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "ComrclAgrmtRef")
 	protected RestrictedFINMax30Text commercialAgreementReference;
 	/**
-	 * Reference to the agreement established between the fund and another
-	 * party. This element, amongst others, defines the conditions of the
-	 * commissions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -270,7 +280,7 @@ public class Commission14 {
 	public static final MMMessageAttribute mmCommercialAgreementReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommercialAgreementReference;
-			componentContext_lazy = () -> Commission14.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission14.mmObject();
 			isDerived = false;
 			xmlTag = "ComrclAgrmtRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,22 +319,24 @@ public class Commission14 {
 	 * definition} = "Either Amount or Rate must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmAmountOrRateRule = new MMXor() {
+	public static final MMXor AmountOrRateRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountOrRateRule";
 			definition = "Either Amount or Rate must be present, but not both.";
-			messageComponent_lazy = () -> Commission14.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(Commission14.mmAmount, Commission14.mmRate);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.Commission14.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission14.mmAmount, com.tools20022.repository.msg.Commission14.mmRate);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Commission14.mmType, Commission14.mmAmount, Commission14.mmRate, Commission14.mmCommercialAgreementReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission14.mmType, com.tools20022.repository.msg.Commission14.mmAmount, com.tools20022.repository.msg.Commission14.mmRate,
+						com.tools20022.repository.msg.Commission14.mmCommercialAgreementReference);
 				trace_lazy = () -> Commission.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTypeAmountRateRule.forCommission14);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -335,45 +347,45 @@ public class Commission14 {
 				})).get();
 				name = "Commission14";
 				definition = "Amount of money due to a party as compensation for a service.";
-				xors_lazy = () -> Arrays.asList(Commission14.mmAmountOrRateRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission14.AmountOrRateRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp")
-	public CommissionType6Code getType() {
-		return type;
+	public Optional<CommissionType6Code> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(CommissionType6Code type) {
+	public Commission14 setType(CommissionType6Code type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Amt")
-	public RestrictedFINActiveCurrencyAnd13DecimalAmount getAmount() {
-		return amount;
+	public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getAmount() {
+		return amount == null ? Optional.empty() : Optional.of(amount);
 	}
 
-	public void setAmount(RestrictedFINActiveCurrencyAnd13DecimalAmount amount) {
+	public Commission14 setAmount(RestrictedFINActiveCurrencyAnd13DecimalAmount amount) {
 		this.amount = amount;
+		return this;
 	}
 
-	@XmlElement(name = "Rate")
-	public PercentageRate getRate() {
-		return rate;
+	public Optional<PercentageRate> getRate() {
+		return rate == null ? Optional.empty() : Optional.of(rate);
 	}
 
-	public void setRate(PercentageRate rate) {
+	public Commission14 setRate(PercentageRate rate) {
 		this.rate = rate;
+		return this;
 	}
 
-	@XmlElement(name = "ComrclAgrmtRef")
-	public RestrictedFINMax30Text getCommercialAgreementReference() {
-		return commercialAgreementReference;
+	public Optional<RestrictedFINMax30Text> getCommercialAgreementReference() {
+		return commercialAgreementReference == null ? Optional.empty() : Optional.of(commercialAgreementReference);
 	}
 
-	public void setCommercialAgreementReference(RestrictedFINMax30Text commercialAgreementReference) {
+	public Commission14 setCommercialAgreementReference(RestrictedFINMax30Text commercialAgreementReference) {
 		this.commercialAgreementReference = commercialAgreementReference;
+		return this;
 	}
 }

@@ -29,9 +29,8 @@ import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.Invoice;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,16 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Report on specific billing data."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "BillingReport1", propOrder = {"regulatoryData", "invoiceDate", "billingIdentification", "billingPeriod", "CSDOrNCB", "invoiceTotals", "serviceCategoryTotals"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "BillingReport1", propOrder = {"regulatoryData", "invoiceDate", "billingIdentification", "billingPeriod", "cSDOrNCB", "invoiceTotals", "serviceCategoryTotals"})
 public class BillingReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RgltryData", required = true)
 	protected InvoiceLegalIssue1 regulatoryData;
 	/**
-	 * Information about legal and regulatory data exchanged between invoicing
-	 * and paying party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -123,7 +122,7 @@ public class BillingReport1 {
 	public static final MMMessageAssociationEnd mmRegulatoryData = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
-			componentContext_lazy = () -> BillingReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BillingReport1.mmObject();
 			isDerived = false;
 			xmlTag = "RgltryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +134,11 @@ public class BillingReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.InvoiceLegalIssue1.mmObject();
 		}
 	};
+	@XmlElement(name = "InvcDt", required = true)
 	protected ISODate invoiceDate;
 	/**
-	 * Date at which the billing report was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,7 +170,7 @@ public class BillingReport1 {
 	public static final MMMessageAttribute mmInvoiceDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
-			componentContext_lazy = () -> BillingReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BillingReport1.mmObject();
 			isDerived = false;
 			xmlTag = "InvcDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,10 +181,11 @@ public class BillingReport1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "BllgId", required = true)
 	protected Max35Text billingIdentification;
 	/**
-	 * Unique identification of the billing report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -216,7 +217,7 @@ public class BillingReport1 {
 	public static final MMMessageAttribute mmBillingIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> BillingReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BillingReport1.mmObject();
 			isDerived = false;
 			xmlTag = "BllgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,10 +228,11 @@ public class BillingReport1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BllgPrd", required = true)
 	protected DatePeriodDetails billingPeriod;
 	/**
-	 * Date period for which the report data is valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -263,7 +265,7 @@ public class BillingReport1 {
 	public static final MMMessageAttribute mmBillingPeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmPeriodCovered;
-			componentContext_lazy = () -> BillingReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BillingReport1.mmObject();
 			isDerived = false;
 			xmlTag = "BllgPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -274,11 +276,11 @@ public class BillingReport1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails.mmObject();
 		}
 	};
+	@XmlElement(name = "CSDOrNCB")
 	protected CSDOrNCB1Choice cSDOrNCB;
 	/**
-	 * Specifies the billed party either CSD or NCB (party identification of the
-	 * CSD or NCB which has a contractual relationship with the billed customer)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -311,7 +313,7 @@ public class BillingReport1 {
 	public static final MMMessageAssociationEnd mmCSDOrNCB = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmPartyRole;
-			componentContext_lazy = () -> BillingReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BillingReport1.mmObject();
 			isDerived = false;
 			xmlTag = "CSDOrNCB";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -323,10 +325,11 @@ public class BillingReport1 {
 			type_lazy = () -> CSDOrNCB1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "InvcTtls", required = true)
 	protected InvoiceTotals2 invoiceTotals;
 	/**
-	 * Specifies totals related to the invoice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -356,7 +359,7 @@ public class BillingReport1 {
 	public static final MMMessageAssociationEnd mmInvoiceTotals = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
-			componentContext_lazy = () -> BillingReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BillingReport1.mmObject();
 			isDerived = false;
 			xmlTag = "InvcTtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -368,10 +371,11 @@ public class BillingReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.InvoiceTotals2.mmObject();
 		}
 	};
+	@XmlElement(name = "SvcCtgyTtls", required = true)
 	protected List<com.tools20022.repository.msg.ServiceCategoryTotals1> serviceCategoryTotals;
 	/**
-	 * Specifies totals related to the service category.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -401,7 +405,7 @@ public class BillingReport1 {
 	public static final MMMessageAssociationEnd mmServiceCategoryTotals = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
-			componentContext_lazy = () -> BillingReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BillingReport1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcCtgyTtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -416,10 +420,11 @@ public class BillingReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BillingReport1.mmRegulatoryData, BillingReport1.mmInvoiceDate, BillingReport1.mmBillingIdentification, BillingReport1.mmBillingPeriod, BillingReport1.mmCSDOrNCB,
-						BillingReport1.mmInvoiceTotals, BillingReport1.mmServiceCategoryTotals);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BillingReport1.mmRegulatoryData, com.tools20022.repository.msg.BillingReport1.mmInvoiceDate,
+						com.tools20022.repository.msg.BillingReport1.mmBillingIdentification, com.tools20022.repository.msg.BillingReport1.mmBillingPeriod, com.tools20022.repository.msg.BillingReport1.mmCSDOrNCB,
+						com.tools20022.repository.msg.BillingReport1.mmInvoiceTotals, com.tools20022.repository.msg.BillingReport1.mmServiceCategoryTotals);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BillingReport1";
 				definition = "Report on specific billing data.";
@@ -428,66 +433,66 @@ public class BillingReport1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RgltryData", required = true)
 	public InvoiceLegalIssue1 getRegulatoryData() {
 		return regulatoryData;
 	}
 
-	public void setRegulatoryData(com.tools20022.repository.msg.InvoiceLegalIssue1 regulatoryData) {
-		this.regulatoryData = regulatoryData;
+	public BillingReport1 setRegulatoryData(com.tools20022.repository.msg.InvoiceLegalIssue1 regulatoryData) {
+		this.regulatoryData = Objects.requireNonNull(regulatoryData);
+		return this;
 	}
 
-	@XmlElement(name = "InvcDt", required = true)
 	public ISODate getInvoiceDate() {
 		return invoiceDate;
 	}
 
-	public void setInvoiceDate(ISODate invoiceDate) {
-		this.invoiceDate = invoiceDate;
+	public BillingReport1 setInvoiceDate(ISODate invoiceDate) {
+		this.invoiceDate = Objects.requireNonNull(invoiceDate);
+		return this;
 	}
 
-	@XmlElement(name = "BllgId", required = true)
 	public Max35Text getBillingIdentification() {
 		return billingIdentification;
 	}
 
-	public void setBillingIdentification(Max35Text billingIdentification) {
-		this.billingIdentification = billingIdentification;
+	public BillingReport1 setBillingIdentification(Max35Text billingIdentification) {
+		this.billingIdentification = Objects.requireNonNull(billingIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "BllgPrd", required = true)
 	public DatePeriodDetails getBillingPeriod() {
 		return billingPeriod;
 	}
 
-	public void setBillingPeriod(com.tools20022.repository.msg.DatePeriodDetails billingPeriod) {
-		this.billingPeriod = billingPeriod;
+	public BillingReport1 setBillingPeriod(com.tools20022.repository.msg.DatePeriodDetails billingPeriod) {
+		this.billingPeriod = Objects.requireNonNull(billingPeriod);
+		return this;
 	}
 
-	@XmlElement(name = "CSDOrNCB")
-	public CSDOrNCB1Choice getCSDOrNCB() {
-		return cSDOrNCB;
+	public Optional<CSDOrNCB1Choice> getCSDOrNCB() {
+		return cSDOrNCB == null ? Optional.empty() : Optional.of(cSDOrNCB);
 	}
 
-	public void setCSDOrNCB(CSDOrNCB1Choice cSDOrNCB) {
+	public BillingReport1 setCSDOrNCB(CSDOrNCB1Choice cSDOrNCB) {
 		this.cSDOrNCB = cSDOrNCB;
+		return this;
 	}
 
-	@XmlElement(name = "InvcTtls", required = true)
 	public InvoiceTotals2 getInvoiceTotals() {
 		return invoiceTotals;
 	}
 
-	public void setInvoiceTotals(com.tools20022.repository.msg.InvoiceTotals2 invoiceTotals) {
-		this.invoiceTotals = invoiceTotals;
+	public BillingReport1 setInvoiceTotals(com.tools20022.repository.msg.InvoiceTotals2 invoiceTotals) {
+		this.invoiceTotals = Objects.requireNonNull(invoiceTotals);
+		return this;
 	}
 
-	@XmlElement(name = "SvcCtgyTtls", required = true)
 	public List<ServiceCategoryTotals1> getServiceCategoryTotals() {
-		return serviceCategoryTotals;
+		return serviceCategoryTotals == null ? serviceCategoryTotals = new ArrayList<>() : serviceCategoryTotals;
 	}
 
-	public void setServiceCategoryTotals(List<com.tools20022.repository.msg.ServiceCategoryTotals1> serviceCategoryTotals) {
-		this.serviceCategoryTotals = serviceCategoryTotals;
+	public BillingReport1 setServiceCategoryTotals(List<com.tools20022.repository.msg.ServiceCategoryTotals1> serviceCategoryTotals) {
+		this.serviceCategoryTotals = Objects.requireNonNull(serviceCategoryTotals);
+		return this;
 	}
 }

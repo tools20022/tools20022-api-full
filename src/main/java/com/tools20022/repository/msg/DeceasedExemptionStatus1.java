@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -27,6 +28,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Deceased beneficial owner exemption information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DeceasedExemptionStatus1", propOrder = {"beneficialOwnerDeathDate", "deathCertificateSerialNumber", "issuingJurisdiction", "documentationAcknowledgementOfExemption"})
 public class DeceasedExemptionStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BnfclOwnrDthDt", required = true)
 	protected ISODate beneficialOwnerDeathDate;
 	/**
-	 * Date of death of the beneficial owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -93,6 +96,9 @@ public class DeceasedExemptionStatus1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BnfclOwnrDthDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Beneficial Owner Death Date</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -105,9 +111,10 @@ public class DeceasedExemptionStatus1 {
 	 */
 	public static final MMMessageAttribute mmBeneficialOwnerDeathDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DeceasedExemptionStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeceasedExemptionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "BnfclOwnrDthDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Beneficial Owner Death Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerDeathDate";
 			definition = "Date of death of the beneficial owner.";
@@ -116,10 +123,11 @@ public class DeceasedExemptionStatus1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DthCertSrlNb", required = true)
 	protected Max35Text deathCertificateSerialNumber;
 	/**
-	 * Serial number of the death certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,6 +142,9 @@ public class DeceasedExemptionStatus1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DthCertSrlNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Death Certificate Serial Number</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -146,9 +157,10 @@ public class DeceasedExemptionStatus1 {
 	 */
 	public static final MMMessageAttribute mmDeathCertificateSerialNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DeceasedExemptionStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeceasedExemptionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "DthCertSrlNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Death Certificate Serial Number"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeathCertificateSerialNumber";
 			definition = "Serial number of the death certificate.";
@@ -157,10 +169,11 @@ public class DeceasedExemptionStatus1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IssgJursdctn", required = true)
 	protected Max35Text issuingJurisdiction;
 	/**
-	 * Identification of the jurisdiction issuing the death certificate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -175,6 +188,9 @@ public class DeceasedExemptionStatus1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IssgJursdctn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Issuing Jurisdiction</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -188,9 +204,10 @@ public class DeceasedExemptionStatus1 {
 	 */
 	public static final MMMessageAttribute mmIssuingJurisdiction = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DeceasedExemptionStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeceasedExemptionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "IssgJursdctn";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Issuing Jurisdiction"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuingJurisdiction";
 			definition = "Identification of the jurisdiction issuing the death certificate.";
@@ -199,12 +216,11 @@ public class DeceasedExemptionStatus1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DcmnttnAckOfXmptn", required = true)
 	protected AcknowledgementOfExemption1Choice documentationAcknowledgementOfExemption;
 	/**
-	 * Acknowledgement of exempt instruction specifying whether the
-	 * documentation will be sent to DTC (The Depository Trust Corporation) or
-	 * not (not maintained by DTCC).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -218,6 +234,10 @@ public class DeceasedExemptionStatus1 {
 	 * DeceasedExemptionStatus1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DcmnttnAckOfXmptn"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Documentation Acknowledgement Of Exemption
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -233,9 +253,10 @@ public class DeceasedExemptionStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmDocumentationAcknowledgementOfExemption = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DeceasedExemptionStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DeceasedExemptionStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "DcmnttnAckOfXmptn";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Documentation Acknowledgement Of Exemption"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentationAcknowledgementOfExemption";
 			definition = "Acknowledgement of exempt instruction specifying whether the documentation will be sent to DTC (The Depository Trust Corporation) or not (not maintained by DTCC).";
@@ -249,9 +270,9 @@ public class DeceasedExemptionStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DeceasedExemptionStatus1.mmBeneficialOwnerDeathDate, DeceasedExemptionStatus1.mmDeathCertificateSerialNumber, DeceasedExemptionStatus1.mmIssuingJurisdiction,
-						DeceasedExemptionStatus1.mmDocumentationAcknowledgementOfExemption);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DeceasedExemptionStatus1.mmBeneficialOwnerDeathDate, com.tools20022.repository.msg.DeceasedExemptionStatus1.mmDeathCertificateSerialNumber,
+						com.tools20022.repository.msg.DeceasedExemptionStatus1.mmIssuingJurisdiction, com.tools20022.repository.msg.DeceasedExemptionStatus1.mmDocumentationAcknowledgementOfExemption);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DeceasedExemptionStatus1";
 				definition = "Deceased beneficial owner exemption information.";
@@ -260,39 +281,39 @@ public class DeceasedExemptionStatus1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BnfclOwnrDthDt", required = true)
 	public ISODate getBeneficialOwnerDeathDate() {
 		return beneficialOwnerDeathDate;
 	}
 
-	public void setBeneficialOwnerDeathDate(ISODate beneficialOwnerDeathDate) {
-		this.beneficialOwnerDeathDate = beneficialOwnerDeathDate;
+	public DeceasedExemptionStatus1 setBeneficialOwnerDeathDate(ISODate beneficialOwnerDeathDate) {
+		this.beneficialOwnerDeathDate = Objects.requireNonNull(beneficialOwnerDeathDate);
+		return this;
 	}
 
-	@XmlElement(name = "DthCertSrlNb", required = true)
 	public Max35Text getDeathCertificateSerialNumber() {
 		return deathCertificateSerialNumber;
 	}
 
-	public void setDeathCertificateSerialNumber(Max35Text deathCertificateSerialNumber) {
-		this.deathCertificateSerialNumber = deathCertificateSerialNumber;
+	public DeceasedExemptionStatus1 setDeathCertificateSerialNumber(Max35Text deathCertificateSerialNumber) {
+		this.deathCertificateSerialNumber = Objects.requireNonNull(deathCertificateSerialNumber);
+		return this;
 	}
 
-	@XmlElement(name = "IssgJursdctn", required = true)
 	public Max35Text getIssuingJurisdiction() {
 		return issuingJurisdiction;
 	}
 
-	public void setIssuingJurisdiction(Max35Text issuingJurisdiction) {
-		this.issuingJurisdiction = issuingJurisdiction;
+	public DeceasedExemptionStatus1 setIssuingJurisdiction(Max35Text issuingJurisdiction) {
+		this.issuingJurisdiction = Objects.requireNonNull(issuingJurisdiction);
+		return this;
 	}
 
-	@XmlElement(name = "DcmnttnAckOfXmptn", required = true)
 	public AcknowledgementOfExemption1Choice getDocumentationAcknowledgementOfExemption() {
 		return documentationAcknowledgementOfExemption;
 	}
 
-	public void setDocumentationAcknowledgementOfExemption(AcknowledgementOfExemption1Choice documentationAcknowledgementOfExemption) {
-		this.documentationAcknowledgementOfExemption = documentationAcknowledgementOfExemption;
+	public DeceasedExemptionStatus1 setDocumentationAcknowledgementOfExemption(AcknowledgementOfExemption1Choice documentationAcknowledgementOfExemption) {
+		this.documentationAcknowledgementOfExemption = Objects.requireNonNull(documentationAcknowledgementOfExemption);
+		return this;
 	}
 }

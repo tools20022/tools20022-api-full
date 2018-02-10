@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Amount2", propOrder = {"originalCurrencyAmount", "reportingAmount"})
 public class Amount2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgnlCcyAmt")
 	protected ActiveCurrencyAndAmount originalCurrencyAmount;
 	/**
-	 * Amount expressed in the original currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +102,7 @@ public class Amount2 {
 	 */
 	public static final MMMessageAttribute mmOriginalCurrencyAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Amount2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCcyAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,10 +113,11 @@ public class Amount2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RptgAmt", required = true)
 	protected ImpliedCurrencyAndAmount reportingAmount;
 	/**
-	 * Amount expressed in the reporting currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,7 +144,7 @@ public class Amount2 {
 	 */
 	public static final MMMessageAttribute mmReportingAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Amount2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Amount2.mmObject();
 			isDerived = false;
 			xmlTag = "RptgAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,8 +159,8 @@ public class Amount2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Amount2.mmOriginalCurrencyAmount, Amount2.mmReportingAmount);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amount2.mmOriginalCurrencyAmount, com.tools20022.repository.msg.Amount2.mmReportingAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Amount2";
 				definition = "Provides the amount in the reporting currency and optionally in the original currency.";
@@ -165,21 +169,21 @@ public class Amount2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgnlCcyAmt")
-	public ActiveCurrencyAndAmount getOriginalCurrencyAmount() {
-		return originalCurrencyAmount;
+	public Optional<ActiveCurrencyAndAmount> getOriginalCurrencyAmount() {
+		return originalCurrencyAmount == null ? Optional.empty() : Optional.of(originalCurrencyAmount);
 	}
 
-	public void setOriginalCurrencyAmount(ActiveCurrencyAndAmount originalCurrencyAmount) {
+	public Amount2 setOriginalCurrencyAmount(ActiveCurrencyAndAmount originalCurrencyAmount) {
 		this.originalCurrencyAmount = originalCurrencyAmount;
+		return this;
 	}
 
-	@XmlElement(name = "RptgAmt", required = true)
 	public ImpliedCurrencyAndAmount getReportingAmount() {
 		return reportingAmount;
 	}
 
-	public void setReportingAmount(ImpliedCurrencyAndAmount reportingAmount) {
-		this.reportingAmount = reportingAmount;
+	public Amount2 setReportingAmount(ImpliedCurrencyAndAmount reportingAmount) {
+		this.reportingAmount = Objects.requireNonNull(reportingAmount);
+		return this;
 	}
 }

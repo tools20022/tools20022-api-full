@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -30,6 +31,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +67,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintLinkedQuantityRule#forLinkages24
+ * ConstraintLinkedQuantityRule.forLinkages24}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forLinkages24
+ * ConstraintCoexistenceQuantityRule.forLinkages24}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -77,15 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information related to a linked transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Linkages24", propOrder = {"processingPosition", "messageNumber", "reference", "linkedQuantity", "referenceOwner"})
 public class Linkages24 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrcgPos")
 	protected ProcessingPosition3Choice processingPosition;
 	/**
-	 * When the transaction is to be executed relative to a linked transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -98,6 +113,9 @@ public class Linkages24 {
 	 * Linkages24}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrcgPos"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::LINK</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -113,9 +131,10 @@ public class Linkages24 {
 	 */
 	public static final MMMessageAssociationEnd mmProcessingPosition = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Linkages24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages24.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgPos";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::LINK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingPosition";
 			definition = "When the transaction is to be executed relative to a linked transaction.";
@@ -125,11 +144,11 @@ public class Linkages24 {
 			type_lazy = () -> ProcessingPosition3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgNb")
 	protected DocumentNumber2Choice messageNumber;
 	/**
-	 * Message type number/message identifier of the message referenced in the
-	 * linkage sequence.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -142,6 +161,9 @@ public class Linkages24 {
 	 * Linkages24}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MsgNb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13a::LINK</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -157,9 +179,10 @@ public class Linkages24 {
 	 */
 	public static final MMMessageAssociationEnd mmMessageNumber = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Linkages24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages24.mmObject();
 			isDerived = false;
 			xmlTag = "MsgNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13a::LINK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumber";
 			definition = "Message type number/message identifier of the message referenced in the linkage sequence.";
@@ -169,10 +192,11 @@ public class Linkages24 {
 			type_lazy = () -> DocumentNumber2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Ref", required = true)
 	protected References32Choice reference;
 	/**
-	 * Reference to the linked transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -190,6 +214,9 @@ public class Linkages24 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Ref"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -203,9 +230,10 @@ public class Linkages24 {
 	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-			componentContext_lazy = () -> Linkages24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages24.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the linked transaction.";
@@ -215,11 +243,11 @@ public class Linkages24 {
 			type_lazy = () -> References32Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LkdQty")
 	protected PairedOrTurnedQuantity2Choice linkedQuantity;
 	/**
-	 * Quantity of financial instruments of the linked transaction to be
-	 * paired-off or turned.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -238,6 +266,9 @@ public class Linkages24 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LkdQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36B::PAIR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -253,9 +284,10 @@ public class Linkages24 {
 	public static final MMMessageAssociationEnd mmLinkedQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
-			componentContext_lazy = () -> Linkages24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages24.mmObject();
 			isDerived = false;
 			xmlTag = "LkdQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::PAIR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedQuantity";
 			definition = "Quantity of financial instruments of the linked transaction to be paired-off or turned.";
@@ -265,10 +297,11 @@ public class Linkages24 {
 			type_lazy = () -> PairedOrTurnedQuantity2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RefOwnr")
 	protected PartyIdentification51Choice referenceOwner;
 	/**
-	 * Party that generates the reference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -300,7 +333,7 @@ public class Linkages24 {
 	public static final MMMessageAssociationEnd mmReferenceOwner = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Linkages24.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Linkages24.mmObject();
 			isDerived = false;
 			xmlTag = "RefOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -316,9 +349,11 @@ public class Linkages24 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Linkages24.mmProcessingPosition, Linkages24.mmMessageNumber, Linkages24.mmReference, Linkages24.mmLinkedQuantity, Linkages24.mmReferenceOwner);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages24.mmProcessingPosition, com.tools20022.repository.msg.Linkages24.mmMessageNumber, com.tools20022.repository.msg.Linkages24.mmReference,
+						com.tools20022.repository.msg.Linkages24.mmLinkedQuantity, com.tools20022.repository.msg.Linkages24.mmReferenceOwner);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLinkedQuantityRule.forLinkages24, com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forLinkages24);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -334,48 +369,48 @@ public class Linkages24 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrcgPos")
-	public ProcessingPosition3Choice getProcessingPosition() {
-		return processingPosition;
+	public Optional<ProcessingPosition3Choice> getProcessingPosition() {
+		return processingPosition == null ? Optional.empty() : Optional.of(processingPosition);
 	}
 
-	public void setProcessingPosition(ProcessingPosition3Choice processingPosition) {
+	public Linkages24 setProcessingPosition(ProcessingPosition3Choice processingPosition) {
 		this.processingPosition = processingPosition;
+		return this;
 	}
 
-	@XmlElement(name = "MsgNb")
-	public DocumentNumber2Choice getMessageNumber() {
-		return messageNumber;
+	public Optional<DocumentNumber2Choice> getMessageNumber() {
+		return messageNumber == null ? Optional.empty() : Optional.of(messageNumber);
 	}
 
-	public void setMessageNumber(DocumentNumber2Choice messageNumber) {
+	public Linkages24 setMessageNumber(DocumentNumber2Choice messageNumber) {
 		this.messageNumber = messageNumber;
+		return this;
 	}
 
-	@XmlElement(name = "Ref", required = true)
 	public References32Choice getReference() {
 		return reference;
 	}
 
-	public void setReference(References32Choice reference) {
-		this.reference = reference;
+	public Linkages24 setReference(References32Choice reference) {
+		this.reference = Objects.requireNonNull(reference);
+		return this;
 	}
 
-	@XmlElement(name = "LkdQty")
-	public PairedOrTurnedQuantity2Choice getLinkedQuantity() {
-		return linkedQuantity;
+	public Optional<PairedOrTurnedQuantity2Choice> getLinkedQuantity() {
+		return linkedQuantity == null ? Optional.empty() : Optional.of(linkedQuantity);
 	}
 
-	public void setLinkedQuantity(PairedOrTurnedQuantity2Choice linkedQuantity) {
+	public Linkages24 setLinkedQuantity(PairedOrTurnedQuantity2Choice linkedQuantity) {
 		this.linkedQuantity = linkedQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "RefOwnr")
-	public PartyIdentification51Choice getReferenceOwner() {
-		return referenceOwner;
+	public Optional<PartyIdentification51Choice> getReferenceOwner() {
+		return referenceOwner == null ? Optional.empty() : Optional.of(referenceOwner);
 	}
 
-	public void setReferenceOwner(PartyIdentification51Choice referenceOwner) {
+	public Linkages24 setReferenceOwner(PartyIdentification51Choice referenceOwner) {
 		this.referenceOwner = referenceOwner;
+		return this;
 	}
 }

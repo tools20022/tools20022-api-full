@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DatePeriodDetails;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Choice between search criteria based on dates and date ranges."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DateSearchChoice", propOrder = {"fromDate", "toDate", "fromToDate", "equalDate", "notEqualDate"})
 public class DateSearchChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FrDt", required = true)
 	protected ISODate fromDate;
 	/**
-	 * Start date of the range.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +114,7 @@ public class DateSearchChoice {
 	public static final MMMessageAttribute mmFromDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> DateSearchChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "FrDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +125,11 @@ public class DateSearchChoice {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ToDt", required = true)
 	protected ISODate toDate;
 	/**
-	 * End date of the range.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +162,7 @@ public class DateSearchChoice {
 	public static final MMMessageAttribute mmToDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
-			componentContext_lazy = () -> DateSearchChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "ToDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,10 +173,11 @@ public class DateSearchChoice {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "FrToDt", required = true)
 	protected DatePeriodDetails fromToDate;
 	/**
-	 * Particular time span specified between a start date and an end date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,7 +206,7 @@ public class DateSearchChoice {
 	 */
 	public static final MMMessageAttribute mmFromToDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateSearchChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "FrToDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,10 +217,11 @@ public class DateSearchChoice {
 			complexType_lazy = () -> DatePeriodDetails.mmObject();
 		}
 	};
+	@XmlElement(name = "EQDt", required = true)
 	protected ISODate equalDate;
 	/**
-	 * Specified date to match.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -243,7 +248,7 @@ public class DateSearchChoice {
 	 */
 	public static final MMMessageAttribute mmEqualDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateSearchChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "EQDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,10 +259,11 @@ public class DateSearchChoice {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "NEQDt", required = true)
 	protected ISODate notEqualDate;
 	/**
-	 * Specified date to be excluded from the search.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -284,7 +290,7 @@ public class DateSearchChoice {
 	 */
 	public static final MMMessageAttribute mmNotEqualDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DateSearchChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DateSearchChoice.mmObject();
 			isDerived = false;
 			xmlTag = "NEQDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -299,8 +305,9 @@ public class DateSearchChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DateSearchChoice.mmFromDate, DateSearchChoice.mmToDate, DateSearchChoice.mmFromToDate, DateSearchChoice.mmEqualDate, DateSearchChoice.mmNotEqualDate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateSearchChoice.mmFromDate, com.tools20022.repository.choice.DateSearchChoice.mmToDate,
+						com.tools20022.repository.choice.DateSearchChoice.mmFromToDate, com.tools20022.repository.choice.DateSearchChoice.mmEqualDate, com.tools20022.repository.choice.DateSearchChoice.mmNotEqualDate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateSearchChoice";
 				definition = "Choice between search criteria based on dates and date ranges.";
@@ -309,48 +316,48 @@ public class DateSearchChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FrDt", required = true)
 	public ISODate getFromDate() {
 		return fromDate;
 	}
 
-	public void setFromDate(ISODate fromDate) {
-		this.fromDate = fromDate;
+	public DateSearchChoice setFromDate(ISODate fromDate) {
+		this.fromDate = Objects.requireNonNull(fromDate);
+		return this;
 	}
 
-	@XmlElement(name = "ToDt", required = true)
 	public ISODate getToDate() {
 		return toDate;
 	}
 
-	public void setToDate(ISODate toDate) {
-		this.toDate = toDate;
+	public DateSearchChoice setToDate(ISODate toDate) {
+		this.toDate = Objects.requireNonNull(toDate);
+		return this;
 	}
 
-	@XmlElement(name = "FrToDt", required = true)
 	public DatePeriodDetails getFromToDate() {
 		return fromToDate;
 	}
 
-	public void setFromToDate(DatePeriodDetails fromToDate) {
-		this.fromToDate = fromToDate;
+	public DateSearchChoice setFromToDate(DatePeriodDetails fromToDate) {
+		this.fromToDate = Objects.requireNonNull(fromToDate);
+		return this;
 	}
 
-	@XmlElement(name = "EQDt", required = true)
 	public ISODate getEqualDate() {
 		return equalDate;
 	}
 
-	public void setEqualDate(ISODate equalDate) {
-		this.equalDate = equalDate;
+	public DateSearchChoice setEqualDate(ISODate equalDate) {
+		this.equalDate = Objects.requireNonNull(equalDate);
+		return this;
 	}
 
-	@XmlElement(name = "NEQDt", required = true)
 	public ISODate getNotEqualDate() {
 		return notEqualDate;
 	}
 
-	public void setNotEqualDate(ISODate notEqualDate) {
-		this.notEqualDate = notEqualDate;
+	public DateSearchChoice setNotEqualDate(ISODate notEqualDate) {
+		this.notEqualDate = Objects.requireNonNull(notEqualDate);
+		return this;
 	}
 }

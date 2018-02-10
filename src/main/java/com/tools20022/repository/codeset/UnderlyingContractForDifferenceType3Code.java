@@ -20,52 +20,56 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.UnderlyingTypeV3Code;
+import com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type for an underlying contract for difference derivative.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code
- * UnderlyingTypeV3Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#mmBond
- * UnderlyingContractForDifferenceType3Code.mmBond}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#Bond
+ * UnderlyingContractForDifferenceType3Code.Bond}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#mmCommodity
- * UnderlyingContractForDifferenceType3Code.mmCommodity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#Commodity
+ * UnderlyingContractForDifferenceType3Code.Commodity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#mmCurrency
- * UnderlyingContractForDifferenceType3Code.mmCurrency}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#Currency
+ * UnderlyingContractForDifferenceType3Code.Currency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#mmEmissionAllowance
- * UnderlyingContractForDifferenceType3Code.mmEmissionAllowance}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#EmissionAllowance
+ * UnderlyingContractForDifferenceType3Code.EmissionAllowance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#mmEquity
- * UnderlyingContractForDifferenceType3Code.mmEquity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#Equity
+ * UnderlyingContractForDifferenceType3Code.Equity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#mmFutureOnEquity
- * UnderlyingContractForDifferenceType3Code.mmFutureOnEquity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#FutureOnEquity
+ * UnderlyingContractForDifferenceType3Code.FutureOnEquity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#mmOptionOnEquity
- * UnderlyingContractForDifferenceType3Code.mmOptionOnEquity}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#OptionOnEquity
+ * UnderlyingContractForDifferenceType3Code.OptionOnEquity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#mmOther
- * UnderlyingContractForDifferenceType3Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code#Other
+ * UnderlyingContractForDifferenceType3Code.Other}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.UnderlyingTypeV3Code
+ * UnderlyingTypeV3Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,7 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the type for an underlying contract for difference derivative."</li>
  * </ul>
  */
-public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class UnderlyingContractForDifferenceType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -96,11 +101,12 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 * name} = "Bond"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBond = new MMCode() {
+	public static final UnderlyingContractForDifferenceType3Code Bond = new UnderlyingContractForDifferenceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bond";
-			owner_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmObject();
+			codeName = UnderlyingTypeV3Code.Bond.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -119,11 +125,12 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 * name} = "Commodity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommodity = new MMCode() {
+	public static final UnderlyingContractForDifferenceType3Code Commodity = new UnderlyingContractForDifferenceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodity";
-			owner_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmObject();
+			codeName = UnderlyingTypeV3Code.Commodity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -142,11 +149,12 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 * name} = "Currency"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrency = new MMCode() {
+	public static final UnderlyingContractForDifferenceType3Code Currency = new UnderlyingContractForDifferenceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
-			owner_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmObject();
+			codeName = UnderlyingTypeV3Code.Currency.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -165,11 +173,12 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 * name} = "EmissionAllowance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEmissionAllowance = new MMCode() {
+	public static final UnderlyingContractForDifferenceType3Code EmissionAllowance = new UnderlyingContractForDifferenceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmissionAllowance";
-			owner_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmObject();
+			codeName = UnderlyingTypeV3Code.EmissionAllowance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -188,11 +197,12 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 * name} = "Equity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEquity = new MMCode() {
+	public static final UnderlyingContractForDifferenceType3Code Equity = new UnderlyingContractForDifferenceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equity";
-			owner_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmObject();
+			codeName = UnderlyingTypeV3Code.Equity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -211,11 +221,12 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 * name} = "FutureOnEquity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFutureOnEquity = new MMCode() {
+	public static final UnderlyingContractForDifferenceType3Code FutureOnEquity = new UnderlyingContractForDifferenceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FutureOnEquity";
-			owner_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmObject();
+			codeName = UnderlyingTypeV3Code.FutureOnEquity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -234,11 +245,12 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 * name} = "OptionOnEquity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOptionOnEquity = new MMCode() {
+	public static final UnderlyingContractForDifferenceType3Code OptionOnEquity = new UnderlyingContractForDifferenceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionOnEquity";
-			owner_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmObject();
+			codeName = UnderlyingTypeV3Code.OptionOnEquity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -257,27 +269,65 @@ public class UnderlyingContractForDifferenceType3Code extends UnderlyingTypeV3Co
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final UnderlyingContractForDifferenceType3Code Other = new UnderlyingContractForDifferenceType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> UnderlyingContractForDifferenceType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.mmObject();
+			codeName = UnderlyingTypeV3Code.Other.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, UnderlyingContractForDifferenceType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected UnderlyingContractForDifferenceType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingContractForDifferenceType3Code";
 				definition = "Specifies the type for an underlying contract for difference derivative.";
-				code_lazy = () -> Arrays.asList(UnderlyingContractForDifferenceType3Code.mmBond, UnderlyingContractForDifferenceType3Code.mmCommodity, UnderlyingContractForDifferenceType3Code.mmCurrency,
-						UnderlyingContractForDifferenceType3Code.mmEmissionAllowance, UnderlyingContractForDifferenceType3Code.mmEquity, UnderlyingContractForDifferenceType3Code.mmFutureOnEquity,
-						UnderlyingContractForDifferenceType3Code.mmOptionOnEquity, UnderlyingContractForDifferenceType3Code.mmOther);
 				trace_lazy = () -> UnderlyingTypeV3Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.Bond, com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.Commodity,
+						com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.Currency, com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.EmissionAllowance,
+						com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.Equity, com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.FutureOnEquity,
+						com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.OptionOnEquity, com.tools20022.repository.codeset.UnderlyingContractForDifferenceType3Code.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Bond.getCodeName().get(), Bond);
+		codesByName.put(Commodity.getCodeName().get(), Commodity);
+		codesByName.put(Currency.getCodeName().get(), Currency);
+		codesByName.put(EmissionAllowance.getCodeName().get(), EmissionAllowance);
+		codesByName.put(Equity.getCodeName().get(), Equity);
+		codesByName.put(FutureOnEquity.getCodeName().get(), FutureOnEquity);
+		codesByName.put(OptionOnEquity.getCodeName().get(), OptionOnEquity);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static UnderlyingContractForDifferenceType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static UnderlyingContractForDifferenceType3Code[] values() {
+		UnderlyingContractForDifferenceType3Code[] values = new UnderlyingContractForDifferenceType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, UnderlyingContractForDifferenceType3Code> {
+		@Override
+		public UnderlyingContractForDifferenceType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(UnderlyingContractForDifferenceType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -33,6 +33,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forReferences22Choice
+ * ConstraintCoexistenceIdentificationRule.forReferences22Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -88,16 +97,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "References22Choice", propOrder = {"otherTransactionIdentification", "securitiesFinancingTransactionIdentification", "securitiesSettlementTransactionIdentification", "intraPositionMovementIdentification"})
 public class References22Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OthrTxId", required = true)
 	protected GenericDocumentIdentification1 otherTransactionIdentification;
 	/**
-	 * Reference to a transaction that cannot be identified using a standard
-	 * reference element present in the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -140,7 +149,7 @@ public class References22Choice {
 	public static final MMMessageAssociationEnd mmOtherTransactionIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmIdentification;
-			componentContext_lazy = () -> References22Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.References22Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,12 +162,11 @@ public class References22Choice {
 			type_lazy = () -> GenericDocumentIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesFincgTxId", required = true)
 	protected SettlementTypeAndIdentification13 securitiesFinancingTransactionIdentification;
 	/**
-	 * Unambiguous identification of the underlying securities financing
-	 * transaction (not the underlying securities financing trade) as assigned
-	 * by the instructing party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -201,7 +209,7 @@ public class References22Choice {
 	public static final MMMessageAssociationEnd mmSecuritiesFinancingTransactionIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
-			componentContext_lazy = () -> References22Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.References22Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesFincgTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,10 +222,11 @@ public class References22Choice {
 			type_lazy = () -> SettlementTypeAndIdentification13.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesSttlmTxId", required = true)
 	protected SettlementTypeAndIdentification13 securitiesSettlementTransactionIdentification;
 	/**
-	 * Unambiguous identification of the securities settlement transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -259,7 +268,7 @@ public class References22Choice {
 	public static final MMMessageAssociationEnd mmSecuritiesSettlementTransactionIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTradeExecution.mmSecuritiesSettlement;
-			componentContext_lazy = () -> References22Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.References22Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesSttlmTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -272,12 +281,11 @@ public class References22Choice {
 			type_lazy = () -> SettlementTypeAndIdentification13.mmObject();
 		}
 	};
+	@XmlElement(name = "IntraPosMvmntId", required = true)
 	protected Max35Text intraPositionMovementIdentification;
 	/**
-	 * Reference to the intra-position movement transaction requested to be
-	 * cancelled as known by the account owner (or instructing party acting on
-	 * its behalf).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -314,7 +322,7 @@ public class References22Choice {
 	 */
 	public static final MMMessageAttribute mmIntraPositionMovementIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> References22Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.References22Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IntraPosMvmntId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -330,10 +338,12 @@ public class References22Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(References22Choice.mmOtherTransactionIdentification, References22Choice.mmSecuritiesFinancingTransactionIdentification,
-						References22Choice.mmSecuritiesSettlementTransactionIdentification, References22Choice.mmIntraPositionMovementIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References22Choice.mmOtherTransactionIdentification,
+						com.tools20022.repository.choice.References22Choice.mmSecuritiesFinancingTransactionIdentification, com.tools20022.repository.choice.References22Choice.mmSecuritiesSettlementTransactionIdentification,
+						com.tools20022.repository.choice.References22Choice.mmIntraPositionMovementIdentification);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forReferences22Choice);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -350,39 +360,39 @@ public class References22Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OthrTxId", required = true)
 	public GenericDocumentIdentification1 getOtherTransactionIdentification() {
 		return otherTransactionIdentification;
 	}
 
-	public void setOtherTransactionIdentification(GenericDocumentIdentification1 otherTransactionIdentification) {
-		this.otherTransactionIdentification = otherTransactionIdentification;
+	public References22Choice setOtherTransactionIdentification(GenericDocumentIdentification1 otherTransactionIdentification) {
+		this.otherTransactionIdentification = Objects.requireNonNull(otherTransactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesFincgTxId", required = true)
 	public SettlementTypeAndIdentification13 getSecuritiesFinancingTransactionIdentification() {
 		return securitiesFinancingTransactionIdentification;
 	}
 
-	public void setSecuritiesFinancingTransactionIdentification(SettlementTypeAndIdentification13 securitiesFinancingTransactionIdentification) {
-		this.securitiesFinancingTransactionIdentification = securitiesFinancingTransactionIdentification;
+	public References22Choice setSecuritiesFinancingTransactionIdentification(SettlementTypeAndIdentification13 securitiesFinancingTransactionIdentification) {
+		this.securitiesFinancingTransactionIdentification = Objects.requireNonNull(securitiesFinancingTransactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesSttlmTxId", required = true)
 	public SettlementTypeAndIdentification13 getSecuritiesSettlementTransactionIdentification() {
 		return securitiesSettlementTransactionIdentification;
 	}
 
-	public void setSecuritiesSettlementTransactionIdentification(SettlementTypeAndIdentification13 securitiesSettlementTransactionIdentification) {
-		this.securitiesSettlementTransactionIdentification = securitiesSettlementTransactionIdentification;
+	public References22Choice setSecuritiesSettlementTransactionIdentification(SettlementTypeAndIdentification13 securitiesSettlementTransactionIdentification) {
+		this.securitiesSettlementTransactionIdentification = Objects.requireNonNull(securitiesSettlementTransactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "IntraPosMvmntId", required = true)
 	public Max35Text getIntraPositionMovementIdentification() {
 		return intraPositionMovementIdentification;
 	}
 
-	public void setIntraPositionMovementIdentification(Max35Text intraPositionMovementIdentification) {
-		this.intraPositionMovementIdentification = intraPositionMovementIdentification;
+	public References22Choice setIntraPositionMovementIdentification(Max35Text intraPositionMovementIdentification) {
+		this.intraPositionMovementIdentification = Objects.requireNonNull(intraPositionMovementIdentification);
+		return this;
 	}
 }

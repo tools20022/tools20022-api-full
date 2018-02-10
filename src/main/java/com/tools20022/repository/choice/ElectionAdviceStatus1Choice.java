@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.CorporateActionInstructionProcessingStatus1
 import com.tools20022.repository.msg.CorporateActionInstructionRejectionStatus1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between the different statuses of an election advice."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ElectionAdviceStatus1Choice", propOrder = {"processedStatus", "rejectedStatus"})
 public class ElectionAdviceStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrcdSts", required = true)
 	protected CorporateActionInstructionProcessingStatus1 processedStatus;
 	/**
-	 * Provides information about the processing status of advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,7 +120,7 @@ public class ElectionAdviceStatus1Choice {
 	public static final MMMessageAssociationEnd mmProcessedStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
-			componentContext_lazy = () -> ElectionAdviceStatus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ElectionAdviceStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrcdSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +132,11 @@ public class ElectionAdviceStatus1Choice {
 			type_lazy = () -> CorporateActionInstructionProcessingStatus1.mmObject();
 		}
 	};
+	@XmlElement(name = "RjctdSts", required = true)
 	protected CorporateActionInstructionRejectionStatus1 rejectedStatus;
 	/**
-	 * Provides information about the rejection status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -166,7 +169,7 @@ public class ElectionAdviceStatus1Choice {
 	public static final MMMessageAssociationEnd mmRejectedStatus = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatus.mmObject();
-			componentContext_lazy = () -> ElectionAdviceStatus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ElectionAdviceStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,10 +185,10 @@ public class ElectionAdviceStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ElectionAdviceStatus1Choice.mmProcessedStatus, ElectionAdviceStatus1Choice.mmRejectedStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ElectionAdviceStatus1Choice.mmProcessedStatus, com.tools20022.repository.choice.ElectionAdviceStatus1Choice.mmRejectedStatus);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AgentCAElectionStatusAdviceV01.mmElectionAdviceStatus);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElectionAdviceStatus1Choice";
 				definition = "Choice between the different statuses of an election advice.";
@@ -194,21 +197,21 @@ public class ElectionAdviceStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrcdSts", required = true)
 	public CorporateActionInstructionProcessingStatus1 getProcessedStatus() {
 		return processedStatus;
 	}
 
-	public void setProcessedStatus(CorporateActionInstructionProcessingStatus1 processedStatus) {
-		this.processedStatus = processedStatus;
+	public ElectionAdviceStatus1Choice setProcessedStatus(CorporateActionInstructionProcessingStatus1 processedStatus) {
+		this.processedStatus = Objects.requireNonNull(processedStatus);
+		return this;
 	}
 
-	@XmlElement(name = "RjctdSts", required = true)
 	public CorporateActionInstructionRejectionStatus1 getRejectedStatus() {
 		return rejectedStatus;
 	}
 
-	public void setRejectedStatus(CorporateActionInstructionRejectionStatus1 rejectedStatus) {
-		this.rejectedStatus = rejectedStatus;
+	public ElectionAdviceStatus1Choice setRejectedStatus(CorporateActionInstructionRejectionStatus1 rejectedStatus) {
+		this.rejectedStatus = Objects.requireNonNull(rejectedStatus);
+		return this;
 	}
 }

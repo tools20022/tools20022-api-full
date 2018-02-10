@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -29,6 +30,8 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +72,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identification of an entity involved in an activity."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PartyIdentification103", propOrder = {"identification", "LEI", "alternateIdentification", "processingDate", "processingIdentification", "additionalInformation"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PartyIdentification103", propOrder = {"identification", "lEI", "alternateIdentification", "processingDate", "processingIdentification", "additionalInformation"})
 public class PartyIdentification103 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected PartyIdentification58Choice identification;
 	/**
-	 * Unique and unambiguous way to identify an organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,6 +113,9 @@ public class PartyIdentification103 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Id"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -122,9 +129,10 @@ public class PartyIdentification103 {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> PartyIdentification103.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification103.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous way to identify an organisation.";
@@ -134,10 +142,11 @@ public class PartyIdentification103 {
 			type_lazy = () -> PartyIdentification58Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LEI")
 	protected LEIIdentifier lEI;
 	/**
-	 * Legal entity identification as an alternate identification for a party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +182,7 @@ public class PartyIdentification103 {
 	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
-			componentContext_lazy = () -> PartyIdentification103.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification103.mmObject();
 			isDerived = false;
 			xmlTag = "LEI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,10 +193,11 @@ public class PartyIdentification103 {
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "AltrnId")
 	protected AlternatePartyIdentification9 alternateIdentification;
 	/**
-	 * Alternate identification for a party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -207,6 +217,9 @@ public class PartyIdentification103 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AltrnId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -220,9 +233,10 @@ public class PartyIdentification103 {
 	public static final MMMessageAssociationEnd mmAlternateIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> PartyIdentification103.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification103.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Alternate identification for a party.";
@@ -232,10 +246,11 @@ public class PartyIdentification103 {
 			type_lazy = () -> com.tools20022.repository.msg.AlternatePartyIdentification9.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcgDt")
 	protected DateAndDateTimeChoice processingDate;
 	/**
-	 * Date/time at which the instruction was processed by the specified party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -249,6 +264,9 @@ public class PartyIdentification103 {
 	 * PartyIdentification103}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrcgDt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::PROC</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -264,9 +282,10 @@ public class PartyIdentification103 {
 	 */
 	public static final MMMessageAssociationEnd mmProcessingDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentification103.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification103.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::PROC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingDate";
 			definition = "Date/time at which the instruction was processed by the specified party.";
@@ -276,10 +295,11 @@ public class PartyIdentification103 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcgId")
 	protected RestrictedFINXMax16Text processingIdentification;
 	/**
-	 * Unambiguous identification of the transaction for the party identified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -295,6 +315,9 @@ public class PartyIdentification103 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrcgId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::PROC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -309,9 +332,10 @@ public class PartyIdentification103 {
 	 */
 	public static final MMMessageAttribute mmProcessingIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification103.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification103.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::PROC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingIdentification";
 			definition = "Unambiguous identification of the transaction for the party identified.";
@@ -320,10 +344,11 @@ public class PartyIdentification103 {
 			simpleType_lazy = () -> RestrictedFINXMax16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected PartyTextInformation3 additionalInformation;
 	/**
-	 * Provides additional information to a party identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -336,6 +361,9 @@ public class PartyIdentification103 {
 	 * PartyIdentification103}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlInf"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70a:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -350,9 +378,10 @@ public class PartyIdentification103 {
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentification103.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification103.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information to a party identification.";
@@ -366,10 +395,11 @@ public class PartyIdentification103 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification103.mmIdentification, PartyIdentification103.mmLEI, PartyIdentification103.mmAlternateIdentification, PartyIdentification103.mmProcessingDate,
-						PartyIdentification103.mmProcessingIdentification, PartyIdentification103.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification103.mmIdentification, com.tools20022.repository.msg.PartyIdentification103.mmLEI,
+						com.tools20022.repository.msg.PartyIdentification103.mmAlternateIdentification, com.tools20022.repository.msg.PartyIdentification103.mmProcessingDate,
+						com.tools20022.repository.msg.PartyIdentification103.mmProcessingIdentification, com.tools20022.repository.msg.PartyIdentification103.mmAdditionalInformation);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification103";
 				definition = "Identification of an entity involved in an activity.";
@@ -378,57 +408,57 @@ public class PartyIdentification103 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public PartyIdentification58Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(PartyIdentification58Choice identification) {
-		this.identification = identification;
+	public PartyIdentification103 setIdentification(PartyIdentification58Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "LEI")
-	public LEIIdentifier getLEI() {
-		return lEI;
+	public Optional<LEIIdentifier> getLEI() {
+		return lEI == null ? Optional.empty() : Optional.of(lEI);
 	}
 
-	public void setLEI(LEIIdentifier lEI) {
+	public PartyIdentification103 setLEI(LEIIdentifier lEI) {
 		this.lEI = lEI;
+		return this;
 	}
 
-	@XmlElement(name = "AltrnId")
-	public AlternatePartyIdentification9 getAlternateIdentification() {
-		return alternateIdentification;
+	public Optional<AlternatePartyIdentification9> getAlternateIdentification() {
+		return alternateIdentification == null ? Optional.empty() : Optional.of(alternateIdentification);
 	}
 
-	public void setAlternateIdentification(com.tools20022.repository.msg.AlternatePartyIdentification9 alternateIdentification) {
+	public PartyIdentification103 setAlternateIdentification(com.tools20022.repository.msg.AlternatePartyIdentification9 alternateIdentification) {
 		this.alternateIdentification = alternateIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PrcgDt")
-	public DateAndDateTimeChoice getProcessingDate() {
-		return processingDate;
+	public Optional<DateAndDateTimeChoice> getProcessingDate() {
+		return processingDate == null ? Optional.empty() : Optional.of(processingDate);
 	}
 
-	public void setProcessingDate(DateAndDateTimeChoice processingDate) {
+	public PartyIdentification103 setProcessingDate(DateAndDateTimeChoice processingDate) {
 		this.processingDate = processingDate;
+		return this;
 	}
 
-	@XmlElement(name = "PrcgId")
-	public RestrictedFINXMax16Text getProcessingIdentification() {
-		return processingIdentification;
+	public Optional<RestrictedFINXMax16Text> getProcessingIdentification() {
+		return processingIdentification == null ? Optional.empty() : Optional.of(processingIdentification);
 	}
 
-	public void setProcessingIdentification(RestrictedFINXMax16Text processingIdentification) {
+	public PartyIdentification103 setProcessingIdentification(RestrictedFINXMax16Text processingIdentification) {
 		this.processingIdentification = processingIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public PartyTextInformation3 getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<PartyTextInformation3> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(com.tools20022.repository.msg.PartyTextInformation3 additionalInformation) {
+	public PartyIdentification103 setAdditionalInformation(com.tools20022.repository.msg.PartyTextInformation3 additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 }

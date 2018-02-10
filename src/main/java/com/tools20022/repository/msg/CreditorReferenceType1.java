@@ -31,6 +31,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -44,8 +46,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.CreditorReferenceType1#mmCodeOrProprietaryRule
- * CreditorReferenceType1.mmCodeOrProprietaryRule}</li>
+ * {@linkplain com.tools20022.repository.msg.CreditorReferenceType1#CodeOrProprietaryRule
+ * CreditorReferenceType1.CodeOrProprietaryRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -67,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CreditorReferenceType1", propOrder = {"code", "proprietary", "issuer"})
 public class CreditorReferenceType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected DocumentType3Code code;
 	/**
-	 * Coded creditor reference type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +126,7 @@ public class CreditorReferenceType1 {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
-			componentContext_lazy = () -> CreditorReferenceType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CreditorReferenceType1.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +137,11 @@ public class CreditorReferenceType1 {
 			simpleType_lazy = () -> DocumentType3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected Max35Text proprietary;
 	/**
-	 * Creditor reference type not avilable in a coded format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,7 +174,7 @@ public class CreditorReferenceType1 {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Document.mmType;
-			componentContext_lazy = () -> CreditorReferenceType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CreditorReferenceType1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,10 +185,11 @@ public class CreditorReferenceType1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Issr")
 	protected Max35Text issuer;
 	/**
-	 * Identification of the issuer of the credit reference type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,7 +223,7 @@ public class CreditorReferenceType1 {
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> DocumentIssuer.mmObject();
-			componentContext_lazy = () -> CreditorReferenceType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CreditorReferenceType1.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,22 +268,23 @@ public class CreditorReferenceType1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmCodeOrProprietaryRule = new MMXor() {
+	public static final MMXor CodeOrProprietaryRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CodeOrProprietaryRule";
 			definition = "If Code is present then Proprietary must not be present.\nIf Proprietary is present then Code must not be present.";
-			messageComponent_lazy = () -> CreditorReferenceType1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(CreditorReferenceType1.mmCode, CreditorReferenceType1.mmProprietary);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.CreditorReferenceType1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditorReferenceType1.mmCode, com.tools20022.repository.msg.CreditorReferenceType1.mmProprietary);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CreditorReferenceType1.mmCode, CreditorReferenceType1.mmProprietary, CreditorReferenceType1.mmIssuer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditorReferenceType1.mmCode, com.tools20022.repository.msg.CreditorReferenceType1.mmProprietary,
+						com.tools20022.repository.msg.CreditorReferenceType1.mmIssuer);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -289,36 +295,36 @@ public class CreditorReferenceType1 {
 				})).get();
 				name = "CreditorReferenceType1";
 				definition = "Specifies the type of the documents referred by the creditor.";
-				xors_lazy = () -> Arrays.asList(CreditorReferenceType1.mmCodeOrProprietaryRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CreditorReferenceType1.CodeOrProprietaryRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public DocumentType3Code getCode() {
 		return code;
 	}
 
-	public void setCode(DocumentType3Code code) {
-		this.code = code;
+	public CreditorReferenceType1 setCode(DocumentType3Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public Max35Text getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(Max35Text proprietary) {
-		this.proprietary = proprietary;
+	public CreditorReferenceType1 setProprietary(Max35Text proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 
-	@XmlElement(name = "Issr")
-	public Max35Text getIssuer() {
-		return issuer;
+	public Optional<Max35Text> getIssuer() {
+		return issuer == null ? Optional.empty() : Optional.of(issuer);
 	}
 
-	public void setIssuer(Max35Text issuer) {
+	public CreditorReferenceType1 setIssuer(Max35Text issuer) {
 		this.issuer = issuer;
+		return this;
 	}
 }

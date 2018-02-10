@@ -25,9 +25,8 @@ import com.tools20022.repository.choice.OrderWaiverReason3Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.InvestmentFundOrder;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +55,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintWaiverElementRule#forOrderWaiver1
+ * ConstraintWaiverElementRule.forOrderWaiver1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,17 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * AdditionalInformation2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OrderWaiver1", propOrder = {"orderWaiverReason", "informationValue"})
 public class OrderWaiver1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrdrWvrRsn")
 	protected List<OrderWaiverReason3Choice> orderWaiverReason;
 	/**
-	 * Reason why the order has to be handled differently, probably in a manual
-	 * fashion, because, for example, the investment manager has agreed a waiver
-	 * to the terms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -121,7 +127,7 @@ public class OrderWaiver1 {
 	public static final MMMessageAssociationEnd mmOrderWaiverReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmOrderWaiverReason;
-			componentContext_lazy = () -> OrderWaiver1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderWaiver1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrWvrRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,10 +139,11 @@ public class OrderWaiver1 {
 			type_lazy = () -> OrderWaiverReason3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "InfVal")
 	protected Max350Text informationValue;
 	/**
-	 * Additional information about the order waiver.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +174,7 @@ public class OrderWaiver1 {
 	 */
 	public static final MMMessageAttribute mmInformationValue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OrderWaiver1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OrderWaiver1.mmObject();
 			isDerived = false;
 			xmlTag = "InfVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,9 +190,10 @@ public class OrderWaiver1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OrderWaiver1.mmOrderWaiverReason, OrderWaiver1.mmInformationValue);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OrderWaiver1.mmOrderWaiverReason, com.tools20022.repository.msg.OrderWaiver1.mmInformationValue);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintWaiverElementRule.forOrderWaiver1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderWaiver1";
 				definition = "Information about how an order is to be processed.";
@@ -195,21 +203,21 @@ public class OrderWaiver1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrdrWvrRsn")
 	public List<OrderWaiverReason3Choice> getOrderWaiverReason() {
-		return orderWaiverReason;
+		return orderWaiverReason == null ? orderWaiverReason = new ArrayList<>() : orderWaiverReason;
 	}
 
-	public void setOrderWaiverReason(List<OrderWaiverReason3Choice> orderWaiverReason) {
-		this.orderWaiverReason = orderWaiverReason;
+	public OrderWaiver1 setOrderWaiverReason(List<OrderWaiverReason3Choice> orderWaiverReason) {
+		this.orderWaiverReason = Objects.requireNonNull(orderWaiverReason);
+		return this;
 	}
 
-	@XmlElement(name = "InfVal")
-	public Max350Text getInformationValue() {
-		return informationValue;
+	public Optional<Max350Text> getInformationValue() {
+		return informationValue == null ? Optional.empty() : Optional.of(informationValue);
 	}
 
-	public void setInformationValue(Max350Text informationValue) {
+	public OrderWaiver1 setInformationValue(Max350Text informationValue) {
 		this.informationValue = informationValue;
+		return this;
 	}
 }

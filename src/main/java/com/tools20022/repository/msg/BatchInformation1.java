@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,16 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identifies the underlying batches."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BatchInformation1", propOrder = {"messageIdentification", "paymentInformationIdentification", "numberOfTransactions"})
 public class BatchInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId")
 	protected Max35Text messageIdentification;
 	/**
-	 * Point to point reference assigned by the sending party to unambiguously
-	 * identify the batch of transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -103,7 +104,7 @@ public class BatchInformation1 {
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BatchInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BatchInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,11 +115,11 @@ public class BatchInformation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtInfId")
 	protected Max35Text paymentInformationIdentification;
 	/**
-	 * Reference assigned by a sending party to unambiguously identify a payment
-	 * information block within a payment message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,7 +148,7 @@ public class BatchInformation1 {
 	 */
 	public static final MMMessageAttribute mmPaymentInformationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BatchInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BatchInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInfId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,10 +159,11 @@ public class BatchInformation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfTxs")
 	protected Max15NumericText numberOfTransactions;
 	/**
-	 * Number of individual transactions included in the batch.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,7 +191,7 @@ public class BatchInformation1 {
 	 */
 	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BatchInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BatchInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfTxs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,8 +206,9 @@ public class BatchInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BatchInformation1.mmMessageIdentification, BatchInformation1.mmPaymentInformationIdentification, BatchInformation1.mmNumberOfTransactions);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BatchInformation1.mmMessageIdentification, com.tools20022.repository.msg.BatchInformation1.mmPaymentInformationIdentification,
+						com.tools20022.repository.msg.BatchInformation1.mmNumberOfTransactions);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BatchInformation1";
 				definition = "Identifies the underlying batches.";
@@ -214,30 +217,30 @@ public class BatchInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgId")
-	public Max35Text getMessageIdentification() {
-		return messageIdentification;
+	public Optional<Max35Text> getMessageIdentification() {
+		return messageIdentification == null ? Optional.empty() : Optional.of(messageIdentification);
 	}
 
-	public void setMessageIdentification(Max35Text messageIdentification) {
+	public BatchInformation1 setMessageIdentification(Max35Text messageIdentification) {
 		this.messageIdentification = messageIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PmtInfId")
-	public Max35Text getPaymentInformationIdentification() {
-		return paymentInformationIdentification;
+	public Optional<Max35Text> getPaymentInformationIdentification() {
+		return paymentInformationIdentification == null ? Optional.empty() : Optional.of(paymentInformationIdentification);
 	}
 
-	public void setPaymentInformationIdentification(Max35Text paymentInformationIdentification) {
+	public BatchInformation1 setPaymentInformationIdentification(Max35Text paymentInformationIdentification) {
 		this.paymentInformationIdentification = paymentInformationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "NbOfTxs")
-	public Max15NumericText getNumberOfTransactions() {
-		return numberOfTransactions;
+	public Optional<Max15NumericText> getNumberOfTransactions() {
+		return numberOfTransactions == null ? Optional.empty() : Optional.of(numberOfTransactions);
 	}
 
-	public void setNumberOfTransactions(Max15NumericText numberOfTransactions) {
+	public BatchInformation1 setNumberOfTransactions(Max15NumericText numberOfTransactions) {
 		this.numberOfTransactions = numberOfTransactions;
+		return this;
 	}
 }

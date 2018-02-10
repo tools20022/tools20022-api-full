@@ -25,9 +25,8 @@ import com.tools20022.repository.entity.InstructionForMeeting;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecurityPosition3", propOrder = {"identification", "account", "voteInstruction", "securitySubPosition"})
 public class SecurityPosition3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected SecurityIdentification3 identification;
 	/**
-	 * Security held in an account on which the balance is calculated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +119,7 @@ public class SecurityPosition3 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> SecurityPosition3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +130,11 @@ public class SecurityPosition3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification3.mmObject();
 		}
 	};
+	@XmlElement(name = "Acct")
 	protected EligiblePosition1 account;
 	/**
-	 * Amount of securities that are eligible for the vote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -165,7 +166,7 @@ public class SecurityPosition3 {
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesAccount;
-			componentContext_lazy = () -> SecurityPosition3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition3.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,10 +178,11 @@ public class SecurityPosition3 {
 			type_lazy = () -> com.tools20022.repository.msg.EligiblePosition1.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteInstr")
 	protected VoteInstruction1 voteInstruction;
 	/**
-	 * Specifies how a party has voted for each agenda item.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -212,7 +214,7 @@ public class SecurityPosition3 {
 	public static final MMMessageAssociationEnd mmVoteInstruction = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InstructionForMeeting.mmVoteInstruction;
-			componentContext_lazy = () -> SecurityPosition3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition3.mmObject();
 			isDerived = false;
 			xmlTag = "VoteInstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,10 +226,11 @@ public class SecurityPosition3 {
 			type_lazy = () -> com.tools20022.repository.msg.VoteInstruction1.mmObject();
 		}
 	};
+	@XmlElement(name = "SctySubPos")
 	protected List<com.tools20022.repository.msg.SecurityPosition4> securitySubPosition;
 	/**
-	 * Subdivision of an account used to segregate specific holdings.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -260,7 +263,7 @@ public class SecurityPosition3 {
 	public static final MMMessageAssociationEnd mmSecuritySubPosition = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
-			componentContext_lazy = () -> SecurityPosition3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition3.mmObject();
 			isDerived = false;
 			xmlTag = "SctySubPos";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,9 +279,10 @@ public class SecurityPosition3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityPosition3.mmIdentification, SecurityPosition3.mmAccount, SecurityPosition3.mmVoteInstruction, SecurityPosition3.mmSecuritySubPosition);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition3.mmIdentification, com.tools20022.repository.msg.SecurityPosition3.mmAccount,
+						com.tools20022.repository.msg.SecurityPosition3.mmVoteInstruction, com.tools20022.repository.msg.SecurityPosition3.mmSecuritySubPosition);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityPosition3";
 				definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account.";
@@ -287,39 +291,39 @@ public class SecurityPosition3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification3 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.SecurityIdentification3 identification) {
-		this.identification = identification;
+	public SecurityPosition3 setIdentification(com.tools20022.repository.msg.SecurityIdentification3 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Acct")
-	public EligiblePosition1 getAccount() {
-		return account;
+	public Optional<EligiblePosition1> getAccount() {
+		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public void setAccount(com.tools20022.repository.msg.EligiblePosition1 account) {
+	public SecurityPosition3 setAccount(com.tools20022.repository.msg.EligiblePosition1 account) {
 		this.account = account;
+		return this;
 	}
 
-	@XmlElement(name = "VoteInstr")
-	public VoteInstruction1 getVoteInstruction() {
-		return voteInstruction;
+	public Optional<VoteInstruction1> getVoteInstruction() {
+		return voteInstruction == null ? Optional.empty() : Optional.of(voteInstruction);
 	}
 
-	public void setVoteInstruction(com.tools20022.repository.msg.VoteInstruction1 voteInstruction) {
+	public SecurityPosition3 setVoteInstruction(com.tools20022.repository.msg.VoteInstruction1 voteInstruction) {
 		this.voteInstruction = voteInstruction;
+		return this;
 	}
 
-	@XmlElement(name = "SctySubPos")
 	public List<SecurityPosition4> getSecuritySubPosition() {
-		return securitySubPosition;
+		return securitySubPosition == null ? securitySubPosition = new ArrayList<>() : securitySubPosition;
 	}
 
-	public void setSecuritySubPosition(List<com.tools20022.repository.msg.SecurityPosition4> securitySubPosition) {
-		this.securitySubPosition = securitySubPosition;
+	public SecurityPosition3 setSecuritySubPosition(List<com.tools20022.repository.msg.SecurityPosition4> securitySubPosition) {
+		this.securitySubPosition = Objects.requireNonNull(securitySubPosition);
+		return this;
 	}
 }

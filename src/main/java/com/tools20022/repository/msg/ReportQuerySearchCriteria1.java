@@ -27,9 +27,8 @@ import com.tools20022.repository.choice.DateTimePeriodChoice;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,16 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the criteria used to search for a report."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReportQuerySearchCriteria1", propOrder = {"accountIdentification", "balance", "reportName", "partyIdentification", "responsiblePartyIdentification", "dateSearch", "scheduledTime"})
 public class ReportQuerySearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId")
 	protected List<AccountIdentificationSearchCriteria2Choice> accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -120,7 +119,7 @@ public class ReportQuerySearchCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,12 +130,11 @@ public class ReportQuerySearchCriteria1 {
 			type_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Bal")
 	protected List<com.tools20022.repository.msg.CashBalance4> balance;
 	/**
-	 * Numerical representation of the net increases and decreases in an account
-	 * at a specific point in time. A cash balance is calculated from a sum of
-	 * cash credits minus a sum of cash debits.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -164,7 +162,7 @@ public class ReportQuerySearchCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,10 +173,11 @@ public class ReportQuerySearchCriteria1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashBalance4.mmObject();
 		}
 	};
+	@XmlElement(name = "RptNm")
 	protected Max4AlphaNumericText reportName;
 	/**
-	 * Values of possible reports.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,7 +205,7 @@ public class ReportQuerySearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmReportName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RptNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,10 +216,11 @@ public class ReportQuerySearchCriteria1 {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "PtyId", required = true)
 	protected PartyIdentification71Choice partyIdentification;
 	/**
-	 * Report owning party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -248,7 +248,7 @@ public class ReportQuerySearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -259,10 +259,11 @@ public class ReportQuerySearchCriteria1 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RspnsblPtyId")
 	protected PartyIdentification71Choice responsiblePartyIdentification;
 	/**
-	 * Responsible Party of the report owning party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -290,7 +291,7 @@ public class ReportQuerySearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmResponsiblePartyIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RspnsblPtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -301,10 +302,11 @@ public class ReportQuerySearchCriteria1 {
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DtSch")
 	protected DateSearchChoice dateSearch;
 	/**
-	 * Date and time when the report was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -332,7 +334,7 @@ public class ReportQuerySearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmDateSearch = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "DtSch";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -343,11 +345,11 @@ public class ReportQuerySearchCriteria1 {
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "SchdldTm")
 	protected DateTimePeriodChoice scheduledTime;
 	/**
-	 * Time when the (business) event, which triggered the report, was
-	 * scheduled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -377,7 +379,7 @@ public class ReportQuerySearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmScheduledTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ReportQuerySearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SchdldTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -392,9 +394,11 @@ public class ReportQuerySearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReportQuerySearchCriteria1.mmAccountIdentification, ReportQuerySearchCriteria1.mmBalance, ReportQuerySearchCriteria1.mmReportName, ReportQuerySearchCriteria1.mmPartyIdentification,
-						ReportQuerySearchCriteria1.mmResponsiblePartyIdentification, ReportQuerySearchCriteria1.mmDateSearch, ReportQuerySearchCriteria1.mmScheduledTime);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmAccountIdentification, com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmBalance,
+						com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmReportName, com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmPartyIdentification,
+						com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmResponsiblePartyIdentification, com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmDateSearch,
+						com.tools20022.repository.msg.ReportQuerySearchCriteria1.mmScheduledTime);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReportQuerySearchCriteria1";
 				definition = "Defines the criteria used to search for a report.";
@@ -403,66 +407,66 @@ public class ReportQuerySearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId")
 	public List<AccountIdentificationSearchCriteria2Choice> getAccountIdentification() {
-		return accountIdentification;
+		return accountIdentification == null ? accountIdentification = new ArrayList<>() : accountIdentification;
 	}
 
-	public void setAccountIdentification(List<AccountIdentificationSearchCriteria2Choice> accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public ReportQuerySearchCriteria1 setAccountIdentification(List<AccountIdentificationSearchCriteria2Choice> accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Bal")
 	public List<CashBalance4> getBalance() {
-		return balance;
+		return balance == null ? balance = new ArrayList<>() : balance;
 	}
 
-	public void setBalance(List<com.tools20022.repository.msg.CashBalance4> balance) {
-		this.balance = balance;
+	public ReportQuerySearchCriteria1 setBalance(List<com.tools20022.repository.msg.CashBalance4> balance) {
+		this.balance = Objects.requireNonNull(balance);
+		return this;
 	}
 
-	@XmlElement(name = "RptNm")
-	public Max4AlphaNumericText getReportName() {
-		return reportName;
+	public Optional<Max4AlphaNumericText> getReportName() {
+		return reportName == null ? Optional.empty() : Optional.of(reportName);
 	}
 
-	public void setReportName(Max4AlphaNumericText reportName) {
+	public ReportQuerySearchCriteria1 setReportName(Max4AlphaNumericText reportName) {
 		this.reportName = reportName;
+		return this;
 	}
 
-	@XmlElement(name = "PtyId", required = true)
 	public PartyIdentification71Choice getPartyIdentification() {
 		return partyIdentification;
 	}
 
-	public void setPartyIdentification(PartyIdentification71Choice partyIdentification) {
-		this.partyIdentification = partyIdentification;
+	public ReportQuerySearchCriteria1 setPartyIdentification(PartyIdentification71Choice partyIdentification) {
+		this.partyIdentification = Objects.requireNonNull(partyIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "RspnsblPtyId")
-	public PartyIdentification71Choice getResponsiblePartyIdentification() {
-		return responsiblePartyIdentification;
+	public Optional<PartyIdentification71Choice> getResponsiblePartyIdentification() {
+		return responsiblePartyIdentification == null ? Optional.empty() : Optional.of(responsiblePartyIdentification);
 	}
 
-	public void setResponsiblePartyIdentification(PartyIdentification71Choice responsiblePartyIdentification) {
+	public ReportQuerySearchCriteria1 setResponsiblePartyIdentification(PartyIdentification71Choice responsiblePartyIdentification) {
 		this.responsiblePartyIdentification = responsiblePartyIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "DtSch")
-	public DateSearchChoice getDateSearch() {
-		return dateSearch;
+	public Optional<DateSearchChoice> getDateSearch() {
+		return dateSearch == null ? Optional.empty() : Optional.of(dateSearch);
 	}
 
-	public void setDateSearch(DateSearchChoice dateSearch) {
+	public ReportQuerySearchCriteria1 setDateSearch(DateSearchChoice dateSearch) {
 		this.dateSearch = dateSearch;
+		return this;
 	}
 
-	@XmlElement(name = "SchdldTm")
-	public DateTimePeriodChoice getScheduledTime() {
-		return scheduledTime;
+	public Optional<DateTimePeriodChoice> getScheduledTime() {
+		return scheduledTime == null ? Optional.empty() : Optional.of(scheduledTime);
 	}
 
-	public void setScheduledTime(DateTimePeriodChoice scheduledTime) {
+	public ReportQuerySearchCriteria1 setScheduledTime(DateTimePeriodChoice scheduledTime) {
 		this.scheduledTime = scheduledTime;
+		return this;
 	}
 }

@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.CollateralValueReportOrError2Choice;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Reports either on the collateral value report or on a business error."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CollateralValueReport1", propOrder = {"account", "securitiesAccountOwner", "securitiesAccountServicer", "collateralValueReport"})
 public class CollateralValueReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Acct", required = true)
 	protected CashAccount25 account;
 	/**
-	 * Unique identification, as assigned by the account servicer, to
-	 * unambiguously identify the account on which information is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -107,7 +106,7 @@ public class CollateralValueReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CollateralValueReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueReport1.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +118,11 @@ public class CollateralValueReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount25.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesAcctOwnr")
 	protected PartyIdentification71Choice securitiesAccountOwner;
 	/**
-	 * Unique and unambiguous identification of the securities account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -150,7 +150,7 @@ public class CollateralValueReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccountOwner = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CollateralValueReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueReport1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,10 +162,11 @@ public class CollateralValueReport1 {
 			type_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesAcctSvcr")
 	protected PartyIdentification71Choice securitiesAccountServicer;
 	/**
-	 * Party that manages the securities account on behalf of the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -194,7 +195,7 @@ public class CollateralValueReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccountServicer = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CollateralValueReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueReport1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,11 +207,11 @@ public class CollateralValueReport1 {
 			type_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CollValRpt")
 	protected List<CollateralValueReportOrError2Choice> collateralValueReport;
 	/**
-	 * Provides information specific to the report on collateral value
-	 * positions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -239,7 +240,7 @@ public class CollateralValueReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmCollateralValueReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CollateralValueReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CollateralValueReport1.mmObject();
 			isDerived = false;
 			xmlTag = "CollValRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,9 +255,9 @@ public class CollateralValueReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(CollateralValueReport1.mmAccount, CollateralValueReport1.mmSecuritiesAccountOwner, CollateralValueReport1.mmSecuritiesAccountServicer, CollateralValueReport1.mmCollateralValueReport);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CollateralValueReport1.mmAccount, com.tools20022.repository.msg.CollateralValueReport1.mmSecuritiesAccountOwner,
+						com.tools20022.repository.msg.CollateralValueReport1.mmSecuritiesAccountServicer, com.tools20022.repository.msg.CollateralValueReport1.mmCollateralValueReport);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueReport1";
 				definition = "Reports either on the collateral value report or on a business error.";
@@ -265,39 +266,39 @@ public class CollateralValueReport1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Acct", required = true)
 	public CashAccount25 getAccount() {
 		return account;
 	}
 
-	public void setAccount(com.tools20022.repository.msg.CashAccount25 account) {
-		this.account = account;
+	public CollateralValueReport1 setAccount(com.tools20022.repository.msg.CashAccount25 account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesAcctOwnr")
-	public PartyIdentification71Choice getSecuritiesAccountOwner() {
-		return securitiesAccountOwner;
+	public Optional<PartyIdentification71Choice> getSecuritiesAccountOwner() {
+		return securitiesAccountOwner == null ? Optional.empty() : Optional.of(securitiesAccountOwner);
 	}
 
-	public void setSecuritiesAccountOwner(PartyIdentification71Choice securitiesAccountOwner) {
+	public CollateralValueReport1 setSecuritiesAccountOwner(PartyIdentification71Choice securitiesAccountOwner) {
 		this.securitiesAccountOwner = securitiesAccountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesAcctSvcr")
-	public PartyIdentification71Choice getSecuritiesAccountServicer() {
-		return securitiesAccountServicer;
+	public Optional<PartyIdentification71Choice> getSecuritiesAccountServicer() {
+		return securitiesAccountServicer == null ? Optional.empty() : Optional.of(securitiesAccountServicer);
 	}
 
-	public void setSecuritiesAccountServicer(PartyIdentification71Choice securitiesAccountServicer) {
+	public CollateralValueReport1 setSecuritiesAccountServicer(PartyIdentification71Choice securitiesAccountServicer) {
 		this.securitiesAccountServicer = securitiesAccountServicer;
+		return this;
 	}
 
-	@XmlElement(name = "CollValRpt")
 	public List<CollateralValueReportOrError2Choice> getCollateralValueReport() {
-		return collateralValueReport;
+		return collateralValueReport == null ? collateralValueReport = new ArrayList<>() : collateralValueReport;
 	}
 
-	public void setCollateralValueReport(List<CollateralValueReportOrError2Choice> collateralValueReport) {
-		this.collateralValueReport = collateralValueReport;
+	public CollateralValueReport1 setCollateralValueReport(List<CollateralValueReportOrError2Choice> collateralValueReport) {
+		this.collateralValueReport = Objects.requireNonNull(collateralValueReport);
+		return this;
 	}
 }

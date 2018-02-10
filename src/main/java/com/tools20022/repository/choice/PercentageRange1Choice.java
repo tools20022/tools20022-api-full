@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.FromToPercentageRange1;
 import com.tools20022.repository.msg.PercentageRangeBoundary1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PercentageRange1Choice", propOrder = {"from", "to", "fromTo", "equal", "notEqual"})
 public class PercentageRange1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Fr", required = true)
 	protected PercentageRangeBoundary1 from;
 	/**
-	 * Lower boundary of a range of percentage rates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,7 +113,7 @@ public class PercentageRange1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmFrom = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PercentageRange1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PercentageRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Fr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +125,11 @@ public class PercentageRange1Choice {
 			type_lazy = () -> PercentageRangeBoundary1.mmObject();
 		}
 	};
+	@XmlElement(name = "To", required = true)
 	protected PercentageRangeBoundary1 to;
 	/**
-	 * Upper boundary of a range of percentage rates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -153,7 +156,7 @@ public class PercentageRange1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmTo = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PercentageRange1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PercentageRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "To";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,10 +168,11 @@ public class PercentageRange1Choice {
 			type_lazy = () -> PercentageRangeBoundary1.mmObject();
 		}
 	};
+	@XmlElement(name = "FrTo", required = true)
 	protected FromToPercentageRange1 fromTo;
 	/**
-	 * Range of valid percentage rates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -194,7 +198,7 @@ public class PercentageRange1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmFromTo = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PercentageRange1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PercentageRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrTo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,10 +210,11 @@ public class PercentageRange1Choice {
 			type_lazy = () -> FromToPercentageRange1.mmObject();
 		}
 	};
+	@XmlElement(name = "EQ", required = true)
 	protected PercentageRate equal;
 	/**
-	 * Exact percentage rate must match to be considered valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -237,7 +242,7 @@ public class PercentageRange1Choice {
 	 */
 	public static final MMMessageAttribute mmEqual = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PercentageRange1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PercentageRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EQ";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,10 +253,11 @@ public class PercentageRange1Choice {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "NEQ", required = true)
 	protected PercentageRate notEqual;
 	/**
-	 * Value that percentage rate must not match to be considered valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -280,7 +286,7 @@ public class PercentageRange1Choice {
 	 */
 	public static final MMMessageAttribute mmNotEqual = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PercentageRange1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PercentageRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NEQ";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -295,8 +301,9 @@ public class PercentageRange1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PercentageRange1Choice.mmFrom, PercentageRange1Choice.mmTo, PercentageRange1Choice.mmFromTo, PercentageRange1Choice.mmEqual, PercentageRange1Choice.mmNotEqual);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PercentageRange1Choice.mmFrom, com.tools20022.repository.choice.PercentageRange1Choice.mmTo,
+						com.tools20022.repository.choice.PercentageRange1Choice.mmFromTo, com.tools20022.repository.choice.PercentageRange1Choice.mmEqual, com.tools20022.repository.choice.PercentageRange1Choice.mmNotEqual);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PercentageRange1Choice";
 				definition = "Choice between ranges of rates in which a percentage rate is considered valid or a specified percentage rate which has to be matched or unmatched to be valid.";
@@ -305,48 +312,48 @@ public class PercentageRange1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Fr", required = true)
 	public PercentageRangeBoundary1 getFrom() {
 		return from;
 	}
 
-	public void setFrom(PercentageRangeBoundary1 from) {
-		this.from = from;
+	public PercentageRange1Choice setFrom(PercentageRangeBoundary1 from) {
+		this.from = Objects.requireNonNull(from);
+		return this;
 	}
 
-	@XmlElement(name = "To", required = true)
 	public PercentageRangeBoundary1 getTo() {
 		return to;
 	}
 
-	public void setTo(PercentageRangeBoundary1 to) {
-		this.to = to;
+	public PercentageRange1Choice setTo(PercentageRangeBoundary1 to) {
+		this.to = Objects.requireNonNull(to);
+		return this;
 	}
 
-	@XmlElement(name = "FrTo", required = true)
 	public FromToPercentageRange1 getFromTo() {
 		return fromTo;
 	}
 
-	public void setFromTo(FromToPercentageRange1 fromTo) {
-		this.fromTo = fromTo;
+	public PercentageRange1Choice setFromTo(FromToPercentageRange1 fromTo) {
+		this.fromTo = Objects.requireNonNull(fromTo);
+		return this;
 	}
 
-	@XmlElement(name = "EQ", required = true)
 	public PercentageRate getEqual() {
 		return equal;
 	}
 
-	public void setEqual(PercentageRate equal) {
-		this.equal = equal;
+	public PercentageRange1Choice setEqual(PercentageRate equal) {
+		this.equal = Objects.requireNonNull(equal);
+		return this;
 	}
 
-	@XmlElement(name = "NEQ", required = true)
 	public PercentageRate getNotEqual() {
 		return notEqual;
 	}
 
-	public void setNotEqual(PercentageRate notEqual) {
-		this.notEqual = notEqual;
+	public PercentageRange1Choice setNotEqual(PercentageRate notEqual) {
+		this.notEqual = Objects.requireNonNull(notEqual);
+		return this;
 	}
 }

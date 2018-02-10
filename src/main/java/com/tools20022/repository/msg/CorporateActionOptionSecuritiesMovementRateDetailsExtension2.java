@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CorporateActionOptionSecuritiesMovementRateDetailsExtension2", propOrder = {"placeAndName", "DTCSecurityRate", "DTCMultiplyDivideIndicator"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CorporateActionOptionSecuritiesMovementRateDetailsExtension2", propOrder = {"placeAndName", "dTCSecurityRate", "dTCMultiplyDivideIndicator"})
 public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +110,7 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,11 +121,11 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCSctyRate")
 	protected DecimalNumber dTCSecurityRate;
 	/**
-	 * Rate of the security is disbursed by DTC (The Depository Trust
-	 * Corporation).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,6 +141,9 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCSctyRate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Security Rate</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -151,9 +158,10 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 	 */
 	public static final MMMessageAttribute mmDTCSecurityRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "DTCSctyRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Security Rate"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCSecurityRate";
 			definition = "Rate of the security is disbursed by DTC (The Depository Trust Corporation).";
@@ -162,13 +170,11 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCMltplyDvdInd")
 	protected DTCMultiplyDivide1Code dTCMultiplyDivideIndicator;
 	/**
-	 * Action used to clarify calculation of the security rate: old shares * new
-	 * shares or old shares/ new shares used by DTC (The Depository Trust
-	 * Corporation). Used in conjunction with DTC Security Rate element to
-	 * determine entitlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -184,6 +190,9 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCMltplyDvdInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Multiply/ Divide Indicator</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -198,9 +207,10 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 	 */
 	public static final MMMessageAttribute mmDTCMultiplyDivideIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmObject();
 			isDerived = false;
 			xmlTag = "DTCMltplyDvdInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Multiply/ Divide Indicator"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCMultiplyDivideIndicator";
 			definition = "Action used to clarify calculation of the security rate: old shares * new shares or old shares/ new shares used by DTC (The Depository Trust Corporation). Used in conjunction with DTC Security Rate element to determine entitlement. ";
@@ -213,9 +223,10 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmPlaceAndName, CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmDTCSecurityRate,
-						CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmDTCMultiplyDivideIndicator);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmDTCSecurityRate,
+						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementRateDetailsExtension2.mmDTCMultiplyDivideIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOptionSecuritiesMovementRateDetailsExtension2";
 				definition = "Provides additional information regarding corporate action option securities movement rate details.";
@@ -224,30 +235,30 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionOptionSecuritiesMovementRateDetailsExtension2 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "DTCSctyRate")
-	public DecimalNumber getDTCSecurityRate() {
-		return dTCSecurityRate;
+	public Optional<DecimalNumber> getDTCSecurityRate() {
+		return dTCSecurityRate == null ? Optional.empty() : Optional.of(dTCSecurityRate);
 	}
 
-	public void setDTCSecurityRate(DecimalNumber dTCSecurityRate) {
+	public CorporateActionOptionSecuritiesMovementRateDetailsExtension2 setDTCSecurityRate(DecimalNumber dTCSecurityRate) {
 		this.dTCSecurityRate = dTCSecurityRate;
+		return this;
 	}
 
-	@XmlElement(name = "DTCMltplyDvdInd")
-	public DTCMultiplyDivide1Code getDTCMultiplyDivideIndicator() {
-		return dTCMultiplyDivideIndicator;
+	public Optional<DTCMultiplyDivide1Code> getDTCMultiplyDivideIndicator() {
+		return dTCMultiplyDivideIndicator == null ? Optional.empty() : Optional.of(dTCMultiplyDivideIndicator);
 	}
 
-	public void setDTCMultiplyDivideIndicator(DTCMultiplyDivide1Code dTCMultiplyDivideIndicator) {
+	public CorporateActionOptionSecuritiesMovementRateDetailsExtension2 setDTCMultiplyDivideIndicator(DTCMultiplyDivide1Code dTCMultiplyDivideIndicator) {
 		this.dTCMultiplyDivideIndicator = dTCMultiplyDivideIndicator;
+		return this;
 	}
 }

@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ProcessingPositionCode;
+import com.tools20022.repository.codeset.ProcessingPosition5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies when an transaction/instruction is to be executed relative to a
@@ -31,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ProcessingPositionCode
- * ProcessingPositionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProcessingPosition5Code#mmInformation
- * ProcessingPosition5Code.mmInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPosition5Code#Information
+ * ProcessingPosition5Code.Information}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ProcessingPositionCode
+ * ProcessingPositionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ProcessingPosition5Code extends ProcessingPositionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProcessingPosition5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,25 +82,55 @@ public class ProcessingPosition5Code extends ProcessingPositionCode {
 	 * name} = "Information"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInformation = new MMCode() {
+	public static final ProcessingPosition5Code Information = new ProcessingPosition5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Information";
-			owner_lazy = () -> ProcessingPosition5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProcessingPosition5Code.mmObject();
+			codeName = ProcessingPositionCode.Information.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ProcessingPosition5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProcessingPosition5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessingPosition5Code";
 				definition = "Specifies when an transaction/instruction is to be executed relative to a linked transaction/instruction.";
-				code_lazy = () -> Arrays.asList(ProcessingPosition5Code.mmInformation);
 				trace_lazy = () -> ProcessingPositionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProcessingPosition5Code.Information);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Information.getCodeName().get(), Information);
+	}
+
+	public static ProcessingPosition5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProcessingPosition5Code[] values() {
+		ProcessingPosition5Code[] values = new ProcessingPosition5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProcessingPosition5Code> {
+		@Override
+		public ProcessingPosition5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProcessingPosition5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

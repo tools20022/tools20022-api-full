@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrument58;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,21 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "FinancialInstrumentIdentification6Choice", propOrder = {"ISIN", "index"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "FinancialInstrumentIdentification6Choice", propOrder = {"iSIN", "index"})
 public class FinancialInstrumentIdentification6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ISIN", required = true)
 	protected ISINOct2015Identifier iSIN;
 	/**
-	 * International Securities Identification Number (ISIN). A numbering system
-	 * designed by the United Nation's International Organisation for
-	 * Standardisation (ISO). The ISIN is composed of a 2-character prefix
-	 * representing the country of issue, followed by the national security
-	 * number (if one exists), and a check digit. Each country has a national
-	 * numbering agency that assigns ISIN numbers for securities in that
-	 * country.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +116,7 @@ public class FinancialInstrumentIdentification6Choice {
 	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
-			componentContext_lazy = () -> FinancialInstrumentIdentification6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ISIN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +127,11 @@ public class FinancialInstrumentIdentification6Choice {
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Indx", required = true)
 	protected FinancialInstrument58 index;
 	/**
-	 * Index on which the financial instrument is based.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -166,7 +163,7 @@ public class FinancialInstrumentIdentification6Choice {
 	public static final MMMessageAssociationEnd mmIndex = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmIdentifiedSecurity;
-			componentContext_lazy = () -> FinancialInstrumentIdentification6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Indx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,9 +179,9 @@ public class FinancialInstrumentIdentification6Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentIdentification6Choice.mmISIN, FinancialInstrumentIdentification6Choice.mmIndex);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice.mmISIN, com.tools20022.repository.choice.FinancialInstrumentIdentification6Choice.mmIndex);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentIdentification6Choice";
 				definition = "Choice between formats for the identification of the financial instruments.";
@@ -193,21 +190,21 @@ public class FinancialInstrumentIdentification6Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ISIN", required = true)
 	public ISINOct2015Identifier getISIN() {
 		return iSIN;
 	}
 
-	public void setISIN(ISINOct2015Identifier iSIN) {
-		this.iSIN = iSIN;
+	public FinancialInstrumentIdentification6Choice setISIN(ISINOct2015Identifier iSIN) {
+		this.iSIN = Objects.requireNonNull(iSIN);
+		return this;
 	}
 
-	@XmlElement(name = "Indx", required = true)
 	public FinancialInstrument58 getIndex() {
 		return index;
 	}
 
-	public void setIndex(FinancialInstrument58 index) {
-		this.index = index;
+	public FinancialInstrumentIdentification6Choice setIndex(FinancialInstrument58 index) {
+		this.index = Objects.requireNonNull(index);
+		return this;
 	}
 }

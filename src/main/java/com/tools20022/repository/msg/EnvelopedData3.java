@@ -24,9 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.Recipient3Choice;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * EnvelopedData2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EnvelopedData3", propOrder = {"version", "recipient", "encryptedContent"})
 public class EnvelopedData3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Vrsn")
 	protected Number version;
 	/**
-	 * Version of the data structure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +120,7 @@ public class EnvelopedData3 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EnvelopedData3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EnvelopedData3.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,11 +133,11 @@ public class EnvelopedData3 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Rcpt", required = true)
 	protected List<Recipient3Choice> recipient;
 	/**
-	 * Transport key or key encryption key (KEK) identification for the
-	 * recipient.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -176,7 +176,7 @@ public class EnvelopedData3 {
 	 */
 	public static final MMMessageAssociationEnd mmRecipient = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> EnvelopedData3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EnvelopedData3.mmObject();
 			isDerived = false;
 			xmlTag = "Rcpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,10 +189,11 @@ public class EnvelopedData3 {
 			type_lazy = () -> Recipient3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NcrptdCntt", required = true)
 	protected EncryptedContent2 encryptedContent;
 	/**
-	 * Encrypted data with an encryption key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -230,7 +231,7 @@ public class EnvelopedData3 {
 	 */
 	public static final MMMessageAssociationEnd mmEncryptedContent = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> EnvelopedData3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EnvelopedData3.mmObject();
 			isDerived = false;
 			xmlTag = "NcrptdCntt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,8 +249,8 @@ public class EnvelopedData3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EnvelopedData3.mmVersion, EnvelopedData3.mmRecipient, EnvelopedData3.mmEncryptedContent);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EnvelopedData3.mmVersion, com.tools20022.repository.msg.EnvelopedData3.mmRecipient, com.tools20022.repository.msg.EnvelopedData3.mmEncryptedContent);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EnvelopedData3";
 				definition = "Encrypted data with encryption key.";
@@ -260,30 +261,30 @@ public class EnvelopedData3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Vrsn")
-	public Number getVersion() {
-		return version;
+	public Optional<Number> getVersion() {
+		return version == null ? Optional.empty() : Optional.of(version);
 	}
 
-	public void setVersion(Number version) {
+	public EnvelopedData3 setVersion(Number version) {
 		this.version = version;
+		return this;
 	}
 
-	@XmlElement(name = "Rcpt", required = true)
 	public List<Recipient3Choice> getRecipient() {
-		return recipient;
+		return recipient == null ? recipient = new ArrayList<>() : recipient;
 	}
 
-	public void setRecipient(List<Recipient3Choice> recipient) {
-		this.recipient = recipient;
+	public EnvelopedData3 setRecipient(List<Recipient3Choice> recipient) {
+		this.recipient = Objects.requireNonNull(recipient);
+		return this;
 	}
 
-	@XmlElement(name = "NcrptdCntt", required = true)
 	public EncryptedContent2 getEncryptedContent() {
 		return encryptedContent;
 	}
 
-	public void setEncryptedContent(com.tools20022.repository.msg.EncryptedContent2 encryptedContent) {
-		this.encryptedContent = encryptedContent;
+	public EnvelopedData3 setEncryptedContent(com.tools20022.repository.msg.EncryptedContent2 encryptedContent) {
+		this.encryptedContent = Objects.requireNonNull(encryptedContent);
+		return this;
 	}
 }

@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.VariableInterest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * FloatingInterestRate4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FloatingInterestRate6", propOrder = {"referenceRate", "term", "basisPointSpread"})
 public class FloatingInterestRate6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RefRate", required = true)
 	protected BenchmarkCurveName6Choice referenceRate;
 	/**
-	 * Identifies the reference index for the debt instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,7 +125,7 @@ public class FloatingInterestRate6 {
 	public static final MMMessageAttribute mmReferenceRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Index.mmIdentification;
-			componentContext_lazy = () -> FloatingInterestRate6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FloatingInterestRate6.mmObject();
 			isDerived = false;
 			xmlTag = "RefRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,11 +137,11 @@ public class FloatingInterestRate6 {
 			complexType_lazy = () -> BenchmarkCurveName6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Term", required = true)
 	protected InterestRateContractTerm2 term;
 	/**
-	 * Term of the index/benchmark of a floating rate bond. The term shall be
-	 * expressed in days, weeks, months or years.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -179,7 +181,7 @@ public class FloatingInterestRate6 {
 	public static final MMMessageAssociationEnd mmTerm = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> VariableInterest.mmDurationCalculation;
-			componentContext_lazy = () -> FloatingInterestRate6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FloatingInterestRate6.mmObject();
 			isDerived = false;
 			xmlTag = "Term";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,17 +194,11 @@ public class FloatingInterestRate6 {
 			type_lazy = () -> com.tools20022.repository.msg.InterestRateContractTerm2.mmObject();
 		}
 	};
+	@XmlElement(name = "BsisPtSprd", required = true)
 	protected Max5Number basisPointSpread;
 	/**
-	 * Number of basis points above (if positive) or below (if negative) the
-	 * underlying reference rate to calculate the actual interest rate
-	 * applicable for a given period at issuance of the floating rate
-	 * instrument.<br>
-	 * <br>
-	 * Usage:<br>
-	 * Used to express differences in interest rates, for example, a difference
-	 * of 0.10% is equivalent to a change of 10 basis points.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -242,7 +238,7 @@ public class FloatingInterestRate6 {
 	public static final MMMessageAttribute mmBasisPointSpread = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Spread.mmBasisPointSpread;
-			componentContext_lazy = () -> FloatingInterestRate6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FloatingInterestRate6.mmObject();
 			isDerived = false;
 			xmlTag = "BsisPtSprd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,9 +254,10 @@ public class FloatingInterestRate6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FloatingInterestRate6.mmReferenceRate, FloatingInterestRate6.mmTerm, FloatingInterestRate6.mmBasisPointSpread);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FloatingInterestRate6.mmReferenceRate, com.tools20022.repository.msg.FloatingInterestRate6.mmTerm,
+						com.tools20022.repository.msg.FloatingInterestRate6.mmBasisPointSpread);
 				trace_lazy = () -> VariableInterest.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FloatingInterestRate6";
 				definition = "Provides the index used to define the rate and the basis point spread.";
@@ -270,30 +267,30 @@ public class FloatingInterestRate6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RefRate", required = true)
 	public BenchmarkCurveName6Choice getReferenceRate() {
 		return referenceRate;
 	}
 
-	public void setReferenceRate(BenchmarkCurveName6Choice referenceRate) {
-		this.referenceRate = referenceRate;
+	public FloatingInterestRate6 setReferenceRate(BenchmarkCurveName6Choice referenceRate) {
+		this.referenceRate = Objects.requireNonNull(referenceRate);
+		return this;
 	}
 
-	@XmlElement(name = "Term", required = true)
 	public InterestRateContractTerm2 getTerm() {
 		return term;
 	}
 
-	public void setTerm(com.tools20022.repository.msg.InterestRateContractTerm2 term) {
-		this.term = term;
+	public FloatingInterestRate6 setTerm(com.tools20022.repository.msg.InterestRateContractTerm2 term) {
+		this.term = Objects.requireNonNull(term);
+		return this;
 	}
 
-	@XmlElement(name = "BsisPtSprd", required = true)
 	public Max5Number getBasisPointSpread() {
 		return basisPointSpread;
 	}
 
-	public void setBasisPointSpread(Max5Number basisPointSpread) {
-		this.basisPointSpread = basisPointSpread;
+	public FloatingInterestRate6 setBasisPointSpread(Max5Number basisPointSpread) {
+		this.basisPointSpread = Objects.requireNonNull(basisPointSpread);
+		return this;
 	}
 }

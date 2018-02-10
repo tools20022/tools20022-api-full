@@ -20,71 +20,71 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RateTypeCode;
+import com.tools20022.repository.codeset.RateType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of rate.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RateTypeCode RateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RateType2Code#mmAdditionalTax
- * RateType2Code.mmAdditionalTax}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType2Code#mmCharges
- * RateType2Code.mmCharges}</li>
+ * {@linkplain com.tools20022.repository.codeset.RateType2Code#AdditionalTax
+ * RateType2Code.AdditionalTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType2Code#Charges
+ * RateType2Code.Charges}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RateType2Code#mmCashInLieuOfSecurities
- * RateType2Code.mmCashInLieuOfSecurities}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType2Code#mmGross
- * RateType2Code.mmGross}</li>
+ * {@linkplain com.tools20022.repository.codeset.RateType2Code#CashInLieuOfSecurities
+ * RateType2Code.CashInLieuOfSecurities}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType2Code#Gross
+ * RateType2Code.Gross}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RateType2Code#mmCashIncentive
- * RateType2Code.mmCashIncentive}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType2Code#mmNet
- * RateType2Code.mmNet}</li>
+ * {@linkplain com.tools20022.repository.codeset.RateType2Code#CashIncentive
+ * RateType2Code.CashIncentive}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType2Code#Net
+ * RateType2Code.Net}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType2Code#Sollication
+ * RateType2Code.Sollication}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType2Code#StampDuty
+ * RateType2Code.StampDuty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RateType2Code#mmSollication
- * RateType2Code.mmSollication}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType2Code#mmStampDuty
- * RateType2Code.mmStampDuty}</li>
+ * {@linkplain com.tools20022.repository.codeset.RateType2Code#StockExchangeTax
+ * RateType2Code.StockExchangeTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType2Code#TransferTax
+ * RateType2Code.TransferTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RateType2Code#mmStockExchangeTax
- * RateType2Code.mmStockExchangeTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.RateType2Code#TransactionTax
+ * RateType2Code.TransactionTax}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType2Code#TaxDeferred
+ * RateType2Code.TaxDeferred}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType2Code#TaxFeeAmount
+ * RateType2Code.TaxFeeAmount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RateType2Code#mmTransferTax
- * RateType2Code.mmTransferTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.RateType2Code#WithholdingOfForeignTax
+ * RateType2Code.WithholdingOfForeignTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RateType2Code#mmTransactionTax
- * RateType2Code.mmTransactionTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.RateType2Code#WithholdingOfLocalTax
+ * RateType2Code.WithholdingOfLocalTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RateType2Code#mmTaxDeferred
- * RateType2Code.mmTaxDeferred}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RateType2Code#mmTaxFeeAmount
- * RateType2Code.mmTaxFeeAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RateType2Code#mmWithholdingOfForeignTax
- * RateType2Code.mmWithholdingOfForeignTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RateType2Code#mmWithholdingOfLocalTax
- * RateType2Code.mmWithholdingOfLocalTax}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RateType2Code#mmWithholdingTax
- * RateType2Code.mmWithholdingTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.RateType2Code#WithholdingTax
+ * RateType2Code.WithholdingTax}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RateTypeCode RateTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -101,7 +101,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of rate."</li>
  * </ul>
  */
-public class RateType2Code extends RateTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RateType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -120,11 +121,12 @@ public class RateType2Code extends RateTypeCode {
 	 * name} = "AdditionalTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAdditionalTax = new MMCode() {
+	public static final RateType2Code AdditionalTax = new RateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalTax";
-			owner_lazy = () -> RateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType2Code.mmObject();
+			codeName = RateTypeCode.AdditionalTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -143,11 +145,12 @@ public class RateType2Code extends RateTypeCode {
 	 * name} = "Charges"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCharges = new MMCode() {
+	public static final RateType2Code Charges = new RateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
-			owner_lazy = () -> RateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType2Code.mmObject();
+			codeName = RateTypeCode.Charges.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -166,11 +169,12 @@ public class RateType2Code extends RateTypeCode {
 	 * name} = "CashInLieuOfSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashInLieuOfSecurities = new MMCode() {
+	public static final RateType2Code CashInLieuOfSecurities = new RateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfSecurities";
-			owner_lazy = () -> RateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType2Code.mmObject();
+			codeName = RateTypeCode.CashInLieuOfSecurities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -189,11 +193,12 @@ public class RateType2Code extends RateTypeCode {
 	 * name} = "Gross"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGross = new MMCode() {
+	public static final RateType2Code Gross = new RateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gross";
-			owner_lazy = () -> RateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType2Code.mmObject();
+			codeName = RateTypeCode.Gross.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -212,11 +217,12 @@ public class RateType2Code extends RateTypeCode {
 	 * name} = "CashIncentive"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashIncentive = new MMCode() {
+	public static final RateType2Code CashIncentive = new RateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashIncentive";
-			owner_lazy = () -> RateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType2Code.mmObject();
+			codeName = RateTypeCode.CashIncentive.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -235,11 +241,12 @@ public class RateType2Code extends RateTypeCode {
 	 * name} = "Net"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNet = new MMCode() {
+	public static final RateType2Code Net = new RateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Net";
-			owner_lazy = () -> RateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType2Code.mmObject();
+			codeName = RateTypeCode.Net.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -258,11 +265,12 @@ public class RateType2Code extends RateTypeCode {
 	 * name} = "Sollication"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSollication = new MMCode() {
+	public static final RateType2Code Sollication = new RateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sollication";
-			owner_lazy = () -> RateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType2Code.mmObject();
+			codeName = RateTypeCode.Sollication.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -281,11 +289,12 @@ public class RateType2Code extends RateTypeCode {
 	 * name} = "StampDuty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStampDuty = new MMCode() {
+	public static final RateType2Code StampDuty = new RateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
-			owner_lazy = () -> RateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType2Code.mmObject();
+			codeName = RateTypeCode.StampDuty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -304,11 +313,12 @@ public class RateType2Code extends RateTypeCode {
 	 * name} = "StockExchangeTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockExchangeTax = new MMCode() {
+	public static final RateType2Code StockExchangeTax = new RateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchangeTax";
-			owner_lazy = () -> RateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType2Code.mmObject();
+			codeName = RateTypeCode.StockExchangeTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -327,11 +337,12 @@ public class RateType2Code extends RateTypeCode {
 	 * name} = "TransferTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransferTax = new MMCode() {
+	public static final RateType2Code TransferTax = new RateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferTax";
-			owner_lazy = () -> RateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType2Code.mmObject();
+			codeName = RateTypeCode.TransferTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -350,11 +361,12 @@ public class RateType2Code extends RateTypeCode {
 	 * name} = "TransactionTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransactionTax = new MMCode() {
+	public static final RateType2Code TransactionTax = new RateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTax";
-			owner_lazy = () -> RateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType2Code.mmObject();
+			codeName = RateTypeCode.TransactionTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -373,11 +385,12 @@ public class RateType2Code extends RateTypeCode {
 	 * name} = "TaxDeferred"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxDeferred = new MMCode() {
+	public static final RateType2Code TaxDeferred = new RateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDeferred";
-			owner_lazy = () -> RateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType2Code.mmObject();
+			codeName = RateTypeCode.TaxDeferred.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -396,11 +409,12 @@ public class RateType2Code extends RateTypeCode {
 	 * name} = "TaxFeeAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxFeeAmount = new MMCode() {
+	public static final RateType2Code TaxFeeAmount = new RateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxFeeAmount";
-			owner_lazy = () -> RateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType2Code.mmObject();
+			codeName = RateTypeCode.TaxFeeAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -419,11 +433,12 @@ public class RateType2Code extends RateTypeCode {
 	 * name} = "WithholdingOfForeignTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithholdingOfForeignTax = new MMCode() {
+	public static final RateType2Code WithholdingOfForeignTax = new RateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingOfForeignTax";
-			owner_lazy = () -> RateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType2Code.mmObject();
+			codeName = RateTypeCode.WithholdingOfForeignTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -442,11 +457,12 @@ public class RateType2Code extends RateTypeCode {
 	 * name} = "WithholdingOfLocalTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithholdingOfLocalTax = new MMCode() {
+	public static final RateType2Code WithholdingOfLocalTax = new RateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingOfLocalTax";
-			owner_lazy = () -> RateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType2Code.mmObject();
+			codeName = RateTypeCode.WithholdingOfLocalTax.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -465,28 +481,76 @@ public class RateType2Code extends RateTypeCode {
 	 * name} = "WithholdingTax"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithholdingTax = new MMCode() {
+	public static final RateType2Code WithholdingTax = new RateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
-			owner_lazy = () -> RateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType2Code.mmObject();
+			codeName = RateTypeCode.WithholdingTax.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RateType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RateType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ATAX");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateType2Code";
 				definition = "Specifies the type of rate.";
-				code_lazy = () -> Arrays.asList(RateType2Code.mmAdditionalTax, RateType2Code.mmCharges, RateType2Code.mmCashInLieuOfSecurities, RateType2Code.mmGross, RateType2Code.mmCashIncentive, RateType2Code.mmNet,
-						RateType2Code.mmSollication, RateType2Code.mmStampDuty, RateType2Code.mmStockExchangeTax, RateType2Code.mmTransferTax, RateType2Code.mmTransactionTax, RateType2Code.mmTaxDeferred, RateType2Code.mmTaxFeeAmount,
-						RateType2Code.mmWithholdingOfForeignTax, RateType2Code.mmWithholdingOfLocalTax, RateType2Code.mmWithholdingTax);
 				trace_lazy = () -> RateTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType2Code.AdditionalTax, com.tools20022.repository.codeset.RateType2Code.Charges, com.tools20022.repository.codeset.RateType2Code.CashInLieuOfSecurities,
+						com.tools20022.repository.codeset.RateType2Code.Gross, com.tools20022.repository.codeset.RateType2Code.CashIncentive, com.tools20022.repository.codeset.RateType2Code.Net,
+						com.tools20022.repository.codeset.RateType2Code.Sollication, com.tools20022.repository.codeset.RateType2Code.StampDuty, com.tools20022.repository.codeset.RateType2Code.StockExchangeTax,
+						com.tools20022.repository.codeset.RateType2Code.TransferTax, com.tools20022.repository.codeset.RateType2Code.TransactionTax, com.tools20022.repository.codeset.RateType2Code.TaxDeferred,
+						com.tools20022.repository.codeset.RateType2Code.TaxFeeAmount, com.tools20022.repository.codeset.RateType2Code.WithholdingOfForeignTax, com.tools20022.repository.codeset.RateType2Code.WithholdingOfLocalTax,
+						com.tools20022.repository.codeset.RateType2Code.WithholdingTax);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AdditionalTax.getCodeName().get(), AdditionalTax);
+		codesByName.put(Charges.getCodeName().get(), Charges);
+		codesByName.put(CashInLieuOfSecurities.getCodeName().get(), CashInLieuOfSecurities);
+		codesByName.put(Gross.getCodeName().get(), Gross);
+		codesByName.put(CashIncentive.getCodeName().get(), CashIncentive);
+		codesByName.put(Net.getCodeName().get(), Net);
+		codesByName.put(Sollication.getCodeName().get(), Sollication);
+		codesByName.put(StampDuty.getCodeName().get(), StampDuty);
+		codesByName.put(StockExchangeTax.getCodeName().get(), StockExchangeTax);
+		codesByName.put(TransferTax.getCodeName().get(), TransferTax);
+		codesByName.put(TransactionTax.getCodeName().get(), TransactionTax);
+		codesByName.put(TaxDeferred.getCodeName().get(), TaxDeferred);
+		codesByName.put(TaxFeeAmount.getCodeName().get(), TaxFeeAmount);
+		codesByName.put(WithholdingOfForeignTax.getCodeName().get(), WithholdingOfForeignTax);
+		codesByName.put(WithholdingOfLocalTax.getCodeName().get(), WithholdingOfLocalTax);
+		codesByName.put(WithholdingTax.getCodeName().get(), WithholdingTax);
+	}
+
+	public static RateType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RateType2Code[] values() {
+		RateType2Code[] values = new RateType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RateType2Code> {
+		@Override
+		public RateType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RateType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

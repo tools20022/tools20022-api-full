@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.QueryDataTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the inquiry type of the data.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryDataTypeCode#mmQueryForeignExchangeTradingData
- * QueryDataTypeCode.mmQueryForeignExchangeTradingData}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryDataTypeCode#QueryForeignExchangeTradingData
+ * QueryDataTypeCode.QueryForeignExchangeTradingData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QueryDataTypeCode#mmQueryOptionTradingData
- * QueryDataTypeCode.mmQueryOptionTradingData}</li>
+ * {@linkplain com.tools20022.repository.codeset.QueryDataTypeCode#QueryOptionTradingData
+ * QueryDataTypeCode.QueryOptionTradingData}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the inquiry type of the data."</li>
  * </ul>
  */
-public class QueryDataTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class QueryDataTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,12 +91,12 @@ public class QueryDataTypeCode {
 	 * definition} = "Query for tading data of foreign exchange."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQueryForeignExchangeTradingData = new MMCode() {
+	public static final QueryDataTypeCode QueryForeignExchangeTradingData = new QueryDataTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryForeignExchangeTradingData";
 			definition = "Query for tading data of foreign exchange.";
-			owner_lazy = () -> QueryDataTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryDataTypeCode.mmObject();
 			codeName = "QFXT";
 		}
 	};
@@ -115,27 +121,57 @@ public class QueryDataTypeCode {
 	 * definition} = "Query for tading data of option."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQueryOptionTradingData = new MMCode() {
+	public static final QueryDataTypeCode QueryOptionTradingData = new QueryDataTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryOptionTradingData";
 			definition = "Query for tading data of option.";
-			owner_lazy = () -> QueryDataTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryDataTypeCode.mmObject();
 			codeName = "QOTD";
 		}
 	};
+	final static private LinkedHashMap<String, QueryDataTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected QueryDataTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueryDataTypeCode";
 				definition = "Specifies the inquiry type of the data.";
-				code_lazy = () -> Arrays.asList(QueryDataTypeCode.mmQueryForeignExchangeTradingData, QueryDataTypeCode.mmQueryOptionTradingData);
 				derivation_lazy = () -> Arrays.asList(QueryDataType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryDataTypeCode.QueryForeignExchangeTradingData, com.tools20022.repository.codeset.QueryDataTypeCode.QueryOptionTradingData);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(QueryForeignExchangeTradingData.getCodeName().get(), QueryForeignExchangeTradingData);
+		codesByName.put(QueryOptionTradingData.getCodeName().get(), QueryOptionTradingData);
+	}
+
+	public static QueryDataTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static QueryDataTypeCode[] values() {
+		QueryDataTypeCode[] values = new QueryDataTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, QueryDataTypeCode> {
+		@Override
+		public QueryDataTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(QueryDataTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

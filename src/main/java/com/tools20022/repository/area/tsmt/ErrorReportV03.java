@@ -26,9 +26,8 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion;
 import com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -48,25 +47,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
- * TradeServicesManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion
- * TradeServicesManagementISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion
- * TradeServicesManagementISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "ErrRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -100,6 +80,25 @@ import javax.xml.bind.annotation.*;
  * ErrorReportV03.mmRequestForAction}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOPreviousversion
+ * TradeServicesManagementISOPreviousversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TradeServicesManagementISOLatestversion
+ * TradeServicesManagementISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "ErrRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesManagementLatestVersion
+ * TradeServicesManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code tsmt.016.001.03}</li>
@@ -115,16 +114,17 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ErrorReportV03", propOrder = {"reportIdentification", "transactionIdentification", "establishedBaselineIdentification", "transactionStatus", "userTransactionReference", "rejectedMessageReference", "numberOfErrors",
 		"errorDescription", "requestForAction"})
 public class ErrorReportV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptId", required = true)
 	protected MessageIdentification1 reportIdentification;
 	/**
-	 * Identifies the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,12 +164,11 @@ public class ErrorReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "TxId")
 	protected SimpleIdentificationInformation transactionIdentification;
 	/**
-	 * Unique identification assigned by the matching application to the
-	 * transaction. This identification is to be used in any communication
-	 * between the parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,11 +210,11 @@ public class ErrorReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "EstblishdBaselnId")
 	protected DocumentIdentification3 establishedBaselineIdentification;
 	/**
-	 * Unique identification assigned by the matching application to the
-	 * baseline when it is established.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -257,10 +256,11 @@ public class ErrorReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "TxSts")
 	protected TransactionStatus4 transactionStatus;
 	/**
-	 * Identifies the status of the transaction by means of a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -301,11 +301,11 @@ public class ErrorReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "UsrTxRef")
 	protected DocumentIdentification5 userTransactionReference;
 	/**
-	 * Reference to the transaction for the financial institution which is the
-	 * sender of the rejected message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -347,10 +347,11 @@ public class ErrorReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RjctdMsgRef")
 	protected MessageIdentification1 rejectedMessageReference;
 	/**
-	 * Reference to the identification of the rejected message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -391,10 +392,11 @@ public class ErrorReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "NbOfErrs", required = true)
 	protected Count1 numberOfErrors;
 	/**
-	 * Specifies the total number of errors identified in the rejected message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -434,10 +436,11 @@ public class ErrorReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "ErrDesc", required = true)
 	protected List<ValidationResult3> errorDescription;
 	/**
-	 * Describes the error that is the cause of the rejection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -476,10 +479,11 @@ public class ErrorReportV03 {
 			}
 		}
 	};
+	@XmlElement(name = "ReqForActn")
 	protected PendingActivity2 requestForAction;
 	/**
-	 * Information on the next processing step required.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -552,88 +556,88 @@ public class ErrorReportV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptId", required = true)
 	public MessageIdentification1 getReportIdentification() {
 		return reportIdentification;
 	}
 
-	public void setReportIdentification(MessageIdentification1 reportIdentification) {
-		this.reportIdentification = reportIdentification;
+	public ErrorReportV03 setReportIdentification(MessageIdentification1 reportIdentification) {
+		this.reportIdentification = Objects.requireNonNull(reportIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TxId")
-	public SimpleIdentificationInformation getTransactionIdentification() {
-		return transactionIdentification;
+	public Optional<SimpleIdentificationInformation> getTransactionIdentification() {
+		return transactionIdentification == null ? Optional.empty() : Optional.of(transactionIdentification);
 	}
 
-	public void setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
+	public ErrorReportV03 setTransactionIdentification(SimpleIdentificationInformation transactionIdentification) {
 		this.transactionIdentification = transactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "EstblishdBaselnId")
-	public DocumentIdentification3 getEstablishedBaselineIdentification() {
-		return establishedBaselineIdentification;
+	public Optional<DocumentIdentification3> getEstablishedBaselineIdentification() {
+		return establishedBaselineIdentification == null ? Optional.empty() : Optional.of(establishedBaselineIdentification);
 	}
 
-	public void setEstablishedBaselineIdentification(DocumentIdentification3 establishedBaselineIdentification) {
+	public ErrorReportV03 setEstablishedBaselineIdentification(DocumentIdentification3 establishedBaselineIdentification) {
 		this.establishedBaselineIdentification = establishedBaselineIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TxSts")
-	public TransactionStatus4 getTransactionStatus() {
-		return transactionStatus;
+	public Optional<TransactionStatus4> getTransactionStatus() {
+		return transactionStatus == null ? Optional.empty() : Optional.of(transactionStatus);
 	}
 
-	public void setTransactionStatus(TransactionStatus4 transactionStatus) {
+	public ErrorReportV03 setTransactionStatus(TransactionStatus4 transactionStatus) {
 		this.transactionStatus = transactionStatus;
+		return this;
 	}
 
-	@XmlElement(name = "UsrTxRef")
-	public DocumentIdentification5 getUserTransactionReference() {
-		return userTransactionReference;
+	public Optional<DocumentIdentification5> getUserTransactionReference() {
+		return userTransactionReference == null ? Optional.empty() : Optional.of(userTransactionReference);
 	}
 
-	public void setUserTransactionReference(DocumentIdentification5 userTransactionReference) {
+	public ErrorReportV03 setUserTransactionReference(DocumentIdentification5 userTransactionReference) {
 		this.userTransactionReference = userTransactionReference;
+		return this;
 	}
 
-	@XmlElement(name = "RjctdMsgRef")
-	public MessageIdentification1 getRejectedMessageReference() {
-		return rejectedMessageReference;
+	public Optional<MessageIdentification1> getRejectedMessageReference() {
+		return rejectedMessageReference == null ? Optional.empty() : Optional.of(rejectedMessageReference);
 	}
 
-	public void setRejectedMessageReference(MessageIdentification1 rejectedMessageReference) {
+	public ErrorReportV03 setRejectedMessageReference(MessageIdentification1 rejectedMessageReference) {
 		this.rejectedMessageReference = rejectedMessageReference;
+		return this;
 	}
 
-	@XmlElement(name = "NbOfErrs", required = true)
 	public Count1 getNumberOfErrors() {
 		return numberOfErrors;
 	}
 
-	public void setNumberOfErrors(Count1 numberOfErrors) {
-		this.numberOfErrors = numberOfErrors;
+	public ErrorReportV03 setNumberOfErrors(Count1 numberOfErrors) {
+		this.numberOfErrors = Objects.requireNonNull(numberOfErrors);
+		return this;
 	}
 
-	@XmlElement(name = "ErrDesc", required = true)
 	public List<ValidationResult3> getErrorDescription() {
-		return errorDescription;
+		return errorDescription == null ? errorDescription = new ArrayList<>() : errorDescription;
 	}
 
-	public void setErrorDescription(List<ValidationResult3> errorDescription) {
-		this.errorDescription = errorDescription;
+	public ErrorReportV03 setErrorDescription(List<ValidationResult3> errorDescription) {
+		this.errorDescription = Objects.requireNonNull(errorDescription);
+		return this;
 	}
 
-	@XmlElement(name = "ReqForActn")
-	public PendingActivity2 getRequestForAction() {
-		return requestForAction;
+	public Optional<PendingActivity2> getRequestForAction() {
+		return requestForAction == null ? Optional.empty() : Optional.of(requestForAction);
 	}
 
-	public void setRequestForAction(PendingActivity2 requestForAction) {
+	public ErrorReportV03 setRequestForAction(PendingActivity2 requestForAction) {
 		this.requestForAction = requestForAction;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.016.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:tsmt.016.001.03")
 	static public class Document {
 		@XmlElement(name = "ErrRpt", required = true)
 		public ErrorReportV03 messageBody;

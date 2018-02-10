@@ -29,9 +29,8 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -78,8 +77,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline#forSafekeepingAccount3
+ * ConstraintRightsHolderMultiplicty1Guideline.forSafekeepingAccount3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceQall1Rule#forSafekeepingAccount3
+ * ConstraintBalanceQall1Rule.forSafekeepingAccount3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,16 +101,16 @@ import javax.xml.bind.annotation.XmlType;
  * "A safekeeping account is an account on which a securities entry is made."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SafekeepingAccount3", propOrder = {"accountIdentification", "accountOwner", "subAccountDetails", "instructedBalance", "rightsHolder"})
 public class SafekeepingAccount3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId", required = true)
 	protected Max35Text accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +145,7 @@ public class SafekeepingAccount3 {
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> SafekeepingAccount3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,10 +156,11 @@ public class SafekeepingAccount3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification9Choice accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -182,7 +193,7 @@ public class SafekeepingAccount3 {
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SafekeepingAccount3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,10 +205,11 @@ public class SafekeepingAccount3 {
 			type_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SubAcctDtls")
 	protected SubAccount2 subAccountDetails;
 	/**
-	 * Identification of a subaccount within the safekeeping account
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -230,7 +242,7 @@ public class SafekeepingAccount3 {
 	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmSubAccount;
-			componentContext_lazy = () -> SafekeepingAccount3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "SubAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -242,10 +254,11 @@ public class SafekeepingAccount3 {
 			type_lazy = () -> com.tools20022.repository.msg.SubAccount2.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdBal", required = true)
 	protected List<com.tools20022.repository.msg.HoldingBalance4> instructedBalance;
 	/**
-	 * Quantity of securities in the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -278,7 +291,7 @@ public class SafekeepingAccount3 {
 	public static final MMMessageAttribute mmInstructedBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesAccount.mmSecuritiesBalance;
-			componentContext_lazy = () -> SafekeepingAccount3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "InstdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -289,10 +302,11 @@ public class SafekeepingAccount3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.HoldingBalance4.mmObject();
 		}
 	};
+	@XmlElement(name = "RghtsHldr")
 	protected List<PartyIdentification9Choice> rightsHolder;
 	/**
-	 * Owner of the voting rights.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -325,7 +339,7 @@ public class SafekeepingAccount3 {
 	public static final MMMessageAssociationEnd mmRightsHolder = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SafekeepingAccount3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SafekeepingAccount3.mmObject();
 			isDerived = false;
 			xmlTag = "RghtsHldr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -341,11 +355,13 @@ public class SafekeepingAccount3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SafekeepingAccount3.mmAccountIdentification, SafekeepingAccount3.mmAccountOwner, SafekeepingAccount3.mmSubAccountDetails, SafekeepingAccount3.mmInstructedBalance,
-						SafekeepingAccount3.mmRightsHolder);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SafekeepingAccount3.mmAccountIdentification, com.tools20022.repository.msg.SafekeepingAccount3.mmAccountOwner,
+						com.tools20022.repository.msg.SafekeepingAccount3.mmSubAccountDetails, com.tools20022.repository.msg.SafekeepingAccount3.mmInstructedBalance, com.tools20022.repository.msg.SafekeepingAccount3.mmRightsHolder);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingInstructionCancellationRequestV02.mmInstructedPosition);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRightsHolderMultiplicty1Guideline.forSafekeepingAccount3,
+						com.tools20022.repository.constraints.ConstraintBalanceQall1Rule.forSafekeepingAccount3);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingAccount3";
 				definition = "A safekeeping account is an account on which a securities entry is made.";
@@ -354,48 +370,48 @@ public class SafekeepingAccount3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public Max35Text getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(Max35Text accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public SafekeepingAccount3 setAccountIdentification(Max35Text accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification9Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification9Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification9Choice accountOwner) {
+	public SafekeepingAccount3 setAccountOwner(PartyIdentification9Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SubAcctDtls")
-	public SubAccount2 getSubAccountDetails() {
-		return subAccountDetails;
+	public Optional<SubAccount2> getSubAccountDetails() {
+		return subAccountDetails == null ? Optional.empty() : Optional.of(subAccountDetails);
 	}
 
-	public void setSubAccountDetails(com.tools20022.repository.msg.SubAccount2 subAccountDetails) {
+	public SafekeepingAccount3 setSubAccountDetails(com.tools20022.repository.msg.SubAccount2 subAccountDetails) {
 		this.subAccountDetails = subAccountDetails;
+		return this;
 	}
 
-	@XmlElement(name = "InstdBal", required = true)
 	public List<HoldingBalance4> getInstructedBalance() {
-		return instructedBalance;
+		return instructedBalance == null ? instructedBalance = new ArrayList<>() : instructedBalance;
 	}
 
-	public void setInstructedBalance(List<com.tools20022.repository.msg.HoldingBalance4> instructedBalance) {
-		this.instructedBalance = instructedBalance;
+	public SafekeepingAccount3 setInstructedBalance(List<com.tools20022.repository.msg.HoldingBalance4> instructedBalance) {
+		this.instructedBalance = Objects.requireNonNull(instructedBalance);
+		return this;
 	}
 
-	@XmlElement(name = "RghtsHldr")
 	public List<PartyIdentification9Choice> getRightsHolder() {
-		return rightsHolder;
+		return rightsHolder == null ? rightsHolder = new ArrayList<>() : rightsHolder;
 	}
 
-	public void setRightsHolder(List<PartyIdentification9Choice> rightsHolder) {
-		this.rightsHolder = rightsHolder;
+	public SafekeepingAccount3 setRightsHolder(List<PartyIdentification9Choice> rightsHolder) {
+		this.rightsHolder = Objects.requireNonNull(rightsHolder);
+		return this;
 	}
 }

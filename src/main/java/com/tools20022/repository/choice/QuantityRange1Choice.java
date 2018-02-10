@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.FromToQuantityRange1;
 import com.tools20022.repository.msg.QuantityRangeBoundary1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QuantityRange1Choice", propOrder = {"fromQuantity", "toQuantity", "fromToQuantity", "equalQuantity", "notEqualQuantity"})
 public class QuantityRange1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FrQty", required = true)
 	protected QuantityRangeBoundary1 fromQuantity;
 	/**
-	 * Lower boundary of a range of quantity values.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -110,7 +112,7 @@ public class QuantityRange1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmFromQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> QuantityRange1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.QuantityRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class QuantityRange1Choice {
 			type_lazy = () -> QuantityRangeBoundary1.mmObject();
 		}
 	};
+	@XmlElement(name = "ToQty", required = true)
 	protected QuantityRangeBoundary1 toQuantity;
 	/**
-	 * Upper boundary of a range of quantity values.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -151,7 +154,7 @@ public class QuantityRange1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmToQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> QuantityRange1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.QuantityRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ToQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,10 +166,11 @@ public class QuantityRange1Choice {
 			type_lazy = () -> QuantityRangeBoundary1.mmObject();
 		}
 	};
+	@XmlElement(name = "FrToQty", required = true)
 	protected FromToQuantityRange1 fromToQuantity;
 	/**
-	 * Range of valid quantity values.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -194,7 +198,7 @@ public class QuantityRange1Choice {
 	 */
 	public static final MMMessageAttribute mmFromToQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QuantityRange1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.QuantityRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FrToQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,10 +209,11 @@ public class QuantityRange1Choice {
 			complexType_lazy = () -> FromToQuantityRange1.mmObject();
 		}
 	};
+	@XmlElement(name = "EQQty", required = true)
 	protected DecimalNumber equalQuantity;
 	/**
-	 * Exact value a quantity must match to be considered valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -237,7 +242,7 @@ public class QuantityRange1Choice {
 	 */
 	public static final MMMessageAttribute mmEqualQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QuantityRange1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.QuantityRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EQQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,10 +253,11 @@ public class QuantityRange1Choice {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "NEQQty", required = true)
 	protected DecimalNumber notEqualQuantity;
 	/**
-	 * Value that a quantity must not match to be considered valid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -280,7 +286,7 @@ public class QuantityRange1Choice {
 	 */
 	public static final MMMessageAttribute mmNotEqualQuantity = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QuantityRange1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.QuantityRange1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NEQQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -295,9 +301,11 @@ public class QuantityRange1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QuantityRange1Choice.mmFromQuantity, QuantityRange1Choice.mmToQuantity, QuantityRange1Choice.mmFromToQuantity, QuantityRange1Choice.mmEqualQuantity,
-						QuantityRange1Choice.mmNotEqualQuantity);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.choice.QuantityRange1Choice.mmFromQuantity, com.tools20022.repository.choice.QuantityRange1Choice.mmToQuantity,
+								com.tools20022.repository.choice.QuantityRange1Choice.mmFromToQuantity, com.tools20022.repository.choice.QuantityRange1Choice.mmEqualQuantity,
+								com.tools20022.repository.choice.QuantityRange1Choice.mmNotEqualQuantity);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuantityRange1Choice";
 				definition = "Choice between ranges of values in which a quantity is considered valid or a specified quantity value which has to be matched or unmatched to be valid.";
@@ -306,48 +314,48 @@ public class QuantityRange1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FrQty", required = true)
 	public QuantityRangeBoundary1 getFromQuantity() {
 		return fromQuantity;
 	}
 
-	public void setFromQuantity(QuantityRangeBoundary1 fromQuantity) {
-		this.fromQuantity = fromQuantity;
+	public QuantityRange1Choice setFromQuantity(QuantityRangeBoundary1 fromQuantity) {
+		this.fromQuantity = Objects.requireNonNull(fromQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "ToQty", required = true)
 	public QuantityRangeBoundary1 getToQuantity() {
 		return toQuantity;
 	}
 
-	public void setToQuantity(QuantityRangeBoundary1 toQuantity) {
-		this.toQuantity = toQuantity;
+	public QuantityRange1Choice setToQuantity(QuantityRangeBoundary1 toQuantity) {
+		this.toQuantity = Objects.requireNonNull(toQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "FrToQty", required = true)
 	public FromToQuantityRange1 getFromToQuantity() {
 		return fromToQuantity;
 	}
 
-	public void setFromToQuantity(FromToQuantityRange1 fromToQuantity) {
-		this.fromToQuantity = fromToQuantity;
+	public QuantityRange1Choice setFromToQuantity(FromToQuantityRange1 fromToQuantity) {
+		this.fromToQuantity = Objects.requireNonNull(fromToQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "EQQty", required = true)
 	public DecimalNumber getEqualQuantity() {
 		return equalQuantity;
 	}
 
-	public void setEqualQuantity(DecimalNumber equalQuantity) {
-		this.equalQuantity = equalQuantity;
+	public QuantityRange1Choice setEqualQuantity(DecimalNumber equalQuantity) {
+		this.equalQuantity = Objects.requireNonNull(equalQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "NEQQty", required = true)
 	public DecimalNumber getNotEqualQuantity() {
 		return notEqualQuantity;
 	}
 
-	public void setNotEqualQuantity(DecimalNumber notEqualQuantity) {
-		this.notEqualQuantity = notEqualQuantity;
+	public QuantityRange1Choice setNotEqualQuantity(DecimalNumber notEqualQuantity) {
+		this.notEqualQuantity = Objects.requireNonNull(notEqualQuantity);
+		return this;
 	}
 }

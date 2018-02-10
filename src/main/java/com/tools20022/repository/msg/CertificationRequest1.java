@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CertificationRequest1", propOrder = {"certificateRequestInformation", "keyIdentification", "keyVersion"})
 public class CertificationRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CertReqInf", required = true)
 	protected CertificationRequest2 certificateRequestInformation;
 	/**
-	 * Information of the certificate to create.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +112,7 @@ public class CertificationRequest1 {
 	 */
 	public static final MMMessageAssociationEnd mmCertificateRequestInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CertificationRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CertificationRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "CertReqInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +124,11 @@ public class CertificationRequest1 {
 			type_lazy = () -> com.tools20022.repository.msg.CertificationRequest2.mmObject();
 		}
 	};
+	@XmlElement(name = "KeyId")
 	protected Max140Text keyIdentification;
 	/**
-	 * Identification of the key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +163,7 @@ public class CertificationRequest1 {
 	 */
 	public static final MMMessageAttribute mmKeyIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CertificationRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CertificationRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "KeyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,10 +175,11 @@ public class CertificationRequest1 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "KeyVrsn")
 	protected Max140Text keyVersion;
 	/**
-	 * Version of the key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,7 +206,7 @@ public class CertificationRequest1 {
 	 */
 	public static final MMMessageAttribute mmKeyVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CertificationRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CertificationRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "KeyVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,8 +221,9 @@ public class CertificationRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CertificationRequest1.mmCertificateRequestInformation, CertificationRequest1.mmKeyIdentification, CertificationRequest1.mmKeyVersion);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CertificationRequest1.mmCertificateRequestInformation, com.tools20022.repository.msg.CertificationRequest1.mmKeyIdentification,
+						com.tools20022.repository.msg.CertificationRequest1.mmKeyVersion);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificationRequest1";
 				definition = "Certification request PKCS#10 (Public Key Certificate Standard 10) for creation or renewal of an X.509 certificate.";
@@ -227,30 +233,30 @@ public class CertificationRequest1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CertReqInf", required = true)
 	public CertificationRequest2 getCertificateRequestInformation() {
 		return certificateRequestInformation;
 	}
 
-	public void setCertificateRequestInformation(com.tools20022.repository.msg.CertificationRequest2 certificateRequestInformation) {
-		this.certificateRequestInformation = certificateRequestInformation;
+	public CertificationRequest1 setCertificateRequestInformation(com.tools20022.repository.msg.CertificationRequest2 certificateRequestInformation) {
+		this.certificateRequestInformation = Objects.requireNonNull(certificateRequestInformation);
+		return this;
 	}
 
-	@XmlElement(name = "KeyId")
-	public Max140Text getKeyIdentification() {
-		return keyIdentification;
+	public Optional<Max140Text> getKeyIdentification() {
+		return keyIdentification == null ? Optional.empty() : Optional.of(keyIdentification);
 	}
 
-	public void setKeyIdentification(Max140Text keyIdentification) {
+	public CertificationRequest1 setKeyIdentification(Max140Text keyIdentification) {
 		this.keyIdentification = keyIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "KeyVrsn")
-	public Max140Text getKeyVersion() {
-		return keyVersion;
+	public Optional<Max140Text> getKeyVersion() {
+		return keyVersion == null ? Optional.empty() : Optional.of(keyVersion);
 	}
 
-	public void setKeyVersion(Max140Text keyVersion) {
+	public CertificationRequest1 setKeyVersion(Max140Text keyVersion) {
 		this.keyVersion = keyVersion;
+		return this;
 	}
 }

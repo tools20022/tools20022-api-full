@@ -30,6 +30,8 @@ import com.tools20022.repository.msg.PegOrderInstructions1;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Instructions specific to pegged orders, which consist in an investor buying
@@ -75,14 +77,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.PegOrderInstructions1
- * PegOrderInstructions1}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -95,10 +89,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PegOrderInstructions1
+ * PegOrderInstructions1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,8 +118,8 @@ public class SecuritiesPegOrderInstruction {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyAndAmount offset;
 	/**
-	 * Amount (signed) added to the peg for a pegged order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,8 +154,8 @@ public class SecuritiesPegOrderInstruction {
 	public static final MMBusinessAttribute mmOffset = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PegOrderInstructions1.mmOffset);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Offset";
 			definition = "Amount (signed) added to the peg for a pegged order.";
@@ -172,8 +174,8 @@ public class SecuritiesPegOrderInstruction {
 	};
 	protected PegTypeCode priceType;
 	/**
-	 * Defines the type of peg.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -207,8 +209,8 @@ public class SecuritiesPegOrderInstruction {
 	public static final MMBusinessAttribute mmPriceType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PegOrderInstructions1.mmRelatedPriceType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceType";
 			definition = "Defines the type of peg.";
@@ -227,8 +229,8 @@ public class SecuritiesPegOrderInstruction {
 	};
 	protected MoveTypeCode moveType;
 	/**
-	 * Describes whether peg is static/fixed or floats.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -262,8 +264,8 @@ public class SecuritiesPegOrderInstruction {
 	public static final MMBusinessAttribute mmMoveType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PegOrderInstructions1.mmMoveType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MoveType";
 			definition = "Describes whether peg is static/fixed or floats.";
@@ -282,8 +284,8 @@ public class SecuritiesPegOrderInstruction {
 	};
 	protected OffsetTypeCode offsetType;
 	/**
-	 * Type of peg offset.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -318,8 +320,8 @@ public class SecuritiesPegOrderInstruction {
 	public static final MMBusinessAttribute mmOffsetType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PegOrderInstructions1.mmOffsetType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OffsetType";
 			definition = "Type of peg offset.";
@@ -338,8 +340,8 @@ public class SecuritiesPegOrderInstruction {
 	};
 	protected Max35Text limitType;
 	/**
-	 * Specifies nature of resulting pegged price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -373,8 +375,8 @@ public class SecuritiesPegOrderInstruction {
 	public static final MMBusinessAttribute mmLimitType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PegOrderInstructions1.mmLimitType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LimitType";
 			definition = "Specifies nature of resulting pegged price.";
@@ -393,9 +395,8 @@ public class SecuritiesPegOrderInstruction {
 	};
 	protected PriceProtectionScopeCode scope;
 	/**
-	 * The scope of "related to" price of the peg (for example, local, global
-	 * etc).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -432,8 +433,8 @@ public class SecuritiesPegOrderInstruction {
 	public static final MMBusinessAttribute mmScope = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PegOrderInstructions1.mmScope);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Scope";
 			definition = "The scope of \"related to\" price of the peg (for example, local, global etc).";
@@ -452,9 +453,8 @@ public class SecuritiesPegOrderInstruction {
 	};
 	protected PlusOrMinusIndicator offsetSign;
 	/**
-	 * Indicates whether the offset should be added to or subtracted from the
-	 * peg for a pegged order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -491,8 +491,8 @@ public class SecuritiesPegOrderInstruction {
 	public static final MMBusinessAttribute mmOffsetSign = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PegOrderInstructions1.mmOffsetSign);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OffsetSign";
 			definition = "Indicates whether the offset should be added to or subtracted from the peg for a pegged order.";
@@ -511,8 +511,8 @@ public class SecuritiesPegOrderInstruction {
 	};
 	protected SecuritiesOrderParameters order;
 	/**
-	 * Order which is pegged.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -546,8 +546,8 @@ public class SecuritiesPegOrderInstruction {
 	 */
 	public static final MMBusinessAssociationEnd mmOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Order";
 			definition = "Order which is pegged.";
@@ -560,9 +560,8 @@ public class SecuritiesPegOrderInstruction {
 	};
 	protected RoundingParameters roundDirection;
 	/**
-	 * If the calculated peg price is not a valid tick price, specifies how to
-	 * round the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -606,8 +605,8 @@ public class SecuritiesPegOrderInstruction {
 	public static final MMBusinessAssociationEnd mmRoundDirection = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PegOrderInstructions1.mmRoundDirection);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDirection";
 			definition = "If the calculated peg price is not a valid tick price, specifies how to round the price.";
@@ -622,7 +621,7 @@ public class SecuritiesPegOrderInstruction {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesPegOrderInstruction";
 				definition = "Instructions specific to pegged orders, which consist in an investor buying large amounts of  the underlying asset of a derivative it holds.\r\n";
@@ -647,71 +646,80 @@ public class SecuritiesPegOrderInstruction {
 		return offset;
 	}
 
-	public void setOffset(CurrencyAndAmount offset) {
-		this.offset = offset;
+	public SecuritiesPegOrderInstruction setOffset(CurrencyAndAmount offset) {
+		this.offset = Objects.requireNonNull(offset);
+		return this;
 	}
 
 	public PegTypeCode getPriceType() {
 		return priceType;
 	}
 
-	public void setPriceType(PegTypeCode priceType) {
-		this.priceType = priceType;
+	public SecuritiesPegOrderInstruction setPriceType(PegTypeCode priceType) {
+		this.priceType = Objects.requireNonNull(priceType);
+		return this;
 	}
 
 	public MoveTypeCode getMoveType() {
 		return moveType;
 	}
 
-	public void setMoveType(MoveTypeCode moveType) {
-		this.moveType = moveType;
+	public SecuritiesPegOrderInstruction setMoveType(MoveTypeCode moveType) {
+		this.moveType = Objects.requireNonNull(moveType);
+		return this;
 	}
 
 	public OffsetTypeCode getOffsetType() {
 		return offsetType;
 	}
 
-	public void setOffsetType(OffsetTypeCode offsetType) {
-		this.offsetType = offsetType;
+	public SecuritiesPegOrderInstruction setOffsetType(OffsetTypeCode offsetType) {
+		this.offsetType = Objects.requireNonNull(offsetType);
+		return this;
 	}
 
 	public Max35Text getLimitType() {
 		return limitType;
 	}
 
-	public void setLimitType(Max35Text limitType) {
-		this.limitType = limitType;
+	public SecuritiesPegOrderInstruction setLimitType(Max35Text limitType) {
+		this.limitType = Objects.requireNonNull(limitType);
+		return this;
 	}
 
 	public PriceProtectionScopeCode getScope() {
 		return scope;
 	}
 
-	public void setScope(PriceProtectionScopeCode scope) {
-		this.scope = scope;
+	public SecuritiesPegOrderInstruction setScope(PriceProtectionScopeCode scope) {
+		this.scope = Objects.requireNonNull(scope);
+		return this;
 	}
 
 	public PlusOrMinusIndicator getOffsetSign() {
 		return offsetSign;
 	}
 
-	public void setOffsetSign(PlusOrMinusIndicator offsetSign) {
-		this.offsetSign = offsetSign;
+	public SecuritiesPegOrderInstruction setOffsetSign(PlusOrMinusIndicator offsetSign) {
+		this.offsetSign = Objects.requireNonNull(offsetSign);
+		return this;
 	}
 
-	public SecuritiesOrderParameters getOrder() {
-		return order;
+	public Optional<SecuritiesOrderParameters> getOrder() {
+		return order == null ? Optional.empty() : Optional.of(order);
 	}
 
-	public void setOrder(com.tools20022.repository.entity.SecuritiesOrderParameters order) {
+	public SecuritiesPegOrderInstruction setOrder(com.tools20022.repository.entity.SecuritiesOrderParameters order) {
 		this.order = order;
+		return this;
 	}
 
 	public RoundingParameters getRoundDirection() {
 		return roundDirection;
 	}
 
-	public void setRoundDirection(com.tools20022.repository.entity.RoundingParameters roundDirection) {
-		this.roundDirection = roundDirection;
+	public SecuritiesPegOrderInstruction setRoundDirection(com.tools20022.repository.entity.RoundingParameters roundDirection) {
+		this.roundDirection = Objects.requireNonNull(roundDirection);
+		return this;
 	}
 }

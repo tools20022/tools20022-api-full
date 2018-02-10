@@ -26,9 +26,8 @@ import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Amount of money associated with a service.
@@ -39,6 +38,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Adjustment
+ * Adjustment}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -89,106 +91,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.Charges#mmChargePaymentMethod
  * Charges.mmChargePaymentMethod}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees
- * SecuritiesRelatedFees}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges
- * CorporateActionFeesAndCharges}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Adjustment
- * Adjustment}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ChargeType2 ChargeType2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CalculationBasis1
- * CalculationBasis1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge9 Charge9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge15 Charge15}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ChargeTypeFormat2Choice
- * ChargeTypeFormat2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge4 Charge4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge20 Charge20}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ChargeTypeChoice
- * ChargeTypeChoice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation3
- * ChargesInformation3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ChargeType2Choice
- * ChargeType2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation6
- * ChargesInformation6}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ChargeType3Choice
- * ChargeType3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ChargesRecord1 ChargesRecord1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charges3 Charges3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ChargesRecord2 ChargesRecord2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charges4 Charges4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation1
- * ChargesInformation1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation5
- * ChargesInformation5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation7
- * ChargesInformation7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charges2 Charges2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge16 Charge16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ChargeType1 ChargeType1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge11 Charge11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge19 Charge19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge8 Charge8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge17 Charge17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge10 Charge10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalCharges2 TotalCharges2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge18 Charge18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalCharges3 TotalCharges3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ChargeType2FormatChoice
- * ChargeType2FormatChoice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charges1 Charges1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ChargeTypeFormat3Choice
- * ChargeTypeFormat3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails2
- * ChargesDetails2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails1
- * ChargesDetails1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge12 Charge12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge13 Charge13}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ChargeType1Choice
- * ChargeType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AmountRate1Choice
- * AmountRate1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge21 Charge21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalCharges4 TotalCharges4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation2
- * ChargesInformation2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation4
- * ChargesInformation4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge23 Charge23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TotalCharges5 TotalCharges5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge22 Charge22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charges5 Charges5}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ChargePaymentMethod1Choice
- * ChargePaymentMethod1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge24 Charge24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails3
- * ChargesDetails3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ChargesType1Choice
- * ChargesType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge25 Charge25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails4
- * ChargesDetails4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge26 Charge26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge27 Charge27}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Charge29 Charge29}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee3 Fee3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee2 Fee2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Fee1 Fee1}</li>
  * </ul>
  * </li>
  * <li>
@@ -452,11 +354,108 @@ import java.util.List;
  * PaymentTransaction82.mmChargesInformation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees
+ * SecuritiesRelatedFees}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionFeesAndCharges
+ * CorporateActionFeesAndCharges}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargeType2 ChargeType2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CalculationBasis1
+ * CalculationBasis1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge9 Charge9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge15 Charge15}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ChargeTypeFormat2Choice
+ * ChargeTypeFormat2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge4 Charge4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge20 Charge20}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ChargeTypeChoice
+ * ChargeTypeChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation3
+ * ChargesInformation3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ChargeType2Choice
+ * ChargeType2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation6
+ * ChargesInformation6}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ChargeType3Choice
+ * ChargeType3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargesRecord1 ChargesRecord1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charges3 Charges3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargesRecord2 ChargesRecord2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charges4 Charges4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation1
+ * ChargesInformation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation5
+ * ChargesInformation5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation7
+ * ChargesInformation7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charges2 Charges2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge16 Charge16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargeType1 ChargeType1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge11 Charge11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge19 Charge19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge8 Charge8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge17 Charge17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge10 Charge10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalCharges2 TotalCharges2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge18 Charge18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalCharges3 TotalCharges3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ChargeType2FormatChoice
+ * ChargeType2FormatChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charges1 Charges1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ChargeTypeFormat3Choice
+ * ChargeTypeFormat3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails2
+ * ChargesDetails2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails1
+ * ChargesDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge12 Charge12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge13 Charge13}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ChargeType1Choice
+ * ChargeType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AmountRate1Choice
+ * AmountRate1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge21 Charge21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalCharges4 TotalCharges4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation2
+ * ChargesInformation2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargesInformation4
+ * ChargesInformation4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge23 Charge23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalCharges5 TotalCharges5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge22 Charge22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charges5 Charges5}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ChargePaymentMethod1Choice
+ * ChargePaymentMethod1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge24 Charge24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails3
+ * ChargesDetails3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ChargesType1Choice
+ * ChargesType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge25 Charge25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargesDetails4
+ * ChargesDetails4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge26 Charge26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge27 Charge27}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Charge29 Charge29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee3 Fee3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee2 Fee2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee1 Fee1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -472,8 +471,8 @@ public class Charges extends Adjustment {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected ChargeTypeCode chargeType;
 	/**
-	 * Type of service for which a charge is asked or paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -660,8 +659,8 @@ public class Charges extends Adjustment {
 					ChargeType1Choice.mmProprietary, Charge21.mmChargeType, Charge23.mmType, Charge22.mmType, Charges5.mmType, ChargesDetails3.mmType, ChargesType1Choice.mmType, ChargesType1Choice.mmOtherChargesType,
 					ChargesDetails4.mmChargesType, Charge26.mmType, ChargeType4Choice.mmCode, ChargeType4Choice.mmProprietary, Charge27.mmType, Charge29.mmType, ChargeType5Choice.mmCode, ChargeType5Choice.mmProprietary, Fee3.mmType,
 					Fee2.mmType, Fee1.mmType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChargeType";
 			definition = "Type of service for which a charge is asked or paid.";
@@ -680,8 +679,8 @@ public class Charges extends Adjustment {
 	};
 	protected CalculationBasisCode calculationBasis;
 	/**
-	 * Calculation basis for the charge or fee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -726,8 +725,8 @@ public class Charges extends Adjustment {
 	public static final MMBusinessAttribute mmCalculationBasis = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CalculationBasis1.mmStructured, CalculationBasis1.mmAdditionalInformation, Charge9.mmCalculationBasis, Charge15.mmCalculationBasis, Charge15.mmExtendedCalculationBasis);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationBasis";
 			definition = "Calculation basis for the charge or fee.";
@@ -746,9 +745,8 @@ public class Charges extends Adjustment {
 	};
 	protected ChargeBearerTypeCode bearerType;
 	/**
-	 * Specifies which party/parties will bear the charges associated with the
-	 * processing of the payment transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1119,8 +1117,8 @@ public class Charges extends Adjustment {
 					Charge29.mmChargeBearer, PaymentInstruction21.mmChargeBearer, DirectDebitTransactionInformation21.mmChargeBearer, PaymentTransaction81.mmChargeBearer, RequestedModification6.mmChargeBearer,
 					PaymentInstruction23.mmChargeBearer, PaymentTransaction76.mmChargeBearer, PaymentInstruction22.mmChargeBearer, PaymentTransaction77.mmChargeBearer, DirectDebitTransactionInformation22.mmChargeBearer,
 					PaymentComplementaryInformation6.mmChargeBearer);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BearerType";
 			definition = "Specifies which party/parties will bear the charges associated with the processing of the payment transaction.";
@@ -1139,8 +1137,8 @@ public class Charges extends Adjustment {
 	};
 	protected List<com.tools20022.repository.entity.CashAccount> chargesDebitAccount;
 	/**
-	 * Account from which a charge is debited.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1229,8 +1227,8 @@ public class Charges extends Adjustment {
 					PaymentInstruction6.mmChargesAccount, PaymentInstruction9.mmChargesAccount, PaymentInstructionInformation2.mmChargesAccount, PaymentInstructionInformation4.mmChargesAccount, PaymentInstruction7.mmChargesAccount,
 					PaymentInstruction10.mmChargesAccount, PaymentInstruction16.mmChargesAccount, PaymentInstruction15.mmChargesAccount, PaymentInstruction18.mmChargesAccount, PaymentInstruction20.mmChargesAccount,
 					PaymentInstruction21.mmChargesAccount, PaymentInstruction22.mmChargesAccount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChargesDebitAccount";
 			definition = "Account from which a charge is debited.";
@@ -1242,8 +1240,8 @@ public class Charges extends Adjustment {
 	};
 	protected CashEntry cashEntry;
 	/**
-	 * Entry which contains the charges.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1275,8 +1273,8 @@ public class Charges extends Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmCashEntry = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashEntry";
 			definition = "Entry which contains the charges.";
@@ -1289,8 +1287,8 @@ public class Charges extends Adjustment {
 	};
 	protected DebitCreditCode creditDebitIndicator;
 	/**
-	 * Indicates whether a charge is a credit or a debit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1330,8 +1328,8 @@ public class Charges extends Adjustment {
 	public static final MMBusinessAttribute mmCreditDebitIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ChargesInformation6.mmCreditDebitIndicator, ChargesRecord1.mmCreditDebitIndicator, ChargesRecord2.mmCreditDebitIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether a charge is a credit or a debit.";
@@ -1350,9 +1348,8 @@ public class Charges extends Adjustment {
 	};
 	protected CurrencyAndAmount maximumAmount;
 	/**
-	 * Maximum amount of money asked or paid for the charge for example
-	 * depending on the type of investors.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1379,8 +1376,8 @@ public class Charges extends Adjustment {
 	 */
 	public static final MMBusinessAttribute mmMaximumAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumAmount";
 			definition = "Maximum amount of money asked or paid for the charge for example depending on the type of investors.";
@@ -1399,8 +1396,8 @@ public class Charges extends Adjustment {
 	};
 	protected InvestmentFundTransaction investmentFundTransaction;
 	/**
-	 * Investment fund transaction for which charges are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1434,8 +1431,8 @@ public class Charges extends Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentFundTransaction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFundTransaction";
 			definition = "Investment fund transaction for which charges are specified.";
@@ -1448,8 +1445,8 @@ public class Charges extends Adjustment {
 	};
 	protected LineItem logisticsChargeLineItem;
 	/**
-	 * Specifies the line item to which the logistics charge applies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1481,8 +1478,8 @@ public class Charges extends Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmLogisticsChargeLineItem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LogisticsChargeLineItem";
 			definition = "Specifies the line item to which the logistics charge applies.";
@@ -1495,8 +1492,8 @@ public class Charges extends Adjustment {
 	};
 	protected Transport transport;
 	/**
-	 * Specifies the transport process to which the charges apply.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1529,8 +1526,8 @@ public class Charges extends Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmTransport = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Transport";
 			definition = "Specifies the transport process to which the charges apply.";
@@ -1543,8 +1540,8 @@ public class Charges extends Adjustment {
 	};
 	protected AccountService services;
 	/**
-	 * Account services for which account administration charges are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1578,8 +1575,8 @@ public class Charges extends Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmServices = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Services";
 			definition = "Account services for which account administration charges are specified.";
@@ -1592,8 +1589,8 @@ public class Charges extends Adjustment {
 	};
 	protected Undertaking relatedUndertaking;
 	/**
-	 * Undertaking for which charges are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1625,8 +1622,8 @@ public class Charges extends Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedUndertaking = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedUndertaking";
 			definition = "Undertaking for which charges are specified.";
@@ -1639,8 +1636,8 @@ public class Charges extends Adjustment {
 	};
 	protected LineItem lineItem;
 	/**
-	 * Line item for which charges are specified
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1671,8 +1668,8 @@ public class Charges extends Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmLineItem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LineItem";
 			definition = "Line item for which charges are specified";
@@ -1685,8 +1682,8 @@ public class Charges extends Adjustment {
 	};
 	protected LineItem netPriceChargeLineItem;
 	/**
-	 * Specifies the line item to which the net price charge applies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1718,8 +1715,8 @@ public class Charges extends Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmNetPriceChargeLineItem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetPriceChargeLineItem";
 			definition = "Specifies the line item to which the net price charge applies.";
@@ -1732,8 +1729,8 @@ public class Charges extends Adjustment {
 	};
 	protected CurrencyAndAmount baseAmount;
 	/**
-	 * Amount on which the charges are calculated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1758,8 +1755,8 @@ public class Charges extends Adjustment {
 	 */
 	public static final MMBusinessAttribute mmBaseAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BaseAmount";
 			definition = "Amount on which the charges are calculated.";
@@ -1778,9 +1775,8 @@ public class Charges extends Adjustment {
 	};
 	protected PercentageRate maximumRate;
 	/**
-	 * Maximum rate used to calculate the amount of the charge or fee for
-	 * example depending on the type of investors.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1807,8 +1803,8 @@ public class Charges extends Adjustment {
 	 */
 	public static final MMBusinessAttribute mmMaximumRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumRate";
 			definition = "Maximum rate used to calculate the amount of the charge or fee for example depending on the type of investors.";
@@ -1827,9 +1823,8 @@ public class Charges extends Adjustment {
 	};
 	protected PercentageRate minimumRate;
 	/**
-	 * Minimum rate used to calculate the amount of the charge or fee for
-	 * example depending on the type of investors.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1856,8 +1851,8 @@ public class Charges extends Adjustment {
 	 */
 	public static final MMBusinessAttribute mmMinimumRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumRate";
 			definition = "Minimum rate used to calculate the amount of the charge or fee for example depending on the type of investors.";
@@ -1876,9 +1871,8 @@ public class Charges extends Adjustment {
 	};
 	protected CurrencyAndAmount minimumAmount;
 	/**
-	 * Minimum amount of money asked or paid for the charge for example
-	 * depending on the type of investors.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1905,8 +1899,8 @@ public class Charges extends Adjustment {
 	 */
 	public static final MMBusinessAttribute mmMinimumAmount = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumAmount";
 			definition = "Minimum amount of money asked or paid for the charge for example depending on the type of investors.";
@@ -1925,8 +1919,8 @@ public class Charges extends Adjustment {
 	};
 	protected List<com.tools20022.repository.entity.InterestCalculation> relatedInterest;
 	/**
-	 * Interest on which charges are applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1958,8 +1952,8 @@ public class Charges extends Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInterest";
 			definition = "Interest on which charges are applied.";
@@ -1971,8 +1965,8 @@ public class Charges extends Adjustment {
 	};
 	protected ChargePaymentMethodCode chargePaymentMethod;
 	/**
-	 * Specifies how charges are paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2028,8 +2022,8 @@ public class Charges extends Adjustment {
 		{
 			derivation_lazy = () -> Arrays.asList(Transfer27.mmTransferExpensesPaymentType, Transfer28.mmTransferExpensesPaymentType, Transfer29.mmTransferExpensesPaymentType, ChargePaymentMethod1Choice.mmCode,
 					ChargePaymentMethod1Choice.mmProprietary, Transfer31.mmTransferExpensesPaymentType, Transfer30.mmTransferExpensesPaymentType, Transfer33.mmTransferExpensesPaymentType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChargePaymentMethod";
 			definition = "Specifies how charges are paid.";
@@ -2050,7 +2044,7 @@ public class Charges extends Adjustment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Charges";
 				definition = "Amount of money associated with a service.";
@@ -2108,159 +2102,179 @@ public class Charges extends Adjustment {
 		return chargeType;
 	}
 
-	public void setChargeType(ChargeTypeCode chargeType) {
-		this.chargeType = chargeType;
+	public Charges setChargeType(ChargeTypeCode chargeType) {
+		this.chargeType = Objects.requireNonNull(chargeType);
+		return this;
 	}
 
 	public CalculationBasisCode getCalculationBasis() {
 		return calculationBasis;
 	}
 
-	public void setCalculationBasis(CalculationBasisCode calculationBasis) {
-		this.calculationBasis = calculationBasis;
+	public Charges setCalculationBasis(CalculationBasisCode calculationBasis) {
+		this.calculationBasis = Objects.requireNonNull(calculationBasis);
+		return this;
 	}
 
 	public ChargeBearerTypeCode getBearerType() {
 		return bearerType;
 	}
 
-	public void setBearerType(ChargeBearerTypeCode bearerType) {
-		this.bearerType = bearerType;
+	public Charges setBearerType(ChargeBearerTypeCode bearerType) {
+		this.bearerType = Objects.requireNonNull(bearerType);
+		return this;
 	}
 
 	public List<CashAccount> getChargesDebitAccount() {
-		return chargesDebitAccount;
+		return chargesDebitAccount == null ? chargesDebitAccount = new ArrayList<>() : chargesDebitAccount;
 	}
 
-	public void setChargesDebitAccount(List<com.tools20022.repository.entity.CashAccount> chargesDebitAccount) {
-		this.chargesDebitAccount = chargesDebitAccount;
+	public Charges setChargesDebitAccount(List<com.tools20022.repository.entity.CashAccount> chargesDebitAccount) {
+		this.chargesDebitAccount = Objects.requireNonNull(chargesDebitAccount);
+		return this;
 	}
 
 	public CashEntry getCashEntry() {
 		return cashEntry;
 	}
 
-	public void setCashEntry(com.tools20022.repository.entity.CashEntry cashEntry) {
-		this.cashEntry = cashEntry;
+	public Charges setCashEntry(com.tools20022.repository.entity.CashEntry cashEntry) {
+		this.cashEntry = Objects.requireNonNull(cashEntry);
+		return this;
 	}
 
 	public DebitCreditCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
 
-	public void setCreditDebitIndicator(DebitCreditCode creditDebitIndicator) {
-		this.creditDebitIndicator = creditDebitIndicator;
+	public Charges setCreditDebitIndicator(DebitCreditCode creditDebitIndicator) {
+		this.creditDebitIndicator = Objects.requireNonNull(creditDebitIndicator);
+		return this;
 	}
 
 	public CurrencyAndAmount getMaximumAmount() {
 		return maximumAmount;
 	}
 
-	public void setMaximumAmount(CurrencyAndAmount maximumAmount) {
-		this.maximumAmount = maximumAmount;
+	public Charges setMaximumAmount(CurrencyAndAmount maximumAmount) {
+		this.maximumAmount = Objects.requireNonNull(maximumAmount);
+		return this;
 	}
 
-	public InvestmentFundTransaction getInvestmentFundTransaction() {
-		return investmentFundTransaction;
+	public Optional<InvestmentFundTransaction> getInvestmentFundTransaction() {
+		return investmentFundTransaction == null ? Optional.empty() : Optional.of(investmentFundTransaction);
 	}
 
-	public void setInvestmentFundTransaction(com.tools20022.repository.entity.InvestmentFundTransaction investmentFundTransaction) {
+	public Charges setInvestmentFundTransaction(com.tools20022.repository.entity.InvestmentFundTransaction investmentFundTransaction) {
 		this.investmentFundTransaction = investmentFundTransaction;
+		return this;
 	}
 
-	public LineItem getLogisticsChargeLineItem() {
-		return logisticsChargeLineItem;
+	public Optional<LineItem> getLogisticsChargeLineItem() {
+		return logisticsChargeLineItem == null ? Optional.empty() : Optional.of(logisticsChargeLineItem);
 	}
 
-	public void setLogisticsChargeLineItem(com.tools20022.repository.entity.LineItem logisticsChargeLineItem) {
+	public Charges setLogisticsChargeLineItem(com.tools20022.repository.entity.LineItem logisticsChargeLineItem) {
 		this.logisticsChargeLineItem = logisticsChargeLineItem;
+		return this;
 	}
 
-	public Transport getTransport() {
-		return transport;
+	public Optional<Transport> getTransport() {
+		return transport == null ? Optional.empty() : Optional.of(transport);
 	}
 
-	public void setTransport(com.tools20022.repository.entity.Transport transport) {
+	public Charges setTransport(com.tools20022.repository.entity.Transport transport) {
 		this.transport = transport;
+		return this;
 	}
 
-	public AccountService getServices() {
-		return services;
+	public Optional<AccountService> getServices() {
+		return services == null ? Optional.empty() : Optional.of(services);
 	}
 
-	public void setServices(com.tools20022.repository.entity.AccountService services) {
+	public Charges setServices(com.tools20022.repository.entity.AccountService services) {
 		this.services = services;
+		return this;
 	}
 
 	public Undertaking getRelatedUndertaking() {
 		return relatedUndertaking;
 	}
 
-	public void setRelatedUndertaking(com.tools20022.repository.entity.Undertaking relatedUndertaking) {
-		this.relatedUndertaking = relatedUndertaking;
+	public Charges setRelatedUndertaking(com.tools20022.repository.entity.Undertaking relatedUndertaking) {
+		this.relatedUndertaking = Objects.requireNonNull(relatedUndertaking);
+		return this;
 	}
 
 	public LineItem getLineItem() {
 		return lineItem;
 	}
 
-	public void setLineItem(com.tools20022.repository.entity.LineItem lineItem) {
-		this.lineItem = lineItem;
+	public Charges setLineItem(com.tools20022.repository.entity.LineItem lineItem) {
+		this.lineItem = Objects.requireNonNull(lineItem);
+		return this;
 	}
 
-	public LineItem getNetPriceChargeLineItem() {
-		return netPriceChargeLineItem;
+	public Optional<LineItem> getNetPriceChargeLineItem() {
+		return netPriceChargeLineItem == null ? Optional.empty() : Optional.of(netPriceChargeLineItem);
 	}
 
-	public void setNetPriceChargeLineItem(com.tools20022.repository.entity.LineItem netPriceChargeLineItem) {
+	public Charges setNetPriceChargeLineItem(com.tools20022.repository.entity.LineItem netPriceChargeLineItem) {
 		this.netPriceChargeLineItem = netPriceChargeLineItem;
+		return this;
 	}
 
 	public CurrencyAndAmount getBaseAmount() {
 		return baseAmount;
 	}
 
-	public void setBaseAmount(CurrencyAndAmount baseAmount) {
-		this.baseAmount = baseAmount;
+	public Charges setBaseAmount(CurrencyAndAmount baseAmount) {
+		this.baseAmount = Objects.requireNonNull(baseAmount);
+		return this;
 	}
 
 	public PercentageRate getMaximumRate() {
 		return maximumRate;
 	}
 
-	public void setMaximumRate(PercentageRate maximumRate) {
-		this.maximumRate = maximumRate;
+	public Charges setMaximumRate(PercentageRate maximumRate) {
+		this.maximumRate = Objects.requireNonNull(maximumRate);
+		return this;
 	}
 
 	public PercentageRate getMinimumRate() {
 		return minimumRate;
 	}
 
-	public void setMinimumRate(PercentageRate minimumRate) {
-		this.minimumRate = minimumRate;
+	public Charges setMinimumRate(PercentageRate minimumRate) {
+		this.minimumRate = Objects.requireNonNull(minimumRate);
+		return this;
 	}
 
 	public CurrencyAndAmount getMinimumAmount() {
 		return minimumAmount;
 	}
 
-	public void setMinimumAmount(CurrencyAndAmount minimumAmount) {
-		this.minimumAmount = minimumAmount;
+	public Charges setMinimumAmount(CurrencyAndAmount minimumAmount) {
+		this.minimumAmount = Objects.requireNonNull(minimumAmount);
+		return this;
 	}
 
 	public List<InterestCalculation> getRelatedInterest() {
-		return relatedInterest;
+		return relatedInterest == null ? relatedInterest = new ArrayList<>() : relatedInterest;
 	}
 
-	public void setRelatedInterest(List<com.tools20022.repository.entity.InterestCalculation> relatedInterest) {
-		this.relatedInterest = relatedInterest;
+	public Charges setRelatedInterest(List<com.tools20022.repository.entity.InterestCalculation> relatedInterest) {
+		this.relatedInterest = Objects.requireNonNull(relatedInterest);
+		return this;
 	}
 
 	public ChargePaymentMethodCode getChargePaymentMethod() {
 		return chargePaymentMethod;
 	}
 
-	public void setChargePaymentMethod(ChargePaymentMethodCode chargePaymentMethod) {
-		this.chargePaymentMethod = chargePaymentMethod;
+	public Charges setChargePaymentMethod(ChargePaymentMethodCode chargePaymentMethod) {
+		this.chargePaymentMethod = Objects.requireNonNull(chargePaymentMethod);
+		return this;
 	}
 }

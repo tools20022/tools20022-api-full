@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InterestRateDerivative5", propOrder = {"underlyingType", "underlyingBond", "swaptionNotionalCurrency", "underlyingSwapMaturityDate", "inflationIndex", "interestRateReference"})
 public class InterestRateDerivative5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UndrlygTp", required = true)
 	protected InterestRateDerivative2Choice underlyingType;
 	/**
-	 * Specific details on the underlying type of the interest rate derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -126,7 +129,7 @@ public class InterestRateDerivative5 {
 	public static final MMMessageAssociationEnd mmUnderlyingType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
-			componentContext_lazy = () -> InterestRateDerivative5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRateDerivative5.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,11 +141,11 @@ public class InterestRateDerivative5 {
 			type_lazy = () -> InterestRateDerivative2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygBd")
 	protected BondDerivative2 underlyingBond;
 	/**
-	 * Populated when the underlying type is a bond or a bond future. Details
-	 * the issuer and maturity date of the bond.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -175,7 +178,7 @@ public class InterestRateDerivative5 {
 	public static final MMMessageAssociationEnd mmUnderlyingBond = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Debt.mmObject();
-			componentContext_lazy = () -> InterestRateDerivative5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRateDerivative5.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygBd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,10 +190,11 @@ public class InterestRateDerivative5 {
 			type_lazy = () -> com.tools20022.repository.msg.BondDerivative2.mmObject();
 		}
 	};
+	@XmlElement(name = "SwptnNtnlCcy")
 	protected ActiveCurrencyCode swaptionNotionalCurrency;
 	/**
-	 * Notional currency of a swaption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,7 +222,7 @@ public class InterestRateDerivative5 {
 	 */
 	public static final MMMessageAttribute mmSwaptionNotionalCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InterestRateDerivative5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRateDerivative5.mmObject();
 			isDerived = false;
 			xmlTag = "SwptnNtnlCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,11 +233,11 @@ public class InterestRateDerivative5 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygSwpMtrtyDt")
 	protected ISODate underlyingSwapMaturityDate;
 	/**
-	 * Maturity date of the underlying swap, populated for swaptions, futures on
-	 * swaps and forwards on a swap only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -268,7 +272,7 @@ public class InterestRateDerivative5 {
 	public static final MMMessageAttribute mmUnderlyingSwapMaturityDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
-			componentContext_lazy = () -> InterestRateDerivative5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRateDerivative5.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygSwpMtrtyDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,10 +283,11 @@ public class InterestRateDerivative5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "InfltnIndx")
 	protected InflationIndex1Choice inflationIndex;
 	/**
-	 * Populated to define the inflation index.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -315,7 +320,7 @@ public class InterestRateDerivative5 {
 	public static final MMMessageAssociationEnd mmInflationIndex = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmInterest;
-			componentContext_lazy = () -> InterestRateDerivative5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRateDerivative5.mmObject();
 			isDerived = false;
 			xmlTag = "InfltnIndx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -327,11 +332,11 @@ public class InterestRateDerivative5 {
 			type_lazy = () -> InflationIndex1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstRateRef", required = true)
 	protected FloatingInterestRate8 interestRateReference;
 	/**
-	 * Provides the interest rate against a reference rate and term in number of
-	 * days, weeks, months or years.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -365,7 +370,7 @@ public class InterestRateDerivative5 {
 	public static final MMMessageAssociationEnd mmInterestRateReference = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
-			componentContext_lazy = () -> InterestRateDerivative5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InterestRateDerivative5.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstRateRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -381,10 +386,11 @@ public class InterestRateDerivative5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InterestRateDerivative5.mmUnderlyingType, InterestRateDerivative5.mmUnderlyingBond, InterestRateDerivative5.mmSwaptionNotionalCurrency,
-						InterestRateDerivative5.mmUnderlyingSwapMaturityDate, InterestRateDerivative5.mmInflationIndex, InterestRateDerivative5.mmInterestRateReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InterestRateDerivative5.mmUnderlyingType, com.tools20022.repository.msg.InterestRateDerivative5.mmUnderlyingBond,
+						com.tools20022.repository.msg.InterestRateDerivative5.mmSwaptionNotionalCurrency, com.tools20022.repository.msg.InterestRateDerivative5.mmUnderlyingSwapMaturityDate,
+						com.tools20022.repository.msg.InterestRateDerivative5.mmInflationIndex, com.tools20022.repository.msg.InterestRateDerivative5.mmInterestRateReference);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestRateDerivative5";
 				definition = "Specifies the interest rate derivative specific elements for interest rate derivatives as defined in the local regulation.";
@@ -393,57 +399,57 @@ public class InterestRateDerivative5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UndrlygTp", required = true)
 	public InterestRateDerivative2Choice getUnderlyingType() {
 		return underlyingType;
 	}
 
-	public void setUnderlyingType(InterestRateDerivative2Choice underlyingType) {
-		this.underlyingType = underlyingType;
+	public InterestRateDerivative5 setUnderlyingType(InterestRateDerivative2Choice underlyingType) {
+		this.underlyingType = Objects.requireNonNull(underlyingType);
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygBd")
-	public BondDerivative2 getUnderlyingBond() {
-		return underlyingBond;
+	public Optional<BondDerivative2> getUnderlyingBond() {
+		return underlyingBond == null ? Optional.empty() : Optional.of(underlyingBond);
 	}
 
-	public void setUnderlyingBond(com.tools20022.repository.msg.BondDerivative2 underlyingBond) {
+	public InterestRateDerivative5 setUnderlyingBond(com.tools20022.repository.msg.BondDerivative2 underlyingBond) {
 		this.underlyingBond = underlyingBond;
+		return this;
 	}
 
-	@XmlElement(name = "SwptnNtnlCcy")
-	public ActiveCurrencyCode getSwaptionNotionalCurrency() {
-		return swaptionNotionalCurrency;
+	public Optional<ActiveCurrencyCode> getSwaptionNotionalCurrency() {
+		return swaptionNotionalCurrency == null ? Optional.empty() : Optional.of(swaptionNotionalCurrency);
 	}
 
-	public void setSwaptionNotionalCurrency(ActiveCurrencyCode swaptionNotionalCurrency) {
+	public InterestRateDerivative5 setSwaptionNotionalCurrency(ActiveCurrencyCode swaptionNotionalCurrency) {
 		this.swaptionNotionalCurrency = swaptionNotionalCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygSwpMtrtyDt")
-	public ISODate getUnderlyingSwapMaturityDate() {
-		return underlyingSwapMaturityDate;
+	public Optional<ISODate> getUnderlyingSwapMaturityDate() {
+		return underlyingSwapMaturityDate == null ? Optional.empty() : Optional.of(underlyingSwapMaturityDate);
 	}
 
-	public void setUnderlyingSwapMaturityDate(ISODate underlyingSwapMaturityDate) {
+	public InterestRateDerivative5 setUnderlyingSwapMaturityDate(ISODate underlyingSwapMaturityDate) {
 		this.underlyingSwapMaturityDate = underlyingSwapMaturityDate;
+		return this;
 	}
 
-	@XmlElement(name = "InfltnIndx")
-	public InflationIndex1Choice getInflationIndex() {
-		return inflationIndex;
+	public Optional<InflationIndex1Choice> getInflationIndex() {
+		return inflationIndex == null ? Optional.empty() : Optional.of(inflationIndex);
 	}
 
-	public void setInflationIndex(InflationIndex1Choice inflationIndex) {
+	public InterestRateDerivative5 setInflationIndex(InflationIndex1Choice inflationIndex) {
 		this.inflationIndex = inflationIndex;
+		return this;
 	}
 
-	@XmlElement(name = "IntrstRateRef", required = true)
 	public FloatingInterestRate8 getInterestRateReference() {
 		return interestRateReference;
 	}
 
-	public void setInterestRateReference(com.tools20022.repository.msg.FloatingInterestRate8 interestRateReference) {
-		this.interestRateReference = interestRateReference;
+	public InterestRateDerivative5 setInterestRateReference(com.tools20022.repository.msg.FloatingInterestRate8 interestRateReference) {
+		this.interestRateReference = Objects.requireNonNull(interestRateReference);
+		return this;
 	}
 }

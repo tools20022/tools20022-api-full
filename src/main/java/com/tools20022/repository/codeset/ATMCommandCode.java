@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ATMCommandCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of command performed by an ATM.
@@ -31,47 +36,43 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCommandCode#ATMBalance
+ * ATMCommandCode.ATMBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#mmATMBalance
- * ATMCommandCode.mmATMBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#ATMStatusUpdate
+ * ATMCommandCode.ATMStatusUpdate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#mmATMStatusUpdate
- * ATMCommandCode.mmATMStatusUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#ConfigurationUpdate
+ * ATMCommandCode.ConfigurationUpdate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#mmConfigurationUpdate
- * ATMCommandCode.mmConfigurationUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#CountersInquiry
+ * ATMCommandCode.CountersInquiry}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCommandCode#Disconnect
+ * ATMCommandCode.Disconnect}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCommandCode#SendMessage
+ * ATMCommandCode.SendMessage}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#mmCountersInquiry
- * ATMCommandCode.mmCountersInquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#KeyActivation
+ * ATMCommandCode.KeyActivation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#mmDisconnect
- * ATMCommandCode.mmDisconnect}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#KeyDeactivation
+ * ATMCommandCode.KeyDeactivation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCommandCode#KeyDownload
+ * ATMCommandCode.KeyDownload}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCommandCode#KeyRemove
+ * ATMCommandCode.KeyRemove}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#mmSendMessage
- * ATMCommandCode.mmSendMessage}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#SecurityDeviceConfigurationUpdate
+ * ATMCommandCode.SecurityDeviceConfigurationUpdate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#mmKeyActivation
- * ATMCommandCode.mmKeyActivation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#SecurityDeviceSchemeUpdate
+ * ATMCommandCode.SecurityDeviceSchemeUpdate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#mmKeyDeactivation
- * ATMCommandCode.mmKeyDeactivation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#SecurityDeviceStatusUpdate
+ * ATMCommandCode.SecurityDeviceStatusUpdate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#mmKeyDownload
- * ATMCommandCode.mmKeyDownload}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCommandCode#mmKeyRemove
- * ATMCommandCode.mmKeyRemove}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#mmSecurityDeviceConfigurationUpdate
- * ATMCommandCode.mmSecurityDeviceConfigurationUpdate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#mmSecurityDeviceSchemeUpdate
- * ATMCommandCode.mmSecurityDeviceSchemeUpdate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#mmSecurityDeviceStatusUpdate
- * ATMCommandCode.mmSecurityDeviceStatusUpdate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#mmCountersReport
- * ATMCommandCode.mmCountersReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandCode#CountersReport
+ * ATMCommandCode.CountersReport}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -92,8 +93,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -104,7 +105,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of command performed by an ATM."</li>
  * </ul>
  */
-public class ATMCommandCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ATMCommandCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -129,12 +131,12 @@ public class ATMCommandCode {
 	 * "Provide the ATM counters, resetting those that are applicable."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmATMBalance = new MMCode() {
+	public static final ATMCommandCode ATMBalance = new ATMCommandCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMBalance";
 			definition = "Provide the ATM counters, resetting those that are applicable.";
-			owner_lazy = () -> ATMCommandCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandCode.mmObject();
 			codeName = "ABAL";
 		}
 	};
@@ -159,12 +161,12 @@ public class ATMCommandCode {
 	 * definition} = "Status of the ATM required by the ATM manager."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmATMStatusUpdate = new MMCode() {
+	public static final ATMCommandCode ATMStatusUpdate = new ATMCommandCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMStatusUpdate";
 			definition = "Status of the ATM required by the ATM manager.";
-			owner_lazy = () -> ATMCommandCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandCode.mmObject();
 			codeName = "ASTS";
 		}
 	};
@@ -189,12 +191,12 @@ public class ATMCommandCode {
 	 * definition} = "Update the ATM configuration parameters."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConfigurationUpdate = new MMCode() {
+	public static final ATMCommandCode ConfigurationUpdate = new ATMCommandCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfigurationUpdate";
 			definition = "Update the ATM configuration parameters.";
-			owner_lazy = () -> ATMCommandCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandCode.mmObject();
 			codeName = "CFGT";
 		}
 	};
@@ -219,12 +221,12 @@ public class ATMCommandCode {
 	 * definition} = "Request the value of the ATM counters."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCountersInquiry = new MMCode() {
+	public static final ATMCommandCode CountersInquiry = new ATMCommandCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersInquiry";
 			definition = "Request the value of the ATM counters.";
-			owner_lazy = () -> ATMCommandCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandCode.mmObject();
 			codeName = "CCNT";
 		}
 	};
@@ -249,12 +251,12 @@ public class ATMCommandCode {
 	 * definition} = "Perform a disconnection followed by a reconnection."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisconnect = new MMCode() {
+	public static final ATMCommandCode Disconnect = new ATMCommandCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disconnect";
 			definition = "Perform a disconnection followed by a reconnection.";
-			owner_lazy = () -> ATMCommandCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandCode.mmObject();
 			codeName = "DISC";
 		}
 	};
@@ -279,12 +281,12 @@ public class ATMCommandCode {
 	 * definition} = "Send a specific message to initiate a process."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSendMessage = new MMCode() {
+	public static final ATMCommandCode SendMessage = new ATMCommandCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendMessage";
 			definition = "Send a specific message to initiate a process.";
-			owner_lazy = () -> ATMCommandCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandCode.mmObject();
 			codeName = "SNDM";
 		}
 	};
@@ -309,12 +311,12 @@ public class ATMCommandCode {
 	 * definition} = "Activate cryptographic keys."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmKeyActivation = new MMCode() {
+	public static final ATMCommandCode KeyActivation = new ATMCommandCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyActivation";
 			definition = "Activate cryptographic keys.";
-			owner_lazy = () -> ATMCommandCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandCode.mmObject();
 			codeName = "KACT";
 		}
 	};
@@ -339,12 +341,12 @@ public class ATMCommandCode {
 	 * definition} = "Deactivate cryptographic keys."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmKeyDeactivation = new MMCode() {
+	public static final ATMCommandCode KeyDeactivation = new ATMCommandCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyDeactivation";
 			definition = "Deactivate cryptographic keys.";
-			owner_lazy = () -> ATMCommandCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandCode.mmObject();
 			codeName = "KDAC";
 		}
 	};
@@ -369,12 +371,12 @@ public class ATMCommandCode {
 	 * definition} = "Start a cryptographic key download."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmKeyDownload = new MMCode() {
+	public static final ATMCommandCode KeyDownload = new ATMCommandCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyDownload";
 			definition = "Start a cryptographic key download.";
-			owner_lazy = () -> ATMCommandCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandCode.mmObject();
 			codeName = "KDWL";
 		}
 	};
@@ -399,12 +401,12 @@ public class ATMCommandCode {
 	 * definition} = "Remove cryptographic keys."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmKeyRemove = new MMCode() {
+	public static final ATMCommandCode KeyRemove = new ATMCommandCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyRemove";
 			definition = "Remove cryptographic keys.";
-			owner_lazy = () -> ATMCommandCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandCode.mmObject();
 			codeName = "KRMV";
 		}
 	};
@@ -430,12 +432,12 @@ public class ATMCommandCode {
 	 * "Update the configuration of the hardware security module on the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecurityDeviceConfigurationUpdate = new MMCode() {
+	public static final ATMCommandCode SecurityDeviceConfigurationUpdate = new ATMCommandCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDeviceConfigurationUpdate";
 			definition = "Update the configuration of the hardware security module on the ATM.";
-			owner_lazy = () -> ATMCommandCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandCode.mmObject();
 			codeName = "SCFU";
 		}
 	};
@@ -461,12 +463,12 @@ public class ATMCommandCode {
 	 * "Update the security scheme of the hardware security module on the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecurityDeviceSchemeUpdate = new MMCode() {
+	public static final ATMCommandCode SecurityDeviceSchemeUpdate = new ATMCommandCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDeviceSchemeUpdate";
 			definition = "Update the security scheme of the hardware security module on the ATM.";
-			owner_lazy = () -> ATMCommandCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandCode.mmObject();
 			codeName = "SSCU";
 		}
 	};
@@ -492,12 +494,12 @@ public class ATMCommandCode {
 	 * "Update the status of the hardware security module on the ATM."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecurityDeviceStatusUpdate = new MMCode() {
+	public static final ATMCommandCode SecurityDeviceStatusUpdate = new ATMCommandCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDeviceStatusUpdate";
 			definition = "Update the status of the hardware security module on the ATM.";
-			owner_lazy = () -> ATMCommandCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandCode.mmObject();
 			codeName = "SSTU";
 		}
 	};
@@ -525,29 +527,74 @@ public class ATMCommandCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCountersReport = new MMCode() {
+	public static final ATMCommandCode CountersReport = new ATMCommandCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersReport";
 			definition = "Provide the value of the ATM counters, no reinitialisation of the counters.";
-			owner_lazy = () -> ATMCommandCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommandCode.mmObject();
 			codeName = "RPTC";
 		}
 	};
+	final static private LinkedHashMap<String, ATMCommandCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ATMCommandCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommandCode";
 				definition = "Type of command performed by an ATM.";
-				code_lazy = () -> Arrays.asList(ATMCommandCode.mmATMBalance, ATMCommandCode.mmATMStatusUpdate, ATMCommandCode.mmConfigurationUpdate, ATMCommandCode.mmCountersInquiry, ATMCommandCode.mmDisconnect,
-						ATMCommandCode.mmSendMessage, ATMCommandCode.mmKeyActivation, ATMCommandCode.mmKeyDeactivation, ATMCommandCode.mmKeyDownload, ATMCommandCode.mmKeyRemove, ATMCommandCode.mmSecurityDeviceConfigurationUpdate,
-						ATMCommandCode.mmSecurityDeviceSchemeUpdate, ATMCommandCode.mmSecurityDeviceStatusUpdate, ATMCommandCode.mmCountersReport);
 				derivation_lazy = () -> Arrays.asList(ATMCommand2Code.mmObject(), ATMCommand1Code.mmObject(), ATMCommand3Code.mmObject(), ATMCommand4Code.mmObject(), ATMCommand5Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCommandCode.ATMBalance, com.tools20022.repository.codeset.ATMCommandCode.ATMStatusUpdate,
+						com.tools20022.repository.codeset.ATMCommandCode.ConfigurationUpdate, com.tools20022.repository.codeset.ATMCommandCode.CountersInquiry, com.tools20022.repository.codeset.ATMCommandCode.Disconnect,
+						com.tools20022.repository.codeset.ATMCommandCode.SendMessage, com.tools20022.repository.codeset.ATMCommandCode.KeyActivation, com.tools20022.repository.codeset.ATMCommandCode.KeyDeactivation,
+						com.tools20022.repository.codeset.ATMCommandCode.KeyDownload, com.tools20022.repository.codeset.ATMCommandCode.KeyRemove, com.tools20022.repository.codeset.ATMCommandCode.SecurityDeviceConfigurationUpdate,
+						com.tools20022.repository.codeset.ATMCommandCode.SecurityDeviceSchemeUpdate, com.tools20022.repository.codeset.ATMCommandCode.SecurityDeviceStatusUpdate,
+						com.tools20022.repository.codeset.ATMCommandCode.CountersReport);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ATMBalance.getCodeName().get(), ATMBalance);
+		codesByName.put(ATMStatusUpdate.getCodeName().get(), ATMStatusUpdate);
+		codesByName.put(ConfigurationUpdate.getCodeName().get(), ConfigurationUpdate);
+		codesByName.put(CountersInquiry.getCodeName().get(), CountersInquiry);
+		codesByName.put(Disconnect.getCodeName().get(), Disconnect);
+		codesByName.put(SendMessage.getCodeName().get(), SendMessage);
+		codesByName.put(KeyActivation.getCodeName().get(), KeyActivation);
+		codesByName.put(KeyDeactivation.getCodeName().get(), KeyDeactivation);
+		codesByName.put(KeyDownload.getCodeName().get(), KeyDownload);
+		codesByName.put(KeyRemove.getCodeName().get(), KeyRemove);
+		codesByName.put(SecurityDeviceConfigurationUpdate.getCodeName().get(), SecurityDeviceConfigurationUpdate);
+		codesByName.put(SecurityDeviceSchemeUpdate.getCodeName().get(), SecurityDeviceSchemeUpdate);
+		codesByName.put(SecurityDeviceStatusUpdate.getCodeName().get(), SecurityDeviceStatusUpdate);
+		codesByName.put(CountersReport.getCodeName().get(), CountersReport);
+	}
+
+	public static ATMCommandCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ATMCommandCode[] values() {
+		ATMCommandCode[] values = new ATMCommandCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ATMCommandCode> {
+		@Override
+		public ATMCommandCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ATMCommandCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

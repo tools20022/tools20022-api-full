@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DateTypeCode;
+import com.tools20022.repository.codeset.DateType8Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of dates.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DateTypeCode DateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DateType8Code#mmUnknown
- * DateType8Code.mmUnknown}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DateType8Code#mmOngoing
- * DateType8Code.mmOngoing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateType8Code#Unknown
+ * DateType8Code.Unknown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DateType8Code#Ongoing
+ * DateType8Code.Ongoing}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DateTypeCode DateTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of dates."</li>
  * </ul>
  */
-public class DateType8Code extends DateTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DateType8Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,11 +85,12 @@ public class DateType8Code extends DateTypeCode {
 	 * name} = "Unknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknown = new MMCode() {
+	public static final DateType8Code Unknown = new DateType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
-			owner_lazy = () -> DateType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DateType8Code.mmObject();
+			codeName = DateTypeCode.Unknown.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,26 +109,57 @@ public class DateType8Code extends DateTypeCode {
 	 * name} = "Ongoing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOngoing = new MMCode() {
+	public static final DateType8Code Ongoing = new DateType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Ongoing";
-			owner_lazy = () -> DateType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DateType8Code.mmObject();
+			codeName = DateTypeCode.Ongoing.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DateType8Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DateType8Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("UKWN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateType8Code";
 				definition = "Specifies the type of dates.";
-				code_lazy = () -> Arrays.asList(DateType8Code.mmUnknown, DateType8Code.mmOngoing);
 				trace_lazy = () -> DateTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DateType8Code.Unknown, com.tools20022.repository.codeset.DateType8Code.Ongoing);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Unknown.getCodeName().get(), Unknown);
+		codesByName.put(Ongoing.getCodeName().get(), Ongoing);
+	}
+
+	public static DateType8Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DateType8Code[] values() {
+		DateType8Code[] values = new DateType8Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DateType8Code> {
+		@Override
+		public DateType8Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DateType8Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

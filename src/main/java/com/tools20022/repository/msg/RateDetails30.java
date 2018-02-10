@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.datatype.RestrictedFINActiveCurrencyAnd13DecimalAmount;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -96,8 +95,34 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGrossDividendRate2Rule#forRateDetails30
+ * ConstraintGrossDividendRate2Rule.forRateDetails30}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNetDividendRate1Rule#forRateDetails30
+ * ConstraintNetDividendRate1Rule.forRateDetails30}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTaxCreditRate1Rule#forRateDetails30
+ * ConstraintTaxCreditRate1Rule.forRateDetails30}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGrossDividendRate3Rule#forRateDetails30
+ * ConstraintGrossDividendRate3Rule.forRateDetails30}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule#forRateDetails30
+ * ConstraintNetDividendRate2Rule.forRateDetails30}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTaxCreditRate2Rule#forRateDetails30
+ * ConstraintTaxCreditRate2Rule.forRateDetails30}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSecondLevelTax1Rule#forRateDetails30
+ * ConstraintSecondLevelTax1Rule.forRateDetails30}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -109,16 +134,17 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides information about the rates related to securities movement."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RateDetails30", propOrder = {"additionalTax", "chargesFees", "fiscalStamp", "grossDividendRate", "earlySolicitationFeeRate", "thirdPartyIncentiveRate", "interestRateUsedForPayment", "netDividendRate", "nonResidentRate",
 		"applicableRate", "solicitationFeeRate", "taxCreditRate", "withholdingTaxRate", "secondLevelTax", "taxOnIncome", "taxOnProfits", "taxReclaimRate", "equalisationRate"})
 public class RateDetails30 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AddtlTax")
 	protected RateAndAmountFormat43Choice additionalTax;
 	/**
-	 * Rate used for additional tax that cannot be categorised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -150,7 +176,7 @@ public class RateDetails30 {
 	public static final MMMessageAssociationEnd mmAdditionalTax = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionDistribution.mmTaxVoucher;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlTax";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,11 +188,11 @@ public class RateDetails30 {
 			type_lazy = () -> RateAndAmountFormat43Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgsFees")
 	protected RateAndAmountFormat43Choice chargesFees;
 	/**
-	 * Rate used to calculate the amount of the charges/fees that cannot be
-	 * categorised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -200,7 +226,7 @@ public class RateDetails30 {
 	public static final MMMessageAssociationEnd mmChargesFees = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmCorporateActionCharge;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsFees";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,10 +238,11 @@ public class RateDetails30 {
 			type_lazy = () -> RateAndAmountFormat43Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FsclStmp")
 	protected PercentageRate fiscalStamp;
 	/**
-	 * Percentage of fiscal tax to apply.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -247,7 +274,7 @@ public class RateDetails30 {
 	public static final MMMessageAttribute mmFiscalStamp = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "FsclStmp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,11 +285,11 @@ public class RateDetails30 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "GrssDvddRate")
 	protected List<GrossDividendRateFormat24Choice> grossDividendRate;
 	/**
-	 * Cash dividend amount per equity before deductions or allowances have been
-	 * made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -296,7 +323,7 @@ public class RateDetails30 {
 	public static final MMMessageAssociationEnd mmGrossDividendRate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmGrossDividend;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "GrssDvddRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -307,11 +334,11 @@ public class RateDetails30 {
 			type_lazy = () -> GrossDividendRateFormat24Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "EarlySlctnFeeRate")
 	protected SolicitationFeeRateFormat9Choice earlySolicitationFeeRate;
 	/**
-	 * Cash rate made available, as an incentive, in addition to the
-	 * solicitation fee, in order to encourage early participation in an offer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -346,7 +373,7 @@ public class RateDetails30 {
 	public static final MMMessageAttribute mmEarlySolicitationFeeRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionFeesAndCharges.mmEarlySolicitationFeeRate;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "EarlySlctnFeeRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -357,12 +384,11 @@ public class RateDetails30 {
 			complexType_lazy = () -> SolicitationFeeRateFormat9Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ThrdPtyIncntivRate")
 	protected RateAndAmountFormat43Choice thirdPartyIncentiveRate;
 	/**
-	 * Cash rate made available in an event in order to encourage participation
-	 * in the offer. As information, Payment is made to a third party who has
-	 * solicited an entity to take part in the offer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -397,7 +423,7 @@ public class RateDetails30 {
 	public static final MMMessageAttribute mmThirdPartyIncentiveRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashProceedsDefinition.mmCashIncentiveRate;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "ThrdPtyIncntivRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -408,11 +434,11 @@ public class RateDetails30 {
 			complexType_lazy = () -> RateAndAmountFormat43Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstRateUsdForPmt")
 	protected List<InterestRateUsedForPaymentFormat9Choice> interestRateUsedForPayment;
 	/**
-	 * Actual interest rate used for the payment of the interest for the
-	 * specified interest period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -446,7 +472,7 @@ public class RateDetails30 {
 	public static final MMMessageAssociationEnd mmInterestRateUsedForPayment = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstRateUsdForPmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -457,11 +483,11 @@ public class RateDetails30 {
 			type_lazy = () -> InterestRateUsedForPaymentFormat9Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NetDvddRate")
 	protected List<NetDividendRateFormat26Choice> netDividendRate;
 	/**
-	 * Cash dividend amount per equity after deductions or allowances have been
-	 * made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -495,7 +521,7 @@ public class RateDetails30 {
 	public static final MMMessageAssociationEnd mmNetDividendRate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmNetDividend;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "NetDvddRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -506,10 +532,11 @@ public class RateDetails30 {
 			type_lazy = () -> NetDividendRateFormat26Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NonResdtRate")
 	protected RateAndAmountFormat43Choice nonResidentRate;
 	/**
-	 * Rate per share to which a non-resident is entitled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -541,7 +568,7 @@ public class RateDetails30 {
 	public static final MMMessageAssociationEnd mmNonResidentRate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmRate;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "NonResdtRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -553,11 +580,11 @@ public class RateDetails30 {
 			type_lazy = () -> RateAndAmountFormat43Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AplblRate")
 	protected PercentageRate applicableRate;
 	/**
-	 * Rate applicable to the event announced, for example, redemption rate for
-	 * a redemption event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -592,7 +619,7 @@ public class RateDetails30 {
 	public static final MMMessageAttribute mmApplicableRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmApplicableRate;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "AplblRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -603,12 +630,11 @@ public class RateDetails30 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "SlctnFeeRate")
 	protected SolicitationFeeRateFormat9Choice solicitationFeeRate;
 	/**
-	 * Rate of the cash premium made available if the securities holder consents
-	 * or participates to an event, for example consent fees or solicitation
-	 * fee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -643,7 +669,7 @@ public class RateDetails30 {
 	public static final MMMessageAttribute mmSolicitationFeeRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionFeesAndCharges.mmSolicitationFee;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "SlctnFeeRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -654,10 +680,11 @@ public class RateDetails30 {
 			complexType_lazy = () -> SolicitationFeeRateFormat9Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxCdtRate")
 	protected List<TaxCreditRateFormat9Choice> taxCreditRate;
 	/**
-	 * Amount of money per equity allocated as the result of a tax credit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -690,7 +717,7 @@ public class RateDetails30 {
 	public static final MMMessageAssociationEnd mmTaxCreditRate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> TaxVoucher.mmCreditRate;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "TaxCdtRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -701,12 +728,11 @@ public class RateDetails30 {
 			type_lazy = () -> TaxCreditRateFormat9Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "WhldgTaxRate")
 	protected List<RateAndAmountFormat45Choice> withholdingTaxRate;
 	/**
-	 * Percentage of a cash distribution that will be withheld by the tax
-	 * authorities of the jurisdiction of the issuer, for which a relief at
-	 * source and/or reclaim may be possible.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -740,7 +766,7 @@ public class RateDetails30 {
 	public static final MMMessageAttribute mmWithholdingTaxRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "WhldgTaxRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -750,14 +776,11 @@ public class RateDetails30 {
 			complexType_lazy = () -> RateAndAmountFormat45Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ScndLvlTax")
 	protected List<RateAndAmountFormat45Choice> secondLevelTax;
 	/**
-	 * Rate at which the income will be withheld by a jurisdiction other than
-	 * the jurisdiction of the issuer’s country of tax incorporation, for which
-	 * a relief at source and/or reclaim may be possible. It is levied in
-	 * complement or offset of the withholding tax rate (TAXR) levied by the
-	 * jurisdiction of the issuer’s tax domicile.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -790,7 +813,7 @@ public class RateDetails30 {
 	public static final MMMessageAssociationEnd mmSecondLevelTax = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "ScndLvlTax";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -801,10 +824,11 @@ public class RateDetails30 {
 			type_lazy = () -> RateAndAmountFormat45Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxOnIncm")
 	protected RateAndAmountFormat43Choice taxOnIncome;
 	/**
-	 * Taxation applied on an amount clearly identified as an income.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -837,7 +861,7 @@ public class RateDetails30 {
 	public static final MMMessageAttribute mmTaxOnIncome = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "TaxOnIncm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -848,11 +872,11 @@ public class RateDetails30 {
 			complexType_lazy = () -> RateAndAmountFormat43Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxOnPrfts")
 	protected PercentageRate taxOnProfits;
 	/**
-	 * Taxation applied on an amount clearly identified as capital profits,
-	 * capital gains.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -886,7 +910,7 @@ public class RateDetails30 {
 	public static final MMMessageAttribute mmTaxOnProfits = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "TaxOnPrfts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -897,11 +921,11 @@ public class RateDetails30 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxRclmRate")
 	protected PercentageRate taxReclaimRate;
 	/**
-	 * Percentage of cash that was paid in excess of actual tax obligation and
-	 * was reclaimed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -935,7 +959,7 @@ public class RateDetails30 {
 	public static final MMMessageAttribute mmTaxReclaimRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmRate;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "TaxRclmRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -946,12 +970,11 @@ public class RateDetails30 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "EqulstnRate")
 	protected RestrictedFINActiveCurrencyAnd13DecimalAmount equalisationRate;
 	/**
-	 * Portion of the fund distribution which represents the average accrued
-	 * income included in the purchase price for units bought during the account
-	 * period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -986,7 +1009,7 @@ public class RateDetails30 {
 	public static final MMMessageAttribute mmEqualisationRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Equalisation.mmAmount;
-			componentContext_lazy = () -> RateDetails30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateDetails30.mmObject();
 			isDerived = false;
 			xmlTag = "EqulstnRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1001,12 +1024,18 @@ public class RateDetails30 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RateDetails30.mmAdditionalTax, RateDetails30.mmChargesFees, RateDetails30.mmFiscalStamp, RateDetails30.mmGrossDividendRate, RateDetails30.mmEarlySolicitationFeeRate,
-						RateDetails30.mmThirdPartyIncentiveRate, RateDetails30.mmInterestRateUsedForPayment, RateDetails30.mmNetDividendRate, RateDetails30.mmNonResidentRate, RateDetails30.mmApplicableRate,
-						RateDetails30.mmSolicitationFeeRate, RateDetails30.mmTaxCreditRate, RateDetails30.mmWithholdingTaxRate, RateDetails30.mmSecondLevelTax, RateDetails30.mmTaxOnIncome, RateDetails30.mmTaxOnProfits,
-						RateDetails30.mmTaxReclaimRate, RateDetails30.mmEqualisationRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateDetails30.mmAdditionalTax, com.tools20022.repository.msg.RateDetails30.mmChargesFees, com.tools20022.repository.msg.RateDetails30.mmFiscalStamp,
+						com.tools20022.repository.msg.RateDetails30.mmGrossDividendRate, com.tools20022.repository.msg.RateDetails30.mmEarlySolicitationFeeRate, com.tools20022.repository.msg.RateDetails30.mmThirdPartyIncentiveRate,
+						com.tools20022.repository.msg.RateDetails30.mmInterestRateUsedForPayment, com.tools20022.repository.msg.RateDetails30.mmNetDividendRate, com.tools20022.repository.msg.RateDetails30.mmNonResidentRate,
+						com.tools20022.repository.msg.RateDetails30.mmApplicableRate, com.tools20022.repository.msg.RateDetails30.mmSolicitationFeeRate, com.tools20022.repository.msg.RateDetails30.mmTaxCreditRate,
+						com.tools20022.repository.msg.RateDetails30.mmWithholdingTaxRate, com.tools20022.repository.msg.RateDetails30.mmSecondLevelTax, com.tools20022.repository.msg.RateDetails30.mmTaxOnIncome,
+						com.tools20022.repository.msg.RateDetails30.mmTaxOnProfits, com.tools20022.repository.msg.RateDetails30.mmTaxReclaimRate, com.tools20022.repository.msg.RateDetails30.mmEqualisationRate);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGrossDividendRate2Rule.forRateDetails30, com.tools20022.repository.constraints.ConstraintNetDividendRate1Rule.forRateDetails30,
+						com.tools20022.repository.constraints.ConstraintTaxCreditRate1Rule.forRateDetails30, com.tools20022.repository.constraints.ConstraintGrossDividendRate3Rule.forRateDetails30,
+						com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forRateDetails30, com.tools20022.repository.constraints.ConstraintTaxCreditRate2Rule.forRateDetails30,
+						com.tools20022.repository.constraints.ConstraintSecondLevelTax1Rule.forRateDetails30);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateDetails30";
 				definition = "Provides information about the rates related to securities movement.";
@@ -1015,165 +1044,165 @@ public class RateDetails30 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AddtlTax")
-	public RateAndAmountFormat43Choice getAdditionalTax() {
-		return additionalTax;
+	public Optional<RateAndAmountFormat43Choice> getAdditionalTax() {
+		return additionalTax == null ? Optional.empty() : Optional.of(additionalTax);
 	}
 
-	public void setAdditionalTax(RateAndAmountFormat43Choice additionalTax) {
+	public RateDetails30 setAdditionalTax(RateAndAmountFormat43Choice additionalTax) {
 		this.additionalTax = additionalTax;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgsFees")
-	public RateAndAmountFormat43Choice getChargesFees() {
-		return chargesFees;
+	public Optional<RateAndAmountFormat43Choice> getChargesFees() {
+		return chargesFees == null ? Optional.empty() : Optional.of(chargesFees);
 	}
 
-	public void setChargesFees(RateAndAmountFormat43Choice chargesFees) {
+	public RateDetails30 setChargesFees(RateAndAmountFormat43Choice chargesFees) {
 		this.chargesFees = chargesFees;
+		return this;
 	}
 
-	@XmlElement(name = "FsclStmp")
-	public PercentageRate getFiscalStamp() {
-		return fiscalStamp;
+	public Optional<PercentageRate> getFiscalStamp() {
+		return fiscalStamp == null ? Optional.empty() : Optional.of(fiscalStamp);
 	}
 
-	public void setFiscalStamp(PercentageRate fiscalStamp) {
+	public RateDetails30 setFiscalStamp(PercentageRate fiscalStamp) {
 		this.fiscalStamp = fiscalStamp;
+		return this;
 	}
 
-	@XmlElement(name = "GrssDvddRate")
 	public List<GrossDividendRateFormat24Choice> getGrossDividendRate() {
-		return grossDividendRate;
+		return grossDividendRate == null ? grossDividendRate = new ArrayList<>() : grossDividendRate;
 	}
 
-	public void setGrossDividendRate(List<GrossDividendRateFormat24Choice> grossDividendRate) {
-		this.grossDividendRate = grossDividendRate;
+	public RateDetails30 setGrossDividendRate(List<GrossDividendRateFormat24Choice> grossDividendRate) {
+		this.grossDividendRate = Objects.requireNonNull(grossDividendRate);
+		return this;
 	}
 
-	@XmlElement(name = "EarlySlctnFeeRate")
-	public SolicitationFeeRateFormat9Choice getEarlySolicitationFeeRate() {
-		return earlySolicitationFeeRate;
+	public Optional<SolicitationFeeRateFormat9Choice> getEarlySolicitationFeeRate() {
+		return earlySolicitationFeeRate == null ? Optional.empty() : Optional.of(earlySolicitationFeeRate);
 	}
 
-	public void setEarlySolicitationFeeRate(SolicitationFeeRateFormat9Choice earlySolicitationFeeRate) {
+	public RateDetails30 setEarlySolicitationFeeRate(SolicitationFeeRateFormat9Choice earlySolicitationFeeRate) {
 		this.earlySolicitationFeeRate = earlySolicitationFeeRate;
+		return this;
 	}
 
-	@XmlElement(name = "ThrdPtyIncntivRate")
-	public RateAndAmountFormat43Choice getThirdPartyIncentiveRate() {
-		return thirdPartyIncentiveRate;
+	public Optional<RateAndAmountFormat43Choice> getThirdPartyIncentiveRate() {
+		return thirdPartyIncentiveRate == null ? Optional.empty() : Optional.of(thirdPartyIncentiveRate);
 	}
 
-	public void setThirdPartyIncentiveRate(RateAndAmountFormat43Choice thirdPartyIncentiveRate) {
+	public RateDetails30 setThirdPartyIncentiveRate(RateAndAmountFormat43Choice thirdPartyIncentiveRate) {
 		this.thirdPartyIncentiveRate = thirdPartyIncentiveRate;
+		return this;
 	}
 
-	@XmlElement(name = "IntrstRateUsdForPmt")
 	public List<InterestRateUsedForPaymentFormat9Choice> getInterestRateUsedForPayment() {
-		return interestRateUsedForPayment;
+		return interestRateUsedForPayment == null ? interestRateUsedForPayment = new ArrayList<>() : interestRateUsedForPayment;
 	}
 
-	public void setInterestRateUsedForPayment(List<InterestRateUsedForPaymentFormat9Choice> interestRateUsedForPayment) {
-		this.interestRateUsedForPayment = interestRateUsedForPayment;
+	public RateDetails30 setInterestRateUsedForPayment(List<InterestRateUsedForPaymentFormat9Choice> interestRateUsedForPayment) {
+		this.interestRateUsedForPayment = Objects.requireNonNull(interestRateUsedForPayment);
+		return this;
 	}
 
-	@XmlElement(name = "NetDvddRate")
 	public List<NetDividendRateFormat26Choice> getNetDividendRate() {
-		return netDividendRate;
+		return netDividendRate == null ? netDividendRate = new ArrayList<>() : netDividendRate;
 	}
 
-	public void setNetDividendRate(List<NetDividendRateFormat26Choice> netDividendRate) {
-		this.netDividendRate = netDividendRate;
+	public RateDetails30 setNetDividendRate(List<NetDividendRateFormat26Choice> netDividendRate) {
+		this.netDividendRate = Objects.requireNonNull(netDividendRate);
+		return this;
 	}
 
-	@XmlElement(name = "NonResdtRate")
-	public RateAndAmountFormat43Choice getNonResidentRate() {
-		return nonResidentRate;
+	public Optional<RateAndAmountFormat43Choice> getNonResidentRate() {
+		return nonResidentRate == null ? Optional.empty() : Optional.of(nonResidentRate);
 	}
 
-	public void setNonResidentRate(RateAndAmountFormat43Choice nonResidentRate) {
+	public RateDetails30 setNonResidentRate(RateAndAmountFormat43Choice nonResidentRate) {
 		this.nonResidentRate = nonResidentRate;
+		return this;
 	}
 
-	@XmlElement(name = "AplblRate")
-	public PercentageRate getApplicableRate() {
-		return applicableRate;
+	public Optional<PercentageRate> getApplicableRate() {
+		return applicableRate == null ? Optional.empty() : Optional.of(applicableRate);
 	}
 
-	public void setApplicableRate(PercentageRate applicableRate) {
+	public RateDetails30 setApplicableRate(PercentageRate applicableRate) {
 		this.applicableRate = applicableRate;
+		return this;
 	}
 
-	@XmlElement(name = "SlctnFeeRate")
-	public SolicitationFeeRateFormat9Choice getSolicitationFeeRate() {
-		return solicitationFeeRate;
+	public Optional<SolicitationFeeRateFormat9Choice> getSolicitationFeeRate() {
+		return solicitationFeeRate == null ? Optional.empty() : Optional.of(solicitationFeeRate);
 	}
 
-	public void setSolicitationFeeRate(SolicitationFeeRateFormat9Choice solicitationFeeRate) {
+	public RateDetails30 setSolicitationFeeRate(SolicitationFeeRateFormat9Choice solicitationFeeRate) {
 		this.solicitationFeeRate = solicitationFeeRate;
+		return this;
 	}
 
-	@XmlElement(name = "TaxCdtRate")
 	public List<TaxCreditRateFormat9Choice> getTaxCreditRate() {
-		return taxCreditRate;
+		return taxCreditRate == null ? taxCreditRate = new ArrayList<>() : taxCreditRate;
 	}
 
-	public void setTaxCreditRate(List<TaxCreditRateFormat9Choice> taxCreditRate) {
-		this.taxCreditRate = taxCreditRate;
+	public RateDetails30 setTaxCreditRate(List<TaxCreditRateFormat9Choice> taxCreditRate) {
+		this.taxCreditRate = Objects.requireNonNull(taxCreditRate);
+		return this;
 	}
 
-	@XmlElement(name = "WhldgTaxRate")
 	public List<RateAndAmountFormat45Choice> getWithholdingTaxRate() {
-		return withholdingTaxRate;
+		return withholdingTaxRate == null ? withholdingTaxRate = new ArrayList<>() : withholdingTaxRate;
 	}
 
-	public void setWithholdingTaxRate(List<RateAndAmountFormat45Choice> withholdingTaxRate) {
-		this.withholdingTaxRate = withholdingTaxRate;
+	public RateDetails30 setWithholdingTaxRate(List<RateAndAmountFormat45Choice> withholdingTaxRate) {
+		this.withholdingTaxRate = Objects.requireNonNull(withholdingTaxRate);
+		return this;
 	}
 
-	@XmlElement(name = "ScndLvlTax")
 	public List<RateAndAmountFormat45Choice> getSecondLevelTax() {
-		return secondLevelTax;
+		return secondLevelTax == null ? secondLevelTax = new ArrayList<>() : secondLevelTax;
 	}
 
-	public void setSecondLevelTax(List<RateAndAmountFormat45Choice> secondLevelTax) {
-		this.secondLevelTax = secondLevelTax;
+	public RateDetails30 setSecondLevelTax(List<RateAndAmountFormat45Choice> secondLevelTax) {
+		this.secondLevelTax = Objects.requireNonNull(secondLevelTax);
+		return this;
 	}
 
-	@XmlElement(name = "TaxOnIncm")
-	public RateAndAmountFormat43Choice getTaxOnIncome() {
-		return taxOnIncome;
+	public Optional<RateAndAmountFormat43Choice> getTaxOnIncome() {
+		return taxOnIncome == null ? Optional.empty() : Optional.of(taxOnIncome);
 	}
 
-	public void setTaxOnIncome(RateAndAmountFormat43Choice taxOnIncome) {
+	public RateDetails30 setTaxOnIncome(RateAndAmountFormat43Choice taxOnIncome) {
 		this.taxOnIncome = taxOnIncome;
+		return this;
 	}
 
-	@XmlElement(name = "TaxOnPrfts")
-	public PercentageRate getTaxOnProfits() {
-		return taxOnProfits;
+	public Optional<PercentageRate> getTaxOnProfits() {
+		return taxOnProfits == null ? Optional.empty() : Optional.of(taxOnProfits);
 	}
 
-	public void setTaxOnProfits(PercentageRate taxOnProfits) {
+	public RateDetails30 setTaxOnProfits(PercentageRate taxOnProfits) {
 		this.taxOnProfits = taxOnProfits;
+		return this;
 	}
 
-	@XmlElement(name = "TaxRclmRate")
-	public PercentageRate getTaxReclaimRate() {
-		return taxReclaimRate;
+	public Optional<PercentageRate> getTaxReclaimRate() {
+		return taxReclaimRate == null ? Optional.empty() : Optional.of(taxReclaimRate);
 	}
 
-	public void setTaxReclaimRate(PercentageRate taxReclaimRate) {
+	public RateDetails30 setTaxReclaimRate(PercentageRate taxReclaimRate) {
 		this.taxReclaimRate = taxReclaimRate;
+		return this;
 	}
 
-	@XmlElement(name = "EqulstnRate")
-	public RestrictedFINActiveCurrencyAnd13DecimalAmount getEqualisationRate() {
-		return equalisationRate;
+	public Optional<RestrictedFINActiveCurrencyAnd13DecimalAmount> getEqualisationRate() {
+		return equalisationRate == null ? Optional.empty() : Optional.of(equalisationRate);
 	}
 
-	public void setEqualisationRate(RestrictedFINActiveCurrencyAnd13DecimalAmount equalisationRate) {
+	public RateDetails30 setEqualisationRate(RestrictedFINActiveCurrencyAnd13DecimalAmount equalisationRate) {
 		this.equalisationRate = equalisationRate;
+		return this;
 	}
 }

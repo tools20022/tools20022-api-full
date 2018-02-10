@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Dividend;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,18 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GrossDividendRateFormat6SD1", propOrder = {"placeAndName", "maximumDividendRate", "minimumDividendRate"})
 public class GrossDividendRateFormat6SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm")
 	protected Max350Text placeAndName;
 	/**
-	 * Unambiguous reference to the location where the supplementary data must
-	 * be inserted in the message instance. <br>
-	 * <br>
-	 * In the case of XML, this is expressed by a valid XPath.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +108,7 @@ public class GrossDividendRateFormat6SD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> GrossDividendRateFormat6SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GrossDividendRateFormat6SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +119,11 @@ public class GrossDividendRateFormat6SD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxDvddRate")
 	protected RateAndAmountFormat16Choice maximumDividendRate;
 	/**
-	 * Provides the maximum dividend rate as announced by the Issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +158,7 @@ public class GrossDividendRateFormat6SD1 {
 	public static final MMMessageAttribute mmMaximumDividendRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
-			componentContext_lazy = () -> GrossDividendRateFormat6SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GrossDividendRateFormat6SD1.mmObject();
 			isDerived = false;
 			xmlTag = "MaxDvddRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,10 +169,11 @@ public class GrossDividendRateFormat6SD1 {
 			complexType_lazy = () -> RateAndAmountFormat16Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MinDvddRate")
 	protected RateAndAmountFormat16Choice minimumDividendRate;
 	/**
-	 * Provides the minimum dividend rate as announced by the Issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -207,7 +208,7 @@ public class GrossDividendRateFormat6SD1 {
 	public static final MMMessageAttribute mmMinimumDividendRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmAnnualTotalDividendRate;
-			componentContext_lazy = () -> GrossDividendRateFormat6SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GrossDividendRateFormat6SD1.mmObject();
 			isDerived = false;
 			xmlTag = "MinDvddRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,9 +223,10 @@ public class GrossDividendRateFormat6SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GrossDividendRateFormat6SD1.mmPlaceAndName, GrossDividendRateFormat6SD1.mmMaximumDividendRate, GrossDividendRateFormat6SD1.mmMinimumDividendRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GrossDividendRateFormat6SD1.mmPlaceAndName, com.tools20022.repository.msg.GrossDividendRateFormat6SD1.mmMaximumDividendRate,
+						com.tools20022.repository.msg.GrossDividendRateFormat6SD1.mmMinimumDividendRate);
 				trace_lazy = () -> Dividend.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GrossDividendRateFormat6SD1";
 				definition = "Extension to choose between an amount or an unspecified rate.";
@@ -233,30 +235,30 @@ public class GrossDividendRateFormat6SD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm")
-	public Max350Text getPlaceAndName() {
-		return placeAndName;
+	public Optional<Max350Text> getPlaceAndName() {
+		return placeAndName == null ? Optional.empty() : Optional.of(placeAndName);
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
+	public GrossDividendRateFormat6SD1 setPlaceAndName(Max350Text placeAndName) {
 		this.placeAndName = placeAndName;
+		return this;
 	}
 
-	@XmlElement(name = "MaxDvddRate")
-	public RateAndAmountFormat16Choice getMaximumDividendRate() {
-		return maximumDividendRate;
+	public Optional<RateAndAmountFormat16Choice> getMaximumDividendRate() {
+		return maximumDividendRate == null ? Optional.empty() : Optional.of(maximumDividendRate);
 	}
 
-	public void setMaximumDividendRate(RateAndAmountFormat16Choice maximumDividendRate) {
+	public GrossDividendRateFormat6SD1 setMaximumDividendRate(RateAndAmountFormat16Choice maximumDividendRate) {
 		this.maximumDividendRate = maximumDividendRate;
+		return this;
 	}
 
-	@XmlElement(name = "MinDvddRate")
-	public RateAndAmountFormat16Choice getMinimumDividendRate() {
-		return minimumDividendRate;
+	public Optional<RateAndAmountFormat16Choice> getMinimumDividendRate() {
+		return minimumDividendRate == null ? Optional.empty() : Optional.of(minimumDividendRate);
 	}
 
-	public void setMinimumDividendRate(RateAndAmountFormat16Choice minimumDividendRate) {
+	public GrossDividendRateFormat6SD1 setMinimumDividendRate(RateAndAmountFormat16Choice minimumDividendRate) {
 		this.minimumDividendRate = minimumDividendRate;
+		return this;
 	}
 }

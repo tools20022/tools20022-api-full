@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -31,6 +32,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +65,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintISO8532AndIssuerSchemeNameRule#forSecuritiesCertificate1
+ * ConstraintISO8532AndIssuerSchemeNameRule.forSecuritiesCertificate1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIssuerSchemeNameRule#forSecuritiesCertificate1
+ * ConstraintCoexistenceIssuerSchemeNameRule.forSecuritiesCertificate1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistence35to30TextFieldRule#forSecuritiesCertificate1
+ * ConstraintCoexistence35to30TextFieldRule.forSecuritiesCertificate1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -82,16 +99,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesCertificate1", propOrder = {"number", "issuer", "schemeName"})
 public class SecuritiesCertificate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nb", required = true)
 	protected Max35Text number;
 	/**
-	 * Unique and unambiguous identifier of a certificate assigned by the
-	 * issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,6 +127,9 @@ public class SecuritiesCertificate1 {
 	 * SecuritiesCertificate1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Nb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13B::CERT/[4!c[4c]]/30x</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -134,9 +154,10 @@ public class SecuritiesCertificate1 {
 	public static final MMMessageAttribute mmNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> SecuritiesCertificate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCertificate1.mmObject();
 			isDerived = false;
 			xmlTag = "Nb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13B::CERT/[4!c[4c]]/30x"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
 			definition = "Unique and unambiguous identifier of a certificate assigned by the issuer.";
@@ -146,11 +167,11 @@ public class SecuritiesCertificate1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Issr")
 	protected Max35Text issuer;
 	/**
-	 * Financial instruments representing a sum of rights of the investor
-	 * vis-a-vis the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,6 +190,9 @@ public class SecuritiesCertificate1 {
 	 * SecuritiesCertificate1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Issr"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13B::CERT/4!c</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -193,9 +217,10 @@ public class SecuritiesCertificate1 {
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> IdentificationIssuerRole.mmEntityName;
-			componentContext_lazy = () -> SecuritiesCertificate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCertificate1.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13B::CERT/4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
@@ -205,10 +230,11 @@ public class SecuritiesCertificate1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SchmeNm")
 	protected Max35Text schemeName;
 	/**
-	 * Short textual description of the scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -227,6 +253,9 @@ public class SecuritiesCertificate1 {
 	 * SecuritiesCertificate1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SchmeNm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :13B::CERT/4!c4c</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -249,9 +278,10 @@ public class SecuritiesCertificate1 {
 	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Scheme.mmNameShort;
-			componentContext_lazy = () -> SecuritiesCertificate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesCertificate1.mmObject();
 			isDerived = false;
 			xmlTag = "SchmeNm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13B::CERT/4!c4c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeName";
 			definition = "Short textual description of the scheme.";
@@ -265,9 +295,12 @@ public class SecuritiesCertificate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesCertificate1.mmNumber, SecuritiesCertificate1.mmIssuer, SecuritiesCertificate1.mmSchemeName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesCertificate1.mmNumber, com.tools20022.repository.msg.SecuritiesCertificate1.mmIssuer,
+						com.tools20022.repository.msg.SecuritiesCertificate1.mmSchemeName);
 				trace_lazy = () -> SecuritiesCertificate.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintISO8532AndIssuerSchemeNameRule.forSecuritiesCertificate1,
+						com.tools20022.repository.constraints.ConstraintCoexistenceIssuerSchemeNameRule.forSecuritiesCertificate1, com.tools20022.repository.constraints.ConstraintCoexistence35to30TextFieldRule.forSecuritiesCertificate1);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -284,30 +317,30 @@ public class SecuritiesCertificate1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nb", required = true)
 	public Max35Text getNumber() {
 		return number;
 	}
 
-	public void setNumber(Max35Text number) {
-		this.number = number;
+	public SecuritiesCertificate1 setNumber(Max35Text number) {
+		this.number = Objects.requireNonNull(number);
+		return this;
 	}
 
-	@XmlElement(name = "Issr")
-	public Max35Text getIssuer() {
-		return issuer;
+	public Optional<Max35Text> getIssuer() {
+		return issuer == null ? Optional.empty() : Optional.of(issuer);
 	}
 
-	public void setIssuer(Max35Text issuer) {
+	public SecuritiesCertificate1 setIssuer(Max35Text issuer) {
 		this.issuer = issuer;
+		return this;
 	}
 
-	@XmlElement(name = "SchmeNm")
-	public Max35Text getSchemeName() {
-		return schemeName;
+	public Optional<Max35Text> getSchemeName() {
+		return schemeName == null ? Optional.empty() : Optional.of(schemeName);
 	}
 
-	public void setSchemeName(Max35Text schemeName) {
+	public SecuritiesCertificate1 setSchemeName(Max35Text schemeName) {
 		this.schemeName = schemeName;
+		return this;
 	}
 }

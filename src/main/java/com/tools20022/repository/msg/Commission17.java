@@ -32,6 +32,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,15 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * Commission12}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Commission17", propOrder = {"type", "basis", "amount", "recipientIdentification", "commercialAgreementReference", "waivingDetails"})
 public class Commission17 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected CommissionType3Choice type;
 	/**
-	 * Service for which the commission is asked or paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -136,7 +139,7 @@ public class Commission17 {
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionType;
-			componentContext_lazy = () -> Commission17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission17.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,10 +152,11 @@ public class Commission17 {
 			type_lazy = () -> CommissionType3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Bsis", required = true)
 	protected CommissionBasis1Choice basis;
 	/**
-	 * Basis upon which a commission is charged, for example, flat fee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -192,7 +196,7 @@ public class Commission17 {
 	public static final MMMessageAssociationEnd mmBasis = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmBasis;
-			componentContext_lazy = () -> Commission17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission17.mmObject();
 			isDerived = false;
 			xmlTag = "Bsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,10 +209,11 @@ public class Commission17 {
 			type_lazy = () -> CommissionBasis1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
-	 * Commission expressed as an amount of money.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -253,7 +258,7 @@ public class Commission17 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> Commission17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission17.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,10 +271,11 @@ public class Commission17 {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RcptId")
 	protected PartyIdentification2Choice recipientIdentification;
 	/**
-	 * Party entitled to the amount of money resulting from a commission.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -316,7 +322,7 @@ public class Commission17 {
 	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Commission17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission17.mmObject();
 			isDerived = false;
 			xmlTag = "RcptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,12 +335,11 @@ public class Commission17 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ComrclAgrmtRef")
 	protected Max35Text commercialAgreementReference;
 	/**
-	 * Reference to the agreement established between the fund and another
-	 * party. This element, amongst others, defines the conditions of the
-	 * commissions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -381,7 +386,7 @@ public class Commission17 {
 	public static final MMMessageAttribute mmCommercialAgreementReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommercialAgreementReference;
-			componentContext_lazy = () -> Commission17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission17.mmObject();
 			isDerived = false;
 			xmlTag = "ComrclAgrmtRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -394,10 +399,11 @@ public class Commission17 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "WvgDtls")
 	protected CommissionWaiver4 waivingDetails;
 	/**
-	 * Voluntary non-enforcement of the right to part of a commission.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -437,7 +443,7 @@ public class Commission17 {
 	public static final MMMessageAssociationEnd mmWaivingDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commission.mmCommissionWaiving;
-			componentContext_lazy = () -> Commission17.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Commission17.mmObject();
 			isDerived = false;
 			xmlTag = "WvgDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -454,9 +460,10 @@ public class Commission17 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Commission17.mmType, Commission17.mmBasis, Commission17.mmAmount, Commission17.mmRecipientIdentification, Commission17.mmCommercialAgreementReference, Commission17.mmWaivingDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Commission17.mmType, com.tools20022.repository.msg.Commission17.mmBasis, com.tools20022.repository.msg.Commission17.mmAmount,
+						com.tools20022.repository.msg.Commission17.mmRecipientIdentification, com.tools20022.repository.msg.Commission17.mmCommercialAgreementReference, com.tools20022.repository.msg.Commission17.mmWaivingDetails);
 				trace_lazy = () -> Commission.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Commission17";
 				definition = "Amount of money due to a party as compensation for a service.";
@@ -467,57 +474,57 @@ public class Commission17 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public CommissionType3Choice getType() {
 		return type;
 	}
 
-	public void setType(CommissionType3Choice type) {
-		this.type = type;
+	public Commission17 setType(CommissionType3Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Bsis", required = true)
 	public CommissionBasis1Choice getBasis() {
 		return basis;
 	}
 
-	public void setBasis(CommissionBasis1Choice basis) {
-		this.basis = basis;
+	public Commission17 setBasis(CommissionBasis1Choice basis) {
+		this.basis = Objects.requireNonNull(basis);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
-		this.amount = amount;
+	public Commission17 setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "RcptId")
-	public PartyIdentification2Choice getRecipientIdentification() {
-		return recipientIdentification;
+	public Optional<PartyIdentification2Choice> getRecipientIdentification() {
+		return recipientIdentification == null ? Optional.empty() : Optional.of(recipientIdentification);
 	}
 
-	public void setRecipientIdentification(PartyIdentification2Choice recipientIdentification) {
+	public Commission17 setRecipientIdentification(PartyIdentification2Choice recipientIdentification) {
 		this.recipientIdentification = recipientIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ComrclAgrmtRef")
-	public Max35Text getCommercialAgreementReference() {
-		return commercialAgreementReference;
+	public Optional<Max35Text> getCommercialAgreementReference() {
+		return commercialAgreementReference == null ? Optional.empty() : Optional.of(commercialAgreementReference);
 	}
 
-	public void setCommercialAgreementReference(Max35Text commercialAgreementReference) {
+	public Commission17 setCommercialAgreementReference(Max35Text commercialAgreementReference) {
 		this.commercialAgreementReference = commercialAgreementReference;
+		return this;
 	}
 
-	@XmlElement(name = "WvgDtls")
-	public CommissionWaiver4 getWaivingDetails() {
-		return waivingDetails;
+	public Optional<CommissionWaiver4> getWaivingDetails() {
+		return waivingDetails == null ? Optional.empty() : Optional.of(waivingDetails);
 	}
 
-	public void setWaivingDetails(com.tools20022.repository.msg.CommissionWaiver4 waivingDetails) {
+	public Commission17 setWaivingDetails(com.tools20022.repository.msg.CommissionWaiver4 waivingDetails) {
 		this.waivingDetails = waivingDetails;
+		return this;
 	}
 }

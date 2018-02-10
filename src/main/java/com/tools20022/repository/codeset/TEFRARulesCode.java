@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TEFRARulesCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the Tax Equity and Fiscal Responsibility Act (TEFRA) rule levied by
@@ -32,10 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TEFRARulesCode#mmC
- * TEFRARulesCode.mmC}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TEFRARulesCode#mmD
- * TEFRARulesCode.mmD}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TEFRARulesCode#C
+ * TEFRARulesCode.C}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TEFRARulesCode#D
+ * TEFRARulesCode.D}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -48,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TEFRARulesCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TEFRARulesCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,12 +99,12 @@ public class TEFRARulesCode {
 	 * "Indicates that the security is issued under the TEFRA rule C."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmC = new MMCode() {
+	public static final TEFRARulesCode C = new TEFRARulesCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "C";
 			definition = "Indicates that the security is issued under the TEFRA rule C.";
-			owner_lazy = () -> TEFRARulesCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TEFRARulesCode.mmObject();
 			codeName = "RULC";
 		}
 	};
@@ -124,28 +130,58 @@ public class TEFRARulesCode {
 	 * "Indicates that the security is issued under the TEFRA rule D."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmD = new MMCode() {
+	public static final TEFRARulesCode D = new TEFRARulesCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "D";
 			definition = "Indicates that the security is issued under the TEFRA rule D.";
-			owner_lazy = () -> TEFRARulesCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TEFRARulesCode.mmObject();
 			codeName = "RULD";
 		}
 	};
+	final static private LinkedHashMap<String, TEFRARulesCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TEFRARulesCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RULC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TEFRARulesCode";
 				definition = "Indicates the Tax Equity and Fiscal Responsibility Act (TEFRA) rule levied by the Internal Revenue Service under which the security is issued.";
-				code_lazy = () -> Arrays.asList(TEFRARulesCode.mmC, TEFRARulesCode.mmD);
 				derivation_lazy = () -> Arrays.asList(TEFRARules1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TEFRARulesCode.C, com.tools20022.repository.codeset.TEFRARulesCode.D);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(C.getCodeName().get(), C);
+		codesByName.put(D.getCodeName().get(), D);
+	}
+
+	public static TEFRARulesCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TEFRARulesCode[] values() {
+		TEFRARulesCode[] values = new TEFRARulesCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TEFRARulesCode> {
+		@Override
+		public TEFRARulesCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TEFRARulesCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

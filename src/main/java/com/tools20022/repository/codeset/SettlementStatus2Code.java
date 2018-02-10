@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SettlementStatusCode;
+import com.tools20022.repository.codeset.SettlementStatus2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of the settlement of a trade in a central matching and
@@ -31,36 +35,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SettlementStatusCode
- * SettlementStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#mmAwaitingAuthorisation
- * SettlementStatus2Code.mmAwaitingAuthorisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#AwaitingAuthorisation
+ * SettlementStatus2Code.AwaitingAuthorisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#mmAcceptedForSettlement
- * SettlementStatus2Code.mmAcceptedForSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#AcceptedForSettlement
+ * SettlementStatus2Code.AcceptedForSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#mmSettlementTransactionCreated
- * SettlementStatus2Code.mmSettlementTransactionCreated}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#SettlementTransactionCreated
+ * SettlementStatus2Code.SettlementTransactionCreated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#mmSettled
- * SettlementStatus2Code.mmSettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#Settled
+ * SettlementStatus2Code.Settled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#mmAwaitingCreationConfirmation
- * SettlementStatus2Code.mmAwaitingCreationConfirmation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#AwaitingCreationConfirmation
+ * SettlementStatus2Code.AwaitingCreationConfirmation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#mmAwaitingRescindConfirmation
- * SettlementStatus2Code.mmAwaitingRescindConfirmation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementStatus2Code#AwaitingRescindConfirmation
+ * SettlementStatus2Code.AwaitingRescindConfirmation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SettlementStatusCode
+ * SettlementStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -79,7 +83,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class SettlementStatus2Code extends SettlementStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettlementStatus2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,11 +103,12 @@ public class SettlementStatus2Code extends SettlementStatusCode {
 	 * name} = "AwaitingAuthorisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingAuthorisation = new MMCode() {
+	public static final SettlementStatus2Code AwaitingAuthorisation = new SettlementStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingAuthorisation";
-			owner_lazy = () -> SettlementStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementStatus2Code.mmObject();
+			codeName = SettlementStatusCode.AwaitingAuthorisation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -121,11 +127,12 @@ public class SettlementStatus2Code extends SettlementStatusCode {
 	 * name} = "AcceptedForSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedForSettlement = new MMCode() {
+	public static final SettlementStatus2Code AcceptedForSettlement = new SettlementStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedForSettlement";
-			owner_lazy = () -> SettlementStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementStatus2Code.mmObject();
+			codeName = SettlementStatusCode.AcceptedForSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -144,11 +151,12 @@ public class SettlementStatus2Code extends SettlementStatusCode {
 	 * name} = "SettlementTransactionCreated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementTransactionCreated = new MMCode() {
+	public static final SettlementStatus2Code SettlementTransactionCreated = new SettlementStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransactionCreated";
-			owner_lazy = () -> SettlementStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementStatus2Code.mmObject();
+			codeName = SettlementStatusCode.SettlementTransactionCreated.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -167,11 +175,12 @@ public class SettlementStatus2Code extends SettlementStatusCode {
 	 * name} = "Settled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettled = new MMCode() {
+	public static final SettlementStatus2Code Settled = new SettlementStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
-			owner_lazy = () -> SettlementStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementStatus2Code.mmObject();
+			codeName = SettlementStatusCode.Settled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -190,11 +199,12 @@ public class SettlementStatus2Code extends SettlementStatusCode {
 	 * name} = "AwaitingCreationConfirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingCreationConfirmation = new MMCode() {
+	public static final SettlementStatus2Code AwaitingCreationConfirmation = new SettlementStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingCreationConfirmation";
-			owner_lazy = () -> SettlementStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementStatus2Code.mmObject();
+			codeName = SettlementStatusCode.AwaitingCreationConfirmation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -213,27 +223,63 @@ public class SettlementStatus2Code extends SettlementStatusCode {
 	 * name} = "AwaitingRescindConfirmation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingRescindConfirmation = new MMCode() {
+	public static final SettlementStatus2Code AwaitingRescindConfirmation = new SettlementStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingRescindConfirmation";
-			owner_lazy = () -> SettlementStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementStatus2Code.mmObject();
+			codeName = SettlementStatusCode.AwaitingRescindConfirmation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SettlementStatus2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettlementStatus2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AAUT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementStatus2Code";
 				definition = "Specifies the status of the settlement of a trade in a central matching and settlement system.";
-				code_lazy = () -> Arrays.asList(SettlementStatus2Code.mmAwaitingAuthorisation, SettlementStatus2Code.mmAcceptedForSettlement, SettlementStatus2Code.mmSettlementTransactionCreated, SettlementStatus2Code.mmSettled,
-						SettlementStatus2Code.mmAwaitingCreationConfirmation, SettlementStatus2Code.mmAwaitingRescindConfirmation);
 				trace_lazy = () -> SettlementStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementStatus2Code.AwaitingAuthorisation, com.tools20022.repository.codeset.SettlementStatus2Code.AcceptedForSettlement,
+						com.tools20022.repository.codeset.SettlementStatus2Code.SettlementTransactionCreated, com.tools20022.repository.codeset.SettlementStatus2Code.Settled,
+						com.tools20022.repository.codeset.SettlementStatus2Code.AwaitingCreationConfirmation, com.tools20022.repository.codeset.SettlementStatus2Code.AwaitingRescindConfirmation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AwaitingAuthorisation.getCodeName().get(), AwaitingAuthorisation);
+		codesByName.put(AcceptedForSettlement.getCodeName().get(), AcceptedForSettlement);
+		codesByName.put(SettlementTransactionCreated.getCodeName().get(), SettlementTransactionCreated);
+		codesByName.put(Settled.getCodeName().get(), Settled);
+		codesByName.put(AwaitingCreationConfirmation.getCodeName().get(), AwaitingCreationConfirmation);
+		codesByName.put(AwaitingRescindConfirmation.getCodeName().get(), AwaitingRescindConfirmation);
+	}
+
+	public static SettlementStatus2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettlementStatus2Code[] values() {
+		SettlementStatus2Code[] values = new SettlementStatus2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettlementStatus2Code> {
+		@Override
+		public SettlementStatus2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettlementStatus2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

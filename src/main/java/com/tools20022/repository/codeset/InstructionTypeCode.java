@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.InstructionTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the action that the TSU must take on a baseline or a data set.
@@ -31,24 +36,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.InstructionTypeCode#Lodge
+ * InstructionTypeCode.Lodge}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#mmLodge
- * InstructionTypeCode.mmLodge}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#FullPushThrough
+ * InstructionTypeCode.FullPushThrough}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#mmFullPushThrough
- * InstructionTypeCode.mmFullPushThrough}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#TwinSubmit
+ * InstructionTypeCode.TwinSubmit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#mmTwinSubmit
- * InstructionTypeCode.mmTwinSubmit}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#TwinResubmit
+ * InstructionTypeCode.TwinResubmit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.InstructionTypeCode#Match
+ * InstructionTypeCode.Match}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#mmTwinResubmit
- * InstructionTypeCode.mmTwinResubmit}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#mmMatch
- * InstructionTypeCode.mmMatch}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#mmPreMatch
- * InstructionTypeCode.mmPreMatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.InstructionTypeCode#PreMatch
+ * InstructionTypeCode.PreMatch}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -63,8 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +85,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the action that the TSU must take on a baseline or a data set."</li>
  * </ul>
  */
-public class InstructionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InstructionTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -106,12 +110,12 @@ public class InstructionTypeCode {
 	 * definition} = "Instruction to lodge a baseline."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLodge = new MMCode() {
+	public static final InstructionTypeCode Lodge = new InstructionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lodge";
 			definition = "Instruction to lodge a baseline.";
-			owner_lazy = () -> InstructionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionTypeCode.mmObject();
 			codeName = "LODG";
 		}
 	};
@@ -137,12 +141,12 @@ public class InstructionTypeCode {
 	 * "Instruction to push full baseline information to the correspondent."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullPushThrough = new MMCode() {
+	public static final InstructionTypeCode FullPushThrough = new InstructionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPushThrough";
 			definition = "Instruction to push full baseline information to the correspondent.";
-			owner_lazy = () -> InstructionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionTypeCode.mmObject();
 			codeName = "FPTR";
 		}
 	};
@@ -167,12 +171,12 @@ public class InstructionTypeCode {
 	 * definition} = "Indication that a twin baseline is submitted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTwinSubmit = new MMCode() {
+	public static final InstructionTypeCode TwinSubmit = new InstructionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwinSubmit";
 			definition = "Indication that a twin baseline is submitted.";
-			owner_lazy = () -> InstructionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionTypeCode.mmObject();
 			codeName = "TWSB";
 		}
 	};
@@ -197,12 +201,12 @@ public class InstructionTypeCode {
 	 * definition} = "Indication that a twin baseline is resubmitted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTwinResubmit = new MMCode() {
+	public static final InstructionTypeCode TwinResubmit = new InstructionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwinResubmit";
 			definition = "Indication that a twin baseline is resubmitted.";
-			owner_lazy = () -> InstructionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionTypeCode.mmObject();
 			codeName = "TWRS";
 		}
 	};
@@ -227,12 +231,12 @@ public class InstructionTypeCode {
 	 * definition} = "Instruction to match a data set."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMatch = new MMCode() {
+	public static final InstructionTypeCode Match = new InstructionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Match";
 			definition = "Instruction to match a data set.";
-			owner_lazy = () -> InstructionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionTypeCode.mmObject();
 			codeName = "MTCH";
 		}
 	};
@@ -257,29 +261,64 @@ public class InstructionTypeCode {
 	 * definition} = "Instruction to pre-match a data set."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreMatch = new MMCode() {
+	public static final InstructionTypeCode PreMatch = new InstructionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreMatch";
 			definition = "Instruction to pre-match a data set.";
-			owner_lazy = () -> InstructionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InstructionTypeCode.mmObject();
 			codeName = "PMTC";
 		}
 	};
+	final static private LinkedHashMap<String, InstructionTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InstructionTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("LODG");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionTypeCode";
 				definition = "Specifies the action that the TSU must take on a baseline or a data set.";
-				code_lazy = () -> Arrays.asList(InstructionTypeCode.mmLodge, InstructionTypeCode.mmFullPushThrough, InstructionTypeCode.mmTwinSubmit, InstructionTypeCode.mmTwinResubmit, InstructionTypeCode.mmMatch,
-						InstructionTypeCode.mmPreMatch);
 				derivation_lazy = () -> Arrays.asList(InstructionType3Code.mmObject(), InstructionType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstructionTypeCode.Lodge, com.tools20022.repository.codeset.InstructionTypeCode.FullPushThrough,
+						com.tools20022.repository.codeset.InstructionTypeCode.TwinSubmit, com.tools20022.repository.codeset.InstructionTypeCode.TwinResubmit, com.tools20022.repository.codeset.InstructionTypeCode.Match,
+						com.tools20022.repository.codeset.InstructionTypeCode.PreMatch);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Lodge.getCodeName().get(), Lodge);
+		codesByName.put(FullPushThrough.getCodeName().get(), FullPushThrough);
+		codesByName.put(TwinSubmit.getCodeName().get(), TwinSubmit);
+		codesByName.put(TwinResubmit.getCodeName().get(), TwinResubmit);
+		codesByName.put(Match.getCodeName().get(), Match);
+		codesByName.put(PreMatch.getCodeName().get(), PreMatch);
+	}
+
+	public static InstructionTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InstructionTypeCode[] values() {
+		InstructionTypeCode[] values = new InstructionTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InstructionTypeCode> {
+		@Override
+		public InstructionTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InstructionTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

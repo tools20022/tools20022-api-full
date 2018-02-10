@@ -25,9 +25,11 @@ import com.tools20022.repository.msg.FinancialInstrument21;
 import com.tools20022.repository.msg.FinancialInstrument22;
 import com.tools20022.repository.msg.SecurityIdentification1;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * In securities, a collective investment scheme that has a contractual or a
@@ -65,8 +67,8 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,8 +86,8 @@ public class UmbrellaFund {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Max350Text name;
 	/**
-	 * Name of the fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,8 +129,8 @@ public class UmbrellaFund {
 	public static final MMBusinessAttribute mmName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmUmbrellaName, SecurityIdentification1.mmUmbrellaName, FinancialInstrument21.mmUmbrellaName, FinancialInstrument22.mmUmbrellaName);
-			elementContext_lazy = () -> com.tools20022.repository.entity.UmbrellaFund.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UmbrellaFund.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Name";
 			definition = "Name of the fund.";
@@ -147,8 +149,8 @@ public class UmbrellaFund {
 	};
 	protected List<com.tools20022.repository.entity.InvestmentFund> subFund;
 	/**
-	 * Compartment of an umbrellla fund.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,8 +182,8 @@ public class UmbrellaFund {
 	 */
 	public static final MMBusinessAssociationEnd mmSubFund = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.UmbrellaFund.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UmbrellaFund.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SubFund";
 			definition = "Compartment of an umbrellla fund.";
@@ -195,7 +197,7 @@ public class UmbrellaFund {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UmbrellaFund";
 				definition = "In securities, a collective investment scheme that has a contractual or a corporate form. When it has a contractual form, a fund is constituted under either the law of contract or under the trust law and thus it is not a legal entity. In its corporate form, a fund is a legal entity and is structured as a company.\r\nIt has several distinct sub-funds which in effect are traded as individual investment funds.";
@@ -215,15 +217,17 @@ public class UmbrellaFund {
 		return name;
 	}
 
-	public void setName(Max350Text name) {
-		this.name = name;
+	public UmbrellaFund setName(Max350Text name) {
+		this.name = Objects.requireNonNull(name);
+		return this;
 	}
 
 	public List<InvestmentFund> getSubFund() {
-		return subFund;
+		return subFund == null ? subFund = new ArrayList<>() : subFund;
 	}
 
-	public void setSubFund(List<com.tools20022.repository.entity.InvestmentFund> subFund) {
-		this.subFund = subFund;
+	public UmbrellaFund setSubFund(List<com.tools20022.repository.entity.InvestmentFund> subFund) {
+		this.subFund = Objects.requireNonNull(subFund);
+		return this;
 	}
 }

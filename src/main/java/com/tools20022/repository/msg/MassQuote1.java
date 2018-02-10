@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -24,9 +25,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.FinancialInstrumentQuantityChoice;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,16 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identifies elements related to a mass quote."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MassQuote1", propOrder = {"defaultBidSize", "defaultOfferSize", "quoteSetDetails", "tradingParties", "cashParties", "receivingSettlementParties", "deliveringSettlementParties", "otherBusinessParties"})
 public class MassQuote1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DfltBidSz")
 	protected FinancialInstrumentQuantityChoice defaultBidSize;
 	/**
-	 * Default Bid Size for quote contained within this quote message - if not
-	 * explicitly provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,6 +108,9 @@ public class MassQuote1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DfltBidSz"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 293</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -123,9 +126,10 @@ public class MassQuote1 {
 	public static final MMMessageAttribute mmDefaultBidSize = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmQuantity;
-			componentContext_lazy = () -> MassQuote1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MassQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "DfltBidSz";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "293"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultBidSize";
 			definition = "Default Bid Size for quote contained within this quote message - if not explicitly provided.";
@@ -134,11 +138,11 @@ public class MassQuote1 {
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "DfltOfferSz")
 	protected FinancialInstrumentQuantityChoice defaultOfferSize;
 	/**
-	 * Default Offer Size for quotes contained within this quote message - if
-	 * not explicitly provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,6 +162,9 @@ public class MassQuote1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DfltOfferSz"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 294</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -173,9 +180,10 @@ public class MassQuote1 {
 	public static final MMMessageAttribute mmDefaultOfferSize = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmQuantity;
-			componentContext_lazy = () -> MassQuote1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MassQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "DfltOfferSz";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "294"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultOfferSize";
 			definition = "Default Offer Size for quotes contained within this quote message - if not explicitly provided.";
@@ -184,10 +192,11 @@ public class MassQuote1 {
 			complexType_lazy = () -> FinancialInstrumentQuantityChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "QtSetDtls", required = true)
 	protected List<com.tools20022.repository.msg.QuoteSet1> quoteSetDetails;
 	/**
-	 * Provides details about a group of related quotes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -217,7 +226,7 @@ public class MassQuote1 {
 	public static final MMMessageAssociationEnd mmQuoteSetDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Quote.mmSecurityQuoteVariable;
-			componentContext_lazy = () -> MassQuote1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MassQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "QtSetDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,11 +237,11 @@ public class MassQuote1 {
 			type_lazy = () -> com.tools20022.repository.msg.QuoteSet1.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgPties")
 	protected List<com.tools20022.repository.msg.Intermediary14> tradingParties;
 	/**
-	 * Parties used for acting parties that applies either to the whole message
-	 * or to individual sides.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -265,7 +274,7 @@ public class MassQuote1 {
 	public static final MMMessageAssociationEnd mmTradingParties = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradePartyRole;
-			componentContext_lazy = () -> MassQuote1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MassQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,11 +285,11 @@ public class MassQuote1 {
 			type_lazy = () -> com.tools20022.repository.msg.Intermediary14.mmObject();
 		}
 	};
+	@XmlElement(name = "CshPties")
 	protected CashParties1 cashParties;
 	/**
-	 * Payment processes required to transfer cash from the debtor to the
-	 * creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -313,7 +322,7 @@ public class MassQuote1 {
 	public static final MMMessageAssociationEnd mmCashParties = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPartyRole;
-			componentContext_lazy = () -> MassQuote1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MassQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "CshPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,13 +334,11 @@ public class MassQuote1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashParties1.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvgSttlmPties")
 	protected SettlementParties3 receivingSettlementParties;
 	/**
-	 * Chain of parties involved in the settlement of a transaction, including
-	 * receipts and deliveries, book transfers, treasury deals, or other
-	 * activities, resulting in the movement of a security or amount of money
-	 * from one account to another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -364,7 +371,7 @@ public class MassQuote1 {
 	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
-			componentContext_lazy = () -> MassQuote1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MassQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgSttlmPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -376,13 +383,11 @@ public class MassQuote1 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvrgSttlmPties")
 	protected SettlementParties3 deliveringSettlementParties;
 	/**
-	 * Chain of parties involved in the settlement of a transaction, including
-	 * receipts and deliveries, book transfers, treasury deals, or other
-	 * activities, resulting in the movement of a security or amount of money
-	 * from one account to another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -415,7 +420,7 @@ public class MassQuote1 {
 	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
-			componentContext_lazy = () -> MassQuote1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MassQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgSttlmPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -427,13 +432,11 @@ public class MassQuote1 {
 			type_lazy = () -> com.tools20022.repository.msg.SettlementParties3.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrBizPties")
 	protected OtherParties1 otherBusinessParties;
 	/**
-	 * Chain of parties involved in the settlement of a transaction, including
-	 * receipts and deliveries, book transfers, treasury deals, or other
-	 * activities, resulting in the movement of a security or amount of money
-	 * from one account to another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -460,7 +463,7 @@ public class MassQuote1 {
 	 */
 	public static final MMMessageAssociationEnd mmOtherBusinessParties = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MassQuote1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MassQuote1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrBizPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -476,10 +479,11 @@ public class MassQuote1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MassQuote1.mmDefaultBidSize, MassQuote1.mmDefaultOfferSize, MassQuote1.mmQuoteSetDetails, MassQuote1.mmTradingParties, MassQuote1.mmCashParties,
-						MassQuote1.mmReceivingSettlementParties, MassQuote1.mmDeliveringSettlementParties, MassQuote1.mmOtherBusinessParties);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MassQuote1.mmDefaultBidSize, com.tools20022.repository.msg.MassQuote1.mmDefaultOfferSize, com.tools20022.repository.msg.MassQuote1.mmQuoteSetDetails,
+						com.tools20022.repository.msg.MassQuote1.mmTradingParties, com.tools20022.repository.msg.MassQuote1.mmCashParties, com.tools20022.repository.msg.MassQuote1.mmReceivingSettlementParties,
+						com.tools20022.repository.msg.MassQuote1.mmDeliveringSettlementParties, com.tools20022.repository.msg.MassQuote1.mmOtherBusinessParties);
 				trace_lazy = () -> Quote.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MassQuote1";
 				definition = "Identifies elements related to a mass quote.";
@@ -488,75 +492,75 @@ public class MassQuote1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DfltBidSz")
-	public FinancialInstrumentQuantityChoice getDefaultBidSize() {
-		return defaultBidSize;
+	public Optional<FinancialInstrumentQuantityChoice> getDefaultBidSize() {
+		return defaultBidSize == null ? Optional.empty() : Optional.of(defaultBidSize);
 	}
 
-	public void setDefaultBidSize(FinancialInstrumentQuantityChoice defaultBidSize) {
+	public MassQuote1 setDefaultBidSize(FinancialInstrumentQuantityChoice defaultBidSize) {
 		this.defaultBidSize = defaultBidSize;
+		return this;
 	}
 
-	@XmlElement(name = "DfltOfferSz")
-	public FinancialInstrumentQuantityChoice getDefaultOfferSize() {
-		return defaultOfferSize;
+	public Optional<FinancialInstrumentQuantityChoice> getDefaultOfferSize() {
+		return defaultOfferSize == null ? Optional.empty() : Optional.of(defaultOfferSize);
 	}
 
-	public void setDefaultOfferSize(FinancialInstrumentQuantityChoice defaultOfferSize) {
+	public MassQuote1 setDefaultOfferSize(FinancialInstrumentQuantityChoice defaultOfferSize) {
 		this.defaultOfferSize = defaultOfferSize;
+		return this;
 	}
 
-	@XmlElement(name = "QtSetDtls", required = true)
 	public List<QuoteSet1> getQuoteSetDetails() {
-		return quoteSetDetails;
+		return quoteSetDetails == null ? quoteSetDetails = new ArrayList<>() : quoteSetDetails;
 	}
 
-	public void setQuoteSetDetails(List<com.tools20022.repository.msg.QuoteSet1> quoteSetDetails) {
-		this.quoteSetDetails = quoteSetDetails;
+	public MassQuote1 setQuoteSetDetails(List<com.tools20022.repository.msg.QuoteSet1> quoteSetDetails) {
+		this.quoteSetDetails = Objects.requireNonNull(quoteSetDetails);
+		return this;
 	}
 
-	@XmlElement(name = "TradgPties")
 	public List<Intermediary14> getTradingParties() {
-		return tradingParties;
+		return tradingParties == null ? tradingParties = new ArrayList<>() : tradingParties;
 	}
 
-	public void setTradingParties(List<com.tools20022.repository.msg.Intermediary14> tradingParties) {
-		this.tradingParties = tradingParties;
+	public MassQuote1 setTradingParties(List<com.tools20022.repository.msg.Intermediary14> tradingParties) {
+		this.tradingParties = Objects.requireNonNull(tradingParties);
+		return this;
 	}
 
-	@XmlElement(name = "CshPties")
-	public CashParties1 getCashParties() {
-		return cashParties;
+	public Optional<CashParties1> getCashParties() {
+		return cashParties == null ? Optional.empty() : Optional.of(cashParties);
 	}
 
-	public void setCashParties(com.tools20022.repository.msg.CashParties1 cashParties) {
+	public MassQuote1 setCashParties(com.tools20022.repository.msg.CashParties1 cashParties) {
 		this.cashParties = cashParties;
+		return this;
 	}
 
-	@XmlElement(name = "RcvgSttlmPties")
-	public SettlementParties3 getReceivingSettlementParties() {
-		return receivingSettlementParties;
+	public Optional<SettlementParties3> getReceivingSettlementParties() {
+		return receivingSettlementParties == null ? Optional.empty() : Optional.of(receivingSettlementParties);
 	}
 
-	public void setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties3 receivingSettlementParties) {
+	public MassQuote1 setReceivingSettlementParties(com.tools20022.repository.msg.SettlementParties3 receivingSettlementParties) {
 		this.receivingSettlementParties = receivingSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "DlvrgSttlmPties")
-	public SettlementParties3 getDeliveringSettlementParties() {
-		return deliveringSettlementParties;
+	public Optional<SettlementParties3> getDeliveringSettlementParties() {
+		return deliveringSettlementParties == null ? Optional.empty() : Optional.of(deliveringSettlementParties);
 	}
 
-	public void setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties3 deliveringSettlementParties) {
+	public MassQuote1 setDeliveringSettlementParties(com.tools20022.repository.msg.SettlementParties3 deliveringSettlementParties) {
 		this.deliveringSettlementParties = deliveringSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "OthrBizPties")
-	public OtherParties1 getOtherBusinessParties() {
-		return otherBusinessParties;
+	public Optional<OtherParties1> getOtherBusinessParties() {
+		return otherBusinessParties == null ? Optional.empty() : Optional.of(otherBusinessParties);
 	}
 
-	public void setOtherBusinessParties(com.tools20022.repository.msg.OtherParties1 otherBusinessParties) {
+	public MassQuote1 setOtherBusinessParties(com.tools20022.repository.msg.OtherParties1 otherBusinessParties) {
 		this.otherBusinessParties = otherBusinessParties;
+		return this;
 	}
 }

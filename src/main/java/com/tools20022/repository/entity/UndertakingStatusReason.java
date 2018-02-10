@@ -29,6 +29,8 @@ import com.tools20022.repository.msg.UndertakingTermination3;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Specifies the reason for the status or for the action (for instance
@@ -41,6 +43,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.StatusReason
+ * StatusReason}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -61,18 +66,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * UndertakingStatusReason.mmSettlementReason}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.StatusReason
- * StatusReason}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DemandRefusal1 DemandRefusal1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.TerminationReason1Choice
- * TerminationReason1Choice}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -86,10 +79,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.DemandRefusal1 DemandRefusal1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.TerminationReason1Choice
+ * TerminationReason1Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,8 +109,8 @@ public class UndertakingStatusReason extends StatusReason {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Discrepancy discrepancy;
 	/**
-	 * Demand is refused because of a discrepancy in the demand.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,8 +153,8 @@ public class UndertakingStatusReason extends StatusReason {
 	public static final MMBusinessAssociationEnd mmDiscrepancy = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(DemandRefusal1.mmDiscrepancy);
-			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Discrepancy";
 			definition = "Demand is refused because of a discrepancy in the demand.";
@@ -165,9 +167,8 @@ public class UndertakingStatusReason extends StatusReason {
 	};
 	protected UndertakingStatus undertakingStatus;
 	/**
-	 * Status for which a reason is provided. It is derived from the association
-	 * between StatusReason and Status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,8 +203,8 @@ public class UndertakingStatusReason extends StatusReason {
 	 */
 	public static final MMBusinessAssociationEnd mmUndertakingStatus = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UndertakingStatus";
 			definition = "Status for which a reason is provided. It is derived from the association between StatusReason and Status.";
@@ -216,8 +217,8 @@ public class UndertakingStatusReason extends StatusReason {
 	};
 	protected TerminationReasonCode terminationReason;
 	/**
-	 * Reason for the termination.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -258,8 +259,8 @@ public class UndertakingStatusReason extends StatusReason {
 	public static final MMBusinessAttribute mmTerminationReason = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TerminationReason1Choice.mmCode, TerminationReason1Choice.mmProprietary, UndertakingTermination3.mmReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TerminationReason";
 			definition = "Reason for the termination.";
@@ -278,8 +279,8 @@ public class UndertakingStatusReason extends StatusReason {
 	};
 	protected DemandStatusCode demandRefusalStatusReason;
 	/**
-	 * Processing status reported by the issuer for the refusal of a demand.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -306,8 +307,8 @@ public class UndertakingStatusReason extends StatusReason {
 	 */
 	public static final MMBusinessAttribute mmDemandRefusalStatusReason = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DemandRefusalStatusReason";
 			definition = "Processing status reported by the issuer for the refusal of a demand.";
@@ -326,8 +327,8 @@ public class UndertakingStatusReason extends StatusReason {
 	};
 	protected SettlementAdviceTypeCode settlementReason;
 	/**
-	 * Specifies the reason for the settlement of an amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -353,8 +354,8 @@ public class UndertakingStatusReason extends StatusReason {
 	 */
 	public static final MMBusinessAttribute mmSettlementReason = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementReason";
 			definition = "Specifies the reason for the settlement of an amount.";
@@ -375,7 +376,7 @@ public class UndertakingStatusReason extends StatusReason {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingStatusReason";
 				definition = "Specifies the reason for the status or for the action (for instance settlement reason).";
@@ -395,43 +396,48 @@ public class UndertakingStatusReason extends StatusReason {
 		return mmObject_lazy.get();
 	}
 
-	public Discrepancy getDiscrepancy() {
-		return discrepancy;
+	public Optional<Discrepancy> getDiscrepancy() {
+		return discrepancy == null ? Optional.empty() : Optional.of(discrepancy);
 	}
 
-	public void setDiscrepancy(com.tools20022.repository.entity.Discrepancy discrepancy) {
+	public UndertakingStatusReason setDiscrepancy(com.tools20022.repository.entity.Discrepancy discrepancy) {
 		this.discrepancy = discrepancy;
+		return this;
 	}
 
 	public UndertakingStatus getUndertakingStatus() {
 		return undertakingStatus;
 	}
 
-	public void setUndertakingStatus(com.tools20022.repository.entity.UndertakingStatus undertakingStatus) {
-		this.undertakingStatus = undertakingStatus;
+	public UndertakingStatusReason setUndertakingStatus(com.tools20022.repository.entity.UndertakingStatus undertakingStatus) {
+		this.undertakingStatus = Objects.requireNonNull(undertakingStatus);
+		return this;
 	}
 
 	public TerminationReasonCode getTerminationReason() {
 		return terminationReason;
 	}
 
-	public void setTerminationReason(TerminationReasonCode terminationReason) {
-		this.terminationReason = terminationReason;
+	public UndertakingStatusReason setTerminationReason(TerminationReasonCode terminationReason) {
+		this.terminationReason = Objects.requireNonNull(terminationReason);
+		return this;
 	}
 
 	public DemandStatusCode getDemandRefusalStatusReason() {
 		return demandRefusalStatusReason;
 	}
 
-	public void setDemandRefusalStatusReason(DemandStatusCode demandRefusalStatusReason) {
-		this.demandRefusalStatusReason = demandRefusalStatusReason;
+	public UndertakingStatusReason setDemandRefusalStatusReason(DemandStatusCode demandRefusalStatusReason) {
+		this.demandRefusalStatusReason = Objects.requireNonNull(demandRefusalStatusReason);
+		return this;
 	}
 
 	public SettlementAdviceTypeCode getSettlementReason() {
 		return settlementReason;
 	}
 
-	public void setSettlementReason(SettlementAdviceTypeCode settlementReason) {
-		this.settlementReason = settlementReason;
+	public UndertakingStatusReason setSettlementReason(SettlementAdviceTypeCode settlementReason) {
+		this.settlementReason = Objects.requireNonNull(settlementReason);
+		return this;
 	}
 }

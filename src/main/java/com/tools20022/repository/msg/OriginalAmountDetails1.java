@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.RateAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OriginalAmountDetails1", propOrder = {"actualAmount", "minimumAmount", "maximumAmount"})
 public class OriginalAmountDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ActlAmt")
 	protected ImpliedCurrencyAndAmount actualAmount;
 	/**
-	 * Actual amount to be converted
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +116,7 @@ public class OriginalAmountDetails1 {
 	public static final MMMessageAttribute mmActualAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
-			componentContext_lazy = () -> OriginalAmountDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalAmountDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ActlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +127,11 @@ public class OriginalAmountDetails1 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "MinAmt")
 	protected ImpliedCurrencyAndAmount minimumAmount;
 	/**
-	 * Minimum amount for conversion (in case of range of amounts)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +166,7 @@ public class OriginalAmountDetails1 {
 	public static final MMMessageAttribute mmMinimumAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
-			componentContext_lazy = () -> OriginalAmountDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalAmountDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "MinAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +177,11 @@ public class OriginalAmountDetails1 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxAmt")
 	protected ImpliedCurrencyAndAmount maximumAmount;
 	/**
-	 * Maximum amount for conversion (in case of range of amounts)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -212,7 +216,7 @@ public class OriginalAmountDetails1 {
 	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
-			componentContext_lazy = () -> OriginalAmountDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalAmountDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "MaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,9 +231,10 @@ public class OriginalAmountDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OriginalAmountDetails1.mmActualAmount, OriginalAmountDetails1.mmMinimumAmount, OriginalAmountDetails1.mmMaximumAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalAmountDetails1.mmActualAmount, com.tools20022.repository.msg.OriginalAmountDetails1.mmMinimumAmount,
+						com.tools20022.repository.msg.OriginalAmountDetails1.mmMaximumAmount);
 				trace_lazy = () -> RateAndAmount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalAmountDetails1";
 				definition = "The OriginalAmountDetails contains all amount information in the acceptor currency code necessary to manage currency conversion in the cardholder currency code.";
@@ -238,30 +243,30 @@ public class OriginalAmountDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ActlAmt")
-	public ImpliedCurrencyAndAmount getActualAmount() {
-		return actualAmount;
+	public Optional<ImpliedCurrencyAndAmount> getActualAmount() {
+		return actualAmount == null ? Optional.empty() : Optional.of(actualAmount);
 	}
 
-	public void setActualAmount(ImpliedCurrencyAndAmount actualAmount) {
+	public OriginalAmountDetails1 setActualAmount(ImpliedCurrencyAndAmount actualAmount) {
 		this.actualAmount = actualAmount;
+		return this;
 	}
 
-	@XmlElement(name = "MinAmt")
-	public ImpliedCurrencyAndAmount getMinimumAmount() {
-		return minimumAmount;
+	public Optional<ImpliedCurrencyAndAmount> getMinimumAmount() {
+		return minimumAmount == null ? Optional.empty() : Optional.of(minimumAmount);
 	}
 
-	public void setMinimumAmount(ImpliedCurrencyAndAmount minimumAmount) {
+	public OriginalAmountDetails1 setMinimumAmount(ImpliedCurrencyAndAmount minimumAmount) {
 		this.minimumAmount = minimumAmount;
+		return this;
 	}
 
-	@XmlElement(name = "MaxAmt")
-	public ImpliedCurrencyAndAmount getMaximumAmount() {
-		return maximumAmount;
+	public Optional<ImpliedCurrencyAndAmount> getMaximumAmount() {
+		return maximumAmount == null ? Optional.empty() : Optional.of(maximumAmount);
 	}
 
-	public void setMaximumAmount(ImpliedCurrencyAndAmount maximumAmount) {
+	public OriginalAmountDetails1 setMaximumAmount(ImpliedCurrencyAndAmount maximumAmount) {
 		this.maximumAmount = maximumAmount;
+		return this;
 	}
 }

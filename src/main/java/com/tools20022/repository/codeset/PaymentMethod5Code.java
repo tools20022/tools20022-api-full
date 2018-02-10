@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PaymentMethodCode;
+import com.tools20022.repository.codeset.PaymentMethod5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the transfer method that will be used to transfer an amount of
@@ -31,21 +35,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PaymentMethodCode
- * PaymentMethodCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PaymentMethod5Code#mmCreditTransfer
- * PaymentMethod5Code.mmCreditTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.PaymentMethod5Code#CreditTransfer
+ * PaymentMethod5Code.CreditTransfer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PaymentMethodCode
+ * PaymentMethodCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PaymentMethod5Code extends PaymentMethodCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PaymentMethod5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,26 +88,56 @@ public class PaymentMethod5Code extends PaymentMethodCode {
 	 * name} = "CreditTransfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreditTransfer = new MMCode() {
+	public static final PaymentMethod5Code CreditTransfer = new PaymentMethod5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditTransfer";
-			owner_lazy = () -> PaymentMethod5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PaymentMethod5Code.mmObject();
+			codeName = PaymentMethodCode.CreditTransfer.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PaymentMethod5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PaymentMethod5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("TRF");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentMethod5Code";
 				definition = "Specifies the transfer method that will be used to transfer an amount of money.";
-				code_lazy = () -> Arrays.asList(PaymentMethod5Code.mmCreditTransfer);
 				trace_lazy = () -> PaymentMethodCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PaymentMethod5Code.CreditTransfer);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CreditTransfer.getCodeName().get(), CreditTransfer);
+	}
+
+	public static PaymentMethod5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PaymentMethod5Code[] values() {
+		PaymentMethod5Code[] values = new PaymentMethod5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PaymentMethod5Code> {
+		@Override
+		public PaymentMethod5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PaymentMethod5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

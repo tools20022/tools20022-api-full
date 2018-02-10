@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TradingFloorOrderHandlingCode;
+import com.tools20022.repository.codeset.TradingFloorOrderHandling1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Description of the parameters under which an order must be handled on the
@@ -31,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TradingFloorOrderHandlingCode
- * TradingFloorOrderHandlingCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingFloorOrderHandling1Code#mmAutomatedPrivate
- * TradingFloorOrderHandling1Code.mmAutomatedPrivate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingFloorOrderHandling1Code#AutomatedPrivate
+ * TradingFloorOrderHandling1Code.AutomatedPrivate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingFloorOrderHandling1Code#mmAutomatedPublic
- * TradingFloorOrderHandling1Code.mmAutomatedPublic}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingFloorOrderHandling1Code#AutomatedPublic
+ * TradingFloorOrderHandling1Code.AutomatedPublic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradingFloorOrderHandling1Code#mmManual
- * TradingFloorOrderHandling1Code.mmManual}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradingFloorOrderHandling1Code#Manual
+ * TradingFloorOrderHandling1Code.Manual}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TradingFloorOrderHandlingCode
+ * TradingFloorOrderHandlingCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TradingFloorOrderHandling1Code extends TradingFloorOrderHandlingCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TradingFloorOrderHandling1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class TradingFloorOrderHandling1Code extends TradingFloorOrderHandlingCod
 	 * name} = "AutomatedPrivate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAutomatedPrivate = new MMCode() {
+	public static final TradingFloorOrderHandling1Code AutomatedPrivate = new TradingFloorOrderHandling1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomatedPrivate";
-			owner_lazy = () -> TradingFloorOrderHandling1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingFloorOrderHandling1Code.mmObject();
+			codeName = TradingFloorOrderHandlingCode.AutomatedPrivate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class TradingFloorOrderHandling1Code extends TradingFloorOrderHandlingCod
 	 * name} = "AutomatedPublic"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAutomatedPublic = new MMCode() {
+	public static final TradingFloorOrderHandling1Code AutomatedPublic = new TradingFloorOrderHandling1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomatedPublic";
-			owner_lazy = () -> TradingFloorOrderHandling1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingFloorOrderHandling1Code.mmObject();
+			codeName = TradingFloorOrderHandlingCode.AutomatedPublic.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,26 +142,59 @@ public class TradingFloorOrderHandling1Code extends TradingFloorOrderHandlingCod
 	 * name} = "Manual"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmManual = new MMCode() {
+	public static final TradingFloorOrderHandling1Code Manual = new TradingFloorOrderHandling1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Manual";
-			owner_lazy = () -> TradingFloorOrderHandling1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradingFloorOrderHandling1Code.mmObject();
+			codeName = TradingFloorOrderHandlingCode.Manual.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TradingFloorOrderHandling1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TradingFloorOrderHandling1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ATPR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingFloorOrderHandling1Code";
 				definition = "Description of the parameters under which an order must be handled on the floor.";
-				code_lazy = () -> Arrays.asList(TradingFloorOrderHandling1Code.mmAutomatedPrivate, TradingFloorOrderHandling1Code.mmAutomatedPublic, TradingFloorOrderHandling1Code.mmManual);
 				trace_lazy = () -> TradingFloorOrderHandlingCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingFloorOrderHandling1Code.AutomatedPrivate, com.tools20022.repository.codeset.TradingFloorOrderHandling1Code.AutomatedPublic,
+						com.tools20022.repository.codeset.TradingFloorOrderHandling1Code.Manual);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AutomatedPrivate.getCodeName().get(), AutomatedPrivate);
+		codesByName.put(AutomatedPublic.getCodeName().get(), AutomatedPublic);
+		codesByName.put(Manual.getCodeName().get(), Manual);
+	}
+
+	public static TradingFloorOrderHandling1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TradingFloorOrderHandling1Code[] values() {
+		TradingFloorOrderHandling1Code[] values = new TradingFloorOrderHandling1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TradingFloorOrderHandling1Code> {
+		@Override
+		public TradingFloorOrderHandling1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TradingFloorOrderHandling1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

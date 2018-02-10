@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SettleStyleCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies when the option contract settles.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettleStyleCode#mmSettleOnOpen
- * SettleStyleCode.mmSettleOnOpen}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettleStyleCode#SettleOnOpen
+ * SettleStyleCode.SettleOnOpen}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettleStyleCode#mmSettleOnClose
- * SettleStyleCode.mmSettleOnClose}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettleStyleCode#SettleOnClose
+ * SettleStyleCode.SettleOnClose}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies when the option contract settles."</li>
  * </ul>
  */
-public class SettleStyleCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettleStyleCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,12 +98,12 @@ public class SettleStyleCode {
 	 * "Settlement is only allowed on the opening of the future contract."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettleOnOpen = new MMCode() {
+	public static final SettleStyleCode SettleOnOpen = new SettleStyleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettleOnOpen";
 			definition = "Settlement is only allowed on the opening of the future contract.";
-			owner_lazy = () -> SettleStyleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettleStyleCode.mmObject();
 			codeName = "SETO";
 		}
 	};
@@ -123,28 +129,58 @@ public class SettleStyleCode {
 	 * "Settlement is only allowed on the closing of the future contract."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettleOnClose = new MMCode() {
+	public static final SettleStyleCode SettleOnClose = new SettleStyleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettleOnClose";
 			definition = "Settlement is only allowed on the closing of the future contract.";
-			owner_lazy = () -> SettleStyleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettleStyleCode.mmObject();
 			codeName = "SETC";
 		}
 	};
+	final static private LinkedHashMap<String, SettleStyleCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettleStyleCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SETO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettleStyleCode";
 				definition = "Specifies when the option contract settles.";
-				code_lazy = () -> Arrays.asList(SettleStyleCode.mmSettleOnOpen, SettleStyleCode.mmSettleOnClose);
 				derivation_lazy = () -> Arrays.asList(SettleStyle1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettleStyleCode.SettleOnOpen, com.tools20022.repository.codeset.SettleStyleCode.SettleOnClose);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SettleOnOpen.getCodeName().get(), SettleOnOpen);
+		codesByName.put(SettleOnClose.getCodeName().get(), SettleOnClose);
+	}
+
+	public static SettleStyleCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettleStyleCode[] values() {
+		SettleStyleCode[] values = new SettleStyleCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettleStyleCode> {
+		@Override
+		public SettleStyleCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettleStyleCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

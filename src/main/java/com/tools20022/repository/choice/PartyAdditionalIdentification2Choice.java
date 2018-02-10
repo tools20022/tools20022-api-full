@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OrganisationIdentification5;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Ancillary identification information about the party."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyAdditionalIdentification2Choice", propOrder = {"birthDate", "registrationIdentification"})
 public class PartyAdditionalIdentification2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BirthDt", required = true)
 	protected ISODate birthDate;
 	/**
-	 * Date of birth of an individual person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +109,7 @@ public class PartyAdditionalIdentification2Choice {
 	public static final MMMessageAttribute mmBirthDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Person.mmBirthDate;
-			componentContext_lazy = () -> PartyAdditionalIdentification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyAdditionalIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BirthDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +120,11 @@ public class PartyAdditionalIdentification2Choice {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "RegnId", required = true)
 	protected OrganisationIdentification5 registrationIdentification;
 	/**
-	 * Official identification of an organisation in a specific register.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -149,7 +152,7 @@ public class PartyAdditionalIdentification2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRegistrationIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyAdditionalIdentification2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PartyAdditionalIdentification2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RegnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,9 +168,10 @@ public class PartyAdditionalIdentification2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyAdditionalIdentification2Choice.mmBirthDate, PartyAdditionalIdentification2Choice.mmRegistrationIdentification);
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.choice.PartyAdditionalIdentification2Choice.mmBirthDate, com.tools20022.repository.choice.PartyAdditionalIdentification2Choice.mmRegistrationIdentification);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyAdditionalIdentification2Choice";
 				definition = "Ancillary identification information about the party.";
@@ -176,21 +180,21 @@ public class PartyAdditionalIdentification2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BirthDt", required = true)
 	public ISODate getBirthDate() {
 		return birthDate;
 	}
 
-	public void setBirthDate(ISODate birthDate) {
-		this.birthDate = birthDate;
+	public PartyAdditionalIdentification2Choice setBirthDate(ISODate birthDate) {
+		this.birthDate = Objects.requireNonNull(birthDate);
+		return this;
 	}
 
-	@XmlElement(name = "RegnId", required = true)
 	public OrganisationIdentification5 getRegistrationIdentification() {
 		return registrationIdentification;
 	}
 
-	public void setRegistrationIdentification(OrganisationIdentification5 registrationIdentification) {
-		this.registrationIdentification = registrationIdentification;
+	public PartyAdditionalIdentification2Choice setRegistrationIdentification(OrganisationIdentification5 registrationIdentification) {
+		this.registrationIdentification = Objects.requireNonNull(registrationIdentification);
+		return this;
 	}
 }

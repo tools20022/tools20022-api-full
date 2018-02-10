@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Sort criteria."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AdditionalParameters1", propOrder = {"country", "currency", "geographicalArea"})
 public class AdditionalParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ctry")
 	protected CountryCode country;
 	/**
-	 * Specifies the country.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,7 +103,7 @@ public class AdditionalParameters1 {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AdditionalParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +114,11 @@ public class AdditionalParameters1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected ActiveOrHistoricCurrencyCode currency;
 	/**
-	 * Specifies the currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +146,7 @@ public class AdditionalParameters1 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AdditionalParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,10 +157,11 @@ public class AdditionalParameters1 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "GeoArea")
 	protected Max35Text geographicalArea;
 	/**
-	 * Specifies the geographical area, eg, Asia-Pacific, Europe, Middle-East.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -186,7 +190,7 @@ public class AdditionalParameters1 {
 	 */
 	public static final MMMessageAttribute mmGeographicalArea = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AdditionalParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "GeoArea";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,8 +205,9 @@ public class AdditionalParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AdditionalParameters1.mmCountry, AdditionalParameters1.mmCurrency, AdditionalParameters1.mmGeographicalArea);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalParameters1.mmCountry, com.tools20022.repository.msg.AdditionalParameters1.mmCurrency,
+						com.tools20022.repository.msg.AdditionalParameters1.mmGeographicalArea);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalParameters1";
 				definition = "Sort criteria.";
@@ -211,30 +216,30 @@ public class AdditionalParameters1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ctry")
-	public CountryCode getCountry() {
-		return country;
+	public Optional<CountryCode> getCountry() {
+		return country == null ? Optional.empty() : Optional.of(country);
 	}
 
-	public void setCountry(CountryCode country) {
+	public AdditionalParameters1 setCountry(CountryCode country) {
 		this.country = country;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public ActiveOrHistoricCurrencyCode getCurrency() {
-		return currency;
+	public Optional<ActiveOrHistoricCurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(ActiveOrHistoricCurrencyCode currency) {
+	public AdditionalParameters1 setCurrency(ActiveOrHistoricCurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "GeoArea")
-	public Max35Text getGeographicalArea() {
-		return geographicalArea;
+	public Optional<Max35Text> getGeographicalArea() {
+		return geographicalArea == null ? Optional.empty() : Optional.of(geographicalArea);
 	}
 
-	public void setGeographicalArea(Max35Text geographicalArea) {
+	public AdditionalParameters1 setGeographicalArea(Max35Text geographicalArea) {
 		this.geographicalArea = geographicalArea;
+		return this;
 	}
 }

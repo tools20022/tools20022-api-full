@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Distribution;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Characteristics for a mixed cash and securities distribution event.
@@ -37,6 +39,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Distribution
+ * Distribution}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -72,9 +77,6 @@ import java.util.List;
  * SecuritiesAndCashDistribution.mmCashDistribution}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Distribution
- * Distribution}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -118,8 +120,8 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -136,9 +138,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected SecuritiesQuantity intermediateToUnderlyingDenominator;
 	/**
-	 * Quantity of interim securities awarded for a given quantity of underlying
-	 * shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,8 +175,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmIntermediateToUnderlyingDenominator = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntermediateToUnderlyingDenominator";
 			definition = "Quantity of interim securities awarded for a given quantity of underlying shares.";
@@ -188,9 +189,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	};
 	protected SecuritiesQuantity maximumHolding;
 	/**
-	 * Indicates the maximum quantity of financial instrument that must be held
-	 * in order to be entitled to take part in the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,8 +225,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmMaximumHolding = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumHolding";
 			definition = "Indicates the maximum quantity of financial instrument that must be held in order to be entitled to take part in the event.";
@@ -239,9 +239,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	};
 	protected SecuritiesQuantity maximumExercisableQuantity;
 	/**
-	 * Indicates the maximum quantity of financial instrument that may be
-	 * exercised in the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -276,8 +275,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmMaximumExercisableQuantity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumExercisableQuantity";
 			definition = "Indicates the maximum quantity of financial instrument that may be exercised in the event.";
@@ -290,8 +289,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	};
 	protected SecuritiesQuantity minimumExercisableQuantity;
 	/**
-	 * Minimum quantity of securities that must be exercised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -324,8 +323,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmMinimumExercisableQuantity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumExercisableQuantity";
 			definition = "Minimum quantity of securities that must be exercised.";
@@ -338,9 +337,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	};
 	protected SecuritiesQuantity distributedToUnderlyingDenominator;
 	/**
-	 * Quantity of new securities that will be derived by the exercise of a
-	 * given quantity of intermediate securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -376,8 +374,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmDistributedToUnderlyingDenominator = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DistributedToUnderlyingDenominator";
 			definition = "Quantity of new securities that will be derived by the exercise of a given quantity of intermediate securities.";
@@ -390,9 +388,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	};
 	protected SecuritiesQuantity intermediateToUnderlyingNumerator;
 	/**
-	 * Quantity of interim securities awarded for a given quantity of underlying
-	 * shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -428,8 +425,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmIntermediateToUnderlyingNumerator = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IntermediateToUnderlyingNumerator";
 			definition = "Quantity of interim securities awarded for a given quantity of underlying shares.";
@@ -442,9 +439,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	};
 	protected SecuritiesQuantity minimumHolding;
 	/**
-	 * Indicates the minimum quantity of financial instrument that must be held
-	 * in order to be entitled to take part in the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -479,8 +475,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmMinimumHolding = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumHolding";
 			definition = "Indicates the minimum quantity of financial instrument that must be held in order to be entitled to take part in the event.";
@@ -493,9 +489,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	};
 	protected SecuritiesQuantity distributedToUnderlyingNumerator;
 	/**
-	 * Quantity of new securities that will be derived by the exercise of a
-	 * given quantity of intermediate securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -531,8 +526,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmDistributedToUnderlyingNumerator = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributedToUnderlyingNumerator";
 			definition = "Quantity of new securities that will be derived by the exercise of a given quantity of intermediate securities.";
@@ -545,9 +540,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	};
 	protected SecuritiesDistribution securitiesDistribution;
 	/**
-	 * Securities distribution elements of a cash and securities distribution
-	 * process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -583,8 +577,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesDistribution";
 			definition = "Securities distribution elements of a cash and securities distribution process.";
@@ -597,8 +591,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	};
 	protected List<com.tools20022.repository.entity.CashDistribution> cashDistribution;
 	/**
-	 * Cash distribution elements of a cash and securities distribution process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -633,8 +627,8 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	 */
 	public static final MMBusinessAssociationEnd mmCashDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAndCashDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashDistribution";
 			definition = "Cash distribution elements of a cash and securities distribution process.";
@@ -648,7 +642,7 @@ public class SecuritiesAndCashDistribution extends Distribution {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAndCashDistribution";
 				definition = "Characteristics for a mixed cash and securities distribution event.";
@@ -679,79 +673,89 @@ public class SecuritiesAndCashDistribution extends Distribution {
 		return intermediateToUnderlyingDenominator;
 	}
 
-	public void setIntermediateToUnderlyingDenominator(com.tools20022.repository.entity.SecuritiesQuantity intermediateToUnderlyingDenominator) {
-		this.intermediateToUnderlyingDenominator = intermediateToUnderlyingDenominator;
+	public SecuritiesAndCashDistribution setIntermediateToUnderlyingDenominator(com.tools20022.repository.entity.SecuritiesQuantity intermediateToUnderlyingDenominator) {
+		this.intermediateToUnderlyingDenominator = Objects.requireNonNull(intermediateToUnderlyingDenominator);
+		return this;
 	}
 
 	public SecuritiesQuantity getMaximumHolding() {
 		return maximumHolding;
 	}
 
-	public void setMaximumHolding(com.tools20022.repository.entity.SecuritiesQuantity maximumHolding) {
-		this.maximumHolding = maximumHolding;
+	public SecuritiesAndCashDistribution setMaximumHolding(com.tools20022.repository.entity.SecuritiesQuantity maximumHolding) {
+		this.maximumHolding = Objects.requireNonNull(maximumHolding);
+		return this;
 	}
 
 	public SecuritiesQuantity getMaximumExercisableQuantity() {
 		return maximumExercisableQuantity;
 	}
 
-	public void setMaximumExercisableQuantity(com.tools20022.repository.entity.SecuritiesQuantity maximumExercisableQuantity) {
-		this.maximumExercisableQuantity = maximumExercisableQuantity;
+	public SecuritiesAndCashDistribution setMaximumExercisableQuantity(com.tools20022.repository.entity.SecuritiesQuantity maximumExercisableQuantity) {
+		this.maximumExercisableQuantity = Objects.requireNonNull(maximumExercisableQuantity);
+		return this;
 	}
 
 	public SecuritiesQuantity getMinimumExercisableQuantity() {
 		return minimumExercisableQuantity;
 	}
 
-	public void setMinimumExercisableQuantity(com.tools20022.repository.entity.SecuritiesQuantity minimumExercisableQuantity) {
-		this.minimumExercisableQuantity = minimumExercisableQuantity;
+	public SecuritiesAndCashDistribution setMinimumExercisableQuantity(com.tools20022.repository.entity.SecuritiesQuantity minimumExercisableQuantity) {
+		this.minimumExercisableQuantity = Objects.requireNonNull(minimumExercisableQuantity);
+		return this;
 	}
 
 	public SecuritiesQuantity getDistributedToUnderlyingDenominator() {
 		return distributedToUnderlyingDenominator;
 	}
 
-	public void setDistributedToUnderlyingDenominator(com.tools20022.repository.entity.SecuritiesQuantity distributedToUnderlyingDenominator) {
-		this.distributedToUnderlyingDenominator = distributedToUnderlyingDenominator;
+	public SecuritiesAndCashDistribution setDistributedToUnderlyingDenominator(com.tools20022.repository.entity.SecuritiesQuantity distributedToUnderlyingDenominator) {
+		this.distributedToUnderlyingDenominator = Objects.requireNonNull(distributedToUnderlyingDenominator);
+		return this;
 	}
 
 	public SecuritiesQuantity getIntermediateToUnderlyingNumerator() {
 		return intermediateToUnderlyingNumerator;
 	}
 
-	public void setIntermediateToUnderlyingNumerator(com.tools20022.repository.entity.SecuritiesQuantity intermediateToUnderlyingNumerator) {
-		this.intermediateToUnderlyingNumerator = intermediateToUnderlyingNumerator;
+	public SecuritiesAndCashDistribution setIntermediateToUnderlyingNumerator(com.tools20022.repository.entity.SecuritiesQuantity intermediateToUnderlyingNumerator) {
+		this.intermediateToUnderlyingNumerator = Objects.requireNonNull(intermediateToUnderlyingNumerator);
+		return this;
 	}
 
 	public SecuritiesQuantity getMinimumHolding() {
 		return minimumHolding;
 	}
 
-	public void setMinimumHolding(com.tools20022.repository.entity.SecuritiesQuantity minimumHolding) {
-		this.minimumHolding = minimumHolding;
+	public SecuritiesAndCashDistribution setMinimumHolding(com.tools20022.repository.entity.SecuritiesQuantity minimumHolding) {
+		this.minimumHolding = Objects.requireNonNull(minimumHolding);
+		return this;
 	}
 
 	public SecuritiesQuantity getDistributedToUnderlyingNumerator() {
 		return distributedToUnderlyingNumerator;
 	}
 
-	public void setDistributedToUnderlyingNumerator(com.tools20022.repository.entity.SecuritiesQuantity distributedToUnderlyingNumerator) {
-		this.distributedToUnderlyingNumerator = distributedToUnderlyingNumerator;
+	public SecuritiesAndCashDistribution setDistributedToUnderlyingNumerator(com.tools20022.repository.entity.SecuritiesQuantity distributedToUnderlyingNumerator) {
+		this.distributedToUnderlyingNumerator = Objects.requireNonNull(distributedToUnderlyingNumerator);
+		return this;
 	}
 
 	public SecuritiesDistribution getSecuritiesDistribution() {
 		return securitiesDistribution;
 	}
 
-	public void setSecuritiesDistribution(com.tools20022.repository.entity.SecuritiesDistribution securitiesDistribution) {
-		this.securitiesDistribution = securitiesDistribution;
+	public SecuritiesAndCashDistribution setSecuritiesDistribution(com.tools20022.repository.entity.SecuritiesDistribution securitiesDistribution) {
+		this.securitiesDistribution = Objects.requireNonNull(securitiesDistribution);
+		return this;
 	}
 
 	public List<CashDistribution> getCashDistribution() {
-		return cashDistribution;
+		return cashDistribution == null ? cashDistribution = new ArrayList<>() : cashDistribution;
 	}
 
-	public void setCashDistribution(List<com.tools20022.repository.entity.CashDistribution> cashDistribution) {
-		this.cashDistribution = cashDistribution;
+	public SecuritiesAndCashDistribution setCashDistribution(List<com.tools20022.repository.entity.CashDistribution> cashDistribution) {
+		this.cashDistribution = Objects.requireNonNull(cashDistribution);
+		return this;
 	}
 }

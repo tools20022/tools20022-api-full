@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -115,8 +116,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -127,7 +128,7 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the criteria used to report on the payment."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentReturnCriteria3", propOrder = {"messageIdentificationIndicator", "requestedExecutionDateIndicator", "instructionIndicator", "instructionStatusReturnCriteria", "instructedAmountIndicator", "creditDebitIndicator",
 		"interbankSettlementAmountIndicator", "priorityIndicator", "processingValidityTimeIndicator", "purposeIndicator", "instructionCopyIndicator", "paymentMessageTypeIndicator", "paymentTypeIndicator",
 		"transactionIdentificationIndicator", "interbankSettlementDateIndicator", "endToEndIdentificationIndicator", "paymentMethodIndicator", "debtorIndicator", "debtorAgentIndicator", "instructingReimbursementAgentIndicator",
@@ -135,11 +136,11 @@ import javax.xml.bind.annotation.XmlType;
 public class PaymentReturnCriteria3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgIdInd")
 	protected RequestedIndicator messageIdentificationIndicator;
 	/**
-	 * Indicates whether the original payment transaction message identification
-	 * is requested. Usage: this is the former TransactionReference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,7 +170,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmMessageIdentificationIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "MsgIdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,11 +181,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdExctnDtInd")
 	protected RequestedIndicator requestedExecutionDateIndicator;
 	/**
-	 * Indicates whether the requested execution date is requested. Usage: this
-	 * is the former TransferValueDate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -214,7 +215,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmRequestedExecutionDateIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,10 +226,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrInd")
 	protected RequestedIndicator instructionIndicator;
 	/**
-	 * Indicates whether the instruction is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -256,7 +258,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmInstructionIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "InstrInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,10 +269,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrStsRtrCrit")
 	protected InstructionStatusReturnCriteria instructionStatusReturnCriteria;
 	/**
-	 * Indicates whether the instruction status is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -298,7 +301,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmInstructionStatusReturnCriteria = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "InstrStsRtrCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,10 +312,11 @@ public class PaymentReturnCriteria3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.InstructionStatusReturnCriteria.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdAmtInd")
 	protected RequestedIndicator instructedAmountIndicator;
 	/**
-	 * Indicates whether the instructed amount is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -340,7 +344,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmInstructedAmountIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAmtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -351,10 +355,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd")
 	protected RequestedIndicator creditDebitIndicator;
 	/**
-	 * Indicates whether the credit debit indicator is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -383,7 +388,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -394,10 +399,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmAmtInd")
 	protected RequestedIndicator interbankSettlementAmountIndicator;
 	/**
-	 * Indicates whether the interbank settlement amount is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -426,7 +432,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmInterbankSettlementAmountIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmAmtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -437,10 +443,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtyInd")
 	protected RequestedIndicator priorityIndicator;
 	/**
-	 * Indicates whether the payment priority is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -468,7 +475,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmPriorityIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "PrtyInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -479,10 +486,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcgVldtyTmInd")
 	protected RequestedIndicator processingValidityTimeIndicator;
 	/**
-	 * Indicates whether the processing validity time is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -511,7 +519,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmProcessingValidityTimeIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgVldtyTmInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -522,10 +530,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PurpInd")
 	protected RequestedIndicator purposeIndicator;
 	/**
-	 * Indicates whether the transfer reason is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -553,7 +562,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmPurposeIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "PurpInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -564,10 +573,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrCpyInd")
 	protected RequestedIndicator instructionCopyIndicator;
 	/**
-	 * Indicates whether the instruction copy is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -595,7 +605,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmInstructionCopyIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "InstrCpyInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -606,10 +616,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtMTInd")
 	protected RequestedIndicator paymentMessageTypeIndicator;
 	/**
-	 * Indicates whether the payment message type is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -637,7 +648,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmPaymentMessageTypeIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtMTInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -648,10 +659,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtTpInd")
 	protected RequestedIndicator paymentTypeIndicator;
 	/**
-	 * Indicates whether the payment type is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -679,7 +691,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmPaymentTypeIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTpInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -690,11 +702,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "TxIdInd")
 	protected RequestedIndicator transactionIdentificationIndicator;
 	/**
-	 * Indicates whether the transaction identification is requested. Usage:
-	 * this is the former PaymentInstructionReference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -724,7 +736,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentificationIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "TxIdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -735,11 +747,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmDtInd")
 	protected RequestedIndicator interbankSettlementDateIndicator;
 	/**
-	 * Indicates whether the interbank settlement date is requested. Usage: this
-	 * is the former InterbankValueDate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -769,7 +781,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmInterbankSettlementDateIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -780,11 +792,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "EndToEndIdInd")
 	protected RequestedIndicator endToEndIdentificationIndicator;
 	/**
-	 * Indicates whether the end-to-end identification is requested. Usage: this
-	 * is the former RelatedReference
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -814,7 +826,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmEndToEndIdentificationIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "EndToEndIdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -825,10 +837,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtMtdInd")
 	protected RequestedIndicator paymentMethodIndicator;
 	/**
-	 * Indicates whether the payment method is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -856,7 +869,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmPaymentMethodIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtMtdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -867,10 +880,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "DbtrInd")
 	protected RequestedIndicator debtorIndicator;
 	/**
-	 * Indicates whether the debtor is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -898,7 +912,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmDebtorIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -909,11 +923,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "DbtrAgtInd")
 	protected RequestedIndicator debtorAgentIndicator;
 	/**
-	 * Indicates whether the debtor agent is requested. Usage: this is the
-	 * former FirstAgent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -943,7 +957,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmDebtorAgentIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAgtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -954,11 +968,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "InstgRmbrsmntAgtInd")
 	protected RequestedIndicator instructingReimbursementAgentIndicator;
 	/**
-	 * Indicates whether the instructing reimbursement agent is requested.<br>
-	 * Usage: this is the former InstructingAgentCorrespondent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -988,7 +1002,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmInstructingReimbursementAgentIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "InstgRmbrsmntAgtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -999,11 +1013,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdRmbrsmntAgtInd")
 	protected RequestedIndicator instructedReimbursementAgentIndicator;
 	/**
-	 * Indicates whether the instructed reimbursement agent is requested.<br>
-	 * Usage: this is the former InstructedAgentCorrespondent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1033,7 +1047,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmInstructedReimbursementAgentIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "InstdRmbrsmntAgtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1044,10 +1058,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrmyInd")
 	protected RequestedIndicator intermediaryIndicator;
 	/**
-	 * Indicates whether the intermediary is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1075,7 +1090,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmIntermediaryIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1086,11 +1101,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrAgtInd")
 	protected RequestedIndicator creditorAgentIndicator;
 	/**
-	 * Indicates whether the creditor agent is requested. Usage: this is the
-	 * former FinalAgent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1120,7 +1135,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmCreditorAgentIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAgtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1131,10 +1146,11 @@ public class PaymentReturnCriteria3 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrInd")
 	protected RequestedIndicator creditorIndicator;
 	/**
-	 * Indicates whether the creditor is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1162,7 +1178,7 @@ public class PaymentReturnCriteria3 {
 	 */
 	public static final MMMessageAttribute mmCreditorIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentReturnCriteria3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentReturnCriteria3.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1177,14 +1193,19 @@ public class PaymentReturnCriteria3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentReturnCriteria3.mmMessageIdentificationIndicator, PaymentReturnCriteria3.mmRequestedExecutionDateIndicator, PaymentReturnCriteria3.mmInstructionIndicator,
-						PaymentReturnCriteria3.mmInstructionStatusReturnCriteria, PaymentReturnCriteria3.mmInstructedAmountIndicator, PaymentReturnCriteria3.mmCreditDebitIndicator,
-						PaymentReturnCriteria3.mmInterbankSettlementAmountIndicator, PaymentReturnCriteria3.mmPriorityIndicator, PaymentReturnCriteria3.mmProcessingValidityTimeIndicator, PaymentReturnCriteria3.mmPurposeIndicator,
-						PaymentReturnCriteria3.mmInstructionCopyIndicator, PaymentReturnCriteria3.mmPaymentMessageTypeIndicator, PaymentReturnCriteria3.mmPaymentTypeIndicator, PaymentReturnCriteria3.mmTransactionIdentificationIndicator,
-						PaymentReturnCriteria3.mmInterbankSettlementDateIndicator, PaymentReturnCriteria3.mmEndToEndIdentificationIndicator, PaymentReturnCriteria3.mmPaymentMethodIndicator, PaymentReturnCriteria3.mmDebtorIndicator,
-						PaymentReturnCriteria3.mmDebtorAgentIndicator, PaymentReturnCriteria3.mmInstructingReimbursementAgentIndicator, PaymentReturnCriteria3.mmInstructedReimbursementAgentIndicator,
-						PaymentReturnCriteria3.mmIntermediaryIndicator, PaymentReturnCriteria3.mmCreditorAgentIndicator, PaymentReturnCriteria3.mmCreditorIndicator);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentReturnCriteria3.mmMessageIdentificationIndicator, com.tools20022.repository.msg.PaymentReturnCriteria3.mmRequestedExecutionDateIndicator,
+						com.tools20022.repository.msg.PaymentReturnCriteria3.mmInstructionIndicator, com.tools20022.repository.msg.PaymentReturnCriteria3.mmInstructionStatusReturnCriteria,
+						com.tools20022.repository.msg.PaymentReturnCriteria3.mmInstructedAmountIndicator, com.tools20022.repository.msg.PaymentReturnCriteria3.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.PaymentReturnCriteria3.mmInterbankSettlementAmountIndicator, com.tools20022.repository.msg.PaymentReturnCriteria3.mmPriorityIndicator,
+						com.tools20022.repository.msg.PaymentReturnCriteria3.mmProcessingValidityTimeIndicator, com.tools20022.repository.msg.PaymentReturnCriteria3.mmPurposeIndicator,
+						com.tools20022.repository.msg.PaymentReturnCriteria3.mmInstructionCopyIndicator, com.tools20022.repository.msg.PaymentReturnCriteria3.mmPaymentMessageTypeIndicator,
+						com.tools20022.repository.msg.PaymentReturnCriteria3.mmPaymentTypeIndicator, com.tools20022.repository.msg.PaymentReturnCriteria3.mmTransactionIdentificationIndicator,
+						com.tools20022.repository.msg.PaymentReturnCriteria3.mmInterbankSettlementDateIndicator, com.tools20022.repository.msg.PaymentReturnCriteria3.mmEndToEndIdentificationIndicator,
+						com.tools20022.repository.msg.PaymentReturnCriteria3.mmPaymentMethodIndicator, com.tools20022.repository.msg.PaymentReturnCriteria3.mmDebtorIndicator,
+						com.tools20022.repository.msg.PaymentReturnCriteria3.mmDebtorAgentIndicator, com.tools20022.repository.msg.PaymentReturnCriteria3.mmInstructingReimbursementAgentIndicator,
+						com.tools20022.repository.msg.PaymentReturnCriteria3.mmInstructedReimbursementAgentIndicator, com.tools20022.repository.msg.PaymentReturnCriteria3.mmIntermediaryIndicator,
+						com.tools20022.repository.msg.PaymentReturnCriteria3.mmCreditorAgentIndicator, com.tools20022.repository.msg.PaymentReturnCriteria3.mmCreditorIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentReturnCriteria3";
 				definition = "Defines the criteria used to report on the payment.";
@@ -1193,219 +1214,219 @@ public class PaymentReturnCriteria3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgIdInd")
-	public RequestedIndicator getMessageIdentificationIndicator() {
-		return messageIdentificationIndicator;
+	public Optional<RequestedIndicator> getMessageIdentificationIndicator() {
+		return messageIdentificationIndicator == null ? Optional.empty() : Optional.of(messageIdentificationIndicator);
 	}
 
-	public void setMessageIdentificationIndicator(RequestedIndicator messageIdentificationIndicator) {
+	public PaymentReturnCriteria3 setMessageIdentificationIndicator(RequestedIndicator messageIdentificationIndicator) {
 		this.messageIdentificationIndicator = messageIdentificationIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "ReqdExctnDtInd")
-	public RequestedIndicator getRequestedExecutionDateIndicator() {
-		return requestedExecutionDateIndicator;
+	public Optional<RequestedIndicator> getRequestedExecutionDateIndicator() {
+		return requestedExecutionDateIndicator == null ? Optional.empty() : Optional.of(requestedExecutionDateIndicator);
 	}
 
-	public void setRequestedExecutionDateIndicator(RequestedIndicator requestedExecutionDateIndicator) {
+	public PaymentReturnCriteria3 setRequestedExecutionDateIndicator(RequestedIndicator requestedExecutionDateIndicator) {
 		this.requestedExecutionDateIndicator = requestedExecutionDateIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "InstrInd")
-	public RequestedIndicator getInstructionIndicator() {
-		return instructionIndicator;
+	public Optional<RequestedIndicator> getInstructionIndicator() {
+		return instructionIndicator == null ? Optional.empty() : Optional.of(instructionIndicator);
 	}
 
-	public void setInstructionIndicator(RequestedIndicator instructionIndicator) {
+	public PaymentReturnCriteria3 setInstructionIndicator(RequestedIndicator instructionIndicator) {
 		this.instructionIndicator = instructionIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "InstrStsRtrCrit")
-	public InstructionStatusReturnCriteria getInstructionStatusReturnCriteria() {
-		return instructionStatusReturnCriteria;
+	public Optional<InstructionStatusReturnCriteria> getInstructionStatusReturnCriteria() {
+		return instructionStatusReturnCriteria == null ? Optional.empty() : Optional.of(instructionStatusReturnCriteria);
 	}
 
-	public void setInstructionStatusReturnCriteria(com.tools20022.repository.msg.InstructionStatusReturnCriteria instructionStatusReturnCriteria) {
+	public PaymentReturnCriteria3 setInstructionStatusReturnCriteria(com.tools20022.repository.msg.InstructionStatusReturnCriteria instructionStatusReturnCriteria) {
 		this.instructionStatusReturnCriteria = instructionStatusReturnCriteria;
+		return this;
 	}
 
-	@XmlElement(name = "InstdAmtInd")
-	public RequestedIndicator getInstructedAmountIndicator() {
-		return instructedAmountIndicator;
+	public Optional<RequestedIndicator> getInstructedAmountIndicator() {
+		return instructedAmountIndicator == null ? Optional.empty() : Optional.of(instructedAmountIndicator);
 	}
 
-	public void setInstructedAmountIndicator(RequestedIndicator instructedAmountIndicator) {
+	public PaymentReturnCriteria3 setInstructedAmountIndicator(RequestedIndicator instructedAmountIndicator) {
 		this.instructedAmountIndicator = instructedAmountIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd")
-	public RequestedIndicator getCreditDebitIndicator() {
-		return creditDebitIndicator;
+	public Optional<RequestedIndicator> getCreditDebitIndicator() {
+		return creditDebitIndicator == null ? Optional.empty() : Optional.of(creditDebitIndicator);
 	}
 
-	public void setCreditDebitIndicator(RequestedIndicator creditDebitIndicator) {
+	public PaymentReturnCriteria3 setCreditDebitIndicator(RequestedIndicator creditDebitIndicator) {
 		this.creditDebitIndicator = creditDebitIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmAmtInd")
-	public RequestedIndicator getInterbankSettlementAmountIndicator() {
-		return interbankSettlementAmountIndicator;
+	public Optional<RequestedIndicator> getInterbankSettlementAmountIndicator() {
+		return interbankSettlementAmountIndicator == null ? Optional.empty() : Optional.of(interbankSettlementAmountIndicator);
 	}
 
-	public void setInterbankSettlementAmountIndicator(RequestedIndicator interbankSettlementAmountIndicator) {
+	public PaymentReturnCriteria3 setInterbankSettlementAmountIndicator(RequestedIndicator interbankSettlementAmountIndicator) {
 		this.interbankSettlementAmountIndicator = interbankSettlementAmountIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PrtyInd")
-	public RequestedIndicator getPriorityIndicator() {
-		return priorityIndicator;
+	public Optional<RequestedIndicator> getPriorityIndicator() {
+		return priorityIndicator == null ? Optional.empty() : Optional.of(priorityIndicator);
 	}
 
-	public void setPriorityIndicator(RequestedIndicator priorityIndicator) {
+	public PaymentReturnCriteria3 setPriorityIndicator(RequestedIndicator priorityIndicator) {
 		this.priorityIndicator = priorityIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PrcgVldtyTmInd")
-	public RequestedIndicator getProcessingValidityTimeIndicator() {
-		return processingValidityTimeIndicator;
+	public Optional<RequestedIndicator> getProcessingValidityTimeIndicator() {
+		return processingValidityTimeIndicator == null ? Optional.empty() : Optional.of(processingValidityTimeIndicator);
 	}
 
-	public void setProcessingValidityTimeIndicator(RequestedIndicator processingValidityTimeIndicator) {
+	public PaymentReturnCriteria3 setProcessingValidityTimeIndicator(RequestedIndicator processingValidityTimeIndicator) {
 		this.processingValidityTimeIndicator = processingValidityTimeIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PurpInd")
-	public RequestedIndicator getPurposeIndicator() {
-		return purposeIndicator;
+	public Optional<RequestedIndicator> getPurposeIndicator() {
+		return purposeIndicator == null ? Optional.empty() : Optional.of(purposeIndicator);
 	}
 
-	public void setPurposeIndicator(RequestedIndicator purposeIndicator) {
+	public PaymentReturnCriteria3 setPurposeIndicator(RequestedIndicator purposeIndicator) {
 		this.purposeIndicator = purposeIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "InstrCpyInd")
-	public RequestedIndicator getInstructionCopyIndicator() {
-		return instructionCopyIndicator;
+	public Optional<RequestedIndicator> getInstructionCopyIndicator() {
+		return instructionCopyIndicator == null ? Optional.empty() : Optional.of(instructionCopyIndicator);
 	}
 
-	public void setInstructionCopyIndicator(RequestedIndicator instructionCopyIndicator) {
+	public PaymentReturnCriteria3 setInstructionCopyIndicator(RequestedIndicator instructionCopyIndicator) {
 		this.instructionCopyIndicator = instructionCopyIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PmtMTInd")
-	public RequestedIndicator getPaymentMessageTypeIndicator() {
-		return paymentMessageTypeIndicator;
+	public Optional<RequestedIndicator> getPaymentMessageTypeIndicator() {
+		return paymentMessageTypeIndicator == null ? Optional.empty() : Optional.of(paymentMessageTypeIndicator);
 	}
 
-	public void setPaymentMessageTypeIndicator(RequestedIndicator paymentMessageTypeIndicator) {
+	public PaymentReturnCriteria3 setPaymentMessageTypeIndicator(RequestedIndicator paymentMessageTypeIndicator) {
 		this.paymentMessageTypeIndicator = paymentMessageTypeIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PmtTpInd")
-	public RequestedIndicator getPaymentTypeIndicator() {
-		return paymentTypeIndicator;
+	public Optional<RequestedIndicator> getPaymentTypeIndicator() {
+		return paymentTypeIndicator == null ? Optional.empty() : Optional.of(paymentTypeIndicator);
 	}
 
-	public void setPaymentTypeIndicator(RequestedIndicator paymentTypeIndicator) {
+	public PaymentReturnCriteria3 setPaymentTypeIndicator(RequestedIndicator paymentTypeIndicator) {
 		this.paymentTypeIndicator = paymentTypeIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "TxIdInd")
-	public RequestedIndicator getTransactionIdentificationIndicator() {
-		return transactionIdentificationIndicator;
+	public Optional<RequestedIndicator> getTransactionIdentificationIndicator() {
+		return transactionIdentificationIndicator == null ? Optional.empty() : Optional.of(transactionIdentificationIndicator);
 	}
 
-	public void setTransactionIdentificationIndicator(RequestedIndicator transactionIdentificationIndicator) {
+	public PaymentReturnCriteria3 setTransactionIdentificationIndicator(RequestedIndicator transactionIdentificationIndicator) {
 		this.transactionIdentificationIndicator = transactionIdentificationIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmDtInd")
-	public RequestedIndicator getInterbankSettlementDateIndicator() {
-		return interbankSettlementDateIndicator;
+	public Optional<RequestedIndicator> getInterbankSettlementDateIndicator() {
+		return interbankSettlementDateIndicator == null ? Optional.empty() : Optional.of(interbankSettlementDateIndicator);
 	}
 
-	public void setInterbankSettlementDateIndicator(RequestedIndicator interbankSettlementDateIndicator) {
+	public PaymentReturnCriteria3 setInterbankSettlementDateIndicator(RequestedIndicator interbankSettlementDateIndicator) {
 		this.interbankSettlementDateIndicator = interbankSettlementDateIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "EndToEndIdInd")
-	public RequestedIndicator getEndToEndIdentificationIndicator() {
-		return endToEndIdentificationIndicator;
+	public Optional<RequestedIndicator> getEndToEndIdentificationIndicator() {
+		return endToEndIdentificationIndicator == null ? Optional.empty() : Optional.of(endToEndIdentificationIndicator);
 	}
 
-	public void setEndToEndIdentificationIndicator(RequestedIndicator endToEndIdentificationIndicator) {
+	public PaymentReturnCriteria3 setEndToEndIdentificationIndicator(RequestedIndicator endToEndIdentificationIndicator) {
 		this.endToEndIdentificationIndicator = endToEndIdentificationIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PmtMtdInd")
-	public RequestedIndicator getPaymentMethodIndicator() {
-		return paymentMethodIndicator;
+	public Optional<RequestedIndicator> getPaymentMethodIndicator() {
+		return paymentMethodIndicator == null ? Optional.empty() : Optional.of(paymentMethodIndicator);
 	}
 
-	public void setPaymentMethodIndicator(RequestedIndicator paymentMethodIndicator) {
+	public PaymentReturnCriteria3 setPaymentMethodIndicator(RequestedIndicator paymentMethodIndicator) {
 		this.paymentMethodIndicator = paymentMethodIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "DbtrInd")
-	public RequestedIndicator getDebtorIndicator() {
-		return debtorIndicator;
+	public Optional<RequestedIndicator> getDebtorIndicator() {
+		return debtorIndicator == null ? Optional.empty() : Optional.of(debtorIndicator);
 	}
 
-	public void setDebtorIndicator(RequestedIndicator debtorIndicator) {
+	public PaymentReturnCriteria3 setDebtorIndicator(RequestedIndicator debtorIndicator) {
 		this.debtorIndicator = debtorIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "DbtrAgtInd")
-	public RequestedIndicator getDebtorAgentIndicator() {
-		return debtorAgentIndicator;
+	public Optional<RequestedIndicator> getDebtorAgentIndicator() {
+		return debtorAgentIndicator == null ? Optional.empty() : Optional.of(debtorAgentIndicator);
 	}
 
-	public void setDebtorAgentIndicator(RequestedIndicator debtorAgentIndicator) {
+	public PaymentReturnCriteria3 setDebtorAgentIndicator(RequestedIndicator debtorAgentIndicator) {
 		this.debtorAgentIndicator = debtorAgentIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "InstgRmbrsmntAgtInd")
-	public RequestedIndicator getInstructingReimbursementAgentIndicator() {
-		return instructingReimbursementAgentIndicator;
+	public Optional<RequestedIndicator> getInstructingReimbursementAgentIndicator() {
+		return instructingReimbursementAgentIndicator == null ? Optional.empty() : Optional.of(instructingReimbursementAgentIndicator);
 	}
 
-	public void setInstructingReimbursementAgentIndicator(RequestedIndicator instructingReimbursementAgentIndicator) {
+	public PaymentReturnCriteria3 setInstructingReimbursementAgentIndicator(RequestedIndicator instructingReimbursementAgentIndicator) {
 		this.instructingReimbursementAgentIndicator = instructingReimbursementAgentIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "InstdRmbrsmntAgtInd")
-	public RequestedIndicator getInstructedReimbursementAgentIndicator() {
-		return instructedReimbursementAgentIndicator;
+	public Optional<RequestedIndicator> getInstructedReimbursementAgentIndicator() {
+		return instructedReimbursementAgentIndicator == null ? Optional.empty() : Optional.of(instructedReimbursementAgentIndicator);
 	}
 
-	public void setInstructedReimbursementAgentIndicator(RequestedIndicator instructedReimbursementAgentIndicator) {
+	public PaymentReturnCriteria3 setInstructedReimbursementAgentIndicator(RequestedIndicator instructedReimbursementAgentIndicator) {
 		this.instructedReimbursementAgentIndicator = instructedReimbursementAgentIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "IntrmyInd")
-	public RequestedIndicator getIntermediaryIndicator() {
-		return intermediaryIndicator;
+	public Optional<RequestedIndicator> getIntermediaryIndicator() {
+		return intermediaryIndicator == null ? Optional.empty() : Optional.of(intermediaryIndicator);
 	}
 
-	public void setIntermediaryIndicator(RequestedIndicator intermediaryIndicator) {
+	public PaymentReturnCriteria3 setIntermediaryIndicator(RequestedIndicator intermediaryIndicator) {
 		this.intermediaryIndicator = intermediaryIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "CdtrAgtInd")
-	public RequestedIndicator getCreditorAgentIndicator() {
-		return creditorAgentIndicator;
+	public Optional<RequestedIndicator> getCreditorAgentIndicator() {
+		return creditorAgentIndicator == null ? Optional.empty() : Optional.of(creditorAgentIndicator);
 	}
 
-	public void setCreditorAgentIndicator(RequestedIndicator creditorAgentIndicator) {
+	public PaymentReturnCriteria3 setCreditorAgentIndicator(RequestedIndicator creditorAgentIndicator) {
 		this.creditorAgentIndicator = creditorAgentIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "CdtrInd")
-	public RequestedIndicator getCreditorIndicator() {
-		return creditorIndicator;
+	public Optional<RequestedIndicator> getCreditorIndicator() {
+		return creditorIndicator == null ? Optional.empty() : Optional.of(creditorIndicator);
 	}
 
-	public void setCreditorIndicator(RequestedIndicator creditorIndicator) {
+	public PaymentReturnCriteria3 setCreditorIndicator(RequestedIndicator creditorIndicator) {
 		this.creditorIndicator = creditorIndicator;
+		return this;
 	}
 }

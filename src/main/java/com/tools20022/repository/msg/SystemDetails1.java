@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides details about a system and about a member of a system."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemDetails1", propOrder = {"systemIdentification", "memberIdentification"})
 public class SystemDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SysId")
 	protected SystemIdentificationChoice systemIdentification;
 	/**
-	 * Identification of a particular cash clearing system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +111,7 @@ public class SystemDetails1 {
 	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> System.mmSystemIdentification;
-			componentContext_lazy = () -> SystemDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "SysId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,11 +122,11 @@ public class SystemDetails1 {
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "MmbId", required = true)
 	protected MemberIdentificationChoice memberIdentification;
 	/**
-	 * Unique and unambiguous identification of a member within a system,
-	 * assigned using the member identification scheme of the system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +161,7 @@ public class SystemDetails1 {
 	public static final MMMessageAttribute mmMemberIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SystemDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "MmbId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,9 +176,9 @@ public class SystemDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SystemDetails1.mmSystemIdentification, SystemDetails1.mmMemberIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemDetails1.mmSystemIdentification, com.tools20022.repository.msg.SystemDetails1.mmMemberIdentification);
 				trace_lazy = () -> System.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemDetails1";
 				definition = "Provides details about a system and about a member of a system.";
@@ -184,21 +187,21 @@ public class SystemDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SysId")
-	public SystemIdentificationChoice getSystemIdentification() {
-		return systemIdentification;
+	public Optional<SystemIdentificationChoice> getSystemIdentification() {
+		return systemIdentification == null ? Optional.empty() : Optional.of(systemIdentification);
 	}
 
-	public void setSystemIdentification(SystemIdentificationChoice systemIdentification) {
+	public SystemDetails1 setSystemIdentification(SystemIdentificationChoice systemIdentification) {
 		this.systemIdentification = systemIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "MmbId", required = true)
 	public MemberIdentificationChoice getMemberIdentification() {
 		return memberIdentification;
 	}
 
-	public void setMemberIdentification(MemberIdentificationChoice memberIdentification) {
-		this.memberIdentification = memberIdentification;
+	public SystemDetails1 setMemberIdentification(MemberIdentificationChoice memberIdentification) {
+		this.memberIdentification = Objects.requireNonNull(memberIdentification);
+		return this;
 	}
 }

@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -78,8 +80,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,22 +94,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LongPaymentIdentification1", propOrder = {"transactionIdentification", "interBankSettlementAmount", "interBankSettlementDate", "paymentMethod", "instructingAgent", "instructedAgent", "entryType", "endToEndIdentification"})
 public class LongPaymentIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId", required = true)
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unique identification, as assigned by the first instructing agent, to
-	 * unambiguously identify the transaction that is passed on, unchanged,
-	 * throughout the entire interbank chain. Usage: The transaction
-	 * identification can be used for reconciliation, tracking or to link tasks
-	 * relating to the transaction on the interbank level. The instructing agent
-	 * has to make sure that the transaction identification is unique for a
-	 * pre-agreed period. Usage: this is the former PaymentInstructionReference
-	 * element.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +138,7 @@ public class LongPaymentIdentification1 {
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmTransactionIdentification;
-			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LongPaymentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,11 +149,11 @@ public class LongPaymentIdentification1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmAmt", required = true)
 	protected ImpliedCurrencyAndAmount interBankSettlementAmount;
 	/**
-	 * Amount of money moved between the instructing agent and the instructed
-	 * agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,7 +189,7 @@ public class LongPaymentIdentification1 {
 	public static final MMMessageAttribute mmInterBankSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
-			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LongPaymentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,12 +200,11 @@ public class LongPaymentIdentification1 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrBkSttlmDt", required = true)
 	protected ISODate interBankSettlementDate;
 	/**
-	 * Date on which the amount of money ceases to be available to the agent
-	 * that owes it and when the amount of money becomes available to the agent
-	 * to which it is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -244,7 +239,7 @@ public class LongPaymentIdentification1 {
 	public static final MMMessageAttribute mmInterBankSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementDate;
-			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LongPaymentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrBkSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -255,10 +250,11 @@ public class LongPaymentIdentification1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtMtd")
 	protected PaymentOrigin1Choice paymentMethod;
 	/**
-	 * Message type with which the instruction has been initiated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -293,7 +289,7 @@ public class LongPaymentIdentification1 {
 	public static final MMMessageAttribute mmPaymentMethod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmPayment;
-			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LongPaymentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -304,11 +300,11 @@ public class LongPaymentIdentification1 {
 			complexType_lazy = () -> PaymentOrigin1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "InstgAgt", required = true)
 	protected BranchAndFinancialInstitutionIdentification5 instructingAgent;
 	/**
-	 * Agent that instructs the next party in the chain to carry out the (set
-	 * of) instruction(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -342,7 +338,7 @@ public class LongPaymentIdentification1 {
 	public static final MMMessageAssociationEnd mmInstructingAgent = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
-			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LongPaymentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "InstgAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -354,11 +350,11 @@ public class LongPaymentIdentification1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "InstdAgt", required = true)
 	protected BranchAndFinancialInstitutionIdentification5 instructedAgent;
 	/**
-	 * Agent that is instructed by the previous party in the chain to carry out
-	 * the (set of) instruction(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -392,7 +388,7 @@ public class LongPaymentIdentification1 {
 	public static final MMMessageAssociationEnd mmInstructedAgent = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
-			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LongPaymentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "InstdAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -404,11 +400,11 @@ public class LongPaymentIdentification1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "NtryTp")
 	protected EntryTypeIdentifier entryType;
 	/**
-	 * Optional qualifier providing additional system specific information about
-	 * the entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -438,7 +434,7 @@ public class LongPaymentIdentification1 {
 	 */
 	public static final MMMessageAttribute mmEntryType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LongPaymentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "NtryTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -449,15 +445,11 @@ public class LongPaymentIdentification1 {
 			simpleType_lazy = () -> EntryTypeIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "EndToEndId")
 	protected Max35Text endToEndIdentification;
 	/**
-	 * Unique identification, as assigned by the initiating party, to
-	 * unambiguously identify the transaction. This identification is passed on,
-	 * unchanged, throughout the entire end-to-end chain. Usage: The end-to-end
-	 * identification can be used for reconciliation or to link tasks relating
-	 * to the transaction. It can be included in several messages related to the
-	 * transaction. Usage: this is the former RelatedReference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -492,7 +484,7 @@ public class LongPaymentIdentification1 {
 	public static final MMMessageAttribute mmEndToEndIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmEndToEndIdentification;
-			componentContext_lazy = () -> LongPaymentIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LongPaymentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "EndToEndId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -507,11 +499,12 @@ public class LongPaymentIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LongPaymentIdentification1.mmTransactionIdentification, LongPaymentIdentification1.mmInterBankSettlementAmount, LongPaymentIdentification1.mmInterBankSettlementDate,
-						LongPaymentIdentification1.mmPaymentMethod, LongPaymentIdentification1.mmInstructingAgent, LongPaymentIdentification1.mmInstructedAgent, LongPaymentIdentification1.mmEntryType,
-						LongPaymentIdentification1.mmEndToEndIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LongPaymentIdentification1.mmTransactionIdentification, com.tools20022.repository.msg.LongPaymentIdentification1.mmInterBankSettlementAmount,
+						com.tools20022.repository.msg.LongPaymentIdentification1.mmInterBankSettlementDate, com.tools20022.repository.msg.LongPaymentIdentification1.mmPaymentMethod,
+						com.tools20022.repository.msg.LongPaymentIdentification1.mmInstructingAgent, com.tools20022.repository.msg.LongPaymentIdentification1.mmInstructedAgent,
+						com.tools20022.repository.msg.LongPaymentIdentification1.mmEntryType, com.tools20022.repository.msg.LongPaymentIdentification1.mmEndToEndIdentification);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LongPaymentIdentification1";
 				definition = "Identifies a payment instruction by a set of characteristics  (as per EBA system requirements) which provides an unambiguous identification of the instruction.";
@@ -520,75 +513,75 @@ public class LongPaymentIdentification1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public LongPaymentIdentification1 setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmAmt", required = true)
 	public ImpliedCurrencyAndAmount getInterBankSettlementAmount() {
 		return interBankSettlementAmount;
 	}
 
-	public void setInterBankSettlementAmount(ImpliedCurrencyAndAmount interBankSettlementAmount) {
-		this.interBankSettlementAmount = interBankSettlementAmount;
+	public LongPaymentIdentification1 setInterBankSettlementAmount(ImpliedCurrencyAndAmount interBankSettlementAmount) {
+		this.interBankSettlementAmount = Objects.requireNonNull(interBankSettlementAmount);
+		return this;
 	}
 
-	@XmlElement(name = "IntrBkSttlmDt", required = true)
 	public ISODate getInterBankSettlementDate() {
 		return interBankSettlementDate;
 	}
 
-	public void setInterBankSettlementDate(ISODate interBankSettlementDate) {
-		this.interBankSettlementDate = interBankSettlementDate;
+	public LongPaymentIdentification1 setInterBankSettlementDate(ISODate interBankSettlementDate) {
+		this.interBankSettlementDate = Objects.requireNonNull(interBankSettlementDate);
+		return this;
 	}
 
-	@XmlElement(name = "PmtMtd")
-	public PaymentOrigin1Choice getPaymentMethod() {
-		return paymentMethod;
+	public Optional<PaymentOrigin1Choice> getPaymentMethod() {
+		return paymentMethod == null ? Optional.empty() : Optional.of(paymentMethod);
 	}
 
-	public void setPaymentMethod(PaymentOrigin1Choice paymentMethod) {
+	public LongPaymentIdentification1 setPaymentMethod(PaymentOrigin1Choice paymentMethod) {
 		this.paymentMethod = paymentMethod;
+		return this;
 	}
 
-	@XmlElement(name = "InstgAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getInstructingAgent() {
 		return instructingAgent;
 	}
 
-	public void setInstructingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructingAgent) {
-		this.instructingAgent = instructingAgent;
+	public LongPaymentIdentification1 setInstructingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructingAgent) {
+		this.instructingAgent = Objects.requireNonNull(instructingAgent);
+		return this;
 	}
 
-	@XmlElement(name = "InstdAgt", required = true)
 	public BranchAndFinancialInstitutionIdentification5 getInstructedAgent() {
 		return instructedAgent;
 	}
 
-	public void setInstructedAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructedAgent) {
-		this.instructedAgent = instructedAgent;
+	public LongPaymentIdentification1 setInstructedAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 instructedAgent) {
+		this.instructedAgent = Objects.requireNonNull(instructedAgent);
+		return this;
 	}
 
-	@XmlElement(name = "NtryTp")
-	public EntryTypeIdentifier getEntryType() {
-		return entryType;
+	public Optional<EntryTypeIdentifier> getEntryType() {
+		return entryType == null ? Optional.empty() : Optional.of(entryType);
 	}
 
-	public void setEntryType(EntryTypeIdentifier entryType) {
+	public LongPaymentIdentification1 setEntryType(EntryTypeIdentifier entryType) {
 		this.entryType = entryType;
+		return this;
 	}
 
-	@XmlElement(name = "EndToEndId")
-	public Max35Text getEndToEndIdentification() {
-		return endToEndIdentification;
+	public Optional<Max35Text> getEndToEndIdentification() {
+		return endToEndIdentification == null ? Optional.empty() : Optional.of(endToEndIdentification);
 	}
 
-	public void setEndToEndIdentification(Max35Text endToEndIdentification) {
+	public LongPaymentIdentification1 setEndToEndIdentification(Max35Text endToEndIdentification) {
 		this.endToEndIdentification = endToEndIdentification;
+		return this;
 	}
 }

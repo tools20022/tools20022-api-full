@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TradeTransactionConditionCode;
+import com.tools20022.repository.codeset.TradeTransactionCondition5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the conditions under which the order/trade is to be/was executed.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode
- * TradeTransactionConditionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition5Code#mmExCoupon
- * TradeTransactionCondition5Code.mmExCoupon}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition5Code#ExCoupon
+ * TradeTransactionCondition5Code.ExCoupon}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition5Code#mmCumCoupon
- * TradeTransactionCondition5Code.mmCumCoupon}</li>
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionCondition5Code#CumCoupon
+ * TradeTransactionCondition5Code.CumCoupon}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TradeTransactionConditionCode
+ * TradeTransactionConditionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,7 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TradeTransactionCondition5Code extends TradeTransactionConditionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TradeTransactionCondition5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -79,11 +84,12 @@ public class TradeTransactionCondition5Code extends TradeTransactionConditionCod
 	 * name} = "ExCoupon"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExCoupon = new MMCode() {
+	public static final TradeTransactionCondition5Code ExCoupon = new TradeTransactionCondition5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExCoupon";
-			owner_lazy = () -> TradeTransactionCondition5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition5Code.mmObject();
+			codeName = TradeTransactionConditionCode.ExCoupon.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -102,25 +108,56 @@ public class TradeTransactionCondition5Code extends TradeTransactionConditionCod
 	 * name} = "CumCoupon"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCumCoupon = new MMCode() {
+	public static final TradeTransactionCondition5Code CumCoupon = new TradeTransactionCondition5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CumCoupon";
-			owner_lazy = () -> TradeTransactionCondition5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TradeTransactionCondition5Code.mmObject();
+			codeName = TradeTransactionConditionCode.CumCoupon.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TradeTransactionCondition5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TradeTransactionCondition5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeTransactionCondition5Code";
 				definition = "Specifies the conditions under which the order/trade is to be/was executed.";
-				code_lazy = () -> Arrays.asList(TradeTransactionCondition5Code.mmExCoupon, TradeTransactionCondition5Code.mmCumCoupon);
 				trace_lazy = () -> TradeTransactionConditionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradeTransactionCondition5Code.ExCoupon, com.tools20022.repository.codeset.TradeTransactionCondition5Code.CumCoupon);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ExCoupon.getCodeName().get(), ExCoupon);
+		codesByName.put(CumCoupon.getCodeName().get(), CumCoupon);
+	}
+
+	public static TradeTransactionCondition5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TradeTransactionCondition5Code[] values() {
+		TradeTransactionCondition5Code[] values = new TradeTransactionCondition5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TradeTransactionCondition5Code> {
+		@Override
+		public TradeTransactionCondition5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TradeTransactionCondition5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

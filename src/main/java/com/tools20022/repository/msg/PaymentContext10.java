@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -77,8 +79,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,17 +101,17 @@ import javax.xml.bind.annotation.XmlType;
  * PaymentContext1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentContext10", propOrder = {"cardPresent", "cardholderPresent", "onLineContext", "attendanceContext", "transactionEnvironment", "transactionChannel", "attendantMessageCapable", "attendantLanguage", "cardDataEntryMode",
 		"fallbackIndicator"})
 public class PaymentContext10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CardPres")
 	protected TrueFalseIndicator cardPresent;
 	/**
-	 * Indicates whether the transaction has been initiated by a card physically
-	 * present or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +160,7 @@ public class PaymentContext10 {
 	public static final MMMessageAttribute mmCardPresent = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardPresent;
-			componentContext_lazy = () -> PaymentContext10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext10.mmObject();
 			isDerived = false;
 			xmlTag = "CardPres";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,11 +173,11 @@ public class PaymentContext10 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CrdhldrPres")
 	protected TrueFalseIndicator cardholderPresent;
 	/**
-	 * Indicates whether the transaction has been initiated in presence of the
-	 * cardholder or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -224,7 +226,7 @@ public class PaymentContext10 {
 	public static final MMMessageAttribute mmCardholderPresent = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardholderPresent;
-			componentContext_lazy = () -> PaymentContext10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext10.mmObject();
 			isDerived = false;
 			xmlTag = "CrdhldrPres";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,10 +239,11 @@ public class PaymentContext10 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "OnLineCntxt")
 	protected TrueFalseIndicator onLineContext;
 	/**
-	 * On-line or off-line context of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -279,7 +282,7 @@ public class PaymentContext10 {
 	public static final MMMessageAttribute mmOnLineContext = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmOnLineContext;
-			componentContext_lazy = () -> PaymentContext10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext10.mmObject();
 			isDerived = false;
 			xmlTag = "OnLineCntxt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -291,10 +294,11 @@ public class PaymentContext10 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AttndncCntxt")
 	protected AttendanceContext1Code attendanceContext;
 	/**
-	 * Human attendance at the POI location during the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -342,7 +346,7 @@ public class PaymentContext10 {
 	public static final MMMessageAttribute mmAttendanceContext = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmAttendanceContext;
-			componentContext_lazy = () -> PaymentContext10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext10.mmObject();
 			isDerived = false;
 			xmlTag = "AttndncCntxt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -355,10 +359,11 @@ public class PaymentContext10 {
 			simpleType_lazy = () -> AttendanceContext1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TxEnvt")
 	protected TransactionEnvironment1Code transactionEnvironment;
 	/**
-	 * Indicates the environment of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -405,7 +410,7 @@ public class PaymentContext10 {
 	public static final MMMessageAttribute mmTransactionEnvironment = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionEnvironment;
-			componentContext_lazy = () -> PaymentContext10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext10.mmObject();
 			isDerived = false;
 			xmlTag = "TxEnvt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -418,11 +423,11 @@ public class PaymentContext10 {
 			simpleType_lazy = () -> TransactionEnvironment1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TxChanl")
 	protected TransactionChannel3Code transactionChannel;
 	/**
-	 * Identifies the type of the communication channels used by the cardholder
-	 * to the acceptor system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -471,7 +476,7 @@ public class PaymentContext10 {
 	public static final MMMessageAttribute mmTransactionChannel = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTransactionChannel;
-			componentContext_lazy = () -> PaymentContext10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext10.mmObject();
 			isDerived = false;
 			xmlTag = "TxChanl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -484,11 +489,11 @@ public class PaymentContext10 {
 			simpleType_lazy = () -> TransactionChannel3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AttndntMsgCpbl")
 	protected TrueFalseIndicator attendantMessageCapable;
 	/**
-	 * Indicates whether a message can be sent or not on an attendant display
-	 * (attendant display present or not).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -537,7 +542,7 @@ public class PaymentContext10 {
 	public static final MMMessageAttribute mmAttendantMessageCapable = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmAttendantMessageCapable;
-			componentContext_lazy = () -> PaymentContext10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext10.mmObject();
 			isDerived = false;
 			xmlTag = "AttndntMsgCpbl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -550,11 +555,11 @@ public class PaymentContext10 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AttndntLang")
 	protected LanguageCode attendantLanguage;
 	/**
-	 * Language used to display messages to the attendant.<br>
-	 * Reference: ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -602,7 +607,7 @@ public class PaymentContext10 {
 	public static final MMMessageAttribute mmAttendantLanguage = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmAttendantLanguage;
-			componentContext_lazy = () -> PaymentContext10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext10.mmObject();
 			isDerived = false;
 			xmlTag = "AttndntLang";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -615,10 +620,11 @@ public class PaymentContext10 {
 			simpleType_lazy = () -> LanguageCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CardDataNtryMd", required = true)
 	protected CardDataReading1Code cardDataEntryMode;
 	/**
-	 * Entry mode of the card data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -665,7 +671,7 @@ public class PaymentContext10 {
 	public static final MMMessageAttribute mmCardDataEntryMode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCardDataEntryMode;
-			componentContext_lazy = () -> PaymentContext10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext10.mmObject();
 			isDerived = false;
 			xmlTag = "CardDataNtryMd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -678,10 +684,11 @@ public class PaymentContext10 {
 			simpleType_lazy = () -> CardDataReading1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "FllbckInd")
 	protected CardFallback1Code fallbackIndicator;
 	/**
-	 * Indicator of a card entry mode fallback.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -722,7 +729,7 @@ public class PaymentContext10 {
 	 */
 	public static final MMMessageAttribute mmFallbackIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentContext10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentContext10.mmObject();
 			isDerived = false;
 			xmlTag = "FllbckInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -739,11 +746,12 @@ public class PaymentContext10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentContext10.mmCardPresent, PaymentContext10.mmCardholderPresent, PaymentContext10.mmOnLineContext, PaymentContext10.mmAttendanceContext,
-						PaymentContext10.mmTransactionEnvironment, PaymentContext10.mmTransactionChannel, PaymentContext10.mmAttendantMessageCapable, PaymentContext10.mmAttendantLanguage, PaymentContext10.mmCardDataEntryMode,
-						PaymentContext10.mmFallbackIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentContext10.mmCardPresent, com.tools20022.repository.msg.PaymentContext10.mmCardholderPresent,
+						com.tools20022.repository.msg.PaymentContext10.mmOnLineContext, com.tools20022.repository.msg.PaymentContext10.mmAttendanceContext, com.tools20022.repository.msg.PaymentContext10.mmTransactionEnvironment,
+						com.tools20022.repository.msg.PaymentContext10.mmTransactionChannel, com.tools20022.repository.msg.PaymentContext10.mmAttendantMessageCapable, com.tools20022.repository.msg.PaymentContext10.mmAttendantLanguage,
+						com.tools20022.repository.msg.PaymentContext10.mmCardDataEntryMode, com.tools20022.repository.msg.PaymentContext10.mmFallbackIndicator);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentContext10";
 				definition = "Payment context in which the transaction is performed.";
@@ -754,93 +762,93 @@ public class PaymentContext10 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CardPres")
-	public TrueFalseIndicator getCardPresent() {
-		return cardPresent;
+	public Optional<TrueFalseIndicator> getCardPresent() {
+		return cardPresent == null ? Optional.empty() : Optional.of(cardPresent);
 	}
 
-	public void setCardPresent(TrueFalseIndicator cardPresent) {
+	public PaymentContext10 setCardPresent(TrueFalseIndicator cardPresent) {
 		this.cardPresent = cardPresent;
+		return this;
 	}
 
-	@XmlElement(name = "CrdhldrPres")
-	public TrueFalseIndicator getCardholderPresent() {
-		return cardholderPresent;
+	public Optional<TrueFalseIndicator> getCardholderPresent() {
+		return cardholderPresent == null ? Optional.empty() : Optional.of(cardholderPresent);
 	}
 
-	public void setCardholderPresent(TrueFalseIndicator cardholderPresent) {
+	public PaymentContext10 setCardholderPresent(TrueFalseIndicator cardholderPresent) {
 		this.cardholderPresent = cardholderPresent;
+		return this;
 	}
 
-	@XmlElement(name = "OnLineCntxt")
-	public TrueFalseIndicator getOnLineContext() {
-		return onLineContext;
+	public Optional<TrueFalseIndicator> getOnLineContext() {
+		return onLineContext == null ? Optional.empty() : Optional.of(onLineContext);
 	}
 
-	public void setOnLineContext(TrueFalseIndicator onLineContext) {
+	public PaymentContext10 setOnLineContext(TrueFalseIndicator onLineContext) {
 		this.onLineContext = onLineContext;
+		return this;
 	}
 
-	@XmlElement(name = "AttndncCntxt")
-	public AttendanceContext1Code getAttendanceContext() {
-		return attendanceContext;
+	public Optional<AttendanceContext1Code> getAttendanceContext() {
+		return attendanceContext == null ? Optional.empty() : Optional.of(attendanceContext);
 	}
 
-	public void setAttendanceContext(AttendanceContext1Code attendanceContext) {
+	public PaymentContext10 setAttendanceContext(AttendanceContext1Code attendanceContext) {
 		this.attendanceContext = attendanceContext;
+		return this;
 	}
 
-	@XmlElement(name = "TxEnvt")
-	public TransactionEnvironment1Code getTransactionEnvironment() {
-		return transactionEnvironment;
+	public Optional<TransactionEnvironment1Code> getTransactionEnvironment() {
+		return transactionEnvironment == null ? Optional.empty() : Optional.of(transactionEnvironment);
 	}
 
-	public void setTransactionEnvironment(TransactionEnvironment1Code transactionEnvironment) {
+	public PaymentContext10 setTransactionEnvironment(TransactionEnvironment1Code transactionEnvironment) {
 		this.transactionEnvironment = transactionEnvironment;
+		return this;
 	}
 
-	@XmlElement(name = "TxChanl")
-	public TransactionChannel3Code getTransactionChannel() {
-		return transactionChannel;
+	public Optional<TransactionChannel3Code> getTransactionChannel() {
+		return transactionChannel == null ? Optional.empty() : Optional.of(transactionChannel);
 	}
 
-	public void setTransactionChannel(TransactionChannel3Code transactionChannel) {
+	public PaymentContext10 setTransactionChannel(TransactionChannel3Code transactionChannel) {
 		this.transactionChannel = transactionChannel;
+		return this;
 	}
 
-	@XmlElement(name = "AttndntMsgCpbl")
-	public TrueFalseIndicator getAttendantMessageCapable() {
-		return attendantMessageCapable;
+	public Optional<TrueFalseIndicator> getAttendantMessageCapable() {
+		return attendantMessageCapable == null ? Optional.empty() : Optional.of(attendantMessageCapable);
 	}
 
-	public void setAttendantMessageCapable(TrueFalseIndicator attendantMessageCapable) {
+	public PaymentContext10 setAttendantMessageCapable(TrueFalseIndicator attendantMessageCapable) {
 		this.attendantMessageCapable = attendantMessageCapable;
+		return this;
 	}
 
-	@XmlElement(name = "AttndntLang")
-	public LanguageCode getAttendantLanguage() {
-		return attendantLanguage;
+	public Optional<LanguageCode> getAttendantLanguage() {
+		return attendantLanguage == null ? Optional.empty() : Optional.of(attendantLanguage);
 	}
 
-	public void setAttendantLanguage(LanguageCode attendantLanguage) {
+	public PaymentContext10 setAttendantLanguage(LanguageCode attendantLanguage) {
 		this.attendantLanguage = attendantLanguage;
+		return this;
 	}
 
-	@XmlElement(name = "CardDataNtryMd", required = true)
 	public CardDataReading1Code getCardDataEntryMode() {
 		return cardDataEntryMode;
 	}
 
-	public void setCardDataEntryMode(CardDataReading1Code cardDataEntryMode) {
-		this.cardDataEntryMode = cardDataEntryMode;
+	public PaymentContext10 setCardDataEntryMode(CardDataReading1Code cardDataEntryMode) {
+		this.cardDataEntryMode = Objects.requireNonNull(cardDataEntryMode);
+		return this;
 	}
 
-	@XmlElement(name = "FllbckInd")
-	public CardFallback1Code getFallbackIndicator() {
-		return fallbackIndicator;
+	public Optional<CardFallback1Code> getFallbackIndicator() {
+		return fallbackIndicator == null ? Optional.empty() : Optional.of(fallbackIndicator);
 	}
 
-	public void setFallbackIndicator(CardFallback1Code fallbackIndicator) {
+	public PaymentContext10 setFallbackIndicator(CardFallback1Code fallbackIndicator) {
 		this.fallbackIndicator = fallbackIndicator;
+		return this;
 	}
 }

@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MarginCallResponseCode;
+import com.tools20022.repository.codeset.MarginCallResponse1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the margin call request was sent on a non valuation day or
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MarginCallResponseCode
- * MarginCallResponseCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginCallResponse1Code#mmNonValuationDay
- * MarginCallResponse1Code.mmNonValuationDay}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginCallResponse1Code#NonValuationDay
+ * MarginCallResponse1Code.NonValuationDay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginCallResponse1Code#mmReceivedAfterNotificationTime
- * MarginCallResponse1Code.mmReceivedAfterNotificationTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginCallResponse1Code#ReceivedAfterNotificationTime
+ * MarginCallResponse1Code.ReceivedAfterNotificationTime}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MarginCallResponseCode
+ * MarginCallResponseCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class MarginCallResponse1Code extends MarginCallResponseCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MarginCallResponse1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class MarginCallResponse1Code extends MarginCallResponseCode {
 	 * name} = "NonValuationDay"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonValuationDay = new MMCode() {
+	public static final MarginCallResponse1Code NonValuationDay = new MarginCallResponse1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonValuationDay";
-			owner_lazy = () -> MarginCallResponse1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarginCallResponse1Code.mmObject();
+			codeName = MarginCallResponseCode.NonValuationDay.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,57 @@ public class MarginCallResponse1Code extends MarginCallResponseCode {
 	 * name} = "ReceivedAfterNotificationTime"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivedAfterNotificationTime = new MMCode() {
+	public static final MarginCallResponse1Code ReceivedAfterNotificationTime = new MarginCallResponse1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedAfterNotificationTime";
-			owner_lazy = () -> MarginCallResponse1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarginCallResponse1Code.mmObject();
+			codeName = MarginCallResponseCode.ReceivedAfterNotificationTime.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MarginCallResponse1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MarginCallResponse1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NVDA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginCallResponse1Code";
 				definition = "Specifies whether the margin call request was sent on a non valuation day or was received after notification time.";
-				code_lazy = () -> Arrays.asList(MarginCallResponse1Code.mmNonValuationDay, MarginCallResponse1Code.mmReceivedAfterNotificationTime);
 				trace_lazy = () -> MarginCallResponseCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarginCallResponse1Code.NonValuationDay, com.tools20022.repository.codeset.MarginCallResponse1Code.ReceivedAfterNotificationTime);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NonValuationDay.getCodeName().get(), NonValuationDay);
+		codesByName.put(ReceivedAfterNotificationTime.getCodeName().get(), ReceivedAfterNotificationTime);
+	}
+
+	public static MarginCallResponse1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MarginCallResponse1Code[] values() {
+		MarginCallResponse1Code[] values = new MarginCallResponse1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MarginCallResponse1Code> {
+		@Override
+		public MarginCallResponse1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MarginCallResponse1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

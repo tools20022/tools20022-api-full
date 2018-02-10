@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.reda.PriceReportCancellationV04;
 import com.tools20022.repository.entity.NetAssetValueCalculation;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * PriceReport2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PriceReport3", propOrder = "priceValuationDetails")
 public class PriceReport3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PricValtnDtls", required = true)
 	protected List<com.tools20022.repository.msg.PriceValuation4> priceValuationDetails;
 	/**
-	 * Information related to the price valuation of a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -112,7 +115,7 @@ public class PriceReport3 {
 	public static final MMMessageAssociationEnd mmPriceValuationDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> NetAssetValueCalculation.mmObject();
-			componentContext_lazy = () -> PriceReport3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PriceReport3.mmObject();
 			isDerived = false;
 			xmlTag = "PricValtnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,9 +130,9 @@ public class PriceReport3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PriceReport3.mmPriceValuationDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PriceReport3.mmPriceValuationDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(PriceReportCancellationV04.mmCancelledPriceValuationDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceReport3";
 				definition = "Information about a price report.";
@@ -139,12 +142,12 @@ public class PriceReport3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PricValtnDtls", required = true)
 	public List<PriceValuation4> getPriceValuationDetails() {
-		return priceValuationDetails;
+		return priceValuationDetails == null ? priceValuationDetails = new ArrayList<>() : priceValuationDetails;
 	}
 
-	public void setPriceValuationDetails(List<com.tools20022.repository.msg.PriceValuation4> priceValuationDetails) {
-		this.priceValuationDetails = priceValuationDetails;
+	public PriceReport3 setPriceValuationDetails(List<com.tools20022.repository.msg.PriceValuation4> priceValuationDetails) {
+		this.priceValuationDetails = Objects.requireNonNull(priceValuationDetails);
+		return this;
 	}
 }

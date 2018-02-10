@@ -30,6 +30,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -43,8 +44,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification9#mmNameOrBEIOrOtherSchemeRule
- * PartyIdentification9.mmNameOrBEIOrOtherSchemeRule}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification9#NameOrBEIOrOtherSchemeRule
+ * PartyIdentification9.NameOrBEIOrOtherSchemeRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -70,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -83,16 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Entity involved in an activity."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PartyIdentification9", propOrder = {"name", "BEI", "otherScheme", "postalAddress"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PartyIdentification9", propOrder = {"name", "bEI", "otherScheme", "postalAddress"})
 public class PartyIdentification9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nm", required = true)
 	protected Max70Text name;
 	/**
-	 * Name by which a party is known and which is usually used to identify that
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,7 +128,7 @@ public class PartyIdentification9 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
-			componentContext_lazy = () -> PartyIdentification9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,10 +139,11 @@ public class PartyIdentification9 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BEI", required = true)
 	protected BEIIdentifier bEI;
 	/**
-	 * Identification of a non-financial institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -175,7 +177,7 @@ public class PartyIdentification9 {
 	public static final MMMessageAttribute mmBEI = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICNonFI;
-			componentContext_lazy = () -> PartyIdentification9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
 			isDerived = false;
 			xmlTag = "BEI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,10 +188,11 @@ public class PartyIdentification9 {
 			simpleType_lazy = () -> BEIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrSchme", required = true)
 	protected Max70Text otherScheme;
 	/**
-	 * An identification of a corporate in another scheme than name or BIC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,7 +220,7 @@ public class PartyIdentification9 {
 	 */
 	public static final MMMessageAttribute mmOtherScheme = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
 			isDerived = false;
 			xmlTag = "OthrSchme";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,11 +231,11 @@ public class PartyIdentification9 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PstlAdr", required = true)
 	protected PostalAddress2 postalAddress;
 	/**
-	 * Information that locates and identifies a specific address, as defined by
-	 * postal services.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -266,7 +269,7 @@ public class PartyIdentification9 {
 	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
-			componentContext_lazy = () -> PartyIdentification9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -314,22 +317,23 @@ public class PartyIdentification9 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmNameOrBEIOrOtherSchemeRule = new MMXor() {
+	public static final MMXor NameOrBEIOrOtherSchemeRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameOrBEIOrOtherSchemeRule";
 			definition = "One and only one of the following elements must be present: Name, BEI, OtherScheme.";
-			messageComponent_lazy = () -> PartyIdentification9.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(PartyIdentification9.mmName, PartyIdentification9.mmBEI, PartyIdentification9.mmOtherScheme);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.PartyIdentification9.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification9.mmName, com.tools20022.repository.msg.PartyIdentification9.mmBEI, com.tools20022.repository.msg.PartyIdentification9.mmOtherScheme);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification9.mmName, PartyIdentification9.mmBEI, PartyIdentification9.mmOtherScheme, PartyIdentification9.mmPostalAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification9.mmName, com.tools20022.repository.msg.PartyIdentification9.mmBEI,
+						com.tools20022.repository.msg.PartyIdentification9.mmOtherScheme, com.tools20022.repository.msg.PartyIdentification9.mmPostalAddress);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -340,45 +344,45 @@ public class PartyIdentification9 {
 				})).get();
 				name = "PartyIdentification9";
 				definition = "Entity involved in an activity.";
-				xors_lazy = () -> Arrays.asList(PartyIdentification9.mmNameOrBEIOrOtherSchemeRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification9.NameOrBEIOrOtherSchemeRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nm", required = true)
 	public Max70Text getName() {
 		return name;
 	}
 
-	public void setName(Max70Text name) {
-		this.name = name;
+	public PartyIdentification9 setName(Max70Text name) {
+		this.name = Objects.requireNonNull(name);
+		return this;
 	}
 
-	@XmlElement(name = "BEI", required = true)
 	public BEIIdentifier getBEI() {
 		return bEI;
 	}
 
-	public void setBEI(BEIIdentifier bEI) {
-		this.bEI = bEI;
+	public PartyIdentification9 setBEI(BEIIdentifier bEI) {
+		this.bEI = Objects.requireNonNull(bEI);
+		return this;
 	}
 
-	@XmlElement(name = "OthrSchme", required = true)
 	public Max70Text getOtherScheme() {
 		return otherScheme;
 	}
 
-	public void setOtherScheme(Max70Text otherScheme) {
-		this.otherScheme = otherScheme;
+	public PartyIdentification9 setOtherScheme(Max70Text otherScheme) {
+		this.otherScheme = Objects.requireNonNull(otherScheme);
+		return this;
 	}
 
-	@XmlElement(name = "PstlAdr", required = true)
 	public PostalAddress2 getPostalAddress() {
 		return postalAddress;
 	}
 
-	public void setPostalAddress(com.tools20022.repository.msg.PostalAddress2 postalAddress) {
-		this.postalAddress = postalAddress;
+	public PartyIdentification9 setPostalAddress(com.tools20022.repository.msg.PostalAddress2 postalAddress) {
+		this.postalAddress = Objects.requireNonNull(postalAddress);
+		return this;
 	}
 }

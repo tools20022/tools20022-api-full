@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.FormOfSecurityCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the form of the security.
@@ -32,11 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FormOfSecurityCode#mmRegistered
- * FormOfSecurityCode.mmRegistered}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.FormOfSecurityCode#mmBearer
- * FormOfSecurityCode.mmBearer}</li>
+ * {@linkplain com.tools20022.repository.codeset.FormOfSecurityCode#Registered
+ * FormOfSecurityCode.Registered}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.FormOfSecurityCode#Bearer
+ * FormOfSecurityCode.Bearer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +53,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the form of the security."</li>
  * </ul>
  */
-public class FormOfSecurityCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FormOfSecurityCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -94,12 +99,12 @@ public class FormOfSecurityCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegistered = new MMCode() {
+	public static final FormOfSecurityCode Registered = new FormOfSecurityCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Registered";
 			definition = "Shareholder name of the financial instrument appears in the corporation/funds books.";
-			owner_lazy = () -> FormOfSecurityCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FormOfSecurityCode.mmObject();
 			codeName = "REGD";
 		}
 	};
@@ -127,28 +132,58 @@ public class FormOfSecurityCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBearer = new MMCode() {
+	public static final FormOfSecurityCode Bearer = new FormOfSecurityCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Bearer";
 			definition = "The financial instrument does not specify any registration of ownership, and  is payable to whomever possesses the certificate.";
-			owner_lazy = () -> FormOfSecurityCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FormOfSecurityCode.mmObject();
 			codeName = "BEAR";
 		}
 	};
+	final static private LinkedHashMap<String, FormOfSecurityCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FormOfSecurityCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REGD");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FormOfSecurityCode";
 				definition = "Specifies the form of the security.";
-				code_lazy = () -> Arrays.asList(FormOfSecurityCode.mmRegistered, FormOfSecurityCode.mmBearer);
 				derivation_lazy = () -> Arrays.asList(FormOfSecurity1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FormOfSecurityCode.Registered, com.tools20022.repository.codeset.FormOfSecurityCode.Bearer);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Registered.getCodeName().get(), Registered);
+		codesByName.put(Bearer.getCodeName().get(), Bearer);
+	}
+
+	public static FormOfSecurityCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FormOfSecurityCode[] values() {
+		FormOfSecurityCode[] values = new FormOfSecurityCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FormOfSecurityCode> {
+		@Override
+		public FormOfSecurityCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FormOfSecurityCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

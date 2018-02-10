@@ -20,55 +20,59 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AdditionalBusinessProcessCode;
+import com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the additional business process linked to a corporate action event.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcessCode
- * AdditionalBusinessProcessCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#mmClaimOrCompensation
- * AdditionalBusinessProcess4Code.mmClaimOrCompensation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#ClaimOrCompensation
+ * AdditionalBusinessProcess4Code.ClaimOrCompensation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#mmTaxRefund
- * AdditionalBusinessProcess4Code.mmTaxRefund}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#TaxRefund
+ * AdditionalBusinessProcess4Code.TaxRefund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#mmAutomaticMarketClaim
- * AdditionalBusinessProcess4Code.mmAutomaticMarketClaim}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#AutomaticMarketClaim
+ * AdditionalBusinessProcess4Code.AutomaticMarketClaim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#mmSubjectToTransformation
- * AdditionalBusinessProcess4Code.mmSubjectToTransformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#SubjectToTransformation
+ * AdditionalBusinessProcess4Code.SubjectToTransformation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#mmCancelUnderlyingTrades
- * AdditionalBusinessProcess4Code.mmCancelUnderlyingTrades}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#CancelUnderlyingTrades
+ * AdditionalBusinessProcess4Code.CancelUnderlyingTrades}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#mmConsent
- * AdditionalBusinessProcess4Code.mmConsent}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#Consent
+ * AdditionalBusinessProcess4Code.Consent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#mmNoAutomaticMarketClaimsAndTransformations
- * AdditionalBusinessProcess4Code.mmNoAutomaticMarketClaimsAndTransformations}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#NoAutomaticMarketClaimsAndTransformations
+ * AdditionalBusinessProcess4Code.NoAutomaticMarketClaimsAndTransformations}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#mmNoSplitElection
- * AdditionalBusinessProcess4Code.mmNoSplitElection}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#NoSplitElection
+ * AdditionalBusinessProcess4Code.NoSplitElection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#mmSchemeOrPlanOfArrangement
- * AdditionalBusinessProcess4Code.mmSchemeOrPlanOfArrangement}</li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess4Code#SchemeOrPlanOfArrangement
+ * AdditionalBusinessProcess4Code.SchemeOrPlanOfArrangement}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcessCode
+ * AdditionalBusinessProcessCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -99,7 +103,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AdditionalBusinessProcess3Code}</li>
  * </ul>
  */
-public class AdditionalBusinessProcess4Code extends AdditionalBusinessProcessCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AdditionalBusinessProcess4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -120,18 +125,19 @@ public class AdditionalBusinessProcess4Code extends AdditionalBusinessProcessCod
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#mmClaimOrCompensation
-	 * AdditionalBusinessProcess7Code.mmClaimOrCompensation}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#ClaimOrCompensation
+	 * AdditionalBusinessProcess7Code.ClaimOrCompensation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmClaimOrCompensation = new MMCode() {
+	public static final AdditionalBusinessProcess4Code ClaimOrCompensation = new AdditionalBusinessProcess4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClaimOrCompensation";
-			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.mmClaimOrCompensation);
-			owner_lazy = () -> AdditionalBusinessProcess4Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.ClaimOrCompensation);
+			owner_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.mmObject();
+			codeName = AdditionalBusinessProcessCode.ClaimOrCompensation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -152,18 +158,19 @@ public class AdditionalBusinessProcess4Code extends AdditionalBusinessProcessCod
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#mmTaxRefund
-	 * AdditionalBusinessProcess7Code.mmTaxRefund}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#TaxRefund
+	 * AdditionalBusinessProcess7Code.TaxRefund}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxRefund = new MMCode() {
+	public static final AdditionalBusinessProcess4Code TaxRefund = new AdditionalBusinessProcess4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRefund";
-			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.mmTaxRefund);
-			owner_lazy = () -> AdditionalBusinessProcess4Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.TaxRefund);
+			owner_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.mmObject();
+			codeName = AdditionalBusinessProcessCode.TaxRefund.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,18 +191,19 @@ public class AdditionalBusinessProcess4Code extends AdditionalBusinessProcessCod
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#mmAutomaticMarketClaim
-	 * AdditionalBusinessProcess7Code.mmAutomaticMarketClaim}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#AutomaticMarketClaim
+	 * AdditionalBusinessProcess7Code.AutomaticMarketClaim}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAutomaticMarketClaim = new MMCode() {
+	public static final AdditionalBusinessProcess4Code AutomaticMarketClaim = new AdditionalBusinessProcess4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomaticMarketClaim";
-			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.mmAutomaticMarketClaim);
-			owner_lazy = () -> AdditionalBusinessProcess4Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.AutomaticMarketClaim);
+			owner_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.mmObject();
+			codeName = AdditionalBusinessProcessCode.AutomaticMarketClaim.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -216,18 +224,19 @@ public class AdditionalBusinessProcess4Code extends AdditionalBusinessProcessCod
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#mmSubjectToTransformation
-	 * AdditionalBusinessProcess7Code.mmSubjectToTransformation}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#SubjectToTransformation
+	 * AdditionalBusinessProcess7Code.SubjectToTransformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubjectToTransformation = new MMCode() {
+	public static final AdditionalBusinessProcess4Code SubjectToTransformation = new AdditionalBusinessProcess4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectToTransformation";
-			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.mmSubjectToTransformation);
-			owner_lazy = () -> AdditionalBusinessProcess4Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.SubjectToTransformation);
+			owner_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.mmObject();
+			codeName = AdditionalBusinessProcessCode.SubjectToTransformation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -248,18 +257,19 @@ public class AdditionalBusinessProcess4Code extends AdditionalBusinessProcessCod
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#mmCancelUnderlyingTrades
-	 * AdditionalBusinessProcess7Code.mmCancelUnderlyingTrades}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#CancelUnderlyingTrades
+	 * AdditionalBusinessProcess7Code.CancelUnderlyingTrades}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelUnderlyingTrades = new MMCode() {
+	public static final AdditionalBusinessProcess4Code CancelUnderlyingTrades = new AdditionalBusinessProcess4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancelUnderlyingTrades";
-			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.mmCancelUnderlyingTrades);
-			owner_lazy = () -> AdditionalBusinessProcess4Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.CancelUnderlyingTrades);
+			owner_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.mmObject();
+			codeName = AdditionalBusinessProcessCode.CancelUnderlyingTrades.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -280,18 +290,19 @@ public class AdditionalBusinessProcess4Code extends AdditionalBusinessProcessCod
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#mmConsent
-	 * AdditionalBusinessProcess7Code.mmConsent}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#Consent
+	 * AdditionalBusinessProcess7Code.Consent}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsent = new MMCode() {
+	public static final AdditionalBusinessProcess4Code Consent = new AdditionalBusinessProcess4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consent";
-			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.mmConsent);
-			owner_lazy = () -> AdditionalBusinessProcess4Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.Consent);
+			owner_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.mmObject();
+			codeName = AdditionalBusinessProcessCode.Consent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -312,19 +323,20 @@ public class AdditionalBusinessProcess4Code extends AdditionalBusinessProcessCod
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#mmNoAutomaticMarketClaimsAndTransformations
-	 * AdditionalBusinessProcess7Code.
-	 * mmNoAutomaticMarketClaimsAndTransformations}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#NoAutomaticMarketClaimsAndTransformations
+	 * AdditionalBusinessProcess7Code.NoAutomaticMarketClaimsAndTransformations}
+	 * </li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoAutomaticMarketClaimsAndTransformations = new MMCode() {
+	public static final AdditionalBusinessProcess4Code NoAutomaticMarketClaimsAndTransformations = new AdditionalBusinessProcess4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAutomaticMarketClaimsAndTransformations";
-			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.mmNoAutomaticMarketClaimsAndTransformations);
-			owner_lazy = () -> AdditionalBusinessProcess4Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.NoAutomaticMarketClaimsAndTransformations);
+			owner_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.mmObject();
+			codeName = AdditionalBusinessProcessCode.NoAutomaticMarketClaimsAndTransformations.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -345,18 +357,19 @@ public class AdditionalBusinessProcess4Code extends AdditionalBusinessProcessCod
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#mmNoSplitElection
-	 * AdditionalBusinessProcess7Code.mmNoSplitElection}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#NoSplitElection
+	 * AdditionalBusinessProcess7Code.NoSplitElection}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoSplitElection = new MMCode() {
+	public static final AdditionalBusinessProcess4Code NoSplitElection = new AdditionalBusinessProcess4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSplitElection";
-			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.mmNoSplitElection);
-			owner_lazy = () -> AdditionalBusinessProcess4Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.NoSplitElection);
+			owner_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.mmObject();
+			codeName = AdditionalBusinessProcessCode.NoSplitElection.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -377,37 +390,77 @@ public class AdditionalBusinessProcess4Code extends AdditionalBusinessProcessCod
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#mmSchemeOrPlanOfArrangement
-	 * AdditionalBusinessProcess7Code.mmSchemeOrPlanOfArrangement}</li>
+	 * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess7Code#SchemeOrPlanOfArrangement
+	 * AdditionalBusinessProcess7Code.SchemeOrPlanOfArrangement}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSchemeOrPlanOfArrangement = new MMCode() {
+	public static final AdditionalBusinessProcess4Code SchemeOrPlanOfArrangement = new AdditionalBusinessProcess4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeOrPlanOfArrangement";
-			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.mmSchemeOrPlanOfArrangement);
-			owner_lazy = () -> AdditionalBusinessProcess4Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.SchemeOrPlanOfArrangement);
+			owner_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.mmObject();
+			codeName = AdditionalBusinessProcessCode.SchemeOrPlanOfArrangement.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AdditionalBusinessProcess4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AdditionalBusinessProcess4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CLAI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalBusinessProcess4Code";
 				definition = "Specifies the additional business process linked to a corporate action event.";
 				nextVersions_lazy = () -> Arrays.asList(AdditionalBusinessProcess7Code.mmObject());
 				previousVersion_lazy = () -> AdditionalBusinessProcess3Code.mmObject();
-				code_lazy = () -> Arrays.asList(AdditionalBusinessProcess4Code.mmClaimOrCompensation, AdditionalBusinessProcess4Code.mmTaxRefund, AdditionalBusinessProcess4Code.mmAutomaticMarketClaim,
-						AdditionalBusinessProcess4Code.mmSubjectToTransformation, AdditionalBusinessProcess4Code.mmCancelUnderlyingTrades, AdditionalBusinessProcess4Code.mmConsent,
-						AdditionalBusinessProcess4Code.mmNoAutomaticMarketClaimsAndTransformations, AdditionalBusinessProcess4Code.mmNoSplitElection, AdditionalBusinessProcess4Code.mmSchemeOrPlanOfArrangement);
 				trace_lazy = () -> AdditionalBusinessProcessCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.ClaimOrCompensation, com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.TaxRefund,
+						com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.AutomaticMarketClaim, com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.SubjectToTransformation,
+						com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.CancelUnderlyingTrades, com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.Consent,
+						com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.NoAutomaticMarketClaimsAndTransformations, com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.NoSplitElection,
+						com.tools20022.repository.codeset.AdditionalBusinessProcess4Code.SchemeOrPlanOfArrangement);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ClaimOrCompensation.getCodeName().get(), ClaimOrCompensation);
+		codesByName.put(TaxRefund.getCodeName().get(), TaxRefund);
+		codesByName.put(AutomaticMarketClaim.getCodeName().get(), AutomaticMarketClaim);
+		codesByName.put(SubjectToTransformation.getCodeName().get(), SubjectToTransformation);
+		codesByName.put(CancelUnderlyingTrades.getCodeName().get(), CancelUnderlyingTrades);
+		codesByName.put(Consent.getCodeName().get(), Consent);
+		codesByName.put(NoAutomaticMarketClaimsAndTransformations.getCodeName().get(), NoAutomaticMarketClaimsAndTransformations);
+		codesByName.put(NoSplitElection.getCodeName().get(), NoSplitElection);
+		codesByName.put(SchemeOrPlanOfArrangement.getCodeName().get(), SchemeOrPlanOfArrangement);
+	}
+
+	public static AdditionalBusinessProcess4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AdditionalBusinessProcess4Code[] values() {
+		AdditionalBusinessProcess4Code[] values = new AdditionalBusinessProcess4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AdditionalBusinessProcess4Code> {
+		@Override
+		public AdditionalBusinessProcess4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AdditionalBusinessProcess4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

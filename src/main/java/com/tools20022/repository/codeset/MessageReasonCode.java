@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.MessageReasonCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Reason to send an card acquirer to issuer message.
@@ -32,122 +37,121 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmAcquirerStandin
- * MessageReasonCode.mmAcquirerStandin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#AcquirerStandin
+ * MessageReasonCode.AcquirerStandin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmAmountInconsistency
- * MessageReasonCode.mmAmountInconsistency}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#AmountInconsistency
+ * MessageReasonCode.AmountInconsistency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmCardAcceptorSuspicious
- * MessageReasonCode.mmCardAcceptorSuspicious}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#CardAcceptorSuspicious
+ * MessageReasonCode.CardAcceptorSuspicious}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmCardDeclined
- * MessageReasonCode.mmCardDeclined}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#CardDeclined
+ * MessageReasonCode.CardDeclined}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmCardProcessed
- * MessageReasonCode.mmCardProcessed}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#CardProcessed
+ * MessageReasonCode.CardProcessed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmCardRandomSelection
- * MessageReasonCode.mmCardRandomSelection}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#CardRandomSelection
+ * MessageReasonCode.CardRandomSelection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmCardRetained
- * MessageReasonCode.mmCardRetained}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#CardRetained
+ * MessageReasonCode.CardRetained}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmCardUnableToProcess
- * MessageReasonCode.mmCardUnableToProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#CardUnableToProcess
+ * MessageReasonCode.CardUnableToProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmCustomerCancel
- * MessageReasonCode.mmCustomerCancel}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#CustomerCancel
+ * MessageReasonCode.CustomerCancel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmDeactivatedKey
- * MessageReasonCode.mmDeactivatedKey}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#DeactivatedKey
+ * MessageReasonCode.DeactivatedKey}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmErrorInResponse
- * MessageReasonCode.mmErrorInResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#ErrorInResponse
+ * MessageReasonCode.ErrorInResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmFloorLimit
- * MessageReasonCode.mmFloorLimit}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#FloorLimit
+ * MessageReasonCode.FloorLimit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmInconsistentDeposit
- * MessageReasonCode.mmInconsistentDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#InconsistentDeposit
+ * MessageReasonCode.InconsistentDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmInvalidVerification
- * MessageReasonCode.mmInvalidVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#InvalidVerification
+ * MessageReasonCode.InvalidVerification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmIssuerSignedOff
- * MessageReasonCode.mmIssuerSignedOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#IssuerSignedOff
+ * MessageReasonCode.IssuerSignedOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmIssuerStandin
- * MessageReasonCode.mmIssuerStandin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#IssuerStandin
+ * MessageReasonCode.IssuerStandin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmIssuerTimeout
- * MessageReasonCode.mmIssuerTimeout}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#IssuerTimeout
+ * MessageReasonCode.IssuerTimeout}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmIssuerUnavailable
- * MessageReasonCode.mmIssuerUnavailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#IssuerUnavailable
+ * MessageReasonCode.IssuerUnavailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmLifeCycleEnd
- * MessageReasonCode.mmLifeCycleEnd}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#LifeCycleEnd
+ * MessageReasonCode.LifeCycleEnd}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmMalfunction
- * MessageReasonCode.mmMalfunction}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#Malfunction
+ * MessageReasonCode.Malfunction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmOfflineDeclined
- * MessageReasonCode.mmOfflineDeclined}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#OfflineDeclined
+ * MessageReasonCode.OfflineDeclined}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmOnLineDeclined
- * MessageReasonCode.mmOnLineDeclined}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#OnLineDeclined
+ * MessageReasonCode.OnLineDeclined}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmOnlineForced
- * MessageReasonCode.mmOnlineForced}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#OnlineForced
+ * MessageReasonCode.OnlineForced}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmOutOfSynchronisation
- * MessageReasonCode.mmOutOfSynchronisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#OutOfSynchronisation
+ * MessageReasonCode.OutOfSynchronisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmPartiallyCompleted
- * MessageReasonCode.mmPartiallyCompleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#PartiallyCompleted
+ * MessageReasonCode.PartiallyCompleted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmReceiverSignedOff
- * MessageReasonCode.mmReceiverSignedOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#ReceiverSignedOff
+ * MessageReasonCode.ReceiverSignedOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmReceiverStandin
- * MessageReasonCode.mmReceiverStandin}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#ReceiverStandin
+ * MessageReasonCode.ReceiverStandin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmReceiverTimeout
- * MessageReasonCode.mmReceiverTimeout}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#ReceiverTimeout
+ * MessageReasonCode.ReceiverTimeout}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmReceiverUnavailable
- * MessageReasonCode.mmReceiverUnavailable}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#ReceiverUnavailable
+ * MessageReasonCode.ReceiverUnavailable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmSecurityReason
- * MessageReasonCode.mmSecurityReason}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#SecurityReason
+ * MessageReasonCode.SecurityReason}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmSuspectedFraud
- * MessageReasonCode.mmSuspectedFraud}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#SuspectedFraud
+ * MessageReasonCode.SuspectedFraud}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmTerminalProcessed
- * MessageReasonCode.mmTerminalProcessed}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#TerminalProcessed
+ * MessageReasonCode.TerminalProcessed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmTerminalRandomSelection
- * MessageReasonCode.mmTerminalRandomSelection}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#TerminalRandomSelection
+ * MessageReasonCode.TerminalRandomSelection}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmTerminalUnableToProcess
- * MessageReasonCode.mmTerminalUnableToProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#TerminalUnableToProcess
+ * MessageReasonCode.TerminalUnableToProcess}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageReasonCode#TimeOut
+ * MessageReasonCode.TimeOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmTimeOut
- * MessageReasonCode.mmTimeOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#TooLateResponse
+ * MessageReasonCode.TooLateResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmTooLateResponse
- * MessageReasonCode.mmTooLateResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#UnableToComplete
+ * MessageReasonCode.UnableToComplete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmUnableToComplete
- * MessageReasonCode.mmUnableToComplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#UnableToSend
+ * MessageReasonCode.UnableToSend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmUnableToSend
- * MessageReasonCode.mmUnableToSend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#mmUncompleteDispense
- * MessageReasonCode.mmUncompleteDispense}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageReasonCode#UncompleteDispense
+ * MessageReasonCode.UncompleteDispense}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -160,8 +164,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -172,7 +176,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Reason to send an card acquirer to issuer message."</li>
  * </ul>
  */
-public class MessageReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MessageReasonCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -196,12 +201,12 @@ public class MessageReasonCode {
 	 * definition} = "Stand-in processing at the acquirer's option."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcquirerStandin = new MMCode() {
+	public static final MessageReasonCode AcquirerStandin = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerStandin";
 			definition = "Stand-in processing at the acquirer's option.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "ASTD";
 		}
 	};
@@ -226,12 +231,12 @@ public class MessageReasonCode {
 	 * definition} = "Amount inconsistent between request and response."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAmountInconsistency = new MMCode() {
+	public static final MessageReasonCode AmountInconsistency = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountInconsistency";
 			definition = "Amount inconsistent between request and response.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "AMNT";
 		}
 	};
@@ -256,12 +261,12 @@ public class MessageReasonCode {
 	 * definition} = "Card acceptor forced to be online."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardAcceptorSuspicious = new MMCode() {
+	public static final MessageReasonCode CardAcceptorSuspicious = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardAcceptorSuspicious";
 			definition = "Card acceptor forced to be online.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "ASPC";
 		}
 	};
@@ -288,12 +293,12 @@ public class MessageReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardDeclined = new MMCode() {
+	public static final MessageReasonCode CardDeclined = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardDeclined";
 			definition = "Integrated circuit card declines the transaction after the authorisation.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "CDCL";
 		}
 	};
@@ -318,12 +323,12 @@ public class MessageReasonCode {
 	 * definition} = "Transaction performed offline by the card."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardProcessed = new MMCode() {
+	public static final MessageReasonCode CardProcessed = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardProcessed";
 			definition = "Transaction performed offline by the card.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "COFF";
 		}
 	};
@@ -348,12 +353,12 @@ public class MessageReasonCode {
 	 * definition} = "Random online decided by the card."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardRandomSelection = new MMCode() {
+	public static final MessageReasonCode CardRandomSelection = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardRandomSelection";
 			definition = "Random online decided by the card.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "CRND";
 		}
 	};
@@ -378,12 +383,12 @@ public class MessageReasonCode {
 	 * definition} = "Card left by the cardholder."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardRetained = new MMCode() {
+	public static final MessageReasonCode CardRetained = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardRetained";
 			definition = "Card left by the cardholder.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "CRTN";
 		}
 	};
@@ -408,12 +413,12 @@ public class MessageReasonCode {
 	 * definition} = "Card cannot process offline the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardUnableToProcess = new MMCode() {
+	public static final MessageReasonCode CardUnableToProcess = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardUnableToProcess";
 			definition = "Card cannot process offline the transaction.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "CUNB";
 		}
 	};
@@ -441,12 +446,12 @@ public class MessageReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustomerCancel = new MMCode() {
+	public static final MessageReasonCode CustomerCancel = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerCancel";
 			definition = "Customer cancellation, for example removing the chip card after sending the authorisation, but before the end of the transaction.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "CCAN";
 		}
 	};
@@ -471,12 +476,12 @@ public class MessageReasonCode {
 	 * definition} = "Deactivated key must be replaced."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeactivatedKey = new MMCode() {
+	public static final MessageReasonCode DeactivatedKey = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeactivatedKey";
 			definition = "Deactivated key must be replaced.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "KDAC";
 		}
 	};
@@ -504,12 +509,12 @@ public class MessageReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmErrorInResponse = new MMCode() {
+	public static final MessageReasonCode ErrorInResponse = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ErrorInResponse";
 			definition = "Response message was invalid (for example a problem of format or security).";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "ERRP";
 		}
 	};
@@ -534,12 +539,12 @@ public class MessageReasonCode {
 	 * definition} = "Transaction above or under the floor limit."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFloorLimit = new MMCode() {
+	public static final MessageReasonCode FloorLimit = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloorLimit";
 			definition = "Transaction above or under the floor limit.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "FLRL";
 		}
 	};
@@ -565,12 +570,12 @@ public class MessageReasonCode {
 	 * "Inconsistency between the items deposited and their declared value."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInconsistentDeposit = new MMCode() {
+	public static final MessageReasonCode InconsistentDeposit = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InconsistentDeposit";
 			definition = "Inconsistency between the items deposited and their declared value.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "IDPS";
 		}
 	};
@@ -595,12 +600,12 @@ public class MessageReasonCode {
 	 * definition} = "Verification of the key has failed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidVerification = new MMCode() {
+	public static final MessageReasonCode InvalidVerification = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidVerification";
 			definition = "Verification of the key has failed.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "KINV";
 		}
 	};
@@ -625,12 +630,12 @@ public class MessageReasonCode {
 	 * definition} = "Issuer signed off."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuerSignedOff = new MMCode() {
+	public static final MessageReasonCode IssuerSignedOff = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerSignedOff";
 			definition = "Issuer signed off.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "ISGN";
 		}
 	};
@@ -655,12 +660,12 @@ public class MessageReasonCode {
 	 * definition} = "Stand-in processing at the issuer's option."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuerStandin = new MMCode() {
+	public static final MessageReasonCode IssuerStandin = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerStandin";
 			definition = "Stand-in processing at the issuer's option.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "ISTD";
 		}
 	};
@@ -685,12 +690,12 @@ public class MessageReasonCode {
 	 * definition} = "Issuer timed out on request."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuerTimeout = new MMCode() {
+	public static final MessageReasonCode IssuerTimeout = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerTimeout";
 			definition = "Issuer timed out on request.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "ITIM";
 		}
 	};
@@ -715,12 +720,12 @@ public class MessageReasonCode {
 	 * definition} = "Issuer unavailable."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuerUnavailable = new MMCode() {
+	public static final MessageReasonCode IssuerUnavailable = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerUnavailable";
 			definition = "Issuer unavailable.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "IUNV";
 		}
 	};
@@ -745,12 +750,12 @@ public class MessageReasonCode {
 	 * definition} = "End of key life cycle."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLifeCycleEnd = new MMCode() {
+	public static final MessageReasonCode LifeCycleEnd = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LifeCycleEnd";
 			definition = "End of key life cycle.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "ENDK";
 		}
 	};
@@ -778,12 +783,12 @@ public class MessageReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMalfunction = new MMCode() {
+	public static final MessageReasonCode Malfunction = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Malfunction";
 			definition = "Suspected malfunction (for example card reader defect, or printer out of order).";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "MLFC";
 		}
 	};
@@ -808,12 +813,12 @@ public class MessageReasonCode {
 	 * definition} = "Offline authorisation declined the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOfflineDeclined = new MMCode() {
+	public static final MessageReasonCode OfflineDeclined = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfflineDeclined";
 			definition = "Offline authorisation declined the transaction.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "FDCL";
 		}
 	};
@@ -838,12 +843,12 @@ public class MessageReasonCode {
 	 * definition} = "Online authorisation declined the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOnLineDeclined = new MMCode() {
+	public static final MessageReasonCode OnLineDeclined = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLineDeclined";
 			definition = "Online authorisation declined the transaction.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "NDCL";
 		}
 	};
@@ -869,12 +874,12 @@ public class MessageReasonCode {
 	 * "Forced online by card acceptor, terminal, card, or the issuer."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOnlineForced = new MMCode() {
+	public static final MessageReasonCode OnlineForced = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnlineForced";
 			definition = "Forced online by card acceptor, terminal, card, or the issuer.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "FORC";
 		}
 	};
@@ -899,12 +904,12 @@ public class MessageReasonCode {
 	 * definition} = "Keys not synchronised."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOutOfSynchronisation = new MMCode() {
+	public static final MessageReasonCode OutOfSynchronisation = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfSynchronisation";
 			definition = "Keys not synchronised.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "KSYN";
 		}
 	};
@@ -929,12 +934,12 @@ public class MessageReasonCode {
 	 * definition} = "Partial reversal."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartiallyCompleted = new MMCode() {
+	public static final MessageReasonCode PartiallyCompleted = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallyCompleted";
 			definition = "Partial reversal.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "PART";
 		}
 	};
@@ -959,12 +964,12 @@ public class MessageReasonCode {
 	 * definition} = "Receiver signed off."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceiverSignedOff = new MMCode() {
+	public static final MessageReasonCode ReceiverSignedOff = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverSignedOff";
 			definition = "Receiver signed off.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "RSGN";
 		}
 	};
@@ -989,12 +994,12 @@ public class MessageReasonCode {
 	 * definition} = "Stand-in processing at the receiver's option."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceiverStandin = new MMCode() {
+	public static final MessageReasonCode ReceiverStandin = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverStandin";
 			definition = "Stand-in processing at the receiver's option.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "RSTD";
 		}
 	};
@@ -1019,12 +1024,12 @@ public class MessageReasonCode {
 	 * definition} = "Receiver timed out on request."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceiverTimeout = new MMCode() {
+	public static final MessageReasonCode ReceiverTimeout = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverTimeout";
 			definition = "Receiver timed out on request.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "RTIM";
 		}
 	};
@@ -1049,12 +1054,12 @@ public class MessageReasonCode {
 	 * definition} = "Receiver unavailable."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceiverUnavailable = new MMCode() {
+	public static final MessageReasonCode ReceiverUnavailable = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverUnavailable";
 			definition = "Receiver unavailable.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "RUNV";
 		}
 	};
@@ -1079,12 +1084,12 @@ public class MessageReasonCode {
 	 * definition} = "Security reasons."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecurityReason = new MMCode() {
+	public static final MessageReasonCode SecurityReason = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityReason";
 			definition = "Security reasons.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "KSEC";
 		}
 	};
@@ -1110,12 +1115,12 @@ public class MessageReasonCode {
 	 * "Card transaction failed because the merchant suspected a fraud."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuspectedFraud = new MMCode() {
+	public static final MessageReasonCode SuspectedFraud = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspectedFraud";
 			definition = "Card transaction failed because the merchant suspected a fraud.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "SUSP";
 		}
 	};
@@ -1140,12 +1145,12 @@ public class MessageReasonCode {
 	 * definition} = "Transaction performed offline by the terminal."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTerminalProcessed = new MMCode() {
+	public static final MessageReasonCode TerminalProcessed = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalProcessed";
 			definition = "Transaction performed offline by the terminal.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "TOFF";
 		}
 	};
@@ -1170,12 +1175,12 @@ public class MessageReasonCode {
 	 * definition} = "Random online decided by the terminal."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTerminalRandomSelection = new MMCode() {
+	public static final MessageReasonCode TerminalRandomSelection = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalRandomSelection";
 			definition = "Random online decided by the terminal.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "TRND";
 		}
 	};
@@ -1200,12 +1205,12 @@ public class MessageReasonCode {
 	 * definition} = "Terminal cannot process offline the transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTerminalUnableToProcess = new MMCode() {
+	public static final MessageReasonCode TerminalUnableToProcess = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalUnableToProcess";
 			definition = "Terminal cannot process offline the transaction.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "TUNB";
 		}
 	};
@@ -1233,12 +1238,12 @@ public class MessageReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTimeOut = new MMCode() {
+	public static final MessageReasonCode TimeOut = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeOut";
 			definition = "Waiting for response from the receiver, or no response was received (for example connection release before receiving the response).";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "TIMO";
 		}
 	};
@@ -1263,12 +1268,12 @@ public class MessageReasonCode {
 	 * definition} = "Response to the authorisation received too late."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTooLateResponse = new MMCode() {
+	public static final MessageReasonCode TooLateResponse = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TooLateResponse";
 			definition = "Response to the authorisation received too late.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "LATE";
 		}
 	};
@@ -1296,12 +1301,12 @@ public class MessageReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnableToComplete = new MMCode() {
+	public static final MessageReasonCode UnableToComplete = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToComplete";
 			definition = "Card acceptor device unable to complete transaction after the authorisation response (for example, the written signature invalid).";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "UCMP";
 		}
 	};
@@ -1326,12 +1331,12 @@ public class MessageReasonCode {
 	 * definition} = "Unable to send the message."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnableToSend = new MMCode() {
+	public static final MessageReasonCode UnableToSend = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToSend";
 			definition = "Unable to send the message.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "USND";
 		}
 	};
@@ -1356,34 +1361,107 @@ public class MessageReasonCode {
 	 * definition} = "Cardholder did not take the presented items."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUncompleteDispense = new MMCode() {
+	public static final MessageReasonCode UncompleteDispense = new MessageReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UncompleteDispense";
 			definition = "Cardholder did not take the presented items.";
-			owner_lazy = () -> MessageReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageReasonCode.mmObject();
 			codeName = "UDSP";
 		}
 	};
+	final static private LinkedHashMap<String, MessageReasonCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MessageReasonCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageReasonCode";
 				definition = "Reason to send an card acquirer to issuer message.";
-				code_lazy = () -> Arrays.asList(MessageReasonCode.mmAcquirerStandin, MessageReasonCode.mmAmountInconsistency, MessageReasonCode.mmCardAcceptorSuspicious, MessageReasonCode.mmCardDeclined, MessageReasonCode.mmCardProcessed,
-						MessageReasonCode.mmCardRandomSelection, MessageReasonCode.mmCardRetained, MessageReasonCode.mmCardUnableToProcess, MessageReasonCode.mmCustomerCancel, MessageReasonCode.mmDeactivatedKey,
-						MessageReasonCode.mmErrorInResponse, MessageReasonCode.mmFloorLimit, MessageReasonCode.mmInconsistentDeposit, MessageReasonCode.mmInvalidVerification, MessageReasonCode.mmIssuerSignedOff,
-						MessageReasonCode.mmIssuerStandin, MessageReasonCode.mmIssuerTimeout, MessageReasonCode.mmIssuerUnavailable, MessageReasonCode.mmLifeCycleEnd, MessageReasonCode.mmMalfunction, MessageReasonCode.mmOfflineDeclined,
-						MessageReasonCode.mmOnLineDeclined, MessageReasonCode.mmOnlineForced, MessageReasonCode.mmOutOfSynchronisation, MessageReasonCode.mmPartiallyCompleted, MessageReasonCode.mmReceiverSignedOff,
-						MessageReasonCode.mmReceiverStandin, MessageReasonCode.mmReceiverTimeout, MessageReasonCode.mmReceiverUnavailable, MessageReasonCode.mmSecurityReason, MessageReasonCode.mmSuspectedFraud,
-						MessageReasonCode.mmTerminalProcessed, MessageReasonCode.mmTerminalRandomSelection, MessageReasonCode.mmTerminalUnableToProcess, MessageReasonCode.mmTimeOut, MessageReasonCode.mmTooLateResponse,
-						MessageReasonCode.mmUnableToComplete, MessageReasonCode.mmUnableToSend, MessageReasonCode.mmUncompleteDispense);
 				derivation_lazy = () -> Arrays.asList(MessageReason1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageReasonCode.AcquirerStandin, com.tools20022.repository.codeset.MessageReasonCode.AmountInconsistency,
+						com.tools20022.repository.codeset.MessageReasonCode.CardAcceptorSuspicious, com.tools20022.repository.codeset.MessageReasonCode.CardDeclined, com.tools20022.repository.codeset.MessageReasonCode.CardProcessed,
+						com.tools20022.repository.codeset.MessageReasonCode.CardRandomSelection, com.tools20022.repository.codeset.MessageReasonCode.CardRetained, com.tools20022.repository.codeset.MessageReasonCode.CardUnableToProcess,
+						com.tools20022.repository.codeset.MessageReasonCode.CustomerCancel, com.tools20022.repository.codeset.MessageReasonCode.DeactivatedKey, com.tools20022.repository.codeset.MessageReasonCode.ErrorInResponse,
+						com.tools20022.repository.codeset.MessageReasonCode.FloorLimit, com.tools20022.repository.codeset.MessageReasonCode.InconsistentDeposit, com.tools20022.repository.codeset.MessageReasonCode.InvalidVerification,
+						com.tools20022.repository.codeset.MessageReasonCode.IssuerSignedOff, com.tools20022.repository.codeset.MessageReasonCode.IssuerStandin, com.tools20022.repository.codeset.MessageReasonCode.IssuerTimeout,
+						com.tools20022.repository.codeset.MessageReasonCode.IssuerUnavailable, com.tools20022.repository.codeset.MessageReasonCode.LifeCycleEnd, com.tools20022.repository.codeset.MessageReasonCode.Malfunction,
+						com.tools20022.repository.codeset.MessageReasonCode.OfflineDeclined, com.tools20022.repository.codeset.MessageReasonCode.OnLineDeclined, com.tools20022.repository.codeset.MessageReasonCode.OnlineForced,
+						com.tools20022.repository.codeset.MessageReasonCode.OutOfSynchronisation, com.tools20022.repository.codeset.MessageReasonCode.PartiallyCompleted,
+						com.tools20022.repository.codeset.MessageReasonCode.ReceiverSignedOff, com.tools20022.repository.codeset.MessageReasonCode.ReceiverStandin, com.tools20022.repository.codeset.MessageReasonCode.ReceiverTimeout,
+						com.tools20022.repository.codeset.MessageReasonCode.ReceiverUnavailable, com.tools20022.repository.codeset.MessageReasonCode.SecurityReason, com.tools20022.repository.codeset.MessageReasonCode.SuspectedFraud,
+						com.tools20022.repository.codeset.MessageReasonCode.TerminalProcessed, com.tools20022.repository.codeset.MessageReasonCode.TerminalRandomSelection,
+						com.tools20022.repository.codeset.MessageReasonCode.TerminalUnableToProcess, com.tools20022.repository.codeset.MessageReasonCode.TimeOut, com.tools20022.repository.codeset.MessageReasonCode.TooLateResponse,
+						com.tools20022.repository.codeset.MessageReasonCode.UnableToComplete, com.tools20022.repository.codeset.MessageReasonCode.UnableToSend, com.tools20022.repository.codeset.MessageReasonCode.UncompleteDispense);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AcquirerStandin.getCodeName().get(), AcquirerStandin);
+		codesByName.put(AmountInconsistency.getCodeName().get(), AmountInconsistency);
+		codesByName.put(CardAcceptorSuspicious.getCodeName().get(), CardAcceptorSuspicious);
+		codesByName.put(CardDeclined.getCodeName().get(), CardDeclined);
+		codesByName.put(CardProcessed.getCodeName().get(), CardProcessed);
+		codesByName.put(CardRandomSelection.getCodeName().get(), CardRandomSelection);
+		codesByName.put(CardRetained.getCodeName().get(), CardRetained);
+		codesByName.put(CardUnableToProcess.getCodeName().get(), CardUnableToProcess);
+		codesByName.put(CustomerCancel.getCodeName().get(), CustomerCancel);
+		codesByName.put(DeactivatedKey.getCodeName().get(), DeactivatedKey);
+		codesByName.put(ErrorInResponse.getCodeName().get(), ErrorInResponse);
+		codesByName.put(FloorLimit.getCodeName().get(), FloorLimit);
+		codesByName.put(InconsistentDeposit.getCodeName().get(), InconsistentDeposit);
+		codesByName.put(InvalidVerification.getCodeName().get(), InvalidVerification);
+		codesByName.put(IssuerSignedOff.getCodeName().get(), IssuerSignedOff);
+		codesByName.put(IssuerStandin.getCodeName().get(), IssuerStandin);
+		codesByName.put(IssuerTimeout.getCodeName().get(), IssuerTimeout);
+		codesByName.put(IssuerUnavailable.getCodeName().get(), IssuerUnavailable);
+		codesByName.put(LifeCycleEnd.getCodeName().get(), LifeCycleEnd);
+		codesByName.put(Malfunction.getCodeName().get(), Malfunction);
+		codesByName.put(OfflineDeclined.getCodeName().get(), OfflineDeclined);
+		codesByName.put(OnLineDeclined.getCodeName().get(), OnLineDeclined);
+		codesByName.put(OnlineForced.getCodeName().get(), OnlineForced);
+		codesByName.put(OutOfSynchronisation.getCodeName().get(), OutOfSynchronisation);
+		codesByName.put(PartiallyCompleted.getCodeName().get(), PartiallyCompleted);
+		codesByName.put(ReceiverSignedOff.getCodeName().get(), ReceiverSignedOff);
+		codesByName.put(ReceiverStandin.getCodeName().get(), ReceiverStandin);
+		codesByName.put(ReceiverTimeout.getCodeName().get(), ReceiverTimeout);
+		codesByName.put(ReceiverUnavailable.getCodeName().get(), ReceiverUnavailable);
+		codesByName.put(SecurityReason.getCodeName().get(), SecurityReason);
+		codesByName.put(SuspectedFraud.getCodeName().get(), SuspectedFraud);
+		codesByName.put(TerminalProcessed.getCodeName().get(), TerminalProcessed);
+		codesByName.put(TerminalRandomSelection.getCodeName().get(), TerminalRandomSelection);
+		codesByName.put(TerminalUnableToProcess.getCodeName().get(), TerminalUnableToProcess);
+		codesByName.put(TimeOut.getCodeName().get(), TimeOut);
+		codesByName.put(TooLateResponse.getCodeName().get(), TooLateResponse);
+		codesByName.put(UnableToComplete.getCodeName().get(), UnableToComplete);
+		codesByName.put(UnableToSend.getCodeName().get(), UnableToSend);
+		codesByName.put(UncompleteDispense.getCodeName().get(), UncompleteDispense);
+	}
+
+	public static MessageReasonCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MessageReasonCode[] values() {
+		MessageReasonCode[] values = new MessageReasonCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MessageReasonCode> {
+		@Override
+		public MessageReasonCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MessageReasonCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

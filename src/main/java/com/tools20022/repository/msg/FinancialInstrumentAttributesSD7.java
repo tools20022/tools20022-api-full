@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +28,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides additional information regarding underlying security details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "FinancialInstrumentAttributesSD7", propOrder = {"placeAndName", "issuerDescription", "countryOfIncorporation", "primaryExchangeFlag", "SECRegisteredFlag"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "FinancialInstrumentAttributesSD7", propOrder = {"placeAndName", "issuerDescription", "countryOfIncorporation", "primaryExchangeFlag", "sECRegisteredFlag"})
 public class FinancialInstrumentAttributesSD7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +113,7 @@ public class FinancialInstrumentAttributesSD7 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +124,11 @@ public class FinancialInstrumentAttributesSD7 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IssrDesc")
 	protected Max70Text issuerDescription;
 	/**
-	 * Name of the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -138,6 +143,9 @@ public class FinancialInstrumentAttributesSD7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IssrDesc"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Issuer Description</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -150,9 +158,10 @@ public class FinancialInstrumentAttributesSD7 {
 	 */
 	public static final MMMessageAttribute mmIssuerDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
 			xmlTag = "IssrDesc";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Issuer Description"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerDescription";
 			definition = "Name of the issuer.";
@@ -161,10 +170,11 @@ public class FinancialInstrumentAttributesSD7 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtryOfIncorprtn")
 	protected CountryCode countryOfIncorporation;
 	/**
-	 * Country of incorporation of the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -179,6 +189,9 @@ public class FinancialInstrumentAttributesSD7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtryOfIncorprtn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Country of Incorporation</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -191,9 +204,10 @@ public class FinancialInstrumentAttributesSD7 {
 	 */
 	public static final MMMessageAttribute mmCountryOfIncorporation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfIncorprtn";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Country of Incorporation"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIncorporation";
 			definition = "Country of incorporation of the issuer.";
@@ -202,11 +216,11 @@ public class FinancialInstrumentAttributesSD7 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "PmryXchgFlg")
 	protected YesNoIndicator primaryExchangeFlag;
 	/**
-	 * Indicates if the stock exchange associated to place of listing code is
-	 * primary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,6 +236,9 @@ public class FinancialInstrumentAttributesSD7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PmryXchgFlg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Primary Exchange Flag</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -236,9 +253,10 @@ public class FinancialInstrumentAttributesSD7 {
 	 */
 	public static final MMMessageAttribute mmPrimaryExchangeFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
 			xmlTag = "PmryXchgFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Primary Exchange Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryExchangeFlag";
 			definition = "Indicates if the stock exchange associated to place of listing code is primary.";
@@ -247,11 +265,11 @@ public class FinancialInstrumentAttributesSD7 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "SECRegdFlg")
 	protected YesNoIndicator sECRegisteredFlag;
 	/**
-	 * Indicates whether the event has been registered with US Securities
-	 * Exchange Commission (SEC).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -267,6 +285,9 @@ public class FinancialInstrumentAttributesSD7 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SECRegdFlg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: SEC Registered Flag</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -281,9 +302,10 @@ public class FinancialInstrumentAttributesSD7 {
 	 */
 	public static final MMMessageAttribute mmSECRegisteredFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmObject();
 			isDerived = false;
 			xmlTag = "SECRegdFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "SEC Registered Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SECRegisteredFlag";
 			definition = "Indicates whether the event has been registered with US Securities Exchange Commission (SEC).";
@@ -296,9 +318,10 @@ public class FinancialInstrumentAttributesSD7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD7.mmPlaceAndName, FinancialInstrumentAttributesSD7.mmIssuerDescription, FinancialInstrumentAttributesSD7.mmCountryOfIncorporation,
-						FinancialInstrumentAttributesSD7.mmPrimaryExchangeFlag, FinancialInstrumentAttributesSD7.mmSECRegisteredFlag);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmPlaceAndName, com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmIssuerDescription,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmCountryOfIncorporation, com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmPrimaryExchangeFlag,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD7.mmSECRegisteredFlag);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentAttributesSD7";
 				definition = "Provides additional information regarding underlying security details.";
@@ -307,48 +330,48 @@ public class FinancialInstrumentAttributesSD7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public FinancialInstrumentAttributesSD7 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "IssrDesc")
-	public Max70Text getIssuerDescription() {
-		return issuerDescription;
+	public Optional<Max70Text> getIssuerDescription() {
+		return issuerDescription == null ? Optional.empty() : Optional.of(issuerDescription);
 	}
 
-	public void setIssuerDescription(Max70Text issuerDescription) {
+	public FinancialInstrumentAttributesSD7 setIssuerDescription(Max70Text issuerDescription) {
 		this.issuerDescription = issuerDescription;
+		return this;
 	}
 
-	@XmlElement(name = "CtryOfIncorprtn")
-	public CountryCode getCountryOfIncorporation() {
-		return countryOfIncorporation;
+	public Optional<CountryCode> getCountryOfIncorporation() {
+		return countryOfIncorporation == null ? Optional.empty() : Optional.of(countryOfIncorporation);
 	}
 
-	public void setCountryOfIncorporation(CountryCode countryOfIncorporation) {
+	public FinancialInstrumentAttributesSD7 setCountryOfIncorporation(CountryCode countryOfIncorporation) {
 		this.countryOfIncorporation = countryOfIncorporation;
+		return this;
 	}
 
-	@XmlElement(name = "PmryXchgFlg")
-	public YesNoIndicator getPrimaryExchangeFlag() {
-		return primaryExchangeFlag;
+	public Optional<YesNoIndicator> getPrimaryExchangeFlag() {
+		return primaryExchangeFlag == null ? Optional.empty() : Optional.of(primaryExchangeFlag);
 	}
 
-	public void setPrimaryExchangeFlag(YesNoIndicator primaryExchangeFlag) {
+	public FinancialInstrumentAttributesSD7 setPrimaryExchangeFlag(YesNoIndicator primaryExchangeFlag) {
 		this.primaryExchangeFlag = primaryExchangeFlag;
+		return this;
 	}
 
-	@XmlElement(name = "SECRegdFlg")
-	public YesNoIndicator getSECRegisteredFlag() {
-		return sECRegisteredFlag;
+	public Optional<YesNoIndicator> getSECRegisteredFlag() {
+		return sECRegisteredFlag == null ? Optional.empty() : Optional.of(sECRegisteredFlag);
 	}
 
-	public void setSECRegisteredFlag(YesNoIndicator sECRegisteredFlag) {
+	public FinancialInstrumentAttributesSD7 setSECRegisteredFlag(YesNoIndicator sECRegisteredFlag) {
 		this.sECRegisteredFlag = sECRegisteredFlag;
+		return this;
 	}
 }

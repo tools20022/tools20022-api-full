@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AgentTypeCode;
+import com.tools20022.repository.codeset.AgentType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the function the agent is performing (for example, event agent,
@@ -31,22 +35,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AgentTypeCode AgentTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgentType1Code#mmDropAgentBearer
- * AgentType1Code.mmDropAgentBearer}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AgentType1Code#mmOther
- * AgentType1Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgentType1Code#DropAgentBearer
+ * AgentType1Code.DropAgentBearer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AgentType1Code#Other
+ * AgentType1Code.Other}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AgentTypeCode AgentTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class AgentType1Code extends AgentTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AgentType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +89,12 @@ public class AgentType1Code extends AgentTypeCode {
 	 * name} = "DropAgentBearer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDropAgentBearer = new MMCode() {
+	public static final AgentType1Code DropAgentBearer = new AgentType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DropAgentBearer";
-			owner_lazy = () -> AgentType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AgentType1Code.mmObject();
+			codeName = AgentTypeCode.DropAgentBearer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,26 +113,57 @@ public class AgentType1Code extends AgentTypeCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final AgentType1Code Other = new AgentType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> AgentType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AgentType1Code.mmObject();
+			codeName = AgentTypeCode.Other.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AgentType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AgentType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DAGB");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentType1Code";
 				definition = "Specifies the function the agent is performing (for example, event agent, information agent).";
-				code_lazy = () -> Arrays.asList(AgentType1Code.mmDropAgentBearer, AgentType1Code.mmOther);
 				trace_lazy = () -> AgentTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AgentType1Code.DropAgentBearer, com.tools20022.repository.codeset.AgentType1Code.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(DropAgentBearer.getCodeName().get(), DropAgentBearer);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static AgentType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AgentType1Code[] values() {
+		AgentType1Code[] values = new AgentType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AgentType1Code> {
+		@Override
+		public AgentType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AgentType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

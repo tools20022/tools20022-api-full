@@ -27,9 +27,11 @@ import com.tools20022.repository.entity.AccountOwnerRole;
 import com.tools20022.repository.entity.AccountPartyRole;
 import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Specifies the details of the account and the role of the party."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountAndParties2", propOrder = {"account", "role", "additionalInformation"})
 public class AccountAndParties2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Acct", required = true)
 	protected CustomerAccount1 account;
 	/**
-	 * Description of the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -120,7 +123,7 @@ public class AccountAndParties2 {
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
-			componentContext_lazy = () -> AccountAndParties2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountAndParties2.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +135,11 @@ public class AccountAndParties2 {
 			type_lazy = () -> com.tools20022.repository.msg.CustomerAccount1.mmObject();
 		}
 	};
+	@XmlElement(name = "Role", required = true)
 	protected List<com.tools20022.repository.msg.AccountRole1> role;
 	/**
-	 * Specifies the role related to the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -167,7 +171,7 @@ public class AccountAndParties2 {
 	public static final MMMessageAssociationEnd mmRole = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> AccountOwnerRole.mmObject();
-			componentContext_lazy = () -> AccountAndParties2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountAndParties2.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +182,11 @@ public class AccountAndParties2 {
 			type_lazy = () -> com.tools20022.repository.msg.AccountRole1.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected List<Max256Text> additionalInformation;
 	/**
-	 * Additional information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,7 +213,7 @@ public class AccountAndParties2 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountAndParties2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountAndParties2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,10 +227,11 @@ public class AccountAndParties2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountAndParties2.mmAccount, AccountAndParties2.mmRole, AccountAndParties2.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndParties2.mmAccount, com.tools20022.repository.msg.AccountAndParties2.mmRole,
+						com.tools20022.repository.msg.AccountAndParties2.mmAdditionalInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(InformationResponseSD1V01.mmAccountAndParties);
 				trace_lazy = () -> AccountPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountAndParties2";
 				definition = "Specifies the details of the account and the role of the party.";
@@ -234,30 +240,30 @@ public class AccountAndParties2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Acct", required = true)
 	public CustomerAccount1 getAccount() {
 		return account;
 	}
 
-	public void setAccount(com.tools20022.repository.msg.CustomerAccount1 account) {
-		this.account = account;
+	public AccountAndParties2 setAccount(com.tools20022.repository.msg.CustomerAccount1 account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 
-	@XmlElement(name = "Role", required = true)
 	public List<AccountRole1> getRole() {
-		return role;
+		return role == null ? role = new ArrayList<>() : role;
 	}
 
-	public void setRole(List<com.tools20022.repository.msg.AccountRole1> role) {
-		this.role = role;
+	public AccountAndParties2 setRole(List<com.tools20022.repository.msg.AccountRole1> role) {
+		this.role = Objects.requireNonNull(role);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
 	public List<Max256Text> getAdditionalInformation() {
-		return additionalInformation;
+		return additionalInformation == null ? additionalInformation = new ArrayList<>() : additionalInformation;
 	}
 
-	public void setAdditionalInformation(List<Max256Text> additionalInformation) {
-		this.additionalInformation = additionalInformation;
+	public AccountAndParties2 setAdditionalInformation(List<Max256Text> additionalInformation) {
+		this.additionalInformation = Objects.requireNonNull(additionalInformation);
+		return this;
 	}
 }

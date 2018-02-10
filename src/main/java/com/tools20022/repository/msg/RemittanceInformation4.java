@@ -22,11 +22,9 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.Document;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -42,8 +40,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.RemittanceInformation4#mmStructuredOrUnstructured
- * RemittanceInformation4.mmStructuredOrUnstructured}</li>
+ * {@linkplain com.tools20022.repository.msg.RemittanceInformation4#StructuredOrUnstructured
+ * RemittanceInformation4.StructuredOrUnstructured}</li>
  * </ul>
  * </li>
  * <li>
@@ -63,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -78,17 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RemittanceInformation4", propOrder = {"unstructured", "structured"})
 public class RemittanceInformation4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ustrd", required = true)
 	protected List<Max140Text> unstructured;
 	/**
-	 * Information supplied to enable the matching of an entry with the items
-	 * that the transfer is intended to settle, eg, commercial invoices in an
-	 * accounts' receivable system in an unstructured form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +119,7 @@ public class RemittanceInformation4 {
 	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
-			componentContext_lazy = () -> RemittanceInformation4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "Ustrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,12 +129,11 @@ public class RemittanceInformation4 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Strd", required = true)
 	protected List<com.tools20022.repository.msg.StructuredRemittanceInformation6> structured;
 	/**
-	 * Information supplied to enable the matching of an entry with the items
-	 * that the transfer is intended to settle, eg, commercial invoices in an
-	 * accounts' receivable system in a structured form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -171,7 +167,7 @@ public class RemittanceInformation4 {
 	public static final MMMessageAssociationEnd mmStructured = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Document.mmObject();
-			componentContext_lazy = () -> RemittanceInformation4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RemittanceInformation4.mmObject();
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,22 +212,22 @@ public class RemittanceInformation4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmStructuredOrUnstructured = new MMXor() {
+	public static final MMXor StructuredOrUnstructured = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StructuredOrUnstructured";
 			definition = "If Structured is present, then Unstructured is not allowed.\nIf Unstructured is present, then Structured is not allowed.";
-			messageComponent_lazy = () -> RemittanceInformation4.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(RemittanceInformation4.mmUnstructured, RemittanceInformation4.mmStructured);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.RemittanceInformation4.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceInformation4.mmUnstructured, com.tools20022.repository.msg.RemittanceInformation4.mmStructured);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RemittanceInformation4.mmUnstructured, RemittanceInformation4.mmStructured);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceInformation4.mmUnstructured, com.tools20022.repository.msg.RemittanceInformation4.mmStructured);
 				trace_lazy = () -> Document.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -242,27 +238,27 @@ public class RemittanceInformation4 {
 				})).get();
 				name = "RemittanceInformation4";
 				definition = "Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, eg, commercial invoices in an accounts' receivable system.";
-				xors_lazy = () -> Arrays.asList(RemittanceInformation4.mmStructuredOrUnstructured);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RemittanceInformation4.StructuredOrUnstructured);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ustrd", required = true)
 	public List<Max140Text> getUnstructured() {
-		return unstructured;
+		return unstructured == null ? unstructured = new ArrayList<>() : unstructured;
 	}
 
-	public void setUnstructured(List<Max140Text> unstructured) {
-		this.unstructured = unstructured;
+	public RemittanceInformation4 setUnstructured(List<Max140Text> unstructured) {
+		this.unstructured = Objects.requireNonNull(unstructured);
+		return this;
 	}
 
-	@XmlElement(name = "Strd", required = true)
 	public List<StructuredRemittanceInformation6> getStructured() {
-		return structured;
+		return structured == null ? structured = new ArrayList<>() : structured;
 	}
 
-	public void setStructured(List<com.tools20022.repository.msg.StructuredRemittanceInformation6> structured) {
-		this.structured = structured;
+	public RemittanceInformation4 setStructured(List<com.tools20022.repository.msg.StructuredRemittanceInformation6> structured) {
+		this.structured = Objects.requireNonNull(structured);
+		return this;
 	}
 }

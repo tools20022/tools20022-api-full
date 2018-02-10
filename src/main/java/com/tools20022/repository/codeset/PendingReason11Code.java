@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PendingFailingReasonCode;
+import com.tools20022.repository.codeset.PendingReason11Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason the transaction/instruction is pending or failing
@@ -33,60 +37,59 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PendingFailingReasonCode
- * PendingFailingReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#mmAccountServicerDeadlineMissed
- * PendingReason11Code.mmAccountServicerDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#AccountServicerDeadlineMissed
+ * PendingReason11Code.AccountServicerDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#mmSentToTaxAuthorities
- * PendingReason11Code.mmSentToTaxAuthorities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#SentToTaxAuthorities
+ * PendingReason11Code.SentToTaxAuthorities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#mmPendingBeneficiaryOwnerDetails
- * PendingReason11Code.mmPendingBeneficiaryOwnerDetails}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#PendingBeneficiaryOwnerDetails
+ * PendingReason11Code.PendingBeneficiaryOwnerDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#mmQuantityDisagreement
- * PendingReason11Code.mmQuantityDisagreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#QuantityDisagreement
+ * PendingReason11Code.QuantityDisagreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#mmLackOfSecurities
- * PendingReason11Code.mmLackOfSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#LackOfSecurities
+ * PendingReason11Code.LackOfSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#mmMarketDeadlineMissed
- * PendingReason11Code.mmMarketDeadlineMissed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#MarketDeadlineMissed
+ * PendingReason11Code.MarketDeadlineMissed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#mmMissingCertification
- * PendingReason11Code.mmMissingCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#MissingCertification
+ * PendingReason11Code.MissingCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#mmInsufficientMoney
- * PendingReason11Code.mmInsufficientMoney}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#InsufficientMoney
+ * PendingReason11Code.InsufficientMoney}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingReason11Code#Other
+ * PendingReason11Code.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#mmOther
- * PendingReason11Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#NoPayment
+ * PendingReason11Code.NoPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#mmNoPayment
- * PendingReason11Code.mmNoPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#NotDelivered
+ * PendingReason11Code.NotDelivered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#mmNotDelivered
- * PendingReason11Code.mmNotDelivered}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#PendingReceipt
+ * PendingReason11Code.PendingReceipt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#mmPendingReceipt
- * PendingReason11Code.mmPendingReceipt}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#ValidForTaxAuthorities
+ * PendingReason11Code.ValidForTaxAuthorities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#mmValidForTaxAuthorities
- * PendingReason11Code.mmValidForTaxAuthorities}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#mmWrongCertificatesNumbers
- * PendingReason11Code.mmWrongCertificatesNumbers}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingReason11Code#WrongCertificatesNumbers
+ * PendingReason11Code.WrongCertificatesNumbers}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PendingFailingReasonCode
+ * PendingFailingReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,7 +102,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PendingReason11Code extends PendingFailingReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PendingReason11Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -118,11 +122,12 @@ public class PendingReason11Code extends PendingFailingReasonCode {
 	 * name} = "AccountServicerDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountServicerDeadlineMissed = new MMCode() {
+	public static final PendingReason11Code AccountServicerDeadlineMissed = new PendingReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerDeadlineMissed";
-			owner_lazy = () -> PendingReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason11Code.mmObject();
+			codeName = PendingFailingReasonCode.AccountServicerDeadlineMissed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -141,11 +146,12 @@ public class PendingReason11Code extends PendingFailingReasonCode {
 	 * name} = "SentToTaxAuthorities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSentToTaxAuthorities = new MMCode() {
+	public static final PendingReason11Code SentToTaxAuthorities = new PendingReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToTaxAuthorities";
-			owner_lazy = () -> PendingReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason11Code.mmObject();
+			codeName = PendingFailingReasonCode.SentToTaxAuthorities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -164,11 +170,12 @@ public class PendingReason11Code extends PendingFailingReasonCode {
 	 * name} = "PendingBeneficiaryOwnerDetails"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingBeneficiaryOwnerDetails = new MMCode() {
+	public static final PendingReason11Code PendingBeneficiaryOwnerDetails = new PendingReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingBeneficiaryOwnerDetails";
-			owner_lazy = () -> PendingReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason11Code.mmObject();
+			codeName = PendingFailingReasonCode.PendingBeneficiaryOwnerDetails.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -187,11 +194,12 @@ public class PendingReason11Code extends PendingFailingReasonCode {
 	 * name} = "QuantityDisagreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQuantityDisagreement = new MMCode() {
+	public static final PendingReason11Code QuantityDisagreement = new PendingReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityDisagreement";
-			owner_lazy = () -> PendingReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason11Code.mmObject();
+			codeName = PendingFailingReasonCode.QuantityDisagreement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -210,11 +218,12 @@ public class PendingReason11Code extends PendingFailingReasonCode {
 	 * name} = "LackOfSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLackOfSecurities = new MMCode() {
+	public static final PendingReason11Code LackOfSecurities = new PendingReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LackOfSecurities";
-			owner_lazy = () -> PendingReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason11Code.mmObject();
+			codeName = PendingFailingReasonCode.LackOfSecurities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -233,11 +242,12 @@ public class PendingReason11Code extends PendingFailingReasonCode {
 	 * name} = "MarketDeadlineMissed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarketDeadlineMissed = new MMCode() {
+	public static final PendingReason11Code MarketDeadlineMissed = new PendingReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadlineMissed";
-			owner_lazy = () -> PendingReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason11Code.mmObject();
+			codeName = PendingFailingReasonCode.MarketDeadlineMissed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -256,11 +266,12 @@ public class PendingReason11Code extends PendingFailingReasonCode {
 	 * name} = "MissingCertification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMissingCertification = new MMCode() {
+	public static final PendingReason11Code MissingCertification = new PendingReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCertification";
-			owner_lazy = () -> PendingReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason11Code.mmObject();
+			codeName = PendingFailingReasonCode.MissingCertification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -279,11 +290,12 @@ public class PendingReason11Code extends PendingFailingReasonCode {
 	 * name} = "InsufficientMoney"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInsufficientMoney = new MMCode() {
+	public static final PendingReason11Code InsufficientMoney = new PendingReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientMoney";
-			owner_lazy = () -> PendingReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason11Code.mmObject();
+			codeName = PendingFailingReasonCode.InsufficientMoney.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -302,11 +314,12 @@ public class PendingReason11Code extends PendingFailingReasonCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final PendingReason11Code Other = new PendingReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> PendingReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason11Code.mmObject();
+			codeName = PendingFailingReasonCode.Other.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -325,11 +338,12 @@ public class PendingReason11Code extends PendingFailingReasonCode {
 	 * name} = "NoPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoPayment = new MMCode() {
+	public static final PendingReason11Code NoPayment = new PendingReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoPayment";
-			owner_lazy = () -> PendingReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason11Code.mmObject();
+			codeName = PendingFailingReasonCode.NoPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -348,11 +362,12 @@ public class PendingReason11Code extends PendingFailingReasonCode {
 	 * name} = "NotDelivered"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotDelivered = new MMCode() {
+	public static final PendingReason11Code NotDelivered = new PendingReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDelivered";
-			owner_lazy = () -> PendingReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason11Code.mmObject();
+			codeName = PendingFailingReasonCode.NotDelivered.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -371,11 +386,12 @@ public class PendingReason11Code extends PendingFailingReasonCode {
 	 * name} = "PendingReceipt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingReceipt = new MMCode() {
+	public static final PendingReason11Code PendingReceipt = new PendingReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceipt";
-			owner_lazy = () -> PendingReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason11Code.mmObject();
+			codeName = PendingFailingReasonCode.PendingReceipt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -394,11 +410,12 @@ public class PendingReason11Code extends PendingFailingReasonCode {
 	 * name} = "ValidForTaxAuthorities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmValidForTaxAuthorities = new MMCode() {
+	public static final PendingReason11Code ValidForTaxAuthorities = new PendingReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidForTaxAuthorities";
-			owner_lazy = () -> PendingReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason11Code.mmObject();
+			codeName = PendingFailingReasonCode.ValidForTaxAuthorities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -417,28 +434,73 @@ public class PendingReason11Code extends PendingFailingReasonCode {
 	 * name} = "WrongCertificatesNumbers"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWrongCertificatesNumbers = new MMCode() {
+	public static final PendingReason11Code WrongCertificatesNumbers = new PendingReason11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WrongCertificatesNumbers";
-			owner_lazy = () -> PendingReason11Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingReason11Code.mmObject();
+			codeName = PendingFailingReasonCode.WrongCertificatesNumbers.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PendingReason11Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PendingReason11Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingReason11Code";
 				definition = "Specifies the reason the transaction/instruction is pending or failing settlement. Settlement on the instructed settlement date is still possible, status is pending. Settlement on the instructed settlement date is no longer possible, status is failing.";
-				code_lazy = () -> Arrays.asList(PendingReason11Code.mmAccountServicerDeadlineMissed, PendingReason11Code.mmSentToTaxAuthorities, PendingReason11Code.mmPendingBeneficiaryOwnerDetails,
-						PendingReason11Code.mmQuantityDisagreement, PendingReason11Code.mmLackOfSecurities, PendingReason11Code.mmMarketDeadlineMissed, PendingReason11Code.mmMissingCertification, PendingReason11Code.mmInsufficientMoney,
-						PendingReason11Code.mmOther, PendingReason11Code.mmNoPayment, PendingReason11Code.mmNotDelivered, PendingReason11Code.mmPendingReceipt, PendingReason11Code.mmValidForTaxAuthorities,
-						PendingReason11Code.mmWrongCertificatesNumbers);
 				trace_lazy = () -> PendingFailingReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingReason11Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingReason11Code.SentToTaxAuthorities,
+						com.tools20022.repository.codeset.PendingReason11Code.PendingBeneficiaryOwnerDetails, com.tools20022.repository.codeset.PendingReason11Code.QuantityDisagreement,
+						com.tools20022.repository.codeset.PendingReason11Code.LackOfSecurities, com.tools20022.repository.codeset.PendingReason11Code.MarketDeadlineMissed,
+						com.tools20022.repository.codeset.PendingReason11Code.MissingCertification, com.tools20022.repository.codeset.PendingReason11Code.InsufficientMoney, com.tools20022.repository.codeset.PendingReason11Code.Other,
+						com.tools20022.repository.codeset.PendingReason11Code.NoPayment, com.tools20022.repository.codeset.PendingReason11Code.NotDelivered, com.tools20022.repository.codeset.PendingReason11Code.PendingReceipt,
+						com.tools20022.repository.codeset.PendingReason11Code.ValidForTaxAuthorities, com.tools20022.repository.codeset.PendingReason11Code.WrongCertificatesNumbers);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccountServicerDeadlineMissed.getCodeName().get(), AccountServicerDeadlineMissed);
+		codesByName.put(SentToTaxAuthorities.getCodeName().get(), SentToTaxAuthorities);
+		codesByName.put(PendingBeneficiaryOwnerDetails.getCodeName().get(), PendingBeneficiaryOwnerDetails);
+		codesByName.put(QuantityDisagreement.getCodeName().get(), QuantityDisagreement);
+		codesByName.put(LackOfSecurities.getCodeName().get(), LackOfSecurities);
+		codesByName.put(MarketDeadlineMissed.getCodeName().get(), MarketDeadlineMissed);
+		codesByName.put(MissingCertification.getCodeName().get(), MissingCertification);
+		codesByName.put(InsufficientMoney.getCodeName().get(), InsufficientMoney);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(NoPayment.getCodeName().get(), NoPayment);
+		codesByName.put(NotDelivered.getCodeName().get(), NotDelivered);
+		codesByName.put(PendingReceipt.getCodeName().get(), PendingReceipt);
+		codesByName.put(ValidForTaxAuthorities.getCodeName().get(), ValidForTaxAuthorities);
+		codesByName.put(WrongCertificatesNumbers.getCodeName().get(), WrongCertificatesNumbers);
+	}
+
+	public static PendingReason11Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PendingReason11Code[] values() {
+		PendingReason11Code[] values = new PendingReason11Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PendingReason11Code> {
+		@Override
+		public PendingReason11Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PendingReason11Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

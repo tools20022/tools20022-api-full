@@ -27,6 +27,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Specifies a shipment period or a shipment date.
@@ -52,22 +54,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.ShipmentDateRange#mmShipmentDate
  * ShipmentDateRange.mmShipmentDate}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.ShipmentDateRange1
- * ShipmentDateRange1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ShipmentDateRange2
- * ShipmentDateRange2}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ShipmentSchedule1Choice
- * ShipmentSchedule1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ShipmentSchedule2Choice
- * ShipmentSchedule2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ShipmentAttribute1
- * ShipmentAttribute1}</li>
  * </ul>
  * </li>
  * <li>
@@ -97,10 +83,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ShipmentDateRange1
+ * ShipmentDateRange1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ShipmentDateRange2
+ * ShipmentDateRange2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ShipmentSchedule1Choice
+ * ShipmentSchedule1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ShipmentSchedule2Choice
+ * ShipmentSchedule2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ShipmentAttribute1
+ * ShipmentAttribute1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -116,8 +118,8 @@ public class ShipmentDateRange {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected ISODateTime latestShipmentDate;
 	/**
-	 * Latest date whereby the goods must be shipped.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,8 +165,8 @@ public class ShipmentDateRange {
 	public static final MMBusinessAttribute mmLatestShipmentDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItemDetails4.mmLatestShipmentDate, LineItem5.mmLatestShipmentDate, ShipmentDateRange1.mmLatestShipmentDate, ShipmentDateRange2.mmLatestShipmentDate, ShipmentAttribute1.mmExpectedDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LatestShipmentDate";
 			definition = "Latest date whereby the goods must be shipped.";
@@ -183,8 +185,8 @@ public class ShipmentDateRange {
 	};
 	protected Transport relatedTransport;
 	/**
-	 * Specifies the transport process to which the dates apply.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -218,8 +220,8 @@ public class ShipmentDateRange {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedTransport = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedTransport";
 			definition = "Specifies the transport process to which the dates apply.";
@@ -232,8 +234,8 @@ public class ShipmentDateRange {
 	};
 	protected ISODateTime earliestShipmentDate;
 	/**
-	 * Earliest date whereby the items must be shipped.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -270,8 +272,8 @@ public class ShipmentDateRange {
 	public static final MMBusinessAttribute mmEarliestShipmentDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ShipmentDateRange1.mmEarliestShipmentDate, ShipmentDateRange2.mmEarliestShipmentDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarliestShipmentDate";
 			definition = "Earliest date whereby the items must be shipped.";
@@ -290,8 +292,8 @@ public class ShipmentDateRange {
 	};
 	protected ISODateTime shipmentDate;
 	/**
-	 * Date at which the goods are shipped.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -344,8 +346,8 @@ public class ShipmentDateRange {
 		{
 			derivation_lazy = () -> Arrays.asList(TransportDetails1.mmProposedShipmentDate, TransportDetails1.mmActualShipmentDate, TransportDetails2.mmProposedShipmentDate, TransportDetails2.mmActualShipmentDate,
 					ShipmentDate1Choice.mmProposedShipmentDate, ShipmentDate1Choice.mmActualShipmentDate, TransactionCertificateContract1.mmExpectedShipmentDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ShipmentDateRange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ShipmentDate";
 			definition = "Date at which the goods are shipped.";
@@ -366,7 +368,7 @@ public class ShipmentDateRange {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShipmentDateRange";
 				definition = "Specifies a shipment period or a shipment date.";
@@ -390,31 +392,35 @@ public class ShipmentDateRange {
 		return latestShipmentDate;
 	}
 
-	public void setLatestShipmentDate(ISODateTime latestShipmentDate) {
-		this.latestShipmentDate = latestShipmentDate;
+	public ShipmentDateRange setLatestShipmentDate(ISODateTime latestShipmentDate) {
+		this.latestShipmentDate = Objects.requireNonNull(latestShipmentDate);
+		return this;
 	}
 
-	public Transport getRelatedTransport() {
-		return relatedTransport;
+	public Optional<Transport> getRelatedTransport() {
+		return relatedTransport == null ? Optional.empty() : Optional.of(relatedTransport);
 	}
 
-	public void setRelatedTransport(com.tools20022.repository.entity.Transport relatedTransport) {
+	public ShipmentDateRange setRelatedTransport(com.tools20022.repository.entity.Transport relatedTransport) {
 		this.relatedTransport = relatedTransport;
+		return this;
 	}
 
 	public ISODateTime getEarliestShipmentDate() {
 		return earliestShipmentDate;
 	}
 
-	public void setEarliestShipmentDate(ISODateTime earliestShipmentDate) {
-		this.earliestShipmentDate = earliestShipmentDate;
+	public ShipmentDateRange setEarliestShipmentDate(ISODateTime earliestShipmentDate) {
+		this.earliestShipmentDate = Objects.requireNonNull(earliestShipmentDate);
+		return this;
 	}
 
 	public ISODateTime getShipmentDate() {
 		return shipmentDate;
 	}
 
-	public void setShipmentDate(ISODateTime shipmentDate) {
-		this.shipmentDate = shipmentDate;
+	public ShipmentDateRange setShipmentDate(ISODateTime shipmentDate) {
+		this.shipmentDate = Objects.requireNonNull(shipmentDate);
+		return this;
 	}
 }

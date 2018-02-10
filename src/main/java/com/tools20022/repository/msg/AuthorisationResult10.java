@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,16 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * AuthorisationResult4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "AuthorisationResult10", propOrder = {"authorisationEntity", "responseToAuthorisation", "authorisationCode", "completionRequired", "TMSTrigger"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "AuthorisationResult10", propOrder = {"authorisationEntity", "responseToAuthorisation", "authorisationCode", "completionRequired", "tMSTrigger"})
 public class AuthorisationResult10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AuthstnNtty")
 	protected GenericIdentification90 authorisationEntity;
 	/**
-	 * Type of party that has delivered or declined the card payment
-	 * authorisation (the party is not identified).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -131,7 +133,7 @@ public class AuthorisationResult10 {
 	public static final MMMessageAssociationEnd mmAuthorisationEntity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> AuthorisationResult10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult10.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnNtty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -144,10 +146,11 @@ public class AuthorisationResult10 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification90.mmObject();
 		}
 	};
+	@XmlElement(name = "RspnToAuthstn", required = true)
 	protected ResponseType5 responseToAuthorisation;
 	/**
-	 * Response to an authorisation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -184,7 +187,7 @@ public class AuthorisationResult10 {
 	public static final MMMessageAssociationEnd mmResponseToAuthorisation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmResponse;
-			componentContext_lazy = () -> AuthorisationResult10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult10.mmObject();
 			isDerived = false;
 			xmlTag = "RspnToAuthstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,10 +200,11 @@ public class AuthorisationResult10 {
 			type_lazy = () -> com.tools20022.repository.msg.ResponseType5.mmObject();
 		}
 	};
+	@XmlElement(name = "AuthstnCd")
 	protected Min6Max8Text authorisationCode;
 	/**
-	 * Value assigned by the authorising party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -239,7 +243,7 @@ public class AuthorisationResult10 {
 	public static final MMMessageAttribute mmAuthorisationCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentValidation.mmAuthorisationCode;
-			componentContext_lazy = () -> AuthorisationResult10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult10.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,11 +255,11 @@ public class AuthorisationResult10 {
 			simpleType_lazy = () -> Min6Max8Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CmpltnReqrd")
 	protected TrueFalseIndicator completionRequired;
 	/**
-	 * Indicates whether the acquirer requires a further exchange completion
-	 * after the completion of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -296,7 +300,7 @@ public class AuthorisationResult10 {
 	public static final MMMessageAttribute mmCompletionRequired = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmCompletionRequired;
-			componentContext_lazy = () -> AuthorisationResult10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult10.mmObject();
 			isDerived = false;
 			xmlTag = "CmpltnReqrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -308,11 +312,11 @@ public class AuthorisationResult10 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "TMSTrggr")
 	protected TMSTrigger1 tMSTrigger;
 	/**
-	 * Instructs the point of interaction (POI) how to contact the host to
-	 * initiate the maintenance of the terminal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -351,7 +355,7 @@ public class AuthorisationResult10 {
 	public static final MMMessageAssociationEnd mmTMSTrigger = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTMSTrigger;
-			componentContext_lazy = () -> AuthorisationResult10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AuthorisationResult10.mmObject();
 			isDerived = false;
 			xmlTag = "TMSTrggr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -368,10 +372,10 @@ public class AuthorisationResult10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AuthorisationResult10.mmAuthorisationEntity, AuthorisationResult10.mmResponseToAuthorisation, AuthorisationResult10.mmAuthorisationCode, AuthorisationResult10.mmCompletionRequired,
-						AuthorisationResult10.mmTMSTrigger);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AuthorisationResult10.mmAuthorisationEntity, com.tools20022.repository.msg.AuthorisationResult10.mmResponseToAuthorisation,
+						com.tools20022.repository.msg.AuthorisationResult10.mmAuthorisationCode, com.tools20022.repository.msg.AuthorisationResult10.mmCompletionRequired, com.tools20022.repository.msg.AuthorisationResult10.mmTMSTrigger);
 				trace_lazy = () -> CardPaymentValidation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AuthorisationResult10";
 				definition = "Outcome of the authorisation, and actions to perform.";
@@ -381,48 +385,48 @@ public class AuthorisationResult10 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AuthstnNtty")
-	public GenericIdentification90 getAuthorisationEntity() {
-		return authorisationEntity;
+	public Optional<GenericIdentification90> getAuthorisationEntity() {
+		return authorisationEntity == null ? Optional.empty() : Optional.of(authorisationEntity);
 	}
 
-	public void setAuthorisationEntity(com.tools20022.repository.msg.GenericIdentification90 authorisationEntity) {
+	public AuthorisationResult10 setAuthorisationEntity(com.tools20022.repository.msg.GenericIdentification90 authorisationEntity) {
 		this.authorisationEntity = authorisationEntity;
+		return this;
 	}
 
-	@XmlElement(name = "RspnToAuthstn", required = true)
 	public ResponseType5 getResponseToAuthorisation() {
 		return responseToAuthorisation;
 	}
 
-	public void setResponseToAuthorisation(com.tools20022.repository.msg.ResponseType5 responseToAuthorisation) {
-		this.responseToAuthorisation = responseToAuthorisation;
+	public AuthorisationResult10 setResponseToAuthorisation(com.tools20022.repository.msg.ResponseType5 responseToAuthorisation) {
+		this.responseToAuthorisation = Objects.requireNonNull(responseToAuthorisation);
+		return this;
 	}
 
-	@XmlElement(name = "AuthstnCd")
-	public Min6Max8Text getAuthorisationCode() {
-		return authorisationCode;
+	public Optional<Min6Max8Text> getAuthorisationCode() {
+		return authorisationCode == null ? Optional.empty() : Optional.of(authorisationCode);
 	}
 
-	public void setAuthorisationCode(Min6Max8Text authorisationCode) {
+	public AuthorisationResult10 setAuthorisationCode(Min6Max8Text authorisationCode) {
 		this.authorisationCode = authorisationCode;
+		return this;
 	}
 
-	@XmlElement(name = "CmpltnReqrd")
-	public TrueFalseIndicator getCompletionRequired() {
-		return completionRequired;
+	public Optional<TrueFalseIndicator> getCompletionRequired() {
+		return completionRequired == null ? Optional.empty() : Optional.of(completionRequired);
 	}
 
-	public void setCompletionRequired(TrueFalseIndicator completionRequired) {
+	public AuthorisationResult10 setCompletionRequired(TrueFalseIndicator completionRequired) {
 		this.completionRequired = completionRequired;
+		return this;
 	}
 
-	@XmlElement(name = "TMSTrggr")
-	public TMSTrigger1 getTMSTrigger() {
-		return tMSTrigger;
+	public Optional<TMSTrigger1> getTMSTrigger() {
+		return tMSTrigger == null ? Optional.empty() : Optional.of(tMSTrigger);
 	}
 
-	public void setTMSTrigger(com.tools20022.repository.msg.TMSTrigger1 tMSTrigger) {
+	public AuthorisationResult10 setTMSTrigger(com.tools20022.repository.msg.TMSTrigger1 tMSTrigger) {
 		this.tMSTrigger = tMSTrigger;
+		return this;
 	}
 }

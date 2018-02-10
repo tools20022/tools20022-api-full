@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ErrorHandling4;
 import com.tools20022.repository.msg.Limits5;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * LimitReportOrError1Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LimitReportOrError2Choice", propOrder = {"businessReport", "operationalError"})
 public class LimitReportOrError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BizRpt", required = true)
 	protected Limits5 businessReport;
 	/**
-	 * Reports on limits.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +112,7 @@ public class LimitReportOrError2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmBusinessReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitReportOrError2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.LimitReportOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,11 +125,11 @@ public class LimitReportOrError2Choice {
 			type_lazy = () -> Limits5.mmObject();
 		}
 	};
+	@XmlElement(name = "OprlErr", required = true)
 	protected List<ErrorHandling4> operationalError;
 	/**
-	 * Indicates that an operational error has been issued during the processing
-	 * of the related request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -159,7 +162,7 @@ public class LimitReportOrError2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LimitReportOrError2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.LimitReportOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,8 +178,8 @@ public class LimitReportOrError2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LimitReportOrError2Choice.mmBusinessReport, LimitReportOrError2Choice.mmOperationalError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitReportOrError2Choice.mmBusinessReport, com.tools20022.repository.choice.LimitReportOrError2Choice.mmOperationalError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LimitReportOrError2Choice";
 				definition = "Choice between details of one or more limits set by the member (or on behalf of the member) and managed by the transaction administrator or an operational error when the requested data cannot be retrieved.";
@@ -186,21 +189,21 @@ public class LimitReportOrError2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BizRpt", required = true)
 	public Limits5 getBusinessReport() {
 		return businessReport;
 	}
 
-	public void setBusinessReport(Limits5 businessReport) {
-		this.businessReport = businessReport;
+	public LimitReportOrError2Choice setBusinessReport(Limits5 businessReport) {
+		this.businessReport = Objects.requireNonNull(businessReport);
+		return this;
 	}
 
-	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling4> getOperationalError() {
-		return operationalError;
+		return operationalError == null ? operationalError = new ArrayList<>() : operationalError;
 	}
 
-	public void setOperationalError(List<ErrorHandling4> operationalError) {
-		this.operationalError = operationalError;
+	public LimitReportOrError2Choice setOperationalError(List<ErrorHandling4> operationalError) {
+		this.operationalError = Objects.requireNonNull(operationalError);
+		return this;
 	}
 }

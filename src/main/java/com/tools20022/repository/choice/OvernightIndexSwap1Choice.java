@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.ReportPeriodActivity1Code;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.OvernightIndexSwapTransaction1;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,16 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OvernightIndexSwap1Choice", propOrder = {"dataSetAction", "transaction"})
 public class OvernightIndexSwap1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DataSetActn", required = true)
 	protected ReportPeriodActivity1Code dataSetAction;
 	/**
-	 * Provides the reason why no transactions are being reported for a money
-	 * market reporting period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +108,7 @@ public class OvernightIndexSwap1Choice {
 	 */
 	public static final MMMessageAttribute mmDataSetAction = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OvernightIndexSwap1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.OvernightIndexSwap1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,11 +119,11 @@ public class OvernightIndexSwap1Choice {
 			simpleType_lazy = () -> ReportPeriodActivity1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Tx", required = true)
 	protected List<OvernightIndexSwapTransaction1> transaction;
 	/**
-	 * Provides the details of the secured market transaction as reported by the
-	 * reporting agent
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -150,7 +152,7 @@ public class OvernightIndexSwap1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> OvernightIndexSwap1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.OvernightIndexSwap1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,8 +167,8 @@ public class OvernightIndexSwap1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OvernightIndexSwap1Choice.mmDataSetAction, OvernightIndexSwap1Choice.mmTransaction);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OvernightIndexSwap1Choice.mmDataSetAction, com.tools20022.repository.choice.OvernightIndexSwap1Choice.mmTransaction);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OvernightIndexSwap1Choice";
 				definition = "Choice between a reason for no activity and the overnight index swaps segment transaction details.";
@@ -175,21 +177,21 @@ public class OvernightIndexSwap1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DataSetActn", required = true)
 	public ReportPeriodActivity1Code getDataSetAction() {
 		return dataSetAction;
 	}
 
-	public void setDataSetAction(ReportPeriodActivity1Code dataSetAction) {
-		this.dataSetAction = dataSetAction;
+	public OvernightIndexSwap1Choice setDataSetAction(ReportPeriodActivity1Code dataSetAction) {
+		this.dataSetAction = Objects.requireNonNull(dataSetAction);
+		return this;
 	}
 
-	@XmlElement(name = "Tx", required = true)
 	public List<OvernightIndexSwapTransaction1> getTransaction() {
-		return transaction;
+		return transaction == null ? transaction = new ArrayList<>() : transaction;
 	}
 
-	public void setTransaction(List<OvernightIndexSwapTransaction1> transaction) {
-		this.transaction = transaction;
+	public OvernightIndexSwap1Choice setTransaction(List<OvernightIndexSwapTransaction1> transaction) {
+		this.transaction = Objects.requireNonNull(transaction);
+		return this;
 	}
 }

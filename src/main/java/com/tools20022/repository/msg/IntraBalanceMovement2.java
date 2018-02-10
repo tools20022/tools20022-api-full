@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -28,9 +29,8 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -100,8 +100,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -113,16 +113,17 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides additional details of the intra-balance movements data."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IntraBalanceMovement2", propOrder = {"balanceFrom", "balanceTo", "settlementAmount", "settledAmount", "previouslySettledAmount", "remainingSettlementAmount", "intendedSettlementDate", "effectiveSettlementDate",
 		"statusDate", "cashSubBalanceIdentification", "linkages", "priority", "messageOriginator", "creationDateTime", "instructionProcessingAdditionalDetails", "supplementaryData"})
 public class IntraBalanceMovement2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BalFr", required = true)
 	protected CashSubBalanceTypeAndQuantityBreakdown1 balanceFrom;
 	/**
-	 * Balance from which the amount of money is moved.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -142,6 +143,9 @@ public class IntraBalanceMovement2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BalFr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93A::FROM</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -155,9 +159,10 @@ public class IntraBalanceMovement2 {
 	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashBalance;
-			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "BalFr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93A::FROM"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFrom";
 			definition = "Balance from which the amount of money is moved.";
@@ -167,10 +172,11 @@ public class IntraBalanceMovement2 {
 			type_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
 		}
 	};
+	@XmlElement(name = "BalTo", required = true)
 	protected CashSubBalanceTypeAndQuantityBreakdown1 balanceTo;
 	/**
-	 * Balance to which the amount of money is moved.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -190,6 +196,9 @@ public class IntraBalanceMovement2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BalTo"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93A::TOBA</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -203,9 +212,10 @@ public class IntraBalanceMovement2 {
 	public static final MMMessageAssociationEnd mmBalanceTo = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCashBalance;
-			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "BalTo";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93A::TOBA"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTo";
 			definition = "Balance to which the amount of money is moved.";
@@ -215,12 +225,11 @@ public class IntraBalanceMovement2 {
 			type_lazy = () -> com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmAmt", required = true)
 	protected Amount2Choice settlementAmount;
 	/**
-	 * Amount of money effectively settled and which will be credited to/debited
-	 * from the account owner's cash account. It may differ from the instructed
-	 * settlement amount based on market tolerance level.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -256,7 +265,7 @@ public class IntraBalanceMovement2 {
 	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementAmount;
-			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,12 +276,11 @@ public class IntraBalanceMovement2 {
 			complexType_lazy = () -> Amount2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SttldAmt")
 	protected Amount2Choice settledAmount;
 	/**
-	 * Amount of money effectively settled and which will be credited to/debited
-	 * from the account owner's cash account. It may differ from the instructed
-	 * settlement amount based on market tolerance level.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -308,7 +316,7 @@ public class IntraBalanceMovement2 {
 	public static final MMMessageAttribute mmSettledAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
-			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "SttldAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -319,10 +327,11 @@ public class IntraBalanceMovement2 {
 			complexType_lazy = () -> Amount2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrevslySttldAmt")
 	protected Amount2Choice previouslySettledAmount;
 	/**
-	 * Amount of money previously settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -356,7 +365,7 @@ public class IntraBalanceMovement2 {
 	public static final MMMessageAttribute mmPreviouslySettledAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
-			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "PrevslySttldAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -367,10 +376,11 @@ public class IntraBalanceMovement2 {
 			complexType_lazy = () -> Amount2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RmngSttlmAmt")
 	protected Amount2Choice remainingSettlementAmount;
 	/**
-	 * Amount of money remaining to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -404,7 +414,7 @@ public class IntraBalanceMovement2 {
 	public static final MMMessageAttribute mmRemainingSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
-			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "RmngSttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -415,10 +425,11 @@ public class IntraBalanceMovement2 {
 			complexType_lazy = () -> Amount2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IntnddSttlmDt", required = true)
 	protected DateAndDateTimeChoice intendedSettlementDate;
 	/**
-	 * Date and time at which the amount of money is intended to be moved.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -439,6 +450,9 @@ public class IntraBalanceMovement2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IntnddSttlmDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::SETT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -453,9 +467,10 @@ public class IntraBalanceMovement2 {
 	public static final MMMessageAttribute mmIntendedSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmRequestedSettlementDate;
-			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "IntnddSttlmDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntendedSettlementDate";
 			definition = "Date and time at which the amount of money is intended to be moved.";
@@ -464,10 +479,11 @@ public class IntraBalanceMovement2 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "FctvSttlmDt")
 	protected DateAndDateTimeChoice effectiveSettlementDate;
 	/**
-	 * Date and time at which the amount of money is moved.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -488,6 +504,9 @@ public class IntraBalanceMovement2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FctvSttlmDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::ESET</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -501,9 +520,10 @@ public class IntraBalanceMovement2 {
 	public static final MMMessageAttribute mmEffectiveSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmValueDate;
-			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "FctvSttlmDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::ESET"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDate";
 			definition = "Date and time at which the amount of money is moved.";
@@ -512,10 +532,11 @@ public class IntraBalanceMovement2 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "StsDt")
 	protected ISODateTime statusDate;
 	/**
-	 * Date and time at which the status was assigned.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -535,6 +556,9 @@ public class IntraBalanceMovement2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StsDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::SETT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -548,9 +572,10 @@ public class IntraBalanceMovement2 {
 	public static final MMMessageAttribute mmStatusDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusDateTime;
-			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "StsDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusDate";
 			definition = "Date and time at which the status was assigned.";
@@ -559,10 +584,11 @@ public class IntraBalanceMovement2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "CshSubBalId")
 	protected GenericIdentification37 cashSubBalanceIdentification;
 	/**
-	 * Number identifying a lot constituting the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -589,7 +615,7 @@ public class IntraBalanceMovement2 {
 	 */
 	public static final MMMessageAssociationEnd mmCashSubBalanceIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "CshSubBalId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -601,11 +627,11 @@ public class IntraBalanceMovement2 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification37.mmObject();
 		}
 	};
+	@XmlElement(name = "Lnkgs")
 	protected List<com.tools20022.repository.msg.Linkages26> linkages;
 	/**
-	 * Link to another transaction that must be processed after, before or at
-	 * the same time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -634,7 +660,7 @@ public class IntraBalanceMovement2 {
 	 */
 	public static final MMMessageAttribute mmLinkages = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "Lnkgs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -644,10 +670,11 @@ public class IntraBalanceMovement2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Linkages26.mmObject();
 		}
 	};
+	@XmlElement(name = "Prty")
 	protected PriorityNumeric1Choice priority;
 	/**
-	 * Specifies whether the transaction is to be executed with a high priority.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -663,6 +690,9 @@ public class IntraBalanceMovement2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Prty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::PRIR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -677,9 +707,10 @@ public class IntraBalanceMovement2 {
 	 */
 	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "Prty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PRIR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Specifies whether the transaction is to be executed with a high priority.";
@@ -688,10 +719,11 @@ public class IntraBalanceMovement2 {
 			complexType_lazy = () -> PriorityNumeric1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgOrgtr")
 	protected SystemPartyIdentification5 messageOriginator;
 	/**
-	 * Party that originated the message, if other than the sender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -719,7 +751,7 @@ public class IntraBalanceMovement2 {
 	 */
 	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "MsgOrgtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -731,10 +763,11 @@ public class IntraBalanceMovement2 {
 			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm", required = true)
 	protected ISODateTime creationDateTime;
 	/**
-	 * Specifies the date/time on which the trade was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -749,6 +782,9 @@ public class IntraBalanceMovement2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CreDtTm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::TRAD</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -761,9 +797,10 @@ public class IntraBalanceMovement2 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::TRAD"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Specifies the date/time on which the trade was executed.";
@@ -772,11 +809,11 @@ public class IntraBalanceMovement2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrPrcgAddtlDtls")
 	protected Max350Text instructionProcessingAdditionalDetails;
 	/**
-	 * Provides additional settlement processing information which can not be
-	 * included within the structured fields of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -790,6 +827,9 @@ public class IntraBalanceMovement2 {
 	 * IntraBalanceMovement2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "InstrPrcgAddtlDtls"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E::SPRO</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -805,9 +845,10 @@ public class IntraBalanceMovement2 {
 	 */
 	public static final MMMessageAttribute mmInstructionProcessingAdditionalDetails = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "InstrPrcgAddtlDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E::SPRO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionProcessingAdditionalDetails";
 			definition = "Provides additional settlement processing information which can not be included within the structured fields of the message.";
@@ -816,11 +857,11 @@ public class IntraBalanceMovement2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -848,7 +889,7 @@ public class IntraBalanceMovement2 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraBalanceMovement2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceMovement2.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -863,12 +904,15 @@ public class IntraBalanceMovement2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IntraBalanceMovement2.mmBalanceFrom, IntraBalanceMovement2.mmBalanceTo, IntraBalanceMovement2.mmSettlementAmount, IntraBalanceMovement2.mmSettledAmount,
-						IntraBalanceMovement2.mmPreviouslySettledAmount, IntraBalanceMovement2.mmRemainingSettlementAmount, IntraBalanceMovement2.mmIntendedSettlementDate, IntraBalanceMovement2.mmEffectiveSettlementDate,
-						IntraBalanceMovement2.mmStatusDate, IntraBalanceMovement2.mmCashSubBalanceIdentification, IntraBalanceMovement2.mmLinkages, IntraBalanceMovement2.mmPriority, IntraBalanceMovement2.mmMessageOriginator,
-						IntraBalanceMovement2.mmCreationDateTime, IntraBalanceMovement2.mmInstructionProcessingAdditionalDetails, IntraBalanceMovement2.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceMovement2.mmBalanceFrom, com.tools20022.repository.msg.IntraBalanceMovement2.mmBalanceTo,
+						com.tools20022.repository.msg.IntraBalanceMovement2.mmSettlementAmount, com.tools20022.repository.msg.IntraBalanceMovement2.mmSettledAmount,
+						com.tools20022.repository.msg.IntraBalanceMovement2.mmPreviouslySettledAmount, com.tools20022.repository.msg.IntraBalanceMovement2.mmRemainingSettlementAmount,
+						com.tools20022.repository.msg.IntraBalanceMovement2.mmIntendedSettlementDate, com.tools20022.repository.msg.IntraBalanceMovement2.mmEffectiveSettlementDate,
+						com.tools20022.repository.msg.IntraBalanceMovement2.mmStatusDate, com.tools20022.repository.msg.IntraBalanceMovement2.mmCashSubBalanceIdentification, com.tools20022.repository.msg.IntraBalanceMovement2.mmLinkages,
+						com.tools20022.repository.msg.IntraBalanceMovement2.mmPriority, com.tools20022.repository.msg.IntraBalanceMovement2.mmMessageOriginator, com.tools20022.repository.msg.IntraBalanceMovement2.mmCreationDateTime,
+						com.tools20022.repository.msg.IntraBalanceMovement2.mmInstructionProcessingAdditionalDetails, com.tools20022.repository.msg.IntraBalanceMovement2.mmSupplementaryData);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceMovement2";
 				definition = "Provides additional details of the intra-balance movements data.";
@@ -877,147 +921,147 @@ public class IntraBalanceMovement2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BalFr", required = true)
 	public CashSubBalanceTypeAndQuantityBreakdown1 getBalanceFrom() {
 		return balanceFrom;
 	}
 
-	public void setBalanceFrom(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1 balanceFrom) {
-		this.balanceFrom = balanceFrom;
+	public IntraBalanceMovement2 setBalanceFrom(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1 balanceFrom) {
+		this.balanceFrom = Objects.requireNonNull(balanceFrom);
+		return this;
 	}
 
-	@XmlElement(name = "BalTo", required = true)
 	public CashSubBalanceTypeAndQuantityBreakdown1 getBalanceTo() {
 		return balanceTo;
 	}
 
-	public void setBalanceTo(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1 balanceTo) {
-		this.balanceTo = balanceTo;
+	public IntraBalanceMovement2 setBalanceTo(com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown1 balanceTo) {
+		this.balanceTo = Objects.requireNonNull(balanceTo);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmAmt", required = true)
 	public Amount2Choice getSettlementAmount() {
 		return settlementAmount;
 	}
 
-	public void setSettlementAmount(Amount2Choice settlementAmount) {
-		this.settlementAmount = settlementAmount;
+	public IntraBalanceMovement2 setSettlementAmount(Amount2Choice settlementAmount) {
+		this.settlementAmount = Objects.requireNonNull(settlementAmount);
+		return this;
 	}
 
-	@XmlElement(name = "SttldAmt")
-	public Amount2Choice getSettledAmount() {
-		return settledAmount;
+	public Optional<Amount2Choice> getSettledAmount() {
+		return settledAmount == null ? Optional.empty() : Optional.of(settledAmount);
 	}
 
-	public void setSettledAmount(Amount2Choice settledAmount) {
+	public IntraBalanceMovement2 setSettledAmount(Amount2Choice settledAmount) {
 		this.settledAmount = settledAmount;
+		return this;
 	}
 
-	@XmlElement(name = "PrevslySttldAmt")
-	public Amount2Choice getPreviouslySettledAmount() {
-		return previouslySettledAmount;
+	public Optional<Amount2Choice> getPreviouslySettledAmount() {
+		return previouslySettledAmount == null ? Optional.empty() : Optional.of(previouslySettledAmount);
 	}
 
-	public void setPreviouslySettledAmount(Amount2Choice previouslySettledAmount) {
+	public IntraBalanceMovement2 setPreviouslySettledAmount(Amount2Choice previouslySettledAmount) {
 		this.previouslySettledAmount = previouslySettledAmount;
+		return this;
 	}
 
-	@XmlElement(name = "RmngSttlmAmt")
-	public Amount2Choice getRemainingSettlementAmount() {
-		return remainingSettlementAmount;
+	public Optional<Amount2Choice> getRemainingSettlementAmount() {
+		return remainingSettlementAmount == null ? Optional.empty() : Optional.of(remainingSettlementAmount);
 	}
 
-	public void setRemainingSettlementAmount(Amount2Choice remainingSettlementAmount) {
+	public IntraBalanceMovement2 setRemainingSettlementAmount(Amount2Choice remainingSettlementAmount) {
 		this.remainingSettlementAmount = remainingSettlementAmount;
+		return this;
 	}
 
-	@XmlElement(name = "IntnddSttlmDt", required = true)
 	public DateAndDateTimeChoice getIntendedSettlementDate() {
 		return intendedSettlementDate;
 	}
 
-	public void setIntendedSettlementDate(DateAndDateTimeChoice intendedSettlementDate) {
-		this.intendedSettlementDate = intendedSettlementDate;
+	public IntraBalanceMovement2 setIntendedSettlementDate(DateAndDateTimeChoice intendedSettlementDate) {
+		this.intendedSettlementDate = Objects.requireNonNull(intendedSettlementDate);
+		return this;
 	}
 
-	@XmlElement(name = "FctvSttlmDt")
-	public DateAndDateTimeChoice getEffectiveSettlementDate() {
-		return effectiveSettlementDate;
+	public Optional<DateAndDateTimeChoice> getEffectiveSettlementDate() {
+		return effectiveSettlementDate == null ? Optional.empty() : Optional.of(effectiveSettlementDate);
 	}
 
-	public void setEffectiveSettlementDate(DateAndDateTimeChoice effectiveSettlementDate) {
+	public IntraBalanceMovement2 setEffectiveSettlementDate(DateAndDateTimeChoice effectiveSettlementDate) {
 		this.effectiveSettlementDate = effectiveSettlementDate;
+		return this;
 	}
 
-	@XmlElement(name = "StsDt")
-	public ISODateTime getStatusDate() {
-		return statusDate;
+	public Optional<ISODateTime> getStatusDate() {
+		return statusDate == null ? Optional.empty() : Optional.of(statusDate);
 	}
 
-	public void setStatusDate(ISODateTime statusDate) {
+	public IntraBalanceMovement2 setStatusDate(ISODateTime statusDate) {
 		this.statusDate = statusDate;
+		return this;
 	}
 
-	@XmlElement(name = "CshSubBalId")
-	public GenericIdentification37 getCashSubBalanceIdentification() {
-		return cashSubBalanceIdentification;
+	public Optional<GenericIdentification37> getCashSubBalanceIdentification() {
+		return cashSubBalanceIdentification == null ? Optional.empty() : Optional.of(cashSubBalanceIdentification);
 	}
 
-	public void setCashSubBalanceIdentification(com.tools20022.repository.msg.GenericIdentification37 cashSubBalanceIdentification) {
+	public IntraBalanceMovement2 setCashSubBalanceIdentification(com.tools20022.repository.msg.GenericIdentification37 cashSubBalanceIdentification) {
 		this.cashSubBalanceIdentification = cashSubBalanceIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Lnkgs")
 	public List<Linkages26> getLinkages() {
-		return linkages;
+		return linkages == null ? linkages = new ArrayList<>() : linkages;
 	}
 
-	public void setLinkages(List<com.tools20022.repository.msg.Linkages26> linkages) {
-		this.linkages = linkages;
+	public IntraBalanceMovement2 setLinkages(List<com.tools20022.repository.msg.Linkages26> linkages) {
+		this.linkages = Objects.requireNonNull(linkages);
+		return this;
 	}
 
-	@XmlElement(name = "Prty")
-	public PriorityNumeric1Choice getPriority() {
-		return priority;
+	public Optional<PriorityNumeric1Choice> getPriority() {
+		return priority == null ? Optional.empty() : Optional.of(priority);
 	}
 
-	public void setPriority(PriorityNumeric1Choice priority) {
+	public IntraBalanceMovement2 setPriority(PriorityNumeric1Choice priority) {
 		this.priority = priority;
+		return this;
 	}
 
-	@XmlElement(name = "MsgOrgtr")
-	public SystemPartyIdentification5 getMessageOriginator() {
-		return messageOriginator;
+	public Optional<SystemPartyIdentification5> getMessageOriginator() {
+		return messageOriginator == null ? Optional.empty() : Optional.of(messageOriginator);
 	}
 
-	public void setMessageOriginator(com.tools20022.repository.msg.SystemPartyIdentification5 messageOriginator) {
+	public IntraBalanceMovement2 setMessageOriginator(com.tools20022.repository.msg.SystemPartyIdentification5 messageOriginator) {
 		this.messageOriginator = messageOriginator;
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm", required = true)
 	public ISODateTime getCreationDateTime() {
 		return creationDateTime;
 	}
 
-	public void setCreationDateTime(ISODateTime creationDateTime) {
-		this.creationDateTime = creationDateTime;
+	public IntraBalanceMovement2 setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = Objects.requireNonNull(creationDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "InstrPrcgAddtlDtls")
-	public Max350Text getInstructionProcessingAdditionalDetails() {
-		return instructionProcessingAdditionalDetails;
+	public Optional<Max350Text> getInstructionProcessingAdditionalDetails() {
+		return instructionProcessingAdditionalDetails == null ? Optional.empty() : Optional.of(instructionProcessingAdditionalDetails);
 	}
 
-	public void setInstructionProcessingAdditionalDetails(Max350Text instructionProcessingAdditionalDetails) {
+	public IntraBalanceMovement2 setInstructionProcessingAdditionalDetails(Max350Text instructionProcessingAdditionalDetails) {
 		this.instructionProcessingAdditionalDetails = instructionProcessingAdditionalDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public IntraBalanceMovement2 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max500Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,8 +47,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Parameter1", propOrder = "initialisationVector")
 public class Parameter1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InitlstnVctr")
 	protected Max500Binary initialisationVector;
 	/**
-	 * Initialisation vector of a cipher block chaining (CBC) mode encryption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +117,7 @@ public class Parameter1 {
 	 */
 	public static final MMMessageAttribute mmInitialisationVector = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Parameter1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter1.mmObject();
 			isDerived = false;
 			xmlTag = "InitlstnVctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,8 +133,8 @@ public class Parameter1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Parameter1.mmInitialisationVector);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter1.mmInitialisationVector);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Parameter1";
 				definition = "Parameters associated to a cryptographic algorithm.";
@@ -142,12 +144,12 @@ public class Parameter1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InitlstnVctr")
-	public Max500Binary getInitialisationVector() {
-		return initialisationVector;
+	public Optional<Max500Binary> getInitialisationVector() {
+		return initialisationVector == null ? Optional.empty() : Optional.of(initialisationVector);
 	}
 
-	public void setInitialisationVector(Max500Binary initialisationVector) {
+	public Parameter1 setInitialisationVector(Max500Binary initialisationVector) {
 		this.initialisationVector = initialisationVector;
+		return this;
 	}
 }

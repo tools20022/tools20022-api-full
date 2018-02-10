@@ -25,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ReservationIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CurrentOrDefaultReservation1Choice", propOrder = {"current", "default"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CurrentOrDefaultReservation1Choice", propOrder = {"current", "default_"})
 public class CurrentOrDefaultReservation1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cur", required = true)
 	protected ReservationIdentification1 current;
 	/**
-	 * Identification of the current reservation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -108,7 +110,7 @@ public class CurrentOrDefaultReservation1Choice {
 	public static final MMMessageAssociationEnd mmCurrent = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
-			componentContext_lazy = () -> CurrentOrDefaultReservation1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CurrentOrDefaultReservation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cur";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +122,11 @@ public class CurrentOrDefaultReservation1Choice {
 			type_lazy = () -> ReservationIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "Dflt", required = true)
 	protected ReservationIdentification1 default_;
 	/**
-	 * Identification of the default reservation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +158,7 @@ public class CurrentOrDefaultReservation1Choice {
 	public static final MMMessageAssociationEnd mmDefault = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Reservation.mmObject();
-			componentContext_lazy = () -> CurrentOrDefaultReservation1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CurrentOrDefaultReservation1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dflt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,9 +174,9 @@ public class CurrentOrDefaultReservation1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CurrentOrDefaultReservation1Choice.mmCurrent, CurrentOrDefaultReservation1Choice.mmDefault);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CurrentOrDefaultReservation1Choice.mmCurrent, com.tools20022.repository.choice.CurrentOrDefaultReservation1Choice.mmDefault);
 				trace_lazy = () -> Reservation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CurrentOrDefaultReservation1Choice";
 				definition = "Current or default reservation set by the member and managed by the transaction administrator.";
@@ -182,21 +185,21 @@ public class CurrentOrDefaultReservation1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cur", required = true)
 	public ReservationIdentification1 getCurrent() {
 		return current;
 	}
 
-	public void setCurrent(ReservationIdentification1 current) {
-		this.current = current;
+	public CurrentOrDefaultReservation1Choice setCurrent(ReservationIdentification1 current) {
+		this.current = Objects.requireNonNull(current);
+		return this;
 	}
 
-	@XmlElement(name = "Dflt", required = true)
 	public ReservationIdentification1 getDefault() {
 		return default_;
 	}
 
-	public void setDefault(ReservationIdentification1 default_) {
-		this.default_ = default_;
+	public CurrentOrDefaultReservation1Choice setDefault(ReservationIdentification1 default_) {
+		this.default_ = Objects.requireNonNull(default_);
+		return this;
 	}
 }

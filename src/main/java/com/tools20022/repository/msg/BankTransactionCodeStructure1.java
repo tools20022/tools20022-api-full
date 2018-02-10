@@ -24,6 +24,7 @@ import com.tools20022.repository.entity.BankTransaction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDomainAndProprietary1Rule#forBankTransactionCodeStructure1
+ * ConstraintDomainAndProprietary1Rule.forBankTransactionCodeStructure1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDomainAndProprietary2Rule#forBankTransactionCodeStructure1
+ * ConstraintDomainAndProprietary2Rule.forBankTransactionCodeStructure1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintFamilyAndSubFamilyRule#forBankTransactionCodeStructure1
+ * ConstraintFamilyAndSubFamilyRule.forBankTransactionCodeStructure1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,20 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Set of elements to fully identify the type of the bank transaction entry."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BankTransactionCodeStructure1", propOrder = {"domain", "proprietary"})
 public class BankTransactionCodeStructure1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Domn")
 	protected BankTransactionCodeStructure2 domain;
 	/**
-	 * Specifies the domain, the family and the sub-family of the bank
-	 * transaction code, in a structured and hierarchical format.
 	 * 
-	 * Usage: If a specific family or subfamily code cannot be provided, the
-	 * generic family code defined for the domain or the generic subfamily code
-	 * defined for the family should be provided.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -113,7 +124,7 @@ public class BankTransactionCodeStructure1 {
 	public static final MMMessageAssociationEnd mmDomain = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> BankTransaction.mmObject();
-			componentContext_lazy = () -> BankTransactionCodeStructure1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure1.mmObject();
 			isDerived = false;
 			xmlTag = "Domn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,11 +136,11 @@ public class BankTransactionCodeStructure1 {
 			type_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure2.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry")
 	protected ProprietaryBankTransactionCodeStructure1 proprietary;
 	/**
-	 * Proprietary identification of the bank transaction code, as defined by
-	 * the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -164,7 +175,7 @@ public class BankTransactionCodeStructure1 {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BankTransaction.mmProprietaryIdentification;
-			componentContext_lazy = () -> BankTransactionCodeStructure1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure1.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,9 +191,11 @@ public class BankTransactionCodeStructure1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BankTransactionCodeStructure1.mmDomain, BankTransactionCodeStructure1.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BankTransactionCodeStructure1.mmDomain, com.tools20022.repository.msg.BankTransactionCodeStructure1.mmProprietary);
 				trace_lazy = () -> BankTransaction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDomainAndProprietary1Rule.forBankTransactionCodeStructure1,
+						com.tools20022.repository.constraints.ConstraintDomainAndProprietary2Rule.forBankTransactionCodeStructure1, com.tools20022.repository.constraints.ConstraintFamilyAndSubFamilyRule.forBankTransactionCodeStructure1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BankTransactionCodeStructure1";
 				definition = "Set of elements to fully identify the type of the bank transaction entry.";
@@ -191,21 +204,21 @@ public class BankTransactionCodeStructure1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Domn")
-	public BankTransactionCodeStructure2 getDomain() {
-		return domain;
+	public Optional<BankTransactionCodeStructure2> getDomain() {
+		return domain == null ? Optional.empty() : Optional.of(domain);
 	}
 
-	public void setDomain(com.tools20022.repository.msg.BankTransactionCodeStructure2 domain) {
+	public BankTransactionCodeStructure1 setDomain(com.tools20022.repository.msg.BankTransactionCodeStructure2 domain) {
 		this.domain = domain;
+		return this;
 	}
 
-	@XmlElement(name = "Prtry")
-	public ProprietaryBankTransactionCodeStructure1 getProprietary() {
-		return proprietary;
+	public Optional<ProprietaryBankTransactionCodeStructure1> getProprietary() {
+		return proprietary == null ? Optional.empty() : Optional.of(proprietary);
 	}
 
-	public void setProprietary(com.tools20022.repository.msg.ProprietaryBankTransactionCodeStructure1 proprietary) {
+	public BankTransactionCodeStructure1 setProprietary(com.tools20022.repository.msg.ProprietaryBankTransactionCodeStructure1 proprietary) {
 		this.proprietary = proprietary;
+		return this;
 	}
 }

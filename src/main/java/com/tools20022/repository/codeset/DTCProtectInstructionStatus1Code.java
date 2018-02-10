@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DTCInstructionStatusCode;
+import com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * DTC (The Depository Trust Company) system status code of protect instruction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatusCode
- * DTCInstructionStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#mmPendingApproval
- * DTCProtectInstructionStatus1Code.mmPendingApproval}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#PendingApproval
+ * DTCProtectInstructionStatus1Code.PendingApproval}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#mmWithdrawn
- * DTCProtectInstructionStatus1Code.mmWithdrawn}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#Withdrawn
+ * DTCProtectInstructionStatus1Code.Withdrawn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#mmFullyCovered
- * DTCProtectInstructionStatus1Code.mmFullyCovered}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#FullyCovered
+ * DTCProtectInstructionStatus1Code.FullyCovered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#mmExpired
- * DTCProtectInstructionStatus1Code.mmExpired}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#Expired
+ * DTCProtectInstructionStatus1Code.Expired}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#mmOpen
- * DTCProtectInstructionStatus1Code.mmOpen}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code#Open
+ * DTCProtectInstructionStatus1Code.Open}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DTCInstructionStatusCode
+ * DTCInstructionStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class DTCProtectInstructionStatus1Code extends DTCInstructionStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DTCProtectInstructionStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,11 +93,12 @@ public class DTCProtectInstructionStatus1Code extends DTCInstructionStatusCode {
 	 * name} = "PendingApproval"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingApproval = new MMCode() {
+	public static final DTCProtectInstructionStatus1Code PendingApproval = new DTCProtectInstructionStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingApproval";
-			owner_lazy = () -> DTCProtectInstructionStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.mmObject();
+			codeName = DTCInstructionStatusCode.PendingApproval.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -111,11 +117,12 @@ public class DTCProtectInstructionStatus1Code extends DTCInstructionStatusCode {
 	 * name} = "Withdrawn"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithdrawn = new MMCode() {
+	public static final DTCProtectInstructionStatus1Code Withdrawn = new DTCProtectInstructionStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withdrawn";
-			owner_lazy = () -> DTCProtectInstructionStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.mmObject();
+			codeName = DTCInstructionStatusCode.Withdrawn.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -134,11 +141,12 @@ public class DTCProtectInstructionStatus1Code extends DTCInstructionStatusCode {
 	 * name} = "FullyCovered"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullyCovered = new MMCode() {
+	public static final DTCProtectInstructionStatus1Code FullyCovered = new DTCProtectInstructionStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyCovered";
-			owner_lazy = () -> DTCProtectInstructionStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.mmObject();
+			codeName = DTCInstructionStatusCode.FullyCovered.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -157,11 +165,12 @@ public class DTCProtectInstructionStatus1Code extends DTCInstructionStatusCode {
 	 * name} = "Expired"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExpired = new MMCode() {
+	public static final DTCProtectInstructionStatus1Code Expired = new DTCProtectInstructionStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Expired";
-			owner_lazy = () -> DTCProtectInstructionStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.mmObject();
+			codeName = DTCInstructionStatusCode.Expired.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -180,26 +189,61 @@ public class DTCProtectInstructionStatus1Code extends DTCInstructionStatusCode {
 	 * name} = "Open"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOpen = new MMCode() {
+	public static final DTCProtectInstructionStatus1Code Open = new DTCProtectInstructionStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Open";
-			owner_lazy = () -> DTCProtectInstructionStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.mmObject();
+			codeName = DTCInstructionStatusCode.Open.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DTCProtectInstructionStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DTCProtectInstructionStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DTCProtectInstructionStatus1Code";
 				definition = "DTC (The Depository Trust Company) system status code of protect instruction.";
-				code_lazy = () -> Arrays.asList(DTCProtectInstructionStatus1Code.mmPendingApproval, DTCProtectInstructionStatus1Code.mmWithdrawn, DTCProtectInstructionStatus1Code.mmFullyCovered, DTCProtectInstructionStatus1Code.mmExpired,
-						DTCProtectInstructionStatus1Code.mmOpen);
 				trace_lazy = () -> DTCInstructionStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.PendingApproval, com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.Withdrawn,
+						com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.FullyCovered, com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.Expired,
+						com.tools20022.repository.codeset.DTCProtectInstructionStatus1Code.Open);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PendingApproval.getCodeName().get(), PendingApproval);
+		codesByName.put(Withdrawn.getCodeName().get(), Withdrawn);
+		codesByName.put(FullyCovered.getCodeName().get(), FullyCovered);
+		codesByName.put(Expired.getCodeName().get(), Expired);
+		codesByName.put(Open.getCodeName().get(), Open);
+	}
+
+	public static DTCProtectInstructionStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DTCProtectInstructionStatus1Code[] values() {
+		DTCProtectInstructionStatus1Code[] values = new DTCProtectInstructionStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DTCProtectInstructionStatus1Code> {
+		@Override
+		public DTCProtectInstructionStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DTCProtectInstructionStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

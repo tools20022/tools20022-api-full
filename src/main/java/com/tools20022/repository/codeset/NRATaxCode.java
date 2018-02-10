@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.NRATaxCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Non resident alien U.S. tax codes.
@@ -32,139 +37,136 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmDomesticIncomeDividend
- * NRATaxCode.mmDomesticIncomeDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#DomesticIncomeDividend
+ * NRATaxCode.DomesticIncomeDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmForeignIncomeDividends
- * NRATaxCode.mmForeignIncomeDividends}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#ForeignIncomeDividends
+ * NRATaxCode.ForeignIncomeDividends}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmDividendsDomesticNonTaxable
- * NRATaxCode.mmDividendsDomesticNonTaxable}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#DividendsDomesticNonTaxable
+ * NRATaxCode.DividendsDomesticNonTaxable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmDividendsFullyExempt
- * NRATaxCode.mmDividendsFullyExempt}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#DividendsFullyExempt
+ * NRATaxCode.DividendsFullyExempt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmDividendsFederalTaxableStateExempt
- * NRATaxCode.mmDividendsFederalTaxableStateExempt}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#DividendsFederalTaxableStateExempt
+ * NRATaxCode.DividendsFederalTaxableStateExempt}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NRATaxCode#ReturnOfCapital
+ * NRATaxCode.ReturnOfCapital}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmReturnOfCapital
- * NRATaxCode.mmReturnOfCapital}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#LongTermCapitalGains
+ * NRATaxCode.LongTermCapitalGains}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmLongTermCapitalGains
- * NRATaxCode.mmLongTermCapitalGains}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#ShortTermCapitalGains
+ * NRATaxCode.ShortTermCapitalGains}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NRATaxCode#FIRPTAEligible
+ * NRATaxCode.FIRPTAEligible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmShortTermCapitalGains
- * NRATaxCode.mmShortTermCapitalGains}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#REITCapitalGainDistributions
+ * NRATaxCode.REITCapitalGainDistributions}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmFIRPTAEligible
- * NRATaxCode.mmFIRPTAEligible}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#LimitedPubliclyTradedPartnership
+ * NRATaxCode.LimitedPubliclyTradedPartnership}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmREITCapitalGainDistributions
- * NRATaxCode.mmREITCapitalGainDistributions}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#SubstituteDividendPayment
+ * NRATaxCode.SubstituteDividendPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmLimitedPubliclyTradedPartnership
- * NRATaxCode.mmLimitedPubliclyTradedPartnership}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#CapitalGainDistributionShortTermRICs
+ * NRATaxCode.CapitalGainDistributionShortTermRICs}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmSubstituteDividendPayment
- * NRATaxCode.mmSubstituteDividendPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#CorporateActionDividendCapitalGains
+ * NRATaxCode.CorporateActionDividendCapitalGains}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmCapitalGainDistributionShortTermRICs
- * NRATaxCode.mmCapitalGainDistributionShortTermRICs}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#USSourceOrdinaryInterest
+ * NRATaxCode.USSourceOrdinaryInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmCorporateActionDividendCapitalGains
- * NRATaxCode.mmCorporateActionDividendCapitalGains}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#ForeignBondInterest
+ * NRATaxCode.ForeignBondInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmUSSourceOrdinaryInterest
- * NRATaxCode.mmUSSourceOrdinaryInterest}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#AllStateAndTerritorialMunicipalInterest
+ * NRATaxCode.AllStateAndTerritorialMunicipalInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmForeignBondInterest
- * NRATaxCode.mmForeignBondInterest}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#AllMunicipalBondsSubjectToFederalTax
+ * NRATaxCode.AllMunicipalBondsSubjectToFederalTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmAllStateAndTerritorialMunicipalInterest
- * NRATaxCode.mmAllStateAndTerritorialMunicipalInterest}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#USGovernmentInterestOnContractsNotesAndMortgages
+ * NRATaxCode.USGovernmentInterestOnContractsNotesAndMortgages}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmAllMunicipalBondsSubjectToFederalTax
- * NRATaxCode.mmAllMunicipalBondsSubjectToFederalTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#USGovernmentInterestOnGNMA1And2
+ * NRATaxCode.USGovernmentInterestOnGNMA1And2}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmUSGovernmentInterestOnContractsNotesAndMortgages
- * NRATaxCode.mmUSGovernmentInterestOnContractsNotesAndMortgages}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#InterestOnCollatralizedMortgageObligations
+ * NRATaxCode.InterestOnCollatralizedMortgageObligations}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmUSGovernmentInterestOnGNMA1And2
- * NRATaxCode.mmUSGovernmentInterestOnGNMA1And2}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#InterestOnCertificatesOfDeposit
+ * NRATaxCode.InterestOnCertificatesOfDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmInterestOnCollatralizedMortgageObligations
- * NRATaxCode.mmInterestOnCollatralizedMortgageObligations}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#USGovernmentInterest
+ * NRATaxCode.USGovernmentInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmInterestOnCertificatesOfDeposit
- * NRATaxCode.mmInterestOnCertificatesOfDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#USGovernmentInterestOnNotesAndBills
+ * NRATaxCode.USGovernmentInterestOnNotesAndBills}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmUSGovernmentInterest
- * NRATaxCode.mmUSGovernmentInterest}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#PrincipalPaydowns
+ * NRATaxCode.PrincipalPaydowns}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmUSGovernmentInterestOnNotesAndBills
- * NRATaxCode.mmUSGovernmentInterestOnNotesAndBills}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#ShortTermInterest
+ * NRATaxCode.ShortTermInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmPrincipalPaydowns
- * NRATaxCode.mmPrincipalPaydowns}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#USGovernmentInterestLongerThan183Days
+ * NRATaxCode.USGovernmentInterestLongerThan183Days}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmShortTermInterest
- * NRATaxCode.mmShortTermInterest}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#InterestSubstitutePayment
+ * NRATaxCode.InterestSubstitutePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmUSGovernmentInterestLongerThan183Days
- * NRATaxCode.mmUSGovernmentInterestLongerThan183Days}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#OtherSusbtitutePayment
+ * NRATaxCode.OtherSusbtitutePayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmInterestSubstitutePayment
- * NRATaxCode.mmInterestSubstitutePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#NRAWithholdingTax
+ * NRATaxCode.NRAWithholdingTax}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmOtherSusbtitutePayment
- * NRATaxCode.mmOtherSusbtitutePayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#FederalBackUpDividends
+ * NRATaxCode.FederalBackUpDividends}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmNRAWithholdingTax
- * NRATaxCode.mmNRAWithholdingTax}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#FederalBackUpInterest
+ * NRATaxCode.FederalBackUpInterest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmFederalBackUpDividends
- * NRATaxCode.mmFederalBackUpDividends}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#ForeignTaxWithheldAtSourceDividends
+ * NRATaxCode.ForeignTaxWithheldAtSourceDividends}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmFederalBackUpInterest
- * NRATaxCode.mmFederalBackUpInterest}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#ForeignTaxWithheldAtSourceInterest
+ * NRATaxCode.ForeignTaxWithheldAtSourceInterest}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NRATaxCode#CustodyIssues
+ * NRATaxCode.CustodyIssues}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmForeignTaxWithheldAtSourceDividends
- * NRATaxCode.mmForeignTaxWithheldAtSourceDividends}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#InterestOnBalances
+ * NRATaxCode.InterestOnBalances}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmForeignTaxWithheldAtSourceInterest
- * NRATaxCode.mmForeignTaxWithheldAtSourceInterest}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.NRATaxCode#mmCustodyIssues
- * NRATaxCode.mmCustodyIssues}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#InterestOnSeriesEOrHBonds
+ * NRATaxCode.InterestOnSeriesEOrHBonds}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NRATaxCode#RoyaltyPayments
+ * NRATaxCode.RoyaltyPayments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmInterestOnBalances
- * NRATaxCode.mmInterestOnBalances}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#OtherTaxableIncome
+ * NRATaxCode.OtherTaxableIncome}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmInterestOnSeriesEOrHBonds
- * NRATaxCode.mmInterestOnSeriesEOrHBonds}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#OtherNonTaxableIncome
+ * NRATaxCode.OtherNonTaxableIncome}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmRoyaltyPayments
- * NRATaxCode.mmRoyaltyPayments}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#MiscellaneousPayments
+ * NRATaxCode.MiscellaneousPayments}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmOtherTaxableIncome
- * NRATaxCode.mmOtherTaxableIncome}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#CashInLieuOfFractionalShares
+ * NRATaxCode.CashInLieuOfFractionalShares}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NRATaxCode#StockSplit
+ * NRATaxCode.StockSplit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NRATaxCode#StockDividend
+ * NRATaxCode.StockDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmOtherNonTaxableIncome
- * NRATaxCode.mmOtherNonTaxableIncome}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmMiscellaneousPayments
- * NRATaxCode.mmMiscellaneousPayments}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmCashInLieuOfFractionalShares
- * NRATaxCode.mmCashInLieuOfFractionalShares}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.NRATaxCode#mmStockSplit
- * NRATaxCode.mmStockSplit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.NRATaxCode#mmStockDividend
- * NRATaxCode.mmStockDividend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.NRATaxCode#mmCashOnIncreasedShares
- * NRATaxCode.mmCashOnIncreasedShares}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.NRATaxCode#mmSpinOff
- * NRATaxCode.mmSpinOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.NRATaxCode#CashOnIncreasedShares
+ * NRATaxCode.CashOnIncreasedShares}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.NRATaxCode#SpinOff
+ * NRATaxCode.SpinOff}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -177,8 +179,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -195,7 +197,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Non resident alien U.S. tax codes."</li>
  * </ul>
  */
-public class NRATaxCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class NRATaxCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -218,12 +221,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for domestic source income dividends."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDomesticIncomeDividend = new MMCode() {
+	public static final NRATaxCode DomesticIncomeDividend = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomesticIncomeDividend";
 			definition = "Tax category for domestic source income dividends.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T011";
 		}
 	};
@@ -247,12 +250,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for foreign source income dividends."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignIncomeDividends = new MMCode() {
+	public static final NRATaxCode ForeignIncomeDividends = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignIncomeDividends";
 			definition = "Tax category for foreign source income dividends.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T012";
 		}
 	};
@@ -276,12 +279,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for non taxable domestic dividends."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividendsDomesticNonTaxable = new MMCode() {
+	public static final NRATaxCode DividendsDomesticNonTaxable = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendsDomesticNonTaxable";
 			definition = "Tax category for non taxable domestic dividends.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T013";
 		}
 	};
@@ -307,12 +310,12 @@ public class NRATaxCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividendsFullyExempt = new MMCode() {
+	public static final NRATaxCode DividendsFullyExempt = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendsFullyExempt";
 			definition = "Tax category for fully exempt dividends  on municipal  type mutual funds. ";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T014";
 		}
 	};
@@ -336,12 +339,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for federal taxable state exempt dividends."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividendsFederalTaxableStateExempt = new MMCode() {
+	public static final NRATaxCode DividendsFederalTaxableStateExempt = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendsFederalTaxableStateExempt";
 			definition = "Tax category for federal taxable state exempt dividends.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T015";
 		}
 	};
@@ -365,12 +368,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for Return Of Capital proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReturnOfCapital = new MMCode() {
+	public static final NRATaxCode ReturnOfCapital = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnOfCapital";
 			definition = "Tax category for Return Of Capital proceeds.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T019";
 		}
 	};
@@ -394,12 +397,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for Long Term Capital Gains proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLongTermCapitalGains = new MMCode() {
+	public static final NRATaxCode LongTermCapitalGains = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongTermCapitalGains";
 			definition = "Tax category for Long Term Capital Gains proceeds.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T021";
 		}
 	};
@@ -423,12 +426,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for Short Term Capital Gains proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmShortTermCapitalGains = new MMCode() {
+	public static final NRATaxCode ShortTermCapitalGains = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortTermCapitalGains";
 			definition = "Tax category for Short Term Capital Gains proceeds.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T022";
 		}
 	};
@@ -452,12 +455,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for FIRPTA eligible (REITS)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFIRPTAEligible = new MMCode() {
+	public static final NRATaxCode FIRPTAEligible = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FIRPTAEligible";
 			definition = "Tax category for FIRPTA eligible (REITS).";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T023";
 		}
 	};
@@ -481,12 +484,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for REIT (Capital Gain Distributions)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmREITCapitalGainDistributions = new MMCode() {
+	public static final NRATaxCode REITCapitalGainDistributions = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "REITCapitalGainDistributions";
 			definition = "Tax category for REIT (Capital Gain Distributions).";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T025";
 		}
 	};
@@ -510,12 +513,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for  limited publicly traded partnership."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLimitedPubliclyTradedPartnership = new MMCode() {
+	public static final NRATaxCode LimitedPubliclyTradedPartnership = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedPubliclyTradedPartnership";
 			definition = "Tax category for  limited publicly traded partnership.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T026";
 		}
 	};
@@ -539,12 +542,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for substitute dividend payments."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubstituteDividendPayment = new MMCode() {
+	public static final NRATaxCode SubstituteDividendPayment = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubstituteDividendPayment";
 			definition = "Tax category for substitute dividend payments.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T027";
 		}
 	};
@@ -568,12 +571,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for short term capital gain distributions."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCapitalGainDistributionShortTermRICs = new MMCode() {
+	public static final NRATaxCode CapitalGainDistributionShortTermRICs = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGainDistributionShortTermRICs";
 			definition = "Tax category for short term capital gain distributions.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T029";
 		}
 	};
@@ -600,12 +603,12 @@ public class NRATaxCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateActionDividendCapitalGains = new MMCode() {
+	public static final NRATaxCode CorporateActionDividendCapitalGains = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionDividendCapitalGains";
 			definition = "Tax category for dividend or capital gains distribution due to a corporate action.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T302";
 		}
 	};
@@ -629,12 +632,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for U.S. source ordinary interest proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSSourceOrdinaryInterest = new MMCode() {
+	public static final NRATaxCode USSourceOrdinaryInterest = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USSourceOrdinaryInterest";
 			definition = "Tax category for U.S. source ordinary interest proceeds.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T041";
 		}
 	};
@@ -658,12 +661,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for foreign bond interest proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignBondInterest = new MMCode() {
+	public static final NRATaxCode ForeignBondInterest = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignBondInterest";
 			definition = "Tax category for foreign bond interest proceeds.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T042";
 		}
 	};
@@ -689,12 +692,12 @@ public class NRATaxCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAllStateAndTerritorialMunicipalInterest = new MMCode() {
+	public static final NRATaxCode AllStateAndTerritorialMunicipalInterest = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllStateAndTerritorialMunicipalInterest";
 			definition = "Tax category for all state and territorial municipal interest proceeds.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T043";
 		}
 	};
@@ -721,12 +724,12 @@ public class NRATaxCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAllMunicipalBondsSubjectToFederalTax = new MMCode() {
+	public static final NRATaxCode AllMunicipalBondsSubjectToFederalTax = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllMunicipalBondsSubjectToFederalTax";
 			definition = "Tax category for all municipal bonds that are subject to federal tax proceeds.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T044";
 		}
 	};
@@ -753,12 +756,12 @@ public class NRATaxCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSGovernmentInterestOnContractsNotesAndMortgages = new MMCode() {
+	public static final NRATaxCode USGovernmentInterestOnContractsNotesAndMortgages = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USGovernmentInterestOnContractsNotesAndMortgages";
 			definition = "Tax category for U.S. government interest on contracts Notes & mortgages proceeds.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T045";
 		}
 	};
@@ -783,12 +786,12 @@ public class NRATaxCode {
 	 * "Tax category for U.S. government interest on GNMA 1 &amp; 2 proceeds. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSGovernmentInterestOnGNMA1And2 = new MMCode() {
+	public static final NRATaxCode USGovernmentInterestOnGNMA1And2 = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USGovernmentInterestOnGNMA1And2";
 			definition = "Tax category for U.S. government interest on GNMA 1 & 2 proceeds. ";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T046";
 		}
 	};
@@ -815,12 +818,12 @@ public class NRATaxCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterestOnCollatralizedMortgageObligations = new MMCode() {
+	public static final NRATaxCode InterestOnCollatralizedMortgageObligations = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestOnCollatralizedMortgageObligations";
 			definition = "Tax category for interest on collateralized mortgage obligations proceeds.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T047";
 		}
 	};
@@ -845,12 +848,12 @@ public class NRATaxCode {
 	 * "Tax category for interests on certificates of deposits proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterestOnCertificatesOfDeposit = new MMCode() {
+	public static final NRATaxCode InterestOnCertificatesOfDeposit = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestOnCertificatesOfDeposit";
 			definition = "Tax category for interests on certificates of deposits proceeds.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T048";
 		}
 	};
@@ -874,12 +877,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for U.S. government interest proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSGovernmentInterest = new MMCode() {
+	public static final NRATaxCode USGovernmentInterest = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USGovernmentInterest";
 			definition = "Tax category for U.S. government interest proceeds.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T049";
 		}
 	};
@@ -904,12 +907,12 @@ public class NRATaxCode {
 	 * "Tax Category for US government interest on Notes and Bills."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSGovernmentInterestOnNotesAndBills = new MMCode() {
+	public static final NRATaxCode USGovernmentInterestOnNotesAndBills = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USGovernmentInterestOnNotesAndBills";
 			definition = "Tax Category for US government interest on Notes and Bills.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T050";
 		}
 	};
@@ -933,12 +936,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for principal pay downs proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrincipalPaydowns = new MMCode() {
+	public static final NRATaxCode PrincipalPaydowns = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalPaydowns";
 			definition = "Tax category for principal pay downs proceeds.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T051";
 		}
 	};
@@ -963,12 +966,12 @@ public class NRATaxCode {
 	 * "Tax category for Short Term Interest (less than 183 days) proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmShortTermInterest = new MMCode() {
+	public static final NRATaxCode ShortTermInterest = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortTermInterest";
 			definition = "Tax category for Short Term Interest (less than 183 days) proceeds.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T052";
 		}
 	};
@@ -995,12 +998,12 @@ public class NRATaxCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmUSGovernmentInterestLongerThan183Days = new MMCode() {
+	public static final NRATaxCode USGovernmentInterestLongerThan183Days = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USGovernmentInterestLongerThan183Days";
 			definition = "Tax category for U.S. Government Interest (longer that 183 days) proceeds.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T053";
 		}
 	};
@@ -1024,12 +1027,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for interest substitute payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterestSubstitutePayment = new MMCode() {
+	public static final NRATaxCode InterestSubstitutePayment = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestSubstitutePayment";
 			definition = "Tax category for interest substitute payment.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T054";
 		}
 	};
@@ -1054,12 +1057,12 @@ public class NRATaxCode {
 	 * "Tax category for other substitute payment that cannot be categorised."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherSusbtitutePayment = new MMCode() {
+	public static final NRATaxCode OtherSusbtitutePayment = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherSusbtitutePayment";
 			definition = "Tax category for other substitute payment that cannot be categorised.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T055";
 		}
 	};
@@ -1083,12 +1086,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for NRA withholding tax."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNRAWithholdingTax = new MMCode() {
+	public static final NRATaxCode NRAWithholdingTax = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NRAWithholdingTax";
 			definition = "Tax category for NRA withholding tax.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T061";
 		}
 	};
@@ -1112,12 +1115,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for federal backup dividends proceeds. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFederalBackUpDividends = new MMCode() {
+	public static final NRATaxCode FederalBackUpDividends = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FederalBackUpDividends";
 			definition = "Tax category for federal backup dividends proceeds. ";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T062";
 		}
 	};
@@ -1141,12 +1144,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for federal backup interest proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFederalBackUpInterest = new MMCode() {
+	public static final NRATaxCode FederalBackUpInterest = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FederalBackUpInterest";
 			definition = "Tax category for federal backup interest proceeds.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T063";
 		}
 	};
@@ -1171,12 +1174,12 @@ public class NRATaxCode {
 	 * "Tax category for foreign tax withheld at source dividends proceeds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignTaxWithheldAtSourceDividends = new MMCode() {
+	public static final NRATaxCode ForeignTaxWithheldAtSourceDividends = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignTaxWithheldAtSourceDividends";
 			definition = "Tax category for foreign tax withheld at source dividends proceeds.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T064";
 		}
 	};
@@ -1201,12 +1204,12 @@ public class NRATaxCode {
 	 * "Tax category for foreign tax withheld at source interest proceeds. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForeignTaxWithheldAtSourceInterest = new MMCode() {
+	public static final NRATaxCode ForeignTaxWithheldAtSourceInterest = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignTaxWithheldAtSourceInterest";
 			definition = "Tax category for foreign tax withheld at source interest proceeds. ";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T065";
 		}
 	};
@@ -1230,12 +1233,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for custody issues."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustodyIssues = new MMCode() {
+	public static final NRATaxCode CustodyIssues = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyIssues";
 			definition = "Tax category for custody issues.";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T070";
 		}
 	};
@@ -1259,12 +1262,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for interest on balances proceeds. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterestOnBalances = new MMCode() {
+	public static final NRATaxCode InterestOnBalances = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestOnBalances";
 			definition = "Tax category for interest on balances proceeds. ";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T071";
 		}
 	};
@@ -1289,12 +1292,12 @@ public class NRATaxCode {
 	 * "Tax category for interest on series E or H bonds proceeds. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterestOnSeriesEOrHBonds = new MMCode() {
+	public static final NRATaxCode InterestOnSeriesEOrHBonds = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestOnSeriesEOrHBonds";
 			definition = "Tax category for interest on series E or H bonds proceeds. ";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T072";
 		}
 	};
@@ -1318,12 +1321,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for royalty payments proceeds. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRoyaltyPayments = new MMCode() {
+	public static final NRATaxCode RoyaltyPayments = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoyaltyPayments";
 			definition = "Tax category for royalty payments proceeds. ";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T073";
 		}
 	};
@@ -1347,12 +1350,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for other taxable income proceeds. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherTaxableIncome = new MMCode() {
+	public static final NRATaxCode OtherTaxableIncome = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherTaxableIncome";
 			definition = "Tax category for other taxable income proceeds. ";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T074";
 		}
 	};
@@ -1376,12 +1379,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for other non-taxable income proceeds. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherNonTaxableIncome = new MMCode() {
+	public static final NRATaxCode OtherNonTaxableIncome = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherNonTaxableIncome";
 			definition = "Tax category for other non-taxable income proceeds. ";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T075";
 		}
 	};
@@ -1405,12 +1408,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for miscellaneous payments proceeds. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMiscellaneousPayments = new MMCode() {
+	public static final NRATaxCode MiscellaneousPayments = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiscellaneousPayments";
 			definition = "Tax category for miscellaneous payments proceeds. ";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T076";
 		}
 	};
@@ -1435,12 +1438,12 @@ public class NRATaxCode {
 	 * "Tax category for Cash-in-Lieu of fractional shares proceeds. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashInLieuOfFractionalShares = new MMCode() {
+	public static final NRATaxCode CashInLieuOfFractionalShares = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfFractionalShares";
 			definition = "Tax category for Cash-in-Lieu of fractional shares proceeds. ";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T024";
 		}
 	};
@@ -1464,12 +1467,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for stock split proceeds. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockSplit = new MMCode() {
+	public static final NRATaxCode StockSplit = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockSplit";
 			definition = "Tax category for stock split proceeds. ";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T077";
 		}
 	};
@@ -1493,12 +1496,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for stock dividend proceeds. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockDividend = new MMCode() {
+	public static final NRATaxCode StockDividend = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockDividend";
 			definition = "Tax category for stock dividend proceeds. ";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T078";
 		}
 	};
@@ -1522,12 +1525,12 @@ public class NRATaxCode {
 	 * definition} = "Tax category for cash on increased shares proceeds. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashOnIncreasedShares = new MMCode() {
+	public static final NRATaxCode CashOnIncreasedShares = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashOnIncreasedShares";
 			definition = "Tax category for cash on increased shares proceeds. ";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T079";
 		}
 	};
@@ -1551,37 +1554,120 @@ public class NRATaxCode {
 	 * definition} = "Tax category for  spin off proceeds. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpinOff = new MMCode() {
+	public static final NRATaxCode SpinOff = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpinOff";
 			definition = "Tax category for  spin off proceeds. ";
-			owner_lazy = () -> NRATaxCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T080";
 		}
 	};
+	final static private LinkedHashMap<String, NRATaxCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected NRATaxCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("T011");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NRATaxCode";
 				definition = "Non resident alien U.S. tax codes.";
-				code_lazy = () -> Arrays.asList(NRATaxCode.mmDomesticIncomeDividend, NRATaxCode.mmForeignIncomeDividends, NRATaxCode.mmDividendsDomesticNonTaxable, NRATaxCode.mmDividendsFullyExempt,
-						NRATaxCode.mmDividendsFederalTaxableStateExempt, NRATaxCode.mmReturnOfCapital, NRATaxCode.mmLongTermCapitalGains, NRATaxCode.mmShortTermCapitalGains, NRATaxCode.mmFIRPTAEligible,
-						NRATaxCode.mmREITCapitalGainDistributions, NRATaxCode.mmLimitedPubliclyTradedPartnership, NRATaxCode.mmSubstituteDividendPayment, NRATaxCode.mmCapitalGainDistributionShortTermRICs,
-						NRATaxCode.mmCorporateActionDividendCapitalGains, NRATaxCode.mmUSSourceOrdinaryInterest, NRATaxCode.mmForeignBondInterest, NRATaxCode.mmAllStateAndTerritorialMunicipalInterest,
-						NRATaxCode.mmAllMunicipalBondsSubjectToFederalTax, NRATaxCode.mmUSGovernmentInterestOnContractsNotesAndMortgages, NRATaxCode.mmUSGovernmentInterestOnGNMA1And2,
-						NRATaxCode.mmInterestOnCollatralizedMortgageObligations, NRATaxCode.mmInterestOnCertificatesOfDeposit, NRATaxCode.mmUSGovernmentInterest, NRATaxCode.mmUSGovernmentInterestOnNotesAndBills,
-						NRATaxCode.mmPrincipalPaydowns, NRATaxCode.mmShortTermInterest, NRATaxCode.mmUSGovernmentInterestLongerThan183Days, NRATaxCode.mmInterestSubstitutePayment, NRATaxCode.mmOtherSusbtitutePayment,
-						NRATaxCode.mmNRAWithholdingTax, NRATaxCode.mmFederalBackUpDividends, NRATaxCode.mmFederalBackUpInterest, NRATaxCode.mmForeignTaxWithheldAtSourceDividends, NRATaxCode.mmForeignTaxWithheldAtSourceInterest,
-						NRATaxCode.mmCustodyIssues, NRATaxCode.mmInterestOnBalances, NRATaxCode.mmInterestOnSeriesEOrHBonds, NRATaxCode.mmRoyaltyPayments, NRATaxCode.mmOtherTaxableIncome, NRATaxCode.mmOtherNonTaxableIncome,
-						NRATaxCode.mmMiscellaneousPayments, NRATaxCode.mmCashInLieuOfFractionalShares, NRATaxCode.mmStockSplit, NRATaxCode.mmStockDividend, NRATaxCode.mmCashOnIncreasedShares, NRATaxCode.mmSpinOff);
 				derivation_lazy = () -> Arrays.asList(NRATax1Code.mmObject(), NRATax2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NRATaxCode.DomesticIncomeDividend, com.tools20022.repository.codeset.NRATaxCode.ForeignIncomeDividends,
+						com.tools20022.repository.codeset.NRATaxCode.DividendsDomesticNonTaxable, com.tools20022.repository.codeset.NRATaxCode.DividendsFullyExempt,
+						com.tools20022.repository.codeset.NRATaxCode.DividendsFederalTaxableStateExempt, com.tools20022.repository.codeset.NRATaxCode.ReturnOfCapital, com.tools20022.repository.codeset.NRATaxCode.LongTermCapitalGains,
+						com.tools20022.repository.codeset.NRATaxCode.ShortTermCapitalGains, com.tools20022.repository.codeset.NRATaxCode.FIRPTAEligible, com.tools20022.repository.codeset.NRATaxCode.REITCapitalGainDistributions,
+						com.tools20022.repository.codeset.NRATaxCode.LimitedPubliclyTradedPartnership, com.tools20022.repository.codeset.NRATaxCode.SubstituteDividendPayment,
+						com.tools20022.repository.codeset.NRATaxCode.CapitalGainDistributionShortTermRICs, com.tools20022.repository.codeset.NRATaxCode.CorporateActionDividendCapitalGains,
+						com.tools20022.repository.codeset.NRATaxCode.USSourceOrdinaryInterest, com.tools20022.repository.codeset.NRATaxCode.ForeignBondInterest,
+						com.tools20022.repository.codeset.NRATaxCode.AllStateAndTerritorialMunicipalInterest, com.tools20022.repository.codeset.NRATaxCode.AllMunicipalBondsSubjectToFederalTax,
+						com.tools20022.repository.codeset.NRATaxCode.USGovernmentInterestOnContractsNotesAndMortgages, com.tools20022.repository.codeset.NRATaxCode.USGovernmentInterestOnGNMA1And2,
+						com.tools20022.repository.codeset.NRATaxCode.InterestOnCollatralizedMortgageObligations, com.tools20022.repository.codeset.NRATaxCode.InterestOnCertificatesOfDeposit,
+						com.tools20022.repository.codeset.NRATaxCode.USGovernmentInterest, com.tools20022.repository.codeset.NRATaxCode.USGovernmentInterestOnNotesAndBills, com.tools20022.repository.codeset.NRATaxCode.PrincipalPaydowns,
+						com.tools20022.repository.codeset.NRATaxCode.ShortTermInterest, com.tools20022.repository.codeset.NRATaxCode.USGovernmentInterestLongerThan183Days,
+						com.tools20022.repository.codeset.NRATaxCode.InterestSubstitutePayment, com.tools20022.repository.codeset.NRATaxCode.OtherSusbtitutePayment, com.tools20022.repository.codeset.NRATaxCode.NRAWithholdingTax,
+						com.tools20022.repository.codeset.NRATaxCode.FederalBackUpDividends, com.tools20022.repository.codeset.NRATaxCode.FederalBackUpInterest,
+						com.tools20022.repository.codeset.NRATaxCode.ForeignTaxWithheldAtSourceDividends, com.tools20022.repository.codeset.NRATaxCode.ForeignTaxWithheldAtSourceInterest,
+						com.tools20022.repository.codeset.NRATaxCode.CustodyIssues, com.tools20022.repository.codeset.NRATaxCode.InterestOnBalances, com.tools20022.repository.codeset.NRATaxCode.InterestOnSeriesEOrHBonds,
+						com.tools20022.repository.codeset.NRATaxCode.RoyaltyPayments, com.tools20022.repository.codeset.NRATaxCode.OtherTaxableIncome, com.tools20022.repository.codeset.NRATaxCode.OtherNonTaxableIncome,
+						com.tools20022.repository.codeset.NRATaxCode.MiscellaneousPayments, com.tools20022.repository.codeset.NRATaxCode.CashInLieuOfFractionalShares, com.tools20022.repository.codeset.NRATaxCode.StockSplit,
+						com.tools20022.repository.codeset.NRATaxCode.StockDividend, com.tools20022.repository.codeset.NRATaxCode.CashOnIncreasedShares, com.tools20022.repository.codeset.NRATaxCode.SpinOff);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(DomesticIncomeDividend.getCodeName().get(), DomesticIncomeDividend);
+		codesByName.put(ForeignIncomeDividends.getCodeName().get(), ForeignIncomeDividends);
+		codesByName.put(DividendsDomesticNonTaxable.getCodeName().get(), DividendsDomesticNonTaxable);
+		codesByName.put(DividendsFullyExempt.getCodeName().get(), DividendsFullyExempt);
+		codesByName.put(DividendsFederalTaxableStateExempt.getCodeName().get(), DividendsFederalTaxableStateExempt);
+		codesByName.put(ReturnOfCapital.getCodeName().get(), ReturnOfCapital);
+		codesByName.put(LongTermCapitalGains.getCodeName().get(), LongTermCapitalGains);
+		codesByName.put(ShortTermCapitalGains.getCodeName().get(), ShortTermCapitalGains);
+		codesByName.put(FIRPTAEligible.getCodeName().get(), FIRPTAEligible);
+		codesByName.put(REITCapitalGainDistributions.getCodeName().get(), REITCapitalGainDistributions);
+		codesByName.put(LimitedPubliclyTradedPartnership.getCodeName().get(), LimitedPubliclyTradedPartnership);
+		codesByName.put(SubstituteDividendPayment.getCodeName().get(), SubstituteDividendPayment);
+		codesByName.put(CapitalGainDistributionShortTermRICs.getCodeName().get(), CapitalGainDistributionShortTermRICs);
+		codesByName.put(CorporateActionDividendCapitalGains.getCodeName().get(), CorporateActionDividendCapitalGains);
+		codesByName.put(USSourceOrdinaryInterest.getCodeName().get(), USSourceOrdinaryInterest);
+		codesByName.put(ForeignBondInterest.getCodeName().get(), ForeignBondInterest);
+		codesByName.put(AllStateAndTerritorialMunicipalInterest.getCodeName().get(), AllStateAndTerritorialMunicipalInterest);
+		codesByName.put(AllMunicipalBondsSubjectToFederalTax.getCodeName().get(), AllMunicipalBondsSubjectToFederalTax);
+		codesByName.put(USGovernmentInterestOnContractsNotesAndMortgages.getCodeName().get(), USGovernmentInterestOnContractsNotesAndMortgages);
+		codesByName.put(USGovernmentInterestOnGNMA1And2.getCodeName().get(), USGovernmentInterestOnGNMA1And2);
+		codesByName.put(InterestOnCollatralizedMortgageObligations.getCodeName().get(), InterestOnCollatralizedMortgageObligations);
+		codesByName.put(InterestOnCertificatesOfDeposit.getCodeName().get(), InterestOnCertificatesOfDeposit);
+		codesByName.put(USGovernmentInterest.getCodeName().get(), USGovernmentInterest);
+		codesByName.put(USGovernmentInterestOnNotesAndBills.getCodeName().get(), USGovernmentInterestOnNotesAndBills);
+		codesByName.put(PrincipalPaydowns.getCodeName().get(), PrincipalPaydowns);
+		codesByName.put(ShortTermInterest.getCodeName().get(), ShortTermInterest);
+		codesByName.put(USGovernmentInterestLongerThan183Days.getCodeName().get(), USGovernmentInterestLongerThan183Days);
+		codesByName.put(InterestSubstitutePayment.getCodeName().get(), InterestSubstitutePayment);
+		codesByName.put(OtherSusbtitutePayment.getCodeName().get(), OtherSusbtitutePayment);
+		codesByName.put(NRAWithholdingTax.getCodeName().get(), NRAWithholdingTax);
+		codesByName.put(FederalBackUpDividends.getCodeName().get(), FederalBackUpDividends);
+		codesByName.put(FederalBackUpInterest.getCodeName().get(), FederalBackUpInterest);
+		codesByName.put(ForeignTaxWithheldAtSourceDividends.getCodeName().get(), ForeignTaxWithheldAtSourceDividends);
+		codesByName.put(ForeignTaxWithheldAtSourceInterest.getCodeName().get(), ForeignTaxWithheldAtSourceInterest);
+		codesByName.put(CustodyIssues.getCodeName().get(), CustodyIssues);
+		codesByName.put(InterestOnBalances.getCodeName().get(), InterestOnBalances);
+		codesByName.put(InterestOnSeriesEOrHBonds.getCodeName().get(), InterestOnSeriesEOrHBonds);
+		codesByName.put(RoyaltyPayments.getCodeName().get(), RoyaltyPayments);
+		codesByName.put(OtherTaxableIncome.getCodeName().get(), OtherTaxableIncome);
+		codesByName.put(OtherNonTaxableIncome.getCodeName().get(), OtherNonTaxableIncome);
+		codesByName.put(MiscellaneousPayments.getCodeName().get(), MiscellaneousPayments);
+		codesByName.put(CashInLieuOfFractionalShares.getCodeName().get(), CashInLieuOfFractionalShares);
+		codesByName.put(StockSplit.getCodeName().get(), StockSplit);
+		codesByName.put(StockDividend.getCodeName().get(), StockDividend);
+		codesByName.put(CashOnIncreasedShares.getCodeName().get(), CashOnIncreasedShares);
+		codesByName.put(SpinOff.getCodeName().get(), SpinOff);
+	}
+
+	public static NRATaxCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static NRATaxCode[] values() {
+		NRATaxCode[] values = new NRATaxCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, NRATaxCode> {
+		@Override
+		public NRATaxCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(NRATaxCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

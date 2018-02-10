@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.MeetingStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,16 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * " Specifies the status of the information contained in the notification."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NotificationStatus", propOrder = "status")
 public class NotificationStatus {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected NotificationStatus1Code status;
 	/**
-	 * Status to define the completeness of information contained in the
-	 * notification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +108,7 @@ public class NotificationStatus {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MeetingStatus.mmNotificationStatus;
-			componentContext_lazy = () -> NotificationStatus.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NotificationStatus.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,9 +123,9 @@ public class NotificationStatus {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NotificationStatus.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NotificationStatus.mmStatus);
 				trace_lazy = () -> MeetingStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "NotificationStatus";
 				definition = " Specifies the status of the information contained in the notification.";
@@ -133,12 +134,12 @@ public class NotificationStatus {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public NotificationStatus1Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(NotificationStatus1Code status) {
-		this.status = status;
+	public NotificationStatus setStatus(NotificationStatus1Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 }

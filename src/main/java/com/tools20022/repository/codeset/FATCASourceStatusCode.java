@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.FATCASourceStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the source of Foreign Account Tax Compliance Act (FATCA) status.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FATCASourceStatusCode#mmDeclared
- * FATCASourceStatusCode.mmDeclared}</li>
+ * {@linkplain com.tools20022.repository.codeset.FATCASourceStatusCode#Declared
+ * FATCASourceStatusCode.Declared}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FATCASourceStatusCode#mmCalculated
- * FATCASourceStatusCode.mmCalculated}</li>
+ * {@linkplain com.tools20022.repository.codeset.FATCASourceStatusCode#Calculated
+ * FATCASourceStatusCode.Calculated}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the source of Foreign Account Tax Compliance Act (FATCA) status."</li>
  * </ul>
  */
-public class FATCASourceStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FATCASourceStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,12 +95,12 @@ public class FATCASourceStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeclared = new MMCode() {
+	public static final FATCASourceStatusCode Declared = new FATCASourceStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Declared";
 			definition = "Source of the Foreign Account Tax Compliance Act (FATCA) status is as declared by the investor.";
-			owner_lazy = () -> FATCASourceStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCASourceStatusCode.mmObject();
 			codeName = "DECL";
 		}
 	};
@@ -122,27 +128,57 @@ public class FATCASourceStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCalculated = new MMCode() {
+	public static final FATCASourceStatusCode Calculated = new FATCASourceStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Calculated";
 			definition = "Source of the Foreign Account Tax Compliance Act (FATCA) status calculated";
-			owner_lazy = () -> FATCASourceStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FATCASourceStatusCode.mmObject();
 			codeName = "CALC";
 		}
 	};
+	final static private LinkedHashMap<String, FATCASourceStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FATCASourceStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FATCASourceStatusCode";
 				definition = "Specifies the source of Foreign Account Tax Compliance Act (FATCA) status.";
-				code_lazy = () -> Arrays.asList(FATCASourceStatusCode.mmDeclared, FATCASourceStatusCode.mmCalculated);
 				derivation_lazy = () -> Arrays.asList(FATCASourceStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FATCASourceStatusCode.Declared, com.tools20022.repository.codeset.FATCASourceStatusCode.Calculated);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Declared.getCodeName().get(), Declared);
+		codesByName.put(Calculated.getCodeName().get(), Calculated);
+	}
+
+	public static FATCASourceStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FATCASourceStatusCode[] values() {
+		FATCASourceStatusCode[] values = new FATCASourceStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FATCASourceStatusCode> {
+		@Override
+		public FATCASourceStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FATCASourceStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

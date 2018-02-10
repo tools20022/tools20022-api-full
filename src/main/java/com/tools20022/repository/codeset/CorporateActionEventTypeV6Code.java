@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the corporate action event type.
@@ -32,241 +37,240 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmDividendReinvestment
- * CorporateActionEventTypeV6Code.mmDividendReinvestment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#DividendReinvestment
+ * CorporateActionEventTypeV6Code.DividendReinvestment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmCapitalGainsDistribution
- * CorporateActionEventTypeV6Code.mmCapitalGainsDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#CapitalGainsDistribution
+ * CorporateActionEventTypeV6Code.CapitalGainsDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmCashDividend
- * CorporateActionEventTypeV6Code.mmCashDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#CashDividend
+ * CorporateActionEventTypeV6Code.CashDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmDividendOption
- * CorporateActionEventTypeV6Code.mmDividendOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#DividendOption
+ * CorporateActionEventTypeV6Code.DividendOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmStockDividend
- * CorporateActionEventTypeV6Code.mmStockDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#StockDividend
+ * CorporateActionEventTypeV6Code.StockDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmLiquidationDividend
- * CorporateActionEventTypeV6Code.mmLiquidationDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#LiquidationDividend
+ * CorporateActionEventTypeV6Code.LiquidationDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmMerger
- * CorporateActionEventTypeV6Code.mmMerger}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Merger
+ * CorporateActionEventTypeV6Code.Merger}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmNameChange
- * CorporateActionEventTypeV6Code.mmNameChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#NameChange
+ * CorporateActionEventTypeV6Code.NameChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmSpinOff
- * CorporateActionEventTypeV6Code.mmSpinOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#SpinOff
+ * CorporateActionEventTypeV6Code.SpinOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmTender
- * CorporateActionEventTypeV6Code.mmTender}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Tender
+ * CorporateActionEventTypeV6Code.Tender}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmBonusIssue
- * CorporateActionEventTypeV6Code.mmBonusIssue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#BonusIssue
+ * CorporateActionEventTypeV6Code.BonusIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmChange
- * CorporateActionEventTypeV6Code.mmChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Change
+ * CorporateActionEventTypeV6Code.Change}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmRedenomination
- * CorporateActionEventTypeV6Code.mmRedenomination}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Redenomination
+ * CorporateActionEventTypeV6Code.Redenomination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmExchangeOption
- * CorporateActionEventTypeV6Code.mmExchangeOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#ExchangeOption
+ * CorporateActionEventTypeV6Code.ExchangeOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmExchange
- * CorporateActionEventTypeV6Code.mmExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Exchange
+ * CorporateActionEventTypeV6Code.Exchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmDecreaseInValue
- * CorporateActionEventTypeV6Code.mmDecreaseInValue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#DecreaseInValue
+ * CorporateActionEventTypeV6Code.DecreaseInValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmEarlyRedemption
- * CorporateActionEventTypeV6Code.mmEarlyRedemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#EarlyRedemption
+ * CorporateActionEventTypeV6Code.EarlyRedemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmFinalMaturity
- * CorporateActionEventTypeV6Code.mmFinalMaturity}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#FinalMaturity
+ * CorporateActionEventTypeV6Code.FinalMaturity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmInterestPayment
- * CorporateActionEventTypeV6Code.mmInterestPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#InterestPayment
+ * CorporateActionEventTypeV6Code.InterestPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmPrefunding
- * CorporateActionEventTypeV6Code.mmPrefunding}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Prefunding
+ * CorporateActionEventTypeV6Code.Prefunding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmRemarketing
- * CorporateActionEventTypeV6Code.mmRemarketing}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Remarketing
+ * CorporateActionEventTypeV6Code.Remarketing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmSubscription
- * CorporateActionEventTypeV6Code.mmSubscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Subscription
+ * CorporateActionEventTypeV6Code.Subscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmAttachment
- * CorporateActionEventTypeV6Code.mmAttachment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Attachment
+ * CorporateActionEventTypeV6Code.Attachment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmConversion
- * CorporateActionEventTypeV6Code.mmConversion}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Conversion
+ * CorporateActionEventTypeV6Code.Conversion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmDetachment
- * CorporateActionEventTypeV6Code.mmDetachment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Detachment
+ * CorporateActionEventTypeV6Code.Detachment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmActiveTradingStatus
- * CorporateActionEventTypeV6Code.mmActiveTradingStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#ActiveTradingStatus
+ * CorporateActionEventTypeV6Code.ActiveTradingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmAnnualGeneralMeeting
- * CorporateActionEventTypeV6Code.mmAnnualGeneralMeeting}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#AnnualGeneralMeeting
+ * CorporateActionEventTypeV6Code.AnnualGeneralMeeting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmBankruptcy
- * CorporateActionEventTypeV6Code.mmBankruptcy}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Bankruptcy
+ * CorporateActionEventTypeV6Code.Bankruptcy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmBondDefault
- * CorporateActionEventTypeV6Code.mmBondDefault}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#BondDefault
+ * CorporateActionEventTypeV6Code.BondDefault}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmCallOnIntermediateSecurities
- * CorporateActionEventTypeV6Code.mmCallOnIntermediateSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#CallOnIntermediateSecurities
+ * CorporateActionEventTypeV6Code.CallOnIntermediateSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmCapitalisation
- * CorporateActionEventTypeV6Code.mmCapitalisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Capitalisation
+ * CorporateActionEventTypeV6Code.Capitalisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmConsent
- * CorporateActionEventTypeV6Code.mmConsent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Consent
+ * CorporateActionEventTypeV6Code.Consent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmCompanyOption
- * CorporateActionEventTypeV6Code.mmCompanyOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#CompanyOption
+ * CorporateActionEventTypeV6Code.CompanyOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmCouponStripping
- * CorporateActionEventTypeV6Code.mmCouponStripping}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#CouponStripping
+ * CorporateActionEventTypeV6Code.CouponStripping}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmCourtMeeting
- * CorporateActionEventTypeV6Code.mmCourtMeeting}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#CourtMeeting
+ * CorporateActionEventTypeV6Code.CourtMeeting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmDisclosure
- * CorporateActionEventTypeV6Code.mmDisclosure}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Disclosure
+ * CorporateActionEventTypeV6Code.Disclosure}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmDrawing
- * CorporateActionEventTypeV6Code.mmDrawing}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Drawing
+ * CorporateActionEventTypeV6Code.Drawing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmDutchAuction
- * CorporateActionEventTypeV6Code.mmDutchAuction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#DutchAuction
+ * CorporateActionEventTypeV6Code.DutchAuction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmExtraordinaryGeneralMeeting
- * CorporateActionEventTypeV6Code.mmExtraordinaryGeneralMeeting}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#ExtraordinaryGeneralMeeting
+ * CorporateActionEventTypeV6Code.ExtraordinaryGeneralMeeting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmFullCall
- * CorporateActionEventTypeV6Code.mmFullCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#FullCall
+ * CorporateActionEventTypeV6Code.FullCall}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmIncreaseInValue
- * CorporateActionEventTypeV6Code.mmIncreaseInValue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#IncreaseInValue
+ * CorporateActionEventTypeV6Code.IncreaseInValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmInstalmentCall
- * CorporateActionEventTypeV6Code.mmInstalmentCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#InstalmentCall
+ * CorporateActionEventTypeV6Code.InstalmentCall}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmInterestPaymentWithPrincipal
- * CorporateActionEventTypeV6Code.mmInterestPaymentWithPrincipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#InterestPaymentWithPrincipal
+ * CorporateActionEventTypeV6Code.InterestPaymentWithPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmIntermediateSecuritiesDistribution
- * CorporateActionEventTypeV6Code.mmIntermediateSecuritiesDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#IntermediateSecuritiesDistribution
+ * CorporateActionEventTypeV6Code.IntermediateSecuritiesDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmMaturityExtension
- * CorporateActionEventTypeV6Code.mmMaturityExtension}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#MaturityExtension
+ * CorporateActionEventTypeV6Code.MaturityExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmNonUSTEFRADCertification
- * CorporateActionEventTypeV6Code.mmNonUSTEFRADCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#NonUSTEFRADCertification
+ * CorporateActionEventTypeV6Code.NonUSTEFRADCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmOddLotSalePurchase
- * CorporateActionEventTypeV6Code.mmOddLotSalePurchase}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#OddLotSalePurchase
+ * CorporateActionEventTypeV6Code.OddLotSalePurchase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmOrdinaryGeneralMeeting
- * CorporateActionEventTypeV6Code.mmOrdinaryGeneralMeeting}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#OrdinaryGeneralMeeting
+ * CorporateActionEventTypeV6Code.OrdinaryGeneralMeeting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmOtherEvent
- * CorporateActionEventTypeV6Code.mmOtherEvent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#OtherEvent
+ * CorporateActionEventTypeV6Code.OtherEvent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmPariPassu
- * CorporateActionEventTypeV6Code.mmPariPassu}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#PariPassu
+ * CorporateActionEventTypeV6Code.PariPassu}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmPartialRedemptionWithoutPoolFactorReduction
- * CorporateActionEventTypeV6Code.mmPartialRedemptionWithoutPoolFactorReduction}
- * </li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#PartialRedemptionWithoutPoolFactorReduction
+ * CorporateActionEventTypeV6Code.PartialRedemptionWithoutPoolFactorReduction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmPartialRedemptionWithPoolFactorReduction
- * CorporateActionEventTypeV6Code.mmPartialRedemptionWithPoolFactorReduction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#PartialRedemptionWithPoolFactorReduction
+ * CorporateActionEventTypeV6Code.PartialRedemptionWithPoolFactorReduction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmPayInKind
- * CorporateActionEventTypeV6Code.mmPayInKind}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#PayInKind
+ * CorporateActionEventTypeV6Code.PayInKind}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmPlaceOfIncorporation
- * CorporateActionEventTypeV6Code.mmPlaceOfIncorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#PlaceOfIncorporation
+ * CorporateActionEventTypeV6Code.PlaceOfIncorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmPriorityIssue
- * CorporateActionEventTypeV6Code.mmPriorityIssue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#PriorityIssue
+ * CorporateActionEventTypeV6Code.PriorityIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmPutRedemption
- * CorporateActionEventTypeV6Code.mmPutRedemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#PutRedemption
+ * CorporateActionEventTypeV6Code.PutRedemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmRemarketingAgreement
- * CorporateActionEventTypeV6Code.mmRemarketingAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#RemarketingAgreement
+ * CorporateActionEventTypeV6Code.RemarketingAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmRepurchaseOffer
- * CorporateActionEventTypeV6Code.mmRepurchaseOffer}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#RepurchaseOffer
+ * CorporateActionEventTypeV6Code.RepurchaseOffer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmReverseStockSplit
- * CorporateActionEventTypeV6Code.mmReverseStockSplit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#ReverseStockSplit
+ * CorporateActionEventTypeV6Code.ReverseStockSplit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmRightsIssue
- * CorporateActionEventTypeV6Code.mmRightsIssue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#RightsIssue
+ * CorporateActionEventTypeV6Code.RightsIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmScripDividend
- * CorporateActionEventTypeV6Code.mmScripDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#ScripDividend
+ * CorporateActionEventTypeV6Code.ScripDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmSharesPremiumDividend
- * CorporateActionEventTypeV6Code.mmSharesPremiumDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#SharesPremiumDividend
+ * CorporateActionEventTypeV6Code.SharesPremiumDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmSmallestNegotiableUnit
- * CorporateActionEventTypeV6Code.mmSmallestNegotiableUnit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#SmallestNegotiableUnit
+ * CorporateActionEventTypeV6Code.SmallestNegotiableUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmStockSplit
- * CorporateActionEventTypeV6Code.mmStockSplit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#StockSplit
+ * CorporateActionEventTypeV6Code.StockSplit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmTaxReclaim
- * CorporateActionEventTypeV6Code.mmTaxReclaim}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#TaxReclaim
+ * CorporateActionEventTypeV6Code.TaxReclaim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmTradingStatusDelisted
- * CorporateActionEventTypeV6Code.mmTradingStatusDelisted}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#TradingStatusDelisted
+ * CorporateActionEventTypeV6Code.TradingStatusDelisted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmTradingStatusSuspended
- * CorporateActionEventTypeV6Code.mmTradingStatusSuspended}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#TradingStatusSuspended
+ * CorporateActionEventTypeV6Code.TradingStatusSuspended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmWarrantExercise
- * CorporateActionEventTypeV6Code.mmWarrantExercise}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#WarrantExercise
+ * CorporateActionEventTypeV6Code.WarrantExercise}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmWithholdingTaxReliefCertification
- * CorporateActionEventTypeV6Code.mmWithholdingTaxReliefCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#WithholdingTaxReliefCertification
+ * CorporateActionEventTypeV6Code.WithholdingTaxReliefCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmWorthless
- * CorporateActionEventTypeV6Code.mmWorthless}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Worthless
+ * CorporateActionEventTypeV6Code.Worthless}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmClassActionProposedSettlement
- * CorporateActionEventTypeV6Code.mmClassActionProposedSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#ClassActionProposedSettlement
+ * CorporateActionEventTypeV6Code.ClassActionProposedSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmCapitalDistribution
- * CorporateActionEventTypeV6Code.mmCapitalDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#CapitalDistribution
+ * CorporateActionEventTypeV6Code.CapitalDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmCreditEvent
- * CorporateActionEventTypeV6Code.mmCreditEvent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#CreditEvent
+ * CorporateActionEventTypeV6Code.CreditEvent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmSecuritiesHoldersMeeting
- * CorporateActionEventTypeV6Code.mmSecuritiesHoldersMeeting}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#SecuritiesHoldersMeeting
+ * CorporateActionEventTypeV6Code.SecuritiesHoldersMeeting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmCashDistributionFromNonEligibleSecuritiesSales
- * CorporateActionEventTypeV6Code.
- * mmCashDistributionFromNonEligibleSecuritiesSales}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#CashDistributionFromNonEligibleSecuritiesSales
+ * CorporateActionEventTypeV6Code.CashDistributionFromNonEligibleSecuritiesSales
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmAccumulation
- * CorporateActionEventTypeV6Code.mmAccumulation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Accumulation
+ * CorporateActionEventTypeV6Code.Accumulation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmInformation
- * CorporateActionEventTypeV6Code.mmInformation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#Information
+ * CorporateActionEventTypeV6Code.Information}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#mmNonOfficialOffer
- * CorporateActionEventTypeV6Code.mmNonOfficialOffer}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#NonOfficialOffer
+ * CorporateActionEventTypeV6Code.NonOfficialOffer}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -292,8 +296,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -310,7 +314,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the corporate action event type."</li>
  * </ul>
  */
-public class CorporateActionEventTypeV6Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionEventTypeV6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -340,12 +345,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividendReinvestment = new MMCode() {
+	public static final CorporateActionEventTypeV6Code DividendReinvestment = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestment";
 			definition = "Dividend payment where holders can keep cash or have the cash reinvested in the market by the issuer into additional shares in the issuing company. To be distinguished from DVOP as the company invests the dividend in the market rather than creating new share capital in exchange for the dividend.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "DRIP";
 		}
 	};
@@ -375,12 +380,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCapitalGainsDistribution = new MMCode() {
+	public static final CorporateActionEventTypeV6Code CapitalGainsDistribution = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGainsDistribution";
 			definition = "Event is the distribution of profits resulting from the sale of securities. Shareholders of mutual funds, unit trusts, or SICAVs are recipients of capital gains distributions and are often reinvested in additional shares of the fund.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "CAPG";
 		}
 	};
@@ -409,12 +414,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashDividend = new MMCode() {
+	public static final CorporateActionEventTypeV6Code CashDividend = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividend";
 			definition = "Distribution of cash to shareholders, in proportion to their equity holding. Ordinary dividends are recurring and regular. Shareholder must take cash and may be offered a choice of currency.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "DVCA";
 		}
 	};
@@ -445,12 +450,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividendOption = new MMCode() {
+	public static final CorporateActionEventTypeV6Code DividendOption = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendOption";
 			definition = "Distribution of a dividend to shareholders with a choice of benefit to receive. Shareholders may choose to receive shares or cash. To be distinguished from DRIP as the company creates new share capital in exchange for the dividend rather than investing the dividend in the market.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "DVOP";
 		}
 	};
@@ -478,12 +483,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockDividend = new MMCode() {
+	public static final CorporateActionEventTypeV6Code StockDividend = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockDividend";
 			definition = "Dividend paid to shareholders in the form of equities of the issuing corporation.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "DVSE";
 		}
 	};
@@ -511,12 +516,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmLiquidationDividend = new MMCode() {
+	public static final CorporateActionEventTypeV6Code LiquidationDividend = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidationDividend";
 			definition = "Distribution of cash, assets or both. Debt may be paid in order of priority based on preferred claims to assets specified by the security.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "LIQU";
 		}
 	};
@@ -546,12 +551,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMerger = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Merger = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merger";
 			definition = "Exchange of outstanding securities, initiated by the issuer which may include options, as the result of two or more companies combining assets, that is, an external, third party company. Cash payments may accompany share exchange.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "MRGR";
 		}
 	};
@@ -580,12 +585,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNameChange = new MMCode() {
+	public static final CorporateActionEventTypeV6Code NameChange = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameChange";
 			definition = "Event is a name change. The issuing company changes its name. The event shows the change from old name to new name and may involve surrendering physical shares with the old name to the registrar.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "NAME";
 		}
 	};
@@ -614,12 +619,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpinOff = new MMCode() {
+	public static final CorporateActionEventTypeV6Code SpinOff = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpinOff";
 			definition = "Distribution of securities issued by another company. The distributed securities may either be of a newly created or of an existing company. For example, spin-off, demerger, unbundling, divestment.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "SOFF";
 		}
 	};
@@ -647,12 +652,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTender = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Tender = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tender";
 			definition = "Offer made to holders by a third party, requesting them to sell (tender) or exchange their securities.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "TEND";
 		}
 	};
@@ -680,12 +685,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBonusIssue = new MMCode() {
+	public static final CorporateActionEventTypeV6Code BonusIssue = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BonusIssue";
 			definition = "Bonus or capitalisation issue. Security holders receive additional assets free of payment from the issuer, in proportion to their holding.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "BONU";
 		}
 	};
@@ -713,12 +718,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmChange = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Change = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Change";
 			definition = "Information regarding a change further described in the corporate action details.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "CHAN";
 		}
 	};
@@ -747,12 +752,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRedenomination = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Redenomination = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redenomination";
 			definition = "Event by which the unit (currency and/or nominal) of a security is restated, for example, nominal/par value of security in a national currency is restated in another currency.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "REDO";
 		}
 	};
@@ -782,12 +787,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmExchangeOption = new MMCode() {
+	public static final CorporateActionEventTypeV6Code ExchangeOption = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeOption";
 			definition = "Event is an option for the shareholders to exchange their securities for other securities and/or cash. Exchange options are mentioned in the terms and conditions of a security and are valid during the whole lifetime of a security.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "EXOP";
 		}
 	};
@@ -817,12 +822,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmExchange = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Exchange = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exchange";
 			definition = "Exchange of holdings for other securities and/or cash. The exchange can be either mandatory or voluntary involving the exchange of outstanding securities for different securities and/or cash. For example \"exchange offer\", \"capital reorganisation\" or \"funds separation\" .";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "EXOF";
 		}
 	};
@@ -851,12 +856,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDecreaseInValue = new MMCode() {
+	public static final CorporateActionEventTypeV6Code DecreaseInValue = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DecreaseInValue";
 			definition = "Reduction of face value of a single share or the value of fund assets. The number of circulating shares/units remains unchanged. This event may include a cash payout to holders.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "DECR";
 		}
 	};
@@ -889,12 +894,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEarlyRedemption = new MMCode() {
+	public static final CorporateActionEventTypeV6Code EarlyRedemption = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlyRedemption";
 			definition = "This includes drawing, partial and full call, put.\nRedemption in part or full before the scheduled final maturity date of a security, subject to the terms and conditions of the issue. \nDrawing - Securities are redeemed in part by lottery.\nPartial Call - Securities are redeemed in part by reducing proportionally the outstanding amount of securities.\nPut - Early redemption of a bond at the election of the bondholder.\nFull Call - The entire outstanding of a security is redeemed by the issuer.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "ERED";
 		}
 	};
@@ -923,12 +928,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinalMaturity = new MMCode() {
+	public static final CorporateActionEventTypeV6Code FinalMaturity = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalMaturity";
 			definition = "Redemption of an entire issue outstanding of securities, eg, bonds, preferred equity, funds, by the issuer or its agent, for example, asset manager, at final maturity.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "REDM";
 		}
 	};
@@ -954,12 +959,12 @@ public class CorporateActionEventTypeV6Code {
 	 * "Interest payment distributed to holders of an interest bearing asset."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterestPayment = new MMCode() {
+	public static final CorporateActionEventTypeV6Code InterestPayment = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPayment";
 			definition = "Interest payment distributed to holders of an interest bearing asset.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "INTR";
 		}
 	};
@@ -988,12 +993,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrefunding = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Prefunding = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prefunding";
 			definition = "Also called partial defeasance. Issuer has money set aside to redeem a portion of an issue and the indenture states that the securities could be called earlier than the stated maturity.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "PDEF";
 		}
 	};
@@ -1021,12 +1026,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRemarketing = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Remarketing = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Remarketing";
 			definition = "Purchase and sale of remarketed preferred equities/bonds through the negotiation of interest rate between the issuers and the holders.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "RMRK";
 		}
 	};
@@ -1054,12 +1059,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubscription = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Subscription = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscription";
 			definition = "Ability for security holders to purchase (additional or new) securities at a certain price, in proportion to their holding.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "SUBS";
 		}
 	};
@@ -1089,12 +1094,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAttachment = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Attachment = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attachment";
 			definition = "Combination of different security types to create a unit. Units are usually comprised of warrants and bonds or warrants and equities. Securities may be combined at the request of the security holder or based on market convention.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "ATTI";
 		}
 	};
@@ -1123,12 +1128,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmConversion = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Conversion = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Conversion";
 			definition = "Conversion of securities ( generally convertible bonds or preferred shares) into another form of securities ( usually common shares) at a pre-stated price/ratio.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "CONV";
 		}
 	};
@@ -1158,12 +1163,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDetachment = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Detachment = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Detachment";
 			definition = "Separation of components that comprise a security, for example, usually units comprised of warrants and bond or warrants and equity . Units may be broken up at the request of the security holder or based on market convention.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "DETI";
 		}
 	};
@@ -1191,12 +1196,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmActiveTradingStatus = new MMCode() {
+	public static final CorporateActionEventTypeV6Code ActiveTradingStatus = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActiveTradingStatus";
 			definition = "Trading in security has commenced or security has been re-activated after a suspension in trading.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "ACTV";
 		}
 	};
@@ -1221,12 +1226,12 @@ public class CorporateActionEventTypeV6Code {
 	 * definition} = "Meeting Annual general meeting."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAnnualGeneralMeeting = new MMCode() {
+	public static final CorporateActionEventTypeV6Code AnnualGeneralMeeting = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnnualGeneralMeeting";
 			definition = "Meeting Annual general meeting.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "MEET";
 		}
 	};
@@ -1254,12 +1259,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBankruptcy = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Bankruptcy = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bankruptcy";
 			definition = "Legal status of a company unable to pay creditors. Bankruptcy usually involves a formal court ruling. Securities may become valueless.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "BRUP";
 		}
 	};
@@ -1287,12 +1292,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBondDefault = new MMCode() {
+	public static final CorporateActionEventTypeV6Code BondDefault = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondDefault";
 			definition = "Failure by the company to perform obligations defined as default events under the bond agreement and that have not been remedied.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "DFLT";
 		}
 	};
@@ -1323,12 +1328,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCallOnIntermediateSecurities = new MMCode() {
+	public static final CorporateActionEventTypeV6Code CallOnIntermediateSecurities = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallOnIntermediateSecurities";
 			definition = "Call or exercise on nil paid securities or intermediate securities resulting from an intermediate securities distribution (RHDI). This code is used for the second event, when an intermediate securities' issue (rights/coupons) is composed of two events, the first event being the distribution of intermediate securities.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "EXRI";
 		}
 	};
@@ -1359,12 +1364,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCapitalisation = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Capitalisation = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capitalisation";
 			definition = "Increase of the current principal of a debt instrument without increasing the nominal value. It normally arises from the incorporation of due but unpaid interest into the principal. This is commonly done by increasing the pool factor value, for example, capitalisation, and negative amortisation.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "CAPI";
 		}
 	};
@@ -1393,12 +1398,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsent = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Consent = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consent";
 			definition = "Procedure that aims to obtain consent of holder  to a proposal by the issuer or a third party without convening a meeting. For example, consent to change the terms of a bond.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "CONS";
 		}
 	};
@@ -1433,12 +1438,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompanyOption = new MMCode() {
+	public static final CorporateActionEventTypeV6Code CompanyOption = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompanyOption";
 			definition = "Company option may be granted by the company, allowing the holder to take up shares at some future date(s) at a pre arranged price in the company. A company may not grant options which enable the holder to take up unissued shares at a time which is five or more years from the date of the grant. Option holders are not members of a company. They are contingent creditors of a company and hence may, in some instances, be entitled to vote on and be bound by a scheme of arrangement between the creditors and the company. As many options have multiple exercise periods a company option will either lapse or carry on to the next expiry date.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "COOP";
 		}
 	};
@@ -1467,12 +1472,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCouponStripping = new MMCode() {
+	public static final CorporateActionEventTypeV6Code CouponStripping = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponStripping";
 			definition = "Coupon stripping is the process whereby interest coupons for future payment dates are separated from the security corpus that entitles the holder to the principal repayment.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "CPST";
 		}
 	};
@@ -1497,12 +1502,12 @@ public class CorporateActionEventTypeV6Code {
 	 * definition} = "Announcement of a meeting at a Court."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCourtMeeting = new MMCode() {
+	public static final CorporateActionEventTypeV6Code CourtMeeting = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CourtMeeting";
 			definition = "Announcement of a meeting at a Court.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "CMET";
 		}
 	};
@@ -1530,12 +1535,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisclosure = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Disclosure = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disclosure";
 			definition = "Requirement for holders or beneficial owners to disclose their name, location and holdings of any issue to the issuer.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "DSCL";
 		}
 	};
@@ -1566,12 +1571,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDrawing = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Drawing = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Drawing";
 			definition = "Securities are redeemed in part before the scheduled final maturity date. It is done without any pool factor reduction. The redemption is reflected in a debit of the face amount (FAMT). Drawing is distinct from partial call since drawn bonds are chosen by lottery. Therefore, not every holder is affected in the same way.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "DRAW";
 		}
 	};
@@ -1600,12 +1605,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDutchAuction = new MMCode() {
+	public static final CorporateActionEventTypeV6Code DutchAuction = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DutchAuction";
 			definition = "Action by a party wishing to acquire a security. Holders of the security are invited to make an offer to sell, within a specific price range. The acquiring party will buy from the holder with lowest offer.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "DTCH";
 		}
 	};
@@ -1633,12 +1638,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmExtraordinaryGeneralMeeting = new MMCode() {
+	public static final CorporateActionEventTypeV6Code ExtraordinaryGeneralMeeting = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtraordinaryGeneralMeeting";
 			definition = "Extraordinary or Special General Meeting. Extraordinary or special general meeting.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "XMET";
 		}
 	};
@@ -1667,12 +1672,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullCall = new MMCode() {
+	public static final CorporateActionEventTypeV6Code FullCall = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullCall";
 			definition = "Redemption of an entire issue outstanding of securities, eg, bonds, preferred equity, funds, by the issuer or its agent, for example, asset manager,before final maturity.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "MCAL";
 		}
 	};
@@ -1700,12 +1705,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncreaseInValue = new MMCode() {
+	public static final CorporateActionEventTypeV6Code IncreaseInValue = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseInValue";
 			definition = "Increase in the face value of a single security. The number of circulating securities remains unchanged .";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "INCR";
 		}
 	};
@@ -1733,12 +1738,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstalmentCall = new MMCode() {
+	public static final CorporateActionEventTypeV6Code InstalmentCall = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentCall";
 			definition = "Instalment towards the purchase of equity capital, subject to an agreement between an issuer and a purchaser.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "PPMT";
 		}
 	};
@@ -1766,12 +1771,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterestPaymentWithPrincipal = new MMCode() {
+	public static final CorporateActionEventTypeV6Code InterestPaymentWithPrincipal = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentWithPrincipal";
 			definition = "Event which consists of two components, the decrease of the amortized value of a pool factor security and an interest payment.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "PRII";
 		}
 	};
@@ -1799,12 +1804,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntermediateSecuritiesDistribution = new MMCode() {
+	public static final CorporateActionEventTypeV6Code IntermediateSecuritiesDistribution = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesDistribution";
 			definition = "Distribution of intermediate securities that gives the holder the right to take part in a future event.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "RHDI";
 		}
 	};
@@ -1834,12 +1839,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmMaturityExtension = new MMCode() {
+	public static final CorporateActionEventTypeV6Code MaturityExtension = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityExtension";
 			definition = "As stipulated in the security's Terms and Conditions, the issuer or the holder may prolong the maturity date of a security. After extension, the security details may differ from the original issue. An issuer initiated extension may be subject to holder's approval.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "EXTM";
 		}
 	};
@@ -1867,12 +1872,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonUSTEFRADCertification = new MMCode() {
+	public static final CorporateActionEventTypeV6Code NonUSTEFRADCertification = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonUSTEFRADCertification";
 			definition = "Non-US beneficial owner certification requirement for exchange of temporary to permanent notes.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "CERT";
 		}
 	};
@@ -1901,12 +1906,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOddLotSalePurchase = new MMCode() {
+	public static final CorporateActionEventTypeV6Code OddLotSalePurchase = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OddLotSalePurchase";
 			definition = "Sale or purchase of odd-lots to/from the issuing company, initiated either by the holder of the security or through an offer made by the issuer.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "ODLT";
 		}
 	};
@@ -1931,12 +1936,12 @@ public class CorporateActionEventTypeV6Code {
 	 * definition} = "Ordinary general meeting."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOrdinaryGeneralMeeting = new MMCode() {
+	public static final CorporateActionEventTypeV6Code OrdinaryGeneralMeeting = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrdinaryGeneralMeeting";
 			definition = "Ordinary general meeting.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "OMET";
 		}
 	};
@@ -1964,12 +1969,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherEvent = new MMCode() {
+	public static final CorporateActionEventTypeV6Code OtherEvent = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherEvent";
 			definition = "Other event, use only when no other event type applies, for example, a new event type.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "OTHR";
 		}
 	};
@@ -2002,12 +2007,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPariPassu = new MMCode() {
+	public static final CorporateActionEventTypeV6Code PariPassu = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PariPassu";
 			definition = "Occurs when securities with different characteristics, for example, shares with different entitlements to dividend or voting rights, become identical in all respects, for example , pari-passu or assimilation. May be scheduled in advance, for example, shares resulting from a bonus may become fungible after a pre-set period of time, or may result from outside events, for example, merger, reorganisation, issue of supplementary tranches.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "PARI";
 		}
 	};
@@ -2036,12 +2041,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialRedemptionWithoutPoolFactorReduction = new MMCode() {
+	public static final CorporateActionEventTypeV6Code PartialRedemptionWithoutPoolFactorReduction = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialRedemptionWithoutPoolFactorReduction";
 			definition = "Securities are redeemed in part before their scheduled final maturity date. It is done without any pool factor reduction. The redemption is reflected in a debit of the face amount (FAMT).";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "PCAL";
 		}
 	};
@@ -2070,12 +2075,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialRedemptionWithPoolFactorReduction = new MMCode() {
+	public static final CorporateActionEventTypeV6Code PartialRedemptionWithPoolFactorReduction = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialRedemptionWithPoolFactorReduction";
 			definition = "Securities are redeemed in part before their scheduled final maturity date. The redemption is reflected in a pool factor reduction. No movement of securities occurs.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "PRED";
 		}
 	};
@@ -2103,12 +2108,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPayInKind = new MMCode() {
+	public static final CorporateActionEventTypeV6Code PayInKind = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayInKind";
 			definition = "Interest payment, in any kind except cash, distributed to holders of an interest bearing asset.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "PINK";
 		}
 	};
@@ -2138,12 +2143,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPlaceOfIncorporation = new MMCode() {
+	public static final CorporateActionEventTypeV6Code PlaceOfIncorporation = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfIncorporation";
 			definition = "Changes in the state of incorporation for US companies and changes in the place of incorporation for foreign companies. Where shares need to be registered following the incorporation change, the holder(s) may have to elect the registrar.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "PLAC";
 		}
 	};
@@ -2171,12 +2176,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPriorityIssue = new MMCode() {
+	public static final CorporateActionEventTypeV6Code PriorityIssue = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriorityIssue";
 			definition = "Form of open or public offer where, due to a limited amount of securities available, priority is given to existing shareholders.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "PRIO";
 		}
 	};
@@ -2204,12 +2209,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPutRedemption = new MMCode() {
+	public static final CorporateActionEventTypeV6Code PutRedemption = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PutRedemption";
 			definition = "Early redemption of a security at the election of the holder subject to the terms and condition of the issue with no reduction in nominal value.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "BPUT";
 		}
 	};
@@ -2237,12 +2242,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRemarketingAgreement = new MMCode() {
+	public static final CorporateActionEventTypeV6Code RemarketingAgreement = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemarketingAgreement";
 			definition = "Purchase and sale of remarketed preferred equities/bonds through the negotiation of interest rate between the issuers and the holders.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "REMK";
 		}
 	};
@@ -2271,12 +2276,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRepurchaseOffer = new MMCode() {
+	public static final CorporateActionEventTypeV6Code RepurchaseOffer = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseOffer";
 			definition = "Repurchase offer/Issuer bid/ Reverse rights. Offer to existing holders by the issuing company to repurchase its own securities. The objective of the offer is to reduce the number of outstanding securities.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "BIDS";
 		}
 	};
@@ -2305,12 +2310,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmReverseStockSplit = new MMCode() {
+	public static final CorporateActionEventTypeV6Code ReverseStockSplit = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseStockSplit";
 			definition = "Decrease in a company's number of outstanding equities without any change in the shareholder's equity or the aggregate market value at the time of the split. Equity price and nominal value are increased accordingly.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "SPLR";
 		}
 	};
@@ -2339,12 +2344,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRightsIssue = new MMCode() {
+	public static final CorporateActionEventTypeV6Code RightsIssue = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsIssue";
 			definition = "Offer to holders of a security to subscribe for additional securities via the distribution of an intermediate security. Both processes are included in the same event.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "RHTS";
 		}
 	};
@@ -2369,12 +2374,12 @@ public class CorporateActionEventTypeV6Code {
 	 * definition} = "Dividend or interest paid in the form of scrip."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmScripDividend = new MMCode() {
+	public static final CorporateActionEventTypeV6Code ScripDividend = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScripDividend";
 			definition = "Dividend or interest paid in the form of scrip.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "DVSC";
 		}
 	};
@@ -2403,12 +2408,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSharesPremiumDividend = new MMCode() {
+	public static final CorporateActionEventTypeV6Code SharesPremiumDividend = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharesPremiumDividend";
 			definition = "Corporate event pays shareholders an amount in cash issued from the shares premium reserve. It is similar to a dividend but with different tax implications.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "SHPR";
 		}
 	};
@@ -2436,12 +2441,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSmallestNegotiableUnit = new MMCode() {
+	public static final CorporateActionEventTypeV6Code SmallestNegotiableUnit = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SmallestNegotiableUnit";
 			definition = "Modification of the smallest negotiable unit of shares in order to obtain a new negotiable unit.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "SMAL";
 		}
 	};
@@ -2471,12 +2476,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockSplit = new MMCode() {
+	public static final CorporateActionEventTypeV6Code StockSplit = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockSplit";
 			definition = "Increase in a corporation's number of outstanding equities without any change in the shareholder's equity or the aggregate market value at the time of the split. Equity price and nominal value are reduced accordingly.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "SPLF";
 		}
 	};
@@ -2501,12 +2506,12 @@ public class CorporateActionEventTypeV6Code {
 	 * definition} = "Event related to tax reclaim activities."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxReclaim = new MMCode() {
+	public static final CorporateActionEventTypeV6Code TaxReclaim = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxReclaim";
 			definition = "Event related to tax reclaim activities.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "TREC";
 		}
 	};
@@ -2534,12 +2539,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradingStatusDelisted = new MMCode() {
+	public static final CorporateActionEventTypeV6Code TradingStatusDelisted = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingStatusDelisted";
 			definition = "Security is no longer able to comply with the listing requirements of a stock exchange and is removed from official board quotation.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "DLST";
 		}
 	};
@@ -2564,12 +2569,12 @@ public class CorporateActionEventTypeV6Code {
 	 * definition} = "Trading in the security has been suspended."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradingStatusSuspended = new MMCode() {
+	public static final CorporateActionEventTypeV6Code TradingStatusSuspended = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingStatusSuspended";
 			definition = "Trading in the security has been suspended.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "SUSP";
 		}
 	};
@@ -2599,12 +2604,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmWarrantExercise = new MMCode() {
+	public static final CorporateActionEventTypeV6Code WarrantExercise = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantExercise";
 			definition = "Option offered to holders to buy (call warrant) or to sell (put warrant) a specific amount of stock, cash, or commodity, at a predetermined price, during a predetermined period of time (which usually corresponds to the life of the issue).";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "EXWA";
 		}
 	};
@@ -2632,12 +2637,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithholdingTaxReliefCertification = new MMCode() {
+	public static final CorporateActionEventTypeV6Code WithholdingTaxReliefCertification = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxReliefCertification";
 			definition = "Certification process for withholding tax reduction or exemption based on the tax status of the holder.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "WTRC";
 		}
 	};
@@ -2662,12 +2667,12 @@ public class CorporateActionEventTypeV6Code {
 	 * definition} = "Booking out of valueless securities."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWorthless = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Worthless = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Worthless";
 			definition = "Booking out of valueless securities.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "WRTH";
 		}
 	};
@@ -2696,12 +2701,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmClassActionProposedSettlement = new MMCode() {
+	public static final CorporateActionEventTypeV6Code ClassActionProposedSettlement = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassActionProposedSettlement";
 			definition = "Situation where interested parties seek restitution for financial loss. The security holder may be offered the opportunity to join a class action proceeding and would need to respond with an instruction.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "CLSA";
 		}
 	};
@@ -2731,12 +2736,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCapitalDistribution = new MMCode() {
+	public static final CorporateActionEventTypeV6Code CapitalDistribution = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalDistribution";
 			definition = "Corporate event pays shareholders an amount in cash issued from the capital account. There is no reduction to the face value of a single share (or the share has no par value). The number of circulating shares remains unchanged.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "CAPD";
 		}
 	};
@@ -2765,12 +2770,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreditEvent = new MMCode() {
+	public static final CorporateActionEventTypeV6Code CreditEvent = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditEvent";
 			definition = "Occurrence of credit derivative for which the issuer of one or several underlying securities is unable to fulfill his financial obligations (as defined in terms and conditions).";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "CREV";
 		}
 	};
@@ -2796,12 +2801,12 @@ public class CorporateActionEventTypeV6Code {
 	 * "Ordinary or annual or extraordinary or special general meeting."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesHoldersMeeting = new MMCode() {
+	public static final CorporateActionEventTypeV6Code SecuritiesHoldersMeeting = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesHoldersMeeting";
 			definition = "Ordinary or annual or extraordinary or special general meeting.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "MTNG";
 		}
 	};
@@ -2830,12 +2835,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashDistributionFromNonEligibleSecuritiesSales = new MMCode() {
+	public static final CorporateActionEventTypeV6Code CashDistributionFromNonEligibleSecuritiesSales = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDistributionFromNonEligibleSecuritiesSales";
 			definition = "Distribution to shareholders of cash resulting from the selling of non-eligible securities, for example, in the frame of a depositary receipt program.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "DRCA";
 		}
 	};
@@ -2866,12 +2871,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccumulation = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Accumulation = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accumulation";
 			definition = "Funds related event in which the income (for example accumulation units) that accrues during an accounting period is retained within the fund instead of being paid away to investors. The retained income is nonetheless deemed to have been distributed to investors for tax purposes. ";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "ACCU";
 		}
 	};
@@ -2899,12 +2904,12 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInformation = new MMCode() {
+	public static final CorporateActionEventTypeV6Code Information = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Information";
 			definition = "Information provided by the issuer having no accounting/financial impact on the holder.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "INFO";
 		}
 	};
@@ -2934,50 +2939,174 @@ public class CorporateActionEventTypeV6Code {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonOfficialOffer = new MMCode() {
+	public static final CorporateActionEventTypeV6Code NonOfficialOffer = new CorporateActionEventTypeV6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonOfficialOffer";
 			definition = "Offers that are not supervised or regulated by an official entity and being offered by a party, for example a broker, usually at a discount price, for example broker offer, mini-tender, mini odd lot offer or third party offer.";
-			owner_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "NOOF";
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionEventTypeV6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionEventTypeV6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DRIP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventTypeV6Code";
 				definition = "Specifies the corporate action event type.";
-				code_lazy = () -> Arrays.asList(CorporateActionEventTypeV6Code.mmDividendReinvestment, CorporateActionEventTypeV6Code.mmCapitalGainsDistribution, CorporateActionEventTypeV6Code.mmCashDividend,
-						CorporateActionEventTypeV6Code.mmDividendOption, CorporateActionEventTypeV6Code.mmStockDividend, CorporateActionEventTypeV6Code.mmLiquidationDividend, CorporateActionEventTypeV6Code.mmMerger,
-						CorporateActionEventTypeV6Code.mmNameChange, CorporateActionEventTypeV6Code.mmSpinOff, CorporateActionEventTypeV6Code.mmTender, CorporateActionEventTypeV6Code.mmBonusIssue, CorporateActionEventTypeV6Code.mmChange,
-						CorporateActionEventTypeV6Code.mmRedenomination, CorporateActionEventTypeV6Code.mmExchangeOption, CorporateActionEventTypeV6Code.mmExchange, CorporateActionEventTypeV6Code.mmDecreaseInValue,
-						CorporateActionEventTypeV6Code.mmEarlyRedemption, CorporateActionEventTypeV6Code.mmFinalMaturity, CorporateActionEventTypeV6Code.mmInterestPayment, CorporateActionEventTypeV6Code.mmPrefunding,
-						CorporateActionEventTypeV6Code.mmRemarketing, CorporateActionEventTypeV6Code.mmSubscription, CorporateActionEventTypeV6Code.mmAttachment, CorporateActionEventTypeV6Code.mmConversion,
-						CorporateActionEventTypeV6Code.mmDetachment, CorporateActionEventTypeV6Code.mmActiveTradingStatus, CorporateActionEventTypeV6Code.mmAnnualGeneralMeeting, CorporateActionEventTypeV6Code.mmBankruptcy,
-						CorporateActionEventTypeV6Code.mmBondDefault, CorporateActionEventTypeV6Code.mmCallOnIntermediateSecurities, CorporateActionEventTypeV6Code.mmCapitalisation, CorporateActionEventTypeV6Code.mmConsent,
-						CorporateActionEventTypeV6Code.mmCompanyOption, CorporateActionEventTypeV6Code.mmCouponStripping, CorporateActionEventTypeV6Code.mmCourtMeeting, CorporateActionEventTypeV6Code.mmDisclosure,
-						CorporateActionEventTypeV6Code.mmDrawing, CorporateActionEventTypeV6Code.mmDutchAuction, CorporateActionEventTypeV6Code.mmExtraordinaryGeneralMeeting, CorporateActionEventTypeV6Code.mmFullCall,
-						CorporateActionEventTypeV6Code.mmIncreaseInValue, CorporateActionEventTypeV6Code.mmInstalmentCall, CorporateActionEventTypeV6Code.mmInterestPaymentWithPrincipal,
-						CorporateActionEventTypeV6Code.mmIntermediateSecuritiesDistribution, CorporateActionEventTypeV6Code.mmMaturityExtension, CorporateActionEventTypeV6Code.mmNonUSTEFRADCertification,
-						CorporateActionEventTypeV6Code.mmOddLotSalePurchase, CorporateActionEventTypeV6Code.mmOrdinaryGeneralMeeting, CorporateActionEventTypeV6Code.mmOtherEvent, CorporateActionEventTypeV6Code.mmPariPassu,
-						CorporateActionEventTypeV6Code.mmPartialRedemptionWithoutPoolFactorReduction, CorporateActionEventTypeV6Code.mmPartialRedemptionWithPoolFactorReduction, CorporateActionEventTypeV6Code.mmPayInKind,
-						CorporateActionEventTypeV6Code.mmPlaceOfIncorporation, CorporateActionEventTypeV6Code.mmPriorityIssue, CorporateActionEventTypeV6Code.mmPutRedemption, CorporateActionEventTypeV6Code.mmRemarketingAgreement,
-						CorporateActionEventTypeV6Code.mmRepurchaseOffer, CorporateActionEventTypeV6Code.mmReverseStockSplit, CorporateActionEventTypeV6Code.mmRightsIssue, CorporateActionEventTypeV6Code.mmScripDividend,
-						CorporateActionEventTypeV6Code.mmSharesPremiumDividend, CorporateActionEventTypeV6Code.mmSmallestNegotiableUnit, CorporateActionEventTypeV6Code.mmStockSplit, CorporateActionEventTypeV6Code.mmTaxReclaim,
-						CorporateActionEventTypeV6Code.mmTradingStatusDelisted, CorporateActionEventTypeV6Code.mmTradingStatusSuspended, CorporateActionEventTypeV6Code.mmWarrantExercise,
-						CorporateActionEventTypeV6Code.mmWithholdingTaxReliefCertification, CorporateActionEventTypeV6Code.mmWorthless, CorporateActionEventTypeV6Code.mmClassActionProposedSettlement,
-						CorporateActionEventTypeV6Code.mmCapitalDistribution, CorporateActionEventTypeV6Code.mmCreditEvent, CorporateActionEventTypeV6Code.mmSecuritiesHoldersMeeting,
-						CorporateActionEventTypeV6Code.mmCashDistributionFromNonEligibleSecuritiesSales, CorporateActionEventTypeV6Code.mmAccumulation, CorporateActionEventTypeV6Code.mmInformation,
-						CorporateActionEventTypeV6Code.mmNonOfficialOffer);
 				derivation_lazy = () -> Arrays.asList(CorporateActionEventType22Code.mmObject(), CorporateActionEventType20Code.mmObject(), CorporateActionEventType21Code.mmObject(), CorporateActionEventType23Code.mmObject(),
 						CorporateActionEventType24Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.DividendReinvestment, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.CapitalGainsDistribution,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.CashDividend, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.DividendOption,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.StockDividend, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.LiquidationDividend,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Merger, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.NameChange,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.SpinOff, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Tender,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.BonusIssue, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Change,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Redenomination, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.ExchangeOption,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Exchange, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.DecreaseInValue,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.EarlyRedemption, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.FinalMaturity,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.InterestPayment, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Prefunding,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Remarketing, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Subscription,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Attachment, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Conversion,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Detachment, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.ActiveTradingStatus,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.AnnualGeneralMeeting, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Bankruptcy,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.BondDefault, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.CallOnIntermediateSecurities,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Capitalisation, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Consent,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.CompanyOption, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.CouponStripping,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.CourtMeeting, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Disclosure,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Drawing, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.DutchAuction,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.ExtraordinaryGeneralMeeting, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.FullCall,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.IncreaseInValue, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.InstalmentCall,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.InterestPaymentWithPrincipal, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.IntermediateSecuritiesDistribution,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.MaturityExtension, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.NonUSTEFRADCertification,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.OddLotSalePurchase, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.OrdinaryGeneralMeeting,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.OtherEvent, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.PariPassu,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.PartialRedemptionWithoutPoolFactorReduction,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.PartialRedemptionWithPoolFactorReduction, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.PayInKind,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.PlaceOfIncorporation, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.PriorityIssue,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.PutRedemption, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.RemarketingAgreement,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.RepurchaseOffer, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.ReverseStockSplit,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.RightsIssue, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.ScripDividend,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.SharesPremiumDividend, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.SmallestNegotiableUnit,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.StockSplit, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.TaxReclaim,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.TradingStatusDelisted, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.TradingStatusSuspended,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.WarrantExercise, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.WithholdingTaxReliefCertification,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Worthless, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.ClassActionProposedSettlement,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.CapitalDistribution, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.CreditEvent,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.SecuritiesHoldersMeeting, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.CashDistributionFromNonEligibleSecuritiesSales,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Accumulation, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Information,
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.NonOfficialOffer);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(DividendReinvestment.getCodeName().get(), DividendReinvestment);
+		codesByName.put(CapitalGainsDistribution.getCodeName().get(), CapitalGainsDistribution);
+		codesByName.put(CashDividend.getCodeName().get(), CashDividend);
+		codesByName.put(DividendOption.getCodeName().get(), DividendOption);
+		codesByName.put(StockDividend.getCodeName().get(), StockDividend);
+		codesByName.put(LiquidationDividend.getCodeName().get(), LiquidationDividend);
+		codesByName.put(Merger.getCodeName().get(), Merger);
+		codesByName.put(NameChange.getCodeName().get(), NameChange);
+		codesByName.put(SpinOff.getCodeName().get(), SpinOff);
+		codesByName.put(Tender.getCodeName().get(), Tender);
+		codesByName.put(BonusIssue.getCodeName().get(), BonusIssue);
+		codesByName.put(Change.getCodeName().get(), Change);
+		codesByName.put(Redenomination.getCodeName().get(), Redenomination);
+		codesByName.put(ExchangeOption.getCodeName().get(), ExchangeOption);
+		codesByName.put(Exchange.getCodeName().get(), Exchange);
+		codesByName.put(DecreaseInValue.getCodeName().get(), DecreaseInValue);
+		codesByName.put(EarlyRedemption.getCodeName().get(), EarlyRedemption);
+		codesByName.put(FinalMaturity.getCodeName().get(), FinalMaturity);
+		codesByName.put(InterestPayment.getCodeName().get(), InterestPayment);
+		codesByName.put(Prefunding.getCodeName().get(), Prefunding);
+		codesByName.put(Remarketing.getCodeName().get(), Remarketing);
+		codesByName.put(Subscription.getCodeName().get(), Subscription);
+		codesByName.put(Attachment.getCodeName().get(), Attachment);
+		codesByName.put(Conversion.getCodeName().get(), Conversion);
+		codesByName.put(Detachment.getCodeName().get(), Detachment);
+		codesByName.put(ActiveTradingStatus.getCodeName().get(), ActiveTradingStatus);
+		codesByName.put(AnnualGeneralMeeting.getCodeName().get(), AnnualGeneralMeeting);
+		codesByName.put(Bankruptcy.getCodeName().get(), Bankruptcy);
+		codesByName.put(BondDefault.getCodeName().get(), BondDefault);
+		codesByName.put(CallOnIntermediateSecurities.getCodeName().get(), CallOnIntermediateSecurities);
+		codesByName.put(Capitalisation.getCodeName().get(), Capitalisation);
+		codesByName.put(Consent.getCodeName().get(), Consent);
+		codesByName.put(CompanyOption.getCodeName().get(), CompanyOption);
+		codesByName.put(CouponStripping.getCodeName().get(), CouponStripping);
+		codesByName.put(CourtMeeting.getCodeName().get(), CourtMeeting);
+		codesByName.put(Disclosure.getCodeName().get(), Disclosure);
+		codesByName.put(Drawing.getCodeName().get(), Drawing);
+		codesByName.put(DutchAuction.getCodeName().get(), DutchAuction);
+		codesByName.put(ExtraordinaryGeneralMeeting.getCodeName().get(), ExtraordinaryGeneralMeeting);
+		codesByName.put(FullCall.getCodeName().get(), FullCall);
+		codesByName.put(IncreaseInValue.getCodeName().get(), IncreaseInValue);
+		codesByName.put(InstalmentCall.getCodeName().get(), InstalmentCall);
+		codesByName.put(InterestPaymentWithPrincipal.getCodeName().get(), InterestPaymentWithPrincipal);
+		codesByName.put(IntermediateSecuritiesDistribution.getCodeName().get(), IntermediateSecuritiesDistribution);
+		codesByName.put(MaturityExtension.getCodeName().get(), MaturityExtension);
+		codesByName.put(NonUSTEFRADCertification.getCodeName().get(), NonUSTEFRADCertification);
+		codesByName.put(OddLotSalePurchase.getCodeName().get(), OddLotSalePurchase);
+		codesByName.put(OrdinaryGeneralMeeting.getCodeName().get(), OrdinaryGeneralMeeting);
+		codesByName.put(OtherEvent.getCodeName().get(), OtherEvent);
+		codesByName.put(PariPassu.getCodeName().get(), PariPassu);
+		codesByName.put(PartialRedemptionWithoutPoolFactorReduction.getCodeName().get(), PartialRedemptionWithoutPoolFactorReduction);
+		codesByName.put(PartialRedemptionWithPoolFactorReduction.getCodeName().get(), PartialRedemptionWithPoolFactorReduction);
+		codesByName.put(PayInKind.getCodeName().get(), PayInKind);
+		codesByName.put(PlaceOfIncorporation.getCodeName().get(), PlaceOfIncorporation);
+		codesByName.put(PriorityIssue.getCodeName().get(), PriorityIssue);
+		codesByName.put(PutRedemption.getCodeName().get(), PutRedemption);
+		codesByName.put(RemarketingAgreement.getCodeName().get(), RemarketingAgreement);
+		codesByName.put(RepurchaseOffer.getCodeName().get(), RepurchaseOffer);
+		codesByName.put(ReverseStockSplit.getCodeName().get(), ReverseStockSplit);
+		codesByName.put(RightsIssue.getCodeName().get(), RightsIssue);
+		codesByName.put(ScripDividend.getCodeName().get(), ScripDividend);
+		codesByName.put(SharesPremiumDividend.getCodeName().get(), SharesPremiumDividend);
+		codesByName.put(SmallestNegotiableUnit.getCodeName().get(), SmallestNegotiableUnit);
+		codesByName.put(StockSplit.getCodeName().get(), StockSplit);
+		codesByName.put(TaxReclaim.getCodeName().get(), TaxReclaim);
+		codesByName.put(TradingStatusDelisted.getCodeName().get(), TradingStatusDelisted);
+		codesByName.put(TradingStatusSuspended.getCodeName().get(), TradingStatusSuspended);
+		codesByName.put(WarrantExercise.getCodeName().get(), WarrantExercise);
+		codesByName.put(WithholdingTaxReliefCertification.getCodeName().get(), WithholdingTaxReliefCertification);
+		codesByName.put(Worthless.getCodeName().get(), Worthless);
+		codesByName.put(ClassActionProposedSettlement.getCodeName().get(), ClassActionProposedSettlement);
+		codesByName.put(CapitalDistribution.getCodeName().get(), CapitalDistribution);
+		codesByName.put(CreditEvent.getCodeName().get(), CreditEvent);
+		codesByName.put(SecuritiesHoldersMeeting.getCodeName().get(), SecuritiesHoldersMeeting);
+		codesByName.put(CashDistributionFromNonEligibleSecuritiesSales.getCodeName().get(), CashDistributionFromNonEligibleSecuritiesSales);
+		codesByName.put(Accumulation.getCodeName().get(), Accumulation);
+		codesByName.put(Information.getCodeName().get(), Information);
+		codesByName.put(NonOfficialOffer.getCodeName().get(), NonOfficialOffer);
+	}
+
+	public static CorporateActionEventTypeV6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionEventTypeV6Code[] values() {
+		CorporateActionEventTypeV6Code[] values = new CorporateActionEventTypeV6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionEventTypeV6Code> {
+		@Override
+		public CorporateActionEventTypeV6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionEventTypeV6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

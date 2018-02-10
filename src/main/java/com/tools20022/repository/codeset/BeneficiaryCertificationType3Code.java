@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.BeneficiaryCertificationTypeCode;
+import com.tools20022.repository.codeset.BeneficiaryCertificationType3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of certification required.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationTypeCode
- * BeneficiaryCertificationTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType3Code#mmAccreditedInvestor
- * BeneficiaryCertificationType3Code.mmAccreditedInvestor}</li>
+ * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType3Code#AccreditedInvestor
+ * BeneficiaryCertificationType3Code.AccreditedInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType3Code#mmNonCompany
- * BeneficiaryCertificationType3Code.mmNonCompany}</li>
+ * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType3Code#NonCompany
+ * BeneficiaryCertificationType3Code.NonCompany}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType3Code#mmQIBCertification
- * BeneficiaryCertificationType3Code.mmQIBCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType3Code#QIBCertification
+ * BeneficiaryCertificationType3Code.QIBCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType3Code#mmNarrativeDescription
- * BeneficiaryCertificationType3Code.mmNarrativeDescription}</li>
+ * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationType3Code#NarrativeDescription
+ * BeneficiaryCertificationType3Code.NarrativeDescription}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.BeneficiaryCertificationTypeCode
+ * BeneficiaryCertificationTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class BeneficiaryCertificationType3Code extends BeneficiaryCertificationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BeneficiaryCertificationType3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,11 +102,12 @@ public class BeneficiaryCertificationType3Code extends BeneficiaryCertificationT
 	 * name} = "AccreditedInvestor"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccreditedInvestor = new MMCode() {
+	public static final BeneficiaryCertificationType3Code AccreditedInvestor = new BeneficiaryCertificationType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccreditedInvestor";
-			owner_lazy = () -> BeneficiaryCertificationType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BeneficiaryCertificationType3Code.mmObject();
+			codeName = BeneficiaryCertificationTypeCode.AccreditedInvestor.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -120,11 +126,12 @@ public class BeneficiaryCertificationType3Code extends BeneficiaryCertificationT
 	 * name} = "NonCompany"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonCompany = new MMCode() {
+	public static final BeneficiaryCertificationType3Code NonCompany = new BeneficiaryCertificationType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonCompany";
-			owner_lazy = () -> BeneficiaryCertificationType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BeneficiaryCertificationType3Code.mmObject();
+			codeName = BeneficiaryCertificationTypeCode.NonCompany.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -143,11 +150,12 @@ public class BeneficiaryCertificationType3Code extends BeneficiaryCertificationT
 	 * name} = "QIBCertification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQIBCertification = new MMCode() {
+	public static final BeneficiaryCertificationType3Code QIBCertification = new BeneficiaryCertificationType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QIBCertification";
-			owner_lazy = () -> BeneficiaryCertificationType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BeneficiaryCertificationType3Code.mmObject();
+			codeName = BeneficiaryCertificationTypeCode.QIBCertification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -166,28 +174,61 @@ public class BeneficiaryCertificationType3Code extends BeneficiaryCertificationT
 	 * name} = "NarrativeDescription"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNarrativeDescription = new MMCode() {
+	public static final BeneficiaryCertificationType3Code NarrativeDescription = new BeneficiaryCertificationType3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NarrativeDescription";
-			owner_lazy = () -> BeneficiaryCertificationType3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BeneficiaryCertificationType3Code.mmObject();
+			codeName = BeneficiaryCertificationTypeCode.NarrativeDescription.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, BeneficiaryCertificationType3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BeneficiaryCertificationType3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACCI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BeneficiaryCertificationType3Code";
 				definition = "Specifies the type of certification required.";
 				nextVersions_lazy = () -> Arrays.asList(BeneficiaryCertificationType5Code.mmObject());
-				code_lazy = () -> Arrays.asList(BeneficiaryCertificationType3Code.mmAccreditedInvestor, BeneficiaryCertificationType3Code.mmNonCompany, BeneficiaryCertificationType3Code.mmQIBCertification,
-						BeneficiaryCertificationType3Code.mmNarrativeDescription);
 				trace_lazy = () -> BeneficiaryCertificationTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BeneficiaryCertificationType3Code.AccreditedInvestor, com.tools20022.repository.codeset.BeneficiaryCertificationType3Code.NonCompany,
+						com.tools20022.repository.codeset.BeneficiaryCertificationType3Code.QIBCertification, com.tools20022.repository.codeset.BeneficiaryCertificationType3Code.NarrativeDescription);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccreditedInvestor.getCodeName().get(), AccreditedInvestor);
+		codesByName.put(NonCompany.getCodeName().get(), NonCompany);
+		codesByName.put(QIBCertification.getCodeName().get(), QIBCertification);
+		codesByName.put(NarrativeDescription.getCodeName().get(), NarrativeDescription);
+	}
+
+	public static BeneficiaryCertificationType3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BeneficiaryCertificationType3Code[] values() {
+		BeneficiaryCertificationType3Code[] values = new BeneficiaryCertificationType3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BeneficiaryCertificationType3Code> {
+		@Override
+		public BeneficiaryCertificationType3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BeneficiaryCertificationType3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

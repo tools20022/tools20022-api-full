@@ -28,6 +28,7 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOneElementPresentRule#forRecordTechnicalData3
+ * ConstraintOneElementPresentRule.forRecordTechnicalData3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,16 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * RecordTechnicalData2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RecordTechnicalData3", propOrder = {"inconsistencyIndicator", "lastUpdate", "submissionDateTime", "relevantCompetentAuthority", "publicationPeriod", "neverPublished"})
 public class RecordTechnicalData3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IncnsstncyInd")
 	protected TrueFalseIndicator inconsistencyIndicator;
 	/**
-	 * Flag to say if there is an inconsistency across all submitting entities
-	 * records.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +130,7 @@ public class RecordTechnicalData3 {
 	 */
 	public static final MMMessageAttribute mmInconsistencyIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData3.mmObject();
 			isDerived = false;
 			xmlTag = "IncnsstncyInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +141,11 @@ public class RecordTechnicalData3 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "LastUpd")
 	protected ISODateTime lastUpdate;
 	/**
-	 * Last date for which data was received for this instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +173,7 @@ public class RecordTechnicalData3 {
 	 */
 	public static final MMMessageAttribute mmLastUpdate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData3.mmObject();
 			isDerived = false;
 			xmlTag = "LastUpd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,11 +184,11 @@ public class RecordTechnicalData3 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "SubmissnDtTm")
 	protected ISODateTime submissionDateTime;
 	/**
-	 * Defines the date and time when this instrument was originally received at
-	 * the submission destination.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -207,7 +217,7 @@ public class RecordTechnicalData3 {
 	 */
 	public static final MMMessageAttribute mmSubmissionDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData3.mmObject();
 			isDerived = false;
 			xmlTag = "SubmissnDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,10 +228,11 @@ public class RecordTechnicalData3 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "RlvntCmptntAuthrty")
 	protected CountryCode relevantCompetentAuthority;
 	/**
-	 * Country code of the relevant competent authority of the instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,7 +260,7 @@ public class RecordTechnicalData3 {
 	 */
 	public static final MMMessageAttribute mmRelevantCompetentAuthority = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData3.mmObject();
 			isDerived = false;
 			xmlTag = "RlvntCmptntAuthrty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -260,10 +271,11 @@ public class RecordTechnicalData3 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "PblctnPrd")
 	protected Period4Choice publicationPeriod;
 	/**
-	 * Period for which the associated instrument has been publically available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -291,7 +303,7 @@ public class RecordTechnicalData3 {
 	 */
 	public static final MMMessageAssociationEnd mmPublicationPeriod = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData3.mmObject();
 			isDerived = false;
 			xmlTag = "PblctnPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -303,10 +315,11 @@ public class RecordTechnicalData3 {
 			type_lazy = () -> Period4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NvrPblshd")
 	protected TrueFalseIndicator neverPublished;
 	/**
-	 * Flag to say if the record has ever been published.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -334,7 +347,7 @@ public class RecordTechnicalData3 {
 	 */
 	public static final MMMessageAttribute mmNeverPublished = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RecordTechnicalData3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData3.mmObject();
 			isDerived = false;
 			xmlTag = "NvrPblshd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -349,9 +362,11 @@ public class RecordTechnicalData3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RecordTechnicalData3.mmInconsistencyIndicator, RecordTechnicalData3.mmLastUpdate, RecordTechnicalData3.mmSubmissionDateTime, RecordTechnicalData3.mmRelevantCompetentAuthority,
-						RecordTechnicalData3.mmPublicationPeriod, RecordTechnicalData3.mmNeverPublished);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecordTechnicalData3.mmInconsistencyIndicator, com.tools20022.repository.msg.RecordTechnicalData3.mmLastUpdate,
+						com.tools20022.repository.msg.RecordTechnicalData3.mmSubmissionDateTime, com.tools20022.repository.msg.RecordTechnicalData3.mmRelevantCompetentAuthority,
+						com.tools20022.repository.msg.RecordTechnicalData3.mmPublicationPeriod, com.tools20022.repository.msg.RecordTechnicalData3.mmNeverPublished);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOneElementPresentRule.forRecordTechnicalData3);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RecordTechnicalData3";
 				definition = "Instrument specific technical data to support identification.";
@@ -361,57 +376,57 @@ public class RecordTechnicalData3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IncnsstncyInd")
-	public TrueFalseIndicator getInconsistencyIndicator() {
-		return inconsistencyIndicator;
+	public Optional<TrueFalseIndicator> getInconsistencyIndicator() {
+		return inconsistencyIndicator == null ? Optional.empty() : Optional.of(inconsistencyIndicator);
 	}
 
-	public void setInconsistencyIndicator(TrueFalseIndicator inconsistencyIndicator) {
+	public RecordTechnicalData3 setInconsistencyIndicator(TrueFalseIndicator inconsistencyIndicator) {
 		this.inconsistencyIndicator = inconsistencyIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "LastUpd")
-	public ISODateTime getLastUpdate() {
-		return lastUpdate;
+	public Optional<ISODateTime> getLastUpdate() {
+		return lastUpdate == null ? Optional.empty() : Optional.of(lastUpdate);
 	}
 
-	public void setLastUpdate(ISODateTime lastUpdate) {
+	public RecordTechnicalData3 setLastUpdate(ISODateTime lastUpdate) {
 		this.lastUpdate = lastUpdate;
+		return this;
 	}
 
-	@XmlElement(name = "SubmissnDtTm")
-	public ISODateTime getSubmissionDateTime() {
-		return submissionDateTime;
+	public Optional<ISODateTime> getSubmissionDateTime() {
+		return submissionDateTime == null ? Optional.empty() : Optional.of(submissionDateTime);
 	}
 
-	public void setSubmissionDateTime(ISODateTime submissionDateTime) {
+	public RecordTechnicalData3 setSubmissionDateTime(ISODateTime submissionDateTime) {
 		this.submissionDateTime = submissionDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "RlvntCmptntAuthrty")
-	public CountryCode getRelevantCompetentAuthority() {
-		return relevantCompetentAuthority;
+	public Optional<CountryCode> getRelevantCompetentAuthority() {
+		return relevantCompetentAuthority == null ? Optional.empty() : Optional.of(relevantCompetentAuthority);
 	}
 
-	public void setRelevantCompetentAuthority(CountryCode relevantCompetentAuthority) {
+	public RecordTechnicalData3 setRelevantCompetentAuthority(CountryCode relevantCompetentAuthority) {
 		this.relevantCompetentAuthority = relevantCompetentAuthority;
+		return this;
 	}
 
-	@XmlElement(name = "PblctnPrd")
-	public Period4Choice getPublicationPeriod() {
-		return publicationPeriod;
+	public Optional<Period4Choice> getPublicationPeriod() {
+		return publicationPeriod == null ? Optional.empty() : Optional.of(publicationPeriod);
 	}
 
-	public void setPublicationPeriod(Period4Choice publicationPeriod) {
+	public RecordTechnicalData3 setPublicationPeriod(Period4Choice publicationPeriod) {
 		this.publicationPeriod = publicationPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "NvrPblshd")
-	public TrueFalseIndicator getNeverPublished() {
-		return neverPublished;
+	public Optional<TrueFalseIndicator> getNeverPublished() {
+		return neverPublished == null ? Optional.empty() : Optional.of(neverPublished);
 	}
 
-	public void setNeverPublished(TrueFalseIndicator neverPublished) {
+	public RecordTechnicalData3 setNeverPublished(TrueFalseIndicator neverPublished) {
 		this.neverPublished = neverPublished;
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * Balance1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Balance6", propOrder = {"shortLongIndicator", "quantity"})
 public class Balance6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ShrtLngInd", required = true)
 	protected ShortLong1Code shortLongIndicator;
 	/**
-	 * Indication that the position is short or long.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,6 +108,9 @@ public class Balance6 {
 	 * Balance6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ShrtLngInd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B::4!c/[4!c[4c]]/4!c/[N]</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -132,9 +138,10 @@ public class Balance6 {
 	public static final MMMessageAttribute mmShortLongIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmShortLong;
-			componentContext_lazy = () -> Balance6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Balance6.mmObject();
 			isDerived = false;
 			xmlTag = "ShrtLngInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::4!c/[4!c[4c]]/4!c/[N]"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortLongIndicator";
 			definition = "Indication that the position is short or long.";
@@ -145,10 +152,11 @@ public class Balance6 {
 			simpleType_lazy = () -> ShortLong1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Qty", required = true)
 	protected BalanceQuantity9Choice quantity;
 	/**
-	 * Total quantity of financial instruments of the balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,6 +175,9 @@ public class Balance6 {
 	 * Balance6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Qty"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B::4!c/[4!c[4c]]/4!c/[N]15d</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -193,9 +204,10 @@ public class Balance6 {
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
-			componentContext_lazy = () -> Balance6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Balance6.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::4!c/[4!c[4c]]/4!c/[N]15d"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Total quantity of financial instruments of the balance.";
@@ -210,9 +222,9 @@ public class Balance6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Balance6.mmShortLongIndicator, Balance6.mmQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Balance6.mmShortLongIndicator, com.tools20022.repository.msg.Balance6.mmQuantity);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Balance6";
 				definition = "Net position of a segregated holding, in a single security, within the overall position held in a securities account. A securities balance is calculated from the sum of securities' receipts minus the sum of securities' deliveries.";
@@ -223,21 +235,21 @@ public class Balance6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ShrtLngInd", required = true)
 	public ShortLong1Code getShortLongIndicator() {
 		return shortLongIndicator;
 	}
 
-	public void setShortLongIndicator(ShortLong1Code shortLongIndicator) {
-		this.shortLongIndicator = shortLongIndicator;
+	public Balance6 setShortLongIndicator(ShortLong1Code shortLongIndicator) {
+		this.shortLongIndicator = Objects.requireNonNull(shortLongIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public BalanceQuantity9Choice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(BalanceQuantity9Choice quantity) {
-		this.quantity = quantity;
+	public Balance6 setQuantity(BalanceQuantity9Choice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 }

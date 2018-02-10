@@ -30,6 +30,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -79,8 +80,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,15 +100,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountRestrictions1", propOrder = {"limitation", "additionalInformation", "accountValidation", "type", "regulator", "status", "period"})
 public class AccountRestrictions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Lmttn")
 	protected Max350Text limitation;
 	/**
-	 * Restrictions and/or limitations on the account or account party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +145,7 @@ public class AccountRestrictions1 {
 	 */
 	public static final MMMessageAttribute mmLimitation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountRestrictions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
 			isDerived = false;
 			xmlTag = "Lmttn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,10 +157,11 @@ public class AccountRestrictions1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected Max350Text additionalInformation;
 	/**
-	 * Additional information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,7 +196,7 @@ public class AccountRestrictions1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountRestrictions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,11 +208,11 @@ public class AccountRestrictions1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctVldtn")
 	protected Max350Text accountValidation;
 	/**
-	 * Information or instructions for the by-passing of validations in the
-	 * account registration process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -246,7 +249,7 @@ public class AccountRestrictions1 {
 	 */
 	public static final MMMessageAttribute mmAccountValidation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountRestrictions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctVldtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,10 +261,11 @@ public class AccountRestrictions1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected Max35Text type;
 	/**
-	 * Type or identification of the restriction
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -296,7 +300,7 @@ public class AccountRestrictions1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountRestrictions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -308,11 +312,11 @@ public class AccountRestrictions1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Rgltr")
 	protected PartyIdentification70Choice regulator;
 	/**
-	 * Regulator that may have to be informed about restrictions or limitations
-	 * on the account or account party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -349,7 +353,7 @@ public class AccountRestrictions1 {
 	 */
 	public static final MMMessageAssociationEnd mmRegulator = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountRestrictions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
 			isDerived = false;
 			xmlTag = "Rgltr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -362,10 +366,11 @@ public class AccountRestrictions1 {
 			type_lazy = () -> PartyIdentification70Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts")
 	protected RestrictionStatus1Choice status;
 	/**
-	 * Status of the restriction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -400,7 +405,7 @@ public class AccountRestrictions1 {
 	 */
 	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountRestrictions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -413,10 +418,11 @@ public class AccountRestrictions1 {
 			type_lazy = () -> RestrictionStatus1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Prd")
 	protected DateTimePeriodDetails1 period;
 	/**
-	 * Period of the restriction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -450,7 +456,7 @@ public class AccountRestrictions1 {
 	 */
 	public static final MMMessageAssociationEnd mmPeriod = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountRestrictions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountRestrictions1.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -467,10 +473,11 @@ public class AccountRestrictions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountRestrictions1.mmLimitation, AccountRestrictions1.mmAdditionalInformation, AccountRestrictions1.mmAccountValidation, AccountRestrictions1.mmType,
-						AccountRestrictions1.mmRegulator, AccountRestrictions1.mmStatus, AccountRestrictions1.mmPeriod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountRestrictions1.mmLimitation, com.tools20022.repository.msg.AccountRestrictions1.mmAdditionalInformation,
+						com.tools20022.repository.msg.AccountRestrictions1.mmAccountValidation, com.tools20022.repository.msg.AccountRestrictions1.mmType, com.tools20022.repository.msg.AccountRestrictions1.mmRegulator,
+						com.tools20022.repository.msg.AccountRestrictions1.mmStatus, com.tools20022.repository.msg.AccountRestrictions1.mmPeriod);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AccountOpeningInstructionV06.mmAdditionalInformation, AccountDetailsConfirmationV06.mmAdditionalInformation);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountRestrictions1";
 				definition = "Restrictions that may be applied to an account or investment plan.";
@@ -480,66 +487,66 @@ public class AccountRestrictions1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Lmttn")
-	public Max350Text getLimitation() {
-		return limitation;
+	public Optional<Max350Text> getLimitation() {
+		return limitation == null ? Optional.empty() : Optional.of(limitation);
 	}
 
-	public void setLimitation(Max350Text limitation) {
+	public AccountRestrictions1 setLimitation(Max350Text limitation) {
 		this.limitation = limitation;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public Max350Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<Max350Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(Max350Text additionalInformation) {
+	public AccountRestrictions1 setAdditionalInformation(Max350Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 
-	@XmlElement(name = "AcctVldtn")
-	public Max350Text getAccountValidation() {
-		return accountValidation;
+	public Optional<Max350Text> getAccountValidation() {
+		return accountValidation == null ? Optional.empty() : Optional.of(accountValidation);
 	}
 
-	public void setAccountValidation(Max350Text accountValidation) {
+	public AccountRestrictions1 setAccountValidation(Max350Text accountValidation) {
 		this.accountValidation = accountValidation;
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public Max35Text getType() {
-		return type;
+	public Optional<Max35Text> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(Max35Text type) {
+	public AccountRestrictions1 setType(Max35Text type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Rgltr")
-	public PartyIdentification70Choice getRegulator() {
-		return regulator;
+	public Optional<PartyIdentification70Choice> getRegulator() {
+		return regulator == null ? Optional.empty() : Optional.of(regulator);
 	}
 
-	public void setRegulator(PartyIdentification70Choice regulator) {
+	public AccountRestrictions1 setRegulator(PartyIdentification70Choice regulator) {
 		this.regulator = regulator;
+		return this;
 	}
 
-	@XmlElement(name = "Sts")
-	public RestrictionStatus1Choice getStatus() {
-		return status;
+	public Optional<RestrictionStatus1Choice> getStatus() {
+		return status == null ? Optional.empty() : Optional.of(status);
 	}
 
-	public void setStatus(RestrictionStatus1Choice status) {
+	public AccountRestrictions1 setStatus(RestrictionStatus1Choice status) {
 		this.status = status;
+		return this;
 	}
 
-	@XmlElement(name = "Prd")
-	public DateTimePeriodDetails1 getPeriod() {
-		return period;
+	public Optional<DateTimePeriodDetails1> getPeriod() {
+		return period == null ? Optional.empty() : Optional.of(period);
 	}
 
-	public void setPeriod(com.tools20022.repository.msg.DateTimePeriodDetails1 period) {
+	public AccountRestrictions1 setPeriod(com.tools20022.repository.msg.DateTimePeriodDetails1 period) {
 		this.period = period;
+		return this;
 	}
 }

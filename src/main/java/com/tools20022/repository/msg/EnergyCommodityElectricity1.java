@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Commodity;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,16 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EnergyCommodityElectricity1", propOrder = {"baseProduct", "subProduct", "additionalSubProduct"})
 public class EnergyCommodityElectricity1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BasePdct", required = true)
 	protected AssetClassProductType2Code baseProduct;
 	/**
-	 * Base product for the underlying asset class as specified in the
-	 * classification of commodities derivatives table.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +118,7 @@ public class EnergyCommodityElectricity1 {
 	public static final MMMessageAttribute mmBaseProduct = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmBaseProduct;
-			componentContext_lazy = () -> EnergyCommodityElectricity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EnergyCommodityElectricity1.mmObject();
 			isDerived = false;
 			xmlTag = "BasePdct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +129,11 @@ public class EnergyCommodityElectricity1 {
 			simpleType_lazy = () -> AssetClassProductType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SubPdct", required = true)
 	protected AssetClassSubProductType6Code subProduct;
 	/**
-	 * Sub-product for the underlying asset class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +167,7 @@ public class EnergyCommodityElectricity1 {
 	public static final MMMessageAttribute mmSubProduct = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> EnergyCommodityElectricity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EnergyCommodityElectricity1.mmObject();
 			isDerived = false;
 			xmlTag = "SubPdct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,11 +178,11 @@ public class EnergyCommodityElectricity1 {
 			simpleType_lazy = () -> AssetClassSubProductType6Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlSubPdct", required = true)
 	protected AssetClassDetailedSubProductType5Code additionalSubProduct;
 	/**
-	 * Further subproduct type related to instruments that have a non-financial
-	 * instrument or commodity as underlying.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +212,7 @@ public class EnergyCommodityElectricity1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalSubProduct = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EnergyCommodityElectricity1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EnergyCommodityElectricity1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlSubPdct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,9 +227,10 @@ public class EnergyCommodityElectricity1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EnergyCommodityElectricity1.mmBaseProduct, EnergyCommodityElectricity1.mmSubProduct, EnergyCommodityElectricity1.mmAdditionalSubProduct);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EnergyCommodityElectricity1.mmBaseProduct, com.tools20022.repository.msg.EnergyCommodityElectricity1.mmSubProduct,
+						com.tools20022.repository.msg.EnergyCommodityElectricity1.mmAdditionalSubProduct);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EnergyCommodityElectricity1";
 				definition = "Defines commodity sub-product attributes of an energy derivative of type electricity.";
@@ -236,30 +239,30 @@ public class EnergyCommodityElectricity1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BasePdct", required = true)
 	public AssetClassProductType2Code getBaseProduct() {
 		return baseProduct;
 	}
 
-	public void setBaseProduct(AssetClassProductType2Code baseProduct) {
-		this.baseProduct = baseProduct;
+	public EnergyCommodityElectricity1 setBaseProduct(AssetClassProductType2Code baseProduct) {
+		this.baseProduct = Objects.requireNonNull(baseProduct);
+		return this;
 	}
 
-	@XmlElement(name = "SubPdct", required = true)
 	public AssetClassSubProductType6Code getSubProduct() {
 		return subProduct;
 	}
 
-	public void setSubProduct(AssetClassSubProductType6Code subProduct) {
-		this.subProduct = subProduct;
+	public EnergyCommodityElectricity1 setSubProduct(AssetClassSubProductType6Code subProduct) {
+		this.subProduct = Objects.requireNonNull(subProduct);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlSubPdct", required = true)
 	public AssetClassDetailedSubProductType5Code getAdditionalSubProduct() {
 		return additionalSubProduct;
 	}
 
-	public void setAdditionalSubProduct(AssetClassDetailedSubProductType5Code additionalSubProduct) {
-		this.additionalSubProduct = additionalSubProduct;
+	public EnergyCommodityElectricity1 setAdditionalSubProduct(AssetClassDetailedSubProductType5Code additionalSubProduct) {
+		this.additionalSubProduct = Objects.requireNonNull(additionalSubProduct);
+		return this;
 	}
 }

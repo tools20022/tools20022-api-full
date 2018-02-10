@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.FreightCommodityDry1;
 import com.tools20022.repository.msg.FreightCommodityWet1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Defines commodity attributes of a derivative where the type is freight."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AssetClassCommodityFreight1Choice", propOrder = {"dry", "wet", "containerShip"})
 public class AssetClassCommodityFreight1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dry", required = true)
 	protected FreightCommodityDry1 dry;
 	/**
-	 * Dry freight commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -110,7 +112,7 @@ public class AssetClassCommodityFreight1Choice {
 	public static final MMMessageAssociationEnd mmDry = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityFreight1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFreight1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class AssetClassCommodityFreight1Choice {
 			type_lazy = () -> FreightCommodityDry1.mmObject();
 		}
 	};
+	@XmlElement(name = "Wet", required = true)
 	protected FreightCommodityWet1 wet;
 	/**
-	 * Wet freight commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -157,7 +160,7 @@ public class AssetClassCommodityFreight1Choice {
 	public static final MMMessageAssociationEnd mmWet = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityFreight1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFreight1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Wet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,10 +172,11 @@ public class AssetClassCommodityFreight1Choice {
 			type_lazy = () -> FreightCommodityWet1.mmObject();
 		}
 	};
+	@XmlElement(name = "CntnrShip", required = true)
 	protected FreightCommodityContainerShip1 containerShip;
 	/**
-	 * Container ship freight commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -205,7 +209,7 @@ public class AssetClassCommodityFreight1Choice {
 	public static final MMMessageAssociationEnd mmContainerShip = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityFreight1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityFreight1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CntnrShip";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,9 +225,10 @@ public class AssetClassCommodityFreight1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AssetClassCommodityFreight1Choice.mmDry, AssetClassCommodityFreight1Choice.mmWet, AssetClassCommodityFreight1Choice.mmContainerShip);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityFreight1Choice.mmDry, com.tools20022.repository.choice.AssetClassCommodityFreight1Choice.mmWet,
+						com.tools20022.repository.choice.AssetClassCommodityFreight1Choice.mmContainerShip);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityFreight1Choice";
 				definition = "Defines commodity attributes of a derivative where the type is freight.";
@@ -232,30 +237,30 @@ public class AssetClassCommodityFreight1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dry", required = true)
 	public FreightCommodityDry1 getDry() {
 		return dry;
 	}
 
-	public void setDry(FreightCommodityDry1 dry) {
-		this.dry = dry;
+	public AssetClassCommodityFreight1Choice setDry(FreightCommodityDry1 dry) {
+		this.dry = Objects.requireNonNull(dry);
+		return this;
 	}
 
-	@XmlElement(name = "Wet", required = true)
 	public FreightCommodityWet1 getWet() {
 		return wet;
 	}
 
-	public void setWet(FreightCommodityWet1 wet) {
-		this.wet = wet;
+	public AssetClassCommodityFreight1Choice setWet(FreightCommodityWet1 wet) {
+		this.wet = Objects.requireNonNull(wet);
+		return this;
 	}
 
-	@XmlElement(name = "CntnrShip", required = true)
 	public FreightCommodityContainerShip1 getContainerShip() {
 		return containerShip;
 	}
 
-	public void setContainerShip(FreightCommodityContainerShip1 containerShip) {
-		this.containerShip = containerShip;
+	public AssetClassCommodityFreight1Choice setContainerShip(FreightCommodityContainerShip1 containerShip) {
+		this.containerShip = Objects.requireNonNull(containerShip);
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.RateType1Choice;
 import com.tools20022.repository.choice.RateType2Choice;
@@ -28,9 +29,8 @@ import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Information needed to process a currency exchange or conversion.
@@ -123,6 +123,69 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CurrencyExchange#mmAdjustment
  * CurrencyExchange.mmAdjustment}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Account#mmCurrencyExchange
+ * Account.mmCurrencyExchange}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCurrencyExchange
+ * Tax.mmCurrencyExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Adjustment#mmCurrencyExchange
+ * Adjustment.mmCurrencyExchange}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Payment#mmCurrencyExchange
+ * Payment.mmCurrencyExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashEntry#mmCurrencyExchange
+ * CashEntry.mmCurrencyExchange}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmExchangeRate
+ * AssetHolding.mmExchangeRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmCurrencyExchange
+ * PaymentExecution.mmCurrencyExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCurrencyExchange
+ * TransactionAdministrator.mmCurrencyExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmAgreedRate
+ * ForeignExchangeTrade.mmAgreedRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#mmConversionUnitCurrency
+ * SecuritiesConversion.mmConversionUnitCurrency}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmExchangeRate
+ * SecuritiesBalance.mmExchangeRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmExchangeRate
+ * CorporateActionEvent.mmExchangeRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmExchangeRate
+ * CorporateActionCashEntitlement.mmExchangeRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.FixingCondition#mmFixingRate
+ * FixingCondition.mmFixingRate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmCurrencyExchange
+ * Invoice.mmCurrencyExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#mmCurrencyExchange
+ * LiquidityManagementLimit.mmCurrencyExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashDistribution#mmDistributionCurrencyExchangeInformation
+ * CashDistribution.mmDistributionCurrencyExchangeInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Quote#mmQuotedRate
+ * Quote.mmQuotedRate}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TaxVoucher1#mmForeignExchangeDetails
+ * TaxVoucher1.mmForeignExchangeDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -250,73 +313,10 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Account#mmCurrencyExchange
- * Account.mmCurrencyExchange}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmCurrencyExchange
- * Tax.mmCurrencyExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Adjustment#mmCurrencyExchange
- * Adjustment.mmCurrencyExchange}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Payment#mmCurrencyExchange
- * Payment.mmCurrencyExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashEntry#mmCurrencyExchange
- * CashEntry.mmCurrencyExchange}</li>
- * <li>{@linkplain com.tools20022.repository.entity.AssetHolding#mmExchangeRate
- * AssetHolding.mmExchangeRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmCurrencyExchange
- * PaymentExecution.mmCurrencyExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TransactionAdministrator#mmCurrencyExchange
- * TransactionAdministrator.mmCurrencyExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ForeignExchangeTrade#mmAgreedRate
- * ForeignExchangeTrade.mmAgreedRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesConversion#mmConversionUnitCurrency
- * SecuritiesConversion.mmConversionUnitCurrency}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesBalance#mmExchangeRate
- * SecuritiesBalance.mmExchangeRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmExchangeRate
- * CorporateActionEvent.mmExchangeRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionCashEntitlement#mmExchangeRate
- * CorporateActionCashEntitlement.mmExchangeRate}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.FixingCondition#mmFixingRate
- * FixingCondition.mmFixingRate}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Invoice#mmCurrencyExchange
- * Invoice.mmCurrencyExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.LiquidityManagementLimit#mmCurrencyExchange
- * LiquidityManagementLimit.mmCurrencyExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashDistribution#mmDistributionCurrencyExchangeInformation
- * CashDistribution.mmDistributionCurrencyExchangeInformation}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Quote#mmQuotedRate
- * Quote.mmQuotedRate}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TaxVoucher1#mmForeignExchangeDetails
- * TaxVoucher1.mmForeignExchangeDetails}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -333,9 +333,8 @@ public class CurrencyExchange {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyAndAmount originalAmount;
 	/**
-	 * Amount in its original currency when conversion from/into another
-	 * currency has occurred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -645,8 +644,8 @@ public class CurrencyExchange {
 					AmountAndDirection85.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection55.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection58.mmOriginalCurrencyAndOrderedAmount,
 					AmountAndDirection67.mmOriginalCurrencyAndOrderedAmount, ForeignExchangeSwapTransaction2.mmTransactionNominalAmount, CurrencyConversion6.mmOriginalAmount, CurrencyConversion9.mmOriginalAmount,
 					ForeignExchangeSwapTransaction3.mmTransactionNominalAmount, CurrencyConversion12.mmOriginalAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OriginalAmount";
 			definition = "Amount in its original currency when conversion from/into another currency has occurred.";
@@ -665,8 +664,8 @@ public class CurrencyExchange {
 	};
 	protected ForeignExchangeTrade currencyExchangeForForeignExchangeTrade;
 	/**
-	 * Trade which uses the specified exchange rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -700,8 +699,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmCurrencyExchangeForForeignExchangeTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchangeForForeignExchangeTrade";
 			definition = "Trade which uses the specified exchange rate.";
@@ -714,9 +713,8 @@ public class CurrencyExchange {
 	};
 	protected CurrencyCode unitCurrency;
 	/**
-	 * Currency in which the rate of exchange is expressed in a currency
-	 * exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -870,8 +868,8 @@ public class CurrencyExchange {
 					ForeignExchangeTerms10.mmUnitCurrency, ForeignExchangeTerms22.mmUnitCurrency, ForeignExchangeTerms23.mmUnitCurrency, ForeignExchangeTerms24.mmUnitCurrency, AgreedRate3.mmUnitCurrency,
 					ForeignExchangeTerms26.mmUnitCurrency, ForeignExchangeTerms28.mmUnitCurrency, ForeignExchangeTerms27.mmUnitCurrency, ForeignExchangeTerms31.mmUnitCurrency, ForeignExchangeTerms33.mmUnitCurrency,
 					ForeignExchangeTerms32.mmUnitCurrency, FundOrderData5.mmUnitCurrency, FundOrderData6.mmUnitCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnitCurrency";
 			definition = "Currency in which the rate of exchange is expressed in a currency exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.";
@@ -890,9 +888,8 @@ public class CurrencyExchange {
 	};
 	protected CurrencyCode quotedCurrency;
 	/**
-	 * Currency into which the base currency is converted, in a currency
-	 * exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1046,8 +1043,8 @@ public class CurrencyExchange {
 					ForeignExchangeTerms22.mmQuotedCurrency, ForeignExchangeTerms23.mmQuotedCurrency, ForeignExchangeTerms24.mmQuotedCurrency, AgreedRate3.mmQuotedCurrency, ForeignExchangeTerms26.mmQuotedCurrency,
 					ForeignExchangeTerms28.mmQuotedCurrency, ForeignExchangeTerms27.mmQuotedCurrency, ForeignExchangeTerms31.mmQuotedCurrency, ForeignExchangeTerms33.mmQuotedCurrency, ForeignExchangeTerms32.mmQuotedCurrency,
 					FundOrderData5.mmQuotedCurrency, FundOrderData6.mmQuotedCurrency, OpeningConditions1.mmSettlementCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuotedCurrency";
 			definition = "Currency into which the base currency is converted, in a currency exchange.";
@@ -1066,10 +1063,8 @@ public class CurrencyExchange {
 	};
 	protected BaseOneRate exchangeRate;
 	/**
-	 * The value of one currency expressed in relation to another currency.
-	 * ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency
-	 * (ExchangeRate = UnitCurrency/QuotedCurrency).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1357,6 +1352,9 @@ public class CurrencyExchange {
 	 * {@linkplain com.tools20022.repository.entity.CurrencyExchange
 	 * CurrencyExchange}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92A::EXCH</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1390,8 +1388,9 @@ public class CurrencyExchange {
 					CurrencyConversion6.mmExchangeRate, CurrencyConversion6.mmInvertedExchangeRate, CurrencyConversion9.mmExchangeRate, CurrencyConversion9.mmInvertedExchangeRate, ForeignExchangeTerms33.mmExchangeRate,
 					ForeignExchangeTerms32.mmExchangeRate, CurrencyReference3.mmExchangeRateInformation, DirectDebitTransactionInformation21.mmExchangeRate, PaymentTransaction81.mmExchangeRate, PaymentTransaction76.mmExchangeRate,
 					FixingConditions1.mmExchangeRate, CurrencyConversion12.mmExchangeRate, CurrencyConversion12.mmInvertedExchangeRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92A::EXCH"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExchangeRate";
 			definition = "The value of one currency expressed in relation to another currency. ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).";
@@ -1410,8 +1409,8 @@ public class CurrencyExchange {
 	};
 	protected CurrencyAndAmount resultingAmount;
 	/**
-	 * Amount of money resulting from a foreign exchange transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1520,8 +1519,8 @@ public class CurrencyExchange {
 					Value.mmAlternateCurrencyItem, ForeignExchangeTerms8.mmResultingAmount, ForeignExchangeTerms9.mmResultingAmount, ForeignExchangeTerms17.mmResultingAmount, CurrencyConversion1.mmResultingAmount,
 					CurrencyConversion2.mmResultingAmount, CurrencyConversion4.mmResultingAmount, CurrencyConversion5.mmCalculatedAmount, ForeignExchangeTerms23.mmResultingAmount, ForeignExchangeTerms24.mmResultingAmount,
 					ForeignExchangeTerms28.mmResultingAmount, ForeignExchangeTerms27.mmResultingAmount, CurrencyConversion6.mmResultingAmount, CurrencyConversion9.mmResultingAmount, CurrencyConversion12.mmResultingAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResultingAmount";
 			definition = "Amount of money resulting from a foreign exchange transaction.";
@@ -1540,9 +1539,8 @@ public class CurrencyExchange {
 	};
 	protected CorporateActionEvent relatedCorporateActionEvent;
 	/**
-	 * Corporate action for which the offeror/issuer has specified an exchange
-	 * rate for the payment in a currency different from the announced one.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1578,8 +1576,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedCorporateActionEvent = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedCorporateActionEvent";
 			definition = "Corporate action for which the offeror/issuer has specified an exchange rate for the payment in a currency different from the announced one.";
@@ -1592,8 +1590,8 @@ public class CurrencyExchange {
 	};
 	protected SecuritiesBalance currencyExchangeForSecuritiesBalance;
 	/**
-	 * Specifies a securities balance which used a specific exchange rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1627,8 +1625,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmCurrencyExchangeForSecuritiesBalance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchangeForSecuritiesBalance";
 			definition = "Specifies a securities balance which used a specific exchange rate.";
@@ -1641,8 +1639,8 @@ public class CurrencyExchange {
 	};
 	protected ISODateTime quotationDate;
 	/**
-	 * Date and time at which an exchange rate is quoted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1756,8 +1754,8 @@ public class CurrencyExchange {
 					CurrencyConversion1.mmQuotationDate, CurrencyConversion2.mmQuotationDate, CurrencyConversion4.mmQuotationDate, DetailedAmount8.mmQuotationDate, ForeignExchangeTerms22.mmQuotationDate,
 					ForeignExchangeTerms26.mmQuotationDate, ForeignExchangeTerms31.mmQuotationDate, CurrencyConversion6.mmQuotationDate, CurrencyConversion9.mmQuotationDate, ForeignExchangeTerms33.mmQuotationDate,
 					ForeignExchangeTerms32.mmQuotationDate, CurrencyConversion12.mmQuotationDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuotationDate";
 			definition = "Date and time at which an exchange rate is quoted.";
@@ -1776,8 +1774,8 @@ public class CurrencyExchange {
 	};
 	protected List<com.tools20022.repository.entity.AssetHolding> calculatedAssetValue;
 	/**
-	 * Asset value calculated in a different currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1810,8 +1808,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmCalculatedAssetValue = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculatedAssetValue";
 			definition = "Asset value calculated in a different currency.";
@@ -1823,8 +1821,8 @@ public class CurrencyExchange {
 	};
 	protected CurrencyCode sourceCurrency;
 	/**
-	 * Currency of the amount to be converted in a currency conversion.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1907,8 +1905,8 @@ public class CurrencyExchange {
 					CurrencyReference2.mmSourceCurrency, CurrencyExchangeSearchCriteria.mmSourceCurrency, CurrencyExchange6.mmSourceCurrency, CurrencySourceTarget1.mmSourceCurrency, CurrencyConversion1.mmSourceCurrency,
 					CurrencyConversion2.mmSourceCurrency, CurrencyConversion4.mmSourceCurrency, CurrencyConversion5.mmSourceCurrency, CurrencyConversion6.mmSourceCurrency, CurrencyConversion9.mmSourceCurrency,
 					CurrencyReference3.mmSourceCurrency, CurrencyConversion12.mmSourceCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SourceCurrency";
 			definition = "Currency of the amount to be converted in a currency conversion.";
@@ -1927,9 +1925,8 @@ public class CurrencyExchange {
 	};
 	protected CurrencyCode targetCurrency;
 	/**
-	 * Currency into which an amount is to be converted in a currency
-	 * conversion.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2019,8 +2016,8 @@ public class CurrencyExchange {
 					CurrencyExchangeSearchCriteria.mmTargetCurrency, CurrencyExchange6.mmTargetCurrency, CurrencySourceTarget1.mmTargetCurrency, CurrencyConversion1.mmTargetCurrency, CurrencyConversion2.mmTargetCurrency,
 					ForeignExchange1.mmForeignCurrency, CurrencyConversion4.mmTargetCurrency, CurrencyConversion5.mmTargetCurrency, CashAccount33.mmSettlementCurrency, PaymentInstrument13.mmSettlementCurrency,
 					CurrencyConversion6.mmTargetCurrency, CurrencyConversion9.mmTargetCurrency, CurrencyReference3.mmTargetCurrency, CurrencyConversion12.mmTargetCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TargetCurrency";
 			definition = "Currency into which an amount is to be converted in a currency conversion.";
@@ -2039,8 +2036,8 @@ public class CurrencyExchange {
 	};
 	protected List<com.tools20022.repository.entity.CashEntry> currencyExchangeForCashEntry;
 	/**
-	 * Cash entry to which the currency exchange parameters apply.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2074,8 +2071,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmCurrencyExchangeForCashEntry = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchangeForCashEntry";
 			definition = "Cash entry to which the currency exchange parameters apply.";
@@ -2087,8 +2084,8 @@ public class CurrencyExchange {
 	};
 	protected Payment relatedPayment;
 	/**
-	 * Payment for which currency exchange parameters are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2121,8 +2118,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPayment";
 			definition = "Payment for which currency exchange parameters are specified.";
@@ -2135,8 +2132,8 @@ public class CurrencyExchange {
 	};
 	protected ExchangeRateTypeCode rateType;
 	/**
-	 * Specifies the type used to complete the currency exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2184,8 +2181,8 @@ public class CurrencyExchange {
 	public static final MMBusinessAttribute mmRateType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ExchangeRateInformation1.mmRateType, ExchangeRate1.mmRateType, RateType1Choice.mmCode, RateType1Choice.mmProprietary, RateType2Choice.mmCode, RateType2Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RateType";
 			definition = "Specifies the type used to complete the currency exchange.";
@@ -2204,8 +2201,8 @@ public class CurrencyExchange {
 	};
 	protected LiquidityManagementLimit relatedLimitManagement;
 	/**
-	 * Limit for which an exchange rate is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2239,8 +2236,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedLimitManagement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedLimitManagement";
 			definition = "Limit for which an exchange rate is specified.";
@@ -2253,9 +2250,8 @@ public class CurrencyExchange {
 	};
 	protected List<com.tools20022.repository.entity.FixingCondition> fixingConditions;
 	/**
-	 * Set of parameters used to calculate a rate for instance, the fixing rate
-	 * to be applied to a non-deliverable agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2290,8 +2286,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmFixingConditions = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FixingConditions";
 			definition = "Set of parameters used to calculate a rate for instance, the fixing rate to be applied to a non-deliverable agreement.";
@@ -2303,8 +2299,8 @@ public class CurrencyExchange {
 	};
 	protected Tax tax;
 	/**
-	 * Tax for which exchange information is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2336,8 +2332,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmTax = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Tax";
 			definition = "Tax for which exchange information is provided.";
@@ -2350,8 +2346,8 @@ public class CurrencyExchange {
 	};
 	protected Invoice relatedInvoice;
 	/**
-	 * Invoice for which currency exchange information is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2384,8 +2380,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedInvoice = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvoice";
 			definition = "Invoice for which currency exchange information is specified.";
@@ -2398,8 +2394,8 @@ public class CurrencyExchange {
 	};
 	protected TransactionAdministrator currencyExchangeForTransactionAdministrator;
 	/**
-	 * Set of applications which use currency exchange information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2434,8 +2430,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmCurrencyExchangeForTransactionAdministrator = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchangeForTransactionAdministrator";
 			definition = "Set of applications which use currency exchange information.";
@@ -2448,9 +2444,8 @@ public class CurrencyExchange {
 	};
 	protected Account reportedAccount;
 	/**
-	 * Specifies the account which uses an exchange rate to report entries and
-	 * balances.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2484,8 +2479,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmReportedAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportedAccount";
 			definition = "Specifies the account which uses an exchange rate to report entries and balances.";
@@ -2498,8 +2493,8 @@ public class CurrencyExchange {
 	};
 	protected CorporateActionCashEntitlement currencyExchangeForCorporateActionCashEntitlement;
 	/**
-	 * Cash entitlement for which an exchange rate is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2534,8 +2529,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmCurrencyExchangeForCorporateActionCashEntitlement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchangeForCorporateActionCashEntitlement";
 			definition = "Cash entitlement for which an exchange rate is specified.";
@@ -2548,9 +2543,8 @@ public class CurrencyExchange {
 	};
 	protected PaymentExecution paymentExecution;
 	/**
-	 * Payment execution process for which currrency exchange information is
-	 * provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2585,8 +2579,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmPaymentExecution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentExecution";
 			definition = "Payment execution process for which currrency exchange information is provided.";
@@ -2599,8 +2593,8 @@ public class CurrencyExchange {
 	};
 	protected Quote currencyExchangeForSecuritiesQuote;
 	/**
-	 * Quote which uses currency exchange information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2632,8 +2626,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmCurrencyExchangeForSecuritiesQuote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchangeForSecuritiesQuote";
 			definition = "Quote which uses currency exchange information.";
@@ -2646,8 +2640,8 @@ public class CurrencyExchange {
 	};
 	protected SecuritiesConversion currencyExchangeForSecuritiesConversion;
 	/**
-	 * Securities conversion for which a conversion currency is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2682,8 +2676,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmCurrencyExchangeForSecuritiesConversion = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchangeForSecuritiesConversion";
 			definition = "Securities conversion for which a conversion currency is specified.";
@@ -2696,8 +2690,8 @@ public class CurrencyExchange {
 	};
 	protected CashDistribution currencyExchangeForCashDistribution;
 	/**
-	 * Cash distribution for which a conversion currency is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2731,8 +2725,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmCurrencyExchangeForCashDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchangeForCashDistribution";
 			definition = "Cash distribution for which a conversion currency is specified.";
@@ -2745,8 +2739,8 @@ public class CurrencyExchange {
 	};
 	protected Adjustment adjustment;
 	/**
-	 * Fees or commission applied to the currency exchange.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2779,8 +2773,8 @@ public class CurrencyExchange {
 	 */
 	public static final MMBusinessAssociationEnd mmAdjustment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Adjustment";
 			definition = "Fees or commission applied to the currency exchange.\r\n";
@@ -2795,7 +2789,7 @@ public class CurrencyExchange {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyExchange";
 				definition = "Information needed to process a currency exchange or conversion.";
@@ -2844,215 +2838,242 @@ public class CurrencyExchange {
 		return originalAmount;
 	}
 
-	public void setOriginalAmount(CurrencyAndAmount originalAmount) {
-		this.originalAmount = originalAmount;
+	public CurrencyExchange setOriginalAmount(CurrencyAndAmount originalAmount) {
+		this.originalAmount = Objects.requireNonNull(originalAmount);
+		return this;
 	}
 
-	public ForeignExchangeTrade getCurrencyExchangeForForeignExchangeTrade() {
-		return currencyExchangeForForeignExchangeTrade;
+	public Optional<ForeignExchangeTrade> getCurrencyExchangeForForeignExchangeTrade() {
+		return currencyExchangeForForeignExchangeTrade == null ? Optional.empty() : Optional.of(currencyExchangeForForeignExchangeTrade);
 	}
 
-	public void setCurrencyExchangeForForeignExchangeTrade(com.tools20022.repository.entity.ForeignExchangeTrade currencyExchangeForForeignExchangeTrade) {
+	public CurrencyExchange setCurrencyExchangeForForeignExchangeTrade(com.tools20022.repository.entity.ForeignExchangeTrade currencyExchangeForForeignExchangeTrade) {
 		this.currencyExchangeForForeignExchangeTrade = currencyExchangeForForeignExchangeTrade;
+		return this;
 	}
 
 	public CurrencyCode getUnitCurrency() {
 		return unitCurrency;
 	}
 
-	public void setUnitCurrency(CurrencyCode unitCurrency) {
-		this.unitCurrency = unitCurrency;
+	public CurrencyExchange setUnitCurrency(CurrencyCode unitCurrency) {
+		this.unitCurrency = Objects.requireNonNull(unitCurrency);
+		return this;
 	}
 
 	public CurrencyCode getQuotedCurrency() {
 		return quotedCurrency;
 	}
 
-	public void setQuotedCurrency(CurrencyCode quotedCurrency) {
-		this.quotedCurrency = quotedCurrency;
+	public CurrencyExchange setQuotedCurrency(CurrencyCode quotedCurrency) {
+		this.quotedCurrency = Objects.requireNonNull(quotedCurrency);
+		return this;
 	}
 
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
 
-	public void setExchangeRate(BaseOneRate exchangeRate) {
-		this.exchangeRate = exchangeRate;
+	public CurrencyExchange setExchangeRate(BaseOneRate exchangeRate) {
+		this.exchangeRate = Objects.requireNonNull(exchangeRate);
+		return this;
 	}
 
 	public CurrencyAndAmount getResultingAmount() {
 		return resultingAmount;
 	}
 
-	public void setResultingAmount(CurrencyAndAmount resultingAmount) {
-		this.resultingAmount = resultingAmount;
+	public CurrencyExchange setResultingAmount(CurrencyAndAmount resultingAmount) {
+		this.resultingAmount = Objects.requireNonNull(resultingAmount);
+		return this;
 	}
 
 	public CorporateActionEvent getRelatedCorporateActionEvent() {
 		return relatedCorporateActionEvent;
 	}
 
-	public void setRelatedCorporateActionEvent(com.tools20022.repository.entity.CorporateActionEvent relatedCorporateActionEvent) {
-		this.relatedCorporateActionEvent = relatedCorporateActionEvent;
+	public CurrencyExchange setRelatedCorporateActionEvent(com.tools20022.repository.entity.CorporateActionEvent relatedCorporateActionEvent) {
+		this.relatedCorporateActionEvent = Objects.requireNonNull(relatedCorporateActionEvent);
+		return this;
 	}
 
 	public SecuritiesBalance getCurrencyExchangeForSecuritiesBalance() {
 		return currencyExchangeForSecuritiesBalance;
 	}
 
-	public void setCurrencyExchangeForSecuritiesBalance(com.tools20022.repository.entity.SecuritiesBalance currencyExchangeForSecuritiesBalance) {
-		this.currencyExchangeForSecuritiesBalance = currencyExchangeForSecuritiesBalance;
+	public CurrencyExchange setCurrencyExchangeForSecuritiesBalance(com.tools20022.repository.entity.SecuritiesBalance currencyExchangeForSecuritiesBalance) {
+		this.currencyExchangeForSecuritiesBalance = Objects.requireNonNull(currencyExchangeForSecuritiesBalance);
+		return this;
 	}
 
 	public ISODateTime getQuotationDate() {
 		return quotationDate;
 	}
 
-	public void setQuotationDate(ISODateTime quotationDate) {
-		this.quotationDate = quotationDate;
+	public CurrencyExchange setQuotationDate(ISODateTime quotationDate) {
+		this.quotationDate = Objects.requireNonNull(quotationDate);
+		return this;
 	}
 
 	public List<AssetHolding> getCalculatedAssetValue() {
-		return calculatedAssetValue;
+		return calculatedAssetValue == null ? calculatedAssetValue = new ArrayList<>() : calculatedAssetValue;
 	}
 
-	public void setCalculatedAssetValue(List<com.tools20022.repository.entity.AssetHolding> calculatedAssetValue) {
-		this.calculatedAssetValue = calculatedAssetValue;
+	public CurrencyExchange setCalculatedAssetValue(List<com.tools20022.repository.entity.AssetHolding> calculatedAssetValue) {
+		this.calculatedAssetValue = Objects.requireNonNull(calculatedAssetValue);
+		return this;
 	}
 
 	public CurrencyCode getSourceCurrency() {
 		return sourceCurrency;
 	}
 
-	public void setSourceCurrency(CurrencyCode sourceCurrency) {
-		this.sourceCurrency = sourceCurrency;
+	public CurrencyExchange setSourceCurrency(CurrencyCode sourceCurrency) {
+		this.sourceCurrency = Objects.requireNonNull(sourceCurrency);
+		return this;
 	}
 
 	public CurrencyCode getTargetCurrency() {
 		return targetCurrency;
 	}
 
-	public void setTargetCurrency(CurrencyCode targetCurrency) {
-		this.targetCurrency = targetCurrency;
+	public CurrencyExchange setTargetCurrency(CurrencyCode targetCurrency) {
+		this.targetCurrency = Objects.requireNonNull(targetCurrency);
+		return this;
 	}
 
 	public List<CashEntry> getCurrencyExchangeForCashEntry() {
-		return currencyExchangeForCashEntry;
+		return currencyExchangeForCashEntry == null ? currencyExchangeForCashEntry = new ArrayList<>() : currencyExchangeForCashEntry;
 	}
 
-	public void setCurrencyExchangeForCashEntry(List<com.tools20022.repository.entity.CashEntry> currencyExchangeForCashEntry) {
-		this.currencyExchangeForCashEntry = currencyExchangeForCashEntry;
+	public CurrencyExchange setCurrencyExchangeForCashEntry(List<com.tools20022.repository.entity.CashEntry> currencyExchangeForCashEntry) {
+		this.currencyExchangeForCashEntry = Objects.requireNonNull(currencyExchangeForCashEntry);
+		return this;
 	}
 
 	public Payment getRelatedPayment() {
 		return relatedPayment;
 	}
 
-	public void setRelatedPayment(com.tools20022.repository.entity.Payment relatedPayment) {
-		this.relatedPayment = relatedPayment;
+	public CurrencyExchange setRelatedPayment(com.tools20022.repository.entity.Payment relatedPayment) {
+		this.relatedPayment = Objects.requireNonNull(relatedPayment);
+		return this;
 	}
 
 	public ExchangeRateTypeCode getRateType() {
 		return rateType;
 	}
 
-	public void setRateType(ExchangeRateTypeCode rateType) {
-		this.rateType = rateType;
+	public CurrencyExchange setRateType(ExchangeRateTypeCode rateType) {
+		this.rateType = Objects.requireNonNull(rateType);
+		return this;
 	}
 
 	public LiquidityManagementLimit getRelatedLimitManagement() {
 		return relatedLimitManagement;
 	}
 
-	public void setRelatedLimitManagement(com.tools20022.repository.entity.LiquidityManagementLimit relatedLimitManagement) {
-		this.relatedLimitManagement = relatedLimitManagement;
+	public CurrencyExchange setRelatedLimitManagement(com.tools20022.repository.entity.LiquidityManagementLimit relatedLimitManagement) {
+		this.relatedLimitManagement = Objects.requireNonNull(relatedLimitManagement);
+		return this;
 	}
 
 	public List<FixingCondition> getFixingConditions() {
-		return fixingConditions;
+		return fixingConditions == null ? fixingConditions = new ArrayList<>() : fixingConditions;
 	}
 
-	public void setFixingConditions(List<com.tools20022.repository.entity.FixingCondition> fixingConditions) {
-		this.fixingConditions = fixingConditions;
+	public CurrencyExchange setFixingConditions(List<com.tools20022.repository.entity.FixingCondition> fixingConditions) {
+		this.fixingConditions = Objects.requireNonNull(fixingConditions);
+		return this;
 	}
 
 	public Tax getTax() {
 		return tax;
 	}
 
-	public void setTax(com.tools20022.repository.entity.Tax tax) {
-		this.tax = tax;
+	public CurrencyExchange setTax(com.tools20022.repository.entity.Tax tax) {
+		this.tax = Objects.requireNonNull(tax);
+		return this;
 	}
 
 	public Invoice getRelatedInvoice() {
 		return relatedInvoice;
 	}
 
-	public void setRelatedInvoice(com.tools20022.repository.entity.Invoice relatedInvoice) {
-		this.relatedInvoice = relatedInvoice;
+	public CurrencyExchange setRelatedInvoice(com.tools20022.repository.entity.Invoice relatedInvoice) {
+		this.relatedInvoice = Objects.requireNonNull(relatedInvoice);
+		return this;
 	}
 
 	public TransactionAdministrator getCurrencyExchangeForTransactionAdministrator() {
 		return currencyExchangeForTransactionAdministrator;
 	}
 
-	public void setCurrencyExchangeForTransactionAdministrator(com.tools20022.repository.entity.TransactionAdministrator currencyExchangeForTransactionAdministrator) {
-		this.currencyExchangeForTransactionAdministrator = currencyExchangeForTransactionAdministrator;
+	public CurrencyExchange setCurrencyExchangeForTransactionAdministrator(com.tools20022.repository.entity.TransactionAdministrator currencyExchangeForTransactionAdministrator) {
+		this.currencyExchangeForTransactionAdministrator = Objects.requireNonNull(currencyExchangeForTransactionAdministrator);
+		return this;
 	}
 
 	public Account getReportedAccount() {
 		return reportedAccount;
 	}
 
-	public void setReportedAccount(com.tools20022.repository.entity.Account reportedAccount) {
-		this.reportedAccount = reportedAccount;
+	public CurrencyExchange setReportedAccount(com.tools20022.repository.entity.Account reportedAccount) {
+		this.reportedAccount = Objects.requireNonNull(reportedAccount);
+		return this;
 	}
 
 	public CorporateActionCashEntitlement getCurrencyExchangeForCorporateActionCashEntitlement() {
 		return currencyExchangeForCorporateActionCashEntitlement;
 	}
 
-	public void setCurrencyExchangeForCorporateActionCashEntitlement(com.tools20022.repository.entity.CorporateActionCashEntitlement currencyExchangeForCorporateActionCashEntitlement) {
-		this.currencyExchangeForCorporateActionCashEntitlement = currencyExchangeForCorporateActionCashEntitlement;
+	public CurrencyExchange setCurrencyExchangeForCorporateActionCashEntitlement(com.tools20022.repository.entity.CorporateActionCashEntitlement currencyExchangeForCorporateActionCashEntitlement) {
+		this.currencyExchangeForCorporateActionCashEntitlement = Objects.requireNonNull(currencyExchangeForCorporateActionCashEntitlement);
+		return this;
 	}
 
 	public PaymentExecution getPaymentExecution() {
 		return paymentExecution;
 	}
 
-	public void setPaymentExecution(com.tools20022.repository.entity.PaymentExecution paymentExecution) {
-		this.paymentExecution = paymentExecution;
+	public CurrencyExchange setPaymentExecution(com.tools20022.repository.entity.PaymentExecution paymentExecution) {
+		this.paymentExecution = Objects.requireNonNull(paymentExecution);
+		return this;
 	}
 
-	public Quote getCurrencyExchangeForSecuritiesQuote() {
-		return currencyExchangeForSecuritiesQuote;
+	public Optional<Quote> getCurrencyExchangeForSecuritiesQuote() {
+		return currencyExchangeForSecuritiesQuote == null ? Optional.empty() : Optional.of(currencyExchangeForSecuritiesQuote);
 	}
 
-	public void setCurrencyExchangeForSecuritiesQuote(com.tools20022.repository.entity.Quote currencyExchangeForSecuritiesQuote) {
+	public CurrencyExchange setCurrencyExchangeForSecuritiesQuote(com.tools20022.repository.entity.Quote currencyExchangeForSecuritiesQuote) {
 		this.currencyExchangeForSecuritiesQuote = currencyExchangeForSecuritiesQuote;
+		return this;
 	}
 
-	public SecuritiesConversion getCurrencyExchangeForSecuritiesConversion() {
-		return currencyExchangeForSecuritiesConversion;
+	public Optional<SecuritiesConversion> getCurrencyExchangeForSecuritiesConversion() {
+		return currencyExchangeForSecuritiesConversion == null ? Optional.empty() : Optional.of(currencyExchangeForSecuritiesConversion);
 	}
 
-	public void setCurrencyExchangeForSecuritiesConversion(com.tools20022.repository.entity.SecuritiesConversion currencyExchangeForSecuritiesConversion) {
+	public CurrencyExchange setCurrencyExchangeForSecuritiesConversion(com.tools20022.repository.entity.SecuritiesConversion currencyExchangeForSecuritiesConversion) {
 		this.currencyExchangeForSecuritiesConversion = currencyExchangeForSecuritiesConversion;
+		return this;
 	}
 
-	public CashDistribution getCurrencyExchangeForCashDistribution() {
-		return currencyExchangeForCashDistribution;
+	public Optional<CashDistribution> getCurrencyExchangeForCashDistribution() {
+		return currencyExchangeForCashDistribution == null ? Optional.empty() : Optional.of(currencyExchangeForCashDistribution);
 	}
 
-	public void setCurrencyExchangeForCashDistribution(com.tools20022.repository.entity.CashDistribution currencyExchangeForCashDistribution) {
+	public CurrencyExchange setCurrencyExchangeForCashDistribution(com.tools20022.repository.entity.CashDistribution currencyExchangeForCashDistribution) {
 		this.currencyExchangeForCashDistribution = currencyExchangeForCashDistribution;
+		return this;
 	}
 
 	public Adjustment getAdjustment() {
 		return adjustment;
 	}
 
-	public void setAdjustment(com.tools20022.repository.entity.Adjustment adjustment) {
-		this.adjustment = adjustment;
+	public CurrencyExchange setAdjustment(com.tools20022.repository.entity.Adjustment adjustment) {
+		this.adjustment = Objects.requireNonNull(adjustment);
+		return this;
 	}
 }

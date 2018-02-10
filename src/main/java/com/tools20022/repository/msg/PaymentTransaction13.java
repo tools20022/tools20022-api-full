@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,16 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentTransaction13", propOrder = {"settlementAmount", "settlementDate", "paymentInstrument"})
 public class PaymentTransaction13 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SttlmAmt")
 	protected ActiveCurrencyAndAmount settlementAmount;
 	/**
-	 * Amount of money to be transferred between the debtor and creditor before
-	 * bank transaction charges.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +118,7 @@ public class PaymentTransaction13 {
 	public static final MMMessageAttribute mmSettlementAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
-			componentContext_lazy = () -> PaymentTransaction13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransaction13.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,11 +129,11 @@ public class PaymentTransaction13 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmDt")
 	protected ISODate settlementDate;
 	/**
-	 * Date on which the first agent expects the cash to be available to the
-	 * final agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +168,7 @@ public class PaymentTransaction13 {
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmValueDate;
-			componentContext_lazy = () -> PaymentTransaction13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransaction13.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,11 +179,11 @@ public class PaymentTransaction13 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtInstrm")
 	protected PaymentInstrument6Choice paymentInstrument;
 	/**
-	 * Choice between types of payment instrument, ie, cheque, credit transfer,
-	 * direct debit, investment account or payment card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -216,7 +217,7 @@ public class PaymentTransaction13 {
 	public static final MMMessageAssociationEnd mmPaymentInstrument = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Payment.mmObject();
-			componentContext_lazy = () -> PaymentTransaction13.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTransaction13.mmObject();
 			isDerived = false;
 			xmlTag = "PmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,9 +233,10 @@ public class PaymentTransaction13 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentTransaction13.mmSettlementAmount, PaymentTransaction13.mmSettlementDate, PaymentTransaction13.mmPaymentInstrument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTransaction13.mmSettlementAmount, com.tools20022.repository.msg.PaymentTransaction13.mmSettlementDate,
+						com.tools20022.repository.msg.PaymentTransaction13.mmPaymentInstrument);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentTransaction13";
 				definition = "Payment processes required to transfer cash from the debtor to the creditor.";
@@ -243,30 +245,30 @@ public class PaymentTransaction13 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SttlmAmt")
-	public ActiveCurrencyAndAmount getSettlementAmount() {
-		return settlementAmount;
+	public Optional<ActiveCurrencyAndAmount> getSettlementAmount() {
+		return settlementAmount == null ? Optional.empty() : Optional.of(settlementAmount);
 	}
 
-	public void setSettlementAmount(ActiveCurrencyAndAmount settlementAmount) {
+	public PaymentTransaction13 setSettlementAmount(ActiveCurrencyAndAmount settlementAmount) {
 		this.settlementAmount = settlementAmount;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDt")
-	public ISODate getSettlementDate() {
-		return settlementDate;
+	public Optional<ISODate> getSettlementDate() {
+		return settlementDate == null ? Optional.empty() : Optional.of(settlementDate);
 	}
 
-	public void setSettlementDate(ISODate settlementDate) {
+	public PaymentTransaction13 setSettlementDate(ISODate settlementDate) {
 		this.settlementDate = settlementDate;
+		return this;
 	}
 
-	@XmlElement(name = "PmtInstrm")
-	public PaymentInstrument6Choice getPaymentInstrument() {
-		return paymentInstrument;
+	public Optional<PaymentInstrument6Choice> getPaymentInstrument() {
+		return paymentInstrument == null ? Optional.empty() : Optional.of(paymentInstrument);
 	}
 
-	public void setPaymentInstrument(PaymentInstrument6Choice paymentInstrument) {
+	public PaymentTransaction13 setPaymentInstrument(PaymentInstrument6Choice paymentInstrument) {
 		this.paymentInstrument = paymentInstrument;
+		return this;
 	}
 }

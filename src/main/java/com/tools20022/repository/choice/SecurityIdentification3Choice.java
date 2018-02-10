@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AlternateSecurityIdentification1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -94,8 +95,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -115,21 +116,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "SecurityIdentification3Choice", propOrder = {"ISIN", "SEDOL", "CUSIP", "RIC", "tickerSymbol", "bloomberg", "CTA", "QUICK", "wertpapier", "dutch", "valoren", "sicovam", "belgian", "common", "otherProprietaryIdentification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "SecurityIdentification3Choice", propOrder = {"iSIN", "sEDOL", "cUSIP", "rIC", "tickerSymbol", "bloomberg", "cTA", "qUICK", "wertpapier", "dutch", "valoren", "sicovam", "belgian", "common", "otherProprietaryIdentification"})
 public class SecurityIdentification3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ISIN", required = true)
 	protected ISINIdentifier iSIN;
 	/**
-	 * International Securities Identification Number (ISIN). A numbering system
-	 * designed by the United Nation's International Organisation for
-	 * Standardisation (ISO). The ISIN is composed of a 2-character prefix
-	 * representing the country of issue, followed by the national security
-	 * number (if one exists), and a check digit. Each country has a national
-	 * numbering agency that assigns ISIN numbers for securities in that
-	 * country.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +169,7 @@ public class SecurityIdentification3Choice {
 	public static final MMMessageAttribute mmISIN = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
-			componentContext_lazy = () -> SecurityIdentification3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ISIN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,12 +181,11 @@ public class SecurityIdentification3Choice {
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "SEDOL", required = true)
 	protected SEDOLIdentifier sEDOL;
 	/**
-	 * Stock Exchange Daily Official List (SEDOL) number. A code used by the
-	 * London Stock Exchange to identify foreign stocks, especially those that
-	 * aren't actively traded in the US and don't have a CUSIP number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -234,7 +229,7 @@ public class SecurityIdentification3Choice {
 	public static final MMMessageAttribute mmSEDOL = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSEDOL;
-			componentContext_lazy = () -> SecurityIdentification3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SEDOL";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -246,14 +241,11 @@ public class SecurityIdentification3Choice {
 			simpleType_lazy = () -> SEDOLIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "CUSIP", required = true)
 	protected CUSIPIdentifier cUSIP;
 	/**
-	 * Committee on Uniform Securities and Identification Procedures (CUSIP).
-	 * The standards body that created and maintains the securities
-	 * classification system in the US. The CUSIP is composed of a 9-character
-	 * number that uniquely identifies a particular security. Non-US securities
-	 * have a similar number called the CINS number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,7 +289,7 @@ public class SecurityIdentification3Choice {
 	public static final MMMessageAttribute mmCUSIP = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmCUSIP;
-			componentContext_lazy = () -> SecurityIdentification3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CUSIP";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,14 +301,11 @@ public class SecurityIdentification3Choice {
 			simpleType_lazy = () -> CUSIPIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "RIC", required = true)
 	protected RICIdentifier rIC;
 	/**
-	 * Reuters Identification Code (RIC). A numbering system used within the
-	 * Reuters system to identify instruments worldwide. The RIC contains an
-	 * X-character market specific code (can be the CUSIP or EPIC codes)
-	 * followed by a full stop, then the two-digit ISO country code, eg, IBM in
-	 * UK is IBM.UK.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -360,7 +349,7 @@ public class SecurityIdentification3Choice {
 	public static final MMMessageAttribute mmRIC = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmRIC;
-			componentContext_lazy = () -> SecurityIdentification3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RIC";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -372,12 +361,11 @@ public class SecurityIdentification3Choice {
 			simpleType_lazy = () -> RICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "TckrSymb", required = true)
 	protected TickerIdentifier tickerSymbol;
 	/**
-	 * Letters that identify a stock traded on a stock exchange. The Ticker
-	 * Symbol is a short and convenient way of identifying a stock, eg, RTR.L
-	 * for Reuters quoted in London.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -421,7 +409,7 @@ public class SecurityIdentification3Choice {
 	public static final MMMessageAttribute mmTickerSymbol = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmTickerSymbol;
-			componentContext_lazy = () -> SecurityIdentification3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TckrSymb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -433,10 +421,11 @@ public class SecurityIdentification3Choice {
 			simpleType_lazy = () -> TickerIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Blmbrg", required = true)
 	protected BloombergIdentifier bloomberg;
 	/**
-	 * Identifier of a security assigned by the Bloomberg organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -479,7 +468,7 @@ public class SecurityIdentification3Choice {
 	public static final MMMessageAttribute mmBloomberg = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmBloomberg;
-			componentContext_lazy = () -> SecurityIdentification3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Blmbrg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -491,10 +480,11 @@ public class SecurityIdentification3Choice {
 			simpleType_lazy = () -> BloombergIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "CTA", required = true)
 	protected ConsolidatedTapeAssociationIdentifier cTA;
 	/**
-	 * Identifier of a security assigned by the Consolidated Tape Association.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -538,7 +528,7 @@ public class SecurityIdentification3Choice {
 	public static final MMMessageAttribute mmCTA = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmCTA;
-			componentContext_lazy = () -> SecurityIdentification3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CTA";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -550,11 +540,11 @@ public class SecurityIdentification3Choice {
 			simpleType_lazy = () -> ConsolidatedTapeAssociationIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "QUICK", required = true)
 	protected QUICKIdentifier qUICK;
 	/**
-	 * Identifier of a security assigned by the Japanese QUICK identification
-	 * scheme for financial instruments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -598,7 +588,7 @@ public class SecurityIdentification3Choice {
 	public static final MMMessageAttribute mmQUICK = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmQUICK;
-			componentContext_lazy = () -> SecurityIdentification3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QUICK";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -610,13 +600,11 @@ public class SecurityIdentification3Choice {
 			simpleType_lazy = () -> QUICKIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Wrtppr", required = true)
 	protected WertpapierIdentifier wertpapier;
 	/**
-	 * Wertpapier Kenn-nummer. A number issued in Germany by the Wertpapier
-	 * Mitteilungen. The Wertpapier Kenn-nummer, sometimes called WPK, contains
-	 * 6-digits, but no check digit. There are different ranges of numbers
-	 * representing different classes of securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -660,7 +648,7 @@ public class SecurityIdentification3Choice {
 	public static final MMMessageAttribute mmWertpapier = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmWertpapier;
-			componentContext_lazy = () -> SecurityIdentification3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Wrtppr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -672,10 +660,11 @@ public class SecurityIdentification3Choice {
 			simpleType_lazy = () -> WertpapierIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Dtch", required = true)
 	protected DutchIdentifier dutch;
 	/**
-	 * Identifier for Dutch securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -717,7 +706,7 @@ public class SecurityIdentification3Choice {
 	public static final MMMessageAttribute mmDutch = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmDutch;
-			componentContext_lazy = () -> SecurityIdentification3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dtch";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -729,11 +718,11 @@ public class SecurityIdentification3Choice {
 			simpleType_lazy = () -> DutchIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Vlrn", required = true)
 	protected ValorenIdentifier valoren;
 	/**
-	 * Identifier for Swiss securities assigned by Telekurs Financial, the Swiss
-	 * numbering agency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -777,7 +766,7 @@ public class SecurityIdentification3Choice {
 	public static final MMMessageAttribute mmValoren = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmValoren;
-			componentContext_lazy = () -> SecurityIdentification3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Vlrn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -789,12 +778,11 @@ public class SecurityIdentification3Choice {
 			simpleType_lazy = () -> ValorenIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "SCVM", required = true)
 	protected SicovamIdentifier sicovam;
 	/**
-	 * Identifier for French securities assigned by the Societe
-	 * Interprofessionnelle Pour La Compensation des Valeurs Mobilieres in
-	 * France. The Sicovam is composed of 5-digits.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -838,7 +826,7 @@ public class SecurityIdentification3Choice {
 	public static final MMMessageAttribute mmSicovam = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSicovam;
-			componentContext_lazy = () -> SecurityIdentification3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SCVM";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -850,10 +838,11 @@ public class SecurityIdentification3Choice {
 			simpleType_lazy = () -> SicovamIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Belgn", required = true)
 	protected BelgianIdentifier belgian;
 	/**
-	 * Identifier for Belgian securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -895,7 +884,7 @@ public class SecurityIdentification3Choice {
 	public static final MMMessageAttribute mmBelgian = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmBelgian;
-			componentContext_lazy = () -> SecurityIdentification3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Belgn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -907,11 +896,11 @@ public class SecurityIdentification3Choice {
 			simpleType_lazy = () -> BelgianIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Cmon", required = true)
 	protected EuroclearClearstreamIdentifier common;
 	/**
-	 * Identifier of securities issued in Luxembourg. The common code is a
-	 * 9-digit code that replaces the CEDEL (Clearstream) and Euroclear codes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -955,7 +944,7 @@ public class SecurityIdentification3Choice {
 	public static final MMMessageAttribute mmCommon = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmCommon;
-			componentContext_lazy = () -> SecurityIdentification3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cmon";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -967,11 +956,11 @@ public class SecurityIdentification3Choice {
 			simpleType_lazy = () -> EuroclearClearstreamIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrPrtryId", required = true)
 	protected AlternateSecurityIdentification1 otherProprietaryIdentification;
 	/**
-	 * Proprietary identification of a security assigned by an institution or
-	 * organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1015,7 +1004,7 @@ public class SecurityIdentification3Choice {
 	public static final MMMessageAttribute mmOtherProprietaryIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesIdentification.mmObject();
-			componentContext_lazy = () -> SecurityIdentification3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecurityIdentification3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPrtryId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1031,12 +1020,16 @@ public class SecurityIdentification3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityIdentification3Choice.mmISIN, SecurityIdentification3Choice.mmSEDOL, SecurityIdentification3Choice.mmCUSIP, SecurityIdentification3Choice.mmRIC,
-						SecurityIdentification3Choice.mmTickerSymbol, SecurityIdentification3Choice.mmBloomberg, SecurityIdentification3Choice.mmCTA, SecurityIdentification3Choice.mmQUICK, SecurityIdentification3Choice.mmWertpapier,
-						SecurityIdentification3Choice.mmDutch, SecurityIdentification3Choice.mmValoren, SecurityIdentification3Choice.mmSicovam, SecurityIdentification3Choice.mmBelgian, SecurityIdentification3Choice.mmCommon,
-						SecurityIdentification3Choice.mmOtherProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecurityIdentification3Choice.mmISIN, com.tools20022.repository.choice.SecurityIdentification3Choice.mmSEDOL,
+						com.tools20022.repository.choice.SecurityIdentification3Choice.mmCUSIP, com.tools20022.repository.choice.SecurityIdentification3Choice.mmRIC,
+						com.tools20022.repository.choice.SecurityIdentification3Choice.mmTickerSymbol, com.tools20022.repository.choice.SecurityIdentification3Choice.mmBloomberg,
+						com.tools20022.repository.choice.SecurityIdentification3Choice.mmCTA, com.tools20022.repository.choice.SecurityIdentification3Choice.mmQUICK,
+						com.tools20022.repository.choice.SecurityIdentification3Choice.mmWertpapier, com.tools20022.repository.choice.SecurityIdentification3Choice.mmDutch,
+						com.tools20022.repository.choice.SecurityIdentification3Choice.mmValoren, com.tools20022.repository.choice.SecurityIdentification3Choice.mmSicovam,
+						com.tools20022.repository.choice.SecurityIdentification3Choice.mmBelgian, com.tools20022.repository.choice.SecurityIdentification3Choice.mmCommon,
+						com.tools20022.repository.choice.SecurityIdentification3Choice.mmOtherProprietaryIdentification);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityIdentification3Choice";
 				definition = "Choice between formats for the identification of a financial instrument.";
@@ -1046,138 +1039,138 @@ public class SecurityIdentification3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ISIN", required = true)
 	public ISINIdentifier getISIN() {
 		return iSIN;
 	}
 
-	public void setISIN(ISINIdentifier iSIN) {
-		this.iSIN = iSIN;
+	public SecurityIdentification3Choice setISIN(ISINIdentifier iSIN) {
+		this.iSIN = Objects.requireNonNull(iSIN);
+		return this;
 	}
 
-	@XmlElement(name = "SEDOL", required = true)
 	public SEDOLIdentifier getSEDOL() {
 		return sEDOL;
 	}
 
-	public void setSEDOL(SEDOLIdentifier sEDOL) {
-		this.sEDOL = sEDOL;
+	public SecurityIdentification3Choice setSEDOL(SEDOLIdentifier sEDOL) {
+		this.sEDOL = Objects.requireNonNull(sEDOL);
+		return this;
 	}
 
-	@XmlElement(name = "CUSIP", required = true)
 	public CUSIPIdentifier getCUSIP() {
 		return cUSIP;
 	}
 
-	public void setCUSIP(CUSIPIdentifier cUSIP) {
-		this.cUSIP = cUSIP;
+	public SecurityIdentification3Choice setCUSIP(CUSIPIdentifier cUSIP) {
+		this.cUSIP = Objects.requireNonNull(cUSIP);
+		return this;
 	}
 
-	@XmlElement(name = "RIC", required = true)
 	public RICIdentifier getRIC() {
 		return rIC;
 	}
 
-	public void setRIC(RICIdentifier rIC) {
-		this.rIC = rIC;
+	public SecurityIdentification3Choice setRIC(RICIdentifier rIC) {
+		this.rIC = Objects.requireNonNull(rIC);
+		return this;
 	}
 
-	@XmlElement(name = "TckrSymb", required = true)
 	public TickerIdentifier getTickerSymbol() {
 		return tickerSymbol;
 	}
 
-	public void setTickerSymbol(TickerIdentifier tickerSymbol) {
-		this.tickerSymbol = tickerSymbol;
+	public SecurityIdentification3Choice setTickerSymbol(TickerIdentifier tickerSymbol) {
+		this.tickerSymbol = Objects.requireNonNull(tickerSymbol);
+		return this;
 	}
 
-	@XmlElement(name = "Blmbrg", required = true)
 	public BloombergIdentifier getBloomberg() {
 		return bloomberg;
 	}
 
-	public void setBloomberg(BloombergIdentifier bloomberg) {
-		this.bloomberg = bloomberg;
+	public SecurityIdentification3Choice setBloomberg(BloombergIdentifier bloomberg) {
+		this.bloomberg = Objects.requireNonNull(bloomberg);
+		return this;
 	}
 
-	@XmlElement(name = "CTA", required = true)
 	public ConsolidatedTapeAssociationIdentifier getCTA() {
 		return cTA;
 	}
 
-	public void setCTA(ConsolidatedTapeAssociationIdentifier cTA) {
-		this.cTA = cTA;
+	public SecurityIdentification3Choice setCTA(ConsolidatedTapeAssociationIdentifier cTA) {
+		this.cTA = Objects.requireNonNull(cTA);
+		return this;
 	}
 
-	@XmlElement(name = "QUICK", required = true)
 	public QUICKIdentifier getQUICK() {
 		return qUICK;
 	}
 
-	public void setQUICK(QUICKIdentifier qUICK) {
-		this.qUICK = qUICK;
+	public SecurityIdentification3Choice setQUICK(QUICKIdentifier qUICK) {
+		this.qUICK = Objects.requireNonNull(qUICK);
+		return this;
 	}
 
-	@XmlElement(name = "Wrtppr", required = true)
 	public WertpapierIdentifier getWertpapier() {
 		return wertpapier;
 	}
 
-	public void setWertpapier(WertpapierIdentifier wertpapier) {
-		this.wertpapier = wertpapier;
+	public SecurityIdentification3Choice setWertpapier(WertpapierIdentifier wertpapier) {
+		this.wertpapier = Objects.requireNonNull(wertpapier);
+		return this;
 	}
 
-	@XmlElement(name = "Dtch", required = true)
 	public DutchIdentifier getDutch() {
 		return dutch;
 	}
 
-	public void setDutch(DutchIdentifier dutch) {
-		this.dutch = dutch;
+	public SecurityIdentification3Choice setDutch(DutchIdentifier dutch) {
+		this.dutch = Objects.requireNonNull(dutch);
+		return this;
 	}
 
-	@XmlElement(name = "Vlrn", required = true)
 	public ValorenIdentifier getValoren() {
 		return valoren;
 	}
 
-	public void setValoren(ValorenIdentifier valoren) {
-		this.valoren = valoren;
+	public SecurityIdentification3Choice setValoren(ValorenIdentifier valoren) {
+		this.valoren = Objects.requireNonNull(valoren);
+		return this;
 	}
 
-	@XmlElement(name = "SCVM", required = true)
 	public SicovamIdentifier getSicovam() {
 		return sicovam;
 	}
 
-	public void setSicovam(SicovamIdentifier sicovam) {
-		this.sicovam = sicovam;
+	public SecurityIdentification3Choice setSicovam(SicovamIdentifier sicovam) {
+		this.sicovam = Objects.requireNonNull(sicovam);
+		return this;
 	}
 
-	@XmlElement(name = "Belgn", required = true)
 	public BelgianIdentifier getBelgian() {
 		return belgian;
 	}
 
-	public void setBelgian(BelgianIdentifier belgian) {
-		this.belgian = belgian;
+	public SecurityIdentification3Choice setBelgian(BelgianIdentifier belgian) {
+		this.belgian = Objects.requireNonNull(belgian);
+		return this;
 	}
 
-	@XmlElement(name = "Cmon", required = true)
 	public EuroclearClearstreamIdentifier getCommon() {
 		return common;
 	}
 
-	public void setCommon(EuroclearClearstreamIdentifier common) {
-		this.common = common;
+	public SecurityIdentification3Choice setCommon(EuroclearClearstreamIdentifier common) {
+		this.common = Objects.requireNonNull(common);
+		return this;
 	}
 
-	@XmlElement(name = "OthrPrtryId", required = true)
 	public AlternateSecurityIdentification1 getOtherProprietaryIdentification() {
 		return otherProprietaryIdentification;
 	}
 
-	public void setOtherProprietaryIdentification(AlternateSecurityIdentification1 otherProprietaryIdentification) {
-		this.otherProprietaryIdentification = otherProprietaryIdentification;
+	public SecurityIdentification3Choice setOtherProprietaryIdentification(AlternateSecurityIdentification1 otherProprietaryIdentification) {
+		this.otherProprietaryIdentification = Objects.requireNonNull(otherProprietaryIdentification);
+		return this;
 	}
 }

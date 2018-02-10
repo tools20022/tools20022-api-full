@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the foreign currency payment is offered.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode#mmOffered
- * ForeignCurrencyPaymentElectionCode.mmOffered}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode#Offered
+ * ForeignCurrencyPaymentElectionCode.Offered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode#mmNotOffered
- * ForeignCurrencyPaymentElectionCode.mmNotOffered}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode#NotOffered
+ * ForeignCurrencyPaymentElectionCode.NotOffered}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode#mmMandatory
- * ForeignCurrencyPaymentElectionCode.mmMandatory}</li>
+ * {@linkplain com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode#Mandatory
+ * ForeignCurrencyPaymentElectionCode.Mandatory}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies whether the foreign currency payment is offered."</li>
  * </ul>
  */
-public class ForeignCurrencyPaymentElectionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ForeignCurrencyPaymentElectionCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,12 +101,12 @@ public class ForeignCurrencyPaymentElectionCode {
 	 * definition} = "Foreign currency payment is offered."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOffered = new MMCode() {
+	public static final ForeignCurrencyPaymentElectionCode Offered = new ForeignCurrencyPaymentElectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offered";
 			definition = "Foreign currency payment is offered.";
-			owner_lazy = () -> ForeignCurrencyPaymentElectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode.mmObject();
 			codeName = "OFFD";
 		}
 	};
@@ -125,12 +131,12 @@ public class ForeignCurrencyPaymentElectionCode {
 	 * definition} = "Foreign currency payment is not offered."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotOffered = new MMCode() {
+	public static final ForeignCurrencyPaymentElectionCode NotOffered = new ForeignCurrencyPaymentElectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotOffered";
 			definition = "Foreign currency payment is not offered.";
-			owner_lazy = () -> ForeignCurrencyPaymentElectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode.mmObject();
 			codeName = "NOFD";
 		}
 	};
@@ -155,28 +161,60 @@ public class ForeignCurrencyPaymentElectionCode {
 	 * definition} = "Foreign currency payment is mandatory."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMandatory = new MMCode() {
+	public static final ForeignCurrencyPaymentElectionCode Mandatory = new ForeignCurrencyPaymentElectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandatory";
 			definition = "Foreign currency payment is mandatory.";
-			owner_lazy = () -> ForeignCurrencyPaymentElectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode.mmObject();
 			codeName = "MAND";
 		}
 	};
+	final static private LinkedHashMap<String, ForeignCurrencyPaymentElectionCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ForeignCurrencyPaymentElectionCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("OFFD");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignCurrencyPaymentElectionCode";
 				definition = "Specifies whether the foreign currency payment is offered.";
-				code_lazy = () -> Arrays.asList(ForeignCurrencyPaymentElectionCode.mmOffered, ForeignCurrencyPaymentElectionCode.mmNotOffered, ForeignCurrencyPaymentElectionCode.mmMandatory);
 				derivation_lazy = () -> Arrays.asList(ForeignCurrencyPaymentElection1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode.Offered, com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode.NotOffered,
+						com.tools20022.repository.codeset.ForeignCurrencyPaymentElectionCode.Mandatory);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Offered.getCodeName().get(), Offered);
+		codesByName.put(NotOffered.getCodeName().get(), NotOffered);
+		codesByName.put(Mandatory.getCodeName().get(), Mandatory);
+	}
+
+	public static ForeignCurrencyPaymentElectionCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ForeignCurrencyPaymentElectionCode[] values() {
+		ForeignCurrencyPaymentElectionCode[] values = new ForeignCurrencyPaymentElectionCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ForeignCurrencyPaymentElectionCode> {
+		@Override
+		public ForeignCurrencyPaymentElectionCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ForeignCurrencyPaymentElectionCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

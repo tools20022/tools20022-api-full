@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,18 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "FinancialInstrumentAttributesSD4", propOrder = {"CSDDisbursedSecurityIdentification", "CSDDisbursedSecurityDescription", "CSDDisbursedFractionalSecurityIdentification"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "FinancialInstrumentAttributesSD4", propOrder = {"cSDDisbursedSecurityIdentification", "cSDDisbursedSecurityDescription", "cSDDisbursedFractionalSecurityIdentification"})
 public class FinancialInstrumentAttributesSD4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CSDDsbrsdSctyId")
 	protected SecurityIdentification15 cSDDisbursedSecurityIdentification;
 	/**
-	 * Security identification that a CSD (for example in the US - DTC, The
-	 * Depository Trust Corporation) will distribute as part of the entitlement.
-	 * This can be the DTC contra CUSIP in cases where the payout security is a
-	 * contra CUSIP.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -95,6 +95,9 @@ public class FinancialInstrumentAttributesSD4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CSDDsbrsdSctyId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Disbursed Security ID</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -109,9 +112,10 @@ public class FinancialInstrumentAttributesSD4 {
 	 */
 	public static final MMMessageAttribute mmCSDDisbursedSecurityIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.mmObject();
 			isDerived = false;
 			xmlTag = "CSDDsbrsdSctyId";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Disbursed Security ID"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDDisbursedSecurityIdentification";
 			definition = "Security identification that a CSD (for example in the US -  DTC, The Depository Trust Corporation) will distribute as part of the entitlement. This can be the DTC contra CUSIP in cases where the payout security is a contra CUSIP.";
@@ -120,10 +124,11 @@ public class FinancialInstrumentAttributesSD4 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
 		}
 	};
+	@XmlElement(name = "CSDDsbrsdSctyDesc")
 	protected Max140Text cSDDisbursedSecurityDescription;
 	/**
-	 * DTC (The Depository Trust Corporation) disbursed security description.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -138,6 +143,10 @@ public class FinancialInstrumentAttributesSD4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CSDDsbrsdSctyDesc"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Security Description (DTC Disbursed
+	 * Security)</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -151,9 +160,10 @@ public class FinancialInstrumentAttributesSD4 {
 	 */
 	public static final MMMessageAttribute mmCSDDisbursedSecurityDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.mmObject();
 			isDerived = false;
 			xmlTag = "CSDDsbrsdSctyDesc";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Security Description (DTC Disbursed Security)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDDisbursedSecurityDescription";
 			definition = "DTC (The Depository Trust Corporation) disbursed security description.";
@@ -162,13 +172,11 @@ public class FinancialInstrumentAttributesSD4 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CSDDsbrsdFrctnlSctyId")
 	protected SecurityIdentification15 cSDDisbursedFractionalSecurityIdentification;
 	/**
-	 * Security identification of the security that will be distributed in
-	 * fractions by the CSD (for example in the US - DTC, The Depository Trust
-	 * Corporation) DTC (The Depository Trust Corporation) as a result of a
-	 * corporate action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -184,6 +192,9 @@ public class FinancialInstrumentAttributesSD4 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CSDDsbrsdFrctnlSctyId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Disbursed Fractional Security ID</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -198,9 +209,10 @@ public class FinancialInstrumentAttributesSD4 {
 	 */
 	public static final MMMessageAttribute mmCSDDisbursedFractionalSecurityIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.mmObject();
 			isDerived = false;
 			xmlTag = "CSDDsbrsdFrctnlSctyId";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Disbursed Fractional Security ID"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDDisbursedFractionalSecurityIdentification";
 			definition = "Security identification of the security that will be distributed in fractions by the CSD (for example in the US -  DTC, The Depository Trust Corporation) DTC (The Depository Trust Corporation) as a result of a corporate action.";
@@ -213,9 +225,9 @@ public class FinancialInstrumentAttributesSD4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD4.mmCSDDisbursedSecurityIdentification, FinancialInstrumentAttributesSD4.mmCSDDisbursedSecurityDescription,
-						FinancialInstrumentAttributesSD4.mmCSDDisbursedFractionalSecurityIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.mmCSDDisbursedSecurityIdentification,
+						com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.mmCSDDisbursedSecurityDescription, com.tools20022.repository.msg.FinancialInstrumentAttributesSD4.mmCSDDisbursedFractionalSecurityIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAttributesSD4";
 				definition = "Provides additional information regarding security that will being distributed as part of entitlement.";
@@ -224,30 +236,30 @@ public class FinancialInstrumentAttributesSD4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CSDDsbrsdSctyId")
-	public SecurityIdentification15 getCSDDisbursedSecurityIdentification() {
-		return cSDDisbursedSecurityIdentification;
+	public Optional<SecurityIdentification15> getCSDDisbursedSecurityIdentification() {
+		return cSDDisbursedSecurityIdentification == null ? Optional.empty() : Optional.of(cSDDisbursedSecurityIdentification);
 	}
 
-	public void setCSDDisbursedSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 cSDDisbursedSecurityIdentification) {
+	public FinancialInstrumentAttributesSD4 setCSDDisbursedSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 cSDDisbursedSecurityIdentification) {
 		this.cSDDisbursedSecurityIdentification = cSDDisbursedSecurityIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CSDDsbrsdSctyDesc")
-	public Max140Text getCSDDisbursedSecurityDescription() {
-		return cSDDisbursedSecurityDescription;
+	public Optional<Max140Text> getCSDDisbursedSecurityDescription() {
+		return cSDDisbursedSecurityDescription == null ? Optional.empty() : Optional.of(cSDDisbursedSecurityDescription);
 	}
 
-	public void setCSDDisbursedSecurityDescription(Max140Text cSDDisbursedSecurityDescription) {
+	public FinancialInstrumentAttributesSD4 setCSDDisbursedSecurityDescription(Max140Text cSDDisbursedSecurityDescription) {
 		this.cSDDisbursedSecurityDescription = cSDDisbursedSecurityDescription;
+		return this;
 	}
 
-	@XmlElement(name = "CSDDsbrsdFrctnlSctyId")
-	public SecurityIdentification15 getCSDDisbursedFractionalSecurityIdentification() {
-		return cSDDisbursedFractionalSecurityIdentification;
+	public Optional<SecurityIdentification15> getCSDDisbursedFractionalSecurityIdentification() {
+		return cSDDisbursedFractionalSecurityIdentification == null ? Optional.empty() : Optional.of(cSDDisbursedFractionalSecurityIdentification);
 	}
 
-	public void setCSDDisbursedFractionalSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 cSDDisbursedFractionalSecurityIdentification) {
+	public FinancialInstrumentAttributesSD4 setCSDDisbursedFractionalSecurityIdentification(com.tools20022.repository.msg.SecurityIdentification15 cSDDisbursedFractionalSecurityIdentification) {
 		this.cSDDisbursedFractionalSecurityIdentification = cSDDisbursedFractionalSecurityIdentification;
+		return this;
 	}
 }

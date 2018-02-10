@@ -25,9 +25,11 @@ import com.tools20022.repository.codeset.OrderConfirmationStatus1Code;
 import com.tools20022.repository.entity.SecuritiesOrderStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ConfirmationRejectedStatus2;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Status of the confirmation."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ConfirmationStatus1Choice", propOrder = {"confirmationRejected", "amendmentRejected", "status"})
 public class ConfirmationStatus1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ConfRjctd", required = true)
 	protected List<ConfirmationRejectedStatus2> confirmationRejected;
 	/**
-	 * Status of the order confirmation is rejected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -112,7 +115,7 @@ public class ConfirmationStatus1Choice {
 	public static final MMMessageAssociationEnd mmConfirmationRejected = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConfirmationRejectedStatusReason;
-			componentContext_lazy = () -> ConfirmationStatus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ConfirmationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ConfRjctd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +127,11 @@ public class ConfirmationStatus1Choice {
 			type_lazy = () -> ConfirmationRejectedStatus2.mmObject();
 		}
 	};
+	@XmlElement(name = "AmdmntRjctd", required = true)
 	protected List<ConfirmationRejectedStatus2> amendmentRejected;
 	/**
-	 * Status of the order confirmation amendment is rejected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -160,7 +164,7 @@ public class ConfirmationStatus1Choice {
 	public static final MMMessageAssociationEnd mmAmendmentRejected = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrderStatus.mmObject();
-			componentContext_lazy = () -> ConfirmationStatus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ConfirmationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntRjctd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,12 +176,11 @@ public class ConfirmationStatus1Choice {
 			type_lazy = () -> ConfirmationRejectedStatus2.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected OrderConfirmationStatus1Code status;
 	/**
-	 * Status of the order confirmation is accepted or received or sent to next
-	 * party or there is a communication problem with next party. There is no
-	 * reason attached.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,7 +216,7 @@ public class ConfirmationStatus1Choice {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConfirmationStatus;
-			componentContext_lazy = () -> ConfirmationStatus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ConfirmationStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,9 +231,10 @@ public class ConfirmationStatus1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ConfirmationStatus1Choice.mmConfirmationRejected, ConfirmationStatus1Choice.mmAmendmentRejected, ConfirmationStatus1Choice.mmStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ConfirmationStatus1Choice.mmConfirmationRejected, com.tools20022.repository.choice.ConfirmationStatus1Choice.mmAmendmentRejected,
+						com.tools20022.repository.choice.ConfirmationStatus1Choice.mmStatus);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationStatus1Choice";
 				definition = "Status of the confirmation.";
@@ -239,30 +243,30 @@ public class ConfirmationStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ConfRjctd", required = true)
 	public List<ConfirmationRejectedStatus2> getConfirmationRejected() {
-		return confirmationRejected;
+		return confirmationRejected == null ? confirmationRejected = new ArrayList<>() : confirmationRejected;
 	}
 
-	public void setConfirmationRejected(List<ConfirmationRejectedStatus2> confirmationRejected) {
-		this.confirmationRejected = confirmationRejected;
+	public ConfirmationStatus1Choice setConfirmationRejected(List<ConfirmationRejectedStatus2> confirmationRejected) {
+		this.confirmationRejected = Objects.requireNonNull(confirmationRejected);
+		return this;
 	}
 
-	@XmlElement(name = "AmdmntRjctd", required = true)
 	public List<ConfirmationRejectedStatus2> getAmendmentRejected() {
-		return amendmentRejected;
+		return amendmentRejected == null ? amendmentRejected = new ArrayList<>() : amendmentRejected;
 	}
 
-	public void setAmendmentRejected(List<ConfirmationRejectedStatus2> amendmentRejected) {
-		this.amendmentRejected = amendmentRejected;
+	public ConfirmationStatus1Choice setAmendmentRejected(List<ConfirmationRejectedStatus2> amendmentRejected) {
+		this.amendmentRejected = Objects.requireNonNull(amendmentRejected);
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public OrderConfirmationStatus1Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(OrderConfirmationStatus1Code status) {
-		this.status = status;
+	public ConfirmationStatus1Choice setStatus(OrderConfirmationStatus1Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 }

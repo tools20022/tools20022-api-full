@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,17 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Information needed to process a currency exchange or conversion."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CurrencyExchange7", propOrder = {"exchangeRate", "quotedCurrency", "quotationDate"})
 public class CurrencyExchange7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "XchgRate", required = true)
 	protected BaseOneRate exchangeRate;
 	/**
-	 * The value of one currency expressed in relation to another currency.
-	 * ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency
-	 * (ExchangeRate = UnitCurrency/QuotedCurrency).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +116,7 @@ public class CurrencyExchange7 {
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmExchangeRate;
-			componentContext_lazy = () -> CurrencyExchange7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchange7.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,11 +127,11 @@ public class CurrencyExchange7 {
 			simpleType_lazy = () -> BaseOneRate.mmObject();
 		}
 	};
+	@XmlElement(name = "QtdCcy", required = true)
 	protected ActiveOrHistoricCurrencyCode quotedCurrency;
 	/**
-	 * Currency into which the base currency is converted, in a currency
-	 * exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +167,7 @@ public class CurrencyExchange7 {
 	public static final MMMessageAttribute mmQuotedCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
-			componentContext_lazy = () -> CurrencyExchange7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchange7.mmObject();
 			isDerived = false;
 			xmlTag = "QtdCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +178,11 @@ public class CurrencyExchange7 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "QtnDt", required = true)
 	protected ISODateTime quotationDate;
 	/**
-	 * Date and time at which an exchange rate is quoted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -214,7 +215,7 @@ public class CurrencyExchange7 {
 	public static final MMMessageAttribute mmQuotationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotationDate;
-			componentContext_lazy = () -> CurrencyExchange7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyExchange7.mmObject();
 			isDerived = false;
 			xmlTag = "QtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,9 +230,10 @@ public class CurrencyExchange7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CurrencyExchange7.mmExchangeRate, CurrencyExchange7.mmQuotedCurrency, CurrencyExchange7.mmQuotationDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyExchange7.mmExchangeRate, com.tools20022.repository.msg.CurrencyExchange7.mmQuotedCurrency,
+						com.tools20022.repository.msg.CurrencyExchange7.mmQuotationDate);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CurrencyExchange7";
 				definition = "Information needed to process a currency exchange or conversion.";
@@ -240,30 +242,30 @@ public class CurrencyExchange7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "XchgRate", required = true)
 	public BaseOneRate getExchangeRate() {
 		return exchangeRate;
 	}
 
-	public void setExchangeRate(BaseOneRate exchangeRate) {
-		this.exchangeRate = exchangeRate;
+	public CurrencyExchange7 setExchangeRate(BaseOneRate exchangeRate) {
+		this.exchangeRate = Objects.requireNonNull(exchangeRate);
+		return this;
 	}
 
-	@XmlElement(name = "QtdCcy", required = true)
 	public ActiveOrHistoricCurrencyCode getQuotedCurrency() {
 		return quotedCurrency;
 	}
 
-	public void setQuotedCurrency(ActiveOrHistoricCurrencyCode quotedCurrency) {
-		this.quotedCurrency = quotedCurrency;
+	public CurrencyExchange7 setQuotedCurrency(ActiveOrHistoricCurrencyCode quotedCurrency) {
+		this.quotedCurrency = Objects.requireNonNull(quotedCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "QtnDt", required = true)
 	public ISODateTime getQuotationDate() {
 		return quotationDate;
 	}
 
-	public void setQuotationDate(ISODateTime quotationDate) {
-		this.quotationDate = quotationDate;
+	public CurrencyExchange7 setQuotationDate(ISODateTime quotationDate) {
+		this.quotationDate = Objects.requireNonNull(quotationDate);
+		return this;
 	}
 }

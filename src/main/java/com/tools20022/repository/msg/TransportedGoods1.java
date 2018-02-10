@@ -26,9 +26,8 @@ import com.tools20022.repository.entity.Goods;
 import com.tools20022.repository.entity.Product;
 import com.tools20022.repository.entity.PurchaseOrder;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Goods or services that are part of a commercial trade agreement."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransportedGoods1", propOrder = {"purchaseOrderReference", "goodsDescription", "buyerDefinedInformation", "sellerDefinedInformation"})
 public class TransportedGoods1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PurchsOrdrRef", required = true)
 	protected DocumentIdentification7 purchaseOrderReference;
 	/**
-	 * Reference to the purchase order of the underlying transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -117,7 +117,7 @@ public class TransportedGoods1 {
 	public static final MMMessageAssociationEnd mmPurchaseOrderReference = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PurchaseOrder.mmIdentification;
-			componentContext_lazy = () -> TransportedGoods1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportedGoods1.mmObject();
 			isDerived = false;
 			xmlTag = "PurchsOrdrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,10 +129,11 @@ public class TransportedGoods1 {
 			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
 		}
 	};
+	@XmlElement(name = "GoodsDesc")
 	protected Max70Text goodsDescription;
 	/**
-	 * Information about the goods and/or services of a trade transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,7 +167,7 @@ public class TransportedGoods1 {
 	public static final MMMessageAttribute mmGoodsDescription = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Product.mmDescription;
-			componentContext_lazy = () -> TransportedGoods1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportedGoods1.mmObject();
 			isDerived = false;
 			xmlTag = "GoodsDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,12 +178,11 @@ public class TransportedGoods1 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BuyrDfndInf")
 	protected List<com.tools20022.repository.msg.UserDefinedInformation1> buyerDefinedInformation;
 	/**
-	 * Information important for the users of the message/service, which cannot
-	 * be captured in any other message component/element. For example:
-	 * Warehouse number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -211,7 +211,7 @@ public class TransportedGoods1 {
 	 */
 	public static final MMMessageAssociationEnd mmBuyerDefinedInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransportedGoods1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportedGoods1.mmObject();
 			isDerived = false;
 			xmlTag = "BuyrDfndInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,12 +222,11 @@ public class TransportedGoods1 {
 			type_lazy = () -> com.tools20022.repository.msg.UserDefinedInformation1.mmObject();
 		}
 	};
+	@XmlElement(name = "SellrDfndInf")
 	protected List<com.tools20022.repository.msg.UserDefinedInformation1> sellerDefinedInformation;
 	/**
-	 * Information important for the users of the message/service, which cannot
-	 * be captured in any other message component/element. For example:
-	 * Warehouse number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -256,7 +255,7 @@ public class TransportedGoods1 {
 	 */
 	public static final MMMessageAssociationEnd mmSellerDefinedInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransportedGoods1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportedGoods1.mmObject();
 			isDerived = false;
 			xmlTag = "SellrDfndInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -271,9 +270,10 @@ public class TransportedGoods1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransportedGoods1.mmPurchaseOrderReference, TransportedGoods1.mmGoodsDescription, TransportedGoods1.mmBuyerDefinedInformation, TransportedGoods1.mmSellerDefinedInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportedGoods1.mmPurchaseOrderReference, com.tools20022.repository.msg.TransportedGoods1.mmGoodsDescription,
+						com.tools20022.repository.msg.TransportedGoods1.mmBuyerDefinedInformation, com.tools20022.repository.msg.TransportedGoods1.mmSellerDefinedInformation);
 				trace_lazy = () -> Goods.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransportedGoods1";
 				definition = "Goods or services that are part of a commercial trade agreement.";
@@ -282,39 +282,39 @@ public class TransportedGoods1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PurchsOrdrRef", required = true)
 	public DocumentIdentification7 getPurchaseOrderReference() {
 		return purchaseOrderReference;
 	}
 
-	public void setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
-		this.purchaseOrderReference = purchaseOrderReference;
+	public TransportedGoods1 setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
+		this.purchaseOrderReference = Objects.requireNonNull(purchaseOrderReference);
+		return this;
 	}
 
-	@XmlElement(name = "GoodsDesc")
-	public Max70Text getGoodsDescription() {
-		return goodsDescription;
+	public Optional<Max70Text> getGoodsDescription() {
+		return goodsDescription == null ? Optional.empty() : Optional.of(goodsDescription);
 	}
 
-	public void setGoodsDescription(Max70Text goodsDescription) {
+	public TransportedGoods1 setGoodsDescription(Max70Text goodsDescription) {
 		this.goodsDescription = goodsDescription;
+		return this;
 	}
 
-	@XmlElement(name = "BuyrDfndInf")
 	public List<UserDefinedInformation1> getBuyerDefinedInformation() {
-		return buyerDefinedInformation;
+		return buyerDefinedInformation == null ? buyerDefinedInformation = new ArrayList<>() : buyerDefinedInformation;
 	}
 
-	public void setBuyerDefinedInformation(List<com.tools20022.repository.msg.UserDefinedInformation1> buyerDefinedInformation) {
-		this.buyerDefinedInformation = buyerDefinedInformation;
+	public TransportedGoods1 setBuyerDefinedInformation(List<com.tools20022.repository.msg.UserDefinedInformation1> buyerDefinedInformation) {
+		this.buyerDefinedInformation = Objects.requireNonNull(buyerDefinedInformation);
+		return this;
 	}
 
-	@XmlElement(name = "SellrDfndInf")
 	public List<UserDefinedInformation1> getSellerDefinedInformation() {
-		return sellerDefinedInformation;
+		return sellerDefinedInformation == null ? sellerDefinedInformation = new ArrayList<>() : sellerDefinedInformation;
 	}
 
-	public void setSellerDefinedInformation(List<com.tools20022.repository.msg.UserDefinedInformation1> sellerDefinedInformation) {
-		this.sellerDefinedInformation = sellerDefinedInformation;
+	public TransportedGoods1 setSellerDefinedInformation(List<com.tools20022.repository.msg.UserDefinedInformation1> sellerDefinedInformation) {
+		this.sellerDefinedInformation = Objects.requireNonNull(sellerDefinedInformation);
+		return this;
 	}
 }

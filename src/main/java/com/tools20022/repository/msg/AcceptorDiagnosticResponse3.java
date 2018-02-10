@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,15 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * AcceptorDiagnosticResponse2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "AcceptorDiagnosticResponse3", propOrder = {"environment", "TMSTrigger"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "AcceptorDiagnosticResponse3", propOrder = {"environment", "tMSTrigger"})
 public class AcceptorDiagnosticResponse3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Envt", required = true)
 	protected CardPaymentEnvironment31 environment;
 	/**
-	 * Environment of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -139,7 +142,7 @@ public class AcceptorDiagnosticResponse3 {
 	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPayment.mmObject();
-			componentContext_lazy = () -> AcceptorDiagnosticResponse3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorDiagnosticResponse3.mmObject();
 			isDerived = false;
 			xmlTag = "Envt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,10 +156,11 @@ public class AcceptorDiagnosticResponse3 {
 			type_lazy = () -> com.tools20022.repository.msg.CardPaymentEnvironment31.mmObject();
 		}
 	};
+	@XmlElement(name = "TMSTrggr")
 	protected TMSTrigger1 tMSTrigger;
 	/**
-	 * Instructions for contacting the terminal management host.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -202,7 +206,7 @@ public class AcceptorDiagnosticResponse3 {
 	public static final MMMessageAssociationEnd mmTMSTrigger = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmTMSTrigger;
-			componentContext_lazy = () -> AcceptorDiagnosticResponse3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AcceptorDiagnosticResponse3.mmObject();
 			isDerived = false;
 			xmlTag = "TMSTrggr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,10 +224,10 @@ public class AcceptorDiagnosticResponse3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AcceptorDiagnosticResponse3.mmEnvironment, AcceptorDiagnosticResponse3.mmTMSTrigger);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AcceptorDiagnosticResponse3.mmEnvironment, com.tools20022.repository.msg.AcceptorDiagnosticResponse3.mmTMSTrigger);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AcceptorDiagnosticResponseV03.mmDiagnosticResponse);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorDiagnosticResponse3";
 				definition = "Diagnostic response from the acquirer.";
@@ -234,21 +238,21 @@ public class AcceptorDiagnosticResponse3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Envt", required = true)
 	public CardPaymentEnvironment31 getEnvironment() {
 		return environment;
 	}
 
-	public void setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment31 environment) {
-		this.environment = environment;
+	public AcceptorDiagnosticResponse3 setEnvironment(com.tools20022.repository.msg.CardPaymentEnvironment31 environment) {
+		this.environment = Objects.requireNonNull(environment);
+		return this;
 	}
 
-	@XmlElement(name = "TMSTrggr")
-	public TMSTrigger1 getTMSTrigger() {
-		return tMSTrigger;
+	public Optional<TMSTrigger1> getTMSTrigger() {
+		return tMSTrigger == null ? Optional.empty() : Optional.of(tMSTrigger);
 	}
 
-	public void setTMSTrigger(com.tools20022.repository.msg.TMSTrigger1 tMSTrigger) {
+	public AcceptorDiagnosticResponse3 setTMSTrigger(com.tools20022.repository.msg.TMSTrigger1 tMSTrigger) {
 		this.tMSTrigger = tMSTrigger;
+		return this;
 	}
 }

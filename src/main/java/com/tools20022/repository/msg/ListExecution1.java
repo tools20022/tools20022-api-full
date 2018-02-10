@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,8 @@ import com.tools20022.repository.entity.Negotiation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +60,11 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = FIXSynonym: 66</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides details about of a list that must be executed."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ListExecution1", propOrder = {"listIdentification", "clientBidIdentification", "bidIdentification"})
 public class ListExecution1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ListId", required = true)
 	protected Max35Text listIdentification;
 	/**
-	 * Unique identifier for a list, as assigned by the trading party. The
-	 * identifier must be unique within a single trading day.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +118,7 @@ public class ListExecution1 {
 	public static final MMMessageAttribute mmListIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ListTrading.mmListIdentification;
-			componentContext_lazy = () -> ListExecution1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ListExecution1.mmObject();
 			isDerived = false;
 			xmlTag = "ListId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +129,11 @@ public class ListExecution1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ClntBidId")
 	protected Max35Text clientBidIdentification;
 	/**
-	 * Identifies a bid made by a client, to which the list is associated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,6 +152,9 @@ public class ListExecution1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClntBidId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 391</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -159,9 +169,10 @@ public class ListExecution1 {
 	public static final MMMessageAttribute mmClientBidIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Negotiation.mmNegotiationIdentification;
-			componentContext_lazy = () -> ListExecution1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ListExecution1.mmObject();
 			isDerived = false;
 			xmlTag = "ClntBidId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "391"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientBidIdentification";
 			definition = "Identifies a bid made by a client, to which the list is associated.";
@@ -170,11 +181,11 @@ public class ListExecution1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BidId", required = true)
 	protected Max35Text bidIdentification;
 	/**
-	 * Name or number assigned by an entity to enable recognition of that
-	 * entity, eg, account identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,6 +198,9 @@ public class ListExecution1 {
 	 * {@linkplain com.tools20022.repository.msg.ListExecution1 ListExecution1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "BidId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 390</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -202,9 +216,10 @@ public class ListExecution1 {
 	 */
 	public static final MMMessageAttribute mmBidIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ListExecution1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ListExecution1.mmObject();
 			isDerived = false;
 			xmlTag = "BidId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "390"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidIdentification";
 			definition = "Name or number assigned by an entity to enable recognition of that entity, eg, account identifier.";
@@ -217,9 +232,11 @@ public class ListExecution1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ListExecution1.mmListIdentification, ListExecution1.mmClientBidIdentification, ListExecution1.mmBidIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ListExecution1.mmListIdentification, com.tools20022.repository.msg.ListExecution1.mmClientBidIdentification,
+						com.tools20022.repository.msg.ListExecution1.mmBidIdentification);
 				trace_lazy = () -> ListTrading.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "66"));
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ListExecution1";
 				definition = "Provides details about of a list that must be executed.";
@@ -228,30 +245,30 @@ public class ListExecution1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ListId", required = true)
 	public Max35Text getListIdentification() {
 		return listIdentification;
 	}
 
-	public void setListIdentification(Max35Text listIdentification) {
-		this.listIdentification = listIdentification;
+	public ListExecution1 setListIdentification(Max35Text listIdentification) {
+		this.listIdentification = Objects.requireNonNull(listIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ClntBidId")
-	public Max35Text getClientBidIdentification() {
-		return clientBidIdentification;
+	public Optional<Max35Text> getClientBidIdentification() {
+		return clientBidIdentification == null ? Optional.empty() : Optional.of(clientBidIdentification);
 	}
 
-	public void setClientBidIdentification(Max35Text clientBidIdentification) {
+	public ListExecution1 setClientBidIdentification(Max35Text clientBidIdentification) {
 		this.clientBidIdentification = clientBidIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "BidId", required = true)
 	public Max35Text getBidIdentification() {
 		return bidIdentification;
 	}
 
-	public void setBidIdentification(Max35Text bidIdentification) {
-		this.bidIdentification = bidIdentification;
+	public ListExecution1 setBidIdentification(Max35Text bidIdentification) {
+		this.bidIdentification = Objects.requireNonNull(bidIdentification);
+		return this;
 	}
 }

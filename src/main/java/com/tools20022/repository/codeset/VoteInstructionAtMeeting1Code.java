@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.VoteInstructionCode;
+import com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies the possible types of voting instructions for resolutions proposed
@@ -31,42 +35,42 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.VoteInstructionCode
- * VoteInstructionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#mmChairman
- * VoteInstructionAtMeeting1Code.mmChairman}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#Chairman
+ * VoteInstructionAtMeeting1Code.Chairman}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#mmAgainst
- * VoteInstructionAtMeeting1Code.mmAgainst}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#Against
+ * VoteInstructionAtMeeting1Code.Against}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#mmFor
- * VoteInstructionAtMeeting1Code.mmFor}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#For
+ * VoteInstructionAtMeeting1Code.For}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#mmAbstain
- * VoteInstructionAtMeeting1Code.mmAbstain}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#Abstain
+ * VoteInstructionAtMeeting1Code.Abstain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#mmWithhold
- * VoteInstructionAtMeeting1Code.mmWithhold}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#Withhold
+ * VoteInstructionAtMeeting1Code.Withhold}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#mmWithManagement
- * VoteInstructionAtMeeting1Code.mmWithManagement}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#WithManagement
+ * VoteInstructionAtMeeting1Code.WithManagement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#mmAgainstManagement
- * VoteInstructionAtMeeting1Code.mmAgainstManagement}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#AgainstManagement
+ * VoteInstructionAtMeeting1Code.AgainstManagement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#mmNoAction
- * VoteInstructionAtMeeting1Code.mmNoAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code#NoAction
+ * VoteInstructionAtMeeting1Code.NoAction}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.VoteInstructionCode
+ * VoteInstructionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class VoteInstructionAtMeeting1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -104,11 +109,12 @@ public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
 	 * name} = "Chairman"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmChairman = new MMCode() {
+	public static final VoteInstructionAtMeeting1Code Chairman = new VoteInstructionAtMeeting1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Chairman";
-			owner_lazy = () -> VoteInstructionAtMeeting1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.mmObject();
+			codeName = VoteInstructionCode.Chairman.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -127,11 +133,12 @@ public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
 	 * name} = "Against"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgainst = new MMCode() {
+	public static final VoteInstructionAtMeeting1Code Against = new VoteInstructionAtMeeting1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Against";
-			owner_lazy = () -> VoteInstructionAtMeeting1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.mmObject();
+			codeName = VoteInstructionCode.Against.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -150,11 +157,12 @@ public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
 	 * name} = "For"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFor = new MMCode() {
+	public static final VoteInstructionAtMeeting1Code For = new VoteInstructionAtMeeting1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "For";
-			owner_lazy = () -> VoteInstructionAtMeeting1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.mmObject();
+			codeName = VoteInstructionCode.For.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -173,11 +181,12 @@ public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
 	 * name} = "Abstain"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAbstain = new MMCode() {
+	public static final VoteInstructionAtMeeting1Code Abstain = new VoteInstructionAtMeeting1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Abstain";
-			owner_lazy = () -> VoteInstructionAtMeeting1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.mmObject();
+			codeName = VoteInstructionCode.Abstain.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -196,11 +205,12 @@ public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
 	 * name} = "Withhold"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithhold = new MMCode() {
+	public static final VoteInstructionAtMeeting1Code Withhold = new VoteInstructionAtMeeting1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withhold";
-			owner_lazy = () -> VoteInstructionAtMeeting1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.mmObject();
+			codeName = VoteInstructionCode.Withhold.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -219,11 +229,12 @@ public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
 	 * name} = "WithManagement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithManagement = new MMCode() {
+	public static final VoteInstructionAtMeeting1Code WithManagement = new VoteInstructionAtMeeting1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithManagement";
-			owner_lazy = () -> VoteInstructionAtMeeting1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.mmObject();
+			codeName = VoteInstructionCode.WithManagement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -242,11 +253,12 @@ public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
 	 * name} = "AgainstManagement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgainstManagement = new MMCode() {
+	public static final VoteInstructionAtMeeting1Code AgainstManagement = new VoteInstructionAtMeeting1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgainstManagement";
-			owner_lazy = () -> VoteInstructionAtMeeting1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.mmObject();
+			codeName = VoteInstructionCode.AgainstManagement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -265,27 +277,66 @@ public class VoteInstructionAtMeeting1Code extends VoteInstructionCode {
 	 * name} = "NoAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoAction = new MMCode() {
+	public static final VoteInstructionAtMeeting1Code NoAction = new VoteInstructionAtMeeting1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAction";
-			owner_lazy = () -> VoteInstructionAtMeeting1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.mmObject();
+			codeName = VoteInstructionCode.NoAction.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, VoteInstructionAtMeeting1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected VoteInstructionAtMeeting1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CHRM");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VoteInstructionAtMeeting1Code";
 				definition = "Identifies the possible types of voting instructions for resolutions proposed at the meeting.";
-				code_lazy = () -> Arrays.asList(VoteInstructionAtMeeting1Code.mmChairman, VoteInstructionAtMeeting1Code.mmAgainst, VoteInstructionAtMeeting1Code.mmFor, VoteInstructionAtMeeting1Code.mmAbstain,
-						VoteInstructionAtMeeting1Code.mmWithhold, VoteInstructionAtMeeting1Code.mmWithManagement, VoteInstructionAtMeeting1Code.mmAgainstManagement, VoteInstructionAtMeeting1Code.mmNoAction);
 				trace_lazy = () -> VoteInstructionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.Chairman, com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.Against,
+						com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.For, com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.Abstain, com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.Withhold,
+						com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.WithManagement, com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.AgainstManagement,
+						com.tools20022.repository.codeset.VoteInstructionAtMeeting1Code.NoAction);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Chairman.getCodeName().get(), Chairman);
+		codesByName.put(Against.getCodeName().get(), Against);
+		codesByName.put(For.getCodeName().get(), For);
+		codesByName.put(Abstain.getCodeName().get(), Abstain);
+		codesByName.put(Withhold.getCodeName().get(), Withhold);
+		codesByName.put(WithManagement.getCodeName().get(), WithManagement);
+		codesByName.put(AgainstManagement.getCodeName().get(), AgainstManagement);
+		codesByName.put(NoAction.getCodeName().get(), NoAction);
+	}
+
+	public static VoteInstructionAtMeeting1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static VoteInstructionAtMeeting1Code[] values() {
+		VoteInstructionAtMeeting1Code[] values = new VoteInstructionAtMeeting1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, VoteInstructionAtMeeting1Code> {
+		@Override
+		public VoteInstructionAtMeeting1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(VoteInstructionAtMeeting1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

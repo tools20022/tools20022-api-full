@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -76,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -94,16 +93,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentTerms3", propOrder = {"dueDate", "paymentPeriod", "description", "partialPaymentPercent", "directDebitMandateIdentification", "discountAmount", "discountPercentRate", "discountBasisAmount", "penaltyAmount",
 		"penaltyPercentRate", "penaltyBasisAmount"})
 public class PaymentTerms3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DueDt")
 	protected ISODate dueDate;
 	/**
-	 * Due date specified for the payment terms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +135,7 @@ public class PaymentTerms3 {
 	public static final MMMessageAttribute mmDueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentDueDate;
-			componentContext_lazy = () -> PaymentTerms3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms3.mmObject();
 			isDerived = false;
 			xmlTag = "DueDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,10 +146,11 @@ public class PaymentTerms3 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtPrd")
 	protected PaymentPeriod1 paymentPeriod;
 	/**
-	 * Payment period specified for these payment terms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -181,7 +182,7 @@ public class PaymentTerms3 {
 	public static final MMMessageAttribute mmPaymentPeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentTerms.mmPaymentPeriod;
-			componentContext_lazy = () -> PaymentTerms3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms3.mmObject();
 			isDerived = false;
 			xmlTag = "PmtPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,10 +193,11 @@ public class PaymentTerms3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PaymentPeriod1.mmObject();
 		}
 	};
+	@XmlElement(name = "Desc")
 	protected List<Max140Text> description;
 	/**
-	 * Textual description of these payment terms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -221,7 +223,7 @@ public class PaymentTerms3 {
 	 */
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentTerms3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms3.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,10 +233,11 @@ public class PaymentTerms3 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtlPmtPct")
 	protected PercentageRate partialPaymentPercent;
 	/**
-	 * Partial payment, expressed as a percentage, for the payment terms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -268,7 +271,7 @@ public class PaymentTerms3 {
 	public static final MMMessageAttribute mmPartialPaymentPercent = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentTerms.mmPercentage;
-			componentContext_lazy = () -> PaymentTerms3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms3.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlPmtPct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -279,10 +282,11 @@ public class PaymentTerms3 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "DrctDbtMndtId")
 	protected List<Max35Text> directDebitMandateIdentification;
 	/**
-	 * Direct debit mandate identification specified for these payment terms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -315,7 +319,7 @@ public class PaymentTerms3 {
 	public static final MMMessageAttribute mmDirectDebitMandateIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Mandate.mmMandateIdentification;
-			componentContext_lazy = () -> PaymentTerms3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms3.mmObject();
 			isDerived = false;
 			xmlTag = "DrctDbtMndtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,11 +329,11 @@ public class PaymentTerms3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DscntAmt")
 	protected CurrencyAndAmount discountAmount;
 	/**
-	 * Monetary value used as a basis to calculate the discount in these payment
-	 * terms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -372,7 +376,7 @@ public class PaymentTerms3 {
 	public static final MMMessageAttribute mmDiscountAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> PaymentTerms3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms3.mmObject();
 			isDerived = false;
 			xmlTag = "DscntAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -384,10 +388,11 @@ public class PaymentTerms3 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "DscntPctRate")
 	protected PercentageRate discountPercentRate;
 	/**
-	 * Percent rate used to calculate the discount for these payment terms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -429,7 +434,7 @@ public class PaymentTerms3 {
 	public static final MMMessageAttribute mmDiscountPercentRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
-			componentContext_lazy = () -> PaymentTerms3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms3.mmObject();
 			isDerived = false;
 			xmlTag = "DscntPctRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -441,11 +446,11 @@ public class PaymentTerms3 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "DscntBsisAmt")
 	protected CurrencyAndAmount discountBasisAmount;
 	/**
-	 * Monetary value used as a basis to calculate the discount in these payment
-	 * terms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -480,7 +485,7 @@ public class PaymentTerms3 {
 	public static final MMMessageAttribute mmDiscountBasisAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Discount.mmDiscountBasisAmount;
-			componentContext_lazy = () -> PaymentTerms3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms3.mmObject();
 			isDerived = false;
 			xmlTag = "DscntBsisAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -491,11 +496,11 @@ public class PaymentTerms3 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "PnltyAmt")
 	protected CurrencyAndAmount penaltyAmount;
 	/**
-	 * Monetary value used as a basis to calculate the penalty in the payment
-	 * terms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -530,7 +535,7 @@ public class PaymentTerms3 {
 	public static final MMMessageAttribute mmPenaltyAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> PaymentTerms3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms3.mmObject();
 			isDerived = false;
 			xmlTag = "PnltyAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -541,10 +546,11 @@ public class PaymentTerms3 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "PnltyPctRate")
 	protected PercentageRate penaltyPercentRate;
 	/**
-	 * Percent rate used to calculate the penalty for these payment terms.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -578,7 +584,7 @@ public class PaymentTerms3 {
 	public static final MMMessageAttribute mmPenaltyPercentRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
-			componentContext_lazy = () -> PaymentTerms3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms3.mmObject();
 			isDerived = false;
 			xmlTag = "PnltyPctRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -589,10 +595,11 @@ public class PaymentTerms3 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "PnltyBsisAmt")
 	protected CurrencyAndAmount penaltyBasisAmount;
 	/**
-	 * Amount used as a basis to calculate the penalty amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -625,7 +632,7 @@ public class PaymentTerms3 {
 	public static final MMMessageAttribute mmPenaltyBasisAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Penalty.mmPenaltyBasisAmount;
-			componentContext_lazy = () -> PaymentTerms3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTerms3.mmObject();
 			isDerived = false;
 			xmlTag = "PnltyBsisAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -640,10 +647,12 @@ public class PaymentTerms3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentTerms3.mmDueDate, PaymentTerms3.mmPaymentPeriod, PaymentTerms3.mmDescription, PaymentTerms3.mmPartialPaymentPercent, PaymentTerms3.mmDirectDebitMandateIdentification,
-						PaymentTerms3.mmDiscountAmount, PaymentTerms3.mmDiscountPercentRate, PaymentTerms3.mmDiscountBasisAmount, PaymentTerms3.mmPenaltyAmount, PaymentTerms3.mmPenaltyPercentRate, PaymentTerms3.mmPenaltyBasisAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTerms3.mmDueDate, com.tools20022.repository.msg.PaymentTerms3.mmPaymentPeriod, com.tools20022.repository.msg.PaymentTerms3.mmDescription,
+						com.tools20022.repository.msg.PaymentTerms3.mmPartialPaymentPercent, com.tools20022.repository.msg.PaymentTerms3.mmDirectDebitMandateIdentification, com.tools20022.repository.msg.PaymentTerms3.mmDiscountAmount,
+						com.tools20022.repository.msg.PaymentTerms3.mmDiscountPercentRate, com.tools20022.repository.msg.PaymentTerms3.mmDiscountBasisAmount, com.tools20022.repository.msg.PaymentTerms3.mmPenaltyAmount,
+						com.tools20022.repository.msg.PaymentTerms3.mmPenaltyPercentRate, com.tools20022.repository.msg.PaymentTerms3.mmPenaltyBasisAmount);
 				trace_lazy = () -> PaymentObligation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentTerms3";
 				definition = "Specifies the payment terms of the underlying transaction.";
@@ -653,102 +662,102 @@ public class PaymentTerms3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DueDt")
-	public ISODate getDueDate() {
-		return dueDate;
+	public Optional<ISODate> getDueDate() {
+		return dueDate == null ? Optional.empty() : Optional.of(dueDate);
 	}
 
-	public void setDueDate(ISODate dueDate) {
+	public PaymentTerms3 setDueDate(ISODate dueDate) {
 		this.dueDate = dueDate;
+		return this;
 	}
 
-	@XmlElement(name = "PmtPrd")
-	public PaymentPeriod1 getPaymentPeriod() {
-		return paymentPeriod;
+	public Optional<PaymentPeriod1> getPaymentPeriod() {
+		return paymentPeriod == null ? Optional.empty() : Optional.of(paymentPeriod);
 	}
 
-	public void setPaymentPeriod(com.tools20022.repository.msg.PaymentPeriod1 paymentPeriod) {
+	public PaymentTerms3 setPaymentPeriod(com.tools20022.repository.msg.PaymentPeriod1 paymentPeriod) {
 		this.paymentPeriod = paymentPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "Desc")
 	public List<Max140Text> getDescription() {
-		return description;
+		return description == null ? description = new ArrayList<>() : description;
 	}
 
-	public void setDescription(List<Max140Text> description) {
-		this.description = description;
+	public PaymentTerms3 setDescription(List<Max140Text> description) {
+		this.description = Objects.requireNonNull(description);
+		return this;
 	}
 
-	@XmlElement(name = "PrtlPmtPct")
-	public PercentageRate getPartialPaymentPercent() {
-		return partialPaymentPercent;
+	public Optional<PercentageRate> getPartialPaymentPercent() {
+		return partialPaymentPercent == null ? Optional.empty() : Optional.of(partialPaymentPercent);
 	}
 
-	public void setPartialPaymentPercent(PercentageRate partialPaymentPercent) {
+	public PaymentTerms3 setPartialPaymentPercent(PercentageRate partialPaymentPercent) {
 		this.partialPaymentPercent = partialPaymentPercent;
+		return this;
 	}
 
-	@XmlElement(name = "DrctDbtMndtId")
 	public List<Max35Text> getDirectDebitMandateIdentification() {
-		return directDebitMandateIdentification;
+		return directDebitMandateIdentification == null ? directDebitMandateIdentification = new ArrayList<>() : directDebitMandateIdentification;
 	}
 
-	public void setDirectDebitMandateIdentification(List<Max35Text> directDebitMandateIdentification) {
-		this.directDebitMandateIdentification = directDebitMandateIdentification;
+	public PaymentTerms3 setDirectDebitMandateIdentification(List<Max35Text> directDebitMandateIdentification) {
+		this.directDebitMandateIdentification = Objects.requireNonNull(directDebitMandateIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "DscntAmt")
-	public CurrencyAndAmount getDiscountAmount() {
-		return discountAmount;
+	public Optional<CurrencyAndAmount> getDiscountAmount() {
+		return discountAmount == null ? Optional.empty() : Optional.of(discountAmount);
 	}
 
-	public void setDiscountAmount(CurrencyAndAmount discountAmount) {
+	public PaymentTerms3 setDiscountAmount(CurrencyAndAmount discountAmount) {
 		this.discountAmount = discountAmount;
+		return this;
 	}
 
-	@XmlElement(name = "DscntPctRate")
-	public PercentageRate getDiscountPercentRate() {
-		return discountPercentRate;
+	public Optional<PercentageRate> getDiscountPercentRate() {
+		return discountPercentRate == null ? Optional.empty() : Optional.of(discountPercentRate);
 	}
 
-	public void setDiscountPercentRate(PercentageRate discountPercentRate) {
+	public PaymentTerms3 setDiscountPercentRate(PercentageRate discountPercentRate) {
 		this.discountPercentRate = discountPercentRate;
+		return this;
 	}
 
-	@XmlElement(name = "DscntBsisAmt")
-	public CurrencyAndAmount getDiscountBasisAmount() {
-		return discountBasisAmount;
+	public Optional<CurrencyAndAmount> getDiscountBasisAmount() {
+		return discountBasisAmount == null ? Optional.empty() : Optional.of(discountBasisAmount);
 	}
 
-	public void setDiscountBasisAmount(CurrencyAndAmount discountBasisAmount) {
+	public PaymentTerms3 setDiscountBasisAmount(CurrencyAndAmount discountBasisAmount) {
 		this.discountBasisAmount = discountBasisAmount;
+		return this;
 	}
 
-	@XmlElement(name = "PnltyAmt")
-	public CurrencyAndAmount getPenaltyAmount() {
-		return penaltyAmount;
+	public Optional<CurrencyAndAmount> getPenaltyAmount() {
+		return penaltyAmount == null ? Optional.empty() : Optional.of(penaltyAmount);
 	}
 
-	public void setPenaltyAmount(CurrencyAndAmount penaltyAmount) {
+	public PaymentTerms3 setPenaltyAmount(CurrencyAndAmount penaltyAmount) {
 		this.penaltyAmount = penaltyAmount;
+		return this;
 	}
 
-	@XmlElement(name = "PnltyPctRate")
-	public PercentageRate getPenaltyPercentRate() {
-		return penaltyPercentRate;
+	public Optional<PercentageRate> getPenaltyPercentRate() {
+		return penaltyPercentRate == null ? Optional.empty() : Optional.of(penaltyPercentRate);
 	}
 
-	public void setPenaltyPercentRate(PercentageRate penaltyPercentRate) {
+	public PaymentTerms3 setPenaltyPercentRate(PercentageRate penaltyPercentRate) {
 		this.penaltyPercentRate = penaltyPercentRate;
+		return this;
 	}
 
-	@XmlElement(name = "PnltyBsisAmt")
-	public CurrencyAndAmount getPenaltyBasisAmount() {
-		return penaltyBasisAmount;
+	public Optional<CurrencyAndAmount> getPenaltyBasisAmount() {
+		return penaltyBasisAmount == null ? Optional.empty() : Optional.of(penaltyBasisAmount);
 	}
 
-	public void setPenaltyBasisAmount(CurrencyAndAmount penaltyBasisAmount) {
+	public PaymentTerms3 setPenaltyBasisAmount(CurrencyAndAmount penaltyBasisAmount) {
 		this.penaltyBasisAmount = penaltyBasisAmount;
+		return this;
 	}
 }

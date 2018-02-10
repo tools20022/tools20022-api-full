@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about the creditor."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Creditor2", propOrder = {"creditor", "accountIdentification", "finalAgent"})
 public class Creditor2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cdtr")
 	protected PartyIdentification2Choice creditor;
 	/**
-	 * Party that receives an amount of money from the debtor. In the context of
-	 * the payment model, the creditor is also the credit account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +116,7 @@ public class Creditor2 {
 	public static final MMMessageAttribute mmCreditor = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Creditor2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Creditor2.mmObject();
 			isDerived = false;
 			xmlTag = "Cdtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,11 +127,11 @@ public class Creditor2 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctId", required = true)
 	protected AccountIdentificationAndName3 accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +166,7 @@ public class Creditor2 {
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> Creditor2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Creditor2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,12 +177,11 @@ public class Creditor2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName3.mmObject();
 		}
 	};
+	@XmlElement(name = "FnlAgt", required = true)
 	protected FinancialInstitutionIdentification3Choice finalAgent;
 	/**
-	 * Party that is the ultimate beneficiary of the credit transfer. The final
-	 * party is mentioned when different from the creditor, whose account will
-	 * be credited by the final agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,7 +216,7 @@ public class Creditor2 {
 	public static final MMMessageAttribute mmFinalAgent = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> Creditor2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Creditor2.mmObject();
 			isDerived = false;
 			xmlTag = "FnlAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,9 +231,9 @@ public class Creditor2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Creditor2.mmCreditor, Creditor2.mmAccountIdentification, Creditor2.mmFinalAgent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Creditor2.mmCreditor, com.tools20022.repository.msg.Creditor2.mmAccountIdentification, com.tools20022.repository.msg.Creditor2.mmFinalAgent);
 				trace_lazy = () -> CreditorRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Creditor2";
 				definition = "Information about the creditor.";
@@ -241,30 +242,30 @@ public class Creditor2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cdtr")
-	public PartyIdentification2Choice getCreditor() {
-		return creditor;
+	public Optional<PartyIdentification2Choice> getCreditor() {
+		return creditor == null ? Optional.empty() : Optional.of(creditor);
 	}
 
-	public void setCreditor(PartyIdentification2Choice creditor) {
+	public Creditor2 setCreditor(PartyIdentification2Choice creditor) {
 		this.creditor = creditor;
+		return this;
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentificationAndName3 getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(com.tools20022.repository.msg.AccountIdentificationAndName3 accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public Creditor2 setAccountIdentification(com.tools20022.repository.msg.AccountIdentificationAndName3 accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "FnlAgt", required = true)
 	public FinancialInstitutionIdentification3Choice getFinalAgent() {
 		return finalAgent;
 	}
 
-	public void setFinalAgent(FinancialInstitutionIdentification3Choice finalAgent) {
-		this.finalAgent = finalAgent;
+	public Creditor2 setFinalAgent(FinancialInstitutionIdentification3Choice finalAgent) {
+		this.finalAgent = Objects.requireNonNull(finalAgent);
+		return this;
 	}
 }

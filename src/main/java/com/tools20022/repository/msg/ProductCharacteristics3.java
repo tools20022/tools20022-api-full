@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.ProductCharacteristics;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * ProductCharacteristics2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProductCharacteristics3", propOrder = {"characteristic", "valueMeasure"})
 public class ProductCharacteristics3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Chrtc")
 	protected ProductCharacteristics1Choice characteristic;
 	/**
-	 * Characteristics of the product.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +118,7 @@ public class ProductCharacteristics3 {
 	public static final MMMessageAttribute mmCharacteristic = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProductCharacteristics.mmCharacteristics;
-			componentContext_lazy = () -> ProductCharacteristics3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProductCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "Chrtc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +130,11 @@ public class ProductCharacteristics3 {
 			complexType_lazy = () -> ProductCharacteristics1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ValMeasr")
 	protected Quantity10 valueMeasure;
 	/**
-	 * Measurement value for this product characteristic.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +166,7 @@ public class ProductCharacteristics3 {
 	 */
 	public static final MMMessageAttribute mmValueMeasure = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProductCharacteristics3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProductCharacteristics3.mmObject();
 			isDerived = false;
 			xmlTag = "ValMeasr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,9 +182,9 @@ public class ProductCharacteristics3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProductCharacteristics3.mmCharacteristic, ProductCharacteristics3.mmValueMeasure);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProductCharacteristics3.mmCharacteristic, com.tools20022.repository.msg.ProductCharacteristics3.mmValueMeasure);
 				trace_lazy = () -> ProductCharacteristics.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductCharacteristics3";
 				definition = "Product characteristic applicable to this trade product.";
@@ -191,21 +194,21 @@ public class ProductCharacteristics3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Chrtc")
-	public ProductCharacteristics1Choice getCharacteristic() {
-		return characteristic;
+	public Optional<ProductCharacteristics1Choice> getCharacteristic() {
+		return characteristic == null ? Optional.empty() : Optional.of(characteristic);
 	}
 
-	public void setCharacteristic(ProductCharacteristics1Choice characteristic) {
+	public ProductCharacteristics3 setCharacteristic(ProductCharacteristics1Choice characteristic) {
 		this.characteristic = characteristic;
+		return this;
 	}
 
-	@XmlElement(name = "ValMeasr")
-	public Quantity10 getValueMeasure() {
-		return valueMeasure;
+	public Optional<Quantity10> getValueMeasure() {
+		return valueMeasure == null ? Optional.empty() : Optional.of(valueMeasure);
 	}
 
-	public void setValueMeasure(com.tools20022.repository.msg.Quantity10 valueMeasure) {
+	public ProductCharacteristics3 setValueMeasure(com.tools20022.repository.msg.Quantity10 valueMeasure) {
 		this.valueMeasure = valueMeasure;
+		return this;
 	}
 }

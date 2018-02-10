@@ -27,6 +27,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Characteristics and values set for account limits."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountLimits1", propOrder = {"limitType", "limitAmount", "limitUtilisationAmount", "bilateralLimitCounterpartyIdentification", "clearingCircuitScheme"})
 public class AccountLimits1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LmtTp", required = true)
 	protected Max35Text limitType;
 	/**
-	 * Defines type of funds limits.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +108,7 @@ public class AccountLimits1 {
 	 */
 	public static final MMMessageAttribute mmLimitType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountLimits1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLimits1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +119,11 @@ public class AccountLimits1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "LmtAmt", required = true)
 	protected ActiveCurrencyAndAmount limitAmount;
 	/**
-	 * Amount of money of the limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,7 +150,7 @@ public class AccountLimits1 {
 	 */
 	public static final MMMessageAttribute mmLimitAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountLimits1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLimits1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +161,11 @@ public class AccountLimits1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "LmtUtlstnAmt")
 	protected ActiveCurrencyAndAmount limitUtilisationAmount;
 	/**
-	 * Amount of used funds out of defined limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,7 +192,7 @@ public class AccountLimits1 {
 	 */
 	public static final MMMessageAttribute mmLimitUtilisationAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountLimits1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLimits1.mmObject();
 			isDerived = false;
 			xmlTag = "LmtUtlstnAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,10 +203,11 @@ public class AccountLimits1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "BilLmtCtrPtyId")
 	protected BranchAndFinancialInstitutionIdentification5 bilateralLimitCounterpartyIdentification;
 	/**
-	 * Identification of the system member for which the limit is established.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -229,7 +235,7 @@ public class AccountLimits1 {
 	 */
 	public static final MMMessageAssociationEnd mmBilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountLimits1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLimits1.mmObject();
 			isDerived = false;
 			xmlTag = "BilLmtCtrPtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,10 +247,11 @@ public class AccountLimits1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "ClrCrctSchme")
 	protected ClearingScheme1Choice clearingCircuitScheme;
 	/**
-	 * Clearing scheme related to Registry of the Clearing Positions (RCP).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -271,7 +278,7 @@ public class AccountLimits1 {
 	 */
 	public static final MMMessageAssociationEnd mmClearingCircuitScheme = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountLimits1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLimits1.mmObject();
 			isDerived = false;
 			xmlTag = "ClrCrctSchme";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -287,9 +294,10 @@ public class AccountLimits1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountLimits1.mmLimitType, AccountLimits1.mmLimitAmount, AccountLimits1.mmLimitUtilisationAmount, AccountLimits1.mmBilateralLimitCounterpartyIdentification,
-						AccountLimits1.mmClearingCircuitScheme);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLimits1.mmLimitType, com.tools20022.repository.msg.AccountLimits1.mmLimitAmount,
+						com.tools20022.repository.msg.AccountLimits1.mmLimitUtilisationAmount, com.tools20022.repository.msg.AccountLimits1.mmBilateralLimitCounterpartyIdentification,
+						com.tools20022.repository.msg.AccountLimits1.mmClearingCircuitScheme);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountLimits1";
 				definition = "Characteristics and values set for account limits.";
@@ -298,48 +306,48 @@ public class AccountLimits1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LmtTp", required = true)
 	public Max35Text getLimitType() {
 		return limitType;
 	}
 
-	public void setLimitType(Max35Text limitType) {
-		this.limitType = limitType;
+	public AccountLimits1 setLimitType(Max35Text limitType) {
+		this.limitType = Objects.requireNonNull(limitType);
+		return this;
 	}
 
-	@XmlElement(name = "LmtAmt", required = true)
 	public ActiveCurrencyAndAmount getLimitAmount() {
 		return limitAmount;
 	}
 
-	public void setLimitAmount(ActiveCurrencyAndAmount limitAmount) {
-		this.limitAmount = limitAmount;
+	public AccountLimits1 setLimitAmount(ActiveCurrencyAndAmount limitAmount) {
+		this.limitAmount = Objects.requireNonNull(limitAmount);
+		return this;
 	}
 
-	@XmlElement(name = "LmtUtlstnAmt")
-	public ActiveCurrencyAndAmount getLimitUtilisationAmount() {
-		return limitUtilisationAmount;
+	public Optional<ActiveCurrencyAndAmount> getLimitUtilisationAmount() {
+		return limitUtilisationAmount == null ? Optional.empty() : Optional.of(limitUtilisationAmount);
 	}
 
-	public void setLimitUtilisationAmount(ActiveCurrencyAndAmount limitUtilisationAmount) {
+	public AccountLimits1 setLimitUtilisationAmount(ActiveCurrencyAndAmount limitUtilisationAmount) {
 		this.limitUtilisationAmount = limitUtilisationAmount;
+		return this;
 	}
 
-	@XmlElement(name = "BilLmtCtrPtyId")
-	public BranchAndFinancialInstitutionIdentification5 getBilateralLimitCounterpartyIdentification() {
-		return bilateralLimitCounterpartyIdentification;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getBilateralLimitCounterpartyIdentification() {
+		return bilateralLimitCounterpartyIdentification == null ? Optional.empty() : Optional.of(bilateralLimitCounterpartyIdentification);
 	}
 
-	public void setBilateralLimitCounterpartyIdentification(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 bilateralLimitCounterpartyIdentification) {
+	public AccountLimits1 setBilateralLimitCounterpartyIdentification(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 bilateralLimitCounterpartyIdentification) {
 		this.bilateralLimitCounterpartyIdentification = bilateralLimitCounterpartyIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ClrCrctSchme")
-	public ClearingScheme1Choice getClearingCircuitScheme() {
-		return clearingCircuitScheme;
+	public Optional<ClearingScheme1Choice> getClearingCircuitScheme() {
+		return clearingCircuitScheme == null ? Optional.empty() : Optional.of(clearingCircuitScheme);
 	}
 
-	public void setClearingCircuitScheme(ClearingScheme1Choice clearingCircuitScheme) {
+	public AccountLimits1 setClearingCircuitScheme(ClearingScheme1Choice clearingCircuitScheme) {
 		this.clearingCircuitScheme = clearingCircuitScheme;
+		return this;
 	}
 }

@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.PartyName;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * Organisation25}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Organisation26", propOrder = {"commonName", "address", "countryCode", "merchantCategoryCode", "registeredIdentifier"})
 public class Organisation26 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CmonNm", required = true)
 	protected Max70Text commonName;
 	/**
-	 * Name of the merchant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +127,7 @@ public class Organisation26 {
 	public static final MMMessageAttribute mmCommonName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
-			componentContext_lazy = () -> Organisation26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation26.mmObject();
 			isDerived = false;
 			xmlTag = "CmonNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +139,11 @@ public class Organisation26 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Adr")
 	protected Max140Text address;
 	/**
-	 * Location of the merchant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +169,7 @@ public class Organisation26 {
 	 */
 	public static final MMMessageAttribute mmAddress = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Organisation26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation26.mmObject();
 			isDerived = false;
 			xmlTag = "Adr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,10 +180,11 @@ public class Organisation26 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CtryCd", required = true)
 	protected ISO3NumericCountryCode countryCode;
 	/**
-	 * Country of the merchant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,7 +211,7 @@ public class Organisation26 {
 	 */
 	public static final MMMessageAttribute mmCountryCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Organisation26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation26.mmObject();
 			isDerived = false;
 			xmlTag = "CtryCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,11 +222,11 @@ public class Organisation26 {
 			simpleType_lazy = () -> ISO3NumericCountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "MrchntCtgyCd", required = true)
 	protected Min3Max4Text merchantCategoryCode;
 	/**
-	 * Category code conform to ISO 18245, related to the type of services or
-	 * goods the merchant provides for the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -250,7 +255,7 @@ public class Organisation26 {
 	 */
 	public static final MMMessageAttribute mmMerchantCategoryCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Organisation26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation26.mmObject();
 			isDerived = false;
 			xmlTag = "MrchntCtgyCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -261,11 +266,11 @@ public class Organisation26 {
 			simpleType_lazy = () -> Min3Max4Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RegdIdr", required = true)
 	protected Max35Text registeredIdentifier;
 	/**
-	 * Identifier of the sponsored merchant assigned by the payment facilitator
-	 * of their acquirer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -293,7 +298,7 @@ public class Organisation26 {
 	 */
 	public static final MMMessageAttribute mmRegisteredIdentifier = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Organisation26.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Organisation26.mmObject();
 			isDerived = false;
 			xmlTag = "RegdIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -308,9 +313,10 @@ public class Organisation26 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Organisation26.mmCommonName, Organisation26.mmAddress, Organisation26.mmCountryCode, Organisation26.mmMerchantCategoryCode, Organisation26.mmRegisteredIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Organisation26.mmCommonName, com.tools20022.repository.msg.Organisation26.mmAddress, com.tools20022.repository.msg.Organisation26.mmCountryCode,
+						com.tools20022.repository.msg.Organisation26.mmMerchantCategoryCode, com.tools20022.repository.msg.Organisation26.mmRegisteredIdentifier);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Organisation26";
 				definition = "Merchant performing the transaction.";
@@ -320,48 +326,48 @@ public class Organisation26 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CmonNm", required = true)
 	public Max70Text getCommonName() {
 		return commonName;
 	}
 
-	public void setCommonName(Max70Text commonName) {
-		this.commonName = commonName;
+	public Organisation26 setCommonName(Max70Text commonName) {
+		this.commonName = Objects.requireNonNull(commonName);
+		return this;
 	}
 
-	@XmlElement(name = "Adr")
-	public Max140Text getAddress() {
-		return address;
+	public Optional<Max140Text> getAddress() {
+		return address == null ? Optional.empty() : Optional.of(address);
 	}
 
-	public void setAddress(Max140Text address) {
+	public Organisation26 setAddress(Max140Text address) {
 		this.address = address;
+		return this;
 	}
 
-	@XmlElement(name = "CtryCd", required = true)
 	public ISO3NumericCountryCode getCountryCode() {
 		return countryCode;
 	}
 
-	public void setCountryCode(ISO3NumericCountryCode countryCode) {
-		this.countryCode = countryCode;
+	public Organisation26 setCountryCode(ISO3NumericCountryCode countryCode) {
+		this.countryCode = Objects.requireNonNull(countryCode);
+		return this;
 	}
 
-	@XmlElement(name = "MrchntCtgyCd", required = true)
 	public Min3Max4Text getMerchantCategoryCode() {
 		return merchantCategoryCode;
 	}
 
-	public void setMerchantCategoryCode(Min3Max4Text merchantCategoryCode) {
-		this.merchantCategoryCode = merchantCategoryCode;
+	public Organisation26 setMerchantCategoryCode(Min3Max4Text merchantCategoryCode) {
+		this.merchantCategoryCode = Objects.requireNonNull(merchantCategoryCode);
+		return this;
 	}
 
-	@XmlElement(name = "RegdIdr", required = true)
 	public Max35Text getRegisteredIdentifier() {
 		return registeredIdentifier;
 	}
 
-	public void setRegisteredIdentifier(Max35Text registeredIdentifier) {
-		this.registeredIdentifier = registeredIdentifier;
+	public Organisation26 setRegisteredIdentifier(Max35Text registeredIdentifier) {
+		this.registeredIdentifier = Objects.requireNonNull(registeredIdentifier);
+		return this;
 	}
 }

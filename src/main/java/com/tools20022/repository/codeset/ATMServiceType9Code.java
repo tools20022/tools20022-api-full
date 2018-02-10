@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ATMServiceTypeCode;
+import com.tools20022.repository.codeset.ATMServiceType9Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Describes the type of fund transfer selected by the customer or the ATM.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode
- * ATMServiceTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType9Code#mmCustomerTransfer
- * ATMServiceType9Code.mmCustomerTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType9Code#CustomerTransfer
+ * ATMServiceType9Code.CustomerTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType9Code#mmInterCustomerTransfer
- * ATMServiceType9Code.mmInterCustomerTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType9Code#InterCustomerTransfer
+ * ATMServiceType9Code.InterCustomerTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMServiceType9Code#mmPayment
- * ATMServiceType9Code.mmPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceType9Code#Payment
+ * ATMServiceType9Code.Payment}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ATMServiceTypeCode
+ * ATMServiceTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ATMServiceType9Code extends ATMServiceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ATMServiceType9Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,18 +95,19 @@ public class ATMServiceType9Code extends ATMServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType10Code#mmCustomerTransfer
-	 * ATMServiceType10Code.mmCustomerTransfer}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType10Code#CustomerTransfer
+	 * ATMServiceType10Code.CustomerTransfer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustomerTransfer = new MMCode() {
+	public static final ATMServiceType9Code CustomerTransfer = new ATMServiceType9Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerTransfer";
-			nextVersions_lazy = () -> Arrays.asList(ATMServiceType10Code.mmCustomerTransfer);
-			owner_lazy = () -> ATMServiceType9Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(ATMServiceType10Code.CustomerTransfer);
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMServiceType9Code.mmObject();
+			codeName = ATMServiceTypeCode.CustomerTransfer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -122,18 +128,19 @@ public class ATMServiceType9Code extends ATMServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType10Code#mmInterCustomerTransfer
-	 * ATMServiceType10Code.mmInterCustomerTransfer}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType10Code#InterCustomerTransfer
+	 * ATMServiceType10Code.InterCustomerTransfer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterCustomerTransfer = new MMCode() {
+	public static final ATMServiceType9Code InterCustomerTransfer = new ATMServiceType9Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterCustomerTransfer";
-			nextVersions_lazy = () -> Arrays.asList(ATMServiceType10Code.mmInterCustomerTransfer);
-			owner_lazy = () -> ATMServiceType9Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(ATMServiceType10Code.InterCustomerTransfer);
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMServiceType9Code.mmObject();
+			codeName = ATMServiceTypeCode.InterCustomerTransfer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -154,33 +161,66 @@ public class ATMServiceType9Code extends ATMServiceTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType10Code#mmPayment
-	 * ATMServiceType10Code.mmPayment}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMServiceType10Code#Payment
+	 * ATMServiceType10Code.Payment}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPayment = new MMCode() {
+	public static final ATMServiceType9Code Payment = new ATMServiceType9Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
-			nextVersions_lazy = () -> Arrays.asList(ATMServiceType10Code.mmPayment);
-			owner_lazy = () -> ATMServiceType9Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(ATMServiceType10Code.Payment);
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMServiceType9Code.mmObject();
+			codeName = ATMServiceTypeCode.Payment.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ATMServiceType9Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ATMServiceType9Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMServiceType9Code";
 				definition = "Describes the type of fund transfer selected by the customer or the ATM.";
 				nextVersions_lazy = () -> Arrays.asList(ATMServiceType10Code.mmObject());
-				code_lazy = () -> Arrays.asList(ATMServiceType9Code.mmCustomerTransfer, ATMServiceType9Code.mmInterCustomerTransfer, ATMServiceType9Code.mmPayment);
 				trace_lazy = () -> ATMServiceTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMServiceType9Code.CustomerTransfer, com.tools20022.repository.codeset.ATMServiceType9Code.InterCustomerTransfer,
+						com.tools20022.repository.codeset.ATMServiceType9Code.Payment);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CustomerTransfer.getCodeName().get(), CustomerTransfer);
+		codesByName.put(InterCustomerTransfer.getCodeName().get(), InterCustomerTransfer);
+		codesByName.put(Payment.getCodeName().get(), Payment);
+	}
+
+	public static ATMServiceType9Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ATMServiceType9Code[] values() {
+		ATMServiceType9Code[] values = new ATMServiceType9Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ATMServiceType9Code> {
+		@Override
+		public ATMServiceType9Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ATMServiceType9Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

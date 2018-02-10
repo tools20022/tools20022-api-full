@@ -27,9 +27,8 @@ import com.tools20022.repository.datatype.Max100KBinary;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max500Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMReject2", propOrder = {"rejectInitiatorIdentification", "rejectReason", "additionalInformation", "command", "messageInError"})
 public class ATMReject2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RjctInitrId")
 	protected Max35Text rejectInitiatorIdentification;
 	/**
-	 * Identification of the entity sending the reject message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +117,7 @@ public class ATMReject2 {
 	 */
 	public static final MMMessageAttribute mmRejectInitiatorIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMReject2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMReject2.mmObject();
 			isDerived = false;
 			xmlTag = "RjctInitrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,11 +128,11 @@ public class ATMReject2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RjctRsn", required = true)
 	protected RejectReason1Code rejectReason;
 	/**
-	 * High level information allowing the sender of a request or an advice to
-	 * know the types of error, and handle them accordingly.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +161,7 @@ public class ATMReject2 {
 	 */
 	public static final MMMessageAttribute mmRejectReason = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMReject2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMReject2.mmObject();
 			isDerived = false;
 			xmlTag = "RjctRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,14 +172,11 @@ public class ATMReject2 {
 			simpleType_lazy = () -> RejectReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected Max500Text additionalInformation;
 	/**
-	 * Additional information related to the sending of a reject message in
-	 * response to a request or an advice.<br>
-	 * For logging purpose, in order to allow further analysis, statistics and
-	 * deferred processing on the success or the failure of the request
-	 * processing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -207,7 +204,7 @@ public class ATMReject2 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMReject2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMReject2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,10 +215,11 @@ public class ATMReject2 {
 			simpleType_lazy = () -> Max500Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Cmd")
 	protected List<com.tools20022.repository.msg.ATMCommand7> command;
 	/**
-	 * Maintenance command to perform on the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -246,7 +244,7 @@ public class ATMReject2 {
 	 */
 	public static final MMMessageAssociationEnd mmCommand = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMReject2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMReject2.mmObject();
 			isDerived = false;
 			xmlTag = "Cmd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,10 +255,11 @@ public class ATMReject2 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMCommand7.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgInErr")
 	protected Max100KBinary messageInError;
 	/**
-	 * Received message that has been rejected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -287,7 +286,7 @@ public class ATMReject2 {
 	 */
 	public static final MMMessageAttribute mmMessageInError = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMReject2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMReject2.mmObject();
 			isDerived = false;
 			xmlTag = "MsgInErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -302,9 +301,10 @@ public class ATMReject2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMReject2.mmRejectInitiatorIdentification, ATMReject2.mmRejectReason, ATMReject2.mmAdditionalInformation, ATMReject2.mmCommand, ATMReject2.mmMessageInError);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMReject2.mmRejectInitiatorIdentification, com.tools20022.repository.msg.ATMReject2.mmRejectReason,
+						com.tools20022.repository.msg.ATMReject2.mmAdditionalInformation, com.tools20022.repository.msg.ATMReject2.mmCommand, com.tools20022.repository.msg.ATMReject2.mmMessageInError);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ATMRejectV02.mmATMReject);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMReject2";
 				definition = "Information related to the reject of a message from an ATM or an ATM manager.";
@@ -313,48 +313,48 @@ public class ATMReject2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RjctInitrId")
-	public Max35Text getRejectInitiatorIdentification() {
-		return rejectInitiatorIdentification;
+	public Optional<Max35Text> getRejectInitiatorIdentification() {
+		return rejectInitiatorIdentification == null ? Optional.empty() : Optional.of(rejectInitiatorIdentification);
 	}
 
-	public void setRejectInitiatorIdentification(Max35Text rejectInitiatorIdentification) {
+	public ATMReject2 setRejectInitiatorIdentification(Max35Text rejectInitiatorIdentification) {
 		this.rejectInitiatorIdentification = rejectInitiatorIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "RjctRsn", required = true)
 	public RejectReason1Code getRejectReason() {
 		return rejectReason;
 	}
 
-	public void setRejectReason(RejectReason1Code rejectReason) {
-		this.rejectReason = rejectReason;
+	public ATMReject2 setRejectReason(RejectReason1Code rejectReason) {
+		this.rejectReason = Objects.requireNonNull(rejectReason);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public Max500Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<Max500Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(Max500Text additionalInformation) {
+	public ATMReject2 setAdditionalInformation(Max500Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 
-	@XmlElement(name = "Cmd")
 	public List<ATMCommand7> getCommand() {
-		return command;
+		return command == null ? command = new ArrayList<>() : command;
 	}
 
-	public void setCommand(List<com.tools20022.repository.msg.ATMCommand7> command) {
-		this.command = command;
+	public ATMReject2 setCommand(List<com.tools20022.repository.msg.ATMCommand7> command) {
+		this.command = Objects.requireNonNull(command);
+		return this;
 	}
 
-	@XmlElement(name = "MsgInErr")
-	public Max100KBinary getMessageInError() {
-		return messageInError;
+	public Optional<Max100KBinary> getMessageInError() {
+		return messageInError == null ? Optional.empty() : Optional.of(messageInError);
 	}
 
-	public void setMessageInError(Max100KBinary messageInError) {
+	public ATMReject2 setMessageInError(Max100KBinary messageInError) {
 		this.messageInError = messageInError;
+		return this;
 	}
 }

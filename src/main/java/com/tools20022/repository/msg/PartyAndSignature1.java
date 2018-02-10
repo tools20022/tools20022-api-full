@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Undertaking;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -102,8 +103,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,15 +115,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Entity involved in an activity."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyAndSignature1", propOrder = {"party", "signature"})
 public class PartyAndSignature1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pty", required = true)
 	protected PartyIdentification41 party;
 	/**
-	 * Entity involved in an activity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -154,7 +156,7 @@ public class PartyAndSignature1 {
 	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> PartyAndSignature1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAndSignature1.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -166,10 +168,11 @@ public class PartyAndSignature1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification41.mmObject();
 		}
 	};
+	@XmlElement(name = "Sgntr", required = true)
 	protected ProprietaryData3 signature;
 	/**
-	 * Signature of a party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -201,7 +204,7 @@ public class PartyAndSignature1 {
 	public static final MMMessageAssociationEnd mmSignature = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmElectronicSignature;
-			componentContext_lazy = () -> PartyAndSignature1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAndSignature1.mmObject();
 			isDerived = false;
 			xmlTag = "Sgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,14 +220,14 @@ public class PartyAndSignature1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyAndSignature1.mmParty, PartyAndSignature1.mmSignature);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyAndSignature1.mmParty, com.tools20022.repository.msg.PartyAndSignature1.mmSignature);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AccountAdditionalInformationRequestV01.mmDigitalSignature, AccountClosingAdditionalInformationRequestV01.mmDigitalSignature,
 						AccountClosingAmendmentRequestV01.mmDigitalSignature, AccountClosingRequestV01.mmDigitalSignature, AccountExcludedMandateMaintenanceAmendmentRequestV01.mmDigitalSignature,
 						AccountExcludedMandateMaintenanceRequestV01.mmDigitalSignature, AccountMandateMaintenanceAmendmentRequestV01.mmDigitalSignature, AccountMandateMaintenanceRequestV01.mmDigitalSignature,
 						AccountOpeningAdditionalInformationRequestV01.mmDigitalSignature, AccountOpeningAmendmentRequestV01.mmDigitalSignature, AccountOpeningRequestV01.mmDigitalSignature, AccountReportRequestV01.mmDigitalSignature,
 						AccountReportV01.mmDigitalSignature, AccountRequestAcknowledgementV01.mmDigitalSignature, AccountRequestRejectionV01.mmDigitalSignature);
 				trace_lazy = () -> Party.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyAndSignature1";
 				definition = "Entity involved in an activity.";
@@ -233,21 +236,21 @@ public class PartyAndSignature1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pty", required = true)
 	public PartyIdentification41 getParty() {
 		return party;
 	}
 
-	public void setParty(com.tools20022.repository.msg.PartyIdentification41 party) {
-		this.party = party;
+	public PartyAndSignature1 setParty(com.tools20022.repository.msg.PartyIdentification41 party) {
+		this.party = Objects.requireNonNull(party);
+		return this;
 	}
 
-	@XmlElement(name = "Sgntr", required = true)
 	public ProprietaryData3 getSignature() {
 		return signature;
 	}
 
-	public void setSignature(com.tools20022.repository.msg.ProprietaryData3 signature) {
-		this.signature = signature;
+	public PartyAndSignature1 setSignature(com.tools20022.repository.msg.ProprietaryData3 signature) {
+		this.signature = Objects.requireNonNull(signature);
+		return this;
 	}
 }

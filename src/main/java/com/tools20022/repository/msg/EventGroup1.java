@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EventGroup1", propOrder = {"type", "date", "price", "description"})
 public class EventGroup1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp")
 	protected EventType1Code type;
 	/**
-	 * Represents the type of event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +106,7 @@ public class EventGroup1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EventGroup1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EventGroup1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +117,11 @@ public class EventGroup1 {
 			simpleType_lazy = () -> EventType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Dt")
 	protected ISODateTime date;
 	/**
-	 * Date of event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +147,7 @@ public class EventGroup1 {
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EventGroup1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EventGroup1.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,10 +158,11 @@ public class EventGroup1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "Pric")
 	protected Price1 price;
 	/**
-	 * Predetermined price of issue at event, if applicable.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,7 +187,7 @@ public class EventGroup1 {
 	 */
 	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EventGroup1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EventGroup1.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,10 +198,11 @@ public class EventGroup1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
 		}
 	};
+	@XmlElement(name = "Desc")
 	protected Max350Text description;
 	/**
-	 * Comments related to the event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -223,7 +228,7 @@ public class EventGroup1 {
 	 */
 	public static final MMMessageAttribute mmDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EventGroup1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EventGroup1.mmObject();
 			isDerived = false;
 			xmlTag = "Desc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,8 +243,9 @@ public class EventGroup1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EventGroup1.mmType, EventGroup1.mmDate, EventGroup1.mmPrice, EventGroup1.mmDescription);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EventGroup1.mmType, com.tools20022.repository.msg.EventGroup1.mmDate, com.tools20022.repository.msg.EventGroup1.mmPrice,
+						com.tools20022.repository.msg.EventGroup1.mmDescription);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EventGroup1";
 				definition = "Provides the significant events scheduled during the life of a security. Eg, a callable bond may list one or more dates at which the issuer may call the bond. An option may list put, tender or call dates.";
@@ -248,39 +254,39 @@ public class EventGroup1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp")
-	public EventType1Code getType() {
-		return type;
+	public Optional<EventType1Code> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(EventType1Code type) {
+	public EventGroup1 setType(EventType1Code type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Dt")
-	public ISODateTime getDate() {
-		return date;
+	public Optional<ISODateTime> getDate() {
+		return date == null ? Optional.empty() : Optional.of(date);
 	}
 
-	public void setDate(ISODateTime date) {
+	public EventGroup1 setDate(ISODateTime date) {
 		this.date = date;
+		return this;
 	}
 
-	@XmlElement(name = "Pric")
-	public Price1 getPrice() {
-		return price;
+	public Optional<Price1> getPrice() {
+		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public void setPrice(com.tools20022.repository.msg.Price1 price) {
+	public EventGroup1 setPrice(com.tools20022.repository.msg.Price1 price) {
 		this.price = price;
+		return this;
 	}
 
-	@XmlElement(name = "Desc")
-	public Max350Text getDescription() {
-		return description;
+	public Optional<Max350Text> getDescription() {
+		return description == null ? Optional.empty() : Optional.of(description);
 	}
 
-	public void setDescription(Max350Text description) {
+	public EventGroup1 setDescription(Max350Text description) {
 		this.description = description;
+		return this;
 	}
 }

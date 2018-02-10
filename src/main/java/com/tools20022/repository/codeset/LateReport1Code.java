@@ -20,32 +20,36 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.LateReportCode;
+import com.tools20022.repository.codeset.LateReport1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether a transaction report is late.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.LateReportCode LateReportCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.LateReport1Code#mmLate
- * LateReport1Code.mmLate}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.LateReport1Code#Late
+ * LateReport1Code.Late}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.LateReport1Code#mmLateBecausePartial
- * LateReport1Code.mmLateBecausePartial}</li>
+ * {@linkplain com.tools20022.repository.codeset.LateReport1Code#LateBecausePartial
+ * LateReport1Code.LateBecausePartial}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.LateReportCode LateReportCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -62,7 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies whether a transaction report is late."</li>
  * </ul>
  */
-public class LateReport1Code extends LateReportCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class LateReport1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,11 +86,12 @@ public class LateReport1Code extends LateReportCode {
 	 * name} = "Late"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLate = new MMCode() {
+	public static final LateReport1Code Late = new LateReport1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Late";
-			owner_lazy = () -> LateReport1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LateReport1Code.mmObject();
+			codeName = LateReportCode.Late.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -104,26 +110,57 @@ public class LateReport1Code extends LateReportCode {
 	 * name} = "LateBecausePartial"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLateBecausePartial = new MMCode() {
+	public static final LateReport1Code LateBecausePartial = new LateReport1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LateBecausePartial";
-			owner_lazy = () -> LateReport1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.LateReport1Code.mmObject();
+			codeName = LateReportCode.LateBecausePartial.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, LateReport1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected LateReport1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("LAT1");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LateReport1Code";
 				definition = "Specifies whether a transaction report is late.";
-				code_lazy = () -> Arrays.asList(LateReport1Code.mmLate, LateReport1Code.mmLateBecausePartial);
 				trace_lazy = () -> LateReportCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LateReport1Code.Late, com.tools20022.repository.codeset.LateReport1Code.LateBecausePartial);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Late.getCodeName().get(), Late);
+		codesByName.put(LateBecausePartial.getCodeName().get(), LateBecausePartial);
+	}
+
+	public static LateReport1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static LateReport1Code[] values() {
+		LateReport1Code[] values = new LateReport1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, LateReport1Code> {
+		@Override
+		public LateReport1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(LateReport1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

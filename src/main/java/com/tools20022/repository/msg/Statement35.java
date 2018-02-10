@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -26,6 +27,8 @@ import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Defines the criteria used to report on the securities account positions."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Statement35", propOrder = {"dateOrPeriod", "historicData"})
 public class Statement35 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DtOrPrd")
 	protected DateAndPeriod1Choice dateOrPeriod;
 	/**
-	 * Date or period of the statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -84,6 +88,9 @@ public class Statement35 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DtOrPrd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::STAT or :69a::STAT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -96,9 +103,10 @@ public class Statement35 {
 	 */
 	public static final MMMessageAssociationEnd mmDateOrPeriod = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Statement35.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement35.mmObject();
 			isDerived = false;
 			xmlTag = "DtOrPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::STAT or :69a::STAT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOrPeriod";
 			definition = "Date or period of the statement.";
@@ -108,11 +116,11 @@ public class Statement35 {
 			type_lazy = () -> DateAndPeriod1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "HistrcData", required = true)
 	protected TrueFalseIndicator historicData;
 	/**
-	 * Specifies whether the data is either historical (true) or current
-	 * (false).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,6 +134,9 @@ public class Statement35 {
 	 * {@linkplain com.tools20022.repository.msg.Statement35 Statement35}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "HistrcData"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::STTY</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -141,9 +152,10 @@ public class Statement35 {
 	 */
 	public static final MMMessageAttribute mmHistoricData = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Statement35.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Statement35.mmObject();
 			isDerived = false;
 			xmlTag = "HistrcData";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::STTY"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HistoricData";
 			definition = "Specifies whether the data is either historical (true) or current (false).";
@@ -156,8 +168,8 @@ public class Statement35 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Statement35.mmDateOrPeriod, Statement35.mmHistoricData);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Statement35.mmDateOrPeriod, com.tools20022.repository.msg.Statement35.mmHistoricData);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Statement35";
 				definition = "Defines the criteria used to report on the securities account positions.";
@@ -166,21 +178,21 @@ public class Statement35 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DtOrPrd")
-	public DateAndPeriod1Choice getDateOrPeriod() {
-		return dateOrPeriod;
+	public Optional<DateAndPeriod1Choice> getDateOrPeriod() {
+		return dateOrPeriod == null ? Optional.empty() : Optional.of(dateOrPeriod);
 	}
 
-	public void setDateOrPeriod(DateAndPeriod1Choice dateOrPeriod) {
+	public Statement35 setDateOrPeriod(DateAndPeriod1Choice dateOrPeriod) {
 		this.dateOrPeriod = dateOrPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "HistrcData", required = true)
 	public TrueFalseIndicator getHistoricData() {
 		return historicData;
 	}
 
-	public void setHistoricData(TrueFalseIndicator historicData) {
-		this.historicData = historicData;
+	public Statement35 setHistoricData(TrueFalseIndicator historicData) {
+		this.historicData = Objects.requireNonNull(historicData);
+		return this;
 	}
 }

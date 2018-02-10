@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.TimeFrame;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +62,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTradeMinusRule#forTimeFrame3
+ * ConstraintTradeMinusRule.forTimeFrame3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNonWorkingDayAdjustmentRule#forTimeFrame3
+ * ConstraintNonWorkingDayAdjustmentRule.forTimeFrame3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,16 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TimeFrame3", propOrder = {"otherTimeFrameDescription", "tradeMinus", "nonWorkingDayAdjustment", "referToOrderDesk"})
 public class TimeFrame3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OthrTmFrameDesc")
 	protected Max350Text otherTimeFrameDescription;
 	/**
-	 * Specifies a description of any other TimeFrame that may be used for the
-	 * DealingCutOffTimeFrame
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +130,7 @@ public class TimeFrame3 {
 	public static final MMMessageAttribute mmOtherTimeFrameDescription = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmOtherTimeFrameDescription;
-			componentContext_lazy = () -> TimeFrame3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TimeFrame3.mmObject();
 			isDerived = false;
 			xmlTag = "OthrTmFrameDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,13 +141,11 @@ public class TimeFrame3 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TMns")
 	protected Number tradeMinus;
 	/**
-	 * An agreed number of days before the Trade date (T) used to define
-	 * standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition
 	 * 
-	 * Where = T is the date that the price is applied to a transaction,
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,7 +179,7 @@ public class TimeFrame3 {
 	public static final MMMessageAttribute mmTradeMinus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmTradeMinus;
-			componentContext_lazy = () -> TimeFrame3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TimeFrame3.mmObject();
 			isDerived = false;
 			xmlTag = "TMns";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,10 +190,11 @@ public class TimeFrame3 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "NonWorkgDayAdjstmnt")
 	protected BusinessDayConvention1Code nonWorkingDayAdjustment;
 	/**
-	 * Convention used for adjusting a date when it is not a business day.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,7 +228,7 @@ public class TimeFrame3 {
 	public static final MMMessageAttribute mmNonWorkingDayAdjustment = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RedemptionSchedule.mmBusinessDayConvention;
-			componentContext_lazy = () -> TimeFrame3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TimeFrame3.mmObject();
 			isDerived = false;
 			xmlTag = "NonWorkgDayAdjstmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,10 +239,11 @@ public class TimeFrame3 {
 			simpleType_lazy = () -> BusinessDayConvention1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RefrToOrdrDsk")
 	protected ReferToFundOrderDesk1Code referToOrderDesk;
 	/**
-	 * Refer to Order Desk
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -258,7 +270,7 @@ public class TimeFrame3 {
 	 */
 	public static final MMMessageAttribute mmReferToOrderDesk = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TimeFrame3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TimeFrame3.mmObject();
 			isDerived = false;
 			xmlTag = "RefrToOrdrDsk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,9 +285,11 @@ public class TimeFrame3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TimeFrame3.mmOtherTimeFrameDescription, TimeFrame3.mmTradeMinus, TimeFrame3.mmNonWorkingDayAdjustment, TimeFrame3.mmReferToOrderDesk);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TimeFrame3.mmOtherTimeFrameDescription, com.tools20022.repository.msg.TimeFrame3.mmTradeMinus,
+						com.tools20022.repository.msg.TimeFrame3.mmNonWorkingDayAdjustment, com.tools20022.repository.msg.TimeFrame3.mmReferToOrderDesk);
 				trace_lazy = () -> TimeFrame.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeMinusRule.forTimeFrame3, com.tools20022.repository.constraints.ConstraintNonWorkingDayAdjustmentRule.forTimeFrame3);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TimeFrame3";
 				definition = "TimeFrame elements that define a period as number of days before or after a activity.";
@@ -284,39 +298,39 @@ public class TimeFrame3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OthrTmFrameDesc")
-	public Max350Text getOtherTimeFrameDescription() {
-		return otherTimeFrameDescription;
+	public Optional<Max350Text> getOtherTimeFrameDescription() {
+		return otherTimeFrameDescription == null ? Optional.empty() : Optional.of(otherTimeFrameDescription);
 	}
 
-	public void setOtherTimeFrameDescription(Max350Text otherTimeFrameDescription) {
+	public TimeFrame3 setOtherTimeFrameDescription(Max350Text otherTimeFrameDescription) {
 		this.otherTimeFrameDescription = otherTimeFrameDescription;
+		return this;
 	}
 
-	@XmlElement(name = "TMns")
-	public Number getTradeMinus() {
-		return tradeMinus;
+	public Optional<Number> getTradeMinus() {
+		return tradeMinus == null ? Optional.empty() : Optional.of(tradeMinus);
 	}
 
-	public void setTradeMinus(Number tradeMinus) {
+	public TimeFrame3 setTradeMinus(Number tradeMinus) {
 		this.tradeMinus = tradeMinus;
+		return this;
 	}
 
-	@XmlElement(name = "NonWorkgDayAdjstmnt")
-	public BusinessDayConvention1Code getNonWorkingDayAdjustment() {
-		return nonWorkingDayAdjustment;
+	public Optional<BusinessDayConvention1Code> getNonWorkingDayAdjustment() {
+		return nonWorkingDayAdjustment == null ? Optional.empty() : Optional.of(nonWorkingDayAdjustment);
 	}
 
-	public void setNonWorkingDayAdjustment(BusinessDayConvention1Code nonWorkingDayAdjustment) {
+	public TimeFrame3 setNonWorkingDayAdjustment(BusinessDayConvention1Code nonWorkingDayAdjustment) {
 		this.nonWorkingDayAdjustment = nonWorkingDayAdjustment;
+		return this;
 	}
 
-	@XmlElement(name = "RefrToOrdrDsk")
-	public ReferToFundOrderDesk1Code getReferToOrderDesk() {
-		return referToOrderDesk;
+	public Optional<ReferToFundOrderDesk1Code> getReferToOrderDesk() {
+		return referToOrderDesk == null ? Optional.empty() : Optional.of(referToOrderDesk);
 	}
 
-	public void setReferToOrderDesk(ReferToFundOrderDesk1Code referToOrderDesk) {
+	public TimeFrame3 setReferToOrderDesk(ReferToFundOrderDesk1Code referToOrderDesk) {
 		this.referToOrderDesk = referToOrderDesk;
+		return this;
 	}
 }

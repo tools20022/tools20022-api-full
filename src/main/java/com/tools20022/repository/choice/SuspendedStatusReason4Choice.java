@@ -27,9 +27,11 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SuspendedStatus2;
 import com.tools20022.repository.msg.SuspendedStatusReason4;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.msg.SuspendedStatus2 SuspendedStatus2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SuspendedStatusReason4Choice", propOrder = {"noSpecifiedReason", "reasonDetails"})
 public class SuspendedStatusReason4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NoSpcfdRsn", required = true)
 	protected NoReasonCode noSpecifiedReason;
 	/**
-	 * No reason available or to report for the suspended status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +123,7 @@ public class SuspendedStatusReason4Choice {
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmNoSpecifiedReason;
-			componentContext_lazy = () -> SuspendedStatusReason4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SuspendedStatusReason4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NoSpcfdRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +135,11 @@ public class SuspendedStatusReason4Choice {
 			simpleType_lazy = () -> NoReasonCode.mmObject();
 		}
 	};
+	@XmlElement(name = "RsnDtls", required = true)
 	protected List<SuspendedStatusReason4> reasonDetails;
 	/**
-	 * Reason for the suspended status, expressed as a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -172,7 +176,7 @@ public class SuspendedStatusReason4Choice {
 	public static final MMMessageAssociationEnd mmReasonDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderStatus.mmConditionallyAcceptedStatus;
-			componentContext_lazy = () -> SuspendedStatusReason4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SuspendedStatusReason4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RsnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,9 +193,9 @@ public class SuspendedStatusReason4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SuspendedStatusReason4Choice.mmNoSpecifiedReason, SuspendedStatusReason4Choice.mmReasonDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SuspendedStatusReason4Choice.mmNoSpecifiedReason, com.tools20022.repository.choice.SuspendedStatusReason4Choice.mmReasonDetails);
 				trace_lazy = () -> SecuritiesOrderStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SuspendedStatusReason4Choice";
 				definition = "Reason for a suspended status.";
@@ -201,21 +205,21 @@ public class SuspendedStatusReason4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NoSpcfdRsn", required = true)
 	public NoReasonCode getNoSpecifiedReason() {
 		return noSpecifiedReason;
 	}
 
-	public void setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
-		this.noSpecifiedReason = noSpecifiedReason;
+	public SuspendedStatusReason4Choice setNoSpecifiedReason(NoReasonCode noSpecifiedReason) {
+		this.noSpecifiedReason = Objects.requireNonNull(noSpecifiedReason);
+		return this;
 	}
 
-	@XmlElement(name = "RsnDtls", required = true)
 	public List<SuspendedStatusReason4> getReasonDetails() {
-		return reasonDetails;
+		return reasonDetails == null ? reasonDetails = new ArrayList<>() : reasonDetails;
 	}
 
-	public void setReasonDetails(List<SuspendedStatusReason4> reasonDetails) {
-		this.reasonDetails = reasonDetails;
+	public SuspendedStatusReason4Choice setReasonDetails(List<SuspendedStatusReason4> reasonDetails) {
+		this.reasonDetails = Objects.requireNonNull(reasonDetails);
+		return this;
 	}
 }

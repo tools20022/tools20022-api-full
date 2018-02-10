@@ -21,9 +21,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * TransactionSearchCriteria4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionSearchCriteria5", propOrder = {"paymentTo", "paymentFrom", "paymentSearch", "accountEntrySearch"})
 public class TransactionSearchCriteria5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtTo")
 	protected List<com.tools20022.repository.msg.SystemSearch3> paymentTo;
 	/**
-	 * Defines the criteria which are used to search for the destination of the
-	 * payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -114,7 +113,7 @@ public class TransactionSearchCriteria5 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentTo = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionSearchCriteria5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionSearchCriteria5.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,11 +125,11 @@ public class TransactionSearchCriteria5 {
 			type_lazy = () -> com.tools20022.repository.msg.SystemSearch3.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtFr")
 	protected List<com.tools20022.repository.msg.SystemSearch3> paymentFrom;
 	/**
-	 * Defines the criteria which are used to search for the origin of the
-	 * payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -163,7 +162,7 @@ public class TransactionSearchCriteria5 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentFrom = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionSearchCriteria5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionSearchCriteria5.mmObject();
 			isDerived = false;
 			xmlTag = "PmtFr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,10 +174,11 @@ public class TransactionSearchCriteria5 {
 			type_lazy = () -> com.tools20022.repository.msg.SystemSearch3.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtSch")
 	protected PaymentSearch5 paymentSearch;
 	/**
-	 * Defines the criteria which are used to search for a payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -210,7 +210,7 @@ public class TransactionSearchCriteria5 {
 	 */
 	public static final MMMessageAssociationEnd mmPaymentSearch = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionSearchCriteria5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionSearchCriteria5.mmObject();
 			isDerived = false;
 			xmlTag = "PmtSch";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,10 +223,11 @@ public class TransactionSearchCriteria5 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentSearch5.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctNtrySch")
 	protected CashAccountEntrySearch4 accountEntrySearch;
 	/**
-	 * Defines the criteria which are used to search for a cash entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -259,7 +260,7 @@ public class TransactionSearchCriteria5 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountEntrySearch = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionSearchCriteria5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionSearchCriteria5.mmObject();
 			isDerived = false;
 			xmlTag = "AcctNtrySch";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,8 +277,9 @@ public class TransactionSearchCriteria5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionSearchCriteria5.mmPaymentTo, TransactionSearchCriteria5.mmPaymentFrom, TransactionSearchCriteria5.mmPaymentSearch, TransactionSearchCriteria5.mmAccountEntrySearch);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionSearchCriteria5.mmPaymentTo, com.tools20022.repository.msg.TransactionSearchCriteria5.mmPaymentFrom,
+						com.tools20022.repository.msg.TransactionSearchCriteria5.mmPaymentSearch, com.tools20022.repository.msg.TransactionSearchCriteria5.mmAccountEntrySearch);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionSearchCriteria5";
 				definition = "Defines the criteria which are used to search for a payment transaction.";
@@ -287,39 +289,39 @@ public class TransactionSearchCriteria5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtTo")
 	public List<SystemSearch3> getPaymentTo() {
-		return paymentTo;
+		return paymentTo == null ? paymentTo = new ArrayList<>() : paymentTo;
 	}
 
-	public void setPaymentTo(List<com.tools20022.repository.msg.SystemSearch3> paymentTo) {
-		this.paymentTo = paymentTo;
+	public TransactionSearchCriteria5 setPaymentTo(List<com.tools20022.repository.msg.SystemSearch3> paymentTo) {
+		this.paymentTo = Objects.requireNonNull(paymentTo);
+		return this;
 	}
 
-	@XmlElement(name = "PmtFr")
 	public List<SystemSearch3> getPaymentFrom() {
-		return paymentFrom;
+		return paymentFrom == null ? paymentFrom = new ArrayList<>() : paymentFrom;
 	}
 
-	public void setPaymentFrom(List<com.tools20022.repository.msg.SystemSearch3> paymentFrom) {
-		this.paymentFrom = paymentFrom;
+	public TransactionSearchCriteria5 setPaymentFrom(List<com.tools20022.repository.msg.SystemSearch3> paymentFrom) {
+		this.paymentFrom = Objects.requireNonNull(paymentFrom);
+		return this;
 	}
 
-	@XmlElement(name = "PmtSch")
-	public PaymentSearch5 getPaymentSearch() {
-		return paymentSearch;
+	public Optional<PaymentSearch5> getPaymentSearch() {
+		return paymentSearch == null ? Optional.empty() : Optional.of(paymentSearch);
 	}
 
-	public void setPaymentSearch(com.tools20022.repository.msg.PaymentSearch5 paymentSearch) {
+	public TransactionSearchCriteria5 setPaymentSearch(com.tools20022.repository.msg.PaymentSearch5 paymentSearch) {
 		this.paymentSearch = paymentSearch;
+		return this;
 	}
 
-	@XmlElement(name = "AcctNtrySch")
-	public CashAccountEntrySearch4 getAccountEntrySearch() {
-		return accountEntrySearch;
+	public Optional<CashAccountEntrySearch4> getAccountEntrySearch() {
+		return accountEntrySearch == null ? Optional.empty() : Optional.of(accountEntrySearch);
 	}
 
-	public void setAccountEntrySearch(com.tools20022.repository.msg.CashAccountEntrySearch4 accountEntrySearch) {
+	public TransactionSearchCriteria5 setAccountEntrySearch(com.tools20022.repository.msg.CashAccountEntrySearch4 accountEntrySearch) {
 		this.accountEntrySearch = accountEntrySearch;
+		return this;
 	}
 }

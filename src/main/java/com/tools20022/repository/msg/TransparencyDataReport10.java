@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -32,6 +33,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -100,8 +103,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValidISINRule#forTransparencyDataReport10
+ * ConstraintValidISINRule.forTransparencyDataReport10}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintValidMICRule#forTransparencyDataReport10
+ * ConstraintValidMICRule.forTransparencyDataReport10}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,20 +128,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransparencyDataReport10", propOrder = {"technicalRecordIdentification", "identification", "fullName", "tradingVenue", "reportingDate", "maturityDate", "financialInstrumentClassification", "underlyingInstrumentAssetClass",
 		"derivativeContractType", "bond", "emissionAllowanceType", "derivative"})
 public class TransparencyDataReport10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TechRcrdId")
 	protected Max35Text technicalRecordIdentification;
 	/**
-	 * Unique identifier of a record in a message used as part of error
-	 * management and status advice messages.<br>
-	 * <br>
-	 * Usage:<br>
-	 * This identification will be used in the status advice report sent back.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +167,7 @@ public class TransparencyDataReport10 {
 	 */
 	public static final MMMessageAttribute mmTechnicalRecordIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "TechRcrdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,10 +178,11 @@ public class TransparencyDataReport10 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected ISINOct2015Identifier identification;
 	/**
-	 * Identifies the financial instrument using an ISIN.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,7 +216,7 @@ public class TransparencyDataReport10 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmSecurityIdentification;
-			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,10 +227,11 @@ public class TransparencyDataReport10 {
 			simpleType_lazy = () -> ISINOct2015Identifier.mmObject();
 		}
 	};
+	@XmlElement(name = "FullNm")
 	protected Max350Text fullName;
 	/**
-	 * Full name or description of the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,7 +264,7 @@ public class TransparencyDataReport10 {
 	public static final MMMessageAttribute mmFullName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LocalName.mmFullName;
-			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "FullNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,11 +275,11 @@ public class TransparencyDataReport10 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgVn")
 	protected MICIdentifier tradingVenue;
 	/**
-	 * Segment MIC for the trading venue where applicable, otherwise the
-	 * operational MIC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -302,7 +315,7 @@ public class TransparencyDataReport10 {
 	public static final MMMessageAttribute mmTradingVenue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmPlaceOfListing;
-			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "TradgVn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -313,10 +326,11 @@ public class TransparencyDataReport10 {
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "RptgDt")
 	protected ISODate reportingDate;
 	/**
-	 * Date this information is reported in relation to.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -349,7 +363,7 @@ public class TransparencyDataReport10 {
 	public static final MMMessageAttribute mmReportingDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "RptgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -360,13 +374,11 @@ public class TransparencyDataReport10 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "MtrtyDt")
 	protected ISODate maturityDate;
 	/**
-	 * Maturity date of the financial instrument. Field applicable for the asset
-	 * classes of bonds, interest rate derivatives, equity derivatives,
-	 * commodity derivatives, foreign exchange derivatives, credit derivatives,
-	 * C10 derivatives and derivatives on emission allowances.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -401,7 +413,7 @@ public class TransparencyDataReport10 {
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
-			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -412,10 +424,11 @@ public class TransparencyDataReport10 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmClssfctn", required = true)
 	protected NonEquityInstrumentReportingClassification1Code financialInstrumentClassification;
 	/**
-	 * Identification of non-equity financial instruments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -436,6 +449,10 @@ public class TransparencyDataReport10 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "FinInstrmClssfctn"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=Synonym, context=MiFIR,
+	 * value=MiFIRInstrumentClassification</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -449,9 +466,10 @@ public class TransparencyDataReport10 {
 	public static final MMMessageAttribute mmFinancialInstrumentClassification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
-			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmClssfctn";
+			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "MiFIR"}, new String[]{"value", "MiFIRInstrumentClassification"}));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentClassification";
 			definition = "Identification of non-equity financial instruments.";
@@ -460,11 +478,11 @@ public class TransparencyDataReport10 {
 			simpleType_lazy = () -> NonEquityInstrumentReportingClassification1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygInstrmAsstClss")
 	protected ProductType5Code underlyingInstrumentAssetClass;
 	/**
-	 * Details on the type of asset class a non-equity financial instrument can
-	 * be classified as.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -500,7 +518,7 @@ public class TransparencyDataReport10 {
 	public static final MMMessageAttribute mmUnderlyingInstrumentAssetClass = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
-			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygInstrmAsstClss";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -511,11 +529,11 @@ public class TransparencyDataReport10 {
 			simpleType_lazy = () -> ProductType5Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DerivCtrctTp")
 	protected FinancialInstrumentContractType1Code derivativeContractType;
 	/**
-	 * Details on the contract type a derivative non-equity financial instrument
-	 * can be classified as.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -551,7 +569,7 @@ public class TransparencyDataReport10 {
 	public static final MMMessageAttribute mmDerivativeContractType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
-			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "DerivCtrctTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -562,10 +580,11 @@ public class TransparencyDataReport10 {
 			simpleType_lazy = () -> FinancialInstrumentContractType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Bd")
 	protected DebtInstrument5 bond;
 	/**
-	 * Details specific to a bond / debt instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -596,7 +615,7 @@ public class TransparencyDataReport10 {
 	public static final MMMessageAssociationEnd mmBond = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Debt.mmObject();
-			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "Bd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -608,10 +627,11 @@ public class TransparencyDataReport10 {
 			type_lazy = () -> com.tools20022.repository.msg.DebtInstrument5.mmObject();
 		}
 	};
+	@XmlElement(name = "EmssnAllwncTp")
 	protected EmissionAllowanceProductType2Code emissionAllowanceType;
 	/**
-	 * Details the reporting of the emission allowance sub type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -645,7 +665,7 @@ public class TransparencyDataReport10 {
 	public static final MMMessageAttribute mmEmissionAllowanceType = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Commodity.mmObject();
-			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "EmssnAllwncTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -656,10 +676,11 @@ public class TransparencyDataReport10 {
 			simpleType_lazy = () -> EmissionAllowanceProductType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Deriv")
 	protected Derivative2Choice derivative;
 	/**
-	 * Derivative specific details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -691,7 +712,7 @@ public class TransparencyDataReport10 {
 	public static final MMMessageAssociationEnd mmDerivative = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmDerivative;
-			componentContext_lazy = () -> TransparencyDataReport10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransparencyDataReport10.mmObject();
 			isDerived = false;
 			xmlTag = "Deriv";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -707,12 +728,15 @@ public class TransparencyDataReport10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransparencyDataReport10.mmTechnicalRecordIdentification, TransparencyDataReport10.mmIdentification, TransparencyDataReport10.mmFullName, TransparencyDataReport10.mmTradingVenue,
-						TransparencyDataReport10.mmReportingDate, TransparencyDataReport10.mmMaturityDate, TransparencyDataReport10.mmFinancialInstrumentClassification, TransparencyDataReport10.mmUnderlyingInstrumentAssetClass,
-						TransparencyDataReport10.mmDerivativeContractType, TransparencyDataReport10.mmBond, TransparencyDataReport10.mmEmissionAllowanceType, TransparencyDataReport10.mmDerivative);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransparencyDataReport10.mmTechnicalRecordIdentification, com.tools20022.repository.msg.TransparencyDataReport10.mmIdentification,
+						com.tools20022.repository.msg.TransparencyDataReport10.mmFullName, com.tools20022.repository.msg.TransparencyDataReport10.mmTradingVenue, com.tools20022.repository.msg.TransparencyDataReport10.mmReportingDate,
+						com.tools20022.repository.msg.TransparencyDataReport10.mmMaturityDate, com.tools20022.repository.msg.TransparencyDataReport10.mmFinancialInstrumentClassification,
+						com.tools20022.repository.msg.TransparencyDataReport10.mmUnderlyingInstrumentAssetClass, com.tools20022.repository.msg.TransparencyDataReport10.mmDerivativeContractType,
+						com.tools20022.repository.msg.TransparencyDataReport10.mmBond, com.tools20022.repository.msg.TransparencyDataReport10.mmEmissionAllowanceType, com.tools20022.repository.msg.TransparencyDataReport10.mmDerivative);
 				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstrumentReportingNonEquityTransparencyDataReportV01.mmNonEquityTransparencyData);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintValidISINRule.forTransparencyDataReport10, com.tools20022.repository.constraints.ConstraintValidMICRule.forTransparencyDataReport10);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransparencyDataReport10";
 				definition = "Provides for reporting details of non-equity instruments as part of transparency calculations.";
@@ -721,111 +745,111 @@ public class TransparencyDataReport10 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TechRcrdId")
-	public Max35Text getTechnicalRecordIdentification() {
-		return technicalRecordIdentification;
+	public Optional<Max35Text> getTechnicalRecordIdentification() {
+		return technicalRecordIdentification == null ? Optional.empty() : Optional.of(technicalRecordIdentification);
 	}
 
-	public void setTechnicalRecordIdentification(Max35Text technicalRecordIdentification) {
+	public TransparencyDataReport10 setTechnicalRecordIdentification(Max35Text technicalRecordIdentification) {
 		this.technicalRecordIdentification = technicalRecordIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public ISINOct2015Identifier getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(ISINOct2015Identifier identification) {
-		this.identification = identification;
+	public TransparencyDataReport10 setIdentification(ISINOct2015Identifier identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "FullNm")
-	public Max350Text getFullName() {
-		return fullName;
+	public Optional<Max350Text> getFullName() {
+		return fullName == null ? Optional.empty() : Optional.of(fullName);
 	}
 
-	public void setFullName(Max350Text fullName) {
+	public TransparencyDataReport10 setFullName(Max350Text fullName) {
 		this.fullName = fullName;
+		return this;
 	}
 
-	@XmlElement(name = "TradgVn")
-	public MICIdentifier getTradingVenue() {
-		return tradingVenue;
+	public Optional<MICIdentifier> getTradingVenue() {
+		return tradingVenue == null ? Optional.empty() : Optional.of(tradingVenue);
 	}
 
-	public void setTradingVenue(MICIdentifier tradingVenue) {
+	public TransparencyDataReport10 setTradingVenue(MICIdentifier tradingVenue) {
 		this.tradingVenue = tradingVenue;
+		return this;
 	}
 
-	@XmlElement(name = "RptgDt")
-	public ISODate getReportingDate() {
-		return reportingDate;
+	public Optional<ISODate> getReportingDate() {
+		return reportingDate == null ? Optional.empty() : Optional.of(reportingDate);
 	}
 
-	public void setReportingDate(ISODate reportingDate) {
+	public TransparencyDataReport10 setReportingDate(ISODate reportingDate) {
 		this.reportingDate = reportingDate;
+		return this;
 	}
 
-	@XmlElement(name = "MtrtyDt")
-	public ISODate getMaturityDate() {
-		return maturityDate;
+	public Optional<ISODate> getMaturityDate() {
+		return maturityDate == null ? Optional.empty() : Optional.of(maturityDate);
 	}
 
-	public void setMaturityDate(ISODate maturityDate) {
+	public TransparencyDataReport10 setMaturityDate(ISODate maturityDate) {
 		this.maturityDate = maturityDate;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmClssfctn", required = true)
 	public NonEquityInstrumentReportingClassification1Code getFinancialInstrumentClassification() {
 		return financialInstrumentClassification;
 	}
 
-	public void setFinancialInstrumentClassification(NonEquityInstrumentReportingClassification1Code financialInstrumentClassification) {
-		this.financialInstrumentClassification = financialInstrumentClassification;
+	public TransparencyDataReport10 setFinancialInstrumentClassification(NonEquityInstrumentReportingClassification1Code financialInstrumentClassification) {
+		this.financialInstrumentClassification = Objects.requireNonNull(financialInstrumentClassification);
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygInstrmAsstClss")
-	public ProductType5Code getUnderlyingInstrumentAssetClass() {
-		return underlyingInstrumentAssetClass;
+	public Optional<ProductType5Code> getUnderlyingInstrumentAssetClass() {
+		return underlyingInstrumentAssetClass == null ? Optional.empty() : Optional.of(underlyingInstrumentAssetClass);
 	}
 
-	public void setUnderlyingInstrumentAssetClass(ProductType5Code underlyingInstrumentAssetClass) {
+	public TransparencyDataReport10 setUnderlyingInstrumentAssetClass(ProductType5Code underlyingInstrumentAssetClass) {
 		this.underlyingInstrumentAssetClass = underlyingInstrumentAssetClass;
+		return this;
 	}
 
-	@XmlElement(name = "DerivCtrctTp")
-	public FinancialInstrumentContractType1Code getDerivativeContractType() {
-		return derivativeContractType;
+	public Optional<FinancialInstrumentContractType1Code> getDerivativeContractType() {
+		return derivativeContractType == null ? Optional.empty() : Optional.of(derivativeContractType);
 	}
 
-	public void setDerivativeContractType(FinancialInstrumentContractType1Code derivativeContractType) {
+	public TransparencyDataReport10 setDerivativeContractType(FinancialInstrumentContractType1Code derivativeContractType) {
 		this.derivativeContractType = derivativeContractType;
+		return this;
 	}
 
-	@XmlElement(name = "Bd")
-	public DebtInstrument5 getBond() {
-		return bond;
+	public Optional<DebtInstrument5> getBond() {
+		return bond == null ? Optional.empty() : Optional.of(bond);
 	}
 
-	public void setBond(com.tools20022.repository.msg.DebtInstrument5 bond) {
+	public TransparencyDataReport10 setBond(com.tools20022.repository.msg.DebtInstrument5 bond) {
 		this.bond = bond;
+		return this;
 	}
 
-	@XmlElement(name = "EmssnAllwncTp")
-	public EmissionAllowanceProductType2Code getEmissionAllowanceType() {
-		return emissionAllowanceType;
+	public Optional<EmissionAllowanceProductType2Code> getEmissionAllowanceType() {
+		return emissionAllowanceType == null ? Optional.empty() : Optional.of(emissionAllowanceType);
 	}
 
-	public void setEmissionAllowanceType(EmissionAllowanceProductType2Code emissionAllowanceType) {
+	public TransparencyDataReport10 setEmissionAllowanceType(EmissionAllowanceProductType2Code emissionAllowanceType) {
 		this.emissionAllowanceType = emissionAllowanceType;
+		return this;
 	}
 
-	@XmlElement(name = "Deriv")
-	public Derivative2Choice getDerivative() {
-		return derivative;
+	public Optional<Derivative2Choice> getDerivative() {
+		return derivative == null ? Optional.empty() : Optional.of(derivative);
 	}
 
-	public void setDerivative(Derivative2Choice derivative) {
+	public TransparencyDataReport10 setDerivative(Derivative2Choice derivative) {
 		this.derivative = derivative;
+		return this;
 	}
 }

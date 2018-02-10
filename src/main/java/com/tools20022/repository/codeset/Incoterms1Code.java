@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.IncotermsCode;
+import com.tools20022.repository.codeset.Incoterms1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * A set of international standard trade terms (delivery terms) used to
@@ -32,55 +36,53 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.IncotermsCode IncotermsCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Incoterms1Code#mmExWorks
- * Incoterms1Code.mmExWorks}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Incoterms1Code#ExWorks
+ * Incoterms1Code.ExWorks}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Incoterms1Code#FreeCarrier
+ * Incoterms1Code.FreeCarrier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#mmFreeCarrier
- * Incoterms1Code.mmFreeCarrier}</li>
+ * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#FreeAlongsideShip
+ * Incoterms1Code.FreeAlongsideShip}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Incoterms1Code#FreeOnBoard
+ * Incoterms1Code.FreeOnBoard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#mmFreeAlongsideShip
- * Incoterms1Code.mmFreeAlongsideShip}</li>
+ * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#CostAndFreight
+ * Incoterms1Code.CostAndFreight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#mmFreeOnBoard
- * Incoterms1Code.mmFreeOnBoard}</li>
+ * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#CostInsuranceAndFreight
+ * Incoterms1Code.CostInsuranceAndFreight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#mmCostAndFreight
- * Incoterms1Code.mmCostAndFreight}</li>
+ * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#CarriagePaid
+ * Incoterms1Code.CarriagePaid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#mmCostInsuranceAndFreight
- * Incoterms1Code.mmCostInsuranceAndFreight}</li>
+ * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#CarriageAndInsurancePaid
+ * Incoterms1Code.CarriageAndInsurancePaid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#mmCarriagePaid
- * Incoterms1Code.mmCarriagePaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#DeliveredAtFrontier
+ * Incoterms1Code.DeliveredAtFrontier}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#mmCarriageAndInsurancePaid
- * Incoterms1Code.mmCarriageAndInsurancePaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#DeliveredExShip
+ * Incoterms1Code.DeliveredExShip}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#mmDeliveredAtFrontier
- * Incoterms1Code.mmDeliveredAtFrontier}</li>
+ * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#DeliveredExQuay
+ * Incoterms1Code.DeliveredExQuay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#mmDeliveredExShip
- * Incoterms1Code.mmDeliveredExShip}</li>
+ * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#DeliveredDutyUnpaid
+ * Incoterms1Code.DeliveredDutyUnpaid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#mmDeliveredExQuay
- * Incoterms1Code.mmDeliveredExQuay}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#mmDeliveredDutyUnpaid
- * Incoterms1Code.mmDeliveredDutyUnpaid}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#mmDeliveredDutyPaid
- * Incoterms1Code.mmDeliveredDutyPaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.Incoterms1Code#DeliveredDutyPaid
+ * Incoterms1Code.DeliveredDutyPaid}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.IncotermsCode IncotermsCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -99,7 +101,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class Incoterms1Code extends IncotermsCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Incoterms1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -118,11 +121,12 @@ public class Incoterms1Code extends IncotermsCode {
 	 * name} = "ExWorks"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExWorks = new MMCode() {
+	public static final Incoterms1Code ExWorks = new Incoterms1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExWorks";
-			owner_lazy = () -> Incoterms1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Incoterms1Code.mmObject();
+			codeName = IncotermsCode.ExWorks.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -141,11 +145,12 @@ public class Incoterms1Code extends IncotermsCode {
 	 * name} = "FreeCarrier"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFreeCarrier = new MMCode() {
+	public static final Incoterms1Code FreeCarrier = new Incoterms1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FreeCarrier";
-			owner_lazy = () -> Incoterms1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Incoterms1Code.mmObject();
+			codeName = IncotermsCode.FreeCarrier.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -164,11 +169,12 @@ public class Incoterms1Code extends IncotermsCode {
 	 * name} = "FreeAlongsideShip"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFreeAlongsideShip = new MMCode() {
+	public static final Incoterms1Code FreeAlongsideShip = new Incoterms1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FreeAlongsideShip";
-			owner_lazy = () -> Incoterms1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Incoterms1Code.mmObject();
+			codeName = IncotermsCode.FreeAlongsideShip.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -187,11 +193,12 @@ public class Incoterms1Code extends IncotermsCode {
 	 * name} = "FreeOnBoard"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFreeOnBoard = new MMCode() {
+	public static final Incoterms1Code FreeOnBoard = new Incoterms1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FreeOnBoard";
-			owner_lazy = () -> Incoterms1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Incoterms1Code.mmObject();
+			codeName = IncotermsCode.FreeOnBoard.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -210,11 +217,12 @@ public class Incoterms1Code extends IncotermsCode {
 	 * name} = "CostAndFreight"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCostAndFreight = new MMCode() {
+	public static final Incoterms1Code CostAndFreight = new Incoterms1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CostAndFreight";
-			owner_lazy = () -> Incoterms1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Incoterms1Code.mmObject();
+			codeName = IncotermsCode.CostAndFreight.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -233,11 +241,12 @@ public class Incoterms1Code extends IncotermsCode {
 	 * name} = "CostInsuranceAndFreight"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCostInsuranceAndFreight = new MMCode() {
+	public static final Incoterms1Code CostInsuranceAndFreight = new Incoterms1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CostInsuranceAndFreight";
-			owner_lazy = () -> Incoterms1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Incoterms1Code.mmObject();
+			codeName = IncotermsCode.CostInsuranceAndFreight.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -256,11 +265,12 @@ public class Incoterms1Code extends IncotermsCode {
 	 * name} = "CarriagePaid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCarriagePaid = new MMCode() {
+	public static final Incoterms1Code CarriagePaid = new Incoterms1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarriagePaid";
-			owner_lazy = () -> Incoterms1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Incoterms1Code.mmObject();
+			codeName = IncotermsCode.CarriagePaid.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -279,11 +289,12 @@ public class Incoterms1Code extends IncotermsCode {
 	 * name} = "CarriageAndInsurancePaid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCarriageAndInsurancePaid = new MMCode() {
+	public static final Incoterms1Code CarriageAndInsurancePaid = new Incoterms1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarriageAndInsurancePaid";
-			owner_lazy = () -> Incoterms1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Incoterms1Code.mmObject();
+			codeName = IncotermsCode.CarriageAndInsurancePaid.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -302,11 +313,12 @@ public class Incoterms1Code extends IncotermsCode {
 	 * name} = "DeliveredAtFrontier"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeliveredAtFrontier = new MMCode() {
+	public static final Incoterms1Code DeliveredAtFrontier = new Incoterms1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveredAtFrontier";
-			owner_lazy = () -> Incoterms1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Incoterms1Code.mmObject();
+			codeName = IncotermsCode.DeliveredAtFrontier.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -325,11 +337,12 @@ public class Incoterms1Code extends IncotermsCode {
 	 * name} = "DeliveredExShip"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeliveredExShip = new MMCode() {
+	public static final Incoterms1Code DeliveredExShip = new Incoterms1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveredExShip";
-			owner_lazy = () -> Incoterms1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Incoterms1Code.mmObject();
+			codeName = IncotermsCode.DeliveredExShip.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -348,11 +361,12 @@ public class Incoterms1Code extends IncotermsCode {
 	 * name} = "DeliveredExQuay"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeliveredExQuay = new MMCode() {
+	public static final Incoterms1Code DeliveredExQuay = new Incoterms1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveredExQuay";
-			owner_lazy = () -> Incoterms1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Incoterms1Code.mmObject();
+			codeName = IncotermsCode.DeliveredExQuay.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -371,11 +385,12 @@ public class Incoterms1Code extends IncotermsCode {
 	 * name} = "DeliveredDutyUnpaid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeliveredDutyUnpaid = new MMCode() {
+	public static final Incoterms1Code DeliveredDutyUnpaid = new Incoterms1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveredDutyUnpaid";
-			owner_lazy = () -> Incoterms1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Incoterms1Code.mmObject();
+			codeName = IncotermsCode.DeliveredDutyUnpaid.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -394,28 +409,72 @@ public class Incoterms1Code extends IncotermsCode {
 	 * name} = "DeliveredDutyPaid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeliveredDutyPaid = new MMCode() {
+	public static final Incoterms1Code DeliveredDutyPaid = new Incoterms1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveredDutyPaid";
-			owner_lazy = () -> Incoterms1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Incoterms1Code.mmObject();
+			codeName = IncotermsCode.DeliveredDutyPaid.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Incoterms1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Incoterms1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("EXW");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Incoterms1Code";
 				definition = "A set of international standard trade terms (delivery terms) used to designate a point at which the costs and risks of transport are divided between the buyer and the seller.";
-				code_lazy = () -> Arrays.asList(Incoterms1Code.mmExWorks, Incoterms1Code.mmFreeCarrier, Incoterms1Code.mmFreeAlongsideShip, Incoterms1Code.mmFreeOnBoard, Incoterms1Code.mmCostAndFreight,
-						Incoterms1Code.mmCostInsuranceAndFreight, Incoterms1Code.mmCarriagePaid, Incoterms1Code.mmCarriageAndInsurancePaid, Incoterms1Code.mmDeliveredAtFrontier, Incoterms1Code.mmDeliveredExShip,
-						Incoterms1Code.mmDeliveredExQuay, Incoterms1Code.mmDeliveredDutyUnpaid, Incoterms1Code.mmDeliveredDutyPaid);
 				trace_lazy = () -> IncotermsCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Incoterms1Code.ExWorks, com.tools20022.repository.codeset.Incoterms1Code.FreeCarrier, com.tools20022.repository.codeset.Incoterms1Code.FreeAlongsideShip,
+						com.tools20022.repository.codeset.Incoterms1Code.FreeOnBoard, com.tools20022.repository.codeset.Incoterms1Code.CostAndFreight, com.tools20022.repository.codeset.Incoterms1Code.CostInsuranceAndFreight,
+						com.tools20022.repository.codeset.Incoterms1Code.CarriagePaid, com.tools20022.repository.codeset.Incoterms1Code.CarriageAndInsurancePaid, com.tools20022.repository.codeset.Incoterms1Code.DeliveredAtFrontier,
+						com.tools20022.repository.codeset.Incoterms1Code.DeliveredExShip, com.tools20022.repository.codeset.Incoterms1Code.DeliveredExQuay, com.tools20022.repository.codeset.Incoterms1Code.DeliveredDutyUnpaid,
+						com.tools20022.repository.codeset.Incoterms1Code.DeliveredDutyPaid);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ExWorks.getCodeName().get(), ExWorks);
+		codesByName.put(FreeCarrier.getCodeName().get(), FreeCarrier);
+		codesByName.put(FreeAlongsideShip.getCodeName().get(), FreeAlongsideShip);
+		codesByName.put(FreeOnBoard.getCodeName().get(), FreeOnBoard);
+		codesByName.put(CostAndFreight.getCodeName().get(), CostAndFreight);
+		codesByName.put(CostInsuranceAndFreight.getCodeName().get(), CostInsuranceAndFreight);
+		codesByName.put(CarriagePaid.getCodeName().get(), CarriagePaid);
+		codesByName.put(CarriageAndInsurancePaid.getCodeName().get(), CarriageAndInsurancePaid);
+		codesByName.put(DeliveredAtFrontier.getCodeName().get(), DeliveredAtFrontier);
+		codesByName.put(DeliveredExShip.getCodeName().get(), DeliveredExShip);
+		codesByName.put(DeliveredExQuay.getCodeName().get(), DeliveredExQuay);
+		codesByName.put(DeliveredDutyUnpaid.getCodeName().get(), DeliveredDutyUnpaid);
+		codesByName.put(DeliveredDutyPaid.getCodeName().get(), DeliveredDutyPaid);
+	}
+
+	public static Incoterms1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Incoterms1Code[] values() {
+		Incoterms1Code[] values = new Incoterms1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Incoterms1Code> {
+		@Override
+		public Incoterms1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Incoterms1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.Rate2;
 import com.tools20022.repository.msg.RateName2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between a percentage rate or a rate name."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RateOrName2Choice", propOrder = {"rate", "rateName"})
 public class RateOrName2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rate", required = true)
 	protected Rate2 rate;
 	/**
-	 * Pricing expressed as a rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -103,7 +105,7 @@ public class RateOrName2Choice {
 	public static final MMMessageAssociationEnd mmRate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmRate;
-			componentContext_lazy = () -> RateOrName2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RateOrName2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +117,11 @@ public class RateOrName2Choice {
 			type_lazy = () -> Rate2.mmObject();
 		}
 	};
+	@XmlElement(name = "RateNm", required = true)
 	protected RateName2 rateName;
 	/**
-	 * Pricing expressed as a rate name.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -143,7 +146,7 @@ public class RateOrName2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRateName = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RateOrName2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RateOrName2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RateNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,9 +162,9 @@ public class RateOrName2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RateOrName2Choice.mmRate, RateOrName2Choice.mmRateName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RateOrName2Choice.mmRate, com.tools20022.repository.choice.RateOrName2Choice.mmRateName);
 				trace_lazy = () -> Interest.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateOrName2Choice";
 				definition = "Choice between a percentage rate or a rate name.";
@@ -170,21 +173,21 @@ public class RateOrName2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rate", required = true)
 	public Rate2 getRate() {
 		return rate;
 	}
 
-	public void setRate(Rate2 rate) {
-		this.rate = rate;
+	public RateOrName2Choice setRate(Rate2 rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 
-	@XmlElement(name = "RateNm", required = true)
 	public RateName2 getRateName() {
 		return rateName;
 	}
 
-	public void setRateName(RateName2 rateName) {
-		this.rateName = rateName;
+	public RateOrName2Choice setRateName(RateName2 rateName) {
+		this.rateName = Objects.requireNonNull(rateName);
+		return this;
 	}
 }

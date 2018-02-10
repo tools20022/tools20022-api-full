@@ -29,6 +29,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Specifies the different identifications associated with a payment
@@ -41,6 +42,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.TradeIdentification
+ * TradeIdentification}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -67,10 +72,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentIdentification.mmPayment}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.TradeIdentification
- * TradeIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentRelatedIdentifications
+ * Payment.mmPaymentRelatedIdentifications}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -105,19 +115,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Payment#mmPaymentRelatedIdentifications
- * Payment.mmPaymentRelatedIdentifications}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -135,9 +136,8 @@ public class PaymentIdentification extends TradeIdentification {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Max35Text executionIdentification;
 	/**
-	 * Unique and unambiguous identifier for a payment execution, as assigned by
-	 * the clearing agent or the initiating party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -658,8 +658,8 @@ public class PaymentIdentification extends TradeIdentification {
 					OriginalMessage2.mmOriginalMessageIdentification, OriginalMessage3.mmOriginalMessageIdentification, OriginalGroupInformation27.mmOriginalMessageIdentification, OriginalGroupHeader7.mmOriginalMessageIdentification,
 					RequestedModification6.mmInstructionIdentification, OriginalGroupInformation28.mmOriginalMessageIdentification, OriginalPaymentInstruction22.mmOriginalPaymentInformationCancellationIdentification,
 					OriginalPaymentInstruction20.mmPaymentCancellationIdentification, UnderlyingPaymentInstruction3.mmOriginalPaymentInformationIdentification, OriginalGroupHeader6.mmOriginalMessageIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExecutionIdentification";
 			definition = "Unique and unambiguous identifier for a payment execution, as assigned by the clearing agent or the initiating party.";
@@ -678,10 +678,8 @@ public class PaymentIdentification extends TradeIdentification {
 	};
 	protected Max35Text endToEndIdentification;
 	/**
-	 * Unique and unambiguous identifier for a payment as assigned by the
-	 * originator. The payment transaction reference is used for reconciliation
-	 * or to link tasks relating to the payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1180,8 +1178,8 @@ public class PaymentIdentification extends TradeIdentification {
 					PaymentTransaction83.mmOriginalEndToEndIdentification, PaymentTransaction77.mmOriginalEndToEndIdentification, CorrectivePaymentInitiation2.mmEndToEndIdentification,
 					UnderlyingPaymentInstruction3.mmOriginalEndToEndIdentification, PaymentTransaction75.mmOriginalEndToEndIdentification, PaymentTransaction82.mmOriginalEndToEndIdentification,
 					PaymentTransaction79.mmOriginalEndToEndIdentification, PaymentComplementaryInformation6.mmEndToEndIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EndToEndIdentification";
 			definition = "Unique and unambiguous identifier for a payment as assigned by the originator. The payment transaction reference is used for reconciliation or to link tasks relating to the payment.";
@@ -1200,9 +1198,8 @@ public class PaymentIdentification extends TradeIdentification {
 	};
 	protected Max35Text instructionIdentification;
 	/**
-	 * Unique identification assigned by an instructing party for an instructed
-	 * party to unambiguously identify the instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1594,8 +1591,8 @@ public class PaymentIdentification extends TradeIdentification {
 					PaymentTransaction74.mmOriginalInstructionIdentification, PaymentTransaction83.mmOriginalInstructionIdentification, PaymentTransaction77.mmOriginalInstructionIdentification,
 					CorrectivePaymentInitiation2.mmInstructionIdentification, UnderlyingPaymentInstruction3.mmOriginalInstructionIdentification, PaymentTransaction75.mmOriginalInstructionIdentification,
 					PaymentTransaction82.mmOriginalInstructionIdentification, PaymentTransaction79.mmOriginalInstructionIdentification, PaymentComplementaryInformation6.mmInstructionIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InstructionIdentification";
 			definition = "Unique identification assigned by an instructing party for an instructed party to unambiguously identify the instruction.";
@@ -1614,10 +1611,8 @@ public class PaymentIdentification extends TradeIdentification {
 	};
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unique identification assigned by the first instructing agent to
-	 * unambiguously identify the transaction and passed on, unchanged,
-	 * throughout the entire interbank chain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1882,8 +1877,8 @@ public class PaymentIdentification extends TradeIdentification {
 					PaymentTransaction62.mmOriginalTransactionIdentification, PaymentTransaction73.mmOriginalTransactionIdentification, PaymentTransaction80.mmOriginalTransactionIdentification,
 					PaymentTransaction81.mmOriginalTransactionIdentification, PaymentTransaction76.mmOriginalTransactionIdentification, PaymentTransaction75.mmOriginalTransactionIdentification,
 					PaymentTransaction79.mmOriginalTransactionIdentification, PaymentComplementaryInformation6.mmTransactionIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification assigned by the first instructing agent to unambiguously identify the transaction and passed on, unchanged, throughout the entire interbank chain. ";
@@ -1902,9 +1897,8 @@ public class PaymentIdentification extends TradeIdentification {
 	};
 	protected Max35Text clearingSystemReference;
 	/**
-	 * Unique and unambiguous identifier for a payment instruction, as assigned
-	 * by the clearing system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2091,8 +2085,8 @@ public class PaymentIdentification extends TradeIdentification {
 					PaymentTransaction69.mmClearingSystemReference, PaymentTransaction73.mmClearingSystemReference, PaymentTransaction80.mmClearingSystemReference, PaymentTransaction81.mmOriginalClearingSystemReference,
 					PaymentTransaction76.mmOriginalClearingSystemReference, PaymentTransaction83.mmClearingSystemReference, PaymentTransaction75.mmOriginalClearingSystemReference, PaymentTransaction82.mmClearingSystemReference,
 					PaymentTransaction79.mmOriginalClearingSystemReference);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingSystemReference";
 			definition = "Unique and unambiguous identifier for a payment instruction, as assigned by the clearing system.";
@@ -2111,9 +2105,8 @@ public class PaymentIdentification extends TradeIdentification {
 	};
 	protected Max35Text creditorReference;
 	/**
-	 * Unique and unambiguous reference assigned by the creditor to refer to the
-	 * payment obligation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2195,8 +2188,8 @@ public class PaymentIdentification extends TradeIdentification {
 					CreditTransfer3.mmReference, CreditTransfer4.mmReference, CreditTransfer6.mmReference, StructuredRemittanceInformation2.mmCreditorReference, TradeSettlement1.mmCreditorReference,
 					StructuredRemittanceInformation10.mmCreditorReferenceInformation, StructuredRemittanceInformation12.mmCreditorReferenceInformation, StructuredRemittanceInformation13.mmCreditorReferenceInformation,
 					CreditTransfer8.mmReference);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditorReference";
 			definition = "Unique and unambiguous reference assigned by the creditor to refer to the payment obligation.";
@@ -2215,8 +2208,8 @@ public class PaymentIdentification extends TradeIdentification {
 	};
 	protected Payment payment;
 	/**
-	 * Payment for which identifications are provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2248,8 +2241,8 @@ public class PaymentIdentification extends TradeIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
 			definition = "Payment for which identifications are provided.";
@@ -2264,7 +2257,7 @@ public class PaymentIdentification extends TradeIdentification {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentIdentification";
 				definition = "Specifies the different identifications associated with a payment transaction.";
@@ -2291,55 +2284,62 @@ public class PaymentIdentification extends TradeIdentification {
 		return executionIdentification;
 	}
 
-	public void setExecutionIdentification(Max35Text executionIdentification) {
-		this.executionIdentification = executionIdentification;
+	public PaymentIdentification setExecutionIdentification(Max35Text executionIdentification) {
+		this.executionIdentification = Objects.requireNonNull(executionIdentification);
+		return this;
 	}
 
 	public Max35Text getEndToEndIdentification() {
 		return endToEndIdentification;
 	}
 
-	public void setEndToEndIdentification(Max35Text endToEndIdentification) {
-		this.endToEndIdentification = endToEndIdentification;
+	public PaymentIdentification setEndToEndIdentification(Max35Text endToEndIdentification) {
+		this.endToEndIdentification = Objects.requireNonNull(endToEndIdentification);
+		return this;
 	}
 
 	public Max35Text getInstructionIdentification() {
 		return instructionIdentification;
 	}
 
-	public void setInstructionIdentification(Max35Text instructionIdentification) {
-		this.instructionIdentification = instructionIdentification;
+	public PaymentIdentification setInstructionIdentification(Max35Text instructionIdentification) {
+		this.instructionIdentification = Objects.requireNonNull(instructionIdentification);
+		return this;
 	}
 
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public PaymentIdentification setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
 	public Max35Text getClearingSystemReference() {
 		return clearingSystemReference;
 	}
 
-	public void setClearingSystemReference(Max35Text clearingSystemReference) {
-		this.clearingSystemReference = clearingSystemReference;
+	public PaymentIdentification setClearingSystemReference(Max35Text clearingSystemReference) {
+		this.clearingSystemReference = Objects.requireNonNull(clearingSystemReference);
+		return this;
 	}
 
 	public Max35Text getCreditorReference() {
 		return creditorReference;
 	}
 
-	public void setCreditorReference(Max35Text creditorReference) {
-		this.creditorReference = creditorReference;
+	public PaymentIdentification setCreditorReference(Max35Text creditorReference) {
+		this.creditorReference = Objects.requireNonNull(creditorReference);
+		return this;
 	}
 
 	public Payment getPayment() {
 		return payment;
 	}
 
-	public void setPayment(com.tools20022.repository.entity.Payment payment) {
-		this.payment = payment;
+	public PaymentIdentification setPayment(com.tools20022.repository.entity.Payment payment) {
+		this.payment = Objects.requireNonNull(payment);
+		return this;
 	}
 }

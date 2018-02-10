@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesConversion;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides the exercise date or notice period for a call/put option."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OptionDateOrPeriod1Choice", propOrder = {"earliestExerciseDate", "noticePeriod"})
 public class OptionDateOrPeriod1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "EarlstExrcDt", required = true)
 	protected ISODate earliestExerciseDate;
 	/**
-	 * First date on which the call option or the put option can be exercised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +112,7 @@ public class OptionDateOrPeriod1Choice {
 	public static final MMMessageAttribute mmEarliestExerciseDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Option.mmEarliestExerciseDate;
-			componentContext_lazy = () -> OptionDateOrPeriod1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.OptionDateOrPeriod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EarlstExrcDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,12 +123,11 @@ public class OptionDateOrPeriod1Choice {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "NtcePrd", required = true)
 	protected Number noticePeriod;
 	/**
-	 * Number of calendar days that the holder of the instrument/issuer of the
-	 * instrument will give to the issuer/holder of the instrument before
-	 * exercising the put/call option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +162,7 @@ public class OptionDateOrPeriod1Choice {
 	public static final MMMessageAttribute mmNoticePeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesConversion.mmConversionPeriod;
-			componentContext_lazy = () -> OptionDateOrPeriod1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.OptionDateOrPeriod1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NtcePrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,9 +177,9 @@ public class OptionDateOrPeriod1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OptionDateOrPeriod1Choice.mmEarliestExerciseDate, OptionDateOrPeriod1Choice.mmNoticePeriod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.OptionDateOrPeriod1Choice.mmEarliestExerciseDate, com.tools20022.repository.choice.OptionDateOrPeriod1Choice.mmNoticePeriod);
 				trace_lazy = () -> Option.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionDateOrPeriod1Choice";
 				definition = "Provides the exercise date or notice period for a call/put option.";
@@ -187,21 +188,21 @@ public class OptionDateOrPeriod1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "EarlstExrcDt", required = true)
 	public ISODate getEarliestExerciseDate() {
 		return earliestExerciseDate;
 	}
 
-	public void setEarliestExerciseDate(ISODate earliestExerciseDate) {
-		this.earliestExerciseDate = earliestExerciseDate;
+	public OptionDateOrPeriod1Choice setEarliestExerciseDate(ISODate earliestExerciseDate) {
+		this.earliestExerciseDate = Objects.requireNonNull(earliestExerciseDate);
+		return this;
 	}
 
-	@XmlElement(name = "NtcePrd", required = true)
 	public Number getNoticePeriod() {
 		return noticePeriod;
 	}
 
-	public void setNoticePeriod(Number noticePeriod) {
-		this.noticePeriod = noticePeriod;
+	public OptionDateOrPeriod1Choice setNoticePeriod(Number noticePeriod) {
+		this.noticePeriod = Objects.requireNonNull(noticePeriod);
+		return this;
 	}
 }

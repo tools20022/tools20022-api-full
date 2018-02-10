@@ -21,9 +21,11 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,8 +48,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,15 +60,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Reports on members."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MemberInformation", propOrder = "memberReport")
 public class MemberInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MmbRpt", required = true)
 	protected List<com.tools20022.repository.msg.MemberReport> memberReport;
 	/**
-	 * Reports either member information or a business error.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -92,7 +95,7 @@ public class MemberInformation {
 	 */
 	public static final MMMessageAssociationEnd mmMemberReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MemberInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MemberInformation.mmObject();
 			isDerived = false;
 			xmlTag = "MmbRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -107,8 +110,8 @@ public class MemberInformation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MemberInformation.mmMemberReport);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberInformation.mmMemberReport);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MemberInformation";
 				definition = "Reports on members.";
@@ -117,12 +120,12 @@ public class MemberInformation {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MmbRpt", required = true)
 	public List<MemberReport> getMemberReport() {
-		return memberReport;
+		return memberReport == null ? memberReport = new ArrayList<>() : memberReport;
 	}
 
-	public void setMemberReport(List<com.tools20022.repository.msg.MemberReport> memberReport) {
-		this.memberReport = memberReport;
+	public MemberInformation setMemberReport(List<com.tools20022.repository.msg.MemberReport> memberReport) {
+		this.memberReport = Objects.requireNonNull(memberReport);
+		return this;
 	}
 }

@@ -29,6 +29,8 @@ import com.tools20022.repository.msgset.InvoiceFinancingRequestISOLatestversion;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -69,22 +71,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesInitiationLatestVersion
- * TradeServicesInitiationLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.InvoiceFinancingRequestISOLatestversion
- * InvoiceFinancingRequestISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "InvcFincgReqSts"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -100,9 +86,39 @@ import javax.xml.bind.annotation.*;
  * InvoiceFinancingRequestStatusV01.mmFinancingInformationAndStatus}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.InvoiceFinancingRequestISOLatestversion
+ * InvoiceFinancingRequestISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "InvcFincgReqSts"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesInitiationLatestVersion
+ * TradeServicesInitiationLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code tsin.002.001.01}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintRequest1Rule#forInvoiceFinancingRequestStatusV01
+ * ConstraintRequest1Rule.forInvoiceFinancingRequestStatusV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCancellation1Rule#forInvoiceFinancingRequestStatusV01
+ * ConstraintCancellation1Rule.forInvoiceFinancingRequestStatusV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMultiplicity1Rule#forInvoiceFinancingRequestStatusV01
+ * ConstraintMultiplicity1Rule.forInvoiceFinancingRequestStatusV01}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -115,16 +131,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvoiceFinancingRequestStatusV01", propOrder = {"statusIdentification", "originalRequestInformationAndStatus", "financingInformationAndStatus"})
 public class InvoiceFinancingRequestStatusV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StsId", required = true)
 	protected MessageIdentification1 statusIdentification;
 	/**
-	 * General information that unambiguously identify the invoice financing
-	 * status report, such as status identification, creation date time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,12 +182,11 @@ public class InvoiceFinancingRequestStatusV01 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgnlReqInfAndSts", required = true)
 	protected OriginalRequestInformation1 originalRequestInformationAndStatus;
 	/**
-	 * Set of summary information that unambiguously identifies the original
-	 * invoice financing (or cancellation) request to which the status is
-	 * referred. The status of the original request is also given in this block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,10 +228,11 @@ public class InvoiceFinancingRequestStatusV01 {
 			}
 		}
 	};
+	@XmlElement(name = "FincgInfAndSts")
 	protected FinancingInformationAndStatus1 financingInformationAndStatus;
 	/**
-	 * Information concerning the business status of a financing request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -261,6 +277,8 @@ public class InvoiceFinancingRequestStatusV01 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRequest1Rule.forInvoiceFinancingRequestStatusV01,
+						com.tools20022.repository.constraints.ConstraintCancellation1Rule.forInvoiceFinancingRequestStatusV01, com.tools20022.repository.constraints.ConstraintMultiplicity1Rule.forInvoiceFinancingRequestStatusV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvoiceFinancingRequestStatusV01";
 				definition = "Scope\r\nThe InvoiceFinancingRequestStatus message is sent by the First Agent to the Financing Requestor, alternatively through an Intermediary Agent (relay scenario). It is used to inform the Financing Requestor about the positive or negative status of a financing request or a financing cancellation request.\r\nUsage\r\nThe InvoiceFinancingRequestStatus message flows from the First Agent to the Financing Requestor (alternatively through an Intermediary Agent) to provide status information about a request previously sent.\r\nIts usage will always be governed by a bilateral agreement between the First Agent and the Financing Requestor.\r\nThe InvoiceFinancingRequestStatus message can be used two fold:\r\n- to provide information about the reception status (eg rejection, acceptance) of a request message. In this case the status message is the result of a technical validation performed by the First Agent on the request message received;\r\n- to inform the Financing Requestor about the business status of the financing process initiated. In this case the First Agent can:\r\n* communicate that a single financing request has been granted, is pending or has not been granted at all;\r\n* inform that a financing cancellation request has been allowed or denied.\r\nNote.\r\nIf the Financing Requestor requests financing for more than one instalment related to the same invoice, the First Agent can decide to finance only some of the instalments. In such case the status message contains details and status of every single instalment (financed, not financed).\r\nThe message can be used in a direct or in a relay scenario:\r\n- In a direct scenario, the message is sent directly by the First Agent to the Financing Requestor;\r\n- In a relay scenario, the message is sent first by the First Agent to the Intermediary Agent, who forwards it to the Financing Requestor.\r\nThe InvoiceFinancingRequestStatus message refers to the original request(s) by means of references and a set of data elements included into the original request.";
@@ -288,34 +306,34 @@ public class InvoiceFinancingRequestStatusV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StsId", required = true)
 	public MessageIdentification1 getStatusIdentification() {
 		return statusIdentification;
 	}
 
-	public void setStatusIdentification(MessageIdentification1 statusIdentification) {
-		this.statusIdentification = statusIdentification;
+	public InvoiceFinancingRequestStatusV01 setStatusIdentification(MessageIdentification1 statusIdentification) {
+		this.statusIdentification = Objects.requireNonNull(statusIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlReqInfAndSts", required = true)
 	public OriginalRequestInformation1 getOriginalRequestInformationAndStatus() {
 		return originalRequestInformationAndStatus;
 	}
 
-	public void setOriginalRequestInformationAndStatus(OriginalRequestInformation1 originalRequestInformationAndStatus) {
-		this.originalRequestInformationAndStatus = originalRequestInformationAndStatus;
+	public InvoiceFinancingRequestStatusV01 setOriginalRequestInformationAndStatus(OriginalRequestInformation1 originalRequestInformationAndStatus) {
+		this.originalRequestInformationAndStatus = Objects.requireNonNull(originalRequestInformationAndStatus);
+		return this;
 	}
 
-	@XmlElement(name = "FincgInfAndSts")
-	public FinancingInformationAndStatus1 getFinancingInformationAndStatus() {
-		return financingInformationAndStatus;
+	public Optional<FinancingInformationAndStatus1> getFinancingInformationAndStatus() {
+		return financingInformationAndStatus == null ? Optional.empty() : Optional.of(financingInformationAndStatus);
 	}
 
-	public void setFinancingInformationAndStatus(FinancingInformationAndStatus1 financingInformationAndStatus) {
+	public InvoiceFinancingRequestStatusV01 setFinancingInformationAndStatus(FinancingInformationAndStatus1 financingInformationAndStatus) {
 		this.financingInformationAndStatus = financingInformationAndStatus;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsin.002.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:tsin.002.001.01")
 	static public class Document {
 		@XmlElement(name = "InvcFincgReqSts", required = true)
 		public InvoiceFinancingRequestStatusV01 messageBody;

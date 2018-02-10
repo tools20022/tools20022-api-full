@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.NetAssetValueCalculation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintReportParameterRule#forFundParameters3
+ * ConstraintReportParameterRule.forFundParameters3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,16 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Fund parameters."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FundParameters3", propOrder = {"financialInstrumentDetails", "valuationDateTime"})
 public class FundParameters3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FinInstrmDtls", required = true)
 	protected FinancialInstrument17 financialInstrumentDetails;
 	/**
-	 * Financial instrument for which the fund processing passport report report
-	 * is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -110,7 +120,7 @@ public class FundParameters3 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFund.mmInvestmentFundClass;
-			componentContext_lazy = () -> FundParameters3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +132,11 @@ public class FundParameters3 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument17.mmObject();
 		}
 	};
+	@XmlElement(name = "ValtnDtTm")
 	protected DateAndDateTimeChoice valuationDateTime;
 	/**
-	 * Date and time of the price valuation for the investment fund/fund class.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +172,7 @@ public class FundParameters3 {
 	public static final MMMessageAttribute mmValuationDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationDateTime;
-			componentContext_lazy = () -> FundParameters3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundParameters3.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,9 +187,10 @@ public class FundParameters3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FundParameters3.mmFinancialInstrumentDetails, FundParameters3.mmValuationDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundParameters3.mmFinancialInstrumentDetails, com.tools20022.repository.msg.FundParameters3.mmValuationDateTime);
 				trace_lazy = () -> InvestmentFund.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReportParameterRule.forFundParameters3);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FundParameters3";
 				definition = "Fund parameters.";
@@ -187,21 +199,21 @@ public class FundParameters3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FinInstrmDtls", required = true)
 	public FinancialInstrument17 getFinancialInstrumentDetails() {
 		return financialInstrumentDetails;
 	}
 
-	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument17 financialInstrumentDetails) {
-		this.financialInstrumentDetails = financialInstrumentDetails;
+	public FundParameters3 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument17 financialInstrumentDetails) {
+		this.financialInstrumentDetails = Objects.requireNonNull(financialInstrumentDetails);
+		return this;
 	}
 
-	@XmlElement(name = "ValtnDtTm")
-	public DateAndDateTimeChoice getValuationDateTime() {
-		return valuationDateTime;
+	public Optional<DateAndDateTimeChoice> getValuationDateTime() {
+		return valuationDateTime == null ? Optional.empty() : Optional.of(valuationDateTime);
 	}
 
-	public void setValuationDateTime(DateAndDateTimeChoice valuationDateTime) {
+	public FundParameters3 setValuationDateTime(DateAndDateTimeChoice valuationDateTime) {
 		this.valuationDateTime = valuationDateTime;
+		return this;
 	}
 }

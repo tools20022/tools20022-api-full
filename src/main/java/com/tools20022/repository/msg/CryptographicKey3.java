@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Max35Binary;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * CryptographicKey2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CryptographicKey3", propOrder = {"identification", "additionalIdentification", "version"})
 public class CryptographicKey3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max140Text identification;
 	/**
-	 * Name of the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +107,7 @@ public class CryptographicKey3 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey3.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,13 +118,11 @@ public class CryptographicKey3 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlId")
 	protected Max35Binary additionalIdentification;
 	/**
-	 * Additional identification of the key.<br>
-	 * <b>Usage</b><br>
-	 * For derived unique key per transaction (DUKPT) keys, the key serial
-	 * number (KSN) with the 21 bits of the transaction counter set to zero.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,7 +151,7 @@ public class CryptographicKey3 {
 	 */
 	public static final MMMessageAttribute mmAdditionalIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey3.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,10 +162,11 @@ public class CryptographicKey3 {
 			simpleType_lazy = () -> Max35Binary.mmObject();
 		}
 	};
+	@XmlElement(name = "Vrsn", required = true)
 	protected Exact10Text version;
 	/**
-	 * Version of the cryptographic key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,7 +193,7 @@ public class CryptographicKey3 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CryptographicKey3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CryptographicKey3.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -206,8 +208,9 @@ public class CryptographicKey3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CryptographicKey3.mmIdentification, CryptographicKey3.mmAdditionalIdentification, CryptographicKey3.mmVersion);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CryptographicKey3.mmIdentification, com.tools20022.repository.msg.CryptographicKey3.mmAdditionalIdentification,
+						com.tools20022.repository.msg.CryptographicKey3.mmVersion);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CryptographicKey3";
 				definition = "Indetification of a cryptographic Key to use.";
@@ -217,30 +220,30 @@ public class CryptographicKey3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max140Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max140Text identification) {
-		this.identification = identification;
+	public CryptographicKey3 setIdentification(Max140Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlId")
-	public Max35Binary getAdditionalIdentification() {
-		return additionalIdentification;
+	public Optional<Max35Binary> getAdditionalIdentification() {
+		return additionalIdentification == null ? Optional.empty() : Optional.of(additionalIdentification);
 	}
 
-	public void setAdditionalIdentification(Max35Binary additionalIdentification) {
+	public CryptographicKey3 setAdditionalIdentification(Max35Binary additionalIdentification) {
 		this.additionalIdentification = additionalIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Vrsn", required = true)
 	public Exact10Text getVersion() {
 		return version;
 	}
 
-	public void setVersion(Exact10Text version) {
-		this.version = version;
+	public CryptographicKey3 setVersion(Exact10Text version) {
+		this.version = Objects.requireNonNull(version);
+		return this;
 	}
 }

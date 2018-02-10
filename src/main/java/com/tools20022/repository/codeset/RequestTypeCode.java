@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.RequestTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the request used to further detail the type of information that
@@ -33,35 +38,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmReleasePending
- * RequestTypeCode.mmReleasePending}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#ReleasePending
+ * RequestTypeCode.ReleasePending}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RequestTypeCode#HoldNormal
+ * RequestTypeCode.HoldNormal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmHoldNormal
- * RequestTypeCode.mmHoldNormal}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#Cancellation
+ * RequestTypeCode.Cancellation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RequestTypeCode#ReSequence
+ * RequestTypeCode.ReSequence}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmCancellation
- * RequestTypeCode.mmCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#ReleaseSuspicious
+ * RequestTypeCode.ReleaseSuspicious}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmReSequence
- * RequestTypeCode.mmReSequence}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#BankPositionEnquiry
+ * RequestTypeCode.BankPositionEnquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmReleaseSuspicious
- * RequestTypeCode.mmReleaseSuspicious}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#SpecificTransactionEnquiry
+ * RequestTypeCode.SpecificTransactionEnquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmBankPositionEnquiry
- * RequestTypeCode.mmBankPositionEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#QueuedTransactionEnquiry
+ * RequestTypeCode.QueuedTransactionEnquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmSpecificTransactionEnquiry
- * RequestTypeCode.mmSpecificTransactionEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#SuspiciousTransactionEnquiry
+ * RequestTypeCode.SuspiciousTransactionEnquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmQueuedTransactionEnquiry
- * RequestTypeCode.mmQueuedTransactionEnquiry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmSuspiciousTransactionEnquiry
- * RequestTypeCode.mmSuspiciousTransactionEnquiry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#mmPendingInwardCreditsEnquiry
- * RequestTypeCode.mmPendingInwardCreditsEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode#PendingInwardCreditsEnquiry
+ * RequestTypeCode.PendingInwardCreditsEnquiry}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -76,8 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +99,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class RequestTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RequestTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -120,12 +124,12 @@ public class RequestTypeCode {
 	 * definition} = "Type is a request to release the pending transactions."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReleasePending = new MMCode() {
+	public static final RequestTypeCode ReleasePending = new RequestTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReleasePending";
 			definition = "Type is a request to release the pending transactions.";
-			owner_lazy = () -> RequestTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestTypeCode.mmObject();
 			codeName = "RT01";
 		}
 	};
@@ -150,12 +154,12 @@ public class RequestTypeCode {
 	 * definition} = "Type is a request to hold normal transactions."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHoldNormal = new MMCode() {
+	public static final RequestTypeCode HoldNormal = new RequestTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldNormal";
 			definition = "Type is a request to hold normal transactions.";
-			owner_lazy = () -> RequestTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestTypeCode.mmObject();
 			codeName = "RT02";
 		}
 	};
@@ -180,12 +184,12 @@ public class RequestTypeCode {
 	 * definition} = "Type is a request to cancellation a transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellation = new MMCode() {
+	public static final RequestTypeCode Cancellation = new RequestTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
 			definition = "Type is a request to cancellation a transaction.";
-			owner_lazy = () -> RequestTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestTypeCode.mmObject();
 			codeName = "RT03";
 		}
 	};
@@ -211,12 +215,12 @@ public class RequestTypeCode {
 	 * "Type is a request to change the sequence of the  transactions."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReSequence = new MMCode() {
+	public static final RequestTypeCode ReSequence = new RequestTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReSequence";
 			definition = "Type is a request to change the sequence of the  transactions.";
-			owner_lazy = () -> RequestTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestTypeCode.mmObject();
 			codeName = "RT04";
 		}
 	};
@@ -242,12 +246,12 @@ public class RequestTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmReleaseSuspicious = new MMCode() {
+	public static final RequestTypeCode ReleaseSuspicious = new RequestTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReleaseSuspicious";
 			definition = "Type is a request to release the suspicious transactions.";
-			owner_lazy = () -> RequestTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestTypeCode.mmObject();
 			codeName = "RT05";
 		}
 	};
@@ -272,12 +276,12 @@ public class RequestTypeCode {
 	 * definition} = "Type is an enquiry on the bank's position."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBankPositionEnquiry = new MMCode() {
+	public static final RequestTypeCode BankPositionEnquiry = new RequestTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankPositionEnquiry";
 			definition = "Type is an enquiry on the bank's position.";
-			owner_lazy = () -> RequestTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestTypeCode.mmObject();
 			codeName = "RT11";
 		}
 	};
@@ -302,12 +306,12 @@ public class RequestTypeCode {
 	 * definition} = "Type is an enquiry on a specific transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecificTransactionEnquiry = new MMCode() {
+	public static final RequestTypeCode SpecificTransactionEnquiry = new RequestTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecificTransactionEnquiry";
 			definition = "Type is an enquiry on a specific transaction.";
-			owner_lazy = () -> RequestTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestTypeCode.mmObject();
 			codeName = "RT12";
 		}
 	};
@@ -332,12 +336,12 @@ public class RequestTypeCode {
 	 * definition} = "Type is an enquiry on a queued transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQueuedTransactionEnquiry = new MMCode() {
+	public static final RequestTypeCode QueuedTransactionEnquiry = new RequestTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueuedTransactionEnquiry";
 			definition = "Type is an enquiry on a queued transaction.";
-			owner_lazy = () -> RequestTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestTypeCode.mmObject();
 			codeName = "RT13";
 		}
 	};
@@ -362,12 +366,12 @@ public class RequestTypeCode {
 	 * definition} = "Type is an enquiry on a suspicious transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuspiciousTransactionEnquiry = new MMCode() {
+	public static final RequestTypeCode SuspiciousTransactionEnquiry = new RequestTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspiciousTransactionEnquiry";
 			definition = "Type is an enquiry on a suspicious transaction.";
-			owner_lazy = () -> RequestTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestTypeCode.mmObject();
 			codeName = "RT14";
 		}
 	};
@@ -392,30 +396,69 @@ public class RequestTypeCode {
 	 * definition} = "Type is an enquiry on pending inward credits."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingInwardCreditsEnquiry = new MMCode() {
+	public static final RequestTypeCode PendingInwardCreditsEnquiry = new RequestTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingInwardCreditsEnquiry";
 			definition = "Type is an enquiry on pending inward credits.";
-			owner_lazy = () -> RequestTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestTypeCode.mmObject();
 			codeName = "RT15";
 		}
 	};
+	final static private LinkedHashMap<String, RequestTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RequestTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RT01");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestTypeCode";
 				definition = "Specifies the request used to further detail the type of information that will be queried.";
-				code_lazy = () -> Arrays.asList(RequestTypeCode.mmReleasePending, RequestTypeCode.mmHoldNormal, RequestTypeCode.mmCancellation, RequestTypeCode.mmReSequence, RequestTypeCode.mmReleaseSuspicious,
-						RequestTypeCode.mmBankPositionEnquiry, RequestTypeCode.mmSpecificTransactionEnquiry, RequestTypeCode.mmQueuedTransactionEnquiry, RequestTypeCode.mmSuspiciousTransactionEnquiry,
-						RequestTypeCode.mmPendingInwardCreditsEnquiry);
 				derivation_lazy = () -> Arrays.asList(RequestType1Code.mmObject(), RequestType2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RequestTypeCode.ReleasePending, com.tools20022.repository.codeset.RequestTypeCode.HoldNormal, com.tools20022.repository.codeset.RequestTypeCode.Cancellation,
+						com.tools20022.repository.codeset.RequestTypeCode.ReSequence, com.tools20022.repository.codeset.RequestTypeCode.ReleaseSuspicious, com.tools20022.repository.codeset.RequestTypeCode.BankPositionEnquiry,
+						com.tools20022.repository.codeset.RequestTypeCode.SpecificTransactionEnquiry, com.tools20022.repository.codeset.RequestTypeCode.QueuedTransactionEnquiry,
+						com.tools20022.repository.codeset.RequestTypeCode.SuspiciousTransactionEnquiry, com.tools20022.repository.codeset.RequestTypeCode.PendingInwardCreditsEnquiry);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ReleasePending.getCodeName().get(), ReleasePending);
+		codesByName.put(HoldNormal.getCodeName().get(), HoldNormal);
+		codesByName.put(Cancellation.getCodeName().get(), Cancellation);
+		codesByName.put(ReSequence.getCodeName().get(), ReSequence);
+		codesByName.put(ReleaseSuspicious.getCodeName().get(), ReleaseSuspicious);
+		codesByName.put(BankPositionEnquiry.getCodeName().get(), BankPositionEnquiry);
+		codesByName.put(SpecificTransactionEnquiry.getCodeName().get(), SpecificTransactionEnquiry);
+		codesByName.put(QueuedTransactionEnquiry.getCodeName().get(), QueuedTransactionEnquiry);
+		codesByName.put(SuspiciousTransactionEnquiry.getCodeName().get(), SuspiciousTransactionEnquiry);
+		codesByName.put(PendingInwardCreditsEnquiry.getCodeName().get(), PendingInwardCreditsEnquiry);
+	}
+
+	public static RequestTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RequestTypeCode[] values() {
+		RequestTypeCode[] values = new RequestTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RequestTypeCode> {
+		@Override
+		public RequestTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RequestTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

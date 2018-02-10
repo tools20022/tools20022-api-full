@@ -26,11 +26,9 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -45,12 +43,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashInBreakdown2#mmInvestmentFundTransactionInTypeOrExtendedRule
- * FundCashInBreakdown2.mmInvestmentFundTransactionInTypeOrExtendedRule}</li>
+ * {@linkplain com.tools20022.repository.msg.FundCashInBreakdown2#InvestmentFundTransactionInTypeOrExtendedRule
+ * FundCashInBreakdown2.InvestmentFundTransactionInTypeOrExtendedRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.FundCashInBreakdown2#mmOriginalOrderQuantityTypeOrExtendedOriginalOrderQuantityType
+ * {@linkplain com.tools20022.repository.msg.FundCashInBreakdown2#OriginalOrderQuantityTypeOrExtendedOriginalOrderQuantityType
  * FundCashInBreakdown2.
- * mmOriginalOrderQuantityTypeOrExtendedOriginalOrderQuantityType}</li>
+ * OriginalOrderQuantityTypeOrExtendedOriginalOrderQuantityType}</li>
  * </ul>
  * </li>
  * <li>
@@ -91,8 +89,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -113,16 +111,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FundCashInBreakdown2", propOrder = {"amount", "unitsNumber", "newAmountIndicator", "investmentFundTransactionInType", "extendedInvestmentFundTransactionInType", "originalOrderQuantityType",
 		"extendedOriginalOrderQuantityType", "chargeDetails", "commissionDetails"})
 public class FundCashInBreakdown2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt")
 	protected ActiveOrHistoricCurrencyAndAmount amount;
 	/**
-	 * Amount of cash flow in, expressed as an amount of money.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +163,7 @@ public class FundCashInBreakdown2 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmAmount;
-			componentContext_lazy = () -> FundCashInBreakdown2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown2.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,10 +175,11 @@ public class FundCashInBreakdown2 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "UnitsNb")
 	protected FinancialInstrumentQuantity1 unitsNumber;
 	/**
-	 * Amount of the cash flow in, expressed as a number of units.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,7 +222,7 @@ public class FundCashInBreakdown2 {
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
-			componentContext_lazy = () -> FundCashInBreakdown2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown2.mmObject();
 			isDerived = false;
 			xmlTag = "UnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,12 +234,11 @@ public class FundCashInBreakdown2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	@XmlElement(name = "NewAmtInd")
 	protected YesNoIndicator newAmountIndicator;
 	/**
-	 * Indicates whether the cash flow is an item that did not appear on the
-	 * previously sent report, eg, because it was received close to cut-off
-	 * time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,7 +276,7 @@ public class FundCashInBreakdown2 {
 	 */
 	public static final MMMessageAttribute mmNewAmountIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FundCashInBreakdown2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown2.mmObject();
 			isDerived = false;
 			xmlTag = "NewAmtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -289,11 +288,11 @@ public class FundCashInBreakdown2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtFndTxInTp", required = true)
 	protected InvestmentFundTransactionInType1Code investmentFundTransactionInType;
 	/**
-	 * Breakdown of the cash movements into a fund by transaction type, eg,
-	 * subscription, switch-in.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -329,7 +328,7 @@ public class FundCashInBreakdown2 {
 	public static final MMMessageAttribute mmInvestmentFundTransactionInType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
-			componentContext_lazy = () -> FundCashInBreakdown2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown2.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtFndTxInTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -340,11 +339,11 @@ public class FundCashInBreakdown2 {
 			simpleType_lazy = () -> InvestmentFundTransactionInType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedInvstmtFndTxInTp", required = true)
 	protected Extended350Code extendedInvestmentFundTransactionInType;
 	/**
-	 * Breakdown of the cash movements into a fund by transaction type, eg,
-	 * subscription, switch-in.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -380,7 +379,7 @@ public class FundCashInBreakdown2 {
 	public static final MMMessageAttribute mmExtendedInvestmentFundTransactionInType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
-			componentContext_lazy = () -> FundCashInBreakdown2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown2.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedInvstmtFndTxInTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -391,11 +390,11 @@ public class FundCashInBreakdown2 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlOrdrQtyTp", required = true)
 	protected OrderQuantityType2Code originalOrderQuantityType;
 	/**
-	 * Breakdown of the cash movements into a fund by order type, eg, order by
-	 * quantity of units or amount of money.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -431,7 +430,7 @@ public class FundCashInBreakdown2 {
 	public static final MMMessageAttribute mmOriginalOrderQuantityType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmQuantityType;
-			componentContext_lazy = () -> FundCashInBreakdown2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown2.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlOrdrQtyTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -442,11 +441,11 @@ public class FundCashInBreakdown2 {
 			simpleType_lazy = () -> OrderQuantityType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedOrgnlOrdrQtyTp", required = true)
 	protected Extended350Code extendedOriginalOrderQuantityType;
 	/**
-	 * Breakdown of the cash movements into a fund by transaction type, eg,
-	 * subscription, switch-in.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -482,7 +481,7 @@ public class FundCashInBreakdown2 {
 	public static final MMMessageAttribute mmExtendedOriginalOrderQuantityType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmQuantityType;
-			componentContext_lazy = () -> FundCashInBreakdown2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown2.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedOrgnlOrdrQtyTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -493,10 +492,11 @@ public class FundCashInBreakdown2 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgDtls")
 	protected List<com.tools20022.repository.msg.Charge16> chargeDetails;
 	/**
-	 * Charge for the placement of an order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -535,7 +535,7 @@ public class FundCashInBreakdown2 {
 	public static final MMMessageAssociationEnd mmChargeDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmTransactionCharge;
-			componentContext_lazy = () -> FundCashInBreakdown2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown2.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -547,11 +547,11 @@ public class FundCashInBreakdown2 {
 			type_lazy = () -> com.tools20022.repository.msg.Charge16.mmObject();
 		}
 	};
+	@XmlElement(name = "ComssnDtls")
 	protected List<com.tools20022.repository.msg.Commission9> commissionDetails;
 	/**
-	 * Information related to the commission applied to an order, eg, back-end
-	 * or front-end commission.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -593,7 +593,7 @@ public class FundCashInBreakdown2 {
 	public static final MMMessageAssociationEnd mmCommissionDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeCommission;
-			componentContext_lazy = () -> FundCashInBreakdown2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown2.mmObject();
 			isDerived = false;
 			xmlTag = "ComssnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -639,13 +639,13 @@ public class FundCashInBreakdown2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmInvestmentFundTransactionInTypeOrExtendedRule = new MMXor() {
+	public static final MMXor InvestmentFundTransactionInTypeOrExtendedRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFundTransactionInTypeOrExtendedRule";
 			definition = "Either InvestmentFundTransactionInType or ExtendedInvestmentFundTransactionInType must be present, but noth both.";
-			messageComponent_lazy = () -> FundCashInBreakdown2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(FundCashInBreakdown2.mmInvestmentFundTransactionInType, FundCashInBreakdown2.mmExtendedInvestmentFundTransactionInType);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundCashInBreakdown2.mmInvestmentFundTransactionInType, com.tools20022.repository.msg.FundCashInBreakdown2.mmExtendedInvestmentFundTransactionInType);
 		}
 	};
 	/**
@@ -682,24 +682,26 @@ public class FundCashInBreakdown2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmOriginalOrderQuantityTypeOrExtendedOriginalOrderQuantityType = new MMXor() {
+	public static final MMXor OriginalOrderQuantityTypeOrExtendedOriginalOrderQuantityType = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalOrderQuantityTypeOrExtendedOriginalOrderQuantityType";
 			definition = "Either OriginalOrderQuantityType or ExtendedOriginalOrderQuantityType must be present, but not both.";
-			messageComponent_lazy = () -> FundCashInBreakdown2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(FundCashInBreakdown2.mmOriginalOrderQuantityType, FundCashInBreakdown2.mmExtendedOriginalOrderQuantityType);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.FundCashInBreakdown2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundCashInBreakdown2.mmOriginalOrderQuantityType, com.tools20022.repository.msg.FundCashInBreakdown2.mmExtendedOriginalOrderQuantityType);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FundCashInBreakdown2.mmAmount, FundCashInBreakdown2.mmUnitsNumber, FundCashInBreakdown2.mmNewAmountIndicator, FundCashInBreakdown2.mmInvestmentFundTransactionInType,
-						FundCashInBreakdown2.mmExtendedInvestmentFundTransactionInType, FundCashInBreakdown2.mmOriginalOrderQuantityType, FundCashInBreakdown2.mmExtendedOriginalOrderQuantityType, FundCashInBreakdown2.mmChargeDetails,
-						FundCashInBreakdown2.mmCommissionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundCashInBreakdown2.mmAmount, com.tools20022.repository.msg.FundCashInBreakdown2.mmUnitsNumber,
+						com.tools20022.repository.msg.FundCashInBreakdown2.mmNewAmountIndicator, com.tools20022.repository.msg.FundCashInBreakdown2.mmInvestmentFundTransactionInType,
+						com.tools20022.repository.msg.FundCashInBreakdown2.mmExtendedInvestmentFundTransactionInType, com.tools20022.repository.msg.FundCashInBreakdown2.mmOriginalOrderQuantityType,
+						com.tools20022.repository.msg.FundCashInBreakdown2.mmExtendedOriginalOrderQuantityType, com.tools20022.repository.msg.FundCashInBreakdown2.mmChargeDetails,
+						com.tools20022.repository.msg.FundCashInBreakdown2.mmCommissionDetails);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -711,90 +713,91 @@ public class FundCashInBreakdown2 {
 				name = "FundCashInBreakdown2";
 				definition = "Breakdown of cash movements into a fund as a result of investment funds transactions, eg, subscriptions or switch-in.";
 				nextVersions_lazy = () -> Arrays.asList(FundCashInBreakdown3.mmObject());
-				xors_lazy = () -> Arrays.asList(FundCashInBreakdown2.mmInvestmentFundTransactionInTypeOrExtendedRule, FundCashInBreakdown2.mmOriginalOrderQuantityTypeOrExtendedOriginalOrderQuantityType);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundCashInBreakdown2.InvestmentFundTransactionInTypeOrExtendedRule,
+						com.tools20022.repository.msg.FundCashInBreakdown2.OriginalOrderQuantityTypeOrExtendedOriginalOrderQuantityType);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt")
-	public ActiveOrHistoricCurrencyAndAmount getAmount() {
-		return amount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getAmount() {
+		return amount == null ? Optional.empty() : Optional.of(amount);
 	}
 
-	public void setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
+	public FundCashInBreakdown2 setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
 		this.amount = amount;
+		return this;
 	}
 
-	@XmlElement(name = "UnitsNb")
-	public FinancialInstrumentQuantity1 getUnitsNumber() {
-		return unitsNumber;
+	public Optional<FinancialInstrumentQuantity1> getUnitsNumber() {
+		return unitsNumber == null ? Optional.empty() : Optional.of(unitsNumber);
 	}
 
-	public void setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
+	public FundCashInBreakdown2 setUnitsNumber(com.tools20022.repository.msg.FinancialInstrumentQuantity1 unitsNumber) {
 		this.unitsNumber = unitsNumber;
+		return this;
 	}
 
-	@XmlElement(name = "NewAmtInd")
-	public YesNoIndicator getNewAmountIndicator() {
-		return newAmountIndicator;
+	public Optional<YesNoIndicator> getNewAmountIndicator() {
+		return newAmountIndicator == null ? Optional.empty() : Optional.of(newAmountIndicator);
 	}
 
-	public void setNewAmountIndicator(YesNoIndicator newAmountIndicator) {
+	public FundCashInBreakdown2 setNewAmountIndicator(YesNoIndicator newAmountIndicator) {
 		this.newAmountIndicator = newAmountIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtFndTxInTp", required = true)
 	public InvestmentFundTransactionInType1Code getInvestmentFundTransactionInType() {
 		return investmentFundTransactionInType;
 	}
 
-	public void setInvestmentFundTransactionInType(InvestmentFundTransactionInType1Code investmentFundTransactionInType) {
-		this.investmentFundTransactionInType = investmentFundTransactionInType;
+	public FundCashInBreakdown2 setInvestmentFundTransactionInType(InvestmentFundTransactionInType1Code investmentFundTransactionInType) {
+		this.investmentFundTransactionInType = Objects.requireNonNull(investmentFundTransactionInType);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedInvstmtFndTxInTp", required = true)
 	public Extended350Code getExtendedInvestmentFundTransactionInType() {
 		return extendedInvestmentFundTransactionInType;
 	}
 
-	public void setExtendedInvestmentFundTransactionInType(Extended350Code extendedInvestmentFundTransactionInType) {
-		this.extendedInvestmentFundTransactionInType = extendedInvestmentFundTransactionInType;
+	public FundCashInBreakdown2 setExtendedInvestmentFundTransactionInType(Extended350Code extendedInvestmentFundTransactionInType) {
+		this.extendedInvestmentFundTransactionInType = Objects.requireNonNull(extendedInvestmentFundTransactionInType);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlOrdrQtyTp", required = true)
 	public OrderQuantityType2Code getOriginalOrderQuantityType() {
 		return originalOrderQuantityType;
 	}
 
-	public void setOriginalOrderQuantityType(OrderQuantityType2Code originalOrderQuantityType) {
-		this.originalOrderQuantityType = originalOrderQuantityType;
+	public FundCashInBreakdown2 setOriginalOrderQuantityType(OrderQuantityType2Code originalOrderQuantityType) {
+		this.originalOrderQuantityType = Objects.requireNonNull(originalOrderQuantityType);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedOrgnlOrdrQtyTp", required = true)
 	public Extended350Code getExtendedOriginalOrderQuantityType() {
 		return extendedOriginalOrderQuantityType;
 	}
 
-	public void setExtendedOriginalOrderQuantityType(Extended350Code extendedOriginalOrderQuantityType) {
-		this.extendedOriginalOrderQuantityType = extendedOriginalOrderQuantityType;
+	public FundCashInBreakdown2 setExtendedOriginalOrderQuantityType(Extended350Code extendedOriginalOrderQuantityType) {
+		this.extendedOriginalOrderQuantityType = Objects.requireNonNull(extendedOriginalOrderQuantityType);
+		return this;
 	}
 
-	@XmlElement(name = "ChrgDtls")
 	public List<Charge16> getChargeDetails() {
-		return chargeDetails;
+		return chargeDetails == null ? chargeDetails = new ArrayList<>() : chargeDetails;
 	}
 
-	public void setChargeDetails(List<com.tools20022.repository.msg.Charge16> chargeDetails) {
-		this.chargeDetails = chargeDetails;
+	public FundCashInBreakdown2 setChargeDetails(List<com.tools20022.repository.msg.Charge16> chargeDetails) {
+		this.chargeDetails = Objects.requireNonNull(chargeDetails);
+		return this;
 	}
 
-	@XmlElement(name = "ComssnDtls")
 	public List<Commission9> getCommissionDetails() {
-		return commissionDetails;
+		return commissionDetails == null ? commissionDetails = new ArrayList<>() : commissionDetails;
 	}
 
-	public void setCommissionDetails(List<com.tools20022.repository.msg.Commission9> commissionDetails) {
-		this.commissionDetails = commissionDetails;
+	public FundCashInBreakdown2 setCommissionDetails(List<com.tools20022.repository.msg.Commission9> commissionDetails) {
+		this.commissionDetails = Objects.requireNonNull(commissionDetails);
+		return this;
 	}
 }

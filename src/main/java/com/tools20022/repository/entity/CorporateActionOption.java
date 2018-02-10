@@ -25,9 +25,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Provides information about the alternatives available to an account owner
@@ -92,6 +91,29 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CorporateActionOption#mmDefault
  * CorporateActionOption.mmDefault}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmCorporateActionOption
+ * DateTimePeriod.mmCorporateActionOption}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmOption
+ * ProceedsDefinition.mmOption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionElection#mmOption
+ * CorporateActionElection.mmOption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction#mmCorporateActionOptionDefinition
+ * ChoiceCorporateAction.mmCorporateActionOptionDefinition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmOption
+ * CorporateActionDistribution.mmOption}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionOptionServicing#mmRelatedOption
+ * CorporateActionOptionServicing.mmRelatedOption}</li>
  * </ul>
  * </li>
  * <li>
@@ -653,33 +675,10 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.DateTimePeriod#mmCorporateActionOption
- * DateTimePeriod.mmCorporateActionOption}</li>
- * <li>{@linkplain com.tools20022.repository.entity.ProceedsDefinition#mmOption
- * ProceedsDefinition.mmOption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionElection#mmOption
- * CorporateActionElection.mmOption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.ChoiceCorporateAction#mmCorporateActionOptionDefinition
- * ChoiceCorporateAction.mmCorporateActionOptionDefinition}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionDistribution#mmOption
- * CorporateActionDistribution.mmOption}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionOptionServicing#mmRelatedOption
- * CorporateActionOptionServicing.mmRelatedOption}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -697,8 +696,8 @@ public class CorporateActionOption {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Exact3NumericText optionNumber;
 	/**
-	 * Number identifying the available corporate action options.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1069,8 +1068,8 @@ public class CorporateActionOption {
 					InstructedCorporateActionOption7.mmOptionNumber, CorporateActionOption128.mmOptionNumber, CorporateActionOption132.mmOptionNumber, CorporateActionOption130.mmOptionNumber, CorporateActionOption131.mmOptionNumber,
 					CorporateActionOption129.mmOptionNumber, CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmOptionNumber, CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmOptionNumber,
 					CorporateActionOption134.mmOptionNumber, CorporateActionOption136.mmOptionNumber, CorporateActionOption135.mmOptionNumber, CorporateActionOption133.mmOptionNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
@@ -1089,8 +1088,8 @@ public class CorporateActionOption {
 	};
 	protected CorporateActionOptionCode optionType;
 	/**
-	 * Type of corporate action options available to the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1708,8 +1707,8 @@ public class CorporateActionOption {
 					AggregateBalanceInformation32.mmCorporateActionOptionType, AggregateBalanceInformation33.mmCorporateActionOptionType, CorporateActionOption128.mmOptionType, CorporateActionOption29Choice.mmCode,
 					CorporateActionOption29Choice.mmProprietary, CorporateActionOption132.mmOptionType, CorporateActionOption130.mmOptionType, CorporateActionOption131.mmOptionType, CorporateActionOption129.mmOptionType,
 					CorporateActionOption134.mmOptionType, CorporateActionOption136.mmOptionType, CorporateActionOption135.mmOptionType, CorporateActionOption133.mmOptionType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionType";
 			definition = "Type of corporate action options available to the account owner.";
@@ -1728,10 +1727,8 @@ public class CorporateActionOption {
 	};
 	protected FractionDispositionTypeCode fractionDisposition;
 	/**
-	 * Treatment of the fractions resulting from derived securities will be
-	 * processed or how prorated decisions will be rounding, if provided with a
-	 * pro ration rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2302,8 +2299,8 @@ public class CorporateActionOption {
 					CorporateActionOption129.mmFractionDisposition, SecuritiesOption60.mmFractionDisposition, SecuritiesOption59.mmFractionDisposition, CorporateActionOption134.mmFractionDisposition,
 					CorporateActionOption136.mmFractionDisposition, CorporateActionOption135.mmFractionDisposition, CorporateActionOption133.mmFractionDisposition, SecuritiesOption61.mmFractionDisposition,
 					SecuritiesOption63.mmFractionDisposition);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FractionDisposition";
 			definition = "Treatment of the fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
@@ -2322,8 +2319,8 @@ public class CorporateActionOption {
 	};
 	protected CurrencyCode currencyOption;
 	/**
-	 * Currency choice given to the investor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2657,8 +2654,8 @@ public class CorporateActionOption {
 					CorporateActionOption130.mmCurrencyOption, CorporateActionOption131.mmCurrencyOption, CorporateActionOption129.mmCurrencyOption, SecuritiesOption60.mmCurrencyOption, SecuritiesOption59.mmCurrencyOption,
 					CorporateActionOption134.mmCurrencyOption, CorporateActionOption136.mmCurrencyOption, CorporateActionOption135.mmCurrencyOption, CorporateActionOption133.mmCurrencyOption, SecuritiesOption61.mmCurrencyOption,
 					SecuritiesOption63.mmCurrencyOption);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyOption";
 			definition = "Currency choice given to the investor.";
@@ -2677,8 +2674,8 @@ public class CorporateActionOption {
 	};
 	protected ChoiceCorporateAction relatedChoiceCorporateAction;
 	/**
-	 * Corporate action for which one or more options are provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3559,8 +3556,8 @@ public class CorporateActionOption {
 					CorporateActionOption135.mmRateAndAmountDetails, CorporateActionOption133.mmDateDetails, CorporateActionOption133.mmPeriodDetails, CorporateActionOption133.mmRateAndAmountDetails, CashOption53.mmAmountDetails,
 					CashOption53.mmDateDetails, CashOption53.mmRateAndAmountDetails, CashOption54.mmAmountDetails, CashOption54.mmDateDetails, CashOption54.mmRateAndAmountDetails, CashOption55.mmAmountDetails, CashOption55.mmDateDetails,
 					CashOption55.mmRateAndAmountDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedChoiceCorporateAction";
 			definition = "Corporate action for which one or more options are provided.";
@@ -3573,8 +3570,8 @@ public class CorporateActionOption {
 	};
 	protected CorporateActionElection corporateActionElection;
 	/**
-	 * Election process which selected a specific option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3608,8 +3605,8 @@ public class CorporateActionOption {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionElection = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionElection";
 			definition = "Election process which selected a specific option.";
@@ -3622,8 +3619,8 @@ public class CorporateActionOption {
 	};
 	protected OptionFeaturesCode optionFeatures;
 	/**
-	 * Features that may apply to a corporate action option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3933,8 +3930,8 @@ public class CorporateActionOption {
 					OptionFeaturesFormat21Choice.mmProprietary, OptionFeaturesFormat20Choice.mmCode, OptionFeaturesFormat20Choice.mmProprietary, CorporateActionOption132.mmOptionFeatures, CorporateActionOption130.mmOptionFeatures,
 					CorporateActionOption129.mmOptionFeatures, OptionFeaturesFormat22Choice.mmCode, OptionFeaturesFormat22Choice.mmProprietary, CorporateActionOption136.mmOptionFeatures, CorporateActionOption135.mmOptionFeatures,
 					CorporateActionOption133.mmOptionFeatures, OptionFeaturesFormat23Choice.mmCode, OptionFeaturesFormat23Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionFeatures";
 			definition = "Features that may apply to a corporate action option.";
@@ -3953,8 +3950,8 @@ public class CorporateActionOption {
 	};
 	protected DateTimePeriod actionPeriod;
 	/**
-	 * Period during which the specified option remains valid, eg, offer period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4017,8 +4014,8 @@ public class CorporateActionOption {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod4.mmActionPeriod, CorporateActionPeriod9.mmActionPeriod, CorporateActionPeriod5.mmActionPeriod, CorporateActionPeriod7.mmActionPeriod,
 					CorporateActionPeriod1.mmActionPeriod, CorporateActionPeriod2.mmActionPeriod, CorporateActionPeriod11.mmActionPeriod);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ActionPeriod";
 			definition = "Period during which the specified option remains valid, eg, offer period.";
@@ -4031,8 +4028,8 @@ public class CorporateActionOption {
 	};
 	protected OfferTypeV2Code offerType;
 	/**
-	 * Conditions that apply to the offer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4254,8 +4251,8 @@ public class CorporateActionOption {
 					CorporateActionOption114.mmOfferType, CorporateAction31.mmOfferType, OfferTypeFormat10Choice.mmCode, OfferTypeFormat10Choice.mmProprietary, CorporateActionOption125.mmOfferType, CorporateActionOption127.mmOfferType,
 					CorporateAction40.mmOfferType, OfferTypeFormat11Choice.mmCode, OfferTypeFormat11Choice.mmProprietary, CorporateActionOption130.mmOfferType, CorporateActionOption129.mmOfferType, CorporateActionOption135.mmOfferType,
 					CorporateActionOption133.mmOfferType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OfferType";
 			definition = "Conditions that apply to the offer.";
@@ -4274,9 +4271,8 @@ public class CorporateActionOption {
 	};
 	protected YesNoIndicator chargesAppliedIndicator;
 	/**
-	 * Indicates whether charges apply to the holder, for instance redemption
-	 * charges.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4446,8 +4442,8 @@ public class CorporateActionOption {
 					CorporateAction17.mmChargesAppliedIndicator, CorporateActionOption115.mmChargesAppliedIndicator, CorporateActionOption114.mmChargesAppliedIndicator, CorporateAction31.mmChargesAppliedIndicator,
 					CorporateActionOption125.mmChargesAppliedIndicator, CorporateActionOption127.mmChargesAppliedIndicator, CorporateAction40.mmChargesAppliedIndicator, CorporateActionOption130.mmChargesAppliedIndicator,
 					CorporateActionOption129.mmChargesAppliedIndicator, CorporateActionOption135.mmChargesAppliedIndicator, CorporateActionOption133.mmChargesAppliedIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChargesAppliedIndicator";
 			definition = "Indicates whether charges apply to the holder, for instance redemption charges.";
@@ -4466,8 +4462,8 @@ public class CorporateActionOption {
 	};
 	protected YesNoIndicator withdrawalAllowedIndicator;
 	/**
-	 * Indicates whether withdrawal of instruction is allowed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4593,8 +4589,8 @@ public class CorporateActionOption {
 					CorporateActionOption108.mmWithdrawalAllowedIndicator, CorporateActionOption106.mmWithdrawalAllowedIndicator, CorporateActionOption115.mmWithdrawalAllowedIndicator, CorporateActionOption114.mmWithdrawalAllowedIndicator,
 					CorporateActionOption125.mmWithdrawalAllowedIndicator, CorporateActionOption127.mmWithdrawalAllowedIndicator, CorporateActionOption130.mmWithdrawalAllowedIndicator, CorporateActionOption129.mmWithdrawalAllowedIndicator,
 					CorporateActionOption135.mmWithdrawalAllowedIndicator, CorporateActionOption133.mmWithdrawalAllowedIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WithdrawalAllowedIndicator";
 			definition = "Indicates whether withdrawal of instruction is allowed.";
@@ -4613,8 +4609,8 @@ public class CorporateActionOption {
 	};
 	protected YesNoIndicator changeAllowedIndicator;
 	/**
-	 * Indicates whether change of instruction is allowed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4740,8 +4736,8 @@ public class CorporateActionOption {
 					CorporateActionOption108.mmChangeAllowedIndicator, CorporateActionOption106.mmChangeAllowedIndicator, CorporateActionOption115.mmChangeAllowedIndicator, CorporateActionOption114.mmChangeAllowedIndicator,
 					CorporateActionOption125.mmChangeAllowedIndicator, CorporateActionOption127.mmChangeAllowedIndicator, CorporateActionOption130.mmChangeAllowedIndicator, CorporateActionOption129.mmChangeAllowedIndicator,
 					CorporateActionOption135.mmChangeAllowedIndicator, CorporateActionOption133.mmChangeAllowedIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChangeAllowedIndicator";
 			definition = "Indicates whether change of instruction is allowed.";
@@ -4760,8 +4756,8 @@ public class CorporateActionOption {
 	};
 	protected List<com.tools20022.repository.entity.CorporateActionOptionServicing> corporateActionOptionServicing;
 	/**
-	 * Calculation of the entitlement on the basis of the proposed option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4796,8 +4792,8 @@ public class CorporateActionOption {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionOptionServicing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionOptionServicing";
 			definition = "Calculation of the entitlement on the basis of the proposed option.";
@@ -4809,9 +4805,8 @@ public class CorporateActionOption {
 	};
 	protected List<com.tools20022.repository.entity.ProceedsDefinition> proceedsDefinition;
 	/**
-	 * Definition of exchanges of cash and / or securities available in the
-	 * processing of corporate actions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4846,8 +4841,8 @@ public class CorporateActionOption {
 	 */
 	public static final MMBusinessAssociationEnd mmProceedsDefinition = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProceedsDefinition";
 			definition = "Definition of exchanges of cash and / or securities available in the processing of corporate actions.";
@@ -4859,8 +4854,8 @@ public class CorporateActionOption {
 	};
 	protected List<com.tools20022.repository.entity.CorporateActionDistribution> distribution;
 	/**
-	 * Distribution process for which an option is selected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4894,8 +4889,8 @@ public class CorporateActionOption {
 	 */
 	public static final MMBusinessAssociationEnd mmDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Distribution";
 			definition = "Distribution process for which an option is selected.";
@@ -4907,8 +4902,8 @@ public class CorporateActionOption {
 	};
 	protected YesNoIndicator default_;
 	/**
-	 * Specifies whether the option is the default option or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4935,8 +4930,8 @@ public class CorporateActionOption {
 	 */
 	public static final MMBusinessAttribute mmDefault = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Default";
 			definition = "Specifies whether the option is the default option or not.";
@@ -4957,7 +4952,7 @@ public class CorporateActionOption {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOption";
 				definition = "Provides information about the alternatives available to an account owner when participating to a corporate action event. This is defined at a general level without looking at the specificities of the securities balances.";
@@ -5030,127 +5025,143 @@ public class CorporateActionOption {
 		return optionNumber;
 	}
 
-	public void setOptionNumber(Exact3NumericText optionNumber) {
-		this.optionNumber = optionNumber;
+	public CorporateActionOption setOptionNumber(Exact3NumericText optionNumber) {
+		this.optionNumber = Objects.requireNonNull(optionNumber);
+		return this;
 	}
 
 	public CorporateActionOptionCode getOptionType() {
 		return optionType;
 	}
 
-	public void setOptionType(CorporateActionOptionCode optionType) {
-		this.optionType = optionType;
+	public CorporateActionOption setOptionType(CorporateActionOptionCode optionType) {
+		this.optionType = Objects.requireNonNull(optionType);
+		return this;
 	}
 
 	public FractionDispositionTypeCode getFractionDisposition() {
 		return fractionDisposition;
 	}
 
-	public void setFractionDisposition(FractionDispositionTypeCode fractionDisposition) {
-		this.fractionDisposition = fractionDisposition;
+	public CorporateActionOption setFractionDisposition(FractionDispositionTypeCode fractionDisposition) {
+		this.fractionDisposition = Objects.requireNonNull(fractionDisposition);
+		return this;
 	}
 
 	public CurrencyCode getCurrencyOption() {
 		return currencyOption;
 	}
 
-	public void setCurrencyOption(CurrencyCode currencyOption) {
-		this.currencyOption = currencyOption;
+	public CorporateActionOption setCurrencyOption(CurrencyCode currencyOption) {
+		this.currencyOption = Objects.requireNonNull(currencyOption);
+		return this;
 	}
 
-	public ChoiceCorporateAction getRelatedChoiceCorporateAction() {
-		return relatedChoiceCorporateAction;
+	public Optional<ChoiceCorporateAction> getRelatedChoiceCorporateAction() {
+		return relatedChoiceCorporateAction == null ? Optional.empty() : Optional.of(relatedChoiceCorporateAction);
 	}
 
-	public void setRelatedChoiceCorporateAction(com.tools20022.repository.entity.ChoiceCorporateAction relatedChoiceCorporateAction) {
+	public CorporateActionOption setRelatedChoiceCorporateAction(com.tools20022.repository.entity.ChoiceCorporateAction relatedChoiceCorporateAction) {
 		this.relatedChoiceCorporateAction = relatedChoiceCorporateAction;
+		return this;
 	}
 
 	public CorporateActionElection getCorporateActionElection() {
 		return corporateActionElection;
 	}
 
-	public void setCorporateActionElection(com.tools20022.repository.entity.CorporateActionElection corporateActionElection) {
-		this.corporateActionElection = corporateActionElection;
+	public CorporateActionOption setCorporateActionElection(com.tools20022.repository.entity.CorporateActionElection corporateActionElection) {
+		this.corporateActionElection = Objects.requireNonNull(corporateActionElection);
+		return this;
 	}
 
 	public OptionFeaturesCode getOptionFeatures() {
 		return optionFeatures;
 	}
 
-	public void setOptionFeatures(OptionFeaturesCode optionFeatures) {
-		this.optionFeatures = optionFeatures;
+	public CorporateActionOption setOptionFeatures(OptionFeaturesCode optionFeatures) {
+		this.optionFeatures = Objects.requireNonNull(optionFeatures);
+		return this;
 	}
 
 	public DateTimePeriod getActionPeriod() {
 		return actionPeriod;
 	}
 
-	public void setActionPeriod(com.tools20022.repository.entity.DateTimePeriod actionPeriod) {
-		this.actionPeriod = actionPeriod;
+	public CorporateActionOption setActionPeriod(com.tools20022.repository.entity.DateTimePeriod actionPeriod) {
+		this.actionPeriod = Objects.requireNonNull(actionPeriod);
+		return this;
 	}
 
 	public OfferTypeV2Code getOfferType() {
 		return offerType;
 	}
 
-	public void setOfferType(OfferTypeV2Code offerType) {
-		this.offerType = offerType;
+	public CorporateActionOption setOfferType(OfferTypeV2Code offerType) {
+		this.offerType = Objects.requireNonNull(offerType);
+		return this;
 	}
 
 	public YesNoIndicator getChargesAppliedIndicator() {
 		return chargesAppliedIndicator;
 	}
 
-	public void setChargesAppliedIndicator(YesNoIndicator chargesAppliedIndicator) {
-		this.chargesAppliedIndicator = chargesAppliedIndicator;
+	public CorporateActionOption setChargesAppliedIndicator(YesNoIndicator chargesAppliedIndicator) {
+		this.chargesAppliedIndicator = Objects.requireNonNull(chargesAppliedIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getWithdrawalAllowedIndicator() {
 		return withdrawalAllowedIndicator;
 	}
 
-	public void setWithdrawalAllowedIndicator(YesNoIndicator withdrawalAllowedIndicator) {
-		this.withdrawalAllowedIndicator = withdrawalAllowedIndicator;
+	public CorporateActionOption setWithdrawalAllowedIndicator(YesNoIndicator withdrawalAllowedIndicator) {
+		this.withdrawalAllowedIndicator = Objects.requireNonNull(withdrawalAllowedIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getChangeAllowedIndicator() {
 		return changeAllowedIndicator;
 	}
 
-	public void setChangeAllowedIndicator(YesNoIndicator changeAllowedIndicator) {
-		this.changeAllowedIndicator = changeAllowedIndicator;
+	public CorporateActionOption setChangeAllowedIndicator(YesNoIndicator changeAllowedIndicator) {
+		this.changeAllowedIndicator = Objects.requireNonNull(changeAllowedIndicator);
+		return this;
 	}
 
 	public List<CorporateActionOptionServicing> getCorporateActionOptionServicing() {
-		return corporateActionOptionServicing;
+		return corporateActionOptionServicing == null ? corporateActionOptionServicing = new ArrayList<>() : corporateActionOptionServicing;
 	}
 
-	public void setCorporateActionOptionServicing(List<com.tools20022.repository.entity.CorporateActionOptionServicing> corporateActionOptionServicing) {
-		this.corporateActionOptionServicing = corporateActionOptionServicing;
+	public CorporateActionOption setCorporateActionOptionServicing(List<com.tools20022.repository.entity.CorporateActionOptionServicing> corporateActionOptionServicing) {
+		this.corporateActionOptionServicing = Objects.requireNonNull(corporateActionOptionServicing);
+		return this;
 	}
 
 	public List<ProceedsDefinition> getProceedsDefinition() {
-		return proceedsDefinition;
+		return proceedsDefinition == null ? proceedsDefinition = new ArrayList<>() : proceedsDefinition;
 	}
 
-	public void setProceedsDefinition(List<com.tools20022.repository.entity.ProceedsDefinition> proceedsDefinition) {
-		this.proceedsDefinition = proceedsDefinition;
+	public CorporateActionOption setProceedsDefinition(List<com.tools20022.repository.entity.ProceedsDefinition> proceedsDefinition) {
+		this.proceedsDefinition = Objects.requireNonNull(proceedsDefinition);
+		return this;
 	}
 
 	public List<CorporateActionDistribution> getDistribution() {
-		return distribution;
+		return distribution == null ? distribution = new ArrayList<>() : distribution;
 	}
 
-	public void setDistribution(List<com.tools20022.repository.entity.CorporateActionDistribution> distribution) {
-		this.distribution = distribution;
+	public CorporateActionOption setDistribution(List<com.tools20022.repository.entity.CorporateActionDistribution> distribution) {
+		this.distribution = Objects.requireNonNull(distribution);
+		return this;
 	}
 
 	public YesNoIndicator getDefault() {
 		return default_;
 	}
 
-	public void setDefault(YesNoIndicator default_) {
-		this.default_ = default_;
+	public CorporateActionOption setDefault(YesNoIndicator default_) {
+		this.default_ = Objects.requireNonNull(default_);
+		return this;
 	}
 }

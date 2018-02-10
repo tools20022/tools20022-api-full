@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ValidationCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the validation of a signature used to sign the file.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValidationCode#mmValidationSuccessful
- * ValidationCode.mmValidationSuccessful}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValidationCode#ValidationSuccessful
+ * ValidationCode.ValidationSuccessful}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValidationCode#mmValidationUnkonwn
- * ValidationCode.mmValidationUnkonwn}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValidationCode#ValidationUnkonwn
+ * ValidationCode.ValidationUnkonwn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ValidationCode#mmValidationFailed
- * ValidationCode.mmValidationFailed}</li>
+ * {@linkplain com.tools20022.repository.codeset.ValidationCode#ValidationFailed
+ * ValidationCode.ValidationFailed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the validation of a signature used to sign the file."</li>
  * </ul>
  */
-public class ValidationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ValidationCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,12 +97,12 @@ public class ValidationCode {
 	 * definition} = "Validation of the signature is successful."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmValidationSuccessful = new MMCode() {
+	public static final ValidationCode ValidationSuccessful = new ValidationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationSuccessful";
 			definition = "Validation of the signature is successful.";
-			owner_lazy = () -> ValidationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ValidationCode.mmObject();
 			codeName = "OKAY";
 		}
 	};
@@ -122,12 +128,12 @@ public class ValidationCode {
 	 * "Validation of the signature is unknown or not yet executed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmValidationUnkonwn = new MMCode() {
+	public static final ValidationCode ValidationUnkonwn = new ValidationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationUnkonwn";
 			definition = "Validation of the signature is unknown or not yet executed.";
-			owner_lazy = () -> ValidationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ValidationCode.mmObject();
 			codeName = "UKWN";
 		}
 	};
@@ -152,27 +158,59 @@ public class ValidationCode {
 	 * definition} = "Validation of the signature has failed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmValidationFailed = new MMCode() {
+	public static final ValidationCode ValidationFailed = new ValidationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidationFailed";
 			definition = "Validation of the signature has failed.";
-			owner_lazy = () -> ValidationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ValidationCode.mmObject();
 			codeName = "NTOK";
 		}
 	};
+	final static private LinkedHashMap<String, ValidationCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ValidationCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ValidationCode";
 				definition = "Specifies the validation of a signature used to sign the file.";
-				code_lazy = () -> Arrays.asList(ValidationCode.mmValidationSuccessful, ValidationCode.mmValidationUnkonwn, ValidationCode.mmValidationFailed);
 				derivation_lazy = () -> Arrays.asList(Validation1Code.mmObject(), Validation2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ValidationCode.ValidationSuccessful, com.tools20022.repository.codeset.ValidationCode.ValidationUnkonwn,
+						com.tools20022.repository.codeset.ValidationCode.ValidationFailed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ValidationSuccessful.getCodeName().get(), ValidationSuccessful);
+		codesByName.put(ValidationUnkonwn.getCodeName().get(), ValidationUnkonwn);
+		codesByName.put(ValidationFailed.getCodeName().get(), ValidationFailed);
+	}
+
+	public static ValidationCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ValidationCode[] values() {
+		ValidationCode[] values = new ValidationCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ValidationCode> {
+		@Override
+		public ValidationCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ValidationCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

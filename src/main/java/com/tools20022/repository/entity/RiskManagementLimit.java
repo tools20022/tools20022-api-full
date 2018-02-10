@@ -28,9 +28,8 @@ import com.tools20022.repository.choice.LimitType1Choice;
 import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Cash management feature limiting the maximum risk that a party accepts to
@@ -48,6 +47,8 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Limit Limit}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -57,64 +58,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.RiskManagementLimit#mmCounterparty
  * RiskManagementLimit.mmCounterparty}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Limit Limit}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails
- * RiskManagementLimitIdentificationDetails}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitIdentificationDetails1
- * LimitIdentificationDetails1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitIdentificationDetails2
- * LimitIdentificationDetails2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitDetailsStructure1
- * LimitDetailsStructure1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitIdentificationDetails3
- * LimitIdentificationDetails3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitDetailsStructure3
- * LimitDetailsStructure3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.LimitType1Choice
- * LimitType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitIdentification1
- * LimitIdentification1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitIdentification2
- * LimitIdentification2}</li>
- * <li>{@linkplain com.tools20022.repository.choice.LimitStructure1Choice
- * LimitStructure1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitDetailsStructure2
- * LimitDetailsStructure2}</li>
- * <li>{@linkplain com.tools20022.repository.choice.LimitIdentification1Choice
- * LimitIdentification1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitStructure1
- * LimitStructure1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BilateralLimitDetails1
- * BilateralLimitDetails1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BilateralLimitDetails2
- * BilateralLimitDetails2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BilateralLimitDetails3
- * BilateralLimitDetails3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.BilateralLimit1
- * BilateralLimit1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitReport1 LimitReport1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limits1 Limits1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitReport2 LimitReport2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limits2 Limits2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitReport3 LimitReport3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limits3 Limits3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitReport4 LimitReport4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limits4 Limits4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitIdentification4
- * LimitIdentification4}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1
- * LimitUtilisationJournalSearchCriteria1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LimitReport5 LimitReport5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Limits5 Limits5}</li>
  * </ul>
  * </li>
  * <li>
@@ -233,10 +176,66 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RiskManagementLimitIdentificationDetails
+ * RiskManagementLimitIdentificationDetails}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitIdentificationDetails1
+ * LimitIdentificationDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitIdentificationDetails2
+ * LimitIdentificationDetails2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitDetailsStructure1
+ * LimitDetailsStructure1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitIdentificationDetails3
+ * LimitIdentificationDetails3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitDetailsStructure3
+ * LimitDetailsStructure3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.LimitType1Choice
+ * LimitType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitIdentification1
+ * LimitIdentification1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitIdentification2
+ * LimitIdentification2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.LimitStructure1Choice
+ * LimitStructure1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitDetailsStructure2
+ * LimitDetailsStructure2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.LimitIdentification1Choice
+ * LimitIdentification1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitStructure1
+ * LimitStructure1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BilateralLimitDetails1
+ * BilateralLimitDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BilateralLimitDetails2
+ * BilateralLimitDetails2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BilateralLimitDetails3
+ * BilateralLimitDetails3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BilateralLimit1
+ * BilateralLimit1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitReport1 LimitReport1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits1 Limits1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitReport2 LimitReport2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits2 Limits2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitReport3 LimitReport3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits3 Limits3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitReport4 LimitReport4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits4 Limits4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitIdentification4
+ * LimitIdentification4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.LimitUtilisationJournalSearchCriteria1
+ * LimitUtilisationJournalSearchCriteria1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitReport5 LimitReport5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits5 Limits5}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -254,8 +253,8 @@ public class RiskManagementLimit extends Limit {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CashManagementService cashManagementService;
 	/**
-	 * Cash management service which offers limit management services.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -290,8 +289,8 @@ public class RiskManagementLimit extends Limit {
 	 */
 	public static final MMBusinessAssociationEnd mmCashManagementService = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.RiskManagementLimit.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RiskManagementLimit.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashManagementService";
 			definition = "Cash management service which offers limit management services.";
@@ -304,8 +303,8 @@ public class RiskManagementLimit extends Limit {
 	};
 	protected List<com.tools20022.repository.entity.SystemMemberRole> counterparty;
 	/**
-	 * Identification of the system member for which the limit is established.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -352,8 +351,8 @@ public class RiskManagementLimit extends Limit {
 	public static final MMBusinessAssociationEnd mmCounterparty = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(LimitSearchCriteria1.mmBilateralLimitCounterpartyIdentification, LimitSearchCriteria2.mmBilateralLimitCounterpartyIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.RiskManagementLimit.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RiskManagementLimit.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Counterparty";
 			definition = "Identification of the system member for which the limit is established.";
@@ -367,7 +366,7 @@ public class RiskManagementLimit extends Limit {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RiskManagementLimit";
 				definition = "Cash management feature limiting the maximum risk that a party accepts to take with respect to a counterparty or a set of counterparties. A risk management limit is either bilateral, for a counterparty, or multilateral, for a set of counterparties or all other members in a system.The limit may also apply to sponsored or indirect members. In principle, a risk management limit is calculated on the net position between two members and is expressed as a credit or debit limit, from the point of view of the party setting the limit.";
@@ -397,19 +396,21 @@ public class RiskManagementLimit extends Limit {
 		return mmObject_lazy.get();
 	}
 
-	public CashManagementService getCashManagementService() {
-		return cashManagementService;
+	public Optional<CashManagementService> getCashManagementService() {
+		return cashManagementService == null ? Optional.empty() : Optional.of(cashManagementService);
 	}
 
-	public void setCashManagementService(com.tools20022.repository.entity.CashManagementService cashManagementService) {
+	public RiskManagementLimit setCashManagementService(com.tools20022.repository.entity.CashManagementService cashManagementService) {
 		this.cashManagementService = cashManagementService;
+		return this;
 	}
 
 	public List<SystemMemberRole> getCounterparty() {
-		return counterparty;
+		return counterparty == null ? counterparty = new ArrayList<>() : counterparty;
 	}
 
-	public void setCounterparty(List<com.tools20022.repository.entity.SystemMemberRole> counterparty) {
-		this.counterparty = counterparty;
+	public RiskManagementLimit setCounterparty(List<com.tools20022.repository.entity.SystemMemberRole> counterparty) {
+		this.counterparty = Objects.requireNonNull(counterparty);
+		return this;
 	}
 }

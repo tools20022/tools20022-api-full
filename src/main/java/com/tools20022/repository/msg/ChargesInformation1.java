@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Information on the charges related to the payment transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ChargesInformation1", propOrder = {"chargesAmount", "chargesParty"})
 public class ChargesInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ChrgsAmt", required = true)
 	protected CurrencyAndAmount chargesAmount;
 	/**
-	 * Transaction charges to be paid by the charge bearer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +112,7 @@ public class ChargesInformation1 {
 	public static final MMMessageAttribute mmChargesAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> ChargesInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,11 +123,11 @@ public class ChargesInformation1 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgsPty", required = true)
 	protected BranchAndFinancialInstitutionIdentification3 chargesParty;
 	/**
-	 * Party that takes the transaction charges or to which the transaction
-	 * charges are due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -160,7 +162,7 @@ public class ChargesInformation1 {
 	public static final MMMessageAssociationEnd mmChargesParty = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> ChargesInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgsPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,9 +178,9 @@ public class ChargesInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ChargesInformation1.mmChargesAmount, ChargesInformation1.mmChargesParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargesInformation1.mmChargesAmount, com.tools20022.repository.msg.ChargesInformation1.mmChargesParty);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargesInformation1";
 				definition = "Information on the charges related to the payment transaction.";
@@ -187,21 +189,21 @@ public class ChargesInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ChrgsAmt", required = true)
 	public CurrencyAndAmount getChargesAmount() {
 		return chargesAmount;
 	}
 
-	public void setChargesAmount(CurrencyAndAmount chargesAmount) {
-		this.chargesAmount = chargesAmount;
+	public ChargesInformation1 setChargesAmount(CurrencyAndAmount chargesAmount) {
+		this.chargesAmount = Objects.requireNonNull(chargesAmount);
+		return this;
 	}
 
-	@XmlElement(name = "ChrgsPty", required = true)
 	public BranchAndFinancialInstitutionIdentification3 getChargesParty() {
 		return chargesParty;
 	}
 
-	public void setChargesParty(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 chargesParty) {
-		this.chargesParty = chargesParty;
+	public ChargesInformation1 setChargesParty(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification3 chargesParty) {
+		this.chargesParty = Objects.requireNonNull(chargesParty);
+		return this;
 	}
 }

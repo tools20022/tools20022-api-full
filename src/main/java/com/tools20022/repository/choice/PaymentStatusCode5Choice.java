@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PaymentStatusCode5Choice", propOrder = {"pending", "final", "RTGS", "settlement", "proprietary"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PaymentStatusCode5Choice", propOrder = {"pending", "final_", "rTGS", "settlement", "proprietary"})
 public class PaymentStatusCode5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pdg", required = true)
 	protected PendingStatus4Code pending;
 	/**
-	 * Qualifies further the pending status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +137,7 @@ public class PaymentStatusCode5Choice {
 	public static final MMMessageAttribute mmPending = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmInstructionStatus;
-			componentContext_lazy = () -> PaymentStatusCode5Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,10 +149,11 @@ public class PaymentStatusCode5Choice {
 			simpleType_lazy = () -> PendingStatus4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Fnl", required = true)
 	protected FinalStatus1Code final_;
 	/**
-	 * Qualifies further the final status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,7 +195,7 @@ public class PaymentStatusCode5Choice {
 	public static final MMMessageAttribute mmFinal = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmInstructionStatus;
-			componentContext_lazy = () -> PaymentStatusCode5Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Fnl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,10 +207,11 @@ public class PaymentStatusCode5Choice {
 			simpleType_lazy = () -> FinalStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RTGS", required = true)
 	protected Max4AlphaNumericText rTGS;
 	/**
-	 * Qualifies further the RTGS status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,7 +253,7 @@ public class PaymentStatusCode5Choice {
 	public static final MMMessageAttribute mmRTGS = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmRTGS;
-			componentContext_lazy = () -> PaymentStatusCode5Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RTGS";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -261,10 +265,11 @@ public class PaymentStatusCode5Choice {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Sttlm", required = true)
 	protected Max4AlphaNumericText settlement;
 	/**
-	 * Qualifies further the settlement status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -306,7 +311,7 @@ public class PaymentStatusCode5Choice {
 	public static final MMMessageAttribute mmSettlement = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmSettlementInstruction;
-			componentContext_lazy = () -> PaymentStatusCode5Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Sttlm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -318,10 +323,11 @@ public class PaymentStatusCode5Choice {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry", required = true)
 	protected Max4AlphaNumericText proprietary;
 	/**
-	 * Qualifies further the proprietary status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -363,7 +369,7 @@ public class PaymentStatusCode5Choice {
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmInstructionStatus;
-			componentContext_lazy = () -> PaymentStatusCode5Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentStatusCode5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -379,9 +385,10 @@ public class PaymentStatusCode5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentStatusCode5Choice.mmPending, PaymentStatusCode5Choice.mmFinal, PaymentStatusCode5Choice.mmRTGS, PaymentStatusCode5Choice.mmSettlement, PaymentStatusCode5Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentStatusCode5Choice.mmPending, com.tools20022.repository.choice.PaymentStatusCode5Choice.mmFinal,
+						com.tools20022.repository.choice.PaymentStatusCode5Choice.mmRTGS, com.tools20022.repository.choice.PaymentStatusCode5Choice.mmSettlement, com.tools20022.repository.choice.PaymentStatusCode5Choice.mmProprietary);
 				trace_lazy = () -> PaymentStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentStatusCode5Choice";
 				definition = "Choice between a list of pending statuses or final statuses.";
@@ -391,48 +398,48 @@ public class PaymentStatusCode5Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pdg", required = true)
 	public PendingStatus4Code getPending() {
 		return pending;
 	}
 
-	public void setPending(PendingStatus4Code pending) {
-		this.pending = pending;
+	public PaymentStatusCode5Choice setPending(PendingStatus4Code pending) {
+		this.pending = Objects.requireNonNull(pending);
+		return this;
 	}
 
-	@XmlElement(name = "Fnl", required = true)
 	public FinalStatus1Code getFinal() {
 		return final_;
 	}
 
-	public void setFinal(FinalStatus1Code final_) {
-		this.final_ = final_;
+	public PaymentStatusCode5Choice setFinal(FinalStatus1Code final_) {
+		this.final_ = Objects.requireNonNull(final_);
+		return this;
 	}
 
-	@XmlElement(name = "RTGS", required = true)
 	public Max4AlphaNumericText getRTGS() {
 		return rTGS;
 	}
 
-	public void setRTGS(Max4AlphaNumericText rTGS) {
-		this.rTGS = rTGS;
+	public PaymentStatusCode5Choice setRTGS(Max4AlphaNumericText rTGS) {
+		this.rTGS = Objects.requireNonNull(rTGS);
+		return this;
 	}
 
-	@XmlElement(name = "Sttlm", required = true)
 	public Max4AlphaNumericText getSettlement() {
 		return settlement;
 	}
 
-	public void setSettlement(Max4AlphaNumericText settlement) {
-		this.settlement = settlement;
+	public PaymentStatusCode5Choice setSettlement(Max4AlphaNumericText settlement) {
+		this.settlement = Objects.requireNonNull(settlement);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry", required = true)
 	public Max4AlphaNumericText getProprietary() {
 		return proprietary;
 	}
 
-	public void setProprietary(Max4AlphaNumericText proprietary) {
-		this.proprietary = proprietary;
+	public PaymentStatusCode5Choice setProprietary(Max4AlphaNumericText proprietary) {
+		this.proprietary = Objects.requireNonNull(proprietary);
+		return this;
 	}
 }

@@ -20,225 +20,229 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CorporateActionEventTypeV4Code;
+import com.tools20022.repository.codeset.CorporateActionEventType10Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of a corporate action event.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV4Code
- * CorporateActionEventTypeV4Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmActiveTradingStatus
- * CorporateActionEventType10Code.mmActiveTradingStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#ActiveTradingStatus
+ * CorporateActionEventType10Code.ActiveTradingStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmAttachment
- * CorporateActionEventType10Code.mmAttachment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#Attachment
+ * CorporateActionEventType10Code.Attachment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmBankruptcy
- * CorporateActionEventType10Code.mmBankruptcy}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#Bankruptcy
+ * CorporateActionEventType10Code.Bankruptcy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmBondDefault
- * CorporateActionEventType10Code.mmBondDefault}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#BondDefault
+ * CorporateActionEventType10Code.BondDefault}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmBonusIssue
- * CorporateActionEventType10Code.mmBonusIssue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#BonusIssue
+ * CorporateActionEventType10Code.BonusIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmCallOnIntermediateSecurities
- * CorporateActionEventType10Code.mmCallOnIntermediateSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#CallOnIntermediateSecurities
+ * CorporateActionEventType10Code.CallOnIntermediateSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmCapitalDistribution
- * CorporateActionEventType10Code.mmCapitalDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#CapitalDistribution
+ * CorporateActionEventType10Code.CapitalDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmCapitalGainsDistribution
- * CorporateActionEventType10Code.mmCapitalGainsDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#CapitalGainsDistribution
+ * CorporateActionEventType10Code.CapitalGainsDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmCapitalisation
- * CorporateActionEventType10Code.mmCapitalisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#Capitalisation
+ * CorporateActionEventType10Code.Capitalisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmCashDistributionFromNonEligibleSecuritiesSales
- * CorporateActionEventType10Code.
- * mmCashDistributionFromNonEligibleSecuritiesSales}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#CashDistributionFromNonEligibleSecuritiesSales
+ * CorporateActionEventType10Code.CashDistributionFromNonEligibleSecuritiesSales
+ * }</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmCashDividend
- * CorporateActionEventType10Code.mmCashDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#CashDividend
+ * CorporateActionEventType10Code.CashDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmChange
- * CorporateActionEventType10Code.mmChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#Change
+ * CorporateActionEventType10Code.Change}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmClassActionProposedSettlement
- * CorporateActionEventType10Code.mmClassActionProposedSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#ClassActionProposedSettlement
+ * CorporateActionEventType10Code.ClassActionProposedSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmCompanyOption
- * CorporateActionEventType10Code.mmCompanyOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#CompanyOption
+ * CorporateActionEventType10Code.CompanyOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmConsent
- * CorporateActionEventType10Code.mmConsent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#Consent
+ * CorporateActionEventType10Code.Consent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmConversion
- * CorporateActionEventType10Code.mmConversion}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#Conversion
+ * CorporateActionEventType10Code.Conversion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmCreditEvent
- * CorporateActionEventType10Code.mmCreditEvent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#CreditEvent
+ * CorporateActionEventType10Code.CreditEvent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmDecreaseInValue
- * CorporateActionEventType10Code.mmDecreaseInValue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#DecreaseInValue
+ * CorporateActionEventType10Code.DecreaseInValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmDetachment
- * CorporateActionEventType10Code.mmDetachment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#Detachment
+ * CorporateActionEventType10Code.Detachment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmDisclosure
- * CorporateActionEventType10Code.mmDisclosure}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#Disclosure
+ * CorporateActionEventType10Code.Disclosure}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmDividendOption
- * CorporateActionEventType10Code.mmDividendOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#DividendOption
+ * CorporateActionEventType10Code.DividendOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmDividendReinvestment
- * CorporateActionEventType10Code.mmDividendReinvestment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#DividendReinvestment
+ * CorporateActionEventType10Code.DividendReinvestment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmDrawing
- * CorporateActionEventType10Code.mmDrawing}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#Drawing
+ * CorporateActionEventType10Code.Drawing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmDutchAuction
- * CorporateActionEventType10Code.mmDutchAuction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#DutchAuction
+ * CorporateActionEventType10Code.DutchAuction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmExchange
- * CorporateActionEventType10Code.mmExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#Exchange
+ * CorporateActionEventType10Code.Exchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmFinalMaturity
- * CorporateActionEventType10Code.mmFinalMaturity}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#FinalMaturity
+ * CorporateActionEventType10Code.FinalMaturity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmFullCall
- * CorporateActionEventType10Code.mmFullCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#FullCall
+ * CorporateActionEventType10Code.FullCall}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmIncreaseInValue
- * CorporateActionEventType10Code.mmIncreaseInValue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#IncreaseInValue
+ * CorporateActionEventType10Code.IncreaseInValue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmInstalmentCall
- * CorporateActionEventType10Code.mmInstalmentCall}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#InstalmentCall
+ * CorporateActionEventType10Code.InstalmentCall}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmInterestPayment
- * CorporateActionEventType10Code.mmInterestPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#InterestPayment
+ * CorporateActionEventType10Code.InterestPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmIntermediateSecuritiesDistribution
- * CorporateActionEventType10Code.mmIntermediateSecuritiesDistribution}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#IntermediateSecuritiesDistribution
+ * CorporateActionEventType10Code.IntermediateSecuritiesDistribution}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmInterestPaymentWithPrincipal
- * CorporateActionEventType10Code.mmInterestPaymentWithPrincipal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#InterestPaymentWithPrincipal
+ * CorporateActionEventType10Code.InterestPaymentWithPrincipal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmLiquidationDividend
- * CorporateActionEventType10Code.mmLiquidationDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#LiquidationDividend
+ * CorporateActionEventType10Code.LiquidationDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmMaturityExtension
- * CorporateActionEventType10Code.mmMaturityExtension}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#MaturityExtension
+ * CorporateActionEventType10Code.MaturityExtension}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmMerger
- * CorporateActionEventType10Code.mmMerger}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#Merger
+ * CorporateActionEventType10Code.Merger}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmNonUSTEFRADCertification
- * CorporateActionEventType10Code.mmNonUSTEFRADCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#NonUSTEFRADCertification
+ * CorporateActionEventType10Code.NonUSTEFRADCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmOddLotSalePurchase
- * CorporateActionEventType10Code.mmOddLotSalePurchase}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#OddLotSalePurchase
+ * CorporateActionEventType10Code.OddLotSalePurchase}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmOtherEvent
- * CorporateActionEventType10Code.mmOtherEvent}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#OtherEvent
+ * CorporateActionEventType10Code.OtherEvent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmPariPassu
- * CorporateActionEventType10Code.mmPariPassu}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#PariPassu
+ * CorporateActionEventType10Code.PariPassu}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmPartialRedemptionWithNominalValueReduction
- * CorporateActionEventType10Code.mmPartialRedemptionWithNominalValueReduction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#PartialRedemptionWithNominalValueReduction
+ * CorporateActionEventType10Code.PartialRedemptionWithNominalValueReduction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmPartialRedemptionWithoutNominalValueReduction
- * CorporateActionEventType10Code.
- * mmPartialRedemptionWithoutNominalValueReduction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#PartialRedemptionWithoutNominalValueReduction
+ * CorporateActionEventType10Code.PartialRedemptionWithoutNominalValueReduction}
+ * </li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmPayInKind
- * CorporateActionEventType10Code.mmPayInKind}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#PayInKind
+ * CorporateActionEventType10Code.PayInKind}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmPlaceOfIncorporation
- * CorporateActionEventType10Code.mmPlaceOfIncorporation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#PlaceOfIncorporation
+ * CorporateActionEventType10Code.PlaceOfIncorporation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmPrefunding
- * CorporateActionEventType10Code.mmPrefunding}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#Prefunding
+ * CorporateActionEventType10Code.Prefunding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmPriorityIssue
- * CorporateActionEventType10Code.mmPriorityIssue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#PriorityIssue
+ * CorporateActionEventType10Code.PriorityIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmPutRedemption
- * CorporateActionEventType10Code.mmPutRedemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#PutRedemption
+ * CorporateActionEventType10Code.PutRedemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmRedenomination
- * CorporateActionEventType10Code.mmRedenomination}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#Redenomination
+ * CorporateActionEventType10Code.Redenomination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmRemarketingAgreement
- * CorporateActionEventType10Code.mmRemarketingAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#RemarketingAgreement
+ * CorporateActionEventType10Code.RemarketingAgreement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmRepurchaseOffer
- * CorporateActionEventType10Code.mmRepurchaseOffer}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#RepurchaseOffer
+ * CorporateActionEventType10Code.RepurchaseOffer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmReverseStockSplit
- * CorporateActionEventType10Code.mmReverseStockSplit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#ReverseStockSplit
+ * CorporateActionEventType10Code.ReverseStockSplit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmRightsIssue
- * CorporateActionEventType10Code.mmRightsIssue}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#RightsIssue
+ * CorporateActionEventType10Code.RightsIssue}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmScripDividend
- * CorporateActionEventType10Code.mmScripDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#ScripDividend
+ * CorporateActionEventType10Code.ScripDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmSharesPremiumDividend
- * CorporateActionEventType10Code.mmSharesPremiumDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#SharesPremiumDividend
+ * CorporateActionEventType10Code.SharesPremiumDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmSmallestNegotiableUnit
- * CorporateActionEventType10Code.mmSmallestNegotiableUnit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#SmallestNegotiableUnit
+ * CorporateActionEventType10Code.SmallestNegotiableUnit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmSpinOff
- * CorporateActionEventType10Code.mmSpinOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#SpinOff
+ * CorporateActionEventType10Code.SpinOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmStockDividend
- * CorporateActionEventType10Code.mmStockDividend}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#StockDividend
+ * CorporateActionEventType10Code.StockDividend}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmStockSplit
- * CorporateActionEventType10Code.mmStockSplit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#StockSplit
+ * CorporateActionEventType10Code.StockSplit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmTaxReclaim
- * CorporateActionEventType10Code.mmTaxReclaim}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#TaxReclaim
+ * CorporateActionEventType10Code.TaxReclaim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmTender
- * CorporateActionEventType10Code.mmTender}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#Tender
+ * CorporateActionEventType10Code.Tender}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmTradingStatusDelisted
- * CorporateActionEventType10Code.mmTradingStatusDelisted}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#TradingStatusDelisted
+ * CorporateActionEventType10Code.TradingStatusDelisted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmTradingStatusSuspended
- * CorporateActionEventType10Code.mmTradingStatusSuspended}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#TradingStatusSuspended
+ * CorporateActionEventType10Code.TradingStatusSuspended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmWarrantExercise
- * CorporateActionEventType10Code.mmWarrantExercise}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#WarrantExercise
+ * CorporateActionEventType10Code.WarrantExercise}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmWithholdingTaxReliefCertification
- * CorporateActionEventType10Code.mmWithholdingTaxReliefCertification}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#WithholdingTaxReliefCertification
+ * CorporateActionEventType10Code.WithholdingTaxReliefCertification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmWorthless
- * CorporateActionEventType10Code.mmWorthless}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#Worthless
+ * CorporateActionEventType10Code.Worthless}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#mmNonOfficialOffer
- * CorporateActionEventType10Code.mmNonOfficialOffer}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType10Code#NonOfficialOffer
+ * CorporateActionEventType10Code.NonOfficialOffer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV4Code
+ * CorporateActionEventTypeV4Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -255,7 +259,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of a corporate action event."</li>
  * </ul>
  */
-public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionEventType10Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -274,11 +279,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "ActiveTradingStatus"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActiveTradingStatus = new MMCode() {
+	public static final CorporateActionEventType10Code ActiveTradingStatus = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActiveTradingStatus";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.ActiveTradingStatus.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -297,11 +303,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "Attachment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAttachment = new MMCode() {
+	public static final CorporateActionEventType10Code Attachment = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attachment";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.Attachment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -320,11 +327,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "Bankruptcy"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBankruptcy = new MMCode() {
+	public static final CorporateActionEventType10Code Bankruptcy = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bankruptcy";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.Bankruptcy.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -343,11 +351,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "BondDefault"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBondDefault = new MMCode() {
+	public static final CorporateActionEventType10Code BondDefault = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondDefault";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.BondDefault.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -366,11 +375,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "BonusIssue"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBonusIssue = new MMCode() {
+	public static final CorporateActionEventType10Code BonusIssue = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BonusIssue";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.BonusIssue.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -389,11 +399,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "CallOnIntermediateSecurities"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCallOnIntermediateSecurities = new MMCode() {
+	public static final CorporateActionEventType10Code CallOnIntermediateSecurities = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallOnIntermediateSecurities";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.CallOnIntermediateSecurities.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -412,11 +423,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "CapitalDistribution"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCapitalDistribution = new MMCode() {
+	public static final CorporateActionEventType10Code CapitalDistribution = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalDistribution";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.CapitalDistribution.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -435,11 +447,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "CapitalGainsDistribution"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCapitalGainsDistribution = new MMCode() {
+	public static final CorporateActionEventType10Code CapitalGainsDistribution = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGainsDistribution";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.CapitalGainsDistribution.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -458,11 +471,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "Capitalisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCapitalisation = new MMCode() {
+	public static final CorporateActionEventType10Code Capitalisation = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capitalisation";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.Capitalisation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -481,11 +495,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "CashDistributionFromNonEligibleSecuritiesSales"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashDistributionFromNonEligibleSecuritiesSales = new MMCode() {
+	public static final CorporateActionEventType10Code CashDistributionFromNonEligibleSecuritiesSales = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDistributionFromNonEligibleSecuritiesSales";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.CashDistributionFromNonEligibleSecuritiesSales.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -504,11 +519,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "CashDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashDividend = new MMCode() {
+	public static final CorporateActionEventType10Code CashDividend = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividend";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.CashDividend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -527,11 +543,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "Change"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmChange = new MMCode() {
+	public static final CorporateActionEventType10Code Change = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Change";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.Change.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -550,11 +567,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "ClassActionProposedSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClassActionProposedSettlement = new MMCode() {
+	public static final CorporateActionEventType10Code ClassActionProposedSettlement = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassActionProposedSettlement";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.ClassActionProposedSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -573,11 +591,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "CompanyOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompanyOption = new MMCode() {
+	public static final CorporateActionEventType10Code CompanyOption = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompanyOption";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.CompanyOption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -596,11 +615,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "Consent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsent = new MMCode() {
+	public static final CorporateActionEventType10Code Consent = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consent";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.Consent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -619,11 +639,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "Conversion"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConversion = new MMCode() {
+	public static final CorporateActionEventType10Code Conversion = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Conversion";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.Conversion.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -642,11 +663,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "CreditEvent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreditEvent = new MMCode() {
+	public static final CorporateActionEventType10Code CreditEvent = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditEvent";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.CreditEvent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -665,11 +687,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "DecreaseInValue"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDecreaseInValue = new MMCode() {
+	public static final CorporateActionEventType10Code DecreaseInValue = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DecreaseInValue";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.DecreaseInValue.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -688,11 +711,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "Detachment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDetachment = new MMCode() {
+	public static final CorporateActionEventType10Code Detachment = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Detachment";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.Detachment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -711,11 +735,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "Disclosure"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisclosure = new MMCode() {
+	public static final CorporateActionEventType10Code Disclosure = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disclosure";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.Disclosure.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -734,11 +759,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "DividendOption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividendOption = new MMCode() {
+	public static final CorporateActionEventType10Code DividendOption = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendOption";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.DividendOption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -757,11 +783,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "DividendReinvestment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDividendReinvestment = new MMCode() {
+	public static final CorporateActionEventType10Code DividendReinvestment = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestment";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.DividendReinvestment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -780,11 +807,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "Drawing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDrawing = new MMCode() {
+	public static final CorporateActionEventType10Code Drawing = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Drawing";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.Drawing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -803,11 +831,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "DutchAuction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDutchAuction = new MMCode() {
+	public static final CorporateActionEventType10Code DutchAuction = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DutchAuction";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.DutchAuction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -826,11 +855,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "Exchange"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExchange = new MMCode() {
+	public static final CorporateActionEventType10Code Exchange = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exchange";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.Exchange.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -849,11 +879,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "FinalMaturity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinalMaturity = new MMCode() {
+	public static final CorporateActionEventType10Code FinalMaturity = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalMaturity";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.FinalMaturity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -872,11 +903,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "FullCall"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullCall = new MMCode() {
+	public static final CorporateActionEventType10Code FullCall = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullCall";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.FullCall.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -895,11 +927,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "IncreaseInValue"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncreaseInValue = new MMCode() {
+	public static final CorporateActionEventType10Code IncreaseInValue = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseInValue";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.IncreaseInValue.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -918,11 +951,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "InstalmentCall"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstalmentCall = new MMCode() {
+	public static final CorporateActionEventType10Code InstalmentCall = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentCall";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.InstalmentCall.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -941,11 +975,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "InterestPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterestPayment = new MMCode() {
+	public static final CorporateActionEventType10Code InterestPayment = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPayment";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.InterestPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -964,11 +999,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "IntermediateSecuritiesDistribution"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntermediateSecuritiesDistribution = new MMCode() {
+	public static final CorporateActionEventType10Code IntermediateSecuritiesDistribution = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesDistribution";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.IntermediateSecuritiesDistribution.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -987,11 +1023,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "InterestPaymentWithPrincipal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInterestPaymentWithPrincipal = new MMCode() {
+	public static final CorporateActionEventType10Code InterestPaymentWithPrincipal = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentWithPrincipal";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.InterestPaymentWithPrincipal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1010,11 +1047,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "LiquidationDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLiquidationDividend = new MMCode() {
+	public static final CorporateActionEventType10Code LiquidationDividend = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidationDividend";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.LiquidationDividend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1033,11 +1071,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "MaturityExtension"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMaturityExtension = new MMCode() {
+	public static final CorporateActionEventType10Code MaturityExtension = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityExtension";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.MaturityExtension.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1056,11 +1095,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "Merger"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMerger = new MMCode() {
+	public static final CorporateActionEventType10Code Merger = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merger";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.Merger.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1079,11 +1119,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "NonUSTEFRADCertification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonUSTEFRADCertification = new MMCode() {
+	public static final CorporateActionEventType10Code NonUSTEFRADCertification = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonUSTEFRADCertification";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.NonUSTEFRADCertification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1102,11 +1143,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "OddLotSalePurchase"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOddLotSalePurchase = new MMCode() {
+	public static final CorporateActionEventType10Code OddLotSalePurchase = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OddLotSalePurchase";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.OddLotSalePurchase.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1125,11 +1167,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "OtherEvent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherEvent = new MMCode() {
+	public static final CorporateActionEventType10Code OtherEvent = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherEvent";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.OtherEvent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1148,11 +1191,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "PariPassu"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPariPassu = new MMCode() {
+	public static final CorporateActionEventType10Code PariPassu = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PariPassu";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.PariPassu.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1171,11 +1215,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "PartialRedemptionWithNominalValueReduction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialRedemptionWithNominalValueReduction = new MMCode() {
+	public static final CorporateActionEventType10Code PartialRedemptionWithNominalValueReduction = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialRedemptionWithNominalValueReduction";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.PartialRedemptionWithNominalValueReduction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1194,11 +1239,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "PartialRedemptionWithoutNominalValueReduction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialRedemptionWithoutNominalValueReduction = new MMCode() {
+	public static final CorporateActionEventType10Code PartialRedemptionWithoutNominalValueReduction = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialRedemptionWithoutNominalValueReduction";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.PartialRedemptionWithoutNominalValueReduction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1217,11 +1263,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "PayInKind"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPayInKind = new MMCode() {
+	public static final CorporateActionEventType10Code PayInKind = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayInKind";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.PayInKind.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1240,11 +1287,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "PlaceOfIncorporation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPlaceOfIncorporation = new MMCode() {
+	public static final CorporateActionEventType10Code PlaceOfIncorporation = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfIncorporation";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.PlaceOfIncorporation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1263,11 +1311,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "Prefunding"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrefunding = new MMCode() {
+	public static final CorporateActionEventType10Code Prefunding = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prefunding";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.Prefunding.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1286,11 +1335,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "PriorityIssue"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPriorityIssue = new MMCode() {
+	public static final CorporateActionEventType10Code PriorityIssue = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriorityIssue";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.PriorityIssue.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1309,11 +1359,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "PutRedemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPutRedemption = new MMCode() {
+	public static final CorporateActionEventType10Code PutRedemption = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PutRedemption";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.PutRedemption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1332,11 +1383,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "Redenomination"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRedenomination = new MMCode() {
+	public static final CorporateActionEventType10Code Redenomination = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redenomination";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.Redenomination.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1355,11 +1407,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "RemarketingAgreement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRemarketingAgreement = new MMCode() {
+	public static final CorporateActionEventType10Code RemarketingAgreement = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemarketingAgreement";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.RemarketingAgreement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1378,11 +1431,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "RepurchaseOffer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRepurchaseOffer = new MMCode() {
+	public static final CorporateActionEventType10Code RepurchaseOffer = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseOffer";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.RepurchaseOffer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1401,11 +1455,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "ReverseStockSplit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReverseStockSplit = new MMCode() {
+	public static final CorporateActionEventType10Code ReverseStockSplit = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseStockSplit";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.ReverseStockSplit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1424,11 +1479,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "RightsIssue"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRightsIssue = new MMCode() {
+	public static final CorporateActionEventType10Code RightsIssue = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsIssue";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.RightsIssue.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1447,11 +1503,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "ScripDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmScripDividend = new MMCode() {
+	public static final CorporateActionEventType10Code ScripDividend = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScripDividend";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.ScripDividend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1470,11 +1527,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "SharesPremiumDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSharesPremiumDividend = new MMCode() {
+	public static final CorporateActionEventType10Code SharesPremiumDividend = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharesPremiumDividend";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.SharesPremiumDividend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1493,11 +1551,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "SmallestNegotiableUnit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSmallestNegotiableUnit = new MMCode() {
+	public static final CorporateActionEventType10Code SmallestNegotiableUnit = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SmallestNegotiableUnit";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.SmallestNegotiableUnit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1516,11 +1575,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "SpinOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpinOff = new MMCode() {
+	public static final CorporateActionEventType10Code SpinOff = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpinOff";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.SpinOff.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1539,11 +1599,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "StockDividend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockDividend = new MMCode() {
+	public static final CorporateActionEventType10Code StockDividend = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockDividend";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.StockDividend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1562,11 +1623,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "StockSplit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStockSplit = new MMCode() {
+	public static final CorporateActionEventType10Code StockSplit = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockSplit";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.StockSplit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1585,11 +1647,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "TaxReclaim"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTaxReclaim = new MMCode() {
+	public static final CorporateActionEventType10Code TaxReclaim = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxReclaim";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.TaxReclaim.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1608,11 +1671,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "Tender"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTender = new MMCode() {
+	public static final CorporateActionEventType10Code Tender = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tender";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.Tender.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1631,11 +1695,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "TradingStatusDelisted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradingStatusDelisted = new MMCode() {
+	public static final CorporateActionEventType10Code TradingStatusDelisted = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingStatusDelisted";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.TradingStatusDelisted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1654,11 +1719,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "TradingStatusSuspended"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTradingStatusSuspended = new MMCode() {
+	public static final CorporateActionEventType10Code TradingStatusSuspended = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingStatusSuspended";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.TradingStatusSuspended.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1677,11 +1743,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "WarrantExercise"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWarrantExercise = new MMCode() {
+	public static final CorporateActionEventType10Code WarrantExercise = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantExercise";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.WarrantExercise.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1700,11 +1767,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "WithholdingTaxReliefCertification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithholdingTaxReliefCertification = new MMCode() {
+	public static final CorporateActionEventType10Code WithholdingTaxReliefCertification = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxReliefCertification";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.WithholdingTaxReliefCertification.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1723,11 +1791,12 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "Worthless"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWorthless = new MMCode() {
+	public static final CorporateActionEventType10Code Worthless = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Worthless";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.Worthless.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1746,43 +1815,152 @@ public class CorporateActionEventType10Code extends CorporateActionEventTypeV4Co
 	 * name} = "NonOfficialOffer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonOfficialOffer = new MMCode() {
+	public static final CorporateActionEventType10Code NonOfficialOffer = new CorporateActionEventType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonOfficialOffer";
-			owner_lazy = () -> CorporateActionEventType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType10Code.mmObject();
+			codeName = CorporateActionEventTypeV4Code.NonOfficialOffer.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionEventType10Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionEventType10Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACTV");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventType10Code";
 				definition = "Specifies the type of a corporate action event.";
-				code_lazy = () -> Arrays.asList(CorporateActionEventType10Code.mmActiveTradingStatus, CorporateActionEventType10Code.mmAttachment, CorporateActionEventType10Code.mmBankruptcy, CorporateActionEventType10Code.mmBondDefault,
-						CorporateActionEventType10Code.mmBonusIssue, CorporateActionEventType10Code.mmCallOnIntermediateSecurities, CorporateActionEventType10Code.mmCapitalDistribution,
-						CorporateActionEventType10Code.mmCapitalGainsDistribution, CorporateActionEventType10Code.mmCapitalisation, CorporateActionEventType10Code.mmCashDistributionFromNonEligibleSecuritiesSales,
-						CorporateActionEventType10Code.mmCashDividend, CorporateActionEventType10Code.mmChange, CorporateActionEventType10Code.mmClassActionProposedSettlement, CorporateActionEventType10Code.mmCompanyOption,
-						CorporateActionEventType10Code.mmConsent, CorporateActionEventType10Code.mmConversion, CorporateActionEventType10Code.mmCreditEvent, CorporateActionEventType10Code.mmDecreaseInValue,
-						CorporateActionEventType10Code.mmDetachment, CorporateActionEventType10Code.mmDisclosure, CorporateActionEventType10Code.mmDividendOption, CorporateActionEventType10Code.mmDividendReinvestment,
-						CorporateActionEventType10Code.mmDrawing, CorporateActionEventType10Code.mmDutchAuction, CorporateActionEventType10Code.mmExchange, CorporateActionEventType10Code.mmFinalMaturity,
-						CorporateActionEventType10Code.mmFullCall, CorporateActionEventType10Code.mmIncreaseInValue, CorporateActionEventType10Code.mmInstalmentCall, CorporateActionEventType10Code.mmInterestPayment,
-						CorporateActionEventType10Code.mmIntermediateSecuritiesDistribution, CorporateActionEventType10Code.mmInterestPaymentWithPrincipal, CorporateActionEventType10Code.mmLiquidationDividend,
-						CorporateActionEventType10Code.mmMaturityExtension, CorporateActionEventType10Code.mmMerger, CorporateActionEventType10Code.mmNonUSTEFRADCertification, CorporateActionEventType10Code.mmOddLotSalePurchase,
-						CorporateActionEventType10Code.mmOtherEvent, CorporateActionEventType10Code.mmPariPassu, CorporateActionEventType10Code.mmPartialRedemptionWithNominalValueReduction,
-						CorporateActionEventType10Code.mmPartialRedemptionWithoutNominalValueReduction, CorporateActionEventType10Code.mmPayInKind, CorporateActionEventType10Code.mmPlaceOfIncorporation,
-						CorporateActionEventType10Code.mmPrefunding, CorporateActionEventType10Code.mmPriorityIssue, CorporateActionEventType10Code.mmPutRedemption, CorporateActionEventType10Code.mmRedenomination,
-						CorporateActionEventType10Code.mmRemarketingAgreement, CorporateActionEventType10Code.mmRepurchaseOffer, CorporateActionEventType10Code.mmReverseStockSplit, CorporateActionEventType10Code.mmRightsIssue,
-						CorporateActionEventType10Code.mmScripDividend, CorporateActionEventType10Code.mmSharesPremiumDividend, CorporateActionEventType10Code.mmSmallestNegotiableUnit, CorporateActionEventType10Code.mmSpinOff,
-						CorporateActionEventType10Code.mmStockDividend, CorporateActionEventType10Code.mmStockSplit, CorporateActionEventType10Code.mmTaxReclaim, CorporateActionEventType10Code.mmTender,
-						CorporateActionEventType10Code.mmTradingStatusDelisted, CorporateActionEventType10Code.mmTradingStatusSuspended, CorporateActionEventType10Code.mmWarrantExercise,
-						CorporateActionEventType10Code.mmWithholdingTaxReliefCertification, CorporateActionEventType10Code.mmWorthless, CorporateActionEventType10Code.mmNonOfficialOffer);
 				trace_lazy = () -> CorporateActionEventTypeV4Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventType10Code.ActiveTradingStatus, com.tools20022.repository.codeset.CorporateActionEventType10Code.Attachment,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.Bankruptcy, com.tools20022.repository.codeset.CorporateActionEventType10Code.BondDefault,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.BonusIssue, com.tools20022.repository.codeset.CorporateActionEventType10Code.CallOnIntermediateSecurities,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.CapitalDistribution, com.tools20022.repository.codeset.CorporateActionEventType10Code.CapitalGainsDistribution,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.Capitalisation, com.tools20022.repository.codeset.CorporateActionEventType10Code.CashDistributionFromNonEligibleSecuritiesSales,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.CashDividend, com.tools20022.repository.codeset.CorporateActionEventType10Code.Change,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.ClassActionProposedSettlement, com.tools20022.repository.codeset.CorporateActionEventType10Code.CompanyOption,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.Consent, com.tools20022.repository.codeset.CorporateActionEventType10Code.Conversion,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.CreditEvent, com.tools20022.repository.codeset.CorporateActionEventType10Code.DecreaseInValue,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.Detachment, com.tools20022.repository.codeset.CorporateActionEventType10Code.Disclosure,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.DividendOption, com.tools20022.repository.codeset.CorporateActionEventType10Code.DividendReinvestment,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.Drawing, com.tools20022.repository.codeset.CorporateActionEventType10Code.DutchAuction,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.Exchange, com.tools20022.repository.codeset.CorporateActionEventType10Code.FinalMaturity,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.FullCall, com.tools20022.repository.codeset.CorporateActionEventType10Code.IncreaseInValue,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.InstalmentCall, com.tools20022.repository.codeset.CorporateActionEventType10Code.InterestPayment,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.IntermediateSecuritiesDistribution, com.tools20022.repository.codeset.CorporateActionEventType10Code.InterestPaymentWithPrincipal,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.LiquidationDividend, com.tools20022.repository.codeset.CorporateActionEventType10Code.MaturityExtension,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.Merger, com.tools20022.repository.codeset.CorporateActionEventType10Code.NonUSTEFRADCertification,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.OddLotSalePurchase, com.tools20022.repository.codeset.CorporateActionEventType10Code.OtherEvent,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.PariPassu, com.tools20022.repository.codeset.CorporateActionEventType10Code.PartialRedemptionWithNominalValueReduction,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.PartialRedemptionWithoutNominalValueReduction, com.tools20022.repository.codeset.CorporateActionEventType10Code.PayInKind,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.PlaceOfIncorporation, com.tools20022.repository.codeset.CorporateActionEventType10Code.Prefunding,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.PriorityIssue, com.tools20022.repository.codeset.CorporateActionEventType10Code.PutRedemption,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.Redenomination, com.tools20022.repository.codeset.CorporateActionEventType10Code.RemarketingAgreement,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.RepurchaseOffer, com.tools20022.repository.codeset.CorporateActionEventType10Code.ReverseStockSplit,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.RightsIssue, com.tools20022.repository.codeset.CorporateActionEventType10Code.ScripDividend,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.SharesPremiumDividend, com.tools20022.repository.codeset.CorporateActionEventType10Code.SmallestNegotiableUnit,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.SpinOff, com.tools20022.repository.codeset.CorporateActionEventType10Code.StockDividend,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.StockSplit, com.tools20022.repository.codeset.CorporateActionEventType10Code.TaxReclaim,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.Tender, com.tools20022.repository.codeset.CorporateActionEventType10Code.TradingStatusDelisted,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.TradingStatusSuspended, com.tools20022.repository.codeset.CorporateActionEventType10Code.WarrantExercise,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.WithholdingTaxReliefCertification, com.tools20022.repository.codeset.CorporateActionEventType10Code.Worthless,
+						com.tools20022.repository.codeset.CorporateActionEventType10Code.NonOfficialOffer);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ActiveTradingStatus.getCodeName().get(), ActiveTradingStatus);
+		codesByName.put(Attachment.getCodeName().get(), Attachment);
+		codesByName.put(Bankruptcy.getCodeName().get(), Bankruptcy);
+		codesByName.put(BondDefault.getCodeName().get(), BondDefault);
+		codesByName.put(BonusIssue.getCodeName().get(), BonusIssue);
+		codesByName.put(CallOnIntermediateSecurities.getCodeName().get(), CallOnIntermediateSecurities);
+		codesByName.put(CapitalDistribution.getCodeName().get(), CapitalDistribution);
+		codesByName.put(CapitalGainsDistribution.getCodeName().get(), CapitalGainsDistribution);
+		codesByName.put(Capitalisation.getCodeName().get(), Capitalisation);
+		codesByName.put(CashDistributionFromNonEligibleSecuritiesSales.getCodeName().get(), CashDistributionFromNonEligibleSecuritiesSales);
+		codesByName.put(CashDividend.getCodeName().get(), CashDividend);
+		codesByName.put(Change.getCodeName().get(), Change);
+		codesByName.put(ClassActionProposedSettlement.getCodeName().get(), ClassActionProposedSettlement);
+		codesByName.put(CompanyOption.getCodeName().get(), CompanyOption);
+		codesByName.put(Consent.getCodeName().get(), Consent);
+		codesByName.put(Conversion.getCodeName().get(), Conversion);
+		codesByName.put(CreditEvent.getCodeName().get(), CreditEvent);
+		codesByName.put(DecreaseInValue.getCodeName().get(), DecreaseInValue);
+		codesByName.put(Detachment.getCodeName().get(), Detachment);
+		codesByName.put(Disclosure.getCodeName().get(), Disclosure);
+		codesByName.put(DividendOption.getCodeName().get(), DividendOption);
+		codesByName.put(DividendReinvestment.getCodeName().get(), DividendReinvestment);
+		codesByName.put(Drawing.getCodeName().get(), Drawing);
+		codesByName.put(DutchAuction.getCodeName().get(), DutchAuction);
+		codesByName.put(Exchange.getCodeName().get(), Exchange);
+		codesByName.put(FinalMaturity.getCodeName().get(), FinalMaturity);
+		codesByName.put(FullCall.getCodeName().get(), FullCall);
+		codesByName.put(IncreaseInValue.getCodeName().get(), IncreaseInValue);
+		codesByName.put(InstalmentCall.getCodeName().get(), InstalmentCall);
+		codesByName.put(InterestPayment.getCodeName().get(), InterestPayment);
+		codesByName.put(IntermediateSecuritiesDistribution.getCodeName().get(), IntermediateSecuritiesDistribution);
+		codesByName.put(InterestPaymentWithPrincipal.getCodeName().get(), InterestPaymentWithPrincipal);
+		codesByName.put(LiquidationDividend.getCodeName().get(), LiquidationDividend);
+		codesByName.put(MaturityExtension.getCodeName().get(), MaturityExtension);
+		codesByName.put(Merger.getCodeName().get(), Merger);
+		codesByName.put(NonUSTEFRADCertification.getCodeName().get(), NonUSTEFRADCertification);
+		codesByName.put(OddLotSalePurchase.getCodeName().get(), OddLotSalePurchase);
+		codesByName.put(OtherEvent.getCodeName().get(), OtherEvent);
+		codesByName.put(PariPassu.getCodeName().get(), PariPassu);
+		codesByName.put(PartialRedemptionWithNominalValueReduction.getCodeName().get(), PartialRedemptionWithNominalValueReduction);
+		codesByName.put(PartialRedemptionWithoutNominalValueReduction.getCodeName().get(), PartialRedemptionWithoutNominalValueReduction);
+		codesByName.put(PayInKind.getCodeName().get(), PayInKind);
+		codesByName.put(PlaceOfIncorporation.getCodeName().get(), PlaceOfIncorporation);
+		codesByName.put(Prefunding.getCodeName().get(), Prefunding);
+		codesByName.put(PriorityIssue.getCodeName().get(), PriorityIssue);
+		codesByName.put(PutRedemption.getCodeName().get(), PutRedemption);
+		codesByName.put(Redenomination.getCodeName().get(), Redenomination);
+		codesByName.put(RemarketingAgreement.getCodeName().get(), RemarketingAgreement);
+		codesByName.put(RepurchaseOffer.getCodeName().get(), RepurchaseOffer);
+		codesByName.put(ReverseStockSplit.getCodeName().get(), ReverseStockSplit);
+		codesByName.put(RightsIssue.getCodeName().get(), RightsIssue);
+		codesByName.put(ScripDividend.getCodeName().get(), ScripDividend);
+		codesByName.put(SharesPremiumDividend.getCodeName().get(), SharesPremiumDividend);
+		codesByName.put(SmallestNegotiableUnit.getCodeName().get(), SmallestNegotiableUnit);
+		codesByName.put(SpinOff.getCodeName().get(), SpinOff);
+		codesByName.put(StockDividend.getCodeName().get(), StockDividend);
+		codesByName.put(StockSplit.getCodeName().get(), StockSplit);
+		codesByName.put(TaxReclaim.getCodeName().get(), TaxReclaim);
+		codesByName.put(Tender.getCodeName().get(), Tender);
+		codesByName.put(TradingStatusDelisted.getCodeName().get(), TradingStatusDelisted);
+		codesByName.put(TradingStatusSuspended.getCodeName().get(), TradingStatusSuspended);
+		codesByName.put(WarrantExercise.getCodeName().get(), WarrantExercise);
+		codesByName.put(WithholdingTaxReliefCertification.getCodeName().get(), WithholdingTaxReliefCertification);
+		codesByName.put(Worthless.getCodeName().get(), Worthless);
+		codesByName.put(NonOfficialOffer.getCodeName().get(), NonOfficialOffer);
+	}
+
+	public static CorporateActionEventType10Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionEventType10Code[] values() {
+		CorporateActionEventType10Code[] values = new CorporateActionEventType10Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionEventType10Code> {
+		@Override
+		public CorporateActionEventType10Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionEventType10Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

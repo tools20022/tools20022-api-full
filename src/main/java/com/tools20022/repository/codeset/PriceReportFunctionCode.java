@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.PriceReportFunctionCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the function of the price report.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceReportFunctionCode#mmNewPriceReport
- * PriceReportFunctionCode.mmNewPriceReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceReportFunctionCode#NewPriceReport
+ * PriceReportFunctionCode.NewPriceReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceReportFunctionCode#mmCompleteReplacementPriceReport
- * PriceReportFunctionCode.mmCompleteReplacementPriceReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceReportFunctionCode#CompleteReplacementPriceReport
+ * PriceReportFunctionCode.CompleteReplacementPriceReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceReportFunctionCode#mmPartialCorrectionPriceReport
- * PriceReportFunctionCode.mmPartialCorrectionPriceReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.PriceReportFunctionCode#PartialCorrectionPriceReport
+ * PriceReportFunctionCode.PartialCorrectionPriceReport}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the function of the price report."</li>
  * </ul>
  */
-public class PriceReportFunctionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PriceReportFunctionCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,12 +103,12 @@ public class PriceReportFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNewPriceReport = new MMCode() {
+	public static final PriceReportFunctionCode NewPriceReport = new PriceReportFunctionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPriceReport";
 			definition = "The price report is ‘new’, that is the report is not being used as a correction of previously sent prices.";
-			owner_lazy = () -> PriceReportFunctionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceReportFunctionCode.mmObject();
 			codeName = "NEWP";
 		}
 	};
@@ -130,12 +136,12 @@ public class PriceReportFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompleteReplacementPriceReport = new MMCode() {
+	public static final PriceReportFunctionCode CompleteReplacementPriceReport = new PriceReportFunctionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompleteReplacementPriceReport";
 			definition = "The price report conveys the correction of the complete set of prices previously sent for the same price report identification.";
-			owner_lazy = () -> PriceReportFunctionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceReportFunctionCode.mmObject();
 			codeName = "REPL";
 		}
 	};
@@ -163,28 +169,60 @@ public class PriceReportFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialCorrectionPriceReport = new MMCode() {
+	public static final PriceReportFunctionCode PartialCorrectionPriceReport = new PriceReportFunctionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialCorrectionPriceReport";
 			definition = "The price report conveys the correction of some of the prices previously sent for the same price report identification.";
-			owner_lazy = () -> PriceReportFunctionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceReportFunctionCode.mmObject();
 			codeName = "PART";
 		}
 	};
+	final static private LinkedHashMap<String, PriceReportFunctionCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PriceReportFunctionCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NEWP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceReportFunctionCode";
 				definition = "Specifies the function of the price report.";
-				code_lazy = () -> Arrays.asList(PriceReportFunctionCode.mmNewPriceReport, PriceReportFunctionCode.mmCompleteReplacementPriceReport, PriceReportFunctionCode.mmPartialCorrectionPriceReport);
 				derivation_lazy = () -> Arrays.asList(PriceReportFunction1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceReportFunctionCode.NewPriceReport, com.tools20022.repository.codeset.PriceReportFunctionCode.CompleteReplacementPriceReport,
+						com.tools20022.repository.codeset.PriceReportFunctionCode.PartialCorrectionPriceReport);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NewPriceReport.getCodeName().get(), NewPriceReport);
+		codesByName.put(CompleteReplacementPriceReport.getCodeName().get(), CompleteReplacementPriceReport);
+		codesByName.put(PartialCorrectionPriceReport.getCodeName().get(), PartialCorrectionPriceReport);
+	}
+
+	public static PriceReportFunctionCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PriceReportFunctionCode[] values() {
+		PriceReportFunctionCode[] values = new PriceReportFunctionCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PriceReportFunctionCode> {
+		@Override
+		public PriceReportFunctionCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PriceReportFunctionCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.AdjustmentDirectionCode;
@@ -29,9 +30,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Modification on the value of goods and / or services. For example: rebate,
@@ -94,43 +94,6 @@ import java.util.List;
  * Adjustment.mmTax}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Commission Commission}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Charges Charges}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Discount Discount}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Allowance Allowance}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Penalty Penalty}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.ChargeTaxBasisType1Choice
- * ChargeTaxBasisType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DocumentAdjustment1
- * DocumentAdjustment1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Adjustment5 Adjustment5}</li>
- * <li>{@linkplain com.tools20022.repository.choice.DiscountOrChargeType1Choice
- * DiscountOrChargeType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.DocumentAdjustment2
- * DocumentAdjustment2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge1
- * LineItemAllowanceCharge1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Adjustment4 Adjustment4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Adjustment3 Adjustment3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Adjustment6 Adjustment6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Adjustment7 Adjustment7}</li>
- * <li>{@linkplain com.tools20022.repository.choice.AdjustmentType1Choice
- * AdjustmentType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ChargeBasisType1Choice
- * ChargeBasisType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge2
- * LineItemAllowanceCharge2}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -172,11 +135,48 @@ import java.util.List;
  * RemittanceAmount3.mmAdjustmentAmountAndReason}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Commission Commission}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Charges Charges}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Discount Discount}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Allowance Allowance}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Penalty Penalty}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.ChargeTaxBasisType1Choice
+ * ChargeTaxBasisType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DocumentAdjustment1
+ * DocumentAdjustment1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Adjustment5 Adjustment5}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.DiscountOrChargeType1Choice
+ * DiscountOrChargeType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DocumentAdjustment2
+ * DocumentAdjustment2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge1
+ * LineItemAllowanceCharge1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Adjustment4 Adjustment4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Adjustment3 Adjustment3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Adjustment6 Adjustment6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Adjustment7 Adjustment7}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AdjustmentType1Choice
+ * AdjustmentType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ChargeBasisType1Choice
+ * ChargeBasisType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge2
+ * LineItemAllowanceCharge2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -194,9 +194,8 @@ public class Adjustment {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyAndAmount amount;
 	/**
-	 * Amount of money that results from the application of an adjustment
-	 * (charges. fees, discount or allowance) to the amount due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1226,8 +1225,8 @@ public class Adjustment {
 					OtherAmounts38.mmExecutingBrokerAmount, OtherAmounts38.mmLocalBrokerCommission, OtherAmounts36.mmChargesFees, OtherAmounts36.mmExecutingBrokerAmount, OtherAmounts36.mmLocalBrokerCommission, OtherAmounts33.mmChargesFees,
 					LineItemAllowanceCharge2.mmActualAmount, TotalFeesAndTaxes40.mmTotalOverheadApplied, Fee3.mmRepairedStandardAmount, Fee3.mmRepairedDiscountAmount, Fee3.mmRepairedRequestedAmount, Fee2.mmStandardAmount,
 					Fee2.mmAppliedAmount, Fee1.mmStandardAmount, Fee1.mmRequestedAmount, PaymentTransaction81.mmCompensationAmount, PaymentTransaction76.mmCompensationAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
 			definition = "Amount of money that results from the application of an adjustment (charges. fees, discount or allowance) to the amount due.";
@@ -1246,9 +1245,8 @@ public class Adjustment {
 	};
 	protected PercentageRate chargeRate;
 	/**
-	 * Rate used to calculate the amount of the adjustment, allowance, charge or
-	 * fee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1369,8 +1367,8 @@ public class Adjustment {
 					PaymentObligation1.mmChargesPercentage, AmountRate1Choice.mmRate, Charge23.mmRate, Charge22.mmRate, Charges5.mmPercentage, AmountOrRate3Choice.mmRate, PaymentTerms6.mmDiscountPercentRate,
 					PaymentTerms6.mmPenaltyPercentRate, EarlyPayment1.mmDiscountPercent, LineItemAllowanceCharge2.mmCalculationPercent, Fee3.mmRepairedStandardRate, Fee3.mmRepairedDiscountRate, Fee3.mmRepairedRequestedRate,
 					Fee2.mmStandardRate, Fee2.mmAppliedRate, ChargeOrCommissionDiscount1.mmRate, Fee1.mmStandardRate, Fee1.mmRequestedRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChargeRate";
 			definition = "Rate used to calculate the amount of the adjustment, allowance, charge or fee.";
@@ -1389,9 +1387,8 @@ public class Adjustment {
 	};
 	protected TaxationBasisCode calculationMethod;
 	/**
-	 * Method used to calculate an adjustment (financial adjustment, charge or
-	 * allowance).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1448,6 +1445,9 @@ public class Adjustment {
 	 * elementContext} =
 	 * {@linkplain com.tools20022.repository.entity.Adjustment Adjustment}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22a::CATB</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1465,8 +1465,9 @@ public class Adjustment {
 			derivation_lazy = () -> Arrays.asList(Charge4.mmChargeBasis, Charge20.mmChargeBasis, Charge20.mmExtendedChargeBasis, Charge8.mmChargeBasis, Charge17.mmChargeBasis, Charge17.mmExtendedChargeBasis, Charge10.mmChargeBasis,
 					Charge18.mmChargeBasis, Charge18.mmExtendedChargeBasis, CommissionBasis1Choice.mmCode, CommissionBasis1Choice.mmProprietary, Charge27.mmChargeBasis, Charge29.mmChargeBasis, ChargeBasis2Choice.mmCode,
 					ChargeBasis2Choice.mmProprietary, Fee2.mmBasis, Fee1.mmBasis);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22a::CATB"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CalculationMethod";
 			definition = "Method used to calculate an adjustment (financial adjustment, charge or allowance).";
@@ -1485,9 +1486,8 @@ public class Adjustment {
 	};
 	protected List<com.tools20022.repository.entity.Payment> payment;
 	/**
-	 * Specifies the payment resulting from charges due by one party to another
-	 * or the payment to which adjustements (for instance charges) are applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1520,8 +1520,8 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmPayment = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
 			definition = "Specifies the payment resulting from charges due by one party to another or the payment to which adjustements (for instance charges) are applied.";
@@ -1533,9 +1533,8 @@ public class Adjustment {
 	};
 	protected AdjustmentDirectionCode direction;
 	/**
-	 * Specifies whether the adjustment must be subtracted or added to the total
-	 * amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1585,8 +1584,8 @@ public class Adjustment {
 		{
 			derivation_lazy = () -> Arrays.asList(DocumentAdjustment1.mmCreditDebitIndicator, Adjustment5.mmDirection, DocumentAdjustment2.mmCreditDebitIndicator, Adjustment4.mmDirection, Adjustment3.mmDirection, Adjustment6.mmDirection,
 					Adjustment7.mmDirection);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Direction";
 			definition = "Specifies whether the adjustment must be subtracted or added to the total amount.";
@@ -1605,8 +1604,8 @@ public class Adjustment {
 	};
 	protected Max4AlphaNumericText reason;
 	/**
-	 * Reason for the amount adjustment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1652,8 +1651,8 @@ public class Adjustment {
 	public static final MMBusinessAttribute mmReason = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DocumentAdjustment1.mmReason, SettlementAllowanceCharge1.mmReason, DocumentAdjustment2.mmReason, LineItemAllowanceCharge1.mmReason, LineItemAllowanceCharge2.mmReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reason";
 			definition = "Reason for the amount adjustment.";
@@ -1672,8 +1671,8 @@ public class Adjustment {
 	};
 	protected LineItem relatedLineItem;
 	/**
-	 * Specifies the line item on which a financial adjustment took place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1705,8 +1704,8 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedLineItem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedLineItem";
 			definition = "Specifies the line item on which a financial adjustment took place.";
@@ -1719,10 +1718,8 @@ public class Adjustment {
 	};
 	protected YesNoIndicator allowanceChargeIndicator;
 	/**
-	 * Indication of whether or not this allowance charge is a charge (Indicator
-	 * is Yes) that should be added or an allowance that should be subtracted
-	 * (Indicator is No).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1758,8 +1755,8 @@ public class Adjustment {
 	public static final MMBusinessAttribute mmAllowanceChargeIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementAllowanceCharge1.mmAllowanceChargeIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllowanceChargeIndicator";
 			definition = "Indication of whether or not this allowance charge is a charge (Indicator is Yes) that should be added or an allowance that should be subtracted (Indicator is No).";
@@ -1778,8 +1775,8 @@ public class Adjustment {
 	};
 	protected Price price;
 	/**
-	 * Specifies the price which is adjusted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1822,8 +1819,8 @@ public class Adjustment {
 	public static final MMBusinessAssociationEnd mmPrice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(OtherPrices1.mmMarketBrokerCommission, OtherPrices2.mmMarketBrokerCommission);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Price";
 			definition = "Specifies the price which is adjusted.";
@@ -1836,8 +1833,8 @@ public class Adjustment {
 	};
 	protected YesNoIndicator chargeIndicator;
 	/**
-	 * Indication of whether or not this allowance charge is a charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1875,8 +1872,8 @@ public class Adjustment {
 	public static final MMBusinessAttribute mmChargeIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItemAllowanceCharge1.mmChargeIndicator, LineItemAllowanceCharge2.mmChargeIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChargeIndicator";
 			definition = "Indication of whether or not this allowance charge is a charge.";
@@ -1895,9 +1892,8 @@ public class Adjustment {
 	};
 	protected AdjustmentTypeCode type;
 	/**
-	 * Specifies the type of adjustment applied to the amount of goods/services
-	 * by means of a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1951,8 +1947,8 @@ public class Adjustment {
 		{
 			derivation_lazy = () -> Arrays.asList(Adjustment4.mmType, Adjustment4.mmOtherAdjustmentType, Adjustment3.mmType, Adjustment3.mmOtherAdjustmentType, Adjustment6.mmType, Adjustment7.mmType, AdjustmentType1Choice.mmType,
 					AdjustmentType1Choice.mmOtherAdjustmentType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of adjustment applied to the amount of goods/services by means of a code.";
@@ -1971,8 +1967,8 @@ public class Adjustment {
 	};
 	protected CollateralManagement collateralManagement;
 	/**
-	 * Process which groups the activities related to collateral.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2006,8 +2002,8 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmCollateralManagement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralManagement";
 			definition = "Process which groups the activities related to collateral.";
@@ -2020,8 +2016,8 @@ public class Adjustment {
 	};
 	protected Balance adjustedBalance;
 	/**
-	 * Balance for which adjustments are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2052,8 +2048,8 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmAdjustedBalance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdjustedBalance";
 			definition = "Balance for which adjustments are specified.";
@@ -2066,8 +2062,8 @@ public class Adjustment {
 	};
 	protected List<com.tools20022.repository.entity.ChargePartyRole> chargesPartyRole;
 	/**
-	 * Role played by a party in the context of charges due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2099,8 +2095,8 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmChargesPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChargesPartyRole";
 			definition = "Role played by a party in the context of charges due.";
@@ -2112,8 +2108,8 @@ public class Adjustment {
 	};
 	protected DateTimePeriod effectivePeriod;
 	/**
-	 * Period during which the adjustment is applicable.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2145,8 +2141,8 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmEffectivePeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EffectivePeriod";
 			definition = "Period during which the adjustment is applicable.";
@@ -2159,9 +2155,8 @@ public class Adjustment {
 	};
 	protected CurrencyExchange currencyExchange;
 	/**
-	 * Currency exchange for which adjustments such as fees or commissions are
-	 * applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2195,8 +2190,8 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmCurrencyExchange = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchange";
 			definition = "Currency exchange for which adjustments such as fees or commissions are applied.";
@@ -2209,8 +2204,8 @@ public class Adjustment {
 	};
 	protected SecuritiesOrder securitiesOrder;
 	/**
-	 * Order for which adjustments are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2242,8 +2237,8 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesOrder";
 			definition = "Order for which adjustments are specified.";
@@ -2256,10 +2251,8 @@ public class Adjustment {
 	};
 	protected Tax tax;
 	/**
-	 * Information on the calculation method resulting in the tax amount
-	 * included in the charge transfer. The tax is expressed as a fixed amount,
-	 * or as a percentage of the charge amount, upon which the tax is applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2306,8 +2299,8 @@ public class Adjustment {
 	public static final MMBusinessAssociationEnd mmTax = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ChargesInformation3.mmTax, ChargesInformation6.mmTax, ChargesRecord1.mmTax, ChargesRecord2.mmTax);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Tax";
 			definition = "Information on the calculation method resulting in the tax amount included in the charge transfer. The tax is expressed as a fixed amount, or as a percentage of the charge amount, upon which the tax is applied.";
@@ -2322,7 +2315,7 @@ public class Adjustment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Adjustment";
 				definition = "Modification on the value of goods and / or services. For example: rebate, discount.";
@@ -2355,143 +2348,161 @@ public class Adjustment {
 		return amount;
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
-		this.amount = amount;
+	public Adjustment setAmount(CurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
 	public PercentageRate getChargeRate() {
 		return chargeRate;
 	}
 
-	public void setChargeRate(PercentageRate chargeRate) {
-		this.chargeRate = chargeRate;
+	public Adjustment setChargeRate(PercentageRate chargeRate) {
+		this.chargeRate = Objects.requireNonNull(chargeRate);
+		return this;
 	}
 
 	public TaxationBasisCode getCalculationMethod() {
 		return calculationMethod;
 	}
 
-	public void setCalculationMethod(TaxationBasisCode calculationMethod) {
-		this.calculationMethod = calculationMethod;
+	public Adjustment setCalculationMethod(TaxationBasisCode calculationMethod) {
+		this.calculationMethod = Objects.requireNonNull(calculationMethod);
+		return this;
 	}
 
 	public List<Payment> getPayment() {
-		return payment;
+		return payment == null ? payment = new ArrayList<>() : payment;
 	}
 
-	public void setPayment(List<com.tools20022.repository.entity.Payment> payment) {
-		this.payment = payment;
+	public Adjustment setPayment(List<com.tools20022.repository.entity.Payment> payment) {
+		this.payment = Objects.requireNonNull(payment);
+		return this;
 	}
 
 	public AdjustmentDirectionCode getDirection() {
 		return direction;
 	}
 
-	public void setDirection(AdjustmentDirectionCode direction) {
-		this.direction = direction;
+	public Adjustment setDirection(AdjustmentDirectionCode direction) {
+		this.direction = Objects.requireNonNull(direction);
+		return this;
 	}
 
 	public Max4AlphaNumericText getReason() {
 		return reason;
 	}
 
-	public void setReason(Max4AlphaNumericText reason) {
-		this.reason = reason;
+	public Adjustment setReason(Max4AlphaNumericText reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	public LineItem getRelatedLineItem() {
-		return relatedLineItem;
+	public Optional<LineItem> getRelatedLineItem() {
+		return relatedLineItem == null ? Optional.empty() : Optional.of(relatedLineItem);
 	}
 
-	public void setRelatedLineItem(com.tools20022.repository.entity.LineItem relatedLineItem) {
+	public Adjustment setRelatedLineItem(com.tools20022.repository.entity.LineItem relatedLineItem) {
 		this.relatedLineItem = relatedLineItem;
+		return this;
 	}
 
 	public YesNoIndicator getAllowanceChargeIndicator() {
 		return allowanceChargeIndicator;
 	}
 
-	public void setAllowanceChargeIndicator(YesNoIndicator allowanceChargeIndicator) {
-		this.allowanceChargeIndicator = allowanceChargeIndicator;
+	public Adjustment setAllowanceChargeIndicator(YesNoIndicator allowanceChargeIndicator) {
+		this.allowanceChargeIndicator = Objects.requireNonNull(allowanceChargeIndicator);
+		return this;
 	}
 
-	public Price getPrice() {
-		return price;
+	public Optional<Price> getPrice() {
+		return price == null ? Optional.empty() : Optional.of(price);
 	}
 
-	public void setPrice(com.tools20022.repository.entity.Price price) {
+	public Adjustment setPrice(com.tools20022.repository.entity.Price price) {
 		this.price = price;
+		return this;
 	}
 
-	public YesNoIndicator getChargeIndicator() {
-		return chargeIndicator;
+	public Optional<YesNoIndicator> getChargeIndicator() {
+		return chargeIndicator == null ? Optional.empty() : Optional.of(chargeIndicator);
 	}
 
-	public void setChargeIndicator(YesNoIndicator chargeIndicator) {
+	public Adjustment setChargeIndicator(YesNoIndicator chargeIndicator) {
 		this.chargeIndicator = chargeIndicator;
+		return this;
 	}
 
 	public AdjustmentTypeCode getType() {
 		return type;
 	}
 
-	public void setType(AdjustmentTypeCode type) {
-		this.type = type;
+	public Adjustment setType(AdjustmentTypeCode type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
 	public CollateralManagement getCollateralManagement() {
 		return collateralManagement;
 	}
 
-	public void setCollateralManagement(com.tools20022.repository.entity.CollateralManagement collateralManagement) {
-		this.collateralManagement = collateralManagement;
+	public Adjustment setCollateralManagement(com.tools20022.repository.entity.CollateralManagement collateralManagement) {
+		this.collateralManagement = Objects.requireNonNull(collateralManagement);
+		return this;
 	}
 
 	public Balance getAdjustedBalance() {
 		return adjustedBalance;
 	}
 
-	public void setAdjustedBalance(com.tools20022.repository.entity.Balance adjustedBalance) {
-		this.adjustedBalance = adjustedBalance;
+	public Adjustment setAdjustedBalance(com.tools20022.repository.entity.Balance adjustedBalance) {
+		this.adjustedBalance = Objects.requireNonNull(adjustedBalance);
+		return this;
 	}
 
 	public List<ChargePartyRole> getChargesPartyRole() {
-		return chargesPartyRole;
+		return chargesPartyRole == null ? chargesPartyRole = new ArrayList<>() : chargesPartyRole;
 	}
 
-	public void setChargesPartyRole(List<com.tools20022.repository.entity.ChargePartyRole> chargesPartyRole) {
-		this.chargesPartyRole = chargesPartyRole;
+	public Adjustment setChargesPartyRole(List<com.tools20022.repository.entity.ChargePartyRole> chargesPartyRole) {
+		this.chargesPartyRole = Objects.requireNonNull(chargesPartyRole);
+		return this;
 	}
 
 	public DateTimePeriod getEffectivePeriod() {
 		return effectivePeriod;
 	}
 
-	public void setEffectivePeriod(com.tools20022.repository.entity.DateTimePeriod effectivePeriod) {
-		this.effectivePeriod = effectivePeriod;
+	public Adjustment setEffectivePeriod(com.tools20022.repository.entity.DateTimePeriod effectivePeriod) {
+		this.effectivePeriod = Objects.requireNonNull(effectivePeriod);
+		return this;
 	}
 
 	public CurrencyExchange getCurrencyExchange() {
 		return currencyExchange;
 	}
 
-	public void setCurrencyExchange(com.tools20022.repository.entity.CurrencyExchange currencyExchange) {
-		this.currencyExchange = currencyExchange;
+	public Adjustment setCurrencyExchange(com.tools20022.repository.entity.CurrencyExchange currencyExchange) {
+		this.currencyExchange = Objects.requireNonNull(currencyExchange);
+		return this;
 	}
 
 	public SecuritiesOrder getSecuritiesOrder() {
 		return securitiesOrder;
 	}
 
-	public void setSecuritiesOrder(com.tools20022.repository.entity.SecuritiesOrder securitiesOrder) {
-		this.securitiesOrder = securitiesOrder;
+	public Adjustment setSecuritiesOrder(com.tools20022.repository.entity.SecuritiesOrder securitiesOrder) {
+		this.securitiesOrder = Objects.requireNonNull(securitiesOrder);
+		return this;
 	}
 
-	public Tax getTax() {
-		return tax;
+	public Optional<Tax> getTax() {
+		return tax == null ? Optional.empty() : Optional.of(tax);
 	}
 
-	public void setTax(com.tools20022.repository.entity.Tax tax) {
+	public Adjustment setTax(com.tools20022.repository.entity.Tax tax) {
 		this.tax = tax;
+		return this;
 	}
 }

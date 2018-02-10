@@ -24,9 +24,11 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.CommercialTrade;
 import com.tools20022.repository.entity.LineItem;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identifies the line item number and the purchase order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LineItemAndPOIdentification1", propOrder = {"lineItemIdentification", "purchaseOrderReference"})
 public class LineItemAndPOIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LineItmId", required = true)
 	protected List<Max70Text> lineItemIdentification;
 	/**
-	 * Identification assigned to a line item.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +110,7 @@ public class LineItemAndPOIdentification1 {
 	public static final MMMessageAttribute mmLineItemIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LineItem.mmIdentification;
-			componentContext_lazy = () -> LineItemAndPOIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemAndPOIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "LineItmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +120,11 @@ public class LineItemAndPOIdentification1 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PurchsOrdrRef", required = true)
 	protected DocumentIdentification7 purchaseOrderReference;
 	/**
-	 * Reference to the purchase order containing the line item.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +159,7 @@ public class LineItemAndPOIdentification1 {
 	public static final MMMessageAttribute mmPurchaseOrderReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CommercialTrade.mmPurchaseOrder;
-			componentContext_lazy = () -> LineItemAndPOIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemAndPOIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "PurchsOrdrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,9 +174,9 @@ public class LineItemAndPOIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LineItemAndPOIdentification1.mmLineItemIdentification, LineItemAndPOIdentification1.mmPurchaseOrderReference);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemAndPOIdentification1.mmLineItemIdentification, com.tools20022.repository.msg.LineItemAndPOIdentification1.mmPurchaseOrderReference);
 				trace_lazy = () -> LineItem.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LineItemAndPOIdentification1";
 				definition = "Identifies the line item number and the purchase order.";
@@ -181,21 +185,21 @@ public class LineItemAndPOIdentification1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LineItmId", required = true)
 	public List<Max70Text> getLineItemIdentification() {
-		return lineItemIdentification;
+		return lineItemIdentification == null ? lineItemIdentification = new ArrayList<>() : lineItemIdentification;
 	}
 
-	public void setLineItemIdentification(List<Max70Text> lineItemIdentification) {
-		this.lineItemIdentification = lineItemIdentification;
+	public LineItemAndPOIdentification1 setLineItemIdentification(List<Max70Text> lineItemIdentification) {
+		this.lineItemIdentification = Objects.requireNonNull(lineItemIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PurchsOrdrRef", required = true)
 	public DocumentIdentification7 getPurchaseOrderReference() {
 		return purchaseOrderReference;
 	}
 
-	public void setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
-		this.purchaseOrderReference = purchaseOrderReference;
+	public LineItemAndPOIdentification1 setPurchaseOrderReference(com.tools20022.repository.msg.DocumentIdentification7 purchaseOrderReference) {
+		this.purchaseOrderReference = Objects.requireNonNull(purchaseOrderReference);
+		return this;
 	}
 }

@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ConsentTypeCode;
+import com.tools20022.repository.codeset.ConsentType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of consent announced.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ConsentTypeCode
- * ConsentTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConsentType1Code#mmChangeInTerms
- * ConsentType1Code.mmChangeInTerms}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConsentType1Code#ChangeInTerms
+ * ConsentType1Code.ChangeInTerms}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConsentType1Code#mmDueAndPayable
- * ConsentType1Code.mmDueAndPayable}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConsentType1Code#DueAndPayable
+ * ConsentType1Code.DueAndPayable}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ConsentTypeCode
+ * ConsentTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of consent announced."</li>
  * </ul>
  */
-public class ConsentType1Code extends ConsentTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ConsentType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class ConsentType1Code extends ConsentTypeCode {
 	 * name} = "ChangeInTerms"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmChangeInTerms = new MMCode() {
+	public static final ConsentType1Code ChangeInTerms = new ConsentType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInTerms";
-			owner_lazy = () -> ConsentType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConsentType1Code.mmObject();
+			codeName = ConsentTypeCode.ChangeInTerms.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class ConsentType1Code extends ConsentTypeCode {
 	 * name} = "DueAndPayable"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDueAndPayable = new MMCode() {
+	public static final ConsentType1Code DueAndPayable = new ConsentType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueAndPayable";
-			owner_lazy = () -> ConsentType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConsentType1Code.mmObject();
+			codeName = ConsentTypeCode.DueAndPayable.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ConsentType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ConsentType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConsentType1Code";
 				definition = "Specifies the type of consent announced.";
-				code_lazy = () -> Arrays.asList(ConsentType1Code.mmChangeInTerms, ConsentType1Code.mmDueAndPayable);
 				trace_lazy = () -> ConsentTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConsentType1Code.ChangeInTerms, com.tools20022.repository.codeset.ConsentType1Code.DueAndPayable);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ChangeInTerms.getCodeName().get(), ChangeInTerms);
+		codesByName.put(DueAndPayable.getCodeName().get(), DueAndPayable);
+	}
+
+	public static ConsentType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ConsentType1Code[] values() {
+		ConsentType1Code[] values = new ConsentType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ConsentType1Code> {
+		@Override
+		public ConsentType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ConsentType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

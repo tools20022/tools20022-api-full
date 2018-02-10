@@ -26,9 +26,11 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.entity.FixingCondition;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the conditions for the NDF opening."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OpeningConditions1", propOrder = {"settlementCurrency", "valuationDate", "settlementRateSource"})
 public class OpeningConditions1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SttlmCcy", required = true)
 	protected ActiveCurrencyCode settlementCurrency;
 	/**
-	 * Specifies the settlement currency of the non deliverable trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +118,7 @@ public class OpeningConditions1 {
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CurrencyExchange.mmQuotedCurrency;
-			componentContext_lazy = () -> OpeningConditions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OpeningConditions1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +129,11 @@ public class OpeningConditions1 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "ValtnDt", required = true)
 	protected ISODate valuationDate;
 	/**
-	 * Specifies the valuation date for a non deliverable trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +167,7 @@ public class OpeningConditions1 {
 	public static final MMMessageAttribute mmValuationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> FixingCondition.mmFixingDateTime;
-			componentContext_lazy = () -> OpeningConditions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OpeningConditions1.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +178,11 @@ public class OpeningConditions1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmRateSrc", required = true)
 	protected List<com.tools20022.repository.msg.SettlementRateSource1> settlementRateSource;
 	/**
-	 * Specifies the rate source associated with the non deliverable trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -210,7 +215,7 @@ public class OpeningConditions1 {
 	public static final MMMessageAssociationEnd mmSettlementRateSource = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> FixingCondition.mmSettlementRateOption;
-			componentContext_lazy = () -> OpeningConditions1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OpeningConditions1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmRateSrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,9 +231,10 @@ public class OpeningConditions1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OpeningConditions1.mmSettlementCurrency, OpeningConditions1.mmValuationDate, OpeningConditions1.mmSettlementRateSource);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OpeningConditions1.mmSettlementCurrency, com.tools20022.repository.msg.OpeningConditions1.mmValuationDate,
+						com.tools20022.repository.msg.OpeningConditions1.mmSettlementRateSource);
 				trace_lazy = () -> FixingCondition.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OpeningConditions1";
 				definition = "Specifies the conditions for the NDF opening.";
@@ -237,30 +243,30 @@ public class OpeningConditions1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SttlmCcy", required = true)
 	public ActiveCurrencyCode getSettlementCurrency() {
 		return settlementCurrency;
 	}
 
-	public void setSettlementCurrency(ActiveCurrencyCode settlementCurrency) {
-		this.settlementCurrency = settlementCurrency;
+	public OpeningConditions1 setSettlementCurrency(ActiveCurrencyCode settlementCurrency) {
+		this.settlementCurrency = Objects.requireNonNull(settlementCurrency);
+		return this;
 	}
 
-	@XmlElement(name = "ValtnDt", required = true)
 	public ISODate getValuationDate() {
 		return valuationDate;
 	}
 
-	public void setValuationDate(ISODate valuationDate) {
-		this.valuationDate = valuationDate;
+	public OpeningConditions1 setValuationDate(ISODate valuationDate) {
+		this.valuationDate = Objects.requireNonNull(valuationDate);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmRateSrc", required = true)
 	public List<SettlementRateSource1> getSettlementRateSource() {
-		return settlementRateSource;
+		return settlementRateSource == null ? settlementRateSource = new ArrayList<>() : settlementRateSource;
 	}
 
-	public void setSettlementRateSource(List<com.tools20022.repository.msg.SettlementRateSource1> settlementRateSource) {
-		this.settlementRateSource = settlementRateSource;
+	public OpeningConditions1 setSettlementRateSource(List<com.tools20022.repository.msg.SettlementRateSource1> settlementRateSource) {
+		this.settlementRateSource = Objects.requireNonNull(settlementRateSource);
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.PINFormatCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * PIN (Personal Identification Number) format used to encrypt the PIN block.
@@ -31,40 +36,40 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmISO0
- * PINFormatCode.mmISO0}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmISO1
- * PINFormatCode.mmISO1}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmISO2
- * PINFormatCode.mmISO2}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmISO3
- * PINFormatCode.mmISO3}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmISO4
- * PINFormatCode.mmISO4}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmISO5
- * PINFormatCode.mmISO5}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmANSI0
- * PINFormatCode.mmANSI0}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmBancomat
- * PINFormatCode.mmBancomat}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmBanksys
- * PINFormatCode.mmBanksys}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmDiebold
- * PINFormatCode.mmDiebold}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmDieboldCO
- * PINFormatCode.mmDieboldCO}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmECI2
- * PINFormatCode.mmECI2}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmECI3
- * PINFormatCode.mmECI3}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmEMVRSA
- * PINFormatCode.mmEMVRSA}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmIBM3624
- * PINFormatCode.mmIBM3624}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmVISA2
- * PINFormatCode.mmVISA2}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#mmVISA3
- * PINFormatCode.mmVISA3}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#ISO0
+ * PINFormatCode.ISO0}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#ISO1
+ * PINFormatCode.ISO1}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#ISO2
+ * PINFormatCode.ISO2}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#ISO3
+ * PINFormatCode.ISO3}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#ISO4
+ * PINFormatCode.ISO4}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#ISO5
+ * PINFormatCode.ISO5}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#ANSI0
+ * PINFormatCode.ANSI0}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#Bancomat
+ * PINFormatCode.Bancomat}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#Banksys
+ * PINFormatCode.Banksys}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#Diebold
+ * PINFormatCode.Diebold}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#DieboldCO
+ * PINFormatCode.DieboldCO}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#ECI2
+ * PINFormatCode.ECI2}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#ECI3
+ * PINFormatCode.ECI3}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#EMVRSA
+ * PINFormatCode.EMVRSA}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#IBM3624
+ * PINFormatCode.IBM3624}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#VISA2
+ * PINFormatCode.VISA2}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormatCode#VISA3
+ * PINFormatCode.VISA3}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -83,8 +88,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -102,7 +107,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "PIN (Personal Identification Number) format used to encrypt the PIN block."</li>
  * </ul>
  */
-public class PINFormatCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PINFormatCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -129,12 +135,12 @@ public class PINFormatCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmISO0 = new MMCode() {
+	public static final PINFormatCode ISO0 = new PINFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ISO0";
 			definition = "PIN diversified with the card account number, conforming to the standard ISO 9564-2.";
-			owner_lazy = () -> PINFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormatCode.mmObject();
 			codeName = "ISO0";
 		}
 	};
@@ -162,12 +168,12 @@ public class PINFormatCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmISO1 = new MMCode() {
+	public static final PINFormatCode ISO1 = new PINFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ISO1";
 			definition = "PIN completed with random padding characters, conforming to the standard ISO 9564-2.";
-			owner_lazy = () -> PINFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormatCode.mmObject();
 			codeName = "ISO1";
 		}
 	};
@@ -195,12 +201,12 @@ public class PINFormatCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmISO2 = new MMCode() {
+	public static final PINFormatCode ISO2 = new PINFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ISO2";
 			definition = "PIN without diversification characters, conforming to the standard ISO 9564-2.";
-			owner_lazy = () -> PINFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormatCode.mmObject();
 			codeName = "ISO2";
 		}
 	};
@@ -228,12 +234,12 @@ public class PINFormatCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmISO3 = new MMCode() {
+	public static final PINFormatCode ISO3 = new PINFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ISO3";
 			definition = "PIN diversified with the card account number and random characters, conforming to the standard ISO 9564-2.";
-			owner_lazy = () -> PINFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormatCode.mmObject();
 			codeName = "ISO3";
 		}
 	};
@@ -261,12 +267,12 @@ public class PINFormatCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmISO4 = new MMCode() {
+	public static final PINFormatCode ISO4 = new PINFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ISO4";
 			definition = "PIN format used with AES encryption, conforming to the new ISO SC2 format.";
-			owner_lazy = () -> PINFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormatCode.mmObject();
 			codeName = "ISO4";
 		}
 	};
@@ -294,12 +300,12 @@ public class PINFormatCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmISO5 = new MMCode() {
+	public static final PINFormatCode ISO5 = new PINFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO5";
 			definition = "Alternative PIN format used with AES encryption, conforming to the new ISO SC2 format.";
-			owner_lazy = () -> PINFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormatCode.mmObject();
 			codeName = "ISO5";
 		}
 	};
@@ -324,12 +330,12 @@ public class PINFormatCode {
 	 * definition} = "ANSI 0 PIN block format."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmANSI0 = new MMCode() {
+	public static final PINFormatCode ANSI0 = new PINFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ANSI0";
 			definition = "ANSI 0 PIN block format.";
-			owner_lazy = () -> PINFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormatCode.mmObject();
 			codeName = "ANSI";
 		}
 	};
@@ -354,12 +360,12 @@ public class PINFormatCode {
 	 * definition} = "Italian Bancomat PIN block format."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBancomat = new MMCode() {
+	public static final PINFormatCode Bancomat = new PINFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bancomat";
 			definition = "Italian Bancomat PIN block format.";
-			owner_lazy = () -> PINFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormatCode.mmObject();
 			codeName = "BNCM";
 		}
 	};
@@ -384,12 +390,12 @@ public class PINFormatCode {
 	 * definition} = "Banksys PIN block format."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBanksys = new MMCode() {
+	public static final PINFormatCode Banksys = new PINFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Banksys";
 			definition = "Banksys PIN block format.";
-			owner_lazy = () -> PINFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormatCode.mmObject();
 			codeName = "BKSY";
 		}
 	};
@@ -414,12 +420,12 @@ public class PINFormatCode {
 	 * definition} = "Diebold PIN block format."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiebold = new MMCode() {
+	public static final PINFormatCode Diebold = new PINFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Diebold";
 			definition = "Diebold PIN block format.";
-			owner_lazy = () -> PINFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormatCode.mmObject();
 			codeName = "DBLD";
 		}
 	};
@@ -444,12 +450,12 @@ public class PINFormatCode {
 	 * definition} = "Diebold CO PIN block format."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDieboldCO = new MMCode() {
+	public static final PINFormatCode DieboldCO = new PINFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DieboldCO";
 			definition = "Diebold CO PIN block format.";
-			owner_lazy = () -> PINFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormatCode.mmObject();
 			codeName = "DBLC";
 		}
 	};
@@ -474,12 +480,12 @@ public class PINFormatCode {
 	 * definition} = "ECI2 PIN block format."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmECI2 = new MMCode() {
+	public static final PINFormatCode ECI2 = new PINFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ECI2";
 			definition = "ECI2 PIN block format.";
-			owner_lazy = () -> PINFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormatCode.mmObject();
 			codeName = "ECI2";
 		}
 	};
@@ -504,12 +510,12 @@ public class PINFormatCode {
 	 * definition} = "ECI3 PIN block format."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmECI3 = new MMCode() {
+	public static final PINFormatCode ECI3 = new PINFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ECI3";
 			definition = "ECI3 PIN block format.";
-			owner_lazy = () -> PINFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormatCode.mmObject();
 			codeName = "ECI3";
 		}
 	};
@@ -537,12 +543,12 @@ public class PINFormatCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEMVRSA = new MMCode() {
+	public static final PINFormatCode EMVRSA = new PINFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EMVRSA";
 			definition = "EMV ISO2 PIN block format encrypted with the EMV RSA cryptographic key for the PIN.";
-			owner_lazy = () -> PINFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormatCode.mmObject();
 			codeName = "EMVS";
 		}
 	};
@@ -567,12 +573,12 @@ public class PINFormatCode {
 	 * definition} = "IBM 3624 PIN block format."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIBM3624 = new MMCode() {
+	public static final PINFormatCode IBM3624 = new PINFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IBM3624";
 			definition = "IBM 3624 PIN block format.";
-			owner_lazy = () -> PINFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormatCode.mmObject();
 			codeName = "IBM3";
 		}
 	};
@@ -597,12 +603,12 @@ public class PINFormatCode {
 	 * definition} = "VISA2 PIN block format."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVISA2 = new MMCode() {
+	public static final PINFormatCode VISA2 = new PINFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VISA2";
 			definition = "VISA2 PIN block format.";
-			owner_lazy = () -> PINFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormatCode.mmObject();
 			codeName = "VIS2";
 		}
 	};
@@ -627,29 +633,78 @@ public class PINFormatCode {
 	 * definition} = "VISA3 PIN block format."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVISA3 = new MMCode() {
+	public static final PINFormatCode VISA3 = new PINFormatCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VISA3";
 			definition = "VISA3 PIN block format.";
-			owner_lazy = () -> PINFormatCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormatCode.mmObject();
 			codeName = "VIS3";
 		}
 	};
+	final static private LinkedHashMap<String, PINFormatCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PINFormatCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ISO0");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PINFormatCode";
 				definition = "PIN (Personal Identification Number) format used to encrypt the PIN block.";
-				code_lazy = () -> Arrays.asList(PINFormatCode.mmISO0, PINFormatCode.mmISO1, PINFormatCode.mmISO2, PINFormatCode.mmISO3, PINFormatCode.mmISO4, PINFormatCode.mmISO5, PINFormatCode.mmANSI0, PINFormatCode.mmBancomat,
-						PINFormatCode.mmBanksys, PINFormatCode.mmDiebold, PINFormatCode.mmDieboldCO, PINFormatCode.mmECI2, PINFormatCode.mmECI3, PINFormatCode.mmEMVRSA, PINFormatCode.mmIBM3624, PINFormatCode.mmVISA2, PINFormatCode.mmVISA3);
 				derivation_lazy = () -> Arrays.asList(PINFormat1Code.mmObject(), PINFormat2Code.mmObject(), PINFormat3Code.mmObject(), PINFormat4Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PINFormatCode.ISO0, com.tools20022.repository.codeset.PINFormatCode.ISO1, com.tools20022.repository.codeset.PINFormatCode.ISO2,
+						com.tools20022.repository.codeset.PINFormatCode.ISO3, com.tools20022.repository.codeset.PINFormatCode.ISO4, com.tools20022.repository.codeset.PINFormatCode.ISO5,
+						com.tools20022.repository.codeset.PINFormatCode.ANSI0, com.tools20022.repository.codeset.PINFormatCode.Bancomat, com.tools20022.repository.codeset.PINFormatCode.Banksys,
+						com.tools20022.repository.codeset.PINFormatCode.Diebold, com.tools20022.repository.codeset.PINFormatCode.DieboldCO, com.tools20022.repository.codeset.PINFormatCode.ECI2,
+						com.tools20022.repository.codeset.PINFormatCode.ECI3, com.tools20022.repository.codeset.PINFormatCode.EMVRSA, com.tools20022.repository.codeset.PINFormatCode.IBM3624,
+						com.tools20022.repository.codeset.PINFormatCode.VISA2, com.tools20022.repository.codeset.PINFormatCode.VISA3);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ISO0.getCodeName().get(), ISO0);
+		codesByName.put(ISO1.getCodeName().get(), ISO1);
+		codesByName.put(ISO2.getCodeName().get(), ISO2);
+		codesByName.put(ISO3.getCodeName().get(), ISO3);
+		codesByName.put(ISO4.getCodeName().get(), ISO4);
+		codesByName.put(ISO5.getCodeName().get(), ISO5);
+		codesByName.put(ANSI0.getCodeName().get(), ANSI0);
+		codesByName.put(Bancomat.getCodeName().get(), Bancomat);
+		codesByName.put(Banksys.getCodeName().get(), Banksys);
+		codesByName.put(Diebold.getCodeName().get(), Diebold);
+		codesByName.put(DieboldCO.getCodeName().get(), DieboldCO);
+		codesByName.put(ECI2.getCodeName().get(), ECI2);
+		codesByName.put(ECI3.getCodeName().get(), ECI3);
+		codesByName.put(EMVRSA.getCodeName().get(), EMVRSA);
+		codesByName.put(IBM3624.getCodeName().get(), IBM3624);
+		codesByName.put(VISA2.getCodeName().get(), VISA2);
+		codesByName.put(VISA3.getCodeName().get(), VISA3);
+	}
+
+	public static PINFormatCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PINFormatCode[] values() {
+		PINFormatCode[] values = new PINFormatCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PINFormatCode> {
+		@Override
+		public PINFormatCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PINFormatCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

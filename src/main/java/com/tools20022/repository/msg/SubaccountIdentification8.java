@@ -28,9 +28,8 @@ import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +64,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSubSafekeepingReportingRule#forSubaccountIdentification8
+ * ConstraintSubSafekeepingReportingRule.forSubaccountIdentification8}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintActivityAndBalanceForSubAccount1Rule#forSubaccountIdentification8
+ * ConstraintActivityAndBalanceForSubAccount1Rule.forSubaccountIdentification8}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintActivityAndBalanceForSubAccount2Rule#forSubaccountIdentification8
+ * ConstraintActivityAndBalanceForSubAccount2Rule.forSubaccountIdentification8}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Account to or from which a securities entry is made."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SubaccountIdentification8", propOrder = {"accountOwner", "safekeepingAccount", "activityIndicator", "balanceForSubAccount"})
 public class SubaccountIdentification8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification2Choice accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,7 +132,7 @@ public class SubaccountIdentification8 {
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> SubaccountIdentification8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubaccountIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +144,11 @@ public class SubaccountIdentification8 {
 			type_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgAcct", required = true)
 	protected SecuritiesAccount2 safekeepingAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -165,7 +180,7 @@ public class SubaccountIdentification8 {
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
-			componentContext_lazy = () -> SubaccountIdentification8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubaccountIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,11 +192,11 @@ public class SubaccountIdentification8 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount2.mmObject();
 		}
 	};
+	@XmlElement(name = "ActvtyInd", required = true)
 	protected YesNoIndicator activityIndicator;
 	/**
-	 * Indicates whether there is activity or information update reported in the
-	 * statement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,7 +226,7 @@ public class SubaccountIdentification8 {
 	 */
 	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SubaccountIdentification8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubaccountIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "ActvtyInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,11 +237,11 @@ public class SubaccountIdentification8 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "BalForSubAcct")
 	protected List<com.tools20022.repository.msg.AggregateBalanceInformation6> balanceForSubAccount;
 	/**
-	 * Net position of a segregated holding, in a single security, within the
-	 * overall position held in a securities subaccount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -261,7 +276,7 @@ public class SubaccountIdentification8 {
 	public static final MMMessageAssociationEnd mmBalanceForSubAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBalance;
-			componentContext_lazy = () -> SubaccountIdentification8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SubaccountIdentification8.mmObject();
 			isDerived = false;
 			xmlTag = "BalForSubAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,10 +291,13 @@ public class SubaccountIdentification8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SubaccountIdentification8.mmAccountOwner, SubaccountIdentification8.mmSafekeepingAccount, SubaccountIdentification8.mmActivityIndicator,
-						SubaccountIdentification8.mmBalanceForSubAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SubaccountIdentification8.mmAccountOwner, com.tools20022.repository.msg.SubaccountIdentification8.mmSafekeepingAccount,
+						com.tools20022.repository.msg.SubaccountIdentification8.mmActivityIndicator, com.tools20022.repository.msg.SubaccountIdentification8.mmBalanceForSubAccount);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSubSafekeepingReportingRule.forSubaccountIdentification8,
+						com.tools20022.repository.constraints.ConstraintActivityAndBalanceForSubAccount1Rule.forSubaccountIdentification8,
+						com.tools20022.repository.constraints.ConstraintActivityAndBalanceForSubAccount2Rule.forSubaccountIdentification8);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SubaccountIdentification8";
 				definition = "Account to or from which a securities entry is made.";
@@ -288,39 +306,39 @@ public class SubaccountIdentification8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification2Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification2Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification2Choice accountOwner) {
+	public SubaccountIdentification8 setAccountOwner(PartyIdentification2Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgAcct", required = true)
 	public SecuritiesAccount2 getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount2 safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public SubaccountIdentification8 setSafekeepingAccount(com.tools20022.repository.msg.SecuritiesAccount2 safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "ActvtyInd", required = true)
 	public YesNoIndicator getActivityIndicator() {
 		return activityIndicator;
 	}
 
-	public void setActivityIndicator(YesNoIndicator activityIndicator) {
-		this.activityIndicator = activityIndicator;
+	public SubaccountIdentification8 setActivityIndicator(YesNoIndicator activityIndicator) {
+		this.activityIndicator = Objects.requireNonNull(activityIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "BalForSubAcct")
 	public List<AggregateBalanceInformation6> getBalanceForSubAccount() {
-		return balanceForSubAccount;
+		return balanceForSubAccount == null ? balanceForSubAccount = new ArrayList<>() : balanceForSubAccount;
 	}
 
-	public void setBalanceForSubAccount(List<com.tools20022.repository.msg.AggregateBalanceInformation6> balanceForSubAccount) {
-		this.balanceForSubAccount = balanceForSubAccount;
+	public SubaccountIdentification8 setBalanceForSubAccount(List<com.tools20022.repository.msg.AggregateBalanceInformation6> balanceForSubAccount) {
+		this.balanceForSubAccount = Objects.requireNonNull(balanceForSubAccount);
+		return this;
 	}
 }

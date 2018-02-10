@@ -25,6 +25,8 @@ import com.tools20022.repository.codeset.ATMSecurityScheme1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * ATMSecurityContext1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMSecurityContext2", propOrder = {"currentSecurityScheme", "deviceProperty", "currentConfiguration"})
 public class ATMSecurityContext2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CurSctySchme", required = true)
 	protected ATMSecurityScheme1Code currentSecurityScheme;
 	/**
-	 * Key exchange security scheme in activation on the ATM for the host
-	 * manager.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +115,7 @@ public class ATMSecurityContext2 {
 	 */
 	public static final MMMessageAttribute mmCurrentSecurityScheme = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMSecurityContext2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityContext2.mmObject();
 			isDerived = false;
 			xmlTag = "CurSctySchme";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,11 +127,11 @@ public class ATMSecurityContext2 {
 			simpleType_lazy = () -> ATMSecurityScheme1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DvcPrprty")
 	protected ATMEquipment3 deviceProperty;
 	/**
-	 * Hardware security module information, so called EPP for Encrypted PIN
-	 * Pad.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -157,7 +159,7 @@ public class ATMSecurityContext2 {
 	 */
 	public static final MMMessageAssociationEnd mmDeviceProperty = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMSecurityContext2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityContext2.mmObject();
 			isDerived = false;
 			xmlTag = "DvcPrprty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,10 +171,11 @@ public class ATMSecurityContext2 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMEquipment3.mmObject();
 		}
 	};
+	@XmlElement(name = "CurCfgtn")
 	protected ATMSecurityConfiguration1 currentConfiguration;
 	/**
-	 * Configuration parameters in use by the security device.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -199,7 +202,7 @@ public class ATMSecurityContext2 {
 	 */
 	public static final MMMessageAssociationEnd mmCurrentConfiguration = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMSecurityContext2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityContext2.mmObject();
 			isDerived = false;
 			xmlTag = "CurCfgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,8 +218,9 @@ public class ATMSecurityContext2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMSecurityContext2.mmCurrentSecurityScheme, ATMSecurityContext2.mmDeviceProperty, ATMSecurityContext2.mmCurrentConfiguration);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityContext2.mmCurrentSecurityScheme, com.tools20022.repository.msg.ATMSecurityContext2.mmDeviceProperty,
+						com.tools20022.repository.msg.ATMSecurityContext2.mmCurrentConfiguration);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityContext2";
 				definition = "Context of the ATM for the key download.";
@@ -226,30 +230,30 @@ public class ATMSecurityContext2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CurSctySchme", required = true)
 	public ATMSecurityScheme1Code getCurrentSecurityScheme() {
 		return currentSecurityScheme;
 	}
 
-	public void setCurrentSecurityScheme(ATMSecurityScheme1Code currentSecurityScheme) {
-		this.currentSecurityScheme = currentSecurityScheme;
+	public ATMSecurityContext2 setCurrentSecurityScheme(ATMSecurityScheme1Code currentSecurityScheme) {
+		this.currentSecurityScheme = Objects.requireNonNull(currentSecurityScheme);
+		return this;
 	}
 
-	@XmlElement(name = "DvcPrprty")
-	public ATMEquipment3 getDeviceProperty() {
-		return deviceProperty;
+	public Optional<ATMEquipment3> getDeviceProperty() {
+		return deviceProperty == null ? Optional.empty() : Optional.of(deviceProperty);
 	}
 
-	public void setDeviceProperty(com.tools20022.repository.msg.ATMEquipment3 deviceProperty) {
+	public ATMSecurityContext2 setDeviceProperty(com.tools20022.repository.msg.ATMEquipment3 deviceProperty) {
 		this.deviceProperty = deviceProperty;
+		return this;
 	}
 
-	@XmlElement(name = "CurCfgtn")
-	public ATMSecurityConfiguration1 getCurrentConfiguration() {
-		return currentConfiguration;
+	public Optional<ATMSecurityConfiguration1> getCurrentConfiguration() {
+		return currentConfiguration == null ? Optional.empty() : Optional.of(currentConfiguration);
 	}
 
-	public void setCurrentConfiguration(com.tools20022.repository.msg.ATMSecurityConfiguration1 currentConfiguration) {
+	public ATMSecurityContext2 setCurrentConfiguration(com.tools20022.repository.msg.ATMSecurityConfiguration1 currentConfiguration) {
 		this.currentConfiguration = currentConfiguration;
+		return this;
 	}
 }

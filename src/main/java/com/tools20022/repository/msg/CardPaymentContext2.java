@@ -24,6 +24,8 @@ import com.tools20022.repository.entity.CardPaymentAcquiring;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardPaymentContext2", propOrder = {"paymentContext", "saleContext"})
 public class CardPaymentContext2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtCntxt", required = true)
 	protected PaymentContext2 paymentContext;
 	/**
-	 * Context of the card payment transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -125,7 +128,7 @@ public class CardPaymentContext2 {
 	public static final MMMessageAssociationEnd mmPaymentContext = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPaymentAcquiring.mmObject();
-			componentContext_lazy = () -> CardPaymentContext2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentContext2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtCntxt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,10 +141,11 @@ public class CardPaymentContext2 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentContext2.mmObject();
 		}
 	};
+	@XmlElement(name = "SaleCntxt")
 	protected SaleContext1 saleContext;
 	/**
-	 * Context of the sale involving the card payment transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -185,7 +189,7 @@ public class CardPaymentContext2 {
 	public static final MMMessageAssociationEnd mmSaleContext = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CardPaymentAcquiring.mmObject();
-			componentContext_lazy = () -> CardPaymentContext2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentContext2.mmObject();
 			isDerived = false;
 			xmlTag = "SaleCntxt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,9 +206,9 @@ public class CardPaymentContext2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardPaymentContext2.mmPaymentContext, CardPaymentContext2.mmSaleContext);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentContext2.mmPaymentContext, com.tools20022.repository.msg.CardPaymentContext2.mmSaleContext);
 				trace_lazy = () -> CardPaymentAcquiring.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentContext2";
 				definition = "Context in which the transaction is performed (payment and sale).";
@@ -214,21 +218,21 @@ public class CardPaymentContext2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtCntxt", required = true)
 	public PaymentContext2 getPaymentContext() {
 		return paymentContext;
 	}
 
-	public void setPaymentContext(com.tools20022.repository.msg.PaymentContext2 paymentContext) {
-		this.paymentContext = paymentContext;
+	public CardPaymentContext2 setPaymentContext(com.tools20022.repository.msg.PaymentContext2 paymentContext) {
+		this.paymentContext = Objects.requireNonNull(paymentContext);
+		return this;
 	}
 
-	@XmlElement(name = "SaleCntxt")
-	public SaleContext1 getSaleContext() {
-		return saleContext;
+	public Optional<SaleContext1> getSaleContext() {
+		return saleContext == null ? Optional.empty() : Optional.of(saleContext);
 	}
 
-	public void setSaleContext(com.tools20022.repository.msg.SaleContext1 saleContext) {
+	public CardPaymentContext2 setSaleContext(com.tools20022.repository.msg.SaleContext1 saleContext) {
 		this.saleContext = saleContext;
+		return this;
 	}
 }

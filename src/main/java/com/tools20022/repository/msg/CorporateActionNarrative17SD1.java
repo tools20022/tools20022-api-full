@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,18 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Extension for narative in the local language."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionNarrative17SD1", propOrder = {"placeAndName", "otherAdditionalInformation"})
 public class CorporateActionNarrative17SD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm")
 	protected Max350Text placeAndName;
 	/**
-	 * Unambiguous reference to the location where the supplementary data must
-	 * be inserted in the message instance. <br>
-	 * <br>
-	 * In the case of XML, this is expressed by a valid XPath.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +106,7 @@ public class CorporateActionNarrative17SD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNarrative17SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative17SD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,11 +117,11 @@ public class CorporateActionNarrative17SD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrAddtlInf", required = true)
 	protected Max450Text otherAdditionalInformation;
 	/**
-	 * Other additional information in the local language.<br>
-	 * 備考
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,7 +149,7 @@ public class CorporateActionNarrative17SD1 {
 	 */
 	public static final MMMessageAttribute mmOtherAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNarrative17SD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative17SD1.mmObject();
 			isDerived = false;
 			xmlTag = "OthrAddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,9 +164,9 @@ public class CorporateActionNarrative17SD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionNarrative17SD1.mmPlaceAndName, CorporateActionNarrative17SD1.mmOtherAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative17SD1.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionNarrative17SD1.mmOtherAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative17SD1";
 				definition = "Extension for narative in the local language.";
@@ -175,21 +175,21 @@ public class CorporateActionNarrative17SD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm")
-	public Max350Text getPlaceAndName() {
-		return placeAndName;
+	public Optional<Max350Text> getPlaceAndName() {
+		return placeAndName == null ? Optional.empty() : Optional.of(placeAndName);
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
+	public CorporateActionNarrative17SD1 setPlaceAndName(Max350Text placeAndName) {
 		this.placeAndName = placeAndName;
+		return this;
 	}
 
-	@XmlElement(name = "OthrAddtlInf", required = true)
 	public Max450Text getOtherAdditionalInformation() {
 		return otherAdditionalInformation;
 	}
 
-	public void setOtherAdditionalInformation(Max450Text otherAdditionalInformation) {
-		this.otherAdditionalInformation = otherAdditionalInformation;
+	public CorporateActionNarrative17SD1 setOtherAdditionalInformation(Max450Text otherAdditionalInformation) {
+		this.otherAdditionalInformation = Objects.requireNonNull(otherAdditionalInformation);
+		return this;
 	}
 }

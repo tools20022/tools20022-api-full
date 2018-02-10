@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max35Text;
@@ -24,9 +25,8 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Unique and unambiguous way to identify a person.
@@ -37,6 +37,10 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
+ * PartyIdentificationInformation}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -64,67 +68,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.PersonIdentification#mmEmployerIdentificationNumber
  * PersonIdentification.mmEmployerIdentificationNumber}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
- * PartyIdentificationInformation}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.IdentificationType1
- * IdentificationType1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentificationChoice
- * IndividualPersonIdentificationChoice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification3
- * PersonIdentification3}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PersonIdentificationSchemeName1Choice
- * PersonIdentificationSchemeName1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.GenericPersonIdentification1
- * GenericPersonIdentification1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification5
- * PersonIdentification5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ContactDetails2
- * ContactDetails2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CardholderIdentification1
- * CardholderIdentification1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification2
- * PersonIdentification2}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PersonIdentificationType1Choice
- * PersonIdentificationType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification6
- * PersonIdentification6}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PersonIdentificationType3Choice
- * PersonIdentificationType3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ContactDetails3
- * ContactDetails3}</li>
- * <li>{@linkplain com.tools20022.repository.choice.IdentificationType1Choice
- * IdentificationType1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification4
- * PersonIdentification4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification7
- * PersonIdentification7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification10
- * PersonIdentification10}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification1Choice
- * IndividualPersonIdentification1Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification2Choice
- * IndividualPersonIdentification2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification11
- * PersonIdentification11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification12
- * PersonIdentification12}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification3Choice
- * IndividualPersonIdentification3Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -238,10 +181,67 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IdentificationType1
+ * IdentificationType1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentificationChoice
+ * IndividualPersonIdentificationChoice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification3
+ * PersonIdentification3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PersonIdentificationSchemeName1Choice
+ * PersonIdentificationSchemeName1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericPersonIdentification1
+ * GenericPersonIdentification1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification5
+ * PersonIdentification5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContactDetails2
+ * ContactDetails2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardholderIdentification1
+ * CardholderIdentification1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification2
+ * PersonIdentification2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PersonIdentificationType1Choice
+ * PersonIdentificationType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification6
+ * PersonIdentification6}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PersonIdentificationType3Choice
+ * PersonIdentificationType3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContactDetails3
+ * ContactDetails3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.IdentificationType1Choice
+ * IdentificationType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification4
+ * PersonIdentification4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification7
+ * PersonIdentification7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification10
+ * PersonIdentification10}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification1Choice
+ * IndividualPersonIdentification1Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification2Choice
+ * IndividualPersonIdentification2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification11
+ * PersonIdentification11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification12
+ * PersonIdentification12}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.IndividualPersonIdentification3Choice
+ * IndividualPersonIdentification3Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -257,8 +257,8 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Max35Text socialSecurityNumber;
 	/**
-	 * Number assigned by a social security agency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,6 +297,9 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.repository.entity.PersonIdentification
 	 * PersonIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE//SSNX</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -311,8 +314,9 @@ public class PersonIdentification extends PartyIdentificationInformation {
 		{
 			derivation_lazy = () -> Arrays.asList(IndividualPerson3.mmSocialSecurityNumber, IndividualPerson8.mmSocialSecurityNumber, PersonIdentification3.mmSocialSecurityNumber, PersonIdentification2.mmSocialSecurityNumber,
 					PersonIdentificationType1Choice.mmSocialSecurityNumber, PersonIdentification7.mmSocialSecurityNumber, PersonIdentification11.mmSocialSecurityNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE//SSNX"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SocialSecurityNumber";
 			definition = "Number assigned by a social security agency.";
@@ -331,8 +335,8 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	};
 	protected Person person;
 	/**
-	 * Person for which an identification is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -382,8 +386,8 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	public static final MMBusinessAssociationEnd mmPerson = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PersonIdentification3.mmDateAndPlaceOfBirth, PersonIdentification5.mmDateAndPlaceOfBirth, PersonIdentification7.mmDateAndPlaceOfBirth, PersonIdentification11.mmDateAndPlaceOfBirth);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Person";
 			definition = "Person for which an identification is provided.";
@@ -396,10 +400,8 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	};
 	protected List<com.tools20022.repository.entity.PersonName> personName;
 	/**
-	 * Name by which a person is known and which is usually used to identify
-	 * that person. It is derived from PartyName (association between
-	 * PartyIdentificationInformation and PartyName).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -453,8 +455,8 @@ public class PersonIdentification extends PartyIdentificationInformation {
 		{
 			derivation_lazy = () -> Arrays.asList(IndividualPersonIdentificationChoice.mmPersonName, IndividualPersonIdentification1Choice.mmPersonName, IndividualPersonIdentification2Choice.mmPersonName,
 					IndividualPersonIdentification3Choice.mmPersonName);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PersonName";
 			definition = "Name by which a person is known and which is usually used to identify that person. It is derived from PartyName (association between PartyIdentificationInformation and PartyName).";
@@ -466,8 +468,8 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	};
 	protected Max35Text driversLicenseNumber;
 	/**
-	 * Number assigned by a license authority to a driver's license.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -500,6 +502,9 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.repository.entity.PersonIdentification
 	 * PersonIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE//DRLC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -515,8 +520,9 @@ public class PersonIdentification extends PartyIdentificationInformation {
 		{
 			derivation_lazy = () -> Arrays.asList(PersonIdentification3.mmDriversLicenseNumber, PersonIdentification2.mmDriversLicenseNumber, PersonIdentificationType1Choice.mmDriversLicenseNumber,
 					PersonIdentification7.mmDriversLicenseNumber, PersonIdentification11.mmDriverLicenseNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE//DRLC"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DriversLicenseNumber";
 			definition = "Number assigned by a license authority to a driver's license.";
@@ -535,8 +541,8 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	};
 	protected Max35Text alienRegistrationNumber;
 	/**
-	 * Number assigned by a government agency to identify foreign nationals.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -569,6 +575,9 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.repository.entity.PersonIdentification
 	 * PersonIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE//ARNU</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -584,8 +593,9 @@ public class PersonIdentification extends PartyIdentificationInformation {
 		{
 			derivation_lazy = () -> Arrays.asList(PersonIdentification3.mmAlienRegistrationNumber, PersonIdentification2.mmAlienRegistrationNumber, PersonIdentificationType1Choice.mmAlienRegistrationNumber,
 					PersonIdentification7.mmAlienRegistrationNumber, PersonIdentification11.mmAlienRegistrationNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE//ARNU"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AlienRegistrationNumber";
 			definition = "Number assigned by a government agency to identify foreign nationals.";
@@ -604,8 +614,8 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	};
 	protected Max35Text passportNumber;
 	/**
-	 * Number assigned by a passport authority to a passport.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -638,6 +648,9 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.repository.entity.PersonIdentification
 	 * PersonIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE//CCPT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -652,8 +665,9 @@ public class PersonIdentification extends PartyIdentificationInformation {
 		{
 			derivation_lazy = () -> Arrays.asList(PersonIdentification3.mmPassportNumber, PersonIdentification2.mmPassportNumber, PersonIdentificationType1Choice.mmPassportNumber, PersonIdentification7.mmPassportNumber,
 					PersonIdentification11.mmPassportNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE//CCPT"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PassportNumber";
 			definition = "Number assigned by a passport authority to a passport.";
@@ -672,8 +686,8 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	};
 	protected Max35Text identityCardNumber;
 	/**
-	 * Number assigned by a national authority to an identity card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -721,8 +735,8 @@ public class PersonIdentification extends PartyIdentificationInformation {
 		{
 			derivation_lazy = () -> Arrays.asList(PersonIdentification3.mmIdentityCardNumber, PersonIdentification2.mmIdentityCardNumber, PersonIdentificationType1Choice.mmIdentityCardNumber, PersonIdentification7.mmIdentityCardNumber,
 					PersonIdentification11.mmIdentityCardNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IdentityCardNumber";
 			definition = "Number assigned by a national authority to an identity card.";
@@ -741,8 +755,8 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	};
 	protected Max35Text employerIdentificationNumber;
 	/**
-	 * Number assigned to an employer by a registration authority.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -775,6 +789,9 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.repository.entity.PersonIdentification
 	 * PersonIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE//EINX</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -790,8 +807,9 @@ public class PersonIdentification extends PartyIdentificationInformation {
 		{
 			derivation_lazy = () -> Arrays.asList(PersonIdentification3.mmEmployerIdentificationNumber, PersonIdentification2.mmEmployerIdentificationNumber, PersonIdentificationType1Choice.mmEmployerIdentificationNumber,
 					PersonIdentification7.mmEmployerIdentificationNumber, PersonIdentification11.mmEmployerIdentificationNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PersonIdentification.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE//EINX"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EmployerIdentificationNumber";
 			definition = "Number assigned to an employer by a registration authority.";
@@ -812,7 +830,7 @@ public class PersonIdentification extends PartyIdentificationInformation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PersonIdentification";
 				definition = "Unique and unambiguous way to identify a person.";
@@ -848,63 +866,71 @@ public class PersonIdentification extends PartyIdentificationInformation {
 		return socialSecurityNumber;
 	}
 
-	public void setSocialSecurityNumber(Max35Text socialSecurityNumber) {
-		this.socialSecurityNumber = socialSecurityNumber;
+	public PersonIdentification setSocialSecurityNumber(Max35Text socialSecurityNumber) {
+		this.socialSecurityNumber = Objects.requireNonNull(socialSecurityNumber);
+		return this;
 	}
 
-	public Person getPerson() {
-		return person;
+	public Optional<Person> getPerson() {
+		return person == null ? Optional.empty() : Optional.of(person);
 	}
 
-	public void setPerson(com.tools20022.repository.entity.Person person) {
+	public PersonIdentification setPerson(com.tools20022.repository.entity.Person person) {
 		this.person = person;
+		return this;
 	}
 
 	public List<PersonName> getPersonName() {
-		return personName;
+		return personName == null ? personName = new ArrayList<>() : personName;
 	}
 
-	public void setPersonName(List<com.tools20022.repository.entity.PersonName> personName) {
-		this.personName = personName;
+	public PersonIdentification setPersonName(List<com.tools20022.repository.entity.PersonName> personName) {
+		this.personName = Objects.requireNonNull(personName);
+		return this;
 	}
 
 	public Max35Text getDriversLicenseNumber() {
 		return driversLicenseNumber;
 	}
 
-	public void setDriversLicenseNumber(Max35Text driversLicenseNumber) {
-		this.driversLicenseNumber = driversLicenseNumber;
+	public PersonIdentification setDriversLicenseNumber(Max35Text driversLicenseNumber) {
+		this.driversLicenseNumber = Objects.requireNonNull(driversLicenseNumber);
+		return this;
 	}
 
 	public Max35Text getAlienRegistrationNumber() {
 		return alienRegistrationNumber;
 	}
 
-	public void setAlienRegistrationNumber(Max35Text alienRegistrationNumber) {
-		this.alienRegistrationNumber = alienRegistrationNumber;
+	public PersonIdentification setAlienRegistrationNumber(Max35Text alienRegistrationNumber) {
+		this.alienRegistrationNumber = Objects.requireNonNull(alienRegistrationNumber);
+		return this;
 	}
 
 	public Max35Text getPassportNumber() {
 		return passportNumber;
 	}
 
-	public void setPassportNumber(Max35Text passportNumber) {
-		this.passportNumber = passportNumber;
+	public PersonIdentification setPassportNumber(Max35Text passportNumber) {
+		this.passportNumber = Objects.requireNonNull(passportNumber);
+		return this;
 	}
 
 	public Max35Text getIdentityCardNumber() {
 		return identityCardNumber;
 	}
 
-	public void setIdentityCardNumber(Max35Text identityCardNumber) {
-		this.identityCardNumber = identityCardNumber;
+	public PersonIdentification setIdentityCardNumber(Max35Text identityCardNumber) {
+		this.identityCardNumber = Objects.requireNonNull(identityCardNumber);
+		return this;
 	}
 
 	public Max35Text getEmployerIdentificationNumber() {
 		return employerIdentificationNumber;
 	}
 
-	public void setEmployerIdentificationNumber(Max35Text employerIdentificationNumber) {
-		this.employerIdentificationNumber = employerIdentificationNumber;
+	public PersonIdentification setEmployerIdentificationNumber(Max35Text employerIdentificationNumber) {
+		this.employerIdentificationNumber = Objects.requireNonNull(employerIdentificationNumber);
+		return this;
 	}
 }

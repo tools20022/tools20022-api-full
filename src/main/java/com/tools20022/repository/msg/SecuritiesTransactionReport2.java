@@ -28,9 +28,8 @@ import com.tools20022.repository.entity.SecuritiesTransaction;
 import com.tools20022.repository.entity.SubmittingPartyRole;
 import com.tools20022.repository.entity.TradeIdentification;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details of the securities transaction report."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesTransactionReport2", propOrder = {"transactionIdentification", "executingParty", "submittingParty", "technicalAttributes", "supplementaryData"})
 public class SecuritiesTransactionReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId", required = true)
 	protected Max52Text transactionIdentification;
 	/**
-	 * Unique and unambiguous identification of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +122,7 @@ public class SecuritiesTransactionReport2 {
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmUniqueTradeIdentifier;
-			componentContext_lazy = () -> SecuritiesTransactionReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionReport2.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,15 +133,11 @@ public class SecuritiesTransactionReport2 {
 			simpleType_lazy = () -> Max52Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ExctgPty", required = true)
 	protected LEIIdentifier executingParty;
 	/**
-	 * Identification of the entity executing the transaction. <br>
-	 * <br>
-	 * Usage:<br>
-	 * For legal entities, use the legal entity identifier. For non-legal
-	 * entities, this field shall be populated with an identifier as specified
-	 * in the local regulation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,7 +173,7 @@ public class SecuritiesTransactionReport2 {
 	public static final MMMessageAttribute mmExecutingParty = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> ExecutingTrader.mmObject();
-			componentContext_lazy = () -> SecuritiesTransactionReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionReport2.mmObject();
 			isDerived = false;
 			xmlTag = "ExctgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,10 +184,11 @@ public class SecuritiesTransactionReport2 {
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "SubmitgPty", required = true)
 	protected LEIIdentifier submittingParty;
 	/**
-	 * Entity submitting the transaction report to the competent authority.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -227,7 +224,7 @@ public class SecuritiesTransactionReport2 {
 	public static final MMMessageAttribute mmSubmittingParty = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SubmittingPartyRole.mmObject();
-			componentContext_lazy = () -> SecuritiesTransactionReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionReport2.mmObject();
 			isDerived = false;
 			xmlTag = "SubmitgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,11 +235,11 @@ public class SecuritiesTransactionReport2 {
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "TechAttrbts")
 	protected RecordTechnicalData2 technicalAttributes;
 	/**
-	 * Data used for exchanges between national competent authorities, not to be
-	 * used by reporting entities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -270,7 +267,7 @@ public class SecuritiesTransactionReport2 {
 	 */
 	public static final MMMessageAssociationEnd mmTechnicalAttributes = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesTransactionReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionReport2.mmObject();
 			isDerived = false;
 			xmlTag = "TechAttrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -282,11 +279,11 @@ public class SecuritiesTransactionReport2 {
 			type_lazy = () -> com.tools20022.repository.msg.RecordTechnicalData2.mmObject();
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -314,7 +311,7 @@ public class SecuritiesTransactionReport2 {
 	 */
 	public static final MMMessageAssociationEnd mmSupplementaryData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesTransactionReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransactionReport2.mmObject();
 			isDerived = false;
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,10 +326,11 @@ public class SecuritiesTransactionReport2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesTransactionReport2.mmTransactionIdentification, SecuritiesTransactionReport2.mmExecutingParty, SecuritiesTransactionReport2.mmSubmittingParty,
-						SecuritiesTransactionReport2.mmTechnicalAttributes, SecuritiesTransactionReport2.mmSupplementaryData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransactionReport2.mmTransactionIdentification, com.tools20022.repository.msg.SecuritiesTransactionReport2.mmExecutingParty,
+						com.tools20022.repository.msg.SecuritiesTransactionReport2.mmSubmittingParty, com.tools20022.repository.msg.SecuritiesTransactionReport2.mmTechnicalAttributes,
+						com.tools20022.repository.msg.SecuritiesTransactionReport2.mmSupplementaryData);
 				trace_lazy = () -> SecuritiesTransaction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionReport2";
 				definition = "Details of the securities transaction report.";
@@ -341,48 +339,48 @@ public class SecuritiesTransactionReport2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public Max52Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max52Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public SecuritiesTransactionReport2 setTransactionIdentification(Max52Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ExctgPty", required = true)
 	public LEIIdentifier getExecutingParty() {
 		return executingParty;
 	}
 
-	public void setExecutingParty(LEIIdentifier executingParty) {
-		this.executingParty = executingParty;
+	public SecuritiesTransactionReport2 setExecutingParty(LEIIdentifier executingParty) {
+		this.executingParty = Objects.requireNonNull(executingParty);
+		return this;
 	}
 
-	@XmlElement(name = "SubmitgPty", required = true)
 	public LEIIdentifier getSubmittingParty() {
 		return submittingParty;
 	}
 
-	public void setSubmittingParty(LEIIdentifier submittingParty) {
-		this.submittingParty = submittingParty;
+	public SecuritiesTransactionReport2 setSubmittingParty(LEIIdentifier submittingParty) {
+		this.submittingParty = Objects.requireNonNull(submittingParty);
+		return this;
 	}
 
-	@XmlElement(name = "TechAttrbts")
-	public RecordTechnicalData2 getTechnicalAttributes() {
-		return technicalAttributes;
+	public Optional<RecordTechnicalData2> getTechnicalAttributes() {
+		return technicalAttributes == null ? Optional.empty() : Optional.of(technicalAttributes);
 	}
 
-	public void setTechnicalAttributes(com.tools20022.repository.msg.RecordTechnicalData2 technicalAttributes) {
+	public SecuritiesTransactionReport2 setTechnicalAttributes(com.tools20022.repository.msg.RecordTechnicalData2 technicalAttributes) {
 		this.technicalAttributes = technicalAttributes;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuritiesTransactionReport2 setSupplementaryData(List<com.tools20022.repository.msg.SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 }

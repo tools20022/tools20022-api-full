@@ -20,67 +20,71 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode;
+import com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Further sub product code list for commodity derivative Non-Precious.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode
- * AssetClassDetailedSubProductTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#mmAluminium
- * AssetClassDetailedSubProductType10Code.mmAluminium}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#Aluminium
+ * AssetClassDetailedSubProductType10Code.Aluminium}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#mmAluminiumAlloy
- * AssetClassDetailedSubProductType10Code.mmAluminiumAlloy}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#AluminiumAlloy
+ * AssetClassDetailedSubProductType10Code.AluminiumAlloy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#mmCobalt
- * AssetClassDetailedSubProductType10Code.mmCobalt}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#Cobalt
+ * AssetClassDetailedSubProductType10Code.Cobalt}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#mmCopper
- * AssetClassDetailedSubProductType10Code.mmCopper}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#Copper
+ * AssetClassDetailedSubProductType10Code.Copper}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#mmIronOre
- * AssetClassDetailedSubProductType10Code.mmIronOre}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#IronOre
+ * AssetClassDetailedSubProductType10Code.IronOre}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#mmMolybdenum
- * AssetClassDetailedSubProductType10Code.mmMolybdenum}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#Molybdenum
+ * AssetClassDetailedSubProductType10Code.Molybdenum}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#mmNASAAC
- * AssetClassDetailedSubProductType10Code.mmNASAAC}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#NASAAC
+ * AssetClassDetailedSubProductType10Code.NASAAC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#mmNickel
- * AssetClassDetailedSubProductType10Code.mmNickel}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#Nickel
+ * AssetClassDetailedSubProductType10Code.Nickel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#mmSteel
- * AssetClassDetailedSubProductType10Code.mmSteel}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#Steel
+ * AssetClassDetailedSubProductType10Code.Steel}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#mmTin
- * AssetClassDetailedSubProductType10Code.mmTin}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#Tin
+ * AssetClassDetailedSubProductType10Code.Tin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#mmZinc
- * AssetClassDetailedSubProductType10Code.mmZinc}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#Zinc
+ * AssetClassDetailedSubProductType10Code.Zinc}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#mmOther
- * AssetClassDetailedSubProductType10Code.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#Other
+ * AssetClassDetailedSubProductType10Code.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#mmLead
- * AssetClassDetailedSubProductType10Code.mmLead}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code#Lead
+ * AssetClassDetailedSubProductType10Code.Lead}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode
+ * AssetClassDetailedSubProductTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,7 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Further sub product code list for commodity derivative Non-Precious."</li>
  * </ul>
  */
-public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSubProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AssetClassDetailedSubProductType10Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -111,11 +116,12 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 * name} = "Aluminium"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAluminium = new MMCode() {
+	public static final AssetClassDetailedSubProductType10Code Aluminium = new AssetClassDetailedSubProductType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aluminium";
-			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.Aluminium.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -134,11 +140,12 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 * name} = "AluminiumAlloy"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAluminiumAlloy = new MMCode() {
+	public static final AssetClassDetailedSubProductType10Code AluminiumAlloy = new AssetClassDetailedSubProductType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AluminiumAlloy";
-			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.AluminiumAlloy.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -157,11 +164,12 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 * name} = "Cobalt"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCobalt = new MMCode() {
+	public static final AssetClassDetailedSubProductType10Code Cobalt = new AssetClassDetailedSubProductType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cobalt";
-			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.Cobalt.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -180,11 +188,12 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 * name} = "Copper"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCopper = new MMCode() {
+	public static final AssetClassDetailedSubProductType10Code Copper = new AssetClassDetailedSubProductType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Copper";
-			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.Copper.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -203,11 +212,12 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 * name} = "IronOre"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIronOre = new MMCode() {
+	public static final AssetClassDetailedSubProductType10Code IronOre = new AssetClassDetailedSubProductType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IronOre";
-			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.IronOre.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -226,11 +236,12 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 * name} = "Molybdenum"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMolybdenum = new MMCode() {
+	public static final AssetClassDetailedSubProductType10Code Molybdenum = new AssetClassDetailedSubProductType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Molybdenum";
-			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.Molybdenum.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -249,11 +260,12 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 * name} = "NASAAC"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNASAAC = new MMCode() {
+	public static final AssetClassDetailedSubProductType10Code NASAAC = new AssetClassDetailedSubProductType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NASAAC";
-			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.NASAAC.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -272,11 +284,12 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 * name} = "Nickel"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNickel = new MMCode() {
+	public static final AssetClassDetailedSubProductType10Code Nickel = new AssetClassDetailedSubProductType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Nickel";
-			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.Nickel.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -295,11 +308,12 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 * name} = "Steel"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSteel = new MMCode() {
+	public static final AssetClassDetailedSubProductType10Code Steel = new AssetClassDetailedSubProductType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Steel";
-			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.Steel.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -318,11 +332,12 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 * name} = "Tin"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTin = new MMCode() {
+	public static final AssetClassDetailedSubProductType10Code Tin = new AssetClassDetailedSubProductType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tin";
-			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.Tin.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -341,11 +356,12 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 * name} = "Zinc"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmZinc = new MMCode() {
+	public static final AssetClassDetailedSubProductType10Code Zinc = new AssetClassDetailedSubProductType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Zinc";
-			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.Zinc.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -364,11 +380,12 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final AssetClassDetailedSubProductType10Code Other = new AssetClassDetailedSubProductType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.Other.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -387,28 +404,73 @@ public class AssetClassDetailedSubProductType10Code extends AssetClassDetailedSu
 	 * name} = "Lead"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLead = new MMCode() {
+	public static final AssetClassDetailedSubProductType10Code Lead = new AssetClassDetailedSubProductType10Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Lead";
-			owner_lazy = () -> AssetClassDetailedSubProductType10Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.mmObject();
+			codeName = AssetClassDetailedSubProductTypeCode.Lead.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AssetClassDetailedSubProductType10Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AssetClassDetailedSubProductType10Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassDetailedSubProductType10Code";
 				definition = "Further sub product code list for commodity derivative Non-Precious.";
-				code_lazy = () -> Arrays.asList(AssetClassDetailedSubProductType10Code.mmAluminium, AssetClassDetailedSubProductType10Code.mmAluminiumAlloy, AssetClassDetailedSubProductType10Code.mmCobalt,
-						AssetClassDetailedSubProductType10Code.mmCopper, AssetClassDetailedSubProductType10Code.mmIronOre, AssetClassDetailedSubProductType10Code.mmMolybdenum, AssetClassDetailedSubProductType10Code.mmNASAAC,
-						AssetClassDetailedSubProductType10Code.mmNickel, AssetClassDetailedSubProductType10Code.mmSteel, AssetClassDetailedSubProductType10Code.mmTin, AssetClassDetailedSubProductType10Code.mmZinc,
-						AssetClassDetailedSubProductType10Code.mmOther, AssetClassDetailedSubProductType10Code.mmLead);
 				trace_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.Aluminium, com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.AluminiumAlloy,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.Cobalt, com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.Copper,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.IronOre, com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.Molybdenum,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.NASAAC, com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.Nickel,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.Steel, com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.Tin,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.Zinc, com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.Other,
+						com.tools20022.repository.codeset.AssetClassDetailedSubProductType10Code.Lead);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Aluminium.getCodeName().get(), Aluminium);
+		codesByName.put(AluminiumAlloy.getCodeName().get(), AluminiumAlloy);
+		codesByName.put(Cobalt.getCodeName().get(), Cobalt);
+		codesByName.put(Copper.getCodeName().get(), Copper);
+		codesByName.put(IronOre.getCodeName().get(), IronOre);
+		codesByName.put(Molybdenum.getCodeName().get(), Molybdenum);
+		codesByName.put(NASAAC.getCodeName().get(), NASAAC);
+		codesByName.put(Nickel.getCodeName().get(), Nickel);
+		codesByName.put(Steel.getCodeName().get(), Steel);
+		codesByName.put(Tin.getCodeName().get(), Tin);
+		codesByName.put(Zinc.getCodeName().get(), Zinc);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(Lead.getCodeName().get(), Lead);
+	}
+
+	public static AssetClassDetailedSubProductType10Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AssetClassDetailedSubProductType10Code[] values() {
+		AssetClassDetailedSubProductType10Code[] values = new AssetClassDetailedSubProductType10Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AssetClassDetailedSubProductType10Code> {
+		@Override
+		public AssetClassDetailedSubProductType10Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AssetClassDetailedSubProductType10Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CorporateActionOptionSecuritiesMovementDateDetailsExtension1", propOrder = {"placeAndName", "DTCAllocationDateAndTime", "DTCCILAllocationDateAndTime"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CorporateActionOptionSecuritiesMovementDateDetailsExtension1", propOrder = {"placeAndName", "dTCAllocationDateAndTime", "dTCCILAllocationDateAndTime"})
 public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +109,7 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,11 +120,11 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCAllcnDtAndTm")
 	protected ISODateTime dTCAllocationDateAndTime;
 	/**
-	 * Date and time at which DTC (The Depository Trust Corporation) will
-	 * allocate payments to its participants.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -134,6 +138,9 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 	 * CorporateActionOptionSecuritiesMovementDateDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCAllcnDtAndTm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Allocation Date and Time</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -149,9 +156,10 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 	 */
 	public static final MMMessageAttribute mmDTCAllocationDateAndTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCAllcnDtAndTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Allocation Date and Time"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAllocationDateAndTime";
 			definition = "Date and time at which DTC (The Depository Trust Corporation) will allocate payments to its participants.";
@@ -160,13 +168,11 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCCILAllcnDtAndTm")
 	protected ISODateTime dTCCILAllocationDateAndTime;
 	/**
-	 * Date and time at which Cash In Lieu (CIL) will be paid to DTC (The
-	 * Depository Trust Corporation) participants. On a single option that has
-	 * multiple payouts, one of which is CIL, the payouts can be allocated on
-	 * different days.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,6 +186,9 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 	 * CorporateActionOptionSecuritiesMovementDateDetailsExtension1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCCILAllcnDtAndTm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC CIL Allocation Date and Time</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -195,9 +204,10 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 	 */
 	public static final MMMessageAttribute mmDTCCILAllocationDateAndTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmObject();
 			isDerived = false;
 			xmlTag = "DTCCILAllcnDtAndTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC CIL Allocation Date and Time"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCILAllocationDateAndTime";
 			definition = "Date and time at which Cash In Lieu (CIL) will be paid to DTC  (The Depository Trust Corporation) participants. On a single option that has multiple payouts, one of which is CIL, the payouts can be allocated on different days.";
@@ -210,9 +220,10 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmPlaceAndName, CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmDTCAllocationDateAndTime,
-						CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmDTCCILAllocationDateAndTime);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmPlaceAndName,
+						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmDTCAllocationDateAndTime,
+						com.tools20022.repository.msg.CorporateActionOptionSecuritiesMovementDateDetailsExtension1.mmDTCCILAllocationDateAndTime);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionOptionSecuritiesMovementDateDetailsExtension1";
 				definition = "Provides additional information regarding corporate action securities movement date details.";
@@ -221,30 +232,30 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionOptionSecuritiesMovementDateDetailsExtension1 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "DTCAllcnDtAndTm")
-	public ISODateTime getDTCAllocationDateAndTime() {
-		return dTCAllocationDateAndTime;
+	public Optional<ISODateTime> getDTCAllocationDateAndTime() {
+		return dTCAllocationDateAndTime == null ? Optional.empty() : Optional.of(dTCAllocationDateAndTime);
 	}
 
-	public void setDTCAllocationDateAndTime(ISODateTime dTCAllocationDateAndTime) {
+	public CorporateActionOptionSecuritiesMovementDateDetailsExtension1 setDTCAllocationDateAndTime(ISODateTime dTCAllocationDateAndTime) {
 		this.dTCAllocationDateAndTime = dTCAllocationDateAndTime;
+		return this;
 	}
 
-	@XmlElement(name = "DTCCILAllcnDtAndTm")
-	public ISODateTime getDTCCILAllocationDateAndTime() {
-		return dTCCILAllocationDateAndTime;
+	public Optional<ISODateTime> getDTCCILAllocationDateAndTime() {
+		return dTCCILAllocationDateAndTime == null ? Optional.empty() : Optional.of(dTCCILAllocationDateAndTime);
 	}
 
-	public void setDTCCILAllocationDateAndTime(ISODateTime dTCCILAllocationDateAndTime) {
+	public CorporateActionOptionSecuritiesMovementDateDetailsExtension1 setDTCCILAllocationDateAndTime(ISODateTime dTCCILAllocationDateAndTime) {
 		this.dTCCILAllocationDateAndTime = dTCCILAllocationDateAndTime;
+		return this;
 	}
 }

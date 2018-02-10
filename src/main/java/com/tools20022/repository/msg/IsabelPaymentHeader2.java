@@ -28,6 +28,8 @@ import com.tools20022.repository.datatype.Max6Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +72,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -83,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Specifies the header information for a payment initiation file."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IsabelPaymentHeader2", propOrder = {"actualSenderIdentification", "senderPKIIdentification", "contractIdentification", "payloadCreationDate", "file", "qualifiedTransactionType", "urgencyCode", "enhanced"})
 public class IsabelPaymentHeader2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ActlSndrId", required = true)
 	protected Max13AlphaNumericText actualSenderIdentification;
 	/**
-	 * Unique identification of the actual sender of the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +122,7 @@ public class IsabelPaymentHeader2 {
 	 */
 	public static final MMMessageAttribute mmActualSenderIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelPaymentHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "ActlSndrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,11 +133,11 @@ public class IsabelPaymentHeader2 {
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "SndrPKIId", required = true)
 	protected Max13AlphaNumericText senderPKIIdentification;
 	/**
-	 * Unique identification of the public key identification user
-	 * identification of the sender of the file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +167,7 @@ public class IsabelPaymentHeader2 {
 	 */
 	public static final MMMessageAttribute mmSenderPKIIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelPaymentHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "SndrPKIId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,12 +178,11 @@ public class IsabelPaymentHeader2 {
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrctId", required = true)
 	protected Max13AlphaNumericText contractIdentification;
 	/**
-	 * Administrative contract identification of the e-banking contract in which
-	 * context this payment has been sent (and as such should be validated and
-	 * executed).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +212,7 @@ public class IsabelPaymentHeader2 {
 	 */
 	public static final MMMessageAttribute mmContractIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelPaymentHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "CtrctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,10 +223,11 @@ public class IsabelPaymentHeader2 {
 			simpleType_lazy = () -> Max13AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "PyldCreDt", required = true)
 	protected DateAndDateTimeChoice payloadCreationDate;
 	/**
-	 * Date and time at which the file in the payload was actually created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -252,7 +255,7 @@ public class IsabelPaymentHeader2 {
 	 */
 	public static final MMMessageAssociationEnd mmPayloadCreationDate = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelPaymentHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "PyldCreDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,10 +267,11 @@ public class IsabelPaymentHeader2 {
 			type_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "File", required = true)
 	protected IsabelFile1 file;
 	/**
-	 * Characteristics of the file contained in the payload.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -293,7 +297,7 @@ public class IsabelPaymentHeader2 {
 	 */
 	public static final MMMessageAssociationEnd mmFile = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelPaymentHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "File";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -305,11 +309,11 @@ public class IsabelPaymentHeader2 {
 			type_lazy = () -> com.tools20022.repository.msg.IsabelFile1.mmObject();
 		}
 	};
+	@XmlElement(name = "QlfdTxTp", required = true)
 	protected Max6Text qualifiedTransactionType;
 	/**
-	 * High level category of transactions provided in the payload file, such as
-	 * a salary payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -338,7 +342,7 @@ public class IsabelPaymentHeader2 {
 	 */
 	public static final MMMessageAttribute mmQualifiedTransactionType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelPaymentHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "QlfdTxTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -349,10 +353,11 @@ public class IsabelPaymentHeader2 {
 			simpleType_lazy = () -> Max6Text.mmObject();
 		}
 	};
+	@XmlElement(name = "UrgcyCd", required = true)
 	protected Priority4Code urgencyCode;
 	/**
-	 * Urgency level of file in the payload.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -380,7 +385,7 @@ public class IsabelPaymentHeader2 {
 	 */
 	public static final MMMessageAttribute mmUrgencyCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelPaymentHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "UrgcyCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -391,10 +396,11 @@ public class IsabelPaymentHeader2 {
 			simpleType_lazy = () -> Priority4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Nhncd")
 	protected IsabelEnhancedHeader1 enhanced;
 	/**
-	 * Enhanced parameters for an Isabel payment initiation file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -421,7 +427,7 @@ public class IsabelPaymentHeader2 {
 	 */
 	public static final MMMessageAssociationEnd mmEnhanced = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelPaymentHeader2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelPaymentHeader2.mmObject();
 			isDerived = false;
 			xmlTag = "Nhncd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -437,9 +443,10 @@ public class IsabelPaymentHeader2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IsabelPaymentHeader2.mmActualSenderIdentification, IsabelPaymentHeader2.mmSenderPKIIdentification, IsabelPaymentHeader2.mmContractIdentification,
-						IsabelPaymentHeader2.mmPayloadCreationDate, IsabelPaymentHeader2.mmFile, IsabelPaymentHeader2.mmQualifiedTransactionType, IsabelPaymentHeader2.mmUrgencyCode, IsabelPaymentHeader2.mmEnhanced);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelPaymentHeader2.mmActualSenderIdentification, com.tools20022.repository.msg.IsabelPaymentHeader2.mmSenderPKIIdentification,
+						com.tools20022.repository.msg.IsabelPaymentHeader2.mmContractIdentification, com.tools20022.repository.msg.IsabelPaymentHeader2.mmPayloadCreationDate, com.tools20022.repository.msg.IsabelPaymentHeader2.mmFile,
+						com.tools20022.repository.msg.IsabelPaymentHeader2.mmQualifiedTransactionType, com.tools20022.repository.msg.IsabelPaymentHeader2.mmUrgencyCode, com.tools20022.repository.msg.IsabelPaymentHeader2.mmEnhanced);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelPaymentHeader2";
 				definition = "Specifies the header information for a payment initiation file.";
@@ -448,75 +455,75 @@ public class IsabelPaymentHeader2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ActlSndrId", required = true)
 	public Max13AlphaNumericText getActualSenderIdentification() {
 		return actualSenderIdentification;
 	}
 
-	public void setActualSenderIdentification(Max13AlphaNumericText actualSenderIdentification) {
-		this.actualSenderIdentification = actualSenderIdentification;
+	public IsabelPaymentHeader2 setActualSenderIdentification(Max13AlphaNumericText actualSenderIdentification) {
+		this.actualSenderIdentification = Objects.requireNonNull(actualSenderIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "SndrPKIId", required = true)
 	public Max13AlphaNumericText getSenderPKIIdentification() {
 		return senderPKIIdentification;
 	}
 
-	public void setSenderPKIIdentification(Max13AlphaNumericText senderPKIIdentification) {
-		this.senderPKIIdentification = senderPKIIdentification;
+	public IsabelPaymentHeader2 setSenderPKIIdentification(Max13AlphaNumericText senderPKIIdentification) {
+		this.senderPKIIdentification = Objects.requireNonNull(senderPKIIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CtrctId", required = true)
 	public Max13AlphaNumericText getContractIdentification() {
 		return contractIdentification;
 	}
 
-	public void setContractIdentification(Max13AlphaNumericText contractIdentification) {
-		this.contractIdentification = contractIdentification;
+	public IsabelPaymentHeader2 setContractIdentification(Max13AlphaNumericText contractIdentification) {
+		this.contractIdentification = Objects.requireNonNull(contractIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PyldCreDt", required = true)
 	public DateAndDateTimeChoice getPayloadCreationDate() {
 		return payloadCreationDate;
 	}
 
-	public void setPayloadCreationDate(DateAndDateTimeChoice payloadCreationDate) {
-		this.payloadCreationDate = payloadCreationDate;
+	public IsabelPaymentHeader2 setPayloadCreationDate(DateAndDateTimeChoice payloadCreationDate) {
+		this.payloadCreationDate = Objects.requireNonNull(payloadCreationDate);
+		return this;
 	}
 
-	@XmlElement(name = "File", required = true)
 	public IsabelFile1 getFile() {
 		return file;
 	}
 
-	public void setFile(com.tools20022.repository.msg.IsabelFile1 file) {
-		this.file = file;
+	public IsabelPaymentHeader2 setFile(com.tools20022.repository.msg.IsabelFile1 file) {
+		this.file = Objects.requireNonNull(file);
+		return this;
 	}
 
-	@XmlElement(name = "QlfdTxTp", required = true)
 	public Max6Text getQualifiedTransactionType() {
 		return qualifiedTransactionType;
 	}
 
-	public void setQualifiedTransactionType(Max6Text qualifiedTransactionType) {
-		this.qualifiedTransactionType = qualifiedTransactionType;
+	public IsabelPaymentHeader2 setQualifiedTransactionType(Max6Text qualifiedTransactionType) {
+		this.qualifiedTransactionType = Objects.requireNonNull(qualifiedTransactionType);
+		return this;
 	}
 
-	@XmlElement(name = "UrgcyCd", required = true)
 	public Priority4Code getUrgencyCode() {
 		return urgencyCode;
 	}
 
-	public void setUrgencyCode(Priority4Code urgencyCode) {
-		this.urgencyCode = urgencyCode;
+	public IsabelPaymentHeader2 setUrgencyCode(Priority4Code urgencyCode) {
+		this.urgencyCode = Objects.requireNonNull(urgencyCode);
+		return this;
 	}
 
-	@XmlElement(name = "Nhncd")
-	public IsabelEnhancedHeader1 getEnhanced() {
-		return enhanced;
+	public Optional<IsabelEnhancedHeader1> getEnhanced() {
+		return enhanced == null ? Optional.empty() : Optional.of(enhanced);
 	}
 
-	public void setEnhanced(com.tools20022.repository.msg.IsabelEnhancedHeader1 enhanced) {
+	public IsabelPaymentHeader2 setEnhanced(com.tools20022.repository.msg.IsabelEnhancedHeader1 enhanced) {
 		this.enhanced = enhanced;
+		return this;
 	}
 }

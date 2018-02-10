@@ -28,9 +28,8 @@ import com.tools20022.repository.choice.PartyIdentification35Choice;
 import com.tools20022.repository.entity.Clearing;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +73,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides the clearing details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Clearing3", propOrder = {"clearingMember", "clearingSegment"})
 public class Clearing3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ClrMmb", required = true)
 	protected List<com.tools20022.repository.msg.PartyIdentificationAndAccount78> clearingMember;
 	/**
-	 * Provides details about the clearing member identification and account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +128,7 @@ public class Clearing3 {
 	public static final MMMessageAttribute mmClearingMember = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Clearing3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Clearing3.mmObject();
 			isDerived = false;
 			xmlTag = "ClrMmb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,14 +138,11 @@ public class Clearing3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount78.mmObject();
 		}
 	};
+	@XmlElement(name = "ClrSgmt")
 	protected PartyIdentification35Choice clearingSegment;
 	/**
-	 * Clearing organisation that will clear the trade.<br>
-	 * Note: This field allows Clearing Member Firm to segregate flows coming
-	 * from clearing counterparty's clearing system. Indeed, Clearing Member
-	 * Firms receive messages from the same system (same sender) and this field
-	 * allows them to know if the message is related to equities or derivatives.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,7 +177,7 @@ public class Clearing3 {
 	public static final MMMessageAttribute mmClearingSegment = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Clearing3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Clearing3.mmObject();
 			isDerived = false;
 			xmlTag = "ClrSgmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,11 +192,11 @@ public class Clearing3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Clearing3.mmClearingMember, Clearing3.mmClearingSegment);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Clearing3.mmClearingMember, com.tools20022.repository.msg.Clearing3.mmClearingSegment);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationResponseV01.mmClearingDetails, SecuritiesTradeConfirmationV01.mmClearingDetails, SecuritiesTradeConfirmationV02.mmClearingDetails,
 						SecuritiesTradeConfirmationV03.mmClearingDetails);
 				trace_lazy = () -> Clearing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Clearing3";
 				definition = "Provides the clearing details.";
@@ -208,21 +205,21 @@ public class Clearing3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ClrMmb", required = true)
 	public List<PartyIdentificationAndAccount78> getClearingMember() {
-		return clearingMember;
+		return clearingMember == null ? clearingMember = new ArrayList<>() : clearingMember;
 	}
 
-	public void setClearingMember(List<com.tools20022.repository.msg.PartyIdentificationAndAccount78> clearingMember) {
-		this.clearingMember = clearingMember;
+	public Clearing3 setClearingMember(List<com.tools20022.repository.msg.PartyIdentificationAndAccount78> clearingMember) {
+		this.clearingMember = Objects.requireNonNull(clearingMember);
+		return this;
 	}
 
-	@XmlElement(name = "ClrSgmt")
-	public PartyIdentification35Choice getClearingSegment() {
-		return clearingSegment;
+	public Optional<PartyIdentification35Choice> getClearingSegment() {
+		return clearingSegment == null ? Optional.empty() : Optional.of(clearingSegment);
 	}
 
-	public void setClearingSegment(PartyIdentification35Choice clearingSegment) {
+	public Clearing3 setClearingSegment(PartyIdentification35Choice clearingSegment) {
 		this.clearingSegment = clearingSegment;
+		return this;
 	}
 }

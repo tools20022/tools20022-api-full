@@ -28,6 +28,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +71,23 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline#forAccountManagementMessageReference2
+ * ConstraintOtherReferenceGuideline.forAccountManagementMessageReference2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline#forAccountManagementMessageReference2
+ * ConstraintPreviousReferenceGuideline.forAccountManagementMessageReference2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintLinkedReferenceOrAccountApplicationIdentificationRule#forAccountManagementMessageReference2
+ * ConstraintLinkedReferenceOrAccountApplicationIdentificationRule.
+ * forAccountManagementMessageReference2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,15 +112,16 @@ import javax.xml.bind.annotation.XmlType;
  * AccountManagementMessageReference1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountManagementMessageReference2", propOrder = {"linkedReference", "statusRequestType", "accountApplicationIdentification", "investmentAccount"})
 public class AccountManagementMessageReference2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LkdRef")
 	protected LinkedMessage2Choice linkedReference;
 	/**
-	 * Reference to a linked message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -138,7 +156,7 @@ public class AccountManagementMessageReference2 {
 	 */
 	public static final MMMessageAssociationEnd mmLinkedReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountManagementMessageReference2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference2.mmObject();
 			isDerived = false;
 			xmlTag = "LkdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,11 +169,11 @@ public class AccountManagementMessageReference2 {
 			type_lazy = () -> LinkedMessage2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "StsReqTp", required = true)
 	protected AccountManagementType1Code statusRequestType;
 	/**
-	 * Specifies if the status request refers to an earlier account opening or
-	 * modification instruction message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,7 +216,7 @@ public class AccountManagementMessageReference2 {
 	 */
 	public static final MMMessageAttribute mmStatusRequestType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountManagementMessageReference2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference2.mmObject();
 			isDerived = false;
 			xmlTag = "StsReqTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -211,11 +229,11 @@ public class AccountManagementMessageReference2 {
 			simpleType_lazy = () -> AccountManagementType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctApplId")
 	protected Max35Text accountApplicationIdentification;
 	/**
-	 * Unique and unambiguous identifier of the account opening or account
-	 * modification instruction at application level.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -257,7 +275,7 @@ public class AccountManagementMessageReference2 {
 	 */
 	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountManagementMessageReference2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctApplId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,11 +288,11 @@ public class AccountManagementMessageReference2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstmtAcct")
 	protected InvestmentAccount45 investmentAccount;
 	/**
-	 * Account information for which the status of an account management
-	 * instruction is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -315,7 +333,7 @@ public class AccountManagementMessageReference2 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> AccountManagementMessageReference2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementMessageReference2.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -333,10 +351,13 @@ public class AccountManagementMessageReference2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountManagementMessageReference2.mmLinkedReference, AccountManagementMessageReference2.mmStatusRequestType, AccountManagementMessageReference2.mmAccountApplicationIdentification,
-						AccountManagementMessageReference2.mmInvestmentAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementMessageReference2.mmLinkedReference, com.tools20022.repository.msg.AccountManagementMessageReference2.mmStatusRequestType,
+						com.tools20022.repository.msg.AccountManagementMessageReference2.mmAccountApplicationIdentification, com.tools20022.repository.msg.AccountManagementMessageReference2.mmInvestmentAccount);
 				messageBuildingBlock_lazy = () -> Arrays.asList(RequestForAccountManagementStatusReportV03.mmRequestDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherReferenceGuideline.forAccountManagementMessageReference2,
+						com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline.forAccountManagementMessageReference2,
+						com.tools20022.repository.constraints.ConstraintLinkedReferenceOrAccountApplicationIdentificationRule.forAccountManagementMessageReference2);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountManagementMessageReference2";
 				definition = "Information about the message reference of the account management instruction message for which the status is requested .";
@@ -347,39 +368,39 @@ public class AccountManagementMessageReference2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LkdRef")
-	public LinkedMessage2Choice getLinkedReference() {
-		return linkedReference;
+	public Optional<LinkedMessage2Choice> getLinkedReference() {
+		return linkedReference == null ? Optional.empty() : Optional.of(linkedReference);
 	}
 
-	public void setLinkedReference(LinkedMessage2Choice linkedReference) {
+	public AccountManagementMessageReference2 setLinkedReference(LinkedMessage2Choice linkedReference) {
 		this.linkedReference = linkedReference;
+		return this;
 	}
 
-	@XmlElement(name = "StsReqTp", required = true)
 	public AccountManagementType1Code getStatusRequestType() {
 		return statusRequestType;
 	}
 
-	public void setStatusRequestType(AccountManagementType1Code statusRequestType) {
-		this.statusRequestType = statusRequestType;
+	public AccountManagementMessageReference2 setStatusRequestType(AccountManagementType1Code statusRequestType) {
+		this.statusRequestType = Objects.requireNonNull(statusRequestType);
+		return this;
 	}
 
-	@XmlElement(name = "AcctApplId")
-	public Max35Text getAccountApplicationIdentification() {
-		return accountApplicationIdentification;
+	public Optional<Max35Text> getAccountApplicationIdentification() {
+		return accountApplicationIdentification == null ? Optional.empty() : Optional.of(accountApplicationIdentification);
 	}
 
-	public void setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
+	public AccountManagementMessageReference2 setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
 		this.accountApplicationIdentification = accountApplicationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "InvstmtAcct")
-	public InvestmentAccount45 getInvestmentAccount() {
-		return investmentAccount;
+	public Optional<InvestmentAccount45> getInvestmentAccount() {
+		return investmentAccount == null ? Optional.empty() : Optional.of(investmentAccount);
 	}
 
-	public void setInvestmentAccount(com.tools20022.repository.msg.InvestmentAccount45 investmentAccount) {
+	public AccountManagementMessageReference2 setInvestmentAccount(com.tools20022.repository.msg.InvestmentAccount45 investmentAccount) {
 		this.investmentAccount = investmentAccount;
+		return this;
 	}
 }

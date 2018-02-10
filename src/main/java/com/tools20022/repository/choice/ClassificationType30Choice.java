@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification36;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ClassificationType30Choice", propOrder = {"classificationFinancialInstrument", "alternateClassification"})
 public class ClassificationType30Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ClssfctnFinInstrm", required = true)
 	protected CFIIdentifier classificationFinancialInstrument;
 	/**
-	 * ISO 10962 Classification of Financial Instrument (CFI)
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -101,6 +104,9 @@ public class ClassificationType30Choice {
 	 * ClassificationType30Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ClssfctnFinInstrm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :12C:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -123,9 +129,10 @@ public class ClassificationType30Choice {
 	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
-			componentContext_lazy = () -> ClassificationType30Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ClassificationType30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ClssfctnFinInstrm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":12C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationFinancialInstrument";
 			definition = "ISO 10962 Classification of Financial Instrument (CFI)";
@@ -135,10 +142,11 @@ public class ClassificationType30Choice {
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "AltrnClssfctn", required = true)
 	protected GenericIdentification36 alternateClassification;
 	/**
-	 * Proprietary classification of financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,6 +166,9 @@ public class ClassificationType30Choice {
 	 * ClassificationType30Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AltrnClssfctn"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :12A:</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -180,9 +191,10 @@ public class ClassificationType30Choice {
 	public static final MMMessageAttribute mmAlternateClassification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmClassificationType;
-			componentContext_lazy = () -> ClassificationType30Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ClassificationType30Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AltrnClssfctn";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":12A:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateClassification";
 			definition = "Proprietary classification of financial instrument.";
@@ -196,9 +208,10 @@ public class ClassificationType30Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ClassificationType30Choice.mmClassificationFinancialInstrument, ClassificationType30Choice.mmAlternateClassification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClassificationType30Choice.mmClassificationFinancialInstrument,
+						com.tools20022.repository.choice.ClassificationType30Choice.mmAlternateClassification);
 				trace_lazy = () -> AssetClassification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClassificationType30Choice";
 				definition = "Choice of format for the classification.";
@@ -208,21 +221,21 @@ public class ClassificationType30Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ClssfctnFinInstrm", required = true)
 	public CFIIdentifier getClassificationFinancialInstrument() {
 		return classificationFinancialInstrument;
 	}
 
-	public void setClassificationFinancialInstrument(CFIIdentifier classificationFinancialInstrument) {
-		this.classificationFinancialInstrument = classificationFinancialInstrument;
+	public ClassificationType30Choice setClassificationFinancialInstrument(CFIIdentifier classificationFinancialInstrument) {
+		this.classificationFinancialInstrument = Objects.requireNonNull(classificationFinancialInstrument);
+		return this;
 	}
 
-	@XmlElement(name = "AltrnClssfctn", required = true)
 	public GenericIdentification36 getAlternateClassification() {
 		return alternateClassification;
 	}
 
-	public void setAlternateClassification(GenericIdentification36 alternateClassification) {
-		this.alternateClassification = alternateClassification;
+	public ClassificationType30Choice setAlternateClassification(GenericIdentification36 alternateClassification) {
+		this.alternateClassification = Objects.requireNonNull(alternateClassification);
+		return this;
 	}
 }

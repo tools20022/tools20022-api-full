@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -27,9 +28,8 @@ import com.tools20022.repository.choice.SafekeepingPlaceFormat11Choice;
 import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -75,8 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule#forAccountIdentification41
+ * ConstraintSafekeepingPlaceRule.forAccountIdentification41}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,15 +97,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountIdentification41", propOrder = {"safekeepingAccount", "accountOwner", "safekeepingPlace", "corporateActionEventAndBalance"})
 public class AccountIdentification41 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SfkpgAcct", required = true)
 	protected RestrictedFINXMax35Text safekeepingAccount;
 	/**
-	 * Account where financial instruments are maintained.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,6 +127,9 @@ public class AccountIdentification41 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SfkpgAcct"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :97A::SAFE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -131,9 +143,10 @@ public class AccountIdentification41 {
 	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesAccount.mmObject();
-			componentContext_lazy = () -> AccountIdentification41.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification41.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgAcct";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":97A::SAFE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account where financial instruments are maintained.";
@@ -142,10 +155,11 @@ public class AccountIdentification41 {
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification103Choice accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -165,6 +179,9 @@ public class AccountIdentification41 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AcctOwnr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95a::ACOW</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -178,9 +195,10 @@ public class AccountIdentification41 {
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> AccountIdentification41.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification41.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95a::ACOW"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
@@ -190,10 +208,11 @@ public class AccountIdentification41 {
 			type_lazy = () -> PartyIdentification103Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SfkpgPlc")
 	protected SafekeepingPlaceFormat11Choice safekeepingPlace;
 	/**
-	 * Location where the financial instruments are/will be safekept.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -213,6 +232,9 @@ public class AccountIdentification41 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SfkpgPlc"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :94a::SAFE</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -227,9 +249,10 @@ public class AccountIdentification41 {
 	public static final MMMessageAssociationEnd mmSafekeepingPlace = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SafekeepingPlace.mmObject();
-			componentContext_lazy = () -> AccountIdentification41.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification41.mmObject();
 			isDerived = false;
 			xmlTag = "SfkpgPlc";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94a::SAFE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Location where the financial instruments are/will be safekept.";
@@ -239,11 +262,11 @@ public class AccountIdentification41 {
 			type_lazy = () -> SafekeepingPlaceFormat11Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CorpActnEvtAndBal")
 	protected List<com.tools20022.repository.msg.CorporateActionEventAndBalance12> corporateActionEventAndBalance;
 	/**
-	 * Detailed account holdings information report for a corporate action
-	 * event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -278,7 +301,7 @@ public class AccountIdentification41 {
 	public static final MMMessageAssociationEnd mmCorporateActionEventAndBalance = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmCorporateEvent;
-			componentContext_lazy = () -> AccountIdentification41.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountIdentification41.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnEvtAndBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -293,11 +316,12 @@ public class AccountIdentification41 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountIdentification41.mmSafekeepingAccount, AccountIdentification41.mmAccountOwner, AccountIdentification41.mmSafekeepingPlace,
-						AccountIdentification41.mmCorporateActionEventAndBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountIdentification41.mmSafekeepingAccount, com.tools20022.repository.msg.AccountIdentification41.mmAccountOwner,
+						com.tools20022.repository.msg.AccountIdentification41.mmSafekeepingPlace, com.tools20022.repository.msg.AccountIdentification41.mmCorporateActionEventAndBalance);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionStatementReport002V06.mmAccountAndStatementDetails);
 				trace_lazy = () -> AccountIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountIdentification41);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification41";
 				definition = "Account information and detailed account holdings information report for corporate action events.";
@@ -306,39 +330,39 @@ public class AccountIdentification41 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SfkpgAcct", required = true)
 	public RestrictedFINXMax35Text getSafekeepingAccount() {
 		return safekeepingAccount;
 	}
 
-	public void setSafekeepingAccount(RestrictedFINXMax35Text safekeepingAccount) {
-		this.safekeepingAccount = safekeepingAccount;
+	public AccountIdentification41 setSafekeepingAccount(RestrictedFINXMax35Text safekeepingAccount) {
+		this.safekeepingAccount = Objects.requireNonNull(safekeepingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification103Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification103Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification103Choice accountOwner) {
+	public AccountIdentification41 setAccountOwner(PartyIdentification103Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "SfkpgPlc")
-	public SafekeepingPlaceFormat11Choice getSafekeepingPlace() {
-		return safekeepingPlace;
+	public Optional<SafekeepingPlaceFormat11Choice> getSafekeepingPlace() {
+		return safekeepingPlace == null ? Optional.empty() : Optional.of(safekeepingPlace);
 	}
 
-	public void setSafekeepingPlace(SafekeepingPlaceFormat11Choice safekeepingPlace) {
+	public AccountIdentification41 setSafekeepingPlace(SafekeepingPlaceFormat11Choice safekeepingPlace) {
 		this.safekeepingPlace = safekeepingPlace;
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnEvtAndBal")
 	public List<CorporateActionEventAndBalance12> getCorporateActionEventAndBalance() {
-		return corporateActionEventAndBalance;
+		return corporateActionEventAndBalance == null ? corporateActionEventAndBalance = new ArrayList<>() : corporateActionEventAndBalance;
 	}
 
-	public void setCorporateActionEventAndBalance(List<com.tools20022.repository.msg.CorporateActionEventAndBalance12> corporateActionEventAndBalance) {
-		this.corporateActionEventAndBalance = corporateActionEventAndBalance;
+	public AccountIdentification41 setCorporateActionEventAndBalance(List<com.tools20022.repository.msg.CorporateActionEventAndBalance12> corporateActionEventAndBalance) {
+		this.corporateActionEventAndBalance = Objects.requireNonNull(corporateActionEventAndBalance);
+		return this;
 	}
 }

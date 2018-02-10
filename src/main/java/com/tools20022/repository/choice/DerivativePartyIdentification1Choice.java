@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "DerivativePartyIdentification1Choice", propOrder = {"country", "countrySubDivision", "LEI"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "DerivativePartyIdentification1Choice", propOrder = {"country", "countrySubDivision", "lEI"})
 public class DerivativePartyIdentification1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ctry", required = true)
 	protected CountryCode country;
 	/**
-	 * Country of the reference entity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +118,7 @@ public class DerivativePartyIdentification1Choice {
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
-			componentContext_lazy = () -> DerivativePartyIdentification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +129,11 @@ public class DerivativePartyIdentification1Choice {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrySubDvsn", required = true)
 	protected CountrySubDivisionCode countrySubDivision;
 	/**
-	 * Country and country sub-division of the reference entity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -165,7 +168,7 @@ public class DerivativePartyIdentification1Choice {
 	public static final MMMessageAttribute mmCountrySubDivision = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmState;
-			componentContext_lazy = () -> DerivativePartyIdentification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CtrySubDvsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,10 +179,11 @@ public class DerivativePartyIdentification1Choice {
 			simpleType_lazy = () -> CountrySubDivisionCode.mmObject();
 		}
 	};
+	@XmlElement(name = "LEI", required = true)
 	protected LEIIdentifier lEI;
 	/**
-	 * Identification of the reference party through Legal entity identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -214,7 +218,7 @@ public class DerivativePartyIdentification1Choice {
 	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
-			componentContext_lazy = () -> DerivativePartyIdentification1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LEI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,9 +233,10 @@ public class DerivativePartyIdentification1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DerivativePartyIdentification1Choice.mmCountry, DerivativePartyIdentification1Choice.mmCountrySubDivision, DerivativePartyIdentification1Choice.mmLEI);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmCountry, com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmCountrySubDivision,
+						com.tools20022.repository.choice.DerivativePartyIdentification1Choice.mmLEI);
 				trace_lazy = () -> Organisation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DerivativePartyIdentification1Choice";
 				definition = "Reference entity of a single name credit default swap (CDS) or a derivative on single name credit default swap (CDS).";
@@ -240,30 +245,30 @@ public class DerivativePartyIdentification1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
 
-	public void setCountry(CountryCode country) {
-		this.country = country;
+	public DerivativePartyIdentification1Choice setCountry(CountryCode country) {
+		this.country = Objects.requireNonNull(country);
+		return this;
 	}
 
-	@XmlElement(name = "CtrySubDvsn", required = true)
 	public CountrySubDivisionCode getCountrySubDivision() {
 		return countrySubDivision;
 	}
 
-	public void setCountrySubDivision(CountrySubDivisionCode countrySubDivision) {
-		this.countrySubDivision = countrySubDivision;
+	public DerivativePartyIdentification1Choice setCountrySubDivision(CountrySubDivisionCode countrySubDivision) {
+		this.countrySubDivision = Objects.requireNonNull(countrySubDivision);
+		return this;
 	}
 
-	@XmlElement(name = "LEI", required = true)
 	public LEIIdentifier getLEI() {
 		return lEI;
 	}
 
-	public void setLEI(LEIIdentifier lEI) {
-		this.lEI = lEI;
+	public DerivativePartyIdentification1Choice setLEI(LEIIdentifier lEI) {
+		this.lEI = Objects.requireNonNull(lEI);
+		return this;
 	}
 }

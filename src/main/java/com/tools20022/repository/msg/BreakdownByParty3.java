@@ -22,9 +22,8 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,16 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * BreakdownByParty1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BreakdownByParty3", propOrder = {"party", "additionalParameters", "cashInForecast", "cashOutForecast", "netCashForecast"})
 public class BreakdownByParty3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pty", required = true)
 	protected InvestmentAccount42 party;
 	/**
-	 * Party, for example, fund management company, for which the cash flow is
-	 * being reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +117,7 @@ public class BreakdownByParty3 {
 	 */
 	public static final MMMessageAttribute mmParty = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BreakdownByParty3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByParty3.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +129,11 @@ public class BreakdownByParty3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.InvestmentAccount42.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlParams")
 	protected AdditionalParameters1 additionalParameters;
 	/**
-	 * Additional parameter/s applied to the cash flow by party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -165,7 +165,7 @@ public class BreakdownByParty3 {
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalParameters = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BreakdownByParty3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByParty3.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,11 +178,11 @@ public class BreakdownByParty3 {
 			type_lazy = () -> com.tools20022.repository.msg.AdditionalParameters1.mmObject();
 		}
 	};
+	@XmlElement(name = "CshInFcst")
 	protected List<com.tools20022.repository.msg.CashInForecast5> cashInForecast;
 	/**
-	 * Cash movement into the fund as a result of transactions in shares in an
-	 * investment fund, for example, subscriptions or switch-ins.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -215,7 +215,7 @@ public class BreakdownByParty3 {
 	 */
 	public static final MMMessageAssociationEnd mmCashInForecast = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BreakdownByParty3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByParty3.mmObject();
 			isDerived = false;
 			xmlTag = "CshInFcst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,11 +227,11 @@ public class BreakdownByParty3 {
 			type_lazy = () -> com.tools20022.repository.msg.CashInForecast5.mmObject();
 		}
 	};
+	@XmlElement(name = "CshOutFcst")
 	protected List<com.tools20022.repository.msg.CashOutForecast5> cashOutForecast;
 	/**
-	 * Cash movement out of the fund as a result of transactions in shares in an
-	 * investment fund, for example, redemptions or switch-outs.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -264,7 +264,7 @@ public class BreakdownByParty3 {
 	 */
 	public static final MMMessageAssociationEnd mmCashOutForecast = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BreakdownByParty3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByParty3.mmObject();
 			isDerived = false;
 			xmlTag = "CshOutFcst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,11 +276,11 @@ public class BreakdownByParty3 {
 			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast5.mmObject();
 		}
 	};
+	@XmlElement(name = "NetCshFcst")
 	protected List<com.tools20022.repository.msg.NetCashForecast4> netCashForecast;
 	/**
-	 * Net cash as a result of the cash-in and cash-out flows specified for the
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -313,7 +313,7 @@ public class BreakdownByParty3 {
 	 */
 	public static final MMMessageAssociationEnd mmNetCashForecast = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BreakdownByParty3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByParty3.mmObject();
 			isDerived = false;
 			xmlTag = "NetCshFcst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,8 +329,9 @@ public class BreakdownByParty3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BreakdownByParty3.mmParty, BreakdownByParty3.mmAdditionalParameters, BreakdownByParty3.mmCashInForecast, BreakdownByParty3.mmCashOutForecast, BreakdownByParty3.mmNetCashForecast);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByParty3.mmParty, com.tools20022.repository.msg.BreakdownByParty3.mmAdditionalParameters,
+						com.tools20022.repository.msg.BreakdownByParty3.mmCashInForecast, com.tools20022.repository.msg.BreakdownByParty3.mmCashOutForecast, com.tools20022.repository.msg.BreakdownByParty3.mmNetCashForecast);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BreakdownByParty3";
 				definition = "Specifies the cash-in and cash-out flows by party.";
@@ -340,48 +341,48 @@ public class BreakdownByParty3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pty", required = true)
 	public InvestmentAccount42 getParty() {
 		return party;
 	}
 
-	public void setParty(com.tools20022.repository.msg.InvestmentAccount42 party) {
-		this.party = party;
+	public BreakdownByParty3 setParty(com.tools20022.repository.msg.InvestmentAccount42 party) {
+		this.party = Objects.requireNonNull(party);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlParams")
-	public AdditionalParameters1 getAdditionalParameters() {
-		return additionalParameters;
+	public Optional<AdditionalParameters1> getAdditionalParameters() {
+		return additionalParameters == null ? Optional.empty() : Optional.of(additionalParameters);
 	}
 
-	public void setAdditionalParameters(com.tools20022.repository.msg.AdditionalParameters1 additionalParameters) {
+	public BreakdownByParty3 setAdditionalParameters(com.tools20022.repository.msg.AdditionalParameters1 additionalParameters) {
 		this.additionalParameters = additionalParameters;
+		return this;
 	}
 
-	@XmlElement(name = "CshInFcst")
 	public List<CashInForecast5> getCashInForecast() {
-		return cashInForecast;
+		return cashInForecast == null ? cashInForecast = new ArrayList<>() : cashInForecast;
 	}
 
-	public void setCashInForecast(List<com.tools20022.repository.msg.CashInForecast5> cashInForecast) {
-		this.cashInForecast = cashInForecast;
+	public BreakdownByParty3 setCashInForecast(List<com.tools20022.repository.msg.CashInForecast5> cashInForecast) {
+		this.cashInForecast = Objects.requireNonNull(cashInForecast);
+		return this;
 	}
 
-	@XmlElement(name = "CshOutFcst")
 	public List<CashOutForecast5> getCashOutForecast() {
-		return cashOutForecast;
+		return cashOutForecast == null ? cashOutForecast = new ArrayList<>() : cashOutForecast;
 	}
 
-	public void setCashOutForecast(List<com.tools20022.repository.msg.CashOutForecast5> cashOutForecast) {
-		this.cashOutForecast = cashOutForecast;
+	public BreakdownByParty3 setCashOutForecast(List<com.tools20022.repository.msg.CashOutForecast5> cashOutForecast) {
+		this.cashOutForecast = Objects.requireNonNull(cashOutForecast);
+		return this;
 	}
 
-	@XmlElement(name = "NetCshFcst")
 	public List<NetCashForecast4> getNetCashForecast() {
-		return netCashForecast;
+		return netCashForecast == null ? netCashForecast = new ArrayList<>() : netCashForecast;
 	}
 
-	public void setNetCashForecast(List<com.tools20022.repository.msg.NetCashForecast4> netCashForecast) {
-		this.netCashForecast = netCashForecast;
+	public BreakdownByParty3 setNetCashForecast(List<com.tools20022.repository.msg.NetCashForecast4> netCashForecast) {
+		this.netCashForecast = Objects.requireNonNull(netCashForecast);
+		return this;
 	}
 }

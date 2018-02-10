@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the state of the agreement of the custodian record when compared to
@@ -33,14 +38,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode#mmAgree
- * CustodianRecordAgreementTypeCode.mmAgree}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode#Agree
+ * CustodianRecordAgreementTypeCode.Agree}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode#mmDisagree
- * CustodianRecordAgreementTypeCode.mmDisagree}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode#Disagree
+ * CustodianRecordAgreementTypeCode.Disagree}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode#mmNoComposite
- * CustodianRecordAgreementTypeCode.mmNoComposite}</li>
+ * {@linkplain com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode#NoComposite
+ * CustodianRecordAgreementTypeCode.NoComposite}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -54,8 +59,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CustodianRecordAgreementTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CustodianRecordAgreementTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,12 +104,12 @@ public class CustodianRecordAgreementTypeCode {
 	 * definition} = "Custodian record agrees with the composite record."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgree = new MMCode() {
+	public static final CustodianRecordAgreementTypeCode Agree = new CustodianRecordAgreementTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agree";
 			definition = "Custodian record agrees with the composite record.";
-			owner_lazy = () -> CustodianRecordAgreementTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode.mmObject();
 			codeName = "AGRE";
 		}
 	};
@@ -128,12 +134,12 @@ public class CustodianRecordAgreementTypeCode {
 	 * definition} = "Custodian record disagrees with the composite record."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDisagree = new MMCode() {
+	public static final CustodianRecordAgreementTypeCode Disagree = new CustodianRecordAgreementTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disagree";
 			definition = "Custodian record disagrees with the composite record.";
-			owner_lazy = () -> CustodianRecordAgreementTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode.mmObject();
 			codeName = "DAGR";
 		}
 	};
@@ -158,28 +164,60 @@ public class CustodianRecordAgreementTypeCode {
 	 * definition} = "No composite record available."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoComposite = new MMCode() {
+	public static final CustodianRecordAgreementTypeCode NoComposite = new CustodianRecordAgreementTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoComposite";
 			definition = "No composite record available.";
-			owner_lazy = () -> CustodianRecordAgreementTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode.mmObject();
 			codeName = "NCOP";
 		}
 	};
+	final static private LinkedHashMap<String, CustodianRecordAgreementTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CustodianRecordAgreementTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AGRE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustodianRecordAgreementTypeCode";
 				definition = "Specifies the state of the agreement of the custodian record when compared to composite record.";
-				code_lazy = () -> Arrays.asList(CustodianRecordAgreementTypeCode.mmAgree, CustodianRecordAgreementTypeCode.mmDisagree, CustodianRecordAgreementTypeCode.mmNoComposite);
 				derivation_lazy = () -> Arrays.asList(CustodianRecordAgreementType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode.Agree, com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode.Disagree,
+						com.tools20022.repository.codeset.CustodianRecordAgreementTypeCode.NoComposite);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Agree.getCodeName().get(), Agree);
+		codesByName.put(Disagree.getCodeName().get(), Disagree);
+		codesByName.put(NoComposite.getCodeName().get(), NoComposite);
+	}
+
+	public static CustodianRecordAgreementTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CustodianRecordAgreementTypeCode[] values() {
+		CustodianRecordAgreementTypeCode[] values = new CustodianRecordAgreementTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CustodianRecordAgreementTypeCode> {
+		@Override
+		public CustodianRecordAgreementTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CustodianRecordAgreementTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

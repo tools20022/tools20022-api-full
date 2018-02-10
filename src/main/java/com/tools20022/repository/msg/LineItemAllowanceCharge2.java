@@ -28,9 +28,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.LineItem;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -71,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,15 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * LineItemAllowanceCharge1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LineItemAllowanceCharge2", propOrder = {"chargeIndicator", "actualAmount", "basisQuantity", "calculationPercent", "sequenceNumber", "reason"})
 public class LineItemAllowanceCharge2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ChrgInd")
 	protected YesNoIndicator chargeIndicator;
 	/**
-	 * Indication of whether or not this allowance charge is a charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,7 +137,7 @@ public class LineItemAllowanceCharge2 {
 	public static final MMMessageAttribute mmChargeIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeIndicator;
-			componentContext_lazy = () -> LineItemAllowanceCharge2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemAllowanceCharge2.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -149,10 +149,11 @@ public class LineItemAllowanceCharge2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ActlAmt")
 	protected List<CurrencyAndAmount> actualAmount;
 	/**
-	 * Actual monetary value of this allowance charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,7 +192,7 @@ public class LineItemAllowanceCharge2 {
 	public static final MMMessageAttribute mmActualAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> LineItemAllowanceCharge2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemAllowanceCharge2.mmObject();
 			isDerived = false;
 			xmlTag = "ActlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,10 +203,11 @@ public class LineItemAllowanceCharge2 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "BsisQty")
 	protected Quantity10 basisQuantity;
 	/**
-	 * Quantity on which this allowance charge is based.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -243,7 +245,7 @@ public class LineItemAllowanceCharge2 {
 	public static final MMMessageAttribute mmBasisQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LineItem.mmBilledQuantity;
-			componentContext_lazy = () -> LineItemAllowanceCharge2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemAllowanceCharge2.mmObject();
 			isDerived = false;
 			xmlTag = "BsisQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -255,10 +257,11 @@ public class LineItemAllowanceCharge2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Quantity10.mmObject();
 		}
 	};
+	@XmlElement(name = "ClctnPct")
 	protected PercentageRate calculationPercent;
 	/**
-	 * Percentage applied to calculate this allowance charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,7 +300,7 @@ public class LineItemAllowanceCharge2 {
 	public static final MMMessageAttribute mmCalculationPercent = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
-			componentContext_lazy = () -> LineItemAllowanceCharge2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemAllowanceCharge2.mmObject();
 			isDerived = false;
 			xmlTag = "ClctnPct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -309,10 +312,11 @@ public class LineItemAllowanceCharge2 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "SeqNb")
 	protected Number sequenceNumber;
 	/**
-	 * Specifies the order in which the allowance or charge is applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -345,7 +349,7 @@ public class LineItemAllowanceCharge2 {
 	 */
 	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> LineItemAllowanceCharge2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemAllowanceCharge2.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -357,10 +361,11 @@ public class LineItemAllowanceCharge2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn")
 	protected DiscountOrChargeType1Choice reason;
 	/**
-	 * Reason, expressed as text, for this allowance charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -399,7 +404,7 @@ public class LineItemAllowanceCharge2 {
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmReason;
-			componentContext_lazy = () -> LineItemAllowanceCharge2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LineItemAllowanceCharge2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -415,10 +420,11 @@ public class LineItemAllowanceCharge2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LineItemAllowanceCharge2.mmChargeIndicator, LineItemAllowanceCharge2.mmActualAmount, LineItemAllowanceCharge2.mmBasisQuantity, LineItemAllowanceCharge2.mmCalculationPercent,
-						LineItemAllowanceCharge2.mmSequenceNumber, LineItemAllowanceCharge2.mmReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LineItemAllowanceCharge2.mmChargeIndicator, com.tools20022.repository.msg.LineItemAllowanceCharge2.mmActualAmount,
+						com.tools20022.repository.msg.LineItemAllowanceCharge2.mmBasisQuantity, com.tools20022.repository.msg.LineItemAllowanceCharge2.mmCalculationPercent,
+						com.tools20022.repository.msg.LineItemAllowanceCharge2.mmSequenceNumber, com.tools20022.repository.msg.LineItemAllowanceCharge2.mmReason);
 				trace_lazy = () -> Adjustment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LineItemAllowanceCharge2";
 				definition = "Pricing component, such as a service, promotion, allowance or charge, for this line item.";
@@ -428,57 +434,57 @@ public class LineItemAllowanceCharge2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ChrgInd")
-	public YesNoIndicator getChargeIndicator() {
-		return chargeIndicator;
+	public Optional<YesNoIndicator> getChargeIndicator() {
+		return chargeIndicator == null ? Optional.empty() : Optional.of(chargeIndicator);
 	}
 
-	public void setChargeIndicator(YesNoIndicator chargeIndicator) {
+	public LineItemAllowanceCharge2 setChargeIndicator(YesNoIndicator chargeIndicator) {
 		this.chargeIndicator = chargeIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "ActlAmt")
 	public List<CurrencyAndAmount> getActualAmount() {
-		return actualAmount;
+		return actualAmount == null ? actualAmount = new ArrayList<>() : actualAmount;
 	}
 
-	public void setActualAmount(List<CurrencyAndAmount> actualAmount) {
-		this.actualAmount = actualAmount;
+	public LineItemAllowanceCharge2 setActualAmount(List<CurrencyAndAmount> actualAmount) {
+		this.actualAmount = Objects.requireNonNull(actualAmount);
+		return this;
 	}
 
-	@XmlElement(name = "BsisQty")
-	public Quantity10 getBasisQuantity() {
-		return basisQuantity;
+	public Optional<Quantity10> getBasisQuantity() {
+		return basisQuantity == null ? Optional.empty() : Optional.of(basisQuantity);
 	}
 
-	public void setBasisQuantity(com.tools20022.repository.msg.Quantity10 basisQuantity) {
+	public LineItemAllowanceCharge2 setBasisQuantity(com.tools20022.repository.msg.Quantity10 basisQuantity) {
 		this.basisQuantity = basisQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "ClctnPct")
-	public PercentageRate getCalculationPercent() {
-		return calculationPercent;
+	public Optional<PercentageRate> getCalculationPercent() {
+		return calculationPercent == null ? Optional.empty() : Optional.of(calculationPercent);
 	}
 
-	public void setCalculationPercent(PercentageRate calculationPercent) {
+	public LineItemAllowanceCharge2 setCalculationPercent(PercentageRate calculationPercent) {
 		this.calculationPercent = calculationPercent;
+		return this;
 	}
 
-	@XmlElement(name = "SeqNb")
-	public Number getSequenceNumber() {
-		return sequenceNumber;
+	public Optional<Number> getSequenceNumber() {
+		return sequenceNumber == null ? Optional.empty() : Optional.of(sequenceNumber);
 	}
 
-	public void setSequenceNumber(Number sequenceNumber) {
+	public LineItemAllowanceCharge2 setSequenceNumber(Number sequenceNumber) {
 		this.sequenceNumber = sequenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "Rsn")
-	public DiscountOrChargeType1Choice getReason() {
-		return reason;
+	public Optional<DiscountOrChargeType1Choice> getReason() {
+		return reason == null ? Optional.empty() : Optional.of(reason);
 	}
 
-	public void setReason(DiscountOrChargeType1Choice reason) {
+	public LineItemAllowanceCharge2 setReason(DiscountOrChargeType1Choice reason) {
 		this.reason = reason;
+		return this;
 	}
 }

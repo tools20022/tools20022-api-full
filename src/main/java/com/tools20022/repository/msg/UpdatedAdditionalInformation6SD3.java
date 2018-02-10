@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,24 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUseOfAdditionalInformationRule#forUpdatedAdditionalInformation6SD3
+ * ConstraintUseOfAdditionalInformationRule.forUpdatedAdditionalInformation6SD3}
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUseOfOfferorShareLocalCodeRule#forUpdatedAdditionalInformation6SD3
+ * ConstraintUseOfOfferorShareLocalCodeRule.forUpdatedAdditionalInformation6SD3}
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintUseOfOfferorShareRule#forUpdatedAdditionalInformation6SD3
+ * ConstraintUseOfOfferorShareRule.forUpdatedAdditionalInformation6SD3}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,18 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Extension for additional information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UpdatedAdditionalInformation6SD3", propOrder = {"placeAndName", "securitiesCreditAccountIdentification", "offerorShare", "offerorShareLocalCode", "localLanguageName"})
 public class UpdatedAdditionalInformation6SD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm")
 	protected Max350Text placeAndName;
 	/**
-	 * Unambiguous reference to the location where the supplementary data must
-	 * be inserted in the message instance. <br>
-	 * <br>
-	 * In the case of XML, this is expressed by a valid XPath.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +125,7 @@ public class UpdatedAdditionalInformation6SD3 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation6SD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,11 +136,11 @@ public class UpdatedAdditionalInformation6SD3 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesCdtAcctId")
 	protected Max50Text securitiesCreditAccountIdentification;
 	/**
-	 * Specifies the securities account to be credited.<br>
-	 * 会社法制の見直し要綱の、22ページ第３－１－①をご参照ください。
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -154,7 +169,7 @@ public class UpdatedAdditionalInformation6SD3 {
 	 */
 	public static final MMMessageAttribute mmSecuritiesCreditAccountIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation6SD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesCdtAcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,11 +180,11 @@ public class UpdatedAdditionalInformation6SD3 {
 			simpleType_lazy = () -> Max50Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OfferrShr")
 	protected ISINIdentifier offerorShare;
 	/**
-	 * ISIN of Offeror's share when the corporate action event type code is
-	 * TEND.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,7 +214,7 @@ public class UpdatedAdditionalInformation6SD3 {
 	 */
 	public static final MMMessageAttribute mmOfferorShare = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation6SD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
 			xmlTag = "OfferrShr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,12 +225,11 @@ public class UpdatedAdditionalInformation6SD3 {
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "OfferrShrLclCd")
 	protected Max5AlphaNumericText offerorShareLocalCode;
 	/**
-	 * Local code of Offeror's share when the corporate action event type code
-	 * is TEND.<br>
-	 * 買付者 銘柄コード
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,7 +259,7 @@ public class UpdatedAdditionalInformation6SD3 {
 	 */
 	public static final MMMessageAttribute mmOfferorShareLocalCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation6SD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
 			xmlTag = "OfferrShrLclCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,11 +270,11 @@ public class UpdatedAdditionalInformation6SD3 {
 			simpleType_lazy = () -> Max5AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "LclLangNm")
 	protected Max240Text localLanguageName;
 	/**
-	 * Name in the local language by which a party is known and which is usually
-	 * used to identify that party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -289,7 +303,7 @@ public class UpdatedAdditionalInformation6SD3 {
 	 */
 	public static final MMMessageAttribute mmLocalLanguageName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation6SD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmObject();
 			isDerived = false;
 			xmlTag = "LclLangNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -304,9 +318,13 @@ public class UpdatedAdditionalInformation6SD3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UpdatedAdditionalInformation6SD3.mmPlaceAndName, UpdatedAdditionalInformation6SD3.mmSecuritiesCreditAccountIdentification, UpdatedAdditionalInformation6SD3.mmOfferorShare,
-						UpdatedAdditionalInformation6SD3.mmOfferorShareLocalCode, UpdatedAdditionalInformation6SD3.mmLocalLanguageName);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmPlaceAndName,
+						com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmSecuritiesCreditAccountIdentification, com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmOfferorShare,
+						com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmOfferorShareLocalCode, com.tools20022.repository.msg.UpdatedAdditionalInformation6SD3.mmLocalLanguageName);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUseOfAdditionalInformationRule.forUpdatedAdditionalInformation6SD3,
+						com.tools20022.repository.constraints.ConstraintUseOfOfferorShareLocalCodeRule.forUpdatedAdditionalInformation6SD3,
+						com.tools20022.repository.constraints.ConstraintUseOfOfferorShareRule.forUpdatedAdditionalInformation6SD3);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UpdatedAdditionalInformation6SD3";
 				definition = "Extension for additional information.";
@@ -315,48 +333,48 @@ public class UpdatedAdditionalInformation6SD3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm")
-	public Max350Text getPlaceAndName() {
-		return placeAndName;
+	public Optional<Max350Text> getPlaceAndName() {
+		return placeAndName == null ? Optional.empty() : Optional.of(placeAndName);
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
+	public UpdatedAdditionalInformation6SD3 setPlaceAndName(Max350Text placeAndName) {
 		this.placeAndName = placeAndName;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesCdtAcctId")
-	public Max50Text getSecuritiesCreditAccountIdentification() {
-		return securitiesCreditAccountIdentification;
+	public Optional<Max50Text> getSecuritiesCreditAccountIdentification() {
+		return securitiesCreditAccountIdentification == null ? Optional.empty() : Optional.of(securitiesCreditAccountIdentification);
 	}
 
-	public void setSecuritiesCreditAccountIdentification(Max50Text securitiesCreditAccountIdentification) {
+	public UpdatedAdditionalInformation6SD3 setSecuritiesCreditAccountIdentification(Max50Text securitiesCreditAccountIdentification) {
 		this.securitiesCreditAccountIdentification = securitiesCreditAccountIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "OfferrShr")
-	public ISINIdentifier getOfferorShare() {
-		return offerorShare;
+	public Optional<ISINIdentifier> getOfferorShare() {
+		return offerorShare == null ? Optional.empty() : Optional.of(offerorShare);
 	}
 
-	public void setOfferorShare(ISINIdentifier offerorShare) {
+	public UpdatedAdditionalInformation6SD3 setOfferorShare(ISINIdentifier offerorShare) {
 		this.offerorShare = offerorShare;
+		return this;
 	}
 
-	@XmlElement(name = "OfferrShrLclCd")
-	public Max5AlphaNumericText getOfferorShareLocalCode() {
-		return offerorShareLocalCode;
+	public Optional<Max5AlphaNumericText> getOfferorShareLocalCode() {
+		return offerorShareLocalCode == null ? Optional.empty() : Optional.of(offerorShareLocalCode);
 	}
 
-	public void setOfferorShareLocalCode(Max5AlphaNumericText offerorShareLocalCode) {
+	public UpdatedAdditionalInformation6SD3 setOfferorShareLocalCode(Max5AlphaNumericText offerorShareLocalCode) {
 		this.offerorShareLocalCode = offerorShareLocalCode;
+		return this;
 	}
 
-	@XmlElement(name = "LclLangNm")
-	public Max240Text getLocalLanguageName() {
-		return localLanguageName;
+	public Optional<Max240Text> getLocalLanguageName() {
+		return localLanguageName == null ? Optional.empty() : Optional.of(localLanguageName);
 	}
 
-	public void setLocalLanguageName(Max240Text localLanguageName) {
+	public UpdatedAdditionalInformation6SD3 setLocalLanguageName(Max240Text localLanguageName) {
 		this.localLanguageName = localLanguageName;
+		return this;
 	}
 }

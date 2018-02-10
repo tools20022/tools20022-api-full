@@ -30,6 +30,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forQuantity9Choice
+ * ConstraintCoexistenceQuantityRule.forQuantity9Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule#forQuantity9Choice
+ * ConstraintCoexistenceAmountRule.forQuantity9Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -71,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between different quantity of security formats."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Quantity9Choice", propOrder = {"originalAndCurrentFaceAmount", "signedQuantity"})
 public class Quantity9Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgnlAndCurFaceAmt", required = true)
 	protected OriginalAndCurrentQuantities3 originalAndCurrentFaceAmount;
 	/**
-	 * Signed face amount and amortised value of security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -112,7 +125,7 @@ public class Quantity9Choice {
 	public static final MMMessageAssociationEnd mmOriginalAndCurrentFaceAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
-			componentContext_lazy = () -> Quantity9Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlAndCurFaceAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +137,11 @@ public class Quantity9Choice {
 			type_lazy = () -> OriginalAndCurrentQuantities3.mmObject();
 		}
 	};
+	@XmlElement(name = "SgndQty", required = true)
 	protected SignedQuantityFormat4 signedQuantity;
 	/**
-	 * Signed quantity of security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -153,7 +167,7 @@ public class Quantity9Choice {
 	 */
 	public static final MMMessageAssociationEnd mmSignedQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Quantity9Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity9Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SgndQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,9 +183,10 @@ public class Quantity9Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Quantity9Choice.mmOriginalAndCurrentFaceAmount, Quantity9Choice.mmSignedQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity9Choice.mmOriginalAndCurrentFaceAmount, com.tools20022.repository.choice.Quantity9Choice.mmSignedQuantity);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forQuantity9Choice, com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forQuantity9Choice);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -187,21 +202,21 @@ public class Quantity9Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgnlAndCurFaceAmt", required = true)
 	public OriginalAndCurrentQuantities3 getOriginalAndCurrentFaceAmount() {
 		return originalAndCurrentFaceAmount;
 	}
 
-	public void setOriginalAndCurrentFaceAmount(OriginalAndCurrentQuantities3 originalAndCurrentFaceAmount) {
-		this.originalAndCurrentFaceAmount = originalAndCurrentFaceAmount;
+	public Quantity9Choice setOriginalAndCurrentFaceAmount(OriginalAndCurrentQuantities3 originalAndCurrentFaceAmount) {
+		this.originalAndCurrentFaceAmount = Objects.requireNonNull(originalAndCurrentFaceAmount);
+		return this;
 	}
 
-	@XmlElement(name = "SgndQty", required = true)
 	public SignedQuantityFormat4 getSignedQuantity() {
 		return signedQuantity;
 	}
 
-	public void setSignedQuantity(SignedQuantityFormat4 signedQuantity) {
-		this.signedQuantity = signedQuantity;
+	public Quantity9Choice setSignedQuantity(SignedQuantityFormat4 signedQuantity) {
+		this.signedQuantity = Objects.requireNonNull(signedQuantity);
+		return this;
 	}
 }

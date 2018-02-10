@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,18 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Basic valuation details of a collateral position."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BasicCollateralValuation1Details", propOrder = {"valuationHaircut", "haircutSource"})
 public class BasicCollateralValuation1Details {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ValtnHrcut", required = true)
 	protected PercentageRate valuationHaircut;
 	/**
-	 * Haircut percentage applied to the market value of underlying assets used
-	 * as collateral as a risk control measure. The institution valuating the
-	 * collateral calculates the value of underlying assets based on its market
-	 * value less a certain percentage (the haircut).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +113,7 @@ public class BasicCollateralValuation1Details {
 	public static final MMMessageAttribute mmValuationHaircut = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> HaircutValuation.mmHaircut;
-			componentContext_lazy = () -> BasicCollateralValuation1Details.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BasicCollateralValuation1Details.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnHrcut";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +124,11 @@ public class BasicCollateralValuation1Details {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "HrcutSrc")
 	protected PartyIdentification15 haircutSource;
 	/**
-	 * Place where the valuation haircut was calculated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +162,7 @@ public class BasicCollateralValuation1Details {
 	public static final MMMessageAttribute mmHaircutSource = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> BasicCollateralValuation1Details.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BasicCollateralValuation1Details.mmObject();
 			isDerived = false;
 			xmlTag = "HrcutSrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,9 +177,9 @@ public class BasicCollateralValuation1Details {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BasicCollateralValuation1Details.mmValuationHaircut, BasicCollateralValuation1Details.mmHaircutSource);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BasicCollateralValuation1Details.mmValuationHaircut, com.tools20022.repository.msg.BasicCollateralValuation1Details.mmHaircutSource);
 				trace_lazy = () -> HaircutValuation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BasicCollateralValuation1Details";
 				definition = "Basic valuation details of a collateral position.";
@@ -187,21 +188,21 @@ public class BasicCollateralValuation1Details {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ValtnHrcut", required = true)
 	public PercentageRate getValuationHaircut() {
 		return valuationHaircut;
 	}
 
-	public void setValuationHaircut(PercentageRate valuationHaircut) {
-		this.valuationHaircut = valuationHaircut;
+	public BasicCollateralValuation1Details setValuationHaircut(PercentageRate valuationHaircut) {
+		this.valuationHaircut = Objects.requireNonNull(valuationHaircut);
+		return this;
 	}
 
-	@XmlElement(name = "HrcutSrc")
-	public PartyIdentification15 getHaircutSource() {
-		return haircutSource;
+	public Optional<PartyIdentification15> getHaircutSource() {
+		return haircutSource == null ? Optional.empty() : Optional.of(haircutSource);
 	}
 
-	public void setHaircutSource(com.tools20022.repository.msg.PartyIdentification15 haircutSource) {
+	public BasicCollateralValuation1Details setHaircutSource(com.tools20022.repository.msg.PartyIdentification15 haircutSource) {
 		this.haircutSource = haircutSource;
+		return this;
 	}
 }

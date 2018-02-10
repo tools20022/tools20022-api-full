@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Party that is covered under the assurance policy.
@@ -36,6 +37,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.InsurancePartyRole
+ * InsurancePartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -43,14 +47,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * Assured.mmAssuredType}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.InsurancePartyRole
- * InsurancePartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,8 +67,8 @@ public class Assured extends InsurancePartyRole {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected AssuredTypeCode assuredType;
 	/**
-	 * Specifies the type of assured party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -92,8 +93,8 @@ public class Assured extends InsurancePartyRole {
 	 */
 	public static final MMBusinessAttribute mmAssuredType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Assured.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Assured.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssuredType";
 			definition = "Specifies the type of assured party.";
@@ -114,7 +115,7 @@ public class Assured extends InsurancePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Assured";
 				definition = "Party that is covered under the assurance policy.";
@@ -134,7 +135,8 @@ public class Assured extends InsurancePartyRole {
 		return assuredType;
 	}
 
-	public void setAssuredType(AssuredTypeCode assuredType) {
-		this.assuredType = assuredType;
+	public Assured setAssuredType(AssuredTypeCode assuredType) {
+		this.assuredType = Objects.requireNonNull(assuredType);
+		return this;
 	}
 }

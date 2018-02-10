@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max16Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,16 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QueueTransactionIdentificationDetails", propOrder = {"queueIdentification", "positionInQueue"})
 public class QueueTransactionIdentificationDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QId", required = true)
 	protected Max16Text queueIdentification;
 	/**
-	 * Identification of the payment queue where the payment instruction
-	 * resides.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +103,7 @@ public class QueueTransactionIdentificationDetails {
 	 */
 	public static final MMMessageAttribute mmQueueIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QueueTransactionIdentificationDetails.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QueueTransactionIdentificationDetails.mmObject();
 			isDerived = false;
 			xmlTag = "QId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +114,11 @@ public class QueueTransactionIdentificationDetails {
 			simpleType_lazy = () -> Max16Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PosInQ", required = true)
 	protected Max16Text positionInQueue;
 	/**
-	 * Position of the payment instruction within the identified queue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +146,7 @@ public class QueueTransactionIdentificationDetails {
 	 */
 	public static final MMMessageAttribute mmPositionInQueue = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QueueTransactionIdentificationDetails.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QueueTransactionIdentificationDetails.mmObject();
 			isDerived = false;
 			xmlTag = "PosInQ";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,8 +161,8 @@ public class QueueTransactionIdentificationDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QueueTransactionIdentificationDetails.mmQueueIdentification, QueueTransactionIdentificationDetails.mmPositionInQueue);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QueueTransactionIdentificationDetails.mmQueueIdentification, com.tools20022.repository.msg.QueueTransactionIdentificationDetails.mmPositionInQueue);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueueTransactionIdentificationDetails";
 				definition = "Identification of a payment instruction by its relative position in a queue of payment transactions managed by the clearing agent.";
@@ -169,21 +171,21 @@ public class QueueTransactionIdentificationDetails {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QId", required = true)
 	public Max16Text getQueueIdentification() {
 		return queueIdentification;
 	}
 
-	public void setQueueIdentification(Max16Text queueIdentification) {
-		this.queueIdentification = queueIdentification;
+	public QueueTransactionIdentificationDetails setQueueIdentification(Max16Text queueIdentification) {
+		this.queueIdentification = Objects.requireNonNull(queueIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PosInQ", required = true)
 	public Max16Text getPositionInQueue() {
 		return positionInQueue;
 	}
 
-	public void setPositionInQueue(Max16Text positionInQueue) {
-		this.positionInQueue = positionInQueue;
+	public QueueTransactionIdentificationDetails setPositionInQueue(Max16Text positionInQueue) {
+		this.positionInQueue = Objects.requireNonNull(positionInQueue);
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.RepoCallRequestStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies additional information about the status of the repurchase agreement
@@ -33,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepoCallRequestStatusCode#mmAcknowledgedAccepted
- * RepoCallRequestStatusCode.mmAcknowledgedAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepoCallRequestStatusCode#AcknowledgedAccepted
+ * RepoCallRequestStatusCode.AcknowledgedAccepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RepoCallRequestStatusCode#mmDenied
- * RepoCallRequestStatusCode.mmDenied}</li>
+ * {@linkplain com.tools20022.repository.codeset.RepoCallRequestStatusCode#Denied
+ * RepoCallRequestStatusCode.Denied}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class RepoCallRequestStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RepoCallRequestStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,12 +101,12 @@ public class RepoCallRequestStatusCode {
 	 * "Repurchase agreement call request is acknowledged/accepted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcknowledgedAccepted = new MMCode() {
+	public static final RepoCallRequestStatusCode AcknowledgedAccepted = new RepoCallRequestStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
 			definition = "Repurchase agreement call request is acknowledged/accepted.";
-			owner_lazy = () -> RepoCallRequestStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepoCallRequestStatusCode.mmObject();
 			codeName = "CACK";
 		}
 	};
@@ -125,28 +131,58 @@ public class RepoCallRequestStatusCode {
 	 * definition} = "Repuchase agreement call request is denied."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDenied = new MMCode() {
+	public static final RepoCallRequestStatusCode Denied = new RepoCallRequestStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Denied";
 			definition = "Repuchase agreement call request is denied.";
-			owner_lazy = () -> RepoCallRequestStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RepoCallRequestStatusCode.mmObject();
 			codeName = "DEND";
 		}
 	};
+	final static private LinkedHashMap<String, RepoCallRequestStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RepoCallRequestStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CACK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RepoCallRequestStatusCode";
 				definition = "Specifies additional information about the status of the repurchase agreement call processed instruction.";
-				code_lazy = () -> Arrays.asList(RepoCallRequestStatusCode.mmAcknowledgedAccepted, RepoCallRequestStatusCode.mmDenied);
 				derivation_lazy = () -> Arrays.asList(RepoCallRequestStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepoCallRequestStatusCode.AcknowledgedAccepted, com.tools20022.repository.codeset.RepoCallRequestStatusCode.Denied);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AcknowledgedAccepted.getCodeName().get(), AcknowledgedAccepted);
+		codesByName.put(Denied.getCodeName().get(), Denied);
+	}
+
+	public static RepoCallRequestStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RepoCallRequestStatusCode[] values() {
+		RepoCallRequestStatusCode[] values = new RepoCallRequestStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RepoCallRequestStatusCode> {
+		@Override
+		public RepoCallRequestStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RepoCallRequestStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentInstrument6Choice", propOrder = {"paymentCardDetails", "creditTransferDetails", "directDebitDetails", "chequeDetails", "accountDetails"})
 public class PaymentInstrument6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtCardDtls", required = true)
 	protected PaymentCard2 paymentCardDetails;
 	/**
-	 * Electronic money product that provides the cardholder with a portable and
-	 * specialised computer device, which typically contains a microprocessor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -119,7 +120,7 @@ public class PaymentInstrument6Choice {
 	public static final MMMessageAssociationEnd mmPaymentCardDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmPaymentCard;
-			componentContext_lazy = () -> PaymentInstrument6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PmtCardDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,11 +132,11 @@ public class PaymentInstrument6Choice {
 			type_lazy = () -> PaymentCard2.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtTrfDtls", required = true)
 	protected CreditTransfer3 creditTransferDetails;
 	/**
-	 * Payment instrument between a debtor and a creditor, which flows through
-	 * one or more financial institutions or systems.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -169,7 +170,7 @@ public class PaymentInstrument6Choice {
 	public static final MMMessageAssociationEnd mmCreditTransferDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CreditTransfer.mmObject();
-			componentContext_lazy = () -> PaymentInstrument6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CdtTrfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,13 +182,11 @@ public class PaymentInstrument6Choice {
 			type_lazy = () -> CreditTransfer3.mmObject();
 		}
 	};
+	@XmlElement(name = "DrctDbtDtls", required = true)
 	protected DirectDebitMandate2 directDebitDetails;
 	/**
-	 * Instruction, initiated by the creditor, to debit a debtor's account in
-	 * favour of the creditor. A direct debit can be pre-authorised or not. In
-	 * most countries, authorisation is in the form of a mandate between the
-	 * debtor and creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -220,7 +219,7 @@ public class PaymentInstrument6Choice {
 	public static final MMMessageAssociationEnd mmDirectDebitDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebit.mmObject();
-			componentContext_lazy = () -> PaymentInstrument6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DrctDbtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -232,12 +231,11 @@ public class PaymentInstrument6Choice {
 			type_lazy = () -> DirectDebitMandate2.mmObject();
 		}
 	};
+	@XmlElement(name = "ChqDtls", required = true)
 	protected Cheque3 chequeDetails;
 	/**
-	 * Written order on which instructions are given to an account holder (a
-	 * financial institution) to pay a stated sum to a named recipient (the
-	 * payee).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -270,7 +268,7 @@ public class PaymentInstrument6Choice {
 	public static final MMMessageAssociationEnd mmChequeDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ChequePayment.mmCheque;
-			componentContext_lazy = () -> PaymentInstrument6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ChqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -282,11 +280,11 @@ public class PaymentInstrument6Choice {
 			type_lazy = () -> Cheque3.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected InvestmentAccount15 accountDetails;
 	/**
-	 * The part of the investment account to or from which cash entries are
-	 * made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -320,7 +318,7 @@ public class PaymentInstrument6Choice {
 	public static final MMMessageAssociationEnd mmAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
-			componentContext_lazy = () -> PaymentInstrument6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PaymentInstrument6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -336,10 +334,11 @@ public class PaymentInstrument6Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentInstrument6Choice.mmPaymentCardDetails, PaymentInstrument6Choice.mmCreditTransferDetails, PaymentInstrument6Choice.mmDirectDebitDetails,
-						PaymentInstrument6Choice.mmChequeDetails, PaymentInstrument6Choice.mmAccountDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PaymentInstrument6Choice.mmPaymentCardDetails, com.tools20022.repository.choice.PaymentInstrument6Choice.mmCreditTransferDetails,
+						com.tools20022.repository.choice.PaymentInstrument6Choice.mmDirectDebitDetails, com.tools20022.repository.choice.PaymentInstrument6Choice.mmChequeDetails,
+						com.tools20022.repository.choice.PaymentInstrument6Choice.mmAccountDetails);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstrument6Choice";
 				definition = "Choice between types of payment instrument, ie, cheque, credit transfer, direct debit, investment account or payment card.";
@@ -348,48 +347,48 @@ public class PaymentInstrument6Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtCardDtls", required = true)
 	public PaymentCard2 getPaymentCardDetails() {
 		return paymentCardDetails;
 	}
 
-	public void setPaymentCardDetails(PaymentCard2 paymentCardDetails) {
-		this.paymentCardDetails = paymentCardDetails;
+	public PaymentInstrument6Choice setPaymentCardDetails(PaymentCard2 paymentCardDetails) {
+		this.paymentCardDetails = Objects.requireNonNull(paymentCardDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CdtTrfDtls", required = true)
 	public CreditTransfer3 getCreditTransferDetails() {
 		return creditTransferDetails;
 	}
 
-	public void setCreditTransferDetails(CreditTransfer3 creditTransferDetails) {
-		this.creditTransferDetails = creditTransferDetails;
+	public PaymentInstrument6Choice setCreditTransferDetails(CreditTransfer3 creditTransferDetails) {
+		this.creditTransferDetails = Objects.requireNonNull(creditTransferDetails);
+		return this;
 	}
 
-	@XmlElement(name = "DrctDbtDtls", required = true)
 	public DirectDebitMandate2 getDirectDebitDetails() {
 		return directDebitDetails;
 	}
 
-	public void setDirectDebitDetails(DirectDebitMandate2 directDebitDetails) {
-		this.directDebitDetails = directDebitDetails;
+	public PaymentInstrument6Choice setDirectDebitDetails(DirectDebitMandate2 directDebitDetails) {
+		this.directDebitDetails = Objects.requireNonNull(directDebitDetails);
+		return this;
 	}
 
-	@XmlElement(name = "ChqDtls", required = true)
 	public Cheque3 getChequeDetails() {
 		return chequeDetails;
 	}
 
-	public void setChequeDetails(Cheque3 chequeDetails) {
-		this.chequeDetails = chequeDetails;
+	public PaymentInstrument6Choice setChequeDetails(Cheque3 chequeDetails) {
+		this.chequeDetails = Objects.requireNonNull(chequeDetails);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public InvestmentAccount15 getAccountDetails() {
 		return accountDetails;
 	}
 
-	public void setAccountDetails(InvestmentAccount15 accountDetails) {
-		this.accountDetails = accountDetails;
+	public PaymentInstrument6Choice setAccountDetails(InvestmentAccount15 accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 }

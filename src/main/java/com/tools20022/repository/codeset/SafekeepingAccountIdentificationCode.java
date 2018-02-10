@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SafekeepingAccountIdentificationCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the account identification via a code.
@@ -32,8 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SafekeepingAccountIdentificationCode#mmGeneral
- * SafekeepingAccountIdentificationCode.mmGeneral}</li>
+ * {@linkplain com.tools20022.repository.codeset.SafekeepingAccountIdentificationCode#General
+ * SafekeepingAccountIdentificationCode.General}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the account identification via a code."</li>
  * </ul>
  */
-public class SafekeepingAccountIdentificationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SafekeepingAccountIdentificationCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,28 +98,57 @@ public class SafekeepingAccountIdentificationCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmGeneral = new MMCode() {
+	public static final SafekeepingAccountIdentificationCode General = new SafekeepingAccountIdentificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "General";
 			definition = "Announcement applies to all safekeeping accounts that own underlying financial instrument.  (Used for general or preliminary announcements.)";
-			owner_lazy = () -> SafekeepingAccountIdentificationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SafekeepingAccountIdentificationCode.mmObject();
 			codeName = "GENR";
 		}
 	};
+	final static private LinkedHashMap<String, SafekeepingAccountIdentificationCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SafekeepingAccountIdentificationCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("GENR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SafekeepingAccountIdentificationCode";
 				definition = "Specifies the account identification via a code.";
-				code_lazy = () -> Arrays.asList(SafekeepingAccountIdentificationCode.mmGeneral);
 				derivation_lazy = () -> Arrays.asList(SafekeepingAccountIdentification1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SafekeepingAccountIdentificationCode.General);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(General.getCodeName().get(), General);
+	}
+
+	public static SafekeepingAccountIdentificationCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SafekeepingAccountIdentificationCode[] values() {
+		SafekeepingAccountIdentificationCode[] values = new SafekeepingAccountIdentificationCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SafekeepingAccountIdentificationCode> {
+		@Override
+		public SafekeepingAccountIdentificationCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SafekeepingAccountIdentificationCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

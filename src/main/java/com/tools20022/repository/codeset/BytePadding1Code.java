@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.BytePaddingCode;
+import com.tools20022.repository.codeset.BytePadding1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Byte padding for a cypher block chaining mode encryption, if the padding is
@@ -31,33 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.BytePaddingCode
- * BytePaddingCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#mmLengthPadding
- * BytePadding1Code.mmLengthPadding}</li>
+ * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#LengthPadding
+ * BytePadding1Code.LengthPadding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#mmNull80Padding
- * BytePadding1Code.mmNull80Padding}</li>
+ * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#Null80Padding
+ * BytePadding1Code.Null80Padding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#mmNullLengthPadding
- * BytePadding1Code.mmNullLengthPadding}</li>
+ * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#NullLengthPadding
+ * BytePadding1Code.NullLengthPadding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#mmNullPadding
- * BytePadding1Code.mmNullPadding}</li>
+ * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#NullPadding
+ * BytePadding1Code.NullPadding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#mmRandomPadding
- * BytePadding1Code.mmRandomPadding}</li>
+ * {@linkplain com.tools20022.repository.codeset.BytePadding1Code#RandomPadding
+ * BytePadding1Code.RandomPadding}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.BytePaddingCode
+ * BytePaddingCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class BytePadding1Code extends BytePaddingCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BytePadding1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class BytePadding1Code extends BytePaddingCode {
 	 * name} = "LengthPadding"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLengthPadding = new MMCode() {
+	public static final BytePadding1Code LengthPadding = new BytePadding1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LengthPadding";
-			owner_lazy = () -> BytePadding1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BytePadding1Code.mmObject();
+			codeName = BytePaddingCode.LengthPadding.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class BytePadding1Code extends BytePaddingCode {
 	 * name} = "Null80Padding"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNull80Padding = new MMCode() {
+	public static final BytePadding1Code Null80Padding = new BytePadding1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Null80Padding";
-			owner_lazy = () -> BytePadding1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BytePadding1Code.mmObject();
+			codeName = BytePaddingCode.Null80Padding.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class BytePadding1Code extends BytePaddingCode {
 	 * name} = "NullLengthPadding"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNullLengthPadding = new MMCode() {
+	public static final BytePadding1Code NullLengthPadding = new BytePadding1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NullLengthPadding";
-			owner_lazy = () -> BytePadding1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BytePadding1Code.mmObject();
+			codeName = BytePaddingCode.NullLengthPadding.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,11 +166,12 @@ public class BytePadding1Code extends BytePaddingCode {
 	 * name} = "NullPadding"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNullPadding = new MMCode() {
+	public static final BytePadding1Code NullPadding = new BytePadding1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NullPadding";
-			owner_lazy = () -> BytePadding1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BytePadding1Code.mmObject();
+			codeName = BytePaddingCode.NullPadding.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -181,25 +190,60 @@ public class BytePadding1Code extends BytePaddingCode {
 	 * name} = "RandomPadding"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRandomPadding = new MMCode() {
+	public static final BytePadding1Code RandomPadding = new BytePadding1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RandomPadding";
-			owner_lazy = () -> BytePadding1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BytePadding1Code.mmObject();
+			codeName = BytePaddingCode.RandomPadding.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, BytePadding1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BytePadding1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BytePadding1Code";
 				definition = "Byte padding for a cypher block chaining mode encryption, if the padding is not implicit.";
-				code_lazy = () -> Arrays.asList(BytePadding1Code.mmLengthPadding, BytePadding1Code.mmNull80Padding, BytePadding1Code.mmNullLengthPadding, BytePadding1Code.mmNullPadding, BytePadding1Code.mmRandomPadding);
 				trace_lazy = () -> BytePaddingCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BytePadding1Code.LengthPadding, com.tools20022.repository.codeset.BytePadding1Code.Null80Padding,
+						com.tools20022.repository.codeset.BytePadding1Code.NullLengthPadding, com.tools20022.repository.codeset.BytePadding1Code.NullPadding, com.tools20022.repository.codeset.BytePadding1Code.RandomPadding);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(LengthPadding.getCodeName().get(), LengthPadding);
+		codesByName.put(Null80Padding.getCodeName().get(), Null80Padding);
+		codesByName.put(NullLengthPadding.getCodeName().get(), NullLengthPadding);
+		codesByName.put(NullPadding.getCodeName().get(), NullPadding);
+		codesByName.put(RandomPadding.getCodeName().get(), RandomPadding);
+	}
+
+	public static BytePadding1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BytePadding1Code[] values() {
+		BytePadding1Code[] values = new BytePadding1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BytePadding1Code> {
+		@Override
+		public BytePadding1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BytePadding1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

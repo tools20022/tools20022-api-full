@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ClearingAccountTypeCode;
+import com.tools20022.repository.codeset.ClearingAccountType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the clearing account type.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ClearingAccountTypeCode
- * ClearingAccountTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ClearingAccountType1Code#mmHouse
- * ClearingAccountType1Code.mmHouse}</li>
+ * {@linkplain com.tools20022.repository.codeset.ClearingAccountType1Code#House
+ * ClearingAccountType1Code.House}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ClearingAccountType1Code#mmClient
- * ClearingAccountType1Code.mmClient}</li>
+ * {@linkplain com.tools20022.repository.codeset.ClearingAccountType1Code#Client
+ * ClearingAccountType1Code.Client}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ClearingAccountType1Code#mmLiquidityProvider
- * ClearingAccountType1Code.mmLiquidityProvider}</li>
+ * {@linkplain com.tools20022.repository.codeset.ClearingAccountType1Code#LiquidityProvider
+ * ClearingAccountType1Code.LiquidityProvider}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ClearingAccountTypeCode
+ * ClearingAccountTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the clearing account type."</li>
  * </ul>
  */
-public class ClearingAccountType1Code extends ClearingAccountTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ClearingAccountType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class ClearingAccountType1Code extends ClearingAccountTypeCode {
 	 * name} = "House"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHouse = new MMCode() {
+	public static final ClearingAccountType1Code House = new ClearingAccountType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "House";
-			owner_lazy = () -> ClearingAccountType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ClearingAccountType1Code.mmObject();
+			codeName = ClearingAccountTypeCode.House.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class ClearingAccountType1Code extends ClearingAccountTypeCode {
 	 * name} = "Client"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClient = new MMCode() {
+	public static final ClearingAccountType1Code Client = new ClearingAccountType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Client";
-			owner_lazy = () -> ClearingAccountType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ClearingAccountType1Code.mmObject();
+			codeName = ClearingAccountTypeCode.Client.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class ClearingAccountType1Code extends ClearingAccountTypeCode {
 	 * name} = "LiquidityProvider"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLiquidityProvider = new MMCode() {
+	public static final ClearingAccountType1Code LiquidityProvider = new ClearingAccountType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidityProvider";
-			owner_lazy = () -> ClearingAccountType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ClearingAccountType1Code.mmObject();
+			codeName = ClearingAccountTypeCode.LiquidityProvider.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ClearingAccountType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ClearingAccountType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("HOUS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClearingAccountType1Code";
 				definition = "Specifies the clearing account type.";
-				code_lazy = () -> Arrays.asList(ClearingAccountType1Code.mmHouse, ClearingAccountType1Code.mmClient, ClearingAccountType1Code.mmLiquidityProvider);
 				trace_lazy = () -> ClearingAccountTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClearingAccountType1Code.House, com.tools20022.repository.codeset.ClearingAccountType1Code.Client,
+						com.tools20022.repository.codeset.ClearingAccountType1Code.LiquidityProvider);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(House.getCodeName().get(), House);
+		codesByName.put(Client.getCodeName().get(), Client);
+		codesByName.put(LiquidityProvider.getCodeName().get(), LiquidityProvider);
+	}
+
+	public static ClearingAccountType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ClearingAccountType1Code[] values() {
+		ClearingAccountType1Code[] values = new ClearingAccountType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ClearingAccountType1Code> {
+		@Override
+		public ClearingAccountType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ClearingAccountType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

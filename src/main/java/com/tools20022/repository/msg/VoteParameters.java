@@ -31,9 +31,8 @@ import com.tools20022.repository.entity.ElectronicAddress;
 import com.tools20022.repository.entity.PostalAddress;
 import com.tools20022.repository.entity.VotingCondition;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -102,8 +101,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -114,16 +113,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information describing how the voting process is organised."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "VoteParameters", propOrder = {"securitiesQuantityRequiredToVote", "partialVoteAllowed", "splitVoteAllowed", "voteDeadline", "voteElectronicDeadline", "voteMarketDeadline", "voteMethods", "votingBallotElectronicAddress",
 		"votingBallotRequestAddress", "beneficialOwnerDisclosure", "additionalVotingRequirements", "incentivePremium", "voteInstructionType", "voteWithPremiumDeadline", "voteWithPremiumElectronicDeadline", "voteWithPremiumMarketDeadline"})
 public class VoteParameters {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesQtyReqrdToVote")
 	protected DecimalNumber securitiesQuantityRequiredToVote;
 	/**
-	 * Number of holdings required for a vote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +156,7 @@ public class VoteParameters {
 	public static final MMMessageAttribute mmSecuritiesQuantityRequiredToVote = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VotingCondition.mmSecuritiesQuantityRequiredToVote;
-			componentContext_lazy = () -> VoteParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteParameters.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesQtyReqrdToVote";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,10 +167,11 @@ public class VoteParameters {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtlVoteAllwd")
 	protected YesNoIndicator partialVoteAllowed;
 	/**
-	 * Specifies whether partial vote is allowed or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,7 +204,7 @@ public class VoteParameters {
 	public static final MMMessageAttribute mmPartialVoteAllowed = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VotingCondition.mmPartialVoteAllowed;
-			componentContext_lazy = () -> VoteParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteParameters.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlVoteAllwd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,10 +215,11 @@ public class VoteParameters {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "SpltVoteAllwd")
 	protected YesNoIndicator splitVoteAllowed;
 	/**
-	 * Specifies whether split vote is allowed or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -250,7 +252,7 @@ public class VoteParameters {
 	public static final MMMessageAttribute mmSplitVoteAllowed = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VotingCondition.mmSplitVoteAllowed;
-			componentContext_lazy = () -> VoteParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteParameters.mmObject();
 			isDerived = false;
 			xmlTag = "SpltVoteAllwd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -261,11 +263,11 @@ public class VoteParameters {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteDdln")
 	protected ISODateTime voteDeadline;
 	/**
-	 * Date and time by which the vote instructions should be submitted to the
-	 * intermediary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -299,7 +301,7 @@ public class VoteParameters {
 	public static final MMMessageAttribute mmVoteDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmIntermediaryDeadline;
-			componentContext_lazy = () -> VoteParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteParameters.mmObject();
 			isDerived = false;
 			xmlTag = "VoteDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -310,11 +312,11 @@ public class VoteParameters {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteElctrncDdln")
 	protected ISODateTime voteElectronicDeadline;
 	/**
-	 * Date and time by which the vote instructions should be submitted to the
-	 * intermediary (STP mode).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -348,7 +350,7 @@ public class VoteParameters {
 	public static final MMMessageAttribute mmVoteElectronicDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmSTPDeadline;
-			componentContext_lazy = () -> VoteParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteParameters.mmObject();
 			isDerived = false;
 			xmlTag = "VoteElctrncDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -359,11 +361,11 @@ public class VoteParameters {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteMktDdln")
 	protected ISODateTime voteMarketDeadline;
 	/**
-	 * Date and time by which the vote instructions should be submitted to the
-	 * issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -397,7 +399,7 @@ public class VoteParameters {
 	public static final MMMessageAttribute mmVoteMarketDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
-			componentContext_lazy = () -> VoteParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteParameters.mmObject();
 			isDerived = false;
 			xmlTag = "VoteMktDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -408,10 +410,11 @@ public class VoteParameters {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteMthds")
 	protected VoteMethods voteMethods;
 	/**
-	 * Indicates the different methods that can be used to vote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -443,7 +446,7 @@ public class VoteParameters {
 	public static final MMMessageAssociationEnd mmVoteMethods = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> VotingCondition.mmVoteLocation;
-			componentContext_lazy = () -> VoteParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteParameters.mmObject();
 			isDerived = false;
 			xmlTag = "VoteMthds";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -455,11 +458,11 @@ public class VoteParameters {
 			type_lazy = () -> com.tools20022.repository.msg.VoteMethods.mmObject();
 		}
 	};
+	@XmlElement(name = "VtngBlltElctrncAdr")
 	protected CommunicationAddress4 votingBallotElectronicAddress;
 	/**
-	 * Electronic location, e-mail or URL address, where the voting ballot can
-	 * be requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -492,7 +495,7 @@ public class VoteParameters {
 	public static final MMMessageAssociationEnd mmVotingBallotElectronicAddress = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ElectronicAddress.mmObject();
-			componentContext_lazy = () -> VoteParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteParameters.mmObject();
 			isDerived = false;
 			xmlTag = "VtngBlltElctrncAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -504,10 +507,11 @@ public class VoteParameters {
 			type_lazy = () -> com.tools20022.repository.msg.CommunicationAddress4.mmObject();
 		}
 	};
+	@XmlElement(name = "VtngBlltReqAdr")
 	protected PostalAddress1 votingBallotRequestAddress;
 	/**
-	 * Specifies the postal address where the voting ballot can be requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -539,7 +543,7 @@ public class VoteParameters {
 	public static final MMMessageAssociationEnd mmVotingBallotRequestAddress = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
-			componentContext_lazy = () -> VoteParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteParameters.mmObject();
 			isDerived = false;
 			xmlTag = "VtngBlltReqAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -551,11 +555,11 @@ public class VoteParameters {
 			type_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
 		}
 	};
+	@XmlElement(name = "BnfclOwnrDsclsr")
 	protected YesNoIndicator beneficialOwnerDisclosure;
 	/**
-	 * Indicates whether beneficiary details (eg name and address) must be
-	 * supplied in order to take part to a meeting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -590,7 +594,7 @@ public class VoteParameters {
 	public static final MMMessageAttribute mmBeneficialOwnerDisclosure = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VotingCondition.mmBeneficialOwnerDisclosure;
-			componentContext_lazy = () -> VoteParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteParameters.mmObject();
 			isDerived = false;
 			xmlTag = "BnfclOwnrDsclsr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -601,11 +605,11 @@ public class VoteParameters {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlVtngRqrmnts")
 	protected Max350Text additionalVotingRequirements;
 	/**
-	 * Additional information on specific requirements for allowing a person to
-	 * vote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -633,7 +637,7 @@ public class VoteParameters {
 	 */
 	public static final MMMessageAttribute mmAdditionalVotingRequirements = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> VoteParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteParameters.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlVtngRqrmnts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -644,10 +648,11 @@ public class VoteParameters {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IncntivPrm")
 	protected IncentivePremium1 incentivePremium;
 	/**
-	 * Cash premium paid to the security holder when voting.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -678,7 +683,7 @@ public class VoteParameters {
 	public static final MMMessageAssociationEnd mmIncentivePremium = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> VotingCondition.mmIncentivePremium;
-			componentContext_lazy = () -> VoteParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteParameters.mmObject();
 			isDerived = false;
 			xmlTag = "IncntivPrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -690,12 +695,11 @@ public class VoteParameters {
 			type_lazy = () -> com.tools20022.repository.msg.IncentivePremium1.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteInstrTp")
 	protected List<VoteInstruction2Code> voteInstructionType;
 	/**
-	 * Identifies the possible types of voting instructions. When used at the
-	 * resolution level, it supersedes the value specified in the meeting
-	 * notice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -730,7 +734,7 @@ public class VoteParameters {
 	public static final MMMessageAttribute mmVoteInstructionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VotingCondition.mmVoteInstructionType;
-			componentContext_lazy = () -> VoteParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteParameters.mmObject();
 			isDerived = false;
 			xmlTag = "VoteInstrTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -741,11 +745,11 @@ public class VoteParameters {
 			simpleType_lazy = () -> VoteInstruction2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteWthPrmDdln")
 	protected ISODateTime voteWithPremiumDeadline;
 	/**
-	 * Date and time by which the vote instructions should be submitted to the
-	 * intermediary to take advantage of the premium.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -779,7 +783,7 @@ public class VoteParameters {
 	public static final MMMessageAttribute mmVoteWithPremiumDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmIntermediaryDeadline;
-			componentContext_lazy = () -> VoteParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteParameters.mmObject();
 			isDerived = false;
 			xmlTag = "VoteWthPrmDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -790,11 +794,11 @@ public class VoteParameters {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteWthPrmElctrncDdln")
 	protected ISODateTime voteWithPremiumElectronicDeadline;
 	/**
-	 * Date and time by which the vote instructions should be submitted to the
-	 * intermediary to take advantage of the premium (STP mode).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -828,7 +832,7 @@ public class VoteParameters {
 	public static final MMMessageAttribute mmVoteWithPremiumElectronicDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmSTPDeadline;
-			componentContext_lazy = () -> VoteParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteParameters.mmObject();
 			isDerived = false;
 			xmlTag = "VoteWthPrmElctrncDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -839,11 +843,11 @@ public class VoteParameters {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "VoteWthPrmMktDdln")
 	protected ISODateTime voteWithPremiumMarketDeadline;
 	/**
-	 * Date and time by which the vote instructions should be submitted to the
-	 * issuer to take advantage of the premium.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -877,7 +881,7 @@ public class VoteParameters {
 	public static final MMMessageAttribute mmVoteWithPremiumMarketDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
-			componentContext_lazy = () -> VoteParameters.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.VoteParameters.mmObject();
 			isDerived = false;
 			xmlTag = "VoteWthPrmMktDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -892,12 +896,15 @@ public class VoteParameters {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(VoteParameters.mmSecuritiesQuantityRequiredToVote, VoteParameters.mmPartialVoteAllowed, VoteParameters.mmSplitVoteAllowed, VoteParameters.mmVoteDeadline,
-						VoteParameters.mmVoteElectronicDeadline, VoteParameters.mmVoteMarketDeadline, VoteParameters.mmVoteMethods, VoteParameters.mmVotingBallotElectronicAddress, VoteParameters.mmVotingBallotRequestAddress,
-						VoteParameters.mmBeneficialOwnerDisclosure, VoteParameters.mmAdditionalVotingRequirements, VoteParameters.mmIncentivePremium, VoteParameters.mmVoteInstructionType, VoteParameters.mmVoteWithPremiumDeadline,
-						VoteParameters.mmVoteWithPremiumElectronicDeadline, VoteParameters.mmVoteWithPremiumMarketDeadline);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.VoteParameters.mmSecuritiesQuantityRequiredToVote, com.tools20022.repository.msg.VoteParameters.mmPartialVoteAllowed,
+						com.tools20022.repository.msg.VoteParameters.mmSplitVoteAllowed, com.tools20022.repository.msg.VoteParameters.mmVoteDeadline, com.tools20022.repository.msg.VoteParameters.mmVoteElectronicDeadline,
+						com.tools20022.repository.msg.VoteParameters.mmVoteMarketDeadline, com.tools20022.repository.msg.VoteParameters.mmVoteMethods, com.tools20022.repository.msg.VoteParameters.mmVotingBallotElectronicAddress,
+						com.tools20022.repository.msg.VoteParameters.mmVotingBallotRequestAddress, com.tools20022.repository.msg.VoteParameters.mmBeneficialOwnerDisclosure,
+						com.tools20022.repository.msg.VoteParameters.mmAdditionalVotingRequirements, com.tools20022.repository.msg.VoteParameters.mmIncentivePremium, com.tools20022.repository.msg.VoteParameters.mmVoteInstructionType,
+						com.tools20022.repository.msg.VoteParameters.mmVoteWithPremiumDeadline, com.tools20022.repository.msg.VoteParameters.mmVoteWithPremiumElectronicDeadline,
+						com.tools20022.repository.msg.VoteParameters.mmVoteWithPremiumMarketDeadline);
 				trace_lazy = () -> VotingCondition.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "VoteParameters";
 				definition = "Information describing how the voting process is organised.";
@@ -906,147 +913,147 @@ public class VoteParameters {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesQtyReqrdToVote")
-	public DecimalNumber getSecuritiesQuantityRequiredToVote() {
-		return securitiesQuantityRequiredToVote;
+	public Optional<DecimalNumber> getSecuritiesQuantityRequiredToVote() {
+		return securitiesQuantityRequiredToVote == null ? Optional.empty() : Optional.of(securitiesQuantityRequiredToVote);
 	}
 
-	public void setSecuritiesQuantityRequiredToVote(DecimalNumber securitiesQuantityRequiredToVote) {
+	public VoteParameters setSecuritiesQuantityRequiredToVote(DecimalNumber securitiesQuantityRequiredToVote) {
 		this.securitiesQuantityRequiredToVote = securitiesQuantityRequiredToVote;
+		return this;
 	}
 
-	@XmlElement(name = "PrtlVoteAllwd")
-	public YesNoIndicator getPartialVoteAllowed() {
-		return partialVoteAllowed;
+	public Optional<YesNoIndicator> getPartialVoteAllowed() {
+		return partialVoteAllowed == null ? Optional.empty() : Optional.of(partialVoteAllowed);
 	}
 
-	public void setPartialVoteAllowed(YesNoIndicator partialVoteAllowed) {
+	public VoteParameters setPartialVoteAllowed(YesNoIndicator partialVoteAllowed) {
 		this.partialVoteAllowed = partialVoteAllowed;
+		return this;
 	}
 
-	@XmlElement(name = "SpltVoteAllwd")
-	public YesNoIndicator getSplitVoteAllowed() {
-		return splitVoteAllowed;
+	public Optional<YesNoIndicator> getSplitVoteAllowed() {
+		return splitVoteAllowed == null ? Optional.empty() : Optional.of(splitVoteAllowed);
 	}
 
-	public void setSplitVoteAllowed(YesNoIndicator splitVoteAllowed) {
+	public VoteParameters setSplitVoteAllowed(YesNoIndicator splitVoteAllowed) {
 		this.splitVoteAllowed = splitVoteAllowed;
+		return this;
 	}
 
-	@XmlElement(name = "VoteDdln")
-	public ISODateTime getVoteDeadline() {
-		return voteDeadline;
+	public Optional<ISODateTime> getVoteDeadline() {
+		return voteDeadline == null ? Optional.empty() : Optional.of(voteDeadline);
 	}
 
-	public void setVoteDeadline(ISODateTime voteDeadline) {
+	public VoteParameters setVoteDeadline(ISODateTime voteDeadline) {
 		this.voteDeadline = voteDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "VoteElctrncDdln")
-	public ISODateTime getVoteElectronicDeadline() {
-		return voteElectronicDeadline;
+	public Optional<ISODateTime> getVoteElectronicDeadline() {
+		return voteElectronicDeadline == null ? Optional.empty() : Optional.of(voteElectronicDeadline);
 	}
 
-	public void setVoteElectronicDeadline(ISODateTime voteElectronicDeadline) {
+	public VoteParameters setVoteElectronicDeadline(ISODateTime voteElectronicDeadline) {
 		this.voteElectronicDeadline = voteElectronicDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "VoteMktDdln")
-	public ISODateTime getVoteMarketDeadline() {
-		return voteMarketDeadline;
+	public Optional<ISODateTime> getVoteMarketDeadline() {
+		return voteMarketDeadline == null ? Optional.empty() : Optional.of(voteMarketDeadline);
 	}
 
-	public void setVoteMarketDeadline(ISODateTime voteMarketDeadline) {
+	public VoteParameters setVoteMarketDeadline(ISODateTime voteMarketDeadline) {
 		this.voteMarketDeadline = voteMarketDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "VoteMthds")
-	public VoteMethods getVoteMethods() {
-		return voteMethods;
+	public Optional<VoteMethods> getVoteMethods() {
+		return voteMethods == null ? Optional.empty() : Optional.of(voteMethods);
 	}
 
-	public void setVoteMethods(com.tools20022.repository.msg.VoteMethods voteMethods) {
+	public VoteParameters setVoteMethods(com.tools20022.repository.msg.VoteMethods voteMethods) {
 		this.voteMethods = voteMethods;
+		return this;
 	}
 
-	@XmlElement(name = "VtngBlltElctrncAdr")
-	public CommunicationAddress4 getVotingBallotElectronicAddress() {
-		return votingBallotElectronicAddress;
+	public Optional<CommunicationAddress4> getVotingBallotElectronicAddress() {
+		return votingBallotElectronicAddress == null ? Optional.empty() : Optional.of(votingBallotElectronicAddress);
 	}
 
-	public void setVotingBallotElectronicAddress(com.tools20022.repository.msg.CommunicationAddress4 votingBallotElectronicAddress) {
+	public VoteParameters setVotingBallotElectronicAddress(com.tools20022.repository.msg.CommunicationAddress4 votingBallotElectronicAddress) {
 		this.votingBallotElectronicAddress = votingBallotElectronicAddress;
+		return this;
 	}
 
-	@XmlElement(name = "VtngBlltReqAdr")
-	public PostalAddress1 getVotingBallotRequestAddress() {
-		return votingBallotRequestAddress;
+	public Optional<PostalAddress1> getVotingBallotRequestAddress() {
+		return votingBallotRequestAddress == null ? Optional.empty() : Optional.of(votingBallotRequestAddress);
 	}
 
-	public void setVotingBallotRequestAddress(com.tools20022.repository.msg.PostalAddress1 votingBallotRequestAddress) {
+	public VoteParameters setVotingBallotRequestAddress(com.tools20022.repository.msg.PostalAddress1 votingBallotRequestAddress) {
 		this.votingBallotRequestAddress = votingBallotRequestAddress;
+		return this;
 	}
 
-	@XmlElement(name = "BnfclOwnrDsclsr")
-	public YesNoIndicator getBeneficialOwnerDisclosure() {
-		return beneficialOwnerDisclosure;
+	public Optional<YesNoIndicator> getBeneficialOwnerDisclosure() {
+		return beneficialOwnerDisclosure == null ? Optional.empty() : Optional.of(beneficialOwnerDisclosure);
 	}
 
-	public void setBeneficialOwnerDisclosure(YesNoIndicator beneficialOwnerDisclosure) {
+	public VoteParameters setBeneficialOwnerDisclosure(YesNoIndicator beneficialOwnerDisclosure) {
 		this.beneficialOwnerDisclosure = beneficialOwnerDisclosure;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlVtngRqrmnts")
-	public Max350Text getAdditionalVotingRequirements() {
-		return additionalVotingRequirements;
+	public Optional<Max350Text> getAdditionalVotingRequirements() {
+		return additionalVotingRequirements == null ? Optional.empty() : Optional.of(additionalVotingRequirements);
 	}
 
-	public void setAdditionalVotingRequirements(Max350Text additionalVotingRequirements) {
+	public VoteParameters setAdditionalVotingRequirements(Max350Text additionalVotingRequirements) {
 		this.additionalVotingRequirements = additionalVotingRequirements;
+		return this;
 	}
 
-	@XmlElement(name = "IncntivPrm")
-	public IncentivePremium1 getIncentivePremium() {
-		return incentivePremium;
+	public Optional<IncentivePremium1> getIncentivePremium() {
+		return incentivePremium == null ? Optional.empty() : Optional.of(incentivePremium);
 	}
 
-	public void setIncentivePremium(com.tools20022.repository.msg.IncentivePremium1 incentivePremium) {
+	public VoteParameters setIncentivePremium(com.tools20022.repository.msg.IncentivePremium1 incentivePremium) {
 		this.incentivePremium = incentivePremium;
+		return this;
 	}
 
-	@XmlElement(name = "VoteInstrTp")
 	public List<VoteInstruction2Code> getVoteInstructionType() {
-		return voteInstructionType;
+		return voteInstructionType == null ? voteInstructionType = new ArrayList<>() : voteInstructionType;
 	}
 
-	public void setVoteInstructionType(List<VoteInstruction2Code> voteInstructionType) {
-		this.voteInstructionType = voteInstructionType;
+	public VoteParameters setVoteInstructionType(List<VoteInstruction2Code> voteInstructionType) {
+		this.voteInstructionType = Objects.requireNonNull(voteInstructionType);
+		return this;
 	}
 
-	@XmlElement(name = "VoteWthPrmDdln")
-	public ISODateTime getVoteWithPremiumDeadline() {
-		return voteWithPremiumDeadline;
+	public Optional<ISODateTime> getVoteWithPremiumDeadline() {
+		return voteWithPremiumDeadline == null ? Optional.empty() : Optional.of(voteWithPremiumDeadline);
 	}
 
-	public void setVoteWithPremiumDeadline(ISODateTime voteWithPremiumDeadline) {
+	public VoteParameters setVoteWithPremiumDeadline(ISODateTime voteWithPremiumDeadline) {
 		this.voteWithPremiumDeadline = voteWithPremiumDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "VoteWthPrmElctrncDdln")
-	public ISODateTime getVoteWithPremiumElectronicDeadline() {
-		return voteWithPremiumElectronicDeadline;
+	public Optional<ISODateTime> getVoteWithPremiumElectronicDeadline() {
+		return voteWithPremiumElectronicDeadline == null ? Optional.empty() : Optional.of(voteWithPremiumElectronicDeadline);
 	}
 
-	public void setVoteWithPremiumElectronicDeadline(ISODateTime voteWithPremiumElectronicDeadline) {
+	public VoteParameters setVoteWithPremiumElectronicDeadline(ISODateTime voteWithPremiumElectronicDeadline) {
 		this.voteWithPremiumElectronicDeadline = voteWithPremiumElectronicDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "VoteWthPrmMktDdln")
-	public ISODateTime getVoteWithPremiumMarketDeadline() {
-		return voteWithPremiumMarketDeadline;
+	public Optional<ISODateTime> getVoteWithPremiumMarketDeadline() {
+		return voteWithPremiumMarketDeadline == null ? Optional.empty() : Optional.of(voteWithPremiumMarketDeadline);
 	}
 
-	public void setVoteWithPremiumMarketDeadline(ISODateTime voteWithPremiumMarketDeadline) {
+	public VoteParameters setVoteWithPremiumMarketDeadline(ISODateTime voteWithPremiumMarketDeadline) {
 		this.voteWithPremiumMarketDeadline = voteWithPremiumMarketDeadline;
+		return this;
 	}
 }

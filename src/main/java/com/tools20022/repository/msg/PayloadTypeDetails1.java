@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -45,8 +46,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,19 +58,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identification of the type of payload."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PayloadTypeDetails1", propOrder = "type")
 public class PayloadTypeDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected Max256Text type;
 	/**
-	 * Declaration of the payload content. Describes the type of business
-	 * document being exchanged.<br>
-	 * <br>
-	 * When sending a copy or a duplicate of a previous document set, the
-	 * document set identification must remain identical.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +96,7 @@ public class PayloadTypeDetails1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PayloadTypeDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PayloadTypeDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,8 +111,8 @@ public class PayloadTypeDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PayloadTypeDetails1.mmType);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PayloadTypeDetails1.mmType);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PayloadTypeDetails1";
 				definition = "Identification of the type of payload.";
@@ -123,12 +121,12 @@ public class PayloadTypeDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public Max256Text getType() {
 		return type;
 	}
 
-	public void setType(Max256Text type) {
-		this.type = type;
+	public PayloadTypeDetails1 setType(Max256Text type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 }

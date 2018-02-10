@@ -26,6 +26,8 @@ import com.tools20022.repository.choice.DateSearchChoice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Report information about party reference data."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyAuditTrailReport1", propOrder = {"partyAuditTrailOrError", "datePeriod", "partyIdentification"})
 public class PartyAuditTrailReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PtyAudtTrlOrErr", required = true)
 	protected AuditTrailOrBusinessError1Choice partyAuditTrailOrError;
 	/**
-	 * Identifies the returned party reference data or error information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -102,7 +105,7 @@ public class PartyAuditTrailReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmPartyAuditTrailOrError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyAuditTrailReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAuditTrailReport1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyAudtTrlOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,10 +117,11 @@ public class PartyAuditTrailReport1 {
 			type_lazy = () -> AuditTrailOrBusinessError1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DtPrd")
 	protected DateSearchChoice datePeriod;
 	/**
-	 * Period in dates for which the audit trail is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,7 +149,7 @@ public class PartyAuditTrailReport1 {
 	 */
 	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyAuditTrailReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAuditTrailReport1.mmObject();
 			isDerived = false;
 			xmlTag = "DtPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +160,11 @@ public class PartyAuditTrailReport1 {
 			complexType_lazy = () -> DateSearchChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "PtyId", required = true)
 	protected SystemPartyIdentification3 partyIdentification;
 	/**
-	 * Identifies the party for which the audit trail is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -187,7 +192,7 @@ public class PartyAuditTrailReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyAuditTrailReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyAuditTrailReport1.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,8 +208,9 @@ public class PartyAuditTrailReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyAuditTrailReport1.mmPartyAuditTrailOrError, PartyAuditTrailReport1.mmDatePeriod, PartyAuditTrailReport1.mmPartyIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyAuditTrailReport1.mmPartyAuditTrailOrError, com.tools20022.repository.msg.PartyAuditTrailReport1.mmDatePeriod,
+						com.tools20022.repository.msg.PartyAuditTrailReport1.mmPartyIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyAuditTrailReport1";
 				definition = "Report information about party reference data.";
@@ -213,30 +219,30 @@ public class PartyAuditTrailReport1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PtyAudtTrlOrErr", required = true)
 	public AuditTrailOrBusinessError1Choice getPartyAuditTrailOrError() {
 		return partyAuditTrailOrError;
 	}
 
-	public void setPartyAuditTrailOrError(AuditTrailOrBusinessError1Choice partyAuditTrailOrError) {
-		this.partyAuditTrailOrError = partyAuditTrailOrError;
+	public PartyAuditTrailReport1 setPartyAuditTrailOrError(AuditTrailOrBusinessError1Choice partyAuditTrailOrError) {
+		this.partyAuditTrailOrError = Objects.requireNonNull(partyAuditTrailOrError);
+		return this;
 	}
 
-	@XmlElement(name = "DtPrd")
-	public DateSearchChoice getDatePeriod() {
-		return datePeriod;
+	public Optional<DateSearchChoice> getDatePeriod() {
+		return datePeriod == null ? Optional.empty() : Optional.of(datePeriod);
 	}
 
-	public void setDatePeriod(DateSearchChoice datePeriod) {
+	public PartyAuditTrailReport1 setDatePeriod(DateSearchChoice datePeriod) {
 		this.datePeriod = datePeriod;
+		return this;
 	}
 
-	@XmlElement(name = "PtyId", required = true)
 	public SystemPartyIdentification3 getPartyIdentification() {
 		return partyIdentification;
 	}
 
-	public void setPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 partyIdentification) {
-		this.partyIdentification = partyIdentification;
+	public PartyAuditTrailReport1 setPartyIdentification(com.tools20022.repository.msg.SystemPartyIdentification3 partyIdentification) {
+		this.partyIdentification = Objects.requireNonNull(partyIdentification);
+		return this;
 	}
 }

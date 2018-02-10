@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.UndertakingDeliveryToParty;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverToPartyTypeSPECAddressRule#forCommunicationChannel1
+ * ConstraintDeliverToPartyTypeSPECAddressRule.forCommunicationChannel1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Communication channel information."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CommunicationChannel1", propOrder = {"method", "deliverToPartyType", "deliverToName", "deliverToAddress"})
 public class CommunicationChannel1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Mtd", required = true)
 	protected ExternalChannel1Code method;
 	/**
-	 * Method by which the original undertaking or proposed amendment is to be
-	 * made available.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +131,7 @@ public class CommunicationChannel1 {
 	public static final MMMessageAttribute mmMethod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Presentation.mmCommunicationMethod;
-			componentContext_lazy = () -> CommunicationChannel1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationChannel1.mmObject();
 			isDerived = false;
 			xmlTag = "Mtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,11 +142,11 @@ public class CommunicationChannel1 {
 			simpleType_lazy = () -> ExternalChannel1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvrToPtyTp", required = true)
 	protected PartyType1Choice deliverToPartyType;
 	/**
-	 * Type of party to whom the original undertaking or proposed amendment is
-	 * intended to be delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,7 +182,7 @@ public class CommunicationChannel1 {
 	public static final MMMessageAttribute mmDeliverToPartyType = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingDeliveryToParty.mmObject();
-			componentContext_lazy = () -> CommunicationChannel1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationChannel1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrToPtyTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,11 +193,11 @@ public class CommunicationChannel1 {
 			complexType_lazy = () -> PartyType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvrToNm")
 	protected Max140Text deliverToName;
 	/**
-	 * Name of party to whom the original undertaking or proposed amendment is
-	 * intended to be delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,7 +232,7 @@ public class CommunicationChannel1 {
 	public static final MMMessageAttribute mmDeliverToName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
-			componentContext_lazy = () -> CommunicationChannel1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationChannel1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrToNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,11 +243,11 @@ public class CommunicationChannel1 {
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvrToAdr")
 	protected PostalAddress6 deliverToAddress;
 	/**
-	 * Address of party to whom the original undertaking or proposed amendment
-	 * is intended to be delivered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -271,7 +281,7 @@ public class CommunicationChannel1 {
 	public static final MMMessageAssociationEnd mmDeliverToAddress = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
-			componentContext_lazy = () -> CommunicationChannel1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationChannel1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrToAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -287,9 +297,11 @@ public class CommunicationChannel1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CommunicationChannel1.mmMethod, CommunicationChannel1.mmDeliverToPartyType, CommunicationChannel1.mmDeliverToName, CommunicationChannel1.mmDeliverToAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationChannel1.mmMethod, com.tools20022.repository.msg.CommunicationChannel1.mmDeliverToPartyType,
+						com.tools20022.repository.msg.CommunicationChannel1.mmDeliverToName, com.tools20022.repository.msg.CommunicationChannel1.mmDeliverToAddress);
 				trace_lazy = () -> Presentation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverToPartyTypeSPECAddressRule.forCommunicationChannel1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommunicationChannel1";
 				definition = "Communication channel information.";
@@ -298,39 +310,39 @@ public class CommunicationChannel1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Mtd", required = true)
 	public ExternalChannel1Code getMethod() {
 		return method;
 	}
 
-	public void setMethod(ExternalChannel1Code method) {
-		this.method = method;
+	public CommunicationChannel1 setMethod(ExternalChannel1Code method) {
+		this.method = Objects.requireNonNull(method);
+		return this;
 	}
 
-	@XmlElement(name = "DlvrToPtyTp", required = true)
 	public PartyType1Choice getDeliverToPartyType() {
 		return deliverToPartyType;
 	}
 
-	public void setDeliverToPartyType(PartyType1Choice deliverToPartyType) {
-		this.deliverToPartyType = deliverToPartyType;
+	public CommunicationChannel1 setDeliverToPartyType(PartyType1Choice deliverToPartyType) {
+		this.deliverToPartyType = Objects.requireNonNull(deliverToPartyType);
+		return this;
 	}
 
-	@XmlElement(name = "DlvrToNm")
-	public Max140Text getDeliverToName() {
-		return deliverToName;
+	public Optional<Max140Text> getDeliverToName() {
+		return deliverToName == null ? Optional.empty() : Optional.of(deliverToName);
 	}
 
-	public void setDeliverToName(Max140Text deliverToName) {
+	public CommunicationChannel1 setDeliverToName(Max140Text deliverToName) {
 		this.deliverToName = deliverToName;
+		return this;
 	}
 
-	@XmlElement(name = "DlvrToAdr")
-	public PostalAddress6 getDeliverToAddress() {
-		return deliverToAddress;
+	public Optional<PostalAddress6> getDeliverToAddress() {
+		return deliverToAddress == null ? Optional.empty() : Optional.of(deliverToAddress);
 	}
 
-	public void setDeliverToAddress(com.tools20022.repository.msg.PostalAddress6 deliverToAddress) {
+	public CommunicationChannel1 setDeliverToAddress(com.tools20022.repository.msg.PostalAddress6 deliverToAddress) {
 		this.deliverToAddress = deliverToAddress;
+		return this;
 	}
 }

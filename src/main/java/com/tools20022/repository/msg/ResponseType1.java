@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.Response;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ResponseType1", propOrder = {"response", "responseReason"})
 public class ResponseType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rspn", required = true)
 	protected Response1Code response;
 	/**
-	 * Result of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +115,7 @@ public class ResponseType1 {
 	 */
 	public static final MMMessageAttribute mmResponse = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ResponseType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseType1.mmObject();
 			isDerived = false;
 			xmlTag = "Rspn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +127,11 @@ public class ResponseType1 {
 			simpleType_lazy = () -> Response1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RspnRsn")
 	protected Max35Text responseReason;
 	/**
-	 * Detailed result of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +171,7 @@ public class ResponseType1 {
 	public static final MMMessageAttribute mmResponseReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Response.mmResponseReason;
-			componentContext_lazy = () -> ResponseType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ResponseType1.mmObject();
 			isDerived = false;
 			xmlTag = "RspnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,9 +187,9 @@ public class ResponseType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ResponseType1.mmResponse, ResponseType1.mmResponseReason);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ResponseType1.mmResponse, com.tools20022.repository.msg.ResponseType1.mmResponseReason);
 				trace_lazy = () -> Response.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResponseType1";
 				definition = "Response of a requested service.";
@@ -195,21 +199,21 @@ public class ResponseType1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rspn", required = true)
 	public Response1Code getResponse() {
 		return response;
 	}
 
-	public void setResponse(Response1Code response) {
-		this.response = response;
+	public ResponseType1 setResponse(Response1Code response) {
+		this.response = Objects.requireNonNull(response);
+		return this;
 	}
 
-	@XmlElement(name = "RspnRsn")
-	public Max35Text getResponseReason() {
-		return responseReason;
+	public Optional<Max35Text> getResponseReason() {
+		return responseReason == null ? Optional.empty() : Optional.of(responseReason);
 	}
 
-	public void setResponseReason(Max35Text responseReason) {
+	public ResponseType1 setResponseReason(Max35Text responseReason) {
 		this.responseReason = responseReason;
+		return this;
 	}
 }

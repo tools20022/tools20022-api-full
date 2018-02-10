@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CollateralSubstitutionConfirmationCode;
+import com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Provides the status of the collateral substitution, either returned or
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionConfirmationCode
- * CollateralSubstitutionConfirmationCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code#mmCollateralSubstitutionReleased
- * CollateralSubstitutionConfirmation1Code.mmCollateralSubstitutionReleased}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code#CollateralSubstitutionReleased
+ * CollateralSubstitutionConfirmation1Code.CollateralSubstitutionReleased}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code#mmCollateralSubstitutionReturned
- * CollateralSubstitutionConfirmation1Code.mmCollateralSubstitutionReturned}</li>
+ * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code#CollateralSubstitutionReturned
+ * CollateralSubstitutionConfirmation1Code.CollateralSubstitutionReturned}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CollateralSubstitutionConfirmationCode
+ * CollateralSubstitutionConfirmationCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CollateralSubstitutionConfirmation1Code extends CollateralSubstitutionConfirmationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CollateralSubstitutionConfirmation1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class CollateralSubstitutionConfirmation1Code extends CollateralSubstitut
 	 * name} = "CollateralSubstitutionReleased"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralSubstitutionReleased = new MMCode() {
+	public static final CollateralSubstitutionConfirmation1Code CollateralSubstitutionReleased = new CollateralSubstitutionConfirmation1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionReleased";
-			owner_lazy = () -> CollateralSubstitutionConfirmation1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code.mmObject();
+			codeName = CollateralSubstitutionConfirmationCode.CollateralSubstitutionReleased.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,58 @@ public class CollateralSubstitutionConfirmation1Code extends CollateralSubstitut
 	 * name} = "CollateralSubstitutionReturned"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralSubstitutionReturned = new MMCode() {
+	public static final CollateralSubstitutionConfirmation1Code CollateralSubstitutionReturned = new CollateralSubstitutionConfirmation1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralSubstitutionReturned";
-			owner_lazy = () -> CollateralSubstitutionConfirmation1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code.mmObject();
+			codeName = CollateralSubstitutionConfirmationCode.CollateralSubstitutionReturned.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CollateralSubstitutionConfirmation1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CollateralSubstitutionConfirmation1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CREL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralSubstitutionConfirmation1Code";
 				definition = "Provides the status of the collateral substitution, either returned or released.";
-				code_lazy = () -> Arrays.asList(CollateralSubstitutionConfirmation1Code.mmCollateralSubstitutionReleased, CollateralSubstitutionConfirmation1Code.mmCollateralSubstitutionReturned);
 				trace_lazy = () -> CollateralSubstitutionConfirmationCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code.CollateralSubstitutionReleased,
+						com.tools20022.repository.codeset.CollateralSubstitutionConfirmation1Code.CollateralSubstitutionReturned);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CollateralSubstitutionReleased.getCodeName().get(), CollateralSubstitutionReleased);
+		codesByName.put(CollateralSubstitutionReturned.getCodeName().get(), CollateralSubstitutionReturned);
+	}
+
+	public static CollateralSubstitutionConfirmation1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CollateralSubstitutionConfirmation1Code[] values() {
+		CollateralSubstitutionConfirmation1Code[] values = new CollateralSubstitutionConfirmation1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CollateralSubstitutionConfirmation1Code> {
+		@Override
+		public CollateralSubstitutionConfirmation1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CollateralSubstitutionConfirmation1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

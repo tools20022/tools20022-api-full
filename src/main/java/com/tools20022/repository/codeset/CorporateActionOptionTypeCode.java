@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CorporateActionOptionTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of CA options.
@@ -32,98 +37,98 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmAbstain
- * CorporateActionOptionTypeCode.mmAbstain}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#Abstain
+ * CorporateActionOptionTypeCode.Abstain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmVoteAgainst
- * CorporateActionOptionTypeCode.mmVoteAgainst}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#VoteAgainst
+ * CorporateActionOptionTypeCode.VoteAgainst}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmAttach
- * CorporateActionOptionTypeCode.mmAttach}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#Attach
+ * CorporateActionOptionTypeCode.Attach}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmBearerShareExchange
- * CorporateActionOptionTypeCode.mmBearerShareExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#BearerShareExchange
+ * CorporateActionOptionTypeCode.BearerShareExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmBonusSharePlan
- * CorporateActionOptionTypeCode.mmBonusSharePlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#BonusSharePlan
+ * CorporateActionOptionTypeCode.BonusSharePlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmBuyUp
- * CorporateActionOptionTypeCode.mmBuyUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#BuyUp
+ * CorporateActionOptionTypeCode.BuyUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmCashAndSecurities
- * CorporateActionOptionTypeCode.mmCashAndSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#CashAndSecurities
+ * CorporateActionOptionTypeCode.CashAndSecurities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmCash
- * CorporateActionOptionTypeCode.mmCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#Cash
+ * CorporateActionOptionTypeCode.Cash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmConsentAndExchange
- * CorporateActionOptionTypeCode.mmConsentAndExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#ConsentAndExchange
+ * CorporateActionOptionTypeCode.ConsentAndExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmConsentAndTender
- * CorporateActionOptionTypeCode.mmConsentAndTender}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#ConsentAndTender
+ * CorporateActionOptionTypeCode.ConsentAndTender}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmConsentDenied
- * CorporateActionOptionTypeCode.mmConsentDenied}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#ConsentDenied
+ * CorporateActionOptionTypeCode.ConsentDenied}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmConvert
- * CorporateActionOptionTypeCode.mmConvert}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#Convert
+ * CorporateActionOptionTypeCode.Convert}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmConsentGranted
- * CorporateActionOptionTypeCode.mmConsentGranted}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#ConsentGranted
+ * CorporateActionOptionTypeCode.ConsentGranted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmDetached
- * CorporateActionOptionTypeCode.mmDetached}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#Detached
+ * CorporateActionOptionTypeCode.Detached}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmExercise
- * CorporateActionOptionTypeCode.mmExercise}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#Exercise
+ * CorporateActionOptionTypeCode.Exercise}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmLapse
- * CorporateActionOptionTypeCode.mmLapse}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#Lapse
+ * CorporateActionOptionTypeCode.Lapse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmVoteWithManagement
- * CorporateActionOptionTypeCode.mmVoteWithManagement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#VoteWithManagement
+ * CorporateActionOptionTypeCode.VoteWithManagement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmRetain
- * CorporateActionOptionTypeCode.mmRetain}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#Retain
+ * CorporateActionOptionTypeCode.Retain}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmNoAction
- * CorporateActionOptionTypeCode.mmNoAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#NoAction
+ * CorporateActionOptionTypeCode.NoAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmProposedRate
- * CorporateActionOptionTypeCode.mmProposedRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#ProposedRate
+ * CorporateActionOptionTypeCode.ProposedRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmOversubscribe
- * CorporateActionOptionTypeCode.mmOversubscribe}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#Oversubscribe
+ * CorporateActionOptionTypeCode.Oversubscribe}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmProxyCard
- * CorporateActionOptionTypeCode.mmProxyCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#ProxyCard
+ * CorporateActionOptionTypeCode.ProxyCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmRegisteredShareExchange
- * CorporateActionOptionTypeCode.mmRegisteredShareExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#RegisteredShareExchange
+ * CorporateActionOptionTypeCode.RegisteredShareExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmRegulationsExchange
- * CorporateActionOptionTypeCode.mmRegulationsExchange}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#RegulationsExchange
+ * CorporateActionOptionTypeCode.RegulationsExchange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmSecuritiesOption
- * CorporateActionOptionTypeCode.mmSecuritiesOption}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#SecuritiesOption
+ * CorporateActionOptionTypeCode.SecuritiesOption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmSellEntitlement
- * CorporateActionOptionTypeCode.mmSellEntitlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#SellEntitlement
+ * CorporateActionOptionTypeCode.SellEntitlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmSplitInstruction
- * CorporateActionOptionTypeCode.mmSplitInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#SplitInstruction
+ * CorporateActionOptionTypeCode.SplitInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmRule144A
- * CorporateActionOptionTypeCode.mmRule144A}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#Rule144A
+ * CorporateActionOptionTypeCode.Rule144A}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmNonQualifiedInvestor
- * CorporateActionOptionTypeCode.mmNonQualifiedInvestor}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#NonQualifiedInvestor
+ * CorporateActionOptionTypeCode.NonQualifiedInvestor}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmOther
- * CorporateActionOptionTypeCode.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#Other
+ * CorporateActionOptionTypeCode.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#mmQualifiedInvestor
- * CorporateActionOptionTypeCode.mmQualifiedInvestor}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionOptionTypeCode#QualifiedInvestor
+ * CorporateActionOptionTypeCode.QualifiedInvestor}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -137,8 +142,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -155,7 +160,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of CA options."</li>
  * </ul>
  */
-public class CorporateActionOptionTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionOptionTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -184,12 +190,12 @@ public class CorporateActionOptionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAbstain = new MMCode() {
+	public static final CorporateActionOptionTypeCode Abstain = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Abstain";
 			definition = "Vote expressed as abstain. In this case, the issuing company will add the number of shares to the quorum of the meeting. If the voting right is not executed, it will not be added to the quorum. In this case, code NOAC should be used.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "ABST";
 		}
 	};
@@ -214,12 +220,12 @@ public class CorporateActionOptionTypeCode {
 	 * definition} = "Vote against management."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVoteAgainst = new MMCode() {
+	public static final CorporateActionOptionTypeCode VoteAgainst = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoteAgainst";
 			definition = "Vote against management.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "AMGT";
 		}
 	};
@@ -245,12 +251,12 @@ public class CorporateActionOptionTypeCode {
 	 * "Combine warrants and bonds or warrants and stock to form unit."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAttach = new MMCode() {
+	public static final CorporateActionOptionTypeCode Attach = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Attach";
 			definition = "Combine warrants and bonds or warrants and stock to form unit.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "ATCH";
 		}
 	};
@@ -275,12 +281,12 @@ public class CorporateActionOptionTypeCode {
 	 * definition} = "Exchange from registered shares into bearer shares."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBearerShareExchange = new MMCode() {
+	public static final CorporateActionOptionTypeCode BearerShareExchange = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BearerShareExchange";
 			definition = "Exchange from registered shares into bearer shares.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "BEAR";
 		}
 	};
@@ -309,12 +315,12 @@ public class CorporateActionOptionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmBonusSharePlan = new MMCode() {
+	public static final CorporateActionOptionTypeCode BonusSharePlan = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BonusSharePlan";
 			definition = "Receive shares issued from the Share Premium Reserve of the company and considered as a capital distribution rather than a disbursement of income, with different tax implications (typically found in Australia).";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "BSPL";
 		}
 	};
@@ -339,12 +345,12 @@ public class CorporateActionOptionTypeCode {
 	 * definition} = "Buy additional securities to round up position."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBuyUp = new MMCode() {
+	public static final CorporateActionOptionTypeCode BuyUp = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BuyUp";
 			definition = "Buy additional securities to round up position.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "BUYA";
 		}
 	};
@@ -370,12 +376,12 @@ public class CorporateActionOptionTypeCode {
 	 * "Election choice includes a combination of both cash and securities."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashAndSecurities = new MMCode() {
+	public static final CorporateActionOptionTypeCode CashAndSecurities = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAndSecurities";
 			definition = "Election choice includes a combination of both cash and securities.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "CASE";
 		}
 	};
@@ -400,12 +406,12 @@ public class CorporateActionOptionTypeCode {
 	 * definition} = "Distribution of cash."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCash = new MMCode() {
+	public static final CorporateActionOptionTypeCode Cash = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Cash";
 			definition = "Distribution of cash.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "CASH";
 		}
 	};
@@ -433,12 +439,12 @@ public class CorporateActionOptionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsentAndExchange = new MMCode() {
+	public static final CorporateActionOptionTypeCode ConsentAndExchange = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConsentAndExchange";
 			definition = "Vote to consent to change the terms of the securities agreement and to exchange securities.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "CEXC";
 		}
 	};
@@ -466,12 +472,12 @@ public class CorporateActionOptionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsentAndTender = new MMCode() {
+	public static final CorporateActionOptionTypeCode ConsentAndTender = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConsentAndTender";
 			definition = "Vote to consent to change the terms of the securities agreement and to tender securities for cash.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "CTEN";
 		}
 	};
@@ -496,12 +502,12 @@ public class CorporateActionOptionTypeCode {
 	 * definition} = "Vote not to approve the event or proposal."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsentDenied = new MMCode() {
+	public static final CorporateActionOptionTypeCode ConsentDenied = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConsentDenied";
 			definition = "Vote not to approve the event or proposal.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "CONN";
 		}
 	};
@@ -527,12 +533,12 @@ public class CorporateActionOptionTypeCode {
 	 * "Convert underlying securities into other securities, not cash."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConvert = new MMCode() {
+	public static final CorporateActionOptionTypeCode Convert = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Convert";
 			definition = "Convert underlying securities into other securities, not cash.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "CONV";
 		}
 	};
@@ -557,12 +563,12 @@ public class CorporateActionOptionTypeCode {
 	 * definition} = "Vote to approve the event or proposal."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsentGranted = new MMCode() {
+	public static final CorporateActionOptionTypeCode ConsentGranted = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ConsentGranted";
 			definition = "Vote to approve the event or proposal.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "CONY";
 		}
 	};
@@ -590,12 +596,12 @@ public class CorporateActionOptionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDetached = new MMCode() {
+	public static final CorporateActionOptionTypeCode Detached = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Detached";
 			definition = "Separate units into individual securities - warrants and bonds, warrants and equity.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "DETH";
 		}
 	};
@@ -620,12 +626,12 @@ public class CorporateActionOptionTypeCode {
 	 * definition} = "Exercise intermediate securities or warrants."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExercise = new MMCode() {
+	public static final CorporateActionOptionTypeCode Exercise = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Exercise";
 			definition = "Exercise intermediate securities or warrants.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "EXER";
 		}
 	};
@@ -650,12 +656,12 @@ public class CorporateActionOptionTypeCode {
 	 * definition} = "Allow event or entitled security to expire."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLapse = new MMCode() {
+	public static final CorporateActionOptionTypeCode Lapse = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Lapse";
 			definition = "Allow event or entitled security to expire.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "LAPS";
 		}
 	};
@@ -680,12 +686,12 @@ public class CorporateActionOptionTypeCode {
 	 * definition} = "Vote with management."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVoteWithManagement = new MMCode() {
+	public static final CorporateActionOptionTypeCode VoteWithManagement = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoteWithManagement";
 			definition = "Vote with management.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "MNGT";
 		}
 	};
@@ -713,12 +719,12 @@ public class CorporateActionOptionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRetain = new MMCode() {
+	public static final CorporateActionOptionTypeCode Retain = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Retain";
 			definition = "An option that allows a holder to elect to retain their holding, eg, a putable bond.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "MPUT";
 		}
 	};
@@ -744,12 +750,12 @@ public class CorporateActionOptionTypeCode {
 	 * "Option for the account owner not to take part in the event."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoAction = new MMCode() {
+	public static final CorporateActionOptionTypeCode NoAction = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoAction";
 			definition = "Option for the account owner not to take part in the event.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "NOAC";
 		}
 	};
@@ -777,12 +783,12 @@ public class CorporateActionOptionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmProposedRate = new MMCode() {
+	public static final CorporateActionOptionTypeCode ProposedRate = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProposedRate";
 			definition = "In a remarketing of variable notes, the margin that shareholders can propose in respect of the next interest period.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "OFFR";
 		}
 	};
@@ -808,12 +814,12 @@ public class CorporateActionOptionTypeCode {
 	 * "Subscribe to more equities than underlying securities position allows."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOversubscribe = new MMCode() {
+	public static final CorporateActionOptionTypeCode Oversubscribe = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Oversubscribe";
 			definition = "Subscribe to more equities than underlying securities position allows.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "OVER";
 		}
 	};
@@ -838,12 +844,12 @@ public class CorporateActionOptionTypeCode {
 	 * definition} = "Issue a proxy card in case of voting."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProxyCard = new MMCode() {
+	public static final CorporateActionOptionTypeCode ProxyCard = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProxyCard";
 			definition = "Issue a proxy card in case of voting.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "PROX";
 		}
 	};
@@ -868,12 +874,12 @@ public class CorporateActionOptionTypeCode {
 	 * definition} = "Exchange from bearer shares into registered shares."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegisteredShareExchange = new MMCode() {
+	public static final CorporateActionOptionTypeCode RegisteredShareExchange = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegisteredShareExchange";
 			definition = "Exchange from bearer shares into registered shares.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "REGD";
 		}
 	};
@@ -902,12 +908,12 @@ public class CorporateActionOptionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegulationsExchange = new MMCode() {
+	public static final CorporateActionOptionTypeCode RegulationsExchange = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegulationsExchange";
 			definition = "Exchange of securities into the Regulation S tranche. Will typically be used in the restricted period, i.e. the period when a party can change its holdings between 144A and REGS.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "REGS";
 		}
 	};
@@ -932,12 +938,12 @@ public class CorporateActionOptionTypeCode {
 	 * definition} = "Distribution of securities to holders."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesOption = new MMCode() {
+	public static final CorporateActionOptionTypeCode SecuritiesOption = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesOption";
 			definition = "Distribution of securities to holders.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "SECU";
 		}
 	};
@@ -962,12 +968,12 @@ public class CorporateActionOptionTypeCode {
 	 * definition} = "Sell the intermediate securities."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSellEntitlement = new MMCode() {
+	public static final CorporateActionOptionTypeCode SellEntitlement = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SellEntitlement";
 			definition = "Sell the intermediate securities.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "SLLE";
 		}
 	};
@@ -995,12 +1001,12 @@ public class CorporateActionOptionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSplitInstruction = new MMCode() {
+	public static final CorporateActionOptionTypeCode SplitInstruction = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SplitInstruction";
 			definition = "Option to give a split instruction, eg, a split voting instruction on a meeting.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "SPLI";
 		}
 	};
@@ -1029,12 +1035,12 @@ public class CorporateActionOptionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRule144A = new MMCode() {
+	public static final CorporateActionOptionTypeCode Rule144A = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rule144A";
 			definition = "Exchange of securities into the 144A tranche. Will typically be used in the restricted period, i.e. the period when a party can change its holdings between 144A and REGS.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "144A";
 		}
 	};
@@ -1059,12 +1065,12 @@ public class CorporateActionOptionTypeCode {
 	 * definition} = "The account owner is a Non-Qualified Investor."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonQualifiedInvestor = new MMCode() {
+	public static final CorporateActionOptionTypeCode NonQualifiedInvestor = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonQualifiedInvestor";
 			definition = "The account owner is a Non-Qualified Investor.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "NOQU";
 		}
 	};
@@ -1092,12 +1098,12 @@ public class CorporateActionOptionTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final CorporateActionOptionTypeCode Other = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Other";
 			definition = "Generic corporate action option to be used in case that no other specific code is appropriate.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "OTHR";
 		}
 	};
@@ -1122,35 +1128,102 @@ public class CorporateActionOptionTypeCode {
 	 * definition} = "The account owner is a Qualified Investor."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQualifiedInvestor = new MMCode() {
+	public static final CorporateActionOptionTypeCode QualifiedInvestor = new CorporateActionOptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QualifiedInvestor";
 			definition = "The account owner is a Qualified Investor.";
-			owner_lazy = () -> CorporateActionOptionTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionOptionTypeCode.mmObject();
 			codeName = "QINV";
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionOptionTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionOptionTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ABST");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOptionTypeCode";
 				definition = "Specifies the type of CA options.";
-				code_lazy = () -> Arrays.asList(CorporateActionOptionTypeCode.mmAbstain, CorporateActionOptionTypeCode.mmVoteAgainst, CorporateActionOptionTypeCode.mmAttach, CorporateActionOptionTypeCode.mmBearerShareExchange,
-						CorporateActionOptionTypeCode.mmBonusSharePlan, CorporateActionOptionTypeCode.mmBuyUp, CorporateActionOptionTypeCode.mmCashAndSecurities, CorporateActionOptionTypeCode.mmCash,
-						CorporateActionOptionTypeCode.mmConsentAndExchange, CorporateActionOptionTypeCode.mmConsentAndTender, CorporateActionOptionTypeCode.mmConsentDenied, CorporateActionOptionTypeCode.mmConvert,
-						CorporateActionOptionTypeCode.mmConsentGranted, CorporateActionOptionTypeCode.mmDetached, CorporateActionOptionTypeCode.mmExercise, CorporateActionOptionTypeCode.mmLapse,
-						CorporateActionOptionTypeCode.mmVoteWithManagement, CorporateActionOptionTypeCode.mmRetain, CorporateActionOptionTypeCode.mmNoAction, CorporateActionOptionTypeCode.mmProposedRate,
-						CorporateActionOptionTypeCode.mmOversubscribe, CorporateActionOptionTypeCode.mmProxyCard, CorporateActionOptionTypeCode.mmRegisteredShareExchange, CorporateActionOptionTypeCode.mmRegulationsExchange,
-						CorporateActionOptionTypeCode.mmSecuritiesOption, CorporateActionOptionTypeCode.mmSellEntitlement, CorporateActionOptionTypeCode.mmSplitInstruction, CorporateActionOptionTypeCode.mmRule144A,
-						CorporateActionOptionTypeCode.mmNonQualifiedInvestor, CorporateActionOptionTypeCode.mmOther, CorporateActionOptionTypeCode.mmQualifiedInvestor);
 				derivation_lazy = () -> Arrays.asList(CorporateActionOptionType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionOptionTypeCode.Abstain, com.tools20022.repository.codeset.CorporateActionOptionTypeCode.VoteAgainst,
+						com.tools20022.repository.codeset.CorporateActionOptionTypeCode.Attach, com.tools20022.repository.codeset.CorporateActionOptionTypeCode.BearerShareExchange,
+						com.tools20022.repository.codeset.CorporateActionOptionTypeCode.BonusSharePlan, com.tools20022.repository.codeset.CorporateActionOptionTypeCode.BuyUp,
+						com.tools20022.repository.codeset.CorporateActionOptionTypeCode.CashAndSecurities, com.tools20022.repository.codeset.CorporateActionOptionTypeCode.Cash,
+						com.tools20022.repository.codeset.CorporateActionOptionTypeCode.ConsentAndExchange, com.tools20022.repository.codeset.CorporateActionOptionTypeCode.ConsentAndTender,
+						com.tools20022.repository.codeset.CorporateActionOptionTypeCode.ConsentDenied, com.tools20022.repository.codeset.CorporateActionOptionTypeCode.Convert,
+						com.tools20022.repository.codeset.CorporateActionOptionTypeCode.ConsentGranted, com.tools20022.repository.codeset.CorporateActionOptionTypeCode.Detached,
+						com.tools20022.repository.codeset.CorporateActionOptionTypeCode.Exercise, com.tools20022.repository.codeset.CorporateActionOptionTypeCode.Lapse,
+						com.tools20022.repository.codeset.CorporateActionOptionTypeCode.VoteWithManagement, com.tools20022.repository.codeset.CorporateActionOptionTypeCode.Retain,
+						com.tools20022.repository.codeset.CorporateActionOptionTypeCode.NoAction, com.tools20022.repository.codeset.CorporateActionOptionTypeCode.ProposedRate,
+						com.tools20022.repository.codeset.CorporateActionOptionTypeCode.Oversubscribe, com.tools20022.repository.codeset.CorporateActionOptionTypeCode.ProxyCard,
+						com.tools20022.repository.codeset.CorporateActionOptionTypeCode.RegisteredShareExchange, com.tools20022.repository.codeset.CorporateActionOptionTypeCode.RegulationsExchange,
+						com.tools20022.repository.codeset.CorporateActionOptionTypeCode.SecuritiesOption, com.tools20022.repository.codeset.CorporateActionOptionTypeCode.SellEntitlement,
+						com.tools20022.repository.codeset.CorporateActionOptionTypeCode.SplitInstruction, com.tools20022.repository.codeset.CorporateActionOptionTypeCode.Rule144A,
+						com.tools20022.repository.codeset.CorporateActionOptionTypeCode.NonQualifiedInvestor, com.tools20022.repository.codeset.CorporateActionOptionTypeCode.Other,
+						com.tools20022.repository.codeset.CorporateActionOptionTypeCode.QualifiedInvestor);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Abstain.getCodeName().get(), Abstain);
+		codesByName.put(VoteAgainst.getCodeName().get(), VoteAgainst);
+		codesByName.put(Attach.getCodeName().get(), Attach);
+		codesByName.put(BearerShareExchange.getCodeName().get(), BearerShareExchange);
+		codesByName.put(BonusSharePlan.getCodeName().get(), BonusSharePlan);
+		codesByName.put(BuyUp.getCodeName().get(), BuyUp);
+		codesByName.put(CashAndSecurities.getCodeName().get(), CashAndSecurities);
+		codesByName.put(Cash.getCodeName().get(), Cash);
+		codesByName.put(ConsentAndExchange.getCodeName().get(), ConsentAndExchange);
+		codesByName.put(ConsentAndTender.getCodeName().get(), ConsentAndTender);
+		codesByName.put(ConsentDenied.getCodeName().get(), ConsentDenied);
+		codesByName.put(Convert.getCodeName().get(), Convert);
+		codesByName.put(ConsentGranted.getCodeName().get(), ConsentGranted);
+		codesByName.put(Detached.getCodeName().get(), Detached);
+		codesByName.put(Exercise.getCodeName().get(), Exercise);
+		codesByName.put(Lapse.getCodeName().get(), Lapse);
+		codesByName.put(VoteWithManagement.getCodeName().get(), VoteWithManagement);
+		codesByName.put(Retain.getCodeName().get(), Retain);
+		codesByName.put(NoAction.getCodeName().get(), NoAction);
+		codesByName.put(ProposedRate.getCodeName().get(), ProposedRate);
+		codesByName.put(Oversubscribe.getCodeName().get(), Oversubscribe);
+		codesByName.put(ProxyCard.getCodeName().get(), ProxyCard);
+		codesByName.put(RegisteredShareExchange.getCodeName().get(), RegisteredShareExchange);
+		codesByName.put(RegulationsExchange.getCodeName().get(), RegulationsExchange);
+		codesByName.put(SecuritiesOption.getCodeName().get(), SecuritiesOption);
+		codesByName.put(SellEntitlement.getCodeName().get(), SellEntitlement);
+		codesByName.put(SplitInstruction.getCodeName().get(), SplitInstruction);
+		codesByName.put(Rule144A.getCodeName().get(), Rule144A);
+		codesByName.put(NonQualifiedInvestor.getCodeName().get(), NonQualifiedInvestor);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(QualifiedInvestor.getCodeName().get(), QualifiedInvestor);
+	}
+
+	public static CorporateActionOptionTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionOptionTypeCode[] values() {
+		CorporateActionOptionTypeCode[] values = new CorporateActionOptionTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionOptionTypeCode> {
+		@Override
+		public CorporateActionOptionTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionOptionTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

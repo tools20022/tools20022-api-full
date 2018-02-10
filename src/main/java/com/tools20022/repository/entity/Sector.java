@@ -25,9 +25,11 @@ import com.tools20022.repository.msg.NameAndLocation1;
 import com.tools20022.repository.msg.ReportedPartyIdentification1;
 import com.tools20022.repository.msg.SectorAndLocation1;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Type of business of the organisation, for example, pharmaceutical.
@@ -70,8 +72,8 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,8 +90,8 @@ public class Sector {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Security security;
 	/**
-	 * Security for which a sector is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,8 +122,8 @@ public class Sector {
 	 */
 	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Security for which a sector is specified.";
@@ -134,8 +136,8 @@ public class Sector {
 	};
 	protected Scheme scheme;
 	/**
-	 * Information regarding the entity that assigns the sector code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,8 +168,8 @@ public class Sector {
 	 */
 	public static final MMBusinessAssociationEnd mmScheme = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Scheme";
 			definition = "Information regarding the entity that assigns the sector code.";
@@ -180,8 +182,8 @@ public class Sector {
 	};
 	protected Organisation organisation;
 	/**
-	 * Organisation which belongs to a specific sector.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,8 +215,8 @@ public class Sector {
 	 */
 	public static final MMBusinessAssociationEnd mmOrganisation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Organisation";
 			definition = "Organisation which belongs to a specific sector.";
@@ -227,8 +229,8 @@ public class Sector {
 	};
 	protected Max35Text identification;
 	/**
-	 * Type of business of the organisation, for example, pharmaceutical.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -273,8 +275,8 @@ public class Sector {
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SectorAndLocation1.mmSector, NameOrSector1Choice.mmName, NameOrSector1Choice.mmSector, ReportedPartyIdentification1.mmNameOrSector, NameAndLocation1.mmName);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Type of business of the organisation, for example, pharmaceutical.";
@@ -293,8 +295,8 @@ public class Sector {
 	};
 	protected List<com.tools20022.repository.entity.SectorStrategy> strategy;
 	/**
-	 * Strategy based on sector.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -326,8 +328,8 @@ public class Sector {
 	 */
 	public static final MMBusinessAssociationEnd mmStrategy = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Strategy";
 			definition = "Strategy based on sector.";
@@ -341,7 +343,7 @@ public class Sector {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Sector";
 				definition = "Type of business of the organisation, for example, pharmaceutical.";
@@ -363,39 +365,44 @@ public class Sector {
 		return security;
 	}
 
-	public void setSecurity(com.tools20022.repository.entity.Security security) {
-		this.security = security;
+	public Sector setSecurity(com.tools20022.repository.entity.Security security) {
+		this.security = Objects.requireNonNull(security);
+		return this;
 	}
 
 	public Scheme getScheme() {
 		return scheme;
 	}
 
-	public void setScheme(com.tools20022.repository.entity.Scheme scheme) {
-		this.scheme = scheme;
+	public Sector setScheme(com.tools20022.repository.entity.Scheme scheme) {
+		this.scheme = Objects.requireNonNull(scheme);
+		return this;
 	}
 
 	public Organisation getOrganisation() {
 		return organisation;
 	}
 
-	public void setOrganisation(com.tools20022.repository.entity.Organisation organisation) {
-		this.organisation = organisation;
+	public Sector setOrganisation(com.tools20022.repository.entity.Organisation organisation) {
+		this.organisation = Objects.requireNonNull(organisation);
+		return this;
 	}
 
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public Sector setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
 	public List<SectorStrategy> getStrategy() {
-		return strategy;
+		return strategy == null ? strategy = new ArrayList<>() : strategy;
 	}
 
-	public void setStrategy(List<com.tools20022.repository.entity.SectorStrategy> strategy) {
-		this.strategy = strategy;
+	public Sector setStrategy(List<com.tools20022.repository.entity.SectorStrategy> strategy) {
+		this.strategy = Objects.requireNonNull(strategy);
+		return this;
 	}
 }

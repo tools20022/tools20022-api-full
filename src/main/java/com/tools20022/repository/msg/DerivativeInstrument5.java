@@ -34,6 +34,7 @@ import com.tools20022.repository.entity.SecuritiesTransfer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -79,8 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOneElementPresentRule#forDerivativeInstrument5
+ * ConstraintOneElementPresentRule.forDerivativeInstrument5}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,15 +100,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the derivative instrument."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DerivativeInstrument5", propOrder = {"expiryDate", "priceMultiplier", "underlyingInstrument", "optionType", "strikePrice", "optionExerciseStyle", "deliveryType", "assetClassSpecificAttributes"})
 public class DerivativeInstrument5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "XpryDt")
 	protected ISODate expiryDate;
 	/**
-	 * Expiry date of the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,7 +142,7 @@ public class DerivativeInstrument5 {
 	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmExerciseDate;
-			componentContext_lazy = () -> DerivativeInstrument5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
 			isDerived = false;
 			xmlTag = "XpryDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,12 +153,11 @@ public class DerivativeInstrument5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "PricMltplr")
 	protected NonNegativeDecimalNumber priceMultiplier;
 	/**
-	 * Number of units of the underlying instrument represented by a single
-	 * derivative contract. For a future or option on an index, the amount per
-	 * index point.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,6 +178,15 @@ public class DerivativeInstrument5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PricMltplr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+	 * constraint} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintMultiplierRule#forPriceMultiplier
+	 * ConstraintMultiplierRule.forPriceMultiplier}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -184,9 +202,10 @@ public class DerivativeInstrument5 {
 	public static final MMMessageAttribute mmPriceMultiplier = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Option.mmStrikeMultiplier;
-			componentContext_lazy = () -> DerivativeInstrument5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
 			isDerived = false;
 			xmlTag = "PricMltplr";
+			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMultiplierRule.forPriceMultiplier);
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceMultiplier";
 			definition = "Number of units of the underlying instrument represented by a single derivative contract. For a future or option on an index, the amount per index point.";
@@ -195,11 +214,11 @@ public class DerivativeInstrument5 {
 			simpleType_lazy = () -> NonNegativeDecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "UndrlygInstrm")
 	protected FinancialInstrumentIdentification5Choice underlyingInstrument;
 	/**
-	 * Choice to specify the type(s) of underlying instrument(s) that make up
-	 * the financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -234,7 +253,7 @@ public class DerivativeInstrument5 {
 	public static final MMMessageAssociationEnd mmUnderlyingInstrument = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
-			componentContext_lazy = () -> DerivativeInstrument5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -246,21 +265,11 @@ public class DerivativeInstrument5 {
 			type_lazy = () -> FinancialInstrumentIdentification5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnTp")
 	protected OptionType2Code optionType;
 	/**
-	 * Specifies whether it is a call option (right to purchase a specific
-	 * underlying asset) or a put option (right to sell a specific underlying
-	 * asset).<br>
-	 * <br>
-	 * Usage:<br>
-	 * Within the scope of MiFIR, RTS 23, the following meanings should be used
-	 * where a swaption is being detailed, “Put”, in case of receiver swaption,
-	 * in which the buyer has the right to enter into a swap as a fixed-rate
-	 * receiver. Call”, in case of payer swaption, in which the buyer has the
-	 * right to enter into a swap as a fixed-rate payer. Caps and floors shall
-	 * interpret this field as, "Put”, in case of a Floor, "Call”, in case of a
-	 * Cap. Field only applies to derivatives that are options or warrants.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -296,7 +305,7 @@ public class DerivativeInstrument5 {
 	public static final MMMessageAttribute mmOptionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionType;
-			componentContext_lazy = () -> DerivativeInstrument5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
 			isDerived = false;
 			xmlTag = "OptnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -307,17 +316,11 @@ public class DerivativeInstrument5 {
 			simpleType_lazy = () -> OptionType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StrkPric")
 	protected SecuritiesTransactionPrice4Choice strikePrice;
 	/**
-	 * Attributes to specify the strike price of a derivative.<br>
-	 * <br>
-	 * Usage:<br>
-	 * Within the scope of MiFIR RTS 23, these are the fields 31 and 32. This
-	 * field only applies to options, warrants, spread bet on an option on an
-	 * equity or contract for difference on an option on an equity. Where price
-	 * is currently not available but pending, the value shall be ’PNDG’. Where
-	 * strike price is not applicable it shall not be populated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -353,7 +356,7 @@ public class DerivativeInstrument5 {
 	public static final MMMessageAttribute mmStrikePrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Option.mmStrikePrice;
-			componentContext_lazy = () -> DerivativeInstrument5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
 			isDerived = false;
 			xmlTag = "StrkPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -364,16 +367,11 @@ public class DerivativeInstrument5 {
 			complexType_lazy = () -> SecuritiesTransactionPrice4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnExrcStyle")
 	protected OptionStyle7Code optionExerciseStyle;
 	/**
-	 * Indication as to whether the option may be exercised only at a fixed date
-	 * (European, and Asian style), a series of pre-specified dates (Bermudan)
-	 * or at any time during the life of the contract (American style).<br>
-	 * <br>
-	 * Usage:<br>
-	 * Within the scope of MiFIR, RTS 23, this field is only applicable for
-	 * options, warrants and entitlement certificates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -409,7 +407,7 @@ public class DerivativeInstrument5 {
 	public static final MMMessageAttribute mmOptionExerciseStyle = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Option.mmOptionStyle;
-			componentContext_lazy = () -> DerivativeInstrument5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
 			isDerived = false;
 			xmlTag = "OptnExrcStyle";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -420,10 +418,11 @@ public class DerivativeInstrument5 {
 			simpleType_lazy = () -> OptionStyle7Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvryTp")
 	protected PhysicalTransferType4Code deliveryType;
 	/**
-	 * Indicates whether the transaction is settled physically or in cash.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -458,7 +457,7 @@ public class DerivativeInstrument5 {
 	public static final MMMessageAttribute mmDeliveryType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmPhysicalDelivery;
-			componentContext_lazy = () -> DerivativeInstrument5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -469,11 +468,11 @@ public class DerivativeInstrument5 {
 			simpleType_lazy = () -> PhysicalTransferType4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AsstClssSpcfcAttrbts")
 	protected AssetClass2 assetClassSpecificAttributes;
 	/**
-	 * Specific attributes of the underlying asset class of the financial
-	 * instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -501,7 +500,7 @@ public class DerivativeInstrument5 {
 	 */
 	public static final MMMessageAssociationEnd mmAssetClassSpecificAttributes = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DerivativeInstrument5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DerivativeInstrument5.mmObject();
 			isDerived = false;
 			xmlTag = "AsstClssSpcfcAttrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -517,10 +516,13 @@ public class DerivativeInstrument5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DerivativeInstrument5.mmExpiryDate, DerivativeInstrument5.mmPriceMultiplier, DerivativeInstrument5.mmUnderlyingInstrument, DerivativeInstrument5.mmOptionType,
-						DerivativeInstrument5.mmStrikePrice, DerivativeInstrument5.mmOptionExerciseStyle, DerivativeInstrument5.mmDeliveryType, DerivativeInstrument5.mmAssetClassSpecificAttributes);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DerivativeInstrument5.mmExpiryDate, com.tools20022.repository.msg.DerivativeInstrument5.mmPriceMultiplier,
+						com.tools20022.repository.msg.DerivativeInstrument5.mmUnderlyingInstrument, com.tools20022.repository.msg.DerivativeInstrument5.mmOptionType, com.tools20022.repository.msg.DerivativeInstrument5.mmStrikePrice,
+						com.tools20022.repository.msg.DerivativeInstrument5.mmOptionExerciseStyle, com.tools20022.repository.msg.DerivativeInstrument5.mmDeliveryType,
+						com.tools20022.repository.msg.DerivativeInstrument5.mmAssetClassSpecificAttributes);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOneElementPresentRule.forDerivativeInstrument5);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DerivativeInstrument5";
 				definition = "Specifies the derivative instrument.";
@@ -529,75 +531,75 @@ public class DerivativeInstrument5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "XpryDt")
-	public ISODate getExpiryDate() {
-		return expiryDate;
+	public Optional<ISODate> getExpiryDate() {
+		return expiryDate == null ? Optional.empty() : Optional.of(expiryDate);
 	}
 
-	public void setExpiryDate(ISODate expiryDate) {
+	public DerivativeInstrument5 setExpiryDate(ISODate expiryDate) {
 		this.expiryDate = expiryDate;
+		return this;
 	}
 
-	@XmlElement(name = "PricMltplr")
-	public NonNegativeDecimalNumber getPriceMultiplier() {
-		return priceMultiplier;
+	public Optional<NonNegativeDecimalNumber> getPriceMultiplier() {
+		return priceMultiplier == null ? Optional.empty() : Optional.of(priceMultiplier);
 	}
 
-	public void setPriceMultiplier(NonNegativeDecimalNumber priceMultiplier) {
+	public DerivativeInstrument5 setPriceMultiplier(NonNegativeDecimalNumber priceMultiplier) {
 		this.priceMultiplier = priceMultiplier;
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygInstrm")
-	public FinancialInstrumentIdentification5Choice getUnderlyingInstrument() {
-		return underlyingInstrument;
+	public Optional<FinancialInstrumentIdentification5Choice> getUnderlyingInstrument() {
+		return underlyingInstrument == null ? Optional.empty() : Optional.of(underlyingInstrument);
 	}
 
-	public void setUnderlyingInstrument(FinancialInstrumentIdentification5Choice underlyingInstrument) {
+	public DerivativeInstrument5 setUnderlyingInstrument(FinancialInstrumentIdentification5Choice underlyingInstrument) {
 		this.underlyingInstrument = underlyingInstrument;
+		return this;
 	}
 
-	@XmlElement(name = "OptnTp")
-	public OptionType2Code getOptionType() {
-		return optionType;
+	public Optional<OptionType2Code> getOptionType() {
+		return optionType == null ? Optional.empty() : Optional.of(optionType);
 	}
 
-	public void setOptionType(OptionType2Code optionType) {
+	public DerivativeInstrument5 setOptionType(OptionType2Code optionType) {
 		this.optionType = optionType;
+		return this;
 	}
 
-	@XmlElement(name = "StrkPric")
-	public SecuritiesTransactionPrice4Choice getStrikePrice() {
-		return strikePrice;
+	public Optional<SecuritiesTransactionPrice4Choice> getStrikePrice() {
+		return strikePrice == null ? Optional.empty() : Optional.of(strikePrice);
 	}
 
-	public void setStrikePrice(SecuritiesTransactionPrice4Choice strikePrice) {
+	public DerivativeInstrument5 setStrikePrice(SecuritiesTransactionPrice4Choice strikePrice) {
 		this.strikePrice = strikePrice;
+		return this;
 	}
 
-	@XmlElement(name = "OptnExrcStyle")
-	public OptionStyle7Code getOptionExerciseStyle() {
-		return optionExerciseStyle;
+	public Optional<OptionStyle7Code> getOptionExerciseStyle() {
+		return optionExerciseStyle == null ? Optional.empty() : Optional.of(optionExerciseStyle);
 	}
 
-	public void setOptionExerciseStyle(OptionStyle7Code optionExerciseStyle) {
+	public DerivativeInstrument5 setOptionExerciseStyle(OptionStyle7Code optionExerciseStyle) {
 		this.optionExerciseStyle = optionExerciseStyle;
+		return this;
 	}
 
-	@XmlElement(name = "DlvryTp")
-	public PhysicalTransferType4Code getDeliveryType() {
-		return deliveryType;
+	public Optional<PhysicalTransferType4Code> getDeliveryType() {
+		return deliveryType == null ? Optional.empty() : Optional.of(deliveryType);
 	}
 
-	public void setDeliveryType(PhysicalTransferType4Code deliveryType) {
+	public DerivativeInstrument5 setDeliveryType(PhysicalTransferType4Code deliveryType) {
 		this.deliveryType = deliveryType;
+		return this;
 	}
 
-	@XmlElement(name = "AsstClssSpcfcAttrbts")
-	public AssetClass2 getAssetClassSpecificAttributes() {
-		return assetClassSpecificAttributes;
+	public Optional<AssetClass2> getAssetClassSpecificAttributes() {
+		return assetClassSpecificAttributes == null ? Optional.empty() : Optional.of(assetClassSpecificAttributes);
 	}
 
-	public void setAssetClassSpecificAttributes(com.tools20022.repository.msg.AssetClass2 assetClassSpecificAttributes) {
+	public DerivativeInstrument5 setAssetClassSpecificAttributes(com.tools20022.repository.msg.AssetClass2 assetClassSpecificAttributes) {
 		this.assetClassSpecificAttributes = assetClassSpecificAttributes;
+		return this;
 	}
 }

@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAgentRole1Rule#forIssuerAgent1
+ * ConstraintAgentRole1Rule.forIssuerAgent1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,15 +100,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IssuerAgent1", propOrder = {"identification", "role"})
 public class IssuerAgent1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected PartyIdentification9Choice identification;
 	/**
-	 * Identifies Issuer Agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -138,7 +149,7 @@ public class IssuerAgent1 {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> IssuerAgent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAgent1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -151,10 +162,11 @@ public class IssuerAgent1 {
 			type_lazy = () -> PartyIdentification9Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Role")
 	protected AgentRole1Code role;
 	/**
-	 * Specifies the role of the Issuer agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -194,7 +206,7 @@ public class IssuerAgent1 {
 	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionAgent.mmAgentRole;
-			componentContext_lazy = () -> IssuerAgent1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IssuerAgent1.mmObject();
 			isDerived = false;
 			xmlTag = "Role";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,10 +222,11 @@ public class IssuerAgent1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IssuerAgent1.mmIdentification, IssuerAgent1.mmRole);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IssuerAgent1.mmIdentification, com.tools20022.repository.msg.IssuerAgent1.mmRole);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV02.mmIssuerAgent, MeetingNotificationV03.mmIssuerAgent, MeetingNotificationV04.mmIssuerAgent);
 				trace_lazy = () -> CorporateActionAgent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAgentRole1Rule.forIssuerAgent1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IssuerAgent1";
 				definition = "Specifies the role of the Issuer agent.";
@@ -223,21 +236,21 @@ public class IssuerAgent1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public PartyIdentification9Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(PartyIdentification9Choice identification) {
-		this.identification = identification;
+	public IssuerAgent1 setIdentification(PartyIdentification9Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Role")
-	public AgentRole1Code getRole() {
-		return role;
+	public Optional<AgentRole1Code> getRole() {
+		return role == null ? Optional.empty() : Optional.of(role);
 	}
 
-	public void setRole(AgentRole1Code role) {
+	public IssuerAgent1 setRole(AgentRole1Code role) {
 		this.role = role;
+		return this;
 	}
 }

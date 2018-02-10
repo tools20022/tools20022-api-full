@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SignedQuantityFormat4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,16 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AdjustedBalanceTypeSD1Choice", propOrder = {"stockLoan", "repo", "fail"})
 public class AdjustedBalanceTypeSD1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StockLn", required = true)
 	protected SignedQuantityFormat4 stockLoan;
 	/**
-	 * Stock loan transaction position. Stock loan is loaned / borrowed from /
-	 * to a third party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,6 +101,9 @@ public class AdjustedBalanceTypeSD1Choice {
 	 * AdjustedBalanceTypeSD1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StockLn"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Stock Loan</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -122,9 +127,10 @@ public class AdjustedBalanceTypeSD1Choice {
 	 */
 	public static final MMMessageAttribute mmStockLoan = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AdjustedBalanceTypeSD1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AdjustedBalanceTypeSD1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StockLn";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Stock Loan"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoan";
 			definition = "Stock loan transaction position. Stock loan is loaned / borrowed from / to a third party.";
@@ -134,12 +140,11 @@ public class AdjustedBalanceTypeSD1Choice {
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "Repo", required = true)
 	protected SignedQuantityFormat4 repo;
 	/**
-	 * Repurchase agreement (REPO) between a seller and a buyer whereby the
-	 * seller agrees to repurchase the securities at an agreed upon price, and
-	 * usually at a stated time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -154,6 +159,9 @@ public class AdjustedBalanceTypeSD1Choice {
 	 * AdjustedBalanceTypeSD1Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Repo"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: REPO</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -177,9 +185,10 @@ public class AdjustedBalanceTypeSD1Choice {
 	 */
 	public static final MMMessageAttribute mmRepo = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AdjustedBalanceTypeSD1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AdjustedBalanceTypeSD1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Repo";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "REPO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repo";
 			definition = "Repurchase agreement (REPO) between a seller and a buyer whereby the seller agrees to repurchase the securities at an agreed upon price, and usually at a stated time. ";
@@ -189,12 +198,11 @@ public class AdjustedBalanceTypeSD1Choice {
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();
 		}
 	};
+	@XmlElement(name = "Fail", required = true)
 	protected SignedQuantityFormat4 fail;
 	/**
-	 * Securities undelivered (FAIL) transaction position. FAIL occurs due to
-	 * the failure of selling clients to deliver the securities to their brokers
-	 * so the latter can deliver them to the buying brokers.  
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,6 +218,9 @@ public class AdjustedBalanceTypeSD1Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Fail"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Fail</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -224,9 +235,10 @@ public class AdjustedBalanceTypeSD1Choice {
 	 */
 	public static final MMMessageAttribute mmFail = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AdjustedBalanceTypeSD1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AdjustedBalanceTypeSD1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Fail";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Fail"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fail";
 			definition = "Securities undelivered (FAIL) transaction position.  FAIL occurs due to the failure of selling clients to deliver the securities to their brokers so the latter can deliver them to the buying brokers.  ";
@@ -239,8 +251,9 @@ public class AdjustedBalanceTypeSD1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AdjustedBalanceTypeSD1Choice.mmStockLoan, AdjustedBalanceTypeSD1Choice.mmRepo, AdjustedBalanceTypeSD1Choice.mmFail);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AdjustedBalanceTypeSD1Choice.mmStockLoan, com.tools20022.repository.choice.AdjustedBalanceTypeSD1Choice.mmRepo,
+						com.tools20022.repository.choice.AdjustedBalanceTypeSD1Choice.mmFail);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdjustedBalanceTypeSD1Choice";
 				definition = "Choice of balance types to provide transaction details.";
@@ -250,30 +263,30 @@ public class AdjustedBalanceTypeSD1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StockLn", required = true)
 	public SignedQuantityFormat4 getStockLoan() {
 		return stockLoan;
 	}
 
-	public void setStockLoan(SignedQuantityFormat4 stockLoan) {
-		this.stockLoan = stockLoan;
+	public AdjustedBalanceTypeSD1Choice setStockLoan(SignedQuantityFormat4 stockLoan) {
+		this.stockLoan = Objects.requireNonNull(stockLoan);
+		return this;
 	}
 
-	@XmlElement(name = "Repo", required = true)
 	public SignedQuantityFormat4 getRepo() {
 		return repo;
 	}
 
-	public void setRepo(SignedQuantityFormat4 repo) {
-		this.repo = repo;
+	public AdjustedBalanceTypeSD1Choice setRepo(SignedQuantityFormat4 repo) {
+		this.repo = Objects.requireNonNull(repo);
+		return this;
 	}
 
-	@XmlElement(name = "Fail", required = true)
 	public SignedQuantityFormat4 getFail() {
 		return fail;
 	}
 
-	public void setFail(SignedQuantityFormat4 fail) {
-		this.fail = fail;
+	public AdjustedBalanceTypeSD1Choice setFail(SignedQuantityFormat4 fail) {
+		this.fail = Objects.requireNonNull(fail);
+		return this;
 	}
 }

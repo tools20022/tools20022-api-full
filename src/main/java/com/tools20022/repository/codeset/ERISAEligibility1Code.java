@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ERISAEligibilityCode;
+import com.tools20022.repository.codeset.ERISAEligibility1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies information about ERISA (Eligibility to federal Employee Retirement
@@ -31,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ERISAEligibilityCode
- * ERISAEligibilityCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ERISAEligibility1Code#mmERISAEligible
- * ERISAEligibility1Code.mmERISAEligible}</li>
+ * {@linkplain com.tools20022.repository.codeset.ERISAEligibility1Code#ERISAEligible
+ * ERISAEligibility1Code.ERISAEligible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ERISAEligibility1Code#mmNotERISAEligible
- * ERISAEligibility1Code.mmNotERISAEligible}</li>
+ * {@linkplain com.tools20022.repository.codeset.ERISAEligibility1Code#NotERISAEligible
+ * ERISAEligibility1Code.NotERISAEligible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ERISAEligibility1Code#mmERISAEligibilityUnknown
- * ERISAEligibility1Code.mmERISAEligibilityUnknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.ERISAEligibility1Code#ERISAEligibilityUnknown
+ * ERISAEligibility1Code.ERISAEligibilityUnknown}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ERISAEligibilityCode
+ * ERISAEligibilityCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ERISAEligibility1Code extends ERISAEligibilityCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ERISAEligibility1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class ERISAEligibility1Code extends ERISAEligibilityCode {
 	 * name} = "ERISAEligible"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmERISAEligible = new MMCode() {
+	public static final ERISAEligibility1Code ERISAEligible = new ERISAEligibility1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERISAEligible";
-			owner_lazy = () -> ERISAEligibility1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ERISAEligibility1Code.mmObject();
+			codeName = ERISAEligibilityCode.ERISAEligible.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class ERISAEligibility1Code extends ERISAEligibilityCode {
 	 * name} = "NotERISAEligible"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotERISAEligible = new MMCode() {
+	public static final ERISAEligibility1Code NotERISAEligible = new ERISAEligibility1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotERISAEligible";
-			owner_lazy = () -> ERISAEligibility1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ERISAEligibility1Code.mmObject();
+			codeName = ERISAEligibilityCode.NotERISAEligible.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,26 +142,59 @@ public class ERISAEligibility1Code extends ERISAEligibilityCode {
 	 * name} = "ERISAEligibilityUnknown"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmERISAEligibilityUnknown = new MMCode() {
+	public static final ERISAEligibility1Code ERISAEligibilityUnknown = new ERISAEligibility1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ERISAEligibilityUnknown";
-			owner_lazy = () -> ERISAEligibility1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ERISAEligibility1Code.mmObject();
+			codeName = ERISAEligibilityCode.ERISAEligibilityUnknown.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ERISAEligibility1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ERISAEligibility1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ELIG");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ERISAEligibility1Code";
 				definition = "Specifies information about ERISA (Eligibility to federal Employee Retirement Income Security Act) eligibility.";
-				code_lazy = () -> Arrays.asList(ERISAEligibility1Code.mmERISAEligible, ERISAEligibility1Code.mmNotERISAEligible, ERISAEligibility1Code.mmERISAEligibilityUnknown);
 				trace_lazy = () -> ERISAEligibilityCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ERISAEligibility1Code.ERISAEligible, com.tools20022.repository.codeset.ERISAEligibility1Code.NotERISAEligible,
+						com.tools20022.repository.codeset.ERISAEligibility1Code.ERISAEligibilityUnknown);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ERISAEligible.getCodeName().get(), ERISAEligible);
+		codesByName.put(NotERISAEligible.getCodeName().get(), NotERISAEligible);
+		codesByName.put(ERISAEligibilityUnknown.getCodeName().get(), ERISAEligibilityUnknown);
+	}
+
+	public static ERISAEligibility1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ERISAEligibility1Code[] values() {
+		ERISAEligibility1Code[] values = new ERISAEligibility1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ERISAEligibility1Code> {
+		@Override
+		public ERISAEligibility1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ERISAEligibility1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

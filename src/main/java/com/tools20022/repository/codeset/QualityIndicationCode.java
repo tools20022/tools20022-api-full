@@ -17,12 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.QualityIndicationCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the relative quality of the indication of interest.
@@ -31,15 +37,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.QualityIndicationCode#Low
+ * QualityIndicationCode.Low}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.QualityIndicationCode#mmLow
- * QualityIndicationCode.mmLow}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.QualityIndicationCode#mmMedium
- * QualityIndicationCode.mmMedium}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.QualityIndicationCode#mmHigh
- * QualityIndicationCode.mmHigh}</li>
+ * {@linkplain com.tools20022.repository.codeset.QualityIndicationCode#Medium
+ * QualityIndicationCode.Medium}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QualityIndicationCode#High
+ * QualityIndicationCode.High}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +56,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = FIXSynonym: 25</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class QualityIndicationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class QualityIndicationCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,6 +93,9 @@ public class QualityIndicationCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "LOWE"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 25</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -95,12 +106,13 @@ public class QualityIndicationCode {
 	 * definition} = "Low quality."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLow = new MMCode() {
+	public static final QualityIndicationCode Low = new QualityIndicationCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "25"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Low";
 			definition = "Low quality.";
-			owner_lazy = () -> QualityIndicationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QualityIndicationCode.mmObject();
 			codeName = "LOWE";
 		}
 	};
@@ -115,6 +127,9 @@ public class QualityIndicationCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "MEDI"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 25</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -125,12 +140,13 @@ public class QualityIndicationCode {
 	 * definition} = "Medium quality."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMedium = new MMCode() {
+	public static final QualityIndicationCode Medium = new QualityIndicationCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "25"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Medium";
 			definition = "Medium quality.";
-			owner_lazy = () -> QualityIndicationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QualityIndicationCode.mmObject();
 			codeName = "MEDI";
 		}
 	};
@@ -145,6 +161,9 @@ public class QualityIndicationCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "HIGH"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 25</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -155,28 +174,61 @@ public class QualityIndicationCode {
 	 * definition} = "High quality."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHigh = new MMCode() {
+	public static final QualityIndicationCode High = new QualityIndicationCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "25"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "High";
 			definition = "High quality.";
-			owner_lazy = () -> QualityIndicationCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QualityIndicationCode.mmObject();
 			codeName = "HIGH";
 		}
 	};
+	final static private LinkedHashMap<String, QualityIndicationCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected QualityIndicationCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "25"));
 				example = Arrays.asList("LOWE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QualityIndicationCode";
 				definition = "Indicates the relative quality of the indication of interest.";
-				code_lazy = () -> Arrays.asList(QualityIndicationCode.mmLow, QualityIndicationCode.mmMedium, QualityIndicationCode.mmHigh);
 				derivation_lazy = () -> Arrays.asList(QualityIndication1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QualityIndicationCode.Low, com.tools20022.repository.codeset.QualityIndicationCode.Medium, com.tools20022.repository.codeset.QualityIndicationCode.High);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Low.getCodeName().get(), Low);
+		codesByName.put(Medium.getCodeName().get(), Medium);
+		codesByName.put(High.getCodeName().get(), High);
+	}
+
+	public static QualityIndicationCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static QualityIndicationCode[] values() {
+		QualityIndicationCode[] values = new QualityIndicationCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, QualityIndicationCode> {
+		@Override
+		public QualityIndicationCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(QualityIndicationCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Cheque4", propOrder = "payeeIdentification")
 public class Cheque4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PyeeId", required = true)
 	protected NameAndAddress5 payeeIdentification;
 	/**
-	 * Party to which a cheque is made payable.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +106,7 @@ public class Cheque4 {
 	public static final MMMessageAttribute mmPayeeIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Cheque4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Cheque4.mmObject();
 			isDerived = false;
 			xmlTag = "PyeeId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,9 +121,9 @@ public class Cheque4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Cheque4.mmPayeeIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Cheque4.mmPayeeIdentification);
 				trace_lazy = () -> ChequeIssue.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Cheque4";
 				definition = "Set of characteristics related to a cheque instruction, such as cheque type or cheque number.";
@@ -130,12 +132,12 @@ public class Cheque4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PyeeId", required = true)
 	public NameAndAddress5 getPayeeIdentification() {
 		return payeeIdentification;
 	}
 
-	public void setPayeeIdentification(com.tools20022.repository.msg.NameAndAddress5 payeeIdentification) {
-		this.payeeIdentification = payeeIdentification;
+	public Cheque4 setPayeeIdentification(com.tools20022.repository.msg.NameAndAddress5 payeeIdentification) {
+		this.payeeIdentification = Objects.requireNonNull(payeeIdentification);
+		return this;
 	}
 }

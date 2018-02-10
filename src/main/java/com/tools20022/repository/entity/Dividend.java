@@ -27,9 +27,11 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Distribution of earnings to shareholders, paid for in cash, stock, scrip
@@ -106,6 +108,54 @@ import java.util.List;
  * Dividend.mmReinvestmentDate}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Dividend#mmValue
  * Dividend.mmValue}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Security#mmDividend
+ * Security.mmDividend}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Tax#mmDividend
+ * Tax.mmDividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmDividend
+ * PaymentObligation.mmDividend}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmFinalDividendParameters
+ * RateAndAmount.mmFinalDividendParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmFullyFrankedRateAndAmountDividendParameters
+ * RateAndAmount.mmFullyFrankedRateAndAmountDividendParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmGrossDividendParameters
+ * RateAndAmount.mmGrossDividendParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmNetDividendParameters
+ * RateAndAmount.mmNetDividendParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmProvisionalDividendParameters
+ * RateAndAmount.mmProvisionalDividendParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmDividend
+ * CashProceedsDefinition.mmDividend}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Distribution#mmDividend
+ * Distribution.mmDividend}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.GrossDividendRate1Choice#mmRateTypeAmount
+ * GrossDividendRate1Choice.mmRateTypeAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.NetDividendRate1Choice#mmRateTypeAmount
+ * NetDividendRate1Choice.mmRateTypeAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TaxVoucher1#mmNotionalDividendPayable
+ * TaxVoucher1.mmNotionalDividendPayable}</li>
  * </ul>
  * </li>
  * <li>
@@ -340,58 +390,10 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Security#mmDividend
- * Security.mmDividend}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Tax#mmDividend
- * Tax.mmDividend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.PaymentObligation#mmDividend
- * PaymentObligation.mmDividend}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmFinalDividendParameters
- * RateAndAmount.mmFinalDividendParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmFullyFrankedRateAndAmountDividendParameters
- * RateAndAmount.mmFullyFrankedRateAndAmountDividendParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmGrossDividendParameters
- * RateAndAmount.mmGrossDividendParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmNetDividendParameters
- * RateAndAmount.mmNetDividendParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RateAndAmount#mmProvisionalDividendParameters
- * RateAndAmount.mmProvisionalDividendParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CashProceedsDefinition#mmDividend
- * CashProceedsDefinition.mmDividend}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Distribution#mmDividend
- * Distribution.mmDividend}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.GrossDividendRate1Choice#mmRateTypeAmount
- * GrossDividendRate1Choice.mmRateTypeAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.NetDividendRate1Choice#mmRateTypeAmount
- * NetDividendRate1Choice.mmRateTypeAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TaxVoucher1#mmNotionalDividendPayable
- * TaxVoucher1.mmNotionalDividendPayable}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -409,8 +411,8 @@ public class Dividend {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected EventFrequencyCode dividendFrequency;
 	/**
-	 * Frequency with which the income is allocated to investors.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -448,8 +450,8 @@ public class Dividend {
 	public static final MMBusinessAttribute mmDividendFrequency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmDividendFrequency, FinancialInstrument20.mmDividendFrequency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendFrequency";
 			definition = "Frequency with which the income is allocated to investors.";
@@ -468,8 +470,8 @@ public class Dividend {
 	};
 	protected PercentageRate annualTotalDividendRate;
 	/**
-	 * Provides the annual total dividend rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -529,8 +531,8 @@ public class Dividend {
 			derivation_lazy = () -> Arrays.asList(PaymentInstrument10.mmDividendPercentage, PaymentInstrument12.mmDividendPercentage, DividendSD1.mmTotalAnnualDividendRate, DividendSD1.mmMaximumAnnualTotalDividendRate,
 					DividendSD1.mmMinimumAnnualTotalDividendRate, GrossDividendRateFormat6SD1.mmMaximumDividendRate, GrossDividendRateFormat6SD1.mmMinimumDividendRate, CashAccount33.mmDividendPercentage,
 					PaymentInstrument13.mmDividendPercentage);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AnnualTotalDividendRate";
 			definition = "Provides the annual total dividend rate.";
@@ -549,8 +551,8 @@ public class Dividend {
 	};
 	protected RateAndAmount finalDividend;
 	/**
-	 * Dividend is final.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -651,8 +653,8 @@ public class Dividend {
 					RateDetails9.mmFinalDividendRate, RateDetails11.mmFinalDividendRate, RateDetails12.mmFinalDividendRate, CorporateActionRate5.mmFinalDividendRate, CorporateActionRate12.mmFinalDividendRate,
 					RateDetails3.mmFinalDividendRate, RateDetails5.mmFinalDividendRate, RateDetails10.mmFinalDividendRate, RateDetails13.mmFinalDividendRate, GrossDividendRate1Choice.mmAmount, CorporateActionRate2.mmFinalDividend,
 					RateDetails15.mmFinalDividendRate, RateDetails14.mmFinalDividendRate, RateDetails18.mmFinalDividendRate, RateDetails21.mmFinalDividendRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinalDividend";
 			definition = "Dividend is final.";
@@ -665,11 +667,8 @@ public class Dividend {
 	};
 	protected RateAndAmount fullyFrankedRateAndAmount;
 	/**
-	 * Rate of a fully franked dividend paid by a company, or amount resulting
-	 * from a fully franked dividend paid by a company; amount includes tax
-	 * credit for companies that have made sufficient tax payments during the
-	 * fiscal period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -781,8 +780,8 @@ public class Dividend {
 					RateDetails9.mmFullyFrankedRate, RateDetails11.mmFullyFrankedRate, RateDetails12.mmFullyFrankedRate, CorporateActionRate5.mmFullyFrankedRate, CorporateActionRate12.mmFullyFrankedRate, RateDetails3.mmFullyFrankedRate,
 					RateDetails5.mmFullyFrankedRate, RateDetails10.mmFullyFrankedRate, RateDetails13.mmFullyFrankedRate, CorporateActionRate2.mmFullyFranked, RateDetails15.mmFullyFrankedRate, RateDetails14.mmFullyFrankedRate,
 					RateDetails18.mmFullyFrankedRate, RateDetails21.mmFullyFrankedRate, RateDetails23.mmFullyFrankedRate, RateDetails22.mmFullyFrankedRate, RateDetails24.mmFullyFrankedRate, RateDetails25.mmFullyFrankedRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FullyFrankedRateAndAmount";
 			definition = "Rate of a fully franked dividend paid by a company, or amount resulting from a fully franked dividend paid by a company; amount includes tax credit for companies that have made sufficient tax payments during the fiscal period.";
@@ -795,9 +794,8 @@ public class Dividend {
 	};
 	protected RateAndAmount grossDividend;
 	/**
-	 * Cash dividend amount per equity before deductions or allowances have been
-	 * made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1032,8 +1030,8 @@ public class Dividend {
 					RateDetails24.mmGrossDividendRate, RateDetails25.mmGrossDividendRate, CorporateActionRate76.mmGrossDividendRate, RateDetails26.mmGrossDividendRate, CorporateActionRate82.mmGrossDividendRate,
 					CorporateActionRate80.mmGrossDividendRate, RateDetails27.mmGrossDividendRate, CorporateActionRate81.mmGrossDividendRate, CorporateActionRate83.mmGrossDividendRate, CorporateActionRate84.mmGrossDividendRate,
 					CorporateActionRate85.mmGrossDividendRate, RateDetails28.mmGrossDividendRate, RateDetails30.mmGrossDividendRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossDividend";
 			definition = "Cash dividend amount per equity before deductions or allowances have been made.";
@@ -1046,8 +1044,8 @@ public class Dividend {
 	};
 	protected DividendRateTypeCode rateType;
 	/**
-	 * Specifies the type of dividend rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1217,8 +1215,8 @@ public class Dividend {
 					RateType38Choice.mmProprietary, RateType40Choice.mmCode, RateType40Choice.mmProprietary, RateType41Choice.mmCode, RateType41Choice.mmProprietary, RateType36Choice.mmCode, RateType36Choice.mmProprietary,
 					RateType39Choice.mmCode, RateType39Choice.mmProprietary, RateType44Choice.mmCode, RateType44Choice.mmProprietary, RateType47Choice.mmCode, RateType47Choice.mmProprietary, RateType49Choice.mmCode,
 					RateType49Choice.mmProprietary, RateType50Choice.mmCode, RateType50Choice.mmProprietary, RateType51Choice.mmCode, RateType51Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RateType";
 			definition = "Specifies the type of dividend rate.";
@@ -1237,9 +1235,8 @@ public class Dividend {
 	};
 	protected RateAndAmount netDividend;
 	/**
-	 * Cash dividend amount per equity after deductions or allowances have been
-	 * made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1537,8 +1534,8 @@ public class Dividend {
 					NetDividendRateFormat27Choice.mmAmount, RateDetails26.mmNetDividendRate, CorporateActionRate82.mmNetDividendRate, CorporateActionRate80.mmNetDividendRate, RateDetails27.mmNetDividendRate,
 					CorporateActionRate81.mmNetDividendRate, CorporateActionRate83.mmNetDividendRate, CorporateActionRate84.mmNetDividendRate, CorporateActionRate85.mmNetDividendRate, RateDetails28.mmNetDividendRate,
 					RateDetails30.mmNetDividendRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetDividend";
 			definition = "Cash dividend amount per equity after deductions or allowances have been made.";
@@ -1551,8 +1548,8 @@ public class Dividend {
 	};
 	protected RateAndAmount provisionalDividend;
 	/**
-	 * Dividend is provisional.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1650,8 +1647,8 @@ public class Dividend {
 					RateDetails7.mmProvisionalDividendRate, RateDetails9.mmProvisionalDividendRate, RateDetails11.mmProvisionalDividendRate, RateDetails12.mmProvisionalDividendRate, CorporateActionRate5.mmProvisionalDividendRate,
 					CorporateActionRate12.mmProvisionalDividendRate, RateDetails3.mmProvisionalDividendRate, RateDetails5.mmProvisionalDividendRate, RateDetails10.mmProvisionalDividendRate, RateDetails13.mmProvisionalDividendRate,
 					CorporateActionRate2.mmProvisionalDividend, RateDetails15.mmProvisionalDividendRate, RateDetails14.mmProvisionalDividendRate, RateDetails18.mmProvisionalDividendRate, RateDetails21.mmProvisionalDividendRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProvisionalDividend";
 			definition = "Dividend is provisional.";
@@ -1664,8 +1661,8 @@ public class Dividend {
 	};
 	protected ISODateTime dividendRankingDate;
 	/**
-	 * Date on which a security will be entitled to a dividend.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1742,8 +1739,8 @@ public class Dividend {
 			derivation_lazy = () -> Arrays.asList(SecurityDate1.mmDividendRankingDate, SecurityDate3.mmDividendRankingDate, SecurityDate6.mmDividendRankingDate, SecurityDate7.mmDividendRankingDate, SecurityDate2.mmDividendRankingDate,
 					SecurityDate4.mmDividendRankingDate, SecurityDate5.mmDividendRankingDate, SecurityDate8.mmDividendRankingDate, SecurityDate9.mmDividendRankingDate, SecurityDate10.mmDividendRankingDate,
 					CorporateActionDate3.mmDividendRankingDate, SecurityDate12.mmDividendRankingDate, SecurityDate11.mmDividendRankingDate, SecurityDate14.mmDividendRankingDate, SecurityDate13.mmDividendRankingDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendRankingDate";
 			definition = "Date on which a security will be entitled to a dividend.";
@@ -1762,10 +1759,8 @@ public class Dividend {
 	};
 	protected CurrencyAndAmount manufacturedDividendAmount;
 	/**
-	 * Amount of money that the borrower pays to the lender as a compensation.
-	 * It does not entitle the lender to reclaim any tax credit and is sometimes
-	 * treated differently by the local tax authorities of the lender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1921,8 +1916,8 @@ public class Dividend {
 					CorporateActionAmounts35.mmManufacturedDividendPaymentAmount, CorporateActionAmounts37.mmManufacturedDividendPaymentAmount, CorporateActionAmounts36.mmManufacturedDividendPaymentAmount,
 					CorporateActionAmounts38.mmManufacturedDividendPaymentAmount, CorporateActionAmounts39.mmManufacturedDividendPaymentAmount, CorporateActionAmounts41.mmManufacturedDividendPaymentAmount,
 					CorporateActionAmounts40.mmManufacturedDividendPaymentAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ManufacturedDividendAmount";
 			definition = "Amount of money that the borrower pays to the lender as a compensation. It does not entitle the lender to reclaim any tax credit and is sometimes treated differently by the local tax authorities of the lender.";
@@ -1941,9 +1936,8 @@ public class Dividend {
 	};
 	protected CurrencyAndAmount unfrankedAmount;
 	/**
-	 * Amount resulting from an unfranked dividend paid by a company; the amount
-	 * does not include tax credit and is subject to withholding tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2094,8 +2088,8 @@ public class Dividend {
 					CorporateActionAmounts1.mmUnfrankedAmount, CorporateActionAmounts29.mmUnfrankedAmount, CorporateActionAmounts27.mmUnfrankedAmount, CorporateActionAmounts28.mmUnfrankedAmount, CorporateActionAmounts33.mmUnfrankedAmount,
 					CorporateActionAmounts32.mmUnfrankedAmount, CorporateActionAmounts35.mmUnfrankedAmount, CorporateActionAmounts37.mmUnfrankedAmount, CorporateActionAmounts36.mmUnfrankedAmount, CorporateActionAmounts38.mmUnfrankedAmount,
 					CorporateActionAmounts39.mmUnfrankedAmount, CorporateActionAmounts41.mmUnfrankedAmount, CorporateActionAmounts40.mmUnfrankedAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnfrankedAmount";
 			definition = "Amount resulting from an unfranked dividend paid by a company; the amount does not include tax credit and is subject to withholding tax.";
@@ -2114,9 +2108,8 @@ public class Dividend {
 	};
 	protected CurrencyAndAmount notionalDividendPayableAmount;
 	/**
-	 * Amount of cash that would have been payable if the dividend had been
-	 * taken in the form of cash rather than shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2188,8 +2181,8 @@ public class Dividend {
 					CorporateActionAmounts12.mmNotionalDividendPayableAmount, CorporateActionAmounts17.mmNotionalDividendPayableAmount, CorporateActionAmounts20.mmNotionalDividendPayableAmount,
 					CorporateActionAmounts23.mmNotionalDividendPayableAmount, CorporateActionAmounts24.mmNotionalDividendPayableAmount, CorporateActionAmounts29.mmNotionalDividendPayableAmount,
 					CorporateActionAmounts35.mmNotionalDividendPayableAmount, CorporateActionAmounts37.mmNotionalDividendPayableAmount, CorporateActionAmounts39.mmNotionalDividendPayableAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotionalDividendPayableAmount";
 			definition = "Amount of cash that would have been payable if the dividend had been taken in the form of cash rather than shares.";
@@ -2208,8 +2201,8 @@ public class Dividend {
 	};
 	protected PercentageRate rate;
 	/**
-	 * Planned dividend rate, for example, for preferred shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2313,8 +2306,8 @@ public class Dividend {
 					RateDetails12.mmNonResidentRate, RateDetails3.mmNonResidentRate, RateDetails5.mmNonResidentRate, RateDetails10.mmNonResidentRate, RateDetails13.mmNonResidentRate, SecuritiesFinancing10.mmDividendRatio,
 					RateDetails15.mmNonResidentRate, RateDetails14.mmNonResidentRate, RateDetails18.mmNonResidentRate, RateDetails21.mmNonResidentRate, RateDetails23.mmNonResidentRate, RateDetails22.mmNonResidentRate,
 					RateDetails24.mmNonResidentRate, RateDetails25.mmNonResidentRate, RateDetails26.mmNonResidentRate, RateDetails27.mmNonResidentRate, RateDetails28.mmNonResidentRate, RateDetails30.mmNonResidentRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
 			definition = "Planned dividend rate, for example, for preferred shares.";
@@ -2333,9 +2326,8 @@ public class Dividend {
 	};
 	protected ISODateTime exDividendDate;
 	/**
-	 * Date/time as from which trading (including exchange and OTC trading)
-	 * occurs on the underlying security without the benefit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2427,8 +2419,8 @@ public class Dividend {
 					CorporateActionDate22.mmExDividendDate, CorporateActionDate25.mmExDividendDate, CorporateActionDate27.mmExDividendDate, CorporateActionDate28.mmExDividendDate, CorporateActionDate2.mmExDividendDate,
 					CorporateActionDate30.mmExDividendDate, CorporateActionDate34.mmExDividendDate, CorporateActionDate41.mmExDividendDate, CorporateActionDate43.mmExDividendDate, CorporateActionDate49.mmExDividendDate,
 					CorporateActionDate45.mmExDividendDate, CorporateActionDate44.mmExDividendDate, CorporateActionDate54.mmExDividendDate, CorporateActionDate50.mmExDividendDate, CorporateActionDate58.mmExDividendDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExDividendDate";
 			definition = "Date/time as from which trading (including exchange and OTC trading) occurs on the underlying security without the benefit.";
@@ -2447,8 +2439,8 @@ public class Dividend {
 	};
 	protected List<com.tools20022.repository.entity.Security> security;
 	/**
-	 * Security for which a dividend is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2479,8 +2471,8 @@ public class Dividend {
 	 */
 	public static final MMBusinessAssociationEnd mmSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Security for which a dividend is specified.";
@@ -2492,8 +2484,8 @@ public class Dividend {
 	};
 	protected DividendTypeCode type;
 	/**
-	 * Nature of the dividend.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2581,8 +2573,8 @@ public class Dividend {
 					DividendTypeFormat3Choice.mmProprietary, CorporateAction5.mmDividendType, DividendTypeFormat4Choice.mmCode, DividendTypeFormat4Choice.mmProprietary, CorporateAction6.mmDividendType, DividendTypeFormat5Choice.mmCode,
 					DividendTypeFormat5Choice.mmProprietary, DividendTypeFormat8Choice.mmCode, DividendTypeFormat8Choice.mmProprietary, DividendTypeFormat9Choice.mmCode, DividendTypeFormat9Choice.mmProprietary,
 					DividendTypeFormat10Choice.mmCode, DividendTypeFormat10Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Nature of the dividend.";
@@ -2601,8 +2593,8 @@ public class Dividend {
 	};
 	protected List<com.tools20022.repository.entity.CashProceedsDefinition> cashProceeds;
 	/**
-	 * Defines the proceeds which resulted in dividends.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2635,8 +2627,8 @@ public class Dividend {
 	 */
 	public static final MMBusinessAssociationEnd mmCashProceeds = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashProceeds";
 			definition = "Defines the proceeds which resulted in dividends.";
@@ -2648,8 +2640,8 @@ public class Dividend {
 	};
 	protected List<com.tools20022.repository.entity.PaymentObligation> obligation;
 	/**
-	 * Specifies the payment terms of the dividend.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2681,8 +2673,8 @@ public class Dividend {
 	 */
 	public static final MMBusinessAssociationEnd mmObligation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Obligation";
 			definition = "Specifies the  payment terms of the dividend.";
@@ -2694,8 +2686,8 @@ public class Dividend {
 	};
 	protected Tax tax;
 	/**
-	 * Tax on dividend.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2725,8 +2717,8 @@ public class Dividend {
 	 */
 	public static final MMBusinessAssociationEnd mmTax = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Tax";
 			definition = "Tax on dividend.";
@@ -2739,8 +2731,8 @@ public class Dividend {
 	};
 	protected Distribution relatedDistribution;
 	/**
-	 * Distribution for which a dividend is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2772,8 +2764,8 @@ public class Dividend {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedDistribution";
 			definition = "Distribution for which a dividend is specified.";
@@ -2786,8 +2778,8 @@ public class Dividend {
 	};
 	protected CorporateActionFrequencyTypeCode dividendFrequenceType;
 	/**
-	 * Specifies the cycle of dividends.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2812,8 +2804,8 @@ public class Dividend {
 	 */
 	public static final MMBusinessAttribute mmDividendFrequenceType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendFrequenceType";
 			definition = "Specifies the cycle of dividends.";
@@ -2832,8 +2824,8 @@ public class Dividend {
 	};
 	protected PercentageRate dividendRatio;
 	/**
-	 * Percentage of earnings paid to shareholders in dividends.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2859,8 +2851,8 @@ public class Dividend {
 	 */
 	public static final MMBusinessAttribute mmDividendRatio = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DividendRatio";
 			definition = "Percentage of earnings paid to shareholders in dividends.";
@@ -2879,8 +2871,8 @@ public class Dividend {
 	};
 	protected ISODate paymentDate;
 	/**
-	 * Date upon which the dividend is paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2904,8 +2896,8 @@ public class Dividend {
 	 */
 	public static final MMBusinessAttribute mmPaymentDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentDate";
 			definition = "Date upon which the dividend is paid.";
@@ -2924,8 +2916,8 @@ public class Dividend {
 	};
 	protected FrequencyCode paymentFrequency;
 	/**
-	 * Specifies the cycle of dividend payments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2960,8 +2952,8 @@ public class Dividend {
 	public static final MMBusinessAttribute mmPaymentFrequency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmPaymentFrequency, Debt2.mmPaymentFrequency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentFrequency";
 			definition = "Specifies the cycle of dividend payments.";
@@ -2980,8 +2972,8 @@ public class Dividend {
 	};
 	protected ISODate reinvestmentDate;
 	/**
-	 * Date upon which the dividend is reinvested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3005,8 +2997,8 @@ public class Dividend {
 	 */
 	public static final MMBusinessAttribute mmReinvestmentDate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReinvestmentDate";
 			definition = "Date upon which the dividend is reinvested.";
@@ -3025,8 +3017,8 @@ public class Dividend {
 	};
 	protected CurrencyAndAmount value;
 	/**
-	 * Value of the dividend expressed as an amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3051,8 +3043,8 @@ public class Dividend {
 	 */
 	public static final MMBusinessAttribute mmValue = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Dividend.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Value";
 			definition = "Value of the dividend expressed as an amount.";
@@ -3073,7 +3065,7 @@ public class Dividend {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Dividend";
 				definition = "Distribution of earnings to shareholders, paid for in cash, stock, scrip issue or, rarely, in kind, for example, in company products or property. The dividend amount is decided by the board of directors.";
@@ -3122,207 +3114,233 @@ public class Dividend {
 		return dividendFrequency;
 	}
 
-	public void setDividendFrequency(EventFrequencyCode dividendFrequency) {
-		this.dividendFrequency = dividendFrequency;
+	public Dividend setDividendFrequency(EventFrequencyCode dividendFrequency) {
+		this.dividendFrequency = Objects.requireNonNull(dividendFrequency);
+		return this;
 	}
 
 	public PercentageRate getAnnualTotalDividendRate() {
 		return annualTotalDividendRate;
 	}
 
-	public void setAnnualTotalDividendRate(PercentageRate annualTotalDividendRate) {
-		this.annualTotalDividendRate = annualTotalDividendRate;
+	public Dividend setAnnualTotalDividendRate(PercentageRate annualTotalDividendRate) {
+		this.annualTotalDividendRate = Objects.requireNonNull(annualTotalDividendRate);
+		return this;
 	}
 
 	public RateAndAmount getFinalDividend() {
 		return finalDividend;
 	}
 
-	public void setFinalDividend(com.tools20022.repository.entity.RateAndAmount finalDividend) {
-		this.finalDividend = finalDividend;
+	public Dividend setFinalDividend(com.tools20022.repository.entity.RateAndAmount finalDividend) {
+		this.finalDividend = Objects.requireNonNull(finalDividend);
+		return this;
 	}
 
 	public RateAndAmount getFullyFrankedRateAndAmount() {
 		return fullyFrankedRateAndAmount;
 	}
 
-	public void setFullyFrankedRateAndAmount(com.tools20022.repository.entity.RateAndAmount fullyFrankedRateAndAmount) {
-		this.fullyFrankedRateAndAmount = fullyFrankedRateAndAmount;
+	public Dividend setFullyFrankedRateAndAmount(com.tools20022.repository.entity.RateAndAmount fullyFrankedRateAndAmount) {
+		this.fullyFrankedRateAndAmount = Objects.requireNonNull(fullyFrankedRateAndAmount);
+		return this;
 	}
 
 	public RateAndAmount getGrossDividend() {
 		return grossDividend;
 	}
 
-	public void setGrossDividend(com.tools20022.repository.entity.RateAndAmount grossDividend) {
-		this.grossDividend = grossDividend;
+	public Dividend setGrossDividend(com.tools20022.repository.entity.RateAndAmount grossDividend) {
+		this.grossDividend = Objects.requireNonNull(grossDividend);
+		return this;
 	}
 
 	public DividendRateTypeCode getRateType() {
 		return rateType;
 	}
 
-	public void setRateType(DividendRateTypeCode rateType) {
-		this.rateType = rateType;
+	public Dividend setRateType(DividendRateTypeCode rateType) {
+		this.rateType = Objects.requireNonNull(rateType);
+		return this;
 	}
 
 	public RateAndAmount getNetDividend() {
 		return netDividend;
 	}
 
-	public void setNetDividend(com.tools20022.repository.entity.RateAndAmount netDividend) {
-		this.netDividend = netDividend;
+	public Dividend setNetDividend(com.tools20022.repository.entity.RateAndAmount netDividend) {
+		this.netDividend = Objects.requireNonNull(netDividend);
+		return this;
 	}
 
 	public RateAndAmount getProvisionalDividend() {
 		return provisionalDividend;
 	}
 
-	public void setProvisionalDividend(com.tools20022.repository.entity.RateAndAmount provisionalDividend) {
-		this.provisionalDividend = provisionalDividend;
+	public Dividend setProvisionalDividend(com.tools20022.repository.entity.RateAndAmount provisionalDividend) {
+		this.provisionalDividend = Objects.requireNonNull(provisionalDividend);
+		return this;
 	}
 
 	public ISODateTime getDividendRankingDate() {
 		return dividendRankingDate;
 	}
 
-	public void setDividendRankingDate(ISODateTime dividendRankingDate) {
-		this.dividendRankingDate = dividendRankingDate;
+	public Dividend setDividendRankingDate(ISODateTime dividendRankingDate) {
+		this.dividendRankingDate = Objects.requireNonNull(dividendRankingDate);
+		return this;
 	}
 
 	public CurrencyAndAmount getManufacturedDividendAmount() {
 		return manufacturedDividendAmount;
 	}
 
-	public void setManufacturedDividendAmount(CurrencyAndAmount manufacturedDividendAmount) {
-		this.manufacturedDividendAmount = manufacturedDividendAmount;
+	public Dividend setManufacturedDividendAmount(CurrencyAndAmount manufacturedDividendAmount) {
+		this.manufacturedDividendAmount = Objects.requireNonNull(manufacturedDividendAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getUnfrankedAmount() {
 		return unfrankedAmount;
 	}
 
-	public void setUnfrankedAmount(CurrencyAndAmount unfrankedAmount) {
-		this.unfrankedAmount = unfrankedAmount;
+	public Dividend setUnfrankedAmount(CurrencyAndAmount unfrankedAmount) {
+		this.unfrankedAmount = Objects.requireNonNull(unfrankedAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getNotionalDividendPayableAmount() {
 		return notionalDividendPayableAmount;
 	}
 
-	public void setNotionalDividendPayableAmount(CurrencyAndAmount notionalDividendPayableAmount) {
-		this.notionalDividendPayableAmount = notionalDividendPayableAmount;
+	public Dividend setNotionalDividendPayableAmount(CurrencyAndAmount notionalDividendPayableAmount) {
+		this.notionalDividendPayableAmount = Objects.requireNonNull(notionalDividendPayableAmount);
+		return this;
 	}
 
 	public PercentageRate getRate() {
 		return rate;
 	}
 
-	public void setRate(PercentageRate rate) {
-		this.rate = rate;
+	public Dividend setRate(PercentageRate rate) {
+		this.rate = Objects.requireNonNull(rate);
+		return this;
 	}
 
 	public ISODateTime getExDividendDate() {
 		return exDividendDate;
 	}
 
-	public void setExDividendDate(ISODateTime exDividendDate) {
-		this.exDividendDate = exDividendDate;
+	public Dividend setExDividendDate(ISODateTime exDividendDate) {
+		this.exDividendDate = Objects.requireNonNull(exDividendDate);
+		return this;
 	}
 
 	public List<Security> getSecurity() {
-		return security;
+		return security == null ? security = new ArrayList<>() : security;
 	}
 
-	public void setSecurity(List<com.tools20022.repository.entity.Security> security) {
-		this.security = security;
+	public Dividend setSecurity(List<com.tools20022.repository.entity.Security> security) {
+		this.security = Objects.requireNonNull(security);
+		return this;
 	}
 
 	public DividendTypeCode getType() {
 		return type;
 	}
 
-	public void setType(DividendTypeCode type) {
-		this.type = type;
+	public Dividend setType(DividendTypeCode type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
 	public List<CashProceedsDefinition> getCashProceeds() {
-		return cashProceeds;
+		return cashProceeds == null ? cashProceeds = new ArrayList<>() : cashProceeds;
 	}
 
-	public void setCashProceeds(List<com.tools20022.repository.entity.CashProceedsDefinition> cashProceeds) {
-		this.cashProceeds = cashProceeds;
+	public Dividend setCashProceeds(List<com.tools20022.repository.entity.CashProceedsDefinition> cashProceeds) {
+		this.cashProceeds = Objects.requireNonNull(cashProceeds);
+		return this;
 	}
 
 	public List<PaymentObligation> getObligation() {
-		return obligation;
+		return obligation == null ? obligation = new ArrayList<>() : obligation;
 	}
 
-	public void setObligation(List<com.tools20022.repository.entity.PaymentObligation> obligation) {
-		this.obligation = obligation;
+	public Dividend setObligation(List<com.tools20022.repository.entity.PaymentObligation> obligation) {
+		this.obligation = Objects.requireNonNull(obligation);
+		return this;
 	}
 
 	public Tax getTax() {
 		return tax;
 	}
 
-	public void setTax(com.tools20022.repository.entity.Tax tax) {
-		this.tax = tax;
+	public Dividend setTax(com.tools20022.repository.entity.Tax tax) {
+		this.tax = Objects.requireNonNull(tax);
+		return this;
 	}
 
 	public Distribution getRelatedDistribution() {
 		return relatedDistribution;
 	}
 
-	public void setRelatedDistribution(com.tools20022.repository.entity.Distribution relatedDistribution) {
-		this.relatedDistribution = relatedDistribution;
+	public Dividend setRelatedDistribution(com.tools20022.repository.entity.Distribution relatedDistribution) {
+		this.relatedDistribution = Objects.requireNonNull(relatedDistribution);
+		return this;
 	}
 
 	public CorporateActionFrequencyTypeCode getDividendFrequenceType() {
 		return dividendFrequenceType;
 	}
 
-	public void setDividendFrequenceType(CorporateActionFrequencyTypeCode dividendFrequenceType) {
-		this.dividendFrequenceType = dividendFrequenceType;
+	public Dividend setDividendFrequenceType(CorporateActionFrequencyTypeCode dividendFrequenceType) {
+		this.dividendFrequenceType = Objects.requireNonNull(dividendFrequenceType);
+		return this;
 	}
 
 	public PercentageRate getDividendRatio() {
 		return dividendRatio;
 	}
 
-	public void setDividendRatio(PercentageRate dividendRatio) {
-		this.dividendRatio = dividendRatio;
+	public Dividend setDividendRatio(PercentageRate dividendRatio) {
+		this.dividendRatio = Objects.requireNonNull(dividendRatio);
+		return this;
 	}
 
 	public ISODate getPaymentDate() {
 		return paymentDate;
 	}
 
-	public void setPaymentDate(ISODate paymentDate) {
-		this.paymentDate = paymentDate;
+	public Dividend setPaymentDate(ISODate paymentDate) {
+		this.paymentDate = Objects.requireNonNull(paymentDate);
+		return this;
 	}
 
 	public FrequencyCode getPaymentFrequency() {
 		return paymentFrequency;
 	}
 
-	public void setPaymentFrequency(FrequencyCode paymentFrequency) {
-		this.paymentFrequency = paymentFrequency;
+	public Dividend setPaymentFrequency(FrequencyCode paymentFrequency) {
+		this.paymentFrequency = Objects.requireNonNull(paymentFrequency);
+		return this;
 	}
 
 	public ISODate getReinvestmentDate() {
 		return reinvestmentDate;
 	}
 
-	public void setReinvestmentDate(ISODate reinvestmentDate) {
-		this.reinvestmentDate = reinvestmentDate;
+	public Dividend setReinvestmentDate(ISODate reinvestmentDate) {
+		this.reinvestmentDate = Objects.requireNonNull(reinvestmentDate);
+		return this;
 	}
 
 	public CurrencyAndAmount getValue() {
 		return value;
 	}
 
-	public void setValue(CurrencyAndAmount value) {
-		this.value = value;
+	public Dividend setValue(CurrencyAndAmount value) {
+		this.value = Objects.requireNonNull(value);
+		return this;
 	}
 }

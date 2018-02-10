@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DayBookingInstructionCode;
+import com.tools20022.repository.codeset.DayBookingInstruction1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Describes of the nature of execution booking process.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DayBookingInstructionCode
- * DayBookingInstructionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DayBookingInstruction1Code#mmAuto
- * DayBookingInstruction1Code.mmAuto}</li>
+ * {@linkplain com.tools20022.repository.codeset.DayBookingInstruction1Code#Auto
+ * DayBookingInstruction1Code.Auto}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DayBookingInstruction1Code#mmSpeakFirst
- * DayBookingInstruction1Code.mmSpeakFirst}</li>
+ * {@linkplain com.tools20022.repository.codeset.DayBookingInstruction1Code#SpeakFirst
+ * DayBookingInstruction1Code.SpeakFirst}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DayBookingInstructionCode
+ * DayBookingInstructionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Describes of the nature of execution booking process."</li>
  * </ul>
  */
-public class DayBookingInstruction1Code extends DayBookingInstructionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DayBookingInstruction1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class DayBookingInstruction1Code extends DayBookingInstructionCode {
 	 * name} = "Auto"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuto = new MMCode() {
+	public static final DayBookingInstruction1Code Auto = new DayBookingInstruction1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Auto";
-			owner_lazy = () -> DayBookingInstruction1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DayBookingInstruction1Code.mmObject();
+			codeName = DayBookingInstructionCode.Auto.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class DayBookingInstruction1Code extends DayBookingInstructionCode {
 	 * name} = "SpeakFirst"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpeakFirst = new MMCode() {
+	public static final DayBookingInstruction1Code SpeakFirst = new DayBookingInstruction1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpeakFirst";
-			owner_lazy = () -> DayBookingInstruction1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DayBookingInstruction1Code.mmObject();
+			codeName = DayBookingInstructionCode.SpeakFirst.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DayBookingInstruction1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DayBookingInstruction1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AUTO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DayBookingInstruction1Code";
 				definition = "Describes of the nature of execution booking process.";
-				code_lazy = () -> Arrays.asList(DayBookingInstruction1Code.mmAuto, DayBookingInstruction1Code.mmSpeakFirst);
 				trace_lazy = () -> DayBookingInstructionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DayBookingInstruction1Code.Auto, com.tools20022.repository.codeset.DayBookingInstruction1Code.SpeakFirst);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Auto.getCodeName().get(), Auto);
+		codesByName.put(SpeakFirst.getCodeName().get(), SpeakFirst);
+	}
+
+	public static DayBookingInstruction1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DayBookingInstruction1Code[] values() {
+		DayBookingInstruction1Code[] values = new DayBookingInstruction1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DayBookingInstruction1Code> {
+		@Override
+		public DayBookingInstruction1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DayBookingInstruction1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

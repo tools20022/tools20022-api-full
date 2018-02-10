@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +29,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionOptionSD8}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CorporateActionOptionSD10", propOrder = {"placeAndName", "extendedOptionFeatures", "defaultOptionFlag", "optionalDividendSupplementaryDataRequiredFlag", "RDPReferenceNumber"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CorporateActionOptionSD10", propOrder = {"placeAndName", "extendedOptionFeatures", "defaultOptionFlag", "optionalDividendSupplementaryDataRequiredFlag", "rDPReferenceNumber"})
 public class CorporateActionOptionSD10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +123,7 @@ public class CorporateActionOptionSD10 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSD10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD10.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,11 +135,11 @@ public class CorporateActionOptionSD10 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedOptnFeatrs")
 	protected ExtendedOptionFeature1Code extendedOptionFeatures;
 	/**
-	 * Used for options that have particular proprietary feature that cannot be
-	 * represented in standard ISO message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,6 +154,9 @@ public class CorporateActionOptionSD10 {
 	 * CorporateActionOptionSD10}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "XtndedOptnFeatrs"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Option Type</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -169,9 +177,10 @@ public class CorporateActionOptionSD10 {
 	 */
 	public static final MMMessageAttribute mmExtendedOptionFeatures = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSD10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD10.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedOptnFeatrs";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Option Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedOptionFeatures";
 			definition = "Used for options that have particular proprietary feature that cannot be represented in standard ISO message.";
@@ -181,12 +190,11 @@ public class CorporateActionOptionSD10 {
 			simpleType_lazy = () -> ExtendedOptionFeature1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DfltOptnFlg")
 	protected YesNoIndicator defaultOptionFlag;
 	/**
-	 * Identifies whether the option is declared as default by the issuer /
-	 * offeror, and will be treated as default by the issuer / offeror if no
-	 * elections is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,6 +209,10 @@ public class CorporateActionOptionSD10 {
 	 * CorporateActionOptionSD10}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DfltOptnFlg"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :17B::DFLT, DTCCSynonym: Issuer
+	 * Default Option Flag</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -221,9 +233,10 @@ public class CorporateActionOptionSD10 {
 	 */
 	public static final MMMessageAttribute mmDefaultOptionFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSD10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD10.mmObject();
 			isDerived = false;
 			xmlTag = "DfltOptnFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":17B::DFLT"), new DTCCSynonym(this, "Issuer Default Option Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultOptionFlag";
 			definition = "Identifies whether the option is declared as default by the issuer / offeror,  and will be treated as default by the issuer / offeror if no elections is made.";
@@ -233,11 +246,11 @@ public class CorporateActionOptionSD10 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "OptnlDvddSplmtryDataReqrdFlg")
 	protected YesNoIndicator optionalDividendSupplementaryDataRequiredFlag;
 	/**
-	 * Indicates whether optional dividend supplementary data are required in
-	 * the ISO 20022 CAIN instructions for this event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -273,7 +286,7 @@ public class CorporateActionOptionSD10 {
 	 */
 	public static final MMMessageAttribute mmOptionalDividendSupplementaryDataRequiredFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSD10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD10.mmObject();
 			isDerived = false;
 			xmlTag = "OptnlDvddSplmtryDataReqrdFlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,19 +298,11 @@ public class CorporateActionOptionSD10 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RDPRefNb")
 	protected Exact32AlphaNumericText rDPReferenceNumber;
 	/**
-	 * Unique DTCC legacy reference used for matching and reconciling legacy CCF
-	 * records. The element will be populated to all levels of the message
-	 * (Event Details, Options, Movements) where applicable to indicate how
-	 * values are sourced from CCF legacy files. For example: event has 2
-	 * related Activity Types 74, and 54. If event details and cash option are
-	 * sourced from the Activity Type 74, then Activity Type 74 will be in RDP
-	 * Reference Number in event details, and also on the cash option. The
-	 * activity type 54 will be "on" the security option. Also, usage rules will
-	 * specify the different layouts of the RDP Reference Number based on DTCC
-	 * event group (reorganization, distribution, or redemption).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -332,7 +337,7 @@ public class CorporateActionOptionSD10 {
 	 */
 	public static final MMMessageAttribute mmRDPReferenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionOptionSD10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionOptionSD10.mmObject();
 			isDerived = false;
 			xmlTag = "RDPRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -348,9 +353,10 @@ public class CorporateActionOptionSD10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionOptionSD10.mmPlaceAndName, CorporateActionOptionSD10.mmExtendedOptionFeatures, CorporateActionOptionSD10.mmDefaultOptionFlag,
-						CorporateActionOptionSD10.mmOptionalDividendSupplementaryDataRequiredFlag, CorporateActionOptionSD10.mmRDPReferenceNumber);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionOptionSD10.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionOptionSD10.mmExtendedOptionFeatures,
+						com.tools20022.repository.msg.CorporateActionOptionSD10.mmDefaultOptionFlag, com.tools20022.repository.msg.CorporateActionOptionSD10.mmOptionalDividendSupplementaryDataRequiredFlag,
+						com.tools20022.repository.msg.CorporateActionOptionSD10.mmRDPReferenceNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOptionSD10";
 				definition = "Provides additional information regarding corporate action option details.";
@@ -360,48 +366,48 @@ public class CorporateActionOptionSD10 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionOptionSD10 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedOptnFeatrs")
-	public ExtendedOptionFeature1Code getExtendedOptionFeatures() {
-		return extendedOptionFeatures;
+	public Optional<ExtendedOptionFeature1Code> getExtendedOptionFeatures() {
+		return extendedOptionFeatures == null ? Optional.empty() : Optional.of(extendedOptionFeatures);
 	}
 
-	public void setExtendedOptionFeatures(ExtendedOptionFeature1Code extendedOptionFeatures) {
+	public CorporateActionOptionSD10 setExtendedOptionFeatures(ExtendedOptionFeature1Code extendedOptionFeatures) {
 		this.extendedOptionFeatures = extendedOptionFeatures;
+		return this;
 	}
 
-	@XmlElement(name = "DfltOptnFlg")
-	public YesNoIndicator getDefaultOptionFlag() {
-		return defaultOptionFlag;
+	public Optional<YesNoIndicator> getDefaultOptionFlag() {
+		return defaultOptionFlag == null ? Optional.empty() : Optional.of(defaultOptionFlag);
 	}
 
-	public void setDefaultOptionFlag(YesNoIndicator defaultOptionFlag) {
+	public CorporateActionOptionSD10 setDefaultOptionFlag(YesNoIndicator defaultOptionFlag) {
 		this.defaultOptionFlag = defaultOptionFlag;
+		return this;
 	}
 
-	@XmlElement(name = "OptnlDvddSplmtryDataReqrdFlg")
-	public YesNoIndicator getOptionalDividendSupplementaryDataRequiredFlag() {
-		return optionalDividendSupplementaryDataRequiredFlag;
+	public Optional<YesNoIndicator> getOptionalDividendSupplementaryDataRequiredFlag() {
+		return optionalDividendSupplementaryDataRequiredFlag == null ? Optional.empty() : Optional.of(optionalDividendSupplementaryDataRequiredFlag);
 	}
 
-	public void setOptionalDividendSupplementaryDataRequiredFlag(YesNoIndicator optionalDividendSupplementaryDataRequiredFlag) {
+	public CorporateActionOptionSD10 setOptionalDividendSupplementaryDataRequiredFlag(YesNoIndicator optionalDividendSupplementaryDataRequiredFlag) {
 		this.optionalDividendSupplementaryDataRequiredFlag = optionalDividendSupplementaryDataRequiredFlag;
+		return this;
 	}
 
-	@XmlElement(name = "RDPRefNb")
-	public Exact32AlphaNumericText getRDPReferenceNumber() {
-		return rDPReferenceNumber;
+	public Optional<Exact32AlphaNumericText> getRDPReferenceNumber() {
+		return rDPReferenceNumber == null ? Optional.empty() : Optional.of(rDPReferenceNumber);
 	}
 
-	public void setRDPReferenceNumber(Exact32AlphaNumericText rDPReferenceNumber) {
+	public CorporateActionOptionSD10 setRDPReferenceNumber(Exact32AlphaNumericText rDPReferenceNumber) {
 		this.rDPReferenceNumber = rDPReferenceNumber;
+		return this;
 	}
 }

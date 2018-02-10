@@ -24,6 +24,8 @@ import com.tools20022.repository.choice.DailyFundTransfer1Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Details about successor account for automated default funds transfer."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DefaultAccountDetails1", propOrder = {"accountOwner", "account", "dailyFundTransfer"})
 public class DefaultAccountDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctOwnr", required = true)
 	protected FinancialInstitutionIdentification9 accountOwner;
 	/**
-	 * Account owner identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -100,7 +103,7 @@ public class DefaultAccountDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DefaultAccountDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DefaultAccountDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +115,11 @@ public class DefaultAccountDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification9.mmObject();
 		}
 	};
+	@XmlElement(name = "Acct", required = true)
 	protected CashAccount24 account;
 	/**
-	 * Account identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -141,7 +145,7 @@ public class DefaultAccountDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DefaultAccountDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DefaultAccountDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,10 +157,11 @@ public class DefaultAccountDetails1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "DalyFndTrf")
 	protected DailyFundTransfer1Choice dailyFundTransfer;
 	/**
-	 * Information about time and event fund transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -183,7 +188,7 @@ public class DefaultAccountDetails1 {
 	 */
 	public static final MMMessageAssociationEnd mmDailyFundTransfer = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> DefaultAccountDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DefaultAccountDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "DalyFndTrf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,8 +204,9 @@ public class DefaultAccountDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DefaultAccountDetails1.mmAccountOwner, DefaultAccountDetails1.mmAccount, DefaultAccountDetails1.mmDailyFundTransfer);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DefaultAccountDetails1.mmAccountOwner, com.tools20022.repository.msg.DefaultAccountDetails1.mmAccount,
+						com.tools20022.repository.msg.DefaultAccountDetails1.mmDailyFundTransfer);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DefaultAccountDetails1";
 				definition = "Details about successor account for automated default funds transfer.";
@@ -209,30 +215,30 @@ public class DefaultAccountDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctOwnr", required = true)
 	public FinancialInstitutionIdentification9 getAccountOwner() {
 		return accountOwner;
 	}
 
-	public void setAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification9 accountOwner) {
-		this.accountOwner = accountOwner;
+	public DefaultAccountDetails1 setAccountOwner(com.tools20022.repository.msg.FinancialInstitutionIdentification9 accountOwner) {
+		this.accountOwner = Objects.requireNonNull(accountOwner);
+		return this;
 	}
 
-	@XmlElement(name = "Acct", required = true)
 	public CashAccount24 getAccount() {
 		return account;
 	}
 
-	public void setAccount(com.tools20022.repository.msg.CashAccount24 account) {
-		this.account = account;
+	public DefaultAccountDetails1 setAccount(com.tools20022.repository.msg.CashAccount24 account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 
-	@XmlElement(name = "DalyFndTrf")
-	public DailyFundTransfer1Choice getDailyFundTransfer() {
-		return dailyFundTransfer;
+	public Optional<DailyFundTransfer1Choice> getDailyFundTransfer() {
+		return dailyFundTransfer == null ? Optional.empty() : Optional.of(dailyFundTransfer);
 	}
 
-	public void setDailyFundTransfer(DailyFundTransfer1Choice dailyFundTransfer) {
+	public DefaultAccountDetails1 setDailyFundTransfer(DailyFundTransfer1Choice dailyFundTransfer) {
 		this.dailyFundTransfer = dailyFundTransfer;
+		return this;
 	}
 }

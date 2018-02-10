@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * "General information about the invoice contained in the original request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "OriginalInvoiceInformation1", propOrder = {"documentNumber", "totalInvoiceAmount", "issueDate", "paymentDueDate"})
 public class OriginalInvoiceInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DocNb", required = true)
 	protected Max35Text documentNumber;
 	/**
-	 * Unique identifier of the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +119,7 @@ public class OriginalInvoiceInformation1 {
 	public static final MMMessageAttribute mmDocumentNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> OriginalInvoiceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalInvoiceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "DocNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,12 +130,11 @@ public class OriginalInvoiceInformation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlInvcAmt", required = true)
 	protected ActiveCurrencyAndAmount totalInvoiceAmount;
 	/**
-	 * Total amount of the invoice, being the sum of total invoice lines
-	 * amounts, total invoice additional amounts (allowances and charges) and
-	 * total tax amounts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,7 +170,7 @@ public class OriginalInvoiceInformation1 {
 	public static final MMMessageAttribute mmTotalInvoiceAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmTotalInvoiceAmount;
-			componentContext_lazy = () -> OriginalInvoiceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalInvoiceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlInvcAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,10 +181,11 @@ public class OriginalInvoiceInformation1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "IsseDt", required = true)
 	protected ISODate issueDate;
 	/**
-	 * Issue date of the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -216,7 +218,7 @@ public class OriginalInvoiceInformation1 {
 	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Document.mmIssueDate;
-			componentContext_lazy = () -> OriginalInvoiceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalInvoiceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,10 +229,11 @@ public class OriginalInvoiceInformation1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtDueDt", required = true)
 	protected ISODate paymentDueDate;
 	/**
-	 * Due date for the payment of the invoice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -263,7 +266,7 @@ public class OriginalInvoiceInformation1 {
 	public static final MMMessageAttribute mmPaymentDueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmPaymentDueDate;
-			componentContext_lazy = () -> OriginalInvoiceInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalInvoiceInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDueDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -278,10 +281,10 @@ public class OriginalInvoiceInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays
-						.asList(OriginalInvoiceInformation1.mmDocumentNumber, OriginalInvoiceInformation1.mmTotalInvoiceAmount, OriginalInvoiceInformation1.mmIssueDate, OriginalInvoiceInformation1.mmPaymentDueDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalInvoiceInformation1.mmDocumentNumber, com.tools20022.repository.msg.OriginalInvoiceInformation1.mmTotalInvoiceAmount,
+						com.tools20022.repository.msg.OriginalInvoiceInformation1.mmIssueDate, com.tools20022.repository.msg.OriginalInvoiceInformation1.mmPaymentDueDate);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalInvoiceInformation1";
 				definition = "General information about the invoice contained in the original request.";
@@ -290,39 +293,39 @@ public class OriginalInvoiceInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DocNb", required = true)
 	public Max35Text getDocumentNumber() {
 		return documentNumber;
 	}
 
-	public void setDocumentNumber(Max35Text documentNumber) {
-		this.documentNumber = documentNumber;
+	public OriginalInvoiceInformation1 setDocumentNumber(Max35Text documentNumber) {
+		this.documentNumber = Objects.requireNonNull(documentNumber);
+		return this;
 	}
 
-	@XmlElement(name = "TtlInvcAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalInvoiceAmount() {
 		return totalInvoiceAmount;
 	}
 
-	public void setTotalInvoiceAmount(ActiveCurrencyAndAmount totalInvoiceAmount) {
-		this.totalInvoiceAmount = totalInvoiceAmount;
+	public OriginalInvoiceInformation1 setTotalInvoiceAmount(ActiveCurrencyAndAmount totalInvoiceAmount) {
+		this.totalInvoiceAmount = Objects.requireNonNull(totalInvoiceAmount);
+		return this;
 	}
 
-	@XmlElement(name = "IsseDt", required = true)
 	public ISODate getIssueDate() {
 		return issueDate;
 	}
 
-	public void setIssueDate(ISODate issueDate) {
-		this.issueDate = issueDate;
+	public OriginalInvoiceInformation1 setIssueDate(ISODate issueDate) {
+		this.issueDate = Objects.requireNonNull(issueDate);
+		return this;
 	}
 
-	@XmlElement(name = "PmtDueDt", required = true)
 	public ISODate getPaymentDueDate() {
 		return paymentDueDate;
 	}
 
-	public void setPaymentDueDate(ISODate paymentDueDate) {
-		this.paymentDueDate = paymentDueDate;
+	public OriginalInvoiceInformation1 setPaymentDueDate(ISODate paymentDueDate) {
+		this.paymentDueDate = Objects.requireNonNull(paymentDueDate);
+		return this;
 	}
 }

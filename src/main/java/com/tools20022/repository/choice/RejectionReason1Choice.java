@@ -28,9 +28,11 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Reason2;
 import com.tools20022.repository.msg.RejectedElement1;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -78,8 +80,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,15 +94,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RejectionReason1Choice", propOrder = {"globalRejectionReason", "rejectedElement"})
 public class RejectionReason1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GblRjctnRsn", required = true)
 	protected Reason2 globalRejectionReason;
 	/**
-	 * Rejection reason that applies to the whole report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -130,7 +133,7 @@ public class RejectionReason1Choice {
 	public static final MMMessageAssociationEnd mmGlobalRejectionReason = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> StatusReason.mmObject();
-			componentContext_lazy = () -> RejectionReason1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "GblRjctnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,10 +145,11 @@ public class RejectionReason1Choice {
 			type_lazy = () -> Reason2.mmObject();
 		}
 	};
+	@XmlElement(name = "RjctdElmt", required = true)
 	protected List<RejectedElement1> rejectedElement;
 	/**
-	 * Specifies a rejection reason for each individual element of a report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -172,7 +176,7 @@ public class RejectionReason1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmRejectedElement = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RejectionReason1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RejectionReason1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RjctdElmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,11 +191,11 @@ public class RejectionReason1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RejectionReason1Choice.mmGlobalRejectionReason, RejectionReason1Choice.mmRejectedElement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RejectionReason1Choice.mmGlobalRejectionReason, com.tools20022.repository.choice.RejectionReason1Choice.mmRejectedElement);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AmendmentRejectionV02.mmRejectionReason, AmendmentRejectionNotificationV03.mmRejectionReason, MisMatchRejectionV02.mmRejectionReason,
 						MisMatchRejectionNotificationV03.mmRejectionReason);
 				trace_lazy = () -> StatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason1Choice";
 				definition = "Allows the sender of the rejection message to indicate only one rejection reason that applies to the entire rejected message.";
@@ -200,21 +204,21 @@ public class RejectionReason1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GblRjctnRsn", required = true)
 	public Reason2 getGlobalRejectionReason() {
 		return globalRejectionReason;
 	}
 
-	public void setGlobalRejectionReason(Reason2 globalRejectionReason) {
-		this.globalRejectionReason = globalRejectionReason;
+	public RejectionReason1Choice setGlobalRejectionReason(Reason2 globalRejectionReason) {
+		this.globalRejectionReason = Objects.requireNonNull(globalRejectionReason);
+		return this;
 	}
 
-	@XmlElement(name = "RjctdElmt", required = true)
 	public List<RejectedElement1> getRejectedElement() {
-		return rejectedElement;
+		return rejectedElement == null ? rejectedElement = new ArrayList<>() : rejectedElement;
 	}
 
-	public void setRejectedElement(List<RejectedElement1> rejectedElement) {
-		this.rejectedElement = rejectedElement;
+	public RejectionReason1Choice setRejectedElement(List<RejectedElement1> rejectedElement) {
+		this.rejectedElement = Objects.requireNonNull(rejectedElement);
+		return this;
 	}
 }

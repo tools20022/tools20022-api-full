@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AccrualPeriodTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of the first accrual period for debt instruments compared
@@ -33,26 +38,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccrualPeriodTypeCode#mmLongFirstPaymentPeriod
- * AccrualPeriodTypeCode.mmLongFirstPaymentPeriod}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccrualPeriodTypeCode#LongFirstPaymentPeriod
+ * AccrualPeriodTypeCode.LongFirstPaymentPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccrualPeriodTypeCode#mmFirstRegularPaymentPeriod
- * AccrualPeriodTypeCode.mmFirstRegularPaymentPeriod}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccrualPeriodTypeCode#FirstRegularPaymentPeriod
+ * AccrualPeriodTypeCode.FirstRegularPaymentPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccrualPeriodTypeCode#mmShortFirstPaymentperiod
- * AccrualPeriodTypeCode.mmShortFirstPaymentperiod}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccrualPeriodTypeCode#ShortFirstPaymentperiod
+ * AccrualPeriodTypeCode.ShortFirstPaymentperiod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccrualPeriodTypeCode#mmFirstYearOfPayment
- * AccrualPeriodTypeCode.mmFirstYearOfPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccrualPeriodTypeCode#FirstYearOfPayment
+ * AccrualPeriodTypeCode.FirstYearOfPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccrualPeriodTypeCode#mmExtraLongPaymentPeriod
- * AccrualPeriodTypeCode.mmExtraLongPaymentPeriod}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccrualPeriodTypeCode#ExtraLongPaymentPeriod
+ * AccrualPeriodTypeCode.ExtraLongPaymentPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccrualPeriodTypeCode#mmDefaultPeriod
- * AccrualPeriodTypeCode.mmDefaultPeriod}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccrualPeriodTypeCode#DefaultPeriod
+ * AccrualPeriodTypeCode.DefaultPeriod}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AccrualPeriodTypeCode#mmPaymentOmitted
- * AccrualPeriodTypeCode.mmPaymentOmitted}</li>
+ * {@linkplain com.tools20022.repository.codeset.AccrualPeriodTypeCode#PaymentOmitted
+ * AccrualPeriodTypeCode.PaymentOmitted}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -65,8 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -85,7 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class AccrualPeriodTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AccrualPeriodTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -109,12 +115,12 @@ public class AccrualPeriodTypeCode {
 	 * definition} = "Long first payment period is applicable."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLongFirstPaymentPeriod = new MMCode() {
+	public static final AccrualPeriodTypeCode LongFirstPaymentPeriod = new AccrualPeriodTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongFirstPaymentPeriod";
 			definition = "Long first payment period is applicable.";
-			owner_lazy = () -> AccrualPeriodTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccrualPeriodTypeCode.mmObject();
 			codeName = "LONG";
 		}
 	};
@@ -139,12 +145,12 @@ public class AccrualPeriodTypeCode {
 	 * definition} = "Regular first payment period is applicable."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFirstRegularPaymentPeriod = new MMCode() {
+	public static final AccrualPeriodTypeCode FirstRegularPaymentPeriod = new AccrualPeriodTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstRegularPaymentPeriod";
 			definition = "Regular first payment period is applicable.";
-			owner_lazy = () -> AccrualPeriodTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccrualPeriodTypeCode.mmObject();
 			codeName = "FREG";
 		}
 	};
@@ -169,12 +175,12 @@ public class AccrualPeriodTypeCode {
 	 * definition} = "Short first payment period is applicable."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmShortFirstPaymentperiod = new MMCode() {
+	public static final AccrualPeriodTypeCode ShortFirstPaymentperiod = new AccrualPeriodTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortFirstPaymentperiod";
 			definition = "Short first payment period is applicable.";
-			owner_lazy = () -> AccrualPeriodTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccrualPeriodTypeCode.mmObject();
 			codeName = "SHRT";
 		}
 	};
@@ -199,12 +205,12 @@ public class AccrualPeriodTypeCode {
 	 * definition} = "First year of payment is applicable."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFirstYearOfPayment = new MMCode() {
+	public static final AccrualPeriodTypeCode FirstYearOfPayment = new AccrualPeriodTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstYearOfPayment";
 			definition = "First year of payment is applicable.";
-			owner_lazy = () -> AccrualPeriodTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccrualPeriodTypeCode.mmObject();
 			codeName = "YEAR";
 		}
 	};
@@ -229,12 +235,12 @@ public class AccrualPeriodTypeCode {
 	 * definition} = "Extra long payment period is applicable."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExtraLongPaymentPeriod = new MMCode() {
+	public static final AccrualPeriodTypeCode ExtraLongPaymentPeriod = new AccrualPeriodTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtraLongPaymentPeriod";
 			definition = "Extra long payment period is applicable.";
-			owner_lazy = () -> AccrualPeriodTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccrualPeriodTypeCode.mmObject();
 			codeName = "XLNG";
 		}
 	};
@@ -259,12 +265,12 @@ public class AccrualPeriodTypeCode {
 	 * definition} = "Default payment period is applicable."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDefaultPeriod = new MMCode() {
+	public static final AccrualPeriodTypeCode DefaultPeriod = new AccrualPeriodTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultPeriod";
 			definition = "Default payment period is applicable.";
-			owner_lazy = () -> AccrualPeriodTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccrualPeriodTypeCode.mmObject();
 			codeName = "DFLT";
 		}
 	};
@@ -289,29 +295,66 @@ public class AccrualPeriodTypeCode {
 	 * definition} = "Payment is omitted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPaymentOmitted = new MMCode() {
+	public static final AccrualPeriodTypeCode PaymentOmitted = new AccrualPeriodTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentOmitted";
 			definition = "Payment is omitted.";
-			owner_lazy = () -> AccrualPeriodTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AccrualPeriodTypeCode.mmObject();
 			codeName = "OMIT";
 		}
 	};
+	final static private LinkedHashMap<String, AccrualPeriodTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AccrualPeriodTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("LONG");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccrualPeriodTypeCode";
 				definition = "Specifies the type of the first accrual period for debt instruments compared to the normal accrual period of the security.";
-				code_lazy = () -> Arrays.asList(AccrualPeriodTypeCode.mmLongFirstPaymentPeriod, AccrualPeriodTypeCode.mmFirstRegularPaymentPeriod, AccrualPeriodTypeCode.mmShortFirstPaymentperiod, AccrualPeriodTypeCode.mmFirstYearOfPayment,
-						AccrualPeriodTypeCode.mmExtraLongPaymentPeriod, AccrualPeriodTypeCode.mmDefaultPeriod, AccrualPeriodTypeCode.mmPaymentOmitted);
 				derivation_lazy = () -> Arrays.asList(AccrualPeriodType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccrualPeriodTypeCode.LongFirstPaymentPeriod, com.tools20022.repository.codeset.AccrualPeriodTypeCode.FirstRegularPaymentPeriod,
+						com.tools20022.repository.codeset.AccrualPeriodTypeCode.ShortFirstPaymentperiod, com.tools20022.repository.codeset.AccrualPeriodTypeCode.FirstYearOfPayment,
+						com.tools20022.repository.codeset.AccrualPeriodTypeCode.ExtraLongPaymentPeriod, com.tools20022.repository.codeset.AccrualPeriodTypeCode.DefaultPeriod,
+						com.tools20022.repository.codeset.AccrualPeriodTypeCode.PaymentOmitted);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(LongFirstPaymentPeriod.getCodeName().get(), LongFirstPaymentPeriod);
+		codesByName.put(FirstRegularPaymentPeriod.getCodeName().get(), FirstRegularPaymentPeriod);
+		codesByName.put(ShortFirstPaymentperiod.getCodeName().get(), ShortFirstPaymentperiod);
+		codesByName.put(FirstYearOfPayment.getCodeName().get(), FirstYearOfPayment);
+		codesByName.put(ExtraLongPaymentPeriod.getCodeName().get(), ExtraLongPaymentPeriod);
+		codesByName.put(DefaultPeriod.getCodeName().get(), DefaultPeriod);
+		codesByName.put(PaymentOmitted.getCodeName().get(), PaymentOmitted);
+	}
+
+	public static AccrualPeriodTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AccrualPeriodTypeCode[] values() {
+		AccrualPeriodTypeCode[] values = new AccrualPeriodTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AccrualPeriodTypeCode> {
+		@Override
+		public AccrualPeriodTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AccrualPeriodTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

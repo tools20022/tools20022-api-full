@@ -29,6 +29,8 @@ import com.tools20022.repository.msg.Agreement3;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Contractual details related to the agreement between parties.
@@ -40,6 +42,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Agreement
+ * Agreement}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -60,17 +65,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesFinancingAgreement.mmMarginRatio}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Agreement
- * Agreement}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Agreement3 Agreement3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.Agreement1 Agreement1}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -81,10 +75,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Agreement3 Agreement3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Agreement1 Agreement1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,8 +103,8 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected SecuritiesFinancing securitiesFinancingTrade;
 	/**
-	 * Specifies a trade using the related financing agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,8 +137,8 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesFinancingTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesFinancingTrade";
 			definition = "Specifies a trade using the related financing agreement.";
@@ -149,10 +151,8 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	};
 	protected CurrencyCode currency;
 	/**
-	 * Contractual currency forming the basis of a financing agreement and
-	 * associated transactions. Usually, but not always, the same as the trade
-	 * currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,8 +189,8 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Agreement3.mmCurrency, Agreement1.mmCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Currency";
 			definition = "Contractual currency forming the basis of a financing agreement and associated transactions. Usually, but not always, the same as the trade currency.";
@@ -209,8 +209,8 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	};
 	protected TerminationTypeCode terminationType;
 	/**
-	 * Type of financing termination.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -247,8 +247,8 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	public static final MMBusinessAttribute mmTerminationType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Agreement3.mmClosingType, Agreement1.mmTerminationType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TerminationType";
 			definition = "Type of financing termination.";
@@ -267,8 +267,8 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	};
 	protected DeliveryTypeCode deliveryType;
 	/**
-	 * Identifies type of settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -304,8 +304,8 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	public static final MMBusinessAttribute mmDeliveryType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Agreement3.mmDeliveryType, Agreement1.mmDeliveryType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliveryType";
 			definition = "Identifies type of settlement.";
@@ -324,11 +324,8 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	};
 	protected PercentageRate marginRatio;
 	/**
-	 * Fraction of the cash consideration that must be collateralized, expressed
-	 * as a percent. A margin ratio of 02% indicates that the value of the
-	 * collateral (after deducting for "haircut") must exceed the cash
-	 * consideration by 2%.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -366,8 +363,8 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	public static final MMBusinessAttribute mmMarginRatio = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Agreement3.mmMarginRatio, Agreement1.mmMarginRatio);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarginRatio";
 			definition = "Fraction of the cash consideration that must be collateralized, expressed as a percent. A margin ratio of 02% indicates that the value of the collateral (after deducting for \"haircut\") must exceed the cash consideration by 2%.";
@@ -388,7 +385,7 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesFinancingAgreement";
 				definition = "Contractual details related to the agreement between parties.";
@@ -408,43 +405,48 @@ public class SecuritiesFinancingAgreement extends Agreement {
 		return mmObject_lazy.get();
 	}
 
-	public SecuritiesFinancing getSecuritiesFinancingTrade() {
-		return securitiesFinancingTrade;
+	public Optional<SecuritiesFinancing> getSecuritiesFinancingTrade() {
+		return securitiesFinancingTrade == null ? Optional.empty() : Optional.of(securitiesFinancingTrade);
 	}
 
-	public void setSecuritiesFinancingTrade(com.tools20022.repository.entity.SecuritiesFinancing securitiesFinancingTrade) {
+	public SecuritiesFinancingAgreement setSecuritiesFinancingTrade(com.tools20022.repository.entity.SecuritiesFinancing securitiesFinancingTrade) {
 		this.securitiesFinancingTrade = securitiesFinancingTrade;
+		return this;
 	}
 
 	public CurrencyCode getCurrency() {
 		return currency;
 	}
 
-	public void setCurrency(CurrencyCode currency) {
-		this.currency = currency;
+	public SecuritiesFinancingAgreement setCurrency(CurrencyCode currency) {
+		this.currency = Objects.requireNonNull(currency);
+		return this;
 	}
 
 	public TerminationTypeCode getTerminationType() {
 		return terminationType;
 	}
 
-	public void setTerminationType(TerminationTypeCode terminationType) {
-		this.terminationType = terminationType;
+	public SecuritiesFinancingAgreement setTerminationType(TerminationTypeCode terminationType) {
+		this.terminationType = Objects.requireNonNull(terminationType);
+		return this;
 	}
 
 	public DeliveryTypeCode getDeliveryType() {
 		return deliveryType;
 	}
 
-	public void setDeliveryType(DeliveryTypeCode deliveryType) {
-		this.deliveryType = deliveryType;
+	public SecuritiesFinancingAgreement setDeliveryType(DeliveryTypeCode deliveryType) {
+		this.deliveryType = Objects.requireNonNull(deliveryType);
+		return this;
 	}
 
 	public PercentageRate getMarginRatio() {
 		return marginRatio;
 	}
 
-	public void setMarginRatio(PercentageRate marginRatio) {
-		this.marginRatio = marginRatio;
+	public SecuritiesFinancingAgreement setMarginRatio(PercentageRate marginRatio) {
+		this.marginRatio = Objects.requireNonNull(marginRatio);
+		return this;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Reference16", propOrder = "collateralMessageCancellationRequestIdentification")
 public class Reference16 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CollMsgCxlReqId", required = true)
 	protected Max35Text collateralMessageCancellationRequestIdentification;
 	/**
-	 * Identification of the collateral message cancellation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +111,7 @@ public class Reference16 {
 	 */
 	public static final MMMessageAttribute mmCollateralMessageCancellationRequestIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference16.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference16.mmObject();
 			isDerived = false;
 			xmlTag = "CollMsgCxlReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,9 +126,9 @@ public class Reference16 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Reference16.mmCollateralMessageCancellationRequestIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference16.mmCollateralMessageCancellationRequestIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CollateralManagementCancellationStatusV03.mmReference, CollateralManagementCancellationStatusV04.mmReference);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reference16";
 				definition = "Provides the identification of the collateral message cancellation request.";
@@ -135,12 +137,12 @@ public class Reference16 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CollMsgCxlReqId", required = true)
 	public Max35Text getCollateralMessageCancellationRequestIdentification() {
 		return collateralMessageCancellationRequestIdentification;
 	}
 
-	public void setCollateralMessageCancellationRequestIdentification(Max35Text collateralMessageCancellationRequestIdentification) {
-		this.collateralMessageCancellationRequestIdentification = collateralMessageCancellationRequestIdentification;
+	public Reference16 setCollateralMessageCancellationRequestIdentification(Max35Text collateralMessageCancellationRequestIdentification) {
+		this.collateralMessageCancellationRequestIdentification = Objects.requireNonNull(collateralMessageCancellationRequestIdentification);
+		return this;
 	}
 }

@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvoiceLegalIssue1", propOrder = {"invoicer", "invoicee", "invoiceLegalStatement", "paymentMethod"})
 public class InvoiceLegalIssue1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Invcr", required = true)
 	protected PartyIdentification43 invoicer;
 	/**
-	 * Identification of the organisation issuing the invoice, when it is
-	 * different from the creditor or ultimate creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -119,7 +121,7 @@ public class InvoiceLegalIssue1 {
 	public static final MMMessageAssociationEnd mmInvoicer = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> InvoiceLegalIssue1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceLegalIssue1.mmObject();
 			isDerived = false;
 			xmlTag = "Invcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,11 +133,11 @@ public class InvoiceLegalIssue1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "Invcee", required = true)
 	protected PartyIdentification43 invoicee;
 	/**
-	 * Identification of the party to whom an invoice is issued, when it is
-	 * different from the debtor or ultimate debtor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -169,7 +171,7 @@ public class InvoiceLegalIssue1 {
 	public static final MMMessageAssociationEnd mmInvoicee = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> InvoiceLegalIssue1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceLegalIssue1.mmObject();
 			isDerived = false;
 			xmlTag = "Invcee";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,11 +183,11 @@ public class InvoiceLegalIssue1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "InvcLglStmt")
 	protected Max210Text invoiceLegalStatement;
 	/**
-	 * Additional information, in free text form, to complement the structured
-	 * remittance information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -219,7 +221,7 @@ public class InvoiceLegalIssue1 {
 	public static final MMMessageAttribute mmInvoiceLegalStatement = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> Invoice.mmObject();
-			componentContext_lazy = () -> InvoiceLegalIssue1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceLegalIssue1.mmObject();
 			isDerived = false;
 			xmlTag = "InvcLglStmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -230,11 +232,11 @@ public class InvoiceLegalIssue1 {
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtMtd")
 	protected PaymentMethod1Choice paymentMethod;
 	/**
-	 * Method of payment for the remittance of the CSD or NCB to the invoicing
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -269,7 +271,7 @@ public class InvoiceLegalIssue1 {
 	public static final MMMessageAssociationEnd mmPaymentMethod = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashAccountService.mmPaymentMethod;
-			componentContext_lazy = () -> InvoiceLegalIssue1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceLegalIssue1.mmObject();
 			isDerived = false;
 			xmlTag = "PmtMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,9 +287,10 @@ public class InvoiceLegalIssue1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InvoiceLegalIssue1.mmInvoicer, InvoiceLegalIssue1.mmInvoicee, InvoiceLegalIssue1.mmInvoiceLegalStatement, InvoiceLegalIssue1.mmPaymentMethod);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceLegalIssue1.mmInvoicer, com.tools20022.repository.msg.InvoiceLegalIssue1.mmInvoicee,
+						com.tools20022.repository.msg.InvoiceLegalIssue1.mmInvoiceLegalStatement, com.tools20022.repository.msg.InvoiceLegalIssue1.mmPaymentMethod);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvoiceLegalIssue1";
 				definition = "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form.";
@@ -296,39 +299,39 @@ public class InvoiceLegalIssue1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Invcr", required = true)
 	public PartyIdentification43 getInvoicer() {
 		return invoicer;
 	}
 
-	public void setInvoicer(com.tools20022.repository.msg.PartyIdentification43 invoicer) {
-		this.invoicer = invoicer;
+	public InvoiceLegalIssue1 setInvoicer(com.tools20022.repository.msg.PartyIdentification43 invoicer) {
+		this.invoicer = Objects.requireNonNull(invoicer);
+		return this;
 	}
 
-	@XmlElement(name = "Invcee", required = true)
 	public PartyIdentification43 getInvoicee() {
 		return invoicee;
 	}
 
-	public void setInvoicee(com.tools20022.repository.msg.PartyIdentification43 invoicee) {
-		this.invoicee = invoicee;
+	public InvoiceLegalIssue1 setInvoicee(com.tools20022.repository.msg.PartyIdentification43 invoicee) {
+		this.invoicee = Objects.requireNonNull(invoicee);
+		return this;
 	}
 
-	@XmlElement(name = "InvcLglStmt")
-	public Max210Text getInvoiceLegalStatement() {
-		return invoiceLegalStatement;
+	public Optional<Max210Text> getInvoiceLegalStatement() {
+		return invoiceLegalStatement == null ? Optional.empty() : Optional.of(invoiceLegalStatement);
 	}
 
-	public void setInvoiceLegalStatement(Max210Text invoiceLegalStatement) {
+	public InvoiceLegalIssue1 setInvoiceLegalStatement(Max210Text invoiceLegalStatement) {
 		this.invoiceLegalStatement = invoiceLegalStatement;
+		return this;
 	}
 
-	@XmlElement(name = "PmtMtd")
-	public PaymentMethod1Choice getPaymentMethod() {
-		return paymentMethod;
+	public Optional<PaymentMethod1Choice> getPaymentMethod() {
+		return paymentMethod == null ? Optional.empty() : Optional.of(paymentMethod);
 	}
 
-	public void setPaymentMethod(PaymentMethod1Choice paymentMethod) {
+	public InvoiceLegalIssue1 setPaymentMethod(PaymentMethod1Choice paymentMethod) {
 		this.paymentMethod = paymentMethod;
+		return this;
 	}
 }

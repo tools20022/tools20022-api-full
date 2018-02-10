@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.area.auth;
 
+import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
@@ -27,9 +28,11 @@ import com.tools20022.repository.msg.RegisteredContract2;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CrossBorderTransactionsCurrencyControlReportingISOLatestversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -39,22 +42,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
- * AuthoritiesLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CrossBorderTransactionsCurrencyControlReportingISOLatestversion
- * CrossBorderTransactionsCurrencyControlReportingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CtrctRegnClsrReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -70,6 +57,22 @@ import javax.xml.bind.annotation.*;
  * ContractRegistrationClosureRequestV01.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CrossBorderTransactionsCurrencyControlReportingISOLatestversion
+ * CrossBorderTransactionsCurrencyControlReportingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CtrctRegnClsrReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
+ * AuthoritiesLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code auth.020.001.01}</li>
@@ -85,15 +88,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ContractRegistrationClosureRequestV01", propOrder = {"groupHeader", "registeredContractClosure", "supplementaryData"})
 public class ContractRegistrationClosureRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected CurrencyControlHeader1 groupHeader;
 	/**
-	 * Characteristics shared by all individual items included in the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,10 +139,11 @@ public class ContractRegistrationClosureRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "RegdCtrctClsr", required = true)
 	protected List<RegisteredContract2> registeredContractClosure;
 	/**
-	 * Details on the closure of the registered contract.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,6 +153,10 @@ public class ContractRegistrationClosureRequestV01 {
 	 * RegisteredContract2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RegdCtrctClsr"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = type=Synonym, context=RU-CMPG, value=Deal Passport
+	 * Closure</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -162,6 +171,7 @@ public class ContractRegistrationClosureRequestV01 {
 	public static final MMMessageBuildingBlock mmRegisteredContractClosure = new MMMessageBuildingBlock() {
 		{
 			xmlTag = "RegdCtrctClsr";
+			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "RU-CMPG"}, new String[]{"value", "Deal Passport Closure"}));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredContractClosure";
 			definition = "Details on the closure of the registered contract.";
@@ -177,11 +187,11 @@ public class ContractRegistrationClosureRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -253,34 +263,34 @@ public class ContractRegistrationClosureRequestV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public CurrencyControlHeader1 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(CurrencyControlHeader1 groupHeader) {
-		this.groupHeader = groupHeader;
+	public ContractRegistrationClosureRequestV01 setGroupHeader(CurrencyControlHeader1 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "RegdCtrctClsr", required = true)
 	public List<RegisteredContract2> getRegisteredContractClosure() {
-		return registeredContractClosure;
+		return registeredContractClosure == null ? registeredContractClosure = new ArrayList<>() : registeredContractClosure;
 	}
 
-	public void setRegisteredContractClosure(List<RegisteredContract2> registeredContractClosure) {
-		this.registeredContractClosure = registeredContractClosure;
+	public ContractRegistrationClosureRequestV01 setRegisteredContractClosure(List<RegisteredContract2> registeredContractClosure) {
+		this.registeredContractClosure = Objects.requireNonNull(registeredContractClosure);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public ContractRegistrationClosureRequestV01 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.020.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:auth.020.001.01")
 	static public class Document {
 		@XmlElement(name = "CtrctRegnClsrReq", required = true)
 		public ContractRegistrationClosureRequestV01 messageBody;

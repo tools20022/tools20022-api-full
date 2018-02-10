@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CertificationFormatTypeCode;
+import com.tools20022.repository.codeset.CertificationFormatType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the certification format required, that is, physical or electronic
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CertificationFormatTypeCode
- * CertificationFormatTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificationFormatType1Code#mmElectronic
- * CertificationFormatType1Code.mmElectronic}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificationFormatType1Code#Electronic
+ * CertificationFormatType1Code.Electronic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificationFormatType1Code#mmPhysical
- * CertificationFormatType1Code.mmPhysical}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificationFormatType1Code#Physical
+ * CertificationFormatType1Code.Physical}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CertificationFormatTypeCode
+ * CertificationFormatTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CertificationFormatType1Code extends CertificationFormatTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CertificationFormatType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class CertificationFormatType1Code extends CertificationFormatTypeCode {
 	 * name} = "Electronic"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmElectronic = new MMCode() {
+	public static final CertificationFormatType1Code Electronic = new CertificationFormatType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Electronic";
-			owner_lazy = () -> CertificationFormatType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CertificationFormatType1Code.mmObject();
+			codeName = CertificationFormatTypeCode.Electronic.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,57 @@ public class CertificationFormatType1Code extends CertificationFormatTypeCode {
 	 * name} = "Physical"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPhysical = new MMCode() {
+	public static final CertificationFormatType1Code Physical = new CertificationFormatType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Physical";
-			owner_lazy = () -> CertificationFormatType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CertificationFormatType1Code.mmObject();
+			codeName = CertificationFormatTypeCode.Physical.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CertificationFormatType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CertificationFormatType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ELEC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificationFormatType1Code";
 				definition = "Specifies the certification format required, that is, physical or electronic format.";
-				code_lazy = () -> Arrays.asList(CertificationFormatType1Code.mmElectronic, CertificationFormatType1Code.mmPhysical);
 				trace_lazy = () -> CertificationFormatTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CertificationFormatType1Code.Electronic, com.tools20022.repository.codeset.CertificationFormatType1Code.Physical);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Electronic.getCodeName().get(), Electronic);
+		codesByName.put(Physical.getCodeName().get(), Physical);
+	}
+
+	public static CertificationFormatType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CertificationFormatType1Code[] values() {
+		CertificationFormatType1Code[] values = new CertificationFormatType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CertificationFormatType1Code> {
+		@Override
+		public CertificationFormatType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CertificationFormatType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

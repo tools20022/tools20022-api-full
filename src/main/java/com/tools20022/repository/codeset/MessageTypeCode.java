@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.MessageTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the message type.
@@ -32,29 +37,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#mmAccountingHoldings
- * MessageTypeCode.mmAccountingHoldings}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#AccountingHoldings
+ * MessageTypeCode.AccountingHoldings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#mmCustodyHoldings
- * MessageTypeCode.mmCustodyHoldings}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#CustodyHoldings
+ * MessageTypeCode.CustodyHoldings}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#mmInvestmentFundTransactions
- * MessageTypeCode.mmInvestmentFundTransactions}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#InvestmentFundTransactions
+ * MessageTypeCode.InvestmentFundTransactions}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageTypeCode#Estimated
+ * MessageTypeCode.Estimated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#mmEstimated
- * MessageTypeCode.mmEstimated}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#EstimatedDetailed
+ * MessageTypeCode.EstimatedDetailed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageTypeCode#Confirmed
+ * MessageTypeCode.Confirmed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#mmEstimatedDetailed
- * MessageTypeCode.mmEstimatedDetailed}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#CornfirmedDetailed
+ * MessageTypeCode.CornfirmedDetailed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#mmConfirmed
- * MessageTypeCode.mmConfirmed}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#mmCornfirmedDetailed
- * MessageTypeCode.mmCornfirmedDetailed}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#mmTransparency
- * MessageTypeCode.mmTransparency}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageTypeCode#Transparency
+ * MessageTypeCode.Transparency}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -69,8 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -87,7 +90,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the message type."</li>
  * </ul>
  */
-public class MessageTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MessageTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -111,12 +115,12 @@ public class MessageTypeCode {
 	 * definition} = "Accounting Statement of Holdings (semt 003)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountingHoldings = new MMCode() {
+	public static final MessageTypeCode AccountingHoldings = new MessageTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountingHoldings";
 			definition = "Accounting Statement of Holdings (semt 003).";
-			owner_lazy = () -> MessageTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageTypeCode.mmObject();
 			codeName = "ST03";
 		}
 	};
@@ -141,12 +145,12 @@ public class MessageTypeCode {
 	 * definition} = "Custody Statement of Holdings (semt 002)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustodyHoldings = new MMCode() {
+	public static final MessageTypeCode CustodyHoldings = new MessageTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyHoldings";
 			definition = "Custody Statement of Holdings (semt 002).";
-			owner_lazy = () -> MessageTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageTypeCode.mmObject();
 			codeName = "ST02";
 		}
 	};
@@ -171,12 +175,12 @@ public class MessageTypeCode {
 	 * definition} = "Statement of Investment Fund Transactions (semt 006)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvestmentFundTransactions = new MMCode() {
+	public static final MessageTypeCode InvestmentFundTransactions = new MessageTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFundTransactions";
 			definition = "Statement of Investment Fund Transactions (semt 006).";
-			owner_lazy = () -> MessageTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageTypeCode.mmObject();
 			codeName = "ST06";
 		}
 	};
@@ -201,12 +205,12 @@ public class MessageTypeCode {
 	 * definition} = "Fund estimated cash forecast report (camt.040)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEstimated = new MMCode() {
+	public static final MessageTypeCode Estimated = new MessageTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Estimated";
 			definition = "Fund estimated cash forecast report (camt.040).";
-			owner_lazy = () -> MessageTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageTypeCode.mmObject();
 			codeName = "CF40";
 		}
 	};
@@ -231,12 +235,12 @@ public class MessageTypeCode {
 	 * definition} = "Fund detailed estimated cash forecast Report (042)"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEstimatedDetailed = new MMCode() {
+	public static final MessageTypeCode EstimatedDetailed = new MessageTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedDetailed";
 			definition = "Fund detailed estimated cash forecast Report (042)";
-			owner_lazy = () -> MessageTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageTypeCode.mmObject();
 			codeName = "CF42";
 		}
 	};
@@ -261,12 +265,12 @@ public class MessageTypeCode {
 	 * definition} = "Fund confirmed cash forecast report (camt.041)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConfirmed = new MMCode() {
+	public static final MessageTypeCode Confirmed = new MessageTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmed";
 			definition = "Fund confirmed cash forecast report (camt.041).";
-			owner_lazy = () -> MessageTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageTypeCode.mmObject();
 			codeName = "CF41";
 		}
 	};
@@ -291,12 +295,12 @@ public class MessageTypeCode {
 	 * definition} = "Fund detailed confirmed cash forecast report (camt.043)"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCornfirmedDetailed = new MMCode() {
+	public static final MessageTypeCode CornfirmedDetailed = new MessageTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CornfirmedDetailed";
 			definition = "Fund detailed confirmed cash forecast report (camt.043)";
-			owner_lazy = () -> MessageTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageTypeCode.mmObject();
 			codeName = "CF43";
 		}
 	};
@@ -321,29 +325,66 @@ public class MessageTypeCode {
 	 * definition} = "Securities Balance Transparency (semt.041)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransparency = new MMCode() {
+	public static final MessageTypeCode Transparency = new MessageTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transparency";
 			definition = "Securities Balance Transparency (semt.041).";
-			owner_lazy = () -> MessageTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageTypeCode.mmObject();
 			codeName = "ST41";
 		}
 	};
+	final static private LinkedHashMap<String, MessageTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MessageTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ST03");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageTypeCode";
 				definition = "Specifies the message type.";
-				code_lazy = () -> Arrays.asList(MessageTypeCode.mmAccountingHoldings, MessageTypeCode.mmCustodyHoldings, MessageTypeCode.mmInvestmentFundTransactions, MessageTypeCode.mmEstimated, MessageTypeCode.mmEstimatedDetailed,
-						MessageTypeCode.mmConfirmed, MessageTypeCode.mmCornfirmedDetailed, MessageTypeCode.mmTransparency);
 				derivation_lazy = () -> Arrays.asList(CashForecastMessage1Code.mmObject(), StatementType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageTypeCode.AccountingHoldings, com.tools20022.repository.codeset.MessageTypeCode.CustodyHoldings,
+						com.tools20022.repository.codeset.MessageTypeCode.InvestmentFundTransactions, com.tools20022.repository.codeset.MessageTypeCode.Estimated, com.tools20022.repository.codeset.MessageTypeCode.EstimatedDetailed,
+						com.tools20022.repository.codeset.MessageTypeCode.Confirmed, com.tools20022.repository.codeset.MessageTypeCode.CornfirmedDetailed, com.tools20022.repository.codeset.MessageTypeCode.Transparency);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccountingHoldings.getCodeName().get(), AccountingHoldings);
+		codesByName.put(CustodyHoldings.getCodeName().get(), CustodyHoldings);
+		codesByName.put(InvestmentFundTransactions.getCodeName().get(), InvestmentFundTransactions);
+		codesByName.put(Estimated.getCodeName().get(), Estimated);
+		codesByName.put(EstimatedDetailed.getCodeName().get(), EstimatedDetailed);
+		codesByName.put(Confirmed.getCodeName().get(), Confirmed);
+		codesByName.put(CornfirmedDetailed.getCodeName().get(), CornfirmedDetailed);
+		codesByName.put(Transparency.getCodeName().get(), Transparency);
+	}
+
+	public static MessageTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MessageTypeCode[] values() {
+		MessageTypeCode[] values = new MessageTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MessageTypeCode> {
+		@Override
+		public MessageTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MessageTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,36 +20,40 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CrossTypeCode;
+import com.tools20022.repository.codeset.CrossType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of cross being submitted to a market.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CrossTypeCode CrossTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.CrossType1Code#mmAllOrNone
- * CrossType1Code.mmAllOrNone}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CrossType1Code#AllOrNone
+ * CrossType1Code.AllOrNone}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CrossType1Code#mmImmediateOrCancel
- * CrossType1Code.mmImmediateOrCancel}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CrossType1Code#mmOneSide
- * CrossType1Code.mmOneSide}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.CrossType1Code#mmSamePrice
- * CrossType1Code.mmSamePrice}</li>
+ * {@linkplain com.tools20022.repository.codeset.CrossType1Code#ImmediateOrCancel
+ * CrossType1Code.ImmediateOrCancel}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CrossType1Code#OneSide
+ * CrossType1Code.OneSide}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CrossType1Code#SamePrice
+ * CrossType1Code.SamePrice}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CrossTypeCode CrossTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of cross being submitted to a market."</li>
  * </ul>
  */
-public class CrossType1Code extends CrossTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CrossType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,11 +90,12 @@ public class CrossType1Code extends CrossTypeCode {
 	 * name} = "AllOrNone"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAllOrNone = new MMCode() {
+	public static final CrossType1Code AllOrNone = new CrossType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllOrNone";
-			owner_lazy = () -> CrossType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CrossType1Code.mmObject();
+			codeName = CrossTypeCode.AllOrNone.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -108,11 +114,12 @@ public class CrossType1Code extends CrossTypeCode {
 	 * name} = "ImmediateOrCancel"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmImmediateOrCancel = new MMCode() {
+	public static final CrossType1Code ImmediateOrCancel = new CrossType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImmediateOrCancel";
-			owner_lazy = () -> CrossType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CrossType1Code.mmObject();
+			codeName = CrossTypeCode.ImmediateOrCancel.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -131,11 +138,12 @@ public class CrossType1Code extends CrossTypeCode {
 	 * name} = "OneSide"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOneSide = new MMCode() {
+	public static final CrossType1Code OneSide = new CrossType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OneSide";
-			owner_lazy = () -> CrossType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CrossType1Code.mmObject();
+			codeName = CrossTypeCode.OneSide.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -154,26 +162,60 @@ public class CrossType1Code extends CrossTypeCode {
 	 * name} = "SamePrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSamePrice = new MMCode() {
+	public static final CrossType1Code SamePrice = new CrossType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SamePrice";
-			owner_lazy = () -> CrossType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CrossType1Code.mmObject();
+			codeName = CrossTypeCode.SamePrice.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CrossType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CrossType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ALON");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CrossType1Code";
 				definition = "Type of cross being submitted to a market.";
-				code_lazy = () -> Arrays.asList(CrossType1Code.mmAllOrNone, CrossType1Code.mmImmediateOrCancel, CrossType1Code.mmOneSide, CrossType1Code.mmSamePrice);
 				trace_lazy = () -> CrossTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CrossType1Code.AllOrNone, com.tools20022.repository.codeset.CrossType1Code.ImmediateOrCancel, com.tools20022.repository.codeset.CrossType1Code.OneSide,
+						com.tools20022.repository.codeset.CrossType1Code.SamePrice);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AllOrNone.getCodeName().get(), AllOrNone);
+		codesByName.put(ImmediateOrCancel.getCodeName().get(), ImmediateOrCancel);
+		codesByName.put(OneSide.getCodeName().get(), OneSide);
+		codesByName.put(SamePrice.getCodeName().get(), SamePrice);
+	}
+
+	public static CrossType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CrossType1Code[] values() {
+		CrossType1Code[] values = new CrossType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CrossType1Code> {
+		@Override
+		public CrossType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CrossType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

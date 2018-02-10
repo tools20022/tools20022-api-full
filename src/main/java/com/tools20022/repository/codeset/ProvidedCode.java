@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ProvidedCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether items have been provided.
@@ -31,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ProvidedCode#mmProvided
- * ProvidedCode.mmProvided}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ProvidedCode#mmNotProvided
- * ProvidedCode.mmNotProvided}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProvidedCode#Provided
+ * ProvidedCode.Provided}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProvidedCode#NotProvided
+ * ProvidedCode.NotProvided}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies whether items have been provided."</li>
  * </ul>
  */
-public class ProvidedCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProvidedCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,12 +94,12 @@ public class ProvidedCode {
 	 * definition} = "Provided."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProvided = new MMCode() {
+	public static final ProvidedCode Provided = new ProvidedCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Provided";
 			definition = "Provided.";
-			owner_lazy = () -> ProvidedCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProvidedCode.mmObject();
 			codeName = "PROV";
 		}
 	};
@@ -117,28 +123,58 @@ public class ProvidedCode {
 	 * definition} = "Not provided."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotProvided = new MMCode() {
+	public static final ProvidedCode NotProvided = new ProvidedCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotProvided";
 			definition = "Not provided.";
-			owner_lazy = () -> ProvidedCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProvidedCode.mmObject();
 			codeName = "NPRO";
 		}
 	};
+	final static private LinkedHashMap<String, ProvidedCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProvidedCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PROV");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProvidedCode";
 				definition = "Specifies whether items have been provided.";
-				code_lazy = () -> Arrays.asList(ProvidedCode.mmProvided, ProvidedCode.mmNotProvided);
 				derivation_lazy = () -> Arrays.asList(Provided1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProvidedCode.Provided, com.tools20022.repository.codeset.ProvidedCode.NotProvided);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Provided.getCodeName().get(), Provided);
+		codesByName.put(NotProvided.getCodeName().get(), NotProvided);
+	}
+
+	public static ProvidedCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProvidedCode[] values() {
+		ProvidedCode[] values = new ProvidedCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProvidedCode> {
+		@Override
+		public ProvidedCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProvidedCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

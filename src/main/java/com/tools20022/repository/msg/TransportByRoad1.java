@@ -24,9 +24,11 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Transport;
 import com.tools20022.repository.entity.TransportByRoad;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information related to the transportation of goods by road."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransportByRoad1", propOrder = {"placeOfReceipt", "placeOfDelivery"})
 public class TransportByRoad1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcOfRct")
 	protected List<Max35Text> placeOfReceipt;
 	/**
-	 * Identifies the location where the goods are received for transportation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -110,7 +113,7 @@ public class TransportByRoad1 {
 	public static final MMMessageAttribute mmPlaceOfReceipt = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDeparture;
-			componentContext_lazy = () -> TransportByRoad1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByRoad1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfRct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +123,11 @@ public class TransportByRoad1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfDlvry", required = true)
 	protected List<Max35Text> placeOfDelivery;
 	/**
-	 * Identifies the location of delivery of the goods.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +160,7 @@ public class TransportByRoad1 {
 	public static final MMMessageAttribute mmPlaceOfDelivery = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Transport.mmPlaceOfDestination;
-			componentContext_lazy = () -> TransportByRoad1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransportByRoad1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfDlvry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,9 +174,9 @@ public class TransportByRoad1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransportByRoad1.mmPlaceOfReceipt, TransportByRoad1.mmPlaceOfDelivery);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportByRoad1.mmPlaceOfReceipt, com.tools20022.repository.msg.TransportByRoad1.mmPlaceOfDelivery);
 				trace_lazy = () -> TransportByRoad.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransportByRoad1";
 				definition = "Information related to the transportation of goods by road.";
@@ -181,21 +185,21 @@ public class TransportByRoad1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcOfRct")
 	public List<Max35Text> getPlaceOfReceipt() {
-		return placeOfReceipt;
+		return placeOfReceipt == null ? placeOfReceipt = new ArrayList<>() : placeOfReceipt;
 	}
 
-	public void setPlaceOfReceipt(List<Max35Text> placeOfReceipt) {
-		this.placeOfReceipt = placeOfReceipt;
+	public TransportByRoad1 setPlaceOfReceipt(List<Max35Text> placeOfReceipt) {
+		this.placeOfReceipt = Objects.requireNonNull(placeOfReceipt);
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfDlvry", required = true)
 	public List<Max35Text> getPlaceOfDelivery() {
-		return placeOfDelivery;
+		return placeOfDelivery == null ? placeOfDelivery = new ArrayList<>() : placeOfDelivery;
 	}
 
-	public void setPlaceOfDelivery(List<Max35Text> placeOfDelivery) {
-		this.placeOfDelivery = placeOfDelivery;
+	public TransportByRoad1 setPlaceOfDelivery(List<Max35Text> placeOfDelivery) {
+		this.placeOfDelivery = Objects.requireNonNull(placeOfDelivery);
+		return this;
 	}
 }

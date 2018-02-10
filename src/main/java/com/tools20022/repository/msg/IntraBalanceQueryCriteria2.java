@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -27,9 +28,8 @@ import com.tools20022.repository.choice.DateAndDateTimeSearch2Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.BookEntry;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the criteria based on which information is included."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IntraBalanceQueryCriteria2", propOrder = {"cancellationRequestIdentification", "processingStatus", "cashAccount", "cashAccountOwner", "messageOriginator", "creationDateTime"})
 public class IntraBalanceQueryCriteria2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CxlReqId")
 	protected List<Max35Text> cancellationRequestIdentification;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,6 +105,9 @@ public class IntraBalanceQueryCriteria2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CxlReqId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::POOL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -116,9 +120,10 @@ public class IntraBalanceQueryCriteria2 {
 	 */
 	public static final MMMessageAttribute mmCancellationRequestIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceQueryCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "CxlReqId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::POOL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRequestIdentification";
 			definition = "Collective reference identifying a set of messages.";
@@ -126,10 +131,11 @@ public class IntraBalanceQueryCriteria2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcgSts")
 	protected List<CancellationProcessingStatus3Choice> processingStatus;
 	/**
-	 * Provides the status of settlement of a transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +163,7 @@ public class IntraBalanceQueryCriteria2 {
 	 */
 	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceQueryCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,10 +173,11 @@ public class IntraBalanceQueryCriteria2 {
 			complexType_lazy = () -> CancellationProcessingStatus3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAcct")
 	protected List<AccountIdentificationSearchCriteria2Choice> cashAccount;
 	/**
-	 * Account in which cash is maintained.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,7 +205,7 @@ public class IntraBalanceQueryCriteria2 {
 	 */
 	public static final MMMessageAttribute mmCashAccount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceQueryCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,10 +215,11 @@ public class IntraBalanceQueryCriteria2 {
 			complexType_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAcctOwnr")
 	protected List<com.tools20022.repository.msg.SystemPartyIdentification5> cashAccountOwner;
 	/**
-	 * Party that owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -238,7 +246,7 @@ public class IntraBalanceQueryCriteria2 {
 	 */
 	public static final MMMessageAssociationEnd mmCashAccountOwner = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraBalanceQueryCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,10 +257,11 @@ public class IntraBalanceQueryCriteria2 {
 			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "MsgOrgtr")
 	protected List<com.tools20022.repository.msg.SystemPartyIdentification5> messageOriginator;
 	/**
-	 * Party that originated the message, if other than the sender.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -280,7 +289,7 @@ public class IntraBalanceQueryCriteria2 {
 	 */
 	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IntraBalanceQueryCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "MsgOrgtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -291,10 +300,11 @@ public class IntraBalanceQueryCriteria2 {
 			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm")
 	protected DateAndDateTimeSearch2Choice creationDateTime;
 	/**
-	 * Specifies the creation date/time of the intra-balance movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -310,6 +320,9 @@ public class IntraBalanceQueryCriteria2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CreDtTm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::TRAD</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -323,9 +336,10 @@ public class IntraBalanceQueryCriteria2 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IntraBalanceQueryCriteria2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryCriteria2.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::TRAD"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Specifies the creation date/time of the intra-balance movement.";
@@ -338,10 +352,11 @@ public class IntraBalanceQueryCriteria2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IntraBalanceQueryCriteria2.mmCancellationRequestIdentification, IntraBalanceQueryCriteria2.mmProcessingStatus, IntraBalanceQueryCriteria2.mmCashAccount,
-						IntraBalanceQueryCriteria2.mmCashAccountOwner, IntraBalanceQueryCriteria2.mmMessageOriginator, IntraBalanceQueryCriteria2.mmCreationDateTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IntraBalanceQueryCriteria2.mmCancellationRequestIdentification, com.tools20022.repository.msg.IntraBalanceQueryCriteria2.mmProcessingStatus,
+						com.tools20022.repository.msg.IntraBalanceQueryCriteria2.mmCashAccount, com.tools20022.repository.msg.IntraBalanceQueryCriteria2.mmCashAccountOwner,
+						com.tools20022.repository.msg.IntraBalanceQueryCriteria2.mmMessageOriginator, com.tools20022.repository.msg.IntraBalanceQueryCriteria2.mmCreationDateTime);
 				trace_lazy = () -> BookEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceQueryCriteria2";
 				definition = "Defines the criteria based on which information is included.";
@@ -350,57 +365,57 @@ public class IntraBalanceQueryCriteria2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CxlReqId")
 	public List<Max35Text> getCancellationRequestIdentification() {
-		return cancellationRequestIdentification;
+		return cancellationRequestIdentification == null ? cancellationRequestIdentification = new ArrayList<>() : cancellationRequestIdentification;
 	}
 
-	public void setCancellationRequestIdentification(List<Max35Text> cancellationRequestIdentification) {
-		this.cancellationRequestIdentification = cancellationRequestIdentification;
+	public IntraBalanceQueryCriteria2 setCancellationRequestIdentification(List<Max35Text> cancellationRequestIdentification) {
+		this.cancellationRequestIdentification = Objects.requireNonNull(cancellationRequestIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PrcgSts")
 	public List<CancellationProcessingStatus3Choice> getProcessingStatus() {
-		return processingStatus;
+		return processingStatus == null ? processingStatus = new ArrayList<>() : processingStatus;
 	}
 
-	public void setProcessingStatus(List<CancellationProcessingStatus3Choice> processingStatus) {
-		this.processingStatus = processingStatus;
+	public IntraBalanceQueryCriteria2 setProcessingStatus(List<CancellationProcessingStatus3Choice> processingStatus) {
+		this.processingStatus = Objects.requireNonNull(processingStatus);
+		return this;
 	}
 
-	@XmlElement(name = "CshAcct")
 	public List<AccountIdentificationSearchCriteria2Choice> getCashAccount() {
-		return cashAccount;
+		return cashAccount == null ? cashAccount = new ArrayList<>() : cashAccount;
 	}
 
-	public void setCashAccount(List<AccountIdentificationSearchCriteria2Choice> cashAccount) {
-		this.cashAccount = cashAccount;
+	public IntraBalanceQueryCriteria2 setCashAccount(List<AccountIdentificationSearchCriteria2Choice> cashAccount) {
+		this.cashAccount = Objects.requireNonNull(cashAccount);
+		return this;
 	}
 
-	@XmlElement(name = "CshAcctOwnr")
 	public List<SystemPartyIdentification5> getCashAccountOwner() {
-		return cashAccountOwner;
+		return cashAccountOwner == null ? cashAccountOwner = new ArrayList<>() : cashAccountOwner;
 	}
 
-	public void setCashAccountOwner(List<com.tools20022.repository.msg.SystemPartyIdentification5> cashAccountOwner) {
-		this.cashAccountOwner = cashAccountOwner;
+	public IntraBalanceQueryCriteria2 setCashAccountOwner(List<com.tools20022.repository.msg.SystemPartyIdentification5> cashAccountOwner) {
+		this.cashAccountOwner = Objects.requireNonNull(cashAccountOwner);
+		return this;
 	}
 
-	@XmlElement(name = "MsgOrgtr")
 	public List<SystemPartyIdentification5> getMessageOriginator() {
-		return messageOriginator;
+		return messageOriginator == null ? messageOriginator = new ArrayList<>() : messageOriginator;
 	}
 
-	public void setMessageOriginator(List<com.tools20022.repository.msg.SystemPartyIdentification5> messageOriginator) {
-		this.messageOriginator = messageOriginator;
+	public IntraBalanceQueryCriteria2 setMessageOriginator(List<com.tools20022.repository.msg.SystemPartyIdentification5> messageOriginator) {
+		this.messageOriginator = Objects.requireNonNull(messageOriginator);
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm")
-	public DateAndDateTimeSearch2Choice getCreationDateTime() {
-		return creationDateTime;
+	public Optional<DateAndDateTimeSearch2Choice> getCreationDateTime() {
+		return creationDateTime == null ? Optional.empty() : Optional.of(creationDateTime);
 	}
 
-	public void setCreationDateTime(DateAndDateTimeSearch2Choice creationDateTime) {
+	public IntraBalanceQueryCriteria2 setCreationDateTime(DateAndDateTimeSearch2Choice creationDateTime) {
 		this.creationDateTime = creationDateTime;
+		return this;
 	}
 }

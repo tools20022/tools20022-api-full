@@ -31,6 +31,8 @@ import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementI
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -39,28 +41,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
- * TerminalManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion
- * CardPaymentsExchangesTerminalManagementISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20152016
- * CAPETerminalManagementMaintenance20152016}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017
- * CAPETerminalManagementMaintenance20162017}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "MntncDlgtnRspn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -76,6 +56,28 @@ import javax.xml.bind.annotation.*;
  * MaintenanceDelegationResponseV02.mmSecurityTrailer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion
+ * CardPaymentsExchangesTerminalManagementISOLatestversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20152016
+ * CAPETerminalManagementMaintenance20152016}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017
+ * CAPETerminalManagementMaintenance20162017}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "MntncDlgtnRspn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TerminalManagementLatestVersion
+ * TerminalManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catm.006.001.02}</li>
@@ -95,15 +97,16 @@ import javax.xml.bind.annotation.*;
  * MaintenanceDelegationResponseV01}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MaintenanceDelegationResponseV02", propOrder = {"header", "maintenanceDelegationResponse", "securityTrailer"})
 public class MaintenanceDelegationResponseV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header29 header;
 	/**
-	 * Maintenance delegation response message management information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,10 +152,11 @@ public class MaintenanceDelegationResponseV02 {
 			}
 		}
 	};
+	@XmlElement(name = "MntncDlgtnRspn", required = true)
 	protected MaintenanceDelegationResponse2 maintenanceDelegationResponse;
 	/**
-	 * Information related to the request of maintenance delegations.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -199,10 +203,11 @@ public class MaintenanceDelegationResponseV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SctyTrlr")
 	protected ContentInformationType12 securityTrailer;
 	/**
-	 * Trailer of the message containing a MAC or a digital signature.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -281,34 +286,34 @@ public class MaintenanceDelegationResponseV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header29 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header29 header) {
-		this.header = header;
+	public MaintenanceDelegationResponseV02 setHeader(Header29 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "MntncDlgtnRspn", required = true)
 	public MaintenanceDelegationResponse2 getMaintenanceDelegationResponse() {
 		return maintenanceDelegationResponse;
 	}
 
-	public void setMaintenanceDelegationResponse(MaintenanceDelegationResponse2 maintenanceDelegationResponse) {
-		this.maintenanceDelegationResponse = maintenanceDelegationResponse;
+	public MaintenanceDelegationResponseV02 setMaintenanceDelegationResponse(MaintenanceDelegationResponse2 maintenanceDelegationResponse) {
+		this.maintenanceDelegationResponse = Objects.requireNonNull(maintenanceDelegationResponse);
+		return this;
 	}
 
-	@XmlElement(name = "SctyTrlr")
-	public ContentInformationType12 getSecurityTrailer() {
-		return securityTrailer;
+	public Optional<ContentInformationType12> getSecurityTrailer() {
+		return securityTrailer == null ? Optional.empty() : Optional.of(securityTrailer);
 	}
 
-	public void setSecurityTrailer(ContentInformationType12 securityTrailer) {
+	public MaintenanceDelegationResponseV02 setSecurityTrailer(ContentInformationType12 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:catm.006.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:catm.006.001.02")
 	static public class Document {
 		@XmlElement(name = "MntncDlgtnRspn", required = true)
 		public MaintenanceDelegationResponseV02 messageBody;

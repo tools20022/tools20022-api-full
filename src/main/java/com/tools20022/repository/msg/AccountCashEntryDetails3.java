@@ -36,6 +36,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -85,8 +87,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -100,16 +102,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountCashEntryDetails3", propOrder = {"accountIdentification", "accountCurrency", "accountType", "entryReference", "entryAmount", "entryDate", "entryStatus", "accountOwner", "accountServicer"})
 public class AccountCashEntryDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId", required = true)
 	protected AccountIdentification1Choice accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,7 +147,7 @@ public class AccountCashEntryDetails3 {
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> AccountCashEntryDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntryDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +158,11 @@ public class AccountCashEntryDetails3 {
 			complexType_lazy = () -> AccountIdentification1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctCcy")
 	protected CurrencyCode accountCurrency;
 	/**
-	 * Medium of exchange of value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,7 +195,7 @@ public class AccountCashEntryDetails3 {
 	public static final MMMessageAttribute mmAccountCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmBaseCurrency;
-			componentContext_lazy = () -> AccountCashEntryDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntryDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -203,10 +206,11 @@ public class AccountCashEntryDetails3 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctTp")
 	protected CashAccountType2Code accountType;
 	/**
-	 * Specifies the nature, or use, of the cash account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,7 +244,7 @@ public class AccountCashEntryDetails3 {
 	public static final MMMessageAttribute mmAccountType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmCashAccountType;
-			componentContext_lazy = () -> AccountCashEntryDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntryDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,11 +255,11 @@ public class AccountCashEntryDetails3 {
 			simpleType_lazy = () -> CashAccountType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "NtryRef")
 	protected Max35Text entryReference;
 	/**
-	 * Unique and unambiguous identifier for an entry, as assigned by the
-	 * account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -290,7 +294,7 @@ public class AccountCashEntryDetails3 {
 	public static final MMMessageAttribute mmEntryReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmIdentification;
-			componentContext_lazy = () -> AccountCashEntryDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntryDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "NtryRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -301,10 +305,11 @@ public class AccountCashEntryDetails3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NtryAmt")
 	protected CurrencyAndAmount entryAmount;
 	/**
-	 * Amount of money in the cash entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -338,7 +343,7 @@ public class AccountCashEntryDetails3 {
 	public static final MMMessageAttribute mmEntryAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmAmount;
-			componentContext_lazy = () -> AccountCashEntryDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntryDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "NtryAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -349,11 +354,11 @@ public class AccountCashEntryDetails3 {
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "NtryDt")
 	protected DateAndDateTimeChoice entryDate;
 	/**
-	 * Date and time at which an entry is posted to an account on the account
-	 * servicer's books.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -389,7 +394,7 @@ public class AccountCashEntryDetails3 {
 	public static final MMMessageAttribute mmEntryDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmEntryDate;
-			componentContext_lazy = () -> AccountCashEntryDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntryDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "NtryDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -400,10 +405,11 @@ public class AccountCashEntryDetails3 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "NtrySts")
 	protected EntryStatus1Code entryStatus;
 	/**
-	 * Status of an entry on the books of the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -437,7 +443,7 @@ public class AccountCashEntryDetails3 {
 	public static final MMMessageAttribute mmEntryStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountStatus.mmEntryStatus;
-			componentContext_lazy = () -> AccountCashEntryDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntryDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "NtrySts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -448,10 +454,11 @@ public class AccountCashEntryDetails3 {
 			simpleType_lazy = () -> EntryStatus1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected AnyBICIdentifier accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -485,7 +492,7 @@ public class AccountCashEntryDetails3 {
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> AccountCashEntryDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntryDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -496,13 +503,11 @@ public class AccountCashEntryDetails3 {
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcr")
 	protected BICIdentifier accountServicer;
 	/**
-	 * Party that manages the account on behalf of the account owner, that is
-	 * manages the registration and booking of entries on the account,
-	 * calculates balances on the account and provides information about the
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -538,7 +543,7 @@ public class AccountCashEntryDetails3 {
 	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> AccountCashEntryDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountCashEntryDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -553,10 +558,12 @@ public class AccountCashEntryDetails3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountCashEntryDetails3.mmAccountIdentification, AccountCashEntryDetails3.mmAccountCurrency, AccountCashEntryDetails3.mmAccountType, AccountCashEntryDetails3.mmEntryReference,
-						AccountCashEntryDetails3.mmEntryAmount, AccountCashEntryDetails3.mmEntryDate, AccountCashEntryDetails3.mmEntryStatus, AccountCashEntryDetails3.mmAccountOwner, AccountCashEntryDetails3.mmAccountServicer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountCashEntryDetails3.mmAccountIdentification, com.tools20022.repository.msg.AccountCashEntryDetails3.mmAccountCurrency,
+						com.tools20022.repository.msg.AccountCashEntryDetails3.mmAccountType, com.tools20022.repository.msg.AccountCashEntryDetails3.mmEntryReference, com.tools20022.repository.msg.AccountCashEntryDetails3.mmEntryAmount,
+						com.tools20022.repository.msg.AccountCashEntryDetails3.mmEntryDate, com.tools20022.repository.msg.AccountCashEntryDetails3.mmEntryStatus, com.tools20022.repository.msg.AccountCashEntryDetails3.mmAccountOwner,
+						com.tools20022.repository.msg.AccountCashEntryDetails3.mmAccountServicer);
 				trace_lazy = () -> CashEntry.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -572,84 +579,84 @@ public class AccountCashEntryDetails3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentification1Choice getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(AccountIdentification1Choice accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public AccountCashEntryDetails3 setAccountIdentification(AccountIdentification1Choice accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctCcy")
-	public CurrencyCode getAccountCurrency() {
-		return accountCurrency;
+	public Optional<CurrencyCode> getAccountCurrency() {
+		return accountCurrency == null ? Optional.empty() : Optional.of(accountCurrency);
 	}
 
-	public void setAccountCurrency(CurrencyCode accountCurrency) {
+	public AccountCashEntryDetails3 setAccountCurrency(CurrencyCode accountCurrency) {
 		this.accountCurrency = accountCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "AcctTp")
-	public CashAccountType2Code getAccountType() {
-		return accountType;
+	public Optional<CashAccountType2Code> getAccountType() {
+		return accountType == null ? Optional.empty() : Optional.of(accountType);
 	}
 
-	public void setAccountType(CashAccountType2Code accountType) {
+	public AccountCashEntryDetails3 setAccountType(CashAccountType2Code accountType) {
 		this.accountType = accountType;
+		return this;
 	}
 
-	@XmlElement(name = "NtryRef")
-	public Max35Text getEntryReference() {
-		return entryReference;
+	public Optional<Max35Text> getEntryReference() {
+		return entryReference == null ? Optional.empty() : Optional.of(entryReference);
 	}
 
-	public void setEntryReference(Max35Text entryReference) {
+	public AccountCashEntryDetails3 setEntryReference(Max35Text entryReference) {
 		this.entryReference = entryReference;
+		return this;
 	}
 
-	@XmlElement(name = "NtryAmt")
-	public CurrencyAndAmount getEntryAmount() {
-		return entryAmount;
+	public Optional<CurrencyAndAmount> getEntryAmount() {
+		return entryAmount == null ? Optional.empty() : Optional.of(entryAmount);
 	}
 
-	public void setEntryAmount(CurrencyAndAmount entryAmount) {
+	public AccountCashEntryDetails3 setEntryAmount(CurrencyAndAmount entryAmount) {
 		this.entryAmount = entryAmount;
+		return this;
 	}
 
-	@XmlElement(name = "NtryDt")
-	public DateAndDateTimeChoice getEntryDate() {
-		return entryDate;
+	public Optional<DateAndDateTimeChoice> getEntryDate() {
+		return entryDate == null ? Optional.empty() : Optional.of(entryDate);
 	}
 
-	public void setEntryDate(DateAndDateTimeChoice entryDate) {
+	public AccountCashEntryDetails3 setEntryDate(DateAndDateTimeChoice entryDate) {
 		this.entryDate = entryDate;
+		return this;
 	}
 
-	@XmlElement(name = "NtrySts")
-	public EntryStatus1Code getEntryStatus() {
-		return entryStatus;
+	public Optional<EntryStatus1Code> getEntryStatus() {
+		return entryStatus == null ? Optional.empty() : Optional.of(entryStatus);
 	}
 
-	public void setEntryStatus(EntryStatus1Code entryStatus) {
+	public AccountCashEntryDetails3 setEntryStatus(EntryStatus1Code entryStatus) {
 		this.entryStatus = entryStatus;
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public AnyBICIdentifier getAccountOwner() {
-		return accountOwner;
+	public Optional<AnyBICIdentifier> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(AnyBICIdentifier accountOwner) {
+	public AccountCashEntryDetails3 setAccountOwner(AnyBICIdentifier accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcr")
-	public BICIdentifier getAccountServicer() {
-		return accountServicer;
+	public Optional<BICIdentifier> getAccountServicer() {
+		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public void setAccountServicer(BICIdentifier accountServicer) {
+	public AccountCashEntryDetails3 setAccountServicer(BICIdentifier accountServicer) {
 		this.accountServicer = accountServicer;
+		return this;
 	}
 }

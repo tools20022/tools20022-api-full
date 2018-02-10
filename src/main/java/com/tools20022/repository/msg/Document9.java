@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.UndertakingDocument;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about a document."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Document9", propOrder = {"type", "identification", "format", "enclosure", "digitalSignature"})
 public class Document9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected UndertakingDocumentType1Choice type;
 	/**
-	 * Type of document or template.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +119,7 @@ public class Document9 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> UndertakingDocument.mmDocumentType;
-			componentContext_lazy = () -> Document9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +130,11 @@ public class Document9 {
 			complexType_lazy = () -> UndertakingDocumentType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Identification of the document or template.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +166,7 @@ public class Document9 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> Document9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +177,11 @@ public class Document9 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Frmt")
 	protected DocumentFormat1Choice format;
 	/**
-	 * Format of the document or template, such as PDF, XML, XSLT.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +215,7 @@ public class Document9 {
 	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> UndertakingDocument.mmFormat;
-			componentContext_lazy = () -> Document9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
 			isDerived = false;
 			xmlTag = "Frmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,11 +226,11 @@ public class Document9 {
 			complexType_lazy = () -> DocumentFormat1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Nclsr", required = true)
 	protected Max2MBBinary enclosure;
 	/**
-	 * Binary file representing the enclosed document or template, such as a PDF
-	 * file, image file, XML file, MT message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -260,7 +265,7 @@ public class Document9 {
 	public static final MMMessageAttribute mmEnclosure = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingDocument.mmObject();
-			componentContext_lazy = () -> Document9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
 			isDerived = false;
 			xmlTag = "Nclsr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -271,10 +276,11 @@ public class Document9 {
 			simpleType_lazy = () -> Max2MBBinary.mmObject();
 		}
 	};
+	@XmlElement(name = "DgtlSgntr")
 	protected PartyAndSignature2 digitalSignature;
 	/**
-	 * Digital signature of the enclosed binary file.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -305,7 +311,7 @@ public class Document9 {
 	public static final MMMessageAssociationEnd mmDigitalSignature = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ElectronicSignature.mmObject();
-			componentContext_lazy = () -> Document9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();
 			isDerived = false;
 			xmlTag = "DgtlSgntr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -321,9 +327,10 @@ public class Document9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Document9.mmType, Document9.mmIdentification, Document9.mmFormat, Document9.mmEnclosure, Document9.mmDigitalSignature);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Document9.mmType, com.tools20022.repository.msg.Document9.mmIdentification, com.tools20022.repository.msg.Document9.mmFormat,
+						com.tools20022.repository.msg.Document9.mmEnclosure, com.tools20022.repository.msg.Document9.mmDigitalSignature);
 				trace_lazy = () -> UndertakingDocument.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Document9";
 				definition = "Information about a document.";
@@ -332,48 +339,48 @@ public class Document9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public UndertakingDocumentType1Choice getType() {
 		return type;
 	}
 
-	public void setType(UndertakingDocumentType1Choice type) {
-		this.type = type;
+	public Document9 setType(UndertakingDocumentType1Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public Document9 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Frmt")
-	public DocumentFormat1Choice getFormat() {
-		return format;
+	public Optional<DocumentFormat1Choice> getFormat() {
+		return format == null ? Optional.empty() : Optional.of(format);
 	}
 
-	public void setFormat(DocumentFormat1Choice format) {
+	public Document9 setFormat(DocumentFormat1Choice format) {
 		this.format = format;
+		return this;
 	}
 
-	@XmlElement(name = "Nclsr", required = true)
 	public Max2MBBinary getEnclosure() {
 		return enclosure;
 	}
 
-	public void setEnclosure(Max2MBBinary enclosure) {
-		this.enclosure = enclosure;
+	public Document9 setEnclosure(Max2MBBinary enclosure) {
+		this.enclosure = Objects.requireNonNull(enclosure);
+		return this;
 	}
 
-	@XmlElement(name = "DgtlSgntr")
-	public PartyAndSignature2 getDigitalSignature() {
-		return digitalSignature;
+	public Optional<PartyAndSignature2> getDigitalSignature() {
+		return digitalSignature == null ? Optional.empty() : Optional.of(digitalSignature);
 	}
 
-	public void setDigitalSignature(com.tools20022.repository.msg.PartyAndSignature2 digitalSignature) {
+	public Document9 setDigitalSignature(com.tools20022.repository.msg.PartyAndSignature2 digitalSignature) {
 		this.digitalSignature = digitalSignature;
+		return this;
 	}
 }

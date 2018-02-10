@@ -27,6 +27,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.FinancialInstrumentQuantity1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Quantity13Choice", propOrder = {"totalUnitsNumber", "portfolioTransferOutRate"})
 public class Quantity13Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlUnitsNb", required = true)
 	protected FinancialInstrumentQuantity1 totalUnitsNumber;
 	/**
-	 * Total quantity of securities to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +114,7 @@ public class Quantity13Choice {
 	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTransfer.mmTransferredQuantity;
-			componentContext_lazy = () -> Quantity13Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TtlUnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +125,11 @@ public class Quantity13Choice {
 			complexType_lazy = () -> FinancialInstrumentQuantity1.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtflTrfOutRate", required = true)
 	protected PercentageRate portfolioTransferOutRate;
 	/**
-	 * Total quantity of securities to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +163,7 @@ public class Quantity13Choice {
 	public static final MMMessageAttribute mmPortfolioTransferOutRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmRate;
-			componentContext_lazy = () -> Quantity13Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity13Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtflTrfOutRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,9 +178,9 @@ public class Quantity13Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Quantity13Choice.mmTotalUnitsNumber, Quantity13Choice.mmPortfolioTransferOutRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity13Choice.mmTotalUnitsNumber, com.tools20022.repository.choice.Quantity13Choice.mmPortfolioTransferOutRate);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity13Choice";
 				definition = "Total quantity of securities to be transferred, expressed in a number of units or a percentage rate.";
@@ -186,21 +189,21 @@ public class Quantity13Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlUnitsNb", required = true)
 	public FinancialInstrumentQuantity1 getTotalUnitsNumber() {
 		return totalUnitsNumber;
 	}
 
-	public void setTotalUnitsNumber(FinancialInstrumentQuantity1 totalUnitsNumber) {
-		this.totalUnitsNumber = totalUnitsNumber;
+	public Quantity13Choice setTotalUnitsNumber(FinancialInstrumentQuantity1 totalUnitsNumber) {
+		this.totalUnitsNumber = Objects.requireNonNull(totalUnitsNumber);
+		return this;
 	}
 
-	@XmlElement(name = "PrtflTrfOutRate", required = true)
 	public PercentageRate getPortfolioTransferOutRate() {
 		return portfolioTransferOutRate;
 	}
 
-	public void setPortfolioTransferOutRate(PercentageRate portfolioTransferOutRate) {
-		this.portfolioTransferOutRate = portfolioTransferOutRate;
+	public Quantity13Choice setPortfolioTransferOutRate(PercentageRate portfolioTransferOutRate) {
+		this.portfolioTransferOutRate = Objects.requireNonNull(portfolioTransferOutRate);
+		return this;
 	}
 }

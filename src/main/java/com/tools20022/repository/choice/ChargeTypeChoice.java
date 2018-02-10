@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.Charges;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Charge is expressed as a code or a bilaterally agreed code."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ChargeTypeChoice", propOrder = {"code", "proprietaryCode"})
 public class ChargeTypeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected ChargeType1Code code;
 	/**
-	 * Type of service for which a charge is asked or paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +108,7 @@ public class ChargeTypeChoice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
-			componentContext_lazy = () -> ChargeTypeChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ChargeTypeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +119,11 @@ public class ChargeTypeChoice {
 			simpleType_lazy = () -> ChargeType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryCd", required = true)
 	protected Max4AlphaNumericText proprietaryCode;
 	/**
-	 * Type of charge is a bilaterally agreed code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -154,7 +157,7 @@ public class ChargeTypeChoice {
 	public static final MMMessageAttribute mmProprietaryCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
-			componentContext_lazy = () -> ChargeTypeChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ChargeTypeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,9 +172,9 @@ public class ChargeTypeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ChargeTypeChoice.mmCode, ChargeTypeChoice.mmProprietaryCode);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ChargeTypeChoice.mmCode, com.tools20022.repository.choice.ChargeTypeChoice.mmProprietaryCode);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeTypeChoice";
 				definition = "Charge is expressed as a code or a bilaterally agreed code.";
@@ -180,21 +183,21 @@ public class ChargeTypeChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public ChargeType1Code getCode() {
 		return code;
 	}
 
-	public void setCode(ChargeType1Code code) {
-		this.code = code;
+	public ChargeTypeChoice setCode(ChargeType1Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryCd", required = true)
 	public Max4AlphaNumericText getProprietaryCode() {
 		return proprietaryCode;
 	}
 
-	public void setProprietaryCode(Max4AlphaNumericText proprietaryCode) {
-		this.proprietaryCode = proprietaryCode;
+	public ChargeTypeChoice setProprietaryCode(Max4AlphaNumericText proprietaryCode) {
+		this.proprietaryCode = Objects.requireNonNull(proprietaryCode);
+		return this;
 	}
 }

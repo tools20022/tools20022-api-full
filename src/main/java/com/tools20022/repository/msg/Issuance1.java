@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -28,9 +29,8 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -78,8 +78,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,16 +92,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "Issuance1", propOrder = {"issuePlace", "countryOfIssue", "issueDate", "announcementDate", "ISINValidFrom", "issuerOrganisation", "issueNominalAmount", "fullIssuedAmount", "issueSize", "issuePrice", "issuanceDistribution",
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "Issuance1", propOrder = {"issuePlace", "countryOfIssue", "issueDate", "announcementDate", "iSINValidFrom", "issuerOrganisation", "issueNominalAmount", "fullIssuedAmount", "issueSize", "issuePrice", "issuanceDistribution",
 		"governingLaw"})
 public class Issuance1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IssePlc")
 	protected MICIdentifier issuePlace;
 	/**
-	 * Indicates where the financial instrument was issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,6 +122,9 @@ public class Issuance1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IssePlc"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 471, FIXSynonym: 472</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -134,9 +138,10 @@ public class Issuance1 {
 	public static final MMMessageAttribute mmIssuePlace = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmMIC;
-			componentContext_lazy = () -> Issuance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "IssePlc";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "471"), new FIXSynonym(this, "472"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuePlace";
 			definition = "Indicates where the financial instrument was issued.";
@@ -145,10 +150,11 @@ public class Issuance1 {
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "CtryOfIsse")
 	protected CountryCode countryOfIssue;
 	/**
-	 * Country where a security is issued by the issuer or its agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,6 +173,9 @@ public class Issuance1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtryOfIsse"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 470</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -181,9 +190,10 @@ public class Issuance1 {
 	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Country.mmCode;
-			componentContext_lazy = () -> Issuance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfIsse";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "470"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIssue";
 			definition = "Country where a security is issued by the issuer or its agent.";
@@ -192,10 +202,11 @@ public class Issuance1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "IsseDt")
 	protected ISODate issueDate;
 	/**
-	 * Date/time at which the security was made available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -214,6 +225,9 @@ public class Issuance1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IsseDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 225</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -227,9 +241,10 @@ public class Issuance1 {
 	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssueDate;
-			componentContext_lazy = () -> Issuance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "225"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Date/time at which the security was made available.";
@@ -238,11 +253,11 @@ public class Issuance1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "AnncmntDt")
 	protected ISODateTime announcementDate;
 	/**
-	 * Date/time, as announced by the issuer, at which the securities will be
-	 * issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -276,7 +291,7 @@ public class Issuance1 {
 	public static final MMMessageAttribute mmAnnouncementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmAnnouncementDate;
-			componentContext_lazy = () -> Issuance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "AnncmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -287,12 +302,11 @@ public class Issuance1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "ISINVldFr")
 	protected ISODate iSINValidFrom;
 	/**
-	 * Defines the date from which the instrument code is valid. This date can
-	 * be before the actual issue date of an instrument for 'when-issued'
-	 * securities, but may not be a date in the future for a new security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -326,7 +340,7 @@ public class Issuance1 {
 	public static final MMMessageAttribute mmISINValidFrom = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> Issuance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "ISINVldFr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -337,10 +351,11 @@ public class Issuance1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "IssrOrg")
 	protected Organisation2 issuerOrganisation;
 	/**
-	 * Legal entity that has the right to issue securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -370,7 +385,7 @@ public class Issuance1 {
 	public static final MMMessageAssociationEnd mmIssuerOrganisation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
-			componentContext_lazy = () -> Issuance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "IssrOrg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -382,10 +397,11 @@ public class Issuance1 {
 			type_lazy = () -> com.tools20022.repository.msg.Organisation2.mmObject();
 		}
 	};
+	@XmlElement(name = "IsseNmnlAmt")
 	protected FinancialInstrumentQuantity1Choice issueNominalAmount;
 	/**
-	 * Total original amount or quantity published.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -418,7 +434,7 @@ public class Issuance1 {
 	public static final MMMessageAttribute mmIssueNominalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssueNominalAmount;
-			componentContext_lazy = () -> Issuance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseNmnlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -429,11 +445,11 @@ public class Issuance1 {
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FullIssdAmt")
 	protected ActiveCurrencyAndAmount fullIssuedAmount;
 	/**
-	 * Figure used as a control to verify whether the information provided is
-	 * correct. It represents the issue size multiplied by the issue price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -468,7 +484,7 @@ public class Issuance1 {
 	public static final MMMessageAttribute mmFullIssuedAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssueNominalAmount;
-			componentContext_lazy = () -> Issuance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "FullIssdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -479,12 +495,11 @@ public class Issuance1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "IsseSz")
 	protected Number issueSize;
 	/**
-	 * Represents the total amount/quantity of the proceeds from the sale of all
-	 * securities in the initial offering. This amount/quantity is known after
-	 * the new issue is priced.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -518,7 +533,7 @@ public class Issuance1 {
 	public static final MMMessageAttribute mmIssueSize = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssueSize;
-			componentContext_lazy = () -> Issuance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "IsseSz";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -529,10 +544,11 @@ public class Issuance1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "IssePric")
 	protected PriceValue1 issuePrice;
 	/**
-	 * Initial issue price of the asset.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -564,7 +580,7 @@ public class Issuance1 {
 	public static final MMMessageAttribute mmIssuePrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmIssuePrice;
-			componentContext_lazy = () -> Issuance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "IssePric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -575,13 +591,11 @@ public class Issuance1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
 		}
 	};
+	@XmlElement(name = "IssncDstrbtn")
 	protected SecuritiesTransactionType17Choice issuanceDistribution;
 	/**
-	 * Way in which the issue will be marketed to the primary market, via
-	 * individual dealers (so called non syndicated distribution) or via a
-	 * syndicate of managers, underwriters and selling group members (so called
-	 * syndicated distribution).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -610,7 +624,7 @@ public class Issuance1 {
 	 */
 	public static final MMMessageAttribute mmIssuanceDistribution = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Issuance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "IssncDstrbtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -621,10 +635,11 @@ public class Issuance1 {
 			complexType_lazy = () -> SecuritiesTransactionType17Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "GovngLaw")
 	protected List<com.tools20022.repository.msg.Jurisdiction1> governingLaw;
 	/**
-	 * Jurisdiction (country, county, state, province, city) of the issue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -650,7 +665,7 @@ public class Issuance1 {
 	 */
 	public static final MMMessageAssociationEnd mmGoverningLaw = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Issuance1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Issuance1.mmObject();
 			isDerived = false;
 			xmlTag = "GovngLaw";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -665,10 +680,12 @@ public class Issuance1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Issuance1.mmIssuePlace, Issuance1.mmCountryOfIssue, Issuance1.mmIssueDate, Issuance1.mmAnnouncementDate, Issuance1.mmISINValidFrom, Issuance1.mmIssuerOrganisation,
-						Issuance1.mmIssueNominalAmount, Issuance1.mmFullIssuedAmount, Issuance1.mmIssueSize, Issuance1.mmIssuePrice, Issuance1.mmIssuanceDistribution, Issuance1.mmGoverningLaw);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Issuance1.mmIssuePlace, com.tools20022.repository.msg.Issuance1.mmCountryOfIssue, com.tools20022.repository.msg.Issuance1.mmIssueDate,
+						com.tools20022.repository.msg.Issuance1.mmAnnouncementDate, com.tools20022.repository.msg.Issuance1.mmISINValidFrom, com.tools20022.repository.msg.Issuance1.mmIssuerOrganisation,
+						com.tools20022.repository.msg.Issuance1.mmIssueNominalAmount, com.tools20022.repository.msg.Issuance1.mmFullIssuedAmount, com.tools20022.repository.msg.Issuance1.mmIssueSize,
+						com.tools20022.repository.msg.Issuance1.mmIssuePrice, com.tools20022.repository.msg.Issuance1.mmIssuanceDistribution, com.tools20022.repository.msg.Issuance1.mmGoverningLaw);
 				trace_lazy = () -> Issuance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Issuance1";
 				definition = "Preparation/bringing to market of a security (also known as primary market or Initial Public Offering (IPO) issuance).";
@@ -677,111 +694,111 @@ public class Issuance1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IssePlc")
-	public MICIdentifier getIssuePlace() {
-		return issuePlace;
+	public Optional<MICIdentifier> getIssuePlace() {
+		return issuePlace == null ? Optional.empty() : Optional.of(issuePlace);
 	}
 
-	public void setIssuePlace(MICIdentifier issuePlace) {
+	public Issuance1 setIssuePlace(MICIdentifier issuePlace) {
 		this.issuePlace = issuePlace;
+		return this;
 	}
 
-	@XmlElement(name = "CtryOfIsse")
-	public CountryCode getCountryOfIssue() {
-		return countryOfIssue;
+	public Optional<CountryCode> getCountryOfIssue() {
+		return countryOfIssue == null ? Optional.empty() : Optional.of(countryOfIssue);
 	}
 
-	public void setCountryOfIssue(CountryCode countryOfIssue) {
+	public Issuance1 setCountryOfIssue(CountryCode countryOfIssue) {
 		this.countryOfIssue = countryOfIssue;
+		return this;
 	}
 
-	@XmlElement(name = "IsseDt")
-	public ISODate getIssueDate() {
-		return issueDate;
+	public Optional<ISODate> getIssueDate() {
+		return issueDate == null ? Optional.empty() : Optional.of(issueDate);
 	}
 
-	public void setIssueDate(ISODate issueDate) {
+	public Issuance1 setIssueDate(ISODate issueDate) {
 		this.issueDate = issueDate;
+		return this;
 	}
 
-	@XmlElement(name = "AnncmntDt")
-	public ISODateTime getAnnouncementDate() {
-		return announcementDate;
+	public Optional<ISODateTime> getAnnouncementDate() {
+		return announcementDate == null ? Optional.empty() : Optional.of(announcementDate);
 	}
 
-	public void setAnnouncementDate(ISODateTime announcementDate) {
+	public Issuance1 setAnnouncementDate(ISODateTime announcementDate) {
 		this.announcementDate = announcementDate;
+		return this;
 	}
 
-	@XmlElement(name = "ISINVldFr")
-	public ISODate getISINValidFrom() {
-		return iSINValidFrom;
+	public Optional<ISODate> getISINValidFrom() {
+		return iSINValidFrom == null ? Optional.empty() : Optional.of(iSINValidFrom);
 	}
 
-	public void setISINValidFrom(ISODate iSINValidFrom) {
+	public Issuance1 setISINValidFrom(ISODate iSINValidFrom) {
 		this.iSINValidFrom = iSINValidFrom;
+		return this;
 	}
 
-	@XmlElement(name = "IssrOrg")
-	public Organisation2 getIssuerOrganisation() {
-		return issuerOrganisation;
+	public Optional<Organisation2> getIssuerOrganisation() {
+		return issuerOrganisation == null ? Optional.empty() : Optional.of(issuerOrganisation);
 	}
 
-	public void setIssuerOrganisation(com.tools20022.repository.msg.Organisation2 issuerOrganisation) {
+	public Issuance1 setIssuerOrganisation(com.tools20022.repository.msg.Organisation2 issuerOrganisation) {
 		this.issuerOrganisation = issuerOrganisation;
+		return this;
 	}
 
-	@XmlElement(name = "IsseNmnlAmt")
-	public FinancialInstrumentQuantity1Choice getIssueNominalAmount() {
-		return issueNominalAmount;
+	public Optional<FinancialInstrumentQuantity1Choice> getIssueNominalAmount() {
+		return issueNominalAmount == null ? Optional.empty() : Optional.of(issueNominalAmount);
 	}
 
-	public void setIssueNominalAmount(FinancialInstrumentQuantity1Choice issueNominalAmount) {
+	public Issuance1 setIssueNominalAmount(FinancialInstrumentQuantity1Choice issueNominalAmount) {
 		this.issueNominalAmount = issueNominalAmount;
+		return this;
 	}
 
-	@XmlElement(name = "FullIssdAmt")
-	public ActiveCurrencyAndAmount getFullIssuedAmount() {
-		return fullIssuedAmount;
+	public Optional<ActiveCurrencyAndAmount> getFullIssuedAmount() {
+		return fullIssuedAmount == null ? Optional.empty() : Optional.of(fullIssuedAmount);
 	}
 
-	public void setFullIssuedAmount(ActiveCurrencyAndAmount fullIssuedAmount) {
+	public Issuance1 setFullIssuedAmount(ActiveCurrencyAndAmount fullIssuedAmount) {
 		this.fullIssuedAmount = fullIssuedAmount;
+		return this;
 	}
 
-	@XmlElement(name = "IsseSz")
-	public Number getIssueSize() {
-		return issueSize;
+	public Optional<Number> getIssueSize() {
+		return issueSize == null ? Optional.empty() : Optional.of(issueSize);
 	}
 
-	public void setIssueSize(Number issueSize) {
+	public Issuance1 setIssueSize(Number issueSize) {
 		this.issueSize = issueSize;
+		return this;
 	}
 
-	@XmlElement(name = "IssePric")
-	public PriceValue1 getIssuePrice() {
-		return issuePrice;
+	public Optional<PriceValue1> getIssuePrice() {
+		return issuePrice == null ? Optional.empty() : Optional.of(issuePrice);
 	}
 
-	public void setIssuePrice(com.tools20022.repository.msg.PriceValue1 issuePrice) {
+	public Issuance1 setIssuePrice(com.tools20022.repository.msg.PriceValue1 issuePrice) {
 		this.issuePrice = issuePrice;
+		return this;
 	}
 
-	@XmlElement(name = "IssncDstrbtn")
-	public SecuritiesTransactionType17Choice getIssuanceDistribution() {
-		return issuanceDistribution;
+	public Optional<SecuritiesTransactionType17Choice> getIssuanceDistribution() {
+		return issuanceDistribution == null ? Optional.empty() : Optional.of(issuanceDistribution);
 	}
 
-	public void setIssuanceDistribution(SecuritiesTransactionType17Choice issuanceDistribution) {
+	public Issuance1 setIssuanceDistribution(SecuritiesTransactionType17Choice issuanceDistribution) {
 		this.issuanceDistribution = issuanceDistribution;
+		return this;
 	}
 
-	@XmlElement(name = "GovngLaw")
 	public List<Jurisdiction1> getGoverningLaw() {
-		return governingLaw;
+		return governingLaw == null ? governingLaw = new ArrayList<>() : governingLaw;
 	}
 
-	public void setGoverningLaw(List<com.tools20022.repository.msg.Jurisdiction1> governingLaw) {
-		this.governingLaw = governingLaw;
+	public Issuance1 setGoverningLaw(List<com.tools20022.repository.msg.Jurisdiction1> governingLaw) {
+		this.governingLaw = Objects.requireNonNull(governingLaw);
+		return this;
 	}
 }

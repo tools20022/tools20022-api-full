@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.BookingTypeCode;
+import com.tools20022.repository.codeset.BookingType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Method for booking out an order. Used when notifying a broker that an order
@@ -32,26 +36,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.BookingType1Code#Regular
+ * BookingType1Code.Regular}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BookingType1Code#ContractForDifference
+ * BookingType1Code.ContractForDifference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.BookingType1Code#TotalReturnSwap
+ * BookingType1Code.TotalReturnSwap}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.BookingTypeCode
  * BookingTypeCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.BookingType1Code#mmRegular
- * BookingType1Code.mmRegular}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BookingType1Code#mmContractForDifference
- * BookingType1Code.mmContractForDifference}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.BookingType1Code#mmTotalReturnSwap
- * BookingType1Code.mmTotalReturnSwap}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class BookingType1Code extends BookingTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class BookingType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class BookingType1Code extends BookingTypeCode {
 	 * name} = "Regular"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegular = new MMCode() {
+	public static final BookingType1Code Regular = new BookingType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Regular";
-			owner_lazy = () -> BookingType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BookingType1Code.mmObject();
+			codeName = BookingTypeCode.Regular.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class BookingType1Code extends BookingTypeCode {
 	 * name} = "ContractForDifference"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmContractForDifference = new MMCode() {
+	public static final BookingType1Code ContractForDifference = new BookingType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractForDifference";
-			owner_lazy = () -> BookingType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BookingType1Code.mmObject();
+			codeName = BookingTypeCode.ContractForDifference.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,26 +142,59 @@ public class BookingType1Code extends BookingTypeCode {
 	 * name} = "TotalReturnSwap"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTotalReturnSwap = new MMCode() {
+	public static final BookingType1Code TotalReturnSwap = new BookingType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnSwap";
-			owner_lazy = () -> BookingType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.BookingType1Code.mmObject();
+			codeName = BookingTypeCode.TotalReturnSwap.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, BookingType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected BookingType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REGU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BookingType1Code";
 				definition = "Method for booking out an order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an Over The Counter derivative (for example, Contract For Difference - CFD or similar).";
-				code_lazy = () -> Arrays.asList(BookingType1Code.mmRegular, BookingType1Code.mmContractForDifference, BookingType1Code.mmTotalReturnSwap);
 				trace_lazy = () -> BookingTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.BookingType1Code.Regular, com.tools20022.repository.codeset.BookingType1Code.ContractForDifference,
+						com.tools20022.repository.codeset.BookingType1Code.TotalReturnSwap);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Regular.getCodeName().get(), Regular);
+		codesByName.put(ContractForDifference.getCodeName().get(), ContractForDifference);
+		codesByName.put(TotalReturnSwap.getCodeName().get(), TotalReturnSwap);
+	}
+
+	public static BookingType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static BookingType1Code[] values() {
+		BookingType1Code[] values = new BookingType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, BookingType1Code> {
+		@Override
+		public BookingType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(BookingType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

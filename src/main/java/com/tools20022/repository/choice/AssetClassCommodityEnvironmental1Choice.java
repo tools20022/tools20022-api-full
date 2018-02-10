@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.EnvironmentalCommodityEmission1;
 import com.tools20022.repository.msg.EnvironmentalCommodityWeather1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AssetClassCommodityEnvironmental1Choice", propOrder = {"emissions", "weather", "carbonRelated"})
 public class AssetClassCommodityEnvironmental1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Emssns", required = true)
 	protected EnvironmentalCommodityEmission1 emissions;
 	/**
-	 * Emissions environmental commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -112,7 +114,7 @@ public class AssetClassCommodityEnvironmental1Choice {
 	public static final MMMessageAssociationEnd mmEmissions = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityEnvironmental1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnvironmental1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Emssns";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +126,11 @@ public class AssetClassCommodityEnvironmental1Choice {
 			type_lazy = () -> EnvironmentalCommodityEmission1.mmObject();
 		}
 	};
+	@XmlElement(name = "Wthr", required = true)
 	protected EnvironmentalCommodityWeather1 weather;
 	/**
-	 * Weather environmental commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -160,7 +163,7 @@ public class AssetClassCommodityEnvironmental1Choice {
 	public static final MMMessageAssociationEnd mmWeather = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityEnvironmental1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnvironmental1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Wthr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +175,11 @@ public class AssetClassCommodityEnvironmental1Choice {
 			type_lazy = () -> EnvironmentalCommodityWeather1.mmObject();
 		}
 	};
+	@XmlElement(name = "CrbnRltd", required = true)
 	protected EnvironmentalCommodityCarbonRelated1 carbonRelated;
 	/**
-	 * Carbon related environmental commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -208,7 +212,7 @@ public class AssetClassCommodityEnvironmental1Choice {
 	public static final MMMessageAssociationEnd mmCarbonRelated = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityEnvironmental1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityEnvironmental1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CrbnRltd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,9 +228,10 @@ public class AssetClassCommodityEnvironmental1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AssetClassCommodityEnvironmental1Choice.mmEmissions, AssetClassCommodityEnvironmental1Choice.mmWeather, AssetClassCommodityEnvironmental1Choice.mmCarbonRelated);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityEnvironmental1Choice.mmEmissions, com.tools20022.repository.choice.AssetClassCommodityEnvironmental1Choice.mmWeather,
+						com.tools20022.repository.choice.AssetClassCommodityEnvironmental1Choice.mmCarbonRelated);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityEnvironmental1Choice";
 				definition = "Defines commodity attributes of a derivative where the type is environmental.";
@@ -235,30 +240,30 @@ public class AssetClassCommodityEnvironmental1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Emssns", required = true)
 	public EnvironmentalCommodityEmission1 getEmissions() {
 		return emissions;
 	}
 
-	public void setEmissions(EnvironmentalCommodityEmission1 emissions) {
-		this.emissions = emissions;
+	public AssetClassCommodityEnvironmental1Choice setEmissions(EnvironmentalCommodityEmission1 emissions) {
+		this.emissions = Objects.requireNonNull(emissions);
+		return this;
 	}
 
-	@XmlElement(name = "Wthr", required = true)
 	public EnvironmentalCommodityWeather1 getWeather() {
 		return weather;
 	}
 
-	public void setWeather(EnvironmentalCommodityWeather1 weather) {
-		this.weather = weather;
+	public AssetClassCommodityEnvironmental1Choice setWeather(EnvironmentalCommodityWeather1 weather) {
+		this.weather = Objects.requireNonNull(weather);
+		return this;
 	}
 
-	@XmlElement(name = "CrbnRltd", required = true)
 	public EnvironmentalCommodityCarbonRelated1 getCarbonRelated() {
 		return carbonRelated;
 	}
 
-	public void setCarbonRelated(EnvironmentalCommodityCarbonRelated1 carbonRelated) {
-		this.carbonRelated = carbonRelated;
+	public AssetClassCommodityEnvironmental1Choice setCarbonRelated(EnvironmentalCommodityCarbonRelated1 carbonRelated) {
+		this.carbonRelated = Objects.requireNonNull(carbonRelated);
+		return this;
 	}
 }

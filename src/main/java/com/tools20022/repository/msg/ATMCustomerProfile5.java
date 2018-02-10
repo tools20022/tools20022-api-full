@@ -24,9 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Profile of the customer with the allowed services and restrictions."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMCustomerProfile5", propOrder = {"profileReference", "customerIdentification", "profileDescription", "allowedServices"})
 public class ATMCustomerProfile5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PrflRef")
 	protected Max35Text profileReference;
 	/**
-	 * Reference of the customer profile.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +106,7 @@ public class ATMCustomerProfile5 {
 	 */
 	public static final MMMessageAttribute mmProfileReference = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCustomerProfile5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile5.mmObject();
 			isDerived = false;
 			xmlTag = "PrflRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +117,11 @@ public class ATMCustomerProfile5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CstmrId")
 	protected Max35Text customerIdentification;
 	/**
-	 * Identification of the customer for the bank.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,7 +148,7 @@ public class ATMCustomerProfile5 {
 	 */
 	public static final MMMessageAttribute mmCustomerIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCustomerProfile5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile5.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,10 +159,11 @@ public class ATMCustomerProfile5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PrflDesc")
 	protected Max70Text profileDescription;
 	/**
-	 * Description of the customer's profile in plaintext.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,7 +190,7 @@ public class ATMCustomerProfile5 {
 	 */
 	public static final MMMessageAttribute mmProfileDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCustomerProfile5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile5.mmObject();
 			isDerived = false;
 			xmlTag = "PrflDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -199,10 +201,11 @@ public class ATMCustomerProfile5 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AllwdSvcs")
 	protected List<com.tools20022.repository.msg.ATMService17> allowedServices;
 	/**
-	 * Services allowed for the customer's profile.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -228,7 +231,7 @@ public class ATMCustomerProfile5 {
 	 */
 	public static final MMMessageAssociationEnd mmAllowedServices = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMCustomerProfile5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile5.mmObject();
 			isDerived = false;
 			xmlTag = "AllwdSvcs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -243,8 +246,9 @@ public class ATMCustomerProfile5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMCustomerProfile5.mmProfileReference, ATMCustomerProfile5.mmCustomerIdentification, ATMCustomerProfile5.mmProfileDescription, ATMCustomerProfile5.mmAllowedServices);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomerProfile5.mmProfileReference, com.tools20022.repository.msg.ATMCustomerProfile5.mmCustomerIdentification,
+						com.tools20022.repository.msg.ATMCustomerProfile5.mmProfileDescription, com.tools20022.repository.msg.ATMCustomerProfile5.mmAllowedServices);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomerProfile5";
 				definition = "Profile of the customer with the allowed services and restrictions.";
@@ -253,39 +257,39 @@ public class ATMCustomerProfile5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PrflRef")
-	public Max35Text getProfileReference() {
-		return profileReference;
+	public Optional<Max35Text> getProfileReference() {
+		return profileReference == null ? Optional.empty() : Optional.of(profileReference);
 	}
 
-	public void setProfileReference(Max35Text profileReference) {
+	public ATMCustomerProfile5 setProfileReference(Max35Text profileReference) {
 		this.profileReference = profileReference;
+		return this;
 	}
 
-	@XmlElement(name = "CstmrId")
-	public Max35Text getCustomerIdentification() {
-		return customerIdentification;
+	public Optional<Max35Text> getCustomerIdentification() {
+		return customerIdentification == null ? Optional.empty() : Optional.of(customerIdentification);
 	}
 
-	public void setCustomerIdentification(Max35Text customerIdentification) {
+	public ATMCustomerProfile5 setCustomerIdentification(Max35Text customerIdentification) {
 		this.customerIdentification = customerIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PrflDesc")
-	public Max70Text getProfileDescription() {
-		return profileDescription;
+	public Optional<Max70Text> getProfileDescription() {
+		return profileDescription == null ? Optional.empty() : Optional.of(profileDescription);
 	}
 
-	public void setProfileDescription(Max70Text profileDescription) {
+	public ATMCustomerProfile5 setProfileDescription(Max70Text profileDescription) {
 		this.profileDescription = profileDescription;
+		return this;
 	}
 
-	@XmlElement(name = "AllwdSvcs")
 	public List<ATMService17> getAllowedServices() {
-		return allowedServices;
+		return allowedServices == null ? allowedServices = new ArrayList<>() : allowedServices;
 	}
 
-	public void setAllowedServices(List<com.tools20022.repository.msg.ATMService17> allowedServices) {
-		this.allowedServices = allowedServices;
+	public ATMCustomerProfile5 setAllowedServices(List<com.tools20022.repository.msg.ATMService17> allowedServices) {
+		this.allowedServices = Objects.requireNonNull(allowedServices);
+		return this;
 	}
 }

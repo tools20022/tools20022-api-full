@@ -24,6 +24,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Summary of electronic message details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ElectronicMessageDetails1", propOrder = {"electronicSystemInformationMessageIdentifier", "electronicSystemInformationMessagePacketIdentifier"})
 public class ElectronicMessageDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ElctrncSysInfMsgIdr", required = true)
 	protected Max35Text electronicSystemInformationMessageIdentifier;
 	/**
-	 * Information about separate electronic system information message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +101,7 @@ public class ElectronicMessageDetails1 {
 	 */
 	public static final MMMessageAttribute mmElectronicSystemInformationMessageIdentifier = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ElectronicMessageDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ElectronicMessageDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncSysInfMsgIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +112,11 @@ public class ElectronicMessageDetails1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ElctrncSysInfMsgPacketIdr")
 	protected Max35Text electronicSystemInformationMessagePacketIdentifier;
 	/**
-	 * Information about packet of electronic system messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +143,7 @@ public class ElectronicMessageDetails1 {
 	 */
 	public static final MMMessageAttribute mmElectronicSystemInformationMessagePacketIdentifier = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ElectronicMessageDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ElectronicMessageDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "ElctrncSysInfMsgPacketIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +158,9 @@ public class ElectronicMessageDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ElectronicMessageDetails1.mmElectronicSystemInformationMessageIdentifier, ElectronicMessageDetails1.mmElectronicSystemInformationMessagePacketIdentifier);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ElectronicMessageDetails1.mmElectronicSystemInformationMessageIdentifier,
+						com.tools20022.repository.msg.ElectronicMessageDetails1.mmElectronicSystemInformationMessagePacketIdentifier);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ElectronicMessageDetails1";
 				definition = "Summary of electronic message details.";
@@ -164,21 +169,21 @@ public class ElectronicMessageDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ElctrncSysInfMsgIdr", required = true)
 	public Max35Text getElectronicSystemInformationMessageIdentifier() {
 		return electronicSystemInformationMessageIdentifier;
 	}
 
-	public void setElectronicSystemInformationMessageIdentifier(Max35Text electronicSystemInformationMessageIdentifier) {
-		this.electronicSystemInformationMessageIdentifier = electronicSystemInformationMessageIdentifier;
+	public ElectronicMessageDetails1 setElectronicSystemInformationMessageIdentifier(Max35Text electronicSystemInformationMessageIdentifier) {
+		this.electronicSystemInformationMessageIdentifier = Objects.requireNonNull(electronicSystemInformationMessageIdentifier);
+		return this;
 	}
 
-	@XmlElement(name = "ElctrncSysInfMsgPacketIdr")
-	public Max35Text getElectronicSystemInformationMessagePacketIdentifier() {
-		return electronicSystemInformationMessagePacketIdentifier;
+	public Optional<Max35Text> getElectronicSystemInformationMessagePacketIdentifier() {
+		return electronicSystemInformationMessagePacketIdentifier == null ? Optional.empty() : Optional.of(electronicSystemInformationMessagePacketIdentifier);
 	}
 
-	public void setElectronicSystemInformationMessagePacketIdentifier(Max35Text electronicSystemInformationMessagePacketIdentifier) {
+	public ElectronicMessageDetails1 setElectronicSystemInformationMessagePacketIdentifier(Max35Text electronicSystemInformationMessagePacketIdentifier) {
 		this.electronicSystemInformationMessagePacketIdentifier = electronicSystemInformationMessagePacketIdentifier;
+		return this;
 	}
 }

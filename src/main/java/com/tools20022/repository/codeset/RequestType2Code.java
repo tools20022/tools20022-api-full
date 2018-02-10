@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RequestTypeCode;
+import com.tools20022.repository.codeset.RequestType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the request used to further detail the type of information that
@@ -31,33 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RequestTypeCode
- * RequestTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestType2Code#mmBankPositionEnquiry
- * RequestType2Code.mmBankPositionEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestType2Code#BankPositionEnquiry
+ * RequestType2Code.BankPositionEnquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestType2Code#mmSpecificTransactionEnquiry
- * RequestType2Code.mmSpecificTransactionEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestType2Code#SpecificTransactionEnquiry
+ * RequestType2Code.SpecificTransactionEnquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestType2Code#mmQueuedTransactionEnquiry
- * RequestType2Code.mmQueuedTransactionEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestType2Code#QueuedTransactionEnquiry
+ * RequestType2Code.QueuedTransactionEnquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestType2Code#mmSuspiciousTransactionEnquiry
- * RequestType2Code.mmSuspiciousTransactionEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestType2Code#SuspiciousTransactionEnquiry
+ * RequestType2Code.SuspiciousTransactionEnquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RequestType2Code#mmPendingInwardCreditsEnquiry
- * RequestType2Code.mmPendingInwardCreditsEnquiry}</li>
+ * {@linkplain com.tools20022.repository.codeset.RequestType2Code#PendingInwardCreditsEnquiry
+ * RequestType2Code.PendingInwardCreditsEnquiry}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RequestTypeCode
+ * RequestTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -76,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class RequestType2Code extends RequestTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RequestType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,11 +100,12 @@ public class RequestType2Code extends RequestTypeCode {
 	 * name} = "BankPositionEnquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBankPositionEnquiry = new MMCode() {
+	public static final RequestType2Code BankPositionEnquiry = new RequestType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankPositionEnquiry";
-			owner_lazy = () -> RequestType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestType2Code.mmObject();
+			codeName = RequestTypeCode.BankPositionEnquiry.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -118,11 +124,12 @@ public class RequestType2Code extends RequestTypeCode {
 	 * name} = "SpecificTransactionEnquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecificTransactionEnquiry = new MMCode() {
+	public static final RequestType2Code SpecificTransactionEnquiry = new RequestType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecificTransactionEnquiry";
-			owner_lazy = () -> RequestType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestType2Code.mmObject();
+			codeName = RequestTypeCode.SpecificTransactionEnquiry.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -141,11 +148,12 @@ public class RequestType2Code extends RequestTypeCode {
 	 * name} = "QueuedTransactionEnquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQueuedTransactionEnquiry = new MMCode() {
+	public static final RequestType2Code QueuedTransactionEnquiry = new RequestType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueuedTransactionEnquiry";
-			owner_lazy = () -> RequestType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestType2Code.mmObject();
+			codeName = RequestTypeCode.QueuedTransactionEnquiry.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -164,11 +172,12 @@ public class RequestType2Code extends RequestTypeCode {
 	 * name} = "SuspiciousTransactionEnquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuspiciousTransactionEnquiry = new MMCode() {
+	public static final RequestType2Code SuspiciousTransactionEnquiry = new RequestType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspiciousTransactionEnquiry";
-			owner_lazy = () -> RequestType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestType2Code.mmObject();
+			codeName = RequestTypeCode.SuspiciousTransactionEnquiry.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -187,27 +196,62 @@ public class RequestType2Code extends RequestTypeCode {
 	 * name} = "PendingInwardCreditsEnquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingInwardCreditsEnquiry = new MMCode() {
+	public static final RequestType2Code PendingInwardCreditsEnquiry = new RequestType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingInwardCreditsEnquiry";
-			owner_lazy = () -> RequestType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RequestType2Code.mmObject();
+			codeName = RequestTypeCode.PendingInwardCreditsEnquiry.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RequestType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RequestType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RT11");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestType2Code";
 				definition = "Specifies the request used to further detail the type of information that will be queried.";
-				code_lazy = () -> Arrays.asList(RequestType2Code.mmBankPositionEnquiry, RequestType2Code.mmSpecificTransactionEnquiry, RequestType2Code.mmQueuedTransactionEnquiry, RequestType2Code.mmSuspiciousTransactionEnquiry,
-						RequestType2Code.mmPendingInwardCreditsEnquiry);
 				trace_lazy = () -> RequestTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RequestType2Code.BankPositionEnquiry, com.tools20022.repository.codeset.RequestType2Code.SpecificTransactionEnquiry,
+						com.tools20022.repository.codeset.RequestType2Code.QueuedTransactionEnquiry, com.tools20022.repository.codeset.RequestType2Code.SuspiciousTransactionEnquiry,
+						com.tools20022.repository.codeset.RequestType2Code.PendingInwardCreditsEnquiry);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BankPositionEnquiry.getCodeName().get(), BankPositionEnquiry);
+		codesByName.put(SpecificTransactionEnquiry.getCodeName().get(), SpecificTransactionEnquiry);
+		codesByName.put(QueuedTransactionEnquiry.getCodeName().get(), QueuedTransactionEnquiry);
+		codesByName.put(SuspiciousTransactionEnquiry.getCodeName().get(), SuspiciousTransactionEnquiry);
+		codesByName.put(PendingInwardCreditsEnquiry.getCodeName().get(), PendingInwardCreditsEnquiry);
+	}
+
+	public static RequestType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RequestType2Code[] values() {
+		RequestType2Code[] values = new RequestType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RequestType2Code> {
+		@Override
+		public RequestType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RequestType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

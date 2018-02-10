@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DTCCashRoundingTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies types of cash rounding.
@@ -32,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCashRoundingTypeCode#mmRoundDownToTheNearestCent
- * DTCCashRoundingTypeCode.mmRoundDownToTheNearestCent}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCashRoundingTypeCode#RoundDownToTheNearestCent
+ * DTCCashRoundingTypeCode.RoundDownToTheNearestCent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCashRoundingTypeCode#mmRoundDownToTheNearestDollar
- * DTCCashRoundingTypeCode.mmRoundDownToTheNearestDollar}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCashRoundingTypeCode#RoundDownToTheNearestDollar
+ * DTCCashRoundingTypeCode.RoundDownToTheNearestDollar}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCashRoundingTypeCode#mmRoundUpToTheNearestCent
- * DTCCashRoundingTypeCode.mmRoundUpToTheNearestCent}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCashRoundingTypeCode#RoundUpToTheNearestCent
+ * DTCCashRoundingTypeCode.RoundUpToTheNearestCent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCCashRoundingTypeCode#mmRoundUpToTheNearestDollar
- * DTCCashRoundingTypeCode.mmRoundUpToTheNearestDollar}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCashRoundingTypeCode#RoundUpToTheNearestDollar
+ * DTCCashRoundingTypeCode.RoundUpToTheNearestDollar}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -55,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies types of cash rounding."</li>
  * </ul>
  */
-public class DTCCashRoundingTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DTCCashRoundingTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,12 +103,12 @@ public class DTCCashRoundingTypeCode {
 	 * definition} = "Round down to the nearest cent."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRoundDownToTheNearestCent = new MMCode() {
+	public static final DTCCashRoundingTypeCode RoundDownToTheNearestCent = new DTCCashRoundingTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDownToTheNearestCent";
 			definition = "Round down to the nearest cent.";
-			owner_lazy = () -> DTCCashRoundingTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCashRoundingTypeCode.mmObject();
 			codeName = "RDNC";
 		}
 	};
@@ -127,12 +133,12 @@ public class DTCCashRoundingTypeCode {
 	 * definition} = "Round down to the nearest dollar."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRoundDownToTheNearestDollar = new MMCode() {
+	public static final DTCCashRoundingTypeCode RoundDownToTheNearestDollar = new DTCCashRoundingTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDownToTheNearestDollar";
 			definition = "Round down to the nearest dollar.";
-			owner_lazy = () -> DTCCashRoundingTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCashRoundingTypeCode.mmObject();
 			codeName = "RDND";
 		}
 	};
@@ -157,12 +163,12 @@ public class DTCCashRoundingTypeCode {
 	 * definition} = "Round up to the nearest cent."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRoundUpToTheNearestCent = new MMCode() {
+	public static final DTCCashRoundingTypeCode RoundUpToTheNearestCent = new DTCCashRoundingTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundUpToTheNearestCent";
 			definition = "Round up to the nearest cent.";
-			owner_lazy = () -> DTCCashRoundingTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCashRoundingTypeCode.mmObject();
 			codeName = "RUNC";
 		}
 	};
@@ -187,29 +193,61 @@ public class DTCCashRoundingTypeCode {
 	 * definition} = "Round up to the nearest dollar."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRoundUpToTheNearestDollar = new MMCode() {
+	public static final DTCCashRoundingTypeCode RoundUpToTheNearestDollar = new DTCCashRoundingTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundUpToTheNearestDollar";
 			definition = "Round up to the nearest dollar.";
-			owner_lazy = () -> DTCCashRoundingTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCashRoundingTypeCode.mmObject();
 			codeName = "RUND";
 		}
 	};
+	final static private LinkedHashMap<String, DTCCashRoundingTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DTCCashRoundingTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RDNC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCCashRoundingTypeCode";
 				definition = "Specifies types of cash rounding.";
-				code_lazy = () -> Arrays.asList(DTCCashRoundingTypeCode.mmRoundDownToTheNearestCent, DTCCashRoundingTypeCode.mmRoundDownToTheNearestDollar, DTCCashRoundingTypeCode.mmRoundUpToTheNearestCent,
-						DTCCashRoundingTypeCode.mmRoundUpToTheNearestDollar);
 				derivation_lazy = () -> Arrays.asList(DTCCashRoundingType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCashRoundingTypeCode.RoundDownToTheNearestCent, com.tools20022.repository.codeset.DTCCashRoundingTypeCode.RoundDownToTheNearestDollar,
+						com.tools20022.repository.codeset.DTCCashRoundingTypeCode.RoundUpToTheNearestCent, com.tools20022.repository.codeset.DTCCashRoundingTypeCode.RoundUpToTheNearestDollar);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(RoundDownToTheNearestCent.getCodeName().get(), RoundDownToTheNearestCent);
+		codesByName.put(RoundDownToTheNearestDollar.getCodeName().get(), RoundDownToTheNearestDollar);
+		codesByName.put(RoundUpToTheNearestCent.getCodeName().get(), RoundUpToTheNearestCent);
+		codesByName.put(RoundUpToTheNearestDollar.getCodeName().get(), RoundUpToTheNearestDollar);
+	}
+
+	public static DTCCashRoundingTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DTCCashRoundingTypeCode[] values() {
+		DTCCashRoundingTypeCode[] values = new DTCCashRoundingTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DTCCashRoundingTypeCode> {
+		@Override
+		public DTCCashRoundingTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DTCCashRoundingTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

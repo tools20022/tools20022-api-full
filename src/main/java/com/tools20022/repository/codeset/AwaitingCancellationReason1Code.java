@@ -20,31 +20,35 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AwaitingCancellationReasonCode;
+import com.tools20022.repository.codeset.AwaitingCancellationReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason why the instruction has an awaiting cancellation status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AwaitingCancellationReasonCode
- * AwaitingCancellationReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AwaitingCancellationReason1Code#mmAwaitingCancellation
- * AwaitingCancellationReason1Code.mmAwaitingCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AwaitingCancellationReason1Code#AwaitingCancellation
+ * AwaitingCancellationReason1Code.AwaitingCancellation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AwaitingCancellationReasonCode
+ * AwaitingCancellationReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -63,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class AwaitingCancellationReason1Code extends AwaitingCancellationReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AwaitingCancellationReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,26 +87,56 @@ public class AwaitingCancellationReason1Code extends AwaitingCancellationReasonC
 	 * name} = "AwaitingCancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAwaitingCancellation = new MMCode() {
+	public static final AwaitingCancellationReason1Code AwaitingCancellation = new AwaitingCancellationReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AwaitingCancellation";
-			owner_lazy = () -> AwaitingCancellationReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AwaitingCancellationReason1Code.mmObject();
+			codeName = AwaitingCancellationReasonCode.AwaitingCancellation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AwaitingCancellationReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AwaitingCancellationReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("WCAN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AwaitingCancellationReason1Code";
 				definition = "Specifies the reason why the instruction has an awaiting cancellation status.";
-				code_lazy = () -> Arrays.asList(AwaitingCancellationReason1Code.mmAwaitingCancellation);
 				trace_lazy = () -> AwaitingCancellationReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AwaitingCancellationReason1Code.AwaitingCancellation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AwaitingCancellation.getCodeName().get(), AwaitingCancellation);
+	}
+
+	public static AwaitingCancellationReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AwaitingCancellationReason1Code[] values() {
+		AwaitingCancellationReason1Code[] values = new AwaitingCancellationReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AwaitingCancellationReason1Code> {
+		@Override
+		public AwaitingCancellationReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AwaitingCancellationReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

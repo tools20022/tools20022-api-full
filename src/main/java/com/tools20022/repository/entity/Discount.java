@@ -32,6 +32,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Decrease of the value of goods and / or services by applying a discount rate
@@ -43,6 +44,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Adjustment
+ * Adjustment}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -56,9 +60,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * Discount.mmDiscountBasisAmount}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Adjustment
- * Adjustment}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.DiscountAmountAndType1#mmType
+ * DiscountAmountAndType1.mmType}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -72,18 +81,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.DiscountAmountAndType1#mmType
- * DiscountAmountAndType1.mmType}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -101,9 +102,8 @@ public class Discount extends Adjustment {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyAndAmount discountAppliedAmount;
 	/**
-	 * Amount of money that results from the application of an agreed discount
-	 * to the amount due and payable to the creditor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,8 +158,8 @@ public class Discount extends Adjustment {
 		{
 			derivation_lazy = () -> Arrays.asList(ReferredDocumentAmount1Choice.mmDiscountAppliedAmount, RemittanceAmount1.mmDiscountAppliedAmount, RemittanceAmount2.mmDiscountAppliedAmount,
 					SettlementMonetarySummation1.mmTotalDiscountAmount, RemittanceAmount3.mmDiscountAppliedAmount, PaymentTerms6.mmDiscountAmount, EarlyPayment1.mmDiscountAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Discount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Discount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DiscountAppliedAmount";
 			definition = "Amount of money that results from the application of an agreed discount to the amount due and payable to the creditor.";
@@ -178,8 +178,8 @@ public class Discount extends Adjustment {
 	};
 	protected DiscountTypeCode discountType;
 	/**
-	 * Specifies the type of discount applied to the original amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -223,8 +223,8 @@ public class Discount extends Adjustment {
 	public static final MMBusinessAttribute mmDiscountType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DiscountAmountType1Choice.mmCode, DiscountTypeFormat1Choice.mmCode, DiscountTypeFormat1Choice.mmProprietary, DiscountOrChargeType1Choice.mmDiscountType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Discount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Discount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DiscountType";
 			definition = "Specifies the type of discount applied to the original amount.";
@@ -243,8 +243,8 @@ public class Discount extends Adjustment {
 	};
 	protected CurrencyAndAmount discountBasisAmount;
 	/**
-	 * Amount used as a basis to calculate the discount amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -281,8 +281,8 @@ public class Discount extends Adjustment {
 	public static final MMBusinessAttribute mmDiscountBasisAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentTerms3.mmDiscountBasisAmount, PaymentTerms6.mmBasisAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Discount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Discount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DiscountBasisAmount";
 			definition = "Amount used as a basis to calculate the discount amount.";
@@ -303,7 +303,7 @@ public class Discount extends Adjustment {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Discount";
 				definition = "Decrease of the value of goods and / or services by applying a discount rate to the original amount.";
@@ -326,23 +326,26 @@ public class Discount extends Adjustment {
 		return discountAppliedAmount;
 	}
 
-	public void setDiscountAppliedAmount(CurrencyAndAmount discountAppliedAmount) {
-		this.discountAppliedAmount = discountAppliedAmount;
+	public Discount setDiscountAppliedAmount(CurrencyAndAmount discountAppliedAmount) {
+		this.discountAppliedAmount = Objects.requireNonNull(discountAppliedAmount);
+		return this;
 	}
 
 	public DiscountTypeCode getDiscountType() {
 		return discountType;
 	}
 
-	public void setDiscountType(DiscountTypeCode discountType) {
-		this.discountType = discountType;
+	public Discount setDiscountType(DiscountTypeCode discountType) {
+		this.discountType = Objects.requireNonNull(discountType);
+		return this;
 	}
 
 	public CurrencyAndAmount getDiscountBasisAmount() {
 		return discountBasisAmount;
 	}
 
-	public void setDiscountBasisAmount(CurrencyAndAmount discountBasisAmount) {
-		this.discountBasisAmount = discountBasisAmount;
+	public Discount setDiscountBasisAmount(CurrencyAndAmount discountBasisAmount) {
+		this.discountBasisAmount = Objects.requireNonNull(discountBasisAmount);
+		return this;
 	}
 }

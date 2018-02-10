@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.TransactionAdministrator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LiquidityManagementLimitIdentificationDetails", propOrder = {"systemIdentification", "type"})
 public class LiquidityManagementLimitIdentificationDetails {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SysId")
 	protected SystemIdentificationChoice systemIdentification;
 	/**
-	 * Identification of a particular cash clearing system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +119,7 @@ public class LiquidityManagementLimitIdentificationDetails {
 	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TransactionAdministrator.mmCashClearingSystem;
-			componentContext_lazy = () -> LiquidityManagementLimitIdentificationDetails.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails.mmObject();
 			isDerived = false;
 			xmlTag = "SysId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +130,11 @@ public class LiquidityManagementLimitIdentificationDetails {
 			complexType_lazy = () -> SystemIdentificationChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected LiquidityLimitType1Code type;
 	/**
-	 * Type of liquidity management limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +168,7 @@ public class LiquidityManagementLimitIdentificationDetails {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LiquidityManagementLimit.mmLiquidityLimitType;
-			componentContext_lazy = () -> LiquidityManagementLimitIdentificationDetails.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,9 +183,10 @@ public class LiquidityManagementLimitIdentificationDetails {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LiquidityManagementLimitIdentificationDetails.mmSystemIdentification, LiquidityManagementLimitIdentificationDetails.mmType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails.mmSystemIdentification,
+						com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails.mmType);
 				trace_lazy = () -> LiquidityManagementLimit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LiquidityManagementLimitIdentificationDetails";
 				definition = "Cash management feature limiting the amount of liquidity needed to perform clearing and settlement operations. At any point in time during the process, the limit imposes the maximum amount of liquidity available for operations concerning the system or other managed elements, eg, transaction amount or counterparty.";
@@ -190,21 +195,21 @@ public class LiquidityManagementLimitIdentificationDetails {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SysId")
-	public SystemIdentificationChoice getSystemIdentification() {
-		return systemIdentification;
+	public Optional<SystemIdentificationChoice> getSystemIdentification() {
+		return systemIdentification == null ? Optional.empty() : Optional.of(systemIdentification);
 	}
 
-	public void setSystemIdentification(SystemIdentificationChoice systemIdentification) {
+	public LiquidityManagementLimitIdentificationDetails setSystemIdentification(SystemIdentificationChoice systemIdentification) {
 		this.systemIdentification = systemIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public LiquidityLimitType1Code getType() {
 		return type;
 	}
 
-	public void setType(LiquidityLimitType1Code type) {
-		this.type = type;
+	public LiquidityManagementLimitIdentificationDetails setType(LiquidityLimitType1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 }

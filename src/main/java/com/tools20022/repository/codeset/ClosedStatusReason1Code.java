@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ClosedStatusReasonCode;
+import com.tools20022.repository.codeset.ClosedStatusReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for the closed status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ClosedStatusReasonCode
- * ClosedStatusReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ClosedStatusReason1Code#mmAccountServicerInstruction
- * ClosedStatusReason1Code.mmAccountServicerInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ClosedStatusReason1Code#AccountServicerInstruction
+ * ClosedStatusReason1Code.AccountServicerInstruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ClosedStatusReason1Code#mmClientInstruction
- * ClosedStatusReason1Code.mmClientInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.ClosedStatusReason1Code#ClientInstruction
+ * ClosedStatusReason1Code.ClientInstruction}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ClosedStatusReasonCode
+ * ClosedStatusReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason for the closed status."</li>
  * </ul>
  */
-public class ClosedStatusReason1Code extends ClosedStatusReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ClosedStatusReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class ClosedStatusReason1Code extends ClosedStatusReasonCode {
 	 * name} = "AccountServicerInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountServicerInstruction = new MMCode() {
+	public static final ClosedStatusReason1Code AccountServicerInstruction = new ClosedStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerInstruction";
-			owner_lazy = () -> ClosedStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ClosedStatusReason1Code.mmObject();
+			codeName = ClosedStatusReasonCode.AccountServicerInstruction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class ClosedStatusReason1Code extends ClosedStatusReasonCode {
 	 * name} = "ClientInstruction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClientInstruction = new MMCode() {
+	public static final ClosedStatusReason1Code ClientInstruction = new ClosedStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientInstruction";
-			owner_lazy = () -> ClosedStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ClosedStatusReason1Code.mmObject();
+			codeName = ClosedStatusReasonCode.ClientInstruction.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ClosedStatusReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ClosedStatusReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClosedStatusReason1Code";
 				definition = "Specifies the reason for the closed status.";
-				code_lazy = () -> Arrays.asList(ClosedStatusReason1Code.mmAccountServicerInstruction, ClosedStatusReason1Code.mmClientInstruction);
 				trace_lazy = () -> ClosedStatusReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClosedStatusReason1Code.AccountServicerInstruction, com.tools20022.repository.codeset.ClosedStatusReason1Code.ClientInstruction);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AccountServicerInstruction.getCodeName().get(), AccountServicerInstruction);
+		codesByName.put(ClientInstruction.getCodeName().get(), ClientInstruction);
+	}
+
+	public static ClosedStatusReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ClosedStatusReason1Code[] values() {
+		ClosedStatusReason1Code[] values = new ClosedStatusReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ClosedStatusReason1Code> {
+		@Override
+		public ClosedStatusReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ClosedStatusReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

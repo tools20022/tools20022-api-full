@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Portfolio1;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Wrapper for a specific product or a specific sub-product owned by a set of
@@ -62,19 +61,6 @@ import java.util.List;
  * Portfolio.mmInvestmentPlan}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Portfolio#mmAccount
  * Portfolio.mmAccount}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Portfolio1 Portfolio1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ISAPortfolio1Choice
- * ISAPortfolio1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ISAPortfolio2Choice
- * ISAPortfolio2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ISAPortfolio3Choice
- * ISAPortfolio3Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -121,10 +107,23 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Portfolio1 Portfolio1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ISAPortfolio1Choice
+ * ISAPortfolio1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ISAPortfolio2Choice
+ * ISAPortfolio2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ISAPortfolio3Choice
+ * ISAPortfolio3Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -142,8 +141,8 @@ public class Portfolio {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected PortfolioValuation valuation;
 	/**
-	 * Valuation process for the portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -175,8 +174,8 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAssociationEnd mmValuation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Valuation";
 			definition = "Valuation process for the portfolio.";
@@ -189,8 +188,8 @@ public class Portfolio {
 	};
 	protected PortfolioTransfer transfer;
 	/**
-	 * Transfer information related to a portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -237,8 +236,8 @@ public class Portfolio {
 	public static final MMBusinessAssociationEnd mmTransfer = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ISAPortfolio1Choice.mmISA, ISAPortfolio2Choice.mmISA, ISAPortfolio3Choice.mmISA);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Transfer";
 			definition = "Transfer information related to a portfolio.";
@@ -251,8 +250,8 @@ public class Portfolio {
 	};
 	protected List<com.tools20022.repository.entity.Asset> assetDescription;
 	/**
-	 * Specifies the assets included in the portfolio together with their value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -285,8 +284,8 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAssociationEnd mmAssetDescription = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AssetDescription";
 			definition = "Specifies the assets included in the portfolio together with their value.";
@@ -298,8 +297,8 @@ public class Portfolio {
 	};
 	protected Max350Text name;
 	/**
-	 * Name of the portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -323,8 +322,8 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAttribute mmName = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Name";
 			definition = "Name of the portfolio.";
@@ -343,8 +342,8 @@ public class Portfolio {
 	};
 	protected Max35Text identification;
 	/**
-	 * Identification of the portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -368,8 +367,8 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Identification of the portfolio.";
@@ -388,8 +387,8 @@ public class Portfolio {
 	};
 	protected List<com.tools20022.repository.entity.PortfolioStrategy> strategy;
 	/**
-	 * Strategy set for the portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -421,8 +420,8 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAssociationEnd mmStrategy = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Strategy";
 			definition = "Strategy set for the portfolio.";
@@ -434,8 +433,8 @@ public class Portfolio {
 	};
 	protected List<com.tools20022.repository.entity.PortfolioBenchmark> benchmark;
 	/**
-	 * Information on the benchmark set for the portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -467,8 +466,8 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAssociationEnd mmBenchmark = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Benchmark";
 			definition = "Information on the benchmark set for the portfolio.";
@@ -480,8 +479,8 @@ public class Portfolio {
 	};
 	protected InvestmentPlan investmentPlan;
 	/**
-	 * Investment plan associated with a portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -513,8 +512,8 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentPlan = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentPlan";
 			definition = "Investment plan associated with a portfolio.";
@@ -527,8 +526,8 @@ public class Portfolio {
 	};
 	protected InvestmentAccount account;
 	/**
-	 * Account on which the portfolio is held.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -560,8 +559,8 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Account on which the portfolio is held.";
@@ -576,7 +575,7 @@ public class Portfolio {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Portfolio";
 				definition = "Wrapper for a specific product or a specific sub-product owned by a set of beneficial owners.";
@@ -598,75 +597,84 @@ public class Portfolio {
 		return mmObject_lazy.get();
 	}
 
-	public PortfolioValuation getValuation() {
-		return valuation;
+	public Optional<PortfolioValuation> getValuation() {
+		return valuation == null ? Optional.empty() : Optional.of(valuation);
 	}
 
-	public void setValuation(com.tools20022.repository.entity.PortfolioValuation valuation) {
+	public Portfolio setValuation(com.tools20022.repository.entity.PortfolioValuation valuation) {
 		this.valuation = valuation;
+		return this;
 	}
 
-	public PortfolioTransfer getTransfer() {
-		return transfer;
+	public Optional<PortfolioTransfer> getTransfer() {
+		return transfer == null ? Optional.empty() : Optional.of(transfer);
 	}
 
-	public void setTransfer(com.tools20022.repository.entity.PortfolioTransfer transfer) {
+	public Portfolio setTransfer(com.tools20022.repository.entity.PortfolioTransfer transfer) {
 		this.transfer = transfer;
+		return this;
 	}
 
 	public List<Asset> getAssetDescription() {
-		return assetDescription;
+		return assetDescription == null ? assetDescription = new ArrayList<>() : assetDescription;
 	}
 
-	public void setAssetDescription(List<com.tools20022.repository.entity.Asset> assetDescription) {
-		this.assetDescription = assetDescription;
+	public Portfolio setAssetDescription(List<com.tools20022.repository.entity.Asset> assetDescription) {
+		this.assetDescription = Objects.requireNonNull(assetDescription);
+		return this;
 	}
 
 	public Max350Text getName() {
 		return name;
 	}
 
-	public void setName(Max350Text name) {
-		this.name = name;
+	public Portfolio setName(Max350Text name) {
+		this.name = Objects.requireNonNull(name);
+		return this;
 	}
 
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public Portfolio setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
 	public List<PortfolioStrategy> getStrategy() {
-		return strategy;
+		return strategy == null ? strategy = new ArrayList<>() : strategy;
 	}
 
-	public void setStrategy(List<com.tools20022.repository.entity.PortfolioStrategy> strategy) {
-		this.strategy = strategy;
+	public Portfolio setStrategy(List<com.tools20022.repository.entity.PortfolioStrategy> strategy) {
+		this.strategy = Objects.requireNonNull(strategy);
+		return this;
 	}
 
 	public List<PortfolioBenchmark> getBenchmark() {
-		return benchmark;
+		return benchmark == null ? benchmark = new ArrayList<>() : benchmark;
 	}
 
-	public void setBenchmark(List<com.tools20022.repository.entity.PortfolioBenchmark> benchmark) {
-		this.benchmark = benchmark;
+	public Portfolio setBenchmark(List<com.tools20022.repository.entity.PortfolioBenchmark> benchmark) {
+		this.benchmark = Objects.requireNonNull(benchmark);
+		return this;
 	}
 
 	public InvestmentPlan getInvestmentPlan() {
 		return investmentPlan;
 	}
 
-	public void setInvestmentPlan(com.tools20022.repository.entity.InvestmentPlan investmentPlan) {
-		this.investmentPlan = investmentPlan;
+	public Portfolio setInvestmentPlan(com.tools20022.repository.entity.InvestmentPlan investmentPlan) {
+		this.investmentPlan = Objects.requireNonNull(investmentPlan);
+		return this;
 	}
 
 	public InvestmentAccount getAccount() {
 		return account;
 	}
 
-	public void setAccount(com.tools20022.repository.entity.InvestmentAccount account) {
-		this.account = account;
+	public Portfolio setAccount(com.tools20022.repository.entity.InvestmentAccount account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 }

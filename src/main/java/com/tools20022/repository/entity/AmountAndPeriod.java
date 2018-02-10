@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.DateAndAmount1;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Relates an amount to a period of time.
@@ -45,6 +46,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.DateTimePeriod#mmAmount
+ * DateTimePeriod.mmAmount}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
  * <ul>
@@ -54,18 +63,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.DateTimePeriod#mmAmount
- * DateTimePeriod.mmAmount}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,8 +82,8 @@ public class AmountAndPeriod {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected DateTimePeriod period;
 	/**
-	 * Period related to an amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,8 +116,8 @@ public class AmountAndPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Period";
 			definition = "Period related to an amount.";
@@ -129,8 +130,8 @@ public class AmountAndPeriod {
 	};
 	protected CurrencyAndAmount amount;
 	/**
-	 * Amount of this period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,8 +167,8 @@ public class AmountAndPeriod {
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AmountAndPeriod1.mmAmount, DateAndAmount1.mmAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndPeriod.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of this period.";
@@ -188,7 +189,7 @@ public class AmountAndPeriod {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndPeriod";
 				definition = "Relates an amount to a period of time.";
@@ -209,15 +210,17 @@ public class AmountAndPeriod {
 		return period;
 	}
 
-	public void setPeriod(com.tools20022.repository.entity.DateTimePeriod period) {
-		this.period = period;
+	public AmountAndPeriod setPeriod(com.tools20022.repository.entity.DateTimePeriod period) {
+		this.period = Objects.requireNonNull(period);
+		return this;
 	}
 
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
-		this.amount = amount;
+	public AmountAndPeriod setAmount(CurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 }

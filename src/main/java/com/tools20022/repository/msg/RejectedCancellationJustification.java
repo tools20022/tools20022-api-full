@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.PaymentInvestigationCaseRejection;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides the reason for rejecting a RequestToCancelPayment."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RejectedCancellationJustification", propOrder = {"reasonCode", "reason"})
 public class RejectedCancellationJustification {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RsnCd", required = true)
 	protected PaymentCancellationRejection1Code reasonCode;
 	/**
-	 * Justification for the rejection of the cancellation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +108,7 @@ public class RejectedCancellationJustification {
 	public static final MMMessageAttribute mmReasonCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedCancellation;
-			componentContext_lazy = () -> RejectedCancellationJustification.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedCancellationJustification.mmObject();
 			isDerived = false;
 			xmlTag = "RsnCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +119,11 @@ public class RejectedCancellationJustification {
 			simpleType_lazy = () -> PaymentCancellationRejection1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Rsn")
 	protected Max140Text reason;
 	/**
-	 * Free text justification for rejecting a cancellation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,7 +156,7 @@ public class RejectedCancellationJustification {
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentInvestigationCaseRejection.mmRejectedCancellationReason;
-			componentContext_lazy = () -> RejectedCancellationJustification.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RejectedCancellationJustification.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,8 +171,8 @@ public class RejectedCancellationJustification {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RejectedCancellationJustification.mmReasonCode, RejectedCancellationJustification.mmReason);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RejectedCancellationJustification.mmReasonCode, com.tools20022.repository.msg.RejectedCancellationJustification.mmReason);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectedCancellationJustification";
 				definition = "Provides the reason for rejecting a RequestToCancelPayment.";
@@ -177,21 +181,21 @@ public class RejectedCancellationJustification {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RsnCd", required = true)
 	public PaymentCancellationRejection1Code getReasonCode() {
 		return reasonCode;
 	}
 
-	public void setReasonCode(PaymentCancellationRejection1Code reasonCode) {
-		this.reasonCode = reasonCode;
+	public RejectedCancellationJustification setReasonCode(PaymentCancellationRejection1Code reasonCode) {
+		this.reasonCode = Objects.requireNonNull(reasonCode);
+		return this;
 	}
 
-	@XmlElement(name = "Rsn")
-	public Max140Text getReason() {
-		return reason;
+	public Optional<Max140Text> getReason() {
+		return reason == null ? Optional.empty() : Optional.of(reason);
 	}
 
-	public void setReason(Max140Text reason) {
+	public RejectedCancellationJustification setReason(Max140Text reason) {
 		this.reason = reason;
+		return this;
 	}
 }

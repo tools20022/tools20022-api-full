@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Limit for a percentage rate range."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PercentageRangeBoundary1", propOrder = {"boundaryRate", "included"})
 public class PercentageRangeBoundary1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BdryRate", required = true)
 	protected PercentageRate boundaryRate;
 	/**
-	 * Percentage rate of the range limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +100,7 @@ public class PercentageRangeBoundary1 {
 	 */
 	public static final MMMessageAttribute mmBoundaryRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PercentageRangeBoundary1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PercentageRangeBoundary1.mmObject();
 			isDerived = false;
 			xmlTag = "BdryRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,11 +111,11 @@ public class PercentageRangeBoundary1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "Incl", required = true)
 	protected YesNoIndicator included;
 	/**
-	 * Indicates whether the boundary percentage rate is included in the range
-	 * of percentage rates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +145,7 @@ public class PercentageRangeBoundary1 {
 	 */
 	public static final MMMessageAttribute mmIncluded = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PercentageRangeBoundary1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PercentageRangeBoundary1.mmObject();
 			isDerived = false;
 			xmlTag = "Incl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,8 +160,8 @@ public class PercentageRangeBoundary1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PercentageRangeBoundary1.mmBoundaryRate, PercentageRangeBoundary1.mmIncluded);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PercentageRangeBoundary1.mmBoundaryRate, com.tools20022.repository.msg.PercentageRangeBoundary1.mmIncluded);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PercentageRangeBoundary1";
 				definition = "Limit for a percentage rate range.";
@@ -168,21 +170,21 @@ public class PercentageRangeBoundary1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BdryRate", required = true)
 	public PercentageRate getBoundaryRate() {
 		return boundaryRate;
 	}
 
-	public void setBoundaryRate(PercentageRate boundaryRate) {
-		this.boundaryRate = boundaryRate;
+	public PercentageRangeBoundary1 setBoundaryRate(PercentageRate boundaryRate) {
+		this.boundaryRate = Objects.requireNonNull(boundaryRate);
+		return this;
 	}
 
-	@XmlElement(name = "Incl", required = true)
 	public YesNoIndicator getIncluded() {
 		return included;
 	}
 
-	public void setIncluded(YesNoIndicator included) {
-		this.included = included;
+	public PercentageRangeBoundary1 setIncluded(YesNoIndicator included) {
+		this.included = Objects.requireNonNull(included);
+		return this;
 	}
 }

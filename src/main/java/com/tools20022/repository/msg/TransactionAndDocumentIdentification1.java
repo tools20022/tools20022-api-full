@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -33,6 +34,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -82,8 +85,17 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule#forTransactionAndDocumentIdentification1
+ * ConstraintCoexistenceIdentificationRule.
+ * forTransactionAndDocumentIdentification1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -95,16 +107,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Transaction and document identification details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionAndDocumentIdentification1", propOrder = {"transactionIdentification", "documentIdentification", "creationDateTime", "copyDuplicate"})
 public class TransactionAndDocumentIdentification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId", required = true)
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as know by the instructing
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,6 +130,9 @@ public class TransactionAndDocumentIdentification1 {
 	 * TransactionAndDocumentIdentification1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TxId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::SEME</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -133,9 +148,10 @@ public class TransactionAndDocumentIdentification1 {
 	 */
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionAndDocumentIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAndDocumentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "TxId";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::SEME"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unambiguous identification of the transaction as know by the instructing party.";
@@ -144,11 +160,11 @@ public class TransactionAndDocumentIdentification1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DocId")
 	protected Max35Text documentIdentification;
 	/**
-	 * Unique identifier of the document (message) assigned by the sender of the
-	 * document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,7 +193,7 @@ public class TransactionAndDocumentIdentification1 {
 	 */
 	public static final MMMessageAttribute mmDocumentIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionAndDocumentIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAndDocumentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "DocId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,11 +204,11 @@ public class TransactionAndDocumentIdentification1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CreDtTm")
 	protected DateAndDateTimeChoice creationDateTime;
 	/**
-	 * Date and time at which the transaction was created by the instructing
-	 * party in its business application.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,6 +224,9 @@ public class TransactionAndDocumentIdentification1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CreDtTm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::PREP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -222,9 +241,10 @@ public class TransactionAndDocumentIdentification1 {
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionAndDocumentIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAndDocumentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "CreDtTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::PREP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the transaction was created by the instructing party in its business application.";
@@ -233,11 +253,11 @@ public class TransactionAndDocumentIdentification1 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "CpyDplct")
 	protected CopyDuplicate1Code copyDuplicate;
 	/**
-	 * Specifies if this document is a copy, a duplicate, or a duplicate of a
-	 * copy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -253,6 +273,9 @@ public class TransactionAndDocumentIdentification1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CpyDplct"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :23G:4!c/COPY, CODU, DUPL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -267,9 +290,10 @@ public class TransactionAndDocumentIdentification1 {
 	 */
 	public static final MMMessageAttribute mmCopyDuplicate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TransactionAndDocumentIdentification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionAndDocumentIdentification1.mmObject();
 			isDerived = false;
 			xmlTag = "CpyDplct";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":23G:4!c/COPY, CODU, DUPL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDuplicate";
 			definition = "Specifies if this document is a copy, a duplicate, or a duplicate of a copy.";
@@ -282,11 +306,13 @@ public class TransactionAndDocumentIdentification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionAndDocumentIdentification1.mmTransactionIdentification, TransactionAndDocumentIdentification1.mmDocumentIdentification,
-						TransactionAndDocumentIdentification1.mmCreationDateTime, TransactionAndDocumentIdentification1.mmCopyDuplicate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionAndDocumentIdentification1.mmTransactionIdentification,
+						com.tools20022.repository.msg.TransactionAndDocumentIdentification1.mmDocumentIdentification, com.tools20022.repository.msg.TransactionAndDocumentIdentification1.mmCreationDateTime,
+						com.tools20022.repository.msg.TransactionAndDocumentIdentification1.mmCopyDuplicate);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingInstructionV01.mmIdentification, SecuritiesSettlementTransactionInstructionV01.mmIdentification, IntraPositionMovementInstructionV01.mmIdentification,
 						SecuritiesSettlementTransactionAllegementNotificationV01.mmIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forTransactionAndDocumentIdentification1);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -302,39 +328,39 @@ public class TransactionAndDocumentIdentification1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId", required = true)
 	public Max35Text getTransactionIdentification() {
 		return transactionIdentification;
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
-		this.transactionIdentification = transactionIdentification;
+	public TransactionAndDocumentIdentification1 setTransactionIdentification(Max35Text transactionIdentification) {
+		this.transactionIdentification = Objects.requireNonNull(transactionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "DocId")
-	public Max35Text getDocumentIdentification() {
-		return documentIdentification;
+	public Optional<Max35Text> getDocumentIdentification() {
+		return documentIdentification == null ? Optional.empty() : Optional.of(documentIdentification);
 	}
 
-	public void setDocumentIdentification(Max35Text documentIdentification) {
+	public TransactionAndDocumentIdentification1 setDocumentIdentification(Max35Text documentIdentification) {
 		this.documentIdentification = documentIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CreDtTm")
-	public DateAndDateTimeChoice getCreationDateTime() {
-		return creationDateTime;
+	public Optional<DateAndDateTimeChoice> getCreationDateTime() {
+		return creationDateTime == null ? Optional.empty() : Optional.of(creationDateTime);
 	}
 
-	public void setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
+	public TransactionAndDocumentIdentification1 setCreationDateTime(DateAndDateTimeChoice creationDateTime) {
 		this.creationDateTime = creationDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "CpyDplct")
-	public CopyDuplicate1Code getCopyDuplicate() {
-		return copyDuplicate;
+	public Optional<CopyDuplicate1Code> getCopyDuplicate() {
+		return copyDuplicate == null ? Optional.empty() : Optional.of(copyDuplicate);
 	}
 
-	public void setCopyDuplicate(CopyDuplicate1Code copyDuplicate) {
+	public TransactionAndDocumentIdentification1 setCopyDuplicate(CopyDuplicate1Code copyDuplicate) {
 		this.copyDuplicate = copyDuplicate;
+		return this;
 	}
 }

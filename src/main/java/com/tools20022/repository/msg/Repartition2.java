@@ -30,6 +30,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -83,15 +85,16 @@ import javax.xml.bind.annotation.XmlType;
  * Repartition1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Repartition2", propOrder = {"percentage", "financialInstrument", "currencyOfPlan"})
 public class Repartition2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Pctg", required = true)
 	protected PercentageRate percentage;
 	/**
-	 * Percentage of amount invested in a funds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,7 +128,7 @@ public class Repartition2 {
 	 */
 	public static final MMMessageAttribute mmPercentage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Repartition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Repartition2.mmObject();
 			isDerived = false;
 			xmlTag = "Pctg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,11 +140,11 @@ public class Repartition2 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrm", required = true)
 	protected FinancialInstrument29 financialInstrument;
 	/**
-	 * Security that is a sub-set of an investment fund, and is governed by the
-	 * same investment fund policy, eg, dividend option or valuation currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -182,7 +185,7 @@ public class Repartition2 {
 	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
-			componentContext_lazy = () -> Repartition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Repartition2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,11 +198,11 @@ public class Repartition2 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument29.mmObject();
 		}
 	};
+	@XmlElement(name = "CcyOfPlan")
 	protected CurrencyCode currencyOfPlan;
 	/**
-	 * When a fund has multiple currencies within same ISIN, this indicates the
-	 * currency of the savings or withdrawal plan.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -235,7 +238,7 @@ public class Repartition2 {
 	 */
 	public static final MMMessageAttribute mmCurrencyOfPlan = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Repartition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Repartition2.mmObject();
 			isDerived = false;
 			xmlTag = "CcyOfPlan";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,9 +254,10 @@ public class Repartition2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Repartition2.mmPercentage, Repartition2.mmFinancialInstrument, Repartition2.mmCurrencyOfPlan);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Repartition2.mmPercentage, com.tools20022.repository.msg.Repartition2.mmFinancialInstrument,
+						com.tools20022.repository.msg.Repartition2.mmCurrencyOfPlan);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -271,30 +275,30 @@ public class Repartition2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Pctg", required = true)
 	public PercentageRate getPercentage() {
 		return percentage;
 	}
 
-	public void setPercentage(PercentageRate percentage) {
-		this.percentage = percentage;
+	public Repartition2 setPercentage(PercentageRate percentage) {
+		this.percentage = Objects.requireNonNull(percentage);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrm", required = true)
 	public FinancialInstrument29 getFinancialInstrument() {
 		return financialInstrument;
 	}
 
-	public void setFinancialInstrument(com.tools20022.repository.msg.FinancialInstrument29 financialInstrument) {
-		this.financialInstrument = financialInstrument;
+	public Repartition2 setFinancialInstrument(com.tools20022.repository.msg.FinancialInstrument29 financialInstrument) {
+		this.financialInstrument = Objects.requireNonNull(financialInstrument);
+		return this;
 	}
 
-	@XmlElement(name = "CcyOfPlan")
-	public CurrencyCode getCurrencyOfPlan() {
-		return currencyOfPlan;
+	public Optional<CurrencyCode> getCurrencyOfPlan() {
+		return currencyOfPlan == null ? Optional.empty() : Optional.of(currencyOfPlan);
 	}
 
-	public void setCurrencyOfPlan(CurrencyCode currencyOfPlan) {
+	public Repartition2 setCurrencyOfPlan(CurrencyCode currencyOfPlan) {
 		this.currencyOfPlan = currencyOfPlan;
+		return this;
 	}
 }

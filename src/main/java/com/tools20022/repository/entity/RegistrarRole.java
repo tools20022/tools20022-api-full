@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Party responsible for keeping track of the owners of securities.
@@ -35,6 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
+ * SecuritiesPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -46,10 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * RegistrarRole.mmRegisterName}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.SecuritiesPartyRole
- * SecuritiesPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -71,8 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,8 +90,8 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected SecuritiesAccount registrarAccount;
 	/**
-	 * Account at the registrar where financial instruments are registered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,8 +143,8 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	public static final MMBusinessAssociationEnd mmRegistrarAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(RegistrationParameters1.mmRegistrarAccount, RegistrationParameters2.mmRegistrarAccount, RegistrationParameters4.mmRegistrarAccount, RegistrationParameters5.mmRegistrarAccount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.RegistrarRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RegistrarRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrarAccount";
 			definition = "Account at the registrar where financial instruments are registered.";
@@ -156,8 +157,8 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	};
 	protected Max35Text registerName;
 	/**
-	 * Name of the register managed by a registration authority.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,8 +193,8 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	public static final MMBusinessAttribute mmRegisterName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(OrganisationIdentification5.mmRegisterName);
-			elementContext_lazy = () -> com.tools20022.repository.entity.RegistrarRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.RegistrarRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegisterName";
 			definition = "Name of the register managed by a registration authority.";
@@ -214,7 +215,7 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegistrarRole";
 				definition = "Party responsible for keeping track of the owners of securities.";
@@ -236,15 +237,17 @@ public class RegistrarRole extends SecuritiesPartyRole {
 		return registrarAccount;
 	}
 
-	public void setRegistrarAccount(com.tools20022.repository.entity.SecuritiesAccount registrarAccount) {
-		this.registrarAccount = registrarAccount;
+	public RegistrarRole setRegistrarAccount(com.tools20022.repository.entity.SecuritiesAccount registrarAccount) {
+		this.registrarAccount = Objects.requireNonNull(registrarAccount);
+		return this;
 	}
 
 	public Max35Text getRegisterName() {
 		return registerName;
 	}
 
-	public void setRegisterName(Max35Text registerName) {
-		this.registerName = registerName;
+	public RegistrarRole setRegisterName(Max35Text registerName) {
+		this.registerName = Objects.requireNonNull(registerName);
+		return this;
 	}
 }

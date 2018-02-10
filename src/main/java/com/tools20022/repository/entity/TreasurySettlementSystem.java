@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 
 /**
  * Centralised system in which a central party settles treasury trades between
@@ -37,6 +38,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.System System}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -45,8 +48,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * TreasurySettlementSystem.mmSystemRole}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.System System}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
@@ -59,8 +60,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,8 +79,8 @@ public class TreasurySettlementSystem extends System {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected TreasurySettlementSystemRole systemRole;
 	/**
-	 * Specifies the role played by the treasury settlement system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,8 +115,8 @@ public class TreasurySettlementSystem extends System {
 	 */
 	public static final MMBusinessAssociationEnd mmSystemRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.TreasurySettlementSystem.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TreasurySettlementSystem.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemRole";
 			definition = "Specifies the role played by the treasury settlement system.";
@@ -130,7 +131,7 @@ public class TreasurySettlementSystem extends System {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TreasurySettlementSystem";
 				definition = "Centralised system in which a central party settles treasury trades between members.";
@@ -147,11 +148,12 @@ public class TreasurySettlementSystem extends System {
 		return mmObject_lazy.get();
 	}
 
-	public TreasurySettlementSystemRole getSystemRole() {
-		return systemRole;
+	public Optional<TreasurySettlementSystemRole> getSystemRole() {
+		return systemRole == null ? Optional.empty() : Optional.of(systemRole);
 	}
 
-	public void setSystemRole(com.tools20022.repository.entity.TreasurySettlementSystemRole systemRole) {
+	public TreasurySettlementSystem setSystemRole(com.tools20022.repository.entity.TreasurySettlementSystemRole systemRole) {
 		this.systemRole = systemRole;
+		return this;
 	}
 }

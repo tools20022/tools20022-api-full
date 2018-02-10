@@ -20,44 +20,48 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ATMCassetteTypeCode;
+import com.tools20022.repository.codeset.ATMCassetteType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of cassette.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#In
+ * ATMCassetteType1Code.In}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#Out
+ * ATMCassetteType1Code.Out}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#Recycling
+ * ATMCassetteType1Code.Recycling}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#Reject
+ * ATMCassetteType1Code.Reject}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#Replenishment
+ * ATMCassetteType1Code.Replenishment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#Retract
+ * ATMCassetteType1Code.Retract}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.ATMCassetteTypeCode
  * ATMCassetteTypeCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#mmIn
- * ATMCassetteType1Code.mmIn}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#mmOut
- * ATMCassetteType1Code.mmOut}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#mmRecycling
- * ATMCassetteType1Code.mmRecycling}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#mmReject
- * ATMCassetteType1Code.mmReject}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#mmReplenishment
- * ATMCassetteType1Code.mmReplenishment}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCassetteType1Code#mmRetract
- * ATMCassetteType1Code.mmRetract}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of cassette."</li>
  * </ul>
  */
-public class ATMCassetteType1Code extends ATMCassetteTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ATMCassetteType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +92,12 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 * name} = "In"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIn = new MMCode() {
+	public static final ATMCassetteType1Code In = new ATMCassetteType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "In";
-			owner_lazy = () -> ATMCassetteType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCassetteType1Code.mmObject();
+			codeName = ATMCassetteTypeCode.In.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +116,12 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 * name} = "Out"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOut = new MMCode() {
+	public static final ATMCassetteType1Code Out = new ATMCassetteType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Out";
-			owner_lazy = () -> ATMCassetteType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCassetteType1Code.mmObject();
+			codeName = ATMCassetteTypeCode.Out.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,11 +140,12 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 * name} = "Recycling"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRecycling = new MMCode() {
+	public static final ATMCassetteType1Code Recycling = new ATMCassetteType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recycling";
-			owner_lazy = () -> ATMCassetteType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCassetteType1Code.mmObject();
+			codeName = ATMCassetteTypeCode.Recycling.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -156,11 +164,12 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 * name} = "Reject"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReject = new MMCode() {
+	public static final ATMCassetteType1Code Reject = new ATMCassetteType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reject";
-			owner_lazy = () -> ATMCassetteType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCassetteType1Code.mmObject();
+			codeName = ATMCassetteTypeCode.Reject.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -179,11 +188,12 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 * name} = "Replenishment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReplenishment = new MMCode() {
+	public static final ATMCassetteType1Code Replenishment = new ATMCassetteType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replenishment";
-			owner_lazy = () -> ATMCassetteType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCassetteType1Code.mmObject();
+			codeName = ATMCassetteTypeCode.Replenishment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -202,25 +212,61 @@ public class ATMCassetteType1Code extends ATMCassetteTypeCode {
 	 * name} = "Retract"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRetract = new MMCode() {
+	public static final ATMCassetteType1Code Retract = new ATMCassetteType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Retract";
-			owner_lazy = () -> ATMCassetteType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCassetteType1Code.mmObject();
+			codeName = ATMCassetteTypeCode.Retract.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ATMCassetteType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ATMCassetteType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCassetteType1Code";
 				definition = "Type of cassette.";
-				code_lazy = () -> Arrays.asList(ATMCassetteType1Code.mmIn, ATMCassetteType1Code.mmOut, ATMCassetteType1Code.mmRecycling, ATMCassetteType1Code.mmReject, ATMCassetteType1Code.mmReplenishment, ATMCassetteType1Code.mmRetract);
 				trace_lazy = () -> ATMCassetteTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCassetteType1Code.In, com.tools20022.repository.codeset.ATMCassetteType1Code.Out, com.tools20022.repository.codeset.ATMCassetteType1Code.Recycling,
+						com.tools20022.repository.codeset.ATMCassetteType1Code.Reject, com.tools20022.repository.codeset.ATMCassetteType1Code.Replenishment, com.tools20022.repository.codeset.ATMCassetteType1Code.Retract);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(In.getCodeName().get(), In);
+		codesByName.put(Out.getCodeName().get(), Out);
+		codesByName.put(Recycling.getCodeName().get(), Recycling);
+		codesByName.put(Reject.getCodeName().get(), Reject);
+		codesByName.put(Replenishment.getCodeName().get(), Replenishment);
+		codesByName.put(Retract.getCodeName().get(), Retract);
+	}
+
+	public static ATMCassetteType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ATMCassetteType1Code[] values() {
+		ATMCassetteType1Code[] values = new ATMCassetteType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ATMCassetteType1Code> {
+		@Override
+		public ATMCassetteType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ATMCassetteType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -25,9 +25,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.InvestmentFundOrder;
 import com.tools20022.repository.entity.Order;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,17 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * TransferReference3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransferReference7", propOrder = {"masterReference", "transferReferences"})
 public class TransferReference7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MstrRef")
 	protected Max35Text masterReference;
 	/**
-	 * Unique and unambiguous identifier for a group of individual transfers as
-	 * assigned by the instructing party. This identifier links the individual
-	 * transfers together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +120,7 @@ public class TransferReference7 {
 	public static final MMMessageAttribute mmMasterReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Order.mmMasterIdentification;
-			componentContext_lazy = () -> TransferReference7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference7.mmObject();
 			isDerived = false;
 			xmlTag = "MstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,10 +132,11 @@ public class TransferReference7 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfRefs", required = true)
 	protected List<com.tools20022.repository.msg.TransferReference8> transferReferences;
 	/**
-	 * Transfer and cancellation reference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -168,7 +167,7 @@ public class TransferReference7 {
 	 */
 	public static final MMMessageAssociationEnd mmTransferReferences = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransferReference7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransferReference7.mmObject();
 			isDerived = false;
 			xmlTag = "TrfRefs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,9 +183,9 @@ public class TransferReference7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransferReference7.mmMasterReference, TransferReference7.mmTransferReferences);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferReference7.mmMasterReference, com.tools20022.repository.msg.TransferReference7.mmTransferReferences);
 				trace_lazy = () -> InvestmentFundOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferReference7";
 				definition = "Reference of a transfer instruction cancellation.";
@@ -196,21 +195,21 @@ public class TransferReference7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MstrRef")
-	public Max35Text getMasterReference() {
-		return masterReference;
+	public Optional<Max35Text> getMasterReference() {
+		return masterReference == null ? Optional.empty() : Optional.of(masterReference);
 	}
 
-	public void setMasterReference(Max35Text masterReference) {
+	public TransferReference7 setMasterReference(Max35Text masterReference) {
 		this.masterReference = masterReference;
+		return this;
 	}
 
-	@XmlElement(name = "TrfRefs", required = true)
 	public List<TransferReference8> getTransferReferences() {
-		return transferReferences;
+		return transferReferences == null ? transferReferences = new ArrayList<>() : transferReferences;
 	}
 
-	public void setTransferReferences(List<com.tools20022.repository.msg.TransferReference8> transferReferences) {
-		this.transferReferences = transferReferences;
+	public TransferReference7 setTransferReferences(List<com.tools20022.repository.msg.TransferReference8> transferReferences) {
+		this.transferReferences = Objects.requireNonNull(transferReferences);
+		return this;
 	}
 }

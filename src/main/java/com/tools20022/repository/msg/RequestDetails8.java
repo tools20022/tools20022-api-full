@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -30,9 +31,8 @@ import com.tools20022.repository.entity.Obligation;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -99,8 +99,23 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule#forRequestDetails8
+ * ConstraintModificationRequestPresenceRule.forRequestDetails8}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintOtherProcessingRule#forRequestDetails8
+ * ConstraintOtherProcessingRule.forRequestDetails8}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementConditionModificationApplicabilityRule#forRequestDetails8
+ * ConstraintSettlementConditionModificationApplicabilityRule.forRequestDetails8
+ * }</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -121,17 +136,17 @@ import javax.xml.bind.annotation.XmlType;
  * RequestDetails6}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RequestDetails8", propOrder = {"reference", "automaticBorrowing", "retainIndicator", "linkage", "priority", "otherProcessing", "partialSettlementIndicator", "securitiesRTGS", "holdIndicator", "matchingDenial",
 		"unilateralSplit", "linkages"})
 public class RequestDetails8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ref", required = true)
 	protected References9 reference;
 	/**
-	 * References of the transaction for which the securities settlement
-	 * condition modification is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -150,6 +165,9 @@ public class RequestDetails8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Ref"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -165,9 +183,10 @@ public class RequestDetails8 {
 	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications;
-			componentContext_lazy = () -> RequestDetails8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "References of the transaction for which the securities settlement condition modification is requested.";
@@ -177,10 +196,11 @@ public class RequestDetails8 {
 			type_lazy = () -> com.tools20022.repository.msg.References9.mmObject();
 		}
 	};
+	@XmlElement(name = "AutomtcBrrwg")
 	protected AutomaticBorrowing2Choice automaticBorrowing;
 	/**
-	 * Condition for automatic borrowing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -200,6 +220,9 @@ public class RequestDetails8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AutomtcBrrwg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::BORR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -213,9 +236,10 @@ public class RequestDetails8 {
 	public static final MMMessageAssociationEnd mmAutomaticBorrowing = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmAutomaticBorrowing;
-			componentContext_lazy = () -> RequestDetails8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "AutomtcBrrwg";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::BORR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomaticBorrowing";
 			definition = "Condition for automatic borrowing.";
@@ -225,11 +249,11 @@ public class RequestDetails8 {
 			type_lazy = () -> AutomaticBorrowing2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "RtnInd")
 	protected YesNoIndicator retainIndicator;
 	/**
-	 * Specifies whether the instruction due to expire is confirmed for
-	 * settlement
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,6 +269,9 @@ public class RequestDetails8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RtnInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::CONP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -259,9 +286,10 @@ public class RequestDetails8 {
 	 */
 	public static final MMMessageAttribute mmRetainIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RequestDetails8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "RtnInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CONP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetainIndicator";
 			definition = "Specifies whether the instruction due to expire is confirmed for settlement";
@@ -270,10 +298,11 @@ public class RequestDetails8 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Lkg")
 	protected LinkageType1Choice linkage;
 	/**
-	 * Specifies the type of linkage requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -287,6 +316,9 @@ public class RequestDetails8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Lkg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::LINK</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -299,9 +331,10 @@ public class RequestDetails8 {
 	 */
 	public static final MMMessageAssociationEnd mmLinkage = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestDetails8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "Lkg";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::LINK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkage";
 			definition = "Specifies the type of linkage requested.";
@@ -311,10 +344,11 @@ public class RequestDetails8 {
 			type_lazy = () -> LinkageType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Prty")
 	protected PriorityNumeric1Choice priority;
 	/**
-	 * Specifies whether the transaction is to be executed with a high priority.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -334,6 +368,9 @@ public class RequestDetails8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Prty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::PRIR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -349,9 +386,10 @@ public class RequestDetails8 {
 	public static final MMMessageAssociationEnd mmPriority = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Obligation.mmPriority;
-			componentContext_lazy = () -> RequestDetails8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "Prty";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PRIR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Specifies whether the transaction is to be executed with a high priority.";
@@ -361,10 +399,11 @@ public class RequestDetails8 {
 			type_lazy = () -> PriorityNumeric1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrPrcg")
 	protected List<com.tools20022.repository.msg.GenericIdentification20> otherProcessing;
 	/**
-	 * Specifies another type of processing change request
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -379,6 +418,9 @@ public class RequestDetails8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OthrPrcg"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::PROC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -391,9 +433,10 @@ public class RequestDetails8 {
 	 */
 	public static final MMMessageAssociationEnd mmOtherProcessing = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestDetails8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPrcg";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PROC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherProcessing";
 			definition = "Specifies another type of processing change request";
@@ -402,10 +445,11 @@ public class RequestDetails8 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification20.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtlSttlmInd")
 	protected SettlementTransactionCondition5Code partialSettlementIndicator;
 	/**
-	 * Specifies whether partial settlement is allowed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -426,6 +470,9 @@ public class RequestDetails8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrtlSttlmInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::PRTL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -439,9 +486,10 @@ public class RequestDetails8 {
 	public static final MMMessageAttribute mmPartialSettlementIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementTransactionCondition;
-			componentContext_lazy = () -> RequestDetails8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlSttlmInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PRTL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementIndicator";
 			definition = "Specifies whether partial settlement is allowed.";
@@ -450,11 +498,11 @@ public class RequestDetails8 {
 			simpleType_lazy = () -> SettlementTransactionCondition5Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesRTGS")
 	protected SecuritiesRTGS1Choice securitiesRTGS;
 	/**
-	 * Specifies whether the settlement transaction is to be settled through an
-	 * RTGS or a non RTGS system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -474,6 +522,9 @@ public class RequestDetails8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesRTGS"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::RTGS</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -489,9 +540,10 @@ public class RequestDetails8 {
 	public static final MMMessageAssociationEnd mmSecuritiesRTGS = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesRealTimeGrossSettlement;
-			componentContext_lazy = () -> RequestDetails8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesRTGS";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::RTGS"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesRTGS";
 			definition = "Specifies whether the settlement transaction is to be settled through an RTGS or a non RTGS system.";
@@ -501,10 +553,11 @@ public class RequestDetails8 {
 			type_lazy = () -> SecuritiesRTGS1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "HldInd")
 	protected HoldIndicator4 holdIndicator;
 	/**
-	 * Specifies whether the transaction is on hold/blocked/frozen.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -523,6 +576,9 @@ public class RequestDetails8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "HldInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::SETT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -537,9 +593,10 @@ public class RequestDetails8 {
 	public static final MMMessageAssociationEnd mmHoldIndicator = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmHoldIndicator;
-			componentContext_lazy = () -> RequestDetails8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "HldInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldIndicator";
 			definition = "Specifies whether the transaction is on hold/blocked/frozen.";
@@ -549,10 +606,11 @@ public class RequestDetails8 {
 			type_lazy = () -> com.tools20022.repository.msg.HoldIndicator4.mmObject();
 		}
 	};
+	@XmlElement(name = "MtchgDnl")
 	protected MatchingDenied1Choice matchingDenial;
 	/**
-	 * Specifies the matching processing change requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -572,6 +630,9 @@ public class RequestDetails8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MtchgDnl"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::MTCH</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -585,9 +646,10 @@ public class RequestDetails8 {
 	public static final MMMessageAssociationEnd mmMatchingDenial = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTradeStatus;
-			componentContext_lazy = () -> RequestDetails8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "MtchgDnl";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::MTCH"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingDenial";
 			definition = "Specifies the matching processing change requested.";
@@ -597,10 +659,11 @@ public class RequestDetails8 {
 			type_lazy = () -> MatchingDenied1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "UnltrlSplt")
 	protected UnilateralSplit1Choice unilateralSplit;
 	/**
-	 * Specifies that the transaction is requested to be unilaterally split.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -620,6 +683,9 @@ public class RequestDetails8 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UnltrlSplt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::MTCH</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -634,9 +700,10 @@ public class RequestDetails8 {
 	public static final MMMessageAssociationEnd mmUnilateralSplit = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesSettlement.mmObject();
-			componentContext_lazy = () -> RequestDetails8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "UnltrlSplt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::MTCH"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnilateralSplit";
 			definition = "Specifies that the transaction is requested to be unilaterally split.";
@@ -646,10 +713,11 @@ public class RequestDetails8 {
 			type_lazy = () -> UnilateralSplit1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Lnkgs")
 	protected List<com.tools20022.repository.msg.Linkages16> linkages;
 	/**
-	 * Information regarding the linkage requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -661,6 +729,9 @@ public class RequestDetails8 {
 	 * RequestDetails8}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Lnkgs"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :16R:LINK</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -674,9 +745,10 @@ public class RequestDetails8 {
 	 */
 	public static final MMMessageAssociationEnd mmLinkages = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RequestDetails8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RequestDetails8.mmObject();
 			isDerived = false;
 			xmlTag = "Lnkgs";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":16R:LINK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkages";
 			definition = "Information regarding the linkage requested.";
@@ -689,12 +761,16 @@ public class RequestDetails8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RequestDetails8.mmReference, RequestDetails8.mmAutomaticBorrowing, RequestDetails8.mmRetainIndicator, RequestDetails8.mmLinkage, RequestDetails8.mmPriority,
-						RequestDetails8.mmOtherProcessing, RequestDetails8.mmPartialSettlementIndicator, RequestDetails8.mmSecuritiesRTGS, RequestDetails8.mmHoldIndicator, RequestDetails8.mmMatchingDenial,
-						RequestDetails8.mmUnilateralSplit, RequestDetails8.mmLinkages);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RequestDetails8.mmReference, com.tools20022.repository.msg.RequestDetails8.mmAutomaticBorrowing,
+						com.tools20022.repository.msg.RequestDetails8.mmRetainIndicator, com.tools20022.repository.msg.RequestDetails8.mmLinkage, com.tools20022.repository.msg.RequestDetails8.mmPriority,
+						com.tools20022.repository.msg.RequestDetails8.mmOtherProcessing, com.tools20022.repository.msg.RequestDetails8.mmPartialSettlementIndicator, com.tools20022.repository.msg.RequestDetails8.mmSecuritiesRTGS,
+						com.tools20022.repository.msg.RequestDetails8.mmHoldIndicator, com.tools20022.repository.msg.RequestDetails8.mmMatchingDenial, com.tools20022.repository.msg.RequestDetails8.mmUnilateralSplit,
+						com.tools20022.repository.msg.RequestDetails8.mmLinkages);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementConditionModificationStatusAdviceV03.mmRequestDetails, SecuritiesSettlementConditionsModificationRequestV03.mmRequestDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintModificationRequestPresenceRule.forRequestDetails8,
+						com.tools20022.repository.constraints.ConstraintOtherProcessingRule.forRequestDetails8, com.tools20022.repository.constraints.ConstraintSettlementConditionModificationApplicabilityRule.forRequestDetails8);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestDetails8";
 				definition = "Details of the settlement condition modification request";
@@ -705,111 +781,111 @@ public class RequestDetails8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ref", required = true)
 	public References9 getReference() {
 		return reference;
 	}
 
-	public void setReference(com.tools20022.repository.msg.References9 reference) {
-		this.reference = reference;
+	public RequestDetails8 setReference(com.tools20022.repository.msg.References9 reference) {
+		this.reference = Objects.requireNonNull(reference);
+		return this;
 	}
 
-	@XmlElement(name = "AutomtcBrrwg")
-	public AutomaticBorrowing2Choice getAutomaticBorrowing() {
-		return automaticBorrowing;
+	public Optional<AutomaticBorrowing2Choice> getAutomaticBorrowing() {
+		return automaticBorrowing == null ? Optional.empty() : Optional.of(automaticBorrowing);
 	}
 
-	public void setAutomaticBorrowing(AutomaticBorrowing2Choice automaticBorrowing) {
+	public RequestDetails8 setAutomaticBorrowing(AutomaticBorrowing2Choice automaticBorrowing) {
 		this.automaticBorrowing = automaticBorrowing;
+		return this;
 	}
 
-	@XmlElement(name = "RtnInd")
-	public YesNoIndicator getRetainIndicator() {
-		return retainIndicator;
+	public Optional<YesNoIndicator> getRetainIndicator() {
+		return retainIndicator == null ? Optional.empty() : Optional.of(retainIndicator);
 	}
 
-	public void setRetainIndicator(YesNoIndicator retainIndicator) {
+	public RequestDetails8 setRetainIndicator(YesNoIndicator retainIndicator) {
 		this.retainIndicator = retainIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "Lkg")
-	public LinkageType1Choice getLinkage() {
-		return linkage;
+	public Optional<LinkageType1Choice> getLinkage() {
+		return linkage == null ? Optional.empty() : Optional.of(linkage);
 	}
 
-	public void setLinkage(LinkageType1Choice linkage) {
+	public RequestDetails8 setLinkage(LinkageType1Choice linkage) {
 		this.linkage = linkage;
+		return this;
 	}
 
-	@XmlElement(name = "Prty")
-	public PriorityNumeric1Choice getPriority() {
-		return priority;
+	public Optional<PriorityNumeric1Choice> getPriority() {
+		return priority == null ? Optional.empty() : Optional.of(priority);
 	}
 
-	public void setPriority(PriorityNumeric1Choice priority) {
+	public RequestDetails8 setPriority(PriorityNumeric1Choice priority) {
 		this.priority = priority;
+		return this;
 	}
 
-	@XmlElement(name = "OthrPrcg")
 	public List<GenericIdentification20> getOtherProcessing() {
-		return otherProcessing;
+		return otherProcessing == null ? otherProcessing = new ArrayList<>() : otherProcessing;
 	}
 
-	public void setOtherProcessing(List<com.tools20022.repository.msg.GenericIdentification20> otherProcessing) {
-		this.otherProcessing = otherProcessing;
+	public RequestDetails8 setOtherProcessing(List<com.tools20022.repository.msg.GenericIdentification20> otherProcessing) {
+		this.otherProcessing = Objects.requireNonNull(otherProcessing);
+		return this;
 	}
 
-	@XmlElement(name = "PrtlSttlmInd")
-	public SettlementTransactionCondition5Code getPartialSettlementIndicator() {
-		return partialSettlementIndicator;
+	public Optional<SettlementTransactionCondition5Code> getPartialSettlementIndicator() {
+		return partialSettlementIndicator == null ? Optional.empty() : Optional.of(partialSettlementIndicator);
 	}
 
-	public void setPartialSettlementIndicator(SettlementTransactionCondition5Code partialSettlementIndicator) {
+	public RequestDetails8 setPartialSettlementIndicator(SettlementTransactionCondition5Code partialSettlementIndicator) {
 		this.partialSettlementIndicator = partialSettlementIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "SctiesRTGS")
-	public SecuritiesRTGS1Choice getSecuritiesRTGS() {
-		return securitiesRTGS;
+	public Optional<SecuritiesRTGS1Choice> getSecuritiesRTGS() {
+		return securitiesRTGS == null ? Optional.empty() : Optional.of(securitiesRTGS);
 	}
 
-	public void setSecuritiesRTGS(SecuritiesRTGS1Choice securitiesRTGS) {
+	public RequestDetails8 setSecuritiesRTGS(SecuritiesRTGS1Choice securitiesRTGS) {
 		this.securitiesRTGS = securitiesRTGS;
+		return this;
 	}
 
-	@XmlElement(name = "HldInd")
-	public HoldIndicator4 getHoldIndicator() {
-		return holdIndicator;
+	public Optional<HoldIndicator4> getHoldIndicator() {
+		return holdIndicator == null ? Optional.empty() : Optional.of(holdIndicator);
 	}
 
-	public void setHoldIndicator(com.tools20022.repository.msg.HoldIndicator4 holdIndicator) {
+	public RequestDetails8 setHoldIndicator(com.tools20022.repository.msg.HoldIndicator4 holdIndicator) {
 		this.holdIndicator = holdIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "MtchgDnl")
-	public MatchingDenied1Choice getMatchingDenial() {
-		return matchingDenial;
+	public Optional<MatchingDenied1Choice> getMatchingDenial() {
+		return matchingDenial == null ? Optional.empty() : Optional.of(matchingDenial);
 	}
 
-	public void setMatchingDenial(MatchingDenied1Choice matchingDenial) {
+	public RequestDetails8 setMatchingDenial(MatchingDenied1Choice matchingDenial) {
 		this.matchingDenial = matchingDenial;
+		return this;
 	}
 
-	@XmlElement(name = "UnltrlSplt")
-	public UnilateralSplit1Choice getUnilateralSplit() {
-		return unilateralSplit;
+	public Optional<UnilateralSplit1Choice> getUnilateralSplit() {
+		return unilateralSplit == null ? Optional.empty() : Optional.of(unilateralSplit);
 	}
 
-	public void setUnilateralSplit(UnilateralSplit1Choice unilateralSplit) {
+	public RequestDetails8 setUnilateralSplit(UnilateralSplit1Choice unilateralSplit) {
 		this.unilateralSplit = unilateralSplit;
+		return this;
 	}
 
-	@XmlElement(name = "Lnkgs")
 	public List<Linkages16> getLinkages() {
-		return linkages;
+		return linkages == null ? linkages = new ArrayList<>() : linkages;
 	}
 
-	public void setLinkages(List<com.tools20022.repository.msg.Linkages16> linkages) {
-		this.linkages = linkages;
+	public RequestDetails8 setLinkages(List<com.tools20022.repository.msg.Linkages16> linkages) {
+		this.linkages = Objects.requireNonNull(linkages);
+		return this;
 	}
 }

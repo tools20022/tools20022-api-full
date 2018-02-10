@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ResidentialStatusCode;
+import com.tools20022.repository.codeset.ResidentialStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the residential status of an individual.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ResidentialStatusCode
- * ResidentialStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResidentialStatus1Code#mmResident
- * ResidentialStatus1Code.mmResident}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResidentialStatus1Code#Resident
+ * ResidentialStatus1Code.Resident}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResidentialStatus1Code#mmPermanentResident
- * ResidentialStatus1Code.mmPermanentResident}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResidentialStatus1Code#PermanentResident
+ * ResidentialStatus1Code.PermanentResident}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ResidentialStatus1Code#mmNonResident
- * ResidentialStatus1Code.mmNonResident}</li>
+ * {@linkplain com.tools20022.repository.codeset.ResidentialStatus1Code#NonResident
+ * ResidentialStatus1Code.NonResident}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ResidentialStatusCode
+ * ResidentialStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the residential status of an individual."</li>
  * </ul>
  */
-public class ResidentialStatus1Code extends ResidentialStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ResidentialStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class ResidentialStatus1Code extends ResidentialStatusCode {
 	 * name} = "Resident"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmResident = new MMCode() {
+	public static final ResidentialStatus1Code Resident = new ResidentialStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Resident";
-			owner_lazy = () -> ResidentialStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResidentialStatus1Code.mmObject();
+			codeName = ResidentialStatusCode.Resident.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class ResidentialStatus1Code extends ResidentialStatusCode {
 	 * name} = "PermanentResident"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPermanentResident = new MMCode() {
+	public static final ResidentialStatus1Code PermanentResident = new ResidentialStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PermanentResident";
-			owner_lazy = () -> ResidentialStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResidentialStatus1Code.mmObject();
+			codeName = ResidentialStatusCode.PermanentResident.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,26 +139,59 @@ public class ResidentialStatus1Code extends ResidentialStatusCode {
 	 * name} = "NonResident"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonResident = new MMCode() {
+	public static final ResidentialStatus1Code NonResident = new ResidentialStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonResident";
-			owner_lazy = () -> ResidentialStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ResidentialStatus1Code.mmObject();
+			codeName = ResidentialStatusCode.NonResident.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ResidentialStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ResidentialStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RESI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ResidentialStatus1Code";
 				definition = "Specifies the residential status of an individual.";
-				code_lazy = () -> Arrays.asList(ResidentialStatus1Code.mmResident, ResidentialStatus1Code.mmPermanentResident, ResidentialStatus1Code.mmNonResident);
 				trace_lazy = () -> ResidentialStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ResidentialStatus1Code.Resident, com.tools20022.repository.codeset.ResidentialStatus1Code.PermanentResident,
+						com.tools20022.repository.codeset.ResidentialStatus1Code.NonResident);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Resident.getCodeName().get(), Resident);
+		codesByName.put(PermanentResident.getCodeName().get(), PermanentResident);
+		codesByName.put(NonResident.getCodeName().get(), NonResident);
+	}
+
+	public static ResidentialStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ResidentialStatus1Code[] values() {
+		ResidentialStatus1Code[] values = new ResidentialStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ResidentialStatus1Code> {
+		@Override
+		public ResidentialStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ResidentialStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -28,6 +28,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.PersonIdentification10;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * PersonOrOrganisation1Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PersonOrOrganisation2Choice", propOrder = {"LEI", "person"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PersonOrOrganisation2Choice", propOrder = {"lEI", "person"})
 public class PersonOrOrganisation2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LEI", required = true)
 	protected LEIIdentifier lEI;
 	/**
-	 * Legal entity identifier of the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,7 +122,7 @@ public class PersonOrOrganisation2Choice {
 	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmLEI;
-			componentContext_lazy = () -> PersonOrOrganisation2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PersonOrOrganisation2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "LEI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +134,11 @@ public class PersonOrOrganisation2Choice {
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "Prsn", required = true)
 	protected PersonIdentification10 person;
 	/**
-	 * Identification of a person.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -172,7 +175,7 @@ public class PersonOrOrganisation2Choice {
 	public static final MMMessageAssociationEnd mmPerson = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
-			componentContext_lazy = () -> PersonOrOrganisation2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PersonOrOrganisation2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,9 +192,9 @@ public class PersonOrOrganisation2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PersonOrOrganisation2Choice.mmLEI, PersonOrOrganisation2Choice.mmPerson);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PersonOrOrganisation2Choice.mmLEI, com.tools20022.repository.choice.PersonOrOrganisation2Choice.mmPerson);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PersonOrOrganisation2Choice";
 				definition = "Specifies the identification of a person or an organisation.";
@@ -201,21 +204,21 @@ public class PersonOrOrganisation2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LEI", required = true)
 	public LEIIdentifier getLEI() {
 		return lEI;
 	}
 
-	public void setLEI(LEIIdentifier lEI) {
-		this.lEI = lEI;
+	public PersonOrOrganisation2Choice setLEI(LEIIdentifier lEI) {
+		this.lEI = Objects.requireNonNull(lEI);
+		return this;
 	}
 
-	@XmlElement(name = "Prsn", required = true)
 	public PersonIdentification10 getPerson() {
 		return person;
 	}
 
-	public void setPerson(PersonIdentification10 person) {
-		this.person = person;
+	public PersonOrOrganisation2Choice setPerson(PersonIdentification10 person) {
+		this.person = Objects.requireNonNull(person);
+		return this;
 	}
 }

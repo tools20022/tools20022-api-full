@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Status of a meeting instruction cancellation request.
@@ -32,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode#mmCancellationCompleted
- * MeetingInstructionCancellationStatusCode.mmCancellationCompleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode#CancellationCompleted
+ * MeetingInstructionCancellationStatusCode.CancellationCompleted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode#mmPendingCancellation
- * MeetingInstructionCancellationStatusCode.mmPendingCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode#PendingCancellation
+ * MeetingInstructionCancellationStatusCode.PendingCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode#mmCancellationDenied
- * MeetingInstructionCancellationStatusCode.mmCancellationDenied}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode#CancellationDenied
+ * MeetingInstructionCancellationStatusCode.CancellationDenied}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode#mmCancellationRejected
- * MeetingInstructionCancellationStatusCode.mmCancellationRejected}</li>
+ * {@linkplain com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode#CancellationRejected
+ * MeetingInstructionCancellationStatusCode.CancellationRejected}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -56,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Status of a meeting instruction cancellation request."</li>
  * </ul>
  */
-public class MeetingInstructionCancellationStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MeetingInstructionCancellationStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -98,12 +104,12 @@ public class MeetingInstructionCancellationStatusCode {
 	 * definition} = "Cancellation has been completed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellationCompleted = new MMCode() {
+	public static final MeetingInstructionCancellationStatusCode CancellationCompleted = new MeetingInstructionCancellationStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationCompleted";
 			definition = "Cancellation has been completed.";
-			owner_lazy = () -> MeetingInstructionCancellationStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode.mmObject();
 			codeName = "CAND";
 		}
 	};
@@ -131,12 +137,12 @@ public class MeetingInstructionCancellationStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingCancellation = new MMCode() {
+	public static final MeetingInstructionCancellationStatusCode PendingCancellation = new MeetingInstructionCancellationStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellation";
 			definition = "Cancellation is pending. It is not known at this time whether cancellation can be executed.";
-			owner_lazy = () -> MeetingInstructionCancellationStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode.mmObject();
 			codeName = "CANP";
 		}
 	};
@@ -162,12 +168,12 @@ public class MeetingInstructionCancellationStatusCode {
 	 * "Cancellation will not be executed due to business reasons. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellationDenied = new MMCode() {
+	public static final MeetingInstructionCancellationStatusCode CancellationDenied = new MeetingInstructionCancellationStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationDenied";
 			definition = "Cancellation will not be executed due to business reasons. ";
-			owner_lazy = () -> MeetingInstructionCancellationStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode.mmObject();
 			codeName = "DEND";
 		}
 	};
@@ -195,29 +201,62 @@ public class MeetingInstructionCancellationStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellationRejected = new MMCode() {
+	public static final MeetingInstructionCancellationStatusCode CancellationRejected = new MeetingInstructionCancellationStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRejected";
 			definition = "Cancellation request has been rejected for further processing due to system (data) reasons.";
-			owner_lazy = () -> MeetingInstructionCancellationStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode.mmObject();
 			codeName = "REJT";
 		}
 	};
+	final static private LinkedHashMap<String, MeetingInstructionCancellationStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MeetingInstructionCancellationStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CAND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MeetingInstructionCancellationStatusCode";
 				definition = "Status of a meeting instruction cancellation request.";
-				code_lazy = () -> Arrays.asList(MeetingInstructionCancellationStatusCode.mmCancellationCompleted, MeetingInstructionCancellationStatusCode.mmPendingCancellation,
-						MeetingInstructionCancellationStatusCode.mmCancellationDenied, MeetingInstructionCancellationStatusCode.mmCancellationRejected);
 				derivation_lazy = () -> Arrays.asList(MeetingInstructionCancellationStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode.CancellationCompleted,
+						com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode.PendingCancellation, com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode.CancellationDenied,
+						com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode.CancellationRejected);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CancellationCompleted.getCodeName().get(), CancellationCompleted);
+		codesByName.put(PendingCancellation.getCodeName().get(), PendingCancellation);
+		codesByName.put(CancellationDenied.getCodeName().get(), CancellationDenied);
+		codesByName.put(CancellationRejected.getCodeName().get(), CancellationRejected);
+	}
+
+	public static MeetingInstructionCancellationStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MeetingInstructionCancellationStatusCode[] values() {
+		MeetingInstructionCancellationStatusCode[] values = new MeetingInstructionCancellationStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MeetingInstructionCancellationStatusCode> {
+		@Override
+		public MeetingInstructionCancellationStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MeetingInstructionCancellationStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

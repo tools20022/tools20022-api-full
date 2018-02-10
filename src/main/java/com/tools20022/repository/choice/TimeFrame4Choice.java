@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.TimeFrame;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,18 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TimeFrame4Choice", propOrder = {"tradePlus", "renunciationPlus"})
 public class TimeFrame4Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TPlus", required = true)
 	protected Number tradePlus;
 	/**
-	 * An agreed number of days after the Trade date (T) used to define standard
-	 * timeframes e.g T+3 settlement period.
 	 * 
-	 * Where = T is the date that the price is applied to a transaction.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +111,7 @@ public class TimeFrame4Choice {
 	public static final MMMessageAttribute mmTradePlus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmTradePlus;
-			componentContext_lazy = () -> TimeFrame4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TimeFrame4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TPlus";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,12 +122,11 @@ public class TimeFrame4Choice {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "RPlus", required = true)
 	protected Number renunciationPlus;
 	/**
-	 * An agreed number of days after the renunciation of title documents are
-	 * received used to define standard timeframes in Redemption e.g R+3
-	 * Redemption settlement cycle.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +161,7 @@ public class TimeFrame4Choice {
 	public static final MMMessageAttribute mmRenunciationPlus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmRenunciationPlus;
-			componentContext_lazy = () -> TimeFrame4Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TimeFrame4Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RPlus";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,9 +176,9 @@ public class TimeFrame4Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TimeFrame4Choice.mmTradePlus, TimeFrame4Choice.mmRenunciationPlus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TimeFrame4Choice.mmTradePlus, com.tools20022.repository.choice.TimeFrame4Choice.mmRenunciationPlus);
 				trace_lazy = () -> TimeFrame.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TimeFrame4Choice";
 				definition = "TimeFrame elements that define a period as number of days after an activity.";
@@ -189,21 +187,21 @@ public class TimeFrame4Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TPlus", required = true)
 	public Number getTradePlus() {
 		return tradePlus;
 	}
 
-	public void setTradePlus(Number tradePlus) {
-		this.tradePlus = tradePlus;
+	public TimeFrame4Choice setTradePlus(Number tradePlus) {
+		this.tradePlus = Objects.requireNonNull(tradePlus);
+		return this;
 	}
 
-	@XmlElement(name = "RPlus", required = true)
 	public Number getRenunciationPlus() {
 		return renunciationPlus;
 	}
 
-	public void setRenunciationPlus(Number renunciationPlus) {
-		this.renunciationPlus = renunciationPlus;
+	public TimeFrame4Choice setRenunciationPlus(Number renunciationPlus) {
+		this.renunciationPlus = Objects.requireNonNull(renunciationPlus);
+		return this;
 	}
 }

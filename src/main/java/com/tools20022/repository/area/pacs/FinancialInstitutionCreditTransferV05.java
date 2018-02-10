@@ -28,9 +28,11 @@ import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.ISOArchive;
 import com.tools20022.repository.msgset.PaymentsClearingandSettlementISOPreviousversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -52,23 +54,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementPreviousVersion
- * PaymentsClearingandSettlementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PaymentsClearingandSettlementISOPreviousversion
- * PaymentsClearingandSettlementISOPreviousversion}</li>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "FICdtTrf"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -85,9 +70,60 @@ import javax.xml.bind.annotation.*;
  * FinancialInstitutionCreditTransferV05.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PaymentsClearingandSettlementISOPreviousversion
+ * PaymentsClearingandSettlementISOPreviousversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "FICdtTrf"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementPreviousVersion
+ * PaymentsClearingandSettlementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pacs.009.001.05}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#forFinancialInstitutionCreditTransferV05
+ * ConstraintInstructedAgentRule.forFinancialInstitutionCreditTransferV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#forFinancialInstitutionCreditTransferV05
+ * ConstraintInstructingAgentRule.forFinancialInstitutionCreditTransferV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountRule#forFinancialInstitutionCreditTransferV05
+ * ConstraintTotalInterbankSettlementAmountRule.
+ * forFinancialInstitutionCreditTransferV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountAndSumRule#forFinancialInstitutionCreditTransferV05
+ * ConstraintTotalInterbankSettlementAmountAndSumRule.
+ * forFinancialInstitutionCreditTransferV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupHeaderInterbankSettlementDateRule#forFinancialInstitutionCreditTransferV05
+ * ConstraintGroupHeaderInterbankSettlementDateRule.
+ * forFinancialInstitutionCreditTransferV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintTransactionInterbankSettlementDateRule#forFinancialInstitutionCreditTransferV05
+ * ConstraintTransactionInterbankSettlementDateRule.
+ * forFinancialInstitutionCreditTransferV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule#forFinancialInstitutionCreditTransferV05
+ * ConstraintPaymentTypeInformationRule.forFinancialInstitutionCreditTransferV05
+ * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSupplementaryDataRule#forFinancialInstitutionCreditTransferV05
+ * ConstraintSupplementaryDataRule.forFinancialInstitutionCreditTransferV05}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,16 +148,16 @@ import javax.xml.bind.annotation.*;
  * FinancialInstitutionCreditTransferV04}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstitutionCreditTransferV05", propOrder = {"groupHeader", "creditTransferTransactionInformation", "supplementaryData"})
 public class FinancialInstitutionCreditTransferV05 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader49 groupHeader;
 	/**
-	 * Set of characteristics shared by all individual transactions included in
-	 * the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,11 +213,11 @@ public class FinancialInstitutionCreditTransferV05 {
 			}
 		}
 	};
+	@XmlElement(name = "CdtTrfTxInf", required = true)
 	protected List<CreditTransferTransaction17> creditTransferTransactionInformation;
 	/**
-	 * Set of elements providing information specific to the individual credit
-	 * transfer(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -239,11 +275,11 @@ public class FinancialInstitutionCreditTransferV05 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -303,6 +339,14 @@ public class FinancialInstitutionCreditTransferV05 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructedAgentRule.forFinancialInstitutionCreditTransferV05,
+						com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forFinancialInstitutionCreditTransferV05,
+						com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountRule.forFinancialInstitutionCreditTransferV05,
+						com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountAndSumRule.forFinancialInstitutionCreditTransferV05,
+						com.tools20022.repository.constraints.ConstraintGroupHeaderInterbankSettlementDateRule.forFinancialInstitutionCreditTransferV05,
+						com.tools20022.repository.constraints.ConstraintTransactionInterbankSettlementDateRule.forFinancialInstitutionCreditTransferV05,
+						com.tools20022.repository.constraints.ConstraintPaymentTypeInformationRule.forFinancialInstitutionCreditTransferV05,
+						com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forFinancialInstitutionCreditTransferV05);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstitutionCreditTransferV05";
 				definition = "Scope\r\nThe FinancialInstitutionCreditTransfer message is sent by a debtor financial institution to a creditor financial institution, directly or through other agents and/or a payment clearing and settlement system.\r\nIt is used to move funds from a debtor account to a creditor, where both debtor and creditor are financial institutions.\r\nUsage\r\nThe FinancialInstitutionCreditTransfer message is exchanged between agents and can contain one or more credit transfer instructions where debtor and creditor are both financial institutions.\r\nThe FinancialInstitutionCreditTransfer message does not allow for grouping: a CreditTransferTransactionInformation block must be present for each credit transfer transaction.\r\nThe FinancialInstitutionCreditTransfer message can be used in domestic and cross-border scenarios.";
@@ -332,34 +376,34 @@ public class FinancialInstitutionCreditTransferV05 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader49 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader49 groupHeader) {
-		this.groupHeader = groupHeader;
+	public FinancialInstitutionCreditTransferV05 setGroupHeader(GroupHeader49 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "CdtTrfTxInf", required = true)
 	public List<CreditTransferTransaction17> getCreditTransferTransactionInformation() {
-		return creditTransferTransactionInformation;
+		return creditTransferTransactionInformation == null ? creditTransferTransactionInformation = new ArrayList<>() : creditTransferTransactionInformation;
 	}
 
-	public void setCreditTransferTransactionInformation(List<CreditTransferTransaction17> creditTransferTransactionInformation) {
-		this.creditTransferTransactionInformation = creditTransferTransactionInformation;
+	public FinancialInstitutionCreditTransferV05 setCreditTransferTransactionInformation(List<CreditTransferTransaction17> creditTransferTransactionInformation) {
+		this.creditTransferTransactionInformation = Objects.requireNonNull(creditTransferTransactionInformation);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public FinancialInstitutionCreditTransferV05 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.009.05.05")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.009.001.05")
 	static public class Document {
 		@XmlElement(name = "FICdtTrf", required = true)
 		public FinancialInstitutionCreditTransferV05 messageBody;

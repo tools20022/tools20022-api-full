@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.CashAccount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ParentCashAccount1", propOrder = {"level", "identification", "servicer"})
 public class ParentCashAccount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Lvl")
 	protected AccountLevel1Code level;
 	/**
-	 * Defines the parent account level within a hierarchy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +127,7 @@ public class ParentCashAccount1 {
 	public static final MMMessageAttribute mmLevel = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashAccount.mmLevel;
-			componentContext_lazy = () -> ParentCashAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParentCashAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Lvl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,11 +139,11 @@ public class ParentCashAccount1 {
 			simpleType_lazy = () -> AccountLevel1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected CashAccount16 identification;
 	/**
-	 * Unique and unambiguous identification for the parent account between the
-	 * parent account owner and the parent account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,7 +185,7 @@ public class ParentCashAccount1 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> CashAccount.mmObject();
-			componentContext_lazy = () -> ParentCashAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParentCashAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,10 +197,11 @@ public class ParentCashAccount1 {
 			complexType_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
 		}
 	};
+	@XmlElement(name = "Svcr")
 	protected BranchAndFinancialInstitutionIdentification5 servicer;
 	/**
-	 * Financial institution in which the parent account resides.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -240,7 +244,7 @@ public class ParentCashAccount1 {
 	public static final MMMessageAttribute mmServicer = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AccountServicerRole.mmObject();
-			componentContext_lazy = () -> ParentCashAccount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ParentCashAccount1.mmObject();
 			isDerived = false;
 			xmlTag = "Svcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,9 +260,10 @@ public class ParentCashAccount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ParentCashAccount1.mmLevel, ParentCashAccount1.mmIdentification, ParentCashAccount1.mmServicer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ParentCashAccount1.mmLevel, com.tools20022.repository.msg.ParentCashAccount1.mmIdentification,
+						com.tools20022.repository.msg.ParentCashAccount1.mmServicer);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ParentCashAccount1";
 				definition = "Specifies the cash account elements of a parent cash account.";
@@ -268,30 +273,30 @@ public class ParentCashAccount1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Lvl")
-	public AccountLevel1Code getLevel() {
-		return level;
+	public Optional<AccountLevel1Code> getLevel() {
+		return level == null ? Optional.empty() : Optional.of(level);
 	}
 
-	public void setLevel(AccountLevel1Code level) {
+	public ParentCashAccount1 setLevel(AccountLevel1Code level) {
 		this.level = level;
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public CashAccount16 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.CashAccount16 identification) {
-		this.identification = identification;
+	public ParentCashAccount1 setIdentification(com.tools20022.repository.msg.CashAccount16 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Svcr")
-	public BranchAndFinancialInstitutionIdentification5 getServicer() {
-		return servicer;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getServicer() {
+		return servicer == null ? Optional.empty() : Optional.of(servicer);
 	}
 
-	public void setServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 servicer) {
+	public ParentCashAccount1 setServicer(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 servicer) {
 		this.servicer = servicer;
+		return this;
 	}
 }

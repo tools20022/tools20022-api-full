@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ContentTypeCode;
+import com.tools20022.repository.codeset.ContentType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identification of the type of a Cryptographic Message Syntax (CMS) data
@@ -31,36 +35,35 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ContentType1Code#PlainData
+ * ContentType1Code.PlainData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ContentType1Code#SignedData
+ * ContentType1Code.SignedData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ContentType1Code#EnvelopedData
+ * ContentType1Code.EnvelopedData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ContentType1Code#DigestedData
+ * ContentType1Code.DigestedData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ContentType1Code#EncryptedData
+ * ContentType1Code.EncryptedData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ContentType1Code#AuthenticatedData
+ * ContentType1Code.AuthenticatedData}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.ContentTypeCode
  * ContentTypeCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentType1Code#mmPlainData
- * ContentType1Code.mmPlainData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentType1Code#mmSignedData
- * ContentType1Code.mmSignedData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentType1Code#mmEnvelopedData
- * ContentType1Code.mmEnvelopedData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentType1Code#mmDigestedData
- * ContentType1Code.mmDigestedData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentType1Code#mmEncryptedData
- * ContentType1Code.mmEncryptedData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ContentType1Code#mmAuthenticatedData
- * ContentType1Code.mmAuthenticatedData}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -86,7 +89,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ContentType1Code extends ContentTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ContentType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -107,18 +111,19 @@ public class ContentType1Code extends ContentTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.ContentType2Code#mmPlainData
-	 * ContentType2Code.mmPlainData}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ContentType2Code#PlainData
+	 * ContentType2Code.PlainData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPlainData = new MMCode() {
+	public static final ContentType1Code PlainData = new ContentType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlainData";
-			nextVersions_lazy = () -> Arrays.asList(ContentType2Code.mmPlainData);
-			owner_lazy = () -> ContentType1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(ContentType2Code.PlainData);
+			owner_lazy = () -> com.tools20022.repository.codeset.ContentType1Code.mmObject();
+			codeName = ContentTypeCode.PlainData.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -139,18 +144,19 @@ public class ContentType1Code extends ContentTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.ContentType2Code#mmSignedData
-	 * ContentType2Code.mmSignedData}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ContentType2Code#SignedData
+	 * ContentType2Code.SignedData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSignedData = new MMCode() {
+	public static final ContentType1Code SignedData = new ContentType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignedData";
-			nextVersions_lazy = () -> Arrays.asList(ContentType2Code.mmSignedData);
-			owner_lazy = () -> ContentType1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(ContentType2Code.SignedData);
+			owner_lazy = () -> com.tools20022.repository.codeset.ContentType1Code.mmObject();
+			codeName = ContentTypeCode.SignedData.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -171,18 +177,19 @@ public class ContentType1Code extends ContentTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.ContentType2Code#mmEnvelopedData
-	 * ContentType2Code.mmEnvelopedData}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ContentType2Code#EnvelopedData
+	 * ContentType2Code.EnvelopedData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmEnvelopedData = new MMCode() {
+	public static final ContentType1Code EnvelopedData = new ContentType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvelopedData";
-			nextVersions_lazy = () -> Arrays.asList(ContentType2Code.mmEnvelopedData);
-			owner_lazy = () -> ContentType1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(ContentType2Code.EnvelopedData);
+			owner_lazy = () -> com.tools20022.repository.codeset.ContentType1Code.mmObject();
+			codeName = ContentTypeCode.EnvelopedData.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -203,18 +210,19 @@ public class ContentType1Code extends ContentTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.ContentType2Code#mmDigestedData
-	 * ContentType2Code.mmDigestedData}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ContentType2Code#DigestedData
+	 * ContentType2Code.DigestedData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDigestedData = new MMCode() {
+	public static final ContentType1Code DigestedData = new ContentType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestedData";
-			nextVersions_lazy = () -> Arrays.asList(ContentType2Code.mmDigestedData);
-			owner_lazy = () -> ContentType1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(ContentType2Code.DigestedData);
+			owner_lazy = () -> com.tools20022.repository.codeset.ContentType1Code.mmObject();
+			codeName = ContentTypeCode.DigestedData.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -233,11 +241,12 @@ public class ContentType1Code extends ContentTypeCode {
 	 * name} = "EncryptedData"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEncryptedData = new MMCode() {
+	public static final ContentType1Code EncryptedData = new ContentType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedData";
-			owner_lazy = () -> ContentType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ContentType1Code.mmObject();
+			codeName = ContentTypeCode.EncryptedData.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -258,35 +267,70 @@ public class ContentType1Code extends ContentTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.ContentType2Code#mmAuthenticatedData
-	 * ContentType2Code.mmAuthenticatedData}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ContentType2Code#AuthenticatedData
+	 * ContentType2Code.AuthenticatedData}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuthenticatedData = new MMCode() {
+	public static final ContentType1Code AuthenticatedData = new ContentType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticatedData";
-			nextVersions_lazy = () -> Arrays.asList(ContentType2Code.mmAuthenticatedData);
-			owner_lazy = () -> ContentType1Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(ContentType2Code.AuthenticatedData);
+			owner_lazy = () -> com.tools20022.repository.codeset.ContentType1Code.mmObject();
+			codeName = ContentTypeCode.AuthenticatedData.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ContentType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ContentType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DATA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentType1Code";
 				definition = "Identification of the type of a Cryptographic Message Syntax (CMS) data structure.";
 				nextVersions_lazy = () -> Arrays.asList(ContentType2Code.mmObject());
-				code_lazy = () -> Arrays.asList(ContentType1Code.mmPlainData, ContentType1Code.mmSignedData, ContentType1Code.mmEnvelopedData, ContentType1Code.mmDigestedData, ContentType1Code.mmEncryptedData,
-						ContentType1Code.mmAuthenticatedData);
 				trace_lazy = () -> ContentTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ContentType1Code.PlainData, com.tools20022.repository.codeset.ContentType1Code.SignedData, com.tools20022.repository.codeset.ContentType1Code.EnvelopedData,
+						com.tools20022.repository.codeset.ContentType1Code.DigestedData, com.tools20022.repository.codeset.ContentType1Code.EncryptedData, com.tools20022.repository.codeset.ContentType1Code.AuthenticatedData);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PlainData.getCodeName().get(), PlainData);
+		codesByName.put(SignedData.getCodeName().get(), SignedData);
+		codesByName.put(EnvelopedData.getCodeName().get(), EnvelopedData);
+		codesByName.put(DigestedData.getCodeName().get(), DigestedData);
+		codesByName.put(EncryptedData.getCodeName().get(), EncryptedData);
+		codesByName.put(AuthenticatedData.getCodeName().get(), AuthenticatedData);
+	}
+
+	public static ContentType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ContentType1Code[] values() {
+		ContentType1Code[] values = new ContentType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ContentType1Code> {
+		@Override
+		public ContentType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ContentType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

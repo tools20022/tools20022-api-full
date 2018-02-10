@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MessageFunctionCode;
+import com.tools20022.repository.codeset.MessageFunction2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the function of the message.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode
- * MessageFunctionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction2Code#mmRequest
- * MessageFunction2Code.mmRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction2Code#Request
+ * MessageFunction2Code.Request}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MessageFunction2Code#mmResponse
- * MessageFunction2Code.mmResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunction2Code#Response
+ * MessageFunction2Code.Response}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode
+ * MessageFunctionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the function of the message."</li>
  * </ul>
  */
-public class MessageFunction2Code extends MessageFunctionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MessageFunction2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class MessageFunction2Code extends MessageFunctionCode {
 	 * name} = "Request"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRequest = new MMCode() {
+	public static final MessageFunction2Code Request = new MessageFunction2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Request";
-			owner_lazy = () -> MessageFunction2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction2Code.mmObject();
+			codeName = MessageFunctionCode.Request.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class MessageFunction2Code extends MessageFunctionCode {
 	 * name} = "Response"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmResponse = new MMCode() {
+	public static final MessageFunction2Code Response = new MessageFunction2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Response";
-			owner_lazy = () -> MessageFunction2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction2Code.mmObject();
+			codeName = MessageFunctionCode.Response.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MessageFunction2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MessageFunction2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REQU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageFunction2Code";
 				definition = "Specifies the function of the message.";
-				code_lazy = () -> Arrays.asList(MessageFunction2Code.mmRequest, MessageFunction2Code.mmResponse);
 				trace_lazy = () -> MessageFunctionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction2Code.Request, com.tools20022.repository.codeset.MessageFunction2Code.Response);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Request.getCodeName().get(), Request);
+		codesByName.put(Response.getCodeName().get(), Response);
+	}
+
+	public static MessageFunction2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MessageFunction2Code[] values() {
+		MessageFunction2Code[] values = new MessageFunction2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MessageFunction2Code> {
+		@Override
+		public MessageFunction2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MessageFunction2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

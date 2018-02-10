@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.StandingOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +76,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,16 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StandingOrderDetails3", propOrder = {"amount", "creditDebitIndicator", "reference", "frequency", "validityPeriod", "associatedPoolAccount"})
 public class StandingOrderDetails3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected AmountChoice amount;
 	/**
-	 * Amount of money and currency to be transferred when a payment instruction
-	 * is created as a result of a standing order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,7 +134,7 @@ public class StandingOrderDetails3 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmAmount;
-			componentContext_lazy = () -> StandingOrderDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,10 +145,11 @@ public class StandingOrderDetails3 {
 			complexType_lazy = () -> AmountChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd", required = true)
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Specifies if the account is debited or credited by the standing order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -181,7 +184,7 @@ public class StandingOrderDetails3 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashStandingOrder.mmCreditDebitIndicator;
-			componentContext_lazy = () -> StandingOrderDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,11 +195,11 @@ public class StandingOrderDetails3 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Ref")
 	protected Max35Text reference;
 	/**
-	 * Unique and unambiguous identification for a standing order, as assigned
-	 * by the account servicer or the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -231,7 +234,7 @@ public class StandingOrderDetails3 {
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmIdentification;
-			componentContext_lazy = () -> StandingOrderDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -242,12 +245,11 @@ public class StandingOrderDetails3 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Frqcy")
 	protected Frequency2Code frequency;
 	/**
-	 * Regularity with which payment instructions are to be created and
-	 * processed as a result of the standing order, eg, daily, weekly, or
-	 * monthly.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -283,7 +285,7 @@ public class StandingOrderDetails3 {
 	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmFrequency;
-			componentContext_lazy = () -> StandingOrderDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "Frqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -294,10 +296,11 @@ public class StandingOrderDetails3 {
 			simpleType_lazy = () -> Frequency2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "VldtyPrd")
 	protected DatePeriodDetails1 validityPeriod;
 	/**
-	 * Dates during which the standing order is in effect.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -331,7 +334,7 @@ public class StandingOrderDetails3 {
 	public static final MMMessageAttribute mmValidityPeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmValidityPeriod;
-			componentContext_lazy = () -> StandingOrderDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "VldtyPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -342,11 +345,11 @@ public class StandingOrderDetails3 {
 			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails1.mmObject();
 		}
 	};
+	@XmlElement(name = "AssoctdPoolAcct")
 	protected AccountIdentification1Choice associatedPoolAccount;
 	/**
-	 * Liquidity transfer origin or destination account within the pool of
-	 * accounts under management of the requestor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -382,7 +385,7 @@ public class StandingOrderDetails3 {
 	public static final MMMessageAttribute mmAssociatedPoolAccount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> StandingOrderDetails3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderDetails3.mmObject();
 			isDerived = false;
 			xmlTag = "AssoctdPoolAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -397,10 +400,11 @@ public class StandingOrderDetails3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StandingOrderDetails3.mmAmount, StandingOrderDetails3.mmCreditDebitIndicator, StandingOrderDetails3.mmReference, StandingOrderDetails3.mmFrequency,
-						StandingOrderDetails3.mmValidityPeriod, StandingOrderDetails3.mmAssociatedPoolAccount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderDetails3.mmAmount, com.tools20022.repository.msg.StandingOrderDetails3.mmCreditDebitIndicator,
+						com.tools20022.repository.msg.StandingOrderDetails3.mmReference, com.tools20022.repository.msg.StandingOrderDetails3.mmFrequency, com.tools20022.repository.msg.StandingOrderDetails3.mmValidityPeriod,
+						com.tools20022.repository.msg.StandingOrderDetails3.mmAssociatedPoolAccount);
 				trace_lazy = () -> CashStandingOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderDetails3";
 				definition = "Instruction given by a party that has explicit authority to instruct a debit on the account, ie, either the debit account owner or originating party, to a first agent, to process cash transfers at specified intervals during an implicit or explicit period of time. A standing order is given once and is valid for an open or closed period of time.";
@@ -409,57 +413,57 @@ public class StandingOrderDetails3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public AmountChoice getAmount() {
 		return amount;
 	}
 
-	public void setAmount(AmountChoice amount) {
-		this.amount = amount;
+	public StandingOrderDetails3 setAmount(AmountChoice amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
-		this.creditDebitIndicator = creditDebitIndicator;
+	public StandingOrderDetails3 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = Objects.requireNonNull(creditDebitIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "Ref")
-	public Max35Text getReference() {
-		return reference;
+	public Optional<Max35Text> getReference() {
+		return reference == null ? Optional.empty() : Optional.of(reference);
 	}
 
-	public void setReference(Max35Text reference) {
+	public StandingOrderDetails3 setReference(Max35Text reference) {
 		this.reference = reference;
+		return this;
 	}
 
-	@XmlElement(name = "Frqcy")
-	public Frequency2Code getFrequency() {
-		return frequency;
+	public Optional<Frequency2Code> getFrequency() {
+		return frequency == null ? Optional.empty() : Optional.of(frequency);
 	}
 
-	public void setFrequency(Frequency2Code frequency) {
+	public StandingOrderDetails3 setFrequency(Frequency2Code frequency) {
 		this.frequency = frequency;
+		return this;
 	}
 
-	@XmlElement(name = "VldtyPrd")
-	public DatePeriodDetails1 getValidityPeriod() {
-		return validityPeriod;
+	public Optional<DatePeriodDetails1> getValidityPeriod() {
+		return validityPeriod == null ? Optional.empty() : Optional.of(validityPeriod);
 	}
 
-	public void setValidityPeriod(com.tools20022.repository.msg.DatePeriodDetails1 validityPeriod) {
+	public StandingOrderDetails3 setValidityPeriod(com.tools20022.repository.msg.DatePeriodDetails1 validityPeriod) {
 		this.validityPeriod = validityPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "AssoctdPoolAcct")
-	public AccountIdentification1Choice getAssociatedPoolAccount() {
-		return associatedPoolAccount;
+	public Optional<AccountIdentification1Choice> getAssociatedPoolAccount() {
+		return associatedPoolAccount == null ? Optional.empty() : Optional.of(associatedPoolAccount);
 	}
 
-	public void setAssociatedPoolAccount(AccountIdentification1Choice associatedPoolAccount) {
+	public StandingOrderDetails3 setAssociatedPoolAccount(AccountIdentification1Choice associatedPoolAccount) {
 		this.associatedPoolAccount = associatedPoolAccount;
+		return this;
 	}
 }

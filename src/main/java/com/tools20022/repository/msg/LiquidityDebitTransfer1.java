@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -71,8 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDebtorAccountRule#forLiquidityDebitTransfer1
+ * ConstraintDebtorAccountRule.forLiquidityDebitTransfer1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +95,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LiquidityDebitTransfer1", propOrder = {"liquidityTransferIdentification", "creditor", "creditorAccount", "transferredAmount", "debtor", "debtorAccount", "settlementDate"})
 public class LiquidityDebitTransfer1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LqdtyTrfId")
 	protected PaymentIdentification1 liquidityTransferIdentification;
 	/**
-	 * Used to uniquely identify the liquidity transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -119,7 +130,7 @@ public class LiquidityDebitTransfer1 {
 	 */
 	public static final MMMessageAssociationEnd mmLiquidityTransferIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> LiquidityDebitTransfer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityDebitTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "LqdtyTrfId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,10 +142,11 @@ public class LiquidityDebitTransfer1 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "Cdtr")
 	protected BranchAndFinancialInstitutionIdentification5 creditor;
 	/**
-	 * Owner of the account to be credited.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -166,7 +178,7 @@ public class LiquidityDebitTransfer1 {
 	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
-			componentContext_lazy = () -> LiquidityDebitTransfer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityDebitTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "Cdtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +190,11 @@ public class LiquidityDebitTransfer1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrAcct")
 	protected CashAccount24 creditorAccount;
 	/**
-	 * Account to be credited as a result of a transfer of liquidity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -214,7 +227,7 @@ public class LiquidityDebitTransfer1 {
 	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
-			componentContext_lazy = () -> LiquidityDebitTransfer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityDebitTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,11 +239,11 @@ public class LiquidityDebitTransfer1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "TrfdAmt", required = true)
 	protected Amount2Choice transferredAmount;
 	/**
-	 * Amount of money that the transaction administrator transfers from one
-	 * account to another.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -264,7 +277,7 @@ public class LiquidityDebitTransfer1 {
 	public static final MMMessageAssociationEnd mmTransferredAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CreditInstrument.mmNetAmount;
-			componentContext_lazy = () -> LiquidityDebitTransfer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityDebitTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "TrfdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,10 +289,11 @@ public class LiquidityDebitTransfer1 {
 			type_lazy = () -> Amount2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Dbtr")
 	protected BranchAndFinancialInstitutionIdentification5 debtor;
 	/**
-	 * Owner of the account to be debited.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -311,7 +325,7 @@ public class LiquidityDebitTransfer1 {
 	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Organisation.mmObject();
-			componentContext_lazy = () -> LiquidityDebitTransfer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityDebitTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -323,10 +337,11 @@ public class LiquidityDebitTransfer1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "DbtrAcct")
 	protected CashAccount24 debtorAccount;
 	/**
-	 * Account to be debited as a result of a transfer of liquidity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -359,7 +374,7 @@ public class LiquidityDebitTransfer1 {
 	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentPartyRole.mmCashAccount;
-			componentContext_lazy = () -> LiquidityDebitTransfer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityDebitTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -371,12 +386,11 @@ public class LiquidityDebitTransfer1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmDt")
 	protected ISODate settlementDate;
 	/**
-	 * Date on which the amount of money ceases to be available to the agent
-	 * that owes it and when the amount of money becomes available to the agent
-	 * to which it is due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -411,7 +425,7 @@ public class LiquidityDebitTransfer1 {
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Entry.mmValueDate;
-			componentContext_lazy = () -> LiquidityDebitTransfer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LiquidityDebitTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -426,10 +440,12 @@ public class LiquidityDebitTransfer1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LiquidityDebitTransfer1.mmLiquidityTransferIdentification, LiquidityDebitTransfer1.mmCreditor, LiquidityDebitTransfer1.mmCreditorAccount,
-						LiquidityDebitTransfer1.mmTransferredAmount, LiquidityDebitTransfer1.mmDebtor, LiquidityDebitTransfer1.mmDebtorAccount, LiquidityDebitTransfer1.mmSettlementDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityDebitTransfer1.mmLiquidityTransferIdentification, com.tools20022.repository.msg.LiquidityDebitTransfer1.mmCreditor,
+						com.tools20022.repository.msg.LiquidityDebitTransfer1.mmCreditorAccount, com.tools20022.repository.msg.LiquidityDebitTransfer1.mmTransferredAmount, com.tools20022.repository.msg.LiquidityDebitTransfer1.mmDebtor,
+						com.tools20022.repository.msg.LiquidityDebitTransfer1.mmDebtorAccount, com.tools20022.repository.msg.LiquidityDebitTransfer1.mmSettlementDate);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDebtorAccountRule.forLiquidityDebitTransfer1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LiquidityDebitTransfer1";
 				definition = "Provides details specific to the liquidity debit transfer, used to transfer an amount of money from the debtor to the creditor, where both are financial institutions.";
@@ -438,66 +454,66 @@ public class LiquidityDebitTransfer1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LqdtyTrfId")
-	public PaymentIdentification1 getLiquidityTransferIdentification() {
-		return liquidityTransferIdentification;
+	public Optional<PaymentIdentification1> getLiquidityTransferIdentification() {
+		return liquidityTransferIdentification == null ? Optional.empty() : Optional.of(liquidityTransferIdentification);
 	}
 
-	public void setLiquidityTransferIdentification(com.tools20022.repository.msg.PaymentIdentification1 liquidityTransferIdentification) {
+	public LiquidityDebitTransfer1 setLiquidityTransferIdentification(com.tools20022.repository.msg.PaymentIdentification1 liquidityTransferIdentification) {
 		this.liquidityTransferIdentification = liquidityTransferIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Cdtr")
-	public BranchAndFinancialInstitutionIdentification5 getCreditor() {
-		return creditor;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getCreditor() {
+		return creditor == null ? Optional.empty() : Optional.of(creditor);
 	}
 
-	public void setCreditor(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 creditor) {
+	public LiquidityDebitTransfer1 setCreditor(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 creditor) {
 		this.creditor = creditor;
+		return this;
 	}
 
-	@XmlElement(name = "CdtrAcct")
-	public CashAccount24 getCreditorAccount() {
-		return creditorAccount;
+	public Optional<CashAccount24> getCreditorAccount() {
+		return creditorAccount == null ? Optional.empty() : Optional.of(creditorAccount);
 	}
 
-	public void setCreditorAccount(com.tools20022.repository.msg.CashAccount24 creditorAccount) {
+	public LiquidityDebitTransfer1 setCreditorAccount(com.tools20022.repository.msg.CashAccount24 creditorAccount) {
 		this.creditorAccount = creditorAccount;
+		return this;
 	}
 
-	@XmlElement(name = "TrfdAmt", required = true)
 	public Amount2Choice getTransferredAmount() {
 		return transferredAmount;
 	}
 
-	public void setTransferredAmount(Amount2Choice transferredAmount) {
-		this.transferredAmount = transferredAmount;
+	public LiquidityDebitTransfer1 setTransferredAmount(Amount2Choice transferredAmount) {
+		this.transferredAmount = Objects.requireNonNull(transferredAmount);
+		return this;
 	}
 
-	@XmlElement(name = "Dbtr")
-	public BranchAndFinancialInstitutionIdentification5 getDebtor() {
-		return debtor;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getDebtor() {
+		return debtor == null ? Optional.empty() : Optional.of(debtor);
 	}
 
-	public void setDebtor(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtor) {
+	public LiquidityDebitTransfer1 setDebtor(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtor) {
 		this.debtor = debtor;
+		return this;
 	}
 
-	@XmlElement(name = "DbtrAcct")
-	public CashAccount24 getDebtorAccount() {
-		return debtorAccount;
+	public Optional<CashAccount24> getDebtorAccount() {
+		return debtorAccount == null ? Optional.empty() : Optional.of(debtorAccount);
 	}
 
-	public void setDebtorAccount(com.tools20022.repository.msg.CashAccount24 debtorAccount) {
+	public LiquidityDebitTransfer1 setDebtorAccount(com.tools20022.repository.msg.CashAccount24 debtorAccount) {
 		this.debtorAccount = debtorAccount;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDt")
-	public ISODate getSettlementDate() {
-		return settlementDate;
+	public Optional<ISODate> getSettlementDate() {
+		return settlementDate == null ? Optional.empty() : Optional.of(settlementDate);
 	}
 
-	public void setSettlementDate(ISODate settlementDate) {
+	public LiquidityDebitTransfer1 setSettlementDate(ISODate settlementDate) {
 		this.settlementDate = settlementDate;
+		return this;
 	}
 }

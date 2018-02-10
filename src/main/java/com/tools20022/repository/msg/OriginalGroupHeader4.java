@@ -26,9 +26,8 @@ import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentIdentification;
 import com.tools20022.repository.entity.PaymentStatus;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -77,8 +76,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,20 +96,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "OriginalGroupHeader4", propOrder = {"groupCancellationIdentification", "case", "originalMessageIdentification", "originalMessageNameIdentification", "originalCreationDateTime", "numberOfTransactions", "controlSum",
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "OriginalGroupHeader4", propOrder = {"groupCancellationIdentification", "case_", "originalMessageIdentification", "originalMessageNameIdentification", "originalCreationDateTime", "numberOfTransactions", "controlSum",
 		"groupCancellation", "cancellationReasonInformation"})
 public class OriginalGroupHeader4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpCxlId")
 	protected Max35Text groupCancellationIdentification;
 	/**
-	 * Unique identification, as assigned by the assigner, to unambiguously
-	 * identify the group cancellation request.
 	 * 
-	 * Usage: The group cancellation request identification can be used for
-	 * reconciliation or to link tasks related to the cancellation request.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,7 +143,7 @@ public class OriginalGroupHeader4 {
 	 */
 	public static final MMMessageAttribute mmGroupCancellationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OriginalGroupHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "GrpCxlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,11 +155,11 @@ public class OriginalGroupHeader4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Case")
 	protected Case3 case_;
 	/**
-	 * Uniquely and unambiguously identifies an exception or an investigation
-	 * workflow.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -204,7 +200,7 @@ public class OriginalGroupHeader4 {
 	public static final MMMessageAssociationEnd mmCase = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmRelatedInvestigationCase;
-			componentContext_lazy = () -> OriginalGroupHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "Case";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,11 +213,11 @@ public class OriginalGroupHeader4 {
 			type_lazy = () -> com.tools20022.repository.msg.Case3.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlMsgId", required = true)
 	protected Max35Text originalMessageIdentification;
 	/**
-	 * Point to point reference, as assigned by the original instructing party,
-	 * to unambiguously identify the original message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -264,7 +260,7 @@ public class OriginalGroupHeader4 {
 	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
-			componentContext_lazy = () -> OriginalGroupHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -276,11 +272,11 @@ public class OriginalGroupHeader4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlMsgNmId", required = true)
 	protected Max35Text originalMessageNameIdentification;
 	/**
-	 * Specifies the original message name identifier to which the message
-	 * refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -317,7 +313,7 @@ public class OriginalGroupHeader4 {
 	 */
 	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OriginalGroupHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgNmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -329,10 +325,11 @@ public class OriginalGroupHeader4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlCreDtTm")
 	protected ISODateTime originalCreationDateTime;
 	/**
-	 * Date and time at which the original message was created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -373,7 +370,7 @@ public class OriginalGroupHeader4 {
 	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
-			componentContext_lazy = () -> OriginalGroupHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -385,10 +382,11 @@ public class OriginalGroupHeader4 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfTxs")
 	protected Max15NumericText numberOfTransactions;
 	/**
-	 * Number of individual transactions contained in the original message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -425,7 +423,7 @@ public class OriginalGroupHeader4 {
 	 */
 	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OriginalGroupHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfTxs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -437,11 +435,11 @@ public class OriginalGroupHeader4 {
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrlSum")
 	protected DecimalNumber controlSum;
 	/**
-	 * Total of all individual amounts included in the message, irrespective of
-	 * currencies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -479,7 +477,7 @@ public class OriginalGroupHeader4 {
 	 */
 	public static final MMMessageAttribute mmControlSum = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OriginalGroupHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "CtrlSum";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -491,11 +489,11 @@ public class OriginalGroupHeader4 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "GrpCxl")
 	protected GroupCancellationIndicator groupCancellation;
 	/**
-	 * Indicates whether the cancellation request applies to a whole group of
-	 * transactions or to individual transactions within an original group.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -533,7 +531,7 @@ public class OriginalGroupHeader4 {
 	 */
 	public static final MMMessageAttribute mmGroupCancellation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> OriginalGroupHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "GrpCxl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -545,10 +543,11 @@ public class OriginalGroupHeader4 {
 			simpleType_lazy = () -> GroupCancellationIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CxlRsnInf")
 	protected List<com.tools20022.repository.msg.PaymentCancellationReason2> cancellationReasonInformation;
 	/**
-	 * Provides detailed information on the cancellation reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -590,7 +589,7 @@ public class OriginalGroupHeader4 {
 	public static final MMMessageAssociationEnd mmCancellationReasonInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentStatus.mmCancellationReason;
-			componentContext_lazy = () -> OriginalGroupHeader4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader4.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -606,11 +605,13 @@ public class OriginalGroupHeader4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(OriginalGroupHeader4.mmGroupCancellationIdentification, OriginalGroupHeader4.mmCase, OriginalGroupHeader4.mmOriginalMessageIdentification,
-						OriginalGroupHeader4.mmOriginalMessageNameIdentification, OriginalGroupHeader4.mmOriginalCreationDateTime, OriginalGroupHeader4.mmNumberOfTransactions, OriginalGroupHeader4.mmControlSum,
-						OriginalGroupHeader4.mmGroupCancellation, OriginalGroupHeader4.mmCancellationReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalGroupHeader4.mmGroupCancellationIdentification, com.tools20022.repository.msg.OriginalGroupHeader4.mmCase,
+						com.tools20022.repository.msg.OriginalGroupHeader4.mmOriginalMessageIdentification, com.tools20022.repository.msg.OriginalGroupHeader4.mmOriginalMessageNameIdentification,
+						com.tools20022.repository.msg.OriginalGroupHeader4.mmOriginalCreationDateTime, com.tools20022.repository.msg.OriginalGroupHeader4.mmNumberOfTransactions,
+						com.tools20022.repository.msg.OriginalGroupHeader4.mmControlSum, com.tools20022.repository.msg.OriginalGroupHeader4.mmGroupCancellation,
+						com.tools20022.repository.msg.OriginalGroupHeader4.mmCancellationReasonInformation);
 				trace_lazy = () -> PaymentExecution.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalGroupHeader4";
 				definition = "Provides details on the original group, to which the message refers.";
@@ -620,84 +621,84 @@ public class OriginalGroupHeader4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpCxlId")
-	public Max35Text getGroupCancellationIdentification() {
-		return groupCancellationIdentification;
+	public Optional<Max35Text> getGroupCancellationIdentification() {
+		return groupCancellationIdentification == null ? Optional.empty() : Optional.of(groupCancellationIdentification);
 	}
 
-	public void setGroupCancellationIdentification(Max35Text groupCancellationIdentification) {
+	public OriginalGroupHeader4 setGroupCancellationIdentification(Max35Text groupCancellationIdentification) {
 		this.groupCancellationIdentification = groupCancellationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Case")
-	public Case3 getCase() {
-		return case_;
+	public Optional<Case3> getCase() {
+		return case_ == null ? Optional.empty() : Optional.of(case_);
 	}
 
-	public void setCase(com.tools20022.repository.msg.Case3 case_) {
+	public OriginalGroupHeader4 setCase(com.tools20022.repository.msg.Case3 case_) {
 		this.case_ = case_;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlMsgId", required = true)
 	public Max35Text getOriginalMessageIdentification() {
 		return originalMessageIdentification;
 	}
 
-	public void setOriginalMessageIdentification(Max35Text originalMessageIdentification) {
-		this.originalMessageIdentification = originalMessageIdentification;
+	public OriginalGroupHeader4 setOriginalMessageIdentification(Max35Text originalMessageIdentification) {
+		this.originalMessageIdentification = Objects.requireNonNull(originalMessageIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlMsgNmId", required = true)
 	public Max35Text getOriginalMessageNameIdentification() {
 		return originalMessageNameIdentification;
 	}
 
-	public void setOriginalMessageNameIdentification(Max35Text originalMessageNameIdentification) {
-		this.originalMessageNameIdentification = originalMessageNameIdentification;
+	public OriginalGroupHeader4 setOriginalMessageNameIdentification(Max35Text originalMessageNameIdentification) {
+		this.originalMessageNameIdentification = Objects.requireNonNull(originalMessageNameIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlCreDtTm")
-	public ISODateTime getOriginalCreationDateTime() {
-		return originalCreationDateTime;
+	public Optional<ISODateTime> getOriginalCreationDateTime() {
+		return originalCreationDateTime == null ? Optional.empty() : Optional.of(originalCreationDateTime);
 	}
 
-	public void setOriginalCreationDateTime(ISODateTime originalCreationDateTime) {
+	public OriginalGroupHeader4 setOriginalCreationDateTime(ISODateTime originalCreationDateTime) {
 		this.originalCreationDateTime = originalCreationDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "NbOfTxs")
-	public Max15NumericText getNumberOfTransactions() {
-		return numberOfTransactions;
+	public Optional<Max15NumericText> getNumberOfTransactions() {
+		return numberOfTransactions == null ? Optional.empty() : Optional.of(numberOfTransactions);
 	}
 
-	public void setNumberOfTransactions(Max15NumericText numberOfTransactions) {
+	public OriginalGroupHeader4 setNumberOfTransactions(Max15NumericText numberOfTransactions) {
 		this.numberOfTransactions = numberOfTransactions;
+		return this;
 	}
 
-	@XmlElement(name = "CtrlSum")
-	public DecimalNumber getControlSum() {
-		return controlSum;
+	public Optional<DecimalNumber> getControlSum() {
+		return controlSum == null ? Optional.empty() : Optional.of(controlSum);
 	}
 
-	public void setControlSum(DecimalNumber controlSum) {
+	public OriginalGroupHeader4 setControlSum(DecimalNumber controlSum) {
 		this.controlSum = controlSum;
+		return this;
 	}
 
-	@XmlElement(name = "GrpCxl")
-	public GroupCancellationIndicator getGroupCancellation() {
-		return groupCancellation;
+	public Optional<GroupCancellationIndicator> getGroupCancellation() {
+		return groupCancellation == null ? Optional.empty() : Optional.of(groupCancellation);
 	}
 
-	public void setGroupCancellation(GroupCancellationIndicator groupCancellation) {
+	public OriginalGroupHeader4 setGroupCancellation(GroupCancellationIndicator groupCancellation) {
 		this.groupCancellation = groupCancellation;
+		return this;
 	}
 
-	@XmlElement(name = "CxlRsnInf")
 	public List<PaymentCancellationReason2> getCancellationReasonInformation() {
-		return cancellationReasonInformation;
+		return cancellationReasonInformation == null ? cancellationReasonInformation = new ArrayList<>() : cancellationReasonInformation;
 	}
 
-	public void setCancellationReasonInformation(List<com.tools20022.repository.msg.PaymentCancellationReason2> cancellationReasonInformation) {
-		this.cancellationReasonInformation = cancellationReasonInformation;
+	public OriginalGroupHeader4 setCancellationReasonInformation(List<com.tools20022.repository.msg.PaymentCancellationReason2> cancellationReasonInformation) {
+		this.cancellationReasonInformation = Objects.requireNonNull(cancellationReasonInformation);
+		return this;
 	}
 }

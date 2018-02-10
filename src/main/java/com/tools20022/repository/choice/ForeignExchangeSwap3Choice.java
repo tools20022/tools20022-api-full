@@ -25,9 +25,11 @@ import com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatis
 import com.tools20022.repository.codeset.ReportPeriodActivity3Code;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ForeignExchangeSwapTransaction3;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,16 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * ForeignExchangeSwap2Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ForeignExchangeSwap3Choice", propOrder = {"dataSetAction", "transaction"})
 public class ForeignExchangeSwap3Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DataSetActn", required = true)
 	protected ReportPeriodActivity3Code dataSetAction;
 	/**
-	 * Provides the reason why no transactions are being reported for a money
-	 * market reporting period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,7 +128,7 @@ public class ForeignExchangeSwap3Choice {
 	 */
 	public static final MMMessageAttribute mmDataSetAction = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ForeignExchangeSwap3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ForeignExchangeSwap3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DataSetActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,11 +140,11 @@ public class ForeignExchangeSwap3Choice {
 			simpleType_lazy = () -> ReportPeriodActivity3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Tx", required = true)
 	protected List<ForeignExchangeSwapTransaction3> transaction;
 	/**
-	 * Provides the details of the foreign exchange transaction as reported by
-	 * the reporting agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -176,7 +178,7 @@ public class ForeignExchangeSwap3Choice {
 	 */
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ForeignExchangeSwap3Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ForeignExchangeSwap3Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -192,9 +194,9 @@ public class ForeignExchangeSwap3Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ForeignExchangeSwap3Choice.mmDataSetAction, ForeignExchangeSwap3Choice.mmTransaction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ForeignExchangeSwap3Choice.mmDataSetAction, com.tools20022.repository.choice.ForeignExchangeSwap3Choice.mmTransaction);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmForeignExchangeSwapsReport);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeSwap3Choice";
 				definition = "Choice between a reason for no activity and the foreign exchange swaps segment transaction details.";
@@ -204,21 +206,21 @@ public class ForeignExchangeSwap3Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DataSetActn", required = true)
 	public ReportPeriodActivity3Code getDataSetAction() {
 		return dataSetAction;
 	}
 
-	public void setDataSetAction(ReportPeriodActivity3Code dataSetAction) {
-		this.dataSetAction = dataSetAction;
+	public ForeignExchangeSwap3Choice setDataSetAction(ReportPeriodActivity3Code dataSetAction) {
+		this.dataSetAction = Objects.requireNonNull(dataSetAction);
+		return this;
 	}
 
-	@XmlElement(name = "Tx", required = true)
 	public List<ForeignExchangeSwapTransaction3> getTransaction() {
-		return transaction;
+		return transaction == null ? transaction = new ArrayList<>() : transaction;
 	}
 
-	public void setTransaction(List<ForeignExchangeSwapTransaction3> transaction) {
-		this.transaction = transaction;
+	public ForeignExchangeSwap3Choice setTransaction(List<ForeignExchangeSwapTransaction3> transaction) {
+		this.transaction = Objects.requireNonNull(transaction);
+		return this;
 	}
 }

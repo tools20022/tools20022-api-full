@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.entity.PointOfInteraction;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * PointOfInteractionCapabilities3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PointOfInteractionCapabilities5", propOrder = {"cardReadData", "cardWriteData", "authentication", "PINLengthCapabilities", "approvalCodeLength", "maxScriptLength", "cardCaptureCapable"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PointOfInteractionCapabilities5", propOrder = {"cardReadData", "cardWriteData", "authentication", "pINLengthCapabilities", "approvalCodeLength", "maxScriptLength", "cardCaptureCapable"})
 public class PointOfInteractionCapabilities5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CardRdData")
 	protected List<CardDataReading4Code> cardReadData;
 	/**
-	 * Card reading capabilities of the ATM performing the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -136,7 +136,7 @@ public class PointOfInteractionCapabilities5 {
 	public static final MMMessageAttribute mmCardReadData = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PointOfInteraction.mmCardReadingCapabilities;
-			componentContext_lazy = () -> PointOfInteractionCapabilities5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmObject();
 			isDerived = false;
 			xmlTag = "CardRdData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -147,10 +147,11 @@ public class PointOfInteractionCapabilities5 {
 			simpleType_lazy = () -> CardDataReading4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "CardWrtData")
 	protected List<CardDataReading4Code> cardWriteData;
 	/**
-	 * Card writing capabilities of the terminal performing the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -185,7 +186,7 @@ public class PointOfInteractionCapabilities5 {
 	public static final MMMessageAttribute mmCardWriteData = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PointOfInteraction.mmCardReadingCapabilities;
-			componentContext_lazy = () -> PointOfInteractionCapabilities5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmObject();
 			isDerived = false;
 			xmlTag = "CardWrtData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,10 +196,11 @@ public class PointOfInteractionCapabilities5 {
 			simpleType_lazy = () -> CardDataReading4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Authntcn")
 	protected List<CardholderVerificationCapability3Code> authentication;
 	/**
-	 * Customer and card authentication capabilities available at the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -238,7 +240,7 @@ public class PointOfInteractionCapabilities5 {
 	public static final MMMessageAttribute mmAuthentication = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PointOfInteraction.mmCardholderVerificationCapabilities;
-			componentContext_lazy = () -> PointOfInteractionCapabilities5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmObject();
 			isDerived = false;
 			xmlTag = "Authntcn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -249,11 +251,11 @@ public class PointOfInteractionCapabilities5 {
 			simpleType_lazy = () -> CardholderVerificationCapability3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PINLngthCpblties")
 	protected Number pINLengthCapabilities;
 	/**
-	 * Maximum number of digits the ATM is able to accept when the cardholder
-	 * enters its PIN.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -287,7 +289,7 @@ public class PointOfInteractionCapabilities5 {
 	 */
 	public static final MMMessageAttribute mmPINLengthCapabilities = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PointOfInteractionCapabilities5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmObject();
 			isDerived = false;
 			xmlTag = "PINLngthCpblties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -299,11 +301,11 @@ public class PointOfInteractionCapabilities5 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "ApprvlCdLngth")
 	protected Number approvalCodeLength;
 	/**
-	 * Maximum number of characters of the approval code the ATM is able to
-	 * manage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -337,7 +339,7 @@ public class PointOfInteractionCapabilities5 {
 	 */
 	public static final MMMessageAttribute mmApprovalCodeLength = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PointOfInteractionCapabilities5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmObject();
 			isDerived = false;
 			xmlTag = "ApprvlCdLngth";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -349,11 +351,11 @@ public class PointOfInteractionCapabilities5 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "MxScrptLngth")
 	protected Number maxScriptLength;
 	/**
-	 * Maximum data length in bytes that a card issuer can return to the ICC at
-	 * the terminal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -382,7 +384,7 @@ public class PointOfInteractionCapabilities5 {
 	 */
 	public static final MMMessageAttribute mmMaxScriptLength = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PointOfInteractionCapabilities5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmObject();
 			isDerived = false;
 			xmlTag = "MxScrptLngth";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -393,10 +395,11 @@ public class PointOfInteractionCapabilities5 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "CardCaptrCpbl")
 	protected TrueFalseIndicator cardCaptureCapable;
 	/**
-	 * True if the ATM is able to capture card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -429,7 +432,7 @@ public class PointOfInteractionCapabilities5 {
 	 */
 	public static final MMMessageAttribute mmCardCaptureCapable = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PointOfInteractionCapabilities5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmObject();
 			isDerived = false;
 			xmlTag = "CardCaptrCpbl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -445,10 +448,12 @@ public class PointOfInteractionCapabilities5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PointOfInteractionCapabilities5.mmCardReadData, PointOfInteractionCapabilities5.mmCardWriteData, PointOfInteractionCapabilities5.mmAuthentication,
-						PointOfInteractionCapabilities5.mmPINLengthCapabilities, PointOfInteractionCapabilities5.mmApprovalCodeLength, PointOfInteractionCapabilities5.mmMaxScriptLength, PointOfInteractionCapabilities5.mmCardCaptureCapable);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmCardReadData, com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmCardWriteData,
+						com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmAuthentication, com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmPINLengthCapabilities,
+						com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmApprovalCodeLength, com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmMaxScriptLength,
+						com.tools20022.repository.msg.PointOfInteractionCapabilities5.mmCardCaptureCapable);
 				trace_lazy = () -> PointOfInteraction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionCapabilities5";
 				definition = "Capabilities of the ATM terminal.";
@@ -458,66 +463,66 @@ public class PointOfInteractionCapabilities5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CardRdData")
 	public List<CardDataReading4Code> getCardReadData() {
-		return cardReadData;
+		return cardReadData == null ? cardReadData = new ArrayList<>() : cardReadData;
 	}
 
-	public void setCardReadData(List<CardDataReading4Code> cardReadData) {
-		this.cardReadData = cardReadData;
+	public PointOfInteractionCapabilities5 setCardReadData(List<CardDataReading4Code> cardReadData) {
+		this.cardReadData = Objects.requireNonNull(cardReadData);
+		return this;
 	}
 
-	@XmlElement(name = "CardWrtData")
 	public List<CardDataReading4Code> getCardWriteData() {
-		return cardWriteData;
+		return cardWriteData == null ? cardWriteData = new ArrayList<>() : cardWriteData;
 	}
 
-	public void setCardWriteData(List<CardDataReading4Code> cardWriteData) {
-		this.cardWriteData = cardWriteData;
+	public PointOfInteractionCapabilities5 setCardWriteData(List<CardDataReading4Code> cardWriteData) {
+		this.cardWriteData = Objects.requireNonNull(cardWriteData);
+		return this;
 	}
 
-	@XmlElement(name = "Authntcn")
 	public List<CardholderVerificationCapability3Code> getAuthentication() {
-		return authentication;
+		return authentication == null ? authentication = new ArrayList<>() : authentication;
 	}
 
-	public void setAuthentication(List<CardholderVerificationCapability3Code> authentication) {
-		this.authentication = authentication;
+	public PointOfInteractionCapabilities5 setAuthentication(List<CardholderVerificationCapability3Code> authentication) {
+		this.authentication = Objects.requireNonNull(authentication);
+		return this;
 	}
 
-	@XmlElement(name = "PINLngthCpblties")
-	public Number getPINLengthCapabilities() {
-		return pINLengthCapabilities;
+	public Optional<Number> getPINLengthCapabilities() {
+		return pINLengthCapabilities == null ? Optional.empty() : Optional.of(pINLengthCapabilities);
 	}
 
-	public void setPINLengthCapabilities(Number pINLengthCapabilities) {
+	public PointOfInteractionCapabilities5 setPINLengthCapabilities(Number pINLengthCapabilities) {
 		this.pINLengthCapabilities = pINLengthCapabilities;
+		return this;
 	}
 
-	@XmlElement(name = "ApprvlCdLngth")
-	public Number getApprovalCodeLength() {
-		return approvalCodeLength;
+	public Optional<Number> getApprovalCodeLength() {
+		return approvalCodeLength == null ? Optional.empty() : Optional.of(approvalCodeLength);
 	}
 
-	public void setApprovalCodeLength(Number approvalCodeLength) {
+	public PointOfInteractionCapabilities5 setApprovalCodeLength(Number approvalCodeLength) {
 		this.approvalCodeLength = approvalCodeLength;
+		return this;
 	}
 
-	@XmlElement(name = "MxScrptLngth")
-	public Number getMaxScriptLength() {
-		return maxScriptLength;
+	public Optional<Number> getMaxScriptLength() {
+		return maxScriptLength == null ? Optional.empty() : Optional.of(maxScriptLength);
 	}
 
-	public void setMaxScriptLength(Number maxScriptLength) {
+	public PointOfInteractionCapabilities5 setMaxScriptLength(Number maxScriptLength) {
 		this.maxScriptLength = maxScriptLength;
+		return this;
 	}
 
-	@XmlElement(name = "CardCaptrCpbl")
-	public TrueFalseIndicator getCardCaptureCapable() {
-		return cardCaptureCapable;
+	public Optional<TrueFalseIndicator> getCardCaptureCapable() {
+		return cardCaptureCapable == null ? Optional.empty() : Optional.of(cardCaptureCapable);
 	}
 
-	public void setCardCaptureCapable(TrueFalseIndicator cardCaptureCapable) {
+	public PointOfInteractionCapabilities5 setCardCaptureCapable(TrueFalseIndicator cardCaptureCapable) {
 		this.cardCaptureCapable = cardCaptureCapable;
+		return this;
 	}
 }

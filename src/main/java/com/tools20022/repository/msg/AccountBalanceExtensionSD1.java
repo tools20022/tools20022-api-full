@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -28,6 +29,8 @@ import com.tools20022.repository.datatype.RestrictedFINXMax35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,8 +73,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,15 +94,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountBalanceExtensionSD1", propOrder = {"placeAndName", "transactionPosition", "asOfDate", "deliveryDate", "contraParticipantNumber", "receiverAccountNumber", "delivererAccountNumber"})
 public class AccountBalanceExtensionSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,7 +130,7 @@ public class AccountBalanceExtensionSD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,10 +141,11 @@ public class AccountBalanceExtensionSD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TxPos")
 	protected AdjustedBalanceTypeSD1Choice transactionPosition;
 	/**
-	 * Position that is concerned in transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,6 +161,9 @@ public class AccountBalanceExtensionSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TxPos"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Transaction Position</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -168,9 +176,10 @@ public class AccountBalanceExtensionSD1 {
 	 */
 	public static final MMMessageAttribute mmTransactionPosition = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TxPos";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Transaction Position"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionPosition";
 			definition = "Position that is concerned in transaction.";
@@ -179,10 +188,11 @@ public class AccountBalanceExtensionSD1 {
 			complexType_lazy = () -> AdjustedBalanceTypeSD1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AsOfDt")
 	protected ISODate asOfDate;
 	/**
-	 * Effective date of the transaction. Applicable to Fail transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -197,6 +207,9 @@ public class AccountBalanceExtensionSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AsOfDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: As Of Date</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -210,9 +223,10 @@ public class AccountBalanceExtensionSD1 {
 	 */
 	public static final MMMessageAttribute mmAsOfDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "AsOfDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "As Of Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsOfDate";
 			definition = "Effective date of the transaction. Applicable to Fail transactions.";
@@ -221,10 +235,11 @@ public class AccountBalanceExtensionSD1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvryDt")
 	protected ISODate deliveryDate;
 	/**
-	 * Date of the delivery. Applicable to Fail transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -239,6 +254,9 @@ public class AccountBalanceExtensionSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DlvryDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Delivery Date</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -251,9 +269,10 @@ public class AccountBalanceExtensionSD1 {
 	 */
 	public static final MMMessageAttribute mmDeliveryDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Delivery Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryDate";
 			definition = "Date of the delivery. Applicable to Fail transactions.";
@@ -262,11 +281,11 @@ public class AccountBalanceExtensionSD1 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "ContraPtcptNb")
 	protected Max8Text contraParticipantNumber;
 	/**
-	 * Transaction contra participant identification for stock loans, repurchase
-	 * agreements (REPOs), securities undelivered (FAILs).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -280,6 +299,9 @@ public class AccountBalanceExtensionSD1 {
 	 * AccountBalanceExtensionSD1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ContraPtcptNb"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Contra Participant Number</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -295,9 +317,10 @@ public class AccountBalanceExtensionSD1 {
 	 */
 	public static final MMMessageAttribute mmContraParticipantNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "ContraPtcptNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Contra Participant Number"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Transaction contra participant identification for stock loans, repurchase agreements (REPOs), securities undelivered (FAILs).";
@@ -306,10 +329,11 @@ public class AccountBalanceExtensionSD1 {
 			simpleType_lazy = () -> Max8Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvrAcctNb")
 	protected RestrictedFINXMax35Text receiverAccountNumber;
 	/**
-	 * Account number at receiver’s side. Applicable to Fail transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -325,6 +349,9 @@ public class AccountBalanceExtensionSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RcvrAcctNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Receiver Account Number</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -338,9 +365,10 @@ public class AccountBalanceExtensionSD1 {
 	 */
 	public static final MMMessageAttribute mmReceiverAccountNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvrAcctNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Receiver Account Number"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverAccountNumber";
 			definition = "Account number at receiver’s side. Applicable to Fail transactions.";
@@ -349,10 +377,11 @@ public class AccountBalanceExtensionSD1 {
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvrrAcctNb")
 	protected RestrictedFINXMax35Text delivererAccountNumber;
 	/**
-	 * Account number at deliverer’s side. Applicable to Fail transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -368,6 +397,9 @@ public class AccountBalanceExtensionSD1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DlvrrAcctNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Deliverer Account Number</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -381,9 +413,10 @@ public class AccountBalanceExtensionSD1 {
 	 */
 	public static final MMMessageAttribute mmDelivererAccountNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountBalanceExtensionSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrrAcctNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Deliverer Account Number"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelivererAccountNumber";
 			definition = "Account number at deliverer’s side. Applicable to Fail transactions.";
@@ -396,9 +429,11 @@ public class AccountBalanceExtensionSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountBalanceExtensionSD1.mmPlaceAndName, AccountBalanceExtensionSD1.mmTransactionPosition, AccountBalanceExtensionSD1.mmAsOfDate, AccountBalanceExtensionSD1.mmDeliveryDate,
-						AccountBalanceExtensionSD1.mmContraParticipantNumber, AccountBalanceExtensionSD1.mmReceiverAccountNumber, AccountBalanceExtensionSD1.mmDelivererAccountNumber);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmPlaceAndName, com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmTransactionPosition,
+						com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmAsOfDate, com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmDeliveryDate,
+						com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmContraParticipantNumber, com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmReceiverAccountNumber,
+						com.tools20022.repository.msg.AccountBalanceExtensionSD1.mmDelivererAccountNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountBalanceExtensionSD1";
 				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  ";
@@ -408,66 +443,66 @@ public class AccountBalanceExtensionSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public AccountBalanceExtensionSD1 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "TxPos")
-	public AdjustedBalanceTypeSD1Choice getTransactionPosition() {
-		return transactionPosition;
+	public Optional<AdjustedBalanceTypeSD1Choice> getTransactionPosition() {
+		return transactionPosition == null ? Optional.empty() : Optional.of(transactionPosition);
 	}
 
-	public void setTransactionPosition(AdjustedBalanceTypeSD1Choice transactionPosition) {
+	public AccountBalanceExtensionSD1 setTransactionPosition(AdjustedBalanceTypeSD1Choice transactionPosition) {
 		this.transactionPosition = transactionPosition;
+		return this;
 	}
 
-	@XmlElement(name = "AsOfDt")
-	public ISODate getAsOfDate() {
-		return asOfDate;
+	public Optional<ISODate> getAsOfDate() {
+		return asOfDate == null ? Optional.empty() : Optional.of(asOfDate);
 	}
 
-	public void setAsOfDate(ISODate asOfDate) {
+	public AccountBalanceExtensionSD1 setAsOfDate(ISODate asOfDate) {
 		this.asOfDate = asOfDate;
+		return this;
 	}
 
-	@XmlElement(name = "DlvryDt")
-	public ISODate getDeliveryDate() {
-		return deliveryDate;
+	public Optional<ISODate> getDeliveryDate() {
+		return deliveryDate == null ? Optional.empty() : Optional.of(deliveryDate);
 	}
 
-	public void setDeliveryDate(ISODate deliveryDate) {
+	public AccountBalanceExtensionSD1 setDeliveryDate(ISODate deliveryDate) {
 		this.deliveryDate = deliveryDate;
+		return this;
 	}
 
-	@XmlElement(name = "ContraPtcptNb")
-	public Max8Text getContraParticipantNumber() {
-		return contraParticipantNumber;
+	public Optional<Max8Text> getContraParticipantNumber() {
+		return contraParticipantNumber == null ? Optional.empty() : Optional.of(contraParticipantNumber);
 	}
 
-	public void setContraParticipantNumber(Max8Text contraParticipantNumber) {
+	public AccountBalanceExtensionSD1 setContraParticipantNumber(Max8Text contraParticipantNumber) {
 		this.contraParticipantNumber = contraParticipantNumber;
+		return this;
 	}
 
-	@XmlElement(name = "RcvrAcctNb")
-	public RestrictedFINXMax35Text getReceiverAccountNumber() {
-		return receiverAccountNumber;
+	public Optional<RestrictedFINXMax35Text> getReceiverAccountNumber() {
+		return receiverAccountNumber == null ? Optional.empty() : Optional.of(receiverAccountNumber);
 	}
 
-	public void setReceiverAccountNumber(RestrictedFINXMax35Text receiverAccountNumber) {
+	public AccountBalanceExtensionSD1 setReceiverAccountNumber(RestrictedFINXMax35Text receiverAccountNumber) {
 		this.receiverAccountNumber = receiverAccountNumber;
+		return this;
 	}
 
-	@XmlElement(name = "DlvrrAcctNb")
-	public RestrictedFINXMax35Text getDelivererAccountNumber() {
-		return delivererAccountNumber;
+	public Optional<RestrictedFINXMax35Text> getDelivererAccountNumber() {
+		return delivererAccountNumber == null ? Optional.empty() : Optional.of(delivererAccountNumber);
 	}
 
-	public void setDelivererAccountNumber(RestrictedFINXMax35Text delivererAccountNumber) {
+	public AccountBalanceExtensionSD1 setDelivererAccountNumber(RestrictedFINXMax35Text delivererAccountNumber) {
 		this.delivererAccountNumber = delivererAccountNumber;
+		return this;
 	}
 }

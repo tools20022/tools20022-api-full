@@ -26,6 +26,8 @@ import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,18 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UpdatedAdditionalInformation6SD2", propOrder = {"placeAndName", "fullLocalLanguageSecurityName", "abbreviatedLocalLanguageSecurityName"})
 public class UpdatedAdditionalInformation6SD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm")
 	protected Max350Text placeAndName;
 	/**
-	 * Unambiguous reference to the location where the supplementary data must
-	 * be inserted in the message instance. <br>
-	 * <br>
-	 * In the case of XML, this is expressed by a valid XPath.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +109,7 @@ public class UpdatedAdditionalInformation6SD2 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation6SD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +120,11 @@ public class UpdatedAdditionalInformation6SD2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FullLclLangSctyNm")
 	protected Max240Text fullLocalLanguageSecurityName;
 	/**
-	 * Full and formal name of underlying securities in the local language.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +158,7 @@ public class UpdatedAdditionalInformation6SD2 {
 	public static final MMMessageAttribute mmFullLocalLanguageSecurityName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> UpdatedAdditionalInformation6SD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.mmObject();
 			isDerived = false;
 			xmlTag = "FullLclLangSctyNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,13 +169,11 @@ public class UpdatedAdditionalInformation6SD2 {
 			simpleType_lazy = () -> Max240Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AbbrvtdLclLangSctyNm", required = true)
 	protected Max240Text abbreviatedLocalLanguageSecurityName;
 	/**
-	 * Abbreviated name of underlying securities in the local language. <br>
-	 * In case of non-listed securities, it will be a full local language
-	 * security name.<br>
-	 * 銘柄名（銘柄略称
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,7 +202,7 @@ public class UpdatedAdditionalInformation6SD2 {
 	 */
 	public static final MMMessageAttribute mmAbbreviatedLocalLanguageSecurityName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> UpdatedAdditionalInformation6SD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.mmObject();
 			isDerived = false;
 			xmlTag = "AbbrvtdLclLangSctyNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,9 +217,9 @@ public class UpdatedAdditionalInformation6SD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UpdatedAdditionalInformation6SD2.mmPlaceAndName, UpdatedAdditionalInformation6SD2.mmFullLocalLanguageSecurityName,
-						UpdatedAdditionalInformation6SD2.mmAbbreviatedLocalLanguageSecurityName);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.mmPlaceAndName, com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.mmFullLocalLanguageSecurityName,
+						com.tools20022.repository.msg.UpdatedAdditionalInformation6SD2.mmAbbreviatedLocalLanguageSecurityName);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UpdatedAdditionalInformation6SD2";
 				definition = "Extension to provide the local language information of the new company name when the corporate action event type code is CHAN (name change).";
@@ -229,30 +228,30 @@ public class UpdatedAdditionalInformation6SD2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm")
-	public Max350Text getPlaceAndName() {
-		return placeAndName;
+	public Optional<Max350Text> getPlaceAndName() {
+		return placeAndName == null ? Optional.empty() : Optional.of(placeAndName);
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
+	public UpdatedAdditionalInformation6SD2 setPlaceAndName(Max350Text placeAndName) {
 		this.placeAndName = placeAndName;
+		return this;
 	}
 
-	@XmlElement(name = "FullLclLangSctyNm")
-	public Max240Text getFullLocalLanguageSecurityName() {
-		return fullLocalLanguageSecurityName;
+	public Optional<Max240Text> getFullLocalLanguageSecurityName() {
+		return fullLocalLanguageSecurityName == null ? Optional.empty() : Optional.of(fullLocalLanguageSecurityName);
 	}
 
-	public void setFullLocalLanguageSecurityName(Max240Text fullLocalLanguageSecurityName) {
+	public UpdatedAdditionalInformation6SD2 setFullLocalLanguageSecurityName(Max240Text fullLocalLanguageSecurityName) {
 		this.fullLocalLanguageSecurityName = fullLocalLanguageSecurityName;
+		return this;
 	}
 
-	@XmlElement(name = "AbbrvtdLclLangSctyNm", required = true)
 	public Max240Text getAbbreviatedLocalLanguageSecurityName() {
 		return abbreviatedLocalLanguageSecurityName;
 	}
 
-	public void setAbbreviatedLocalLanguageSecurityName(Max240Text abbreviatedLocalLanguageSecurityName) {
-		this.abbreviatedLocalLanguageSecurityName = abbreviatedLocalLanguageSecurityName;
+	public UpdatedAdditionalInformation6SD2 setAbbreviatedLocalLanguageSecurityName(Max240Text abbreviatedLocalLanguageSecurityName) {
+		this.abbreviatedLocalLanguageSecurityName = Objects.requireNonNull(abbreviatedLocalLanguageSecurityName);
+		return this;
 	}
 }

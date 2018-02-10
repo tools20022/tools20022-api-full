@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.PointOfInteraction;
 import com.tools20022.repository.entity.SystemName;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,16 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * PointOfInteraction1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PointOfInteraction2", propOrder = {"identification", "systemName", "groupIdentification", "capabilities", "component"})
 public class PointOfInteraction2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected GenericIdentification32 identification;
 	/**
-	 * Identification of the POI (Point Of Interaction) for the acquirer or its
-	 * agent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -135,7 +134,7 @@ public class PointOfInteraction2 {
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PointOfInteraction2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteraction2.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -148,10 +147,11 @@ public class PointOfInteraction2 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification32.mmObject();
 		}
 	};
+	@XmlElement(name = "SysNm")
 	protected Max70Text systemName;
 	/**
-	 * Common name assigned by the acquirer to the POI system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,7 +192,7 @@ public class PointOfInteraction2 {
 	public static final MMMessageAttribute mmSystemName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemName.mmName;
-			componentContext_lazy = () -> PointOfInteraction2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteraction2.mmObject();
 			isDerived = false;
 			xmlTag = "SysNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,11 +204,11 @@ public class PointOfInteraction2 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "GrpId")
 	protected Max35Text groupIdentification;
 	/**
-	 * Identifier assigned by the merchant identifying a set of POI terminals
-	 * performing some categories of transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -245,7 +245,7 @@ public class PointOfInteraction2 {
 	 */
 	public static final MMMessageAttribute mmGroupIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PointOfInteraction2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteraction2.mmObject();
 			isDerived = false;
 			xmlTag = "GrpId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,10 +257,11 @@ public class PointOfInteraction2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Cpblties")
 	protected PointOfInteractionCapabilities1 capabilities;
 	/**
-	 * Capabilities of the POI performing the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -301,7 +302,7 @@ public class PointOfInteraction2 {
 	public static final MMMessageAssociationEnd mmCapabilities = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PointOfInteraction.mmObject();
-			componentContext_lazy = () -> PointOfInteraction2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteraction2.mmObject();
 			isDerived = false;
 			xmlTag = "Cpblties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -314,10 +315,11 @@ public class PointOfInteraction2 {
 			type_lazy = () -> com.tools20022.repository.msg.PointOfInteractionCapabilities1.mmObject();
 		}
 	};
+	@XmlElement(name = "Cmpnt")
 	protected List<com.tools20022.repository.msg.PointOfInteractionComponent3> component;
 	/**
-	 * Data related to a component of the POI performing the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -359,7 +361,7 @@ public class PointOfInteraction2 {
 	public static final MMMessageAssociationEnd mmComponent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PointOfInteraction.mmComponent;
-			componentContext_lazy = () -> PointOfInteraction2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PointOfInteraction2.mmObject();
 			isDerived = false;
 			xmlTag = "Cmpnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -375,10 +377,10 @@ public class PointOfInteraction2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PointOfInteraction2.mmIdentification, PointOfInteraction2.mmSystemName, PointOfInteraction2.mmGroupIdentification, PointOfInteraction2.mmCapabilities,
-						PointOfInteraction2.mmComponent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PointOfInteraction2.mmIdentification, com.tools20022.repository.msg.PointOfInteraction2.mmSystemName,
+						com.tools20022.repository.msg.PointOfInteraction2.mmGroupIdentification, com.tools20022.repository.msg.PointOfInteraction2.mmCapabilities, com.tools20022.repository.msg.PointOfInteraction2.mmComponent);
 				trace_lazy = () -> PointOfInteraction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteraction2";
 				definition = "Point of interaction (POI) performing the transaction.";
@@ -389,48 +391,48 @@ public class PointOfInteraction2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public GenericIdentification32 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
-		this.identification = identification;
+	public PointOfInteraction2 setIdentification(com.tools20022.repository.msg.GenericIdentification32 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "SysNm")
-	public Max70Text getSystemName() {
-		return systemName;
+	public Optional<Max70Text> getSystemName() {
+		return systemName == null ? Optional.empty() : Optional.of(systemName);
 	}
 
-	public void setSystemName(Max70Text systemName) {
+	public PointOfInteraction2 setSystemName(Max70Text systemName) {
 		this.systemName = systemName;
+		return this;
 	}
 
-	@XmlElement(name = "GrpId")
-	public Max35Text getGroupIdentification() {
-		return groupIdentification;
+	public Optional<Max35Text> getGroupIdentification() {
+		return groupIdentification == null ? Optional.empty() : Optional.of(groupIdentification);
 	}
 
-	public void setGroupIdentification(Max35Text groupIdentification) {
+	public PointOfInteraction2 setGroupIdentification(Max35Text groupIdentification) {
 		this.groupIdentification = groupIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Cpblties")
-	public PointOfInteractionCapabilities1 getCapabilities() {
-		return capabilities;
+	public Optional<PointOfInteractionCapabilities1> getCapabilities() {
+		return capabilities == null ? Optional.empty() : Optional.of(capabilities);
 	}
 
-	public void setCapabilities(com.tools20022.repository.msg.PointOfInteractionCapabilities1 capabilities) {
+	public PointOfInteraction2 setCapabilities(com.tools20022.repository.msg.PointOfInteractionCapabilities1 capabilities) {
 		this.capabilities = capabilities;
+		return this;
 	}
 
-	@XmlElement(name = "Cmpnt")
 	public List<PointOfInteractionComponent3> getComponent() {
-		return component;
+		return component == null ? component = new ArrayList<>() : component;
 	}
 
-	public void setComponent(List<com.tools20022.repository.msg.PointOfInteractionComponent3> component) {
-		this.component = component;
+	public PointOfInteraction2 setComponent(List<com.tools20022.repository.msg.PointOfInteractionComponent3> component) {
+		this.component = Objects.requireNonNull(component);
+		return this;
 	}
 }

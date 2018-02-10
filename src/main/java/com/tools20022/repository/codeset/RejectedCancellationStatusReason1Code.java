@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.RejectedStatusReasonCode;
+import com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Reason for which a cancellation is rejected.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.RejectedStatusReasonCode
- * RejectedStatusReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code#mmInvalidOrUnrecognisedReference
- * RejectedCancellationStatusReason1Code.mmInvalidOrUnrecognisedReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code#InvalidOrUnrecognisedReference
+ * RejectedCancellationStatusReason1Code.InvalidOrUnrecognisedReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code#mmNoCancellationMatch
- * RejectedCancellationStatusReason1Code.mmNoCancellationMatch}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code#NoCancellationMatch
+ * RejectedCancellationStatusReason1Code.NoCancellationMatch}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code#mmNotCompliantWithSLA
- * RejectedCancellationStatusReason1Code.mmNotCompliantWithSLA}</li>
+ * {@linkplain com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code#NotCompliantWithSLA
+ * RejectedCancellationStatusReason1Code.NotCompliantWithSLA}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.RejectedStatusReasonCode
+ * RejectedStatusReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Reason for which a cancellation is rejected."</li>
  * </ul>
  */
-public class RejectedCancellationStatusReason1Code extends RejectedStatusReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RejectedCancellationStatusReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class RejectedCancellationStatusReason1Code extends RejectedStatusReasonC
 	 * name} = "InvalidOrUnrecognisedReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidOrUnrecognisedReference = new MMCode() {
+	public static final RejectedCancellationStatusReason1Code InvalidOrUnrecognisedReference = new RejectedCancellationStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidOrUnrecognisedReference";
-			owner_lazy = () -> RejectedCancellationStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code.mmObject();
+			codeName = RejectedStatusReasonCode.InvalidOrUnrecognisedReference.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class RejectedCancellationStatusReason1Code extends RejectedStatusReasonC
 	 * name} = "NoCancellationMatch"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoCancellationMatch = new MMCode() {
+	public static final RejectedCancellationStatusReason1Code NoCancellationMatch = new RejectedCancellationStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoCancellationMatch";
-			owner_lazy = () -> RejectedCancellationStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code.mmObject();
+			codeName = RejectedStatusReasonCode.NoCancellationMatch.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,27 +139,59 @@ public class RejectedCancellationStatusReason1Code extends RejectedStatusReasonC
 	 * name} = "NotCompliantWithSLA"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotCompliantWithSLA = new MMCode() {
+	public static final RejectedCancellationStatusReason1Code NotCompliantWithSLA = new RejectedCancellationStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotCompliantWithSLA";
-			owner_lazy = () -> RejectedCancellationStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code.mmObject();
+			codeName = RejectedStatusReasonCode.NotCompliantWithSLA.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RejectedCancellationStatusReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RejectedCancellationStatusReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("REFE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectedCancellationStatusReason1Code";
 				definition = "Reason for which a cancellation is rejected.";
-				code_lazy = () -> Arrays.asList(RejectedCancellationStatusReason1Code.mmInvalidOrUnrecognisedReference, RejectedCancellationStatusReason1Code.mmNoCancellationMatch,
-						RejectedCancellationStatusReason1Code.mmNotCompliantWithSLA);
 				trace_lazy = () -> RejectedStatusReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code.InvalidOrUnrecognisedReference,
+						com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code.NoCancellationMatch, com.tools20022.repository.codeset.RejectedCancellationStatusReason1Code.NotCompliantWithSLA);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(InvalidOrUnrecognisedReference.getCodeName().get(), InvalidOrUnrecognisedReference);
+		codesByName.put(NoCancellationMatch.getCodeName().get(), NoCancellationMatch);
+		codesByName.put(NotCompliantWithSLA.getCodeName().get(), NotCompliantWithSLA);
+	}
+
+	public static RejectedCancellationStatusReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RejectedCancellationStatusReason1Code[] values() {
+		RejectedCancellationStatusReason1Code[] values = new RejectedCancellationStatusReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RejectedCancellationStatusReason1Code> {
+		@Override
+		public RejectedCancellationStatusReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RejectedCancellationStatusReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

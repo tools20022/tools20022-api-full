@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.NetworkTypeCode;
+import com.tools20022.repository.codeset.NetworkType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of communication network.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.NetworkTypeCode
- * NetworkTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NetworkType1Code#mmInternetProtocol
- * NetworkType1Code.mmInternetProtocol}</li>
+ * {@linkplain com.tools20022.repository.codeset.NetworkType1Code#InternetProtocol
+ * NetworkType1Code.InternetProtocol}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.NetworkType1Code#mmPublicTelephone
- * NetworkType1Code.mmPublicTelephone}</li>
+ * {@linkplain com.tools20022.repository.codeset.NetworkType1Code#PublicTelephone
+ * NetworkType1Code.PublicTelephone}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.NetworkTypeCode
+ * NetworkTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of communication network."</li>
  * </ul>
  */
-public class NetworkType1Code extends NetworkTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class NetworkType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class NetworkType1Code extends NetworkTypeCode {
 	 * name} = "InternetProtocol"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInternetProtocol = new MMCode() {
+	public static final NetworkType1Code InternetProtocol = new NetworkType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternetProtocol";
-			owner_lazy = () -> NetworkType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NetworkType1Code.mmObject();
+			codeName = NetworkTypeCode.InternetProtocol.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class NetworkType1Code extends NetworkTypeCode {
 	 * name} = "PublicTelephone"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPublicTelephone = new MMCode() {
+	public static final NetworkType1Code PublicTelephone = new NetworkType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicTelephone";
-			owner_lazy = () -> NetworkType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.NetworkType1Code.mmObject();
+			codeName = NetworkTypeCode.PublicTelephone.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, NetworkType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected NetworkType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetworkType1Code";
 				definition = "Type of communication network.";
-				code_lazy = () -> Arrays.asList(NetworkType1Code.mmInternetProtocol, NetworkType1Code.mmPublicTelephone);
 				trace_lazy = () -> NetworkTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.NetworkType1Code.InternetProtocol, com.tools20022.repository.codeset.NetworkType1Code.PublicTelephone);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(InternetProtocol.getCodeName().get(), InternetProtocol);
+		codesByName.put(PublicTelephone.getCodeName().get(), PublicTelephone);
+	}
+
+	public static NetworkType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static NetworkType1Code[] values() {
+		NetworkType1Code[] values = new NetworkType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, NetworkType1Code> {
+		@Override
+		public NetworkType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(NetworkType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

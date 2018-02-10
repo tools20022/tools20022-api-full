@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMAccountStatement1", propOrder = {"accountIdentifier", "accountName", "accountStatement"})
 public class ATMAccountStatement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctIdr", required = true)
 	protected AccountIdentification31Choice accountIdentifier;
 	/**
-	 * Unique identifier of the account, as assigned by the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -120,7 +120,7 @@ public class ATMAccountStatement1 {
 	public static final MMMessageAssociationEnd mmAccountIdentifier = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> ATMAccountStatement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMAccountStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,16 +132,11 @@ public class ATMAccountStatement1 {
 			type_lazy = () -> AccountIdentification31Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctNm")
 	protected Max70Text accountName;
 	/**
-	 * Name of the account, as assigned by the account servicing institution, in
-	 * agreement with the account owner in order to provide an additional means
-	 * of identification of the account.<br>
-	 * Usage: The account name is different from the account owner name. The
-	 * account name is used in certain user communities to provide a means of
-	 * identifying the account, in addition to the account owner's identity and
-	 * the account number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,7 +171,7 @@ public class ATMAccountStatement1 {
 	public static final MMMessageAttribute mmAccountName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmName;
-			componentContext_lazy = () -> ATMAccountStatement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMAccountStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,10 +182,11 @@ public class ATMAccountStatement1 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctStmt")
 	protected List<com.tools20022.repository.msg.ATMAccountStatement2> accountStatement;
 	/**
-	 * Statement information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -222,7 +218,7 @@ public class ATMAccountStatement1 {
 	public static final MMMessageAssociationEnd mmAccountStatement = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmEntry;
-			componentContext_lazy = () -> ATMAccountStatement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMAccountStatement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctStmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -237,9 +233,10 @@ public class ATMAccountStatement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMAccountStatement1.mmAccountIdentifier, ATMAccountStatement1.mmAccountName, ATMAccountStatement1.mmAccountStatement);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMAccountStatement1.mmAccountIdentifier, com.tools20022.repository.msg.ATMAccountStatement1.mmAccountName,
+						com.tools20022.repository.msg.ATMAccountStatement1.mmAccountStatement);
 				trace_lazy = () -> Account.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMAccountStatement1";
 				definition = "Statement information of an account.";
@@ -249,30 +246,30 @@ public class ATMAccountStatement1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctIdr", required = true)
 	public AccountIdentification31Choice getAccountIdentifier() {
 		return accountIdentifier;
 	}
 
-	public void setAccountIdentifier(AccountIdentification31Choice accountIdentifier) {
-		this.accountIdentifier = accountIdentifier;
+	public ATMAccountStatement1 setAccountIdentifier(AccountIdentification31Choice accountIdentifier) {
+		this.accountIdentifier = Objects.requireNonNull(accountIdentifier);
+		return this;
 	}
 
-	@XmlElement(name = "AcctNm")
-	public Max70Text getAccountName() {
-		return accountName;
+	public Optional<Max70Text> getAccountName() {
+		return accountName == null ? Optional.empty() : Optional.of(accountName);
 	}
 
-	public void setAccountName(Max70Text accountName) {
+	public ATMAccountStatement1 setAccountName(Max70Text accountName) {
 		this.accountName = accountName;
+		return this;
 	}
 
-	@XmlElement(name = "AcctStmt")
 	public List<ATMAccountStatement2> getAccountStatement() {
-		return accountStatement;
+		return accountStatement == null ? accountStatement = new ArrayList<>() : accountStatement;
 	}
 
-	public void setAccountStatement(List<com.tools20022.repository.msg.ATMAccountStatement2> accountStatement) {
-		this.accountStatement = accountStatement;
+	public ATMAccountStatement1 setAccountStatement(List<com.tools20022.repository.msg.ATMAccountStatement2> accountStatement) {
+		this.accountStatement = Objects.requireNonNull(accountStatement);
+		return this;
 	}
 }

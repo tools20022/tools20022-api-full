@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CardPaymentServiceTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Service provided by a card payment transaction.
@@ -32,191 +37,191 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmCardsFundTransfer
- * CardPaymentServiceTypeCode.mmCardsFundTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#CardsFundTransfer
+ * CardPaymentServiceTypeCode.CardsFundTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmOriginalCredit
- * CardPaymentServiceTypeCode.mmOriginalCredit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#OriginalCredit
+ * CardPaymentServiceTypeCode.OriginalCredit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmCardPayment
- * CardPaymentServiceTypeCode.mmCardPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#CardPayment
+ * CardPaymentServiceTypeCode.CardPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmCashBack
- * CardPaymentServiceTypeCode.mmCashBack}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#CashBack
+ * CardPaymentServiceTypeCode.CashBack}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmCashAdvance
- * CardPaymentServiceTypeCode.mmCashAdvance}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#CashAdvance
+ * CardPaymentServiceTypeCode.CashAdvance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmCashDeposit
- * CardPaymentServiceTypeCode.mmCashDeposit}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#CashDeposit
+ * CardPaymentServiceTypeCode.CashDeposit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmDeferredPayment
- * CardPaymentServiceTypeCode.mmDeferredPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#DeferredPayment
+ * CardPaymentServiceTypeCode.DeferredPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmReservation
- * CardPaymentServiceTypeCode.mmReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#Reservation
+ * CardPaymentServiceTypeCode.Reservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmLoading
- * CardPaymentServiceTypeCode.mmLoading}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#Loading
+ * CardPaymentServiceTypeCode.Loading}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmRefund
- * CardPaymentServiceTypeCode.mmRefund}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#Refund
+ * CardPaymentServiceTypeCode.Refund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmQuasiCash
- * CardPaymentServiceTypeCode.mmQuasiCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#QuasiCash
+ * CardPaymentServiceTypeCode.QuasiCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmBalance
- * CardPaymentServiceTypeCode.mmBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#Balance
+ * CardPaymentServiceTypeCode.Balance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmCardActivation
- * CardPaymentServiceTypeCode.mmCardActivation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#CardActivation
+ * CardPaymentServiceTypeCode.CardActivation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmCardVerification
- * CardPaymentServiceTypeCode.mmCardVerification}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#CardVerification
+ * CardPaymentServiceTypeCode.CardVerification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmPINChange
- * CardPaymentServiceTypeCode.mmPINChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#PINChange
+ * CardPaymentServiceTypeCode.PINChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmValidityCheck
- * CardPaymentServiceTypeCode.mmValidityCheck}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#ValidityCheck
+ * CardPaymentServiceTypeCode.ValidityCheck}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmAggregation
- * CardPaymentServiceTypeCode.mmAggregation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#Aggregation
+ * CardPaymentServiceTypeCode.Aggregation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmDCC
- * CardPaymentServiceTypeCode.mmDCC}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#DCC
+ * CardPaymentServiceTypeCode.DCC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmGratuity
- * CardPaymentServiceTypeCode.mmGratuity}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#Gratuity
+ * CardPaymentServiceTypeCode.Gratuity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmInstalment
- * CardPaymentServiceTypeCode.mmInstalment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#Instalment
+ * CardPaymentServiceTypeCode.Instalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmLoyalty
- * CardPaymentServiceTypeCode.mmLoyalty}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#Loyalty
+ * CardPaymentServiceTypeCode.Loyalty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmNoShow
- * CardPaymentServiceTypeCode.mmNoShow}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#NoShow
+ * CardPaymentServiceTypeCode.NoShow}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmPurchaseCorporate
- * CardPaymentServiceTypeCode.mmPurchaseCorporate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#PurchaseCorporate
+ * CardPaymentServiceTypeCode.PurchaseCorporate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmRecurringPayment
- * CardPaymentServiceTypeCode.mmRecurringPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#RecurringPayment
+ * CardPaymentServiceTypeCode.RecurringPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmSolicitedAvailableFunds
- * CardPaymentServiceTypeCode.mmSolicitedAvailableFunds}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#SolicitedAvailableFunds
+ * CardPaymentServiceTypeCode.SolicitedAvailableFunds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmUnsolicitedAvailableFunds
- * CardPaymentServiceTypeCode.mmUnsolicitedAvailableFunds}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#UnsolicitedAvailableFunds
+ * CardPaymentServiceTypeCode.UnsolicitedAvailableFunds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmVoiceAuthorisation
- * CardPaymentServiceTypeCode.mmVoiceAuthorisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#VoiceAuthorisation
+ * CardPaymentServiceTypeCode.VoiceAuthorisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmInitialReservation
- * CardPaymentServiceTypeCode.mmInitialReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#InitialReservation
+ * CardPaymentServiceTypeCode.InitialReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmUpdateReservation
- * CardPaymentServiceTypeCode.mmUpdateReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#UpdateReservation
+ * CardPaymentServiceTypeCode.UpdateReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmPaymentReservation
- * CardPaymentServiceTypeCode.mmPaymentReservation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#PaymentReservation
+ * CardPaymentServiceTypeCode.PaymentReservation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmAdditionalPayment
- * CardPaymentServiceTypeCode.mmAdditionalPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#AdditionalPayment
+ * CardPaymentServiceTypeCode.AdditionalPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmFirstRecurring
- * CardPaymentServiceTypeCode.mmFirstRecurring}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#FirstRecurring
+ * CardPaymentServiceTypeCode.FirstRecurring}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmFollowingRecurring
- * CardPaymentServiceTypeCode.mmFollowingRecurring}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#FollowingRecurring
+ * CardPaymentServiceTypeCode.FollowingRecurring}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmPersonToBusiness
- * CardPaymentServiceTypeCode.mmPersonToBusiness}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#PersonToBusiness
+ * CardPaymentServiceTypeCode.PersonToBusiness}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmPersonToPerson
- * CardPaymentServiceTypeCode.mmPersonToPerson}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#PersonToPerson
+ * CardPaymentServiceTypeCode.PersonToPerson}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmAcceptorInstalment
- * CardPaymentServiceTypeCode.mmAcceptorInstalment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#AcceptorInstalment
+ * CardPaymentServiceTypeCode.AcceptorInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmIssuerInstalment
- * CardPaymentServiceTypeCode.mmIssuerInstalment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#IssuerInstalment
+ * CardPaymentServiceTypeCode.IssuerInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmUnloading
- * CardPaymentServiceTypeCode.mmUnloading}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#Unloading
+ * CardPaymentServiceTypeCode.Unloading}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmCardsFundTransferPush
- * CardPaymentServiceTypeCode.mmCardsFundTransferPush}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#CardsFundTransferPush
+ * CardPaymentServiceTypeCode.CardsFundTransferPush}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmCardsFundTransferPull
- * CardPaymentServiceTypeCode.mmCardsFundTransferPull}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#CardsFundTransferPull
+ * CardPaymentServiceTypeCode.CardsFundTransferPull}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmCashWithdrawal
- * CardPaymentServiceTypeCode.mmCashWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#CashWithdrawal
+ * CardPaymentServiceTypeCode.CashWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmPINUnblock
- * CardPaymentServiceTypeCode.mmPINUnblock}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#PINUnblock
+ * CardPaymentServiceTypeCode.PINUnblock}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmChosenWithdrawal
- * CardPaymentServiceTypeCode.mmChosenWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#ChosenWithdrawal
+ * CardPaymentServiceTypeCode.ChosenWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmPreAuthorisedWithdrawal
- * CardPaymentServiceTypeCode.mmPreAuthorisedWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#PreAuthorisedWithdrawal
+ * CardPaymentServiceTypeCode.PreAuthorisedWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmProfileWithdrawal
- * CardPaymentServiceTypeCode.mmProfileWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#ProfileWithdrawal
+ * CardPaymentServiceTypeCode.ProfileWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmStandardWithdrawal
- * CardPaymentServiceTypeCode.mmStandardWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#StandardWithdrawal
+ * CardPaymentServiceTypeCode.StandardWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmTransferCardBillPayment
- * CardPaymentServiceTypeCode.mmTransferCardBillPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#TransferCardBillPayment
+ * CardPaymentServiceTypeCode.TransferCardBillPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmTransferFromCash
- * CardPaymentServiceTypeCode.mmTransferFromCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#TransferFromCash
+ * CardPaymentServiceTypeCode.TransferFromCash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmTransferFromCheque
- * CardPaymentServiceTypeCode.mmTransferFromCheque}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#TransferFromCheque
+ * CardPaymentServiceTypeCode.TransferFromCheque}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmTransferFundsDisbursementGeneral
- * CardPaymentServiceTypeCode.mmTransferFundsDisbursementGeneral}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#TransferFundsDisbursementGeneral
+ * CardPaymentServiceTypeCode.TransferFundsDisbursementGeneral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmTransferGovernmentDisbursement
- * CardPaymentServiceTypeCode.mmTransferGovernmentDisbursement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#TransferGovernmentDisbursement
+ * CardPaymentServiceTypeCode.TransferGovernmentDisbursement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmTransferMerchantDisbursement
- * CardPaymentServiceTypeCode.mmTransferMerchantDisbursement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#TransferMerchantDisbursement
+ * CardPaymentServiceTypeCode.TransferMerchantDisbursement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmTransferPayrollPensionDisbursement
- * CardPaymentServiceTypeCode.mmTransferPayrollPensionDisbursement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#TransferPayrollPensionDisbursement
+ * CardPaymentServiceTypeCode.TransferPayrollPensionDisbursement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmNonRefundable
- * CardPaymentServiceTypeCode.mmNonRefundable}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#NonRefundable
+ * CardPaymentServiceTypeCode.NonRefundable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmInstant
- * CardPaymentServiceTypeCode.mmInstant}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#Instant
+ * CardPaymentServiceTypeCode.Instant}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmCreditAdjustement
- * CardPaymentServiceTypeCode.mmCreditAdjustement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#CreditAdjustement
+ * CardPaymentServiceTypeCode.CreditAdjustement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmDebitAdjustement
- * CardPaymentServiceTypeCode.mmDebitAdjustement}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#DebitAdjustement
+ * CardPaymentServiceTypeCode.DebitAdjustement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmCreateCertificate
- * CardPaymentServiceTypeCode.mmCreateCertificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#CreateCertificate
+ * CardPaymentServiceTypeCode.CreateCertificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmRenewCerificate
- * CardPaymentServiceTypeCode.mmRenewCerificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#RenewCerificate
+ * CardPaymentServiceTypeCode.RenewCerificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmRevokeCertificate
- * CardPaymentServiceTypeCode.mmRevokeCertificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#RevokeCertificate
+ * CardPaymentServiceTypeCode.RevokeCertificate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmAddWhiteList
- * CardPaymentServiceTypeCode.mmAddWhiteList}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#AddWhiteList
+ * CardPaymentServiceTypeCode.AddWhiteList}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#mmRemoveWhiteList
- * CardPaymentServiceTypeCode.mmRemoveWhiteList}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#RemoveWhiteList
+ * CardPaymentServiceTypeCode.RemoveWhiteList}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -257,8 +262,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -275,7 +280,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Service provided by a card payment transaction."</li>
  * </ul>
  */
-public class CardPaymentServiceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CardPaymentServiceTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -299,12 +305,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Transfer of funds to and/or from a card account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardsFundTransfer = new MMCode() {
+	public static final CardPaymentServiceTypeCode CardsFundTransfer = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardsFundTransfer";
 			definition = "Transfer of funds to and/or from a card account.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "CAFT";
 		}
 	};
@@ -329,12 +335,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Original credit."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOriginalCredit = new MMCode() {
+	public static final CardPaymentServiceTypeCode OriginalCredit = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OriginalCredit";
 			definition = "Original credit.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "ORCR";
 		}
 	};
@@ -359,12 +365,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Card payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardPayment = new MMCode() {
+	public static final CardPaymentServiceTypeCode CardPayment = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardPayment";
 			definition = "Card payment.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "CRDP";
 		}
 	};
@@ -389,12 +395,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Card payment with cash-back."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashBack = new MMCode() {
+	public static final CardPaymentServiceTypeCode CashBack = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashBack";
 			definition = "Card payment with cash-back.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "CSHB";
 		}
 	};
@@ -422,12 +428,12 @@ public class CardPaymentServiceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashAdvance = new MMCode() {
+	public static final CardPaymentServiceTypeCode CashAdvance = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAdvance";
 			definition = "Cash advance or withdrawals on a POI (Point Of Interaction), or at a bank counter.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "CSHW";
 		}
 	};
@@ -452,12 +458,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Cash deposit."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashDeposit = new MMCode() {
+	public static final CardPaymentServiceTypeCode CashDeposit = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashDeposit";
 			definition = "Cash deposit.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "CSHD";
 		}
 	};
@@ -482,12 +488,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Deferred payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeferredPayment = new MMCode() {
+	public static final CardPaymentServiceTypeCode DeferredPayment = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeferredPayment";
 			definition = "Deferred payment.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "DEFR";
 		}
 	};
@@ -512,12 +518,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Reservation (pre-authorisation)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReservation = new MMCode() {
+	public static final CardPaymentServiceTypeCode Reservation = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reservation";
 			definition = "Reservation (pre-authorisation).";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "RESA";
 		}
 	};
@@ -542,12 +548,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Loading or reloading non-financial account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLoading = new MMCode() {
+	public static final CardPaymentServiceTypeCode Loading = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Loading";
 			definition = "Loading or reloading non-financial account.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "LOAD";
 		}
 	};
@@ -572,12 +578,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Refund transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRefund = new MMCode() {
+	public static final CardPaymentServiceTypeCode Refund = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Refund";
 			definition = "Refund transaction.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "RFND";
 		}
 	};
@@ -602,12 +608,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Quasi-cash."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQuasiCash = new MMCode() {
+	public static final CardPaymentServiceTypeCode QuasiCash = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "QuasiCash";
 			definition = "Quasi-cash.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "QUCH";
 		}
 	};
@@ -632,12 +638,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Balance enquiry."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBalance = new MMCode() {
+	public static final CardPaymentServiceTypeCode Balance = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Balance";
 			definition = "Balance enquiry.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "BALC";
 		}
 	};
@@ -662,12 +668,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Card activation."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardActivation = new MMCode() {
+	public static final CardPaymentServiceTypeCode CardActivation = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardActivation";
 			definition = "Card activation.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "CACT";
 		}
 	};
@@ -692,12 +698,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Card verification."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardVerification = new MMCode() {
+	public static final CardPaymentServiceTypeCode CardVerification = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CardVerification";
 			definition = "Card verification.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "CAVR";
 		}
 	};
@@ -722,12 +728,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "PIN (Personal Identification Number) change."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPINChange = new MMCode() {
+	public static final CardPaymentServiceTypeCode PINChange = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PINChange";
 			definition = "PIN (Personal Identification Number) change.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "PINC";
 		}
 	};
@@ -752,12 +758,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Card validity check."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmValidityCheck = new MMCode() {
+	public static final CardPaymentServiceTypeCode ValidityCheck = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidityCheck";
 			definition = "Card validity check.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "VALC";
 		}
 	};
@@ -782,12 +788,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Aggregation of low payments."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAggregation = new MMCode() {
+	public static final CardPaymentServiceTypeCode Aggregation = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Aggregation";
 			definition = "Aggregation of low payments.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "AGGR";
 		}
 	};
@@ -812,12 +818,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Dynamic currency conversion (DCC)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDCC = new MMCode() {
+	public static final CardPaymentServiceTypeCode DCC = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DCC";
 			definition = "Dynamic currency conversion (DCC).";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "DCCV";
 		}
 	};
@@ -842,12 +848,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Card payment with gratuity."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGratuity = new MMCode() {
+	public static final CardPaymentServiceTypeCode Gratuity = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Gratuity";
 			definition = "Card payment with gratuity.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "GRTT";
 		}
 	};
@@ -872,12 +878,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Instalment payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstalment = new MMCode() {
+	public static final CardPaymentServiceTypeCode Instalment = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Instalment";
 			definition = "Instalment payment.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "INSP";
 		}
 	};
@@ -902,12 +908,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Loyalty services."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLoyalty = new MMCode() {
+	public static final CardPaymentServiceTypeCode Loyalty = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Loyalty";
 			definition = "Loyalty services.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "LOYT";
 		}
 	};
@@ -932,12 +938,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "No show after reservation."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoShow = new MMCode() {
+	public static final CardPaymentServiceTypeCode NoShow = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoShow";
 			definition = "No show after reservation.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "NRES";
 		}
 	};
@@ -962,12 +968,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Purchase and corporate data."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPurchaseCorporate = new MMCode() {
+	public static final CardPaymentServiceTypeCode PurchaseCorporate = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PurchaseCorporate";
 			definition = "Purchase and corporate data.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "PUCO";
 		}
 	};
@@ -992,12 +998,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Recurring payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRecurringPayment = new MMCode() {
+	public static final CardPaymentServiceTypeCode RecurringPayment = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RecurringPayment";
 			definition = "Recurring payment.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "RECP";
 		}
 	};
@@ -1022,12 +1028,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Solicited available funds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSolicitedAvailableFunds = new MMCode() {
+	public static final CardPaymentServiceTypeCode SolicitedAvailableFunds = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SolicitedAvailableFunds";
 			definition = "Solicited available funds.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "SOAF";
 		}
 	};
@@ -1052,12 +1058,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Unsolicited available funds."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnsolicitedAvailableFunds = new MMCode() {
+	public static final CardPaymentServiceTypeCode UnsolicitedAvailableFunds = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnsolicitedAvailableFunds";
 			definition = "Unsolicited available funds.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "UNAF";
 		}
 	};
@@ -1082,12 +1088,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Voice authorisation."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVoiceAuthorisation = new MMCode() {
+	public static final CardPaymentServiceTypeCode VoiceAuthorisation = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VoiceAuthorisation";
 			definition = "Voice authorisation.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "VCAU";
 		}
 	};
@@ -1112,12 +1118,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Initial reservation."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInitialReservation = new MMCode() {
+	public static final CardPaymentServiceTypeCode InitialReservation = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InitialReservation";
 			definition = "Initial reservation.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "IRES";
 		}
 	};
@@ -1142,12 +1148,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Update reservation."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUpdateReservation = new MMCode() {
+	public static final CardPaymentServiceTypeCode UpdateReservation = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UpdateReservation";
 			definition = "Update reservation.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "URES";
 		}
 	};
@@ -1172,12 +1178,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Payment after reservation."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPaymentReservation = new MMCode() {
+	public static final CardPaymentServiceTypeCode PaymentReservation = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentReservation";
 			definition = "Payment after reservation.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "PRES";
 		}
 	};
@@ -1202,12 +1208,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Additional payment after reservation."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAdditionalPayment = new MMCode() {
+	public static final CardPaymentServiceTypeCode AdditionalPayment = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AdditionalPayment";
 			definition = "Additional payment after reservation.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "ARES";
 		}
 	};
@@ -1232,12 +1238,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Initial recurring payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFirstRecurring = new MMCode() {
+	public static final CardPaymentServiceTypeCode FirstRecurring = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirstRecurring";
 			definition = "Initial recurring payment.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "FREC";
 		}
 	};
@@ -1262,12 +1268,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Repeat recurring payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFollowingRecurring = new MMCode() {
+	public static final CardPaymentServiceTypeCode FollowingRecurring = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FollowingRecurring";
 			definition = "Repeat recurring payment.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "RREC";
 		}
 	};
@@ -1293,12 +1299,12 @@ public class CardPaymentServiceTypeCode {
 	 * "Card payment transaction transfer from person to business."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPersonToBusiness = new MMCode() {
+	public static final CardPaymentServiceTypeCode PersonToBusiness = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PersonToBusiness";
 			definition = "Card payment transaction transfer from person to business.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "TP2B";
 		}
 	};
@@ -1323,12 +1329,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Card payment transaction transfer from person to person."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPersonToPerson = new MMCode() {
+	public static final CardPaymentServiceTypeCode PersonToPerson = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PersonToPerson";
 			definition = "Card payment transaction transfer from person to person.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "TP2P";
 		}
 	};
@@ -1355,12 +1361,12 @@ public class CardPaymentServiceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptorInstalment = new MMCode() {
+	public static final CardPaymentServiceTypeCode AcceptorInstalment = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorInstalment";
 			definition = "Instalment payment transaction performed by the acceptor or the acquirer.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "INSA";
 		}
 	};
@@ -1386,12 +1392,12 @@ public class CardPaymentServiceTypeCode {
 	 * "Instalment payment transaction performed by the card issuer."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuerInstalment = new MMCode() {
+	public static final CardPaymentServiceTypeCode IssuerInstalment = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerInstalment";
 			definition = "Instalment payment transaction performed by the card issuer.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "INSI";
 		}
 	};
@@ -1416,12 +1422,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Unloading non-financial account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnloading = new MMCode() {
+	public static final CardPaymentServiceTypeCode Unloading = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unloading";
 			definition = "Unloading non-financial account.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "UNLD";
 		}
 	};
@@ -1446,12 +1452,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Transfer of funds to a card or an account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardsFundTransferPush = new MMCode() {
+	public static final CardPaymentServiceTypeCode CardsFundTransferPush = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardsFundTransferPush";
 			definition = "Transfer of funds to a card or an account.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "CAFH";
 		}
 	};
@@ -1476,12 +1482,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Transfer of funds from a card or an account."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCardsFundTransferPull = new MMCode() {
+	public static final CardPaymentServiceTypeCode CardsFundTransferPull = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardsFundTransferPull";
 			definition = "Transfer of funds from a card or an account.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "CAFL";
 		}
 	};
@@ -1506,12 +1512,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Withdrawal of cash on an ATM."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashWithdrawal = new MMCode() {
+	public static final CardPaymentServiceTypeCode CashWithdrawal = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashWithdrawal";
 			definition = "Withdrawal of cash on an ATM.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "CHWD";
 		}
 	};
@@ -1536,12 +1542,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Unblock the cardholder PIN."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPINUnblock = new MMCode() {
+	public static final CardPaymentServiceTypeCode PINUnblock = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINUnblock";
 			definition = "Unblock the cardholder PIN.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "PINU";
 		}
 	};
@@ -1566,12 +1572,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Amount and notes values are chosen by the customer."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmChosenWithdrawal = new MMCode() {
+	public static final CardPaymentServiceTypeCode ChosenWithdrawal = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChosenWithdrawal";
 			definition = "Amount and notes values are chosen by the customer.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "CSWD";
 		}
 	};
@@ -1599,12 +1605,12 @@ public class CardPaymentServiceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreAuthorisedWithdrawal = new MMCode() {
+	public static final CardPaymentServiceTypeCode PreAuthorisedWithdrawal = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAuthorisedWithdrawal";
 			definition = "Withdrawal transaction was pre-authorised by another channel (amount could be absent).";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "AUWS";
 		}
 	};
@@ -1630,12 +1636,12 @@ public class CardPaymentServiceTypeCode {
 	 * "Amount and Notes Values are pre-defined by the customer profile."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProfileWithdrawal = new MMCode() {
+	public static final CardPaymentServiceTypeCode ProfileWithdrawal = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileWithdrawal";
 			definition = "Amount and Notes Values are pre-defined by the customer profile.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "PFWD";
 		}
 	};
@@ -1663,12 +1669,12 @@ public class CardPaymentServiceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmStandardWithdrawal = new MMCode() {
+	public static final CardPaymentServiceTypeCode StandardWithdrawal = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardWithdrawal";
 			definition = "Customer pressed a button associated with a withdrawal of unique amount and notes mix.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "SDWD";
 		}
 	};
@@ -1693,12 +1699,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Transfer for payment of bills."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransferCardBillPayment = new MMCode() {
+	public static final CardPaymentServiceTypeCode TransferCardBillPayment = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferCardBillPayment";
 			definition = "Transfer for payment of bills.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "TFBL";
 		}
 	};
@@ -1723,12 +1729,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Transfer from cash deposit."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransferFromCash = new MMCode() {
+	public static final CardPaymentServiceTypeCode TransferFromCash = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferFromCash";
 			definition = "Transfer from cash deposit.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "TFCS";
 		}
 	};
@@ -1753,12 +1759,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Transfer from cheque deposit."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransferFromCheque = new MMCode() {
+	public static final CardPaymentServiceTypeCode TransferFromCheque = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferFromCheque";
 			definition = "Transfer from cheque deposit.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "TFCH";
 		}
 	};
@@ -1783,12 +1789,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Transfer for general disbursement."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransferFundsDisbursementGeneral = new MMCode() {
+	public static final CardPaymentServiceTypeCode TransferFundsDisbursementGeneral = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferFundsDisbursementGeneral";
 			definition = "Transfer for general disbursement.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "TFDB";
 		}
 	};
@@ -1813,12 +1819,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Transfer for government disbursement."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransferGovernmentDisbursement = new MMCode() {
+	public static final CardPaymentServiceTypeCode TransferGovernmentDisbursement = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferGovernmentDisbursement";
 			definition = "Transfer for government disbursement.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "TFGD";
 		}
 	};
@@ -1843,12 +1849,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Transfer for merchant disbursement."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransferMerchantDisbursement = new MMCode() {
+	public static final CardPaymentServiceTypeCode TransferMerchantDisbursement = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferMerchantDisbursement";
 			definition = "Transfer for merchant disbursement.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "TFMD";
 		}
 	};
@@ -1873,12 +1879,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Transfer for payroll pension disbursement."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransferPayrollPensionDisbursement = new MMCode() {
+	public static final CardPaymentServiceTypeCode TransferPayrollPensionDisbursement = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferPayrollPensionDisbursement";
 			definition = "Transfer for payroll pension disbursement.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "TFPD";
 		}
 	};
@@ -1906,12 +1912,12 @@ public class CardPaymentServiceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonRefundable = new MMCode() {
+	public static final CardPaymentServiceTypeCode NonRefundable = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonRefundable";
 			definition = "Payment of goods or services which are not refundable, for instance low cost airline tickets.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "NRFD";
 		}
 	};
@@ -1936,12 +1942,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Instant transaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstant = new MMCode() {
+	public static final CardPaymentServiceTypeCode Instant = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instant";
 			definition = "Instant transaction";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "INST";
 		}
 	};
@@ -1966,12 +1972,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Credit adjustment to a previous transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreditAdjustement = new MMCode() {
+	public static final CardPaymentServiceTypeCode CreditAdjustement = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditAdjustement";
 			definition = "Credit adjustment to a previous transaction.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "CADJ";
 		}
 	};
@@ -1996,12 +2002,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Debit adjustment to a previous transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDebitAdjustement = new MMCode() {
+	public static final CardPaymentServiceTypeCode DebitAdjustement = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebitAdjustement";
 			definition = "Debit adjustment to a previous transaction.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "DADJ";
 		}
 	};
@@ -2029,12 +2035,12 @@ public class CardPaymentServiceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCreateCertificate = new MMCode() {
+	public static final CardPaymentServiceTypeCode CreateCertificate = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreateCertificate";
 			definition = "Creation of an X.509 certificate with the public key and the information of the owner of the asymmetric key provided by the requestor.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "CRTC";
 		}
 	};
@@ -2061,12 +2067,12 @@ public class CardPaymentServiceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRenewCerificate = new MMCode() {
+	public static final CardPaymentServiceTypeCode RenewCerificate = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RenewCerificate";
 			definition = "Renewal of an X.509 certificate, protected by the certificate to renew.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "CRTR";
 		}
 	};
@@ -2091,12 +2097,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Revocation of an active X.509 certificate."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRevokeCertificate = new MMCode() {
+	public static final CardPaymentServiceTypeCode RevokeCertificate = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RevokeCertificate";
 			definition = "Revocation of an active X.509 certificate.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "CRTK";
 		}
 	};
@@ -2121,12 +2127,12 @@ public class CardPaymentServiceTypeCode {
 	 * definition} = "Add a POI in the white list of the terminal manager."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAddWhiteList = new MMCode() {
+	public static final CardPaymentServiceTypeCode AddWhiteList = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddWhiteList";
 			definition = "Add a POI in the white list of the terminal manager.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "WLSA";
 		}
 	};
@@ -2152,44 +2158,149 @@ public class CardPaymentServiceTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmRemoveWhiteList = new MMCode() {
+	public static final CardPaymentServiceTypeCode RemoveWhiteList = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemoveWhiteList";
 			definition = "Remove a POI from the white list of the terminal manager.";
-			owner_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "WLSR";
 		}
 	};
+	final static private LinkedHashMap<String, CardPaymentServiceTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CardPaymentServiceTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CAFT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentServiceTypeCode";
 				definition = "Service provided by a card payment transaction.";
-				code_lazy = () -> Arrays.asList(CardPaymentServiceTypeCode.mmCardsFundTransfer, CardPaymentServiceTypeCode.mmOriginalCredit, CardPaymentServiceTypeCode.mmCardPayment, CardPaymentServiceTypeCode.mmCashBack,
-						CardPaymentServiceTypeCode.mmCashAdvance, CardPaymentServiceTypeCode.mmCashDeposit, CardPaymentServiceTypeCode.mmDeferredPayment, CardPaymentServiceTypeCode.mmReservation, CardPaymentServiceTypeCode.mmLoading,
-						CardPaymentServiceTypeCode.mmRefund, CardPaymentServiceTypeCode.mmQuasiCash, CardPaymentServiceTypeCode.mmBalance, CardPaymentServiceTypeCode.mmCardActivation, CardPaymentServiceTypeCode.mmCardVerification,
-						CardPaymentServiceTypeCode.mmPINChange, CardPaymentServiceTypeCode.mmValidityCheck, CardPaymentServiceTypeCode.mmAggregation, CardPaymentServiceTypeCode.mmDCC, CardPaymentServiceTypeCode.mmGratuity,
-						CardPaymentServiceTypeCode.mmInstalment, CardPaymentServiceTypeCode.mmLoyalty, CardPaymentServiceTypeCode.mmNoShow, CardPaymentServiceTypeCode.mmPurchaseCorporate, CardPaymentServiceTypeCode.mmRecurringPayment,
-						CardPaymentServiceTypeCode.mmSolicitedAvailableFunds, CardPaymentServiceTypeCode.mmUnsolicitedAvailableFunds, CardPaymentServiceTypeCode.mmVoiceAuthorisation, CardPaymentServiceTypeCode.mmInitialReservation,
-						CardPaymentServiceTypeCode.mmUpdateReservation, CardPaymentServiceTypeCode.mmPaymentReservation, CardPaymentServiceTypeCode.mmAdditionalPayment, CardPaymentServiceTypeCode.mmFirstRecurring,
-						CardPaymentServiceTypeCode.mmFollowingRecurring, CardPaymentServiceTypeCode.mmPersonToBusiness, CardPaymentServiceTypeCode.mmPersonToPerson, CardPaymentServiceTypeCode.mmAcceptorInstalment,
-						CardPaymentServiceTypeCode.mmIssuerInstalment, CardPaymentServiceTypeCode.mmUnloading, CardPaymentServiceTypeCode.mmCardsFundTransferPush, CardPaymentServiceTypeCode.mmCardsFundTransferPull,
-						CardPaymentServiceTypeCode.mmCashWithdrawal, CardPaymentServiceTypeCode.mmPINUnblock, CardPaymentServiceTypeCode.mmChosenWithdrawal, CardPaymentServiceTypeCode.mmPreAuthorisedWithdrawal,
-						CardPaymentServiceTypeCode.mmProfileWithdrawal, CardPaymentServiceTypeCode.mmStandardWithdrawal, CardPaymentServiceTypeCode.mmTransferCardBillPayment, CardPaymentServiceTypeCode.mmTransferFromCash,
-						CardPaymentServiceTypeCode.mmTransferFromCheque, CardPaymentServiceTypeCode.mmTransferFundsDisbursementGeneral, CardPaymentServiceTypeCode.mmTransferGovernmentDisbursement,
-						CardPaymentServiceTypeCode.mmTransferMerchantDisbursement, CardPaymentServiceTypeCode.mmTransferPayrollPensionDisbursement, CardPaymentServiceTypeCode.mmNonRefundable, CardPaymentServiceTypeCode.mmInstant,
-						CardPaymentServiceTypeCode.mmCreditAdjustement, CardPaymentServiceTypeCode.mmDebitAdjustement, CardPaymentServiceTypeCode.mmCreateCertificate, CardPaymentServiceTypeCode.mmRenewCerificate,
-						CardPaymentServiceTypeCode.mmRevokeCertificate, CardPaymentServiceTypeCode.mmAddWhiteList, CardPaymentServiceTypeCode.mmRemoveWhiteList);
 				derivation_lazy = () -> Arrays.asList(CardPaymentServiceType2Code.mmObject(), CardPaymentServiceType1Code.mmObject(), CardPaymentServiceType3Code.mmObject(), CardPaymentServiceType4Code.mmObject(),
 						CardPaymentServiceType5Code.mmObject(), CardPaymentServiceType6Code.mmObject(), CardPaymentServiceType7Code.mmObject(), CardPaymentServiceType8Code.mmObject(), CardPaymentServiceType9Code.mmObject(),
 						CardPaymentServiceType10Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CardsFundTransfer, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.OriginalCredit,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CardPayment, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CashBack,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CashAdvance, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CashDeposit,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.DeferredPayment, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.Reservation,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.Loading, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.Refund, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.QuasiCash,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.Balance, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CardActivation,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CardVerification, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.PINChange,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.ValidityCheck, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.Aggregation, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.DCC,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.Gratuity, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.Instalment, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.Loyalty,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.NoShow, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.PurchaseCorporate,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.RecurringPayment, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.SolicitedAvailableFunds,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.UnsolicitedAvailableFunds, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.VoiceAuthorisation,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.InitialReservation, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.UpdateReservation,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.PaymentReservation, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.AdditionalPayment,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.FirstRecurring, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.FollowingRecurring,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.PersonToBusiness, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.PersonToPerson,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.AcceptorInstalment, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.IssuerInstalment,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.Unloading, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CardsFundTransferPush,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CardsFundTransferPull, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CashWithdrawal,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.PINUnblock, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.ChosenWithdrawal,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.PreAuthorisedWithdrawal, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.ProfileWithdrawal,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.StandardWithdrawal, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.TransferCardBillPayment,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.TransferFromCash, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.TransferFromCheque,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.TransferFundsDisbursementGeneral, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.TransferGovernmentDisbursement,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.TransferMerchantDisbursement, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.TransferPayrollPensionDisbursement,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.NonRefundable, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.Instant,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CreditAdjustement, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.DebitAdjustement,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CreateCertificate, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.RenewCerificate,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.RevokeCertificate, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.AddWhiteList,
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.RemoveWhiteList);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CardsFundTransfer.getCodeName().get(), CardsFundTransfer);
+		codesByName.put(OriginalCredit.getCodeName().get(), OriginalCredit);
+		codesByName.put(CardPayment.getCodeName().get(), CardPayment);
+		codesByName.put(CashBack.getCodeName().get(), CashBack);
+		codesByName.put(CashAdvance.getCodeName().get(), CashAdvance);
+		codesByName.put(CashDeposit.getCodeName().get(), CashDeposit);
+		codesByName.put(DeferredPayment.getCodeName().get(), DeferredPayment);
+		codesByName.put(Reservation.getCodeName().get(), Reservation);
+		codesByName.put(Loading.getCodeName().get(), Loading);
+		codesByName.put(Refund.getCodeName().get(), Refund);
+		codesByName.put(QuasiCash.getCodeName().get(), QuasiCash);
+		codesByName.put(Balance.getCodeName().get(), Balance);
+		codesByName.put(CardActivation.getCodeName().get(), CardActivation);
+		codesByName.put(CardVerification.getCodeName().get(), CardVerification);
+		codesByName.put(PINChange.getCodeName().get(), PINChange);
+		codesByName.put(ValidityCheck.getCodeName().get(), ValidityCheck);
+		codesByName.put(Aggregation.getCodeName().get(), Aggregation);
+		codesByName.put(DCC.getCodeName().get(), DCC);
+		codesByName.put(Gratuity.getCodeName().get(), Gratuity);
+		codesByName.put(Instalment.getCodeName().get(), Instalment);
+		codesByName.put(Loyalty.getCodeName().get(), Loyalty);
+		codesByName.put(NoShow.getCodeName().get(), NoShow);
+		codesByName.put(PurchaseCorporate.getCodeName().get(), PurchaseCorporate);
+		codesByName.put(RecurringPayment.getCodeName().get(), RecurringPayment);
+		codesByName.put(SolicitedAvailableFunds.getCodeName().get(), SolicitedAvailableFunds);
+		codesByName.put(UnsolicitedAvailableFunds.getCodeName().get(), UnsolicitedAvailableFunds);
+		codesByName.put(VoiceAuthorisation.getCodeName().get(), VoiceAuthorisation);
+		codesByName.put(InitialReservation.getCodeName().get(), InitialReservation);
+		codesByName.put(UpdateReservation.getCodeName().get(), UpdateReservation);
+		codesByName.put(PaymentReservation.getCodeName().get(), PaymentReservation);
+		codesByName.put(AdditionalPayment.getCodeName().get(), AdditionalPayment);
+		codesByName.put(FirstRecurring.getCodeName().get(), FirstRecurring);
+		codesByName.put(FollowingRecurring.getCodeName().get(), FollowingRecurring);
+		codesByName.put(PersonToBusiness.getCodeName().get(), PersonToBusiness);
+		codesByName.put(PersonToPerson.getCodeName().get(), PersonToPerson);
+		codesByName.put(AcceptorInstalment.getCodeName().get(), AcceptorInstalment);
+		codesByName.put(IssuerInstalment.getCodeName().get(), IssuerInstalment);
+		codesByName.put(Unloading.getCodeName().get(), Unloading);
+		codesByName.put(CardsFundTransferPush.getCodeName().get(), CardsFundTransferPush);
+		codesByName.put(CardsFundTransferPull.getCodeName().get(), CardsFundTransferPull);
+		codesByName.put(CashWithdrawal.getCodeName().get(), CashWithdrawal);
+		codesByName.put(PINUnblock.getCodeName().get(), PINUnblock);
+		codesByName.put(ChosenWithdrawal.getCodeName().get(), ChosenWithdrawal);
+		codesByName.put(PreAuthorisedWithdrawal.getCodeName().get(), PreAuthorisedWithdrawal);
+		codesByName.put(ProfileWithdrawal.getCodeName().get(), ProfileWithdrawal);
+		codesByName.put(StandardWithdrawal.getCodeName().get(), StandardWithdrawal);
+		codesByName.put(TransferCardBillPayment.getCodeName().get(), TransferCardBillPayment);
+		codesByName.put(TransferFromCash.getCodeName().get(), TransferFromCash);
+		codesByName.put(TransferFromCheque.getCodeName().get(), TransferFromCheque);
+		codesByName.put(TransferFundsDisbursementGeneral.getCodeName().get(), TransferFundsDisbursementGeneral);
+		codesByName.put(TransferGovernmentDisbursement.getCodeName().get(), TransferGovernmentDisbursement);
+		codesByName.put(TransferMerchantDisbursement.getCodeName().get(), TransferMerchantDisbursement);
+		codesByName.put(TransferPayrollPensionDisbursement.getCodeName().get(), TransferPayrollPensionDisbursement);
+		codesByName.put(NonRefundable.getCodeName().get(), NonRefundable);
+		codesByName.put(Instant.getCodeName().get(), Instant);
+		codesByName.put(CreditAdjustement.getCodeName().get(), CreditAdjustement);
+		codesByName.put(DebitAdjustement.getCodeName().get(), DebitAdjustement);
+		codesByName.put(CreateCertificate.getCodeName().get(), CreateCertificate);
+		codesByName.put(RenewCerificate.getCodeName().get(), RenewCerificate);
+		codesByName.put(RevokeCertificate.getCodeName().get(), RevokeCertificate);
+		codesByName.put(AddWhiteList.getCodeName().get(), AddWhiteList);
+		codesByName.put(RemoveWhiteList.getCodeName().get(), RemoveWhiteList);
+	}
+
+	public static CardPaymentServiceTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CardPaymentServiceTypeCode[] values() {
+		CardPaymentServiceTypeCode[] values = new CardPaymentServiceTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CardPaymentServiceTypeCode> {
+		@Override
+		public CardPaymentServiceTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CardPaymentServiceTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

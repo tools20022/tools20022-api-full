@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.datatype.Max70Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Allows the user to specify the algorithm parameters for the algo strategy."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StrategyParameters1", propOrder = {"name", "type", "targetStrategy"})
 public class StrategyParameters1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nm")
 	protected Max35Text name;
 	/**
-	 * Name of parameter.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -87,6 +90,9 @@ public class StrategyParameters1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Nm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 958</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -99,9 +105,10 @@ public class StrategyParameters1 {
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StrategyParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StrategyParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "958"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of parameter.";
@@ -110,10 +117,11 @@ public class StrategyParameters1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected Max35Text type;
 	/**
-	 * Type of the parameter.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,6 +136,9 @@ public class StrategyParameters1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Tp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 959</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -140,9 +151,10 @@ public class StrategyParameters1 {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StrategyParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StrategyParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "959"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of the parameter.";
@@ -151,11 +163,11 @@ public class StrategyParameters1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TrgtStrtgy")
 	protected Max70Text targetStrategy;
 	/**
-	 * Defines the target strategy of the order, specifies the type of trading
-	 * or algorithm strategy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,6 +181,9 @@ public class StrategyParameters1 {
 	 * StrategyParameters1}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TrgtStrtgy"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 960</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -184,9 +199,10 @@ public class StrategyParameters1 {
 	 */
 	public static final MMMessageAttribute mmTargetStrategy = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StrategyParameters1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StrategyParameters1.mmObject();
 			isDerived = false;
 			xmlTag = "TrgtStrtgy";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "960"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetStrategy";
 			definition = "Defines the target strategy of the order, specifies the type of trading or algorithm strategy.";
@@ -199,8 +215,9 @@ public class StrategyParameters1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StrategyParameters1.mmName, StrategyParameters1.mmType, StrategyParameters1.mmTargetStrategy);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StrategyParameters1.mmName, com.tools20022.repository.msg.StrategyParameters1.mmType,
+						com.tools20022.repository.msg.StrategyParameters1.mmTargetStrategy);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StrategyParameters1";
 				definition = "Allows the user to specify the algorithm parameters for the algo strategy.";
@@ -209,30 +226,30 @@ public class StrategyParameters1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nm")
-	public Max35Text getName() {
-		return name;
+	public Optional<Max35Text> getName() {
+		return name == null ? Optional.empty() : Optional.of(name);
 	}
 
-	public void setName(Max35Text name) {
+	public StrategyParameters1 setName(Max35Text name) {
 		this.name = name;
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public Max35Text getType() {
-		return type;
+	public Optional<Max35Text> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(Max35Text type) {
+	public StrategyParameters1 setType(Max35Text type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "TrgtStrtgy")
-	public Max70Text getTargetStrategy() {
-		return targetStrategy;
+	public Optional<Max70Text> getTargetStrategy() {
+		return targetStrategy == null ? Optional.empty() : Optional.of(targetStrategy);
 	}
 
-	public void setTargetStrategy(Max70Text targetStrategy) {
+	public StrategyParameters1 setTargetStrategy(Max70Text targetStrategy) {
 		this.targetStrategy = targetStrategy;
+		return this;
 	}
 }

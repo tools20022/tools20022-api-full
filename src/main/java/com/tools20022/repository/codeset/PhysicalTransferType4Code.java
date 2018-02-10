@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PhysicalTransferTypeV2Code;
+import com.tools20022.repository.codeset.PhysicalTransferType4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the asset delivery type when the financial instrument is settled.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PhysicalTransferTypeV2Code
- * PhysicalTransferTypeV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PhysicalTransferType4Code#mmPhysical
- * PhysicalTransferType4Code.mmPhysical}</li>
+ * {@linkplain com.tools20022.repository.codeset.PhysicalTransferType4Code#Physical
+ * PhysicalTransferType4Code.Physical}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PhysicalTransferType4Code#mmOptional
- * PhysicalTransferType4Code.mmOptional}</li>
+ * {@linkplain com.tools20022.repository.codeset.PhysicalTransferType4Code#Optional
+ * PhysicalTransferType4Code.Optional}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PhysicalTransferType4Code#mmCash
- * PhysicalTransferType4Code.mmCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.PhysicalTransferType4Code#Cash
+ * PhysicalTransferType4Code.Cash}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PhysicalTransferTypeV2Code
+ * PhysicalTransferTypeV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,7 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PhysicalTransferType4Code extends PhysicalTransferTypeV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PhysicalTransferType4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,11 +87,12 @@ public class PhysicalTransferType4Code extends PhysicalTransferTypeV2Code {
 	 * name} = "Physical"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPhysical = new MMCode() {
+	public static final PhysicalTransferType4Code Physical = new PhysicalTransferType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Physical";
-			owner_lazy = () -> PhysicalTransferType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PhysicalTransferType4Code.mmObject();
+			codeName = PhysicalTransferTypeV2Code.Physical.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -105,11 +111,12 @@ public class PhysicalTransferType4Code extends PhysicalTransferTypeV2Code {
 	 * name} = "Optional"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOptional = new MMCode() {
+	public static final PhysicalTransferType4Code Optional = new PhysicalTransferType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Optional";
-			owner_lazy = () -> PhysicalTransferType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PhysicalTransferType4Code.mmObject();
+			codeName = PhysicalTransferTypeV2Code.Optional.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -128,25 +135,58 @@ public class PhysicalTransferType4Code extends PhysicalTransferTypeV2Code {
 	 * name} = "Cash"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCash = new MMCode() {
+	public static final PhysicalTransferType4Code Cash = new PhysicalTransferType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
-			owner_lazy = () -> PhysicalTransferType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PhysicalTransferType4Code.mmObject();
+			codeName = PhysicalTransferTypeV2Code.Cash.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PhysicalTransferType4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PhysicalTransferType4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PhysicalTransferType4Code";
 				definition = "Specifies the asset delivery type when the financial instrument is settled.";
-				code_lazy = () -> Arrays.asList(PhysicalTransferType4Code.mmPhysical, PhysicalTransferType4Code.mmOptional, PhysicalTransferType4Code.mmCash);
 				trace_lazy = () -> PhysicalTransferTypeV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PhysicalTransferType4Code.Physical, com.tools20022.repository.codeset.PhysicalTransferType4Code.Optional,
+						com.tools20022.repository.codeset.PhysicalTransferType4Code.Cash);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Physical.getCodeName().get(), Physical);
+		codesByName.put(Optional.getCodeName().get(), Optional);
+		codesByName.put(Cash.getCodeName().get(), Cash);
+	}
+
+	public static PhysicalTransferType4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PhysicalTransferType4Code[] values() {
+		PhysicalTransferType4Code[] values = new PhysicalTransferType4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PhysicalTransferType4Code> {
+		@Override
+		public PhysicalTransferType4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PhysicalTransferType4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

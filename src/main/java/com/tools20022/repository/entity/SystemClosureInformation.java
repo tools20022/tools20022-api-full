@@ -24,6 +24,7 @@ import com.tools20022.repository.msg.SystemClosure1;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Information about inactivity of a system.
@@ -50,13 +51,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SystemClosure1 SystemClosure1}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -66,10 +60,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemClosure1 SystemClosure1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,8 +86,8 @@ public class SystemClosureInformation {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected DateTimePeriod period;
 	/**
-	 * Period of time when the system is closed/not operating.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -120,8 +121,8 @@ public class SystemClosureInformation {
 	public static final MMBusinessAttribute mmPeriod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SystemClosure1.mmPeriod);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemClosureInformation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemClosureInformation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Period";
 			definition = "Period of time when the system is closed/not operating.";
@@ -140,8 +141,8 @@ public class SystemClosureInformation {
 	};
 	protected SystemAvailability systemAvailability;
 	/**
-	 * System for which closure information is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,8 +175,8 @@ public class SystemClosureInformation {
 	 */
 	public static final MMBusinessAssociationEnd mmSystemAvailability = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemClosureInformation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemClosureInformation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SystemAvailability";
 			definition = "System for which closure information is specified.";
@@ -188,8 +189,8 @@ public class SystemClosureInformation {
 	};
 	protected SystemClosureReasonCode closureReason;
 	/**
-	 * Reason the system is closed/not operating.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,8 +216,8 @@ public class SystemClosureInformation {
 	 */
 	public static final MMBusinessAttribute mmClosureReason = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemClosureInformation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemClosureInformation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosureReason";
 			definition = "Reason the system is closed/not operating.";
@@ -237,7 +238,7 @@ public class SystemClosureInformation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemClosureInformation";
 				definition = "Information about inactivity of a system.";
@@ -259,23 +260,26 @@ public class SystemClosureInformation {
 		return period;
 	}
 
-	public void setPeriod(com.tools20022.repository.entity.DateTimePeriod period) {
-		this.period = period;
+	public SystemClosureInformation setPeriod(com.tools20022.repository.entity.DateTimePeriod period) {
+		this.period = Objects.requireNonNull(period);
+		return this;
 	}
 
 	public SystemAvailability getSystemAvailability() {
 		return systemAvailability;
 	}
 
-	public void setSystemAvailability(com.tools20022.repository.entity.SystemAvailability systemAvailability) {
-		this.systemAvailability = systemAvailability;
+	public SystemClosureInformation setSystemAvailability(com.tools20022.repository.entity.SystemAvailability systemAvailability) {
+		this.systemAvailability = Objects.requireNonNull(systemAvailability);
+		return this;
 	}
 
 	public SystemClosureReasonCode getClosureReason() {
 		return closureReason;
 	}
 
-	public void setClosureReason(SystemClosureReasonCode closureReason) {
-		this.closureReason = closureReason;
+	public SystemClosureInformation setClosureReason(SystemClosureReasonCode closureReason) {
+		this.closureReason = Objects.requireNonNull(closureReason);
+		return this;
 	}
 }

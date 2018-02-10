@@ -32,6 +32,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -45,9 +46,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.GenericIdentification10#mmIdentificationTypeOrExtendedIdentificationTypeRule
- * GenericIdentification10.mmIdentificationTypeOrExtendedIdentificationTypeRule}
- * </li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification10#IdentificationTypeOrExtendedIdentificationTypeRule
+ * GenericIdentification10.IdentificationTypeOrExtendedIdentificationTypeRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -71,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -92,16 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "GenericIdentification10", propOrder = {"identification", "identificationType", "extendedIdentificationType"})
 public class GenericIdentification10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Name or number assigned by an entity to enable recognition of that
-	 * entity, eg, account identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +144,7 @@ public class GenericIdentification10 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> GenericIdentification10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification10.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +156,11 @@ public class GenericIdentification10 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IdTp", required = true)
 	protected PersonIdentificationType1Code identificationType;
 	/**
-	 * Specifies the nature of the identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,7 +194,7 @@ public class GenericIdentification10 {
 	public static final MMMessageAttribute mmIdentificationType = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
-			componentContext_lazy = () -> GenericIdentification10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification10.mmObject();
 			isDerived = false;
 			xmlTag = "IdTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,10 +205,11 @@ public class GenericIdentification10 {
 			simpleType_lazy = () -> PersonIdentificationType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedIdTp", required = true)
 	protected Extended350Code extendedIdentificationType;
 	/**
-	 * Specifies the nature of the identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -241,7 +243,7 @@ public class GenericIdentification10 {
 	public static final MMMessageAttribute mmExtendedIdentificationType = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
-			componentContext_lazy = () -> GenericIdentification10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.GenericIdentification10.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedIdTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -286,22 +288,23 @@ public class GenericIdentification10 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmIdentificationTypeOrExtendedIdentificationTypeRule = new MMXor() {
+	public static final MMXor IdentificationTypeOrExtendedIdentificationTypeRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationTypeOrExtendedIdentificationTypeRule";
 			definition = "Either IdentificationType or ExtendedIdentificationType must be present, but not both.";
-			messageComponent_lazy = () -> GenericIdentification10.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(GenericIdentification10.mmIdentificationType, GenericIdentification10.mmExtendedIdentificationType);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.GenericIdentification10.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification10.mmIdentificationType, com.tools20022.repository.msg.GenericIdentification10.mmExtendedIdentificationType);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(GenericIdentification10.mmIdentification, GenericIdentification10.mmIdentificationType, GenericIdentification10.mmExtendedIdentificationType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification10.mmIdentification, com.tools20022.repository.msg.GenericIdentification10.mmIdentificationType,
+						com.tools20022.repository.msg.GenericIdentification10.mmExtendedIdentificationType);
 				trace_lazy = () -> GenericIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -313,36 +316,36 @@ public class GenericIdentification10 {
 				name = "GenericIdentification10";
 				definition = "Information related to the identification of an individual person.";
 				nextVersions_lazy = () -> Arrays.asList(GenericIdentification81.mmObject());
-				xors_lazy = () -> Arrays.asList(GenericIdentification10.mmIdentificationTypeOrExtendedIdentificationTypeRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GenericIdentification10.IdentificationTypeOrExtendedIdentificationTypeRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public GenericIdentification10 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "IdTp", required = true)
 	public PersonIdentificationType1Code getIdentificationType() {
 		return identificationType;
 	}
 
-	public void setIdentificationType(PersonIdentificationType1Code identificationType) {
-		this.identificationType = identificationType;
+	public GenericIdentification10 setIdentificationType(PersonIdentificationType1Code identificationType) {
+		this.identificationType = Objects.requireNonNull(identificationType);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedIdTp", required = true)
 	public Extended350Code getExtendedIdentificationType() {
 		return extendedIdentificationType;
 	}
 
-	public void setExtendedIdentificationType(Extended350Code extendedIdentificationType) {
-		this.extendedIdentificationType = extendedIdentificationType;
+	public GenericIdentification10 setExtendedIdentificationType(Extended350Code extendedIdentificationType) {
+		this.extendedIdentificationType = Objects.requireNonNull(extendedIdentificationType);
+		return this;
 	}
 }

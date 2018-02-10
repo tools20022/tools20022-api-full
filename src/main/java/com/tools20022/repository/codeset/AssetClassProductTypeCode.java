@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AssetClassProductTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Commodity derivative base product code list.
@@ -32,47 +37,47 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#mmAgricultural
- * AssetClassProductTypeCode.mmAgricultural}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#Agricultural
+ * AssetClassProductTypeCode.Agricultural}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#mmEnergy
- * AssetClassProductTypeCode.mmEnergy}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#Energy
+ * AssetClassProductTypeCode.Energy}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#mmEnvironmental
- * AssetClassProductTypeCode.mmEnvironmental}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#Environmental
+ * AssetClassProductTypeCode.Environmental}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#mmFreight
- * AssetClassProductTypeCode.mmFreight}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#Freight
+ * AssetClassProductTypeCode.Freight}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#mmFertilizer
- * AssetClassProductTypeCode.mmFertilizer}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#Fertilizer
+ * AssetClassProductTypeCode.Fertilizer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#mmIndustrialProduct
- * AssetClassProductTypeCode.mmIndustrialProduct}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#IndustrialProduct
+ * AssetClassProductTypeCode.IndustrialProduct}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#mmMetal
- * AssetClassProductTypeCode.mmMetal}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#Metal
+ * AssetClassProductTypeCode.Metal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#mmMultiCommodityExotic
- * AssetClassProductTypeCode.mmMultiCommodityExotic}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#MultiCommodityExotic
+ * AssetClassProductTypeCode.MultiCommodityExotic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#mmPaper
- * AssetClassProductTypeCode.mmPaper}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#Paper
+ * AssetClassProductTypeCode.Paper}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#mmPolypropylene
- * AssetClassProductTypeCode.mmPolypropylene}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#Polypropylene
+ * AssetClassProductTypeCode.Polypropylene}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#mmInflation
- * AssetClassProductTypeCode.mmInflation}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#Inflation
+ * AssetClassProductTypeCode.Inflation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#mmOfficialEconomicStatistic
- * AssetClassProductTypeCode.mmOfficialEconomicStatistic}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#OfficialEconomicStatistic
+ * AssetClassProductTypeCode.OfficialEconomicStatistic}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#mmOtherC10
- * AssetClassProductTypeCode.mmOtherC10}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#OtherC10
+ * AssetClassProductTypeCode.OtherC10}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#mmOther
- * AssetClassProductTypeCode.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassProductTypeCode#Other
+ * AssetClassProductTypeCode.Other}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -116,8 +121,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -128,7 +133,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Commodity derivative base product code list."</li>
  * </ul>
  */
-public class AssetClassProductTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AssetClassProductTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -152,12 +158,12 @@ public class AssetClassProductTypeCode {
 	 * definition} = "Commodity of type agricultural."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAgricultural = new MMCode() {
+	public static final AssetClassProductTypeCode Agricultural = new AssetClassProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agricultural";
 			definition = "Commodity of type agricultural.";
-			owner_lazy = () -> AssetClassProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassProductTypeCode.mmObject();
 			codeName = "AGRI";
 		}
 	};
@@ -182,12 +188,12 @@ public class AssetClassProductTypeCode {
 	 * definition} = "Commodity of type energy."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEnergy = new MMCode() {
+	public static final AssetClassProductTypeCode Energy = new AssetClassProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Energy";
 			definition = "Commodity of type energy.";
-			owner_lazy = () -> AssetClassProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassProductTypeCode.mmObject();
 			codeName = "NRGY";
 		}
 	};
@@ -212,12 +218,12 @@ public class AssetClassProductTypeCode {
 	 * definition} = "Commodity of type environmental."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEnvironmental = new MMCode() {
+	public static final AssetClassProductTypeCode Environmental = new AssetClassProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environmental";
 			definition = "Commodity of type environmental.";
-			owner_lazy = () -> AssetClassProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassProductTypeCode.mmObject();
 			codeName = "ENVR";
 		}
 	};
@@ -242,12 +248,12 @@ public class AssetClassProductTypeCode {
 	 * definition} = "Commodity of type freight."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFreight = new MMCode() {
+	public static final AssetClassProductTypeCode Freight = new AssetClassProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Freight";
 			definition = "Commodity of type freight.";
-			owner_lazy = () -> AssetClassProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassProductTypeCode.mmObject();
 			codeName = "FRGT";
 		}
 	};
@@ -272,12 +278,12 @@ public class AssetClassProductTypeCode {
 	 * definition} = "Commodity of type fertilizer."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFertilizer = new MMCode() {
+	public static final AssetClassProductTypeCode Fertilizer = new AssetClassProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fertilizer";
 			definition = "Commodity of type fertilizer.";
-			owner_lazy = () -> AssetClassProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassProductTypeCode.mmObject();
 			codeName = "FRTL";
 		}
 	};
@@ -302,12 +308,12 @@ public class AssetClassProductTypeCode {
 	 * definition} = "Commodity of type industrial product."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIndustrialProduct = new MMCode() {
+	public static final AssetClassProductTypeCode IndustrialProduct = new AssetClassProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndustrialProduct";
 			definition = "Commodity of type industrial product.";
-			owner_lazy = () -> AssetClassProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassProductTypeCode.mmObject();
 			codeName = "INDP";
 		}
 	};
@@ -332,12 +338,12 @@ public class AssetClassProductTypeCode {
 	 * definition} = "Commodity of type metal."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMetal = new MMCode() {
+	public static final AssetClassProductTypeCode Metal = new AssetClassProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Metal";
 			definition = "Commodity of type metal.";
-			owner_lazy = () -> AssetClassProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassProductTypeCode.mmObject();
 			codeName = "METL";
 		}
 	};
@@ -362,12 +368,12 @@ public class AssetClassProductTypeCode {
 	 * definition} = "Commodity of type multi commodity exotic."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMultiCommodityExotic = new MMCode() {
+	public static final AssetClassProductTypeCode MultiCommodityExotic = new AssetClassProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiCommodityExotic";
 			definition = "Commodity of type multi commodity exotic.";
-			owner_lazy = () -> AssetClassProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassProductTypeCode.mmObject();
 			codeName = "MCEX";
 		}
 	};
@@ -392,12 +398,12 @@ public class AssetClassProductTypeCode {
 	 * definition} = "Commodity of type paper."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPaper = new MMCode() {
+	public static final AssetClassProductTypeCode Paper = new AssetClassProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Paper";
 			definition = "Commodity of type paper.";
-			owner_lazy = () -> AssetClassProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassProductTypeCode.mmObject();
 			codeName = "PAPR";
 		}
 	};
@@ -422,12 +428,12 @@ public class AssetClassProductTypeCode {
 	 * definition} = "Commodity of type polypropylene."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPolypropylene = new MMCode() {
+	public static final AssetClassProductTypeCode Polypropylene = new AssetClassProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Polypropylene";
 			definition = "Commodity of type polypropylene.";
-			owner_lazy = () -> AssetClassProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassProductTypeCode.mmObject();
 			codeName = "POLY";
 		}
 	};
@@ -452,12 +458,12 @@ public class AssetClassProductTypeCode {
 	 * definition} = "Commodity of type inflation."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInflation = new MMCode() {
+	public static final AssetClassProductTypeCode Inflation = new AssetClassProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Inflation";
 			definition = "Commodity of type inflation.";
-			owner_lazy = () -> AssetClassProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassProductTypeCode.mmObject();
 			codeName = "INFL";
 		}
 	};
@@ -482,12 +488,12 @@ public class AssetClassProductTypeCode {
 	 * definition} = "Commodity of type official economic statistic."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOfficialEconomicStatistic = new MMCode() {
+	public static final AssetClassProductTypeCode OfficialEconomicStatistic = new AssetClassProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialEconomicStatistic";
 			definition = "Commodity of type official economic statistic.";
-			owner_lazy = () -> AssetClassProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassProductTypeCode.mmObject();
 			codeName = "OEST";
 		}
 	};
@@ -512,12 +518,12 @@ public class AssetClassProductTypeCode {
 	 * definition} = "Commodity of other type C10."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherC10 = new MMCode() {
+	public static final AssetClassProductTypeCode OtherC10 = new AssetClassProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherC10";
 			definition = "Commodity of other type C10.";
-			owner_lazy = () -> AssetClassProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassProductTypeCode.mmObject();
 			codeName = "OTHC";
 		}
 	};
@@ -542,31 +548,77 @@ public class AssetClassProductTypeCode {
 	 * definition} = "Commodity of other type."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final AssetClassProductTypeCode Other = new AssetClassProductTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Commodity of other type.";
-			owner_lazy = () -> AssetClassProductTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AssetClassProductTypeCode.mmObject();
 			codeName = "OTHR";
 		}
 	};
+	final static private LinkedHashMap<String, AssetClassProductTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AssetClassProductTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassProductTypeCode";
 				definition = "Commodity derivative base product code list.";
-				code_lazy = () -> Arrays.asList(AssetClassProductTypeCode.mmAgricultural, AssetClassProductTypeCode.mmEnergy, AssetClassProductTypeCode.mmEnvironmental, AssetClassProductTypeCode.mmFreight,
-						AssetClassProductTypeCode.mmFertilizer, AssetClassProductTypeCode.mmIndustrialProduct, AssetClassProductTypeCode.mmMetal, AssetClassProductTypeCode.mmMultiCommodityExotic, AssetClassProductTypeCode.mmPaper,
-						AssetClassProductTypeCode.mmPolypropylene, AssetClassProductTypeCode.mmInflation, AssetClassProductTypeCode.mmOfficialEconomicStatistic, AssetClassProductTypeCode.mmOtherC10, AssetClassProductTypeCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(AssetClassProductType7Code.mmObject(), AssetClassProductType4Code.mmObject(), AssetClassProductType9Code.mmObject(), AssetClassProductType8Code.mmObject(),
 						AssetClassProductType3Code.mmObject(), AssetClassProductType1Code.mmObject(), AssetClassProductType11Code.mmObject(), AssetClassProductType5Code.mmObject(), AssetClassProductType2Code.mmObject(),
 						AssetClassProductType6Code.mmObject(), AssetClassProductType13Code.mmObject(), AssetClassProductType12Code.mmObject(), AssetClassProductType14Code.mmObject(), AssetClassProductType15Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassProductTypeCode.Agricultural, com.tools20022.repository.codeset.AssetClassProductTypeCode.Energy,
+						com.tools20022.repository.codeset.AssetClassProductTypeCode.Environmental, com.tools20022.repository.codeset.AssetClassProductTypeCode.Freight, com.tools20022.repository.codeset.AssetClassProductTypeCode.Fertilizer,
+						com.tools20022.repository.codeset.AssetClassProductTypeCode.IndustrialProduct, com.tools20022.repository.codeset.AssetClassProductTypeCode.Metal,
+						com.tools20022.repository.codeset.AssetClassProductTypeCode.MultiCommodityExotic, com.tools20022.repository.codeset.AssetClassProductTypeCode.Paper,
+						com.tools20022.repository.codeset.AssetClassProductTypeCode.Polypropylene, com.tools20022.repository.codeset.AssetClassProductTypeCode.Inflation,
+						com.tools20022.repository.codeset.AssetClassProductTypeCode.OfficialEconomicStatistic, com.tools20022.repository.codeset.AssetClassProductTypeCode.OtherC10,
+						com.tools20022.repository.codeset.AssetClassProductTypeCode.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Agricultural.getCodeName().get(), Agricultural);
+		codesByName.put(Energy.getCodeName().get(), Energy);
+		codesByName.put(Environmental.getCodeName().get(), Environmental);
+		codesByName.put(Freight.getCodeName().get(), Freight);
+		codesByName.put(Fertilizer.getCodeName().get(), Fertilizer);
+		codesByName.put(IndustrialProduct.getCodeName().get(), IndustrialProduct);
+		codesByName.put(Metal.getCodeName().get(), Metal);
+		codesByName.put(MultiCommodityExotic.getCodeName().get(), MultiCommodityExotic);
+		codesByName.put(Paper.getCodeName().get(), Paper);
+		codesByName.put(Polypropylene.getCodeName().get(), Polypropylene);
+		codesByName.put(Inflation.getCodeName().get(), Inflation);
+		codesByName.put(OfficialEconomicStatistic.getCodeName().get(), OfficialEconomicStatistic);
+		codesByName.put(OtherC10.getCodeName().get(), OtherC10);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static AssetClassProductTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AssetClassProductTypeCode[] values() {
+		AssetClassProductTypeCode[] values = new AssetClassProductTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AssetClassProductTypeCode> {
+		@Override
+		public AssetClassProductTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AssetClassProductTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

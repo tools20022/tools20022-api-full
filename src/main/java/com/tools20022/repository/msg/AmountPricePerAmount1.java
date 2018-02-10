@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountPricePerAmount1", propOrder = {"amountPriceType", "priceValue", "amount"})
 public class AmountPricePerAmount1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AmtPricTp", required = true)
 	protected AmountPriceType1FormatChoice amountPriceType;
 	/**
-	 * Type of amount price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +117,7 @@ public class AmountPricePerAmount1 {
 	public static final MMMessageAttribute mmAmountPriceType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmTypeOfAmount;
-			componentContext_lazy = () -> AmountPricePerAmount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPricePerAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "AmtPricTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +128,11 @@ public class AmountPricePerAmount1 {
 			complexType_lazy = () -> AmountPriceType1FormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "PricVal", required = true)
 	protected ActiveCurrencyAnd13DecimalAmount priceValue;
 	/**
-	 * Value of the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +166,7 @@ public class AmountPricePerAmount1 {
 	public static final MMMessageAttribute mmPriceValue = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPrice;
-			componentContext_lazy = () -> AmountPricePerAmount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPricePerAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "PricVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +177,11 @@ public class AmountPricePerAmount1 {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
-	 * The amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,7 +215,7 @@ public class AmountPricePerAmount1 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmAmountPricePerAmount;
-			componentContext_lazy = () -> AmountPricePerAmount1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountPricePerAmount1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,9 +230,10 @@ public class AmountPricePerAmount1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountPricePerAmount1.mmAmountPriceType, AmountPricePerAmount1.mmPriceValue, AmountPricePerAmount1.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountPricePerAmount1.mmAmountPriceType, com.tools20022.repository.msg.AmountPricePerAmount1.mmPriceValue,
+						com.tools20022.repository.msg.AmountPricePerAmount1.mmAmount);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountPricePerAmount1";
 				definition = "Specifies a ratio: Amount price per amount.\n\nExample:\nISIN US629377AS17. Repurchase USD1087.17 cash for every USD1000 stock (NRG Energy Inc 8% Senior Notes 15/12/13).";
@@ -237,30 +242,30 @@ public class AmountPricePerAmount1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AmtPricTp", required = true)
 	public AmountPriceType1FormatChoice getAmountPriceType() {
 		return amountPriceType;
 	}
 
-	public void setAmountPriceType(AmountPriceType1FormatChoice amountPriceType) {
-		this.amountPriceType = amountPriceType;
+	public AmountPricePerAmount1 setAmountPriceType(AmountPriceType1FormatChoice amountPriceType) {
+		this.amountPriceType = Objects.requireNonNull(amountPriceType);
+		return this;
 	}
 
-	@XmlElement(name = "PricVal", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getPriceValue() {
 		return priceValue;
 	}
 
-	public void setPriceValue(ActiveCurrencyAnd13DecimalAmount priceValue) {
-		this.priceValue = priceValue;
+	public AmountPricePerAmount1 setPriceValue(ActiveCurrencyAnd13DecimalAmount priceValue) {
+		this.priceValue = Objects.requireNonNull(priceValue);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
-		this.amount = amount;
+	public AmountPricePerAmount1 setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 }

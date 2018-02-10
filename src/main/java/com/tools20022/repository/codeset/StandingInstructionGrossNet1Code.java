@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.StandingInstructionGrossNetCode;
+import com.tools20022.repository.codeset.StandingInstructionGrossNet1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of standing instruction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.StandingInstructionGrossNetCode
- * StandingInstructionGrossNetCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingInstructionGrossNet1Code#mmGross
- * StandingInstructionGrossNet1Code.mmGross}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingInstructionGrossNet1Code#Gross
+ * StandingInstructionGrossNet1Code.Gross}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.StandingInstructionGrossNet1Code#mmNet
- * StandingInstructionGrossNet1Code.mmNet}</li>
+ * {@linkplain com.tools20022.repository.codeset.StandingInstructionGrossNet1Code#Net
+ * StandingInstructionGrossNet1Code.Net}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.StandingInstructionGrossNetCode
+ * StandingInstructionGrossNetCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of standing instruction."</li>
  * </ul>
  */
-public class StandingInstructionGrossNet1Code extends StandingInstructionGrossNetCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class StandingInstructionGrossNet1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class StandingInstructionGrossNet1Code extends StandingInstructionGrossNe
 	 * name} = "Gross"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGross = new MMCode() {
+	public static final StandingInstructionGrossNet1Code Gross = new StandingInstructionGrossNet1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gross";
-			owner_lazy = () -> StandingInstructionGrossNet1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StandingInstructionGrossNet1Code.mmObject();
+			codeName = StandingInstructionGrossNetCode.Gross.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class StandingInstructionGrossNet1Code extends StandingInstructionGrossNe
 	 * name} = "Net"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNet = new MMCode() {
+	public static final StandingInstructionGrossNet1Code Net = new StandingInstructionGrossNet1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Net";
-			owner_lazy = () -> StandingInstructionGrossNet1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.StandingInstructionGrossNet1Code.mmObject();
+			codeName = StandingInstructionGrossNetCode.Net.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, StandingInstructionGrossNet1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected StandingInstructionGrossNet1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("GROS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingInstructionGrossNet1Code";
 				definition = "Specifies the type of standing instruction.";
-				code_lazy = () -> Arrays.asList(StandingInstructionGrossNet1Code.mmGross, StandingInstructionGrossNet1Code.mmNet);
 				trace_lazy = () -> StandingInstructionGrossNetCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandingInstructionGrossNet1Code.Gross, com.tools20022.repository.codeset.StandingInstructionGrossNet1Code.Net);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Gross.getCodeName().get(), Gross);
+		codesByName.put(Net.getCodeName().get(), Net);
+	}
+
+	public static StandingInstructionGrossNet1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static StandingInstructionGrossNet1Code[] values() {
+		StandingInstructionGrossNet1Code[] values = new StandingInstructionGrossNet1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, StandingInstructionGrossNet1Code> {
+		@Override
+		public StandingInstructionGrossNet1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(StandingInstructionGrossNet1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

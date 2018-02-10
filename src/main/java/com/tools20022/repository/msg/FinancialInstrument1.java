@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrument1", propOrder = {"identification", "attributes", "valuationHaircutDetails"})
 public class FinancialInstrument1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected SecurityIdentification11 identification;
 	/**
-	 * Identification of the instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,7 +114,7 @@ public class FinancialInstrument1 {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> FinancialInstrument1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +126,11 @@ public class FinancialInstrument1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification11.mmObject();
 		}
 	};
+	@XmlElement(name = "Attrbts")
 	protected FinancialInstrumentAttributes2 attributes;
 	/**
-	 * Elements characterising a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -158,7 +162,7 @@ public class FinancialInstrument1 {
 	public static final MMMessageAssociationEnd mmAttributes = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
-			componentContext_lazy = () -> FinancialInstrument1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument1.mmObject();
 			isDerived = false;
 			xmlTag = "Attrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,10 +174,11 @@ public class FinancialInstrument1 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributes2.mmObject();
 		}
 	};
+	@XmlElement(name = "ValtnHrcutDtls")
 	protected BasicCollateralValuation1Details valuationHaircutDetails;
 	/**
-	 * Elements used to calculate the valuation haircut.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -206,7 +211,7 @@ public class FinancialInstrument1 {
 	public static final MMMessageAssociationEnd mmValuationHaircutDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmHaircut;
-			componentContext_lazy = () -> FinancialInstrument1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrument1.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnHrcutDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,9 +227,10 @@ public class FinancialInstrument1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrument1.mmIdentification, FinancialInstrument1.mmAttributes, FinancialInstrument1.mmValuationHaircutDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrument1.mmIdentification, com.tools20022.repository.msg.FinancialInstrument1.mmAttributes,
+						com.tools20022.repository.msg.FinancialInstrument1.mmValuationHaircutDetails);
 				trace_lazy = () -> Security.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrument1";
 				definition = "Identification and attributes of a financial instrument for a custody process.";
@@ -233,30 +239,30 @@ public class FinancialInstrument1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification11 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.SecurityIdentification11 identification) {
-		this.identification = identification;
+	public FinancialInstrument1 setIdentification(com.tools20022.repository.msg.SecurityIdentification11 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Attrbts")
-	public FinancialInstrumentAttributes2 getAttributes() {
-		return attributes;
+	public Optional<FinancialInstrumentAttributes2> getAttributes() {
+		return attributes == null ? Optional.empty() : Optional.of(attributes);
 	}
 
-	public void setAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes2 attributes) {
+	public FinancialInstrument1 setAttributes(com.tools20022.repository.msg.FinancialInstrumentAttributes2 attributes) {
 		this.attributes = attributes;
+		return this;
 	}
 
-	@XmlElement(name = "ValtnHrcutDtls")
-	public BasicCollateralValuation1Details getValuationHaircutDetails() {
-		return valuationHaircutDetails;
+	public Optional<BasicCollateralValuation1Details> getValuationHaircutDetails() {
+		return valuationHaircutDetails == null ? Optional.empty() : Optional.of(valuationHaircutDetails);
 	}
 
-	public void setValuationHaircutDetails(com.tools20022.repository.msg.BasicCollateralValuation1Details valuationHaircutDetails) {
+	public FinancialInstrument1 setValuationHaircutDetails(com.tools20022.repository.msg.BasicCollateralValuation1Details valuationHaircutDetails) {
 		this.valuationHaircutDetails = valuationHaircutDetails;
+		return this;
 	}
 }

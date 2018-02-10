@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SpecialCollateralCode;
+import com.tools20022.repository.codeset.SpecialCollateral1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the collateral type against which all repurchase agreements are
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SpecialCollateralCode
- * SpecialCollateralCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SpecialCollateral1Code#mmGeneralCollateral
- * SpecialCollateral1Code.mmGeneralCollateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.SpecialCollateral1Code#GeneralCollateral
+ * SpecialCollateral1Code.GeneralCollateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SpecialCollateral1Code#mmSpecialCollateral
- * SpecialCollateral1Code.mmSpecialCollateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.SpecialCollateral1Code#SpecialCollateral
+ * SpecialCollateral1Code.SpecialCollateral}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SpecialCollateralCode
+ * SpecialCollateralCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,7 +65,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class SpecialCollateral1Code extends SpecialCollateralCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SpecialCollateral1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,11 +85,12 @@ public class SpecialCollateral1Code extends SpecialCollateralCode {
 	 * name} = "GeneralCollateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGeneralCollateral = new MMCode() {
+	public static final SpecialCollateral1Code GeneralCollateral = new SpecialCollateral1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralCollateral";
-			owner_lazy = () -> SpecialCollateral1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SpecialCollateral1Code.mmObject();
+			codeName = SpecialCollateralCode.GeneralCollateral.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -103,25 +109,56 @@ public class SpecialCollateral1Code extends SpecialCollateralCode {
 	 * name} = "SpecialCollateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecialCollateral = new MMCode() {
+	public static final SpecialCollateral1Code SpecialCollateral = new SpecialCollateral1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialCollateral";
-			owner_lazy = () -> SpecialCollateral1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SpecialCollateral1Code.mmObject();
+			codeName = SpecialCollateralCode.SpecialCollateral.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SpecialCollateral1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SpecialCollateral1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SpecialCollateral1Code";
 				definition = "Specifies the collateral type against which all repurchase agreements are conducted.";
-				code_lazy = () -> Arrays.asList(SpecialCollateral1Code.mmGeneralCollateral, SpecialCollateral1Code.mmSpecialCollateral);
 				trace_lazy = () -> SpecialCollateralCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SpecialCollateral1Code.GeneralCollateral, com.tools20022.repository.codeset.SpecialCollateral1Code.SpecialCollateral);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(GeneralCollateral.getCodeName().get(), GeneralCollateral);
+		codesByName.put(SpecialCollateral.getCodeName().get(), SpecialCollateral);
+	}
+
+	public static SpecialCollateral1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SpecialCollateral1Code[] values() {
+		SpecialCollateral1Code[] values = new SpecialCollateral1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SpecialCollateral1Code> {
+		@Override
+		public SpecialCollateral1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SpecialCollateral1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

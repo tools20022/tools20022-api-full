@@ -27,6 +27,8 @@ import com.tools20022.repository.msgset.ForexNotificationsISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -40,21 +42,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
- * TreasuryArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ForexNotificationsISOArchive
- * ForexNotificationsISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CclNDFValtnV02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -79,6 +66,21 @@ import javax.xml.bind.annotation.*;
  * CancelNonDeliverableForwardValuationV02.mmValuationInformation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ForexNotificationsISOArchive
+ * ForexNotificationsISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CclNDFValtnV02"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} = {@linkplain com.tools20022.repository.area.TreasuryArchive
+ * TreasuryArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code trea.006.001.02}</li>
@@ -94,16 +96,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CancelNonDeliverableForwardValuationV02", propOrder = {"tradeInformation", "tradingSideIdentification", "counterpartySideIdentification", "tradeAmounts", "valuationRate", "valuationInformation"})
 public class CancelNonDeliverableForwardValuationV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradInf", required = true)
 	protected TradeAgreement2 tradeInformation;
 	/**
-	 * Provides references and date of the valuation of the non deliverable
-	 * trade which is cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,11 +146,11 @@ public class CancelNonDeliverableForwardValuationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "TradgSdId")
 	protected TradePartyIdentification3 tradingSideIdentification;
 	/**
-	 * Specifies the trading side of the non deliverable trade which is
-	 * cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,11 +192,11 @@ public class CancelNonDeliverableForwardValuationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CtrPtySdId")
 	protected TradePartyIdentification3 counterpartySideIdentification;
 	/**
-	 * Specifies the counterparty of the non deliverable trade which is
-	 * cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -236,11 +238,11 @@ public class CancelNonDeliverableForwardValuationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "TradAmts")
 	protected AmountsAndValueDate1 tradeAmounts;
 	/**
-	 * Specifies the amounts of the valuation of the non deliverable trade which
-	 * is cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -282,11 +284,11 @@ public class CancelNonDeliverableForwardValuationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "ValtnRate")
 	protected AgreedRate1 valuationRate;
 	/**
-	 * Specifies the valuation rate of the valuation of the non deliverable
-	 * trade which is cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -327,11 +329,11 @@ public class CancelNonDeliverableForwardValuationV02 {
 			}
 		}
 	};
+	@XmlElement(name = "ValtnInf")
 	protected ValuationData2 valuationInformation;
 	/**
-	 * Specifies the valuation information of the valuation of the non
-	 * deliverable trade which is cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -405,61 +407,61 @@ public class CancelNonDeliverableForwardValuationV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradInf", required = true)
 	public TradeAgreement2 getTradeInformation() {
 		return tradeInformation;
 	}
 
-	public void setTradeInformation(TradeAgreement2 tradeInformation) {
-		this.tradeInformation = tradeInformation;
+	public CancelNonDeliverableForwardValuationV02 setTradeInformation(TradeAgreement2 tradeInformation) {
+		this.tradeInformation = Objects.requireNonNull(tradeInformation);
+		return this;
 	}
 
-	@XmlElement(name = "TradgSdId")
-	public TradePartyIdentification3 getTradingSideIdentification() {
-		return tradingSideIdentification;
+	public Optional<TradePartyIdentification3> getTradingSideIdentification() {
+		return tradingSideIdentification == null ? Optional.empty() : Optional.of(tradingSideIdentification);
 	}
 
-	public void setTradingSideIdentification(TradePartyIdentification3 tradingSideIdentification) {
+	public CancelNonDeliverableForwardValuationV02 setTradingSideIdentification(TradePartyIdentification3 tradingSideIdentification) {
 		this.tradingSideIdentification = tradingSideIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CtrPtySdId")
-	public TradePartyIdentification3 getCounterpartySideIdentification() {
-		return counterpartySideIdentification;
+	public Optional<TradePartyIdentification3> getCounterpartySideIdentification() {
+		return counterpartySideIdentification == null ? Optional.empty() : Optional.of(counterpartySideIdentification);
 	}
 
-	public void setCounterpartySideIdentification(TradePartyIdentification3 counterpartySideIdentification) {
+	public CancelNonDeliverableForwardValuationV02 setCounterpartySideIdentification(TradePartyIdentification3 counterpartySideIdentification) {
 		this.counterpartySideIdentification = counterpartySideIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TradAmts")
-	public AmountsAndValueDate1 getTradeAmounts() {
-		return tradeAmounts;
+	public Optional<AmountsAndValueDate1> getTradeAmounts() {
+		return tradeAmounts == null ? Optional.empty() : Optional.of(tradeAmounts);
 	}
 
-	public void setTradeAmounts(AmountsAndValueDate1 tradeAmounts) {
+	public CancelNonDeliverableForwardValuationV02 setTradeAmounts(AmountsAndValueDate1 tradeAmounts) {
 		this.tradeAmounts = tradeAmounts;
+		return this;
 	}
 
-	@XmlElement(name = "ValtnRate")
-	public AgreedRate1 getValuationRate() {
-		return valuationRate;
+	public Optional<AgreedRate1> getValuationRate() {
+		return valuationRate == null ? Optional.empty() : Optional.of(valuationRate);
 	}
 
-	public void setValuationRate(AgreedRate1 valuationRate) {
+	public CancelNonDeliverableForwardValuationV02 setValuationRate(AgreedRate1 valuationRate) {
 		this.valuationRate = valuationRate;
+		return this;
 	}
 
-	@XmlElement(name = "ValtnInf")
-	public ValuationData2 getValuationInformation() {
-		return valuationInformation;
+	public Optional<ValuationData2> getValuationInformation() {
+		return valuationInformation == null ? Optional.empty() : Optional.of(valuationInformation);
 	}
 
-	public void setValuationInformation(ValuationData2 valuationInformation) {
+	public CancelNonDeliverableForwardValuationV02 setValuationInformation(ValuationData2 valuationInformation) {
 		this.valuationInformation = valuationInformation;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:trea.006.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:trea.006.001.02")
 	static public class Document {
 		@XmlElement(name = "CclNDFValtnV02", required = true)
 		public CancelNonDeliverableForwardValuationV02 messageBody;

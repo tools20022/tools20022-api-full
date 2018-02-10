@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -29,6 +30,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -73,8 +76,17 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule#forCorporateActionGeneralInformationSD18
+ * ConstraintEDSMessagingEligibilityRule.
+ * forCorporateActionGeneralInformationSD18}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -99,15 +111,16 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionGeneralInformationSD12}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CorporateActionGeneralInformationSD18", propOrder = {"placeAndName", "eventGroup", "eventType", "subEventType", "EDSMessagingEligibilityFlag", "redemptionIdentification", "DTCFCPElectionFlag", "assetServicerProcessingFlag"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CorporateActionGeneralInformationSD18", propOrder = {"placeAndName", "eventGroup", "eventType", "subEventType", "eDSMessagingEligibilityFlag", "redemptionIdentification", "dTCFCPElectionFlag", "assetServicerProcessingFlag"})
 public class CorporateActionGeneralInformationSD18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,7 +160,7 @@ public class CorporateActionGeneralInformationSD18 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD18.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,10 +173,11 @@ public class CorporateActionGeneralInformationSD18 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtGrp")
 	protected EventGroup1Code eventGroup;
 	/**
-	 * DTC processing domain/ category for event types.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -178,6 +192,9 @@ public class CorporateActionGeneralInformationSD18 {
 	 * CorporateActionGeneralInformationSD18}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EvtGrp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Event Group</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -204,9 +221,10 @@ public class CorporateActionGeneralInformationSD18 {
 	 */
 	public static final MMMessageAttribute mmEventGroup = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD18.mmObject();
 			isDerived = false;
 			xmlTag = "EvtGrp";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Event Group"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventGroup";
 			definition = "DTC processing domain/ category for event types.";
@@ -217,14 +235,11 @@ public class CorporateActionGeneralInformationSD18 {
 			simpleType_lazy = () -> EventGroup1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "EvtTp")
 	protected ExtendedEventType2Code eventType;
 	/**
-	 * DTCC (The Depository Trust and Clearing Corporation) native corporate
-	 * action event type name. Used in place for the events that cannot be
-	 * classified by ISO code and mapped to OTHR or when two or more distinct
-	 * events (in DTCC model) use same ISO code and there are no additional data
-	 * elements that distinguish those two or more events.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -239,6 +254,9 @@ public class CorporateActionGeneralInformationSD18 {
 	 * CorporateActionGeneralInformationSD18}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EvtTp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Event Type</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -267,9 +285,10 @@ public class CorporateActionGeneralInformationSD18 {
 	 */
 	public static final MMMessageAttribute mmEventType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD18.mmObject();
 			isDerived = false;
 			xmlTag = "EvtTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Event Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO code and mapped to OTHR or when two  or more distinct events (in DTCC model)  use same ISO code and there are no additional data elements that distinguish those two or more events.";
@@ -280,11 +299,11 @@ public class CorporateActionGeneralInformationSD18 {
 			simpleType_lazy = () -> ExtendedEventType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SubEvtTp")
 	protected DTCCSubEventType2Code subEventType;
 	/**
-	 * DTCC (The Depository Trust and Clearing Corporation) native corporate
-	 * action sub event type name further defines the event type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -299,6 +318,9 @@ public class CorporateActionGeneralInformationSD18 {
 	 * CorporateActionGeneralInformationSD18}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SubEvtTp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Sub Event Type</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -327,9 +349,10 @@ public class CorporateActionGeneralInformationSD18 {
 	 */
 	public static final MMMessageAttribute mmSubEventType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD18.mmObject();
 			isDerived = false;
 			xmlTag = "SubEvtTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Sub Event Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubEventType";
 			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type. ";
@@ -340,11 +363,11 @@ public class CorporateActionGeneralInformationSD18 {
 			simpleType_lazy = () -> DTCCSubEventType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "EDSMsggElgbltyFlg")
 	protected YesNoIndicator eDSMessagingEligibilityFlag;
 	/**
-	 * Indicates whether the event is eligible for EDS (Elective Dividend
-	 * Services) ISO20022 messaging.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -387,7 +410,7 @@ public class CorporateActionGeneralInformationSD18 {
 	 */
 	public static final MMMessageAttribute mmEDSMessagingEligibilityFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD18.mmObject();
 			isDerived = false;
 			xmlTag = "EDSMsggElgbltyFlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -400,12 +423,11 @@ public class CorporateActionGeneralInformationSD18 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RedId")
 	protected Max10NumericText redemptionIdentification;
 	/**
-	 * Unique number systemically assigned to all Lottery and Non-Lottery events
-	 * announced in DTC Redemptions (REDS) Participant Terminal System (PTS)/
-	 * Particinant Browser System(PBS) function.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -448,7 +470,7 @@ public class CorporateActionGeneralInformationSD18 {
 	 */
 	public static final MMMessageAttribute mmRedemptionIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD18.mmObject();
 			isDerived = false;
 			xmlTag = "RedId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -461,11 +483,11 @@ public class CorporateActionGeneralInformationSD18 {
 			simpleType_lazy = () -> Max10NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCFCPElctnFlg")
 	protected YesNoIndicator dTCFCPElectionFlag;
 	/**
-	 * Identifies events that offer instruction processing specific to foreign
-	 * currency payment (FCP) elections.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -508,7 +530,7 @@ public class CorporateActionGeneralInformationSD18 {
 	 */
 	public static final MMMessageAttribute mmDTCFCPElectionFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD18.mmObject();
 			isDerived = false;
 			xmlTag = "DTCFCPElctnFlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -521,10 +543,11 @@ public class CorporateActionGeneralInformationSD18 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AsstSvcrPrcgFlg")
 	protected YesNoIndicator assetServicerProcessingFlag;
 	/**
-	 * Indicates whether the event is being processed by DTC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -565,7 +588,7 @@ public class CorporateActionGeneralInformationSD18 {
 	 */
 	public static final MMMessageAttribute mmAssetServicerProcessingFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionGeneralInformationSD18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionGeneralInformationSD18.mmObject();
 			isDerived = false;
 			xmlTag = "AsstSvcrPrcgFlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -582,10 +605,12 @@ public class CorporateActionGeneralInformationSD18 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD18.mmPlaceAndName, CorporateActionGeneralInformationSD18.mmEventGroup, CorporateActionGeneralInformationSD18.mmEventType,
-						CorporateActionGeneralInformationSD18.mmSubEventType, CorporateActionGeneralInformationSD18.mmEDSMessagingEligibilityFlag, CorporateActionGeneralInformationSD18.mmRedemptionIdentification,
-						CorporateActionGeneralInformationSD18.mmDTCFCPElectionFlag, CorporateActionGeneralInformationSD18.mmAssetServicerProcessingFlag);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformationSD18.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionGeneralInformationSD18.mmEventGroup,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD18.mmEventType, com.tools20022.repository.msg.CorporateActionGeneralInformationSD18.mmSubEventType,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD18.mmEDSMessagingEligibilityFlag, com.tools20022.repository.msg.CorporateActionGeneralInformationSD18.mmRedemptionIdentification,
+						com.tools20022.repository.msg.CorporateActionGeneralInformationSD18.mmDTCFCPElectionFlag, com.tools20022.repository.msg.CorporateActionGeneralInformationSD18.mmAssetServicerProcessingFlag);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule.forCorporateActionGeneralInformationSD18);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformationSD18";
 				definition = "Provides additional information regarding corporate action general information details.";
@@ -596,75 +621,75 @@ public class CorporateActionGeneralInformationSD18 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionGeneralInformationSD18 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "EvtGrp")
-	public EventGroup1Code getEventGroup() {
-		return eventGroup;
+	public Optional<EventGroup1Code> getEventGroup() {
+		return eventGroup == null ? Optional.empty() : Optional.of(eventGroup);
 	}
 
-	public void setEventGroup(EventGroup1Code eventGroup) {
+	public CorporateActionGeneralInformationSD18 setEventGroup(EventGroup1Code eventGroup) {
 		this.eventGroup = eventGroup;
+		return this;
 	}
 
-	@XmlElement(name = "EvtTp")
-	public ExtendedEventType2Code getEventType() {
-		return eventType;
+	public Optional<ExtendedEventType2Code> getEventType() {
+		return eventType == null ? Optional.empty() : Optional.of(eventType);
 	}
 
-	public void setEventType(ExtendedEventType2Code eventType) {
+	public CorporateActionGeneralInformationSD18 setEventType(ExtendedEventType2Code eventType) {
 		this.eventType = eventType;
+		return this;
 	}
 
-	@XmlElement(name = "SubEvtTp")
-	public DTCCSubEventType2Code getSubEventType() {
-		return subEventType;
+	public Optional<DTCCSubEventType2Code> getSubEventType() {
+		return subEventType == null ? Optional.empty() : Optional.of(subEventType);
 	}
 
-	public void setSubEventType(DTCCSubEventType2Code subEventType) {
+	public CorporateActionGeneralInformationSD18 setSubEventType(DTCCSubEventType2Code subEventType) {
 		this.subEventType = subEventType;
+		return this;
 	}
 
-	@XmlElement(name = "EDSMsggElgbltyFlg")
-	public YesNoIndicator getEDSMessagingEligibilityFlag() {
-		return eDSMessagingEligibilityFlag;
+	public Optional<YesNoIndicator> getEDSMessagingEligibilityFlag() {
+		return eDSMessagingEligibilityFlag == null ? Optional.empty() : Optional.of(eDSMessagingEligibilityFlag);
 	}
 
-	public void setEDSMessagingEligibilityFlag(YesNoIndicator eDSMessagingEligibilityFlag) {
+	public CorporateActionGeneralInformationSD18 setEDSMessagingEligibilityFlag(YesNoIndicator eDSMessagingEligibilityFlag) {
 		this.eDSMessagingEligibilityFlag = eDSMessagingEligibilityFlag;
+		return this;
 	}
 
-	@XmlElement(name = "RedId")
-	public Max10NumericText getRedemptionIdentification() {
-		return redemptionIdentification;
+	public Optional<Max10NumericText> getRedemptionIdentification() {
+		return redemptionIdentification == null ? Optional.empty() : Optional.of(redemptionIdentification);
 	}
 
-	public void setRedemptionIdentification(Max10NumericText redemptionIdentification) {
+	public CorporateActionGeneralInformationSD18 setRedemptionIdentification(Max10NumericText redemptionIdentification) {
 		this.redemptionIdentification = redemptionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "DTCFCPElctnFlg")
-	public YesNoIndicator getDTCFCPElectionFlag() {
-		return dTCFCPElectionFlag;
+	public Optional<YesNoIndicator> getDTCFCPElectionFlag() {
+		return dTCFCPElectionFlag == null ? Optional.empty() : Optional.of(dTCFCPElectionFlag);
 	}
 
-	public void setDTCFCPElectionFlag(YesNoIndicator dTCFCPElectionFlag) {
+	public CorporateActionGeneralInformationSD18 setDTCFCPElectionFlag(YesNoIndicator dTCFCPElectionFlag) {
 		this.dTCFCPElectionFlag = dTCFCPElectionFlag;
+		return this;
 	}
 
-	@XmlElement(name = "AsstSvcrPrcgFlg")
-	public YesNoIndicator getAssetServicerProcessingFlag() {
-		return assetServicerProcessingFlag;
+	public Optional<YesNoIndicator> getAssetServicerProcessingFlag() {
+		return assetServicerProcessingFlag == null ? Optional.empty() : Optional.of(assetServicerProcessingFlag);
 	}
 
-	public void setAssetServicerProcessingFlag(YesNoIndicator assetServicerProcessingFlag) {
+	public CorporateActionGeneralInformationSD18 setAssetServicerProcessingFlag(YesNoIndicator assetServicerProcessingFlag) {
 		this.assetServicerProcessingFlag = assetServicerProcessingFlag;
+		return this;
 	}
 }

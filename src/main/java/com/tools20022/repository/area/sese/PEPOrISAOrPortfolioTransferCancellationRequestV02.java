@@ -27,6 +27,8 @@ import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -51,28 +53,14 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
- * SecuritiesSettlementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "PEPOrISAOrPrtflTrfCxlReqV02"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02#mmCancellationByReferenceOrByTransferInstructionDetailsRule
+ * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02#CancellationByReferenceOrByTransferInstructionDetailsRule
  * PEPOrISAOrPortfolioTransferCancellationRequestV02.
- * mmCancellationByReferenceOrByTransferInstructionDetailsRule}</li>
+ * CancellationByReferenceOrByTransferInstructionDetailsRule}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -98,6 +86,20 @@ import javax.xml.bind.annotation.*;
  * PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByReference}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "PEPOrISAOrPrtflTrfCxlReqV02"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
+ * SecuritiesSettlementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.014.001.02}</li>
@@ -121,7 +123,7 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PEPOrISAOrPortfolioTransferCancellationRequestV02", propOrder = {"messageReference", "poolReference", "previousReference", "relatedReference", "cancellationByTransferInstructionDetails", "cancellationByReference"})
 public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 
@@ -163,7 +165,7 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmCancellationByReferenceOrByTransferInstructionDetailsRule = new MMXor() {
+	public static final MMXor CancellationByReferenceOrByTransferInstructionDetailsRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByReferenceOrByTransferInstructionDetailsRule";
@@ -173,10 +175,11 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 					com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByReference);
 		}
 	};
+	@XmlElement(name = "MsgRef", required = true)
 	protected MessageIdentification1 messageReference;
 	/**
-	 * Identifies the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -216,10 +219,11 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PoolRef")
 	protected AdditionalReference3 poolReference;
 	/**
-	 * Collective reference identifying a set of messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,10 +263,11 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "PrvsRef")
 	protected AdditionalReference3 previousReference;
 	/**
-	 * Reference to a linked message that was previously sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -302,10 +307,11 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "RltdRef")
 	protected AdditionalReference3 relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -346,10 +352,11 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CxlByTrfInstrDtls")
 	protected PEPISATransfer7 cancellationByTransferInstructionDetails;
 	/**
-	 * Information related to the transfer instruction to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -389,10 +396,11 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CxlByRef")
 	protected TransferReference3 cancellationByReference;
 	/**
-	 * Reference of the transfer instruction to be cancelled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -441,7 +449,7 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 				definition = "Scope\r\nAn instructing party, eg, a (new) plan manager, sends the PEPOrISAOrPortfolioTransferCancellationRequest message to the executing party, eg, a (old) plan manager, to request the cancellation of a previously sent PEPOrISAOrPortfolioTransferInstruction.\r\nUsage\r\nThe PEPOrISAOrPortfolioTransferCancellationRequest message is used to request the cancellation of an entire PEPOrISAOrPortfolioTransferInstruction message, ie, all the product transfers that it contained. The cancellation request can be specified either by:\r\n- quoting the transfer references of all the product transfers listed in the PEPOrISAOrPortfolioTransferInstruction message, or,\r\n- quoting the details of all the product transfers (this includes TransferReference) listed in PEPOrISAOrPortfolioTransferInstruction message.\r\nThe message identification of the PEPOrISAOrPortfolioTransferInstruction may also be quoted in PreviousReference. It is also possible to request the cancellation of PEPOrISAOrPortfolioTransferInstruction by just quoting its message identification in PreviousReference.";
 				nextVersions_lazy = () -> Arrays.asList(PortfolioTransferCancellationRequestV03.mmObject());
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.mmCancellationByReferenceOrByTransferInstructionDetailsRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferCancellationRequestV02.CancellationByReferenceOrByTransferInstructionDetailsRule);
 				rootElement = "Document";
 				xmlTag = "PEPOrISAOrPrtflTrfCxlReqV02";
 				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
@@ -468,61 +476,61 @@ public class PEPOrISAOrPortfolioTransferCancellationRequestV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MsgRef", required = true)
 	public MessageIdentification1 getMessageReference() {
 		return messageReference;
 	}
 
-	public void setMessageReference(MessageIdentification1 messageReference) {
-		this.messageReference = messageReference;
+	public PEPOrISAOrPortfolioTransferCancellationRequestV02 setMessageReference(MessageIdentification1 messageReference) {
+		this.messageReference = Objects.requireNonNull(messageReference);
+		return this;
 	}
 
-	@XmlElement(name = "PoolRef")
-	public AdditionalReference3 getPoolReference() {
-		return poolReference;
+	public Optional<AdditionalReference3> getPoolReference() {
+		return poolReference == null ? Optional.empty() : Optional.of(poolReference);
 	}
 
-	public void setPoolReference(AdditionalReference3 poolReference) {
+	public PEPOrISAOrPortfolioTransferCancellationRequestV02 setPoolReference(AdditionalReference3 poolReference) {
 		this.poolReference = poolReference;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsRef")
-	public AdditionalReference3 getPreviousReference() {
-		return previousReference;
+	public Optional<AdditionalReference3> getPreviousReference() {
+		return previousReference == null ? Optional.empty() : Optional.of(previousReference);
 	}
 
-	public void setPreviousReference(AdditionalReference3 previousReference) {
+	public PEPOrISAOrPortfolioTransferCancellationRequestV02 setPreviousReference(AdditionalReference3 previousReference) {
 		this.previousReference = previousReference;
+		return this;
 	}
 
-	@XmlElement(name = "RltdRef")
-	public AdditionalReference3 getRelatedReference() {
-		return relatedReference;
+	public Optional<AdditionalReference3> getRelatedReference() {
+		return relatedReference == null ? Optional.empty() : Optional.of(relatedReference);
 	}
 
-	public void setRelatedReference(AdditionalReference3 relatedReference) {
+	public PEPOrISAOrPortfolioTransferCancellationRequestV02 setRelatedReference(AdditionalReference3 relatedReference) {
 		this.relatedReference = relatedReference;
+		return this;
 	}
 
-	@XmlElement(name = "CxlByTrfInstrDtls")
-	public PEPISATransfer7 getCancellationByTransferInstructionDetails() {
-		return cancellationByTransferInstructionDetails;
+	public Optional<PEPISATransfer7> getCancellationByTransferInstructionDetails() {
+		return cancellationByTransferInstructionDetails == null ? Optional.empty() : Optional.of(cancellationByTransferInstructionDetails);
 	}
 
-	public void setCancellationByTransferInstructionDetails(PEPISATransfer7 cancellationByTransferInstructionDetails) {
+	public PEPOrISAOrPortfolioTransferCancellationRequestV02 setCancellationByTransferInstructionDetails(PEPISATransfer7 cancellationByTransferInstructionDetails) {
 		this.cancellationByTransferInstructionDetails = cancellationByTransferInstructionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "CxlByRef")
-	public TransferReference3 getCancellationByReference() {
-		return cancellationByReference;
+	public Optional<TransferReference3> getCancellationByReference() {
+		return cancellationByReference == null ? Optional.empty() : Optional.of(cancellationByReference);
 	}
 
-	public void setCancellationByReference(TransferReference3 cancellationByReference) {
+	public PEPOrISAOrPortfolioTransferCancellationRequestV02 setCancellationByReference(TransferReference3 cancellationByReference) {
 		this.cancellationByReference = cancellationByReference;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:sese.014.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:sese.014.001.02")
 	static public class Document {
 		@XmlElement(name = "PEPOrISAOrPrtflTrfCxlReqV02", required = true)
 		public PEPOrISAOrPortfolioTransferCancellationRequestV02 messageBody;

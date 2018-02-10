@@ -17,12 +17,19 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.RoundingDirectionCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the rounding direction.
@@ -31,39 +38,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#Full
+ * RoundingDirectionCode.Full}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#mmFull
- * RoundingDirectionCode.mmFull}</li>
+ * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#NoFraction
+ * RoundingDirectionCode.NoFraction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#mmNoFraction
- * RoundingDirectionCode.mmNoFraction}</li>
+ * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#ProRate
+ * RoundingDirectionCode.ProRate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#mmProRate
- * RoundingDirectionCode.mmProRate}</li>
+ * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#RoundUp
+ * RoundingDirectionCode.RoundUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#mmRoundUp
- * RoundingDirectionCode.mmRoundUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#RoundDown
+ * RoundingDirectionCode.RoundDown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#mmRoundDown
- * RoundingDirectionCode.mmRoundDown}</li>
+ * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#RoundToNearest
+ * RoundingDirectionCode.RoundToNearest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#mmRoundToNearest
- * RoundingDirectionCode.mmRoundToNearest}</li>
+ * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#IssueFraction
+ * RoundingDirectionCode.IssueFraction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#mmIssueFraction
- * RoundingDirectionCode.mmIssueFraction}</li>
+ * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#DiscussFirst
+ * RoundingDirectionCode.DiscussFirst}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#mmDiscussFirst
- * RoundingDirectionCode.mmDiscussFirst}</li>
+ * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#Specific
+ * RoundingDirectionCode.Specific}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#mmSpecific
- * RoundingDirectionCode.mmSpecific}</li>
+ * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#Standard
+ * RoundingDirectionCode.Standard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#mmStandard
- * RoundingDirectionCode.mmStandard}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#mmRetain
- * RoundingDirectionCode.mmRetain}</li>
+ * {@linkplain com.tools20022.repository.codeset.RoundingDirectionCode#Retain
+ * RoundingDirectionCode.Retain}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -78,8 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -96,7 +102,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the rounding direction."</li>
  * </ul>
  */
-public class RoundingDirectionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RoundingDirectionCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -110,6 +117,9 @@ public class RoundingDirectionCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "FULL"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::PRCO//FULL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -120,12 +130,13 @@ public class RoundingDirectionCode {
 	 * definition} = "Pre-allocate shares only if fully dealt."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFull = new MMCode() {
+	public static final RoundingDirectionCode Full = new RoundingDirectionCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PRCO//FULL"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Full";
 			definition = "Pre-allocate shares only if fully dealt.";
-			owner_lazy = () -> RoundingDirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RoundingDirectionCode.mmObject();
 			codeName = "FULL";
 		}
 	};
@@ -140,6 +151,9 @@ public class RoundingDirectionCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "NOFR"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::PRCO//NOFR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -150,12 +164,13 @@ public class RoundingDirectionCode {
 	 * definition} = "No fractional shares are allowed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoFraction = new MMCode() {
+	public static final RoundingDirectionCode NoFraction = new RoundingDirectionCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PRCO//NOFR"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NoFraction";
 			definition = "No fractional shares are allowed.";
-			owner_lazy = () -> RoundingDirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RoundingDirectionCode.mmObject();
 			codeName = "NOFR";
 		}
 	};
@@ -170,6 +185,9 @@ public class RoundingDirectionCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PROR"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::PRCO//PROR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -180,12 +198,13 @@ public class RoundingDirectionCode {
 	 * definition} = "In case of a partial fill, pro-rate the allocations."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProRate = new MMCode() {
+	public static final RoundingDirectionCode ProRate = new RoundingDirectionCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PRCO//PROR"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProRate";
 			definition = "In case of a partial fill, pro-rate the allocations.";
-			owner_lazy = () -> RoundingDirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RoundingDirectionCode.mmObject();
 			codeName = "PROR";
 		}
 	};
@@ -200,6 +219,9 @@ public class RoundingDirectionCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RDUP"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::PRCO//RDUP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -210,12 +232,13 @@ public class RoundingDirectionCode {
 	 * definition} = "Round up to the nearest whole number."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRoundUp = new MMCode() {
+	public static final RoundingDirectionCode RoundUp = new RoundingDirectionCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PRCO//RDUP"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoundUp";
 			definition = "Round up to the nearest whole number.";
-			owner_lazy = () -> RoundingDirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RoundingDirectionCode.mmObject();
 			codeName = "RDUP";
 		}
 	};
@@ -230,6 +253,9 @@ public class RoundingDirectionCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "RDWN"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::PRCO//RDWN</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -240,12 +266,13 @@ public class RoundingDirectionCode {
 	 * definition} = "Round down to the nearest whole number."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRoundDown = new MMCode() {
+	public static final RoundingDirectionCode RoundDown = new RoundingDirectionCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PRCO//RDWN"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoundDown";
 			definition = "Round down to the nearest whole number.";
-			owner_lazy = () -> RoundingDirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RoundingDirectionCode.mmObject();
 			codeName = "RDWN";
 		}
 	};
@@ -270,12 +297,12 @@ public class RoundingDirectionCode {
 	 * definition} = "Round up or down to the nearest whole number."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRoundToNearest = new MMCode() {
+	public static final RoundingDirectionCode RoundToNearest = new RoundingDirectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoundToNearest";
 			definition = "Round up or down to the nearest whole number.";
-			owner_lazy = () -> RoundingDirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RoundingDirectionCode.mmObject();
 			codeName = "STAN";
 		}
 	};
@@ -300,12 +327,12 @@ public class RoundingDirectionCode {
 	 * definition} = "Do not round."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssueFraction = new MMCode() {
+	public static final RoundingDirectionCode IssueFraction = new RoundingDirectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssueFraction";
 			definition = "Do not round.";
-			owner_lazy = () -> RoundingDirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RoundingDirectionCode.mmObject();
 			codeName = "DIST";
 		}
 	};
@@ -320,6 +347,9 @@ public class RoundingDirectionCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "TALK"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 591 value 1</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -330,12 +360,13 @@ public class RoundingDirectionCode {
 	 * definition} = "Do not pro-rate; discuss first."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDiscussFirst = new MMCode() {
+	public static final RoundingDirectionCode DiscussFirst = new RoundingDirectionCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "591 value 1"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DiscussFirst";
 			definition = "Do not pro-rate; discuss first.";
-			owner_lazy = () -> RoundingDirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RoundingDirectionCode.mmObject();
 			codeName = "TALK";
 		}
 	};
@@ -351,6 +382,9 @@ public class RoundingDirectionCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "SPEC"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::PRCO//SPEC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -363,12 +397,13 @@ public class RoundingDirectionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpecific = new MMCode() {
+	public static final RoundingDirectionCode Specific = new RoundingDirectionCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PRCO//SPEC"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Specific";
 			definition = "Pre-allocate according to the amounts shown in a linked allocation instruction.";
-			owner_lazy = () -> RoundingDirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RoundingDirectionCode.mmObject();
 			codeName = "SPEC";
 		}
 	};
@@ -396,12 +431,12 @@ public class RoundingDirectionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmStandard = new MMCode() {
+	public static final RoundingDirectionCode Standard = new RoundingDirectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Standard";
 			definition = "Indicates that if the fraction is greater than or equal to 0.5 of the value should be rounded up; otherwise rounded down.";
-			owner_lazy = () -> RoundingDirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RoundingDirectionCode.mmObject();
 			codeName = "SSTD";
 		}
 	};
@@ -427,30 +462,70 @@ public class RoundingDirectionCode {
 	 * "Indicates that fractional value should be retained; no rounding."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRetain = new MMCode() {
+	public static final RoundingDirectionCode Retain = new RoundingDirectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Retain";
 			definition = "Indicates that fractional value should be retained; no rounding.";
-			owner_lazy = () -> RoundingDirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RoundingDirectionCode.mmObject();
 			codeName = "RETA";
 		}
 	};
+	final static private LinkedHashMap<String, RoundingDirectionCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RoundingDirectionCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FULL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RoundingDirectionCode";
 				definition = "Specifies the rounding direction.";
-				code_lazy = () -> Arrays
-						.asList(RoundingDirectionCode.mmFull, RoundingDirectionCode.mmNoFraction, RoundingDirectionCode.mmProRate, RoundingDirectionCode.mmRoundUp, RoundingDirectionCode.mmRoundDown, RoundingDirectionCode.mmRoundToNearest,
-								RoundingDirectionCode.mmIssueFraction, RoundingDirectionCode.mmDiscussFirst, RoundingDirectionCode.mmSpecific, RoundingDirectionCode.mmStandard, RoundingDirectionCode.mmRetain);
 				derivation_lazy = () -> Arrays.asList(RoundingDirection1Code.mmObject(), RoundingDirection2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RoundingDirectionCode.Full, com.tools20022.repository.codeset.RoundingDirectionCode.NoFraction,
+						com.tools20022.repository.codeset.RoundingDirectionCode.ProRate, com.tools20022.repository.codeset.RoundingDirectionCode.RoundUp, com.tools20022.repository.codeset.RoundingDirectionCode.RoundDown,
+						com.tools20022.repository.codeset.RoundingDirectionCode.RoundToNearest, com.tools20022.repository.codeset.RoundingDirectionCode.IssueFraction, com.tools20022.repository.codeset.RoundingDirectionCode.DiscussFirst,
+						com.tools20022.repository.codeset.RoundingDirectionCode.Specific, com.tools20022.repository.codeset.RoundingDirectionCode.Standard, com.tools20022.repository.codeset.RoundingDirectionCode.Retain);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Full.getCodeName().get(), Full);
+		codesByName.put(NoFraction.getCodeName().get(), NoFraction);
+		codesByName.put(ProRate.getCodeName().get(), ProRate);
+		codesByName.put(RoundUp.getCodeName().get(), RoundUp);
+		codesByName.put(RoundDown.getCodeName().get(), RoundDown);
+		codesByName.put(RoundToNearest.getCodeName().get(), RoundToNearest);
+		codesByName.put(IssueFraction.getCodeName().get(), IssueFraction);
+		codesByName.put(DiscussFirst.getCodeName().get(), DiscussFirst);
+		codesByName.put(Specific.getCodeName().get(), Specific);
+		codesByName.put(Standard.getCodeName().get(), Standard);
+		codesByName.put(Retain.getCodeName().get(), Retain);
+	}
+
+	public static RoundingDirectionCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RoundingDirectionCode[] values() {
+		RoundingDirectionCode[] values = new RoundingDirectionCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RoundingDirectionCode> {
+		@Override
+		public RoundingDirectionCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RoundingDirectionCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.SecuritiesIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * AlternateSecurityIdentification1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AlternateSecurityIdentification7", propOrder = {"identification", "identificationSource"})
 public class AlternateSecurityIdentification7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Unique and unambiguous identifier of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +124,7 @@ public class AlternateSecurityIdentification7 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> AlternateSecurityIdentification7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateSecurityIdentification7.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -134,11 +136,11 @@ public class AlternateSecurityIdentification7 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IdSrc", required = true)
 	protected IdentificationSource1Choice identificationSource;
 	/**
-	 * Source of the identification, that is, domestic (national) or
-	 * proprietary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -173,7 +175,7 @@ public class AlternateSecurityIdentification7 {
 	public static final MMMessageAssociationEnd mmIdentificationSource = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesIdentification.mmGenericIdentification;
-			componentContext_lazy = () -> AlternateSecurityIdentification7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AlternateSecurityIdentification7.mmObject();
 			isDerived = false;
 			xmlTag = "IdSrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -189,9 +191,9 @@ public class AlternateSecurityIdentification7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AlternateSecurityIdentification7.mmIdentification, AlternateSecurityIdentification7.mmIdentificationSource);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AlternateSecurityIdentification7.mmIdentification, com.tools20022.repository.msg.AlternateSecurityIdentification7.mmIdentificationSource);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlternateSecurityIdentification7";
 				definition = "Proprietary or domestic identification scheme that uniquely identifies a security.";
@@ -201,21 +203,21 @@ public class AlternateSecurityIdentification7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public AlternateSecurityIdentification7 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "IdSrc", required = true)
 	public IdentificationSource1Choice getIdentificationSource() {
 		return identificationSource;
 	}
 
-	public void setIdentificationSource(IdentificationSource1Choice identificationSource) {
-		this.identificationSource = identificationSource;
+	public AlternateSecurityIdentification7 setIdentificationSource(IdentificationSource1Choice identificationSource) {
+		this.identificationSource = Objects.requireNonNull(identificationSource);
+		return this;
 	}
 }

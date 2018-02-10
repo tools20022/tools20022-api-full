@@ -25,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryQuantity8;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Quantity19Choice", propOrder = {"quantity", "proprietaryQuantity"})
 public class Quantity19Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Qty", required = true)
 	protected FinancialInstrumentQuantity1Choice quantity;
 	/**
-	 * Quantity of security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -108,7 +110,7 @@ public class Quantity19Choice {
 	 */
 	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Quantity19Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity19Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +123,11 @@ public class Quantity19Choice {
 			type_lazy = () -> com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryQty", required = true)
 	protected ProprietaryQuantity8 proprietaryQuantity;
 	/**
-	 * Proprietary quantity of security format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +158,7 @@ public class Quantity19Choice {
 	 */
 	public static final MMMessageAssociationEnd mmProprietaryQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Quantity19Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity19Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +175,9 @@ public class Quantity19Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Quantity19Choice.mmQuantity, Quantity19Choice.mmProprietaryQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity19Choice.mmQuantity, com.tools20022.repository.choice.Quantity19Choice.mmProprietaryQuantity);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity19Choice";
 				definition = "Choice between different quantity of security formats.";
@@ -184,21 +187,21 @@ public class Quantity19Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity1Choice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice quantity) {
-		this.quantity = quantity;
+	public Quantity19Choice setQuantity(com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryQty", required = true)
 	public ProprietaryQuantity8 getProprietaryQuantity() {
 		return proprietaryQuantity;
 	}
 
-	public void setProprietaryQuantity(ProprietaryQuantity8 proprietaryQuantity) {
-		this.proprietaryQuantity = proprietaryQuantity;
+	public Quantity19Choice setProprietaryQuantity(ProprietaryQuantity8 proprietaryQuantity) {
+		this.proprietaryQuantity = Objects.requireNonNull(proprietaryQuantity);
+		return this;
 	}
 }

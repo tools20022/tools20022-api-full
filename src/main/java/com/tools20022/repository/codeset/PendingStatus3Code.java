@@ -20,76 +20,78 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PaymentInstructionStatusCode;
+import com.tools20022.repository.codeset.PendingStatus3Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates that the state of a payment at the clearing agent side is pending.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatusCode
- * PaymentInstructionStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmAccepted
- * PendingStatus3Code.mmAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#Accepted
+ * PendingStatus3Code.Accepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmValidated
- * PendingStatus3Code.mmValidated}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#Validated
+ * PendingStatus3Code.Validated}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingStatus3Code#Matched
+ * PendingStatus3Code.Matched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmMatched
- * PendingStatus3Code.mmMatched}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#Authorised
+ * PendingStatus3Code.Authorised}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PendingStatus3Code#Invalid
+ * PendingStatus3Code.Invalid}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmAuthorised
- * PendingStatus3Code.mmAuthorised}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#Unmatched
+ * PendingStatus3Code.Unmatched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmInvalid
- * PendingStatus3Code.mmInvalid}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#SettlementEligible
+ * PendingStatus3Code.SettlementEligible}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmUnmatched
- * PendingStatus3Code.mmUnmatched}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#SettlementMature
+ * PendingStatus3Code.SettlementMature}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmSettlementEligible
- * PendingStatus3Code.mmSettlementEligible}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#Suspended
+ * PendingStatus3Code.Suspended}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmSettlementMature
- * PendingStatus3Code.mmSettlementMature}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#PendingCancellation
+ * PendingStatus3Code.PendingCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmSuspended
- * PendingStatus3Code.mmSuspended}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#PendingSettlement
+ * PendingStatus3Code.PendingSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmPendingCancellation
- * PendingStatus3Code.mmPendingCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#PendingFailingSettlement
+ * PendingStatus3Code.PendingFailingSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmPendingSettlement
- * PendingStatus3Code.mmPendingSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#SenderMultilateralLimitRelated
+ * PendingStatus3Code.SenderMultilateralLimitRelated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmPendingFailingSettlement
- * PendingStatus3Code.mmPendingFailingSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#ReceiverMultilateralLimitRelated
+ * PendingStatus3Code.ReceiverMultilateralLimitRelated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmSenderMultilateralLimitRelated
- * PendingStatus3Code.mmSenderMultilateralLimitRelated}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#SenderReceiverBilateralLimitRelated
+ * PendingStatus3Code.SenderReceiverBilateralLimitRelated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmReceiverMultilateralLimitRelated
- * PendingStatus3Code.mmReceiverMultilateralLimitRelated}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmSenderReceiverBilateralLimitRelated
- * PendingStatus3Code.mmSenderReceiverBilateralLimitRelated}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#mmHeldForServiceAvailability
- * PendingStatus3Code.mmHeldForServiceAvailability}</li>
+ * {@linkplain com.tools20022.repository.codeset.PendingStatus3Code#HeldForServiceAvailability
+ * PendingStatus3Code.HeldForServiceAvailability}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PaymentInstructionStatusCode
+ * PaymentInstructionStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -108,7 +110,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PendingStatus3Code extends PaymentInstructionStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PendingStatus3Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -127,11 +130,12 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final PendingStatus3Code Accepted = new PendingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> PendingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingStatus3Code.mmObject();
+			codeName = PaymentInstructionStatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -150,11 +154,12 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "Validated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmValidated = new MMCode() {
+	public static final PendingStatus3Code Validated = new PendingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Validated";
-			owner_lazy = () -> PendingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingStatus3Code.mmObject();
+			codeName = PaymentInstructionStatusCode.Validated.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -173,11 +178,12 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "Matched"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMatched = new MMCode() {
+	public static final PendingStatus3Code Matched = new PendingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
-			owner_lazy = () -> PendingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingStatus3Code.mmObject();
+			codeName = PaymentInstructionStatusCode.Matched.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -196,11 +202,12 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "Authorised"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuthorised = new MMCode() {
+	public static final PendingStatus3Code Authorised = new PendingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authorised";
-			owner_lazy = () -> PendingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingStatus3Code.mmObject();
+			codeName = PaymentInstructionStatusCode.Authorised.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -219,11 +226,12 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "Invalid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalid = new MMCode() {
+	public static final PendingStatus3Code Invalid = new PendingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invalid";
-			owner_lazy = () -> PendingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingStatus3Code.mmObject();
+			codeName = PaymentInstructionStatusCode.Invalid.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -242,11 +250,12 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "Unmatched"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnmatched = new MMCode() {
+	public static final PendingStatus3Code Unmatched = new PendingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
-			owner_lazy = () -> PendingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingStatus3Code.mmObject();
+			codeName = PaymentInstructionStatusCode.Unmatched.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -265,11 +274,12 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "SettlementEligible"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementEligible = new MMCode() {
+	public static final PendingStatus3Code SettlementEligible = new PendingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementEligible";
-			owner_lazy = () -> PendingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingStatus3Code.mmObject();
+			codeName = PaymentInstructionStatusCode.SettlementEligible.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -288,11 +298,12 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "SettlementMature"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettlementMature = new MMCode() {
+	public static final PendingStatus3Code SettlementMature = new PendingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMature";
-			owner_lazy = () -> PendingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingStatus3Code.mmObject();
+			codeName = PaymentInstructionStatusCode.SettlementMature.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -311,11 +322,12 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "Suspended"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuspended = new MMCode() {
+	public static final PendingStatus3Code Suspended = new PendingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
-			owner_lazy = () -> PendingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingStatus3Code.mmObject();
+			codeName = PaymentInstructionStatusCode.Suspended.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -334,11 +346,12 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "PendingCancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingCancellation = new MMCode() {
+	public static final PendingStatus3Code PendingCancellation = new PendingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingCancellation";
-			owner_lazy = () -> PendingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingStatus3Code.mmObject();
+			codeName = PaymentInstructionStatusCode.PendingCancellation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -357,11 +370,12 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "PendingSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingSettlement = new MMCode() {
+	public static final PendingStatus3Code PendingSettlement = new PendingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingSettlement";
-			owner_lazy = () -> PendingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingStatus3Code.mmObject();
+			codeName = PaymentInstructionStatusCode.PendingSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -380,11 +394,12 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "PendingFailingSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPendingFailingSettlement = new MMCode() {
+	public static final PendingStatus3Code PendingFailingSettlement = new PendingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingFailingSettlement";
-			owner_lazy = () -> PendingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingStatus3Code.mmObject();
+			codeName = PaymentInstructionStatusCode.PendingFailingSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -403,11 +418,12 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "SenderMultilateralLimitRelated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSenderMultilateralLimitRelated = new MMCode() {
+	public static final PendingStatus3Code SenderMultilateralLimitRelated = new PendingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderMultilateralLimitRelated";
-			owner_lazy = () -> PendingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingStatus3Code.mmObject();
+			codeName = PaymentInstructionStatusCode.SenderMultilateralLimitRelated.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -426,11 +442,12 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "ReceiverMultilateralLimitRelated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceiverMultilateralLimitRelated = new MMCode() {
+	public static final PendingStatus3Code ReceiverMultilateralLimitRelated = new PendingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverMultilateralLimitRelated";
-			owner_lazy = () -> PendingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingStatus3Code.mmObject();
+			codeName = PaymentInstructionStatusCode.ReceiverMultilateralLimitRelated.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -449,11 +466,12 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "SenderReceiverBilateralLimitRelated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSenderReceiverBilateralLimitRelated = new MMCode() {
+	public static final PendingStatus3Code SenderReceiverBilateralLimitRelated = new PendingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderReceiverBilateralLimitRelated";
-			owner_lazy = () -> PendingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingStatus3Code.mmObject();
+			codeName = PaymentInstructionStatusCode.SenderReceiverBilateralLimitRelated.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -472,29 +490,77 @@ public class PendingStatus3Code extends PaymentInstructionStatusCode {
 	 * name} = "HeldForServiceAvailability"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmHeldForServiceAvailability = new MMCode() {
+	public static final PendingStatus3Code HeldForServiceAvailability = new PendingStatus3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HeldForServiceAvailability";
-			owner_lazy = () -> PendingStatus3Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PendingStatus3Code.mmObject();
+			codeName = PaymentInstructionStatusCode.HeldForServiceAvailability.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PendingStatus3Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PendingStatus3Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACPD");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingStatus3Code";
 				definition = "Indicates that the state of a payment at the clearing agent side is pending.";
-				code_lazy = () -> Arrays.asList(PendingStatus3Code.mmAccepted, PendingStatus3Code.mmValidated, PendingStatus3Code.mmMatched, PendingStatus3Code.mmAuthorised, PendingStatus3Code.mmInvalid, PendingStatus3Code.mmUnmatched,
-						PendingStatus3Code.mmSettlementEligible, PendingStatus3Code.mmSettlementMature, PendingStatus3Code.mmSuspended, PendingStatus3Code.mmPendingCancellation, PendingStatus3Code.mmPendingSettlement,
-						PendingStatus3Code.mmPendingFailingSettlement, PendingStatus3Code.mmSenderMultilateralLimitRelated, PendingStatus3Code.mmReceiverMultilateralLimitRelated, PendingStatus3Code.mmSenderReceiverBilateralLimitRelated,
-						PendingStatus3Code.mmHeldForServiceAvailability);
 				trace_lazy = () -> PaymentInstructionStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingStatus3Code.Accepted, com.tools20022.repository.codeset.PendingStatus3Code.Validated, com.tools20022.repository.codeset.PendingStatus3Code.Matched,
+						com.tools20022.repository.codeset.PendingStatus3Code.Authorised, com.tools20022.repository.codeset.PendingStatus3Code.Invalid, com.tools20022.repository.codeset.PendingStatus3Code.Unmatched,
+						com.tools20022.repository.codeset.PendingStatus3Code.SettlementEligible, com.tools20022.repository.codeset.PendingStatus3Code.SettlementMature, com.tools20022.repository.codeset.PendingStatus3Code.Suspended,
+						com.tools20022.repository.codeset.PendingStatus3Code.PendingCancellation, com.tools20022.repository.codeset.PendingStatus3Code.PendingSettlement,
+						com.tools20022.repository.codeset.PendingStatus3Code.PendingFailingSettlement, com.tools20022.repository.codeset.PendingStatus3Code.SenderMultilateralLimitRelated,
+						com.tools20022.repository.codeset.PendingStatus3Code.ReceiverMultilateralLimitRelated, com.tools20022.repository.codeset.PendingStatus3Code.SenderReceiverBilateralLimitRelated,
+						com.tools20022.repository.codeset.PendingStatus3Code.HeldForServiceAvailability);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(Validated.getCodeName().get(), Validated);
+		codesByName.put(Matched.getCodeName().get(), Matched);
+		codesByName.put(Authorised.getCodeName().get(), Authorised);
+		codesByName.put(Invalid.getCodeName().get(), Invalid);
+		codesByName.put(Unmatched.getCodeName().get(), Unmatched);
+		codesByName.put(SettlementEligible.getCodeName().get(), SettlementEligible);
+		codesByName.put(SettlementMature.getCodeName().get(), SettlementMature);
+		codesByName.put(Suspended.getCodeName().get(), Suspended);
+		codesByName.put(PendingCancellation.getCodeName().get(), PendingCancellation);
+		codesByName.put(PendingSettlement.getCodeName().get(), PendingSettlement);
+		codesByName.put(PendingFailingSettlement.getCodeName().get(), PendingFailingSettlement);
+		codesByName.put(SenderMultilateralLimitRelated.getCodeName().get(), SenderMultilateralLimitRelated);
+		codesByName.put(ReceiverMultilateralLimitRelated.getCodeName().get(), ReceiverMultilateralLimitRelated);
+		codesByName.put(SenderReceiverBilateralLimitRelated.getCodeName().get(), SenderReceiverBilateralLimitRelated);
+		codesByName.put(HeldForServiceAvailability.getCodeName().get(), HeldForServiceAvailability);
+	}
+
+	public static PendingStatus3Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PendingStatus3Code[] values() {
+		PendingStatus3Code[] values = new PendingStatus3Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PendingStatus3Code> {
+		@Override
+		public PendingStatus3Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PendingStatus3Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -24,9 +24,11 @@ import com.tools20022.repository.entity.CollateralValuation;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CollateralValuation3;
 import com.tools20022.repository.msg.CollateralValuation4;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuredCollateral1Choice", propOrder = {"singleCollateral", "multipleCollateral", "poolCollateral", "otherCollateral"})
 public class SecuredCollateral1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SnglColl", required = true)
 	protected CollateralValuation3 singleCollateral;
 	/**
-	 * Identifies the security pledged via a single ISIN.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -128,7 +131,7 @@ public class SecuredCollateral1Choice {
 	public static final MMMessageAssociationEnd mmSingleCollateral = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CollateralValuation.mmObject();
-			componentContext_lazy = () -> SecuredCollateral1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuredCollateral1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SnglColl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,14 +144,11 @@ public class SecuredCollateral1Choice {
 			type_lazy = () -> CollateralValuation3.mmObject();
 		}
 	};
+	@XmlElement(name = "MltplColl", required = true)
 	protected List<CollateralValuation3> multipleCollateral;
 	/**
-	 * Identifies all securities pledged when the transaction is collateralised
-	 * with more than one security. <br>
-	 * Usage:<br>
-	 * In case of multi-collateral repo, the nominal amount of each
-	 * collateralised security must be provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -190,7 +190,7 @@ public class SecuredCollateral1Choice {
 	public static final MMMessageAssociationEnd mmMultipleCollateral = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CollateralValuation.mmObject();
-			componentContext_lazy = () -> SecuredCollateral1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuredCollateral1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "MltplColl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,14 +202,11 @@ public class SecuredCollateral1Choice {
 			type_lazy = () -> CollateralValuation3.mmObject();
 		}
 	};
+	@XmlElement(name = "PoolColl", required = true)
 	protected CollateralValuation3 poolCollateral;
 	/**
-	 * Identifies the pooling of repos in which the collateral basket is
-	 * identified by an ISIN. <br>
-	 * <br>
-	 * Usage: When the collateral basket is identified by an ISIN, the basket
-	 * ISIN shall be reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -251,7 +248,7 @@ public class SecuredCollateral1Choice {
 	public static final MMMessageAssociationEnd mmPoolCollateral = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CollateralValuation.mmObject();
-			componentContext_lazy = () -> SecuredCollateral1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuredCollateral1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PoolColl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,11 +261,11 @@ public class SecuredCollateral1Choice {
 			type_lazy = () -> CollateralValuation3.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrColl", required = true)
 	protected List<CollateralValuation4> otherCollateral;
 	/**
-	 * Identifies the collateral when the asset class pledged as collateral does
-	 * not correspond to an ISIN.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -310,7 +307,7 @@ public class SecuredCollateral1Choice {
 	public static final MMMessageAssociationEnd mmOtherCollateral = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CollateralValuation.mmObject();
-			componentContext_lazy = () -> SecuredCollateral1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SecuredCollateral1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrColl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -326,9 +323,10 @@ public class SecuredCollateral1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuredCollateral1Choice.mmSingleCollateral, SecuredCollateral1Choice.mmMultipleCollateral, SecuredCollateral1Choice.mmPoolCollateral, SecuredCollateral1Choice.mmOtherCollateral);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SecuredCollateral1Choice.mmSingleCollateral, com.tools20022.repository.choice.SecuredCollateral1Choice.mmMultipleCollateral,
+						com.tools20022.repository.choice.SecuredCollateral1Choice.mmPoolCollateral, com.tools20022.repository.choice.SecuredCollateral1Choice.mmOtherCollateral);
 				trace_lazy = () -> CollateralValuation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuredCollateral1Choice";
 				definition = "Provides the collateral details for the secured markets.";
@@ -338,39 +336,39 @@ public class SecuredCollateral1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SnglColl", required = true)
 	public CollateralValuation3 getSingleCollateral() {
 		return singleCollateral;
 	}
 
-	public void setSingleCollateral(CollateralValuation3 singleCollateral) {
-		this.singleCollateral = singleCollateral;
+	public SecuredCollateral1Choice setSingleCollateral(CollateralValuation3 singleCollateral) {
+		this.singleCollateral = Objects.requireNonNull(singleCollateral);
+		return this;
 	}
 
-	@XmlElement(name = "MltplColl", required = true)
 	public List<CollateralValuation3> getMultipleCollateral() {
-		return multipleCollateral;
+		return multipleCollateral == null ? multipleCollateral = new ArrayList<>() : multipleCollateral;
 	}
 
-	public void setMultipleCollateral(List<CollateralValuation3> multipleCollateral) {
-		this.multipleCollateral = multipleCollateral;
+	public SecuredCollateral1Choice setMultipleCollateral(List<CollateralValuation3> multipleCollateral) {
+		this.multipleCollateral = Objects.requireNonNull(multipleCollateral);
+		return this;
 	}
 
-	@XmlElement(name = "PoolColl", required = true)
 	public CollateralValuation3 getPoolCollateral() {
 		return poolCollateral;
 	}
 
-	public void setPoolCollateral(CollateralValuation3 poolCollateral) {
-		this.poolCollateral = poolCollateral;
+	public SecuredCollateral1Choice setPoolCollateral(CollateralValuation3 poolCollateral) {
+		this.poolCollateral = Objects.requireNonNull(poolCollateral);
+		return this;
 	}
 
-	@XmlElement(name = "OthrColl", required = true)
 	public List<CollateralValuation4> getOtherCollateral() {
-		return otherCollateral;
+		return otherCollateral == null ? otherCollateral = new ArrayList<>() : otherCollateral;
 	}
 
-	public void setOtherCollateral(List<CollateralValuation4> otherCollateral) {
-		this.otherCollateral = otherCollateral;
+	public SecuredCollateral1Choice setOtherCollateral(List<CollateralValuation4> otherCollateral) {
+		this.otherCollateral = Objects.requireNonNull(otherCollateral);
+		return this;
 	}
 }

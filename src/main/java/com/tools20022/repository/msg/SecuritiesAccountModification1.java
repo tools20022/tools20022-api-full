@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAccountModification1", propOrder = {"scopeIndication", "requestedModification"})
 public class SecuritiesAccountModification1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ScpIndctn", required = true)
 	protected DataModification1Code scopeIndication;
 	/**
-	 * Specifies the type of requested modification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +104,7 @@ public class SecuritiesAccountModification1 {
 	 */
 	public static final MMMessageAttribute mmScopeIndication = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountModification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountModification1.mmObject();
 			isDerived = false;
 			xmlTag = "ScpIndctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,11 +115,11 @@ public class SecuritiesAccountModification1 {
 			simpleType_lazy = () -> DataModification1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdMod", required = true)
 	protected SecuritiesAccountModification1Choice requestedModification;
 	/**
-	 * Specifies the elements to be modified for the securities account
-	 * reference data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -146,7 +148,7 @@ public class SecuritiesAccountModification1 {
 	 */
 	public static final MMMessageAssociationEnd mmRequestedModification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountModification1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountModification1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdMod";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,8 +164,8 @@ public class SecuritiesAccountModification1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountModification1.mmScopeIndication, SecuritiesAccountModification1.mmRequestedModification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountModification1.mmScopeIndication, com.tools20022.repository.msg.SecuritiesAccountModification1.mmRequestedModification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountModification1";
 				definition = "Information about the kind of modification request for securities account reference data.";
@@ -172,21 +174,21 @@ public class SecuritiesAccountModification1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ScpIndctn", required = true)
 	public DataModification1Code getScopeIndication() {
 		return scopeIndication;
 	}
 
-	public void setScopeIndication(DataModification1Code scopeIndication) {
-		this.scopeIndication = scopeIndication;
+	public SecuritiesAccountModification1 setScopeIndication(DataModification1Code scopeIndication) {
+		this.scopeIndication = Objects.requireNonNull(scopeIndication);
+		return this;
 	}
 
-	@XmlElement(name = "ReqdMod", required = true)
 	public SecuritiesAccountModification1Choice getRequestedModification() {
 		return requestedModification;
 	}
 
-	public void setRequestedModification(SecuritiesAccountModification1Choice requestedModification) {
-		this.requestedModification = requestedModification;
+	public SecuritiesAccountModification1 setRequestedModification(SecuritiesAccountModification1Choice requestedModification) {
+		this.requestedModification = Objects.requireNonNull(requestedModification);
+		return this;
 	}
 }

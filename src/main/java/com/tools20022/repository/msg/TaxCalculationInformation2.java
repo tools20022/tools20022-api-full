@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.SecuritiesTax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,18 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information used to calculate the tax."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "TaxCalculationInformation2", propOrder = {"EUCapitalGain", "percentageOfDebtClaim", "percentageGrandfatheredDebt"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "TaxCalculationInformation2", propOrder = {"eUCapitalGain", "percentageOfDebtClaim", "percentageGrandfatheredDebt"})
 public class TaxCalculationInformation2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "EUCptlGn")
 	protected EUCapitalGain1 eUCapitalGain;
 	/**
-	 * Specifies whether capital gain is in the scope of the European directive
-	 * on taxation of savings income in the form of interest payments (Council
-	 * Directive 2003/48/EC 3 June), or an income realised upon sale, a refund
-	 * or redemption of shares and units, etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +114,7 @@ public class TaxCalculationInformation2 {
 	public static final MMMessageAttribute mmEUCapitalGain = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTax.mmEUCapitalGain;
-			componentContext_lazy = () -> TaxCalculationInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "EUCptlGn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,13 +125,11 @@ public class TaxCalculationInformation2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.EUCapitalGain1.mmObject();
 		}
 	};
+	@XmlElement(name = "PctgOfDebtClm")
 	protected PercentageRate percentageOfDebtClaim;
 	/**
-	 * Percentage of the underlying assets of the funds that represents a debt
-	 * and is in the scope of the European directive on taxation of savings
-	 * income in the form of interest payments (Council Directive 2003/48/EC 3
-	 * June).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,7 +165,7 @@ public class TaxCalculationInformation2 {
 	public static final MMMessageAttribute mmPercentageOfDebtClaim = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTax.mmPercentageOfDebtClaim;
-			componentContext_lazy = () -> TaxCalculationInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "PctgOfDebtClm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,10 +176,11 @@ public class TaxCalculationInformation2 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "PctgGrdfthdDebt")
 	protected PercentageRate percentageGrandfatheredDebt;
 	/**
-	 * Percentage of grandfathered debt claim.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -216,7 +214,7 @@ public class TaxCalculationInformation2 {
 	public static final MMMessageAttribute mmPercentageGrandfatheredDebt = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTax.mmPercentageGrandfatheredDebt;
-			componentContext_lazy = () -> TaxCalculationInformation2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxCalculationInformation2.mmObject();
 			isDerived = false;
 			xmlTag = "PctgGrdfthdDebt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,9 +229,10 @@ public class TaxCalculationInformation2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TaxCalculationInformation2.mmEUCapitalGain, TaxCalculationInformation2.mmPercentageOfDebtClaim, TaxCalculationInformation2.mmPercentageGrandfatheredDebt);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxCalculationInformation2.mmEUCapitalGain, com.tools20022.repository.msg.TaxCalculationInformation2.mmPercentageOfDebtClaim,
+						com.tools20022.repository.msg.TaxCalculationInformation2.mmPercentageGrandfatheredDebt);
 				trace_lazy = () -> InvestmentFundTax.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxCalculationInformation2";
 				definition = "Information used to calculate the tax.";
@@ -242,30 +241,30 @@ public class TaxCalculationInformation2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "EUCptlGn")
-	public EUCapitalGain1 getEUCapitalGain() {
-		return eUCapitalGain;
+	public Optional<EUCapitalGain1> getEUCapitalGain() {
+		return eUCapitalGain == null ? Optional.empty() : Optional.of(eUCapitalGain);
 	}
 
-	public void setEUCapitalGain(com.tools20022.repository.msg.EUCapitalGain1 eUCapitalGain) {
+	public TaxCalculationInformation2 setEUCapitalGain(com.tools20022.repository.msg.EUCapitalGain1 eUCapitalGain) {
 		this.eUCapitalGain = eUCapitalGain;
+		return this;
 	}
 
-	@XmlElement(name = "PctgOfDebtClm")
-	public PercentageRate getPercentageOfDebtClaim() {
-		return percentageOfDebtClaim;
+	public Optional<PercentageRate> getPercentageOfDebtClaim() {
+		return percentageOfDebtClaim == null ? Optional.empty() : Optional.of(percentageOfDebtClaim);
 	}
 
-	public void setPercentageOfDebtClaim(PercentageRate percentageOfDebtClaim) {
+	public TaxCalculationInformation2 setPercentageOfDebtClaim(PercentageRate percentageOfDebtClaim) {
 		this.percentageOfDebtClaim = percentageOfDebtClaim;
+		return this;
 	}
 
-	@XmlElement(name = "PctgGrdfthdDebt")
-	public PercentageRate getPercentageGrandfatheredDebt() {
-		return percentageGrandfatheredDebt;
+	public Optional<PercentageRate> getPercentageGrandfatheredDebt() {
+		return percentageGrandfatheredDebt == null ? Optional.empty() : Optional.of(percentageGrandfatheredDebt);
 	}
 
-	public void setPercentageGrandfatheredDebt(PercentageRate percentageGrandfatheredDebt) {
+	public TaxCalculationInformation2 setPercentageGrandfatheredDebt(PercentageRate percentageGrandfatheredDebt) {
 		this.percentageGrandfatheredDebt = percentageGrandfatheredDebt;
+		return this;
 	}
 }

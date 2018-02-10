@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.CollateralValuePosition1;
 import com.tools20022.repository.msg.ErrorHandling3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Business Report on collateral value or on business error."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CollateralValueReportOrError2Choice", propOrder = {"businessError", "collateralValue"})
 public class CollateralValueReportOrError2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BizErr", required = true)
 	protected ErrorHandling3 businessError;
 	/**
-	 * Reason the requested business information is not given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -96,7 +98,7 @@ public class CollateralValueReportOrError2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CollateralValueReportOrError2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralValueReportOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BizErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -108,11 +110,11 @@ public class CollateralValueReportOrError2Choice {
 			type_lazy = () -> ErrorHandling3.mmObject();
 		}
 	};
+	@XmlElement(name = "CollVal", required = true)
 	protected CollateralValuePosition1 collateralValue;
 	/**
-	 * Requested information on the value of the position for collateral
-	 * purposes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -141,7 +143,7 @@ public class CollateralValueReportOrError2Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCollateralValue = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CollateralValueReportOrError2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CollateralValueReportOrError2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CollVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,8 +159,8 @@ public class CollateralValueReportOrError2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CollateralValueReportOrError2Choice.mmBusinessError, CollateralValueReportOrError2Choice.mmCollateralValue);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CollateralValueReportOrError2Choice.mmBusinessError, com.tools20022.repository.choice.CollateralValueReportOrError2Choice.mmCollateralValue);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueReportOrError2Choice";
 				definition = "Business Report on collateral value or on business error.";
@@ -167,21 +169,21 @@ public class CollateralValueReportOrError2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BizErr", required = true)
 	public ErrorHandling3 getBusinessError() {
 		return businessError;
 	}
 
-	public void setBusinessError(ErrorHandling3 businessError) {
-		this.businessError = businessError;
+	public CollateralValueReportOrError2Choice setBusinessError(ErrorHandling3 businessError) {
+		this.businessError = Objects.requireNonNull(businessError);
+		return this;
 	}
 
-	@XmlElement(name = "CollVal", required = true)
 	public CollateralValuePosition1 getCollateralValue() {
 		return collateralValue;
 	}
 
-	public void setCollateralValue(CollateralValuePosition1 collateralValue) {
-		this.collateralValue = collateralValue;
+	public CollateralValueReportOrError2Choice setCollateralValue(CollateralValuePosition1 collateralValue) {
+		this.collateralValue = Objects.requireNonNull(collateralValue);
+		return this;
 	}
 }

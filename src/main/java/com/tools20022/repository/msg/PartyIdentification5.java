@@ -30,6 +30,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -43,8 +45,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PartyIdentification5#mmNameOrBEIRule
- * PartyIdentification5.mmNameOrBEIRule}</li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification5#NameOrBEIRule
+ * PartyIdentification5.NameOrBEIRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -67,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -80,16 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Entity involved in an activity."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PartyIdentification5", propOrder = {"name", "BEI", "postalAddress"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PartyIdentification5", propOrder = {"name", "bEI", "postalAddress"})
 public class PartyIdentification5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Nm", required = true)
 	protected Max70Text name;
 	/**
-	 * Name by which a party is known and which is usually used to identify that
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -124,7 +126,7 @@ public class PartyIdentification5 {
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyName.mmName;
-			componentContext_lazy = () -> PartyIdentification5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -135,10 +137,11 @@ public class PartyIdentification5 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "BEI", required = true)
 	protected BEIIdentifier bEI;
 	/**
-	 * Identification of a non-financial institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,7 +175,7 @@ public class PartyIdentification5 {
 	public static final MMMessageAttribute mmBEI = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICNonFI;
-			componentContext_lazy = () -> PartyIdentification5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "BEI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,11 +186,11 @@ public class PartyIdentification5 {
 			simpleType_lazy = () -> BEIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "PstlAdr")
 	protected PostalAddress2 postalAddress;
 	/**
-	 * Information that locates and identifies a specific address, as defined by
-	 * postal services.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -221,7 +224,7 @@ public class PartyIdentification5 {
 	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PostalAddress.mmObject();
-			componentContext_lazy = () -> PartyIdentification5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification5.mmObject();
 			isDerived = false;
 			xmlTag = "PstlAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -266,22 +269,23 @@ public class PartyIdentification5 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmNameOrBEIRule = new MMXor() {
+	public static final MMXor NameOrBEIRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameOrBEIRule";
 			definition = "If Name is present, then BEI is not allowed. If Name is not present, then BEI is mandatory.";
-			messageComponent_lazy = () -> PartyIdentification5.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(PartyIdentification5.mmName, PartyIdentification5.mmBEI);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.PartyIdentification5.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification5.mmName, com.tools20022.repository.msg.PartyIdentification5.mmBEI);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification5.mmName, PartyIdentification5.mmBEI, PartyIdentification5.mmPostalAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification5.mmName, com.tools20022.repository.msg.PartyIdentification5.mmBEI,
+						com.tools20022.repository.msg.PartyIdentification5.mmPostalAddress);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -292,36 +296,36 @@ public class PartyIdentification5 {
 				})).get();
 				name = "PartyIdentification5";
 				definition = "Entity involved in an activity.";
-				xors_lazy = () -> Arrays.asList(PartyIdentification5.mmNameOrBEIRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification5.NameOrBEIRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Nm", required = true)
 	public Max70Text getName() {
 		return name;
 	}
 
-	public void setName(Max70Text name) {
-		this.name = name;
+	public PartyIdentification5 setName(Max70Text name) {
+		this.name = Objects.requireNonNull(name);
+		return this;
 	}
 
-	@XmlElement(name = "BEI", required = true)
 	public BEIIdentifier getBEI() {
 		return bEI;
 	}
 
-	public void setBEI(BEIIdentifier bEI) {
-		this.bEI = bEI;
+	public PartyIdentification5 setBEI(BEIIdentifier bEI) {
+		this.bEI = Objects.requireNonNull(bEI);
+		return this;
 	}
 
-	@XmlElement(name = "PstlAdr")
-	public PostalAddress2 getPostalAddress() {
-		return postalAddress;
+	public Optional<PostalAddress2> getPostalAddress() {
+		return postalAddress == null ? Optional.empty() : Optional.of(postalAddress);
 	}
 
-	public void setPostalAddress(com.tools20022.repository.msg.PostalAddress2 postalAddress) {
+	public PartyIdentification5 setPostalAddress(com.tools20022.repository.msg.PostalAddress2 postalAddress) {
 		this.postalAddress = postalAddress;
+		return this;
 	}
 }

@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.FundIntentionCode;
+import com.tools20022.repository.codeset.FundIntention1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies if the fund is intended for qualified investors.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.FundIntentionCode
- * FundIntentionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundIntention1Code#mmQualified
- * FundIntention1Code.mmQualified}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundIntention1Code#Qualified
+ * FundIntention1Code.Qualified}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FundIntention1Code#mmNotQualified
- * FundIntention1Code.mmNotQualified}</li>
+ * {@linkplain com.tools20022.repository.codeset.FundIntention1Code#NotQualified
+ * FundIntention1Code.NotQualified}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.FundIntentionCode
+ * FundIntentionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies if the fund is intended for qualified investors."</li>
  * </ul>
  */
-public class FundIntention1Code extends FundIntentionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FundIntention1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -77,11 +82,12 @@ public class FundIntention1Code extends FundIntentionCode {
 	 * name} = "Qualified"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmQualified = new MMCode() {
+	public static final FundIntention1Code Qualified = new FundIntention1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Qualified";
-			owner_lazy = () -> FundIntention1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundIntention1Code.mmObject();
+			codeName = FundIntentionCode.Qualified.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -100,25 +106,56 @@ public class FundIntention1Code extends FundIntentionCode {
 	 * name} = "NotQualified"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotQualified = new MMCode() {
+	public static final FundIntention1Code NotQualified = new FundIntention1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotQualified";
-			owner_lazy = () -> FundIntention1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FundIntention1Code.mmObject();
+			codeName = FundIntentionCode.NotQualified.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, FundIntention1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FundIntention1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundIntention1Code";
 				definition = "Specifies if the fund is intended for qualified investors.";
-				code_lazy = () -> Arrays.asList(FundIntention1Code.mmQualified, FundIntention1Code.mmNotQualified);
 				trace_lazy = () -> FundIntentionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FundIntention1Code.Qualified, com.tools20022.repository.codeset.FundIntention1Code.NotQualified);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Qualified.getCodeName().get(), Qualified);
+		codesByName.put(NotQualified.getCodeName().get(), NotQualified);
+	}
+
+	public static FundIntention1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FundIntention1Code[] values() {
+		FundIntention1Code[] values = new FundIntention1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FundIntention1Code> {
+		@Override
+		public FundIntention1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FundIntention1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * ATMEquipment1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMEquipment2", propOrder = {"manufacturer", "model", "version", "serialNumber", "firmwareProvider", "firmwareIdentification", "firmwareVersion"})
 public class ATMEquipment2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Manfctr")
 	protected Max35Text manufacturer;
 	/**
-	 * ATM Manufacturer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -129,7 +131,7 @@ public class ATMEquipment2 {
 	 */
 	public static final MMMessageAttribute mmManufacturer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMEquipment2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmObject();
 			isDerived = false;
 			xmlTag = "Manfctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,10 +144,11 @@ public class ATMEquipment2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Mdl")
 	protected Max35Text model;
 	/**
-	 * Model of ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,7 +186,7 @@ public class ATMEquipment2 {
 	 */
 	public static final MMMessageAttribute mmModel = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMEquipment2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmObject();
 			isDerived = false;
 			xmlTag = "Mdl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -196,10 +199,11 @@ public class ATMEquipment2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Vrsn")
 	protected Max35Text version;
 	/**
-	 * Version of the device model.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -232,7 +236,7 @@ public class ATMEquipment2 {
 	 */
 	public static final MMMessageAttribute mmVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMEquipment2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmObject();
 			isDerived = false;
 			xmlTag = "Vrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -244,10 +248,11 @@ public class ATMEquipment2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SrlNb")
 	protected Max35Text serialNumber;
 	/**
-	 * Serial number of the ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -286,7 +291,7 @@ public class ATMEquipment2 {
 	 */
 	public static final MMMessageAttribute mmSerialNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMEquipment2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmObject();
 			isDerived = false;
 			xmlTag = "SrlNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -299,10 +304,11 @@ public class ATMEquipment2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FrmwrPrvdr")
 	protected Max35Text firmwareProvider;
 	/**
-	 * Provider of the firmware.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -341,7 +347,7 @@ public class ATMEquipment2 {
 	 */
 	public static final MMMessageAttribute mmFirmwareProvider = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMEquipment2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmObject();
 			isDerived = false;
 			xmlTag = "FrmwrPrvdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -354,10 +360,11 @@ public class ATMEquipment2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FrmwrId")
 	protected Max35Text firmwareIdentification;
 	/**
-	 * Identification of the firmware.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -396,7 +403,7 @@ public class ATMEquipment2 {
 	 */
 	public static final MMMessageAttribute mmFirmwareIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMEquipment2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmObject();
 			isDerived = false;
 			xmlTag = "FrmwrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -409,10 +416,11 @@ public class ATMEquipment2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FrmwrVrsn")
 	protected Max35Text firmwareVersion;
 	/**
-	 * Version of the firmware.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -451,7 +459,7 @@ public class ATMEquipment2 {
 	 */
 	public static final MMMessageAttribute mmFirmwareVersion = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMEquipment2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMEquipment2.mmObject();
 			isDerived = false;
 			xmlTag = "FrmwrVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -468,9 +476,10 @@ public class ATMEquipment2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMEquipment2.mmManufacturer, ATMEquipment2.mmModel, ATMEquipment2.mmVersion, ATMEquipment2.mmSerialNumber, ATMEquipment2.mmFirmwareProvider, ATMEquipment2.mmFirmwareIdentification,
-						ATMEquipment2.mmFirmwareVersion);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMEquipment2.mmManufacturer, com.tools20022.repository.msg.ATMEquipment2.mmModel, com.tools20022.repository.msg.ATMEquipment2.mmVersion,
+						com.tools20022.repository.msg.ATMEquipment2.mmSerialNumber, com.tools20022.repository.msg.ATMEquipment2.mmFirmwareProvider, com.tools20022.repository.msg.ATMEquipment2.mmFirmwareIdentification,
+						com.tools20022.repository.msg.ATMEquipment2.mmFirmwareVersion);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMEquipment2";
 				definition = "Hardware security module information, so called EPP for Encrypted PIN Pad.";
@@ -481,66 +490,66 @@ public class ATMEquipment2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Manfctr")
-	public Max35Text getManufacturer() {
-		return manufacturer;
+	public Optional<Max35Text> getManufacturer() {
+		return manufacturer == null ? Optional.empty() : Optional.of(manufacturer);
 	}
 
-	public void setManufacturer(Max35Text manufacturer) {
+	public ATMEquipment2 setManufacturer(Max35Text manufacturer) {
 		this.manufacturer = manufacturer;
+		return this;
 	}
 
-	@XmlElement(name = "Mdl")
-	public Max35Text getModel() {
-		return model;
+	public Optional<Max35Text> getModel() {
+		return model == null ? Optional.empty() : Optional.of(model);
 	}
 
-	public void setModel(Max35Text model) {
+	public ATMEquipment2 setModel(Max35Text model) {
 		this.model = model;
+		return this;
 	}
 
-	@XmlElement(name = "Vrsn")
-	public Max35Text getVersion() {
-		return version;
+	public Optional<Max35Text> getVersion() {
+		return version == null ? Optional.empty() : Optional.of(version);
 	}
 
-	public void setVersion(Max35Text version) {
+	public ATMEquipment2 setVersion(Max35Text version) {
 		this.version = version;
+		return this;
 	}
 
-	@XmlElement(name = "SrlNb")
-	public Max35Text getSerialNumber() {
-		return serialNumber;
+	public Optional<Max35Text> getSerialNumber() {
+		return serialNumber == null ? Optional.empty() : Optional.of(serialNumber);
 	}
 
-	public void setSerialNumber(Max35Text serialNumber) {
+	public ATMEquipment2 setSerialNumber(Max35Text serialNumber) {
 		this.serialNumber = serialNumber;
+		return this;
 	}
 
-	@XmlElement(name = "FrmwrPrvdr")
-	public Max35Text getFirmwareProvider() {
-		return firmwareProvider;
+	public Optional<Max35Text> getFirmwareProvider() {
+		return firmwareProvider == null ? Optional.empty() : Optional.of(firmwareProvider);
 	}
 
-	public void setFirmwareProvider(Max35Text firmwareProvider) {
+	public ATMEquipment2 setFirmwareProvider(Max35Text firmwareProvider) {
 		this.firmwareProvider = firmwareProvider;
+		return this;
 	}
 
-	@XmlElement(name = "FrmwrId")
-	public Max35Text getFirmwareIdentification() {
-		return firmwareIdentification;
+	public Optional<Max35Text> getFirmwareIdentification() {
+		return firmwareIdentification == null ? Optional.empty() : Optional.of(firmwareIdentification);
 	}
 
-	public void setFirmwareIdentification(Max35Text firmwareIdentification) {
+	public ATMEquipment2 setFirmwareIdentification(Max35Text firmwareIdentification) {
 		this.firmwareIdentification = firmwareIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "FrmwrVrsn")
-	public Max35Text getFirmwareVersion() {
-		return firmwareVersion;
+	public Optional<Max35Text> getFirmwareVersion() {
+		return firmwareVersion == null ? Optional.empty() : Optional.of(firmwareVersion);
 	}
 
-	public void setFirmwareVersion(Max35Text firmwareVersion) {
+	public ATMEquipment2 setFirmwareVersion(Max35Text firmwareVersion) {
 		this.firmwareVersion = firmwareVersion;
+		return this;
 	}
 }

@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InstalmentFinancingInformation1", propOrder = {"instalmentSequenceIdentification", "instalmentTotalAmount", "instalmentFinancingResult"})
 public class InstalmentFinancingInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InstlmtSeqId", required = true)
 	protected Max70Text instalmentSequenceIdentification;
 	/**
-	 * Progressive number of the single instalment related to an invoice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +111,7 @@ public class InstalmentFinancingInformation1 {
 	 */
 	public static final MMMessageAttribute mmInstalmentSequenceIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InstalmentFinancingInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstalmentFinancingInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "InstlmtSeqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,12 +122,11 @@ public class InstalmentFinancingInformation1 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "InstlmtTtlAmt", required = true)
 	protected ActiveCurrencyAndAmount instalmentTotalAmount;
 	/**
-	 * Amount of money to be moved between the debtor and creditor, before
-	 * deduction of charges, expressed in the currency as ordered by the
-	 * initiating party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +162,7 @@ public class InstalmentFinancingInformation1 {
 	public static final MMMessageAttribute mmInstalmentTotalAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmInstructedAmount;
-			componentContext_lazy = () -> InstalmentFinancingInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstalmentFinancingInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "InstlmtTtlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,10 +173,11 @@ public class InstalmentFinancingInformation1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "InstlmtFincgRslt", required = true)
 	protected FinancingResult1 instalmentFinancingResult;
 	/**
-	 * Information about the financing result of one instalment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -208,7 +210,7 @@ public class InstalmentFinancingInformation1 {
 	public static final MMMessageAssociationEnd mmInstalmentFinancingResult = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmInvoiceFinancingStatus;
-			componentContext_lazy = () -> InstalmentFinancingInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstalmentFinancingInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "InstlmtFincgRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -224,10 +226,10 @@ public class InstalmentFinancingInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InstalmentFinancingInformation1.mmInstalmentSequenceIdentification, InstalmentFinancingInformation1.mmInstalmentTotalAmount,
-						InstalmentFinancingInformation1.mmInstalmentFinancingResult);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstalmentFinancingInformation1.mmInstalmentSequenceIdentification,
+						com.tools20022.repository.msg.InstalmentFinancingInformation1.mmInstalmentTotalAmount, com.tools20022.repository.msg.InstalmentFinancingInformation1.mmInstalmentFinancingResult);
 				trace_lazy = () -> Payment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstalmentFinancingInformation1";
 				definition = "Information about result of a single instalment (financed or not) within an invoice.";
@@ -236,30 +238,30 @@ public class InstalmentFinancingInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InstlmtSeqId", required = true)
 	public Max70Text getInstalmentSequenceIdentification() {
 		return instalmentSequenceIdentification;
 	}
 
-	public void setInstalmentSequenceIdentification(Max70Text instalmentSequenceIdentification) {
-		this.instalmentSequenceIdentification = instalmentSequenceIdentification;
+	public InstalmentFinancingInformation1 setInstalmentSequenceIdentification(Max70Text instalmentSequenceIdentification) {
+		this.instalmentSequenceIdentification = Objects.requireNonNull(instalmentSequenceIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "InstlmtTtlAmt", required = true)
 	public ActiveCurrencyAndAmount getInstalmentTotalAmount() {
 		return instalmentTotalAmount;
 	}
 
-	public void setInstalmentTotalAmount(ActiveCurrencyAndAmount instalmentTotalAmount) {
-		this.instalmentTotalAmount = instalmentTotalAmount;
+	public InstalmentFinancingInformation1 setInstalmentTotalAmount(ActiveCurrencyAndAmount instalmentTotalAmount) {
+		this.instalmentTotalAmount = Objects.requireNonNull(instalmentTotalAmount);
+		return this;
 	}
 
-	@XmlElement(name = "InstlmtFincgRslt", required = true)
 	public FinancingResult1 getInstalmentFinancingResult() {
 		return instalmentFinancingResult;
 	}
 
-	public void setInstalmentFinancingResult(com.tools20022.repository.msg.FinancingResult1 instalmentFinancingResult) {
-		this.instalmentFinancingResult = instalmentFinancingResult;
+	public InstalmentFinancingInformation1 setInstalmentFinancingResult(com.tools20022.repository.msg.FinancingResult1 instalmentFinancingResult) {
+		this.instalmentFinancingResult = Objects.requireNonNull(instalmentFinancingResult);
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.MarginCallResponseCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the margin call request was sent on a non valuation day or
@@ -33,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginCallResponseCode#mmNonValuationDay
- * MarginCallResponseCode.mmNonValuationDay}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginCallResponseCode#NonValuationDay
+ * MarginCallResponseCode.NonValuationDay}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MarginCallResponseCode#mmReceivedAfterNotificationTime
- * MarginCallResponseCode.mmReceivedAfterNotificationTime}</li>
+ * {@linkplain com.tools20022.repository.codeset.MarginCallResponseCode#ReceivedAfterNotificationTime
+ * MarginCallResponseCode.ReceivedAfterNotificationTime}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class MarginCallResponseCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MarginCallResponseCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -96,12 +102,12 @@ public class MarginCallResponseCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonValuationDay = new MMCode() {
+	public static final MarginCallResponseCode NonValuationDay = new MarginCallResponseCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonValuationDay";
 			definition = "Indicates that the margin call request was sent on a non valuation day.";
-			owner_lazy = () -> MarginCallResponseCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarginCallResponseCode.mmObject();
 			codeName = "NVDA";
 		}
 	};
@@ -129,28 +135,58 @@ public class MarginCallResponseCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivedAfterNotificationTime = new MMCode() {
+	public static final MarginCallResponseCode ReceivedAfterNotificationTime = new MarginCallResponseCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedAfterNotificationTime";
 			definition = "Indicates that the margin call request was sent after the notification time.";
-			owner_lazy = () -> MarginCallResponseCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MarginCallResponseCode.mmObject();
 			codeName = "RANT";
 		}
 	};
+	final static private LinkedHashMap<String, MarginCallResponseCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MarginCallResponseCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NVDA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarginCallResponseCode";
 				definition = "Specifies whether the margin call request was sent on a non valuation day or was received after notification time.";
-				code_lazy = () -> Arrays.asList(MarginCallResponseCode.mmNonValuationDay, MarginCallResponseCode.mmReceivedAfterNotificationTime);
 				derivation_lazy = () -> Arrays.asList(MarginCallResponse1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarginCallResponseCode.NonValuationDay, com.tools20022.repository.codeset.MarginCallResponseCode.ReceivedAfterNotificationTime);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NonValuationDay.getCodeName().get(), NonValuationDay);
+		codesByName.put(ReceivedAfterNotificationTime.getCodeName().get(), ReceivedAfterNotificationTime);
+	}
+
+	public static MarginCallResponseCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MarginCallResponseCode[] values() {
+		MarginCallResponseCode[] values = new MarginCallResponseCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MarginCallResponseCode> {
+		@Override
+		public MarginCallResponseCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MarginCallResponseCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

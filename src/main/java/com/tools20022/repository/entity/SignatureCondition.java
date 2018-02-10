@@ -25,9 +25,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Specifies the signature requirements for managing an account.
@@ -75,8 +74,8 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -93,9 +92,8 @@ public class SignatureCondition {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Number requiredSignatureNumber;
 	/**
-	 * Number of account owners or related parties required to authorise
-	 * transactions on the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -193,8 +191,8 @@ public class SignatureCondition {
 					InvestmentAccount39.mmRequiredSignatoriesNumber, InvestmentAccount46.mmRequiredSignatoriesNumber, InvestmentAccount47.mmRequiredSignatoriesNumber, InvestmentAccount49.mmRequiredSignatoriesNumber,
 					InvestmentAccount51.mmRequiredSignatoriesNumber, InvestmentAccount50.mmRequiredSignatoriesNumber, InvestmentAccount61.mmRequiredSignatoriesNumber, InvestmentAccount63.mmRequiredSignatoriesNumber,
 					InvestmentAccount62.mmRequiredSignatoriesNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequiredSignatureNumber";
 			definition = "Number of account owners or related parties required to authorise transactions on the account.";
@@ -213,9 +211,8 @@ public class SignatureCondition {
 	};
 	protected YesNoIndicator signatoryRightIndicator;
 	/**
-	 * Indicates whether the signature of the account owner is required to
-	 * authorise transactions on the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -295,8 +292,8 @@ public class SignatureCondition {
 					InvestmentAccountOwnershipInformation7.mmSignatoryRightIndicator, InvestmentAccountOwnershipInformation8.mmSignatoryRightIndicator, InvestmentAccountOwnershipInformation9.mmSignatoryRightIndicator,
 					InvestmentAccountOwnershipInformation10.mmSignatoryRightIndicator, InvestmentAccountOwnershipInformation11.mmSignatoryRightIndicator, InvestmentAccountOwnershipInformation12.mmSignatoryRightIndicator,
 					InvestmentAccountOwnershipInformation13.mmSignatoryRightIndicator, InvestmentAccountOwnershipInformation15.mmSignatoryRightIndicator, InvestmentAccountOwnershipInformation14.mmSignatoryRightIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SignatoryRightIndicator";
 			definition = "Indicates whether the signature of the account owner is required to authorise transactions on the account.";
@@ -315,8 +312,8 @@ public class SignatureCondition {
 	};
 	protected Mandate mandate;
 	/**
-	 * Mandate for which signature conditions are provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -348,8 +345,8 @@ public class SignatureCondition {
 	 */
 	public static final MMBusinessAssociationEnd mmMandate = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Mandate";
 			definition = "Mandate for which signature conditions are provided.";
@@ -362,9 +359,8 @@ public class SignatureCondition {
 	};
 	protected TrueFalseIndicator signatureOrderIndicator;
 	/**
-	 * Indicator whether a certain order of signatures has to be respected or
-	 * not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -407,8 +403,8 @@ public class SignatureCondition {
 	public static final MMBusinessAttribute mmSignatureOrderIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(OperationMandate1.mmSignatureOrderIndicator, OperationMandate2.mmSignatureOrderIndicator, OperationMandate3.mmSignatureOrderIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SignatureOrderIndicator";
 			definition = "Indicator whether a certain order of signatures has to be respected or not.";
@@ -427,8 +423,8 @@ public class SignatureCondition {
 	};
 	protected Max15PlusSignedNumericText signatureOrder;
 	/**
-	 * Indicates the order in which the mandate holders are allowed to sign.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -470,8 +466,8 @@ public class SignatureCondition {
 	public static final MMBusinessAttribute mmSignatureOrder = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyAndCertificate1.mmSignatureOrder, PartyAndAuthorisation1.mmSignatureOrder, PartyAndAuthorisation3.mmSignatureOrder);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SignatureOrder";
 			definition = "Indicates the order in which the mandate holders are allowed to sign.";
@@ -490,9 +486,8 @@ public class SignatureCondition {
 	};
 	protected List<com.tools20022.repository.entity.Signature> signature;
 	/**
-	 * Manual or digital signature added as security provision by each party
-	 * involved in the business covered by the document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -527,8 +522,8 @@ public class SignatureCondition {
 	 */
 	public static final MMBusinessAssociationEnd mmSignature = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SignatureCondition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Signature";
 			definition = "Manual or digital signature added as security provision by each party involved in the business covered by the document.";
@@ -542,7 +537,7 @@ public class SignatureCondition {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SignatureCondition";
 				definition = "Specifies the signature requirements for managing an account.";
@@ -564,47 +559,53 @@ public class SignatureCondition {
 		return requiredSignatureNumber;
 	}
 
-	public void setRequiredSignatureNumber(Number requiredSignatureNumber) {
-		this.requiredSignatureNumber = requiredSignatureNumber;
+	public SignatureCondition setRequiredSignatureNumber(Number requiredSignatureNumber) {
+		this.requiredSignatureNumber = Objects.requireNonNull(requiredSignatureNumber);
+		return this;
 	}
 
 	public YesNoIndicator getSignatoryRightIndicator() {
 		return signatoryRightIndicator;
 	}
 
-	public void setSignatoryRightIndicator(YesNoIndicator signatoryRightIndicator) {
-		this.signatoryRightIndicator = signatoryRightIndicator;
+	public SignatureCondition setSignatoryRightIndicator(YesNoIndicator signatoryRightIndicator) {
+		this.signatoryRightIndicator = Objects.requireNonNull(signatoryRightIndicator);
+		return this;
 	}
 
-	public Mandate getMandate() {
-		return mandate;
+	public Optional<Mandate> getMandate() {
+		return mandate == null ? Optional.empty() : Optional.of(mandate);
 	}
 
-	public void setMandate(com.tools20022.repository.entity.Mandate mandate) {
+	public SignatureCondition setMandate(com.tools20022.repository.entity.Mandate mandate) {
 		this.mandate = mandate;
+		return this;
 	}
 
 	public TrueFalseIndicator getSignatureOrderIndicator() {
 		return signatureOrderIndicator;
 	}
 
-	public void setSignatureOrderIndicator(TrueFalseIndicator signatureOrderIndicator) {
-		this.signatureOrderIndicator = signatureOrderIndicator;
+	public SignatureCondition setSignatureOrderIndicator(TrueFalseIndicator signatureOrderIndicator) {
+		this.signatureOrderIndicator = Objects.requireNonNull(signatureOrderIndicator);
+		return this;
 	}
 
 	public Max15PlusSignedNumericText getSignatureOrder() {
 		return signatureOrder;
 	}
 
-	public void setSignatureOrder(Max15PlusSignedNumericText signatureOrder) {
-		this.signatureOrder = signatureOrder;
+	public SignatureCondition setSignatureOrder(Max15PlusSignedNumericText signatureOrder) {
+		this.signatureOrder = Objects.requireNonNull(signatureOrder);
+		return this;
 	}
 
 	public List<Signature> getSignature() {
-		return signature;
+		return signature == null ? signature = new ArrayList<>() : signature;
 	}
 
-	public void setSignature(List<com.tools20022.repository.entity.Signature> signature) {
-		this.signature = signature;
+	public SignatureCondition setSignature(List<com.tools20022.repository.entity.Signature> signature) {
+		this.signature = Objects.requireNonNull(signature);
+		return this;
 	}
 }

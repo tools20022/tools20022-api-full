@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -82,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Identifies the mandate to be amended and gives details of the new mandate."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MandateAmendment1", propOrder = {"originalMessageInformation", "amendmentReason", "mandate", "originalMandate"})
 public class MandateAmendment1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgnlMsgInf")
 	protected OriginalMessageInformation1 originalMessageInformation;
 	/**
-	 * Set of elements used to provide information on the original messsage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,7 +121,7 @@ public class MandateAmendment1 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalMessageInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> MandateAmendment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAmendment1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,11 +133,11 @@ public class MandateAmendment1 {
 			type_lazy = () -> com.tools20022.repository.msg.OriginalMessageInformation1.mmObject();
 		}
 	};
+	@XmlElement(name = "AmdmntRsn", required = true)
 	protected AmendmentReasonInformation1 amendmentReason;
 	/**
-	 * Set of elements used to provide detailed information on the amendment
-	 * reason.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -169,7 +172,7 @@ public class MandateAmendment1 {
 	public static final MMMessageAssociationEnd mmAmendmentReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
-			componentContext_lazy = () -> MandateAmendment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAmendment1.mmObject();
 			isDerived = false;
 			xmlTag = "AmdmntRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,10 +184,11 @@ public class MandateAmendment1 {
 			type_lazy = () -> com.tools20022.repository.msg.AmendmentReasonInformation1.mmObject();
 		}
 	};
+	@XmlElement(name = "Mndt", required = true)
 	protected MandateInformation3 mandate;
 	/**
-	 * Set of elements used to provide the amended mandate data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -217,7 +221,7 @@ public class MandateAmendment1 {
 	public static final MMMessageAssociationEnd mmMandate = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> DirectDebitMandate.mmObject();
-			componentContext_lazy = () -> MandateAmendment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAmendment1.mmObject();
 			isDerived = false;
 			xmlTag = "Mndt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,10 +233,11 @@ public class MandateAmendment1 {
 			type_lazy = () -> com.tools20022.repository.msg.MandateInformation3.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlMndt", required = true)
 	protected OriginalMandate1Choice originalMandate;
 	/**
-	 * Set of elements used to provide the original mandate data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -265,7 +270,7 @@ public class MandateAmendment1 {
 	public static final MMMessageAssociationEnd mmOriginalMandate = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Mandate.mmObject();
-			componentContext_lazy = () -> MandateAmendment1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MandateAmendment1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMndt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -281,10 +286,11 @@ public class MandateAmendment1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MandateAmendment1.mmOriginalMessageInformation, MandateAmendment1.mmAmendmentReason, MandateAmendment1.mmMandate, MandateAmendment1.mmOriginalMandate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MandateAmendment1.mmOriginalMessageInformation, com.tools20022.repository.msg.MandateAmendment1.mmAmendmentReason,
+						com.tools20022.repository.msg.MandateAmendment1.mmMandate, com.tools20022.repository.msg.MandateAmendment1.mmOriginalMandate);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MandateAmendmentRequestV01.mmUnderlyingAmendmentDetails);
 				trace_lazy = () -> Mandate.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MandateAmendment1";
 				definition = "Identifies the mandate to be amended and gives details of the new mandate.";
@@ -293,39 +299,39 @@ public class MandateAmendment1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgnlMsgInf")
-	public OriginalMessageInformation1 getOriginalMessageInformation() {
-		return originalMessageInformation;
+	public Optional<OriginalMessageInformation1> getOriginalMessageInformation() {
+		return originalMessageInformation == null ? Optional.empty() : Optional.of(originalMessageInformation);
 	}
 
-	public void setOriginalMessageInformation(com.tools20022.repository.msg.OriginalMessageInformation1 originalMessageInformation) {
+	public MandateAmendment1 setOriginalMessageInformation(com.tools20022.repository.msg.OriginalMessageInformation1 originalMessageInformation) {
 		this.originalMessageInformation = originalMessageInformation;
+		return this;
 	}
 
-	@XmlElement(name = "AmdmntRsn", required = true)
 	public AmendmentReasonInformation1 getAmendmentReason() {
 		return amendmentReason;
 	}
 
-	public void setAmendmentReason(com.tools20022.repository.msg.AmendmentReasonInformation1 amendmentReason) {
-		this.amendmentReason = amendmentReason;
+	public MandateAmendment1 setAmendmentReason(com.tools20022.repository.msg.AmendmentReasonInformation1 amendmentReason) {
+		this.amendmentReason = Objects.requireNonNull(amendmentReason);
+		return this;
 	}
 
-	@XmlElement(name = "Mndt", required = true)
 	public MandateInformation3 getMandate() {
 		return mandate;
 	}
 
-	public void setMandate(com.tools20022.repository.msg.MandateInformation3 mandate) {
-		this.mandate = mandate;
+	public MandateAmendment1 setMandate(com.tools20022.repository.msg.MandateInformation3 mandate) {
+		this.mandate = Objects.requireNonNull(mandate);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlMndt", required = true)
 	public OriginalMandate1Choice getOriginalMandate() {
 		return originalMandate;
 	}
 
-	public void setOriginalMandate(OriginalMandate1Choice originalMandate) {
-		this.originalMandate = originalMandate;
+	public MandateAmendment1 setOriginalMandate(OriginalMandate1Choice originalMandate) {
+		this.originalMandate = Objects.requireNonNull(originalMandate);
+		return this;
 	}
 }

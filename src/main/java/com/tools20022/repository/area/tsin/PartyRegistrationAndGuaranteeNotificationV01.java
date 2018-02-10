@@ -29,9 +29,8 @@ import com.tools20022.repository.msg.EncapsulatedBusinessMessage1;
 import com.tools20022.repository.msg.FinancingAgreementList1;
 import com.tools20022.repository.msgset.FactoringServicesISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -47,22 +46,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.TradeServicesInitiationLatestVersion
- * TradeServicesInitiationLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.FactoringServicesISOLatestversion
- * FactoringServicesISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "PtyRegnAndGrntNtfctn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -87,6 +70,22 @@ import javax.xml.bind.annotation.*;
  * PartyRegistrationAndGuaranteeNotificationV01.mmAttachedMessage}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.FactoringServicesISOLatestversion
+ * FactoringServicesISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "PtyRegnAndGrntNtfctn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.TradeServicesInitiationLatestVersion
+ * TradeServicesInitiationLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code tsin.011.001.01}</li>
@@ -102,16 +101,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyRegistrationAndGuaranteeNotificationV01", propOrder = {"header", "notificationList", "notificationCount", "itemCount", "controlSum", "attachedMessage"})
 public class PartyRegistrationAndGuaranteeNotificationV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected BusinessLetter1 header;
 	/**
-	 * Set of characteristics that unambiguously identify the notification,
-	 * common parameters, documents and identifications.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -152,10 +151,11 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 			}
 		}
 	};
+	@XmlElement(name = "NtfctnList", required = true)
 	protected List<FinancingAgreementList1> notificationList;
 	/**
-	 * List of otifications.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -194,10 +194,11 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 			}
 		}
 	};
+	@XmlElement(name = "NtfctnCnt")
 	protected Max15NumericText notificationCount;
 	/**
-	 * Number of notification lists as control value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -237,10 +238,11 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 			}
 		}
 	};
+	@XmlElement(name = "ItmCnt")
 	protected Max15NumericText itemCount;
 	/**
-	 * Total number of individual items in all lists.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -280,11 +282,11 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CtrlSum")
 	protected DecimalNumber controlSum;
 	/**
-	 * Total of all individual amounts included in all lists, irrespective of
-	 * currencies or direction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -326,10 +328,11 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AttchdMsg")
 	protected List<EncapsulatedBusinessMessage1> attachedMessage;
 	/**
-	 * Referenced or related business message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -401,61 +404,61 @@ public class PartyRegistrationAndGuaranteeNotificationV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public BusinessLetter1 getHeader() {
 		return header;
 	}
 
-	public void setHeader(BusinessLetter1 header) {
-		this.header = header;
+	public PartyRegistrationAndGuaranteeNotificationV01 setHeader(BusinessLetter1 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "NtfctnList", required = true)
 	public List<FinancingAgreementList1> getNotificationList() {
-		return notificationList;
+		return notificationList == null ? notificationList = new ArrayList<>() : notificationList;
 	}
 
-	public void setNotificationList(List<FinancingAgreementList1> notificationList) {
-		this.notificationList = notificationList;
+	public PartyRegistrationAndGuaranteeNotificationV01 setNotificationList(List<FinancingAgreementList1> notificationList) {
+		this.notificationList = Objects.requireNonNull(notificationList);
+		return this;
 	}
 
-	@XmlElement(name = "NtfctnCnt")
-	public Max15NumericText getNotificationCount() {
-		return notificationCount;
+	public Optional<Max15NumericText> getNotificationCount() {
+		return notificationCount == null ? Optional.empty() : Optional.of(notificationCount);
 	}
 
-	public void setNotificationCount(Max15NumericText notificationCount) {
+	public PartyRegistrationAndGuaranteeNotificationV01 setNotificationCount(Max15NumericText notificationCount) {
 		this.notificationCount = notificationCount;
+		return this;
 	}
 
-	@XmlElement(name = "ItmCnt")
-	public Max15NumericText getItemCount() {
-		return itemCount;
+	public Optional<Max15NumericText> getItemCount() {
+		return itemCount == null ? Optional.empty() : Optional.of(itemCount);
 	}
 
-	public void setItemCount(Max15NumericText itemCount) {
+	public PartyRegistrationAndGuaranteeNotificationV01 setItemCount(Max15NumericText itemCount) {
 		this.itemCount = itemCount;
+		return this;
 	}
 
-	@XmlElement(name = "CtrlSum")
-	public DecimalNumber getControlSum() {
-		return controlSum;
+	public Optional<DecimalNumber> getControlSum() {
+		return controlSum == null ? Optional.empty() : Optional.of(controlSum);
 	}
 
-	public void setControlSum(DecimalNumber controlSum) {
+	public PartyRegistrationAndGuaranteeNotificationV01 setControlSum(DecimalNumber controlSum) {
 		this.controlSum = controlSum;
+		return this;
 	}
 
-	@XmlElement(name = "AttchdMsg")
 	public List<EncapsulatedBusinessMessage1> getAttachedMessage() {
-		return attachedMessage;
+		return attachedMessage == null ? attachedMessage = new ArrayList<>() : attachedMessage;
 	}
 
-	public void setAttachedMessage(List<EncapsulatedBusinessMessage1> attachedMessage) {
-		this.attachedMessage = attachedMessage;
+	public PartyRegistrationAndGuaranteeNotificationV01 setAttachedMessage(List<EncapsulatedBusinessMessage1> attachedMessage) {
+		this.attachedMessage = Objects.requireNonNull(attachedMessage);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:tsin.011.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:tsin.011.001.01")
 	static public class Document {
 		@XmlElement(name = "PtyRegnAndGrntNtfctn", required = true)
 		public PartyRegistrationAndGuaranteeNotificationV01 messageBody;

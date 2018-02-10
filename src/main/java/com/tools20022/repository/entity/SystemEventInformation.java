@@ -27,6 +27,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Detailed information about an event occurring on a system, whether planned,
@@ -56,18 +58,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SystemEvent1 SystemEvent1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2 SystemEvent2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ParticipantAndStatus1
- * ParticipantAndStatus1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.ServiceAvailability1
- * ServiceAvailability1}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -91,10 +81,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemEvent1 SystemEvent1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemEvent2 SystemEvent2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ParticipantAndStatus1
+ * ParticipantAndStatus1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ServiceAvailability1
+ * ServiceAvailability1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -112,8 +114,8 @@ public class SystemEventInformation {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected SystemEventTypeCode type;
 	/**
-	 * Nature of the event that has occurred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,8 +163,8 @@ public class SystemEventInformation {
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SystemEventType1Choice.mmCode, SystemEventType2Choice.mmCode, SystemEventType2Choice.mmProprietary, SystemEvent1.mmType, SystemEvent2.mmType, ServiceAvailability1.mmAvailabilityStatus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Nature of the event that has occurred.";
@@ -181,8 +183,8 @@ public class SystemEventInformation {
 	};
 	protected ISODateTime time;
 	/**
-	 * Date and time at which the event occurred.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -238,8 +240,8 @@ public class SystemEventInformation {
 		{
 			derivation_lazy = () -> Arrays.asList(SystemEvent1.mmScheduledTime, SystemEvent1.mmEffectiveTime, SystemEvent2.mmScheduledTime, SystemEvent2.mmEffectiveTime, SystemEvent2.mmStartTime, SystemEvent2.mmEndTime,
 					RequestorDetails1.mmDateTimeStamp, ResponderDetails1.mmDateTimeStamp, CutOff1.mmCutOffTime);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Time";
 			definition = "Date and time at which the event occurred.";
@@ -258,8 +260,8 @@ public class SystemEventInformation {
 	};
 	protected System system;
 	/**
-	 * System for which event information is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -290,8 +292,8 @@ public class SystemEventInformation {
 	 */
 	public static final MMBusinessAssociationEnd mmSystem = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SystemEventInformation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "System";
 			definition = "System for which event information is provided.";
@@ -306,7 +308,7 @@ public class SystemEventInformation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemEventInformation";
 				definition = "Detailed information about an event occurring on a system, whether planned, for example, cut-off time for a specific type of eligible transfer, or unplanned, for example, an unsolicited failure, as stipulated in the specifications of the system.";
@@ -329,23 +331,26 @@ public class SystemEventInformation {
 		return type;
 	}
 
-	public void setType(SystemEventTypeCode type) {
-		this.type = type;
+	public SystemEventInformation setType(SystemEventTypeCode type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
 	public ISODateTime getTime() {
 		return time;
 	}
 
-	public void setTime(ISODateTime time) {
-		this.time = time;
+	public SystemEventInformation setTime(ISODateTime time) {
+		this.time = Objects.requireNonNull(time);
+		return this;
 	}
 
-	public System getSystem() {
-		return system;
+	public Optional<System> getSystem() {
+		return system == null ? Optional.empty() : Optional.of(system);
 	}
 
-	public void setSystem(com.tools20022.repository.entity.System system) {
+	public SystemEventInformation setSystem(com.tools20022.repository.entity.System system) {
 		this.system = system;
+		return this;
 	}
 }

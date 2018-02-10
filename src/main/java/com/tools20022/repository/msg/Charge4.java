@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Amount of money associated with a service."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Charge4", propOrder = {"type", "amount", "chargeBasis", "chargeBearer", "recipientIdentification"})
 public class Charge4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected ChargeTypeFormat2Choice type;
 	/**
-	 * Type of service for which a charge is asked or paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +118,7 @@ public class Charge4 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
-			componentContext_lazy = () -> Charge4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge4.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +129,11 @@ public class Charge4 {
 			complexType_lazy = () -> ChargeTypeFormat2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount amount;
 	/**
-	 * Amount of money asked or paid for the charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +166,7 @@ public class Charge4 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> Charge4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge4.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +177,11 @@ public class Charge4 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgBsis")
 	protected TaxationBasis2Code chargeBasis;
 	/**
-	 * Method used to calculate a charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -209,7 +214,7 @@ public class Charge4 {
 	public static final MMMessageAttribute mmChargeBasis = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmCalculationMethod;
-			componentContext_lazy = () -> Charge4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge4.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -220,11 +225,11 @@ public class Charge4 {
 			simpleType_lazy = () -> TaxationBasis2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgBr")
 	protected ChargeBearer1Code chargeBearer;
 	/**
-	 * Specifies the party that will bear the charges associated with a
-	 * transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,7 +264,7 @@ public class Charge4 {
 	public static final MMMessageAttribute mmChargeBearer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmBearerType;
-			componentContext_lazy = () -> Charge4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge4.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgBr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,10 +275,11 @@ public class Charge4 {
 			simpleType_lazy = () -> ChargeBearer1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RcptId")
 	protected PartyIdentification1Choice recipientIdentification;
 	/**
-	 * Party entitled to the amount of money resulting from a charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -307,7 +313,7 @@ public class Charge4 {
 	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Charge4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge4.mmObject();
 			isDerived = false;
 			xmlTag = "RcptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -322,9 +328,10 @@ public class Charge4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Charge4.mmType, Charge4.mmAmount, Charge4.mmChargeBasis, Charge4.mmChargeBearer, Charge4.mmRecipientIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge4.mmType, com.tools20022.repository.msg.Charge4.mmAmount, com.tools20022.repository.msg.Charge4.mmChargeBasis,
+						com.tools20022.repository.msg.Charge4.mmChargeBearer, com.tools20022.repository.msg.Charge4.mmRecipientIdentification);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Charge4";
 				definition = "Amount of money associated with a service.";
@@ -333,48 +340,48 @@ public class Charge4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public ChargeTypeFormat2Choice getType() {
 		return type;
 	}
 
-	public void setType(ChargeTypeFormat2Choice type) {
-		this.type = type;
+	public Charge4 setType(ChargeTypeFormat2Choice type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
-		this.amount = amount;
+	public Charge4 setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "ChrgBsis")
-	public TaxationBasis2Code getChargeBasis() {
-		return chargeBasis;
+	public Optional<TaxationBasis2Code> getChargeBasis() {
+		return chargeBasis == null ? Optional.empty() : Optional.of(chargeBasis);
 	}
 
-	public void setChargeBasis(TaxationBasis2Code chargeBasis) {
+	public Charge4 setChargeBasis(TaxationBasis2Code chargeBasis) {
 		this.chargeBasis = chargeBasis;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgBr")
-	public ChargeBearer1Code getChargeBearer() {
-		return chargeBearer;
+	public Optional<ChargeBearer1Code> getChargeBearer() {
+		return chargeBearer == null ? Optional.empty() : Optional.of(chargeBearer);
 	}
 
-	public void setChargeBearer(ChargeBearer1Code chargeBearer) {
+	public Charge4 setChargeBearer(ChargeBearer1Code chargeBearer) {
 		this.chargeBearer = chargeBearer;
+		return this;
 	}
 
-	@XmlElement(name = "RcptId")
-	public PartyIdentification1Choice getRecipientIdentification() {
-		return recipientIdentification;
+	public Optional<PartyIdentification1Choice> getRecipientIdentification() {
+		return recipientIdentification == null ? Optional.empty() : Optional.of(recipientIdentification);
 	}
 
-	public void setRecipientIdentification(PartyIdentification1Choice recipientIdentification) {
+	public Charge4 setRecipientIdentification(PartyIdentification1Choice recipientIdentification) {
 		this.recipientIdentification = recipientIdentification;
+		return this;
 	}
 }

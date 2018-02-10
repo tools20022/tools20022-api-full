@@ -30,6 +30,7 @@ import com.tools20022.repository.entity.ElectronicAddress;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -76,8 +77,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,15 +90,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Communication device number or electronic address used for communication."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CommunicationAddress4", propOrder = {"emailAddress", "URLAddress"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CommunicationAddress4", propOrder = {"emailAddress", "uRLAddress"})
 public class CommunicationAddress4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "EmailAdr")
 	protected Max256Text emailAddress;
 	/**
-	 * Address for electronic mail (e-mail).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +132,7 @@ public class CommunicationAddress4 {
 	public static final MMMessageAttribute mmEmailAddress = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmEmailAddress;
-			componentContext_lazy = () -> CommunicationAddress4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationAddress4.mmObject();
 			isDerived = false;
 			xmlTag = "EmailAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -141,11 +143,11 @@ public class CommunicationAddress4 {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	@XmlElement(name = "URLAdr")
 	protected Max256Text uRLAddress;
 	/**
-	 * Address for the Universal Resource Locator (URL), eg, used over the www
-	 * (HTTP) service.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -180,7 +182,7 @@ public class CommunicationAddress4 {
 	public static final MMMessageAttribute mmURLAddress = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ElectronicAddress.mmURLAddress;
-			componentContext_lazy = () -> CommunicationAddress4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CommunicationAddress4.mmObject();
 			isDerived = false;
 			xmlTag = "URLAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,11 +197,11 @@ public class CommunicationAddress4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CommunicationAddress4.mmEmailAddress, CommunicationAddress4.mmURLAddress);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CommunicationAddress4.mmEmailAddress, com.tools20022.repository.msg.CommunicationAddress4.mmURLAddress);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingResultDisseminationV02.mmAdditionalInformation, MeetingResultDisseminationV03.mmAdditionalInformation, MeetingResultDisseminationV04.mmAdditionalInformation,
 						MeetingResultDisseminationV05.mmAdditionalInformation);
 				trace_lazy = () -> ContactPoint.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommunicationAddress4";
 				definition = "Communication device number or electronic address used for communication.";
@@ -208,21 +210,21 @@ public class CommunicationAddress4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "EmailAdr")
-	public Max256Text getEmailAddress() {
-		return emailAddress;
+	public Optional<Max256Text> getEmailAddress() {
+		return emailAddress == null ? Optional.empty() : Optional.of(emailAddress);
 	}
 
-	public void setEmailAddress(Max256Text emailAddress) {
+	public CommunicationAddress4 setEmailAddress(Max256Text emailAddress) {
 		this.emailAddress = emailAddress;
+		return this;
 	}
 
-	@XmlElement(name = "URLAdr")
-	public Max256Text getURLAddress() {
-		return uRLAddress;
+	public Optional<Max256Text> getURLAddress() {
+		return uRLAddress == null ? Optional.empty() : Optional.of(uRLAddress);
 	}
 
-	public void setURLAddress(Max256Text uRLAddress) {
+	public CommunicationAddress4 setURLAddress(Max256Text uRLAddress) {
 		this.uRLAddress = uRLAddress;
+		return this;
 	}
 }

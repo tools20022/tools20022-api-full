@@ -26,9 +26,8 @@ import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CollateralManagementISOPreviousversion;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -50,23 +49,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CollateralManagementPreviousVersion
- * CollateralManagementPreviousVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CollateralManagementISOPreviousversion
- * CollateralManagementISOPreviousversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CollAndXpsrRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -91,6 +73,23 @@ import javax.xml.bind.annotation.*;
  * CollateralAndExposureReportV02.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CollateralManagementISOPreviousversion
+ * CollateralManagementISOPreviousversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CollAndXpsrRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CollateralManagementPreviousVersion
+ * CollateralManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code colr.016.001.02}</li>
@@ -114,16 +113,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CollateralAndExposureReportV02", propOrder = {"reportParameters", "pagination", "obligation", "agreement", "collateralReport", "supplementaryData"})
 public class CollateralAndExposureReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RptParams", required = true)
 	protected ReportParameters2 reportParameters;
 	/**
-	 * Provides information about the report such as the report identification,
-	 * the report date and time or the report frequency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,11 +173,11 @@ public class CollateralAndExposureReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Pgntn")
 	protected Pagination pagination;
 	/**
-	 * Specifies the page number and an indicator of whether it is the only or
-	 * last page, or if there are additional pages. <br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,12 +227,11 @@ public class CollateralAndExposureReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Oblgtn", required = true)
 	protected Obligation3 obligation;
 	/**
-	 * Provides information like the identification of the party or parties
-	 * associated with the collateral agreement, the exposure type and the
-	 * valuation date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -283,10 +281,11 @@ public class CollateralAndExposureReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "Agrmt")
 	protected Agreement2 agreement;
 	/**
-	 * Agreement details for the over the counter market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -334,10 +333,11 @@ public class CollateralAndExposureReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CollRpt", required = true)
 	protected List<Collateral9> collateralReport;
 	/**
-	 * Provides details on the collateral report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -384,11 +384,11 @@ public class CollateralAndExposureReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -471,61 +471,61 @@ public class CollateralAndExposureReportV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RptParams", required = true)
 	public ReportParameters2 getReportParameters() {
 		return reportParameters;
 	}
 
-	public void setReportParameters(ReportParameters2 reportParameters) {
-		this.reportParameters = reportParameters;
+	public CollateralAndExposureReportV02 setReportParameters(ReportParameters2 reportParameters) {
+		this.reportParameters = Objects.requireNonNull(reportParameters);
+		return this;
 	}
 
-	@XmlElement(name = "Pgntn")
-	public Pagination getPagination() {
-		return pagination;
+	public Optional<Pagination> getPagination() {
+		return pagination == null ? Optional.empty() : Optional.of(pagination);
 	}
 
-	public void setPagination(Pagination pagination) {
+	public CollateralAndExposureReportV02 setPagination(Pagination pagination) {
 		this.pagination = pagination;
+		return this;
 	}
 
-	@XmlElement(name = "Oblgtn", required = true)
 	public Obligation3 getObligation() {
 		return obligation;
 	}
 
-	public void setObligation(Obligation3 obligation) {
-		this.obligation = obligation;
+	public CollateralAndExposureReportV02 setObligation(Obligation3 obligation) {
+		this.obligation = Objects.requireNonNull(obligation);
+		return this;
 	}
 
-	@XmlElement(name = "Agrmt")
-	public Agreement2 getAgreement() {
-		return agreement;
+	public Optional<Agreement2> getAgreement() {
+		return agreement == null ? Optional.empty() : Optional.of(agreement);
 	}
 
-	public void setAgreement(Agreement2 agreement) {
+	public CollateralAndExposureReportV02 setAgreement(Agreement2 agreement) {
 		this.agreement = agreement;
+		return this;
 	}
 
-	@XmlElement(name = "CollRpt", required = true)
 	public List<Collateral9> getCollateralReport() {
-		return collateralReport;
+		return collateralReport == null ? collateralReport = new ArrayList<>() : collateralReport;
 	}
 
-	public void setCollateralReport(List<Collateral9> collateralReport) {
-		this.collateralReport = collateralReport;
+	public CollateralAndExposureReportV02 setCollateralReport(List<Collateral9> collateralReport) {
+		this.collateralReport = Objects.requireNonNull(collateralReport);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CollateralAndExposureReportV02 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:colr.016.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:colr.016.001.02")
 	static public class Document {
 		@XmlElement(name = "CollAndXpsrRpt", required = true)
 		public CollateralAndExposureReportV02 messageBody;

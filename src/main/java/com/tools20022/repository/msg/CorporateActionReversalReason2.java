@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.StatusReason;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,17 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalReasonInforrmationRule#forCorporateActionReversalReason2
+ * ConstraintAdditionalReasonInforrmationRule.forCorporateActionReversalReason2}
+ * </li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Specifies the reason why the corporate action reversal occurs."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionReversalReason2", propOrder = {"reason", "additionalReasonInformation"})
 public class CorporateActionReversalReason2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Rsn", required = true)
 	protected CorporateActionReversalReason2Choice reason;
 	/**
-	 * Specifies the reason for the reversal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -111,7 +123,7 @@ public class CorporateActionReversalReason2 {
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionStatusReason.mmObject();
-			componentContext_lazy = () -> CorporateActionReversalReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionReversalReason2.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +135,11 @@ public class CorporateActionReversalReason2 {
 			type_lazy = () -> CorporateActionReversalReason2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlRsnInf")
 	protected RestrictedFINXMax256Text additionalReasonInformation;
 	/**
-	 * Provides additional information about the processed instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +174,7 @@ public class CorporateActionReversalReason2 {
 	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StatusReason.mmReason;
-			componentContext_lazy = () -> CorporateActionReversalReason2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionReversalReason2.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,9 +189,10 @@ public class CorporateActionReversalReason2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionReversalReason2.mmReason, CorporateActionReversalReason2.mmAdditionalReasonInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionReversalReason2.mmReason, com.tools20022.repository.msg.CorporateActionReversalReason2.mmAdditionalReasonInformation);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalReasonInforrmationRule.forCorporateActionReversalReason2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionReversalReason2";
 				definition = "Specifies the reason why the corporate action reversal occurs.";
@@ -187,21 +201,21 @@ public class CorporateActionReversalReason2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Rsn", required = true)
 	public CorporateActionReversalReason2Choice getReason() {
 		return reason;
 	}
 
-	public void setReason(CorporateActionReversalReason2Choice reason) {
-		this.reason = reason;
+	public CorporateActionReversalReason2 setReason(CorporateActionReversalReason2Choice reason) {
+		this.reason = Objects.requireNonNull(reason);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlRsnInf")
-	public RestrictedFINXMax256Text getAdditionalReasonInformation() {
-		return additionalReasonInformation;
+	public Optional<RestrictedFINXMax256Text> getAdditionalReasonInformation() {
+		return additionalReasonInformation == null ? Optional.empty() : Optional.of(additionalReasonInformation);
 	}
 
-	public void setAdditionalReasonInformation(RestrictedFINXMax256Text additionalReasonInformation) {
+	public CorporateActionReversalReason2 setAdditionalReasonInformation(RestrictedFINXMax256Text additionalReasonInformation) {
 		this.additionalReasonInformation = additionalReasonInformation;
+		return this;
 	}
 }

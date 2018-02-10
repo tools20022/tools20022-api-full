@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.DataModification2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * ModificationScope14}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ModificationScope19", propOrder = {"modificationScopeIndication", "investorProfileValidation"})
 public class ModificationScope19 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ModScpIndctn", required = true)
 	protected DataModification2Code modificationScopeIndication;
 	/**
-	 * Specifies the type of modification to be applied on a set of information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,7 +128,7 @@ public class ModificationScope19 {
 	 */
 	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ModificationScope19.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope19.mmObject();
 			isDerived = false;
 			xmlTag = "ModScpIndctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +141,11 @@ public class ModificationScope19 {
 			simpleType_lazy = () -> DataModification2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "InvstrPrflVldtn", required = true)
 	protected PartyProfileInformation3 investorProfileValidation;
 	/**
-	 * Detailed information about the party profile information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -183,7 +186,7 @@ public class ModificationScope19 {
 	 */
 	public static final MMMessageAssociationEnd mmInvestorProfileValidation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ModificationScope19.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope19.mmObject();
 			isDerived = false;
 			xmlTag = "InvstrPrflVldtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,8 +204,8 @@ public class ModificationScope19 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ModificationScope19.mmModificationScopeIndication, ModificationScope19.mmInvestorProfileValidation);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope19.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope19.mmInvestorProfileValidation);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope19";
 				definition = "Scope of the modification to be applied on an identified set of information.";
@@ -213,21 +216,21 @@ public class ModificationScope19 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ModScpIndctn", required = true)
 	public DataModification2Code getModificationScopeIndication() {
 		return modificationScopeIndication;
 	}
 
-	public void setModificationScopeIndication(DataModification2Code modificationScopeIndication) {
-		this.modificationScopeIndication = modificationScopeIndication;
+	public ModificationScope19 setModificationScopeIndication(DataModification2Code modificationScopeIndication) {
+		this.modificationScopeIndication = Objects.requireNonNull(modificationScopeIndication);
+		return this;
 	}
 
-	@XmlElement(name = "InvstrPrflVldtn", required = true)
 	public PartyProfileInformation3 getInvestorProfileValidation() {
 		return investorProfileValidation;
 	}
 
-	public void setInvestorProfileValidation(com.tools20022.repository.msg.PartyProfileInformation3 investorProfileValidation) {
-		this.investorProfileValidation = investorProfileValidation;
+	public ModificationScope19 setInvestorProfileValidation(com.tools20022.repository.msg.PartyProfileInformation3 investorProfileValidation) {
+		this.investorProfileValidation = Objects.requireNonNull(investorProfileValidation);
+		return this;
 	}
 }

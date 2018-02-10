@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.codeset.WorkflowStatus1Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,8 +48,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -58,15 +60,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Details about the lottery."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionSD6", propOrder = "lotteryRecordStatus")
 public class CorporateActionSD6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LtryRcrdSts", required = true)
 	protected WorkflowStatus1Code lotteryRecordStatus;
 	/**
-	 * Status of the fields of lottery record.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -82,6 +85,9 @@ public class CorporateActionSD6 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LtryRcrdSts"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Lottery Record Status</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -94,9 +100,10 @@ public class CorporateActionSD6 {
 	 */
 	public static final MMMessageAttribute mmLotteryRecordStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "LtryRcrdSts";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Lottery Record Status"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryRecordStatus";
 			definition = "Status of the fields of lottery record.";
@@ -109,8 +116,8 @@ public class CorporateActionSD6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionSD6.mmLotteryRecordStatus);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionSD6.mmLotteryRecordStatus);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionSD6";
 				definition = "Details about the lottery.";
@@ -119,12 +126,12 @@ public class CorporateActionSD6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LtryRcrdSts", required = true)
 	public WorkflowStatus1Code getLotteryRecordStatus() {
 		return lotteryRecordStatus;
 	}
 
-	public void setLotteryRecordStatus(WorkflowStatus1Code lotteryRecordStatus) {
-		this.lotteryRecordStatus = lotteryRecordStatus;
+	public CorporateActionSD6 setLotteryRecordStatus(WorkflowStatus1Code lotteryRecordStatus) {
+		this.lotteryRecordStatus = Objects.requireNonNull(lotteryRecordStatus);
+		return this;
 	}
 }

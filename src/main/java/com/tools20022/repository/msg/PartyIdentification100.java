@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.PartyIdentificationInformation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -83,8 +85,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -95,15 +97,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identification of the party."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "PartyIdentification100", propOrder = {"identification", "LEI"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "PartyIdentification100", propOrder = {"identification", "lEI"})
 public class PartyIdentification100 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected PartyIdentification71Choice identification;
 	/**
-	 * Unique identification of the party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -144,7 +147,7 @@ public class PartyIdentification100 {
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PartyIdentificationInformation.mmObject();
-			componentContext_lazy = () -> PartyIdentification100.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -157,10 +160,11 @@ public class PartyIdentification100 {
 			type_lazy = () -> PartyIdentification71Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LEI")
 	protected LEIIdentifier lEI;
 	/**
-	 * Legal entity identification as an alternate identification for a party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,7 +202,7 @@ public class PartyIdentification100 {
 	 */
 	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PartyIdentification100.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification100.mmObject();
 			isDerived = false;
 			xmlTag = "LEI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,12 +218,12 @@ public class PartyIdentification100 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification100.mmIdentification, PartyIdentification100.mmLEI);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification100.mmIdentification, com.tools20022.repository.msg.PartyIdentification100.mmLEI);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesBalanceTransparencyReportStatusAdviceV01.mmSenderIdentification, SecuritiesBalanceTransparencyReportStatusAdviceV01.mmReceiverIdentification,
 						SecuritiesBalanceCustodyReportV09.mmAccountServicer, SecuritiesBalanceAccountingReportV09.mmAccountServicer, SecuritiesBalanceTransparencyReportV02.mmSenderIdentification,
 						SecuritiesBalanceTransparencyReportV02.mmReceiverIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification100";
 				definition = "Identification of the party.";
@@ -228,21 +232,21 @@ public class PartyIdentification100 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public PartyIdentification71Choice getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(PartyIdentification71Choice identification) {
-		this.identification = identification;
+	public PartyIdentification100 setIdentification(PartyIdentification71Choice identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "LEI")
-	public LEIIdentifier getLEI() {
-		return lEI;
+	public Optional<LEIIdentifier> getLEI() {
+		return lEI == null ? Optional.empty() : Optional.of(lEI);
 	}
 
-	public void setLEI(LEIIdentifier lEI) {
+	public PartyIdentification100 setLEI(LEIIdentifier lEI) {
 		this.lEI = lEI;
+		return this;
 	}
 }

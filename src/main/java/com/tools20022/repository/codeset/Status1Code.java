@@ -20,38 +20,42 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.StatusCode;
+import com.tools20022.repository.codeset.Status1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of an instruction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.StatusCode StatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Status1Code#mmAccepted
- * Status1Code.mmAccepted}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status1Code#mmCompleted
- * Status1Code.mmCompleted}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status1Code#mmNotReceived
- * Status1Code.mmNotReceived}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Status1Code#mmCancelled
- * Status1Code.mmCancelled}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status1Code#Accepted
+ * Status1Code.Accepted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status1Code#Completed
+ * Status1Code.Completed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status1Code#NotReceived
+ * Status1Code.NotReceived}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Status1Code#Cancelled
+ * Status1Code.Cancelled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Status1Code#mmReceivedByIssuerOrRegistrar
- * Status1Code.mmReceivedByIssuerOrRegistrar}</li>
+ * {@linkplain com.tools20022.repository.codeset.Status1Code#ReceivedByIssuerOrRegistrar
+ * Status1Code.ReceivedByIssuerOrRegistrar}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.StatusCode StatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of an instruction."</li>
  * </ul>
  */
-public class Status1Code extends StatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Status1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class Status1Code extends StatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final Status1Code Accepted = new Status1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> Status1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status1Code.mmObject();
+			codeName = StatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -108,11 +114,12 @@ public class Status1Code extends StatusCode {
 	 * name} = "Completed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompleted = new MMCode() {
+	public static final Status1Code Completed = new Status1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
-			owner_lazy = () -> Status1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status1Code.mmObject();
+			codeName = StatusCode.Completed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -130,11 +137,12 @@ public class Status1Code extends StatusCode {
 	 * name} = "NotReceived"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotReceived = new MMCode() {
+	public static final Status1Code NotReceived = new Status1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotReceived";
-			owner_lazy = () -> Status1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status1Code.mmObject();
+			codeName = StatusCode.NotReceived.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -152,11 +160,12 @@ public class Status1Code extends StatusCode {
 	 * name} = "Cancelled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancelled = new MMCode() {
+	public static final Status1Code Cancelled = new Status1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
-			owner_lazy = () -> Status1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status1Code.mmObject();
+			codeName = StatusCode.Cancelled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -174,26 +183,61 @@ public class Status1Code extends StatusCode {
 	 * name} = "ReceivedByIssuerOrRegistrar"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceivedByIssuerOrRegistrar = new MMCode() {
+	public static final Status1Code ReceivedByIssuerOrRegistrar = new Status1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedByIssuerOrRegistrar";
-			owner_lazy = () -> Status1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Status1Code.mmObject();
+			codeName = StatusCode.ReceivedByIssuerOrRegistrar.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Status1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Status1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PACK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status1Code";
 				definition = "Specifies the status of an instruction.";
-				code_lazy = () -> Arrays.asList(Status1Code.mmAccepted, Status1Code.mmCompleted, Status1Code.mmNotReceived, Status1Code.mmCancelled, Status1Code.mmReceivedByIssuerOrRegistrar);
 				trace_lazy = () -> StatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Status1Code.Accepted, com.tools20022.repository.codeset.Status1Code.Completed, com.tools20022.repository.codeset.Status1Code.NotReceived,
+						com.tools20022.repository.codeset.Status1Code.Cancelled, com.tools20022.repository.codeset.Status1Code.ReceivedByIssuerOrRegistrar);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(Completed.getCodeName().get(), Completed);
+		codesByName.put(NotReceived.getCodeName().get(), NotReceived);
+		codesByName.put(Cancelled.getCodeName().get(), Cancelled);
+		codesByName.put(ReceivedByIssuerOrRegistrar.getCodeName().get(), ReceivedByIssuerOrRegistrar);
+	}
+
+	public static Status1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Status1Code[] values() {
+		Status1Code[] values = new Status1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Status1Code> {
+		@Override
+		public Status1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Status1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

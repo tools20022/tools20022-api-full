@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,8 @@ import com.tools20022.repository.datatype.Max8Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InstructionProcessingStatus2", propOrder = {"placeAndName", "rejectCode", "outputRejectIndicator"})
 public class InstructionProcessingStatus2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +108,7 @@ public class InstructionProcessingStatus2 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InstructionProcessingStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionProcessingStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,10 +119,11 @@ public class InstructionProcessingStatus2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RjctCd")
 	protected Max8Text rejectCode;
 	/**
-	 * ICM error code of the last error (if more than one) for the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,6 +137,9 @@ public class InstructionProcessingStatus2 {
 	 * InstructionProcessingStatus2}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RjctCd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Reject Code</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -147,9 +155,10 @@ public class InstructionProcessingStatus2 {
 	 */
 	public static final MMMessageAttribute mmRejectCode = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InstructionProcessingStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionProcessingStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "RjctCd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Reject Code"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectCode";
 			definition = "ICM error code of the last error (if more than one) for the transaction.";
@@ -158,10 +167,11 @@ public class InstructionProcessingStatus2 {
 			simpleType_lazy = () -> Max8Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OutptRjctInd")
 	protected Max1NumericText outputRejectIndicator;
 	/**
-	 * Indicates if the transaction has any errors.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,6 +187,9 @@ public class InstructionProcessingStatus2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OutptRjctInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Output Reject Indicator</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -189,9 +202,10 @@ public class InstructionProcessingStatus2 {
 	 */
 	public static final MMMessageAttribute mmOutputRejectIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> InstructionProcessingStatus2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstructionProcessingStatus2.mmObject();
 			isDerived = false;
 			xmlTag = "OutptRjctInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Output Reject Indicator"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutputRejectIndicator";
 			definition = "Indicates if the transaction has any errors.";
@@ -204,8 +218,9 @@ public class InstructionProcessingStatus2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InstructionProcessingStatus2.mmPlaceAndName, InstructionProcessingStatus2.mmRejectCode, InstructionProcessingStatus2.mmOutputRejectIndicator);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstructionProcessingStatus2.mmPlaceAndName, com.tools20022.repository.msg.InstructionProcessingStatus2.mmRejectCode,
+						com.tools20022.repository.msg.InstructionProcessingStatus2.mmOutputRejectIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InstructionProcessingStatus2";
 				definition = "Provides additional information regarding instruction processing status details.";
@@ -214,30 +229,30 @@ public class InstructionProcessingStatus2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public InstructionProcessingStatus2 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "RjctCd")
-	public Max8Text getRejectCode() {
-		return rejectCode;
+	public Optional<Max8Text> getRejectCode() {
+		return rejectCode == null ? Optional.empty() : Optional.of(rejectCode);
 	}
 
-	public void setRejectCode(Max8Text rejectCode) {
+	public InstructionProcessingStatus2 setRejectCode(Max8Text rejectCode) {
 		this.rejectCode = rejectCode;
+		return this;
 	}
 
-	@XmlElement(name = "OutptRjctInd")
-	public Max1NumericText getOutputRejectIndicator() {
-		return outputRejectIndicator;
+	public Optional<Max1NumericText> getOutputRejectIndicator() {
+		return outputRejectIndicator == null ? Optional.empty() : Optional.of(outputRejectIndicator);
 	}
 
-	public void setOutputRejectIndicator(Max1NumericText outputRejectIndicator) {
+	public InstructionProcessingStatus2 setOutputRejectIndicator(Max1NumericText outputRejectIndicator) {
 		this.outputRejectIndicator = outputRejectIndicator;
+		return this;
 	}
 }

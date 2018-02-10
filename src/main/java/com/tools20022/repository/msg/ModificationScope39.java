@@ -25,6 +25,7 @@ import com.tools20022.repository.codeset.DataModification2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * ModificationScope3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ModificationScope39", propOrder = {"modificationScopeIndication", "citizenship"})
 public class ModificationScope39 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ModScpIndctn", required = true)
 	protected DataModification2Code modificationScopeIndication;
 	/**
-	 * Specifies the type of modification to be applied on a set of information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class ModificationScope39 {
 	 */
 	public static final MMMessageAttribute mmModificationScopeIndication = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ModificationScope39.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope39.mmObject();
 			isDerived = false;
 			xmlTag = "ModScpIndctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,10 +125,11 @@ public class ModificationScope39 {
 			simpleType_lazy = () -> DataModification2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Ctznsh", required = true)
 	protected CitizenshipInformation2 citizenship;
 	/**
-	 * Nationality and legal status (minor or major).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -158,7 +161,7 @@ public class ModificationScope39 {
 	 */
 	public static final MMMessageAssociationEnd mmCitizenship = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ModificationScope39.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ModificationScope39.mmObject();
 			isDerived = false;
 			xmlTag = "Ctznsh";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,8 +178,8 @@ public class ModificationScope39 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ModificationScope39.mmModificationScopeIndication, ModificationScope39.mmCitizenship);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ModificationScope39.mmModificationScopeIndication, com.tools20022.repository.msg.ModificationScope39.mmCitizenship);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ModificationScope39";
 				definition = "Scope of the modification to be applied on an identified set of information.";
@@ -186,21 +189,21 @@ public class ModificationScope39 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ModScpIndctn", required = true)
 	public DataModification2Code getModificationScopeIndication() {
 		return modificationScopeIndication;
 	}
 
-	public void setModificationScopeIndication(DataModification2Code modificationScopeIndication) {
-		this.modificationScopeIndication = modificationScopeIndication;
+	public ModificationScope39 setModificationScopeIndication(DataModification2Code modificationScopeIndication) {
+		this.modificationScopeIndication = Objects.requireNonNull(modificationScopeIndication);
+		return this;
 	}
 
-	@XmlElement(name = "Ctznsh", required = true)
 	public CitizenshipInformation2 getCitizenship() {
 		return citizenship;
 	}
 
-	public void setCitizenship(com.tools20022.repository.msg.CitizenshipInformation2 citizenship) {
-		this.citizenship = citizenship;
+	public ModificationScope39 setCitizenship(com.tools20022.repository.msg.CitizenshipInformation2 citizenship) {
+		this.citizenship = Objects.requireNonNull(citizenship);
+		return this;
 	}
 }

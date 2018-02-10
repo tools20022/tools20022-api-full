@@ -26,6 +26,8 @@ import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -93,8 +95,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,15 +109,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ControlData1", propOrder = {"numberOfTransactions", "controlSum"})
 public class ControlData1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NbOfTxs", required = true)
 	protected Max15NumericText numberOfTransactions;
 	/**
-	 * Number of individual transactions contained in the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +146,7 @@ public class ControlData1 {
 	 */
 	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ControlData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ControlData1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfTxs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,11 +157,11 @@ public class ControlData1 {
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "CtrlSum")
 	protected DecimalNumber controlSum;
 	/**
-	 * Total of all individual amounts included in the message, irrespective of
-	 * currencies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,7 +190,7 @@ public class ControlData1 {
 	 */
 	public static final MMMessageAttribute mmControlSum = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ControlData1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ControlData1.mmObject();
 			isDerived = false;
 			xmlTag = "CtrlSum";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,12 +205,12 @@ public class ControlData1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ControlData1.mmNumberOfTransactions, ControlData1.mmControlSum);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ControlData1.mmNumberOfTransactions, com.tools20022.repository.msg.ControlData1.mmControlSum);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentCancellationRequestV01.mmControlData, CustomerPaymentCancellationRequestV02.mmControlData, CustomerPaymentCancellationRequestV03.mmControlData,
 						FIToFIPaymentCancellationRequestV01.mmControlData, FIToFIPaymentCancellationRequestV02.mmControlData, FIToFIPaymentCancellationRequestV03.mmControlData, FIToFIPaymentCancellationRequestV04.mmControlData,
 						CustomerPaymentCancellationRequestV04.mmControlData, FIToFIPaymentCancellationRequestV05.mmControlData, CustomerPaymentCancellationRequestV05.mmControlData, CustomerPaymentCancellationRequestV06.mmControlData,
 						FIToFIPaymentCancellationRequestV06.mmControlData);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ControlData1";
 				definition = "Provides details of the number of transactions and the control sum of the message.";
@@ -216,21 +219,21 @@ public class ControlData1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NbOfTxs", required = true)
 	public Max15NumericText getNumberOfTransactions() {
 		return numberOfTransactions;
 	}
 
-	public void setNumberOfTransactions(Max15NumericText numberOfTransactions) {
-		this.numberOfTransactions = numberOfTransactions;
+	public ControlData1 setNumberOfTransactions(Max15NumericText numberOfTransactions) {
+		this.numberOfTransactions = Objects.requireNonNull(numberOfTransactions);
+		return this;
 	}
 
-	@XmlElement(name = "CtrlSum")
-	public DecimalNumber getControlSum() {
-		return controlSum;
+	public Optional<DecimalNumber> getControlSum() {
+		return controlSum == null ? Optional.empty() : Optional.of(controlSum);
 	}
 
-	public void setControlSum(DecimalNumber controlSum) {
+	public ControlData1 setControlSum(DecimalNumber controlSum) {
 		this.controlSum = controlSum;
+		return this;
 	}
 }

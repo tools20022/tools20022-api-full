@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max64Text;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "IsabelSignature2", propOrder = {"header", "record", "randomBlock"})
 public class IsabelSignature2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected IsabelSignatureHash1 header;
 	/**
-	 * Common signature elements applicable to all signature records.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -112,7 +115,7 @@ public class IsabelSignature2 {
 	 */
 	public static final MMMessageAssociationEnd mmHeader = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelSignature2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSignature2.mmObject();
 			isDerived = false;
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,10 +128,11 @@ public class IsabelSignature2 {
 			type_lazy = () -> com.tools20022.repository.msg.IsabelSignatureHash1.mmObject();
 		}
 	};
+	@XmlElement(name = "Rcrd", required = true)
 	protected List<com.tools20022.repository.msg.IsabelSignatureRecord1> record;
 	/**
-	 * Individual record of the file signature.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -161,7 +165,7 @@ public class IsabelSignature2 {
 	 */
 	public static final MMMessageAssociationEnd mmRecord = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> IsabelSignature2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSignature2.mmObject();
 			isDerived = false;
 			xmlTag = "Rcrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +178,11 @@ public class IsabelSignature2 {
 			type_lazy = () -> com.tools20022.repository.msg.IsabelSignatureRecord1.mmObject();
 		}
 	};
+	@XmlElement(name = "RandBlck", required = true)
 	protected Max64Text randomBlock;
 	/**
-	 * Random data related to the signature.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -212,7 +217,7 @@ public class IsabelSignature2 {
 	 */
 	public static final MMMessageAttribute mmRandomBlock = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> IsabelSignature2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.IsabelSignature2.mmObject();
 			isDerived = false;
 			xmlTag = "RandBlck";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,8 +233,8 @@ public class IsabelSignature2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(IsabelSignature2.mmHeader, IsabelSignature2.mmRecord, IsabelSignature2.mmRandomBlock);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.IsabelSignature2.mmHeader, com.tools20022.repository.msg.IsabelSignature2.mmRecord, com.tools20022.repository.msg.IsabelSignature2.mmRandomBlock);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IsabelSignature2";
 				definition = "Specifies the signature of an Isabel file.";
@@ -239,30 +244,30 @@ public class IsabelSignature2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public IsabelSignatureHash1 getHeader() {
 		return header;
 	}
 
-	public void setHeader(com.tools20022.repository.msg.IsabelSignatureHash1 header) {
-		this.header = header;
+	public IsabelSignature2 setHeader(com.tools20022.repository.msg.IsabelSignatureHash1 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "Rcrd", required = true)
 	public List<IsabelSignatureRecord1> getRecord() {
-		return record;
+		return record == null ? record = new ArrayList<>() : record;
 	}
 
-	public void setRecord(List<com.tools20022.repository.msg.IsabelSignatureRecord1> record) {
-		this.record = record;
+	public IsabelSignature2 setRecord(List<com.tools20022.repository.msg.IsabelSignatureRecord1> record) {
+		this.record = Objects.requireNonNull(record);
+		return this;
 	}
 
-	@XmlElement(name = "RandBlck", required = true)
 	public Max64Text getRandomBlock() {
 		return randomBlock;
 	}
 
-	public void setRandomBlock(Max64Text randomBlock) {
-		this.randomBlock = randomBlock;
+	public IsabelSignature2 setRandomBlock(Max64Text randomBlock) {
+		this.randomBlock = Objects.requireNonNull(randomBlock);
+		return this;
 	}
 }

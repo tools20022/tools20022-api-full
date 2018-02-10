@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.SystemStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of a system.
@@ -31,15 +36,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemStatusCode#mmSuspended
- * SystemStatusCode.mmSuspended}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SystemStatusCode#mmActive
- * SystemStatusCode.mmActive}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SystemStatusCode#mmClosed
- * SystemStatusCode.mmClosed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.SystemStatusCode#mmClosing
- * SystemStatusCode.mmClosing}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SystemStatusCode#Suspended
+ * SystemStatusCode.Suspended}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SystemStatusCode#Active
+ * SystemStatusCode.Active}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SystemStatusCode#Closed
+ * SystemStatusCode.Closed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SystemStatusCode#Closing
+ * SystemStatusCode.Closing}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of a system."</li>
  * </ul>
  */
-public class SystemStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SystemStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -94,12 +99,12 @@ public class SystemStatusCode {
 	 * definition} = "System is suspended, ie, not operational."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSuspended = new MMCode() {
+	public static final SystemStatusCode Suspended = new SystemStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Suspended";
 			definition = "System is suspended, ie, not operational.";
-			owner_lazy = () -> SystemStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SystemStatusCode.mmObject();
 			codeName = "SUSP";
 		}
 	};
@@ -124,12 +129,12 @@ public class SystemStatusCode {
 	 * definition} = "System is functioning normally, ie, operational."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmActive = new MMCode() {
+	public static final SystemStatusCode Active = new SystemStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Active";
 			definition = "System is functioning normally, ie, operational.";
-			owner_lazy = () -> SystemStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SystemStatusCode.mmObject();
 			codeName = "ACTV";
 		}
 	};
@@ -154,12 +159,12 @@ public class SystemStatusCode {
 	 * definition} = "System is closed (eg. normal closure of an RTGS)"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClosed = new MMCode() {
+	public static final SystemStatusCode Closed = new SystemStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Closed";
 			definition = "System is closed (eg. normal closure of an RTGS)";
-			owner_lazy = () -> SystemStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SystemStatusCode.mmObject();
 			codeName = "CLSD";
 		}
 	};
@@ -187,28 +192,61 @@ public class SystemStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmClosing = new MMCode() {
+	public static final SystemStatusCode Closing = new SystemStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Closing";
 			definition = "System needs to wait for completion of intermediate internal activities before going to a status Closed.";
-			owner_lazy = () -> SystemStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SystemStatusCode.mmObject();
 			codeName = "CLSG";
 		}
 	};
+	final static private LinkedHashMap<String, SystemStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SystemStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SUSP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemStatusCode";
 				definition = "Specifies the status of a system.";
-				code_lazy = () -> Arrays.asList(SystemStatusCode.mmSuspended, SystemStatusCode.mmActive, SystemStatusCode.mmClosed, SystemStatusCode.mmClosing);
 				derivation_lazy = () -> Arrays.asList(SystemStatus2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemStatusCode.Suspended, com.tools20022.repository.codeset.SystemStatusCode.Active, com.tools20022.repository.codeset.SystemStatusCode.Closed,
+						com.tools20022.repository.codeset.SystemStatusCode.Closing);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Suspended.getCodeName().get(), Suspended);
+		codesByName.put(Active.getCodeName().get(), Active);
+		codesByName.put(Closed.getCodeName().get(), Closed);
+		codesByName.put(Closing.getCodeName().get(), Closing);
+	}
+
+	public static SystemStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SystemStatusCode[] values() {
+		SystemStatusCode[] values = new SystemStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SystemStatusCode> {
+		@Override
+		public SystemStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SystemStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -24,9 +24,8 @@ import com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV03;
 import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +64,31 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupCancellationAndReasonRule#forUnderlyingTransaction8
+ * ConstraintGroupCancellationAndReasonRule.forUnderlyingTransaction8}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupCancellationAndNumberOfTransactionsRule#forUnderlyingTransaction8
+ * ConstraintGroupCancellationAndNumberOfTransactionsRule.
+ * forUnderlyingTransaction8}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupCancellationTrueAndTransactionInformationRule#forUnderlyingTransaction8
+ * ConstraintGroupCancellationTrueAndTransactionInformationRule.
+ * forUnderlyingTransaction8}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupCancellationFalseAndTransactionInformationRule#forUnderlyingTransaction8
+ * ConstraintGroupCancellationFalseAndTransactionInformationRule.
+ * forUnderlyingTransaction8}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupOrTransactionCaseRule#forUnderlyingTransaction8
+ * ConstraintGroupOrTransactionCaseRule.forUnderlyingTransaction8}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,16 +112,16 @@ import javax.xml.bind.annotation.XmlType;
  * UnderlyingTransaction5}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "UnderlyingTransaction8", propOrder = {"originalGroupInformationAndCancellation", "transactionInformation"})
 public class UnderlyingTransaction8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgnlGrpInfAndCxl")
 	protected OriginalGroupHeader4 originalGroupInformationAndCancellation;
 	/**
-	 * Provides information on the original message, to which the cancellation
-	 * refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -141,7 +163,7 @@ public class UnderlyingTransaction8 {
 	public static final MMMessageAssociationEnd mmOriginalGroupInformationAndCancellation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PaymentInstruction.mmObject();
-			componentContext_lazy = () -> UnderlyingTransaction8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlGrpInfAndCxl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,11 +176,11 @@ public class UnderlyingTransaction8 {
 			type_lazy = () -> com.tools20022.repository.msg.OriginalGroupHeader4.mmObject();
 		}
 	};
+	@XmlElement(name = "TxInf")
 	protected List<com.tools20022.repository.msg.PaymentTransaction48> transactionInformation;
 	/**
-	 * Provides information on the original transactions to which the
-	 * cancellation request message refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -200,7 +222,7 @@ public class UnderlyingTransaction8 {
 	public static final MMMessageAssociationEnd mmTransactionInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentExecution.mmPayment;
-			componentContext_lazy = () -> UnderlyingTransaction8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingTransaction8.mmObject();
 			isDerived = false;
 			xmlTag = "TxInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,10 +238,15 @@ public class UnderlyingTransaction8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(UnderlyingTransaction8.mmOriginalGroupInformationAndCancellation, UnderlyingTransaction8.mmTransactionInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingTransaction8.mmOriginalGroupInformationAndCancellation, com.tools20022.repository.msg.UnderlyingTransaction8.mmTransactionInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(FIToFIPaymentCancellationRequestV03.mmUnderlying);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupCancellationAndReasonRule.forUnderlyingTransaction8,
+						com.tools20022.repository.constraints.ConstraintGroupCancellationAndNumberOfTransactionsRule.forUnderlyingTransaction8,
+						com.tools20022.repository.constraints.ConstraintGroupCancellationTrueAndTransactionInformationRule.forUnderlyingTransaction8,
+						com.tools20022.repository.constraints.ConstraintGroupCancellationFalseAndTransactionInformationRule.forUnderlyingTransaction8,
+						com.tools20022.repository.constraints.ConstraintGroupOrTransactionCaseRule.forUnderlyingTransaction8);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingTransaction8";
 				definition = "Identifies the underlying (group of) transaction(s) to which the investigation applies.";
@@ -230,21 +257,21 @@ public class UnderlyingTransaction8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgnlGrpInfAndCxl")
-	public OriginalGroupHeader4 getOriginalGroupInformationAndCancellation() {
-		return originalGroupInformationAndCancellation;
+	public Optional<OriginalGroupHeader4> getOriginalGroupInformationAndCancellation() {
+		return originalGroupInformationAndCancellation == null ? Optional.empty() : Optional.of(originalGroupInformationAndCancellation);
 	}
 
-	public void setOriginalGroupInformationAndCancellation(com.tools20022.repository.msg.OriginalGroupHeader4 originalGroupInformationAndCancellation) {
+	public UnderlyingTransaction8 setOriginalGroupInformationAndCancellation(com.tools20022.repository.msg.OriginalGroupHeader4 originalGroupInformationAndCancellation) {
 		this.originalGroupInformationAndCancellation = originalGroupInformationAndCancellation;
+		return this;
 	}
 
-	@XmlElement(name = "TxInf")
 	public List<PaymentTransaction48> getTransactionInformation() {
-		return transactionInformation;
+		return transactionInformation == null ? transactionInformation = new ArrayList<>() : transactionInformation;
 	}
 
-	public void setTransactionInformation(List<com.tools20022.repository.msg.PaymentTransaction48> transactionInformation) {
-		this.transactionInformation = transactionInformation;
+	public UnderlyingTransaction8 setTransactionInformation(List<com.tools20022.repository.msg.PaymentTransaction48> transactionInformation) {
+		this.transactionInformation = Objects.requireNonNull(transactionInformation);
+		return this;
 	}
 }

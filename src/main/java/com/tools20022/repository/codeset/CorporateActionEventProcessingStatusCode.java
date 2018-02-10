@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the stage in the corporate action event life cycle.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode#mmComplete
- * CorporateActionEventProcessingStatusCode.mmComplete}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode#Complete
+ * CorporateActionEventProcessingStatusCode.Complete}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode#mmPending
- * CorporateActionEventProcessingStatusCode.mmPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode#Pending
+ * CorporateActionEventProcessingStatusCode.Pending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode#mmReconciled
- * CorporateActionEventProcessingStatusCode.mmReconciled}</li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode#Reconciled
+ * CorporateActionEventProcessingStatusCode.Reconciled}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -53,8 +58,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -72,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CorporateActionEventProcessingStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CorporateActionEventProcessingStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,12 +103,12 @@ public class CorporateActionEventProcessingStatusCode {
 	 * "Specifies that a corporate action event processing has been completed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmComplete = new MMCode() {
+	public static final CorporateActionEventProcessingStatusCode Complete = new CorporateActionEventProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Complete";
 			definition = "Specifies that a corporate action event processing has been completed.";
-			owner_lazy = () -> CorporateActionEventProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode.mmObject();
 			codeName = "COMP";
 		}
 	};
@@ -130,12 +136,12 @@ public class CorporateActionEventProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPending = new MMCode() {
+	public static final CorporateActionEventProcessingStatusCode Pending = new CorporateActionEventProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Pending";
 			definition = "Specifies that a corporate action event processing has not been completed.";
-			owner_lazy = () -> CorporateActionEventProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode.mmObject();
 			codeName = "PEND";
 		}
 	};
@@ -164,28 +170,60 @@ public class CorporateActionEventProcessingStatusCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmReconciled = new MMCode() {
+	public static final CorporateActionEventProcessingStatusCode Reconciled = new CorporateActionEventProcessingStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Reconciled";
 			definition = "Corporate action event processing specifying that the funds paid have been reconciled with the funds received from the agent (meaning that there is no more risk of payment to be reversed).";
-			owner_lazy = () -> CorporateActionEventProcessingStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode.mmObject();
 			codeName = "RECD";
 		}
 	};
+	final static private LinkedHashMap<String, CorporateActionEventProcessingStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CorporateActionEventProcessingStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("COMP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventProcessingStatusCode";
 				definition = "Specifies the stage in the corporate action event life cycle.";
-				code_lazy = () -> Arrays.asList(CorporateActionEventProcessingStatusCode.mmComplete, CorporateActionEventProcessingStatusCode.mmPending, CorporateActionEventProcessingStatusCode.mmReconciled);
 				derivation_lazy = () -> Arrays.asList(CorporateActionEventProcessingStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode.Complete, com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode.Pending,
+						com.tools20022.repository.codeset.CorporateActionEventProcessingStatusCode.Reconciled);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Complete.getCodeName().get(), Complete);
+		codesByName.put(Pending.getCodeName().get(), Pending);
+		codesByName.put(Reconciled.getCodeName().get(), Reconciled);
+	}
+
+	public static CorporateActionEventProcessingStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CorporateActionEventProcessingStatusCode[] values() {
+		CorporateActionEventProcessingStatusCode[] values = new CorporateActionEventProcessingStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CorporateActionEventProcessingStatusCode> {
+		@Override
+		public CorporateActionEventProcessingStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CorporateActionEventProcessingStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

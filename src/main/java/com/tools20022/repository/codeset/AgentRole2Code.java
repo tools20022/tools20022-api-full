@@ -20,41 +20,42 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AgentRoleCode;
+import com.tools20022.repository.codeset.AgentRole2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the role of the agent.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AgentRoleCode AgentRoleCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AgentRole2Code#mmSystemPayingAgent
- * AgentRole2Code.mmSystemPayingAgent}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AgentRole2Code#mmCoDomicile
- * AgentRole2Code.mmCoDomicile}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AgentRole2Code#mmIssuerAgent
- * AgentRole2Code.mmIssuerAgent}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.AgentRole2Code#mmRegistrar
- * AgentRole2Code.mmRegistrar}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AgentRole2Code#mmPayingAgent
- * AgentRole2Code.mmPayingAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.AgentRole2Code#SystemPayingAgent
+ * AgentRole2Code.SystemPayingAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AgentRole2Code#CoDomicile
+ * AgentRole2Code.CoDomicile}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AgentRole2Code#IssuerAgent
+ * AgentRole2Code.IssuerAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AgentRole2Code#Registrar
+ * AgentRole2Code.Registrar}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AgentRole2Code#PayingAgent
+ * AgentRole2Code.PayingAgent}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AgentRoleCode AgentRoleCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -71,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the role of the agent."</li>
  * </ul>
  */
-public class AgentRole2Code extends AgentRoleCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AgentRole2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -90,11 +92,12 @@ public class AgentRole2Code extends AgentRoleCode {
 	 * name} = "SystemPayingAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSystemPayingAgent = new MMCode() {
+	public static final AgentRole2Code SystemPayingAgent = new AgentRole2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemPayingAgent";
-			owner_lazy = () -> AgentRole2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AgentRole2Code.mmObject();
+			codeName = AgentRoleCode.SystemPayingAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -113,11 +116,12 @@ public class AgentRole2Code extends AgentRoleCode {
 	 * name} = "CoDomicile"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCoDomicile = new MMCode() {
+	public static final AgentRole2Code CoDomicile = new AgentRole2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoDomicile";
-			owner_lazy = () -> AgentRole2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AgentRole2Code.mmObject();
+			codeName = AgentRoleCode.CoDomicile.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -136,11 +140,12 @@ public class AgentRole2Code extends AgentRoleCode {
 	 * name} = "IssuerAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuerAgent = new MMCode() {
+	public static final AgentRole2Code IssuerAgent = new AgentRole2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerAgent";
-			owner_lazy = () -> AgentRole2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AgentRole2Code.mmObject();
+			codeName = AgentRoleCode.IssuerAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -159,11 +164,12 @@ public class AgentRole2Code extends AgentRoleCode {
 	 * name} = "Registrar"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRegistrar = new MMCode() {
+	public static final AgentRole2Code Registrar = new AgentRole2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registrar";
-			owner_lazy = () -> AgentRole2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AgentRole2Code.mmObject();
+			codeName = AgentRoleCode.Registrar.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -182,26 +188,61 @@ public class AgentRole2Code extends AgentRoleCode {
 	 * name} = "PayingAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPayingAgent = new MMCode() {
+	public static final AgentRole2Code PayingAgent = new AgentRole2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayingAgent";
-			owner_lazy = () -> AgentRole2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AgentRole2Code.mmObject();
+			codeName = AgentRoleCode.PayingAgent.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AgentRole2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AgentRole2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SPAY");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgentRole2Code";
 				definition = "Specifies the role of the agent.";
-				code_lazy = () -> Arrays.asList(AgentRole2Code.mmSystemPayingAgent, AgentRole2Code.mmCoDomicile, AgentRole2Code.mmIssuerAgent, AgentRole2Code.mmRegistrar, AgentRole2Code.mmPayingAgent);
 				trace_lazy = () -> AgentRoleCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AgentRole2Code.SystemPayingAgent, com.tools20022.repository.codeset.AgentRole2Code.CoDomicile, com.tools20022.repository.codeset.AgentRole2Code.IssuerAgent,
+						com.tools20022.repository.codeset.AgentRole2Code.Registrar, com.tools20022.repository.codeset.AgentRole2Code.PayingAgent);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SystemPayingAgent.getCodeName().get(), SystemPayingAgent);
+		codesByName.put(CoDomicile.getCodeName().get(), CoDomicile);
+		codesByName.put(IssuerAgent.getCodeName().get(), IssuerAgent);
+		codesByName.put(Registrar.getCodeName().get(), Registrar);
+		codesByName.put(PayingAgent.getCodeName().get(), PayingAgent);
+	}
+
+	public static AgentRole2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AgentRole2Code[] values() {
+		AgentRole2Code[] values = new AgentRole2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AgentRole2Code> {
+		@Override
+		public AgentRole2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AgentRole2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

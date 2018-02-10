@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about the debtor."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Debtor2", propOrder = {"debtor", "accountIdentification", "firstAgent"})
 public class Debtor2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dbtr")
 	protected PartyIdentification2Choice debtor;
 	/**
-	 * Party that owes an amount of money to the (ultimate) creditor. In the
-	 * context of the payment model, the debtor is also the debit account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -113,7 +115,7 @@ public class Debtor2 {
 	public static final MMMessageAttribute mmDebtor = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Debtor2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debtor2.mmObject();
 			isDerived = false;
 			xmlTag = "Dbtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,11 +126,11 @@ public class Debtor2 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctId", required = true)
 	protected AccountIdentificationAndName3 accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +165,7 @@ public class Debtor2 {
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> Debtor2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debtor2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,11 +176,11 @@ public class Debtor2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName3.mmObject();
 		}
 	};
+	@XmlElement(name = "FrstAgt", required = true)
 	protected FinancialInstitutionIdentification3Choice firstAgent;
 	/**
-	 * Financial institution that receives the payment transaction from the
-	 * account owner, or other authorised party, and processes the instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,7 +215,7 @@ public class Debtor2 {
 	public static final MMMessageAttribute mmFirstAgent = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> Debtor2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debtor2.mmObject();
 			isDerived = false;
 			xmlTag = "FrstAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,9 +230,9 @@ public class Debtor2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Debtor2.mmDebtor, Debtor2.mmAccountIdentification, Debtor2.mmFirstAgent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debtor2.mmDebtor, com.tools20022.repository.msg.Debtor2.mmAccountIdentification, com.tools20022.repository.msg.Debtor2.mmFirstAgent);
 				trace_lazy = () -> DebtorRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Debtor2";
 				definition = "Information about the debtor.";
@@ -239,30 +241,30 @@ public class Debtor2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dbtr")
-	public PartyIdentification2Choice getDebtor() {
-		return debtor;
+	public Optional<PartyIdentification2Choice> getDebtor() {
+		return debtor == null ? Optional.empty() : Optional.of(debtor);
 	}
 
-	public void setDebtor(PartyIdentification2Choice debtor) {
+	public Debtor2 setDebtor(PartyIdentification2Choice debtor) {
 		this.debtor = debtor;
+		return this;
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public AccountIdentificationAndName3 getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(com.tools20022.repository.msg.AccountIdentificationAndName3 accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public Debtor2 setAccountIdentification(com.tools20022.repository.msg.AccountIdentificationAndName3 accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "FrstAgt", required = true)
 	public FinancialInstitutionIdentification3Choice getFirstAgent() {
 		return firstAgent;
 	}
 
-	public void setFirstAgent(FinancialInstitutionIdentification3Choice firstAgent) {
-		this.firstAgent = firstAgent;
+	public Debtor2 setFirstAgent(FinancialInstitutionIdentification3Choice firstAgent) {
+		this.firstAgent = Objects.requireNonNull(firstAgent);
+		return this;
 	}
 }

@@ -29,6 +29,8 @@ import com.tools20022.repository.msg.ProprietaryReason1;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -95,8 +97,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,16 +109,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of status for the replacement processing."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReplacementProcessingStatus7Choice", propOrder = {"accepted", "completed", "denied", "inRepair", "partialReplacementAccepted", "pending", "receivedAtIntermediary", "receivedAtStockExchange", "rejected",
 		"modificationRequested", "proprietaryStatus"})
 public class ReplacementProcessingStatus7Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Accptd", required = true)
 	protected ProprietaryReason1 accepted;
 	/**
-	 * Replacement of the trade is accepted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -148,7 +151,7 @@ public class ReplacementProcessingStatus7Choice {
 	public static final MMMessageAssociationEnd mmAccepted = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
-			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Accptd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,10 +163,11 @@ public class ReplacementProcessingStatus7Choice {
 			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "Cmpltd", required = true)
 	protected ProprietaryReason1 completed;
 	/**
-	 * Replacement of the trade is completed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -195,7 +199,7 @@ public class ReplacementProcessingStatus7Choice {
 	public static final MMMessageAssociationEnd mmCompleted = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
-			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cmpltd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,10 +211,11 @@ public class ReplacementProcessingStatus7Choice {
 			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "Dnd", required = true)
 	protected ProprietaryReason1 denied;
 	/**
-	 * Replacement of the trade is denied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -242,7 +247,7 @@ public class ReplacementProcessingStatus7Choice {
 	public static final MMMessageAssociationEnd mmDenied = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
-			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dnd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,10 +259,11 @@ public class ReplacementProcessingStatus7Choice {
 			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "InRpr", required = true)
 	protected ProprietaryReason1 inRepair;
 	/**
-	 * Replacement of the trade is In repair.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -289,7 +295,7 @@ public class ReplacementProcessingStatus7Choice {
 	public static final MMMessageAssociationEnd mmInRepair = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
-			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InRpr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -301,10 +307,11 @@ public class ReplacementProcessingStatus7Choice {
 			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtlRplcmntAccptd", required = true)
 	protected ProprietaryReason1 partialReplacementAccepted;
 	/**
-	 * Replacement of the trade is PartialReplacementAccepted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -336,7 +343,7 @@ public class ReplacementProcessingStatus7Choice {
 	public static final MMMessageAssociationEnd mmPartialReplacementAccepted = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
-			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtlRplcmntAccptd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -348,10 +355,11 @@ public class ReplacementProcessingStatus7Choice {
 			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "Pdg", required = true)
 	protected ProprietaryReason1 pending;
 	/**
-	 * Replacement of the trade is pending.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -383,7 +391,7 @@ public class ReplacementProcessingStatus7Choice {
 	public static final MMMessageAssociationEnd mmPending = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
-			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Pdg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -395,10 +403,11 @@ public class ReplacementProcessingStatus7Choice {
 			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvdAtIntrmy", required = true)
 	protected ProprietaryReason1 receivedAtIntermediary;
 	/**
-	 * Replacement of the trade is ReceivedAtIntermediary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -430,7 +439,7 @@ public class ReplacementProcessingStatus7Choice {
 	public static final MMMessageAssociationEnd mmReceivedAtIntermediary = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
-			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RcvdAtIntrmy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -442,10 +451,11 @@ public class ReplacementProcessingStatus7Choice {
 			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvdAtStockXchg", required = true)
 	protected ProprietaryReason1 receivedAtStockExchange;
 	/**
-	 * Replacement of the trade is ReceivedAtStockExchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -477,7 +487,7 @@ public class ReplacementProcessingStatus7Choice {
 	public static final MMMessageAssociationEnd mmReceivedAtStockExchange = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
-			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RcvdAtStockXchg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -489,10 +499,11 @@ public class ReplacementProcessingStatus7Choice {
 			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "Rjctd", required = true)
 	protected ProprietaryReason1 rejected;
 	/**
-	 * Replacement of the trade is rejected.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -524,7 +535,7 @@ public class ReplacementProcessingStatus7Choice {
 	public static final MMMessageAssociationEnd mmRejected = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
-			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Rjctd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -536,10 +547,11 @@ public class ReplacementProcessingStatus7Choice {
 			type_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "ModReqd", required = true)
 	protected ProprietaryReason1 modificationRequested;
 	/**
-	 * Replacement of the trade is Modification Requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -573,7 +585,7 @@ public class ReplacementProcessingStatus7Choice {
 	public static final MMMessageAttribute mmModificationRequested = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
-			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ModReqd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -584,11 +596,11 @@ public class ReplacementProcessingStatus7Choice {
 			complexType_lazy = () -> ProprietaryReason1.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtrySts")
 	protected ProprietaryStatusAndReason1 proprietaryStatus;
 	/**
-	 * Provides a proprietary status and a proprietary reason of the processing
-	 * status of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -623,7 +635,7 @@ public class ReplacementProcessingStatus7Choice {
 	public static final MMMessageAssociationEnd mmProprietaryStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmTransactionProcessingStatus;
-			componentContext_lazy = () -> ReplacementProcessingStatus7Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtrySts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -639,13 +651,15 @@ public class ReplacementProcessingStatus7Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReplacementProcessingStatus7Choice.mmAccepted, ReplacementProcessingStatus7Choice.mmCompleted, ReplacementProcessingStatus7Choice.mmDenied,
-						ReplacementProcessingStatus7Choice.mmInRepair, ReplacementProcessingStatus7Choice.mmPartialReplacementAccepted, ReplacementProcessingStatus7Choice.mmPending,
-						ReplacementProcessingStatus7Choice.mmReceivedAtIntermediary, ReplacementProcessingStatus7Choice.mmReceivedAtStockExchange, ReplacementProcessingStatus7Choice.mmRejected,
-						ReplacementProcessingStatus7Choice.mmModificationRequested, ReplacementProcessingStatus7Choice.mmProprietaryStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmAccepted, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmCompleted,
+						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmDenied, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmInRepair,
+						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmPartialReplacementAccepted, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmPending,
+						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmReceivedAtIntermediary, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmReceivedAtStockExchange,
+						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmRejected, com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmModificationRequested,
+						com.tools20022.repository.choice.ReplacementProcessingStatus7Choice.mmProprietaryStatus);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationStatusAdviceV01.mmReplacementProcessingStatus, SecuritiesTradeConfirmationStatusAdviceV02.mmReplacementProcessingStatus);
 				trace_lazy = () -> Status.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReplacementProcessingStatus7Choice";
 				definition = "Choice of status for the replacement processing.";
@@ -654,102 +668,102 @@ public class ReplacementProcessingStatus7Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Accptd", required = true)
 	public ProprietaryReason1 getAccepted() {
 		return accepted;
 	}
 
-	public void setAccepted(ProprietaryReason1 accepted) {
-		this.accepted = accepted;
+	public ReplacementProcessingStatus7Choice setAccepted(ProprietaryReason1 accepted) {
+		this.accepted = Objects.requireNonNull(accepted);
+		return this;
 	}
 
-	@XmlElement(name = "Cmpltd", required = true)
 	public ProprietaryReason1 getCompleted() {
 		return completed;
 	}
 
-	public void setCompleted(ProprietaryReason1 completed) {
-		this.completed = completed;
+	public ReplacementProcessingStatus7Choice setCompleted(ProprietaryReason1 completed) {
+		this.completed = Objects.requireNonNull(completed);
+		return this;
 	}
 
-	@XmlElement(name = "Dnd", required = true)
 	public ProprietaryReason1 getDenied() {
 		return denied;
 	}
 
-	public void setDenied(ProprietaryReason1 denied) {
-		this.denied = denied;
+	public ReplacementProcessingStatus7Choice setDenied(ProprietaryReason1 denied) {
+		this.denied = Objects.requireNonNull(denied);
+		return this;
 	}
 
-	@XmlElement(name = "InRpr", required = true)
 	public ProprietaryReason1 getInRepair() {
 		return inRepair;
 	}
 
-	public void setInRepair(ProprietaryReason1 inRepair) {
-		this.inRepair = inRepair;
+	public ReplacementProcessingStatus7Choice setInRepair(ProprietaryReason1 inRepair) {
+		this.inRepair = Objects.requireNonNull(inRepair);
+		return this;
 	}
 
-	@XmlElement(name = "PrtlRplcmntAccptd", required = true)
 	public ProprietaryReason1 getPartialReplacementAccepted() {
 		return partialReplacementAccepted;
 	}
 
-	public void setPartialReplacementAccepted(ProprietaryReason1 partialReplacementAccepted) {
-		this.partialReplacementAccepted = partialReplacementAccepted;
+	public ReplacementProcessingStatus7Choice setPartialReplacementAccepted(ProprietaryReason1 partialReplacementAccepted) {
+		this.partialReplacementAccepted = Objects.requireNonNull(partialReplacementAccepted);
+		return this;
 	}
 
-	@XmlElement(name = "Pdg", required = true)
 	public ProprietaryReason1 getPending() {
 		return pending;
 	}
 
-	public void setPending(ProprietaryReason1 pending) {
-		this.pending = pending;
+	public ReplacementProcessingStatus7Choice setPending(ProprietaryReason1 pending) {
+		this.pending = Objects.requireNonNull(pending);
+		return this;
 	}
 
-	@XmlElement(name = "RcvdAtIntrmy", required = true)
 	public ProprietaryReason1 getReceivedAtIntermediary() {
 		return receivedAtIntermediary;
 	}
 
-	public void setReceivedAtIntermediary(ProprietaryReason1 receivedAtIntermediary) {
-		this.receivedAtIntermediary = receivedAtIntermediary;
+	public ReplacementProcessingStatus7Choice setReceivedAtIntermediary(ProprietaryReason1 receivedAtIntermediary) {
+		this.receivedAtIntermediary = Objects.requireNonNull(receivedAtIntermediary);
+		return this;
 	}
 
-	@XmlElement(name = "RcvdAtStockXchg", required = true)
 	public ProprietaryReason1 getReceivedAtStockExchange() {
 		return receivedAtStockExchange;
 	}
 
-	public void setReceivedAtStockExchange(ProprietaryReason1 receivedAtStockExchange) {
-		this.receivedAtStockExchange = receivedAtStockExchange;
+	public ReplacementProcessingStatus7Choice setReceivedAtStockExchange(ProprietaryReason1 receivedAtStockExchange) {
+		this.receivedAtStockExchange = Objects.requireNonNull(receivedAtStockExchange);
+		return this;
 	}
 
-	@XmlElement(name = "Rjctd", required = true)
 	public ProprietaryReason1 getRejected() {
 		return rejected;
 	}
 
-	public void setRejected(ProprietaryReason1 rejected) {
-		this.rejected = rejected;
+	public ReplacementProcessingStatus7Choice setRejected(ProprietaryReason1 rejected) {
+		this.rejected = Objects.requireNonNull(rejected);
+		return this;
 	}
 
-	@XmlElement(name = "ModReqd", required = true)
 	public ProprietaryReason1 getModificationRequested() {
 		return modificationRequested;
 	}
 
-	public void setModificationRequested(ProprietaryReason1 modificationRequested) {
-		this.modificationRequested = modificationRequested;
+	public ReplacementProcessingStatus7Choice setModificationRequested(ProprietaryReason1 modificationRequested) {
+		this.modificationRequested = Objects.requireNonNull(modificationRequested);
+		return this;
 	}
 
-	@XmlElement(name = "PrtrySts")
-	public ProprietaryStatusAndReason1 getProprietaryStatus() {
-		return proprietaryStatus;
+	public Optional<ProprietaryStatusAndReason1> getProprietaryStatus() {
+		return proprietaryStatus == null ? Optional.empty() : Optional.of(proprietaryStatus);
 	}
 
-	public void setProprietaryStatus(ProprietaryStatusAndReason1 proprietaryStatus) {
+	public ReplacementProcessingStatus7Choice setProprietaryStatus(ProprietaryStatusAndReason1 proprietaryStatus) {
 		this.proprietaryStatus = proprietaryStatus;
+		return this;
 	}
 }

@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Unit4;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * Quantity12Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Quantity14Choice", propOrder = {"unit", "percentageRate"})
 public class Quantity14Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Unit", required = true)
 	protected Unit4 unit;
 	/**
-	 * Total quantity of securities to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class Quantity14Choice {
 	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesQuantity.mmUnit;
-			componentContext_lazy = () -> Quantity14Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity14Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Unit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class Quantity14Choice {
 			complexType_lazy = () -> Unit4.mmObject();
 		}
 	};
+	@XmlElement(name = "PctgRate", required = true)
 	protected PercentageRate percentageRate;
 	/**
-	 * Percentage rate of assets to be settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -153,7 +156,7 @@ public class Quantity14Choice {
 	 */
 	public static final MMMessageAttribute mmPercentageRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Quantity14Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Quantity14Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PctgRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,9 +171,9 @@ public class Quantity14Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Quantity14Choice.mmUnit, Quantity14Choice.mmPercentageRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Quantity14Choice.mmUnit, com.tools20022.repository.choice.Quantity14Choice.mmPercentageRate);
 				trace_lazy = () -> SecuritiesQuantity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity14Choice";
 				definition = "Choice of quantity of assets to be transferred in percentage rate or units.";
@@ -180,21 +183,21 @@ public class Quantity14Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Unit", required = true)
 	public Unit4 getUnit() {
 		return unit;
 	}
 
-	public void setUnit(Unit4 unit) {
-		this.unit = unit;
+	public Quantity14Choice setUnit(Unit4 unit) {
+		this.unit = Objects.requireNonNull(unit);
+		return this;
 	}
 
-	@XmlElement(name = "PctgRate", required = true)
 	public PercentageRate getPercentageRate() {
 		return percentageRate;
 	}
 
-	public void setPercentageRate(PercentageRate percentageRate) {
-		this.percentageRate = percentageRate;
+	public Quantity14Choice setPercentageRate(PercentageRate percentageRate) {
+		this.percentageRate = Objects.requireNonNull(percentageRate);
+		return this;
 	}
 }

@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,6 +27,7 @@ import com.tools20022.repository.entity.CorporateActionPrice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionPrice42}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionPrice57", propOrder = {"maximumPrice", "minimumPrice"})
 public class CorporateActionPrice57 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MaxPric")
 	protected PriceFormat44Choice maximumPrice;
 	/**
-	 * Maximum or cap price at which a holder can bid, for example, on a Dutch
-	 * auction offer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -97,6 +99,9 @@ public class CorporateActionPrice57 {
 	 * CorporateActionPrice57}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MaxPric"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::MAXP</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -118,9 +123,10 @@ public class CorporateActionPrice57 {
 	public static final MMMessageAssociationEnd mmMaximumPrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmMaximumPrice;
-			componentContext_lazy = () -> CorporateActionPrice57.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice57.mmObject();
 			isDerived = false;
 			xmlTag = "MaxPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::MAXP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumPrice";
 			definition = "Maximum or cap price at which a holder can bid, for example, on a Dutch auction offer.";
@@ -131,11 +137,11 @@ public class CorporateActionPrice57 {
 			type_lazy = () -> PriceFormat44Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MinPric")
 	protected PriceFormat44Choice minimumPrice;
 	/**
-	 * Minimum or floor price at which a holder can bid, for example, on a Dutch
-	 * auction offer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -153,6 +159,9 @@ public class CorporateActionPrice57 {
 	 * CorporateActionPrice57}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MinPric"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :90a::MINP</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -174,9 +183,10 @@ public class CorporateActionPrice57 {
 	public static final MMMessageAssociationEnd mmMinimumPrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> BiddingConditions.mmMinimumPrice;
-			componentContext_lazy = () -> CorporateActionPrice57.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionPrice57.mmObject();
 			isDerived = false;
 			xmlTag = "MinPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::MINP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumPrice";
 			definition = "Minimum or floor price at which a holder can bid, for example, on a Dutch auction offer.";
@@ -191,9 +201,9 @@ public class CorporateActionPrice57 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionPrice57.mmMaximumPrice, CorporateActionPrice57.mmMinimumPrice);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPrice57.mmMaximumPrice, com.tools20022.repository.msg.CorporateActionPrice57.mmMinimumPrice);
 				trace_lazy = () -> CorporateActionPrice.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice57";
 				definition = "Specifies prices of a corporate action.";
@@ -203,21 +213,21 @@ public class CorporateActionPrice57 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MaxPric")
-	public PriceFormat44Choice getMaximumPrice() {
-		return maximumPrice;
+	public Optional<PriceFormat44Choice> getMaximumPrice() {
+		return maximumPrice == null ? Optional.empty() : Optional.of(maximumPrice);
 	}
 
-	public void setMaximumPrice(PriceFormat44Choice maximumPrice) {
+	public CorporateActionPrice57 setMaximumPrice(PriceFormat44Choice maximumPrice) {
 		this.maximumPrice = maximumPrice;
+		return this;
 	}
 
-	@XmlElement(name = "MinPric")
-	public PriceFormat44Choice getMinimumPrice() {
-		return minimumPrice;
+	public Optional<PriceFormat44Choice> getMinimumPrice() {
+		return minimumPrice == null ? Optional.empty() : Optional.of(minimumPrice);
 	}
 
-	public void setMinimumPrice(PriceFormat44Choice minimumPrice) {
+	public CorporateActionPrice57 setMinimumPrice(PriceFormat44Choice minimumPrice) {
 		this.minimumPrice = minimumPrice;
+		return this;
 	}
 }

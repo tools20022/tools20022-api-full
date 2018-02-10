@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,16 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RecurringTransaction1", propOrder = {"sequenceNumber", "periodUnit", "instalmentPeriod", "totalNumberOfPayments", "interestCharges"})
 public class RecurringTransaction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SeqNb", required = true)
 	protected Max2NumericText sequenceNumber;
 	/**
-	 * Indicates the recurring/instalment occurrence of the transaction (1 = 1st
-	 * instalment, 2 = 2nd instalment, etc.).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -131,7 +133,7 @@ public class RecurringTransaction1 {
 	 */
 	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> RecurringTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RecurringTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,10 +145,11 @@ public class RecurringTransaction1 {
 			simpleType_lazy = () -> Max2NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "PrdUnit", required = true)
 	protected Frequency4Code periodUnit;
 	/**
-	 * Period unit between consecutive payments (for example day, month, year).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +193,7 @@ public class RecurringTransaction1 {
 	public static final MMMessageAttribute mmPeriodUnit = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmPeriodUnit;
-			componentContext_lazy = () -> RecurringTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RecurringTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "PrdUnit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,10 +205,11 @@ public class RecurringTransaction1 {
 			simpleType_lazy = () -> Frequency4Code.mmObject();
 		}
 	};
+	@XmlElement(name = "InstlmtPrd", required = true)
 	protected Number instalmentPeriod;
 	/**
-	 * Number of period units between consecutive payments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -246,7 +250,7 @@ public class RecurringTransaction1 {
 	public static final MMMessageAttribute mmInstalmentPeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmNumberOfUnits;
-			componentContext_lazy = () -> RecurringTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RecurringTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "InstlmtPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,10 +262,11 @@ public class RecurringTransaction1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNbOfPmts", required = true)
 	protected Number totalNumberOfPayments;
 	/**
-	 * Total number of instalment payments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -302,7 +307,7 @@ public class RecurringTransaction1 {
 	public static final MMMessageAttribute mmTotalNumberOfPayments = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Instalment.mmTotalNumberOfInstalment;
-			componentContext_lazy = () -> RecurringTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RecurringTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNbOfPmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -314,10 +319,11 @@ public class RecurringTransaction1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstChrgs")
 	protected ImpliedCurrencyAndAmount interestCharges;
 	/**
-	 * Interest charged in percentage for the total amount of payments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -352,7 +358,7 @@ public class RecurringTransaction1 {
 	public static final MMMessageAttribute mmInterestCharges = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmInterest;
-			componentContext_lazy = () -> RecurringTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RecurringTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstChrgs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -367,10 +373,11 @@ public class RecurringTransaction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RecurringTransaction1.mmSequenceNumber, RecurringTransaction1.mmPeriodUnit, RecurringTransaction1.mmInstalmentPeriod, RecurringTransaction1.mmTotalNumberOfPayments,
-						RecurringTransaction1.mmInterestCharges);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RecurringTransaction1.mmSequenceNumber, com.tools20022.repository.msg.RecurringTransaction1.mmPeriodUnit,
+						com.tools20022.repository.msg.RecurringTransaction1.mmInstalmentPeriod, com.tools20022.repository.msg.RecurringTransaction1.mmTotalNumberOfPayments,
+						com.tools20022.repository.msg.RecurringTransaction1.mmInterestCharges);
 				trace_lazy = () -> Instalment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RecurringTransaction1";
 				definition = "Financial loan (instalment) or a recurring transaction.";
@@ -380,48 +387,48 @@ public class RecurringTransaction1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SeqNb", required = true)
 	public Max2NumericText getSequenceNumber() {
 		return sequenceNumber;
 	}
 
-	public void setSequenceNumber(Max2NumericText sequenceNumber) {
-		this.sequenceNumber = sequenceNumber;
+	public RecurringTransaction1 setSequenceNumber(Max2NumericText sequenceNumber) {
+		this.sequenceNumber = Objects.requireNonNull(sequenceNumber);
+		return this;
 	}
 
-	@XmlElement(name = "PrdUnit", required = true)
 	public Frequency4Code getPeriodUnit() {
 		return periodUnit;
 	}
 
-	public void setPeriodUnit(Frequency4Code periodUnit) {
-		this.periodUnit = periodUnit;
+	public RecurringTransaction1 setPeriodUnit(Frequency4Code periodUnit) {
+		this.periodUnit = Objects.requireNonNull(periodUnit);
+		return this;
 	}
 
-	@XmlElement(name = "InstlmtPrd", required = true)
 	public Number getInstalmentPeriod() {
 		return instalmentPeriod;
 	}
 
-	public void setInstalmentPeriod(Number instalmentPeriod) {
-		this.instalmentPeriod = instalmentPeriod;
+	public RecurringTransaction1 setInstalmentPeriod(Number instalmentPeriod) {
+		this.instalmentPeriod = Objects.requireNonNull(instalmentPeriod);
+		return this;
 	}
 
-	@XmlElement(name = "TtlNbOfPmts", required = true)
 	public Number getTotalNumberOfPayments() {
 		return totalNumberOfPayments;
 	}
 
-	public void setTotalNumberOfPayments(Number totalNumberOfPayments) {
-		this.totalNumberOfPayments = totalNumberOfPayments;
+	public RecurringTransaction1 setTotalNumberOfPayments(Number totalNumberOfPayments) {
+		this.totalNumberOfPayments = Objects.requireNonNull(totalNumberOfPayments);
+		return this;
 	}
 
-	@XmlElement(name = "IntrstChrgs")
-	public ImpliedCurrencyAndAmount getInterestCharges() {
-		return interestCharges;
+	public Optional<ImpliedCurrencyAndAmount> getInterestCharges() {
+		return interestCharges == null ? Optional.empty() : Optional.of(interestCharges);
 	}
 
-	public void setInterestCharges(ImpliedCurrencyAndAmount interestCharges) {
+	public RecurringTransaction1 setInterestCharges(ImpliedCurrencyAndAmount interestCharges) {
 		this.interestCharges = interestCharges;
+		return this;
 	}
 }

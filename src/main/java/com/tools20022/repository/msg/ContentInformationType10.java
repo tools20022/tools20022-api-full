@@ -27,6 +27,7 @@ import com.tools20022.repository.codeset.ContentType2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -201,8 +202,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -218,15 +219,16 @@ import javax.xml.bind.annotation.XmlType;
  * ContentInformationType7}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ContentInformationType10", propOrder = {"contentType", "envelopedData"})
 public class ContentInformationType10 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CnttTp", required = true)
 	protected ContentType2Code contentType;
 	/**
-	 * Type of data protection.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,7 +261,7 @@ public class ContentInformationType10 {
 	 */
 	public static final MMMessageAttribute mmContentType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ContentInformationType10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
 			isDerived = false;
 			xmlTag = "CnttTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -271,11 +273,11 @@ public class ContentInformationType10 {
 			simpleType_lazy = () -> ContentType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "EnvlpdData", required = true)
 	protected EnvelopedData4 envelopedData;
 	/**
-	 * Data protection by encryption or by a digital envelope, with an
-	 * encryption key.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -308,7 +310,7 @@ public class ContentInformationType10 {
 	 */
 	public static final MMMessageAssociationEnd mmEnvelopedData = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ContentInformationType10.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ContentInformationType10.mmObject();
 			isDerived = false;
 			xmlTag = "EnvlpdData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -325,7 +327,7 @@ public class ContentInformationType10 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ContentInformationType10.mmContentType, ContentInformationType10.mmEnvelopedData);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ContentInformationType10.mmContentType, com.tools20022.repository.msg.ContentInformationType10.mmEnvelopedData);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ATMReconciliationAdviceV01.mmProtectedATMReconciliationAdvice, ATMReconciliationAcknowledgementV01.mmProtectedATMReconciliationAcknowledgement,
 						HostToATMAcknowledgementV01.mmProtectedHostToATMAcknowledgement, ATMDiagnosticResponseV01.mmProtectedATMDiagnosticResponse, ATMDiagnosticRequestV01.mmProtectedATMDiagnosticRequest,
 						ATMKeyDownloadResponseV01.mmProtectedATMKeyDownloadResponse, ATMDeviceReportV01.mmProtectedATMDeviceReport, HostToATMRequestV01.mmProtectedHostToATMRequest, ATMKeyDownloadRequestV01.mmProtectedATMKeyDownloadRequest,
@@ -342,7 +344,7 @@ public class ContentInformationType10 {
 						ATMPINManagementResponseV02.mmProtectedATMPINManagementResponse, ATMDepositCompletionAdviceV01.mmProtectedATMDepositCompletionAdvice, ATMInquiryRequestV02.mmProtectedATMInquiryRequest,
 						ATMCompletionAcknowledgementV02.mmProtectedATMCompletionAcknowledgement, ATMCompletionAdviceV02.mmProtectedATMCompletionAdvice, ATMTransferResponseV01.mmProtectedATMTransferResponse,
 						ATMKeyDownloadResponseV02.mmProtectedATMKeyDownloadResponse);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType10";
 				definition = "General cryptographic message syntax (CMS) containing encrypted data.";
@@ -352,21 +354,21 @@ public class ContentInformationType10 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CnttTp", required = true)
 	public ContentType2Code getContentType() {
 		return contentType;
 	}
 
-	public void setContentType(ContentType2Code contentType) {
-		this.contentType = contentType;
+	public ContentInformationType10 setContentType(ContentType2Code contentType) {
+		this.contentType = Objects.requireNonNull(contentType);
+		return this;
 	}
 
-	@XmlElement(name = "EnvlpdData", required = true)
 	public EnvelopedData4 getEnvelopedData() {
 		return envelopedData;
 	}
 
-	public void setEnvelopedData(com.tools20022.repository.msg.EnvelopedData4 envelopedData) {
-		this.envelopedData = envelopedData;
+	public ContentInformationType10 setEnvelopedData(com.tools20022.repository.msg.EnvelopedData4 envelopedData) {
+		this.envelopedData = Objects.requireNonNull(envelopedData);
+		return this;
 	}
 }

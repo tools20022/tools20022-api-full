@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides additional information regarding underlying security details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FinancialInstrumentAttributesSD9", propOrder = {"placeAndName", "originatingSecurityIdentification"})
 public class FinancialInstrumentAttributesSD9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +101,7 @@ public class FinancialInstrumentAttributesSD9 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD9.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,15 +112,11 @@ public class FinancialInstrumentAttributesSD9 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgtgSctyId")
 	protected OtherIdentification2 originatingSecurityIdentification;
 	/**
-	 * Represents the 'original' security identifier of the event. It is used in
-	 * the scenarios like "partial call" where there are 2 events. The first
-	 * event distributes into the Contra CUSIP, a temporary security; and on the
-	 * second event that temporary security becomes the underlying security of
-	 * the event. This element is used in the second event to point to the
-	 * original CUSIP.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -145,7 +144,7 @@ public class FinancialInstrumentAttributesSD9 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginatingSecurityIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FinancialInstrumentAttributesSD9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentAttributesSD9.mmObject();
 			isDerived = false;
 			xmlTag = "OrgtgSctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -161,8 +160,8 @@ public class FinancialInstrumentAttributesSD9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD9.mmPlaceAndName, FinancialInstrumentAttributesSD9.mmOriginatingSecurityIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FinancialInstrumentAttributesSD9.mmPlaceAndName, com.tools20022.repository.msg.FinancialInstrumentAttributesSD9.mmOriginatingSecurityIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAttributesSD9";
 				definition = "Provides additional information regarding underlying security details.";
@@ -171,21 +170,21 @@ public class FinancialInstrumentAttributesSD9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public FinancialInstrumentAttributesSD9 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "OrgtgSctyId")
-	public OtherIdentification2 getOriginatingSecurityIdentification() {
-		return originatingSecurityIdentification;
+	public Optional<OtherIdentification2> getOriginatingSecurityIdentification() {
+		return originatingSecurityIdentification == null ? Optional.empty() : Optional.of(originatingSecurityIdentification);
 	}
 
-	public void setOriginatingSecurityIdentification(com.tools20022.repository.msg.OtherIdentification2 originatingSecurityIdentification) {
+	public FinancialInstrumentAttributesSD9 setOriginatingSecurityIdentification(com.tools20022.repository.msg.OtherIdentification2 originatingSecurityIdentification) {
 		this.originatingSecurityIdentification = originatingSecurityIdentification;
+		return this;
 	}
 }

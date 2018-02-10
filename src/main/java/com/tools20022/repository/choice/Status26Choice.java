@@ -24,9 +24,11 @@ import com.tools20022.repository.area.setr.OrderCancellationStatusReportV04;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.IndividualOrderStatusAndReason8;
 import com.tools20022.repository.msg.OrderStatusAndReason9;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,16 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of status."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Status26Choice", propOrder = {"cancellationStatusReport", "individualCancellationStatusReport"})
 public class Status26Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CxlStsRpt", required = true)
 	protected OrderStatusAndReason9 cancellationStatusReport;
 	/**
-	 * Status report details of a bulk or multiple or switch order cancellation
-	 * message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -110,7 +112,7 @@ public class Status26Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationStatusReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Status26Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status26Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CxlStsRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,11 +124,11 @@ public class Status26Choice {
 			type_lazy = () -> OrderStatusAndReason9.mmObject();
 		}
 	};
+	@XmlElement(name = "IndvCxlStsRpt", required = true)
 	protected List<IndividualOrderStatusAndReason8> individualCancellationStatusReport;
 	/**
-	 * Status report details of one or more individual orders from a bulk or
-	 * multiple or switch order cancellation request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -155,7 +157,7 @@ public class Status26Choice {
 	 */
 	public static final MMMessageAssociationEnd mmIndividualCancellationStatusReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Status26Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Status26Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndvCxlStsRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,9 +172,9 @@ public class Status26Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Status26Choice.mmCancellationStatusReport, Status26Choice.mmIndividualCancellationStatusReport);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Status26Choice.mmCancellationStatusReport, com.tools20022.repository.choice.Status26Choice.mmIndividualCancellationStatusReport);
 				messageBuildingBlock_lazy = () -> Arrays.asList(OrderCancellationStatusReportV04.mmStatusReport);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Status26Choice";
 				definition = "Choice of status.";
@@ -181,21 +183,21 @@ public class Status26Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CxlStsRpt", required = true)
 	public OrderStatusAndReason9 getCancellationStatusReport() {
 		return cancellationStatusReport;
 	}
 
-	public void setCancellationStatusReport(OrderStatusAndReason9 cancellationStatusReport) {
-		this.cancellationStatusReport = cancellationStatusReport;
+	public Status26Choice setCancellationStatusReport(OrderStatusAndReason9 cancellationStatusReport) {
+		this.cancellationStatusReport = Objects.requireNonNull(cancellationStatusReport);
+		return this;
 	}
 
-	@XmlElement(name = "IndvCxlStsRpt", required = true)
 	public List<IndividualOrderStatusAndReason8> getIndividualCancellationStatusReport() {
-		return individualCancellationStatusReport;
+		return individualCancellationStatusReport == null ? individualCancellationStatusReport = new ArrayList<>() : individualCancellationStatusReport;
 	}
 
-	public void setIndividualCancellationStatusReport(List<IndividualOrderStatusAndReason8> individualCancellationStatusReport) {
-		this.individualCancellationStatusReport = individualCancellationStatusReport;
+	public Status26Choice setIndividualCancellationStatusReport(List<IndividualOrderStatusAndReason8> individualCancellationStatusReport) {
+		this.individualCancellationStatusReport = Objects.requireNonNull(individualCancellationStatusReport);
+		return this;
 	}
 }

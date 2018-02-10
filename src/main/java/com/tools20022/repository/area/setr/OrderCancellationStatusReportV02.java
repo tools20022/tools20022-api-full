@@ -23,9 +23,11 @@ import com.tools20022.repository.msg.AdditionalReference3;
 import com.tools20022.repository.msg.OrderStatusAndReason4;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -49,29 +51,13 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesTradeArchive
- * SecuritiesTradeArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "setr.017.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "setr.017.001.02"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#mmRelatedReferenceOrOtherReferenceRule
- * OrderCancellationStatusReportV02.mmRelatedReferenceOrOtherReferenceRule}</li>
+ * {@linkplain com.tools20022.repository.area.setr.OrderCancellationStatusReportV02#RelatedReferenceOrOtherReferenceRule
+ * OrderCancellationStatusReportV02.RelatedReferenceOrOtherReferenceRule}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -87,9 +73,34 @@ import javax.xml.bind.annotation.*;
  * OrderCancellationStatusReportV02.mmCancellationStatusReport}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "setr.017.001.02"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesTradeArchive
+ * SecuritiesTradeArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "setr.017.001.02"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code setr.017.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline#forOrderCancellationStatusReportV02
+ * ConstraintMessageNameAndReferenceGuideline.
+ * forOrderCancellationStatusReportV02}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,7 +121,7 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "setr.017.001.02", propOrder = {"relatedReference", "otherReference", "cancellationStatusReport"})
 public class OrderCancellationStatusReportV02 {
 
@@ -150,7 +161,7 @@ public class OrderCancellationStatusReportV02 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmRelatedReferenceOrOtherReferenceRule = new MMXor() {
+	public static final MMXor RelatedReferenceOrOtherReferenceRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReferenceOrOtherReferenceRule";
@@ -160,10 +171,11 @@ public class OrderCancellationStatusReportV02 {
 					com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.mmOtherReference);
 		}
 	};
+	@XmlElement(name = "RltdRef", required = true)
 	protected List<AdditionalReference3> relatedReference;
 	/**
-	 * Reference to a linked message that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,11 +216,11 @@ public class OrderCancellationStatusReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrRef", required = true)
 	protected List<AdditionalReference3> otherReference;
 	/**
-	 * Reference to a linked message sent in a proprietary way or reference of a
-	 * system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -250,11 +262,11 @@ public class OrderCancellationStatusReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "CxlStsRpt", required = true)
 	protected OrderStatusAndReason4 cancellationStatusReport;
 	/**
-	 * Status report details of a bulk or multiple or switch order cancellation
-	 * instruction that was previously received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -300,12 +312,13 @@ public class OrderCancellationStatusReportV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMessageNameAndReferenceGuideline.forOrderCancellationStatusReportV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderCancellationStatusReportV02";
 				definition = "Scope\r\nThe OrderCancellationStatusReport is sent by an executing party, eg, a transfer agent, to the instructing party, eg, an investment manager or its authorised representative. There may be one or more intermediary parties between the executing party and the instructing party. The intermediary party is, for example, an intermediary or a concentrator.\r\nThe message gives the status of an order cancellation instruction message that was previously sent by the instructing party.\r\nUsage\r\nThe OrderCancellationStatusReport message is used to report the status of an order cancellation instruction message that was previously sent by the instructing party. The message can be used to report one of the following:\r\n- the cancellation is accepted for further processing, or\r\n- the cancellation is rejected, or\r\n- the order has been cancelled.\r\nWhen the cancellation is rejected, the reason for the rejection must be specified.";
 				nextVersions_lazy = () -> Arrays.asList(OrderCancellationStatusReportV03.mmObject());
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.mmRelatedReferenceOrOtherReferenceRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.setr.OrderCancellationStatusReportV02.RelatedReferenceOrOtherReferenceRule);
 				rootElement = "Document";
 				xmlTag = "setr.017.001.02";
 				businessArea_lazy = () -> SecuritiesTradeArchive.mmObject();
@@ -330,34 +343,34 @@ public class OrderCancellationStatusReportV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RltdRef", required = true)
 	public List<AdditionalReference3> getRelatedReference() {
-		return relatedReference;
+		return relatedReference == null ? relatedReference = new ArrayList<>() : relatedReference;
 	}
 
-	public void setRelatedReference(List<AdditionalReference3> relatedReference) {
-		this.relatedReference = relatedReference;
+	public OrderCancellationStatusReportV02 setRelatedReference(List<AdditionalReference3> relatedReference) {
+		this.relatedReference = Objects.requireNonNull(relatedReference);
+		return this;
 	}
 
-	@XmlElement(name = "OthrRef", required = true)
 	public List<AdditionalReference3> getOtherReference() {
-		return otherReference;
+		return otherReference == null ? otherReference = new ArrayList<>() : otherReference;
 	}
 
-	public void setOtherReference(List<AdditionalReference3> otherReference) {
-		this.otherReference = otherReference;
+	public OrderCancellationStatusReportV02 setOtherReference(List<AdditionalReference3> otherReference) {
+		this.otherReference = Objects.requireNonNull(otherReference);
+		return this;
 	}
 
-	@XmlElement(name = "CxlStsRpt", required = true)
 	public OrderStatusAndReason4 getCancellationStatusReport() {
 		return cancellationStatusReport;
 	}
 
-	public void setCancellationStatusReport(OrderStatusAndReason4 cancellationStatusReport) {
-		this.cancellationStatusReport = cancellationStatusReport;
+	public OrderCancellationStatusReportV02 setCancellationStatusReport(OrderStatusAndReason4 cancellationStatusReport) {
+		this.cancellationStatusReport = Objects.requireNonNull(cancellationStatusReport);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.017.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:setr.017.001.02")
 	static public class Document {
 		@XmlElement(name = "setr.017.001.02", required = true)
 		public OrderCancellationStatusReportV02 messageBody;

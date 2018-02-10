@@ -22,9 +22,11 @@ import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.TotalPortfolioValuation1;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Valuation information of the portfolio.
@@ -65,14 +67,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1
- * TotalPortfolioValuation1}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -84,10 +78,18 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1
+ * TotalPortfolioValuation1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,9 +105,8 @@ public class PortfolioValuation {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CurrencyAndAmount totalPortfolioValue;
 	/**
-	 * Total value of the portfolio. It is derived from the sum of the values of
-	 * the asset holdings, of the unrealised gain/loss and of the liabilities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,8 +146,8 @@ public class PortfolioValuation {
 	public static final MMBusinessAttribute mmTotalPortfolioValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmTotalPortfolioValue, TotalPortfolioValuation1.mmPreviousTotalPortfolioValue);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalPortfolioValue";
 			definition = "Total value of the portfolio. It is derived from the sum of the values of the asset holdings, of the unrealised gain/loss and of the liabilities.";
@@ -165,9 +166,8 @@ public class PortfolioValuation {
 	};
 	protected CurrencyAndAmount totalBookValue;
 	/**
-	 * Net asset on balance sheet - total portfolio value minus or plus the
-	 * unrealised gain or loss.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -207,8 +207,8 @@ public class PortfolioValuation {
 	public static final MMBusinessAttribute mmTotalBookValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmTotalBookValue, TotalPortfolioValuation1.mmPreviousTotalBookValue);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalBookValue";
 			definition = "Net asset on balance sheet - total portfolio value minus or plus the unrealised gain or loss.";
@@ -227,8 +227,8 @@ public class PortfolioValuation {
 	};
 	protected CurrencyAndAmount totalReceipts;
 	/**
-	 * Total receipts attributable to the portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -263,8 +263,8 @@ public class PortfolioValuation {
 	public static final MMBusinessAttribute mmTotalReceipts = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmTotalReceipts);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalReceipts";
 			definition = "Total receipts attributable to the portfolio.";
@@ -283,8 +283,8 @@ public class PortfolioValuation {
 	};
 	protected CurrencyAndAmount totalDisbursements;
 	/**
-	 * Total disbursements attributable to the portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -319,8 +319,8 @@ public class PortfolioValuation {
 	public static final MMBusinessAttribute mmTotalDisbursements = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmTotalDisbursements);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalDisbursements";
 			definition = "Total disbursements attributable to the portfolio.";
@@ -339,8 +339,8 @@ public class PortfolioValuation {
 	};
 	protected CurrencyAndAmount incomeReceived;
 	/**
-	 * Income attributable to the portfolio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -375,8 +375,8 @@ public class PortfolioValuation {
 	public static final MMBusinessAttribute mmIncomeReceived = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmIncomeReceived);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IncomeReceived";
 			definition = "Income attributable to the portfolio.";
@@ -395,8 +395,8 @@ public class PortfolioValuation {
 	};
 	protected CurrencyAndAmount expensesPaid;
 	/**
-	 * Expenses attributable to the portfolio
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -431,8 +431,8 @@ public class PortfolioValuation {
 	public static final MMBusinessAttribute mmExpensesPaid = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmExpensesPaid);
-			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpensesPaid";
 			definition = "Expenses attributable to the portfolio";
@@ -451,8 +451,8 @@ public class PortfolioValuation {
 	};
 	protected Portfolio portfolio;
 	/**
-	 * Specifies the portfolio for which a valuation is calculated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -486,8 +486,8 @@ public class PortfolioValuation {
 	 */
 	public static final MMBusinessAssociationEnd mmPortfolio = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Portfolio";
 			definition = "Specifies the portfolio for which a valuation is calculated.";
@@ -500,8 +500,8 @@ public class PortfolioValuation {
 	};
 	protected List<com.tools20022.repository.entity.DateTimePeriod> valuationPeriod;
 	/**
-	 * Period for which the valuation is calculated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -534,8 +534,8 @@ public class PortfolioValuation {
 	 */
 	public static final MMBusinessAssociationEnd mmValuationPeriod = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValuationPeriod";
 			definition = "Period for which the valuation is calculated.";
@@ -549,7 +549,7 @@ public class PortfolioValuation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PortfolioValuation";
 				definition = "Valuation information of the portfolio.";
@@ -572,63 +572,71 @@ public class PortfolioValuation {
 		return totalPortfolioValue;
 	}
 
-	public void setTotalPortfolioValue(CurrencyAndAmount totalPortfolioValue) {
-		this.totalPortfolioValue = totalPortfolioValue;
+	public PortfolioValuation setTotalPortfolioValue(CurrencyAndAmount totalPortfolioValue) {
+		this.totalPortfolioValue = Objects.requireNonNull(totalPortfolioValue);
+		return this;
 	}
 
 	public CurrencyAndAmount getTotalBookValue() {
 		return totalBookValue;
 	}
 
-	public void setTotalBookValue(CurrencyAndAmount totalBookValue) {
-		this.totalBookValue = totalBookValue;
+	public PortfolioValuation setTotalBookValue(CurrencyAndAmount totalBookValue) {
+		this.totalBookValue = Objects.requireNonNull(totalBookValue);
+		return this;
 	}
 
 	public CurrencyAndAmount getTotalReceipts() {
 		return totalReceipts;
 	}
 
-	public void setTotalReceipts(CurrencyAndAmount totalReceipts) {
-		this.totalReceipts = totalReceipts;
+	public PortfolioValuation setTotalReceipts(CurrencyAndAmount totalReceipts) {
+		this.totalReceipts = Objects.requireNonNull(totalReceipts);
+		return this;
 	}
 
 	public CurrencyAndAmount getTotalDisbursements() {
 		return totalDisbursements;
 	}
 
-	public void setTotalDisbursements(CurrencyAndAmount totalDisbursements) {
-		this.totalDisbursements = totalDisbursements;
+	public PortfolioValuation setTotalDisbursements(CurrencyAndAmount totalDisbursements) {
+		this.totalDisbursements = Objects.requireNonNull(totalDisbursements);
+		return this;
 	}
 
 	public CurrencyAndAmount getIncomeReceived() {
 		return incomeReceived;
 	}
 
-	public void setIncomeReceived(CurrencyAndAmount incomeReceived) {
-		this.incomeReceived = incomeReceived;
+	public PortfolioValuation setIncomeReceived(CurrencyAndAmount incomeReceived) {
+		this.incomeReceived = Objects.requireNonNull(incomeReceived);
+		return this;
 	}
 
 	public CurrencyAndAmount getExpensesPaid() {
 		return expensesPaid;
 	}
 
-	public void setExpensesPaid(CurrencyAndAmount expensesPaid) {
-		this.expensesPaid = expensesPaid;
+	public PortfolioValuation setExpensesPaid(CurrencyAndAmount expensesPaid) {
+		this.expensesPaid = Objects.requireNonNull(expensesPaid);
+		return this;
 	}
 
 	public Portfolio getPortfolio() {
 		return portfolio;
 	}
 
-	public void setPortfolio(com.tools20022.repository.entity.Portfolio portfolio) {
-		this.portfolio = portfolio;
+	public PortfolioValuation setPortfolio(com.tools20022.repository.entity.Portfolio portfolio) {
+		this.portfolio = Objects.requireNonNull(portfolio);
+		return this;
 	}
 
 	public List<DateTimePeriod> getValuationPeriod() {
-		return valuationPeriod;
+		return valuationPeriod == null ? valuationPeriod = new ArrayList<>() : valuationPeriod;
 	}
 
-	public void setValuationPeriod(List<com.tools20022.repository.entity.DateTimePeriod> valuationPeriod) {
-		this.valuationPeriod = valuationPeriod;
+	public PortfolioValuation setValuationPeriod(List<com.tools20022.repository.entity.DateTimePeriod> valuationPeriod) {
+		this.valuationPeriod = Objects.requireNonNull(valuationPeriod);
+		return this;
 	}
 }

@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.Tax;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the type of related tax."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RelatedTaxType1", propOrder = {"taxType", "amount"})
 public class RelatedTaxType1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TaxTp", required = true)
 	protected TaxType3FormatChoice taxType;
 	/**
-	 * Specifies the type of tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -106,7 +108,7 @@ public class RelatedTaxType1 {
 	public static final MMMessageAttribute mmTaxType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
-			componentContext_lazy = () -> RelatedTaxType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RelatedTaxType1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,10 +119,11 @@ public class RelatedTaxType1 {
 			complexType_lazy = () -> TaxType3FormatChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * The value of the related tax expressed as an amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -154,7 +157,7 @@ public class RelatedTaxType1 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> RateAndAmount.mmAmount;
-			componentContext_lazy = () -> RelatedTaxType1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RelatedTaxType1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,9 +172,9 @@ public class RelatedTaxType1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RelatedTaxType1.mmTaxType, RelatedTaxType1.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RelatedTaxType1.mmTaxType, com.tools20022.repository.msg.RelatedTaxType1.mmAmount);
 				trace_lazy = () -> RateAndAmount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RelatedTaxType1";
 				definition = "Specifies the type of related tax.";
@@ -180,21 +183,21 @@ public class RelatedTaxType1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TaxTp", required = true)
 	public TaxType3FormatChoice getTaxType() {
 		return taxType;
 	}
 
-	public void setTaxType(TaxType3FormatChoice taxType) {
-		this.taxType = taxType;
+	public RelatedTaxType1 setTaxType(TaxType3FormatChoice taxType) {
+		this.taxType = Objects.requireNonNull(taxType);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public RelatedTaxType1 setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 }

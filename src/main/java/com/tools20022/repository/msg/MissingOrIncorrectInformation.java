@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.UnableToApplyIncorrectInfo1Code;
 import com.tools20022.repository.codeset.UnableToApplyMissingInfo1Code;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "MissingOrIncorrectInformation", propOrder = {"missingInformation", "incorrectInformation"})
 public class MissingOrIncorrectInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MssngInf")
 	protected List<UnableToApplyMissingInfo1Code> missingInformation;
 	/**
-	 * Indicates the missing information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +105,7 @@ public class MissingOrIncorrectInformation {
 	 */
 	public static final MMMessageAttribute mmMissingInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MissingOrIncorrectInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MissingOrIncorrectInformation.mmObject();
 			isDerived = false;
 			xmlTag = "MssngInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +116,11 @@ public class MissingOrIncorrectInformation {
 			simpleType_lazy = () -> UnableToApplyMissingInfo1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "IncrrctInf")
 	protected List<UnableToApplyIncorrectInfo1Code> incorrectInformation;
 	/**
-	 * Indicates the incorrect information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -144,7 +148,7 @@ public class MissingOrIncorrectInformation {
 	 */
 	public static final MMMessageAttribute mmIncorrectInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> MissingOrIncorrectInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.MissingOrIncorrectInformation.mmObject();
 			isDerived = false;
 			xmlTag = "IncrrctInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,8 +163,8 @@ public class MissingOrIncorrectInformation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(MissingOrIncorrectInformation.mmMissingInformation, MissingOrIncorrectInformation.mmIncorrectInformation);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingOrIncorrectInformation.mmMissingInformation, com.tools20022.repository.msg.MissingOrIncorrectInformation.mmIncorrectInformation);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MissingOrIncorrectInformation";
 				definition = "Indicates the reason for the UnableToApply. It can be missing and/or incorrect information.";
@@ -169,21 +173,21 @@ public class MissingOrIncorrectInformation {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MssngInf")
 	public List<UnableToApplyMissingInfo1Code> getMissingInformation() {
-		return missingInformation;
+		return missingInformation == null ? missingInformation = new ArrayList<>() : missingInformation;
 	}
 
-	public void setMissingInformation(List<UnableToApplyMissingInfo1Code> missingInformation) {
-		this.missingInformation = missingInformation;
+	public MissingOrIncorrectInformation setMissingInformation(List<UnableToApplyMissingInfo1Code> missingInformation) {
+		this.missingInformation = Objects.requireNonNull(missingInformation);
+		return this;
 	}
 
-	@XmlElement(name = "IncrrctInf")
 	public List<UnableToApplyIncorrectInfo1Code> getIncorrectInformation() {
-		return incorrectInformation;
+		return incorrectInformation == null ? incorrectInformation = new ArrayList<>() : incorrectInformation;
 	}
 
-	public void setIncorrectInformation(List<UnableToApplyIncorrectInfo1Code> incorrectInformation) {
-		this.incorrectInformation = incorrectInformation;
+	public MissingOrIncorrectInformation setIncorrectInformation(List<UnableToApplyIncorrectInfo1Code> incorrectInformation) {
+		this.incorrectInformation = Objects.requireNonNull(incorrectInformation);
+		return this;
 	}
 }

@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PowerOfAttorneyLegalisationCode;
+import com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the legal constraint on the Power of Attorney.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisationCode
- * PowerOfAttorneyLegalisationCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code#mmNotary
- * PowerOfAttorneyLegalisation1Code.mmNotary}</li>
+ * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code#Notary
+ * PowerOfAttorneyLegalisation1Code.Notary}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code#mmLocalAuthority
- * PowerOfAttorneyLegalisation1Code.mmLocalAuthority}</li>
+ * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code#LocalAuthority
+ * PowerOfAttorneyLegalisation1Code.LocalAuthority}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code#mmApostilled
- * PowerOfAttorneyLegalisation1Code.mmApostilled}</li>
+ * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code#Apostilled
+ * PowerOfAttorneyLegalisation1Code.Apostilled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code#mmConsularized
- * PowerOfAttorneyLegalisation1Code.mmConsularized}</li>
+ * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code#Consularized
+ * PowerOfAttorneyLegalisation1Code.Consularized}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PowerOfAttorneyLegalisationCode
+ * PowerOfAttorneyLegalisationCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates the legal constraint on the Power of Attorney."</li>
  * </ul>
  */
-public class PowerOfAttorneyLegalisation1Code extends PowerOfAttorneyLegalisationCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PowerOfAttorneyLegalisation1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class PowerOfAttorneyLegalisation1Code extends PowerOfAttorneyLegalisatio
 	 * name} = "Notary"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotary = new MMCode() {
+	public static final PowerOfAttorneyLegalisation1Code Notary = new PowerOfAttorneyLegalisation1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Notary";
-			owner_lazy = () -> PowerOfAttorneyLegalisation1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code.mmObject();
+			codeName = PowerOfAttorneyLegalisationCode.Notary.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class PowerOfAttorneyLegalisation1Code extends PowerOfAttorneyLegalisatio
 	 * name} = "LocalAuthority"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLocalAuthority = new MMCode() {
+	public static final PowerOfAttorneyLegalisation1Code LocalAuthority = new PowerOfAttorneyLegalisation1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalAuthority";
-			owner_lazy = () -> PowerOfAttorneyLegalisation1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code.mmObject();
+			codeName = PowerOfAttorneyLegalisationCode.LocalAuthority.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class PowerOfAttorneyLegalisation1Code extends PowerOfAttorneyLegalisatio
 	 * name} = "Apostilled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmApostilled = new MMCode() {
+	public static final PowerOfAttorneyLegalisation1Code Apostilled = new PowerOfAttorneyLegalisation1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Apostilled";
-			owner_lazy = () -> PowerOfAttorneyLegalisation1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code.mmObject();
+			codeName = PowerOfAttorneyLegalisationCode.Apostilled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,26 +166,60 @@ public class PowerOfAttorneyLegalisation1Code extends PowerOfAttorneyLegalisatio
 	 * name} = "Consularized"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConsularized = new MMCode() {
+	public static final PowerOfAttorneyLegalisation1Code Consularized = new PowerOfAttorneyLegalisation1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consularized";
-			owner_lazy = () -> PowerOfAttorneyLegalisation1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code.mmObject();
+			codeName = PowerOfAttorneyLegalisationCode.Consularized.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PowerOfAttorneyLegalisation1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PowerOfAttorneyLegalisation1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NOTA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PowerOfAttorneyLegalisation1Code";
 				definition = "Indicates the legal constraint on the Power of Attorney.";
-				code_lazy = () -> Arrays.asList(PowerOfAttorneyLegalisation1Code.mmNotary, PowerOfAttorneyLegalisation1Code.mmLocalAuthority, PowerOfAttorneyLegalisation1Code.mmApostilled, PowerOfAttorneyLegalisation1Code.mmConsularized);
 				trace_lazy = () -> PowerOfAttorneyLegalisationCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code.Notary, com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code.LocalAuthority,
+						com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code.Apostilled, com.tools20022.repository.codeset.PowerOfAttorneyLegalisation1Code.Consularized);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Notary.getCodeName().get(), Notary);
+		codesByName.put(LocalAuthority.getCodeName().get(), LocalAuthority);
+		codesByName.put(Apostilled.getCodeName().get(), Apostilled);
+		codesByName.put(Consularized.getCodeName().get(), Consularized);
+	}
+
+	public static PowerOfAttorneyLegalisation1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PowerOfAttorneyLegalisation1Code[] values() {
+		PowerOfAttorneyLegalisation1Code[] values = new PowerOfAttorneyLegalisation1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PowerOfAttorneyLegalisation1Code> {
+		@Override
+		public PowerOfAttorneyLegalisation1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PowerOfAttorneyLegalisation1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

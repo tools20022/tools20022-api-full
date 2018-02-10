@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.TimeFrame;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,18 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TimeFrame1Choice", propOrder = {"tradePlus", "tradeMinus", "renunciationPlus", "renunciationMinus"})
 public class TimeFrame1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TPlus", required = true)
 	protected Number tradePlus;
 	/**
-	 * An agreed number of days after the Trade date (T) used to define standard
-	 * timeframes e.g T+3 settlement period.
 	 * 
-	 * Where = T is the date that the price is applied to a transaction.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +118,7 @@ public class TimeFrame1Choice {
 	public static final MMMessageAttribute mmTradePlus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmTradePlus;
-			componentContext_lazy = () -> TimeFrame1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TimeFrame1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TPlus";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,13 +129,11 @@ public class TimeFrame1Choice {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "TMns", required = true)
 	protected Number tradeMinus;
 	/**
-	 * An agreed number of days before the Trade date (T) used to define
-	 * standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition
 	 * 
-	 * Where = T is the date that the price is applied to a transaction,
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -171,7 +168,7 @@ public class TimeFrame1Choice {
 	public static final MMMessageAttribute mmTradeMinus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmTradeMinus;
-			componentContext_lazy = () -> TimeFrame1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TimeFrame1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "TMns";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,12 +179,11 @@ public class TimeFrame1Choice {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "RPlus", required = true)
 	protected Number renunciationPlus;
 	/**
-	 * An agreed number of days after the renunciation of title documents are
-	 * received used to define standard timeframes in Redemption e.g R+3
-	 * Redemption settlement cycle.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,7 +218,7 @@ public class TimeFrame1Choice {
 	public static final MMMessageAttribute mmRenunciationPlus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmRenunciationPlus;
-			componentContext_lazy = () -> TimeFrame1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TimeFrame1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RPlus";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -233,11 +229,11 @@ public class TimeFrame1Choice {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "RMns", required = true)
 	protected Number renunciationMinus;
 	/**
-	 * An agreed number of days before the Renunciation of Title documents are
-	 * received used to define standard timeframes in redemption.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -272,7 +268,7 @@ public class TimeFrame1Choice {
 	public static final MMMessageAttribute mmRenunciationMinus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TimeFrame.mmRenunciationMinus;
-			componentContext_lazy = () -> TimeFrame1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TimeFrame1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "RMns";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -287,9 +283,10 @@ public class TimeFrame1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TimeFrame1Choice.mmTradePlus, TimeFrame1Choice.mmTradeMinus, TimeFrame1Choice.mmRenunciationPlus, TimeFrame1Choice.mmRenunciationMinus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TimeFrame1Choice.mmTradePlus, com.tools20022.repository.choice.TimeFrame1Choice.mmTradeMinus,
+						com.tools20022.repository.choice.TimeFrame1Choice.mmRenunciationPlus, com.tools20022.repository.choice.TimeFrame1Choice.mmRenunciationMinus);
 				trace_lazy = () -> TimeFrame.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TimeFrame1Choice";
 				definition = "Choice between TimeFrame elements that define a period as number of days before or after a activity.";
@@ -298,39 +295,39 @@ public class TimeFrame1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TPlus", required = true)
 	public Number getTradePlus() {
 		return tradePlus;
 	}
 
-	public void setTradePlus(Number tradePlus) {
-		this.tradePlus = tradePlus;
+	public TimeFrame1Choice setTradePlus(Number tradePlus) {
+		this.tradePlus = Objects.requireNonNull(tradePlus);
+		return this;
 	}
 
-	@XmlElement(name = "TMns", required = true)
 	public Number getTradeMinus() {
 		return tradeMinus;
 	}
 
-	public void setTradeMinus(Number tradeMinus) {
-		this.tradeMinus = tradeMinus;
+	public TimeFrame1Choice setTradeMinus(Number tradeMinus) {
+		this.tradeMinus = Objects.requireNonNull(tradeMinus);
+		return this;
 	}
 
-	@XmlElement(name = "RPlus", required = true)
 	public Number getRenunciationPlus() {
 		return renunciationPlus;
 	}
 
-	public void setRenunciationPlus(Number renunciationPlus) {
-		this.renunciationPlus = renunciationPlus;
+	public TimeFrame1Choice setRenunciationPlus(Number renunciationPlus) {
+		this.renunciationPlus = Objects.requireNonNull(renunciationPlus);
+		return this;
 	}
 
-	@XmlElement(name = "RMns", required = true)
 	public Number getRenunciationMinus() {
 		return renunciationMinus;
 	}
 
-	public void setRenunciationMinus(Number renunciationMinus) {
-		this.renunciationMinus = renunciationMinus;
+	public TimeFrame1Choice setRenunciationMinus(Number renunciationMinus) {
+		this.renunciationMinus = Objects.requireNonNull(renunciationMinus);
+		return this;
 	}
 }

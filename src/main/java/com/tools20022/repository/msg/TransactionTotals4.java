@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * TransactionTotals3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionTotals4", propOrder = {"totalCredit", "totalDebit", "totalNumber"})
 public class TransactionTotals4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlCdt", required = true)
 	protected TransactionTotals5 totalCredit;
 	/**
-	 * Total of credit transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -110,7 +113,7 @@ public class TransactionTotals4 {
 	 */
 	public static final MMMessageAssociationEnd mmTotalCredit = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionTotals4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlCdt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +125,11 @@ public class TransactionTotals4 {
 			type_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlDbt", required = true)
 	protected TransactionTotals5 totalDebit;
 	/**
-	 * Total of debit transactions.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -151,7 +155,7 @@ public class TransactionTotals4 {
 	 */
 	public static final MMMessageAssociationEnd mmTotalDebit = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionTotals4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlDbt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -163,10 +167,11 @@ public class TransactionTotals4 {
 			type_lazy = () -> com.tools20022.repository.msg.TransactionTotals5.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNb")
 	protected TransactionTotals6 totalNumber;
 	/**
-	 * Additional count which may be utilised for reconciliation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -193,7 +198,7 @@ public class TransactionTotals4 {
 	 */
 	public static final MMMessageAssociationEnd mmTotalNumber = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> TransactionTotals4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TransactionTotals4.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,8 +214,9 @@ public class TransactionTotals4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionTotals4.mmTotalCredit, TransactionTotals4.mmTotalDebit, TransactionTotals4.mmTotalNumber);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTotals4.mmTotalCredit, com.tools20022.repository.msg.TransactionTotals4.mmTotalDebit,
+						com.tools20022.repository.msg.TransactionTotals4.mmTotalNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionTotals4";
 				definition = "Totals of the reconciliation.";
@@ -221,30 +227,30 @@ public class TransactionTotals4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlCdt", required = true)
 	public TransactionTotals5 getTotalCredit() {
 		return totalCredit;
 	}
 
-	public void setTotalCredit(com.tools20022.repository.msg.TransactionTotals5 totalCredit) {
-		this.totalCredit = totalCredit;
+	public TransactionTotals4 setTotalCredit(com.tools20022.repository.msg.TransactionTotals5 totalCredit) {
+		this.totalCredit = Objects.requireNonNull(totalCredit);
+		return this;
 	}
 
-	@XmlElement(name = "TtlDbt", required = true)
 	public TransactionTotals5 getTotalDebit() {
 		return totalDebit;
 	}
 
-	public void setTotalDebit(com.tools20022.repository.msg.TransactionTotals5 totalDebit) {
-		this.totalDebit = totalDebit;
+	public TransactionTotals4 setTotalDebit(com.tools20022.repository.msg.TransactionTotals5 totalDebit) {
+		this.totalDebit = Objects.requireNonNull(totalDebit);
+		return this;
 	}
 
-	@XmlElement(name = "TtlNb")
-	public TransactionTotals6 getTotalNumber() {
-		return totalNumber;
+	public Optional<TransactionTotals6> getTotalNumber() {
+		return totalNumber == null ? Optional.empty() : Optional.of(totalNumber);
 	}
 
-	public void setTotalNumber(com.tools20022.repository.msg.TransactionTotals6 totalNumber) {
+	public TransactionTotals4 setTotalNumber(com.tools20022.repository.msg.TransactionTotals6 totalNumber) {
 		this.totalNumber = totalNumber;
+		return this;
 	}
 }

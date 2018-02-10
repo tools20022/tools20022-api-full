@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CounterpartyResponseStatusReasonCode;
+import com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of counterparty's action the response is related to.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CounterpartyResponseStatusReasonCode
- * CounterpartyResponseStatusReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code#mmCounterpartyTransaction
- * CounterpartyResponseStatusReason1Code.mmCounterpartyTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code#CounterpartyTransaction
+ * CounterpartyResponseStatusReason1Code.CounterpartyTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code#mmCounterpartyCancellation
- * CounterpartyResponseStatusReason1Code.mmCounterpartyCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code#CounterpartyCancellation
+ * CounterpartyResponseStatusReason1Code.CounterpartyCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code#mmCounterpartyModification
- * CounterpartyResponseStatusReason1Code.mmCounterpartyModification}</li>
+ * {@linkplain com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code#CounterpartyModification
+ * CounterpartyResponseStatusReason1Code.CounterpartyModification}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CounterpartyResponseStatusReasonCode
+ * CounterpartyResponseStatusReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the type of counterparty's action the response is related to."</li>
  * </ul>
  */
-public class CounterpartyResponseStatusReason1Code extends CounterpartyResponseStatusReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CounterpartyResponseStatusReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,11 +92,12 @@ public class CounterpartyResponseStatusReason1Code extends CounterpartyResponseS
 	 * name} = "CounterpartyTransaction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCounterpartyTransaction = new MMCode() {
+	public static final CounterpartyResponseStatusReason1Code CounterpartyTransaction = new CounterpartyResponseStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyTransaction";
-			owner_lazy = () -> CounterpartyResponseStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code.mmObject();
+			codeName = CounterpartyResponseStatusReasonCode.CounterpartyTransaction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -110,11 +116,12 @@ public class CounterpartyResponseStatusReason1Code extends CounterpartyResponseS
 	 * name} = "CounterpartyCancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCounterpartyCancellation = new MMCode() {
+	public static final CounterpartyResponseStatusReason1Code CounterpartyCancellation = new CounterpartyResponseStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyCancellation";
-			owner_lazy = () -> CounterpartyResponseStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code.mmObject();
+			codeName = CounterpartyResponseStatusReasonCode.CounterpartyCancellation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,27 +140,59 @@ public class CounterpartyResponseStatusReason1Code extends CounterpartyResponseS
 	 * name} = "CounterpartyModification"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCounterpartyModification = new MMCode() {
+	public static final CounterpartyResponseStatusReason1Code CounterpartyModification = new CounterpartyResponseStatusReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyModification";
-			owner_lazy = () -> CounterpartyResponseStatusReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code.mmObject();
+			codeName = CounterpartyResponseStatusReasonCode.CounterpartyModification.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CounterpartyResponseStatusReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CounterpartyResponseStatusReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CPTR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CounterpartyResponseStatusReason1Code";
 				definition = "Specifies the type of counterparty's action the response is related to.";
-				code_lazy = () -> Arrays.asList(CounterpartyResponseStatusReason1Code.mmCounterpartyTransaction, CounterpartyResponseStatusReason1Code.mmCounterpartyCancellation,
-						CounterpartyResponseStatusReason1Code.mmCounterpartyModification);
 				trace_lazy = () -> CounterpartyResponseStatusReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code.CounterpartyTransaction,
+						com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code.CounterpartyCancellation, com.tools20022.repository.codeset.CounterpartyResponseStatusReason1Code.CounterpartyModification);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CounterpartyTransaction.getCodeName().get(), CounterpartyTransaction);
+		codesByName.put(CounterpartyCancellation.getCodeName().get(), CounterpartyCancellation);
+		codesByName.put(CounterpartyModification.getCodeName().get(), CounterpartyModification);
+	}
+
+	public static CounterpartyResponseStatusReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CounterpartyResponseStatusReason1Code[] values() {
+		CounterpartyResponseStatusReason1Code[] values = new CounterpartyResponseStatusReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CounterpartyResponseStatusReason1Code> {
+		@Override
+		public CounterpartyResponseStatusReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CounterpartyResponseStatusReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

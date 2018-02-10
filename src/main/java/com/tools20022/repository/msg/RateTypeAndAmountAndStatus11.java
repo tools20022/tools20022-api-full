@@ -32,6 +32,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule#forRateTypeAndAmountAndStatus11
+ * ConstraintCoexistenceAmountRule.forRateTypeAndAmountAndStatus11}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -82,15 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RateTypeAndAmountAndStatus11", propOrder = {"rateType", "amount", "rateStatus"})
 public class RateTypeAndAmountAndStatus11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RateTp", required = true)
 	protected RateType17Choice rateType;
 	/**
-	 * Value expressed as a rate type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -130,7 +141,7 @@ public class RateTypeAndAmountAndStatus11 {
 	public static final MMMessageAssociationEnd mmRateType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmInterestCalculation;
-			componentContext_lazy = () -> RateTypeAndAmountAndStatus11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateTypeAndAmountAndStatus11.mmObject();
 			isDerived = false;
 			xmlTag = "RateTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,10 +154,11 @@ public class RateTypeAndAmountAndStatus11 {
 			type_lazy = () -> RateType17Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAnd13DecimalAmount amount;
 	/**
-	 * Value expressed as an amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,7 +200,7 @@ public class RateTypeAndAmountAndStatus11 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
-			componentContext_lazy = () -> RateTypeAndAmountAndStatus11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateTypeAndAmountAndStatus11.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,10 +212,11 @@ public class RateTypeAndAmountAndStatus11 {
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "RateSts")
 	protected RateStatus1Choice rateStatus;
 	/**
-	 * Value expressed as a rate status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -243,7 +256,7 @@ public class RateTypeAndAmountAndStatus11 {
 	public static final MMMessageAssociationEnd mmRateStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionStatus.mmRateStatus;
-			componentContext_lazy = () -> RateTypeAndAmountAndStatus11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RateTypeAndAmountAndStatus11.mmObject();
 			isDerived = false;
 			xmlTag = "RateSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -260,9 +273,11 @@ public class RateTypeAndAmountAndStatus11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RateTypeAndAmountAndStatus11.mmRateType, RateTypeAndAmountAndStatus11.mmAmount, RateTypeAndAmountAndStatus11.mmRateStatus);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RateTypeAndAmountAndStatus11.mmRateType, com.tools20022.repository.msg.RateTypeAndAmountAndStatus11.mmAmount,
+						com.tools20022.repository.msg.RateTypeAndAmountAndStatus11.mmRateStatus);
 				trace_lazy = () -> Interest.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceAmountRule.forRateTypeAndAmountAndStatus11);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -279,30 +294,30 @@ public class RateTypeAndAmountAndStatus11 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RateTp", required = true)
 	public RateType17Choice getRateType() {
 		return rateType;
 	}
 
-	public void setRateType(RateType17Choice rateType) {
-		this.rateType = rateType;
+	public RateTypeAndAmountAndStatus11 setRateType(RateType17Choice rateType) {
+		this.rateType = Objects.requireNonNull(rateType);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAnd13DecimalAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
-		this.amount = amount;
+	public RateTypeAndAmountAndStatus11 setAmount(ActiveCurrencyAnd13DecimalAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "RateSts")
-	public RateStatus1Choice getRateStatus() {
-		return rateStatus;
+	public Optional<RateStatus1Choice> getRateStatus() {
+		return rateStatus == null ? Optional.empty() : Optional.of(rateStatus);
 	}
 
-	public void setRateStatus(RateStatus1Choice rateStatus) {
+	public RateTypeAndAmountAndStatus11 setRateStatus(RateStatus1Choice rateStatus) {
 		this.rateStatus = rateStatus;
+		return this;
 	}
 }

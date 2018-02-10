@@ -30,6 +30,8 @@ import com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandA
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -39,22 +41,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.ATMManagementLatestVersion
- * ATMManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion
- * ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "ATMDgnstcReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -73,6 +59,22 @@ import javax.xml.bind.annotation.*;
  * ATMDiagnosticRequestV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion
+ * ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "ATMDgnstcReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.ATMManagementLatestVersion
+ * ATMManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code caam.005.001.01}</li>
@@ -95,16 +97,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ATMDiagnosticRequestV01", propOrder = {"header", "protectedATMDiagnosticRequest", "ATMDiagnosticRequest", "securityTrailer"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ATMDiagnosticRequestV01", propOrder = {"header", "protectedATMDiagnosticRequest", "aTMDiagnosticRequest", "securityTrailer"})
 public class ATMDiagnosticRequestV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header20 header;
 	/**
-	 * Information related to the protocol management on a segment of the path
-	 * from the ATM to the acquirer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,10 +147,11 @@ public class ATMDiagnosticRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "PrtctdATMDgnstcReq")
 	protected ContentInformationType10 protectedATMDiagnosticRequest;
 	/**
-	 * Encrypted body of the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,10 +191,11 @@ public class ATMDiagnosticRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "ATMDgnstcReq")
 	protected ATMDiagnosticRequest1 aTMDiagnosticRequest;
 	/**
-	 * Information related to the request of a diagnostic from an ATM.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -232,10 +236,11 @@ public class ATMDiagnosticRequestV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SctyTrlr")
 	protected ContentInformationType15 securityTrailer;
 	/**
-	 * Trailer of the message containing a MAC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -307,43 +312,43 @@ public class ATMDiagnosticRequestV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header20 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header20 header) {
-		this.header = header;
+	public ATMDiagnosticRequestV01 setHeader(Header20 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "PrtctdATMDgnstcReq")
-	public ContentInformationType10 getProtectedATMDiagnosticRequest() {
-		return protectedATMDiagnosticRequest;
+	public Optional<ContentInformationType10> getProtectedATMDiagnosticRequest() {
+		return protectedATMDiagnosticRequest == null ? Optional.empty() : Optional.of(protectedATMDiagnosticRequest);
 	}
 
-	public void setProtectedATMDiagnosticRequest(ContentInformationType10 protectedATMDiagnosticRequest) {
+	public ATMDiagnosticRequestV01 setProtectedATMDiagnosticRequest(ContentInformationType10 protectedATMDiagnosticRequest) {
 		this.protectedATMDiagnosticRequest = protectedATMDiagnosticRequest;
+		return this;
 	}
 
-	@XmlElement(name = "ATMDgnstcReq")
-	public ATMDiagnosticRequest1 getATMDiagnosticRequest() {
-		return aTMDiagnosticRequest;
+	public Optional<ATMDiagnosticRequest1> getATMDiagnosticRequest() {
+		return aTMDiagnosticRequest == null ? Optional.empty() : Optional.of(aTMDiagnosticRequest);
 	}
 
-	public void setATMDiagnosticRequest(ATMDiagnosticRequest1 aTMDiagnosticRequest) {
+	public ATMDiagnosticRequestV01 setATMDiagnosticRequest(ATMDiagnosticRequest1 aTMDiagnosticRequest) {
 		this.aTMDiagnosticRequest = aTMDiagnosticRequest;
+		return this;
 	}
 
-	@XmlElement(name = "SctyTrlr")
-	public ContentInformationType15 getSecurityTrailer() {
-		return securityTrailer;
+	public Optional<ContentInformationType15> getSecurityTrailer() {
+		return securityTrailer == null ? Optional.empty() : Optional.of(securityTrailer);
 	}
 
-	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+	public ATMDiagnosticRequestV01 setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caam.005.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:caam.005.001.01")
 	static public class Document {
 		@XmlElement(name = "ATMDgnstcReq", required = true)
 		public ATMDiagnosticRequestV01 messageBody;

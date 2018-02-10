@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,16 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * ProcessTiming1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProcessTiming2", propOrder = {"waitingTime", "startTime", "endTime", "period", "maximumNumber", "reTry"})
 public class ProcessTiming2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "WtgTm")
 	protected Max9NumericText waitingTime;
 	/**
-	 * Waiting time after the previous action in months, days, hours and
-	 * minutes, leading zeros could be omitted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -126,7 +127,7 @@ public class ProcessTiming2 {
 	 */
 	public static final MMMessageAttribute mmWaitingTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProcessTiming2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming2.mmObject();
 			isDerived = false;
 			xmlTag = "WtgTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,10 +139,11 @@ public class ProcessTiming2 {
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "StartTm")
 	protected ISODateTime startTime;
 	/**
-	 * Date and time to start the action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -174,7 +176,7 @@ public class ProcessTiming2 {
 	 */
 	public static final MMMessageAttribute mmStartTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProcessTiming2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming2.mmObject();
 			isDerived = false;
 			xmlTag = "StartTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -186,10 +188,11 @@ public class ProcessTiming2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "EndTm")
 	protected ISODateTime endTime;
 	/**
-	 * Date and time after which the action cannot be processed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -223,7 +226,7 @@ public class ProcessTiming2 {
 	 */
 	public static final MMMessageAttribute mmEndTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProcessTiming2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming2.mmObject();
 			isDerived = false;
 			xmlTag = "EndTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -235,11 +238,11 @@ public class ProcessTiming2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "Prd")
 	protected Max9NumericText period;
 	/**
-	 * Period delay between cyclic action activation in months, days, hours and
-	 * minutes, leading zeros could be omitted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -275,7 +278,7 @@ public class ProcessTiming2 {
 	 */
 	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProcessTiming2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming2.mmObject();
 			isDerived = false;
 			xmlTag = "Prd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -287,10 +290,11 @@ public class ProcessTiming2 {
 			simpleType_lazy = () -> Max9NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxNb")
 	protected Number maximumNumber;
 	/**
-	 * Maximum number of cyclic calls.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -324,7 +328,7 @@ public class ProcessTiming2 {
 	 */
 	public static final MMMessageAttribute mmMaximumNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProcessTiming2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -336,10 +340,11 @@ public class ProcessTiming2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "ReTry")
 	protected ProcessRetry2 reTry;
 	/**
-	 * Definition of retry process if activation of the action fails.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -365,7 +370,7 @@ public class ProcessTiming2 {
 	 */
 	public static final MMMessageAssociationEnd mmReTry = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ProcessTiming2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProcessTiming2.mmObject();
 			isDerived = false;
 			xmlTag = "ReTry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -381,8 +386,9 @@ public class ProcessTiming2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProcessTiming2.mmWaitingTime, ProcessTiming2.mmStartTime, ProcessTiming2.mmEndTime, ProcessTiming2.mmPeriod, ProcessTiming2.mmMaximumNumber, ProcessTiming2.mmReTry);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProcessTiming2.mmWaitingTime, com.tools20022.repository.msg.ProcessTiming2.mmStartTime, com.tools20022.repository.msg.ProcessTiming2.mmEndTime,
+						com.tools20022.repository.msg.ProcessTiming2.mmPeriod, com.tools20022.repository.msg.ProcessTiming2.mmMaximumNumber, com.tools20022.repository.msg.ProcessTiming2.mmReTry);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessTiming2";
 				definition = "Parameters defining the timing conditions to process an action.";
@@ -393,57 +399,57 @@ public class ProcessTiming2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "WtgTm")
-	public Max9NumericText getWaitingTime() {
-		return waitingTime;
+	public Optional<Max9NumericText> getWaitingTime() {
+		return waitingTime == null ? Optional.empty() : Optional.of(waitingTime);
 	}
 
-	public void setWaitingTime(Max9NumericText waitingTime) {
+	public ProcessTiming2 setWaitingTime(Max9NumericText waitingTime) {
 		this.waitingTime = waitingTime;
+		return this;
 	}
 
-	@XmlElement(name = "StartTm")
-	public ISODateTime getStartTime() {
-		return startTime;
+	public Optional<ISODateTime> getStartTime() {
+		return startTime == null ? Optional.empty() : Optional.of(startTime);
 	}
 
-	public void setStartTime(ISODateTime startTime) {
+	public ProcessTiming2 setStartTime(ISODateTime startTime) {
 		this.startTime = startTime;
+		return this;
 	}
 
-	@XmlElement(name = "EndTm")
-	public ISODateTime getEndTime() {
-		return endTime;
+	public Optional<ISODateTime> getEndTime() {
+		return endTime == null ? Optional.empty() : Optional.of(endTime);
 	}
 
-	public void setEndTime(ISODateTime endTime) {
+	public ProcessTiming2 setEndTime(ISODateTime endTime) {
 		this.endTime = endTime;
+		return this;
 	}
 
-	@XmlElement(name = "Prd")
-	public Max9NumericText getPeriod() {
-		return period;
+	public Optional<Max9NumericText> getPeriod() {
+		return period == null ? Optional.empty() : Optional.of(period);
 	}
 
-	public void setPeriod(Max9NumericText period) {
+	public ProcessTiming2 setPeriod(Max9NumericText period) {
 		this.period = period;
+		return this;
 	}
 
-	@XmlElement(name = "MaxNb")
-	public Number getMaximumNumber() {
-		return maximumNumber;
+	public Optional<Number> getMaximumNumber() {
+		return maximumNumber == null ? Optional.empty() : Optional.of(maximumNumber);
 	}
 
-	public void setMaximumNumber(Number maximumNumber) {
+	public ProcessTiming2 setMaximumNumber(Number maximumNumber) {
 		this.maximumNumber = maximumNumber;
+		return this;
 	}
 
-	@XmlElement(name = "ReTry")
-	public ProcessRetry2 getReTry() {
-		return reTry;
+	public Optional<ProcessRetry2> getReTry() {
+		return reTry == null ? Optional.empty() : Optional.of(reTry);
 	}
 
-	public void setReTry(com.tools20022.repository.msg.ProcessRetry2 reTry) {
+	public ProcessTiming2 setReTry(com.tools20022.repository.msg.ProcessRetry2 reTry) {
 		this.reTry = reTry;
+		return this;
 	}
 }

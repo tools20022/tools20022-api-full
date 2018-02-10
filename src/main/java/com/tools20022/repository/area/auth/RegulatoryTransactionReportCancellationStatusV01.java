@@ -25,9 +25,11 @@ import com.tools20022.repository.msg.ReportStatusAndReason2;
 import com.tools20022.repository.msg.TradeTransactionStatusAndReason2;
 import com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -47,30 +49,14 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
- * AuthoritiesLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive
- * TransactionRegulatoryReportingISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "RgltryTxRptCxlStsV01"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01#mmReportCancellationStatusOrIndividualTransactionCancellationStatusRule
+ * {@linkplain com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01#ReportCancellationStatusOrIndividualTransactionCancellationStatusRule
  * RegulatoryTransactionReportCancellationStatusV01.
- * mmReportCancellationStatusOrIndividualTransactionCancellationStatusRule}</li>
+ * ReportCancellationStatusOrIndividualTransactionCancellationStatusRule}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -90,6 +76,22 @@ import javax.xml.bind.annotation.*;
  * mmIndividualTransactionCancellationStatus}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.TransactionRegulatoryReportingISOArchive
+ * TransactionRegulatoryReportingISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "RgltryTxRptCxlStsV01"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
+ * AuthoritiesLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code auth.011.001.01}</li>
@@ -105,7 +107,7 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RegulatoryTransactionReportCancellationStatusV01", propOrder = {"identification", "reportingInstitution", "reportCancellationStatus", "individualTransactionCancellationStatus"})
 public class RegulatoryTransactionReportCancellationStatusV01 {
 
@@ -148,7 +150,7 @@ public class RegulatoryTransactionReportCancellationStatusV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmReportCancellationStatusOrIndividualTransactionCancellationStatusRule = new MMXor() {
+	public static final MMXor ReportCancellationStatusOrIndividualTransactionCancellationStatusRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportCancellationStatusOrIndividualTransactionCancellationStatusRule";
@@ -158,11 +160,11 @@ public class RegulatoryTransactionReportCancellationStatusV01 {
 					com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01.mmIndividualTransactionCancellationStatus);
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected DocumentIdentification8 identification;
 	/**
-	 * Identification of the RegulatoryTransactionReportCancellationStatus
-	 * document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,10 +206,11 @@ public class RegulatoryTransactionReportCancellationStatusV01 {
 			}
 		}
 	};
+	@XmlElement(name = "RptgInstn", required = true)
 	protected PartyIdentification23Choice reportingInstitution;
 	/**
-	 * Identification of the firm that executed the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -248,12 +251,11 @@ public class RegulatoryTransactionReportCancellationStatusV01 {
 			}
 		}
 	};
+	@XmlElement(name = "RptCxlSts", required = true)
 	protected ReportStatusAndReason2 reportCancellationStatus;
 	/**
-	 * Provides the status of the entire
-	 * RegulatoryTransactionReportCancellationRequest document that was
-	 * previously sent by a reporting institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -295,12 +297,11 @@ public class RegulatoryTransactionReportCancellationStatusV01 {
 			}
 		}
 	};
+	@XmlElement(name = "IndvTxCxlSts", required = true)
 	protected List<TradeTransactionStatusAndReason2> individualTransactionCancellationStatus;
 	/**
-	 * Provides the cancellation status of one or more transactions within a
-	 * RegulatoryTransactionReportCancellationRequest that was previously sent
-	 * by a reporting institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -349,7 +350,7 @@ public class RegulatoryTransactionReportCancellationStatusV01 {
 				name = "RegulatoryTransactionReportCancellationStatusV01";
 				definition = "Scope\r\nA regulator or an intermediary sends the RegulatoryTransactionReportCancellationStatus to a reporting institution to provide the status of a RegulatoryTransactionReportCancellationRequest previously sent by the reporting institution.\r\nUsage\r\nThe message definition may be used to provide a status for the entire report or to provide a status at the level of individual transactions within the report. One of the following statuses can be reported:\r\n- Completed, or,\r\n- Pending, or,\r\n- Rejected.\r\nIf the status is rejected, then reason for the rejection must be specified.";
 				messageSet_lazy = () -> Arrays.asList(TransactionRegulatoryReportingISOArchive.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01.mmReportCancellationStatusOrIndividualTransactionCancellationStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.RegulatoryTransactionReportCancellationStatusV01.ReportCancellationStatusOrIndividualTransactionCancellationStatusRule);
 				rootElement = "Document";
 				xmlTag = "RgltryTxRptCxlStsV01";
 				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
@@ -375,43 +376,43 @@ public class RegulatoryTransactionReportCancellationStatusV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(DocumentIdentification8 identification) {
-		this.identification = identification;
+	public RegulatoryTransactionReportCancellationStatusV01 setIdentification(DocumentIdentification8 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "RptgInstn", required = true)
 	public PartyIdentification23Choice getReportingInstitution() {
 		return reportingInstitution;
 	}
 
-	public void setReportingInstitution(PartyIdentification23Choice reportingInstitution) {
-		this.reportingInstitution = reportingInstitution;
+	public RegulatoryTransactionReportCancellationStatusV01 setReportingInstitution(PartyIdentification23Choice reportingInstitution) {
+		this.reportingInstitution = Objects.requireNonNull(reportingInstitution);
+		return this;
 	}
 
-	@XmlElement(name = "RptCxlSts", required = true)
 	public ReportStatusAndReason2 getReportCancellationStatus() {
 		return reportCancellationStatus;
 	}
 
-	public void setReportCancellationStatus(ReportStatusAndReason2 reportCancellationStatus) {
-		this.reportCancellationStatus = reportCancellationStatus;
+	public RegulatoryTransactionReportCancellationStatusV01 setReportCancellationStatus(ReportStatusAndReason2 reportCancellationStatus) {
+		this.reportCancellationStatus = Objects.requireNonNull(reportCancellationStatus);
+		return this;
 	}
 
-	@XmlElement(name = "IndvTxCxlSts", required = true)
 	public List<TradeTransactionStatusAndReason2> getIndividualTransactionCancellationStatus() {
-		return individualTransactionCancellationStatus;
+		return individualTransactionCancellationStatus == null ? individualTransactionCancellationStatus = new ArrayList<>() : individualTransactionCancellationStatus;
 	}
 
-	public void setIndividualTransactionCancellationStatus(List<TradeTransactionStatusAndReason2> individualTransactionCancellationStatus) {
-		this.individualTransactionCancellationStatus = individualTransactionCancellationStatus;
+	public RegulatoryTransactionReportCancellationStatusV01 setIndividualTransactionCancellationStatus(List<TradeTransactionStatusAndReason2> individualTransactionCancellationStatus) {
+		this.individualTransactionCancellationStatus = Objects.requireNonNull(individualTransactionCancellationStatus);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:auth.011.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:auth.011.001.01")
 	static public class Document {
 		@XmlElement(name = "RgltryTxRptCxlStsV01", required = true)
 		public RegulatoryTransactionReportCancellationStatusV01 messageBody;

@@ -20,52 +20,56 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SettlementAdviceTypeCode;
+import com.tools20022.repository.codeset.SettlementAdviceType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of settlement advice.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode
- * SettlementAdviceTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#mmUndertakingAmendment
- * SettlementAdviceType1Code.mmUndertakingAmendment}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#UndertakingAmendment
+ * SettlementAdviceType1Code.UndertakingAmendment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#mmAutomaticChargesBooking
- * SettlementAdviceType1Code.mmAutomaticChargesBooking}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#AutomaticChargesBooking
+ * SettlementAdviceType1Code.AutomaticChargesBooking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#mmPaymentClaim
- * SettlementAdviceType1Code.mmPaymentClaim}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#PaymentClaim
+ * SettlementAdviceType1Code.PaymentClaim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#mmCorrespondentBankCharges
- * SettlementAdviceType1Code.mmCorrespondentBankCharges}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#CorrespondentBankCharges
+ * SettlementAdviceType1Code.CorrespondentBankCharges}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#mmUndertakingIssuance
- * SettlementAdviceType1Code.mmUndertakingIssuance}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#UndertakingIssuance
+ * SettlementAdviceType1Code.UndertakingIssuance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#mmManualChargesBooking
- * SettlementAdviceType1Code.mmManualChargesBooking}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#ManualChargesBooking
+ * SettlementAdviceType1Code.ManualChargesBooking}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#mmRefund
- * SettlementAdviceType1Code.mmRefund}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#Refund
+ * SettlementAdviceType1Code.Refund}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#mmTermination
- * SettlementAdviceType1Code.mmTermination}</li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceType1Code#Termination
+ * SettlementAdviceType1Code.Termination}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SettlementAdviceTypeCode
+ * SettlementAdviceTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of settlement advice."</li>
  * </ul>
  */
-public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SettlementAdviceType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -101,11 +106,12 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 * name} = "UndertakingAmendment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUndertakingAmendment = new MMCode() {
+	public static final SettlementAdviceType1Code UndertakingAmendment = new SettlementAdviceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingAmendment";
-			owner_lazy = () -> SettlementAdviceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementAdviceType1Code.mmObject();
+			codeName = SettlementAdviceTypeCode.UndertakingAmendment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -124,11 +130,12 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 * name} = "AutomaticChargesBooking"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAutomaticChargesBooking = new MMCode() {
+	public static final SettlementAdviceType1Code AutomaticChargesBooking = new SettlementAdviceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutomaticChargesBooking";
-			owner_lazy = () -> SettlementAdviceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementAdviceType1Code.mmObject();
+			codeName = SettlementAdviceTypeCode.AutomaticChargesBooking.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -147,11 +154,12 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 * name} = "PaymentClaim"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPaymentClaim = new MMCode() {
+	public static final SettlementAdviceType1Code PaymentClaim = new SettlementAdviceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentClaim";
-			owner_lazy = () -> SettlementAdviceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementAdviceType1Code.mmObject();
+			codeName = SettlementAdviceTypeCode.PaymentClaim.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -170,11 +178,12 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 * name} = "CorrespondentBankCharges"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorrespondentBankCharges = new MMCode() {
+	public static final SettlementAdviceType1Code CorrespondentBankCharges = new SettlementAdviceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrespondentBankCharges";
-			owner_lazy = () -> SettlementAdviceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementAdviceType1Code.mmObject();
+			codeName = SettlementAdviceTypeCode.CorrespondentBankCharges.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -193,11 +202,12 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 * name} = "UndertakingIssuance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUndertakingIssuance = new MMCode() {
+	public static final SettlementAdviceType1Code UndertakingIssuance = new SettlementAdviceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIssuance";
-			owner_lazy = () -> SettlementAdviceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementAdviceType1Code.mmObject();
+			codeName = SettlementAdviceTypeCode.UndertakingIssuance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -216,11 +226,12 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 * name} = "ManualChargesBooking"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmManualChargesBooking = new MMCode() {
+	public static final SettlementAdviceType1Code ManualChargesBooking = new SettlementAdviceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualChargesBooking";
-			owner_lazy = () -> SettlementAdviceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementAdviceType1Code.mmObject();
+			codeName = SettlementAdviceTypeCode.ManualChargesBooking.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -239,11 +250,12 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 * name} = "Refund"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRefund = new MMCode() {
+	public static final SettlementAdviceType1Code Refund = new SettlementAdviceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Refund";
-			owner_lazy = () -> SettlementAdviceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementAdviceType1Code.mmObject();
+			codeName = SettlementAdviceTypeCode.Refund.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -262,28 +274,66 @@ public class SettlementAdviceType1Code extends SettlementAdviceTypeCode {
 	 * name} = "Termination"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTermination = new MMCode() {
+	public static final SettlementAdviceType1Code Termination = new SettlementAdviceType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Termination";
-			owner_lazy = () -> SettlementAdviceType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementAdviceType1Code.mmObject();
+			codeName = SettlementAdviceTypeCode.Termination.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SettlementAdviceType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SettlementAdviceType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AMND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementAdviceType1Code";
 				definition = "Specifies the type of settlement advice.";
-				code_lazy = () -> Arrays.asList(SettlementAdviceType1Code.mmUndertakingAmendment, SettlementAdviceType1Code.mmAutomaticChargesBooking, SettlementAdviceType1Code.mmPaymentClaim,
-						SettlementAdviceType1Code.mmCorrespondentBankCharges, SettlementAdviceType1Code.mmUndertakingIssuance, SettlementAdviceType1Code.mmManualChargesBooking, SettlementAdviceType1Code.mmRefund,
-						SettlementAdviceType1Code.mmTermination);
 				trace_lazy = () -> SettlementAdviceTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementAdviceType1Code.UndertakingAmendment, com.tools20022.repository.codeset.SettlementAdviceType1Code.AutomaticChargesBooking,
+						com.tools20022.repository.codeset.SettlementAdviceType1Code.PaymentClaim, com.tools20022.repository.codeset.SettlementAdviceType1Code.CorrespondentBankCharges,
+						com.tools20022.repository.codeset.SettlementAdviceType1Code.UndertakingIssuance, com.tools20022.repository.codeset.SettlementAdviceType1Code.ManualChargesBooking,
+						com.tools20022.repository.codeset.SettlementAdviceType1Code.Refund, com.tools20022.repository.codeset.SettlementAdviceType1Code.Termination);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(UndertakingAmendment.getCodeName().get(), UndertakingAmendment);
+		codesByName.put(AutomaticChargesBooking.getCodeName().get(), AutomaticChargesBooking);
+		codesByName.put(PaymentClaim.getCodeName().get(), PaymentClaim);
+		codesByName.put(CorrespondentBankCharges.getCodeName().get(), CorrespondentBankCharges);
+		codesByName.put(UndertakingIssuance.getCodeName().get(), UndertakingIssuance);
+		codesByName.put(ManualChargesBooking.getCodeName().get(), ManualChargesBooking);
+		codesByName.put(Refund.getCodeName().get(), Refund);
+		codesByName.put(Termination.getCodeName().get(), Termination);
+	}
+
+	public static SettlementAdviceType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SettlementAdviceType1Code[] values() {
+		SettlementAdviceType1Code[] values = new SettlementAdviceType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SettlementAdviceType1Code> {
+		@Override
+		public SettlementAdviceType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SettlementAdviceType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.EligibilityTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Defines the type of eligibility.
@@ -32,14 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EligibilityTypeCode#mmSecurities
- * EligibilityTypeCode.mmSecurities}</li>
+ * {@linkplain com.tools20022.repository.codeset.EligibilityTypeCode#Securities
+ * EligibilityTypeCode.Securities}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EligibilityTypeCode#mmIssuerCSD
- * EligibilityTypeCode.mmIssuerCSD}</li>
+ * {@linkplain com.tools20022.repository.codeset.EligibilityTypeCode#IssuerCSD
+ * EligibilityTypeCode.IssuerCSD}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.EligibilityTypeCode#mmCountry
- * EligibilityTypeCode.mmCountry}</li>
+ * {@linkplain com.tools20022.repository.codeset.EligibilityTypeCode#Country
+ * EligibilityTypeCode.Country}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +57,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Defines the type of eligibility."</li>
  * </ul>
  */
-public class EligibilityTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EligibilityTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -94,12 +100,12 @@ public class EligibilityTypeCode {
 	 * definition} = "Eligiblity applies at securities level."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecurities = new MMCode() {
+	public static final EligibilityTypeCode Securities = new EligibilityTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
 			definition = "Eligiblity applies at securities level.";
-			owner_lazy = () -> EligibilityTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EligibilityTypeCode.mmObject();
 			codeName = "SECU";
 		}
 	};
@@ -127,12 +133,12 @@ public class EligibilityTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuerCSD = new MMCode() {
+	public static final EligibilityTypeCode IssuerCSD = new EligibilityTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCSD";
 			definition = "Eligibility applies at the level of issuer CSD.\r\nAll of the securities issued by the issuer CSD are eligible.";
-			owner_lazy = () -> EligibilityTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EligibilityTypeCode.mmObject();
 			codeName = "ISCS";
 		}
 	};
@@ -160,28 +166,60 @@ public class EligibilityTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCountry = new MMCode() {
+	public static final EligibilityTypeCode Country = new EligibilityTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Eligibility applies at country level.\r\nAll of the securities issued in that country are eligible.";
-			owner_lazy = () -> EligibilityTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EligibilityTypeCode.mmObject();
 			codeName = "CTRY";
 		}
 	};
+	final static private LinkedHashMap<String, EligibilityTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EligibilityTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SECU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EligibilityTypeCode";
 				definition = "Defines the type of eligibility.";
-				code_lazy = () -> Arrays.asList(EligibilityTypeCode.mmSecurities, EligibilityTypeCode.mmIssuerCSD, EligibilityTypeCode.mmCountry);
 				derivation_lazy = () -> Arrays.asList(EligibilityType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EligibilityTypeCode.Securities, com.tools20022.repository.codeset.EligibilityTypeCode.IssuerCSD,
+						com.tools20022.repository.codeset.EligibilityTypeCode.Country);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Securities.getCodeName().get(), Securities);
+		codesByName.put(IssuerCSD.getCodeName().get(), IssuerCSD);
+		codesByName.put(Country.getCodeName().get(), Country);
+	}
+
+	public static EligibilityTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EligibilityTypeCode[] values() {
+		EligibilityTypeCode[] values = new EligibilityTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EligibilityTypeCode> {
+		@Override
+		public EligibilityTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EligibilityTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

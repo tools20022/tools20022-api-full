@@ -25,6 +25,8 @@ import com.tools20022.repository.datatype.Max8000Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides additional information regarding additional comments."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionCancellationSD2", propOrder = {"placeAndName", "externalComments"})
 public class CorporateActionCancellationSD2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +101,7 @@ public class CorporateActionCancellationSD2 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionCancellationSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +112,11 @@ public class CorporateActionCancellationSD2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "XtrnlCmnts")
 	protected Max8000Text externalComments;
 	/**
-	 * Additional textual information regarding the cancelled event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -140,7 +144,7 @@ public class CorporateActionCancellationSD2 {
 	 */
 	public static final MMMessageAttribute mmExternalComments = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionCancellationSD2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionCancellationSD2.mmObject();
 			isDerived = false;
 			xmlTag = "XtrnlCmnts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,8 +159,8 @@ public class CorporateActionCancellationSD2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionCancellationSD2.mmPlaceAndName, CorporateActionCancellationSD2.mmExternalComments);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionCancellationSD2.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionCancellationSD2.mmExternalComments);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionCancellationSD2";
 				definition = "Provides additional information regarding additional comments.";
@@ -165,21 +169,21 @@ public class CorporateActionCancellationSD2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionCancellationSD2 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "XtrnlCmnts")
-	public Max8000Text getExternalComments() {
-		return externalComments;
+	public Optional<Max8000Text> getExternalComments() {
+		return externalComments == null ? Optional.empty() : Optional.of(externalComments);
 	}
 
-	public void setExternalComments(Max8000Text externalComments) {
+	public CorporateActionCancellationSD2 setExternalComments(Max8000Text externalComments) {
 		this.externalComments = externalComments;
+		return this;
 	}
 }

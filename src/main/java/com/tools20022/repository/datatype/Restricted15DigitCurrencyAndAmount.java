@@ -20,8 +20,12 @@ package com.tools20022.repository.datatype;
 import com.tools20022.metamodel.MMAmount;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CurrencyCode;
+import com.tools20022.repository.datatype.Restricted15DigitCurrencyAndAmount.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.math.BigDecimal;
 import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Number of monetary units specified in a currency, where the unit of currency
@@ -38,8 +42,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -52,14 +56,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
 public class Restricted15DigitCurrencyAndAmount {
 
 	final static private AtomicReference<MMAmount> mmObject_lazy = new AtomicReference<>();
+	protected BigDecimal value;
 
 	final static public MMAmount mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMAmount() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Restricted15DigitCurrencyAndAmount";
 				definition = "Number of monetary units specified in a currency, where the unit of currency is explicit and compliant with ISO 4217. The maximum number of digits must not exceed 15, including a maximum of 5 fractional digits.  ";
@@ -70,5 +76,25 @@ public class Restricted15DigitCurrencyAndAmount {
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	public Restricted15DigitCurrencyAndAmount(BigDecimal value) {
+		this.value = value;
+	}
+
+	public BigDecimal toBigDecimal() {
+		return value;
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<BigDecimal, Restricted15DigitCurrencyAndAmount> {
+		@Override
+		public Restricted15DigitCurrencyAndAmount unmarshal(BigDecimal value) {
+			return new Restricted15DigitCurrencyAndAmount(value);
+		}
+
+		@Override
+		public BigDecimal marshal(Restricted15DigitCurrencyAndAmount typedData) {
+			return typedData.value;
+		}
 	}
 }

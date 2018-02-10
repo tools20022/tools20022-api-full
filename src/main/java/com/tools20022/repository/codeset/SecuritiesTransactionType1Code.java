@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SecuritiesTransactionTypeV2Code;
+import com.tools20022.repository.codeset.SecuritiesTransactionType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies underlying information regarding the type of settlement
@@ -31,138 +35,138 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionTypeV2Code
- * SecuritiesTransactionTypeV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmCentralBankCollateralOperation
- * SecuritiesTransactionType1Code.mmCentralBankCollateralOperation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#CentralBankCollateralOperation
+ * SecuritiesTransactionType1Code.CentralBankCollateralOperation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmBuySellBack
- * SecuritiesTransactionType1Code.mmBuySellBack}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#BuySellBack
+ * SecuritiesTransactionType1Code.BuySellBack}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmCollateralIn
- * SecuritiesTransactionType1Code.mmCollateralIn}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#CollateralIn
+ * SecuritiesTransactionType1Code.CollateralIn}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmCollateralOut
- * SecuritiesTransactionType1Code.mmCollateralOut}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#CollateralOut
+ * SecuritiesTransactionType1Code.CollateralOut}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmDepositoryReceiptConversion
- * SecuritiesTransactionType1Code.mmDepositoryReceiptConversion}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#DepositoryReceiptConversion
+ * SecuritiesTransactionType1Code.DepositoryReceiptConversion}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmFactorUpdate
- * SecuritiesTransactionType1Code.mmFactorUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#FactorUpdate
+ * SecuritiesTransactionType1Code.FactorUpdate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmMoveOfStock
- * SecuritiesTransactionType1Code.mmMoveOfStock}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#MoveOfStock
+ * SecuritiesTransactionType1Code.MoveOfStock}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmIssuance
- * SecuritiesTransactionType1Code.mmIssuance}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#Issuance
+ * SecuritiesTransactionType1Code.Issuance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmMarkDown
- * SecuritiesTransactionType1Code.mmMarkDown}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#MarkDown
+ * SecuritiesTransactionType1Code.MarkDown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmMarkUp
- * SecuritiesTransactionType1Code.mmMarkUp}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#MarkUp
+ * SecuritiesTransactionType1Code.MarkUp}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmNetting
- * SecuritiesTransactionType1Code.mmNetting}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#Netting
+ * SecuritiesTransactionType1Code.Netting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmNonSyndicated
- * SecuritiesTransactionType1Code.mmNonSyndicated}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#NonSyndicated
+ * SecuritiesTransactionType1Code.NonSyndicated}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmExternalAccountTransfer
- * SecuritiesTransactionType1Code.mmExternalAccountTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#ExternalAccountTransfer
+ * SecuritiesTransactionType1Code.ExternalAccountTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmInternalAccountTransfer
- * SecuritiesTransactionType1Code.mmInternalAccountTransfer}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#InternalAccountTransfer
+ * SecuritiesTransactionType1Code.InternalAccountTransfer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmPairOff
- * SecuritiesTransactionType1Code.mmPairOff}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#PairOff
+ * SecuritiesTransactionType1Code.PairOff}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmPlacement
- * SecuritiesTransactionType1Code.mmPlacement}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#Placement
+ * SecuritiesTransactionType1Code.Placement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmPortfolioMove
- * SecuritiesTransactionType1Code.mmPortfolioMove}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#PortfolioMove
+ * SecuritiesTransactionType1Code.PortfolioMove}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmRealignment
- * SecuritiesTransactionType1Code.mmRealignment}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#Realignment
+ * SecuritiesTransactionType1Code.Realignment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmWithdrawal
- * SecuritiesTransactionType1Code.mmWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#Withdrawal
+ * SecuritiesTransactionType1Code.Withdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmRedemption
- * SecuritiesTransactionType1Code.mmRedemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#Redemption
+ * SecuritiesTransactionType1Code.Redemption}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmDepositoryReceiptReleaseCancellation
- * SecuritiesTransactionType1Code.mmDepositoryReceiptReleaseCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#DepositoryReceiptReleaseCancellation
+ * SecuritiesTransactionType1Code.DepositoryReceiptReleaseCancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmRepo
- * SecuritiesTransactionType1Code.mmRepo}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#Repo
+ * SecuritiesTransactionType1Code.Repo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmReturnDeliveryWithoutMatching
- * SecuritiesTransactionType1Code.mmReturnDeliveryWithoutMatching}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#ReturnDeliveryWithoutMatching
+ * SecuritiesTransactionType1Code.ReturnDeliveryWithoutMatching}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmReporting
- * SecuritiesTransactionType1Code.mmReporting}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#Reporting
+ * SecuritiesTransactionType1Code.Reporting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmReverseRepo
- * SecuritiesTransactionType1Code.mmReverseRepo}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#ReverseRepo
+ * SecuritiesTransactionType1Code.ReverseRepo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmSellBuyBack
- * SecuritiesTransactionType1Code.mmSellBuyBack}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#SellBuyBack
+ * SecuritiesTransactionType1Code.SellBuyBack}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmBorrowingReallocation
- * SecuritiesTransactionType1Code.mmBorrowingReallocation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#BorrowingReallocation
+ * SecuritiesTransactionType1Code.BorrowingReallocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmSecuritiesBorrowing
- * SecuritiesTransactionType1Code.mmSecuritiesBorrowing}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#SecuritiesBorrowing
+ * SecuritiesTransactionType1Code.SecuritiesBorrowing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmSecuritiesLending
- * SecuritiesTransactionType1Code.mmSecuritiesLending}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#SecuritiesLending
+ * SecuritiesTransactionType1Code.SecuritiesLending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmLendingReallocation
- * SecuritiesTransactionType1Code.mmLendingReallocation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#LendingReallocation
+ * SecuritiesTransactionType1Code.LendingReallocation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmSubscription
- * SecuritiesTransactionType1Code.mmSubscription}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#Subscription
+ * SecuritiesTransactionType1Code.Subscription}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmSyndicateUnderwriters
- * SecuritiesTransactionType1Code.mmSyndicateUnderwriters}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#SyndicateUnderwriters
+ * SecuritiesTransactionType1Code.SyndicateUnderwriters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmTBAClosing
- * SecuritiesTransactionType1Code.mmTBAClosing}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#TBAClosing
+ * SecuritiesTransactionType1Code.TBAClosing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmTrade
- * SecuritiesTransactionType1Code.mmTrade}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#Trade
+ * SecuritiesTransactionType1Code.Trade}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmTripartyRepo
- * SecuritiesTransactionType1Code.mmTripartyRepo}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#TripartyRepo
+ * SecuritiesTransactionType1Code.TripartyRepo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmTripartyReverseRepo
- * SecuritiesTransactionType1Code.mmTripartyReverseRepo}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#TripartyReverseRepo
+ * SecuritiesTransactionType1Code.TripartyReverseRepo}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmTurnaround
- * SecuritiesTransactionType1Code.mmTurnaround}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#Turnaround
+ * SecuritiesTransactionType1Code.Turnaround}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmCorporateAction
- * SecuritiesTransactionType1Code.mmCorporateAction}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#CorporateAction
+ * SecuritiesTransactionType1Code.CorporateAction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmMarketClaim
- * SecuritiesTransactionType1Code.mmMarketClaim}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#MarketClaim
+ * SecuritiesTransactionType1Code.MarketClaim}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#mmAutoCollateralisation
- * SecuritiesTransactionType1Code.mmAutoCollateralisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionType1Code#AutoCollateralisation
+ * SecuritiesTransactionType1Code.AutoCollateralisation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesTransactionTypeV2Code
+ * SecuritiesTransactionTypeV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -189,7 +193,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecuritiesTransactionType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -208,11 +213,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "CentralBankCollateralOperation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCentralBankCollateralOperation = new MMCode() {
+	public static final SecuritiesTransactionType1Code CentralBankCollateralOperation = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CentralBankCollateralOperation";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.CentralBankCollateralOperation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -231,11 +237,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "BuySellBack"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBuySellBack = new MMCode() {
+	public static final SecuritiesTransactionType1Code BuySellBack = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuySellBack";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.BuySellBack.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -254,11 +261,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "CollateralIn"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralIn = new MMCode() {
+	public static final SecuritiesTransactionType1Code CollateralIn = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralIn";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.CollateralIn.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -277,11 +285,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "CollateralOut"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollateralOut = new MMCode() {
+	public static final SecuritiesTransactionType1Code CollateralOut = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralOut";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.CollateralOut.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -300,11 +309,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "DepositoryReceiptConversion"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDepositoryReceiptConversion = new MMCode() {
+	public static final SecuritiesTransactionType1Code DepositoryReceiptConversion = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryReceiptConversion";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.DepositoryReceiptConversion.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -323,11 +333,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "FactorUpdate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFactorUpdate = new MMCode() {
+	public static final SecuritiesTransactionType1Code FactorUpdate = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FactorUpdate";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.FactorUpdate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -346,11 +357,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "MoveOfStock"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMoveOfStock = new MMCode() {
+	public static final SecuritiesTransactionType1Code MoveOfStock = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoveOfStock";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.MoveOfStock.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -369,11 +381,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "Issuance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuance = new MMCode() {
+	public static final SecuritiesTransactionType1Code Issuance = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuance";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.Issuance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -392,11 +405,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "MarkDown"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarkDown = new MMCode() {
+	public static final SecuritiesTransactionType1Code MarkDown = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkDown";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.MarkDown.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -415,11 +429,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "MarkUp"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarkUp = new MMCode() {
+	public static final SecuritiesTransactionType1Code MarkUp = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkUp";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.MarkUp.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -438,11 +453,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "Netting"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNetting = new MMCode() {
+	public static final SecuritiesTransactionType1Code Netting = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Netting";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.Netting.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -461,11 +477,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "NonSyndicated"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonSyndicated = new MMCode() {
+	public static final SecuritiesTransactionType1Code NonSyndicated = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonSyndicated";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.NonSyndicated.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -484,11 +501,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "ExternalAccountTransfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExternalAccountTransfer = new MMCode() {
+	public static final SecuritiesTransactionType1Code ExternalAccountTransfer = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExternalAccountTransfer";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.ExternalAccountTransfer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -507,11 +525,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "InternalAccountTransfer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInternalAccountTransfer = new MMCode() {
+	public static final SecuritiesTransactionType1Code InternalAccountTransfer = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternalAccountTransfer";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.InternalAccountTransfer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -530,11 +549,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "PairOff"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPairOff = new MMCode() {
+	public static final SecuritiesTransactionType1Code PairOff = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PairOff";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.PairOff.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -553,11 +573,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "Placement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPlacement = new MMCode() {
+	public static final SecuritiesTransactionType1Code Placement = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Placement";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.Placement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -576,11 +597,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "PortfolioMove"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPortfolioMove = new MMCode() {
+	public static final SecuritiesTransactionType1Code PortfolioMove = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortfolioMove";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.PortfolioMove.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -599,11 +621,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "Realignment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRealignment = new MMCode() {
+	public static final SecuritiesTransactionType1Code Realignment = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Realignment";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.Realignment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -622,11 +645,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "Withdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWithdrawal = new MMCode() {
+	public static final SecuritiesTransactionType1Code Withdrawal = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withdrawal";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.Withdrawal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -645,11 +669,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "Redemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRedemption = new MMCode() {
+	public static final SecuritiesTransactionType1Code Redemption = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redemption";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.Redemption.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -668,11 +693,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "DepositoryReceiptReleaseCancellation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDepositoryReceiptReleaseCancellation = new MMCode() {
+	public static final SecuritiesTransactionType1Code DepositoryReceiptReleaseCancellation = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryReceiptReleaseCancellation";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.DepositoryReceiptReleaseCancellation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -691,11 +717,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "Repo"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRepo = new MMCode() {
+	public static final SecuritiesTransactionType1Code Repo = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repo";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.Repo.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -714,11 +741,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "ReturnDeliveryWithoutMatching"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReturnDeliveryWithoutMatching = new MMCode() {
+	public static final SecuritiesTransactionType1Code ReturnDeliveryWithoutMatching = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnDeliveryWithoutMatching";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.ReturnDeliveryWithoutMatching.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -737,11 +765,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "Reporting"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReporting = new MMCode() {
+	public static final SecuritiesTransactionType1Code Reporting = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reporting";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.Reporting.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -760,11 +789,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "ReverseRepo"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReverseRepo = new MMCode() {
+	public static final SecuritiesTransactionType1Code ReverseRepo = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseRepo";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.ReverseRepo.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -783,11 +813,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "SellBuyBack"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSellBuyBack = new MMCode() {
+	public static final SecuritiesTransactionType1Code SellBuyBack = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellBuyBack";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.SellBuyBack.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -806,11 +837,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "BorrowingReallocation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBorrowingReallocation = new MMCode() {
+	public static final SecuritiesTransactionType1Code BorrowingReallocation = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorrowingReallocation";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.BorrowingReallocation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -829,11 +861,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "SecuritiesBorrowing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesBorrowing = new MMCode() {
+	public static final SecuritiesTransactionType1Code SecuritiesBorrowing = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesBorrowing";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.SecuritiesBorrowing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -852,11 +885,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "SecuritiesLending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSecuritiesLending = new MMCode() {
+	public static final SecuritiesTransactionType1Code SecuritiesLending = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesLending";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.SecuritiesLending.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -875,11 +909,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "LendingReallocation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLendingReallocation = new MMCode() {
+	public static final SecuritiesTransactionType1Code LendingReallocation = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LendingReallocation";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.LendingReallocation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -898,11 +933,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "Subscription"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubscription = new MMCode() {
+	public static final SecuritiesTransactionType1Code Subscription = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subscription";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.Subscription.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -921,11 +957,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "SyndicateUnderwriters"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSyndicateUnderwriters = new MMCode() {
+	public static final SecuritiesTransactionType1Code SyndicateUnderwriters = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SyndicateUnderwriters";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.SyndicateUnderwriters.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -944,11 +981,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "TBAClosing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTBAClosing = new MMCode() {
+	public static final SecuritiesTransactionType1Code TBAClosing = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TBAClosing";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.TBAClosing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -967,11 +1005,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "Trade"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTrade = new MMCode() {
+	public static final SecuritiesTransactionType1Code Trade = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trade";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.Trade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -990,11 +1029,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "TripartyRepo"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTripartyRepo = new MMCode() {
+	public static final SecuritiesTransactionType1Code TripartyRepo = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyRepo";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.TripartyRepo.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1013,11 +1053,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "TripartyReverseRepo"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTripartyReverseRepo = new MMCode() {
+	public static final SecuritiesTransactionType1Code TripartyReverseRepo = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyReverseRepo";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.TripartyReverseRepo.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1036,11 +1077,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "Turnaround"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTurnaround = new MMCode() {
+	public static final SecuritiesTransactionType1Code Turnaround = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Turnaround";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.Turnaround.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1059,11 +1101,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "CorporateAction"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorporateAction = new MMCode() {
+	public static final SecuritiesTransactionType1Code CorporateAction = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateAction";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.CorporateAction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1082,11 +1125,12 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "MarketClaim"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMarketClaim = new MMCode() {
+	public static final SecuritiesTransactionType1Code MarketClaim = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketClaim";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.MarketClaim.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1105,37 +1149,115 @@ public class SecuritiesTransactionType1Code extends SecuritiesTransactionTypeV2C
 	 * name} = "AutoCollateralisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAutoCollateralisation = new MMCode() {
+	public static final SecuritiesTransactionType1Code AutoCollateralisation = new SecuritiesTransactionType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutoCollateralisation";
-			owner_lazy = () -> SecuritiesTransactionType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionType1Code.mmObject();
+			codeName = SecuritiesTransactionTypeV2Code.AutoCollateralisation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SecuritiesTransactionType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecuritiesTransactionType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CNCB");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionType1Code";
 				definition = "Specifies underlying information regarding the type of settlement transaction.";
 				nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionType7Code.mmObject());
-				code_lazy = () -> Arrays.asList(SecuritiesTransactionType1Code.mmCentralBankCollateralOperation, SecuritiesTransactionType1Code.mmBuySellBack, SecuritiesTransactionType1Code.mmCollateralIn,
-						SecuritiesTransactionType1Code.mmCollateralOut, SecuritiesTransactionType1Code.mmDepositoryReceiptConversion, SecuritiesTransactionType1Code.mmFactorUpdate, SecuritiesTransactionType1Code.mmMoveOfStock,
-						SecuritiesTransactionType1Code.mmIssuance, SecuritiesTransactionType1Code.mmMarkDown, SecuritiesTransactionType1Code.mmMarkUp, SecuritiesTransactionType1Code.mmNetting,
-						SecuritiesTransactionType1Code.mmNonSyndicated, SecuritiesTransactionType1Code.mmExternalAccountTransfer, SecuritiesTransactionType1Code.mmInternalAccountTransfer, SecuritiesTransactionType1Code.mmPairOff,
-						SecuritiesTransactionType1Code.mmPlacement, SecuritiesTransactionType1Code.mmPortfolioMove, SecuritiesTransactionType1Code.mmRealignment, SecuritiesTransactionType1Code.mmWithdrawal,
-						SecuritiesTransactionType1Code.mmRedemption, SecuritiesTransactionType1Code.mmDepositoryReceiptReleaseCancellation, SecuritiesTransactionType1Code.mmRepo,
-						SecuritiesTransactionType1Code.mmReturnDeliveryWithoutMatching, SecuritiesTransactionType1Code.mmReporting, SecuritiesTransactionType1Code.mmReverseRepo, SecuritiesTransactionType1Code.mmSellBuyBack,
-						SecuritiesTransactionType1Code.mmBorrowingReallocation, SecuritiesTransactionType1Code.mmSecuritiesBorrowing, SecuritiesTransactionType1Code.mmSecuritiesLending, SecuritiesTransactionType1Code.mmLendingReallocation,
-						SecuritiesTransactionType1Code.mmSubscription, SecuritiesTransactionType1Code.mmSyndicateUnderwriters, SecuritiesTransactionType1Code.mmTBAClosing, SecuritiesTransactionType1Code.mmTrade,
-						SecuritiesTransactionType1Code.mmTripartyRepo, SecuritiesTransactionType1Code.mmTripartyReverseRepo, SecuritiesTransactionType1Code.mmTurnaround, SecuritiesTransactionType1Code.mmCorporateAction,
-						SecuritiesTransactionType1Code.mmMarketClaim, SecuritiesTransactionType1Code.mmAutoCollateralisation);
 				trace_lazy = () -> SecuritiesTransactionTypeV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesTransactionType1Code.CentralBankCollateralOperation, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.BuySellBack,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.CollateralIn, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.CollateralOut,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.DepositoryReceiptConversion, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.FactorUpdate,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.MoveOfStock, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.Issuance,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.MarkDown, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.MarkUp,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.Netting, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.NonSyndicated,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.ExternalAccountTransfer, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.InternalAccountTransfer,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.PairOff, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.Placement,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.PortfolioMove, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.Realignment,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.Withdrawal, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.Redemption,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.DepositoryReceiptReleaseCancellation, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.Repo,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.ReturnDeliveryWithoutMatching, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.Reporting,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.ReverseRepo, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.SellBuyBack,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.BorrowingReallocation, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.SecuritiesBorrowing,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.SecuritiesLending, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.LendingReallocation,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.Subscription, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.SyndicateUnderwriters,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.TBAClosing, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.Trade,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.TripartyRepo, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.TripartyReverseRepo,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.Turnaround, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.CorporateAction,
+						com.tools20022.repository.codeset.SecuritiesTransactionType1Code.MarketClaim, com.tools20022.repository.codeset.SecuritiesTransactionType1Code.AutoCollateralisation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CentralBankCollateralOperation.getCodeName().get(), CentralBankCollateralOperation);
+		codesByName.put(BuySellBack.getCodeName().get(), BuySellBack);
+		codesByName.put(CollateralIn.getCodeName().get(), CollateralIn);
+		codesByName.put(CollateralOut.getCodeName().get(), CollateralOut);
+		codesByName.put(DepositoryReceiptConversion.getCodeName().get(), DepositoryReceiptConversion);
+		codesByName.put(FactorUpdate.getCodeName().get(), FactorUpdate);
+		codesByName.put(MoveOfStock.getCodeName().get(), MoveOfStock);
+		codesByName.put(Issuance.getCodeName().get(), Issuance);
+		codesByName.put(MarkDown.getCodeName().get(), MarkDown);
+		codesByName.put(MarkUp.getCodeName().get(), MarkUp);
+		codesByName.put(Netting.getCodeName().get(), Netting);
+		codesByName.put(NonSyndicated.getCodeName().get(), NonSyndicated);
+		codesByName.put(ExternalAccountTransfer.getCodeName().get(), ExternalAccountTransfer);
+		codesByName.put(InternalAccountTransfer.getCodeName().get(), InternalAccountTransfer);
+		codesByName.put(PairOff.getCodeName().get(), PairOff);
+		codesByName.put(Placement.getCodeName().get(), Placement);
+		codesByName.put(PortfolioMove.getCodeName().get(), PortfolioMove);
+		codesByName.put(Realignment.getCodeName().get(), Realignment);
+		codesByName.put(Withdrawal.getCodeName().get(), Withdrawal);
+		codesByName.put(Redemption.getCodeName().get(), Redemption);
+		codesByName.put(DepositoryReceiptReleaseCancellation.getCodeName().get(), DepositoryReceiptReleaseCancellation);
+		codesByName.put(Repo.getCodeName().get(), Repo);
+		codesByName.put(ReturnDeliveryWithoutMatching.getCodeName().get(), ReturnDeliveryWithoutMatching);
+		codesByName.put(Reporting.getCodeName().get(), Reporting);
+		codesByName.put(ReverseRepo.getCodeName().get(), ReverseRepo);
+		codesByName.put(SellBuyBack.getCodeName().get(), SellBuyBack);
+		codesByName.put(BorrowingReallocation.getCodeName().get(), BorrowingReallocation);
+		codesByName.put(SecuritiesBorrowing.getCodeName().get(), SecuritiesBorrowing);
+		codesByName.put(SecuritiesLending.getCodeName().get(), SecuritiesLending);
+		codesByName.put(LendingReallocation.getCodeName().get(), LendingReallocation);
+		codesByName.put(Subscription.getCodeName().get(), Subscription);
+		codesByName.put(SyndicateUnderwriters.getCodeName().get(), SyndicateUnderwriters);
+		codesByName.put(TBAClosing.getCodeName().get(), TBAClosing);
+		codesByName.put(Trade.getCodeName().get(), Trade);
+		codesByName.put(TripartyRepo.getCodeName().get(), TripartyRepo);
+		codesByName.put(TripartyReverseRepo.getCodeName().get(), TripartyReverseRepo);
+		codesByName.put(Turnaround.getCodeName().get(), Turnaround);
+		codesByName.put(CorporateAction.getCodeName().get(), CorporateAction);
+		codesByName.put(MarketClaim.getCodeName().get(), MarketClaim);
+		codesByName.put(AutoCollateralisation.getCodeName().get(), AutoCollateralisation);
+	}
+
+	public static SecuritiesTransactionType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecuritiesTransactionType1Code[] values() {
+		SecuritiesTransactionType1Code[] values = new SecuritiesTransactionType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecuritiesTransactionType1Code> {
+		@Override
+		public SecuritiesTransactionType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecuritiesTransactionType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

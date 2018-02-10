@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintSeriesElementRule#forSeries1
+ * ConstraintSeriesElementRule.forSeries1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,17 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identification of a series."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Series1", propOrder = {"seriesDate", "seriesName"})
 public class Series1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SrsDt")
 	protected DateFormat42Choice seriesDate;
 	/**
-	 * Issue date of the fund series. It is typically applicable to a redemption
-	 * order, subscription order confirmation or redemption order confirmation,
-	 * but may be specified in the subscription order, if known.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -108,7 +116,7 @@ public class Series1 {
 	public static final MMMessageAssociationEnd mmSeriesDate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmSeriesIssueIdentificationDate;
-			componentContext_lazy = () -> Series1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Series1.mmObject();
 			isDerived = false;
 			xmlTag = "SrsDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,12 +128,11 @@ public class Series1 {
 			type_lazy = () -> DateFormat42Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SrsNm")
 	protected Max35Text seriesName;
 	/**
-	 * Name of the fund series. It is typically applicable to a redemption
-	 * order, subscription order confirmation or redemption order confirmation,
-	 * but may be specified in the subscription, if known.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -159,7 +166,7 @@ public class Series1 {
 	public static final MMMessageAttribute mmSeriesName = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmSeriesName;
-			componentContext_lazy = () -> Series1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Series1.mmObject();
 			isDerived = false;
 			xmlTag = "SrsNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,9 +181,10 @@ public class Series1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Series1.mmSeriesDate, Series1.mmSeriesName);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Series1.mmSeriesDate, com.tools20022.repository.msg.Series1.mmSeriesName);
 				trace_lazy = () -> InvestmentFundClass.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSeriesElementRule.forSeries1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Series1";
 				definition = "Identification of a series.";
@@ -185,21 +193,21 @@ public class Series1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SrsDt")
-	public DateFormat42Choice getSeriesDate() {
-		return seriesDate;
+	public Optional<DateFormat42Choice> getSeriesDate() {
+		return seriesDate == null ? Optional.empty() : Optional.of(seriesDate);
 	}
 
-	public void setSeriesDate(DateFormat42Choice seriesDate) {
+	public Series1 setSeriesDate(DateFormat42Choice seriesDate) {
 		this.seriesDate = seriesDate;
+		return this;
 	}
 
-	@XmlElement(name = "SrsNm")
-	public Max35Text getSeriesName() {
-		return seriesName;
+	public Optional<Max35Text> getSeriesName() {
+		return seriesName == null ? Optional.empty() : Optional.of(seriesName);
 	}
 
-	public void setSeriesName(Max35Text seriesName) {
+	public Series1 setSeriesName(Max35Text seriesName) {
 		this.seriesName = seriesName;
+		return this;
 	}
 }

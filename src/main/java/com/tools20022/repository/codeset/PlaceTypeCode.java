@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.PlaceTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of place.
@@ -31,8 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PlaceTypeCode#mmUnknown
- * PlaceTypeCode.mmUnknown}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PlaceTypeCode#Unknown
+ * PlaceTypeCode.Unknown}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -45,8 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -63,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of place."</li>
  * </ul>
  */
-public class PlaceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PlaceTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -87,28 +93,57 @@ public class PlaceTypeCode {
 	 * definition} = "The type of place is unknown."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnknown = new MMCode() {
+	public static final PlaceTypeCode Unknown = new PlaceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unknown";
 			definition = "The type of place is unknown.";
-			owner_lazy = () -> PlaceTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PlaceTypeCode.mmObject();
 			codeName = "UKWN";
 		}
 	};
+	final static private LinkedHashMap<String, PlaceTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PlaceTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("UKWN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PlaceTypeCode";
 				definition = "Type of place.";
-				code_lazy = () -> Arrays.asList(PlaceTypeCode.mmUnknown);
 				derivation_lazy = () -> Arrays.asList(PlaceType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PlaceTypeCode.Unknown);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Unknown.getCodeName().get(), Unknown);
+	}
+
+	public static PlaceTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PlaceTypeCode[] values() {
+		PlaceTypeCode[] values = new PlaceTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PlaceTypeCode> {
+		@Override
+		public PlaceTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PlaceTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

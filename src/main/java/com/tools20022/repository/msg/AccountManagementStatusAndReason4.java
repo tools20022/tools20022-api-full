@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.AccountStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -91,16 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * AccountManagementStatusAndReason3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountManagementStatusAndReason4", propOrder = {"status", "accountApplicationIdentification", "existingAccountIdentification"})
 public class AccountManagementStatusAndReason4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected Status20Choice status;
 	/**
-	 * Status of the account opening instruction or account modification
-	 * instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,7 +151,7 @@ public class AccountManagementStatusAndReason4 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AccountStatus.mmObject();
-			componentContext_lazy = () -> AccountManagementStatusAndReason4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason4.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,11 +164,11 @@ public class AccountManagementStatusAndReason4 {
 			complexType_lazy = () -> Status20Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctApplId")
 	protected Max35Text accountApplicationIdentification;
 	/**
-	 * Unique and unambiguous identifier of the account opening or modification
-	 * instruction at application level.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,7 +210,7 @@ public class AccountManagementStatusAndReason4 {
 	 */
 	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountManagementStatusAndReason4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason4.mmObject();
 			isDerived = false;
 			xmlTag = "AcctApplId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,10 +223,11 @@ public class AccountManagementStatusAndReason4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ExstgAcctId")
 	protected Max35Text existingAccountIdentification;
 	/**
-	 * Account to which the account opening is related.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -259,7 +262,7 @@ public class AccountManagementStatusAndReason4 {
 	 */
 	public static final MMMessageAttribute mmExistingAccountIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountManagementStatusAndReason4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason4.mmObject();
 			isDerived = false;
 			xmlTag = "ExstgAcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -275,10 +278,11 @@ public class AccountManagementStatusAndReason4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountManagementStatusAndReason4.mmStatus, AccountManagementStatusAndReason4.mmAccountApplicationIdentification, AccountManagementStatusAndReason4.mmExistingAccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason4.mmStatus, com.tools20022.repository.msg.AccountManagementStatusAndReason4.mmAccountApplicationIdentification,
+						com.tools20022.repository.msg.AccountManagementStatusAndReason4.mmExistingAccountIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AccountManagementStatusReportV05.mmStatusReport);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementStatusAndReason4";
 				definition = "Status information.";
@@ -289,30 +293,30 @@ public class AccountManagementStatusAndReason4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public Status20Choice getStatus() {
 		return status;
 	}
 
-	public void setStatus(Status20Choice status) {
-		this.status = status;
+	public AccountManagementStatusAndReason4 setStatus(Status20Choice status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "AcctApplId")
-	public Max35Text getAccountApplicationIdentification() {
-		return accountApplicationIdentification;
+	public Optional<Max35Text> getAccountApplicationIdentification() {
+		return accountApplicationIdentification == null ? Optional.empty() : Optional.of(accountApplicationIdentification);
 	}
 
-	public void setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
+	public AccountManagementStatusAndReason4 setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
 		this.accountApplicationIdentification = accountApplicationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ExstgAcctId")
-	public Max35Text getExistingAccountIdentification() {
-		return existingAccountIdentification;
+	public Optional<Max35Text> getExistingAccountIdentification() {
+		return existingAccountIdentification == null ? Optional.empty() : Optional.of(existingAccountIdentification);
 	}
 
-	public void setExistingAccountIdentification(Max35Text existingAccountIdentification) {
+	public AccountManagementStatusAndReason4 setExistingAccountIdentification(Max35Text existingAccountIdentification) {
 		this.existingAccountIdentification = existingAccountIdentification;
+		return this;
 	}
 }

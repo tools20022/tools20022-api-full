@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -71,8 +72,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,15 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAccountReturnCriteria", propOrder = {"accountIdentification", "partyIdentification", "partyType", "accountServicer", "accountType", "openingDate", "closingDate", "endInvestorFlag", "pricingScheme"})
 public class SecuritiesAccountReturnCriteria {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId")
 	protected RequestedIndicator accountIdentification;
 	/**
-	 * Indicates whether the identification of the account is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,7 +124,7 @@ public class SecuritiesAccountReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -133,11 +135,11 @@ public class SecuritiesAccountReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PtyId")
 	protected RequestedIndicator partyIdentification;
 	/**
-	 * Indicates whether the identification of the party owning the account is
-	 * requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -167,7 +169,7 @@ public class SecuritiesAccountReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "PtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,10 +180,11 @@ public class SecuritiesAccountReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PtyTp")
 	protected RequestedIndicator partyType;
 	/**
-	 * Indicates whether the type of the party owning the account is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,7 +214,7 @@ public class SecuritiesAccountReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmPartyType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "PtyTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,10 +225,11 @@ public class SecuritiesAccountReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcr")
 	protected RequestedIndicator accountServicer;
 	/**
-	 * Indicates whether the account servicer is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -253,7 +257,7 @@ public class SecuritiesAccountReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -264,10 +268,11 @@ public class SecuritiesAccountReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctTp")
 	protected RequestedIndicator accountType;
 	/**
-	 * Indicates whether the account type is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -295,7 +300,7 @@ public class SecuritiesAccountReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmAccountType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "AcctTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -306,10 +311,11 @@ public class SecuritiesAccountReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "OpngDt")
 	protected RequestedIndicator openingDate;
 	/**
-	 * Indicates whether the opening date for the account is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -338,7 +344,7 @@ public class SecuritiesAccountReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "OpngDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -349,10 +355,11 @@ public class SecuritiesAccountReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ClsgDt")
 	protected RequestedIndicator closingDate;
 	/**
-	 * Indicates whether the closing date for the account is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -381,7 +388,7 @@ public class SecuritiesAccountReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "ClsgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -392,11 +399,11 @@ public class SecuritiesAccountReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "EndInvstrFlg")
 	protected RequestedIndicator endInvestorFlag;
 	/**
-	 * Specifies information to identify securities accounts where allocation
-	 * instructions are posted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -426,7 +433,7 @@ public class SecuritiesAccountReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmEndInvestorFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "EndInvstrFlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -437,10 +444,11 @@ public class SecuritiesAccountReturnCriteria {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PricgSchme")
 	protected RequestedIndicator pricingScheme;
 	/**
-	 * Defines how the price is applied to the securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -469,7 +477,7 @@ public class SecuritiesAccountReturnCriteria {
 	 */
 	public static final MMMessageAttribute mmPricingScheme = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountReturnCriteria.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmObject();
 			isDerived = false;
 			xmlTag = "PricgSchme";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -484,10 +492,12 @@ public class SecuritiesAccountReturnCriteria {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountReturnCriteria.mmAccountIdentification, SecuritiesAccountReturnCriteria.mmPartyIdentification, SecuritiesAccountReturnCriteria.mmPartyType,
-						SecuritiesAccountReturnCriteria.mmAccountServicer, SecuritiesAccountReturnCriteria.mmAccountType, SecuritiesAccountReturnCriteria.mmOpeningDate, SecuritiesAccountReturnCriteria.mmClosingDate,
-						SecuritiesAccountReturnCriteria.mmEndInvestorFlag, SecuritiesAccountReturnCriteria.mmPricingScheme);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmAccountIdentification, com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmPartyIdentification,
+						com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmPartyType, com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmAccountServicer,
+						com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmAccountType, com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmOpeningDate,
+						com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmClosingDate, com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmEndInvestorFlag,
+						com.tools20022.repository.msg.SecuritiesAccountReturnCriteria.mmPricingScheme);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountReturnCriteria";
 				definition = "Return criteria for information to be returned in the report deriving from a query about securities account reference data. ";
@@ -496,84 +506,84 @@ public class SecuritiesAccountReturnCriteria {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId")
-	public RequestedIndicator getAccountIdentification() {
-		return accountIdentification;
+	public Optional<RequestedIndicator> getAccountIdentification() {
+		return accountIdentification == null ? Optional.empty() : Optional.of(accountIdentification);
 	}
 
-	public void setAccountIdentification(RequestedIndicator accountIdentification) {
+	public SecuritiesAccountReturnCriteria setAccountIdentification(RequestedIndicator accountIdentification) {
 		this.accountIdentification = accountIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PtyId")
-	public RequestedIndicator getPartyIdentification() {
-		return partyIdentification;
+	public Optional<RequestedIndicator> getPartyIdentification() {
+		return partyIdentification == null ? Optional.empty() : Optional.of(partyIdentification);
 	}
 
-	public void setPartyIdentification(RequestedIndicator partyIdentification) {
+	public SecuritiesAccountReturnCriteria setPartyIdentification(RequestedIndicator partyIdentification) {
 		this.partyIdentification = partyIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "PtyTp")
-	public RequestedIndicator getPartyType() {
-		return partyType;
+	public Optional<RequestedIndicator> getPartyType() {
+		return partyType == null ? Optional.empty() : Optional.of(partyType);
 	}
 
-	public void setPartyType(RequestedIndicator partyType) {
+	public SecuritiesAccountReturnCriteria setPartyType(RequestedIndicator partyType) {
 		this.partyType = partyType;
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcr")
-	public RequestedIndicator getAccountServicer() {
-		return accountServicer;
+	public Optional<RequestedIndicator> getAccountServicer() {
+		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public void setAccountServicer(RequestedIndicator accountServicer) {
+	public SecuritiesAccountReturnCriteria setAccountServicer(RequestedIndicator accountServicer) {
 		this.accountServicer = accountServicer;
+		return this;
 	}
 
-	@XmlElement(name = "AcctTp")
-	public RequestedIndicator getAccountType() {
-		return accountType;
+	public Optional<RequestedIndicator> getAccountType() {
+		return accountType == null ? Optional.empty() : Optional.of(accountType);
 	}
 
-	public void setAccountType(RequestedIndicator accountType) {
+	public SecuritiesAccountReturnCriteria setAccountType(RequestedIndicator accountType) {
 		this.accountType = accountType;
+		return this;
 	}
 
-	@XmlElement(name = "OpngDt")
-	public RequestedIndicator getOpeningDate() {
-		return openingDate;
+	public Optional<RequestedIndicator> getOpeningDate() {
+		return openingDate == null ? Optional.empty() : Optional.of(openingDate);
 	}
 
-	public void setOpeningDate(RequestedIndicator openingDate) {
+	public SecuritiesAccountReturnCriteria setOpeningDate(RequestedIndicator openingDate) {
 		this.openingDate = openingDate;
+		return this;
 	}
 
-	@XmlElement(name = "ClsgDt")
-	public RequestedIndicator getClosingDate() {
-		return closingDate;
+	public Optional<RequestedIndicator> getClosingDate() {
+		return closingDate == null ? Optional.empty() : Optional.of(closingDate);
 	}
 
-	public void setClosingDate(RequestedIndicator closingDate) {
+	public SecuritiesAccountReturnCriteria setClosingDate(RequestedIndicator closingDate) {
 		this.closingDate = closingDate;
+		return this;
 	}
 
-	@XmlElement(name = "EndInvstrFlg")
-	public RequestedIndicator getEndInvestorFlag() {
-		return endInvestorFlag;
+	public Optional<RequestedIndicator> getEndInvestorFlag() {
+		return endInvestorFlag == null ? Optional.empty() : Optional.of(endInvestorFlag);
 	}
 
-	public void setEndInvestorFlag(RequestedIndicator endInvestorFlag) {
+	public SecuritiesAccountReturnCriteria setEndInvestorFlag(RequestedIndicator endInvestorFlag) {
 		this.endInvestorFlag = endInvestorFlag;
+		return this;
 	}
 
-	@XmlElement(name = "PricgSchme")
-	public RequestedIndicator getPricingScheme() {
-		return pricingScheme;
+	public Optional<RequestedIndicator> getPricingScheme() {
+		return pricingScheme == null ? Optional.empty() : Optional.of(pricingScheme);
 	}
 
-	public void setPricingScheme(RequestedIndicator pricingScheme) {
+	public SecuritiesAccountReturnCriteria setPricingScheme(RequestedIndicator pricingScheme) {
 		this.pricingScheme = pricingScheme;
+		return this;
 	}
 }

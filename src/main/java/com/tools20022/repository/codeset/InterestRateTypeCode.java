@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.InterestRateTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of interest rate.
@@ -31,21 +36,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.InterestRateTypeCode#Fixed
+ * InterestRateTypeCode.Fixed}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestRateTypeCode#mmFixed
- * InterestRateTypeCode.mmFixed}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestRateTypeCode#Forfeit
+ * InterestRateTypeCode.Forfeit}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestRateTypeCode#mmForfeit
- * InterestRateTypeCode.mmForfeit}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestRateTypeCode#Variable
+ * InterestRateTypeCode.Variable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestRateTypeCode#mmVariable
- * InterestRateTypeCode.mmVariable}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestRateTypeCode#Scheduled
+ * InterestRateTypeCode.Scheduled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestRateTypeCode#mmScheduled
- * InterestRateTypeCode.mmScheduled}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.InterestRateTypeCode#mmUnscheduled
- * InterestRateTypeCode.mmUnscheduled}</li>
+ * {@linkplain com.tools20022.repository.codeset.InterestRateTypeCode#Unscheduled
+ * InterestRateTypeCode.Unscheduled}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -62,8 +66,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -80,7 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of interest rate."</li>
  * </ul>
  */
-public class InterestRateTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InterestRateTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -104,12 +109,12 @@ public class InterestRateTypeCode {
 	 * definition} = "Rate is fixed."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFixed = new MMCode() {
+	public static final InterestRateTypeCode Fixed = new InterestRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
 			definition = "Rate is fixed.";
-			owner_lazy = () -> InterestRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InterestRateTypeCode.mmObject();
 			codeName = "FIXE";
 		}
 	};
@@ -137,12 +142,12 @@ public class InterestRateTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmForfeit = new MMCode() {
+	public static final InterestRateTypeCode Forfeit = new InterestRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Forfeit";
 			definition = "No specific repurchase rate applies to the transaction Repo, only a forfeit.";
-			owner_lazy = () -> InterestRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InterestRateTypeCode.mmObject();
 			codeName = "FORF";
 		}
 	};
@@ -167,12 +172,12 @@ public class InterestRateTypeCode {
 	 * definition} = "Rate is variable."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVariable = new MMCode() {
+	public static final InterestRateTypeCode Variable = new InterestRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Variable";
 			definition = "Rate is variable.";
-			owner_lazy = () -> InterestRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InterestRateTypeCode.mmObject();
 			codeName = "VARI";
 		}
 	};
@@ -197,12 +202,12 @@ public class InterestRateTypeCode {
 	 * definition} = "Rate of the scheduled payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmScheduled = new MMCode() {
+	public static final InterestRateTypeCode Scheduled = new InterestRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Scheduled";
 			definition = "Rate of the scheduled payment.";
-			owner_lazy = () -> InterestRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InterestRateTypeCode.mmObject();
 			codeName = "SCHD";
 		}
 	};
@@ -227,28 +232,62 @@ public class InterestRateTypeCode {
 	 * definition} = "Rate of the unscheduled payment."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnscheduled = new MMCode() {
+	public static final InterestRateTypeCode Unscheduled = new InterestRateTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unscheduled";
 			definition = "Rate of the unscheduled payment.";
-			owner_lazy = () -> InterestRateTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InterestRateTypeCode.mmObject();
 			codeName = "USCD";
 		}
 	};
+	final static private LinkedHashMap<String, InterestRateTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InterestRateTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FIXE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestRateTypeCode";
 				definition = "Specifies the type of interest rate.";
-				code_lazy = () -> Arrays.asList(InterestRateTypeCode.mmFixed, InterestRateTypeCode.mmForfeit, InterestRateTypeCode.mmVariable, InterestRateTypeCode.mmScheduled, InterestRateTypeCode.mmUnscheduled);
 				derivation_lazy = () -> Arrays.asList(RateType7Code.mmObject(), RateType1Code.mmObject(), InterestRateType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InterestRateTypeCode.Fixed, com.tools20022.repository.codeset.InterestRateTypeCode.Forfeit, com.tools20022.repository.codeset.InterestRateTypeCode.Variable,
+						com.tools20022.repository.codeset.InterestRateTypeCode.Scheduled, com.tools20022.repository.codeset.InterestRateTypeCode.Unscheduled);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Fixed.getCodeName().get(), Fixed);
+		codesByName.put(Forfeit.getCodeName().get(), Forfeit);
+		codesByName.put(Variable.getCodeName().get(), Variable);
+		codesByName.put(Scheduled.getCodeName().get(), Scheduled);
+		codesByName.put(Unscheduled.getCodeName().get(), Unscheduled);
+	}
+
+	public static InterestRateTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InterestRateTypeCode[] values() {
+		InterestRateTypeCode[] values = new InterestRateTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InterestRateTypeCode> {
+		@Override
+		public InterestRateTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InterestRateTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

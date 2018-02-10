@@ -25,9 +25,11 @@ import com.tools20022.repository.entity.CommercialTradeSettlement;
 import com.tools20022.repository.entity.Invoice;
 import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,16 +82,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardPaymentInvoice1", propOrder = {"invoiceHeader", "tradeAgreement", "tradeDelivery", "lineItem"})
 public class CardPaymentInvoice1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InvcHdr", required = true)
 	protected InvoiceHeader1 invoiceHeader;
 	/**
-	 * General data relevant to the main body of the invoice such as date of
-	 * issue, currency code and identification number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -125,7 +127,7 @@ public class CardPaymentInvoice1 {
 	 */
 	public static final MMMessageAssociationEnd mmInvoiceHeader = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardPaymentInvoice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentInvoice1.mmObject();
 			isDerived = false;
 			xmlTag = "InvcHdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -138,10 +140,11 @@ public class CardPaymentInvoice1 {
 			type_lazy = () -> com.tools20022.repository.msg.InvoiceHeader1.mmObject();
 		}
 	};
+	@XmlElement(name = "TradAgrmt", required = true)
 	protected TradeAgreement6 tradeAgreement;
 	/**
-	 * Contractual details related to the agreement between parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -182,7 +185,7 @@ public class CardPaymentInvoice1 {
 	public static final MMMessageAssociationEnd mmTradeAgreement = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmGoverningDocument;
-			componentContext_lazy = () -> CardPaymentInvoice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentInvoice1.mmObject();
 			isDerived = false;
 			xmlTag = "TradAgrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -195,11 +198,11 @@ public class CardPaymentInvoice1 {
 			type_lazy = () -> com.tools20022.repository.msg.TradeAgreement6.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDlvry", required = true)
 	protected TradeDelivery1 tradeDelivery;
 	/**
-	 * Supply chain shipping arrangements for delivery of invoiced products
-	 * and/or services.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -241,7 +244,7 @@ public class CardPaymentInvoice1 {
 	public static final MMMessageAssociationEnd mmTradeDelivery = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CommercialTradeSettlement.mmProductDelivery;
-			componentContext_lazy = () -> CardPaymentInvoice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentInvoice1.mmObject();
 			isDerived = false;
 			xmlTag = "TradDlvry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -254,11 +257,11 @@ public class CardPaymentInvoice1 {
 			type_lazy = () -> com.tools20022.repository.msg.TradeDelivery1.mmObject();
 		}
 	};
+	@XmlElement(name = "LineItm")
 	protected List<com.tools20022.repository.msg.LineItem10> lineItem;
 	/**
-	 * Unit of information showing the related provision of products and/or
-	 * services and monetary summations reported as a discrete line items.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -299,7 +302,7 @@ public class CardPaymentInvoice1 {
 	public static final MMMessageAssociationEnd mmLineItem = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmLineItem;
-			componentContext_lazy = () -> CardPaymentInvoice1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentInvoice1.mmObject();
 			isDerived = false;
 			xmlTag = "LineItm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -315,9 +318,10 @@ public class CardPaymentInvoice1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardPaymentInvoice1.mmInvoiceHeader, CardPaymentInvoice1.mmTradeAgreement, CardPaymentInvoice1.mmTradeDelivery, CardPaymentInvoice1.mmLineItem);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentInvoice1.mmInvoiceHeader, com.tools20022.repository.msg.CardPaymentInvoice1.mmTradeAgreement,
+						com.tools20022.repository.msg.CardPaymentInvoice1.mmTradeDelivery, com.tools20022.repository.msg.CardPaymentInvoice1.mmLineItem);
 				trace_lazy = () -> CommercialTrade.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentInvoice1";
 				definition = "Detailed invoice data.";
@@ -327,39 +331,39 @@ public class CardPaymentInvoice1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InvcHdr", required = true)
 	public InvoiceHeader1 getInvoiceHeader() {
 		return invoiceHeader;
 	}
 
-	public void setInvoiceHeader(com.tools20022.repository.msg.InvoiceHeader1 invoiceHeader) {
-		this.invoiceHeader = invoiceHeader;
+	public CardPaymentInvoice1 setInvoiceHeader(com.tools20022.repository.msg.InvoiceHeader1 invoiceHeader) {
+		this.invoiceHeader = Objects.requireNonNull(invoiceHeader);
+		return this;
 	}
 
-	@XmlElement(name = "TradAgrmt", required = true)
 	public TradeAgreement6 getTradeAgreement() {
 		return tradeAgreement;
 	}
 
-	public void setTradeAgreement(com.tools20022.repository.msg.TradeAgreement6 tradeAgreement) {
-		this.tradeAgreement = tradeAgreement;
+	public CardPaymentInvoice1 setTradeAgreement(com.tools20022.repository.msg.TradeAgreement6 tradeAgreement) {
+		this.tradeAgreement = Objects.requireNonNull(tradeAgreement);
+		return this;
 	}
 
-	@XmlElement(name = "TradDlvry", required = true)
 	public TradeDelivery1 getTradeDelivery() {
 		return tradeDelivery;
 	}
 
-	public void setTradeDelivery(com.tools20022.repository.msg.TradeDelivery1 tradeDelivery) {
-		this.tradeDelivery = tradeDelivery;
+	public CardPaymentInvoice1 setTradeDelivery(com.tools20022.repository.msg.TradeDelivery1 tradeDelivery) {
+		this.tradeDelivery = Objects.requireNonNull(tradeDelivery);
+		return this;
 	}
 
-	@XmlElement(name = "LineItm")
 	public List<LineItem10> getLineItem() {
-		return lineItem;
+		return lineItem == null ? lineItem = new ArrayList<>() : lineItem;
 	}
 
-	public void setLineItem(List<com.tools20022.repository.msg.LineItem10> lineItem) {
-		this.lineItem = lineItem;
+	public CardPaymentInvoice1 setLineItem(List<com.tools20022.repository.msg.LineItem10> lineItem) {
+		this.lineItem = Objects.requireNonNull(lineItem);
+		return this;
 	}
 }

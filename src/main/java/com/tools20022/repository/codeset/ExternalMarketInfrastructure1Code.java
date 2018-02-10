@@ -17,11 +17,17 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ExternalMarketInfrastructure1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the market infrastructure identification, as published in an
@@ -35,8 +41,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -55,20 +61,51 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ExternalMarketInfrastructure1Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ExternalMarketInfrastructure1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
+	final static private LinkedHashMap<String, ExternalMarketInfrastructure1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ExternalMarketInfrastructure1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CAD");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExternalMarketInfrastructure1Code";
 				definition = "Specifies the market infrastructure identification, as published in an external market infrastructure code list.\r\nThis is a synonym of the external cash clearing system code list, extended outside the pure cash domains.\r\nExternal code sets can be downloaded from www.iso20022.org.";
+				minLength = 1;
+				maxLength = 3;
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+	}
+
+	public static ExternalMarketInfrastructure1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ExternalMarketInfrastructure1Code[] values() {
+		ExternalMarketInfrastructure1Code[] values = new ExternalMarketInfrastructure1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ExternalMarketInfrastructure1Code> {
+		@Override
+		public ExternalMarketInfrastructure1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ExternalMarketInfrastructure1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

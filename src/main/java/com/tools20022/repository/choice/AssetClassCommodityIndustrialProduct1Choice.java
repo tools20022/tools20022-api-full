@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.IndustrialProductCommodityConstruction1;
 import com.tools20022.repository.msg.IndustrialProductCommodityManufacturing1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AssetClassCommodityIndustrialProduct1Choice", propOrder = {"construction", "manufacturing"})
 public class AssetClassCommodityIndustrialProduct1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cnstrctn", required = true)
 	protected IndustrialProductCommodityConstruction1 construction;
 	/**
-	 * Construction related industrial product commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -110,7 +112,7 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 	public static final MMMessageAssociationEnd mmConstruction = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityIndustrialProduct1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cnstrctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 			type_lazy = () -> IndustrialProductCommodityConstruction1.mmObject();
 		}
 	};
+	@XmlElement(name = "Manfctg", required = true)
 	protected IndustrialProductCommodityManufacturing1 manufacturing;
 	/**
-	 * Manufacturing related industrial product commodity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -159,7 +162,7 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 	public static final MMMessageAssociationEnd mmManufacturing = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Commodity.mmSubProduct;
-			componentContext_lazy = () -> AssetClassCommodityIndustrialProduct1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Manfctg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,9 +178,10 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AssetClassCommodityIndustrialProduct1Choice.mmConstruction, AssetClassCommodityIndustrialProduct1Choice.mmManufacturing);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice.mmConstruction,
+						com.tools20022.repository.choice.AssetClassCommodityIndustrialProduct1Choice.mmManufacturing);
 				trace_lazy = () -> Commodity.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassCommodityIndustrialProduct1Choice";
 				definition = "Defines commodity attributes of a derivative where the type is industrial product.";
@@ -186,21 +190,21 @@ public class AssetClassCommodityIndustrialProduct1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cnstrctn", required = true)
 	public IndustrialProductCommodityConstruction1 getConstruction() {
 		return construction;
 	}
 
-	public void setConstruction(IndustrialProductCommodityConstruction1 construction) {
-		this.construction = construction;
+	public AssetClassCommodityIndustrialProduct1Choice setConstruction(IndustrialProductCommodityConstruction1 construction) {
+		this.construction = Objects.requireNonNull(construction);
+		return this;
 	}
 
-	@XmlElement(name = "Manfctg", required = true)
 	public IndustrialProductCommodityManufacturing1 getManufacturing() {
 		return manufacturing;
 	}
 
-	public void setManufacturing(IndustrialProductCommodityManufacturing1 manufacturing) {
-		this.manufacturing = manufacturing;
+	public AssetClassCommodityIndustrialProduct1Choice setManufacturing(IndustrialProductCommodityManufacturing1 manufacturing) {
+		this.manufacturing = Objects.requireNonNull(manufacturing);
+		return this;
 	}
 }

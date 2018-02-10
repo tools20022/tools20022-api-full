@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.PhysicalTransferTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the financial instrument is to be physically delivered or
@@ -33,17 +38,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PhysicalTransferTypeCode#mmPhysical
- * PhysicalTransferTypeCode.mmPhysical}</li>
+ * {@linkplain com.tools20022.repository.codeset.PhysicalTransferTypeCode#Physical
+ * PhysicalTransferTypeCode.Physical}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PhysicalTransferTypeCode#mmDematerialised
- * PhysicalTransferTypeCode.mmDematerialised}</li>
+ * {@linkplain com.tools20022.repository.codeset.PhysicalTransferTypeCode#Dematerialised
+ * PhysicalTransferTypeCode.Dematerialised}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PhysicalTransferTypeCode#mmCash
- * PhysicalTransferTypeCode.mmCash}</li>
+ * {@linkplain com.tools20022.repository.codeset.PhysicalTransferTypeCode#Cash
+ * PhysicalTransferTypeCode.Cash}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PhysicalTransferTypeCode#mmOptional
- * PhysicalTransferTypeCode.mmOptional}</li>
+ * {@linkplain com.tools20022.repository.codeset.PhysicalTransferTypeCode#Optional
+ * PhysicalTransferTypeCode.Optional}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -56,8 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -76,7 +81,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PhysicalTransferTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PhysicalTransferTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -100,12 +106,12 @@ public class PhysicalTransferTypeCode {
 	 * definition} = "Physical transfer."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPhysical = new MMCode() {
+	public static final PhysicalTransferTypeCode Physical = new PhysicalTransferTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Physical";
 			definition = "Physical transfer.";
-			owner_lazy = () -> PhysicalTransferTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PhysicalTransferTypeCode.mmObject();
 			codeName = "PHYS";
 		}
 	};
@@ -130,12 +136,12 @@ public class PhysicalTransferTypeCode {
 	 * definition} = "Dematerialised transfer."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDematerialised = new MMCode() {
+	public static final PhysicalTransferTypeCode Dematerialised = new PhysicalTransferTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Dematerialised";
 			definition = "Dematerialised transfer.";
-			owner_lazy = () -> PhysicalTransferTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PhysicalTransferTypeCode.mmObject();
 			codeName = "DEMT";
 		}
 	};
@@ -160,12 +166,12 @@ public class PhysicalTransferTypeCode {
 	 * definition} = "Cash transfer."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCash = new MMCode() {
+	public static final PhysicalTransferTypeCode Cash = new PhysicalTransferTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
 			definition = "Cash transfer.";
-			owner_lazy = () -> PhysicalTransferTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PhysicalTransferTypeCode.mmObject();
 			codeName = "CASH";
 		}
 	};
@@ -191,28 +197,61 @@ public class PhysicalTransferTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmOptional = new MMCode() {
+	public static final PhysicalTransferTypeCode Optional = new PhysicalTransferTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Optional";
 			definition = "Determined by a third party or optional for counterparty.";
-			owner_lazy = () -> PhysicalTransferTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PhysicalTransferTypeCode.mmObject();
 			codeName = "OPTN";
 		}
 	};
+	final static private LinkedHashMap<String, PhysicalTransferTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PhysicalTransferTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PHYS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PhysicalTransferTypeCode";
 				definition = "Specifies whether the financial instrument is to be physically delivered or is a dematerilized transfer.";
-				code_lazy = () -> Arrays.asList(PhysicalTransferTypeCode.mmPhysical, PhysicalTransferTypeCode.mmDematerialised, PhysicalTransferTypeCode.mmCash, PhysicalTransferTypeCode.mmOptional);
 				derivation_lazy = () -> Arrays.asList(PhysicalTransferType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PhysicalTransferTypeCode.Physical, com.tools20022.repository.codeset.PhysicalTransferTypeCode.Dematerialised,
+						com.tools20022.repository.codeset.PhysicalTransferTypeCode.Cash, com.tools20022.repository.codeset.PhysicalTransferTypeCode.Optional);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Physical.getCodeName().get(), Physical);
+		codesByName.put(Dematerialised.getCodeName().get(), Dematerialised);
+		codesByName.put(Cash.getCodeName().get(), Cash);
+		codesByName.put(Optional.getCodeName().get(), Optional);
+	}
+
+	public static PhysicalTransferTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PhysicalTransferTypeCode[] values() {
+		PhysicalTransferTypeCode[] values = new PhysicalTransferTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PhysicalTransferTypeCode> {
+		@Override
+		public PhysicalTransferTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PhysicalTransferTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

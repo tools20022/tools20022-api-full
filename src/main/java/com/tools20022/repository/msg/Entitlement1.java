@@ -25,9 +25,8 @@ import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +74,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information about the entitlement."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Entitlement1", propOrder = {"accountOwnerIdentification", "accountIdentification", "securitiesDistributionDetails", "cashDistributionDetails"})
 public class Entitlement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctOwnrId")
 	protected PartyIdentification2Choice accountOwnerIdentification;
 	/**
-	 * Identification of the party that owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +116,7 @@ public class Entitlement1 {
 	public static final MMMessageAttribute mmAccountOwnerIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Entitlement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Entitlement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +127,11 @@ public class Entitlement1 {
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctId", required = true)
 	protected Max35Text accountIdentification;
 	/**
-	 * Idenfitication of the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +163,7 @@ public class Entitlement1 {
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountIdentification.mmNumber;
-			componentContext_lazy = () -> Entitlement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Entitlement1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +174,11 @@ public class Entitlement1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesDstrbtnDtls")
 	protected List<com.tools20022.repository.msg.SecuritiesEntitlement1> securitiesDistributionDetails;
 	/**
-	 * Provides information about the securities distribution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -207,7 +209,7 @@ public class Entitlement1 {
 	public static final MMMessageAssociationEnd mmSecuritiesDistributionDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionSecuritiesEntitlement.mmObject();
-			componentContext_lazy = () -> Entitlement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Entitlement1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesDstrbtnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -218,10 +220,11 @@ public class Entitlement1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesEntitlement1.mmObject();
 		}
 	};
+	@XmlElement(name = "CshDstrbtnDtls")
 	protected List<com.tools20022.repository.msg.CashEntitlement1> cashDistributionDetails;
 	/**
-	 * Provides information about the cash distribution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -252,7 +255,7 @@ public class Entitlement1 {
 	public static final MMMessageAssociationEnd mmCashDistributionDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> CorporateActionCashEntitlement.mmObject();
-			componentContext_lazy = () -> Entitlement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Entitlement1.mmObject();
 			isDerived = false;
 			xmlTag = "CshDstrbtnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,9 +270,10 @@ public class Entitlement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Entitlement1.mmAccountOwnerIdentification, Entitlement1.mmAccountIdentification, Entitlement1.mmSecuritiesDistributionDetails, Entitlement1.mmCashDistributionDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Entitlement1.mmAccountOwnerIdentification, com.tools20022.repository.msg.Entitlement1.mmAccountIdentification,
+						com.tools20022.repository.msg.Entitlement1.mmSecuritiesDistributionDetails, com.tools20022.repository.msg.Entitlement1.mmCashDistributionDetails);
 				trace_lazy = () -> CorporateActionEntitlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Entitlement1";
 				definition = "Provides information about the entitlement.";
@@ -278,39 +282,39 @@ public class Entitlement1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctOwnrId")
-	public PartyIdentification2Choice getAccountOwnerIdentification() {
-		return accountOwnerIdentification;
+	public Optional<PartyIdentification2Choice> getAccountOwnerIdentification() {
+		return accountOwnerIdentification == null ? Optional.empty() : Optional.of(accountOwnerIdentification);
 	}
 
-	public void setAccountOwnerIdentification(PartyIdentification2Choice accountOwnerIdentification) {
+	public Entitlement1 setAccountOwnerIdentification(PartyIdentification2Choice accountOwnerIdentification) {
 		this.accountOwnerIdentification = accountOwnerIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AcctId", required = true)
 	public Max35Text getAccountIdentification() {
 		return accountIdentification;
 	}
 
-	public void setAccountIdentification(Max35Text accountIdentification) {
-		this.accountIdentification = accountIdentification;
+	public Entitlement1 setAccountIdentification(Max35Text accountIdentification) {
+		this.accountIdentification = Objects.requireNonNull(accountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesDstrbtnDtls")
 	public List<SecuritiesEntitlement1> getSecuritiesDistributionDetails() {
-		return securitiesDistributionDetails;
+		return securitiesDistributionDetails == null ? securitiesDistributionDetails = new ArrayList<>() : securitiesDistributionDetails;
 	}
 
-	public void setSecuritiesDistributionDetails(List<com.tools20022.repository.msg.SecuritiesEntitlement1> securitiesDistributionDetails) {
-		this.securitiesDistributionDetails = securitiesDistributionDetails;
+	public Entitlement1 setSecuritiesDistributionDetails(List<com.tools20022.repository.msg.SecuritiesEntitlement1> securitiesDistributionDetails) {
+		this.securitiesDistributionDetails = Objects.requireNonNull(securitiesDistributionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CshDstrbtnDtls")
 	public List<CashEntitlement1> getCashDistributionDetails() {
-		return cashDistributionDetails;
+		return cashDistributionDetails == null ? cashDistributionDetails = new ArrayList<>() : cashDistributionDetails;
 	}
 
-	public void setCashDistributionDetails(List<com.tools20022.repository.msg.CashEntitlement1> cashDistributionDetails) {
-		this.cashDistributionDetails = cashDistributionDetails;
+	public Entitlement1 setCashDistributionDetails(List<com.tools20022.repository.msg.CashEntitlement1> cashDistributionDetails) {
+		this.cashDistributionDetails = Objects.requireNonNull(cashDistributionDetails);
+		return this;
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.UndertakingIssuanceNameCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the issued undertaking name.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingIssuanceNameCode#mmGuarantee
- * UndertakingIssuanceNameCode.mmGuarantee}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingIssuanceNameCode#Guarantee
+ * UndertakingIssuanceNameCode.Guarantee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.UndertakingIssuanceNameCode#mmStandby
- * UndertakingIssuanceNameCode.mmStandby}</li>
+ * {@linkplain com.tools20022.repository.codeset.UndertakingIssuanceNameCode#Standby
+ * UndertakingIssuanceNameCode.Standby}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -68,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the issued undertaking name."</li>
  * </ul>
  */
-public class UndertakingIssuanceNameCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class UndertakingIssuanceNameCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,12 +98,12 @@ public class UndertakingIssuanceNameCode {
 	 * definition} = "Demand guarantee."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGuarantee = new MMCode() {
+	public static final UndertakingIssuanceNameCode Guarantee = new UndertakingIssuanceNameCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Guarantee";
 			definition = "Demand guarantee.";
-			owner_lazy = () -> UndertakingIssuanceNameCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UndertakingIssuanceNameCode.mmObject();
 			codeName = "DGAR";
 		}
 	};
@@ -122,28 +128,58 @@ public class UndertakingIssuanceNameCode {
 	 * definition} = "Standby letter of credit."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStandby = new MMCode() {
+	public static final UndertakingIssuanceNameCode Standby = new UndertakingIssuanceNameCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Standby";
 			definition = "Standby letter of credit.";
-			owner_lazy = () -> UndertakingIssuanceNameCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.UndertakingIssuanceNameCode.mmObject();
 			codeName = "STBY";
 		}
 	};
+	final static private LinkedHashMap<String, UndertakingIssuanceNameCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected UndertakingIssuanceNameCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DGAR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UndertakingIssuanceNameCode";
 				definition = "Specifies the issued undertaking name.";
-				code_lazy = () -> Arrays.asList(UndertakingIssuanceNameCode.mmGuarantee, UndertakingIssuanceNameCode.mmStandby);
 				derivation_lazy = () -> Arrays.asList(UndertakingIssuanceName1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UndertakingIssuanceNameCode.Guarantee, com.tools20022.repository.codeset.UndertakingIssuanceNameCode.Standby);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Guarantee.getCodeName().get(), Guarantee);
+		codesByName.put(Standby.getCodeName().get(), Standby);
+	}
+
+	public static UndertakingIssuanceNameCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static UndertakingIssuanceNameCode[] values() {
+		UndertakingIssuanceNameCode[] values = new UndertakingIssuanceNameCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, UndertakingIssuanceNameCode> {
+		@Override
+		public UndertakingIssuanceNameCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(UndertakingIssuanceNameCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

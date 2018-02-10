@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.IssuerAndSerialNumber1;
 import com.tools20022.repository.msg.KEKIdentifier2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * Recipient4Choice}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Recipient5Choice", propOrder = {"issuerAndSerialNumber", "keyIdentifier"})
 public class Recipient5Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IssrAndSrlNb", required = true)
 	protected IssuerAndSerialNumber1 issuerAndSerialNumber;
 	/**
-	 * Certificate issuer name and serial number (see ITU X.509).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -101,7 +103,7 @@ public class Recipient5Choice {
 	 */
 	public static final MMMessageAssociationEnd mmIssuerAndSerialNumber = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Recipient5Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Recipient5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IssrAndSrlNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,11 +115,11 @@ public class Recipient5Choice {
 			type_lazy = () -> IssuerAndSerialNumber1.mmObject();
 		}
 	};
+	@XmlElement(name = "KeyIdr", required = true)
 	protected KEKIdentifier2 keyIdentifier;
 	/**
-	 * Identifier of a cryptographic asymmetric key, previously exchanged
-	 * between initiator and recipient.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -150,7 +152,7 @@ public class Recipient5Choice {
 	 */
 	public static final MMMessageAssociationEnd mmKeyIdentifier = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Recipient5Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Recipient5Choice.mmObject();
 			isDerived = false;
 			xmlTag = "KeyIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,8 +169,8 @@ public class Recipient5Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Recipient5Choice.mmIssuerAndSerialNumber, Recipient5Choice.mmKeyIdentifier);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Recipient5Choice.mmIssuerAndSerialNumber, com.tools20022.repository.choice.Recipient5Choice.mmKeyIdentifier);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Recipient5Choice";
 				definition = "Identification of a cryptographic asymmetric key.";
@@ -178,21 +180,21 @@ public class Recipient5Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IssrAndSrlNb", required = true)
 	public IssuerAndSerialNumber1 getIssuerAndSerialNumber() {
 		return issuerAndSerialNumber;
 	}
 
-	public void setIssuerAndSerialNumber(IssuerAndSerialNumber1 issuerAndSerialNumber) {
-		this.issuerAndSerialNumber = issuerAndSerialNumber;
+	public Recipient5Choice setIssuerAndSerialNumber(IssuerAndSerialNumber1 issuerAndSerialNumber) {
+		this.issuerAndSerialNumber = Objects.requireNonNull(issuerAndSerialNumber);
+		return this;
 	}
 
-	@XmlElement(name = "KeyIdr", required = true)
 	public KEKIdentifier2 getKeyIdentifier() {
 		return keyIdentifier;
 	}
 
-	public void setKeyIdentifier(KEKIdentifier2 keyIdentifier) {
-		this.keyIdentifier = keyIdentifier;
+	public Recipient5Choice setKeyIdentifier(KEKIdentifier2 keyIdentifier) {
+		this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
+		return this;
 	}
 }

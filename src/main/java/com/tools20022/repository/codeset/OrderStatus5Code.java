@@ -20,48 +20,50 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.OrderStatusCode;
+import com.tools20022.repository.codeset.OrderStatus5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the current status of the order.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus5Code#Received
+ * OrderStatus5Code.Received}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus5Code#Accepted
+ * OrderStatus5Code.Accepted}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus5Code#AlreadyExecuted
+ * OrderStatus5Code.AlreadyExecuted}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus5Code#SentToNextParty
+ * OrderStatus5Code.SentToNextParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus5Code#CommunicationProblemNextParty
+ * OrderStatus5Code.CommunicationProblemNextParty}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus5Code#Settled
+ * OrderStatus5Code.Settled}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.OrderStatus5Code#CashSettledOrderNotExecuted
+ * OrderStatus5Code.CashSettledOrderNotExecuted}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.OrderStatusCode
  * OrderStatusCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus5Code#mmReceived
- * OrderStatus5Code.mmReceived}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus5Code#mmAccepted
- * OrderStatus5Code.mmAccepted}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus5Code#mmAlreadyExecuted
- * OrderStatus5Code.mmAlreadyExecuted}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus5Code#mmSentToNextParty
- * OrderStatus5Code.mmSentToNextParty}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus5Code#mmCommunicationProblemNextParty
- * OrderStatus5Code.mmCommunicationProblemNextParty}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.OrderStatus5Code#mmSettled
- * OrderStatus5Code.mmSettled}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.OrderStatus5Code#mmCashSettledOrderNotExecuted
- * OrderStatus5Code.mmCashSettledOrderNotExecuted}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -78,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the current status of the order."</li>
  * </ul>
  */
-public class OrderStatus5Code extends OrderStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class OrderStatus5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,11 +100,12 @@ public class OrderStatus5Code extends OrderStatusCode {
 	 * name} = "Received"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceived = new MMCode() {
+	public static final OrderStatus5Code Received = new OrderStatus5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
-			owner_lazy = () -> OrderStatus5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus5Code.mmObject();
+			codeName = OrderStatusCode.Received.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -120,11 +124,12 @@ public class OrderStatus5Code extends OrderStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final OrderStatus5Code Accepted = new OrderStatus5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> OrderStatus5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus5Code.mmObject();
+			codeName = OrderStatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -143,11 +148,12 @@ public class OrderStatus5Code extends OrderStatusCode {
 	 * name} = "AlreadyExecuted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAlreadyExecuted = new MMCode() {
+	public static final OrderStatus5Code AlreadyExecuted = new OrderStatus5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlreadyExecuted";
-			owner_lazy = () -> OrderStatus5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus5Code.mmObject();
+			codeName = OrderStatusCode.AlreadyExecuted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -166,11 +172,12 @@ public class OrderStatus5Code extends OrderStatusCode {
 	 * name} = "SentToNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSentToNextParty = new MMCode() {
+	public static final OrderStatus5Code SentToNextParty = new OrderStatus5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
-			owner_lazy = () -> OrderStatus5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus5Code.mmObject();
+			codeName = OrderStatusCode.SentToNextParty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -189,11 +196,12 @@ public class OrderStatus5Code extends OrderStatusCode {
 	 * name} = "CommunicationProblemNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommunicationProblemNextParty = new MMCode() {
+	public static final OrderStatus5Code CommunicationProblemNextParty = new OrderStatus5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunicationProblemNextParty";
-			owner_lazy = () -> OrderStatus5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus5Code.mmObject();
+			codeName = OrderStatusCode.CommunicationProblemNextParty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -212,11 +220,12 @@ public class OrderStatus5Code extends OrderStatusCode {
 	 * name} = "Settled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettled = new MMCode() {
+	public static final OrderStatus5Code Settled = new OrderStatus5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
-			owner_lazy = () -> OrderStatus5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus5Code.mmObject();
+			codeName = OrderStatusCode.Settled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -235,27 +244,64 @@ public class OrderStatus5Code extends OrderStatusCode {
 	 * name} = "CashSettledOrderNotExecuted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashSettledOrderNotExecuted = new MMCode() {
+	public static final OrderStatus5Code CashSettledOrderNotExecuted = new OrderStatus5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettledOrderNotExecuted";
-			owner_lazy = () -> OrderStatus5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatus5Code.mmObject();
+			codeName = OrderStatusCode.CashSettledOrderNotExecuted.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, OrderStatus5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected OrderStatus5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("RECE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderStatus5Code";
 				definition = "Specifies the current status of the order.";
-				code_lazy = () -> Arrays.asList(OrderStatus5Code.mmReceived, OrderStatus5Code.mmAccepted, OrderStatus5Code.mmAlreadyExecuted, OrderStatus5Code.mmSentToNextParty, OrderStatus5Code.mmCommunicationProblemNextParty,
-						OrderStatus5Code.mmSettled, OrderStatus5Code.mmCashSettledOrderNotExecuted);
 				trace_lazy = () -> OrderStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderStatus5Code.Received, com.tools20022.repository.codeset.OrderStatus5Code.Accepted, com.tools20022.repository.codeset.OrderStatus5Code.AlreadyExecuted,
+						com.tools20022.repository.codeset.OrderStatus5Code.SentToNextParty, com.tools20022.repository.codeset.OrderStatus5Code.CommunicationProblemNextParty, com.tools20022.repository.codeset.OrderStatus5Code.Settled,
+						com.tools20022.repository.codeset.OrderStatus5Code.CashSettledOrderNotExecuted);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Received.getCodeName().get(), Received);
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(AlreadyExecuted.getCodeName().get(), AlreadyExecuted);
+		codesByName.put(SentToNextParty.getCodeName().get(), SentToNextParty);
+		codesByName.put(CommunicationProblemNextParty.getCodeName().get(), CommunicationProblemNextParty);
+		codesByName.put(Settled.getCodeName().get(), Settled);
+		codesByName.put(CashSettledOrderNotExecuted.getCodeName().get(), CashSettledOrderNotExecuted);
+	}
+
+	public static OrderStatus5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static OrderStatus5Code[] values() {
+		OrderStatus5Code[] values = new OrderStatus5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, OrderStatus5Code> {
+		@Override
+		public OrderStatus5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(OrderStatus5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

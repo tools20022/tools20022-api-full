@@ -28,9 +28,8 @@ import com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousve
 import com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20162017;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -57,29 +56,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
- * CashManagementLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousversion
- * ExceptionsandInvestigationsISOPreviousversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion
- * ExceptionsandInvestigationsISOLatestversion}</li>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20162017
- * ExceptionsandInvestigationsMaintenance20162017}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CaseStsRpt"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -101,6 +77,29 @@ import javax.xml.bind.annotation.*;
  * CaseStatusReportV04.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOPreviousversion
+ * ExceptionsandInvestigationsISOPreviousversion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsISOLatestversion
+ * ExceptionsandInvestigationsISOLatestversion}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.ExceptionsandInvestigationsMaintenance20162017
+ * ExceptionsandInvestigationsMaintenance20162017}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CaseStsRpt"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.CashManagementLatestVersion
+ * CashManagementLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.039.001.04}</li>
@@ -120,15 +119,16 @@ import javax.xml.bind.annotation.*;
  * CaseStatusReportV03}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "CaseStatusReportV04", propOrder = {"header", "case", "status", "newAssignment", "supplementaryData"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "CaseStatusReportV04", propOrder = {"header", "case_", "status", "newAssignment", "supplementaryData"})
 public class CaseStatusReportV04 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected ReportHeader4 header;
 	/**
-	 * Specifies generic information about an investigation report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,10 +168,11 @@ public class CaseStatusReportV04 {
 			}
 		}
 	};
+	@XmlElement(name = "Case", required = true)
 	protected Case3 case_;
 	/**
-	 * Identifies the investigation case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -209,10 +210,11 @@ public class CaseStatusReportV04 {
 			}
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected CaseStatus2 status;
 	/**
-	 * Defines the status of the case.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,12 +253,11 @@ public class CaseStatusReportV04 {
 			}
 		}
 	};
+	@XmlElement(name = "NewAssgnmt")
 	protected CaseAssignment3 newAssignment;
 	/**
-	 * Identifies the change of an assignment for an investigation case from an
-	 * assigner to a new assignee. Usage: The Assigner must be the sender of
-	 * this confirmation and the Assignee must be the receiver.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,11 +298,11 @@ public class CaseStatusReportV04 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -375,52 +376,52 @@ public class CaseStatusReportV04 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public ReportHeader4 getHeader() {
 		return header;
 	}
 
-	public void setHeader(ReportHeader4 header) {
-		this.header = header;
+	public CaseStatusReportV04 setHeader(ReportHeader4 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "Case", required = true)
 	public Case3 getCase() {
 		return case_;
 	}
 
-	public void setCase(Case3 case_) {
-		this.case_ = case_;
+	public CaseStatusReportV04 setCase(Case3 case_) {
+		this.case_ = Objects.requireNonNull(case_);
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public CaseStatus2 getStatus() {
 		return status;
 	}
 
-	public void setStatus(CaseStatus2 status) {
-		this.status = status;
+	public CaseStatusReportV04 setStatus(CaseStatus2 status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "NewAssgnmt")
-	public CaseAssignment3 getNewAssignment() {
-		return newAssignment;
+	public Optional<CaseAssignment3> getNewAssignment() {
+		return newAssignment == null ? Optional.empty() : Optional.of(newAssignment);
 	}
 
-	public void setNewAssignment(CaseAssignment3 newAssignment) {
+	public CaseStatusReportV04 setNewAssignment(CaseAssignment3 newAssignment) {
 		this.newAssignment = newAssignment;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CaseStatusReportV04 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.039.04.04")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:camt.039.001.04")
 	static public class Document {
 		@XmlElement(name = "CaseStsRpt", required = true)
 		public CaseStatusReportV04 messageBody;

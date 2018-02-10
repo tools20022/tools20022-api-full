@@ -20,40 +20,44 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DeliveryPlaceCode;
+import com.tools20022.repository.codeset.DeliveryPlace1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies where the attendance card should be delivered.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DeliveryPlaceCode
- * DeliveryPlaceCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code#mmEmployer
- * DeliveryPlace1Code.mmEmployer}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code#Employer
+ * DeliveryPlace1Code.Employer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code#mmIndividual
- * DeliveryPlace1Code.mmIndividual}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code#Individual
+ * DeliveryPlace1Code.Individual}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code#mmEntranceOfMeeting
- * DeliveryPlace1Code.mmEntranceOfMeeting}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code#EntranceOfMeeting
+ * DeliveryPlace1Code.EntranceOfMeeting}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code#mmOtherAddress
- * DeliveryPlace1Code.mmOtherAddress}</li>
+ * {@linkplain com.tools20022.repository.codeset.DeliveryPlace1Code#OtherAddress
+ * DeliveryPlace1Code.OtherAddress}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DeliveryPlaceCode
+ * DeliveryPlaceCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies where the attendance card should be delivered."</li>
  * </ul>
  */
-public class DeliveryPlace1Code extends DeliveryPlaceCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DeliveryPlace1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,11 +94,12 @@ public class DeliveryPlace1Code extends DeliveryPlaceCode {
 	 * name} = "Employer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEmployer = new MMCode() {
+	public static final DeliveryPlace1Code Employer = new DeliveryPlace1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Employer";
-			owner_lazy = () -> DeliveryPlace1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DeliveryPlace1Code.mmObject();
+			codeName = DeliveryPlaceCode.Employer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -112,11 +118,12 @@ public class DeliveryPlace1Code extends DeliveryPlaceCode {
 	 * name} = "Individual"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIndividual = new MMCode() {
+	public static final DeliveryPlace1Code Individual = new DeliveryPlace1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Individual";
-			owner_lazy = () -> DeliveryPlace1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DeliveryPlace1Code.mmObject();
+			codeName = DeliveryPlaceCode.Individual.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -135,11 +142,12 @@ public class DeliveryPlace1Code extends DeliveryPlaceCode {
 	 * name} = "EntranceOfMeeting"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEntranceOfMeeting = new MMCode() {
+	public static final DeliveryPlace1Code EntranceOfMeeting = new DeliveryPlace1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntranceOfMeeting";
-			owner_lazy = () -> DeliveryPlace1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DeliveryPlace1Code.mmObject();
+			codeName = DeliveryPlaceCode.EntranceOfMeeting.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -158,26 +166,60 @@ public class DeliveryPlace1Code extends DeliveryPlaceCode {
 	 * name} = "OtherAddress"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOtherAddress = new MMCode() {
+	public static final DeliveryPlace1Code OtherAddress = new DeliveryPlace1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAddress";
-			owner_lazy = () -> DeliveryPlace1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DeliveryPlace1Code.mmObject();
+			codeName = DeliveryPlaceCode.OtherAddress.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DeliveryPlace1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DeliveryPlace1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("EMPL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliveryPlace1Code";
 				definition = "Specifies where the attendance card should be delivered.";
-				code_lazy = () -> Arrays.asList(DeliveryPlace1Code.mmEmployer, DeliveryPlace1Code.mmIndividual, DeliveryPlace1Code.mmEntranceOfMeeting, DeliveryPlace1Code.mmOtherAddress);
 				trace_lazy = () -> DeliveryPlaceCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryPlace1Code.Employer, com.tools20022.repository.codeset.DeliveryPlace1Code.Individual,
+						com.tools20022.repository.codeset.DeliveryPlace1Code.EntranceOfMeeting, com.tools20022.repository.codeset.DeliveryPlace1Code.OtherAddress);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Employer.getCodeName().get(), Employer);
+		codesByName.put(Individual.getCodeName().get(), Individual);
+		codesByName.put(EntranceOfMeeting.getCodeName().get(), EntranceOfMeeting);
+		codesByName.put(OtherAddress.getCodeName().get(), OtherAddress);
+	}
+
+	public static DeliveryPlace1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DeliveryPlace1Code[] values() {
+		DeliveryPlace1Code[] values = new DeliveryPlace1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DeliveryPlace1Code> {
+		@Override
+		public DeliveryPlace1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DeliveryPlace1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

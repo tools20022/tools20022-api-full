@@ -20,35 +20,39 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TypeOfPriceCode;
+import com.tools20022.repository.codeset.TypeOfPrice15Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of price.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice15Code#Bid
+ * TypeOfPrice15Code.Bid}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice15Code#Offer
+ * TypeOfPrice15Code.Offer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TypeOfPrice15Code#NetAssetValue
+ * TypeOfPrice15Code.NetAssetValue}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.TypeOfPriceCode
  * TypeOfPriceCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice15Code#mmBid
- * TypeOfPrice15Code.mmBid}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.TypeOfPrice15Code#mmOffer
- * TypeOfPrice15Code.mmOffer}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TypeOfPrice15Code#mmNetAssetValue
- * TypeOfPrice15Code.mmNetAssetValue}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of price."</li>
  * </ul>
  */
-public class TypeOfPrice15Code extends TypeOfPriceCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TypeOfPrice15Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +89,12 @@ public class TypeOfPrice15Code extends TypeOfPriceCode {
 	 * name} = "Bid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBid = new MMCode() {
+	public static final TypeOfPrice15Code Bid = new TypeOfPrice15Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bid";
-			owner_lazy = () -> TypeOfPrice15Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfPrice15Code.mmObject();
+			codeName = TypeOfPriceCode.Bid.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,11 +113,12 @@ public class TypeOfPrice15Code extends TypeOfPriceCode {
 	 * name} = "Offer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOffer = new MMCode() {
+	public static final TypeOfPrice15Code Offer = new TypeOfPrice15Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Offer";
-			owner_lazy = () -> TypeOfPrice15Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfPrice15Code.mmObject();
+			codeName = TypeOfPriceCode.Offer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -130,26 +137,58 @@ public class TypeOfPrice15Code extends TypeOfPriceCode {
 	 * name} = "NetAssetValue"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNetAssetValue = new MMCode() {
+	public static final TypeOfPrice15Code NetAssetValue = new TypeOfPrice15Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAssetValue";
-			owner_lazy = () -> TypeOfPrice15Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TypeOfPrice15Code.mmObject();
+			codeName = TypeOfPriceCode.NetAssetValue.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TypeOfPrice15Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TypeOfPrice15Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BIDE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TypeOfPrice15Code";
 				definition = "Specifies the type of price.";
-				code_lazy = () -> Arrays.asList(TypeOfPrice15Code.mmBid, TypeOfPrice15Code.mmOffer, TypeOfPrice15Code.mmNetAssetValue);
 				trace_lazy = () -> TypeOfPriceCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TypeOfPrice15Code.Bid, com.tools20022.repository.codeset.TypeOfPrice15Code.Offer, com.tools20022.repository.codeset.TypeOfPrice15Code.NetAssetValue);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Bid.getCodeName().get(), Bid);
+		codesByName.put(Offer.getCodeName().get(), Offer);
+		codesByName.put(NetAssetValue.getCodeName().get(), NetAssetValue);
+	}
+
+	public static TypeOfPrice15Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TypeOfPrice15Code[] values() {
+		TypeOfPrice15Code[] values = new TypeOfPrice15Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TypeOfPrice15Code> {
+		@Override
+		public TypeOfPrice15Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TypeOfPrice15Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

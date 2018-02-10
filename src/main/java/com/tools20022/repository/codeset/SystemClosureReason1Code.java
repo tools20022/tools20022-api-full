@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SystemClosureReasonCode;
+import com.tools20022.repository.codeset.SystemClosureReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for system inactivity.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SystemClosureReasonCode
- * SystemClosureReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#mmBankingHoliday
- * SystemClosureReason1Code.mmBankingHoliday}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#BankingHoliday
+ * SystemClosureReason1Code.BankingHoliday}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#mmSystemMaintenance
- * SystemClosureReason1Code.mmSystemMaintenance}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#SystemMaintenance
+ * SystemClosureReason1Code.SystemMaintenance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#mmNoOperation
- * SystemClosureReason1Code.mmNoOperation}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#NoOperation
+ * SystemClosureReason1Code.NoOperation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#mmRecovery
- * SystemClosureReason1Code.mmRecovery}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#Recovery
+ * SystemClosureReason1Code.Recovery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#mmAllowedDowntimeWindow
- * SystemClosureReason1Code.mmAllowedDowntimeWindow}</li>
+ * {@linkplain com.tools20022.repository.codeset.SystemClosureReason1Code#AllowedDowntimeWindow
+ * SystemClosureReason1Code.AllowedDowntimeWindow}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SystemClosureReasonCode
+ * SystemClosureReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason for system inactivity."</li>
  * </ul>
  */
-public class SystemClosureReason1Code extends SystemClosureReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SystemClosureReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class SystemClosureReason1Code extends SystemClosureReasonCode {
 	 * name} = "BankingHoliday"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBankingHoliday = new MMCode() {
+	public static final SystemClosureReason1Code BankingHoliday = new SystemClosureReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankingHoliday";
-			owner_lazy = () -> SystemClosureReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SystemClosureReason1Code.mmObject();
+			codeName = SystemClosureReasonCode.BankingHoliday.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class SystemClosureReason1Code extends SystemClosureReasonCode {
 	 * name} = "SystemMaintenance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSystemMaintenance = new MMCode() {
+	public static final SystemClosureReason1Code SystemMaintenance = new SystemClosureReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemMaintenance";
-			owner_lazy = () -> SystemClosureReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SystemClosureReason1Code.mmObject();
+			codeName = SystemClosureReasonCode.SystemMaintenance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class SystemClosureReason1Code extends SystemClosureReasonCode {
 	 * name} = "NoOperation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoOperation = new MMCode() {
+	public static final SystemClosureReason1Code NoOperation = new SystemClosureReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoOperation";
-			owner_lazy = () -> SystemClosureReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SystemClosureReason1Code.mmObject();
+			codeName = SystemClosureReasonCode.NoOperation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +169,12 @@ public class SystemClosureReason1Code extends SystemClosureReasonCode {
 	 * name} = "Recovery"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRecovery = new MMCode() {
+	public static final SystemClosureReason1Code Recovery = new SystemClosureReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recovery";
-			owner_lazy = () -> SystemClosureReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SystemClosureReason1Code.mmObject();
+			codeName = SystemClosureReasonCode.Recovery.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,27 +193,62 @@ public class SystemClosureReason1Code extends SystemClosureReasonCode {
 	 * name} = "AllowedDowntimeWindow"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAllowedDowntimeWindow = new MMCode() {
+	public static final SystemClosureReason1Code AllowedDowntimeWindow = new SystemClosureReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllowedDowntimeWindow";
-			owner_lazy = () -> SystemClosureReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SystemClosureReason1Code.mmObject();
+			codeName = SystemClosureReasonCode.AllowedDowntimeWindow.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SystemClosureReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SystemClosureReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("BHOL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemClosureReason1Code";
 				definition = "Specifies the reason for system inactivity.";
-				code_lazy = () -> Arrays.asList(SystemClosureReason1Code.mmBankingHoliday, SystemClosureReason1Code.mmSystemMaintenance, SystemClosureReason1Code.mmNoOperation, SystemClosureReason1Code.mmRecovery,
-						SystemClosureReason1Code.mmAllowedDowntimeWindow);
 				trace_lazy = () -> SystemClosureReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SystemClosureReason1Code.BankingHoliday, com.tools20022.repository.codeset.SystemClosureReason1Code.SystemMaintenance,
+						com.tools20022.repository.codeset.SystemClosureReason1Code.NoOperation, com.tools20022.repository.codeset.SystemClosureReason1Code.Recovery,
+						com.tools20022.repository.codeset.SystemClosureReason1Code.AllowedDowntimeWindow);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(BankingHoliday.getCodeName().get(), BankingHoliday);
+		codesByName.put(SystemMaintenance.getCodeName().get(), SystemMaintenance);
+		codesByName.put(NoOperation.getCodeName().get(), NoOperation);
+		codesByName.put(Recovery.getCodeName().get(), Recovery);
+		codesByName.put(AllowedDowntimeWindow.getCodeName().get(), AllowedDowntimeWindow);
+	}
+
+	public static SystemClosureReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SystemClosureReason1Code[] values() {
+		SystemClosureReason1Code[] values = new SystemClosureReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SystemClosureReason1Code> {
+		@Override
+		public SystemClosureReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SystemClosureReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

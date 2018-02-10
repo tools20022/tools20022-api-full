@@ -25,9 +25,11 @@ import com.tools20022.repository.msg.GlobalDistributionStatus1;
 import com.tools20022.repository.msg.IndividualMovementStatus1;
 import com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -50,30 +52,14 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
- * IssuersAgentsCommunicationISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AgtCAGblDstrbtnStsAdvc"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01#mmGlobalMovementStatusOrIndividualMovementStatusRule
+ * {@linkplain com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01#GlobalMovementStatusOrIndividualMovementStatusRule
  * AgentCAGlobalDistributionStatusAdviceV01.
- * mmGlobalMovementStatusOrIndividualMovementStatusRule}</li>
+ * GlobalMovementStatusOrIndividualMovementStatusRule}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -97,6 +83,22 @@ import javax.xml.bind.annotation.*;
  * AgentCAGlobalDistributionStatusAdviceV01.mmIndividualMovementStatus}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.IssuersAgentsCommunicationISOLatestversion
+ * IssuersAgentsCommunicationISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AgtCAGblDstrbtnStsAdvc"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
+ * SecuritiesEventsLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.018.001.01}</li>
@@ -112,7 +114,7 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AgentCAGlobalDistributionStatusAdviceV01", propOrder = {"identification", "agentCAGlobalDistributionAuthorisationRequestIdentification", "corporateActionGeneralInformation", "globalMovementStatus",
 		"individualMovementStatus"})
 public class AgentCAGlobalDistributionStatusAdviceV01 {
@@ -152,7 +154,7 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmGlobalMovementStatusOrIndividualMovementStatusRule = new MMXor() {
+	public static final MMXor GlobalMovementStatusOrIndividualMovementStatusRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalMovementStatusOrIndividualMovementStatusRule";
@@ -162,11 +164,11 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 					com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmIndividualMovementStatus);
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected DocumentIdentification8 identification;
 	/**
-	 * Identification assigned by the Sender to unambiguously identify the
-	 * status advice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -208,11 +210,11 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "AgtCAGblDstrbtnAuthstnReqId", required = true)
 	protected DocumentIdentification8 agentCAGlobalDistributionAuthorisationRequestIdentification;
 	/**
-	 * Identification of the linked Agent CA Global Distribution Authorisation
-	 * Request for which a status is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -254,10 +256,11 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	protected CorporateActionInformation1 corporateActionGeneralInformation;
 	/**
-	 * General information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -297,10 +300,11 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "GblMvmntSts", required = true)
 	protected GlobalDistributionStatus1 globalMovementStatus;
 	/**
-	 * Provides information about the status of the global movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -341,10 +345,11 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 			}
 		}
 	};
+	@XmlElement(name = "IndvMvmntSts", required = true)
 	protected List<IndividualMovementStatus1> individualMovementStatus;
 	/**
-	 * Provides information about the status of an individual movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -392,7 +397,7 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 				name = "AgentCAGlobalDistributionStatusAdviceV01";
 				definition = "Scope\r\nThis message is sent by an issuer (or its agent) to the CSD to authorise/prohibit the CSD to process the entitlement movements.\r\nUsage\r\nThis message is used to authorise/prohibit the CSD to process the movements requested in the Global Distribution Authorisation Request message.\r\nOnce the amendment request has been accepted by the issuer (or its agent), the CSD will process any resource movement and send an Agent Corporate Action Election Advice message with the function, option change, to confirm that the amendment has been booked at the CSD.\r\nThe issuer (or its agent) can provide the status in 2 different ways:\r\n- Provide a global status, in which case the building block Global Movement Status must be present; or\r\n- Provide a status by individual movements, in which case, the building block Individual Movement Status must be present. An individual movement cannot be rejected.";
 				messageSet_lazy = () -> Arrays.asList(IssuersAgentsCommunicationISOLatestversion.mmObject());
-				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.mmGlobalMovementStatusOrIndividualMovementStatusRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.AgentCAGlobalDistributionStatusAdviceV01.GlobalMovementStatusOrIndividualMovementStatusRule);
 				rootElement = "Document";
 				xmlTag = "AgtCAGblDstrbtnStsAdvc";
 				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
@@ -418,52 +423,52 @@ public class AgentCAGlobalDistributionStatusAdviceV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public DocumentIdentification8 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(DocumentIdentification8 identification) {
-		this.identification = identification;
+	public AgentCAGlobalDistributionStatusAdviceV01 setIdentification(DocumentIdentification8 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "AgtCAGblDstrbtnAuthstnReqId", required = true)
 	public DocumentIdentification8 getAgentCAGlobalDistributionAuthorisationRequestIdentification() {
 		return agentCAGlobalDistributionAuthorisationRequestIdentification;
 	}
 
-	public void setAgentCAGlobalDistributionAuthorisationRequestIdentification(DocumentIdentification8 agentCAGlobalDistributionAuthorisationRequestIdentification) {
-		this.agentCAGlobalDistributionAuthorisationRequestIdentification = agentCAGlobalDistributionAuthorisationRequestIdentification;
+	public AgentCAGlobalDistributionStatusAdviceV01 setAgentCAGlobalDistributionAuthorisationRequestIdentification(DocumentIdentification8 agentCAGlobalDistributionAuthorisationRequestIdentification) {
+		this.agentCAGlobalDistributionAuthorisationRequestIdentification = Objects.requireNonNull(agentCAGlobalDistributionAuthorisationRequestIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionInformation1 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
 
-	public void setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
-		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	public AgentCAGlobalDistributionStatusAdviceV01 setCorporateActionGeneralInformation(CorporateActionInformation1 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = Objects.requireNonNull(corporateActionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "GblMvmntSts", required = true)
 	public GlobalDistributionStatus1 getGlobalMovementStatus() {
 		return globalMovementStatus;
 	}
 
-	public void setGlobalMovementStatus(GlobalDistributionStatus1 globalMovementStatus) {
-		this.globalMovementStatus = globalMovementStatus;
+	public AgentCAGlobalDistributionStatusAdviceV01 setGlobalMovementStatus(GlobalDistributionStatus1 globalMovementStatus) {
+		this.globalMovementStatus = Objects.requireNonNull(globalMovementStatus);
+		return this;
 	}
 
-	@XmlElement(name = "IndvMvmntSts", required = true)
 	public List<IndividualMovementStatus1> getIndividualMovementStatus() {
-		return individualMovementStatus;
+		return individualMovementStatus == null ? individualMovementStatus = new ArrayList<>() : individualMovementStatus;
 	}
 
-	public void setIndividualMovementStatus(List<IndividualMovementStatus1> individualMovementStatus) {
-		this.individualMovementStatus = individualMovementStatus;
+	public AgentCAGlobalDistributionStatusAdviceV01 setIndividualMovementStatus(List<IndividualMovementStatus1> individualMovementStatus) {
+		this.individualMovementStatus = Objects.requireNonNull(individualMovementStatus);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.018.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.018.001.01")
 	static public class Document {
 		@XmlElement(name = "AgtCAGblDstrbtnStsAdvc", required = true)
 		public AgentCAGlobalDistributionStatusAdviceV01 messageBody;

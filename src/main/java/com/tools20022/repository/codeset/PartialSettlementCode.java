@@ -17,12 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.PartialSettlementCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Information about partial settlement.
@@ -32,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialSettlementCode#mmPartialSettlement
- * PartialSettlementCode.mmPartialSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialSettlementCode#PartialSettlement
+ * PartialSettlementCode.PartialSettlement}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialSettlementCode#mmPreviouslyPartialConfirmed
- * PartialSettlementCode.mmPreviouslyPartialConfirmed}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialSettlementCode#PreviouslyPartialConfirmed
+ * PartialSettlementCode.PreviouslyPartialConfirmed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +55,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = ISO15022Synonym: :22F::PARS</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Information about partial settlement."</li>
  * </ul>
  */
-public class PartialSettlementCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PartialSettlementCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,6 +92,9 @@ public class PartialSettlementCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PAIN"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: 22F::PARS//PAIN</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -94,12 +107,13 @@ public class PartialSettlementCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialSettlement = new MMCode() {
+	public static final PartialSettlementCode PartialSettlement = new PartialSettlementCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "22F::PARS//PAIN"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartialSettlement";
 			definition = "Confirmation is for partial settlement. Part of the transaction remains unsettled.";
-			owner_lazy = () -> PartialSettlementCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartialSettlementCode.mmObject();
 			codeName = "PAIN";
 		}
 	};
@@ -115,6 +129,9 @@ public class PartialSettlementCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "PARC"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::PARS//PARC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -127,28 +144,60 @@ public class PartialSettlementCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreviouslyPartialConfirmed = new MMCode() {
+	public static final PartialSettlementCode PreviouslyPartialConfirmed = new PartialSettlementCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PARS//PARC"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreviouslyPartialConfirmed";
 			definition = "Confirmation is for the remaining part of an instruction that was previously partially confirmed.";
-			owner_lazy = () -> PartialSettlementCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartialSettlementCode.mmObject();
 			codeName = "PARC";
 		}
 	};
+	final static private LinkedHashMap<String, PartialSettlementCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PartialSettlementCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PARS"));
 				example = Arrays.asList("PAIN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartialSettlementCode";
 				definition = "Information about partial settlement.";
-				code_lazy = () -> Arrays.asList(PartialSettlementCode.mmPartialSettlement, PartialSettlementCode.mmPreviouslyPartialConfirmed);
 				derivation_lazy = () -> Arrays.asList(PartialSettlement1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartialSettlementCode.PartialSettlement, com.tools20022.repository.codeset.PartialSettlementCode.PreviouslyPartialConfirmed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(PartialSettlement.getCodeName().get(), PartialSettlement);
+		codesByName.put(PreviouslyPartialConfirmed.getCodeName().get(), PreviouslyPartialConfirmed);
+	}
+
+	public static PartialSettlementCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PartialSettlementCode[] values() {
+		PartialSettlementCode[] values = new PartialSettlementCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PartialSettlementCode> {
+		@Override
+		public PartialSettlementCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PartialSettlementCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

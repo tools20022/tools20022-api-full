@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -27,6 +28,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionRateSD6}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionRateSD8", propOrder = {"placeAndName", "declaredSecurityRate", "estimatedRateFlag", "declaredFeeRate"})
 public class CorporateActionRateSD8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +121,7 @@ public class CorporateActionRateSD8 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionRateSD8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD8.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,11 +133,11 @@ public class CorporateActionRateSD8 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DclrdSctyRate")
 	protected CorporateActionRateSD6Choice declaredSecurityRate;
 	/**
-	 * Corresponding rate of the security being disbursed as a result of the
-	 * corporate action as declared by the issuer or offeror on the market.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,6 +152,9 @@ public class CorporateActionRateSD8 {
 	 * CorporateActionRateSD8}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DclrdSctyRate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: New Quantity, DTCCSynonym: Old Quantity</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -168,9 +175,10 @@ public class CorporateActionRateSD8 {
 	 */
 	public static final MMMessageAttribute mmDeclaredSecurityRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionRateSD8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD8.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdSctyRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "New Quantity"), new DTCCSynonym(this, "Old Quantity"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredSecurityRate";
 			definition = "Corresponding rate of the security being disbursed as a result of the corporate action as declared by the issuer or offeror on the market.";
@@ -180,10 +188,11 @@ public class CorporateActionRateSD8 {
 			complexType_lazy = () -> CorporateActionRateSD6Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "EstmtdRateFlg")
 	protected YesNoIndicator estimatedRateFlag;
 	/**
-	 * Denotes whether the rate is approximate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -198,6 +207,9 @@ public class CorporateActionRateSD8 {
 	 * CorporateActionRateSD8}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EstmtdRateFlg"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Estimated Rate Flag</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -216,9 +228,10 @@ public class CorporateActionRateSD8 {
 	 */
 	public static final MMMessageAttribute mmEstimatedRateFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionRateSD8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD8.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdRateFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Estimated Rate Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedRateFlag";
 			definition = "Denotes whether the rate is approximate.";
@@ -228,10 +241,11 @@ public class CorporateActionRateSD8 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "DclrdFeeRate")
 	protected PriceFormatSD2Choice declaredFeeRate;
 	/**
-	 * Rate at which the fee will be charged to a DTC participant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -246,6 +260,10 @@ public class CorporateActionRateSD8 {
 	 * CorporateActionRateSD8}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DclrdFeeRate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Declared Fee Rate, DTCCSynonym: Currency
+	 * (Declared Fee Rate)</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -265,9 +283,10 @@ public class CorporateActionRateSD8 {
 	 */
 	public static final MMMessageAttribute mmDeclaredFeeRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionRateSD8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD8.mmObject();
 			isDerived = false;
 			xmlTag = "DclrdFeeRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Declared Fee Rate"), new DTCCSynonym(this, "Currency (Declared Fee Rate)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredFeeRate";
 			definition = "Rate at which the fee will be charged to a DTC participant.";
@@ -281,8 +300,9 @@ public class CorporateActionRateSD8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionRateSD8.mmPlaceAndName, CorporateActionRateSD8.mmDeclaredSecurityRate, CorporateActionRateSD8.mmEstimatedRateFlag, CorporateActionRateSD8.mmDeclaredFeeRate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD8.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionRateSD8.mmDeclaredSecurityRate,
+						com.tools20022.repository.msg.CorporateActionRateSD8.mmEstimatedRateFlag, com.tools20022.repository.msg.CorporateActionRateSD8.mmDeclaredFeeRate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRateSD8";
 				definition = "Provides additional information regarding corporate action option securities movement rate details.";
@@ -292,39 +312,39 @@ public class CorporateActionRateSD8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionRateSD8 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "DclrdSctyRate")
-	public CorporateActionRateSD6Choice getDeclaredSecurityRate() {
-		return declaredSecurityRate;
+	public Optional<CorporateActionRateSD6Choice> getDeclaredSecurityRate() {
+		return declaredSecurityRate == null ? Optional.empty() : Optional.of(declaredSecurityRate);
 	}
 
-	public void setDeclaredSecurityRate(CorporateActionRateSD6Choice declaredSecurityRate) {
+	public CorporateActionRateSD8 setDeclaredSecurityRate(CorporateActionRateSD6Choice declaredSecurityRate) {
 		this.declaredSecurityRate = declaredSecurityRate;
+		return this;
 	}
 
-	@XmlElement(name = "EstmtdRateFlg")
-	public YesNoIndicator getEstimatedRateFlag() {
-		return estimatedRateFlag;
+	public Optional<YesNoIndicator> getEstimatedRateFlag() {
+		return estimatedRateFlag == null ? Optional.empty() : Optional.of(estimatedRateFlag);
 	}
 
-	public void setEstimatedRateFlag(YesNoIndicator estimatedRateFlag) {
+	public CorporateActionRateSD8 setEstimatedRateFlag(YesNoIndicator estimatedRateFlag) {
 		this.estimatedRateFlag = estimatedRateFlag;
+		return this;
 	}
 
-	@XmlElement(name = "DclrdFeeRate")
-	public PriceFormatSD2Choice getDeclaredFeeRate() {
-		return declaredFeeRate;
+	public Optional<PriceFormatSD2Choice> getDeclaredFeeRate() {
+		return declaredFeeRate == null ? Optional.empty() : Optional.of(declaredFeeRate);
 	}
 
-	public void setDeclaredFeeRate(PriceFormatSD2Choice declaredFeeRate) {
+	public CorporateActionRateSD8 setDeclaredFeeRate(PriceFormatSD2Choice declaredFeeRate) {
 		this.declaredFeeRate = declaredFeeRate;
+		return this;
 	}
 }

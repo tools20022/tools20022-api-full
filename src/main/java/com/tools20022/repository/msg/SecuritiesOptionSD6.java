@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -31,6 +32,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -90,8 +93,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -115,16 +118,17 @@ import javax.xml.bind.annotation.XmlType;
  * SecuritiesOptionSD5}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "SecuritiesOptionSD6", propOrder = {"placeAndName", "DTCPayMethod", "DTCPayOrder", "reinvestmentIncomeClassification", "entitlementCalculationMethod", "priceBasis", "DTCExitExplanationIndicator", "chargeFlag",
-		"protectChargeFlag", "estimatedPriceFlag", "DTCFractionalShareInstructionPeriod", "DTCUSTaxInstructionPeriod", "RDPReferenceNumber"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "SecuritiesOptionSD6", propOrder = {"placeAndName", "dTCPayMethod", "dTCPayOrder", "reinvestmentIncomeClassification", "entitlementCalculationMethod", "priceBasis", "dTCExitExplanationIndicator", "chargeFlag",
+		"protectChargeFlag", "estimatedPriceFlag", "dTCFractionalShareInstructionPeriod", "dTCUSTaxInstructionPeriod", "rDPReferenceNumber"})
 public class SecuritiesOptionSD6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +168,7 @@ public class SecuritiesOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,12 +181,11 @@ public class SecuritiesOptionSD6 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCPayMtd")
 	protected Max3Text dTCPayMethod;
 	/**
-	 * Indicates the type of payment. Used in stock dividends processing at
-	 * DTC(The Depository Trust Corporation). Valid values list will be
-	 * maintained separately from the schema.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -196,6 +199,9 @@ public class SecuritiesOptionSD6 {
 	 * SecuritiesOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCPayMtd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Pay Method</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -224,9 +230,10 @@ public class SecuritiesOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmDTCPayMethod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCPayMtd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Pay Method"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
 			definition = "Indicates the type of payment. Used in stock dividends processing at DTC(The Depository Trust Corporation). Valid values list will be maintained separately from the schema. ";
@@ -237,12 +244,11 @@ public class SecuritiesOptionSD6 {
 			simpleType_lazy = () -> Max3Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCPayOrdr")
 	protected Max3Text dTCPayOrder;
 	/**
-	 * Indicates the payment order. Used in stock dividends processing at DTC
-	 * (The Depository Trust Corporation). Valid values list will be maintained
-	 * separately from the schema.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -256,6 +262,9 @@ public class SecuritiesOptionSD6 {
 	 * SecuritiesOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCPayOrdr"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Pay Order</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -284,9 +293,10 @@ public class SecuritiesOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmDTCPayOrder = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCPayOrdr";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Pay Order"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayOrder";
 			definition = "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation).  Valid values list will be maintained separately from the schema.";
@@ -297,10 +307,11 @@ public class SecuritiesOptionSD6 {
 			simpleType_lazy = () -> Max3Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RinvstmtIncmClssfctn")
 	protected ReinvestmentIncomeClassification2Code reinvestmentIncomeClassification;
 	/**
-	 * Income classification of the cash proceeds for dividend reinvestment .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -315,6 +326,9 @@ public class SecuritiesOptionSD6 {
 	 * SecuritiesOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RinvstmtIncmClssfctn"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Reinvestment Income Classification</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -342,9 +356,10 @@ public class SecuritiesOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmReinvestmentIncomeClassification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "RinvstmtIncmClssfctn";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Reinvestment Income Classification"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentIncomeClassification";
 			definition = "Income classification of the cash proceeds for dividend reinvestment .";
@@ -355,10 +370,11 @@ public class SecuritiesOptionSD6 {
 			simpleType_lazy = () -> ReinvestmentIncomeClassification2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "EntitlmntClctnMtd")
 	protected DTCEntitlementCalculationMethod1Code entitlementCalculationMethod;
 	/**
-	 * Indicates how the entitlements were calculated optional dividends.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -373,6 +389,9 @@ public class SecuritiesOptionSD6 {
 	 * SecuritiesOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EntitlmntClctnMtd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Entitlement Calculation Method</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -400,9 +419,10 @@ public class SecuritiesOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmEntitlementCalculationMethod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "EntitlmntClctnMtd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Entitlement Calculation Method"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementCalculationMethod";
 			definition = "Indicates how the entitlements were calculated optional dividends.";
@@ -413,10 +433,11 @@ public class SecuritiesOptionSD6 {
 			simpleType_lazy = () -> DTCEntitlementCalculationMethod1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PricBsis")
 	protected DTCBaseDisbursed1Code priceBasis;
 	/**
-	 * Price is based on either base or disbursed security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -431,6 +452,9 @@ public class SecuritiesOptionSD6 {
 	 * SecuritiesOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PricBsis"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Price Basis</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -457,9 +481,10 @@ public class SecuritiesOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmPriceBasis = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "PricBsis";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Price Basis"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceBasis";
 			definition = "Price is based on either base or disbursed security. ";
@@ -470,11 +495,11 @@ public class SecuritiesOptionSD6 {
 			simpleType_lazy = () -> DTCBaseDisbursed1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCExitExpltnInd")
 	protected SecuritiesExitReason1Code dTCExitExplanationIndicator;
 	/**
-	 * Specifies the reason for DTC (The Depository Trust Corporation) to exit
-	 * the shares.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -489,6 +514,9 @@ public class SecuritiesOptionSD6 {
 	 * SecuritiesOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCExitExpltnInd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Exit Explanation Indicator</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -517,9 +545,10 @@ public class SecuritiesOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmDTCExitExplanationIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCExitExpltnInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Exit Explanation Indicator"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCExitExplanationIndicator";
 			definition = "Specifies the reason for DTC (The Depository Trust Corporation) to exit the shares. ";
@@ -530,13 +559,11 @@ public class SecuritiesOptionSD6 {
 			simpleType_lazy = () -> SecuritiesExitReason1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgFlg")
 	protected YesNoIndicator chargeFlag;
 	/**
-	 * Indicates whether a DTC (The Depository Trust Corporation) participant,
-	 * using one or more payment bonds in connection with a warrant exercise,
-	 * will be charged (through settlement on exercise date) the value of the
-	 * upcoming interest payment on the bond(s).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -551,6 +578,9 @@ public class SecuritiesOptionSD6 {
 	 * SecuritiesOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ChrgFlg"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Charge Indicator Flag</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -579,9 +609,10 @@ public class SecuritiesOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmChargeFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Charge Indicator Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeFlag";
 			definition = "Indicates whether a DTC (The Depository Trust Corporation) participant, using one or more payment bonds in connection with a warrant exercise, will be charged (through settlement on exercise date) the value of the upcoming interest payment on the bond(s).";
@@ -592,15 +623,11 @@ public class SecuritiesOptionSD6 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtctChrgFlg")
 	protected YesNoIndicator protectChargeFlag;
 	/**
-	 * Indicates whether a charge is levied on the protect instructions at the
-	 * time when the protect is submitted or at the time of the cover. Applies
-	 * to warrants or rights exercise scenario where the holder must put up
-	 * money with rights or warrants execution. When this flag is set to yes -
-	 * charges are due at the time of the protect, when it is set to "no"
-	 * changes are due when protect is covered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -615,6 +642,9 @@ public class SecuritiesOptionSD6 {
 	 * SecuritiesOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PrtctChrgFlg"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Protect Charge Flag</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -643,9 +673,10 @@ public class SecuritiesOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmProtectChargeFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "PrtctChrgFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Protect Charge Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectChargeFlag";
 			definition = "Indicates whether a charge is levied on the protect instructions at the time when the protect is submitted or at the time of the cover. Applies to warrants or rights exercise scenario where the holder must put up money with rights or warrants execution. When this flag is set to yes - charges are due at the time of the protect, when it is set to \"no\" changes are due when protect is covered.";
@@ -656,10 +687,11 @@ public class SecuritiesOptionSD6 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "EstmtdPricFlg")
 	protected YesNoIndicator estimatedPriceFlag;
 	/**
-	 * Indicates whether the price from the offeror is estimated or final.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -674,6 +706,9 @@ public class SecuritiesOptionSD6 {
 	 * SecuritiesOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EstmtdPricFlg"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Estimated Price Flag</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -701,9 +736,10 @@ public class SecuritiesOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmEstimatedPriceFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "EstmtdPricFlg";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Estimated Price Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedPriceFlag";
 			definition = "Indicates whether the price from the offeror is estimated or final. ";
@@ -714,12 +750,11 @@ public class SecuritiesOptionSD6 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCFrctnlShrInstrPrd")
 	protected Period3 dTCFractionalShareInstructionPeriod;
 	/**
-	 * Time period during which instructions regarding the disposition of
-	 * fractional entitlements will be accepted at DTC (The Depository Trust
-	 * Corporation).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -733,6 +768,10 @@ public class SecuritiesOptionSD6 {
 	 * SecuritiesOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCFrctnlShrInstrPrd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC Fractional Share Instruction
+	 * Expiration Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -761,9 +800,10 @@ public class SecuritiesOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmDTCFractionalShareInstructionPeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCFrctnlShrInstrPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Fractional Share Instruction Expiration Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCFractionalShareInstructionPeriod";
 			definition = "Time period during which instructions regarding the disposition of fractional entitlements will be accepted at DTC (The Depository Trust Corporation).";
@@ -774,11 +814,11 @@ public class SecuritiesOptionSD6 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
 		}
 	};
+	@XmlElement(name = "DTCUSTaxInstrPrd")
 	protected Period3 dTCUSTaxInstructionPeriod;
 	/**
-	 * Indicates the period during which the instructions for US Tax service
-	 * will be accepted at DTC (The Depository Trust Corporation).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -792,6 +832,9 @@ public class SecuritiesOptionSD6 {
 	 * SecuritiesOptionSD6}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DTCUSTaxInstrPrd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: DTC NRA Tax Instruction Expiration Date</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -820,9 +863,10 @@ public class SecuritiesOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmDTCUSTaxInstructionPeriod = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "DTCUSTaxInstrPrd";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC NRA Tax Instruction Expiration Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCUSTaxInstructionPeriod";
 			definition = "Indicates the period during which the instructions for US Tax service will be accepted at DTC (The Depository Trust Corporation).";
@@ -833,17 +877,11 @@ public class SecuritiesOptionSD6 {
 			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
 		}
 	};
+	@XmlElement(name = "RDPRefNb")
 	protected Exact32AlphaNumericText rDPReferenceNumber;
 	/**
-	 * Unique DTCC legacy reference used for matching and reconciling legacy
-	 * records. The number algorhithm is as follows: Department ID (1:1),
-	 * Activity Type (2:3), Cusip Country Code (5:2), Cusip (7:9), Record Date
-	 * (15:8), Payable Date (22:8), Sequence Number (29:3), RDP Issue Type
-	 * (31:1). <br>
-	 * USAGE RULE: this sequence can be populated /extended to event details,
-	 * option details or a movement, depending on sequence number coordinality
-	 * to an event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -881,7 +919,7 @@ public class SecuritiesOptionSD6 {
 	 */
 	public static final MMMessageAttribute mmRDPReferenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesOptionSD6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesOptionSD6.mmObject();
 			isDerived = false;
 			xmlTag = "RDPRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -897,10 +935,13 @@ public class SecuritiesOptionSD6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesOptionSD6.mmPlaceAndName, SecuritiesOptionSD6.mmDTCPayMethod, SecuritiesOptionSD6.mmDTCPayOrder, SecuritiesOptionSD6.mmReinvestmentIncomeClassification,
-						SecuritiesOptionSD6.mmEntitlementCalculationMethod, SecuritiesOptionSD6.mmPriceBasis, SecuritiesOptionSD6.mmDTCExitExplanationIndicator, SecuritiesOptionSD6.mmChargeFlag, SecuritiesOptionSD6.mmProtectChargeFlag,
-						SecuritiesOptionSD6.mmEstimatedPriceFlag, SecuritiesOptionSD6.mmDTCFractionalShareInstructionPeriod, SecuritiesOptionSD6.mmDTCUSTaxInstructionPeriod, SecuritiesOptionSD6.mmRDPReferenceNumber);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesOptionSD6.mmPlaceAndName, com.tools20022.repository.msg.SecuritiesOptionSD6.mmDTCPayMethod,
+						com.tools20022.repository.msg.SecuritiesOptionSD6.mmDTCPayOrder, com.tools20022.repository.msg.SecuritiesOptionSD6.mmReinvestmentIncomeClassification,
+						com.tools20022.repository.msg.SecuritiesOptionSD6.mmEntitlementCalculationMethod, com.tools20022.repository.msg.SecuritiesOptionSD6.mmPriceBasis,
+						com.tools20022.repository.msg.SecuritiesOptionSD6.mmDTCExitExplanationIndicator, com.tools20022.repository.msg.SecuritiesOptionSD6.mmChargeFlag, com.tools20022.repository.msg.SecuritiesOptionSD6.mmProtectChargeFlag,
+						com.tools20022.repository.msg.SecuritiesOptionSD6.mmEstimatedPriceFlag, com.tools20022.repository.msg.SecuritiesOptionSD6.mmDTCFractionalShareInstructionPeriod,
+						com.tools20022.repository.msg.SecuritiesOptionSD6.mmDTCUSTaxInstructionPeriod, com.tools20022.repository.msg.SecuritiesOptionSD6.mmRDPReferenceNumber);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesOptionSD6";
 				definition = "Provides additional information regarding corporate action option securities movement details.";
@@ -911,120 +952,120 @@ public class SecuritiesOptionSD6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public SecuritiesOptionSD6 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "DTCPayMtd")
-	public Max3Text getDTCPayMethod() {
-		return dTCPayMethod;
+	public Optional<Max3Text> getDTCPayMethod() {
+		return dTCPayMethod == null ? Optional.empty() : Optional.of(dTCPayMethod);
 	}
 
-	public void setDTCPayMethod(Max3Text dTCPayMethod) {
+	public SecuritiesOptionSD6 setDTCPayMethod(Max3Text dTCPayMethod) {
 		this.dTCPayMethod = dTCPayMethod;
+		return this;
 	}
 
-	@XmlElement(name = "DTCPayOrdr")
-	public Max3Text getDTCPayOrder() {
-		return dTCPayOrder;
+	public Optional<Max3Text> getDTCPayOrder() {
+		return dTCPayOrder == null ? Optional.empty() : Optional.of(dTCPayOrder);
 	}
 
-	public void setDTCPayOrder(Max3Text dTCPayOrder) {
+	public SecuritiesOptionSD6 setDTCPayOrder(Max3Text dTCPayOrder) {
 		this.dTCPayOrder = dTCPayOrder;
+		return this;
 	}
 
-	@XmlElement(name = "RinvstmtIncmClssfctn")
-	public ReinvestmentIncomeClassification2Code getReinvestmentIncomeClassification() {
-		return reinvestmentIncomeClassification;
+	public Optional<ReinvestmentIncomeClassification2Code> getReinvestmentIncomeClassification() {
+		return reinvestmentIncomeClassification == null ? Optional.empty() : Optional.of(reinvestmentIncomeClassification);
 	}
 
-	public void setReinvestmentIncomeClassification(ReinvestmentIncomeClassification2Code reinvestmentIncomeClassification) {
+	public SecuritiesOptionSD6 setReinvestmentIncomeClassification(ReinvestmentIncomeClassification2Code reinvestmentIncomeClassification) {
 		this.reinvestmentIncomeClassification = reinvestmentIncomeClassification;
+		return this;
 	}
 
-	@XmlElement(name = "EntitlmntClctnMtd")
-	public DTCEntitlementCalculationMethod1Code getEntitlementCalculationMethod() {
-		return entitlementCalculationMethod;
+	public Optional<DTCEntitlementCalculationMethod1Code> getEntitlementCalculationMethod() {
+		return entitlementCalculationMethod == null ? Optional.empty() : Optional.of(entitlementCalculationMethod);
 	}
 
-	public void setEntitlementCalculationMethod(DTCEntitlementCalculationMethod1Code entitlementCalculationMethod) {
+	public SecuritiesOptionSD6 setEntitlementCalculationMethod(DTCEntitlementCalculationMethod1Code entitlementCalculationMethod) {
 		this.entitlementCalculationMethod = entitlementCalculationMethod;
+		return this;
 	}
 
-	@XmlElement(name = "PricBsis")
-	public DTCBaseDisbursed1Code getPriceBasis() {
-		return priceBasis;
+	public Optional<DTCBaseDisbursed1Code> getPriceBasis() {
+		return priceBasis == null ? Optional.empty() : Optional.of(priceBasis);
 	}
 
-	public void setPriceBasis(DTCBaseDisbursed1Code priceBasis) {
+	public SecuritiesOptionSD6 setPriceBasis(DTCBaseDisbursed1Code priceBasis) {
 		this.priceBasis = priceBasis;
+		return this;
 	}
 
-	@XmlElement(name = "DTCExitExpltnInd")
-	public SecuritiesExitReason1Code getDTCExitExplanationIndicator() {
-		return dTCExitExplanationIndicator;
+	public Optional<SecuritiesExitReason1Code> getDTCExitExplanationIndicator() {
+		return dTCExitExplanationIndicator == null ? Optional.empty() : Optional.of(dTCExitExplanationIndicator);
 	}
 
-	public void setDTCExitExplanationIndicator(SecuritiesExitReason1Code dTCExitExplanationIndicator) {
+	public SecuritiesOptionSD6 setDTCExitExplanationIndicator(SecuritiesExitReason1Code dTCExitExplanationIndicator) {
 		this.dTCExitExplanationIndicator = dTCExitExplanationIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgFlg")
-	public YesNoIndicator getChargeFlag() {
-		return chargeFlag;
+	public Optional<YesNoIndicator> getChargeFlag() {
+		return chargeFlag == null ? Optional.empty() : Optional.of(chargeFlag);
 	}
 
-	public void setChargeFlag(YesNoIndicator chargeFlag) {
+	public SecuritiesOptionSD6 setChargeFlag(YesNoIndicator chargeFlag) {
 		this.chargeFlag = chargeFlag;
+		return this;
 	}
 
-	@XmlElement(name = "PrtctChrgFlg")
-	public YesNoIndicator getProtectChargeFlag() {
-		return protectChargeFlag;
+	public Optional<YesNoIndicator> getProtectChargeFlag() {
+		return protectChargeFlag == null ? Optional.empty() : Optional.of(protectChargeFlag);
 	}
 
-	public void setProtectChargeFlag(YesNoIndicator protectChargeFlag) {
+	public SecuritiesOptionSD6 setProtectChargeFlag(YesNoIndicator protectChargeFlag) {
 		this.protectChargeFlag = protectChargeFlag;
+		return this;
 	}
 
-	@XmlElement(name = "EstmtdPricFlg")
-	public YesNoIndicator getEstimatedPriceFlag() {
-		return estimatedPriceFlag;
+	public Optional<YesNoIndicator> getEstimatedPriceFlag() {
+		return estimatedPriceFlag == null ? Optional.empty() : Optional.of(estimatedPriceFlag);
 	}
 
-	public void setEstimatedPriceFlag(YesNoIndicator estimatedPriceFlag) {
+	public SecuritiesOptionSD6 setEstimatedPriceFlag(YesNoIndicator estimatedPriceFlag) {
 		this.estimatedPriceFlag = estimatedPriceFlag;
+		return this;
 	}
 
-	@XmlElement(name = "DTCFrctnlShrInstrPrd")
-	public Period3 getDTCFractionalShareInstructionPeriod() {
-		return dTCFractionalShareInstructionPeriod;
+	public Optional<Period3> getDTCFractionalShareInstructionPeriod() {
+		return dTCFractionalShareInstructionPeriod == null ? Optional.empty() : Optional.of(dTCFractionalShareInstructionPeriod);
 	}
 
-	public void setDTCFractionalShareInstructionPeriod(com.tools20022.repository.msg.Period3 dTCFractionalShareInstructionPeriod) {
+	public SecuritiesOptionSD6 setDTCFractionalShareInstructionPeriod(com.tools20022.repository.msg.Period3 dTCFractionalShareInstructionPeriod) {
 		this.dTCFractionalShareInstructionPeriod = dTCFractionalShareInstructionPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "DTCUSTaxInstrPrd")
-	public Period3 getDTCUSTaxInstructionPeriod() {
-		return dTCUSTaxInstructionPeriod;
+	public Optional<Period3> getDTCUSTaxInstructionPeriod() {
+		return dTCUSTaxInstructionPeriod == null ? Optional.empty() : Optional.of(dTCUSTaxInstructionPeriod);
 	}
 
-	public void setDTCUSTaxInstructionPeriod(com.tools20022.repository.msg.Period3 dTCUSTaxInstructionPeriod) {
+	public SecuritiesOptionSD6 setDTCUSTaxInstructionPeriod(com.tools20022.repository.msg.Period3 dTCUSTaxInstructionPeriod) {
 		this.dTCUSTaxInstructionPeriod = dTCUSTaxInstructionPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "RDPRefNb")
-	public Exact32AlphaNumericText getRDPReferenceNumber() {
-		return rDPReferenceNumber;
+	public Optional<Exact32AlphaNumericText> getRDPReferenceNumber() {
+		return rDPReferenceNumber == null ? Optional.empty() : Optional.of(rDPReferenceNumber);
 	}
 
-	public void setRDPReferenceNumber(Exact32AlphaNumericText rDPReferenceNumber) {
+	public SecuritiesOptionSD6 setRDPReferenceNumber(Exact32AlphaNumericText rDPReferenceNumber) {
 		this.rDPReferenceNumber = rDPReferenceNumber;
+		return this;
 	}
 }

@@ -26,9 +26,8 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CorporateActionsISO15022VariantsISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -48,22 +47,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestversionsubsetvariant
- * SecuritiesEventsLatestversionsubsetvariant}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CorporateActionsISO15022VariantsISOLatestversion
- * CorporateActionsISO15022VariantsISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "CorpActnInstrCxlReq"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -92,9 +75,38 @@ import javax.xml.bind.annotation.*;
  * CorporateActionInstructionCancellationRequest002V07.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CorporateActionsISO15022VariantsISOLatestversion
+ * CorporateActionsISO15022VariantsISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "CorpActnInstrCxlReq"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestversionsubsetvariant
+ * SecuritiesEventsLatestversionsubsetvariant}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.040.002.07}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline#forCorporateActionInstructionCancellationRequest002V07
+ * ConstraintChangeInstructionIndicatorGuideline.
+ * forCorporateActionInstructionCancellationRequest002V07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventIdentificationRule#forCorporateActionInstructionCancellationRequest002V07
+ * ConstraintCorporateActionEventIdentificationRule.
+ * forCorporateActionInstructionCancellationRequest002V07}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -107,20 +119,17 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionInstructionCancellationRequest002V07", propOrder = {"changeInstructionIndicator", "instructionIdentification", "corporateActionGeneralInformation", "accountDetails", "corporateActionInstruction",
 		"supplementaryData"})
 public class CorporateActionInstructionCancellationRequest002V07 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ChngInstrInd")
 	protected YesNoIndicator changeInstructionIndicator;
 	/**
-	 * When used in a corporate action instruction, indicates that the current
-	 * instruction is replacing a previous one that was cancelled earlier. When
-	 * used in a corporate action instruction cancellation request, indicates
-	 * that cancelled instruction will be replaced by a new corporate action
-	 * instruction to be sent later.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,10 +171,11 @@ public class CorporateActionInstructionCancellationRequest002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "InstrId", required = true)
 	protected DocumentIdentification37 instructionIdentification;
 	/**
-	 * Identification of a previously sent instruction document.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,10 +216,11 @@ public class CorporateActionInstructionCancellationRequest002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnGnlInf", required = true)
 	protected CorporateActionGeneralInformation121 corporateActionGeneralInformation;
 	/**
-	 * General information about the corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,10 +260,11 @@ public class CorporateActionInstructionCancellationRequest002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "AcctDtls", required = true)
 	protected AccountIdentification42 accountDetails;
 	/**
-	 * General information about the safekeeping account and the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -294,10 +306,11 @@ public class CorporateActionInstructionCancellationRequest002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "CorpActnInstr", required = true)
 	protected CorporateActionOption128 corporateActionInstruction;
 	/**
-	 * Information about the corporate action option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -337,11 +350,11 @@ public class CorporateActionInstructionCancellationRequest002V07 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -386,6 +399,8 @@ public class CorporateActionInstructionCancellationRequest002V07 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionCancellationRequest002V07,
+						com.tools20022.repository.constraints.ConstraintCorporateActionEventIdentificationRule.forCorporateActionInstructionCancellationRequest002V07);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionCancellationRequest002V07";
 				definition = "Scope\r\nAn account owner sends the CorporateActionInstructionCancellationRequest message to an account servicer to request cancellation of a previously sent corporate action election instruction.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).";
@@ -417,61 +432,61 @@ public class CorporateActionInstructionCancellationRequest002V07 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ChngInstrInd")
-	public YesNoIndicator getChangeInstructionIndicator() {
-		return changeInstructionIndicator;
+	public Optional<YesNoIndicator> getChangeInstructionIndicator() {
+		return changeInstructionIndicator == null ? Optional.empty() : Optional.of(changeInstructionIndicator);
 	}
 
-	public void setChangeInstructionIndicator(YesNoIndicator changeInstructionIndicator) {
+	public CorporateActionInstructionCancellationRequest002V07 setChangeInstructionIndicator(YesNoIndicator changeInstructionIndicator) {
 		this.changeInstructionIndicator = changeInstructionIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "InstrId", required = true)
 	public DocumentIdentification37 getInstructionIdentification() {
 		return instructionIdentification;
 	}
 
-	public void setInstructionIdentification(DocumentIdentification37 instructionIdentification) {
-		this.instructionIdentification = instructionIdentification;
+	public CorporateActionInstructionCancellationRequest002V07 setInstructionIdentification(DocumentIdentification37 instructionIdentification) {
+		this.instructionIdentification = Objects.requireNonNull(instructionIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnGnlInf", required = true)
 	public CorporateActionGeneralInformation121 getCorporateActionGeneralInformation() {
 		return corporateActionGeneralInformation;
 	}
 
-	public void setCorporateActionGeneralInformation(CorporateActionGeneralInformation121 corporateActionGeneralInformation) {
-		this.corporateActionGeneralInformation = corporateActionGeneralInformation;
+	public CorporateActionInstructionCancellationRequest002V07 setCorporateActionGeneralInformation(CorporateActionGeneralInformation121 corporateActionGeneralInformation) {
+		this.corporateActionGeneralInformation = Objects.requireNonNull(corporateActionGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "AcctDtls", required = true)
 	public AccountIdentification42 getAccountDetails() {
 		return accountDetails;
 	}
 
-	public void setAccountDetails(AccountIdentification42 accountDetails) {
-		this.accountDetails = accountDetails;
+	public CorporateActionInstructionCancellationRequest002V07 setAccountDetails(AccountIdentification42 accountDetails) {
+		this.accountDetails = Objects.requireNonNull(accountDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnInstr", required = true)
 	public CorporateActionOption128 getCorporateActionInstruction() {
 		return corporateActionInstruction;
 	}
 
-	public void setCorporateActionInstruction(CorporateActionOption128 corporateActionInstruction) {
-		this.corporateActionInstruction = corporateActionInstruction;
+	public CorporateActionInstructionCancellationRequest002V07 setCorporateActionInstruction(CorporateActionOption128 corporateActionInstruction) {
+		this.corporateActionInstruction = Objects.requireNonNull(corporateActionInstruction);
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public CorporateActionInstructionCancellationRequest002V07 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:seev.040.07.07")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:seev.040.002.07")
 	static public class Document {
 		@XmlElement(name = "CorpActnInstrCxlReq", required = true)
 		public CorporateActionInstructionCancellationRequest002V07 messageBody;

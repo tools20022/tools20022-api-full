@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AttendanceContextCode;
+import com.tools20022.repository.codeset.AttendanceContext2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identify the method of delivery or distribution.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode
- * AttendanceContextCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#mmAttendantDelivery
- * AttendanceContext2Code.mmAttendantDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#AttendantDelivery
+ * AttendanceContext2Code.AttendantDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#mmCarrierDelivery
- * AttendanceContext2Code.mmCarrierDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#CarrierDelivery
+ * AttendanceContext2Code.CarrierDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#mmCustomerDelivery
- * AttendanceContext2Code.mmCustomerDelivery}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#CustomerDelivery
+ * AttendanceContext2Code.CustomerDelivery}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#mmFullServe
- * AttendanceContext2Code.mmFullServe}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#FullServe
+ * AttendanceContext2Code.FullServe}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#mmSelfServe
- * AttendanceContext2Code.mmSelfServe}</li>
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContext2Code#SelfServe
+ * AttendanceContext2Code.SelfServe}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AttendanceContextCode
+ * AttendanceContextCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identify the method of delivery or distribution."</li>
  * </ul>
  */
-public class AttendanceContext2Code extends AttendanceContextCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AttendanceContext2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class AttendanceContext2Code extends AttendanceContextCode {
 	 * name} = "AttendantDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAttendantDelivery = new MMCode() {
+	public static final AttendanceContext2Code AttendantDelivery = new AttendanceContext2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendantDelivery";
-			owner_lazy = () -> AttendanceContext2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttendanceContext2Code.mmObject();
+			codeName = AttendanceContextCode.AttendantDelivery.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,11 +115,12 @@ public class AttendanceContext2Code extends AttendanceContextCode {
 	 * name} = "CarrierDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCarrierDelivery = new MMCode() {
+	public static final AttendanceContext2Code CarrierDelivery = new AttendanceContext2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CarrierDelivery";
-			owner_lazy = () -> AttendanceContext2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttendanceContext2Code.mmObject();
+			codeName = AttendanceContextCode.CarrierDelivery.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -132,11 +139,12 @@ public class AttendanceContext2Code extends AttendanceContextCode {
 	 * name} = "CustomerDelivery"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustomerDelivery = new MMCode() {
+	public static final AttendanceContext2Code CustomerDelivery = new AttendanceContext2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerDelivery";
-			owner_lazy = () -> AttendanceContext2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttendanceContext2Code.mmObject();
+			codeName = AttendanceContextCode.CustomerDelivery.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -155,11 +163,12 @@ public class AttendanceContext2Code extends AttendanceContextCode {
 	 * name} = "FullServe"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFullServe = new MMCode() {
+	public static final AttendanceContext2Code FullServe = new AttendanceContext2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullServe";
-			owner_lazy = () -> AttendanceContext2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttendanceContext2Code.mmObject();
+			codeName = AttendanceContextCode.FullServe.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -178,26 +187,60 @@ public class AttendanceContext2Code extends AttendanceContextCode {
 	 * name} = "SelfServe"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSelfServe = new MMCode() {
+	public static final AttendanceContext2Code SelfServe = new AttendanceContext2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfServe";
-			owner_lazy = () -> AttendanceContext2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AttendanceContext2Code.mmObject();
+			codeName = AttendanceContextCode.SelfServe.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, AttendanceContext2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AttendanceContext2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AttendanceContext2Code";
 				definition = "Identify the method of delivery or distribution.";
-				code_lazy = () -> Arrays.asList(AttendanceContext2Code.mmAttendantDelivery, AttendanceContext2Code.mmCarrierDelivery, AttendanceContext2Code.mmCustomerDelivery, AttendanceContext2Code.mmFullServe,
-						AttendanceContext2Code.mmSelfServe);
 				trace_lazy = () -> AttendanceContextCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AttendanceContext2Code.AttendantDelivery, com.tools20022.repository.codeset.AttendanceContext2Code.CarrierDelivery,
+						com.tools20022.repository.codeset.AttendanceContext2Code.CustomerDelivery, com.tools20022.repository.codeset.AttendanceContext2Code.FullServe, com.tools20022.repository.codeset.AttendanceContext2Code.SelfServe);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AttendantDelivery.getCodeName().get(), AttendantDelivery);
+		codesByName.put(CarrierDelivery.getCodeName().get(), CarrierDelivery);
+		codesByName.put(CustomerDelivery.getCodeName().get(), CustomerDelivery);
+		codesByName.put(FullServe.getCodeName().get(), FullServe);
+		codesByName.put(SelfServe.getCodeName().get(), SelfServe);
+	}
+
+	public static AttendanceContext2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AttendanceContext2Code[] values() {
+		AttendanceContext2Code[] values = new AttendanceContext2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AttendanceContext2Code> {
+		@Override
+		public AttendanceContext2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AttendanceContext2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

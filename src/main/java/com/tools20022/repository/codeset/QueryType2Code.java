@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.QueryTypeCode;
+import com.tools20022.repository.codeset.QueryType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifyies the nature of the query, i.e. whether the query requests that all
@@ -32,25 +36,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.QueryTypeCode QueryTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType2Code#mmAll
- * QueryType2Code.mmAll}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType2Code#mmChanged
- * QueryType2Code.mmChanged}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType2Code#mmModified
- * QueryType2Code.mmModified}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.QueryType2Code#mmDeleted
- * QueryType2Code.mmDeleted}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType2Code#All
+ * QueryType2Code.All}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType2Code#Changed
+ * QueryType2Code.Changed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType2Code#Modified
+ * QueryType2Code.Modified}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.QueryType2Code#Deleted
+ * QueryType2Code.Deleted}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.QueryTypeCode QueryTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class QueryType2Code extends QueryTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class QueryType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,11 +93,12 @@ public class QueryType2Code extends QueryTypeCode {
 	 * name} = "All"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAll = new MMCode() {
+	public static final QueryType2Code All = new QueryType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "All";
-			owner_lazy = () -> QueryType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryType2Code.mmObject();
+			codeName = QueryTypeCode.All.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -111,11 +117,12 @@ public class QueryType2Code extends QueryTypeCode {
 	 * name} = "Changed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmChanged = new MMCode() {
+	public static final QueryType2Code Changed = new QueryType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Changed";
-			owner_lazy = () -> QueryType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryType2Code.mmObject();
+			codeName = QueryTypeCode.Changed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -134,11 +141,12 @@ public class QueryType2Code extends QueryTypeCode {
 	 * name} = "Modified"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmModified = new MMCode() {
+	public static final QueryType2Code Modified = new QueryType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modified";
-			owner_lazy = () -> QueryType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryType2Code.mmObject();
+			codeName = QueryTypeCode.Modified.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -157,26 +165,60 @@ public class QueryType2Code extends QueryTypeCode {
 	 * name} = "Deleted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDeleted = new MMCode() {
+	public static final QueryType2Code Deleted = new QueryType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
-			owner_lazy = () -> QueryType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.QueryType2Code.mmObject();
+			codeName = QueryTypeCode.Deleted.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, QueryType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected QueryType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ALLL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueryType2Code";
 				definition = "Specifyies the nature of the query, i.e. whether the query requests that all matching items be returned or only new matching items since the last similar query be returned.";
-				code_lazy = () -> Arrays.asList(QueryType2Code.mmAll, QueryType2Code.mmChanged, QueryType2Code.mmModified, QueryType2Code.mmDeleted);
 				trace_lazy = () -> QueryTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.QueryType2Code.All, com.tools20022.repository.codeset.QueryType2Code.Changed, com.tools20022.repository.codeset.QueryType2Code.Modified,
+						com.tools20022.repository.codeset.QueryType2Code.Deleted);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(All.getCodeName().get(), All);
+		codesByName.put(Changed.getCodeName().get(), Changed);
+		codesByName.put(Modified.getCodeName().get(), Modified);
+		codesByName.put(Deleted.getCodeName().get(), Deleted);
+	}
+
+	public static QueryType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static QueryType2Code[] values() {
+		QueryType2Code[] values = new QueryType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, QueryType2Code> {
+		@Override
+		public QueryType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(QueryType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

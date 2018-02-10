@@ -27,9 +27,11 @@ import com.tools20022.repository.msg.OriginalGroupInformation1;
 import com.tools20022.repository.msg.PaymentTransactionInformation1;
 import com.tools20022.repository.msgset.ISOArchive;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -56,22 +58,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementArchive
- * PaymentsClearingandSettlementArchive}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
- * xmlName} = "pacs.002.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "pacs.002.001.02"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -87,9 +73,60 @@ import javax.xml.bind.annotation.*;
  * PaymentStatusReportV02.mmTransactionInformationAndStatus}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msgset.ISOArchive ISOArchive}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "pacs.002.001.02"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementArchive
+ * PaymentsClearingandSettlementArchive}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlName
+ * xmlName} = "pacs.002.001.02"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pacs.002.001.02}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus1Rule#forPaymentStatusReportV02
+ * ConstraintGroupAndTransactionStatus1Rule.forPaymentStatusReportV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule#forPaymentStatusReportV02
+ * ConstraintGroupAndTransactionStatus2Rule.forPaymentStatusReportV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus3Rule#forPaymentStatusReportV02
+ * ConstraintGroupAndTransactionStatus3Rule.forPaymentStatusReportV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus4Rule#forPaymentStatusReportV02
+ * ConstraintGroupAndTransactionStatus4Rule.forPaymentStatusReportV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedAgentRule#forPaymentStatusReportV02
+ * ConstraintInstructedAgentRule.forPaymentStatusReportV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructingAgentRule#forPaymentStatusReportV02
+ * ConstraintInstructingAgentRule.forPaymentStatusReportV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintForwardingAgentRule#forPaymentStatusReportV02
+ * ConstraintForwardingAgentRule.forPaymentStatusReportV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInitiatingPartyRule#forPaymentStatusReportV02
+ * ConstraintInitiatingPartyRule.forPaymentStatusReportV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCreditorAgentRule#forPaymentStatusReportV02
+ * ConstraintCreditorAgentRule.forPaymentStatusReportV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDebtorAgentRule#forPaymentStatusReportV02
+ * ConstraintDebtorAgentRule.forPaymentStatusReportV02}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,16 +147,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "pacs.002.001.02", propOrder = {"groupHeader", "originalGroupInformationAndStatus", "transactionInformationAndStatus"})
 public class PaymentStatusReportV02 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "GrpHdr", required = true)
 	protected GroupHeader5 groupHeader;
 	/**
-	 * Set of characteristics shared by all individual transactions included in
-	 * the message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,11 +197,11 @@ public class PaymentStatusReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgnlGrpInfAndSts", required = true)
 	protected OriginalGroupInformation1 originalGroupInformationAndStatus;
 	/**
-	 * Original group information concerning the group of transactions, to which
-	 * the message refers to.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -206,11 +243,11 @@ public class PaymentStatusReportV02 {
 			}
 		}
 	};
+	@XmlElement(name = "TxInfAndSts")
 	protected List<PaymentTransactionInformation1> transactionInformationAndStatus;
 	/**
-	 * Information concerning the original transactions, to which the status
-	 * report message refers.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -255,6 +292,12 @@ public class PaymentStatusReportV02 {
 	final static public MMMessageDefinition mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageDefinition() {
 			{
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus1Rule.forPaymentStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus2Rule.forPaymentStatusReportV02, com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus3Rule.forPaymentStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintGroupAndTransactionStatus4Rule.forPaymentStatusReportV02, com.tools20022.repository.constraints.ConstraintInstructedAgentRule.forPaymentStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintInstructingAgentRule.forPaymentStatusReportV02, com.tools20022.repository.constraints.ConstraintForwardingAgentRule.forPaymentStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintInitiatingPartyRule.forPaymentStatusReportV02, com.tools20022.repository.constraints.ConstraintCreditorAgentRule.forPaymentStatusReportV02,
+						com.tools20022.repository.constraints.ConstraintDebtorAgentRule.forPaymentStatusReportV02);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentStatusReportV02";
 				definition = "Scope\r\nThe PaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.\r\nUsage\r\nThe PaymentStatusReport message is exchanged between agents to provide status information about instructions previously sent. Its usage will always be governed by a bilateral agreement between the agents.\r\nThe PaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (e.g. PaymentCancellationRequest).\r\nThe PaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe PaymentStatusReport message can be used in domestic and cross-border scenarios.\r\nThe PaymentStatusReport message exchanged between agents is identified in the schema as follows: \nurn:iso:std:iso:20022:tech:xsd:pacs.002.001.02\r";
@@ -284,34 +327,34 @@ public class PaymentStatusReportV02 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "GrpHdr", required = true)
 	public GroupHeader5 getGroupHeader() {
 		return groupHeader;
 	}
 
-	public void setGroupHeader(GroupHeader5 groupHeader) {
-		this.groupHeader = groupHeader;
+	public PaymentStatusReportV02 setGroupHeader(GroupHeader5 groupHeader) {
+		this.groupHeader = Objects.requireNonNull(groupHeader);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlGrpInfAndSts", required = true)
 	public OriginalGroupInformation1 getOriginalGroupInformationAndStatus() {
 		return originalGroupInformationAndStatus;
 	}
 
-	public void setOriginalGroupInformationAndStatus(OriginalGroupInformation1 originalGroupInformationAndStatus) {
-		this.originalGroupInformationAndStatus = originalGroupInformationAndStatus;
+	public PaymentStatusReportV02 setOriginalGroupInformationAndStatus(OriginalGroupInformation1 originalGroupInformationAndStatus) {
+		this.originalGroupInformationAndStatus = Objects.requireNonNull(originalGroupInformationAndStatus);
+		return this;
 	}
 
-	@XmlElement(name = "TxInfAndSts")
 	public List<PaymentTransactionInformation1> getTransactionInformationAndStatus() {
-		return transactionInformationAndStatus;
+		return transactionInformationAndStatus == null ? transactionInformationAndStatus = new ArrayList<>() : transactionInformationAndStatus;
 	}
 
-	public void setTransactionInformationAndStatus(List<PaymentTransactionInformation1> transactionInformationAndStatus) {
-		this.transactionInformationAndStatus = transactionInformationAndStatus;
+	public PaymentStatusReportV02 setTransactionInformationAndStatus(List<PaymentTransactionInformation1> transactionInformationAndStatus) {
+		this.transactionInformationAndStatus = Objects.requireNonNull(transactionInformationAndStatus);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.002.02.02")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:pacs.002.001.02")
 	static public class Document {
 		@XmlElement(name = "pacs.002.001.02", required = true)
 		public PaymentStatusReportV02 messageBody;

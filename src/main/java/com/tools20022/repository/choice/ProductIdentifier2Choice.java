@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.GenericIdentification4;
 import com.tools20022.repository.msg.ProductIdentifier2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Identifies a product in coded form or free text."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ProductIdentifier2Choice", propOrder = {"structuredProductIdentifier", "otherProductIdentifier"})
 public class ProductIdentifier2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StrdPdctIdr", required = true)
 	protected ProductIdentifier2 structuredProductIdentifier;
 	/**
-	 * Specifies the type of product identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,7 +108,7 @@ public class ProductIdentifier2Choice {
 	public static final MMMessageAssociationEnd mmStructuredProductIdentifier = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ProductIdentification.mmObject();
-			componentContext_lazy = () -> ProductIdentifier2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProductIdentifier2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StrdPdctIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +120,11 @@ public class ProductIdentifier2Choice {
 			type_lazy = () -> ProductIdentifier2.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrPdctIdr", required = true)
 	protected GenericIdentification4 otherProductIdentifier;
 	/**
-	 * Specifies the type of product identifier not present in the code list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -154,7 +157,7 @@ public class ProductIdentifier2Choice {
 	public static final MMMessageAssociationEnd mmOtherProductIdentifier = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ProductIdentification.mmObject();
-			componentContext_lazy = () -> ProductIdentifier2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.ProductIdentifier2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPdctIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,9 +173,9 @@ public class ProductIdentifier2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProductIdentifier2Choice.mmStructuredProductIdentifier, ProductIdentifier2Choice.mmOtherProductIdentifier);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ProductIdentifier2Choice.mmStructuredProductIdentifier, com.tools20022.repository.choice.ProductIdentifier2Choice.mmOtherProductIdentifier);
 				trace_lazy = () -> ProductIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductIdentifier2Choice";
 				definition = "Identifies a product in coded form or free text.";
@@ -181,21 +184,21 @@ public class ProductIdentifier2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StrdPdctIdr", required = true)
 	public ProductIdentifier2 getStructuredProductIdentifier() {
 		return structuredProductIdentifier;
 	}
 
-	public void setStructuredProductIdentifier(ProductIdentifier2 structuredProductIdentifier) {
-		this.structuredProductIdentifier = structuredProductIdentifier;
+	public ProductIdentifier2Choice setStructuredProductIdentifier(ProductIdentifier2 structuredProductIdentifier) {
+		this.structuredProductIdentifier = Objects.requireNonNull(structuredProductIdentifier);
+		return this;
 	}
 
-	@XmlElement(name = "OthrPdctIdr", required = true)
 	public GenericIdentification4 getOtherProductIdentifier() {
 		return otherProductIdentifier;
 	}
 
-	public void setOtherProductIdentifier(GenericIdentification4 otherProductIdentifier) {
-		this.otherProductIdentifier = otherProductIdentifier;
+	public ProductIdentifier2Choice setOtherProductIdentifier(GenericIdentification4 otherProductIdentifier) {
+		this.otherProductIdentifier = Objects.requireNonNull(otherProductIdentifier);
+		return this;
 	}
 }

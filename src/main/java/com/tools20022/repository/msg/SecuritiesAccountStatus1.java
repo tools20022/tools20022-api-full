@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Status6Code;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +53,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintStatusReasonRule#forSecuritiesAccountStatus1
+ * ConstraintStatusReasonRule.forSecuritiesAccountStatus1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPresenceRule#forSecuritiesAccountStatus1
+ * ConstraintPresenceRule.forSecuritiesAccountStatus1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Status of the securities account processed in the system. "</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesAccountStatus1", propOrder = {"relatedSecuritiesAccount", "status", "statusReason"})
 public class SecuritiesAccountStatus1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RltdSctiesAcct")
 	protected SecuritiesAccount13 relatedSecuritiesAccount;
 	/**
-	 * Unique identification of the securities account referenced by a request
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -102,7 +113,7 @@ public class SecuritiesAccountStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedSecuritiesAccount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdSctiesAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,10 +125,11 @@ public class SecuritiesAccountStatus1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	@XmlElement(name = "Sts", required = true)
 	protected Status6Code status;
 	/**
-	 * Status of the securities account maintenance instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,7 +157,7 @@ public class SecuritiesAccountStatus1 {
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +168,11 @@ public class SecuritiesAccountStatus1 {
 			simpleType_lazy = () -> Status6Code.mmObject();
 		}
 	};
+	@XmlElement(name = "StsRsn")
 	protected List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason;
 	/**
-	 * Reason for the status of a securities account maintenance instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -187,7 +200,7 @@ public class SecuritiesAccountStatus1 {
 	 */
 	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SecuritiesAccountStatus1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountStatus1.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,8 +215,10 @@ public class SecuritiesAccountStatus1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesAccountStatus1.mmRelatedSecuritiesAccount, SecuritiesAccountStatus1.mmStatus, SecuritiesAccountStatus1.mmStatusReason);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesAccountStatus1.mmRelatedSecuritiesAccount, com.tools20022.repository.msg.SecuritiesAccountStatus1.mmStatus,
+						com.tools20022.repository.msg.SecuritiesAccountStatus1.mmStatusReason);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusReasonRule.forSecuritiesAccountStatus1, com.tools20022.repository.constraints.ConstraintPresenceRule.forSecuritiesAccountStatus1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountStatus1";
 				definition = "Status of the securities account processed in the system. ";
@@ -212,30 +227,30 @@ public class SecuritiesAccountStatus1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RltdSctiesAcct")
-	public SecuritiesAccount13 getRelatedSecuritiesAccount() {
-		return relatedSecuritiesAccount;
+	public Optional<SecuritiesAccount13> getRelatedSecuritiesAccount() {
+		return relatedSecuritiesAccount == null ? Optional.empty() : Optional.of(relatedSecuritiesAccount);
 	}
 
-	public void setRelatedSecuritiesAccount(com.tools20022.repository.msg.SecuritiesAccount13 relatedSecuritiesAccount) {
+	public SecuritiesAccountStatus1 setRelatedSecuritiesAccount(com.tools20022.repository.msg.SecuritiesAccount13 relatedSecuritiesAccount) {
 		this.relatedSecuritiesAccount = relatedSecuritiesAccount;
+		return this;
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public Status6Code getStatus() {
 		return status;
 	}
 
-	public void setStatus(Status6Code status) {
-		this.status = status;
+	public SecuritiesAccountStatus1 setStatus(Status6Code status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "StsRsn")
 	public List<StatusReasonInformation10> getStatusReason() {
-		return statusReason;
+		return statusReason == null ? statusReason = new ArrayList<>() : statusReason;
 	}
 
-	public void setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason) {
-		this.statusReason = statusReason;
+	public SecuritiesAccountStatus1 setStatusReason(List<com.tools20022.repository.msg.StatusReasonInformation10> statusReason) {
+		this.statusReason = Objects.requireNonNull(statusReason);
+		return this;
 	}
 }

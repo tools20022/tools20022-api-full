@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Limit for a quantity range."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QuantityRangeBoundary1", propOrder = {"boundary", "included"})
 public class QuantityRangeBoundary1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Bdry", required = true)
 	protected DecimalNumber boundary;
 	/**
-	 * Quantity value of the range limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +100,7 @@ public class QuantityRangeBoundary1 {
 	 */
 	public static final MMMessageAttribute mmBoundary = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QuantityRangeBoundary1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityRangeBoundary1.mmObject();
 			isDerived = false;
 			xmlTag = "Bdry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,11 +111,11 @@ public class QuantityRangeBoundary1 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "Incl", required = true)
 	protected YesNoIndicator included;
 	/**
-	 * Indicates whether the boundary quantity is included in the range of
-	 * quantity values.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -143,7 +145,7 @@ public class QuantityRangeBoundary1 {
 	 */
 	public static final MMMessageAttribute mmIncluded = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QuantityRangeBoundary1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityRangeBoundary1.mmObject();
 			isDerived = false;
 			xmlTag = "Incl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,8 +160,8 @@ public class QuantityRangeBoundary1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QuantityRangeBoundary1.mmBoundary, QuantityRangeBoundary1.mmIncluded);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityRangeBoundary1.mmBoundary, com.tools20022.repository.msg.QuantityRangeBoundary1.mmIncluded);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "QuantityRangeBoundary1";
 				definition = "Limit for a quantity range.";
@@ -168,21 +170,21 @@ public class QuantityRangeBoundary1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Bdry", required = true)
 	public DecimalNumber getBoundary() {
 		return boundary;
 	}
 
-	public void setBoundary(DecimalNumber boundary) {
-		this.boundary = boundary;
+	public QuantityRangeBoundary1 setBoundary(DecimalNumber boundary) {
+		this.boundary = Objects.requireNonNull(boundary);
+		return this;
 	}
 
-	@XmlElement(name = "Incl", required = true)
 	public YesNoIndicator getIncluded() {
 		return included;
 	}
 
-	public void setIncluded(YesNoIndicator included) {
-		this.included = included;
+	public QuantityRangeBoundary1 setIncluded(YesNoIndicator included) {
+		this.included = Objects.requireNonNull(included);
+		return this;
 	}
 }

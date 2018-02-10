@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.SecuritiesSettlementStatusCode;
+import com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Provides the status of settlement of an instruction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatusCode
- * SecuritiesSettlementStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code#mmPending
- * SecuritiesSettlementStatus2Code.mmPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code#Pending
+ * SecuritiesSettlementStatus2Code.Pending}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code#mmFailing
- * SecuritiesSettlementStatus2Code.mmFailing}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code#Failing
+ * SecuritiesSettlementStatus2Code.Failing}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code#mmUnsettled
- * SecuritiesSettlementStatus2Code.mmUnsettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code#Unsettled
+ * SecuritiesSettlementStatus2Code.Unsettled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code#mmSettled
- * SecuritiesSettlementStatus2Code.mmSettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code#Settled
+ * SecuritiesSettlementStatus2Code.Settled}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code#mmPartialSettlement
- * SecuritiesSettlementStatus2Code.mmPartialSettlement}</li>
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code#PartialSettlement
+ * SecuritiesSettlementStatus2Code.PartialSettlement}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.SecuritiesSettlementStatusCode
+ * SecuritiesSettlementStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Provides the status of settlement of an instruction."</li>
  * </ul>
  */
-public class SecuritiesSettlementStatus2Code extends SecuritiesSettlementStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class SecuritiesSettlementStatus2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class SecuritiesSettlementStatus2Code extends SecuritiesSettlementStatusC
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPending = new MMCode() {
+	public static final SecuritiesSettlementStatus2Code Pending = new SecuritiesSettlementStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
-			owner_lazy = () -> SecuritiesSettlementStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code.mmObject();
+			codeName = SecuritiesSettlementStatusCode.Pending.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class SecuritiesSettlementStatus2Code extends SecuritiesSettlementStatusC
 	 * name} = "Failing"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFailing = new MMCode() {
+	public static final SecuritiesSettlementStatus2Code Failing = new SecuritiesSettlementStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Failing";
-			owner_lazy = () -> SecuritiesSettlementStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code.mmObject();
+			codeName = SecuritiesSettlementStatusCode.Failing.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class SecuritiesSettlementStatus2Code extends SecuritiesSettlementStatusC
 	 * name} = "Unsettled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnsettled = new MMCode() {
+	public static final SecuritiesSettlementStatus2Code Unsettled = new SecuritiesSettlementStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unsettled";
-			owner_lazy = () -> SecuritiesSettlementStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code.mmObject();
+			codeName = SecuritiesSettlementStatusCode.Unsettled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +169,12 @@ public class SecuritiesSettlementStatus2Code extends SecuritiesSettlementStatusC
 	 * name} = "Settled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettled = new MMCode() {
+	public static final SecuritiesSettlementStatus2Code Settled = new SecuritiesSettlementStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
-			owner_lazy = () -> SecuritiesSettlementStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code.mmObject();
+			codeName = SecuritiesSettlementStatusCode.Settled.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,27 +193,62 @@ public class SecuritiesSettlementStatus2Code extends SecuritiesSettlementStatusC
 	 * name} = "PartialSettlement"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPartialSettlement = new MMCode() {
+	public static final SecuritiesSettlementStatus2Code PartialSettlement = new SecuritiesSettlementStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlement";
-			owner_lazy = () -> SecuritiesSettlementStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code.mmObject();
+			codeName = SecuritiesSettlementStatusCode.PartialSettlement.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, SecuritiesSettlementStatus2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected SecuritiesSettlementStatus2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PEND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementStatus2Code";
 				definition = "Provides the status of settlement of an instruction.";
-				code_lazy = () -> Arrays.asList(SecuritiesSettlementStatus2Code.mmPending, SecuritiesSettlementStatus2Code.mmFailing, SecuritiesSettlementStatus2Code.mmUnsettled, SecuritiesSettlementStatus2Code.mmSettled,
-						SecuritiesSettlementStatus2Code.mmPartialSettlement);
 				trace_lazy = () -> SecuritiesSettlementStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code.Pending, com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code.Failing,
+						com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code.Unsettled, com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code.Settled,
+						com.tools20022.repository.codeset.SecuritiesSettlementStatus2Code.PartialSettlement);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Pending.getCodeName().get(), Pending);
+		codesByName.put(Failing.getCodeName().get(), Failing);
+		codesByName.put(Unsettled.getCodeName().get(), Unsettled);
+		codesByName.put(Settled.getCodeName().get(), Settled);
+		codesByName.put(PartialSettlement.getCodeName().get(), PartialSettlement);
+	}
+
+	public static SecuritiesSettlementStatus2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static SecuritiesSettlementStatus2Code[] values() {
+		SecuritiesSettlementStatus2Code[] values = new SecuritiesSettlementStatus2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, SecuritiesSettlementStatus2Code> {
+		@Override
+		public SecuritiesSettlementStatus2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(SecuritiesSettlementStatus2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

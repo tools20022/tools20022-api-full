@@ -20,35 +20,39 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PINFormatCode;
+import com.tools20022.repository.codeset.PINFormat1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * PIN (Personal Identification Number) format used to encrypt the PIN block.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PINFormatCode PINFormatCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code#mmISO0
- * PINFormat1Code.mmISO0}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code#mmISO1
- * PINFormat1Code.mmISO1}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code#mmISO2
- * PINFormat1Code.mmISO2}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code#mmISO3
- * PINFormat1Code.mmISO3}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code#ISO0
+ * PINFormat1Code.ISO0}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code#ISO1
+ * PINFormat1Code.ISO1}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code#ISO2
+ * PINFormat1Code.ISO2}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PINFormat1Code#ISO3
+ * PINFormat1Code.ISO3}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PINFormatCode PINFormatCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -66,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "PIN (Personal Identification Number) format used to encrypt the PIN block."</li>
  * </ul>
  */
-public class PINFormat1Code extends PINFormatCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PINFormat1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,11 +90,12 @@ public class PINFormat1Code extends PINFormatCode {
 	 * name} = "ISO0"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmISO0 = new MMCode() {
+	public static final PINFormat1Code ISO0 = new PINFormat1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO0";
-			owner_lazy = () -> PINFormat1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormat1Code.mmObject();
+			codeName = PINFormatCode.ISO0.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -108,11 +114,12 @@ public class PINFormat1Code extends PINFormatCode {
 	 * name} = "ISO1"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmISO1 = new MMCode() {
+	public static final PINFormat1Code ISO1 = new PINFormat1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO1";
-			owner_lazy = () -> PINFormat1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormat1Code.mmObject();
+			codeName = PINFormatCode.ISO1.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -131,11 +138,12 @@ public class PINFormat1Code extends PINFormatCode {
 	 * name} = "ISO2"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmISO2 = new MMCode() {
+	public static final PINFormat1Code ISO2 = new PINFormat1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO2";
-			owner_lazy = () -> PINFormat1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormat1Code.mmObject();
+			codeName = PINFormatCode.ISO2.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -154,26 +162,60 @@ public class PINFormat1Code extends PINFormatCode {
 	 * name} = "ISO3"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmISO3 = new MMCode() {
+	public static final PINFormat1Code ISO3 = new PINFormat1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISO3";
-			owner_lazy = () -> PINFormat1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PINFormat1Code.mmObject();
+			codeName = PINFormatCode.ISO3.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PINFormat1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PINFormat1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ISO0");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PINFormat1Code";
 				definition = "PIN (Personal Identification Number) format used to encrypt the PIN block.";
-				code_lazy = () -> Arrays.asList(PINFormat1Code.mmISO0, PINFormat1Code.mmISO1, PINFormat1Code.mmISO2, PINFormat1Code.mmISO3);
 				trace_lazy = () -> PINFormatCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PINFormat1Code.ISO0, com.tools20022.repository.codeset.PINFormat1Code.ISO1, com.tools20022.repository.codeset.PINFormat1Code.ISO2,
+						com.tools20022.repository.codeset.PINFormat1Code.ISO3);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ISO0.getCodeName().get(), ISO0);
+		codesByName.put(ISO1.getCodeName().get(), ISO1);
+		codesByName.put(ISO2.getCodeName().get(), ISO2);
+		codesByName.put(ISO3.getCodeName().get(), ISO3);
+	}
+
+	public static PINFormat1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PINFormat1Code[] values() {
+		PINFormat1Code[] values = new PINFormat1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PINFormat1Code> {
+		@Override
+		public PINFormat1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PINFormat1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

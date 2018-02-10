@@ -31,6 +31,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -85,8 +87,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -97,16 +99,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides the details of the reported transaction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesTransaction1", propOrder = {"tradeDate", "tradingCapacity", "quantity", "derivativeNotionalChange", "price", "netAmount", "tradeVenue", "countryOfBranch", "upFrontPayment", "tradePlaceMatchingIdentification",
 		"complexTradeComponentIdentification"})
 public class SecuritiesTransaction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradDt", required = true)
 	protected ISODateTime tradeDate;
 	/**
-	 * Specifies the date/time on which the trade was executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +142,7 @@ public class SecuritiesTransaction1 {
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,15 +153,11 @@ public class SecuritiesTransaction1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgCpcty", required = true)
 	protected RegulatoryTradingCapacity1Code tradingCapacity;
 	/**
-	 * Indication of whether the transaction results from the reporting firm
-	 * carrying out matched principal trading or dealing on own account under
-	 * the local regulation, or where the transaction does not result from the
-	 * reporting firm carrying out matched principal trading or dealing on own
-	 * account, the field shall indicate that the transaction was carried out
-	 * under any other capacity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -194,7 +193,7 @@ public class SecuritiesTransaction1 {
 	public static final MMMessageAttribute mmTradingCapacity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmTradingPartyCapacity;
-			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgCpcty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,11 +204,11 @@ public class SecuritiesTransaction1 {
 			simpleType_lazy = () -> RegulatoryTradingCapacity1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Qty", required = true)
 	protected FinancialInstrumentQuantity25Choice quantity;
 	/**
-	 * Number of units of the financial instrument, or the number of derivative
-	 * contracts in the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -244,7 +243,7 @@ public class SecuritiesTransaction1 {
 	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
-			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -256,11 +255,11 @@ public class SecuritiesTransaction1 {
 			type_lazy = () -> FinancialInstrumentQuantity25Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DerivNtnlChng")
 	protected VariationType1Code derivativeNotionalChange;
 	/**
-	 * Indicates as to whether an increase or a decrease of notional of
-	 * derivative contracts has taken place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -296,7 +295,7 @@ public class SecuritiesTransaction1 {
 	public static final MMMessageAttribute mmDerivativeNotionalChange = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTransactionType;
-			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "DerivNtnlChng";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -307,21 +306,11 @@ public class SecuritiesTransaction1 {
 			simpleType_lazy = () -> VariationType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Pric", required = true)
 	protected SecuritiesTransactionPrice4Choice price;
 	/**
-	 * Traded price of the transaction excluding, where applicable, commission
-	 * and accrued interest.<br>
-	 * In the case of option contracts, it is the premium of the derivative
-	 * contract per underlying security or index point.<br>
-	 * In the case of spread bets it should be the reference price of the direct
-	 * underlying instrument.<br>
-	 * Where price is currently not available but pending, the value should be
-	 * ’PNDG’.<br>
-	 * For CDS it should be the coupon in basis points. <br>
-	 * Where price reported in monetary terms, it shall be provided in the major
-	 * currency unit.<br>
-	 * Where price is not applicable the field should be left blank.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -356,7 +345,7 @@ public class SecuritiesTransaction1 {
 	public static final MMMessageAssociationEnd mmPrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradePrice;
-			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "Pric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -368,11 +357,11 @@ public class SecuritiesTransaction1 {
 			type_lazy = () -> SecuritiesTransactionPrice4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NetAmt")
 	protected ImpliedCurrencyAndAmount netAmount;
 	/**
-	 * Net amount of the transaction means the cash amount which is paid by the
-	 * buyer of the debt instrument upon the settlement of the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -408,7 +397,7 @@ public class SecuritiesTransaction1 {
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeAmount;
-			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "NetAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -419,28 +408,11 @@ public class SecuritiesTransaction1 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TradVn", required = true)
 	protected MICIdentifier tradeVenue;
 	/**
-	 * Identification of the venue where the transaction was executed.<br>
-	 * <br>
-	 * Usage: <br>
-	 * Use the ISO 10383 segment MIC (4 characters) for financial instruments
-	 * executed on a MiFID trading venue, System Internaliser (SI) or non-EU
-	 * organised trading platform. Where the segment MIC does not exist, use the
-	 * operating MIC. <br>
-	 * <br>
-	 * Use MIC code ‘XOFF’ for financial instruments admitted to trading or
-	 * traded on a trading venue, where the transaction on that financial
-	 * instrument is not executed on a MiFID trading venue, SI or non-EU
-	 * organised trading platform, or where an investment firm does not know it
-	 * is trading with another investment firm acting as an SI.<br>
-	 * <br>
-	 * Use MIC code ‘XXXX’ for financial instruments that are not admitted to
-	 * trading or traded on a trading venue or for which no request for
-	 * admission has been made and that are not traded on an non-EU organised
-	 * trading platform but where the underlying is admitted to trading or
-	 * traded on a trading venue.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -476,7 +448,7 @@ public class SecuritiesTransaction1 {
 	public static final MMMessageAttribute mmTradeVenue = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> TradingMarket.mmObject();
-			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TradVn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -487,13 +459,11 @@ public class SecuritiesTransaction1 {
 			simpleType_lazy = () -> MICIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "CtryOfBrnch")
 	protected CountryCode countryOfBranch;
 	/**
-	 * Country of the branch of the investment firm whose market membership was
-	 * used to execute the transaction.<br>
-	 * <br>
-	 * TBC with item 46.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -528,7 +498,7 @@ public class SecuritiesTransaction1 {
 	public static final MMMessageAttribute mmCountryOfBranch = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PostalAddress.mmCountry;
-			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "CtryOfBrnch";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -539,17 +509,11 @@ public class SecuritiesTransaction1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "UpFrntPmt")
 	protected AmountAndDirection53 upFrontPayment;
 	/**
-	 * Monetary value of any up-front payment in basis points of notional
-	 * received or paid by the seller.<br>
-	 * Where the seller receives the up-front payment, the value populated is
-	 * positive. Where the seller pays the up-front payment, the value populated
-	 * is negative.<br>
-	 * For increase or decrease in notional derivative contracts, the number
-	 * shall reflect the absolute value of the change and shall be expressed as
-	 * a positive number.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -583,7 +547,7 @@ public class SecuritiesTransaction1 {
 	public static final MMMessageAssociationEnd mmUpFrontPayment = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashSettlement.mmInterbankSettlementAmount;
-			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "UpFrntPmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -595,12 +559,11 @@ public class SecuritiesTransaction1 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection53.mmObject();
 		}
 	};
+	@XmlElement(name = "TradPlcMtchgId")
 	protected Max52Text tradePlaceMatchingIdentification;
 	/**
-	 * Common matching identification when executed on a trade place.<br>
-	 * <br>
-	 * Usage: Must be present when a trade venue has been provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -635,7 +598,7 @@ public class SecuritiesTransaction1 {
 	public static final MMMessageAttribute mmTradePlaceMatchingIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
-			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "TradPlcMtchgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -646,16 +609,11 @@ public class SecuritiesTransaction1 {
 			simpleType_lazy = () -> Max52Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CmplxTradCmpntId")
 	protected Max35Text complexTradeComponentIdentification;
 	/**
-	 * Identification, internal to the reporting party to identify all the
-	 * reports related to the same execution of a combination of financial
-	 * instruments. The code must be unique for the reporting party for the
-	 * group of reports for the execution.<br>
-	 * <br>
-	 * Usage:<br>
-	 * Field only applies when the instrument is complex.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -690,7 +648,7 @@ public class SecuritiesTransaction1 {
 	public static final MMMessageAttribute mmComplexTradeComponentIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradeIdentification.mmCommonIdentification;
-			componentContext_lazy = () -> SecuritiesTransaction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecuritiesTransaction1.mmObject();
 			isDerived = false;
 			xmlTag = "CmplxTradCmpntId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -705,11 +663,13 @@ public class SecuritiesTransaction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecuritiesTransaction1.mmTradeDate, SecuritiesTransaction1.mmTradingCapacity, SecuritiesTransaction1.mmQuantity, SecuritiesTransaction1.mmDerivativeNotionalChange,
-						SecuritiesTransaction1.mmPrice, SecuritiesTransaction1.mmNetAmount, SecuritiesTransaction1.mmTradeVenue, SecuritiesTransaction1.mmCountryOfBranch, SecuritiesTransaction1.mmUpFrontPayment,
-						SecuritiesTransaction1.mmTradePlaceMatchingIdentification, SecuritiesTransaction1.mmComplexTradeComponentIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecuritiesTransaction1.mmTradeDate, com.tools20022.repository.msg.SecuritiesTransaction1.mmTradingCapacity,
+						com.tools20022.repository.msg.SecuritiesTransaction1.mmQuantity, com.tools20022.repository.msg.SecuritiesTransaction1.mmDerivativeNotionalChange, com.tools20022.repository.msg.SecuritiesTransaction1.mmPrice,
+						com.tools20022.repository.msg.SecuritiesTransaction1.mmNetAmount, com.tools20022.repository.msg.SecuritiesTransaction1.mmTradeVenue, com.tools20022.repository.msg.SecuritiesTransaction1.mmCountryOfBranch,
+						com.tools20022.repository.msg.SecuritiesTransaction1.mmUpFrontPayment, com.tools20022.repository.msg.SecuritiesTransaction1.mmTradePlaceMatchingIdentification,
+						com.tools20022.repository.msg.SecuritiesTransaction1.mmComplexTradeComponentIdentification);
 				trace_lazy = () -> SecuritiesTransaction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransaction1";
 				definition = "Provides the details of the reported transaction.";
@@ -718,102 +678,102 @@ public class SecuritiesTransaction1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradDt", required = true)
 	public ISODateTime getTradeDate() {
 		return tradeDate;
 	}
 
-	public void setTradeDate(ISODateTime tradeDate) {
-		this.tradeDate = tradeDate;
+	public SecuritiesTransaction1 setTradeDate(ISODateTime tradeDate) {
+		this.tradeDate = Objects.requireNonNull(tradeDate);
+		return this;
 	}
 
-	@XmlElement(name = "TradgCpcty", required = true)
 	public RegulatoryTradingCapacity1Code getTradingCapacity() {
 		return tradingCapacity;
 	}
 
-	public void setTradingCapacity(RegulatoryTradingCapacity1Code tradingCapacity) {
-		this.tradingCapacity = tradingCapacity;
+	public SecuritiesTransaction1 setTradingCapacity(RegulatoryTradingCapacity1Code tradingCapacity) {
+		this.tradingCapacity = Objects.requireNonNull(tradingCapacity);
+		return this;
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity25Choice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(FinancialInstrumentQuantity25Choice quantity) {
-		this.quantity = quantity;
+	public SecuritiesTransaction1 setQuantity(FinancialInstrumentQuantity25Choice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "DerivNtnlChng")
-	public VariationType1Code getDerivativeNotionalChange() {
-		return derivativeNotionalChange;
+	public Optional<VariationType1Code> getDerivativeNotionalChange() {
+		return derivativeNotionalChange == null ? Optional.empty() : Optional.of(derivativeNotionalChange);
 	}
 
-	public void setDerivativeNotionalChange(VariationType1Code derivativeNotionalChange) {
+	public SecuritiesTransaction1 setDerivativeNotionalChange(VariationType1Code derivativeNotionalChange) {
 		this.derivativeNotionalChange = derivativeNotionalChange;
+		return this;
 	}
 
-	@XmlElement(name = "Pric", required = true)
 	public SecuritiesTransactionPrice4Choice getPrice() {
 		return price;
 	}
 
-	public void setPrice(SecuritiesTransactionPrice4Choice price) {
-		this.price = price;
+	public SecuritiesTransaction1 setPrice(SecuritiesTransactionPrice4Choice price) {
+		this.price = Objects.requireNonNull(price);
+		return this;
 	}
 
-	@XmlElement(name = "NetAmt")
-	public ImpliedCurrencyAndAmount getNetAmount() {
-		return netAmount;
+	public Optional<ImpliedCurrencyAndAmount> getNetAmount() {
+		return netAmount == null ? Optional.empty() : Optional.of(netAmount);
 	}
 
-	public void setNetAmount(ImpliedCurrencyAndAmount netAmount) {
+	public SecuritiesTransaction1 setNetAmount(ImpliedCurrencyAndAmount netAmount) {
 		this.netAmount = netAmount;
+		return this;
 	}
 
-	@XmlElement(name = "TradVn", required = true)
 	public MICIdentifier getTradeVenue() {
 		return tradeVenue;
 	}
 
-	public void setTradeVenue(MICIdentifier tradeVenue) {
-		this.tradeVenue = tradeVenue;
+	public SecuritiesTransaction1 setTradeVenue(MICIdentifier tradeVenue) {
+		this.tradeVenue = Objects.requireNonNull(tradeVenue);
+		return this;
 	}
 
-	@XmlElement(name = "CtryOfBrnch")
-	public CountryCode getCountryOfBranch() {
-		return countryOfBranch;
+	public Optional<CountryCode> getCountryOfBranch() {
+		return countryOfBranch == null ? Optional.empty() : Optional.of(countryOfBranch);
 	}
 
-	public void setCountryOfBranch(CountryCode countryOfBranch) {
+	public SecuritiesTransaction1 setCountryOfBranch(CountryCode countryOfBranch) {
 		this.countryOfBranch = countryOfBranch;
+		return this;
 	}
 
-	@XmlElement(name = "UpFrntPmt")
-	public AmountAndDirection53 getUpFrontPayment() {
-		return upFrontPayment;
+	public Optional<AmountAndDirection53> getUpFrontPayment() {
+		return upFrontPayment == null ? Optional.empty() : Optional.of(upFrontPayment);
 	}
 
-	public void setUpFrontPayment(com.tools20022.repository.msg.AmountAndDirection53 upFrontPayment) {
+	public SecuritiesTransaction1 setUpFrontPayment(com.tools20022.repository.msg.AmountAndDirection53 upFrontPayment) {
 		this.upFrontPayment = upFrontPayment;
+		return this;
 	}
 
-	@XmlElement(name = "TradPlcMtchgId")
-	public Max52Text getTradePlaceMatchingIdentification() {
-		return tradePlaceMatchingIdentification;
+	public Optional<Max52Text> getTradePlaceMatchingIdentification() {
+		return tradePlaceMatchingIdentification == null ? Optional.empty() : Optional.of(tradePlaceMatchingIdentification);
 	}
 
-	public void setTradePlaceMatchingIdentification(Max52Text tradePlaceMatchingIdentification) {
+	public SecuritiesTransaction1 setTradePlaceMatchingIdentification(Max52Text tradePlaceMatchingIdentification) {
 		this.tradePlaceMatchingIdentification = tradePlaceMatchingIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CmplxTradCmpntId")
-	public Max35Text getComplexTradeComponentIdentification() {
-		return complexTradeComponentIdentification;
+	public Optional<Max35Text> getComplexTradeComponentIdentification() {
+		return complexTradeComponentIdentification == null ? Optional.empty() : Optional.of(complexTradeComponentIdentification);
 	}
 
-	public void setComplexTradeComponentIdentification(Max35Text complexTradeComponentIdentification) {
+	public SecuritiesTransaction1 setComplexTradeComponentIdentification(Max35Text complexTradeComponentIdentification) {
 		this.complexTradeComponentIdentification = complexTradeComponentIdentification;
+		return this;
 	}
 }

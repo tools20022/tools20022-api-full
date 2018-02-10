@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TransferInFunctionCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the function of the transfer in.
@@ -32,17 +37,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferInFunctionCode#mmAdviceAndRequest
- * TransferInFunctionCode.mmAdviceAndRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferInFunctionCode#AdviceAndRequest
+ * TransferInFunctionCode.AdviceAndRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferInFunctionCode#mmInstruction
- * TransferInFunctionCode.mmInstruction}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferInFunctionCode#Instruction
+ * TransferInFunctionCode.Instruction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferInFunctionCode#mmAdvice
- * TransferInFunctionCode.mmAdvice}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferInFunctionCode#Advice
+ * TransferInFunctionCode.Advice}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferInFunctionCode#mmConfirmation
- * TransferInFunctionCode.mmConfirmation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferInFunctionCode#Confirmation
+ * TransferInFunctionCode.Confirmation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -57,8 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the function of the transfer in."</li>
  * </ul>
  */
-public class TransferInFunctionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransferInFunctionCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,12 +103,12 @@ public class TransferInFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAdviceAndRequest = new MMCode() {
+	public static final TransferInFunctionCode AdviceAndRequest = new TransferInFunctionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdviceAndRequest";
 			definition = "The transfer-in is an advice and request, that is, the message is used to inform the receiver to expect an unsolicited transfer in confirmation and to request account information for the transfer.";
-			owner_lazy = () -> TransferInFunctionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferInFunctionCode.mmObject();
 			codeName = "ADRE";
 		}
 	};
@@ -127,12 +133,12 @@ public class TransferInFunctionCode {
 	 * definition} = "The transfer-in is an instruction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstruction = new MMCode() {
+	public static final TransferInFunctionCode Instruction = new TransferInFunctionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
 			definition = "The transfer-in is an instruction.";
-			owner_lazy = () -> TransferInFunctionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferInFunctionCode.mmObject();
 			codeName = "INST";
 		}
 	};
@@ -159,12 +165,12 @@ public class TransferInFunctionCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAdvice = new MMCode() {
+	public static final TransferInFunctionCode Advice = new TransferInFunctionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Advice";
 			definition = "The transfer-in provides advice about account information for a transfer.";
-			owner_lazy = () -> TransferInFunctionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferInFunctionCode.mmObject();
 			codeName = "ADVI";
 		}
 	};
@@ -190,27 +196,60 @@ public class TransferInFunctionCode {
 	 * "The transfer-in is a confirmation (rather than an advice)."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmConfirmation = new MMCode() {
+	public static final TransferInFunctionCode Confirmation = new TransferInFunctionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmation";
 			definition = "The transfer-in is a confirmation (rather than an advice).";
-			owner_lazy = () -> TransferInFunctionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferInFunctionCode.mmObject();
 			codeName = "CONF";
 		}
 	};
+	final static private LinkedHashMap<String, TransferInFunctionCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransferInFunctionCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferInFunctionCode";
 				definition = "Specifies the function of the transfer in.";
-				code_lazy = () -> Arrays.asList(TransferInFunctionCode.mmAdviceAndRequest, TransferInFunctionCode.mmInstruction, TransferInFunctionCode.mmAdvice, TransferInFunctionCode.mmConfirmation);
 				derivation_lazy = () -> Arrays.asList(TransferInFunction1Code.mmObject(), TransferInFunction2Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferInFunctionCode.AdviceAndRequest, com.tools20022.repository.codeset.TransferInFunctionCode.Instruction,
+						com.tools20022.repository.codeset.TransferInFunctionCode.Advice, com.tools20022.repository.codeset.TransferInFunctionCode.Confirmation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AdviceAndRequest.getCodeName().get(), AdviceAndRequest);
+		codesByName.put(Instruction.getCodeName().get(), Instruction);
+		codesByName.put(Advice.getCodeName().get(), Advice);
+		codesByName.put(Confirmation.getCodeName().get(), Confirmation);
+	}
+
+	public static TransferInFunctionCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransferInFunctionCode[] values() {
+		TransferInFunctionCode[] values = new TransferInFunctionCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransferInFunctionCode> {
+		@Override
+		public TransferInFunctionCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransferInFunctionCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

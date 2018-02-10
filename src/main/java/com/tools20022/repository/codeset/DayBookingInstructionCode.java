@@ -17,12 +17,18 @@
 
 package com.tools20022.repository.codeset;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DayBookingInstructionCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Description of the nature of execution booking process.
@@ -32,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DayBookingInstructionCode#mmAuto
- * DayBookingInstructionCode.mmAuto}</li>
+ * {@linkplain com.tools20022.repository.codeset.DayBookingInstructionCode#Auto
+ * DayBookingInstructionCode.Auto}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DayBookingInstructionCode#mmSpeakFirst
- * DayBookingInstructionCode.mmSpeakFirst}</li>
+ * {@linkplain com.tools20022.repository.codeset.DayBookingInstructionCode#SpeakFirst
+ * DayBookingInstructionCode.SpeakFirst}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +55,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = FIXSynonym: 589</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +76,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Description of the nature of execution booking process."</li>
  * </ul>
  */
-public class DayBookingInstructionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DayBookingInstructionCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,6 +91,9 @@ public class DayBookingInstructionCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "AUTO"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 589 value 0</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -92,12 +105,13 @@ public class DayBookingInstructionCode {
 	 * "Can trigger booking without reference to the order initiator."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAuto = new MMCode() {
+	public static final DayBookingInstructionCode Auto = new DayBookingInstructionCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "589 value 0"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Auto";
 			definition = "Can trigger booking without reference to the order initiator.";
-			owner_lazy = () -> DayBookingInstructionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DayBookingInstructionCode.mmObject();
 			codeName = "AUTO";
 		}
 	};
@@ -112,6 +126,9 @@ public class DayBookingInstructionCode {
 	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
 	 * "TALK"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 589</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -122,28 +139,60 @@ public class DayBookingInstructionCode {
 	 * definition} = "Speak with order initiator before booking."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSpeakFirst = new MMCode() {
+	public static final DayBookingInstructionCode SpeakFirst = new DayBookingInstructionCode() {
 		{
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "589"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpeakFirst";
 			definition = "Speak with order initiator before booking.";
-			owner_lazy = () -> DayBookingInstructionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DayBookingInstructionCode.mmObject();
 			codeName = "TALK";
 		}
 	};
+	final static private LinkedHashMap<String, DayBookingInstructionCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DayBookingInstructionCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "589"));
 				example = Arrays.asList("AUTO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DayBookingInstructionCode";
 				definition = "Description of the nature of execution booking process.";
-				code_lazy = () -> Arrays.asList(DayBookingInstructionCode.mmAuto, DayBookingInstructionCode.mmSpeakFirst);
 				derivation_lazy = () -> Arrays.asList(DayBookingInstruction1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DayBookingInstructionCode.Auto, com.tools20022.repository.codeset.DayBookingInstructionCode.SpeakFirst);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Auto.getCodeName().get(), Auto);
+		codesByName.put(SpeakFirst.getCodeName().get(), SpeakFirst);
+	}
+
+	public static DayBookingInstructionCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DayBookingInstructionCode[] values() {
+		DayBookingInstructionCode[] values = new DayBookingInstructionCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DayBookingInstructionCode> {
+		@Override
+		public DayBookingInstructionCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DayBookingInstructionCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

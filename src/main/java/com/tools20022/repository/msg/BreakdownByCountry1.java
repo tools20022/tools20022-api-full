@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BreakdownByCountry1", propOrder = {"country", "cashInForecast", "cashOutForecast", "netCashForecast"})
 public class BreakdownByCountry1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Ctry", required = true)
 	protected CountryCode country;
 	/**
-	 * Country for which the cash flow is being reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +121,7 @@ public class BreakdownByCountry1 {
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BreakdownByCountry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByCountry1.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,11 +133,11 @@ public class BreakdownByCountry1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "CshInFcst")
 	protected List<com.tools20022.repository.msg.CashInForecast3> cashInForecast;
 	/**
-	 * Cash movement into the fund as a result of investment funds transactions,
-	 * eg, subscriptions or switch-in.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -170,7 +173,7 @@ public class BreakdownByCountry1 {
 	 */
 	public static final MMMessageAssociationEnd mmCashInForecast = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BreakdownByCountry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByCountry1.mmObject();
 			isDerived = false;
 			xmlTag = "CshInFcst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -182,11 +185,11 @@ public class BreakdownByCountry1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashInForecast3.mmObject();
 		}
 	};
+	@XmlElement(name = "CshOutFcst")
 	protected List<com.tools20022.repository.msg.CashOutForecast3> cashOutForecast;
 	/**
-	 * Cash movement out of the fund as a result of investment funds
-	 * transactions, eg, redemptions or switch-out.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -222,7 +225,7 @@ public class BreakdownByCountry1 {
 	 */
 	public static final MMMessageAssociationEnd mmCashOutForecast = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BreakdownByCountry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByCountry1.mmObject();
 			isDerived = false;
 			xmlTag = "CshOutFcst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -234,11 +237,11 @@ public class BreakdownByCountry1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashOutForecast3.mmObject();
 		}
 	};
+	@XmlElement(name = "NetCshFcst")
 	protected List<com.tools20022.repository.msg.NetCashForecast2> netCashForecast;
 	/**
-	 * Net cash as a result of the cash-in and cash-out flows specified for the
-	 * country.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -274,7 +277,7 @@ public class BreakdownByCountry1 {
 	 */
 	public static final MMMessageAssociationEnd mmNetCashForecast = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BreakdownByCountry1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BreakdownByCountry1.mmObject();
 			isDerived = false;
 			xmlTag = "NetCshFcst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -290,8 +293,9 @@ public class BreakdownByCountry1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BreakdownByCountry1.mmCountry, BreakdownByCountry1.mmCashInForecast, BreakdownByCountry1.mmCashOutForecast, BreakdownByCountry1.mmNetCashForecast);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BreakdownByCountry1.mmCountry, com.tools20022.repository.msg.BreakdownByCountry1.mmCashInForecast,
+						com.tools20022.repository.msg.BreakdownByCountry1.mmCashOutForecast, com.tools20022.repository.msg.BreakdownByCountry1.mmNetCashForecast);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BreakdownByCountry1";
 				definition = "Specifies the cash-in and cash-out flows by country.";
@@ -301,39 +305,39 @@ public class BreakdownByCountry1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Ctry", required = true)
 	public CountryCode getCountry() {
 		return country;
 	}
 
-	public void setCountry(CountryCode country) {
-		this.country = country;
+	public BreakdownByCountry1 setCountry(CountryCode country) {
+		this.country = Objects.requireNonNull(country);
+		return this;
 	}
 
-	@XmlElement(name = "CshInFcst")
 	public List<CashInForecast3> getCashInForecast() {
-		return cashInForecast;
+		return cashInForecast == null ? cashInForecast = new ArrayList<>() : cashInForecast;
 	}
 
-	public void setCashInForecast(List<com.tools20022.repository.msg.CashInForecast3> cashInForecast) {
-		this.cashInForecast = cashInForecast;
+	public BreakdownByCountry1 setCashInForecast(List<com.tools20022.repository.msg.CashInForecast3> cashInForecast) {
+		this.cashInForecast = Objects.requireNonNull(cashInForecast);
+		return this;
 	}
 
-	@XmlElement(name = "CshOutFcst")
 	public List<CashOutForecast3> getCashOutForecast() {
-		return cashOutForecast;
+		return cashOutForecast == null ? cashOutForecast = new ArrayList<>() : cashOutForecast;
 	}
 
-	public void setCashOutForecast(List<com.tools20022.repository.msg.CashOutForecast3> cashOutForecast) {
-		this.cashOutForecast = cashOutForecast;
+	public BreakdownByCountry1 setCashOutForecast(List<com.tools20022.repository.msg.CashOutForecast3> cashOutForecast) {
+		this.cashOutForecast = Objects.requireNonNull(cashOutForecast);
+		return this;
 	}
 
-	@XmlElement(name = "NetCshFcst")
 	public List<NetCashForecast2> getNetCashForecast() {
-		return netCashForecast;
+		return netCashForecast == null ? netCashForecast = new ArrayList<>() : netCashForecast;
 	}
 
-	public void setNetCashForecast(List<com.tools20022.repository.msg.NetCashForecast2> netCashForecast) {
-		this.netCashForecast = netCashForecast;
+	public BreakdownByCountry1 setNetCashForecast(List<com.tools20022.repository.msg.NetCashForecast2> netCashForecast) {
+		this.netCashForecast = Objects.requireNonNull(netCashForecast);
+		return this;
 	}
 }

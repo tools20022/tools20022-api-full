@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,17 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Provides details on the detailed or original amount and currency."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardAmountAndCurrencyExchange1", propOrder = {"amount", "currencyExchange", "type"})
 public class CardAmountAndCurrencyExchange1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveCurrencyAndAmount amount;
 	/**
-	 * Amount of money to be moved between the debtor and creditor, before
-	 * deduction of charges, expressed in the currency as ordered by the
-	 * initiating party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -119,7 +120,7 @@ public class CardAmountAndCurrencyExchange1 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmAmount;
-			componentContext_lazy = () -> CardAmountAndCurrencyExchange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +131,11 @@ public class CardAmountAndCurrencyExchange1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CcyXchg")
 	protected CurrencyExchange3 currencyExchange;
 	/**
-	 * Reports on currency exchange information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -165,7 +167,7 @@ public class CardAmountAndCurrencyExchange1 {
 	public static final MMMessageAssociationEnd mmCurrencyExchange = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashEntry.mmCurrencyExchange;
-			componentContext_lazy = () -> CardAmountAndCurrencyExchange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.mmObject();
 			isDerived = false;
 			xmlTag = "CcyXchg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,10 +179,11 @@ public class CardAmountAndCurrencyExchange1 {
 			type_lazy = () -> com.tools20022.repository.msg.CurrencyExchange3.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected TypeOfAmount3Code type;
 	/**
-	 * Identification or qualification of the type of amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -214,7 +217,7 @@ public class CardAmountAndCurrencyExchange1 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmAmountQualifier;
-			componentContext_lazy = () -> CardAmountAndCurrencyExchange1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,9 +232,10 @@ public class CardAmountAndCurrencyExchange1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardAmountAndCurrencyExchange1.mmAmount, CardAmountAndCurrencyExchange1.mmCurrencyExchange, CardAmountAndCurrencyExchange1.mmType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.mmAmount, com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.mmCurrencyExchange,
+						com.tools20022.repository.msg.CardAmountAndCurrencyExchange1.mmType);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardAmountAndCurrencyExchange1";
 				definition = "Provides details on the detailed or original amount and currency.";
@@ -240,30 +244,30 @@ public class CardAmountAndCurrencyExchange1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveCurrencyAndAmount amount) {
-		this.amount = amount;
+	public CardAmountAndCurrencyExchange1 setAmount(ActiveCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "CcyXchg")
-	public CurrencyExchange3 getCurrencyExchange() {
-		return currencyExchange;
+	public Optional<CurrencyExchange3> getCurrencyExchange() {
+		return currencyExchange == null ? Optional.empty() : Optional.of(currencyExchange);
 	}
 
-	public void setCurrencyExchange(com.tools20022.repository.msg.CurrencyExchange3 currencyExchange) {
+	public CardAmountAndCurrencyExchange1 setCurrencyExchange(com.tools20022.repository.msg.CurrencyExchange3 currencyExchange) {
 		this.currencyExchange = currencyExchange;
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public TypeOfAmount3Code getType() {
-		return type;
+	public Optional<TypeOfAmount3Code> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(TypeOfAmount3Code type) {
+	public CardAmountAndCurrencyExchange1 setType(TypeOfAmount3Code type) {
 		this.type = type;
+		return this;
 	}
 }

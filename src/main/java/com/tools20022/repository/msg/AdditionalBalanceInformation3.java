@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AdditionalBalanceInformation3", propOrder = {"quantity", "additionalBalanceInformation"})
 public class AdditionalBalanceInformation3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Qty", required = true)
 	protected SubBalanceQuantity1Choice quantity;
 	/**
-	 * Quantity of securities in the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -112,7 +114,7 @@ public class AdditionalBalanceInformation3 {
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSubBalanceQuantity;
-			componentContext_lazy = () -> AdditionalBalanceInformation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,12 +125,11 @@ public class AdditionalBalanceInformation3 {
 			complexType_lazy = () -> SubBalanceQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlBalInf", required = true)
 	protected SubBalanceType1Choice additionalBalanceInformation;
 	/**
-	 * Net position of a segregated holding of a single security within the
-	 * overall position held in the securities account, eg, sub-balance per
-	 * status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -163,7 +164,7 @@ public class AdditionalBalanceInformation3 {
 	public static final MMMessageAssociationEnd mmAdditionalBalanceInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesBalance.mmSecuritiesSubBalance;
-			componentContext_lazy = () -> AdditionalBalanceInformation3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AdditionalBalanceInformation3.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlBalInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -179,9 +180,9 @@ public class AdditionalBalanceInformation3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AdditionalBalanceInformation3.mmQuantity, AdditionalBalanceInformation3.mmAdditionalBalanceInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalBalanceInformation3.mmQuantity, com.tools20022.repository.msg.AdditionalBalanceInformation3.mmAdditionalBalanceInformation);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AdditionalBalanceInformation3";
 				definition = "Net position of a segregated holding of a single security within the overall position held in the securities account, eg, sub-balance per status.";
@@ -190,21 +191,21 @@ public class AdditionalBalanceInformation3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public SubBalanceQuantity1Choice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(SubBalanceQuantity1Choice quantity) {
-		this.quantity = quantity;
+	public AdditionalBalanceInformation3 setQuantity(SubBalanceQuantity1Choice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "AddtlBalInf", required = true)
 	public SubBalanceType1Choice getAdditionalBalanceInformation() {
 		return additionalBalanceInformation;
 	}
 
-	public void setAdditionalBalanceInformation(SubBalanceType1Choice additionalBalanceInformation) {
-		this.additionalBalanceInformation = additionalBalanceInformation;
+	public AdditionalBalanceInformation3 setAdditionalBalanceInformation(SubBalanceType1Choice additionalBalanceInformation) {
+		this.additionalBalanceInformation = Objects.requireNonNull(additionalBalanceInformation);
+		return this;
 	}
 }

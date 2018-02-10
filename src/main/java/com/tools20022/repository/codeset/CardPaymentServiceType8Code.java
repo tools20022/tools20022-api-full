@@ -20,82 +20,86 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CardPaymentServiceTypeCode;
+import com.tools20022.repository.codeset.CardPaymentServiceType8Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Main card service transaction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode
- * CardPaymentServiceTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmAggregation
- * CardPaymentServiceType8Code.mmAggregation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#Aggregation
+ * CardPaymentServiceType8Code.Aggregation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmCashBack
- * CardPaymentServiceType8Code.mmCashBack}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#CashBack
+ * CardPaymentServiceType8Code.CashBack}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmChosenWithdrawal
- * CardPaymentServiceType8Code.mmChosenWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#ChosenWithdrawal
+ * CardPaymentServiceType8Code.ChosenWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmDCC
- * CardPaymentServiceType8Code.mmDCC}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#DCC
+ * CardPaymentServiceType8Code.DCC}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmGratuity
- * CardPaymentServiceType8Code.mmGratuity}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#Gratuity
+ * CardPaymentServiceType8Code.Gratuity}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmAcceptorInstalment
- * CardPaymentServiceType8Code.mmAcceptorInstalment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#AcceptorInstalment
+ * CardPaymentServiceType8Code.AcceptorInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmIssuerInstalment
- * CardPaymentServiceType8Code.mmIssuerInstalment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#IssuerInstalment
+ * CardPaymentServiceType8Code.IssuerInstalment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmLoyalty
- * CardPaymentServiceType8Code.mmLoyalty}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#Loyalty
+ * CardPaymentServiceType8Code.Loyalty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmNoShow
- * CardPaymentServiceType8Code.mmNoShow}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#NoShow
+ * CardPaymentServiceType8Code.NoShow}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmPreAuthorisedWithdrawal
- * CardPaymentServiceType8Code.mmPreAuthorisedWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#PreAuthorisedWithdrawal
+ * CardPaymentServiceType8Code.PreAuthorisedWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmProfileWithdrawal
- * CardPaymentServiceType8Code.mmProfileWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#ProfileWithdrawal
+ * CardPaymentServiceType8Code.ProfileWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmPurchaseCorporate
- * CardPaymentServiceType8Code.mmPurchaseCorporate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#PurchaseCorporate
+ * CardPaymentServiceType8Code.PurchaseCorporate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmRecurringPayment
- * CardPaymentServiceType8Code.mmRecurringPayment}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#RecurringPayment
+ * CardPaymentServiceType8Code.RecurringPayment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmSolicitedAvailableFunds
- * CardPaymentServiceType8Code.mmSolicitedAvailableFunds}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#SolicitedAvailableFunds
+ * CardPaymentServiceType8Code.SolicitedAvailableFunds}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmStandardWithdrawal
- * CardPaymentServiceType8Code.mmStandardWithdrawal}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#StandardWithdrawal
+ * CardPaymentServiceType8Code.StandardWithdrawal}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmVoiceAuthorisation
- * CardPaymentServiceType8Code.mmVoiceAuthorisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#VoiceAuthorisation
+ * CardPaymentServiceType8Code.VoiceAuthorisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmNonRefundable
- * CardPaymentServiceType8Code.mmNonRefundable}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#NonRefundable
+ * CardPaymentServiceType8Code.NonRefundable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#mmInstant
- * CardPaymentServiceType8Code.mmInstant}</li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType8Code#Instant
+ * CardPaymentServiceType8Code.Instant}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode
+ * CardPaymentServiceTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,7 +110,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Main card service transaction."</li>
  * </ul>
  */
-public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CardPaymentServiceType8Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -125,11 +130,12 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "Aggregation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAggregation = new MMCode() {
+	public static final CardPaymentServiceType8Code Aggregation = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aggregation";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.Aggregation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -148,11 +154,12 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "CashBack"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCashBack = new MMCode() {
+	public static final CardPaymentServiceType8Code CashBack = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashBack";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.CashBack.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -171,11 +178,12 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "ChosenWithdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmChosenWithdrawal = new MMCode() {
+	public static final CardPaymentServiceType8Code ChosenWithdrawal = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChosenWithdrawal";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.ChosenWithdrawal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -194,11 +202,12 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "DCC"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDCC = new MMCode() {
+	public static final CardPaymentServiceType8Code DCC = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DCC";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.DCC.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -217,11 +226,12 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "Gratuity"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGratuity = new MMCode() {
+	public static final CardPaymentServiceType8Code Gratuity = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Gratuity";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.Gratuity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -240,11 +250,12 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "AcceptorInstalment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptorInstalment = new MMCode() {
+	public static final CardPaymentServiceType8Code AcceptorInstalment = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorInstalment";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.AcceptorInstalment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -263,11 +274,12 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "IssuerInstalment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIssuerInstalment = new MMCode() {
+	public static final CardPaymentServiceType8Code IssuerInstalment = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerInstalment";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.IssuerInstalment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -286,11 +298,12 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "Loyalty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLoyalty = new MMCode() {
+	public static final CardPaymentServiceType8Code Loyalty = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loyalty";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.Loyalty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -309,11 +322,12 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "NoShow"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoShow = new MMCode() {
+	public static final CardPaymentServiceType8Code NoShow = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoShow";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.NoShow.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -332,11 +346,12 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "PreAuthorisedWithdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPreAuthorisedWithdrawal = new MMCode() {
+	public static final CardPaymentServiceType8Code PreAuthorisedWithdrawal = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreAuthorisedWithdrawal";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.PreAuthorisedWithdrawal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -355,11 +370,12 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "ProfileWithdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProfileWithdrawal = new MMCode() {
+	public static final CardPaymentServiceType8Code ProfileWithdrawal = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProfileWithdrawal";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.ProfileWithdrawal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -378,11 +394,12 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "PurchaseCorporate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPurchaseCorporate = new MMCode() {
+	public static final CardPaymentServiceType8Code PurchaseCorporate = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseCorporate";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.PurchaseCorporate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -401,11 +418,12 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "RecurringPayment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRecurringPayment = new MMCode() {
+	public static final CardPaymentServiceType8Code RecurringPayment = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecurringPayment";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.RecurringPayment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -424,11 +442,12 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "SolicitedAvailableFunds"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSolicitedAvailableFunds = new MMCode() {
+	public static final CardPaymentServiceType8Code SolicitedAvailableFunds = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SolicitedAvailableFunds";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.SolicitedAvailableFunds.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -447,11 +466,12 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "StandardWithdrawal"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStandardWithdrawal = new MMCode() {
+	public static final CardPaymentServiceType8Code StandardWithdrawal = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardWithdrawal";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.StandardWithdrawal.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -470,11 +490,12 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "VoiceAuthorisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVoiceAuthorisation = new MMCode() {
+	public static final CardPaymentServiceType8Code VoiceAuthorisation = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoiceAuthorisation";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.VoiceAuthorisation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -493,11 +514,12 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "NonRefundable"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonRefundable = new MMCode() {
+	public static final CardPaymentServiceType8Code NonRefundable = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonRefundable";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.NonRefundable.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -516,29 +538,80 @@ public class CardPaymentServiceType8Code extends CardPaymentServiceTypeCode {
 	 * name} = "Instant"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInstant = new MMCode() {
+	public static final CardPaymentServiceType8Code Instant = new CardPaymentServiceType8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instant";
-			owner_lazy = () -> CardPaymentServiceType8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType8Code.mmObject();
+			codeName = CardPaymentServiceTypeCode.Instant.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CardPaymentServiceType8Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CardPaymentServiceType8Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentServiceType8Code";
 				definition = "Main card service transaction.";
-				code_lazy = () -> Arrays.asList(CardPaymentServiceType8Code.mmAggregation, CardPaymentServiceType8Code.mmCashBack, CardPaymentServiceType8Code.mmChosenWithdrawal, CardPaymentServiceType8Code.mmDCC,
-						CardPaymentServiceType8Code.mmGratuity, CardPaymentServiceType8Code.mmAcceptorInstalment, CardPaymentServiceType8Code.mmIssuerInstalment, CardPaymentServiceType8Code.mmLoyalty, CardPaymentServiceType8Code.mmNoShow,
-						CardPaymentServiceType8Code.mmPreAuthorisedWithdrawal, CardPaymentServiceType8Code.mmProfileWithdrawal, CardPaymentServiceType8Code.mmPurchaseCorporate, CardPaymentServiceType8Code.mmRecurringPayment,
-						CardPaymentServiceType8Code.mmSolicitedAvailableFunds, CardPaymentServiceType8Code.mmStandardWithdrawal, CardPaymentServiceType8Code.mmVoiceAuthorisation, CardPaymentServiceType8Code.mmNonRefundable,
-						CardPaymentServiceType8Code.mmInstant);
 				trace_lazy = () -> CardPaymentServiceTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType8Code.Aggregation, com.tools20022.repository.codeset.CardPaymentServiceType8Code.CashBack,
+						com.tools20022.repository.codeset.CardPaymentServiceType8Code.ChosenWithdrawal, com.tools20022.repository.codeset.CardPaymentServiceType8Code.DCC,
+						com.tools20022.repository.codeset.CardPaymentServiceType8Code.Gratuity, com.tools20022.repository.codeset.CardPaymentServiceType8Code.AcceptorInstalment,
+						com.tools20022.repository.codeset.CardPaymentServiceType8Code.IssuerInstalment, com.tools20022.repository.codeset.CardPaymentServiceType8Code.Loyalty,
+						com.tools20022.repository.codeset.CardPaymentServiceType8Code.NoShow, com.tools20022.repository.codeset.CardPaymentServiceType8Code.PreAuthorisedWithdrawal,
+						com.tools20022.repository.codeset.CardPaymentServiceType8Code.ProfileWithdrawal, com.tools20022.repository.codeset.CardPaymentServiceType8Code.PurchaseCorporate,
+						com.tools20022.repository.codeset.CardPaymentServiceType8Code.RecurringPayment, com.tools20022.repository.codeset.CardPaymentServiceType8Code.SolicitedAvailableFunds,
+						com.tools20022.repository.codeset.CardPaymentServiceType8Code.StandardWithdrawal, com.tools20022.repository.codeset.CardPaymentServiceType8Code.VoiceAuthorisation,
+						com.tools20022.repository.codeset.CardPaymentServiceType8Code.NonRefundable, com.tools20022.repository.codeset.CardPaymentServiceType8Code.Instant);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Aggregation.getCodeName().get(), Aggregation);
+		codesByName.put(CashBack.getCodeName().get(), CashBack);
+		codesByName.put(ChosenWithdrawal.getCodeName().get(), ChosenWithdrawal);
+		codesByName.put(DCC.getCodeName().get(), DCC);
+		codesByName.put(Gratuity.getCodeName().get(), Gratuity);
+		codesByName.put(AcceptorInstalment.getCodeName().get(), AcceptorInstalment);
+		codesByName.put(IssuerInstalment.getCodeName().get(), IssuerInstalment);
+		codesByName.put(Loyalty.getCodeName().get(), Loyalty);
+		codesByName.put(NoShow.getCodeName().get(), NoShow);
+		codesByName.put(PreAuthorisedWithdrawal.getCodeName().get(), PreAuthorisedWithdrawal);
+		codesByName.put(ProfileWithdrawal.getCodeName().get(), ProfileWithdrawal);
+		codesByName.put(PurchaseCorporate.getCodeName().get(), PurchaseCorporate);
+		codesByName.put(RecurringPayment.getCodeName().get(), RecurringPayment);
+		codesByName.put(SolicitedAvailableFunds.getCodeName().get(), SolicitedAvailableFunds);
+		codesByName.put(StandardWithdrawal.getCodeName().get(), StandardWithdrawal);
+		codesByName.put(VoiceAuthorisation.getCodeName().get(), VoiceAuthorisation);
+		codesByName.put(NonRefundable.getCodeName().get(), NonRefundable);
+		codesByName.put(Instant.getCodeName().get(), Instant);
+	}
+
+	public static CardPaymentServiceType8Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CardPaymentServiceType8Code[] values() {
+		CardPaymentServiceType8Code[] values = new CardPaymentServiceType8Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CardPaymentServiceType8Code> {
+		@Override
+		public CardPaymentServiceType8Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CardPaymentServiceType8Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

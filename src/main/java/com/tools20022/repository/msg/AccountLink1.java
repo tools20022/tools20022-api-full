@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,15 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Defines how the securities account is linked to the cash account."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountLink1", propOrder = {"securitiesAccount", "cashAccount", "validFrom", "validTo", "defaultIndicator", "collateralisationIndicator", "cashSettlementIndicator"})
 public class AccountLink1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesAcct", required = true)
 	protected SecuritiesAccount13 securitiesAccount;
 	/**
-	 * Account to or from which a securities entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -120,7 +123,7 @@ public class AccountLink1 {
 	public static final MMMessageAssociationEnd mmSecuritiesAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AccountLink.mmSecuritiesAccount;
-			componentContext_lazy = () -> AccountLink1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink1.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +135,11 @@ public class AccountLink1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
 	};
+	@XmlElement(name = "CshAcct", required = true)
 	protected CashAccount24 cashAccount;
 	/**
-	 * Account to or from which a cash entry is made.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -166,7 +170,7 @@ public class AccountLink1 {
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> AccountLink.mmCashAccount;
-			componentContext_lazy = () -> AccountLink1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,11 +182,11 @@ public class AccountLink1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "VldFr", required = true)
 	protected DateAndDateTimeChoice validFrom;
 	/**
-	 * Defines the date since when the securities account is linked to the cash
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -217,7 +221,7 @@ public class AccountLink1 {
 	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmFromDateTime;
-			componentContext_lazy = () -> AccountLink1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink1.mmObject();
 			isDerived = false;
 			xmlTag = "VldFr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,11 +232,11 @@ public class AccountLink1 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "VldTo")
 	protected DateAndDateTimeChoice validTo;
 	/**
-	 * Defines the date until when the securities account is linked to the cash
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -267,7 +271,7 @@ public class AccountLink1 {
 	public static final MMMessageAttribute mmValidTo = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> DateTimePeriod.mmToDateTime;
-			componentContext_lazy = () -> AccountLink1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink1.mmObject();
 			isDerived = false;
 			xmlTag = "VldTo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -278,10 +282,11 @@ public class AccountLink1 {
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "DfltInd", required = true)
 	protected YesNoIndicator defaultIndicator;
 	/**
-	 * Specifies whether created account link is set as default for settlement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -316,7 +321,7 @@ public class AccountLink1 {
 	public static final MMMessageAttribute mmDefaultIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountLink.mmDefaultIndicator;
-			componentContext_lazy = () -> AccountLink1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink1.mmObject();
 			isDerived = false;
 			xmlTag = "DfltInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -327,13 +332,11 @@ public class AccountLink1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CollstnInd", required = true)
 	protected YesNoIndicator collateralisationIndicator;
 	/**
-	 * Specifies whether market infrastructure can use the securities, earmarked
-	 * as collateral and held on the securities account, for
-	 * auto-collateralisation operations on the linked market infrastructure
-	 * dedicated cash account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -368,7 +371,7 @@ public class AccountLink1 {
 	public static final MMMessageAttribute mmCollateralisationIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountLink.mmCollateralisationIndicator;
-			componentContext_lazy = () -> AccountLink1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink1.mmObject();
 			isDerived = false;
 			xmlTag = "CollstnInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -379,12 +382,11 @@ public class AccountLink1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CshSttlmInd", required = true)
 	protected YesNoIndicator cashSettlementIndicator;
 	/**
-	 * Specifies whether market infrastructure can use the link between the
-	 * securities account and the market infrastructure dedicated cash account
-	 * for the settlement of the cash leg of a settlement instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -419,7 +421,7 @@ public class AccountLink1 {
 	public static final MMMessageAttribute mmCashSettlementIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AccountLink.mmCashSettlementIndicator;
-			componentContext_lazy = () -> AccountLink1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountLink1.mmObject();
 			isDerived = false;
 			xmlTag = "CshSttlmInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -434,10 +436,11 @@ public class AccountLink1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountLink1.mmSecuritiesAccount, AccountLink1.mmCashAccount, AccountLink1.mmValidFrom, AccountLink1.mmValidTo, AccountLink1.mmDefaultIndicator,
-						AccountLink1.mmCollateralisationIndicator, AccountLink1.mmCashSettlementIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountLink1.mmSecuritiesAccount, com.tools20022.repository.msg.AccountLink1.mmCashAccount, com.tools20022.repository.msg.AccountLink1.mmValidFrom,
+						com.tools20022.repository.msg.AccountLink1.mmValidTo, com.tools20022.repository.msg.AccountLink1.mmDefaultIndicator, com.tools20022.repository.msg.AccountLink1.mmCollateralisationIndicator,
+						com.tools20022.repository.msg.AccountLink1.mmCashSettlementIndicator);
 				trace_lazy = () -> AccountLink.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountLink1";
 				definition = "Defines how the securities account is linked to the cash account.";
@@ -446,66 +449,66 @@ public class AccountLink1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesAcct", required = true)
 	public SecuritiesAccount13 getSecuritiesAccount() {
 		return securitiesAccount;
 	}
 
-	public void setSecuritiesAccount(com.tools20022.repository.msg.SecuritiesAccount13 securitiesAccount) {
-		this.securitiesAccount = securitiesAccount;
+	public AccountLink1 setSecuritiesAccount(com.tools20022.repository.msg.SecuritiesAccount13 securitiesAccount) {
+		this.securitiesAccount = Objects.requireNonNull(securitiesAccount);
+		return this;
 	}
 
-	@XmlElement(name = "CshAcct", required = true)
 	public CashAccount24 getCashAccount() {
 		return cashAccount;
 	}
 
-	public void setCashAccount(com.tools20022.repository.msg.CashAccount24 cashAccount) {
-		this.cashAccount = cashAccount;
+	public AccountLink1 setCashAccount(com.tools20022.repository.msg.CashAccount24 cashAccount) {
+		this.cashAccount = Objects.requireNonNull(cashAccount);
+		return this;
 	}
 
-	@XmlElement(name = "VldFr", required = true)
 	public DateAndDateTimeChoice getValidFrom() {
 		return validFrom;
 	}
 
-	public void setValidFrom(DateAndDateTimeChoice validFrom) {
-		this.validFrom = validFrom;
+	public AccountLink1 setValidFrom(DateAndDateTimeChoice validFrom) {
+		this.validFrom = Objects.requireNonNull(validFrom);
+		return this;
 	}
 
-	@XmlElement(name = "VldTo")
-	public DateAndDateTimeChoice getValidTo() {
-		return validTo;
+	public Optional<DateAndDateTimeChoice> getValidTo() {
+		return validTo == null ? Optional.empty() : Optional.of(validTo);
 	}
 
-	public void setValidTo(DateAndDateTimeChoice validTo) {
+	public AccountLink1 setValidTo(DateAndDateTimeChoice validTo) {
 		this.validTo = validTo;
+		return this;
 	}
 
-	@XmlElement(name = "DfltInd", required = true)
 	public YesNoIndicator getDefaultIndicator() {
 		return defaultIndicator;
 	}
 
-	public void setDefaultIndicator(YesNoIndicator defaultIndicator) {
-		this.defaultIndicator = defaultIndicator;
+	public AccountLink1 setDefaultIndicator(YesNoIndicator defaultIndicator) {
+		this.defaultIndicator = Objects.requireNonNull(defaultIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "CollstnInd", required = true)
 	public YesNoIndicator getCollateralisationIndicator() {
 		return collateralisationIndicator;
 	}
 
-	public void setCollateralisationIndicator(YesNoIndicator collateralisationIndicator) {
-		this.collateralisationIndicator = collateralisationIndicator;
+	public AccountLink1 setCollateralisationIndicator(YesNoIndicator collateralisationIndicator) {
+		this.collateralisationIndicator = Objects.requireNonNull(collateralisationIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "CshSttlmInd", required = true)
 	public YesNoIndicator getCashSettlementIndicator() {
 		return cashSettlementIndicator;
 	}
 
-	public void setCashSettlementIndicator(YesNoIndicator cashSettlementIndicator) {
-		this.cashSettlementIndicator = cashSettlementIndicator;
+	public AccountLink1 setCashSettlementIndicator(YesNoIndicator cashSettlementIndicator) {
+		this.cashSettlementIndicator = Objects.requireNonNull(cashSettlementIndicator);
+		return this;
 	}
 }

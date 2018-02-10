@@ -32,6 +32,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,8 +47,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Adjustment4#mmTypeOrOtherAdjustmentTypeRule
- * Adjustment4.mmTypeOrOtherAdjustmentTypeRule}</li>
+ * {@linkplain com.tools20022.repository.msg.Adjustment4#TypeOrOtherAdjustmentTypeRule
+ * Adjustment4.TypeOrOtherAdjustmentTypeRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -70,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -91,16 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Adjustment4", propOrder = {"type", "otherAdjustmentType", "direction", "amount"})
 public class Adjustment4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected AdjustmentType2Code type;
 	/**
-	 * Specifies the type of adjustment applied to the amount of goods/services
-	 * by means of a code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -135,7 +136,7 @@ public class Adjustment4 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmType;
-			componentContext_lazy = () -> Adjustment4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment4.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -146,10 +147,11 @@ public class Adjustment4 {
 			simpleType_lazy = () -> AdjustmentType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrAdjstmntTp", required = true)
 	protected Max35Text otherAdjustmentType;
 	/**
-	 * Specifies a type of adjustment not present in the code list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -182,7 +184,7 @@ public class Adjustment4 {
 	public static final MMMessageAttribute mmOtherAdjustmentType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmType;
-			componentContext_lazy = () -> Adjustment4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment4.mmObject();
 			isDerived = false;
 			xmlTag = "OthrAdjstmntTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -193,11 +195,11 @@ public class Adjustment4 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Drctn", required = true)
 	protected AdjustmentDirection1Code direction;
 	/**
-	 * Specifies whether the adjustment must be subtracted or added to the total
-	 * amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -239,7 +241,7 @@ public class Adjustment4 {
 	public static final MMMessageAttribute mmDirection = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmDirection;
-			componentContext_lazy = () -> Adjustment4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment4.mmObject();
 			isDerived = false;
 			xmlTag = "Drctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -251,10 +253,11 @@ public class Adjustment4 {
 			simpleType_lazy = () -> AdjustmentDirection1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected CurrencyAndAmount amount;
 	/**
-	 * Specifies the monetary amount of the adjustment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -294,7 +297,7 @@ public class Adjustment4 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> Adjustment4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Adjustment4.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -338,22 +341,23 @@ public class Adjustment4 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmTypeOrOtherAdjustmentTypeRule = new MMXor() {
+	public static final MMXor TypeOrOtherAdjustmentTypeRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOrOtherAdjustmentTypeRule";
 			definition = "If Type is present, then OtherAdjustmentType is not allowed. If Type is not present, then OtherAdjustmentType is mandatory.";
-			messageComponent_lazy = () -> Adjustment4.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(Adjustment4.mmType, Adjustment4.mmOtherAdjustmentType);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.Adjustment4.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment4.mmType, com.tools20022.repository.msg.Adjustment4.mmOtherAdjustmentType);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Adjustment4.mmType, Adjustment4.mmOtherAdjustmentType, Adjustment4.mmDirection, Adjustment4.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment4.mmType, com.tools20022.repository.msg.Adjustment4.mmOtherAdjustmentType, com.tools20022.repository.msg.Adjustment4.mmDirection,
+						com.tools20022.repository.msg.Adjustment4.mmAmount);
 				trace_lazy = () -> Adjustment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -365,45 +369,45 @@ public class Adjustment4 {
 				name = "Adjustment4";
 				definition = "Modification on the value of goods and / or services. For example: rebate, discount, surcharge";
 				nextVersions_lazy = () -> Arrays.asList(Adjustment6.mmObject());
-				xors_lazy = () -> Arrays.asList(Adjustment4.mmTypeOrOtherAdjustmentTypeRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment4.TypeOrOtherAdjustmentTypeRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public AdjustmentType2Code getType() {
 		return type;
 	}
 
-	public void setType(AdjustmentType2Code type) {
-		this.type = type;
+	public Adjustment4 setType(AdjustmentType2Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "OthrAdjstmntTp", required = true)
 	public Max35Text getOtherAdjustmentType() {
 		return otherAdjustmentType;
 	}
 
-	public void setOtherAdjustmentType(Max35Text otherAdjustmentType) {
-		this.otherAdjustmentType = otherAdjustmentType;
+	public Adjustment4 setOtherAdjustmentType(Max35Text otherAdjustmentType) {
+		this.otherAdjustmentType = Objects.requireNonNull(otherAdjustmentType);
+		return this;
 	}
 
-	@XmlElement(name = "Drctn", required = true)
 	public AdjustmentDirection1Code getDirection() {
 		return direction;
 	}
 
-	public void setDirection(AdjustmentDirection1Code direction) {
-		this.direction = direction;
+	public Adjustment4 setDirection(AdjustmentDirection1Code direction) {
+		this.direction = Objects.requireNonNull(direction);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
-		this.amount = amount;
+	public Adjustment4 setAmount(CurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 }

@@ -17,6 +17,8 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -28,9 +30,8 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -214,8 +215,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPutableDateAndPutableIndicatorRule#forDebt2
+ * ConstraintPutableDateAndPutableIndicatorRule.forDebt2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintNextCallableDateAndCallableIndicatorRule#forDebt2
+ * ConstraintNextCallableDateAndCallableIndicatorRule.forDebt2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -228,9 +240,9 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Debt2", propOrder = {"paymentCurrency", "faceAmount", "paymentFrequency", "interestFixingDate", "datedDate", "firstPaymentDate", "maturityDate", "nextCouponDate", "putableDate", "nextCallableDate", "nextFactorDate",
-		"expirationDate", "paymentDirectionIndicator", "interestRate", "nextInterestRate", "oddCouponIndicator", "callableIndicator", "CPProgram", "CPRegistrationType", "interestAccrualDate", "putableIndicator", "preFundedIndicator",
+		"expirationDate", "paymentDirectionIndicator", "interestRate", "nextInterestRate", "oddCouponIndicator", "callableIndicator", "cPProgram", "cPRegistrationType", "interestAccrualDate", "putableIndicator", "preFundedIndicator",
 		"escrowedIndicator", "perpetualIndicator", "subordinatedIndicator", "extendibleIndicator", "extendiblePeriod", "variableRateIndicator", "overAllotmentAmount", "overAllotmentRate", "amortisableIndicator",
 		"interestCalculationMethod", "capitalisedInterest", "actualDenominationAmount", "currentFactor", "nextFactor", "previousFactor", "pieces", "poolsMaximum", "poolsPerMillion", "poolsPerLot", "poolsPerTrade",
 		"constantPrePaymentPenaltyIndicator", "lotIdentification", "constantPrePaymentYield", "weightedAverageCoupon", "weightedAverageLife", "weightedAverageLoan", "weightedAverageMaturity", "insuredIndicator", "bankQualifiedIndicator",
@@ -240,10 +252,11 @@ import javax.xml.bind.annotation.XmlType;
 public class Debt2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PmtCcy")
 	protected ActiveCurrencyCode paymentCurrency;
 	/**
-	 * Currency of the payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -276,7 +289,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmPaymentCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPaymentCurrency;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -287,10 +300,11 @@ public class Debt2 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "FaceAmt")
 	protected ActiveCurrencyAndAmount faceAmount;
 	/**
-	 * Unit value of a debt security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -323,7 +337,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmFaceAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetHolding.mmFaceAmount;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "FaceAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,10 +348,11 @@ public class Debt2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtFrqcy")
 	protected Frequency11Choice paymentFrequency;
 	/**
-	 * Specifies the frequency of an interest payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -370,7 +385,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmPaymentFrequency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Dividend.mmPaymentFrequency;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -381,11 +396,11 @@ public class Debt2 {
 			complexType_lazy = () -> Frequency11Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstFxgDt")
 	protected ISODateTime interestFixingDate;
 	/**
-	 * Date/time at which the rate determination is made, also called
-	 * determination date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -419,7 +434,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmInterestFixingDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> VariableInterest.mmFixingDate;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstFxgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -430,10 +445,11 @@ public class Debt2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "DtdDt")
 	protected ISODateTime datedDate;
 	/**
-	 * First date/time at which a security begins to accrue interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -452,6 +468,9 @@ public class Debt2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DtdDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 873</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -466,9 +485,10 @@ public class Debt2 {
 	public static final MMMessageAttribute mmDatedDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmDatedDate;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "DtdDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "873"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatedDate";
 			definition = "First date/time at which a security begins to accrue interest.";
@@ -477,11 +497,11 @@ public class Debt2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "FrstPmtDt")
 	protected ISODateTime firstPaymentDate;
 	/**
-	 * Date/time at which the first interest payment is due to holders of the
-	 * security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -515,7 +535,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmFirstPaymentDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmFirstPaymentDate;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "FrstPmtDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -526,10 +546,11 @@ public class Debt2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "MtrtyDt")
 	protected ISODateTime maturityDate;
 	/**
-	 * Planned final repayment date at the time of issuance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -548,6 +569,9 @@ public class Debt2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MtrtyDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 200, FIXSynonym: 541, FIXSynonym: 1079</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -561,9 +585,10 @@ public class Debt2 {
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "MtrtyDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "200"), new FIXSynonym(this, "541"), new FIXSynonym(this, "1079"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Planned final repayment date at the time of issuance.";
@@ -572,10 +597,11 @@ public class Debt2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "NxtCpnDt")
 	protected ISODateTime nextCouponDate;
 	/**
-	 * Date of the coupon attached to the physical security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -594,6 +620,9 @@ public class Debt2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NxtCpnDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 224</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -607,9 +636,10 @@ public class Debt2 {
 	public static final MMMessageAttribute mmNextCouponDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CouponAttached.mmDate;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "NxtCpnDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "224"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextCouponDate";
 			definition = "Date of the coupon attached to the physical security.";
@@ -618,11 +648,11 @@ public class Debt2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "PutblDt")
 	protected ISODateTime putableDate;
 	/**
-	 * Date at which the holder has the right to ask for redemption of the
-	 * security prior to final maturity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -656,7 +686,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmPutableDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPutableDate;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PutblDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -667,11 +697,11 @@ public class Debt2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "NxtCllblDt")
 	protected ISODateTime nextCallableDate;
 	/**
-	 * Next date/time at which the issuer has the right to pay the securitiy
-	 * prior to maturity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -705,7 +735,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmNextCallableDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmNextCallableDate;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "NxtCllblDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -716,10 +746,11 @@ public class Debt2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "NxtFctrDt")
 	protected ISODateTime nextFactorDate;
 	/**
-	 * The date that the current factor will be changed to a new factor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -752,7 +783,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmNextFactorDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmNextFactorDate;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "NxtFctrDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -763,11 +794,11 @@ public class Debt2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "XprtnDt")
 	protected ISODateTime expirationDate;
 	/**
-	 * Date/time at which an interest bearing security becomes due and assets
-	 * are to be repaid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -801,7 +832,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmExpirationDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmExpiryDate;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "XprtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -812,12 +843,11 @@ public class Debt2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtDrctnInd")
 	protected PaymentDirectionIndicator paymentDirectionIndicator;
 	/**
-	 * Indicates the direction of payment for asset or mortgage backed
-	 * securities, ie, whether the repaid capital is distributed (payment
-	 * direction is down) or capitalized (payment direction is up).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -852,7 +882,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmPaymentDirectionIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPaymentDirectionIndicator;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PmtDrctnInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -863,11 +893,11 @@ public class Debt2 {
 			simpleType_lazy = () -> PaymentDirectionIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstRate")
 	protected PercentageRate interestRate;
 	/**
-	 * Per annum ratio of interest paid to the principal amount of the financial
-	 * instrument for a specific period of time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -887,6 +917,9 @@ public class Debt2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IntrstRate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 223</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -902,9 +935,10 @@ public class Debt2 {
 	public static final MMMessageAttribute mmInterestRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "223"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
 			definition = "Per annum ratio of interest paid to the principal amount of the financial instrument for a specific period of time.";
@@ -913,11 +947,11 @@ public class Debt2 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "NxtIntrstRate")
 	protected PercentageRate nextInterestRate;
 	/**
-	 * Specifies the interest rate applicable to the next interest payment
-	 * period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -952,7 +986,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmNextInterestRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmRate;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "NxtIntrstRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -963,11 +997,11 @@ public class Debt2 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "OddCpnInd")
 	protected YesNoIndicator oddCouponIndicator;
 	/**
-	 * Specifies whether the payment of the coupon (interest) on a bond is off
-	 * the normal schedule.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1002,7 +1036,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmOddCouponIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmOddCouponIndicator;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "OddCpnInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1013,11 +1047,11 @@ public class Debt2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CllblInd")
 	protected YesNoIndicator callableIndicator;
 	/**
-	 * Indicates whether the issuer has the right to pay the security prior to
-	 * maturity. Also called RetractableIndicator.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1052,7 +1086,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmCallableIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmCallableIndicator;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "CllblInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1063,19 +1097,11 @@ public class Debt2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CPPrgm")
 	protected Number cPProgram;
 	/**
-	 * The program under which a commercial paper is issued. The values that are
-	 * most used are:<br>
-	 * 0 = N/A<br>
-	 * 1 = 3(a)3<br>
-	 * 2 = 4(2)<br>
-	 * 3 = 3(a)4<br>
-	 * 4 = 3(c)7<br>
-	 * 5 = 144A<br>
-	 * 6 = 3(a)2<br>
-	 * 99 = Other
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1094,6 +1120,9 @@ public class Debt2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CPPrgm"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 875</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1109,9 +1138,10 @@ public class Debt2 {
 	public static final MMMessageAttribute mmCPProgram = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmCPProgram;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "CPPrgm";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "875"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CPProgram";
 			definition = "The program under which a commercial paper is issued. The values that are most used are:\r\n0 = N/A\r\n1 = 3(a)3\r\n2 = 4(2)\r\n3 = 3(a)4\r\n4 = 3(c)7\r\n5 = 144A\r\n6 = 3(a)2\r\n99 = Other";
@@ -1120,10 +1150,11 @@ public class Debt2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "CPRegnTp")
 	protected Max350Text cPRegistrationType;
 	/**
-	 * Registration type of a commercial paper issuance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1142,6 +1173,9 @@ public class Debt2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CPRegnTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 876</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1155,9 +1189,10 @@ public class Debt2 {
 	public static final MMMessageAttribute mmCPRegistrationType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmCPRegistrationType;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "CPRegnTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "876"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CPRegistrationType";
 			definition = "Registration type of a commercial paper issuance.";
@@ -1166,12 +1201,11 @@ public class Debt2 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstAcrlDt")
 	protected ISODateTime interestAccrualDate;
 	/**
-	 * Start date used for calculating accrued interest on debt instruments
-	 * which are being sold between interest payment dates. Often but not always
-	 * the same as the issue date and the dated date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1190,6 +1224,9 @@ public class Debt2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "IntrstAcrlDt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 874</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -1205,9 +1242,10 @@ public class Debt2 {
 	public static final MMMessageAttribute mmInterestAccrualDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterestAccrualDate;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstAcrlDt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "874"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestAccrualDate";
 			definition = "Start date used for calculating accrued interest on debt instruments which are being sold between interest payment dates. Often but not always the same as the issue date and the dated date.";
@@ -1216,11 +1254,11 @@ public class Debt2 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "PutblInd")
 	protected YesNoIndicator putableIndicator;
 	/**
-	 * Indicates whether the holder has the right to ask for redemption of the
-	 * security prior to final maturity. Also called RedeemableIndicator.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1255,7 +1293,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmPutableIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPutableIndicator;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PutblInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1266,15 +1304,11 @@ public class Debt2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PreFnddInd")
 	protected YesNoIndicator preFundedIndicator;
 	/**
-	 * Indicates whether an interest bearing instrument is being escrowed or
-	 * collateralized either by direct obligations guaranteed by the US
-	 * government, or by other types of securities. The maturity schedules of
-	 * the securities in the escrow fund are determined in such a way to pay the
-	 * maturity value, coupon, and premium payments (if any) of the refunded
-	 * bonds.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1309,7 +1343,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmPreFundedIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPreFundedIndicator;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PreFnddInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1320,11 +1354,11 @@ public class Debt2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "EscrwdInd")
 	protected YesNoIndicator escrowedIndicator;
 	/**
-	 * Indicates whether an interest bearing instrument is deposited in a fund
-	 * that will be used to pay debt service on refunded securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1359,7 +1393,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmEscrowedIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmEscrowedIndicator;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "EscrwdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1370,10 +1404,11 @@ public class Debt2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PerptlInd")
 	protected YesNoIndicator perpetualIndicator;
 	/**
-	 * Indicates whether the security has no maturity date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1406,7 +1441,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmPerpetualIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPerpetualIndicator;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PerptlInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1417,10 +1452,11 @@ public class Debt2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "SubrdntdInd")
 	protected YesNoIndicator subordinatedIndicator;
 	/**
-	 * Indicates whether the security is a subordinated security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1454,7 +1490,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmSubordinatedIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmSubordinatedIndicator;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "SubrdntdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1465,11 +1501,11 @@ public class Debt2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndblInd")
 	protected YesNoIndicator extendibleIndicator;
 	/**
-	 * Indicates whether the security is extendible,eg, repayment may be
-	 * extended or maturity changed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1504,7 +1540,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmExtendibleIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmExtendibleIndicator;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "XtndblInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1515,10 +1551,11 @@ public class Debt2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndblPrd")
 	protected DateTimePeriodChoice extendiblePeriod;
 	/**
-	 * Period during which a date might be extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1551,7 +1588,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmExtendiblePeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmExtendiblePeriod;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "XtndblPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1562,11 +1599,11 @@ public class Debt2 {
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "VarblRateInd")
 	protected YesNoIndicator variableRateIndicator;
 	/**
-	 * Indicates whether the interest rate of an interest bearing instrument is
-	 * reset periodically.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1601,7 +1638,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmVariableRateIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmVariableRateIndicator;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "VarblRateInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1612,10 +1649,11 @@ public class Debt2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "OverAlltmtAmt")
 	protected ActiveCurrencyAndAmount overAllotmentAmount;
 	/**
-	 * Amount for which a security can be overalloted (as in greenshoe option).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1650,7 +1688,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmOverAllotmentAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmOverAllotmentAmount;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "OverAlltmtAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1661,11 +1699,11 @@ public class Debt2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "OverAlltmtRate")
 	protected PercentageRate overAllotmentRate;
 	/**
-	 * Percentage for which a security can be overalloted (as in greenshoe
-	 * option).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1700,7 +1738,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmOverAllotmentRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmOverAllotmentRate;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "OverAlltmtRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1711,11 +1749,11 @@ public class Debt2 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtsblInd")
 	protected YesNoIndicator amortisableIndicator;
 	/**
-	 * Indicates whether repayment is made via regular principal and interest
-	 * payments over time.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1750,7 +1788,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmAmortisableIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmAmortisableIndicator;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "AmtsblInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1761,11 +1799,11 @@ public class Debt2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstClctnMtd")
 	protected Max70Text interestCalculationMethod;
 	/**
-	 * Calculation method used to calculate interest and/or yield for a bond,
-	 * for example, street convention.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1799,7 +1837,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmInterestCalculationMethod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmCalculationMethod;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstClctnMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1810,11 +1848,11 @@ public class Debt2 {
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CptlsdIntrst")
 	protected DistributionPolicy1Choice capitalisedInterest;
 	/**
-	 * Specifies whether the interest amount is capitalised until maturity date
-	 * or paid out at each interest payment date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1849,7 +1887,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmCapitalisedInterest = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmCapitalisedInterest;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "CptlsdIntrst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1860,10 +1898,11 @@ public class Debt2 {
 			complexType_lazy = () -> DistributionPolicy1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "ActlDnmtnAmt")
 	protected List<ActiveCurrencyAndAmount> actualDenominationAmount;
 	/**
-	 * Nominal value per security unit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1896,7 +1935,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmActualDenominationAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmActualDenominationAmount;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "ActlDnmtnAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1906,11 +1945,11 @@ public class Debt2 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CurFctr")
 	protected PercentageRate currentFactor;
 	/**
-	 * Identifies the current factor expressed as a decimal between 0 and 1
-	 * defining the outstanding principal of the bond (for factored securities).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1945,7 +1984,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmCurrentFactor = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmFactor;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "CurFctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1956,11 +1995,11 @@ public class Debt2 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "NxtFctr")
 	protected PercentageRate nextFactor;
 	/**
-	 * Identifies the new factor expressed as a decimal between 0 and 1 defining
-	 * the outstanding principal of the bond (for factored securities).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1995,7 +2034,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmNextFactor = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmFactor;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "NxtFctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2006,11 +2045,11 @@ public class Debt2 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvsFctr")
 	protected PercentageRate previousFactor;
 	/**
-	 * Identifies the previous factor expressed as a decimal between 0 and 1
-	 * defining the outstanding principal of the bond (for factored securities).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2045,7 +2084,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmPreviousFactor = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmFactor;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PrvsFctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2056,10 +2095,11 @@ public class Debt2 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "Pcs")
 	protected DecimalNumber pieces;
 	/**
-	 * Number of pieces composing a pool of financial assets.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2092,7 +2132,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmPieces = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPieces;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "Pcs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2103,10 +2143,11 @@ public class Debt2 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "PlsMax")
 	protected DecimalNumber poolsMaximum;
 	/**
-	 * Collection of assets by which a security is backed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2139,7 +2180,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmPoolsMaximum = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPoolsMaximum;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PlsMax";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2150,11 +2191,11 @@ public class Debt2 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "PlsPerMln")
 	protected DecimalNumber poolsPerMillion;
 	/**
-	 * Indicates per million the collection of loans, mortgages or other assets
-	 * assembled by an originator as the basis for a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2189,7 +2230,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmPoolsPerMillion = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPoolsPerMillion;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PlsPerMln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2200,11 +2241,11 @@ public class Debt2 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "PlsPerLot")
 	protected DecimalNumber poolsPerLot;
 	/**
-	 * Indicates per lot the collection of loans, mortgages or other assets
-	 * assembled by an originator as the basis for a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2239,7 +2280,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmPoolsPerLot = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPoolsPerLot;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PlsPerLot";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2250,11 +2291,11 @@ public class Debt2 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "PlsPerTrad")
 	protected DecimalNumber poolsPerTrade;
 	/**
-	 * Indicates per trade the collection of loans, mortgages or other assets
-	 * assembled by an originator as the basis for a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2289,7 +2330,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmPoolsPerTrade = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPoolsPerTrade;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PlsPerTrad";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2300,11 +2341,11 @@ public class Debt2 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "CstPrePmtPnltyInd")
 	protected YesNoIndicator constantPrePaymentPenaltyIndicator;
 	/**
-	 * Indicates whether a penalty might be imposed to the borrower of a
-	 * mortgage in case of prepayments occurring during the lockout period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2339,7 +2380,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmConstantPrePaymentPenaltyIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmConstantPrePaymentPenalty;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "CstPrePmtPnltyInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2350,11 +2391,11 @@ public class Debt2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "LotId")
 	protected Max35Text lotIdentification;
 	/**
-	 * Identifies the lot constituting an asset backed or mortgage backed
-	 * security issue.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2388,7 +2429,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmLotIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> LotBreakdown.mmLotIdentifier;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "LotId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2399,10 +2440,11 @@ public class Debt2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CstPrePmtYld")
 	protected PercentageRate constantPrePaymentYield;
 	/**
-	 * Measure of prepayment as a yield of the current outstanding loan balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2437,7 +2479,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmConstantPrePaymentYield = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmConstantPrePaymentYield;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "CstPrePmtYld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2448,11 +2490,11 @@ public class Debt2 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "WghtdAvrgCpn")
 	protected PercentageRate weightedAverageCoupon;
 	/**
-	 * Contains the weighted average coupon of the fixed income instrument
-	 * (expressed as a percentage).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2487,7 +2529,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmWeightedAverageCoupon = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmWeightedAverageCoupon;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "WghtdAvrgCpn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2498,11 +2540,11 @@ public class Debt2 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "WghtdAvrgLife")
 	protected DecimalNumber weightedAverageLife;
 	/**
-	 * Contains the weighted average life of the fixed income instrument
-	 * (expressed in months).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2537,7 +2579,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmWeightedAverageLife = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmWeightedAverageLife;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "WghtdAvrgLife";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2548,11 +2590,11 @@ public class Debt2 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "WghtdAvrgLn")
 	protected DecimalNumber weightedAverageLoan;
 	/**
-	 * Contains the weighted average loan of the fixed income instrument
-	 * (expressed in months).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2587,7 +2629,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmWeightedAverageLoan = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmWeightedAverageLoan;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "WghtdAvrgLn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2598,11 +2640,11 @@ public class Debt2 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "WghtdAvrgMtrty")
 	protected DecimalNumber weightedAverageMaturity;
 	/**
-	 * Contains the weighted average maturity of the fixed income instrument
-	 * (expressed in months).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2637,7 +2679,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmWeightedAverageMaturity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmWeightedAverageMaturity;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "WghtdAvrgMtrty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2648,10 +2690,11 @@ public class Debt2 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "InsrdInd")
 	protected YesNoIndicator insuredIndicator;
 	/**
-	 * Indicates whether the instruments is backed by any kind of asset or not.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2686,7 +2729,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmInsuredIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmInsuredIndicator;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "InsrdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2697,11 +2740,11 @@ public class Debt2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "BkQlfdInd")
 	protected YesNoIndicator bankQualifiedIndicator;
 	/**
-	 * Indicates whether the security is bank qualified (usually applies to loan
-	 * products).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2736,7 +2779,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmBankQualifiedIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmBankQualified;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "BkQlfdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2747,10 +2790,11 @@ public class Debt2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "YldClctn")
 	protected List<com.tools20022.repository.msg.YieldCalculation3> yieldCalculation;
 	/**
-	 * Rate of return on an investment, based on the price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -2781,7 +2825,7 @@ public class Debt2 {
 	public static final MMMessageAssociationEnd mmYieldCalculation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmYieldCalculation;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "YldClctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2792,10 +2836,11 @@ public class Debt2 {
 			type_lazy = () -> com.tools20022.repository.msg.YieldCalculation3.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrstTp")
 	protected InterestType3Code interestType;
 	/**
-	 * Indicates whether interest rate is fixed, variable or other.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2829,7 +2874,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmInterestType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InterestCalculation.mmInterestType;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "IntrstTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2840,10 +2885,11 @@ public class Debt2 {
 			simpleType_lazy = () -> InterestType3Code.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrmStrTp")
 	protected InstrumentSubStructureType1Choice instrumentStructureType;
 	/**
-	 * Indicates the type of deal for structured finance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2876,7 +2922,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmInstrumentStructureType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmFinancialInstrumentSubStructure;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmStrTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2887,17 +2933,11 @@ public class Debt2 {
 			complexType_lazy = () -> InstrumentSubStructureType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "GblTp")
 	protected GlobalNote1Choice globalType;
 	/**
-	 * Identifies if the security will be issued in New Global Note (NGN) or
-	 * Classical Global Note (CGN).<br>
-	 * New Global Note (NGN): Form of global certificate which refers to the
-	 * books and records of the ICSDs to determine the issue outstanding amount
-	 * (IOA). <br>
-	 * Classical Global Note (CGN): Form of global certificate which requires
-	 * physical annotation on the attached schedule to reflect changes in the
-	 * issue outstanding amount (IOA).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2932,7 +2972,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmGlobalType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmIssuance;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "GblTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2943,11 +2983,11 @@ public class Debt2 {
 			complexType_lazy = () -> GlobalNote1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PotntlEuroSysElgblty")
 	protected YesNoIndicator potentialEuroSystemEligibility;
 	/**
-	 * Flag to indicate the security is intended to be held in a manner that
-	 * could allow the Eurosystem eligibility.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2976,7 +3016,7 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPotentialEuroSystemEligibility = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PotntlEuroSysElgblty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2987,13 +3027,11 @@ public class Debt2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Geogcs")
 	protected Max35Text geographics;
 	/**
-	 * Type of stipulation expressing geographical constraints on a fixed income
-	 * instrument. It is expressed with a state or country abbreviation and a
-	 * minimum or maximum percentage. Example: CA 0-80 (minimum of 80 percent in
-	 * Californian assets).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3012,6 +3050,9 @@ public class Debt2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Geogcs"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 233 value GEOG</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -3027,9 +3068,10 @@ public class Debt2 {
 	public static final MMMessageAttribute mmGeographics = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmGeographics;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "Geogcs";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "233 value GEOG"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Geographics";
 			definition = "Type of stipulation expressing geographical constraints on a fixed income instrument. It is expressed with a state or country abbreviation and a minimum or maximum percentage. Example: CA 0-80 (minimum of 80 percent in Californian assets).";
@@ -3038,10 +3080,11 @@ public class Debt2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "YldRg")
 	protected AmountOrPercentageRange yieldRange;
 	/**
-	 * Range of allowed yield.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3074,7 +3117,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmYieldRange = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> YieldCalculation.mmYieldRange;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "YldRg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3085,11 +3128,11 @@ public class Debt2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountOrPercentageRange.mmObject();
 		}
 	};
+	@XmlElement(name = "CpnRg")
 	protected AmountOrPercentageRange couponRange;
 	/**
-	 * Identification of a range of coupon numbers attached to its related
-	 * financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3124,7 +3167,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmCouponRange = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmConvertibleIndicator;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "CpnRg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3135,10 +3178,11 @@ public class Debt2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountOrPercentageRange.mmObject();
 		}
 	};
+	@XmlElement(name = "Purp")
 	protected Max256Text purpose;
 	/**
-	 * Reason for which money is raised through the issuance of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3171,7 +3215,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmPurpose = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Issuance.mmPurpose;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "Purp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3182,11 +3226,11 @@ public class Debt2 {
 			simpleType_lazy = () -> Max256Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AltrntvMinTaxInd")
 	protected YesNoIndicator alternativeMinimumTaxIndicator;
 	/**
-	 * Identifies whether the issue is subject to alternative minimum taxation
-	 * (used for municipal bonds).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3221,7 +3265,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmAlternativeMinimumTaxIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmAlternativeMinimumTax;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "AltrntvMinTaxInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3232,12 +3276,11 @@ public class Debt2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AutoRinvstmt")
 	protected PercentageRate autoReinvestment;
 	/**
-	 * Indicates an instruction to reinvest dividends in the underlying security
-	 * (or proceeds at maturity in a similar instrument) if the current rate is
-	 * &lt;rate&gt; or better.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3272,7 +3315,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmAutoReinvestment = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmAutoReinvestment;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "AutoRinvstmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3283,10 +3326,11 @@ public class Debt2 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "Hrcut")
 	protected PercentageRate haircut;
 	/**
-	 * Haircut or valuation factor on the security expressed as a percentage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3320,7 +3364,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmHaircut = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> HaircutValuation.mmHaircut;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "Hrcut";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3331,11 +3375,11 @@ public class Debt2 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "TxConds")
 	protected TradeTransactionCondition3Choice transactionConditions;
 	/**
-	 * Indicates the conditions under which the order/trade is to be/was
-	 * executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3370,7 +3414,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmTransactionConditions = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradeTransactionCondition;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "TxConds";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3381,13 +3425,11 @@ public class Debt2 {
 			complexType_lazy = () -> TradeTransactionCondition3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LookBck")
 	protected Number lookBack;
 	/**
-	 * Indicates an instruction or attribute giving the number of days to be
-	 * included in the look-back period for the investment. For example some
-	 * options allow exercise based on the underlying asset's optimal value over
-	 * the look-back period.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3406,6 +3448,9 @@ public class Debt2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LookBck"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::TTCO//GTDL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -3421,9 +3466,10 @@ public class Debt2 {
 	public static final MMMessageAttribute mmLookBack = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmLookBack;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "LookBck";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::TTCO//GTDL"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LookBack";
 			definition = "Indicates an instruction or attribute giving the number of days to be included in the look-back period for the investment. For example some options allow exercise based on the underlying asset's optimal value over the look-back period.";
@@ -3432,10 +3478,11 @@ public class Debt2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxSbstitn")
 	protected Number maximumSubstitution;
 	/**
-	 * Maximum number of time the collateral can be substitute.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3467,7 +3514,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmMaximumSubstitution = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmMaximumSubstitution;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "MaxSbstitn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3478,10 +3525,11 @@ public class Debt2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "MinIncrmt")
 	protected FinancialInstrumentQuantity1Choice minimumIncrement;
 	/**
-	 * Indicates the minimum tradable increments of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3514,7 +3562,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmMinimumIncrement = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmMinimumIncrement;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "MinIncrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3525,10 +3573,11 @@ public class Debt2 {
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MinQty")
 	protected FinancialInstrumentQuantity1Choice minimumQuantity;
 	/**
-	 * Indicates the minimum tradable quantity of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3561,7 +3610,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmMinimumQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradingMarket.mmMinimumTradedNominalQuantity;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "MinQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3572,12 +3621,11 @@ public class Debt2 {
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Pdctn")
 	protected Max35Text production;
 	/**
-	 * Indicates a search criterion used when looking to buy a bond,
-	 * particularly an mortgage back security (MBS), issued in a particular
-	 * year.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3605,7 +3653,7 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmProduction = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "Pdctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3616,10 +3664,11 @@ public class Debt2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RstrctdInd")
 	protected YesNoIndicator restrictedIndicator;
 	/**
-	 * Identifies if the securities is restricted or not (as per Rule 144).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3653,7 +3702,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmRestrictedIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmRestrictedIndicator;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "RstrctdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3664,12 +3713,11 @@ public class Debt2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PricFrqcy")
 	protected Frequency11Choice priceFrequency;
 	/**
-	 * Indicates the frequency at which the bond is re-rated and therefore
-	 * re-priced (bond attribute, particularly of floating rate and index linked
-	 * instruments).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3704,7 +3752,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmPriceFrequency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmPriceFrequency;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PricFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3715,11 +3763,11 @@ public class Debt2 {
 			complexType_lazy = () -> Frequency11Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Sctr")
 	protected Max35Text sector;
 	/**
-	 * Indicates the market sector the security is classified as for example
-	 * pharmaceuticals, automobile, housing, etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3753,7 +3801,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmSector = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmSector;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "Sctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3764,10 +3812,11 @@ public class Debt2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SbstitnFrqcy")
 	protected Frequency11Choice substitutionFrequency;
 	/**
-	 * Indicates the maximum number of times collateral can be substituted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3801,7 +3850,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmSubstitutionFrequency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmSubstitutionFrequency;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "SbstitnFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3812,10 +3861,11 @@ public class Debt2 {
 			complexType_lazy = () -> Frequency11Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SbstitnLft")
 	protected Number substitutionLeft;
 	/**
-	 * Number of remaining times the collateral can be substitute.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3848,7 +3898,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmSubstitutionLeft = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Debt.mmSubstitutionLeft;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "SbstitnLft";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3859,11 +3909,11 @@ public class Debt2 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "WhlPoolInd")
 	protected YesNoIndicator wholePoolIndicator;
 	/**
-	 * Indicates a search criterion when looking to buy a mortgaged backed
-	 * security that either is [yes] or is not [no] an entire pool.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3892,7 +3942,7 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmWholePoolIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "WhlPoolInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3903,11 +3953,11 @@ public class Debt2 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PricSrc")
 	protected Max35Text priceSource;
 	/**
-	 * Identifies the Benchmark source price (eg. BB Generic, BB Fairvalue,
-	 * Brokertec..).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3941,7 +3991,7 @@ public class Debt2 {
 	public static final MMMessageAttribute mmPriceSource = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> GenericIdentification.mmIdentification;
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PricSrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -3952,11 +4002,11 @@ public class Debt2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PricRg")
 	protected AmountOrPercentageRange priceRange;
 	/**
-	 * Indicates a search criterion used when looking to buy a bond within a
-	 * particular price range.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3985,7 +4035,7 @@ public class Debt2 {
 	 */
 	public static final MMMessageAttribute mmPriceRange = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Debt2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Debt2.mmObject();
 			isDerived = false;
 			xmlTag = "PricRg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -4000,18 +4050,35 @@ public class Debt2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Debt2.mmPaymentCurrency, Debt2.mmFaceAmount, Debt2.mmPaymentFrequency, Debt2.mmInterestFixingDate, Debt2.mmDatedDate, Debt2.mmFirstPaymentDate, Debt2.mmMaturityDate,
-						Debt2.mmNextCouponDate, Debt2.mmPutableDate, Debt2.mmNextCallableDate, Debt2.mmNextFactorDate, Debt2.mmExpirationDate, Debt2.mmPaymentDirectionIndicator, Debt2.mmInterestRate, Debt2.mmNextInterestRate,
-						Debt2.mmOddCouponIndicator, Debt2.mmCallableIndicator, Debt2.mmCPProgram, Debt2.mmCPRegistrationType, Debt2.mmInterestAccrualDate, Debt2.mmPutableIndicator, Debt2.mmPreFundedIndicator, Debt2.mmEscrowedIndicator,
-						Debt2.mmPerpetualIndicator, Debt2.mmSubordinatedIndicator, Debt2.mmExtendibleIndicator, Debt2.mmExtendiblePeriod, Debt2.mmVariableRateIndicator, Debt2.mmOverAllotmentAmount, Debt2.mmOverAllotmentRate,
-						Debt2.mmAmortisableIndicator, Debt2.mmInterestCalculationMethod, Debt2.mmCapitalisedInterest, Debt2.mmActualDenominationAmount, Debt2.mmCurrentFactor, Debt2.mmNextFactor, Debt2.mmPreviousFactor, Debt2.mmPieces,
-						Debt2.mmPoolsMaximum, Debt2.mmPoolsPerMillion, Debt2.mmPoolsPerLot, Debt2.mmPoolsPerTrade, Debt2.mmConstantPrePaymentPenaltyIndicator, Debt2.mmLotIdentification, Debt2.mmConstantPrePaymentYield,
-						Debt2.mmWeightedAverageCoupon, Debt2.mmWeightedAverageLife, Debt2.mmWeightedAverageLoan, Debt2.mmWeightedAverageMaturity, Debt2.mmInsuredIndicator, Debt2.mmBankQualifiedIndicator, Debt2.mmYieldCalculation,
-						Debt2.mmInterestType, Debt2.mmInstrumentStructureType, Debt2.mmGlobalType, Debt2.mmPotentialEuroSystemEligibility, Debt2.mmGeographics, Debt2.mmYieldRange, Debt2.mmCouponRange, Debt2.mmPurpose,
-						Debt2.mmAlternativeMinimumTaxIndicator, Debt2.mmAutoReinvestment, Debt2.mmHaircut, Debt2.mmTransactionConditions, Debt2.mmLookBack, Debt2.mmMaximumSubstitution, Debt2.mmMinimumIncrement, Debt2.mmMinimumQuantity,
-						Debt2.mmProduction, Debt2.mmRestrictedIndicator, Debt2.mmPriceFrequency, Debt2.mmSector, Debt2.mmSubstitutionFrequency, Debt2.mmSubstitutionLeft, Debt2.mmWholePoolIndicator, Debt2.mmPriceSource, Debt2.mmPriceRange);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Debt2.mmPaymentCurrency, com.tools20022.repository.msg.Debt2.mmFaceAmount, com.tools20022.repository.msg.Debt2.mmPaymentFrequency,
+						com.tools20022.repository.msg.Debt2.mmInterestFixingDate, com.tools20022.repository.msg.Debt2.mmDatedDate, com.tools20022.repository.msg.Debt2.mmFirstPaymentDate, com.tools20022.repository.msg.Debt2.mmMaturityDate,
+						com.tools20022.repository.msg.Debt2.mmNextCouponDate, com.tools20022.repository.msg.Debt2.mmPutableDate, com.tools20022.repository.msg.Debt2.mmNextCallableDate, com.tools20022.repository.msg.Debt2.mmNextFactorDate,
+						com.tools20022.repository.msg.Debt2.mmExpirationDate, com.tools20022.repository.msg.Debt2.mmPaymentDirectionIndicator, com.tools20022.repository.msg.Debt2.mmInterestRate,
+						com.tools20022.repository.msg.Debt2.mmNextInterestRate, com.tools20022.repository.msg.Debt2.mmOddCouponIndicator, com.tools20022.repository.msg.Debt2.mmCallableIndicator,
+						com.tools20022.repository.msg.Debt2.mmCPProgram, com.tools20022.repository.msg.Debt2.mmCPRegistrationType, com.tools20022.repository.msg.Debt2.mmInterestAccrualDate,
+						com.tools20022.repository.msg.Debt2.mmPutableIndicator, com.tools20022.repository.msg.Debt2.mmPreFundedIndicator, com.tools20022.repository.msg.Debt2.mmEscrowedIndicator,
+						com.tools20022.repository.msg.Debt2.mmPerpetualIndicator, com.tools20022.repository.msg.Debt2.mmSubordinatedIndicator, com.tools20022.repository.msg.Debt2.mmExtendibleIndicator,
+						com.tools20022.repository.msg.Debt2.mmExtendiblePeriod, com.tools20022.repository.msg.Debt2.mmVariableRateIndicator, com.tools20022.repository.msg.Debt2.mmOverAllotmentAmount,
+						com.tools20022.repository.msg.Debt2.mmOverAllotmentRate, com.tools20022.repository.msg.Debt2.mmAmortisableIndicator, com.tools20022.repository.msg.Debt2.mmInterestCalculationMethod,
+						com.tools20022.repository.msg.Debt2.mmCapitalisedInterest, com.tools20022.repository.msg.Debt2.mmActualDenominationAmount, com.tools20022.repository.msg.Debt2.mmCurrentFactor,
+						com.tools20022.repository.msg.Debt2.mmNextFactor, com.tools20022.repository.msg.Debt2.mmPreviousFactor, com.tools20022.repository.msg.Debt2.mmPieces, com.tools20022.repository.msg.Debt2.mmPoolsMaximum,
+						com.tools20022.repository.msg.Debt2.mmPoolsPerMillion, com.tools20022.repository.msg.Debt2.mmPoolsPerLot, com.tools20022.repository.msg.Debt2.mmPoolsPerTrade,
+						com.tools20022.repository.msg.Debt2.mmConstantPrePaymentPenaltyIndicator, com.tools20022.repository.msg.Debt2.mmLotIdentification, com.tools20022.repository.msg.Debt2.mmConstantPrePaymentYield,
+						com.tools20022.repository.msg.Debt2.mmWeightedAverageCoupon, com.tools20022.repository.msg.Debt2.mmWeightedAverageLife, com.tools20022.repository.msg.Debt2.mmWeightedAverageLoan,
+						com.tools20022.repository.msg.Debt2.mmWeightedAverageMaturity, com.tools20022.repository.msg.Debt2.mmInsuredIndicator, com.tools20022.repository.msg.Debt2.mmBankQualifiedIndicator,
+						com.tools20022.repository.msg.Debt2.mmYieldCalculation, com.tools20022.repository.msg.Debt2.mmInterestType, com.tools20022.repository.msg.Debt2.mmInstrumentStructureType,
+						com.tools20022.repository.msg.Debt2.mmGlobalType, com.tools20022.repository.msg.Debt2.mmPotentialEuroSystemEligibility, com.tools20022.repository.msg.Debt2.mmGeographics,
+						com.tools20022.repository.msg.Debt2.mmYieldRange, com.tools20022.repository.msg.Debt2.mmCouponRange, com.tools20022.repository.msg.Debt2.mmPurpose,
+						com.tools20022.repository.msg.Debt2.mmAlternativeMinimumTaxIndicator, com.tools20022.repository.msg.Debt2.mmAutoReinvestment, com.tools20022.repository.msg.Debt2.mmHaircut,
+						com.tools20022.repository.msg.Debt2.mmTransactionConditions, com.tools20022.repository.msg.Debt2.mmLookBack, com.tools20022.repository.msg.Debt2.mmMaximumSubstitution,
+						com.tools20022.repository.msg.Debt2.mmMinimumIncrement, com.tools20022.repository.msg.Debt2.mmMinimumQuantity, com.tools20022.repository.msg.Debt2.mmProduction,
+						com.tools20022.repository.msg.Debt2.mmRestrictedIndicator, com.tools20022.repository.msg.Debt2.mmPriceFrequency, com.tools20022.repository.msg.Debt2.mmSector,
+						com.tools20022.repository.msg.Debt2.mmSubstitutionFrequency, com.tools20022.repository.msg.Debt2.mmSubstitutionLeft, com.tools20022.repository.msg.Debt2.mmWholePoolIndicator,
+						com.tools20022.repository.msg.Debt2.mmPriceSource, com.tools20022.repository.msg.Debt2.mmPriceRange);
 				trace_lazy = () -> Debt.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPutableDateAndPutableIndicatorRule.forDebt2,
+						com.tools20022.repository.constraints.ConstraintNextCallableDateAndCallableIndicatorRule.forDebt2);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Debt2";
 				definition = "Financial instruments evidencing moneys owed by the issuer to the holder on terms as specified.";
@@ -4020,696 +4087,696 @@ public class Debt2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PmtCcy")
-	public ActiveCurrencyCode getPaymentCurrency() {
-		return paymentCurrency;
+	public Optional<ActiveCurrencyCode> getPaymentCurrency() {
+		return paymentCurrency == null ? Optional.empty() : Optional.of(paymentCurrency);
 	}
 
-	public void setPaymentCurrency(ActiveCurrencyCode paymentCurrency) {
+	public Debt2 setPaymentCurrency(ActiveCurrencyCode paymentCurrency) {
 		this.paymentCurrency = paymentCurrency;
+		return this;
 	}
 
-	@XmlElement(name = "FaceAmt")
-	public ActiveCurrencyAndAmount getFaceAmount() {
-		return faceAmount;
+	public Optional<ActiveCurrencyAndAmount> getFaceAmount() {
+		return faceAmount == null ? Optional.empty() : Optional.of(faceAmount);
 	}
 
-	public void setFaceAmount(ActiveCurrencyAndAmount faceAmount) {
+	public Debt2 setFaceAmount(ActiveCurrencyAndAmount faceAmount) {
 		this.faceAmount = faceAmount;
+		return this;
 	}
 
-	@XmlElement(name = "PmtFrqcy")
-	public Frequency11Choice getPaymentFrequency() {
-		return paymentFrequency;
+	public Optional<Frequency11Choice> getPaymentFrequency() {
+		return paymentFrequency == null ? Optional.empty() : Optional.of(paymentFrequency);
 	}
 
-	public void setPaymentFrequency(Frequency11Choice paymentFrequency) {
+	public Debt2 setPaymentFrequency(Frequency11Choice paymentFrequency) {
 		this.paymentFrequency = paymentFrequency;
+		return this;
 	}
 
-	@XmlElement(name = "IntrstFxgDt")
-	public ISODateTime getInterestFixingDate() {
-		return interestFixingDate;
+	public Optional<ISODateTime> getInterestFixingDate() {
+		return interestFixingDate == null ? Optional.empty() : Optional.of(interestFixingDate);
 	}
 
-	public void setInterestFixingDate(ISODateTime interestFixingDate) {
+	public Debt2 setInterestFixingDate(ISODateTime interestFixingDate) {
 		this.interestFixingDate = interestFixingDate;
+		return this;
 	}
 
-	@XmlElement(name = "DtdDt")
-	public ISODateTime getDatedDate() {
-		return datedDate;
+	public Optional<ISODateTime> getDatedDate() {
+		return datedDate == null ? Optional.empty() : Optional.of(datedDate);
 	}
 
-	public void setDatedDate(ISODateTime datedDate) {
+	public Debt2 setDatedDate(ISODateTime datedDate) {
 		this.datedDate = datedDate;
+		return this;
 	}
 
-	@XmlElement(name = "FrstPmtDt")
-	public ISODateTime getFirstPaymentDate() {
-		return firstPaymentDate;
+	public Optional<ISODateTime> getFirstPaymentDate() {
+		return firstPaymentDate == null ? Optional.empty() : Optional.of(firstPaymentDate);
 	}
 
-	public void setFirstPaymentDate(ISODateTime firstPaymentDate) {
+	public Debt2 setFirstPaymentDate(ISODateTime firstPaymentDate) {
 		this.firstPaymentDate = firstPaymentDate;
+		return this;
 	}
 
-	@XmlElement(name = "MtrtyDt")
-	public ISODateTime getMaturityDate() {
-		return maturityDate;
+	public Optional<ISODateTime> getMaturityDate() {
+		return maturityDate == null ? Optional.empty() : Optional.of(maturityDate);
 	}
 
-	public void setMaturityDate(ISODateTime maturityDate) {
+	public Debt2 setMaturityDate(ISODateTime maturityDate) {
 		this.maturityDate = maturityDate;
+		return this;
 	}
 
-	@XmlElement(name = "NxtCpnDt")
-	public ISODateTime getNextCouponDate() {
-		return nextCouponDate;
+	public Optional<ISODateTime> getNextCouponDate() {
+		return nextCouponDate == null ? Optional.empty() : Optional.of(nextCouponDate);
 	}
 
-	public void setNextCouponDate(ISODateTime nextCouponDate) {
+	public Debt2 setNextCouponDate(ISODateTime nextCouponDate) {
 		this.nextCouponDate = nextCouponDate;
+		return this;
 	}
 
-	@XmlElement(name = "PutblDt")
-	public ISODateTime getPutableDate() {
-		return putableDate;
+	public Optional<ISODateTime> getPutableDate() {
+		return putableDate == null ? Optional.empty() : Optional.of(putableDate);
 	}
 
-	public void setPutableDate(ISODateTime putableDate) {
+	public Debt2 setPutableDate(ISODateTime putableDate) {
 		this.putableDate = putableDate;
+		return this;
 	}
 
-	@XmlElement(name = "NxtCllblDt")
-	public ISODateTime getNextCallableDate() {
-		return nextCallableDate;
+	public Optional<ISODateTime> getNextCallableDate() {
+		return nextCallableDate == null ? Optional.empty() : Optional.of(nextCallableDate);
 	}
 
-	public void setNextCallableDate(ISODateTime nextCallableDate) {
+	public Debt2 setNextCallableDate(ISODateTime nextCallableDate) {
 		this.nextCallableDate = nextCallableDate;
+		return this;
 	}
 
-	@XmlElement(name = "NxtFctrDt")
-	public ISODateTime getNextFactorDate() {
-		return nextFactorDate;
+	public Optional<ISODateTime> getNextFactorDate() {
+		return nextFactorDate == null ? Optional.empty() : Optional.of(nextFactorDate);
 	}
 
-	public void setNextFactorDate(ISODateTime nextFactorDate) {
+	public Debt2 setNextFactorDate(ISODateTime nextFactorDate) {
 		this.nextFactorDate = nextFactorDate;
+		return this;
 	}
 
-	@XmlElement(name = "XprtnDt")
-	public ISODateTime getExpirationDate() {
-		return expirationDate;
+	public Optional<ISODateTime> getExpirationDate() {
+		return expirationDate == null ? Optional.empty() : Optional.of(expirationDate);
 	}
 
-	public void setExpirationDate(ISODateTime expirationDate) {
+	public Debt2 setExpirationDate(ISODateTime expirationDate) {
 		this.expirationDate = expirationDate;
+		return this;
 	}
 
-	@XmlElement(name = "PmtDrctnInd")
-	public PaymentDirectionIndicator getPaymentDirectionIndicator() {
-		return paymentDirectionIndicator;
+	public Optional<PaymentDirectionIndicator> getPaymentDirectionIndicator() {
+		return paymentDirectionIndicator == null ? Optional.empty() : Optional.of(paymentDirectionIndicator);
 	}
 
-	public void setPaymentDirectionIndicator(PaymentDirectionIndicator paymentDirectionIndicator) {
+	public Debt2 setPaymentDirectionIndicator(PaymentDirectionIndicator paymentDirectionIndicator) {
 		this.paymentDirectionIndicator = paymentDirectionIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "IntrstRate")
-	public PercentageRate getInterestRate() {
-		return interestRate;
+	public Optional<PercentageRate> getInterestRate() {
+		return interestRate == null ? Optional.empty() : Optional.of(interestRate);
 	}
 
-	public void setInterestRate(PercentageRate interestRate) {
+	public Debt2 setInterestRate(PercentageRate interestRate) {
 		this.interestRate = interestRate;
+		return this;
 	}
 
-	@XmlElement(name = "NxtIntrstRate")
-	public PercentageRate getNextInterestRate() {
-		return nextInterestRate;
+	public Optional<PercentageRate> getNextInterestRate() {
+		return nextInterestRate == null ? Optional.empty() : Optional.of(nextInterestRate);
 	}
 
-	public void setNextInterestRate(PercentageRate nextInterestRate) {
+	public Debt2 setNextInterestRate(PercentageRate nextInterestRate) {
 		this.nextInterestRate = nextInterestRate;
+		return this;
 	}
 
-	@XmlElement(name = "OddCpnInd")
-	public YesNoIndicator getOddCouponIndicator() {
-		return oddCouponIndicator;
+	public Optional<YesNoIndicator> getOddCouponIndicator() {
+		return oddCouponIndicator == null ? Optional.empty() : Optional.of(oddCouponIndicator);
 	}
 
-	public void setOddCouponIndicator(YesNoIndicator oddCouponIndicator) {
+	public Debt2 setOddCouponIndicator(YesNoIndicator oddCouponIndicator) {
 		this.oddCouponIndicator = oddCouponIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "CllblInd")
-	public YesNoIndicator getCallableIndicator() {
-		return callableIndicator;
+	public Optional<YesNoIndicator> getCallableIndicator() {
+		return callableIndicator == null ? Optional.empty() : Optional.of(callableIndicator);
 	}
 
-	public void setCallableIndicator(YesNoIndicator callableIndicator) {
+	public Debt2 setCallableIndicator(YesNoIndicator callableIndicator) {
 		this.callableIndicator = callableIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "CPPrgm")
-	public Number getCPProgram() {
-		return cPProgram;
+	public Optional<Number> getCPProgram() {
+		return cPProgram == null ? Optional.empty() : Optional.of(cPProgram);
 	}
 
-	public void setCPProgram(Number cPProgram) {
+	public Debt2 setCPProgram(Number cPProgram) {
 		this.cPProgram = cPProgram;
+		return this;
 	}
 
-	@XmlElement(name = "CPRegnTp")
-	public Max350Text getCPRegistrationType() {
-		return cPRegistrationType;
+	public Optional<Max350Text> getCPRegistrationType() {
+		return cPRegistrationType == null ? Optional.empty() : Optional.of(cPRegistrationType);
 	}
 
-	public void setCPRegistrationType(Max350Text cPRegistrationType) {
+	public Debt2 setCPRegistrationType(Max350Text cPRegistrationType) {
 		this.cPRegistrationType = cPRegistrationType;
+		return this;
 	}
 
-	@XmlElement(name = "IntrstAcrlDt")
-	public ISODateTime getInterestAccrualDate() {
-		return interestAccrualDate;
+	public Optional<ISODateTime> getInterestAccrualDate() {
+		return interestAccrualDate == null ? Optional.empty() : Optional.of(interestAccrualDate);
 	}
 
-	public void setInterestAccrualDate(ISODateTime interestAccrualDate) {
+	public Debt2 setInterestAccrualDate(ISODateTime interestAccrualDate) {
 		this.interestAccrualDate = interestAccrualDate;
+		return this;
 	}
 
-	@XmlElement(name = "PutblInd")
-	public YesNoIndicator getPutableIndicator() {
-		return putableIndicator;
+	public Optional<YesNoIndicator> getPutableIndicator() {
+		return putableIndicator == null ? Optional.empty() : Optional.of(putableIndicator);
 	}
 
-	public void setPutableIndicator(YesNoIndicator putableIndicator) {
+	public Debt2 setPutableIndicator(YesNoIndicator putableIndicator) {
 		this.putableIndicator = putableIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PreFnddInd")
-	public YesNoIndicator getPreFundedIndicator() {
-		return preFundedIndicator;
+	public Optional<YesNoIndicator> getPreFundedIndicator() {
+		return preFundedIndicator == null ? Optional.empty() : Optional.of(preFundedIndicator);
 	}
 
-	public void setPreFundedIndicator(YesNoIndicator preFundedIndicator) {
+	public Debt2 setPreFundedIndicator(YesNoIndicator preFundedIndicator) {
 		this.preFundedIndicator = preFundedIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "EscrwdInd")
-	public YesNoIndicator getEscrowedIndicator() {
-		return escrowedIndicator;
+	public Optional<YesNoIndicator> getEscrowedIndicator() {
+		return escrowedIndicator == null ? Optional.empty() : Optional.of(escrowedIndicator);
 	}
 
-	public void setEscrowedIndicator(YesNoIndicator escrowedIndicator) {
+	public Debt2 setEscrowedIndicator(YesNoIndicator escrowedIndicator) {
 		this.escrowedIndicator = escrowedIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PerptlInd")
-	public YesNoIndicator getPerpetualIndicator() {
-		return perpetualIndicator;
+	public Optional<YesNoIndicator> getPerpetualIndicator() {
+		return perpetualIndicator == null ? Optional.empty() : Optional.of(perpetualIndicator);
 	}
 
-	public void setPerpetualIndicator(YesNoIndicator perpetualIndicator) {
+	public Debt2 setPerpetualIndicator(YesNoIndicator perpetualIndicator) {
 		this.perpetualIndicator = perpetualIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "SubrdntdInd")
-	public YesNoIndicator getSubordinatedIndicator() {
-		return subordinatedIndicator;
+	public Optional<YesNoIndicator> getSubordinatedIndicator() {
+		return subordinatedIndicator == null ? Optional.empty() : Optional.of(subordinatedIndicator);
 	}
 
-	public void setSubordinatedIndicator(YesNoIndicator subordinatedIndicator) {
+	public Debt2 setSubordinatedIndicator(YesNoIndicator subordinatedIndicator) {
 		this.subordinatedIndicator = subordinatedIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "XtndblInd")
-	public YesNoIndicator getExtendibleIndicator() {
-		return extendibleIndicator;
+	public Optional<YesNoIndicator> getExtendibleIndicator() {
+		return extendibleIndicator == null ? Optional.empty() : Optional.of(extendibleIndicator);
 	}
 
-	public void setExtendibleIndicator(YesNoIndicator extendibleIndicator) {
+	public Debt2 setExtendibleIndicator(YesNoIndicator extendibleIndicator) {
 		this.extendibleIndicator = extendibleIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "XtndblPrd")
-	public DateTimePeriodChoice getExtendiblePeriod() {
-		return extendiblePeriod;
+	public Optional<DateTimePeriodChoice> getExtendiblePeriod() {
+		return extendiblePeriod == null ? Optional.empty() : Optional.of(extendiblePeriod);
 	}
 
-	public void setExtendiblePeriod(DateTimePeriodChoice extendiblePeriod) {
+	public Debt2 setExtendiblePeriod(DateTimePeriodChoice extendiblePeriod) {
 		this.extendiblePeriod = extendiblePeriod;
+		return this;
 	}
 
-	@XmlElement(name = "VarblRateInd")
-	public YesNoIndicator getVariableRateIndicator() {
-		return variableRateIndicator;
+	public Optional<YesNoIndicator> getVariableRateIndicator() {
+		return variableRateIndicator == null ? Optional.empty() : Optional.of(variableRateIndicator);
 	}
 
-	public void setVariableRateIndicator(YesNoIndicator variableRateIndicator) {
+	public Debt2 setVariableRateIndicator(YesNoIndicator variableRateIndicator) {
 		this.variableRateIndicator = variableRateIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "OverAlltmtAmt")
-	public ActiveCurrencyAndAmount getOverAllotmentAmount() {
-		return overAllotmentAmount;
+	public Optional<ActiveCurrencyAndAmount> getOverAllotmentAmount() {
+		return overAllotmentAmount == null ? Optional.empty() : Optional.of(overAllotmentAmount);
 	}
 
-	public void setOverAllotmentAmount(ActiveCurrencyAndAmount overAllotmentAmount) {
+	public Debt2 setOverAllotmentAmount(ActiveCurrencyAndAmount overAllotmentAmount) {
 		this.overAllotmentAmount = overAllotmentAmount;
+		return this;
 	}
 
-	@XmlElement(name = "OverAlltmtRate")
-	public PercentageRate getOverAllotmentRate() {
-		return overAllotmentRate;
+	public Optional<PercentageRate> getOverAllotmentRate() {
+		return overAllotmentRate == null ? Optional.empty() : Optional.of(overAllotmentRate);
 	}
 
-	public void setOverAllotmentRate(PercentageRate overAllotmentRate) {
+	public Debt2 setOverAllotmentRate(PercentageRate overAllotmentRate) {
 		this.overAllotmentRate = overAllotmentRate;
+		return this;
 	}
 
-	@XmlElement(name = "AmtsblInd")
-	public YesNoIndicator getAmortisableIndicator() {
-		return amortisableIndicator;
+	public Optional<YesNoIndicator> getAmortisableIndicator() {
+		return amortisableIndicator == null ? Optional.empty() : Optional.of(amortisableIndicator);
 	}
 
-	public void setAmortisableIndicator(YesNoIndicator amortisableIndicator) {
+	public Debt2 setAmortisableIndicator(YesNoIndicator amortisableIndicator) {
 		this.amortisableIndicator = amortisableIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "IntrstClctnMtd")
-	public Max70Text getInterestCalculationMethod() {
-		return interestCalculationMethod;
+	public Optional<Max70Text> getInterestCalculationMethod() {
+		return interestCalculationMethod == null ? Optional.empty() : Optional.of(interestCalculationMethod);
 	}
 
-	public void setInterestCalculationMethod(Max70Text interestCalculationMethod) {
+	public Debt2 setInterestCalculationMethod(Max70Text interestCalculationMethod) {
 		this.interestCalculationMethod = interestCalculationMethod;
+		return this;
 	}
 
-	@XmlElement(name = "CptlsdIntrst")
-	public DistributionPolicy1Choice getCapitalisedInterest() {
-		return capitalisedInterest;
+	public Optional<DistributionPolicy1Choice> getCapitalisedInterest() {
+		return capitalisedInterest == null ? Optional.empty() : Optional.of(capitalisedInterest);
 	}
 
-	public void setCapitalisedInterest(DistributionPolicy1Choice capitalisedInterest) {
+	public Debt2 setCapitalisedInterest(DistributionPolicy1Choice capitalisedInterest) {
 		this.capitalisedInterest = capitalisedInterest;
+		return this;
 	}
 
-	@XmlElement(name = "ActlDnmtnAmt")
 	public List<ActiveCurrencyAndAmount> getActualDenominationAmount() {
-		return actualDenominationAmount;
+		return actualDenominationAmount == null ? actualDenominationAmount = new ArrayList<>() : actualDenominationAmount;
 	}
 
-	public void setActualDenominationAmount(List<ActiveCurrencyAndAmount> actualDenominationAmount) {
-		this.actualDenominationAmount = actualDenominationAmount;
+	public Debt2 setActualDenominationAmount(List<ActiveCurrencyAndAmount> actualDenominationAmount) {
+		this.actualDenominationAmount = Objects.requireNonNull(actualDenominationAmount);
+		return this;
 	}
 
-	@XmlElement(name = "CurFctr")
-	public PercentageRate getCurrentFactor() {
-		return currentFactor;
+	public Optional<PercentageRate> getCurrentFactor() {
+		return currentFactor == null ? Optional.empty() : Optional.of(currentFactor);
 	}
 
-	public void setCurrentFactor(PercentageRate currentFactor) {
+	public Debt2 setCurrentFactor(PercentageRate currentFactor) {
 		this.currentFactor = currentFactor;
+		return this;
 	}
 
-	@XmlElement(name = "NxtFctr")
-	public PercentageRate getNextFactor() {
-		return nextFactor;
+	public Optional<PercentageRate> getNextFactor() {
+		return nextFactor == null ? Optional.empty() : Optional.of(nextFactor);
 	}
 
-	public void setNextFactor(PercentageRate nextFactor) {
+	public Debt2 setNextFactor(PercentageRate nextFactor) {
 		this.nextFactor = nextFactor;
+		return this;
 	}
 
-	@XmlElement(name = "PrvsFctr")
-	public PercentageRate getPreviousFactor() {
-		return previousFactor;
+	public Optional<PercentageRate> getPreviousFactor() {
+		return previousFactor == null ? Optional.empty() : Optional.of(previousFactor);
 	}
 
-	public void setPreviousFactor(PercentageRate previousFactor) {
+	public Debt2 setPreviousFactor(PercentageRate previousFactor) {
 		this.previousFactor = previousFactor;
+		return this;
 	}
 
-	@XmlElement(name = "Pcs")
-	public DecimalNumber getPieces() {
-		return pieces;
+	public Optional<DecimalNumber> getPieces() {
+		return pieces == null ? Optional.empty() : Optional.of(pieces);
 	}
 
-	public void setPieces(DecimalNumber pieces) {
+	public Debt2 setPieces(DecimalNumber pieces) {
 		this.pieces = pieces;
+		return this;
 	}
 
-	@XmlElement(name = "PlsMax")
-	public DecimalNumber getPoolsMaximum() {
-		return poolsMaximum;
+	public Optional<DecimalNumber> getPoolsMaximum() {
+		return poolsMaximum == null ? Optional.empty() : Optional.of(poolsMaximum);
 	}
 
-	public void setPoolsMaximum(DecimalNumber poolsMaximum) {
+	public Debt2 setPoolsMaximum(DecimalNumber poolsMaximum) {
 		this.poolsMaximum = poolsMaximum;
+		return this;
 	}
 
-	@XmlElement(name = "PlsPerMln")
-	public DecimalNumber getPoolsPerMillion() {
-		return poolsPerMillion;
+	public Optional<DecimalNumber> getPoolsPerMillion() {
+		return poolsPerMillion == null ? Optional.empty() : Optional.of(poolsPerMillion);
 	}
 
-	public void setPoolsPerMillion(DecimalNumber poolsPerMillion) {
+	public Debt2 setPoolsPerMillion(DecimalNumber poolsPerMillion) {
 		this.poolsPerMillion = poolsPerMillion;
+		return this;
 	}
 
-	@XmlElement(name = "PlsPerLot")
-	public DecimalNumber getPoolsPerLot() {
-		return poolsPerLot;
+	public Optional<DecimalNumber> getPoolsPerLot() {
+		return poolsPerLot == null ? Optional.empty() : Optional.of(poolsPerLot);
 	}
 
-	public void setPoolsPerLot(DecimalNumber poolsPerLot) {
+	public Debt2 setPoolsPerLot(DecimalNumber poolsPerLot) {
 		this.poolsPerLot = poolsPerLot;
+		return this;
 	}
 
-	@XmlElement(name = "PlsPerTrad")
-	public DecimalNumber getPoolsPerTrade() {
-		return poolsPerTrade;
+	public Optional<DecimalNumber> getPoolsPerTrade() {
+		return poolsPerTrade == null ? Optional.empty() : Optional.of(poolsPerTrade);
 	}
 
-	public void setPoolsPerTrade(DecimalNumber poolsPerTrade) {
+	public Debt2 setPoolsPerTrade(DecimalNumber poolsPerTrade) {
 		this.poolsPerTrade = poolsPerTrade;
+		return this;
 	}
 
-	@XmlElement(name = "CstPrePmtPnltyInd")
-	public YesNoIndicator getConstantPrePaymentPenaltyIndicator() {
-		return constantPrePaymentPenaltyIndicator;
+	public Optional<YesNoIndicator> getConstantPrePaymentPenaltyIndicator() {
+		return constantPrePaymentPenaltyIndicator == null ? Optional.empty() : Optional.of(constantPrePaymentPenaltyIndicator);
 	}
 
-	public void setConstantPrePaymentPenaltyIndicator(YesNoIndicator constantPrePaymentPenaltyIndicator) {
+	public Debt2 setConstantPrePaymentPenaltyIndicator(YesNoIndicator constantPrePaymentPenaltyIndicator) {
 		this.constantPrePaymentPenaltyIndicator = constantPrePaymentPenaltyIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "LotId")
-	public Max35Text getLotIdentification() {
-		return lotIdentification;
+	public Optional<Max35Text> getLotIdentification() {
+		return lotIdentification == null ? Optional.empty() : Optional.of(lotIdentification);
 	}
 
-	public void setLotIdentification(Max35Text lotIdentification) {
+	public Debt2 setLotIdentification(Max35Text lotIdentification) {
 		this.lotIdentification = lotIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "CstPrePmtYld")
-	public PercentageRate getConstantPrePaymentYield() {
-		return constantPrePaymentYield;
+	public Optional<PercentageRate> getConstantPrePaymentYield() {
+		return constantPrePaymentYield == null ? Optional.empty() : Optional.of(constantPrePaymentYield);
 	}
 
-	public void setConstantPrePaymentYield(PercentageRate constantPrePaymentYield) {
+	public Debt2 setConstantPrePaymentYield(PercentageRate constantPrePaymentYield) {
 		this.constantPrePaymentYield = constantPrePaymentYield;
+		return this;
 	}
 
-	@XmlElement(name = "WghtdAvrgCpn")
-	public PercentageRate getWeightedAverageCoupon() {
-		return weightedAverageCoupon;
+	public Optional<PercentageRate> getWeightedAverageCoupon() {
+		return weightedAverageCoupon == null ? Optional.empty() : Optional.of(weightedAverageCoupon);
 	}
 
-	public void setWeightedAverageCoupon(PercentageRate weightedAverageCoupon) {
+	public Debt2 setWeightedAverageCoupon(PercentageRate weightedAverageCoupon) {
 		this.weightedAverageCoupon = weightedAverageCoupon;
+		return this;
 	}
 
-	@XmlElement(name = "WghtdAvrgLife")
-	public DecimalNumber getWeightedAverageLife() {
-		return weightedAverageLife;
+	public Optional<DecimalNumber> getWeightedAverageLife() {
+		return weightedAverageLife == null ? Optional.empty() : Optional.of(weightedAverageLife);
 	}
 
-	public void setWeightedAverageLife(DecimalNumber weightedAverageLife) {
+	public Debt2 setWeightedAverageLife(DecimalNumber weightedAverageLife) {
 		this.weightedAverageLife = weightedAverageLife;
+		return this;
 	}
 
-	@XmlElement(name = "WghtdAvrgLn")
-	public DecimalNumber getWeightedAverageLoan() {
-		return weightedAverageLoan;
+	public Optional<DecimalNumber> getWeightedAverageLoan() {
+		return weightedAverageLoan == null ? Optional.empty() : Optional.of(weightedAverageLoan);
 	}
 
-	public void setWeightedAverageLoan(DecimalNumber weightedAverageLoan) {
+	public Debt2 setWeightedAverageLoan(DecimalNumber weightedAverageLoan) {
 		this.weightedAverageLoan = weightedAverageLoan;
+		return this;
 	}
 
-	@XmlElement(name = "WghtdAvrgMtrty")
-	public DecimalNumber getWeightedAverageMaturity() {
-		return weightedAverageMaturity;
+	public Optional<DecimalNumber> getWeightedAverageMaturity() {
+		return weightedAverageMaturity == null ? Optional.empty() : Optional.of(weightedAverageMaturity);
 	}
 
-	public void setWeightedAverageMaturity(DecimalNumber weightedAverageMaturity) {
+	public Debt2 setWeightedAverageMaturity(DecimalNumber weightedAverageMaturity) {
 		this.weightedAverageMaturity = weightedAverageMaturity;
+		return this;
 	}
 
-	@XmlElement(name = "InsrdInd")
-	public YesNoIndicator getInsuredIndicator() {
-		return insuredIndicator;
+	public Optional<YesNoIndicator> getInsuredIndicator() {
+		return insuredIndicator == null ? Optional.empty() : Optional.of(insuredIndicator);
 	}
 
-	public void setInsuredIndicator(YesNoIndicator insuredIndicator) {
+	public Debt2 setInsuredIndicator(YesNoIndicator insuredIndicator) {
 		this.insuredIndicator = insuredIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "BkQlfdInd")
-	public YesNoIndicator getBankQualifiedIndicator() {
-		return bankQualifiedIndicator;
+	public Optional<YesNoIndicator> getBankQualifiedIndicator() {
+		return bankQualifiedIndicator == null ? Optional.empty() : Optional.of(bankQualifiedIndicator);
 	}
 
-	public void setBankQualifiedIndicator(YesNoIndicator bankQualifiedIndicator) {
+	public Debt2 setBankQualifiedIndicator(YesNoIndicator bankQualifiedIndicator) {
 		this.bankQualifiedIndicator = bankQualifiedIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "YldClctn")
 	public List<YieldCalculation3> getYieldCalculation() {
-		return yieldCalculation;
+		return yieldCalculation == null ? yieldCalculation = new ArrayList<>() : yieldCalculation;
 	}
 
-	public void setYieldCalculation(List<com.tools20022.repository.msg.YieldCalculation3> yieldCalculation) {
-		this.yieldCalculation = yieldCalculation;
+	public Debt2 setYieldCalculation(List<com.tools20022.repository.msg.YieldCalculation3> yieldCalculation) {
+		this.yieldCalculation = Objects.requireNonNull(yieldCalculation);
+		return this;
 	}
 
-	@XmlElement(name = "IntrstTp")
-	public InterestType3Code getInterestType() {
-		return interestType;
+	public Optional<InterestType3Code> getInterestType() {
+		return interestType == null ? Optional.empty() : Optional.of(interestType);
 	}
 
-	public void setInterestType(InterestType3Code interestType) {
+	public Debt2 setInterestType(InterestType3Code interestType) {
 		this.interestType = interestType;
+		return this;
 	}
 
-	@XmlElement(name = "InstrmStrTp")
-	public InstrumentSubStructureType1Choice getInstrumentStructureType() {
-		return instrumentStructureType;
+	public Optional<InstrumentSubStructureType1Choice> getInstrumentStructureType() {
+		return instrumentStructureType == null ? Optional.empty() : Optional.of(instrumentStructureType);
 	}
 
-	public void setInstrumentStructureType(InstrumentSubStructureType1Choice instrumentStructureType) {
+	public Debt2 setInstrumentStructureType(InstrumentSubStructureType1Choice instrumentStructureType) {
 		this.instrumentStructureType = instrumentStructureType;
+		return this;
 	}
 
-	@XmlElement(name = "GblTp")
-	public GlobalNote1Choice getGlobalType() {
-		return globalType;
+	public Optional<GlobalNote1Choice> getGlobalType() {
+		return globalType == null ? Optional.empty() : Optional.of(globalType);
 	}
 
-	public void setGlobalType(GlobalNote1Choice globalType) {
+	public Debt2 setGlobalType(GlobalNote1Choice globalType) {
 		this.globalType = globalType;
+		return this;
 	}
 
-	@XmlElement(name = "PotntlEuroSysElgblty")
-	public YesNoIndicator getPotentialEuroSystemEligibility() {
-		return potentialEuroSystemEligibility;
+	public Optional<YesNoIndicator> getPotentialEuroSystemEligibility() {
+		return potentialEuroSystemEligibility == null ? Optional.empty() : Optional.of(potentialEuroSystemEligibility);
 	}
 
-	public void setPotentialEuroSystemEligibility(YesNoIndicator potentialEuroSystemEligibility) {
+	public Debt2 setPotentialEuroSystemEligibility(YesNoIndicator potentialEuroSystemEligibility) {
 		this.potentialEuroSystemEligibility = potentialEuroSystemEligibility;
+		return this;
 	}
 
-	@XmlElement(name = "Geogcs")
-	public Max35Text getGeographics() {
-		return geographics;
+	public Optional<Max35Text> getGeographics() {
+		return geographics == null ? Optional.empty() : Optional.of(geographics);
 	}
 
-	public void setGeographics(Max35Text geographics) {
+	public Debt2 setGeographics(Max35Text geographics) {
 		this.geographics = geographics;
+		return this;
 	}
 
-	@XmlElement(name = "YldRg")
-	public AmountOrPercentageRange getYieldRange() {
-		return yieldRange;
+	public Optional<AmountOrPercentageRange> getYieldRange() {
+		return yieldRange == null ? Optional.empty() : Optional.of(yieldRange);
 	}
 
-	public void setYieldRange(com.tools20022.repository.msg.AmountOrPercentageRange yieldRange) {
+	public Debt2 setYieldRange(com.tools20022.repository.msg.AmountOrPercentageRange yieldRange) {
 		this.yieldRange = yieldRange;
+		return this;
 	}
 
-	@XmlElement(name = "CpnRg")
-	public AmountOrPercentageRange getCouponRange() {
-		return couponRange;
+	public Optional<AmountOrPercentageRange> getCouponRange() {
+		return couponRange == null ? Optional.empty() : Optional.of(couponRange);
 	}
 
-	public void setCouponRange(com.tools20022.repository.msg.AmountOrPercentageRange couponRange) {
+	public Debt2 setCouponRange(com.tools20022.repository.msg.AmountOrPercentageRange couponRange) {
 		this.couponRange = couponRange;
+		return this;
 	}
 
-	@XmlElement(name = "Purp")
-	public Max256Text getPurpose() {
-		return purpose;
+	public Optional<Max256Text> getPurpose() {
+		return purpose == null ? Optional.empty() : Optional.of(purpose);
 	}
 
-	public void setPurpose(Max256Text purpose) {
+	public Debt2 setPurpose(Max256Text purpose) {
 		this.purpose = purpose;
+		return this;
 	}
 
-	@XmlElement(name = "AltrntvMinTaxInd")
-	public YesNoIndicator getAlternativeMinimumTaxIndicator() {
-		return alternativeMinimumTaxIndicator;
+	public Optional<YesNoIndicator> getAlternativeMinimumTaxIndicator() {
+		return alternativeMinimumTaxIndicator == null ? Optional.empty() : Optional.of(alternativeMinimumTaxIndicator);
 	}
 
-	public void setAlternativeMinimumTaxIndicator(YesNoIndicator alternativeMinimumTaxIndicator) {
+	public Debt2 setAlternativeMinimumTaxIndicator(YesNoIndicator alternativeMinimumTaxIndicator) {
 		this.alternativeMinimumTaxIndicator = alternativeMinimumTaxIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "AutoRinvstmt")
-	public PercentageRate getAutoReinvestment() {
-		return autoReinvestment;
+	public Optional<PercentageRate> getAutoReinvestment() {
+		return autoReinvestment == null ? Optional.empty() : Optional.of(autoReinvestment);
 	}
 
-	public void setAutoReinvestment(PercentageRate autoReinvestment) {
+	public Debt2 setAutoReinvestment(PercentageRate autoReinvestment) {
 		this.autoReinvestment = autoReinvestment;
+		return this;
 	}
 
-	@XmlElement(name = "Hrcut")
-	public PercentageRate getHaircut() {
-		return haircut;
+	public Optional<PercentageRate> getHaircut() {
+		return haircut == null ? Optional.empty() : Optional.of(haircut);
 	}
 
-	public void setHaircut(PercentageRate haircut) {
+	public Debt2 setHaircut(PercentageRate haircut) {
 		this.haircut = haircut;
+		return this;
 	}
 
-	@XmlElement(name = "TxConds")
-	public TradeTransactionCondition3Choice getTransactionConditions() {
-		return transactionConditions;
+	public Optional<TradeTransactionCondition3Choice> getTransactionConditions() {
+		return transactionConditions == null ? Optional.empty() : Optional.of(transactionConditions);
 	}
 
-	public void setTransactionConditions(TradeTransactionCondition3Choice transactionConditions) {
+	public Debt2 setTransactionConditions(TradeTransactionCondition3Choice transactionConditions) {
 		this.transactionConditions = transactionConditions;
+		return this;
 	}
 
-	@XmlElement(name = "LookBck")
-	public Number getLookBack() {
-		return lookBack;
+	public Optional<Number> getLookBack() {
+		return lookBack == null ? Optional.empty() : Optional.of(lookBack);
 	}
 
-	public void setLookBack(Number lookBack) {
+	public Debt2 setLookBack(Number lookBack) {
 		this.lookBack = lookBack;
+		return this;
 	}
 
-	@XmlElement(name = "MaxSbstitn")
-	public Number getMaximumSubstitution() {
-		return maximumSubstitution;
+	public Optional<Number> getMaximumSubstitution() {
+		return maximumSubstitution == null ? Optional.empty() : Optional.of(maximumSubstitution);
 	}
 
-	public void setMaximumSubstitution(Number maximumSubstitution) {
+	public Debt2 setMaximumSubstitution(Number maximumSubstitution) {
 		this.maximumSubstitution = maximumSubstitution;
+		return this;
 	}
 
-	@XmlElement(name = "MinIncrmt")
-	public FinancialInstrumentQuantity1Choice getMinimumIncrement() {
-		return minimumIncrement;
+	public Optional<FinancialInstrumentQuantity1Choice> getMinimumIncrement() {
+		return minimumIncrement == null ? Optional.empty() : Optional.of(minimumIncrement);
 	}
 
-	public void setMinimumIncrement(FinancialInstrumentQuantity1Choice minimumIncrement) {
+	public Debt2 setMinimumIncrement(FinancialInstrumentQuantity1Choice minimumIncrement) {
 		this.minimumIncrement = minimumIncrement;
+		return this;
 	}
 
-	@XmlElement(name = "MinQty")
-	public FinancialInstrumentQuantity1Choice getMinimumQuantity() {
-		return minimumQuantity;
+	public Optional<FinancialInstrumentQuantity1Choice> getMinimumQuantity() {
+		return minimumQuantity == null ? Optional.empty() : Optional.of(minimumQuantity);
 	}
 
-	public void setMinimumQuantity(FinancialInstrumentQuantity1Choice minimumQuantity) {
+	public Debt2 setMinimumQuantity(FinancialInstrumentQuantity1Choice minimumQuantity) {
 		this.minimumQuantity = minimumQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "Pdctn")
-	public Max35Text getProduction() {
-		return production;
+	public Optional<Max35Text> getProduction() {
+		return production == null ? Optional.empty() : Optional.of(production);
 	}
 
-	public void setProduction(Max35Text production) {
+	public Debt2 setProduction(Max35Text production) {
 		this.production = production;
+		return this;
 	}
 
-	@XmlElement(name = "RstrctdInd")
-	public YesNoIndicator getRestrictedIndicator() {
-		return restrictedIndicator;
+	public Optional<YesNoIndicator> getRestrictedIndicator() {
+		return restrictedIndicator == null ? Optional.empty() : Optional.of(restrictedIndicator);
 	}
 
-	public void setRestrictedIndicator(YesNoIndicator restrictedIndicator) {
+	public Debt2 setRestrictedIndicator(YesNoIndicator restrictedIndicator) {
 		this.restrictedIndicator = restrictedIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PricFrqcy")
-	public Frequency11Choice getPriceFrequency() {
-		return priceFrequency;
+	public Optional<Frequency11Choice> getPriceFrequency() {
+		return priceFrequency == null ? Optional.empty() : Optional.of(priceFrequency);
 	}
 
-	public void setPriceFrequency(Frequency11Choice priceFrequency) {
+	public Debt2 setPriceFrequency(Frequency11Choice priceFrequency) {
 		this.priceFrequency = priceFrequency;
+		return this;
 	}
 
-	@XmlElement(name = "Sctr")
-	public Max35Text getSector() {
-		return sector;
+	public Optional<Max35Text> getSector() {
+		return sector == null ? Optional.empty() : Optional.of(sector);
 	}
 
-	public void setSector(Max35Text sector) {
+	public Debt2 setSector(Max35Text sector) {
 		this.sector = sector;
+		return this;
 	}
 
-	@XmlElement(name = "SbstitnFrqcy")
-	public Frequency11Choice getSubstitutionFrequency() {
-		return substitutionFrequency;
+	public Optional<Frequency11Choice> getSubstitutionFrequency() {
+		return substitutionFrequency == null ? Optional.empty() : Optional.of(substitutionFrequency);
 	}
 
-	public void setSubstitutionFrequency(Frequency11Choice substitutionFrequency) {
+	public Debt2 setSubstitutionFrequency(Frequency11Choice substitutionFrequency) {
 		this.substitutionFrequency = substitutionFrequency;
+		return this;
 	}
 
-	@XmlElement(name = "SbstitnLft")
-	public Number getSubstitutionLeft() {
-		return substitutionLeft;
+	public Optional<Number> getSubstitutionLeft() {
+		return substitutionLeft == null ? Optional.empty() : Optional.of(substitutionLeft);
 	}
 
-	public void setSubstitutionLeft(Number substitutionLeft) {
+	public Debt2 setSubstitutionLeft(Number substitutionLeft) {
 		this.substitutionLeft = substitutionLeft;
+		return this;
 	}
 
-	@XmlElement(name = "WhlPoolInd")
-	public YesNoIndicator getWholePoolIndicator() {
-		return wholePoolIndicator;
+	public Optional<YesNoIndicator> getWholePoolIndicator() {
+		return wholePoolIndicator == null ? Optional.empty() : Optional.of(wholePoolIndicator);
 	}
 
-	public void setWholePoolIndicator(YesNoIndicator wholePoolIndicator) {
+	public Debt2 setWholePoolIndicator(YesNoIndicator wholePoolIndicator) {
 		this.wholePoolIndicator = wholePoolIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "PricSrc")
-	public Max35Text getPriceSource() {
-		return priceSource;
+	public Optional<Max35Text> getPriceSource() {
+		return priceSource == null ? Optional.empty() : Optional.of(priceSource);
 	}
 
-	public void setPriceSource(Max35Text priceSource) {
+	public Debt2 setPriceSource(Max35Text priceSource) {
 		this.priceSource = priceSource;
+		return this;
 	}
 
-	@XmlElement(name = "PricRg")
-	public AmountOrPercentageRange getPriceRange() {
-		return priceRange;
+	public Optional<AmountOrPercentageRange> getPriceRange() {
+		return priceRange == null ? Optional.empty() : Optional.of(priceRange);
 	}
 
-	public void setPriceRange(com.tools20022.repository.msg.AmountOrPercentageRange priceRange) {
+	public Debt2 setPriceRange(com.tools20022.repository.msg.AmountOrPercentageRange priceRange) {
 		this.priceRange = priceRange;
+		return this;
 	}
 }

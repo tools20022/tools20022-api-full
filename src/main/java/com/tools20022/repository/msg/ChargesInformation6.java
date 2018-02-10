@@ -32,6 +32,8 @@ import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +74,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,15 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ChargesInformation6", propOrder = {"totalChargesAndTaxAmount", "amount", "creditDebitIndicator", "type", "rate", "bearer", "party", "tax"})
 public class ChargesInformation6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TtlChrgsAndTaxAmt")
 	protected ActiveOrHistoricCurrencyAndAmount totalChargesAndTaxAmount;
 	/**
-	 * Total of all charges and taxes applied to the entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -128,7 +131,7 @@ public class ChargesInformation6 {
 	public static final MMMessageAttribute mmTotalChargesAndTaxAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> ChargesInformation6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "TtlChrgsAndTaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -139,10 +142,11 @@ public class ChargesInformation6 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount amount;
 	/**
-	 * Transaction charges to be paid by the charge bearer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,7 +180,7 @@ public class ChargesInformation6 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> ChargesInformation6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -187,11 +191,11 @@ public class ChargesInformation6 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd")
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates whether the charges amount is a credit or a debit amount.
-	 * Usage: A zero amount is considered to be a credit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -227,7 +231,7 @@ public class ChargesInformation6 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmCreditDebitIndicator;
-			componentContext_lazy = () -> ChargesInformation6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -238,10 +242,11 @@ public class ChargesInformation6 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected ChargeType2Choice type;
 	/**
-	 * Specifies the type of charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -273,7 +278,7 @@ public class ChargesInformation6 {
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
-			componentContext_lazy = () -> ChargesInformation6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,10 +290,11 @@ public class ChargesInformation6 {
 			type_lazy = () -> ChargeType2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Rate")
 	protected PercentageRate rate;
 	/**
-	 * Rate used to calculate the amount of the charge or fee.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -322,7 +328,7 @@ public class ChargesInformation6 {
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmChargeRate;
-			componentContext_lazy = () -> ChargesInformation6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -333,11 +339,11 @@ public class ChargesInformation6 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "Br")
 	protected ChargeBearerType1Code bearer;
 	/**
-	 * Specifies which party/parties will bear the charges associated with the
-	 * processing of the payment transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -373,7 +379,7 @@ public class ChargesInformation6 {
 	public static final MMMessageAttribute mmBearer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmBearerType;
-			componentContext_lazy = () -> ChargesInformation6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "Br";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -384,11 +390,11 @@ public class ChargesInformation6 {
 			simpleType_lazy = () -> ChargeBearerType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Pty")
 	protected BranchAndFinancialInstitutionIdentification4 party;
 	/**
-	 * Party that takes the transaction charges or to which the transaction
-	 * charges are due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -423,7 +429,7 @@ public class ChargesInformation6 {
 	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> ChargesInformation6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "Pty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -435,10 +441,11 @@ public class ChargesInformation6 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4.mmObject();
 		}
 	};
+	@XmlElement(name = "Tax")
 	protected TaxCharges2 tax;
 	/**
-	 * Set of elements used to provide details on the tax applied to charges.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -471,7 +478,7 @@ public class ChargesInformation6 {
 	public static final MMMessageAssociationEnd mmTax = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmTax;
-			componentContext_lazy = () -> ChargesInformation6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ChargesInformation6.mmObject();
 			isDerived = false;
 			xmlTag = "Tax";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -487,10 +494,11 @@ public class ChargesInformation6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ChargesInformation6.mmTotalChargesAndTaxAmount, ChargesInformation6.mmAmount, ChargesInformation6.mmCreditDebitIndicator, ChargesInformation6.mmType, ChargesInformation6.mmRate,
-						ChargesInformation6.mmBearer, ChargesInformation6.mmParty, ChargesInformation6.mmTax);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ChargesInformation6.mmTotalChargesAndTaxAmount, com.tools20022.repository.msg.ChargesInformation6.mmAmount,
+						com.tools20022.repository.msg.ChargesInformation6.mmCreditDebitIndicator, com.tools20022.repository.msg.ChargesInformation6.mmType, com.tools20022.repository.msg.ChargesInformation6.mmRate,
+						com.tools20022.repository.msg.ChargesInformation6.mmBearer, com.tools20022.repository.msg.ChargesInformation6.mmParty, com.tools20022.repository.msg.ChargesInformation6.mmTax);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargesInformation6";
 				definition = "Set of elements used to provide information on the charges related to the payment transaction.";
@@ -499,75 +507,75 @@ public class ChargesInformation6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TtlChrgsAndTaxAmt")
-	public ActiveOrHistoricCurrencyAndAmount getTotalChargesAndTaxAmount() {
-		return totalChargesAndTaxAmount;
+	public Optional<ActiveOrHistoricCurrencyAndAmount> getTotalChargesAndTaxAmount() {
+		return totalChargesAndTaxAmount == null ? Optional.empty() : Optional.of(totalChargesAndTaxAmount);
 	}
 
-	public void setTotalChargesAndTaxAmount(ActiveOrHistoricCurrencyAndAmount totalChargesAndTaxAmount) {
+	public ChargesInformation6 setTotalChargesAndTaxAmount(ActiveOrHistoricCurrencyAndAmount totalChargesAndTaxAmount) {
 		this.totalChargesAndTaxAmount = totalChargesAndTaxAmount;
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
-		this.amount = amount;
+	public ChargesInformation6 setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd")
-	public CreditDebitCode getCreditDebitIndicator() {
-		return creditDebitIndicator;
+	public Optional<CreditDebitCode> getCreditDebitIndicator() {
+		return creditDebitIndicator == null ? Optional.empty() : Optional.of(creditDebitIndicator);
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+	public ChargesInformation6 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
 		this.creditDebitIndicator = creditDebitIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public ChargeType2Choice getType() {
-		return type;
+	public Optional<ChargeType2Choice> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(ChargeType2Choice type) {
+	public ChargesInformation6 setType(ChargeType2Choice type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Rate")
-	public PercentageRate getRate() {
-		return rate;
+	public Optional<PercentageRate> getRate() {
+		return rate == null ? Optional.empty() : Optional.of(rate);
 	}
 
-	public void setRate(PercentageRate rate) {
+	public ChargesInformation6 setRate(PercentageRate rate) {
 		this.rate = rate;
+		return this;
 	}
 
-	@XmlElement(name = "Br")
-	public ChargeBearerType1Code getBearer() {
-		return bearer;
+	public Optional<ChargeBearerType1Code> getBearer() {
+		return bearer == null ? Optional.empty() : Optional.of(bearer);
 	}
 
-	public void setBearer(ChargeBearerType1Code bearer) {
+	public ChargesInformation6 setBearer(ChargeBearerType1Code bearer) {
 		this.bearer = bearer;
+		return this;
 	}
 
-	@XmlElement(name = "Pty")
-	public BranchAndFinancialInstitutionIdentification4 getParty() {
-		return party;
+	public Optional<BranchAndFinancialInstitutionIdentification4> getParty() {
+		return party == null ? Optional.empty() : Optional.of(party);
 	}
 
-	public void setParty(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 party) {
+	public ChargesInformation6 setParty(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification4 party) {
 		this.party = party;
+		return this;
 	}
 
-	@XmlElement(name = "Tax")
-	public TaxCharges2 getTax() {
-		return tax;
+	public Optional<TaxCharges2> getTax() {
+		return tax == null ? Optional.empty() : Optional.of(tax);
 	}
 
-	public void setTax(com.tools20022.repository.msg.TaxCharges2 tax) {
+	public ChargesInformation6 setTax(com.tools20022.repository.msg.TaxCharges2 tax) {
 		this.tax = tax;
+		return this;
 	}
 }

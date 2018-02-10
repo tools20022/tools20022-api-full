@@ -29,11 +29,9 @@ import com.tools20022.repository.entity.CashBalance;
 import com.tools20022.repository.entity.Payment;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -71,8 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -95,15 +93,16 @@ import javax.xml.bind.annotation.XmlType;
  * CardPaymentTransaction9}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CardPaymentTransaction18", propOrder = {"authorisationResult", "transactionVerificationResult", "balance", "currency", "action"})
 public class CardPaymentTransaction18 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AuthstnRslt", required = true)
 	protected AuthorisationResult1 authorisationResult;
 	/**
-	 * Outcome of the authorisation, and actions to perform.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -143,7 +142,7 @@ public class CardPaymentTransaction18 {
 	public static final MMMessageAssociationEnd mmAuthorisationResult = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPaymentAcquiring.mmValidation;
-			componentContext_lazy = () -> CardPaymentTransaction18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction18.mmObject();
 			isDerived = false;
 			xmlTag = "AuthstnRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,11 +155,11 @@ public class CardPaymentTransaction18 {
 			type_lazy = () -> com.tools20022.repository.msg.AuthorisationResult1.mmObject();
 		}
 	};
+	@XmlElement(name = "TxVrfctnRslt")
 	protected TransactionVerificationResult2 transactionVerificationResult;
 	/**
-	 * Result of the verifications performed by the issuer to deliver or decline
-	 * the authorisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -197,7 +196,7 @@ public class CardPaymentTransaction18 {
 	 */
 	public static final MMMessageAssociationEnd mmTransactionVerificationResult = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CardPaymentTransaction18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction18.mmObject();
 			isDerived = false;
 			xmlTag = "TxVrfctnRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,10 +209,11 @@ public class CardPaymentTransaction18 {
 			type_lazy = () -> com.tools20022.repository.msg.TransactionVerificationResult2.mmObject();
 		}
 	};
+	@XmlElement(name = "Bal")
 	protected ImpliedCurrencyAndAmount balance;
 	/**
-	 * Balance of the account, related to the payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -255,7 +255,7 @@ public class CardPaymentTransaction18 {
 	public static final MMMessageAttribute mmBalance = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashBalance.mmAmount;
-			componentContext_lazy = () -> CardPaymentTransaction18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction18.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,10 +267,11 @@ public class CardPaymentTransaction18 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected CurrencyCode currency;
 	/**
-	 * Currency associated with the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -303,7 +304,7 @@ public class CardPaymentTransaction18 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmCurrencyOfTransfer;
-			componentContext_lazy = () -> CardPaymentTransaction18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction18.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -314,10 +315,11 @@ public class CardPaymentTransaction18 {
 			simpleType_lazy = () -> CurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Actn")
 	protected List<com.tools20022.repository.msg.Action2> action;
 	/**
-	 * Set of actions to be performed by the POI (Point Of Interaction) system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -358,7 +360,7 @@ public class CardPaymentTransaction18 {
 	public static final MMMessageAssociationEnd mmAction = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardPayment.mmCardPaymentAcquiring;
-			componentContext_lazy = () -> CardPaymentTransaction18.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CardPaymentTransaction18.mmObject();
 			isDerived = false;
 			xmlTag = "Actn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -374,10 +376,10 @@ public class CardPaymentTransaction18 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CardPaymentTransaction18.mmAuthorisationResult, CardPaymentTransaction18.mmTransactionVerificationResult, CardPaymentTransaction18.mmBalance, CardPaymentTransaction18.mmCurrency,
-						CardPaymentTransaction18.mmAction);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CardPaymentTransaction18.mmAuthorisationResult, com.tools20022.repository.msg.CardPaymentTransaction18.mmTransactionVerificationResult,
+						com.tools20022.repository.msg.CardPaymentTransaction18.mmBalance, com.tools20022.repository.msg.CardPaymentTransaction18.mmCurrency, com.tools20022.repository.msg.CardPaymentTransaction18.mmAction);
 				trace_lazy = () -> CardPayment.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -395,48 +397,48 @@ public class CardPaymentTransaction18 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AuthstnRslt", required = true)
 	public AuthorisationResult1 getAuthorisationResult() {
 		return authorisationResult;
 	}
 
-	public void setAuthorisationResult(com.tools20022.repository.msg.AuthorisationResult1 authorisationResult) {
-		this.authorisationResult = authorisationResult;
+	public CardPaymentTransaction18 setAuthorisationResult(com.tools20022.repository.msg.AuthorisationResult1 authorisationResult) {
+		this.authorisationResult = Objects.requireNonNull(authorisationResult);
+		return this;
 	}
 
-	@XmlElement(name = "TxVrfctnRslt")
-	public TransactionVerificationResult2 getTransactionVerificationResult() {
-		return transactionVerificationResult;
+	public Optional<TransactionVerificationResult2> getTransactionVerificationResult() {
+		return transactionVerificationResult == null ? Optional.empty() : Optional.of(transactionVerificationResult);
 	}
 
-	public void setTransactionVerificationResult(com.tools20022.repository.msg.TransactionVerificationResult2 transactionVerificationResult) {
+	public CardPaymentTransaction18 setTransactionVerificationResult(com.tools20022.repository.msg.TransactionVerificationResult2 transactionVerificationResult) {
 		this.transactionVerificationResult = transactionVerificationResult;
+		return this;
 	}
 
-	@XmlElement(name = "Bal")
-	public ImpliedCurrencyAndAmount getBalance() {
-		return balance;
+	public Optional<ImpliedCurrencyAndAmount> getBalance() {
+		return balance == null ? Optional.empty() : Optional.of(balance);
 	}
 
-	public void setBalance(ImpliedCurrencyAndAmount balance) {
+	public CardPaymentTransaction18 setBalance(ImpliedCurrencyAndAmount balance) {
 		this.balance = balance;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public CurrencyCode getCurrency() {
-		return currency;
+	public Optional<CurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(CurrencyCode currency) {
+	public CardPaymentTransaction18 setCurrency(CurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "Actn")
 	public List<Action2> getAction() {
-		return action;
+		return action == null ? action = new ArrayList<>() : action;
 	}
 
-	public void setAction(List<com.tools20022.repository.msg.Action2> action) {
-		this.action = action;
+	public CardPaymentTransaction18 setAction(List<com.tools20022.repository.msg.Action2> action) {
+		this.action = Objects.requireNonNull(action);
+		return this;
 	}
 }

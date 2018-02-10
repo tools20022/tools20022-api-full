@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.InvestmentAccountPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * ExtendedParty6}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ExtendedParty7", propOrder = {"extendedPartyRole", "otherPartyDetails"})
 public class ExtendedParty7 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "XtndedPtyRole", required = true)
 	protected Extended350Code extendedPartyRole;
 	/**
-	 * Other type of party's role.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +132,7 @@ public class ExtendedParty7 {
 	public static final MMMessageAttribute mmExtendedPartyRole = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentAccountPartyRole.mmObject();
-			componentContext_lazy = () -> ExtendedParty7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExtendedParty7.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedPtyRole";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -143,10 +145,11 @@ public class ExtendedParty7 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrPtyDtls", required = true)
 	protected InvestmentAccountOwnershipInformation10 otherPartyDetails;
 	/**
-	 * Detailed ownership information about a party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -191,7 +194,7 @@ public class ExtendedParty7 {
 	public static final MMMessageAssociationEnd mmOtherPartyDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentAccountPartyRole.mmObject();
-			componentContext_lazy = () -> ExtendedParty7.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ExtendedParty7.mmObject();
 			isDerived = false;
 			xmlTag = "OthrPtyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -209,9 +212,9 @@ public class ExtendedParty7 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ExtendedParty7.mmExtendedPartyRole, ExtendedParty7.mmOtherPartyDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ExtendedParty7.mmExtendedPartyRole, com.tools20022.repository.msg.ExtendedParty7.mmOtherPartyDetails);
 				trace_lazy = () -> InvestmentAccountPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExtendedParty7";
 				definition = "Other type of party.";
@@ -222,21 +225,21 @@ public class ExtendedParty7 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "XtndedPtyRole", required = true)
 	public Extended350Code getExtendedPartyRole() {
 		return extendedPartyRole;
 	}
 
-	public void setExtendedPartyRole(Extended350Code extendedPartyRole) {
-		this.extendedPartyRole = extendedPartyRole;
+	public ExtendedParty7 setExtendedPartyRole(Extended350Code extendedPartyRole) {
+		this.extendedPartyRole = Objects.requireNonNull(extendedPartyRole);
+		return this;
 	}
 
-	@XmlElement(name = "OthrPtyDtls", required = true)
 	public InvestmentAccountOwnershipInformation10 getOtherPartyDetails() {
 		return otherPartyDetails;
 	}
 
-	public void setOtherPartyDetails(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10 otherPartyDetails) {
-		this.otherPartyDetails = otherPartyDetails;
+	public ExtendedParty7 setOtherPartyDetails(com.tools20022.repository.msg.InvestmentAccountOwnershipInformation10 otherPartyDetails) {
+		this.otherPartyDetails = Objects.requireNonNull(otherPartyDetails);
+		return this;
 	}
 }

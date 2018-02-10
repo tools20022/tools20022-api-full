@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.Max4Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EntityIdentification", propOrder = {"type", "entityIdentifier"})
 public class EntityIdentification {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Type", required = true)
 	protected Max4Text type;
 	/**
-	 * Type of identification, eg, BIC or URI.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -98,7 +100,7 @@ public class EntityIdentification {
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EntityIdentification.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntityIdentification.mmObject();
 			isDerived = false;
 			xmlTag = "Type";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -109,10 +111,11 @@ public class EntityIdentification {
 			simpleType_lazy = () -> Max4Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected Max30Text entityIdentifier;
 	/**
-	 * Actual identification of the entity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +142,7 @@ public class EntityIdentification {
 	 */
 	public static final MMMessageAttribute mmEntityIdentifier = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EntityIdentification.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EntityIdentification.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +157,8 @@ public class EntityIdentification {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EntityIdentification.mmType, EntityIdentification.mmEntityIdentifier);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EntityIdentification.mmType, com.tools20022.repository.msg.EntityIdentification.mmEntityIdentifier);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EntityIdentification";
 				definition = "Identification of a business entity, eg, corporate or financial institution.";
@@ -164,21 +167,21 @@ public class EntityIdentification {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Type", required = true)
 	public Max4Text getType() {
 		return type;
 	}
 
-	public void setType(Max4Text type) {
-		this.type = type;
+	public EntityIdentification setType(Max4Text type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max30Text getEntityIdentifier() {
 		return entityIdentifier;
 	}
 
-	public void setEntityIdentifier(Max30Text entityIdentifier) {
-		this.entityIdentifier = entityIdentifier;
+	public EntityIdentification setEntityIdentifier(Max30Text entityIdentifier) {
+		this.entityIdentifier = Objects.requireNonNull(entityIdentifier);
+		return this;
 	}
 }

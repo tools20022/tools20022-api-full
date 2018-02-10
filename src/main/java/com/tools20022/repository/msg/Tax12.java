@@ -31,6 +31,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -44,8 +45,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Tax12#mmTypeOrOtherTaxTypeRule
- * Tax12.mmTypeOrOtherTaxTypeRule}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax12#TypeOrOtherTaxTypeRule
+ * Tax12.TypeOrOtherTaxTypeRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -63,8 +64,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -78,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Tax12", propOrder = {"type", "otherTaxType", "amount"})
 public class Tax12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected TaxType9Code type;
 	/**
-	 * Type of tax applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +119,7 @@ public class Tax12 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
-			componentContext_lazy = () -> Tax12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Tax12.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,10 +130,11 @@ public class Tax12 {
 			simpleType_lazy = () -> TaxType9Code.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrTaxTp", required = true)
 	protected Max35Text otherTaxType;
 	/**
-	 * Specifies types of tax not present in a code list.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +165,7 @@ public class Tax12 {
 	public static final MMMessageAttribute mmOtherTaxType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmType;
-			componentContext_lazy = () -> Tax12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Tax12.mmObject();
 			isDerived = false;
 			xmlTag = "OthrTaxTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +176,11 @@ public class Tax12 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected CurrencyAndAmount amount;
 	/**
-	 * Amount of money resulting from the calculation of the tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -209,7 +213,7 @@ public class Tax12 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> Tax12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Tax12.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -250,22 +254,22 @@ public class Tax12 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmTypeOrOtherTaxTypeRule = new MMXor() {
+	public static final MMXor TypeOrOtherTaxTypeRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOrOtherTaxTypeRule";
 			definition = "If Type is present, then OtherTaxType is not allowed. If Type is not present, then OtherTaxType is mandatory.";
-			messageComponent_lazy = () -> Tax12.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(Tax12.mmType, Tax12.mmOtherTaxType);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.Tax12.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax12.mmType, com.tools20022.repository.msg.Tax12.mmOtherTaxType);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Tax12.mmType, Tax12.mmOtherTaxType, Tax12.mmAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax12.mmType, com.tools20022.repository.msg.Tax12.mmOtherTaxType, com.tools20022.repository.msg.Tax12.mmAmount);
 				trace_lazy = () -> Tax.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -276,36 +280,36 @@ public class Tax12 {
 				})).get();
 				name = "Tax12";
 				definition = "Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.";
-				xors_lazy = () -> Arrays.asList(Tax12.mmTypeOrOtherTaxTypeRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Tax12.TypeOrOtherTaxTypeRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public TaxType9Code getType() {
 		return type;
 	}
 
-	public void setType(TaxType9Code type) {
-		this.type = type;
+	public Tax12 setType(TaxType9Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "OthrTaxTp", required = true)
 	public Max35Text getOtherTaxType() {
 		return otherTaxType;
 	}
 
-	public void setOtherTaxType(Max35Text otherTaxType) {
-		this.otherTaxType = otherTaxType;
+	public Tax12 setOtherTaxType(Max35Text otherTaxType) {
+		this.otherTaxType = Objects.requireNonNull(otherTaxType);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public CurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(CurrencyAndAmount amount) {
-		this.amount = amount;
+	public Tax12 setAmount(CurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 }

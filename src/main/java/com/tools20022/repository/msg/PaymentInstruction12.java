@@ -29,6 +29,7 @@ import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -78,18 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * PaymentInstruction2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentInstruction12", propOrder = {"instruction", "type", "priority", "processingValidityTime"})
 public class PaymentInstruction12 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Instr")
 	protected Instruction1Code instruction;
 	/**
-	 * Further information related to the processing of the payment instruction.
-	 * The instruction can relate to a level of service between the bank and the
-	 * customer, or give instructions to and for specific parties in the payment
-	 * chain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +129,7 @@ public class PaymentInstruction12 {
 	public static final MMMessageAttribute mmInstruction = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmInstructionForNextAgent;
-			componentContext_lazy = () -> PaymentInstruction12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction12.mmObject();
 			isDerived = false;
 			xmlTag = "Instr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,10 +141,11 @@ public class PaymentInstruction12 {
 			simpleType_lazy = () -> Instruction1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected PaymentType4Choice type;
 	/**
-	 * Type, or nature, of the payment, for example an express payment.<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -185,7 +185,7 @@ public class PaymentInstruction12 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmType;
-			componentContext_lazy = () -> PaymentInstruction12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction12.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,12 +197,11 @@ public class PaymentInstruction12 {
 			complexType_lazy = () -> PaymentType4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Prty")
 	protected PriorityCode3Choice priority;
 	/**
-	 * Urgency or order of importance that the originator would like the
-	 * recipient of the payment instruction to apply to the processing of the
-	 * payment instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -243,7 +242,7 @@ public class PaymentInstruction12 {
 	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Payment.mmPriority;
-			componentContext_lazy = () -> PaymentInstruction12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction12.mmObject();
 			isDerived = false;
 			xmlTag = "Prty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -255,11 +254,11 @@ public class PaymentInstruction12 {
 			complexType_lazy = () -> PriorityCode3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "PrcgVldtyTm")
 	protected DateTimePeriodChoice processingValidityTime;
 	/**
-	 * Date and time range within which the payment instruction must be
-	 * processed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -300,7 +299,7 @@ public class PaymentInstruction12 {
 	public static final MMMessageAttribute mmProcessingValidityTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentInstruction.mmProcessingValidityTime;
-			componentContext_lazy = () -> PaymentInstruction12.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstruction12.mmObject();
 			isDerived = false;
 			xmlTag = "PrcgVldtyTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -316,9 +315,10 @@ public class PaymentInstruction12 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentInstruction12.mmInstruction, PaymentInstruction12.mmType, PaymentInstruction12.mmPriority, PaymentInstruction12.mmProcessingValidityTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction12.mmInstruction, com.tools20022.repository.msg.PaymentInstruction12.mmType,
+						com.tools20022.repository.msg.PaymentInstruction12.mmPriority, com.tools20022.repository.msg.PaymentInstruction12.mmProcessingValidityTime);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstruction12";
 				definition = "Provides details on the payment instruction.";
@@ -328,39 +328,39 @@ public class PaymentInstruction12 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Instr")
-	public Instruction1Code getInstruction() {
-		return instruction;
+	public Optional<Instruction1Code> getInstruction() {
+		return instruction == null ? Optional.empty() : Optional.of(instruction);
 	}
 
-	public void setInstruction(Instruction1Code instruction) {
+	public PaymentInstruction12 setInstruction(Instruction1Code instruction) {
 		this.instruction = instruction;
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public PaymentType4Choice getType() {
-		return type;
+	public Optional<PaymentType4Choice> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(PaymentType4Choice type) {
+	public PaymentInstruction12 setType(PaymentType4Choice type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Prty")
-	public PriorityCode3Choice getPriority() {
-		return priority;
+	public Optional<PriorityCode3Choice> getPriority() {
+		return priority == null ? Optional.empty() : Optional.of(priority);
 	}
 
-	public void setPriority(PriorityCode3Choice priority) {
+	public PaymentInstruction12 setPriority(PriorityCode3Choice priority) {
 		this.priority = priority;
+		return this;
 	}
 
-	@XmlElement(name = "PrcgVldtyTm")
-	public DateTimePeriodChoice getProcessingValidityTime() {
-		return processingValidityTime;
+	public Optional<DateTimePeriodChoice> getProcessingValidityTime() {
+		return processingValidityTime == null ? Optional.empty() : Optional.of(processingValidityTime);
 	}
 
-	public void setProcessingValidityTime(DateTimePeriodChoice processingValidityTime) {
+	public PaymentInstruction12 setProcessingValidityTime(DateTimePeriodChoice processingValidityTime) {
 		this.processingValidityTime = processingValidityTime;
+		return this;
 	}
 }

@@ -36,6 +36,7 @@ import com.tools20022.repository.entity.Trade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -116,8 +117,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -130,15 +131,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AmountsAndValueDate1", propOrder = {"tradingSideBuyAmount", "tradingSideSellAmount", "settlementDate"})
 public class AmountsAndValueDate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradgSdBuyAmt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount tradingSideBuyAmount;
 	/**
-	 * Currency and amount bought in a foreign exchange trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -172,7 +174,7 @@ public class AmountsAndValueDate1 {
 	public static final MMMessageAttribute mmTradingSideBuyAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmBuyAmount;
-			componentContext_lazy = () -> AmountsAndValueDate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSdBuyAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,10 +185,11 @@ public class AmountsAndValueDate1 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgSdSellAmt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount tradingSideSellAmount;
 	/**
-	 * Currency and amount sold in a foreign exchange trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -220,7 +223,7 @@ public class AmountsAndValueDate1 {
 	public static final MMMessageAttribute mmTradingSideSellAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ForeignExchangeTrade.mmSellAmount;
-			componentContext_lazy = () -> AmountsAndValueDate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate1.mmObject();
 			isDerived = false;
 			xmlTag = "TradgSdSellAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,10 +234,11 @@ public class AmountsAndValueDate1 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmDt", required = true)
 	protected ISODate settlementDate;
 	/**
-	 * Date on which the trade is settled, ie, the amounts are due.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -268,7 +272,7 @@ public class AmountsAndValueDate1 {
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmValueDate;
-			componentContext_lazy = () -> AmountsAndValueDate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AmountsAndValueDate1.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,14 +287,15 @@ public class AmountsAndValueDate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AmountsAndValueDate1.mmTradingSideBuyAmount, AmountsAndValueDate1.mmTradingSideSellAmount, AmountsAndValueDate1.mmSettlementDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AmountsAndValueDate1.mmTradingSideBuyAmount, com.tools20022.repository.msg.AmountsAndValueDate1.mmTradingSideSellAmount,
+						com.tools20022.repository.msg.AmountsAndValueDate1.mmSettlementDate);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeInstructionAmendmentV02.mmTradeAmounts, ForeignExchangeTradeInstructionCancellationV02.mmTradeAmounts, ForeignExchangeTradeInstructionV02.mmTradeAmounts,
 						ForeignExchangeTradeStatusAndDetailsNotificationV02.mmTradeAmounts, CreateNonDeliverableForwardOpeningV02.mmTradeAmounts, AmendNonDeliverableForwardOpeningV02.mmTradeAmounts,
 						CancelNonDeliverableForwardOpeningV02.mmTradeAmounts, CreateNonDeliverableForwardValuationV02.mmTradeAmounts, AmendNonDeliverableForwardValuationV02.mmTradeAmounts,
 						CancelNonDeliverableForwardValuationV02.mmTradeAmounts, ForeignExchangeTradeInstructionV04.mmTradeAmounts, ForeignExchangeTradeInstructionCancellationV04.mmTradeAmounts,
 						ForeignExchangeTradeInstructionAmendmentV04.mmTradeAmounts, ForeignExchangeTradeStatusAndDetailsNotificationV04.mmTradeAmounts);
 				trace_lazy = () -> ForeignExchangeTrade.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountsAndValueDate1";
 				definition = "Specifies the value date and the amounts traded in a foreign exchange transaction.";
@@ -299,30 +304,30 @@ public class AmountsAndValueDate1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradgSdBuyAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getTradingSideBuyAmount() {
 		return tradingSideBuyAmount;
 	}
 
-	public void setTradingSideBuyAmount(ActiveOrHistoricCurrencyAndAmount tradingSideBuyAmount) {
-		this.tradingSideBuyAmount = tradingSideBuyAmount;
+	public AmountsAndValueDate1 setTradingSideBuyAmount(ActiveOrHistoricCurrencyAndAmount tradingSideBuyAmount) {
+		this.tradingSideBuyAmount = Objects.requireNonNull(tradingSideBuyAmount);
+		return this;
 	}
 
-	@XmlElement(name = "TradgSdSellAmt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getTradingSideSellAmount() {
 		return tradingSideSellAmount;
 	}
 
-	public void setTradingSideSellAmount(ActiveOrHistoricCurrencyAndAmount tradingSideSellAmount) {
-		this.tradingSideSellAmount = tradingSideSellAmount;
+	public AmountsAndValueDate1 setTradingSideSellAmount(ActiveOrHistoricCurrencyAndAmount tradingSideSellAmount) {
+		this.tradingSideSellAmount = Objects.requireNonNull(tradingSideSellAmount);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDt", required = true)
 	public ISODate getSettlementDate() {
 		return settlementDate;
 	}
 
-	public void setSettlementDate(ISODate settlementDate) {
-		this.settlementDate = settlementDate;
+	public AmountsAndValueDate1 setSettlementDate(ISODate settlementDate) {
+		this.settlementDate = Objects.requireNonNull(settlementDate);
+		return this;
 	}
 }

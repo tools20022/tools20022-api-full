@@ -27,9 +27,8 @@ import com.tools20022.repository.entity.AssignedProxyRole;
 import com.tools20022.repository.entity.Deadline;
 import com.tools20022.repository.entity.ProxyAppointmentCondition;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -68,8 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Indicates how to register a proxy."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "ProxyAppointmentInformation1", propOrder = {"registrationMethod", "deadline", "STPDeadline", "marketDeadline", "authorisedProxy"})
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "ProxyAppointmentInformation1", propOrder = {"registrationMethod", "deadline", "sTPDeadline", "marketDeadline", "authorisedProxy"})
 public class ProxyAppointmentInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RegnMtd")
 	protected Max350Text registrationMethod;
 	/**
-	 * Indicates how to register a proxy.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +121,7 @@ public class ProxyAppointmentInformation1 {
 	public static final MMMessageAttribute mmRegistrationMethod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProxyAppointmentCondition.mmRegistrationMethod;
-			componentContext_lazy = () -> ProxyAppointmentInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "RegnMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,11 +132,11 @@ public class ProxyAppointmentInformation1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Ddln")
 	protected DateFormat2Choice deadline;
 	/**
-	 * Date by which the information on proxy assignment must be received by the
-	 * intermediary.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,7 +166,7 @@ public class ProxyAppointmentInformation1 {
 	 */
 	public static final MMMessageAttribute mmDeadline = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProxyAppointmentInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Ddln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,11 +177,11 @@ public class ProxyAppointmentInformation1 {
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "STPDdln")
 	protected DateFormat2Choice sTPDeadline;
 	/**
-	 * Date by which the information on proxy assignment must be received by the
-	 * intermediary (STP mode).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -211,7 +211,7 @@ public class ProxyAppointmentInformation1 {
 	 */
 	public static final MMMessageAttribute mmSTPDeadline = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ProxyAppointmentInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "STPDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -222,11 +222,11 @@ public class ProxyAppointmentInformation1 {
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "MktDdln")
 	protected DateFormat2Choice marketDeadline;
 	/**
-	 * Date by which the information on proxy assignment must be received by the
-	 * issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -262,7 +262,7 @@ public class ProxyAppointmentInformation1 {
 	public static final MMMessageAttribute mmMarketDeadline = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Deadline.mmMarketDeadline;
-			componentContext_lazy = () -> ProxyAppointmentInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "MktDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -273,10 +273,11 @@ public class ProxyAppointmentInformation1 {
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AuthrsdPrxy")
 	protected List<com.tools20022.repository.msg.Proxy1> authorisedProxy;
 	/**
-	 * Specifies the proxy persons which are authorised by the issuer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -308,7 +309,7 @@ public class ProxyAppointmentInformation1 {
 	public static final MMMessageAssociationEnd mmAuthorisedProxy = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> AssignedProxyRole.mmObject();
-			componentContext_lazy = () -> ProxyAppointmentInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ProxyAppointmentInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "AuthrsdPrxy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -324,10 +325,11 @@ public class ProxyAppointmentInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ProxyAppointmentInformation1.mmRegistrationMethod, ProxyAppointmentInformation1.mmDeadline, ProxyAppointmentInformation1.mmSTPDeadline,
-						ProxyAppointmentInformation1.mmMarketDeadline, ProxyAppointmentInformation1.mmAuthorisedProxy);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ProxyAppointmentInformation1.mmRegistrationMethod, com.tools20022.repository.msg.ProxyAppointmentInformation1.mmDeadline,
+						com.tools20022.repository.msg.ProxyAppointmentInformation1.mmSTPDeadline, com.tools20022.repository.msg.ProxyAppointmentInformation1.mmMarketDeadline,
+						com.tools20022.repository.msg.ProxyAppointmentInformation1.mmAuthorisedProxy);
 				trace_lazy = () -> ProxyAppointmentCondition.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProxyAppointmentInformation1";
 				definition = "Indicates how to register a proxy.";
@@ -336,48 +338,48 @@ public class ProxyAppointmentInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RegnMtd")
-	public Max350Text getRegistrationMethod() {
-		return registrationMethod;
+	public Optional<Max350Text> getRegistrationMethod() {
+		return registrationMethod == null ? Optional.empty() : Optional.of(registrationMethod);
 	}
 
-	public void setRegistrationMethod(Max350Text registrationMethod) {
+	public ProxyAppointmentInformation1 setRegistrationMethod(Max350Text registrationMethod) {
 		this.registrationMethod = registrationMethod;
+		return this;
 	}
 
-	@XmlElement(name = "Ddln")
-	public DateFormat2Choice getDeadline() {
-		return deadline;
+	public Optional<DateFormat2Choice> getDeadline() {
+		return deadline == null ? Optional.empty() : Optional.of(deadline);
 	}
 
-	public void setDeadline(DateFormat2Choice deadline) {
+	public ProxyAppointmentInformation1 setDeadline(DateFormat2Choice deadline) {
 		this.deadline = deadline;
+		return this;
 	}
 
-	@XmlElement(name = "STPDdln")
-	public DateFormat2Choice getSTPDeadline() {
-		return sTPDeadline;
+	public Optional<DateFormat2Choice> getSTPDeadline() {
+		return sTPDeadline == null ? Optional.empty() : Optional.of(sTPDeadline);
 	}
 
-	public void setSTPDeadline(DateFormat2Choice sTPDeadline) {
+	public ProxyAppointmentInformation1 setSTPDeadline(DateFormat2Choice sTPDeadline) {
 		this.sTPDeadline = sTPDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "MktDdln")
-	public DateFormat2Choice getMarketDeadline() {
-		return marketDeadline;
+	public Optional<DateFormat2Choice> getMarketDeadline() {
+		return marketDeadline == null ? Optional.empty() : Optional.of(marketDeadline);
 	}
 
-	public void setMarketDeadline(DateFormat2Choice marketDeadline) {
+	public ProxyAppointmentInformation1 setMarketDeadline(DateFormat2Choice marketDeadline) {
 		this.marketDeadline = marketDeadline;
+		return this;
 	}
 
-	@XmlElement(name = "AuthrsdPrxy")
 	public List<Proxy1> getAuthorisedProxy() {
-		return authorisedProxy;
+		return authorisedProxy == null ? authorisedProxy = new ArrayList<>() : authorisedProxy;
 	}
 
-	public void setAuthorisedProxy(List<com.tools20022.repository.msg.Proxy1> authorisedProxy) {
-		this.authorisedProxy = authorisedProxy;
+	public ProxyAppointmentInformation1 setAuthorisedProxy(List<com.tools20022.repository.msg.Proxy1> authorisedProxy) {
+		this.authorisedProxy = Objects.requireNonNull(authorisedProxy);
+		return this;
 	}
 }

@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.InterestRateTypeCode;
+import com.tools20022.repository.codeset.RateType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the rate is fixed or variable or a forfeit.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType1Code#Fixed
+ * RateType1Code.Fixed}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType1Code#Forfeit
+ * RateType1Code.Forfeit}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.RateType1Code#Variable
+ * RateType1Code.Variable}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.InterestRateTypeCode
  * InterestRateTypeCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType1Code#mmFixed
- * RateType1Code.mmFixed}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType1Code#mmForfeit
- * RateType1Code.mmForfeit}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.RateType1Code#mmVariable
- * RateType1Code.mmVariable}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class RateType1Code extends InterestRateTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RateType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -84,11 +89,12 @@ public class RateType1Code extends InterestRateTypeCode {
 	 * name} = "Fixed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFixed = new MMCode() {
+	public static final RateType1Code Fixed = new RateType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fixed";
-			owner_lazy = () -> RateType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType1Code.mmObject();
+			codeName = InterestRateTypeCode.Fixed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -107,11 +113,12 @@ public class RateType1Code extends InterestRateTypeCode {
 	 * name} = "Forfeit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForfeit = new MMCode() {
+	public static final RateType1Code Forfeit = new RateType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Forfeit";
-			owner_lazy = () -> RateType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType1Code.mmObject();
+			codeName = InterestRateTypeCode.Forfeit.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -130,26 +137,58 @@ public class RateType1Code extends InterestRateTypeCode {
 	 * name} = "Variable"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVariable = new MMCode() {
+	public static final RateType1Code Variable = new RateType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Variable";
-			owner_lazy = () -> RateType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RateType1Code.mmObject();
+			codeName = InterestRateTypeCode.Variable.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RateType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RateType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("FIXE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateType1Code";
 				definition = "Specifies whether the rate is fixed or variable or a forfeit.";
-				code_lazy = () -> Arrays.asList(RateType1Code.mmFixed, RateType1Code.mmForfeit, RateType1Code.mmVariable);
 				trace_lazy = () -> InterestRateTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RateType1Code.Fixed, com.tools20022.repository.codeset.RateType1Code.Forfeit, com.tools20022.repository.codeset.RateType1Code.Variable);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Fixed.getCodeName().get(), Fixed);
+		codesByName.put(Forfeit.getCodeName().get(), Forfeit);
+		codesByName.put(Variable.getCodeName().get(), Variable);
+	}
+
+	public static RateType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RateType1Code[] values() {
+		RateType1Code[] values = new RateType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RateType1Code> {
+		@Override
+		public RateType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RateType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.InvestmentFundOrderExecution3;
 import com.tools20022.repository.msg.Statement9;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,16 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of a cancellation advice."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Advice1Choice", propOrder = {"orderConfirmationAdviceDetails", "statementAdviceDetails"})
 public class Advice1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrdrConfAdvcDtls", required = true)
 	protected List<InvestmentFundOrderExecution3> orderConfirmationAdviceDetails;
 	/**
-	 * Reference and transaction details of the order confirmation for which the
-	 * cancellation is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -101,7 +103,7 @@ public class Advice1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOrderConfirmationAdviceDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Advice1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Advice1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrConfAdvcDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,11 +114,11 @@ public class Advice1Choice {
 			type_lazy = () -> InvestmentFundOrderExecution3.mmObject();
 		}
 	};
+	@XmlElement(name = "StmtAdvcDtls", required = true)
 	protected Statement9 statementAdviceDetails;
 	/**
-	 * Reference and transaction details of the statement for which the
-	 * cancellation is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -143,7 +145,7 @@ public class Advice1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmStatementAdviceDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> Advice1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Advice1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StmtAdvcDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,8 +161,8 @@ public class Advice1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Advice1Choice.mmOrderConfirmationAdviceDetails, Advice1Choice.mmStatementAdviceDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Advice1Choice.mmOrderConfirmationAdviceDetails, com.tools20022.repository.choice.Advice1Choice.mmStatementAdviceDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Advice1Choice";
 				definition = "Choice of a cancellation advice.";
@@ -169,21 +171,21 @@ public class Advice1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrdrConfAdvcDtls", required = true)
 	public List<InvestmentFundOrderExecution3> getOrderConfirmationAdviceDetails() {
-		return orderConfirmationAdviceDetails;
+		return orderConfirmationAdviceDetails == null ? orderConfirmationAdviceDetails = new ArrayList<>() : orderConfirmationAdviceDetails;
 	}
 
-	public void setOrderConfirmationAdviceDetails(List<InvestmentFundOrderExecution3> orderConfirmationAdviceDetails) {
-		this.orderConfirmationAdviceDetails = orderConfirmationAdviceDetails;
+	public Advice1Choice setOrderConfirmationAdviceDetails(List<InvestmentFundOrderExecution3> orderConfirmationAdviceDetails) {
+		this.orderConfirmationAdviceDetails = Objects.requireNonNull(orderConfirmationAdviceDetails);
+		return this;
 	}
 
-	@XmlElement(name = "StmtAdvcDtls", required = true)
 	public Statement9 getStatementAdviceDetails() {
 		return statementAdviceDetails;
 	}
 
-	public void setStatementAdviceDetails(Statement9 statementAdviceDetails) {
-		this.statementAdviceDetails = statementAdviceDetails;
+	public Advice1Choice setStatementAdviceDetails(Statement9 statementAdviceDetails) {
+		this.statementAdviceDetails = Objects.requireNonNull(statementAdviceDetails);
+		return this;
 	}
 }

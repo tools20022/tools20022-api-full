@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ReportTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the purpose of the report.
@@ -32,19 +37,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportTypeCode#mmPrecalculated
- * ReportTypeCode.mmPrecalculated}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ReportTypeCode#mmCurrent
- * ReportTypeCode.mmCurrent}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportTypeCode#Precalculated
+ * ReportTypeCode.Precalculated}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ReportTypeCode#Current
+ * ReportTypeCode.Current}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportTypeCode#mmForwardInitialSubmission
- * ReportTypeCode.mmForwardInitialSubmission}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportTypeCode#ForwardInitialSubmission
+ * ReportTypeCode.ForwardInitialSubmission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportTypeCode#mmForwardReSubmission
- * ReportTypeCode.mmForwardReSubmission}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportTypeCode#ForwardReSubmission
+ * ReportTypeCode.ForwardReSubmission}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ReportTypeCode#mmForwardAmend
- * ReportTypeCode.mmForwardAmend}</li>
+ * {@linkplain com.tools20022.repository.codeset.ReportTypeCode#ForwardAmend
+ * ReportTypeCode.ForwardAmend}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -59,8 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -77,7 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the purpose of the report."</li>
  * </ul>
  */
-public class ReportTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ReportTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -104,12 +110,12 @@ public class ReportTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrecalculated = new MMCode() {
+	public static final ReportTypeCode Precalculated = new ReportTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Precalculated";
 			definition = "The report is precalculated. This type of report is sent when an amendment is proposed.";
-			owner_lazy = () -> ReportTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportTypeCode.mmObject();
 			codeName = "PREC";
 		}
 	};
@@ -137,12 +143,12 @@ public class ReportTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCurrent = new MMCode() {
+	public static final ReportTypeCode Current = new ReportTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Current";
 			definition = "The report is calculated on the basis of a dataset matched with a baseline.";
-			owner_lazy = () -> ReportTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportTypeCode.mmObject();
 			codeName = "CURR";
 		}
 	};
@@ -168,12 +174,12 @@ public class ReportTypeCode {
 	 * "The report contains a baseline submitted for the first time."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForwardInitialSubmission = new MMCode() {
+	public static final ReportTypeCode ForwardInitialSubmission = new ReportTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardInitialSubmission";
 			definition = "The report contains a baseline submitted for the first time.";
-			owner_lazy = () -> ReportTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportTypeCode.mmObject();
 			codeName = "FWIS";
 		}
 	};
@@ -198,12 +204,12 @@ public class ReportTypeCode {
 	 * definition} = "The report contains a baseline that is resubmitted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForwardReSubmission = new MMCode() {
+	public static final ReportTypeCode ForwardReSubmission = new ReportTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardReSubmission";
 			definition = "The report contains a baseline that is resubmitted.";
-			owner_lazy = () -> ReportTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportTypeCode.mmObject();
 			codeName = "FWRE";
 		}
 	};
@@ -228,28 +234,62 @@ public class ReportTypeCode {
 	 * definition} = "The report contains a baseline that is amended."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmForwardAmend = new MMCode() {
+	public static final ReportTypeCode ForwardAmend = new ReportTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardAmend";
 			definition = "The report contains a baseline that is amended.";
-			owner_lazy = () -> ReportTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ReportTypeCode.mmObject();
 			codeName = "FWAM";
 		}
 	};
+	final static private LinkedHashMap<String, ReportTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ReportTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PREC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportTypeCode";
 				definition = "Specifies the purpose of the report.";
-				code_lazy = () -> Arrays.asList(ReportTypeCode.mmPrecalculated, ReportTypeCode.mmCurrent, ReportTypeCode.mmForwardInitialSubmission, ReportTypeCode.mmForwardReSubmission, ReportTypeCode.mmForwardAmend);
 				derivation_lazy = () -> Arrays.asList(ReportType2Code.mmObject(), ReportType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ReportTypeCode.Precalculated, com.tools20022.repository.codeset.ReportTypeCode.Current,
+						com.tools20022.repository.codeset.ReportTypeCode.ForwardInitialSubmission, com.tools20022.repository.codeset.ReportTypeCode.ForwardReSubmission, com.tools20022.repository.codeset.ReportTypeCode.ForwardAmend);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Precalculated.getCodeName().get(), Precalculated);
+		codesByName.put(Current.getCodeName().get(), Current);
+		codesByName.put(ForwardInitialSubmission.getCodeName().get(), ForwardInitialSubmission);
+		codesByName.put(ForwardReSubmission.getCodeName().get(), ForwardReSubmission);
+		codesByName.put(ForwardAmend.getCodeName().get(), ForwardAmend);
+	}
+
+	public static ReportTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ReportTypeCode[] values() {
+		ReportTypeCode[] values = new ReportTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ReportTypeCode> {
+		@Override
+		public ReportTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ReportTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

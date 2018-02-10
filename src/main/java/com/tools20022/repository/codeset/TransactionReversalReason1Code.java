@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TransactionReasonCode;
+import com.tools20022.repository.codeset.TransactionReversalReason1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for a transaction to be reversed by an instructed agent
@@ -31,33 +35,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TransactionReasonCode
- * TransactionReasonCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason1Code#mmClosedAccountNumber
- * TransactionReversalReason1Code.mmClosedAccountNumber}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason1Code#ClosedAccountNumber
+ * TransactionReversalReason1Code.ClosedAccountNumber}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason1Code#mmDuplication
- * TransactionReversalReason1Code.mmDuplication}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason1Code#Duplication
+ * TransactionReversalReason1Code.Duplication}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason1Code#mmInvalidBankOperationCode
- * TransactionReversalReason1Code.mmInvalidBankOperationCode}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason1Code#InvalidBankOperationCode
+ * TransactionReversalReason1Code.InvalidBankOperationCode}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason1Code#mmNoMandate
- * TransactionReversalReason1Code.mmNoMandate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason1Code#NoMandate
+ * TransactionReversalReason1Code.NoMandate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason1Code#mmCollectionNotDue
- * TransactionReversalReason1Code.mmCollectionNotDue}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionReversalReason1Code#CollectionNotDue
+ * TransactionReversalReason1Code.CollectionNotDue}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TransactionReasonCode
+ * TransactionReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -76,7 +80,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class TransactionReversalReason1Code extends TransactionReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransactionReversalReason1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,11 +100,12 @@ public class TransactionReversalReason1Code extends TransactionReasonCode {
 	 * name} = "ClosedAccountNumber"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmClosedAccountNumber = new MMCode() {
+	public static final TransactionReversalReason1Code ClosedAccountNumber = new TransactionReversalReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosedAccountNumber";
-			owner_lazy = () -> TransactionReversalReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionReversalReason1Code.mmObject();
+			codeName = TransactionReasonCode.ClosedAccountNumber.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -118,11 +124,12 @@ public class TransactionReversalReason1Code extends TransactionReasonCode {
 	 * name} = "Duplication"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDuplication = new MMCode() {
+	public static final TransactionReversalReason1Code Duplication = new TransactionReversalReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Duplication";
-			owner_lazy = () -> TransactionReversalReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionReversalReason1Code.mmObject();
+			codeName = TransactionReasonCode.Duplication.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -141,11 +148,12 @@ public class TransactionReversalReason1Code extends TransactionReasonCode {
 	 * name} = "InvalidBankOperationCode"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmInvalidBankOperationCode = new MMCode() {
+	public static final TransactionReversalReason1Code InvalidBankOperationCode = new TransactionReversalReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidBankOperationCode";
-			owner_lazy = () -> TransactionReversalReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionReversalReason1Code.mmObject();
+			codeName = TransactionReasonCode.InvalidBankOperationCode.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -164,11 +172,12 @@ public class TransactionReversalReason1Code extends TransactionReasonCode {
 	 * name} = "NoMandate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoMandate = new MMCode() {
+	public static final TransactionReversalReason1Code NoMandate = new TransactionReversalReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoMandate";
-			owner_lazy = () -> TransactionReversalReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionReversalReason1Code.mmObject();
+			codeName = TransactionReasonCode.NoMandate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -187,27 +196,62 @@ public class TransactionReversalReason1Code extends TransactionReasonCode {
 	 * name} = "CollectionNotDue"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollectionNotDue = new MMCode() {
+	public static final TransactionReversalReason1Code CollectionNotDue = new TransactionReversalReason1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollectionNotDue";
-			owner_lazy = () -> TransactionReversalReason1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionReversalReason1Code.mmObject();
+			codeName = TransactionReasonCode.CollectionNotDue.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TransactionReversalReason1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransactionReversalReason1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AC04");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionReversalReason1Code";
 				definition = "Specifies the reason for a transaction to be reversed by an instructed agent or somebody acting on behalf of an instructed agent.";
-				code_lazy = () -> Arrays.asList(TransactionReversalReason1Code.mmClosedAccountNumber, TransactionReversalReason1Code.mmDuplication, TransactionReversalReason1Code.mmInvalidBankOperationCode,
-						TransactionReversalReason1Code.mmNoMandate, TransactionReversalReason1Code.mmCollectionNotDue);
 				trace_lazy = () -> TransactionReasonCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionReversalReason1Code.ClosedAccountNumber, com.tools20022.repository.codeset.TransactionReversalReason1Code.Duplication,
+						com.tools20022.repository.codeset.TransactionReversalReason1Code.InvalidBankOperationCode, com.tools20022.repository.codeset.TransactionReversalReason1Code.NoMandate,
+						com.tools20022.repository.codeset.TransactionReversalReason1Code.CollectionNotDue);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ClosedAccountNumber.getCodeName().get(), ClosedAccountNumber);
+		codesByName.put(Duplication.getCodeName().get(), Duplication);
+		codesByName.put(InvalidBankOperationCode.getCodeName().get(), InvalidBankOperationCode);
+		codesByName.put(NoMandate.getCodeName().get(), NoMandate);
+		codesByName.put(CollectionNotDue.getCodeName().get(), CollectionNotDue);
+	}
+
+	public static TransactionReversalReason1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransactionReversalReason1Code[] values() {
+		TransactionReversalReason1Code[] values = new TransactionReversalReason1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransactionReversalReason1Code> {
+		@Override
+		public TransactionReversalReason1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransactionReversalReason1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

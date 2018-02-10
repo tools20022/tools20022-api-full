@@ -20,36 +20,39 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.AlgorithmCode;
+import com.tools20022.repository.codeset.Algorithm14Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Cryptographic algorithms for digital signatures.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.AlgorithmCode AlgorithmCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm14Code#mmSHA256WithRSA
- * Algorithm14Code.mmSHA256WithRSA}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm14Code#SHA256WithRSA
+ * Algorithm14Code.SHA256WithRSA}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm14Code#mmSHA1WithRSA
- * Algorithm14Code.mmSHA1WithRSA}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Algorithm14Code#mmRSASSAPSS
- * Algorithm14Code.mmRSASSAPSS}</li>
+ * {@linkplain com.tools20022.repository.codeset.Algorithm14Code#SHA1WithRSA
+ * Algorithm14Code.SHA1WithRSA}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm14Code#RSASSAPSS
+ * Algorithm14Code.RSASSAPSS}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode AlgorithmCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.codeset.Algorithm4Code Algorithm4Code}</li>
  * </ul>
  */
-public class Algorithm14Code extends AlgorithmCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Algorithm14Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,16 +93,17 @@ public class Algorithm14Code extends AlgorithmCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.Algorithm4Code#mmSHA256WithRSA
-	 * Algorithm4Code.mmSHA256WithRSA}</li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm4Code#SHA256WithRSA
+	 * Algorithm4Code.SHA256WithRSA}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSHA256WithRSA = new MMCode() {
+	public static final Algorithm14Code SHA256WithRSA = new Algorithm14Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA256WithRSA";
-			previousVersion_lazy = () -> Algorithm4Code.mmSHA256WithRSA;
-			owner_lazy = () -> Algorithm14Code.mmObject();
+			previousVersion_lazy = () -> Algorithm4Code.SHA256WithRSA;
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm14Code.mmObject();
+			codeName = AlgorithmCode.SHA256WithRSA.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -117,11 +122,12 @@ public class Algorithm14Code extends AlgorithmCode {
 	 * name} = "SHA1WithRSA"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSHA1WithRSA = new MMCode() {
+	public static final Algorithm14Code SHA1WithRSA = new Algorithm14Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA1WithRSA";
-			owner_lazy = () -> Algorithm14Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm14Code.mmObject();
+			codeName = AlgorithmCode.SHA1WithRSA.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -140,27 +146,59 @@ public class Algorithm14Code extends AlgorithmCode {
 	 * name} = "RSASSA-PSS"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRSASSAPSS = new MMCode() {
+	public static final Algorithm14Code RSASSAPSS = new Algorithm14Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RSASSA-PSS";
-			owner_lazy = () -> Algorithm14Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm14Code.mmObject();
+			codeName = AlgorithmCode.RSASSAPSS.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Algorithm14Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Algorithm14Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ERS2");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Algorithm14Code";
 				definition = "Cryptographic algorithms for digital signatures.";
 				previousVersion_lazy = () -> Algorithm4Code.mmObject();
-				code_lazy = () -> Arrays.asList(Algorithm14Code.mmSHA256WithRSA, Algorithm14Code.mmSHA1WithRSA, Algorithm14Code.mmRSASSAPSS);
 				trace_lazy = () -> AlgorithmCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm14Code.SHA256WithRSA, com.tools20022.repository.codeset.Algorithm14Code.SHA1WithRSA, com.tools20022.repository.codeset.Algorithm14Code.RSASSAPSS);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SHA256WithRSA.getCodeName().get(), SHA256WithRSA);
+		codesByName.put(SHA1WithRSA.getCodeName().get(), SHA1WithRSA);
+		codesByName.put(RSASSAPSS.getCodeName().get(), RSASSAPSS);
+	}
+
+	public static Algorithm14Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Algorithm14Code[] values() {
+		Algorithm14Code[] values = new Algorithm14Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Algorithm14Code> {
+		@Override
+		public Algorithm14Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Algorithm14Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

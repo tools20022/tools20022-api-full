@@ -17,12 +17,14 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -48,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,18 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies security rate details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionRateSD6Choice", propOrder = {"additionalQuantityForExistingSecurities", "newToOld"})
 public class CorporateActionRateSD6Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AddtlQtyForExstgScties")
 	protected RatioFormat13Choice additionalQuantityForExistingSecurities;
 	/**
-	 * Quantity of additional securities for a given quantity of underlying
-	 * securities where underlying securities are not exchanged or debited, for
-	 * example, 1 for 1: 1 new equity credited for every 1 underlying equity = 2
-	 * resulting equities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -84,6 +84,9 @@ public class CorporateActionRateSD6Choice {
 	 * CorporateActionRateSD6Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AddtlQtyForExstgScties"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::ADEX</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -99,9 +102,10 @@ public class CorporateActionRateSD6Choice {
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalQuantityForExistingSecurities = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionRateSD6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionRateSD6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlQtyForExstgScties";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::ADEX"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalQuantityForExistingSecurities";
 			definition = "Quantity of additional securities for a given quantity of underlying securities where underlying securities are not exchanged or debited, for example, 1 for 1: 1 new equity credited for every 1 underlying equity = 2 resulting equities.";
@@ -111,13 +115,11 @@ public class CorporateActionRateSD6Choice {
 			type_lazy = () -> com.tools20022.repository.choice.RatioFormat13Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "NewToOd")
 	protected RatioFormat14Choice newToOld;
 	/**
-	 * Quantity of new securities for a given quantity of underlying securities,
-	 * where the underlying securities will be exchanged or debited, for
-	 * example, 2 for 1: 2 new equities credited for every 1 underlying equity
-	 * debited = 2 resulting equities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -130,6 +132,9 @@ public class CorporateActionRateSD6Choice {
 	 * CorporateActionRateSD6Choice}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NewToOd"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92a::NEWO</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -145,9 +150,10 @@ public class CorporateActionRateSD6Choice {
 	 */
 	public static final MMMessageAssociationEnd mmNewToOld = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionRateSD6Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.CorporateActionRateSD6Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NewToOd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::NEWO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewToOld";
 			definition = "Quantity of new securities for a given quantity of underlying securities, where the underlying securities will be exchanged or debited, for example, 2 for 1: 2 new equities credited for every 1 underlying equity debited = 2 resulting equities.";
@@ -161,8 +167,8 @@ public class CorporateActionRateSD6Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionRateSD6Choice.mmAdditionalQuantityForExistingSecurities, CorporateActionRateSD6Choice.mmNewToOld);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CorporateActionRateSD6Choice.mmAdditionalQuantityForExistingSecurities, com.tools20022.repository.choice.CorporateActionRateSD6Choice.mmNewToOld);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRateSD6Choice";
 				definition = "Specifies security rate details.";
@@ -171,21 +177,21 @@ public class CorporateActionRateSD6Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AddtlQtyForExstgScties")
-	public RatioFormat13Choice getAdditionalQuantityForExistingSecurities() {
-		return additionalQuantityForExistingSecurities;
+	public Optional<RatioFormat13Choice> getAdditionalQuantityForExistingSecurities() {
+		return additionalQuantityForExistingSecurities == null ? Optional.empty() : Optional.of(additionalQuantityForExistingSecurities);
 	}
 
-	public void setAdditionalQuantityForExistingSecurities(com.tools20022.repository.choice.RatioFormat13Choice additionalQuantityForExistingSecurities) {
+	public CorporateActionRateSD6Choice setAdditionalQuantityForExistingSecurities(com.tools20022.repository.choice.RatioFormat13Choice additionalQuantityForExistingSecurities) {
 		this.additionalQuantityForExistingSecurities = additionalQuantityForExistingSecurities;
+		return this;
 	}
 
-	@XmlElement(name = "NewToOd")
-	public RatioFormat14Choice getNewToOld() {
-		return newToOld;
+	public Optional<RatioFormat14Choice> getNewToOld() {
+		return newToOld == null ? Optional.empty() : Optional.of(newToOld);
 	}
 
-	public void setNewToOld(com.tools20022.repository.choice.RatioFormat14Choice newToOld) {
+	public CorporateActionRateSD6Choice setNewToOld(com.tools20022.repository.choice.RatioFormat14Choice newToOld) {
 		this.newToOld = newToOld;
+		return this;
 	}
 }

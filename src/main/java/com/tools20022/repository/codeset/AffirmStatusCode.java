@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.AffirmStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Identifies the status of the confirmation acknowledgement.
@@ -31,36 +36,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.AffirmStatusCode#Compared
+ * AffirmStatusCode.Compared}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AffirmStatusCode#Received
+ * AffirmStatusCode.Received}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AffirmStatusCode#mmCompared
- * AffirmStatusCode.mmCompared}</li>
+ * {@linkplain com.tools20022.repository.codeset.AffirmStatusCode#MisMatched
+ * AffirmStatusCode.MisMatched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AffirmStatusCode#mmReceived
- * AffirmStatusCode.mmReceived}</li>
+ * {@linkplain com.tools20022.repository.codeset.AffirmStatusCode#OutOfService
+ * AffirmStatusCode.OutOfService}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AffirmStatusCode#mmMisMatched
- * AffirmStatusCode.mmMisMatched}</li>
+ * {@linkplain com.tools20022.repository.codeset.AffirmStatusCode#OutOfRange
+ * AffirmStatusCode.OutOfRange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AffirmStatusCode#mmOutOfService
- * AffirmStatusCode.mmOutOfService}</li>
+ * {@linkplain com.tools20022.repository.codeset.AffirmStatusCode#AckToConfirmCompleteNotification
+ * AffirmStatusCode.AckToConfirmCompleteNotification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AffirmStatusCode#mmOutOfRange
- * AffirmStatusCode.mmOutOfRange}</li>
+ * {@linkplain com.tools20022.repository.codeset.AffirmStatusCode#Unreceived
+ * AffirmStatusCode.Unreceived}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AffirmStatusCode#ModeError
+ * AffirmStatusCode.ModeError}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AffirmStatusCode#mmAckToConfirmCompleteNotification
- * AffirmStatusCode.mmAckToConfirmCompleteNotification}</li>
+ * {@linkplain com.tools20022.repository.codeset.AffirmStatusCode#AckToSettlementStateChanged
+ * AffirmStatusCode.AckToSettlementStateChanged}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.AffirmStatusCode#mmUnreceived
- * AffirmStatusCode.mmUnreceived}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AffirmStatusCode#mmModeError
- * AffirmStatusCode.mmModeError}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AffirmStatusCode#mmAckToSettlementStateChanged
- * AffirmStatusCode.mmAckToSettlementStateChanged}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.AffirmStatusCode#mmNoTradingPrivilege
- * AffirmStatusCode.mmNoTradingPrivilege}</li>
+ * {@linkplain com.tools20022.repository.codeset.AffirmStatusCode#NoTradingPrivilege
+ * AffirmStatusCode.NoTradingPrivilege}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -73,8 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -85,7 +87,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Identifies the status of the confirmation acknowledgement."</li>
  * </ul>
  */
-public class AffirmStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class AffirmStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -109,12 +112,12 @@ public class AffirmStatusCode {
 	 * definition} = "Data was successfully matched."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompared = new MMCode() {
+	public static final AffirmStatusCode Compared = new AffirmStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compared";
 			definition = "Data was successfully matched.";
-			owner_lazy = () -> AffirmStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AffirmStatusCode.mmObject();
 			codeName = "COMP";
 		}
 	};
@@ -140,12 +143,12 @@ public class AffirmStatusCode {
 	 * "Format of upload data was right, and system receives successfully."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReceived = new MMCode() {
+	public static final AffirmStatusCode Received = new AffirmStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Received";
 			definition = "Format of upload data was right, and system receives successfully.";
-			owner_lazy = () -> AffirmStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AffirmStatusCode.mmObject();
 			codeName = "RECE";
 		}
 	};
@@ -170,12 +173,12 @@ public class AffirmStatusCode {
 	 * definition} = "Data was mismatched."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMisMatched = new MMCode() {
+	public static final AffirmStatusCode MisMatched = new AffirmStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MisMatched";
 			definition = "Data was mismatched.";
-			owner_lazy = () -> AffirmStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AffirmStatusCode.mmObject();
 			codeName = "MISM";
 		}
 	};
@@ -200,12 +203,12 @@ public class AffirmStatusCode {
 	 * definition} = "Query time was over system service time."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOutOfService = new MMCode() {
+	public static final AffirmStatusCode OutOfService = new AffirmStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfService";
 			definition = "Query time was over system service time.";
-			owner_lazy = () -> AffirmStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AffirmStatusCode.mmObject();
 			codeName = "OUOS";
 		}
 	};
@@ -230,12 +233,12 @@ public class AffirmStatusCode {
 	 * definition} = "Query time was out of range."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOutOfRange = new MMCode() {
+	public static final AffirmStatusCode OutOfRange = new AffirmStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutOfRange";
 			definition = "Query time was out of range.";
-			owner_lazy = () -> AffirmStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AffirmStatusCode.mmObject();
 			codeName = "OUOR";
 		}
 	};
@@ -260,12 +263,12 @@ public class AffirmStatusCode {
 	 * definition} = "Notfies that the trade confimation was conpleted."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAckToConfirmCompleteNotification = new MMCode() {
+	public static final AffirmStatusCode AckToConfirmCompleteNotification = new AffirmStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AckToConfirmCompleteNotification";
 			definition = "Notfies that the trade confimation was conpleted.";
-			owner_lazy = () -> AffirmStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AffirmStatusCode.mmObject();
 			codeName = "ATCN";
 		}
 	};
@@ -291,12 +294,12 @@ public class AffirmStatusCode {
 	 * "Format of upload data was wrong, and system receives unsuccessfully."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnreceived = new MMCode() {
+	public static final AffirmStatusCode Unreceived = new AffirmStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unreceived";
 			definition = "Format of upload data was wrong, and system receives unsuccessfully.";
-			owner_lazy = () -> AffirmStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AffirmStatusCode.mmObject();
 			codeName = "UNRE";
 		}
 	};
@@ -321,12 +324,12 @@ public class AffirmStatusCode {
 	 * definition} = "Model has errors."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmModeError = new MMCode() {
+	public static final AffirmStatusCode ModeError = new AffirmStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModeError";
 			definition = "Model has errors.";
-			owner_lazy = () -> AffirmStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AffirmStatusCode.mmObject();
 			codeName = "MISE";
 		}
 	};
@@ -351,12 +354,12 @@ public class AffirmStatusCode {
 	 * definition} = "Notfies the clearing status changed"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAckToSettlementStateChanged = new MMCode() {
+	public static final AffirmStatusCode AckToSettlementStateChanged = new AffirmStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AckToSettlementStateChanged";
 			definition = "Notfies the clearing status changed";
-			owner_lazy = () -> AffirmStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AffirmStatusCode.mmObject();
 			codeName = "ATSC";
 		}
 	};
@@ -381,28 +384,68 @@ public class AffirmStatusCode {
 	 * definition} = "Have no trading permissions."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoTradingPrivilege = new MMCode() {
+	public static final AffirmStatusCode NoTradingPrivilege = new AffirmStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoTradingPrivilege";
 			definition = "Have no trading permissions.";
-			owner_lazy = () -> AffirmStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.AffirmStatusCode.mmObject();
 			codeName = "NOTP";
 		}
 	};
+	final static private LinkedHashMap<String, AffirmStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected AffirmStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AffirmStatusCode";
 				definition = "Identifies the status of the confirmation acknowledgement.";
-				code_lazy = () -> Arrays.asList(AffirmStatusCode.mmCompared, AffirmStatusCode.mmReceived, AffirmStatusCode.mmMisMatched, AffirmStatusCode.mmOutOfService, AffirmStatusCode.mmOutOfRange,
-						AffirmStatusCode.mmAckToConfirmCompleteNotification, AffirmStatusCode.mmUnreceived, AffirmStatusCode.mmModeError, AffirmStatusCode.mmAckToSettlementStateChanged, AffirmStatusCode.mmNoTradingPrivilege);
 				derivation_lazy = () -> Arrays.asList(AffirmStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AffirmStatusCode.Compared, com.tools20022.repository.codeset.AffirmStatusCode.Received, com.tools20022.repository.codeset.AffirmStatusCode.MisMatched,
+						com.tools20022.repository.codeset.AffirmStatusCode.OutOfService, com.tools20022.repository.codeset.AffirmStatusCode.OutOfRange, com.tools20022.repository.codeset.AffirmStatusCode.AckToConfirmCompleteNotification,
+						com.tools20022.repository.codeset.AffirmStatusCode.Unreceived, com.tools20022.repository.codeset.AffirmStatusCode.ModeError, com.tools20022.repository.codeset.AffirmStatusCode.AckToSettlementStateChanged,
+						com.tools20022.repository.codeset.AffirmStatusCode.NoTradingPrivilege);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Compared.getCodeName().get(), Compared);
+		codesByName.put(Received.getCodeName().get(), Received);
+		codesByName.put(MisMatched.getCodeName().get(), MisMatched);
+		codesByName.put(OutOfService.getCodeName().get(), OutOfService);
+		codesByName.put(OutOfRange.getCodeName().get(), OutOfRange);
+		codesByName.put(AckToConfirmCompleteNotification.getCodeName().get(), AckToConfirmCompleteNotification);
+		codesByName.put(Unreceived.getCodeName().get(), Unreceived);
+		codesByName.put(ModeError.getCodeName().get(), ModeError);
+		codesByName.put(AckToSettlementStateChanged.getCodeName().get(), AckToSettlementStateChanged);
+		codesByName.put(NoTradingPrivilege.getCodeName().get(), NoTradingPrivilege);
+	}
+
+	public static AffirmStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static AffirmStatusCode[] values() {
+		AffirmStatusCode[] values = new AffirmStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, AffirmStatusCode> {
+		@Override
+		public AffirmStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(AffirmStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

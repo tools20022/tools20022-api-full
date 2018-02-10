@@ -24,9 +24,11 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BillingCancellationReport1;
 import com.tools20022.repository.msg.BillingReport1;
 import com.tools20022.repository.msg.ErrorHandling3;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BillingReportOrError1Choice", propOrder = {"billingReport", "cancellationReport", "operationalError"})
 public class BillingReportOrError1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "BllgRpt", required = true)
 	protected BillingReport1 billingReport;
 	/**
-	 * Report on billing data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -104,7 +107,7 @@ public class BillingReportOrError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmBillingReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BillingReportOrError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.BillingReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "BllgRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,10 +119,11 @@ public class BillingReportOrError1Choice {
 			type_lazy = () -> BillingReport1.mmObject();
 		}
 	};
+	@XmlElement(name = "CxlRpt", required = true)
 	protected BillingCancellationReport1 cancellationReport;
 	/**
-	 * Report on cancelled billing data.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -146,7 +150,7 @@ public class BillingReportOrError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmCancellationReport = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BillingReportOrError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.BillingReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,11 +162,11 @@ public class BillingReportOrError1Choice {
 			type_lazy = () -> BillingCancellationReport1.mmObject();
 		}
 	};
+	@XmlElement(name = "OprlErr", required = true)
 	protected List<ErrorHandling3> operationalError;
 	/**
-	 * Indicates that an operational error has been issued during the processing
-	 * of the related request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -190,7 +194,7 @@ public class BillingReportOrError1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BillingReportOrError1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.BillingReportOrError1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OprlErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,8 +209,9 @@ public class BillingReportOrError1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BillingReportOrError1Choice.mmBillingReport, BillingReportOrError1Choice.mmCancellationReport, BillingReportOrError1Choice.mmOperationalError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BillingReportOrError1Choice.mmBillingReport, com.tools20022.repository.choice.BillingReportOrError1Choice.mmCancellationReport,
+						com.tools20022.repository.choice.BillingReportOrError1Choice.mmOperationalError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BillingReportOrError1Choice";
 				definition = "Choice between report on billing data, billing cancellation request details or operational error.";
@@ -215,30 +220,30 @@ public class BillingReportOrError1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "BllgRpt", required = true)
 	public BillingReport1 getBillingReport() {
 		return billingReport;
 	}
 
-	public void setBillingReport(BillingReport1 billingReport) {
-		this.billingReport = billingReport;
+	public BillingReportOrError1Choice setBillingReport(BillingReport1 billingReport) {
+		this.billingReport = Objects.requireNonNull(billingReport);
+		return this;
 	}
 
-	@XmlElement(name = "CxlRpt", required = true)
 	public BillingCancellationReport1 getCancellationReport() {
 		return cancellationReport;
 	}
 
-	public void setCancellationReport(BillingCancellationReport1 cancellationReport) {
-		this.cancellationReport = cancellationReport;
+	public BillingReportOrError1Choice setCancellationReport(BillingCancellationReport1 cancellationReport) {
+		this.cancellationReport = Objects.requireNonNull(cancellationReport);
+		return this;
 	}
 
-	@XmlElement(name = "OprlErr", required = true)
 	public List<ErrorHandling3> getOperationalError() {
-		return operationalError;
+		return operationalError == null ? operationalError = new ArrayList<>() : operationalError;
 	}
 
-	public void setOperationalError(List<ErrorHandling3> operationalError) {
-		this.operationalError = operationalError;
+	public BillingReportOrError1Choice setOperationalError(List<ErrorHandling3> operationalError) {
+		this.operationalError = Objects.requireNonNull(operationalError);
+		return this;
 	}
 }

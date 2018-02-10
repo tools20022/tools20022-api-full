@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.Algorithm14Code;
 import com.tools20022.repository.datatype.Number;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,16 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * ATMSecurityConfiguration3}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMSecurityConfiguration4", propOrder = {"maximumCertificates", "maximumSignatures", "digitalSignatureAlgorithm"})
 public class ATMSecurityConfiguration4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MaxCerts")
 	protected Number maximumCertificates;
 	/**
-	 * Maximum number of certificates in a certificate path, the security module
-	 * is able to manage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +117,7 @@ public class ATMSecurityConfiguration4 {
 	 */
 	public static final MMMessageAttribute mmMaximumCertificates = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMSecurityConfiguration4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration4.mmObject();
 			isDerived = false;
 			xmlTag = "MaxCerts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -129,11 +128,11 @@ public class ATMSecurityConfiguration4 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "MaxSgntrs")
 	protected Number maximumSignatures;
 	/**
-	 * Maximum number of cosigners, the security module is able to manage in a
-	 * digital signature.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +161,7 @@ public class ATMSecurityConfiguration4 {
 	 */
 	public static final MMMessageAttribute mmMaximumSignatures = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMSecurityConfiguration4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration4.mmObject();
 			isDerived = false;
 			xmlTag = "MaxSgntrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +172,11 @@ public class ATMSecurityConfiguration4 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "DgtlSgntrAlgo")
 	protected List<Algorithm14Code> digitalSignatureAlgorithm;
 	/**
-	 * Digital signature algorithm the security module is able to manage.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -210,7 +210,7 @@ public class ATMSecurityConfiguration4 {
 	 */
 	public static final MMMessageAttribute mmDigitalSignatureAlgorithm = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMSecurityConfiguration4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMSecurityConfiguration4.mmObject();
 			isDerived = false;
 			xmlTag = "DgtlSgntrAlgo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -225,8 +225,9 @@ public class ATMSecurityConfiguration4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMSecurityConfiguration4.mmMaximumCertificates, ATMSecurityConfiguration4.mmMaximumSignatures, ATMSecurityConfiguration4.mmDigitalSignatureAlgorithm);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMSecurityConfiguration4.mmMaximumCertificates, com.tools20022.repository.msg.ATMSecurityConfiguration4.mmMaximumSignatures,
+						com.tools20022.repository.msg.ATMSecurityConfiguration4.mmDigitalSignatureAlgorithm);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityConfiguration4";
 				definition = "Configuration of the digital signatures if the security module is able to perform digital signatures with an asymmetric key.";
@@ -237,30 +238,30 @@ public class ATMSecurityConfiguration4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MaxCerts")
-	public Number getMaximumCertificates() {
-		return maximumCertificates;
+	public Optional<Number> getMaximumCertificates() {
+		return maximumCertificates == null ? Optional.empty() : Optional.of(maximumCertificates);
 	}
 
-	public void setMaximumCertificates(Number maximumCertificates) {
+	public ATMSecurityConfiguration4 setMaximumCertificates(Number maximumCertificates) {
 		this.maximumCertificates = maximumCertificates;
+		return this;
 	}
 
-	@XmlElement(name = "MaxSgntrs")
-	public Number getMaximumSignatures() {
-		return maximumSignatures;
+	public Optional<Number> getMaximumSignatures() {
+		return maximumSignatures == null ? Optional.empty() : Optional.of(maximumSignatures);
 	}
 
-	public void setMaximumSignatures(Number maximumSignatures) {
+	public ATMSecurityConfiguration4 setMaximumSignatures(Number maximumSignatures) {
 		this.maximumSignatures = maximumSignatures;
+		return this;
 	}
 
-	@XmlElement(name = "DgtlSgntrAlgo")
 	public List<Algorithm14Code> getDigitalSignatureAlgorithm() {
-		return digitalSignatureAlgorithm;
+		return digitalSignatureAlgorithm == null ? digitalSignatureAlgorithm = new ArrayList<>() : digitalSignatureAlgorithm;
 	}
 
-	public void setDigitalSignatureAlgorithm(List<Algorithm14Code> digitalSignatureAlgorithm) {
-		this.digitalSignatureAlgorithm = digitalSignatureAlgorithm;
+	public ATMSecurityConfiguration4 setDigitalSignatureAlgorithm(List<Algorithm14Code> digitalSignatureAlgorithm) {
+		this.digitalSignatureAlgorithm = Objects.requireNonNull(digitalSignatureAlgorithm);
+		return this;
 	}
 }

@@ -24,9 +24,11 @@ import com.tools20022.repository.codeset.TerminalManagementActionResult1Code;
 import com.tools20022.repository.codeset.TerminalManagementErrorAction1Code;
 import com.tools20022.repository.entity.TerminalManagementAction;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -73,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ErrorAction1", propOrder = {"actionResult", "actionToProcess"})
 public class ErrorAction1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ActnRslt", required = true)
 	protected List<TerminalManagementActionResult1Code> actionResult;
 	/**
-	 * List of error action result codes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +117,7 @@ public class ErrorAction1 {
 	public static final MMMessageAttribute mmActionResult = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmActionResult;
-			componentContext_lazy = () -> ErrorAction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorAction1.mmObject();
 			isDerived = false;
 			xmlTag = "ActnRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,10 +127,11 @@ public class ErrorAction1 {
 			simpleType_lazy = () -> TerminalManagementActionResult1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ActnToPrc", required = true)
 	protected TerminalManagementErrorAction1Code actionToProcess;
 	/**
-	 * Action to be processed for the related errors.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +164,7 @@ public class ErrorAction1 {
 	public static final MMMessageAttribute mmActionToProcess = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TerminalManagementAction.mmActionToProcess;
-			componentContext_lazy = () -> ErrorAction1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ErrorAction1.mmObject();
 			isDerived = false;
 			xmlTag = "ActnToPrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,9 +179,9 @@ public class ErrorAction1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ErrorAction1.mmActionResult, ErrorAction1.mmActionToProcess);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorAction1.mmActionResult, com.tools20022.repository.msg.ErrorAction1.mmActionToProcess);
 				trace_lazy = () -> TerminalManagementAction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ErrorAction1";
 				definition = "Action to perform in case of error on the related action in progress.";
@@ -187,21 +191,21 @@ public class ErrorAction1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ActnRslt", required = true)
 	public List<TerminalManagementActionResult1Code> getActionResult() {
-		return actionResult;
+		return actionResult == null ? actionResult = new ArrayList<>() : actionResult;
 	}
 
-	public void setActionResult(List<TerminalManagementActionResult1Code> actionResult) {
-		this.actionResult = actionResult;
+	public ErrorAction1 setActionResult(List<TerminalManagementActionResult1Code> actionResult) {
+		this.actionResult = Objects.requireNonNull(actionResult);
+		return this;
 	}
 
-	@XmlElement(name = "ActnToPrc", required = true)
 	public TerminalManagementErrorAction1Code getActionToProcess() {
 		return actionToProcess;
 	}
 
-	public void setActionToProcess(TerminalManagementErrorAction1Code actionToProcess) {
-		this.actionToProcess = actionToProcess;
+	public ErrorAction1 setActionToProcess(TerminalManagementErrorAction1Code actionToProcess) {
+		this.actionToProcess = Objects.requireNonNull(actionToProcess);
+		return this;
 	}
 }

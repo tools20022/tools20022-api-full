@@ -26,6 +26,7 @@ import com.tools20022.repository.codeset.QueryType2Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,16 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the query criteria."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BusinessInformationQueryDefinition2", propOrder = {"queryType", "generalBusinessInformationCriteria"})
 public class BusinessInformationQueryDefinition2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QryTp")
 	protected QueryType2Code queryType;
 	/**
-	 * Specifies the type of matching items to be returned in the response to
-	 * the query.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +103,7 @@ public class BusinessInformationQueryDefinition2 {
 	 */
 	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> BusinessInformationQueryDefinition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessInformationQueryDefinition2.mmObject();
 			isDerived = false;
 			xmlTag = "QryTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +114,11 @@ public class BusinessInformationQueryDefinition2 {
 			simpleType_lazy = () -> QueryType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "GnlBizInfCrit")
 	protected GeneralBusinessInformationCriteriaDefinitionChoice generalBusinessInformationCriteria;
 	/**
-	 * Defines the general business information query criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -143,7 +145,7 @@ public class BusinessInformationQueryDefinition2 {
 	 */
 	public static final MMMessageAssociationEnd mmGeneralBusinessInformationCriteria = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BusinessInformationQueryDefinition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessInformationQueryDefinition2.mmObject();
 			isDerived = false;
 			xmlTag = "GnlBizInfCrit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,8 +161,9 @@ public class BusinessInformationQueryDefinition2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BusinessInformationQueryDefinition2.mmQueryType, BusinessInformationQueryDefinition2.mmGeneralBusinessInformationCriteria);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.msg.BusinessInformationQueryDefinition2.mmQueryType, com.tools20022.repository.msg.BusinessInformationQueryDefinition2.mmGeneralBusinessInformationCriteria);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessInformationQueryDefinition2";
 				definition = "Defines the query criteria.";
@@ -169,21 +172,21 @@ public class BusinessInformationQueryDefinition2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QryTp")
-	public QueryType2Code getQueryType() {
-		return queryType;
+	public Optional<QueryType2Code> getQueryType() {
+		return queryType == null ? Optional.empty() : Optional.of(queryType);
 	}
 
-	public void setQueryType(QueryType2Code queryType) {
+	public BusinessInformationQueryDefinition2 setQueryType(QueryType2Code queryType) {
 		this.queryType = queryType;
+		return this;
 	}
 
-	@XmlElement(name = "GnlBizInfCrit")
-	public GeneralBusinessInformationCriteriaDefinitionChoice getGeneralBusinessInformationCriteria() {
-		return generalBusinessInformationCriteria;
+	public Optional<GeneralBusinessInformationCriteriaDefinitionChoice> getGeneralBusinessInformationCriteria() {
+		return generalBusinessInformationCriteria == null ? Optional.empty() : Optional.of(generalBusinessInformationCriteria);
 	}
 
-	public void setGeneralBusinessInformationCriteria(GeneralBusinessInformationCriteriaDefinitionChoice generalBusinessInformationCriteria) {
+	public BusinessInformationQueryDefinition2 setGeneralBusinessInformationCriteria(GeneralBusinessInformationCriteriaDefinitionChoice generalBusinessInformationCriteria) {
 		this.generalBusinessInformationCriteria = generalBusinessInformationCriteria;
+		return this;
 	}
 }

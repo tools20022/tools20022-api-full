@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PartyTypeCode;
+import com.tools20022.repository.codeset.PartyType6Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Entity assigning an identification of an entity involved in a maintenance
@@ -31,32 +35,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PartyTypeCode PartyTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType6Code#mmAcceptor
- * PartyType6Code.mmAcceptor}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType6Code#mmMerchant
- * PartyType6Code.mmMerchant}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType6Code#mmAcquirer
- * PartyType6Code.mmAcquirer}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType6Code#Acceptor
+ * PartyType6Code.Acceptor}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType6Code#Merchant
+ * PartyType6Code.Merchant}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType6Code#Acquirer
+ * PartyType6Code.Acquirer}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType6Code#mmIntermediaryAgent
- * PartyType6Code.mmIntermediaryAgent}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType6Code#IntermediaryAgent
+ * PartyType6Code.IntermediaryAgent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType6Code#mmMasterTerminalManager
- * PartyType6Code.mmMasterTerminalManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType6Code#MasterTerminalManager
+ * PartyType6Code.MasterTerminalManager}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType6Code#mmTerminalManager
- * PartyType6Code.mmTerminalManager}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartyType6Code#TerminalManager
+ * PartyType6Code.TerminalManager}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PartyTypeCode PartyTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -75,7 +79,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PartyType6Code extends PartyTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PartyType6Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -94,11 +99,12 @@ public class PartyType6Code extends PartyTypeCode {
 	 * name} = "Acceptor"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptor = new MMCode() {
+	public static final PartyType6Code Acceptor = new PartyType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acceptor";
-			owner_lazy = () -> PartyType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType6Code.mmObject();
+			codeName = PartyTypeCode.Acceptor.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -117,11 +123,12 @@ public class PartyType6Code extends PartyTypeCode {
 	 * name} = "Merchant"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMerchant = new MMCode() {
+	public static final PartyType6Code Merchant = new PartyType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merchant";
-			owner_lazy = () -> PartyType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType6Code.mmObject();
+			codeName = PartyTypeCode.Merchant.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -140,11 +147,12 @@ public class PartyType6Code extends PartyTypeCode {
 	 * name} = "Acquirer"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcquirer = new MMCode() {
+	public static final PartyType6Code Acquirer = new PartyType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
-			owner_lazy = () -> PartyType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType6Code.mmObject();
+			codeName = PartyTypeCode.Acquirer.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -163,11 +171,12 @@ public class PartyType6Code extends PartyTypeCode {
 	 * name} = "IntermediaryAgent"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntermediaryAgent = new MMCode() {
+	public static final PartyType6Code IntermediaryAgent = new PartyType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent";
-			owner_lazy = () -> PartyType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType6Code.mmObject();
+			codeName = PartyTypeCode.IntermediaryAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -186,11 +195,12 @@ public class PartyType6Code extends PartyTypeCode {
 	 * name} = "MasterTerminalManager"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMasterTerminalManager = new MMCode() {
+	public static final PartyType6Code MasterTerminalManager = new PartyType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterTerminalManager";
-			owner_lazy = () -> PartyType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType6Code.mmObject();
+			codeName = PartyTypeCode.MasterTerminalManager.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -209,26 +219,62 @@ public class PartyType6Code extends PartyTypeCode {
 	 * name} = "TerminalManager"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTerminalManager = new MMCode() {
+	public static final PartyType6Code TerminalManager = new PartyType6Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManager";
-			owner_lazy = () -> PartyType6Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType6Code.mmObject();
+			codeName = PartyTypeCode.TerminalManager.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PartyType6Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PartyType6Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACCP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyType6Code";
 				definition = "Entity assigning an identification of an entity involved in a maintenance operation.";
-				code_lazy = () -> Arrays.asList(PartyType6Code.mmAcceptor, PartyType6Code.mmMerchant, PartyType6Code.mmAcquirer, PartyType6Code.mmIntermediaryAgent, PartyType6Code.mmMasterTerminalManager, PartyType6Code.mmTerminalManager);
 				trace_lazy = () -> PartyTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType6Code.Acceptor, com.tools20022.repository.codeset.PartyType6Code.Merchant, com.tools20022.repository.codeset.PartyType6Code.Acquirer,
+						com.tools20022.repository.codeset.PartyType6Code.IntermediaryAgent, com.tools20022.repository.codeset.PartyType6Code.MasterTerminalManager, com.tools20022.repository.codeset.PartyType6Code.TerminalManager);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Acceptor.getCodeName().get(), Acceptor);
+		codesByName.put(Merchant.getCodeName().get(), Merchant);
+		codesByName.put(Acquirer.getCodeName().get(), Acquirer);
+		codesByName.put(IntermediaryAgent.getCodeName().get(), IntermediaryAgent);
+		codesByName.put(MasterTerminalManager.getCodeName().get(), MasterTerminalManager);
+		codesByName.put(TerminalManager.getCodeName().get(), TerminalManager);
+	}
+
+	public static PartyType6Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PartyType6Code[] values() {
+		PartyType6Code[] values = new PartyType6Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PartyType6Code> {
+		@Override
+		public PartyType6Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PartyType6Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -25,9 +25,8 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Account to or from which a securities entry is made.
@@ -38,6 +37,8 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -101,252 +102,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesAccount#mmAccountLink
  * SecuritiesAccount.mmAccountLink}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount1
- * SecuritiesAccount1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount4
- * SecuritiesAccount4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount13
- * SecuritiesAccount13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount17
- * SecuritiesAccount17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance2
- * AccountAndBalance2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance5
- * AccountAndBalance5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance10
- * AccountAndBalance10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance12
- * AccountAndBalance12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance17
- * AccountAndBalance17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance20
- * AccountAndBalance20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance3
- * AccountAndBalance3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance6
- * AccountAndBalance6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance11
- * AccountAndBalance11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance13
- * AccountAndBalance13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance16
- * AccountAndBalance16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance19
- * AccountAndBalance19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance22
- * AccountAndBalance22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance23
- * AccountAndBalance23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance1
- * AccountAndBalance1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance7
- * AccountAndBalance7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance9
- * AccountAndBalance9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance14
- * AccountAndBalance14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance15
- * AccountAndBalance15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance18
- * AccountAndBalance18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance21
- * AccountAndBalance21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance24
- * AccountAndBalance24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance4
- * AccountAndBalance4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance8
- * AccountAndBalance8}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PurposeCode1Choice
- * PurposeCode1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount11
- * SecuritiesAccount11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount2
- * SecuritiesAccount2}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PurposeCode2Choice
- * PurposeCode2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount14
- * SecuritiesAccount14}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PurposeCode3Choice
- * PurposeCode3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount15
- * SecuritiesAccount15}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PurposeCode4Choice
- * PurposeCode4Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount16
- * SecuritiesAccount16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount1
- * SafekeepingAccount1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount2
- * SafekeepingAccount2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification29
- * SubAccountIdentification29}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification31
- * SubAccountIdentification31}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification28
- * SubAccountIdentification28}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification32
- * SubAccountIdentification32}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification30
- * SubAccountIdentification30}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification33
- * SubAccountIdentification33}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount20
- * SecuritiesAccount20}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PurposeCode5Choice
- * PurposeCode5Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount3
- * SecuritiesAccount3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount3
- * SafekeepingAccount3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount4
- * SafekeepingAccount4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount7
- * SecuritiesAccount7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount9
- * SecuritiesAccount9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount12
- * SecuritiesAccount12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount8
- * SecuritiesAccount8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount10
- * SecuritiesAccount10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.IncludedAccount1
- * IncludedAccount1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount6
- * SecuritiesAccount6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount21
- * SecuritiesAccount21}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount19
- * SecuritiesAccount19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount18
- * SecuritiesAccount18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount5
- * SecuritiesAccount5}</li>
- * <li>{@linkplain com.tools20022.repository.choice.SecuritiesAccount1Choice
- * SecuritiesAccount1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification34
- * SubAccountIdentification34}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance26
- * AccountAndBalance26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance25
- * AccountAndBalance25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount22
- * SecuritiesAccount22}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance32
- * AccountAndBalance32}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance29
- * AccountAndBalance29}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification35
- * SubAccountIdentification35}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount5
- * SafekeepingAccount5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel1
- * AccountSubLevel1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel4
- * AccountSubLevel4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel5
- * AccountSubLevel5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel2
- * AccountSubLevel2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel3
- * AccountSubLevel3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel6
- * AccountSubLevel6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel7
- * AccountSubLevel7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel8
- * AccountSubLevel8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel9
- * AccountSubLevel9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification38
- * SubAccountIdentification38}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification37
- * SubAccountIdentification37}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount6
- * SafekeepingAccount6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification40
- * SubAccountIdentification40}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification39
- * SubAccountIdentification39}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount24
- * SecuritiesAccount24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification42
- * SubAccountIdentification42}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification44
- * SubAccountIdentification44}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification43
- * SubAccountIdentification43}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount26
- * SecuritiesAccount26}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount25
- * SecuritiesAccount25}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PurposeCode7Choice
- * PurposeCode7Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance34
- * AccountAndBalance34}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance35
- * AccountAndBalance35}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance36
- * AccountAndBalance36}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance33
- * AccountAndBalance33}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance40
- * AccountAndBalance40}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance38
- * AccountAndBalance38}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance37
- * AccountAndBalance37}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance39
- * AccountAndBalance39}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification47
- * SubAccountIdentification47}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount33
- * SecuritiesAccount33}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification45
- * SubAccountIdentification45}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification46
- * SubAccountIdentification46}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount27
- * SecuritiesAccount27}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PurposeCode8Choice
- * PurposeCode8Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount30
- * SecuritiesAccount30}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount34
- * SecuritiesAccount34}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount7
- * SafekeepingAccount7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel15
- * AccountSubLevel15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel16
- * AccountSubLevel16}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel18
- * AccountSubLevel18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel19
- * AccountSubLevel19}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel11
- * AccountSubLevel11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel12
- * AccountSubLevel12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel17
- * AccountSubLevel17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel13
- * AccountSubLevel13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel14
- * AccountSubLevel14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification49
- * SubAccountIdentification49}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification50
- * SubAccountIdentification50}</li>
  * </ul>
  * </li>
  * <li>
@@ -1227,10 +982,254 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount1
+ * SecuritiesAccount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount4
+ * SecuritiesAccount4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount13
+ * SecuritiesAccount13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount17
+ * SecuritiesAccount17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance2
+ * AccountAndBalance2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance5
+ * AccountAndBalance5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance10
+ * AccountAndBalance10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance12
+ * AccountAndBalance12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance17
+ * AccountAndBalance17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance20
+ * AccountAndBalance20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance3
+ * AccountAndBalance3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance6
+ * AccountAndBalance6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance11
+ * AccountAndBalance11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance13
+ * AccountAndBalance13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance16
+ * AccountAndBalance16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance19
+ * AccountAndBalance19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance22
+ * AccountAndBalance22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance23
+ * AccountAndBalance23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance1
+ * AccountAndBalance1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance7
+ * AccountAndBalance7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance9
+ * AccountAndBalance9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance14
+ * AccountAndBalance14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance15
+ * AccountAndBalance15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance18
+ * AccountAndBalance18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance21
+ * AccountAndBalance21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance24
+ * AccountAndBalance24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance4
+ * AccountAndBalance4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance8
+ * AccountAndBalance8}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PurposeCode1Choice
+ * PurposeCode1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount11
+ * SecuritiesAccount11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount2
+ * SecuritiesAccount2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PurposeCode2Choice
+ * PurposeCode2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount14
+ * SecuritiesAccount14}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PurposeCode3Choice
+ * PurposeCode3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount15
+ * SecuritiesAccount15}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PurposeCode4Choice
+ * PurposeCode4Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount16
+ * SecuritiesAccount16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount1
+ * SafekeepingAccount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount2
+ * SafekeepingAccount2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification29
+ * SubAccountIdentification29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification31
+ * SubAccountIdentification31}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification28
+ * SubAccountIdentification28}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification32
+ * SubAccountIdentification32}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification30
+ * SubAccountIdentification30}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification33
+ * SubAccountIdentification33}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount20
+ * SecuritiesAccount20}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PurposeCode5Choice
+ * PurposeCode5Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount3
+ * SecuritiesAccount3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount3
+ * SafekeepingAccount3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount4
+ * SafekeepingAccount4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount7
+ * SecuritiesAccount7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount9
+ * SecuritiesAccount9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount12
+ * SecuritiesAccount12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount8
+ * SecuritiesAccount8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount10
+ * SecuritiesAccount10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IncludedAccount1
+ * IncludedAccount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount6
+ * SecuritiesAccount6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount21
+ * SecuritiesAccount21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount19
+ * SecuritiesAccount19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount18
+ * SecuritiesAccount18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount5
+ * SecuritiesAccount5}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.SecuritiesAccount1Choice
+ * SecuritiesAccount1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification34
+ * SubAccountIdentification34}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance26
+ * AccountAndBalance26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance25
+ * AccountAndBalance25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount22
+ * SecuritiesAccount22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance32
+ * AccountAndBalance32}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance29
+ * AccountAndBalance29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification35
+ * SubAccountIdentification35}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount5
+ * SafekeepingAccount5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel1
+ * AccountSubLevel1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel4
+ * AccountSubLevel4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel5
+ * AccountSubLevel5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel2
+ * AccountSubLevel2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel3
+ * AccountSubLevel3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel6
+ * AccountSubLevel6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel7
+ * AccountSubLevel7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel8
+ * AccountSubLevel8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel9
+ * AccountSubLevel9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification38
+ * SubAccountIdentification38}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification37
+ * SubAccountIdentification37}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount6
+ * SafekeepingAccount6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification40
+ * SubAccountIdentification40}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification39
+ * SubAccountIdentification39}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount24
+ * SecuritiesAccount24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification42
+ * SubAccountIdentification42}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification44
+ * SubAccountIdentification44}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification43
+ * SubAccountIdentification43}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount26
+ * SecuritiesAccount26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount25
+ * SecuritiesAccount25}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PurposeCode7Choice
+ * PurposeCode7Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance34
+ * AccountAndBalance34}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance35
+ * AccountAndBalance35}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance36
+ * AccountAndBalance36}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance33
+ * AccountAndBalance33}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance40
+ * AccountAndBalance40}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance38
+ * AccountAndBalance38}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance37
+ * AccountAndBalance37}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountAndBalance39
+ * AccountAndBalance39}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification47
+ * SubAccountIdentification47}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount33
+ * SecuritiesAccount33}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification45
+ * SubAccountIdentification45}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification46
+ * SubAccountIdentification46}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount27
+ * SecuritiesAccount27}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PurposeCode8Choice
+ * PurposeCode8Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount30
+ * SecuritiesAccount30}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount34
+ * SecuritiesAccount34}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount7
+ * SafekeepingAccount7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel15
+ * AccountSubLevel15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel16
+ * AccountSubLevel16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel18
+ * AccountSubLevel18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel19
+ * AccountSubLevel19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel11
+ * AccountSubLevel11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel12
+ * AccountSubLevel12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel17
+ * AccountSubLevel17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel13
+ * AccountSubLevel13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel14
+ * AccountSubLevel14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification49
+ * SubAccountIdentification49}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification50
+ * SubAccountIdentification50}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -1246,8 +1245,8 @@ public class SecuritiesAccount extends Account {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected SecuritiesAccountPurposeTypeCode securitiesAccountType;
 	/**
-	 * Specifies the type of securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1366,8 +1365,8 @@ public class SecuritiesAccount extends Account {
 					PurposeCode4Choice.mmCode, PurposeCode4Choice.mmProprietary, SecuritiesAccount16.mmType, SecuritiesAccount20.mmType, PurposeCode5Choice.mmCode, PurposeCode5Choice.mmProprietary, SecuritiesAccount3.mmType,
 					SecuritiesAccount19.mmType, SecuritiesAccount18.mmType, SecuritiesAccount22.mmType, SecuritiesAccount24.mmType, SecuritiesAccount26.mmType, SecuritiesAccount25.mmType, PurposeCode7Choice.mmCode,
 					PurposeCode7Choice.mmProprietary, SecuritiesAccount33.mmType, SecuritiesAccount27.mmType, PurposeCode8Choice.mmCode, PurposeCode8Choice.mmProprietary, SecuritiesAccount30.mmType, SecuritiesAccount34.mmType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesAccountType";
 			definition = "Specifies the type of securities account.";
@@ -1386,9 +1385,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected InvestmentAccount relatedInvestmentAccount;
 	/**
-	 * Investment account which contains a securities account to make securities
-	 * movements.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1423,8 +1421,8 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedInvestmentAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedInvestmentAccount";
 			definition = "Investment account which contains a securities account to make securities movements.";
@@ -1437,9 +1435,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesTransfer> relatedTransfer;
 	/**
-	 * Specifies the process which moves securities out of an account to another
-	 * one.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1474,8 +1471,8 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedTransfer = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedTransfer";
 			definition = "Specifies the process which moves securities out of an account to another one.";
@@ -1487,8 +1484,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected SecuritiesPartyRole securitiesPartyRole;
 	/**
-	 * Specifies the role which uses a securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1521,8 +1518,8 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesPartyRole";
 			definition = "Specifies the role which uses a securities account.";
@@ -1535,8 +1532,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected List<com.tools20022.repository.entity.Security> security;
 	/**
-	 * Security which is held on the securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1620,8 +1617,8 @@ public class SecuritiesAccount extends Account {
 					SubAccountIdentification30.mmFinancialInstrumentDetails, SubAccountIdentification33.mmFinancialInstrumentDetails, SubAccountIdentification34.mmFinancialInstrumentDetails,
 					SubAccountIdentification35.mmFinancialInstrumentDetails, SubAccountIdentification44.mmFinancialInstrumentDetails, SubAccountIdentification47.mmFinancialInstrumentDetails,
 					SubAccountIdentification49.mmFinancialInstrumentDetails, SubAccountIdentification50.mmFinancialInstrumentDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Security";
 			definition = "Security which is held on the securities account.";
@@ -1633,8 +1630,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected RegistrarRole relatedRegistrar;
 	/**
-	 * Specifies where the financial instruments are registered.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1668,8 +1665,8 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedRegistrar = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedRegistrar";
 			definition = "Specifies where the financial instruments are registered.";
@@ -1682,8 +1679,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected List<com.tools20022.repository.entity.SafekeepingPlace> safekeepingPlace;
 	/**
-	 * Location where the financial instruments are safekept.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1814,8 +1811,8 @@ public class SecuritiesAccount extends Account {
 					AccountIdentification13.mmSafekeepingPlace, AccountIdentification18.mmSafekeepingPlace, AccountIdentification20.mmSafekeepingPlace, AccountIdentification11.mmSafekeepingPlace, TradeLeg8.mmSafekeepingPlace,
 					SettlementObligation7.mmSafekeepingPlace, TradeLeg10.mmSafekeepingPlace, TradeLeg9.mmSafekeepingPlace, SettlementObligation8.mmSafekeepingPlace, AccountIdentification31.mmSafekeepingPlace,
 					AccountIdentification32.mmSafekeepingPlace, AccountIdentification34.mmSafekeepingPlace, AccountIdentification37.mmSafekeepingPlace, AccountIdentification39.mmSafekeepingPlace, AccountIdentification42.mmSafekeepingPlace);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Location where the financial instruments are safekept.";
@@ -1827,9 +1824,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesBalance> securitiesBalance;
 	/**
-	 * Value of financial assets held by a person or an organisation. It is
-	 * derived from the association between Account and Balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2057,8 +2053,8 @@ public class SecuritiesAccount extends Account {
 					SubAccountIdentification42.mmBalanceForSubAccount, SubAccountIdentification43.mmBalanceForSubAccount, AccountAndBalance34.mmBalance, AccountAndBalance35.mmBalance, AccountAndBalance36.mmConfirmedBalance,
 					AccountAndBalance33.mmBalance, AccountIdentification32.mmConfirmedBalance, AccountAndBalance40.mmConfirmedBalance, AccountAndBalance38.mmBalance, AccountAndBalance37.mmBalance,
 					AccountIdentification37.mmConfirmedBalance, AccountAndBalance39.mmBalance, SubAccountIdentification45.mmBalanceForSubAccount, SubAccountIdentification46.mmBalanceForSubAccount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesBalance";
 			definition = "Value of financial assets held by a person or an organisation. It is derived from the association between Account and Balance.";
@@ -2070,9 +2066,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected List<com.tools20022.repository.entity.CorporateActionServicing> corporateActionServicing;
 	/**
-	 * Actions taken in relation with the securities account in the context of
-	 * the corporate action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2108,8 +2103,8 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionServicing = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionServicing";
 			definition = "Actions taken in relation with the securities account in the context of the corporate action.";
@@ -2121,8 +2116,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected Allocation relatedAllocation;
 	/**
-	 * Allocation process for which an account is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2155,8 +2150,8 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedAllocation = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedAllocation";
 			definition = "Allocation process for which an account is specified.";
@@ -2169,8 +2164,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesEntry> securitiesEntry;
 	/**
-	 * Record of the movements into or out of an account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2203,8 +2198,8 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesEntry = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesEntry";
 			definition = "Record of the movements into or out of an account.";
@@ -2216,8 +2211,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected ClearingMemberRole clearingAccountOwner;
 	/**
-	 * Clearing member which holds a clearing account at a CCP.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2250,8 +2245,8 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmClearingAccountOwner = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingAccountOwner";
 			definition = "Clearing member which holds a clearing account at a CCP.";
@@ -2264,8 +2259,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected ClearingMemberRole marginAccountOwner;
 	/**
-	 * Clearing member which holds a margin account at a CCP.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2298,8 +2293,8 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmMarginAccountOwner = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarginAccountOwner";
 			definition = "Clearing member which holds a margin account at a CCP.";
@@ -2312,8 +2307,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected ClearingMemberRole deliveryAccountOwner;
 	/**
-	 * Clearing member which holds a delivery account at a CCP.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2346,8 +2341,8 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmDeliveryAccountOwner = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeliveryAccountOwner";
 			definition = "Clearing member which holds a delivery account at a CCP.";
@@ -2360,8 +2355,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected PowerOfAttorney relatedPowerOfAttorney;
 	/**
-	 * Power of attorney related to the securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2394,8 +2389,8 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedPowerOfAttorney = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedPowerOfAttorney";
 			definition = "Power of attorney related to the securities account.";
@@ -2408,8 +2403,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected InstructionForMeeting relatedMeetingInstruction;
 	/**
-	 * Meeting instruction which specifies an account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2443,8 +2438,8 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedMeetingInstruction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedMeetingInstruction";
 			definition = "Meeting instruction which specifies an account.";
@@ -2457,8 +2452,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected ClearingAccountTypeCode clearingAccountType;
 	/**
-	 * Specifies the clearing account type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2496,8 +2491,8 @@ public class SecuritiesAccount extends Account {
 	public static final MMBusinessAttribute mmClearingAccountType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SettlementObligation4.mmClearingAccountType, SettlementObligation8.mmClearingAccountType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingAccountType";
 			definition = "Specifies the clearing account type.";
@@ -2516,8 +2511,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected SecuritiesOrder relatedOrder;
 	/**
-	 * Order process for which an ordering account is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2551,8 +2546,8 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOrder";
 			definition = "Order process for which an ordering account is specified.";
@@ -2565,8 +2560,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected DisclosedListTrading disclosedListTrading;
 	/**
-	 * Disclosed list trading process for which a trading account is specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2602,8 +2597,8 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmDisclosedListTrading = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisclosedListTrading";
 			definition = "Disclosed list trading process for which a trading account is specified.";
@@ -2616,8 +2611,8 @@ public class SecuritiesAccount extends Account {
 	};
 	protected AccountLink accountLink;
 	/**
-	 * Defines the link between a cash account and a securities account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2651,8 +2646,8 @@ public class SecuritiesAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmAccountLink = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountLink";
 			definition = "Defines the link between a cash account and a securities account.";
@@ -2667,7 +2662,7 @@ public class SecuritiesAccount extends Account {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesAccount";
 				definition = "Account to or from which a securities entry is made.";
@@ -2789,159 +2784,179 @@ public class SecuritiesAccount extends Account {
 		return securitiesAccountType;
 	}
 
-	public void setSecuritiesAccountType(SecuritiesAccountPurposeTypeCode securitiesAccountType) {
-		this.securitiesAccountType = securitiesAccountType;
+	public SecuritiesAccount setSecuritiesAccountType(SecuritiesAccountPurposeTypeCode securitiesAccountType) {
+		this.securitiesAccountType = Objects.requireNonNull(securitiesAccountType);
+		return this;
 	}
 
 	public InvestmentAccount getRelatedInvestmentAccount() {
 		return relatedInvestmentAccount;
 	}
 
-	public void setRelatedInvestmentAccount(com.tools20022.repository.entity.InvestmentAccount relatedInvestmentAccount) {
-		this.relatedInvestmentAccount = relatedInvestmentAccount;
+	public SecuritiesAccount setRelatedInvestmentAccount(com.tools20022.repository.entity.InvestmentAccount relatedInvestmentAccount) {
+		this.relatedInvestmentAccount = Objects.requireNonNull(relatedInvestmentAccount);
+		return this;
 	}
 
 	public List<SecuritiesTransfer> getRelatedTransfer() {
-		return relatedTransfer;
+		return relatedTransfer == null ? relatedTransfer = new ArrayList<>() : relatedTransfer;
 	}
 
-	public void setRelatedTransfer(List<com.tools20022.repository.entity.SecuritiesTransfer> relatedTransfer) {
-		this.relatedTransfer = relatedTransfer;
+	public SecuritiesAccount setRelatedTransfer(List<com.tools20022.repository.entity.SecuritiesTransfer> relatedTransfer) {
+		this.relatedTransfer = Objects.requireNonNull(relatedTransfer);
+		return this;
 	}
 
 	public SecuritiesPartyRole getSecuritiesPartyRole() {
 		return securitiesPartyRole;
 	}
 
-	public void setSecuritiesPartyRole(com.tools20022.repository.entity.SecuritiesPartyRole securitiesPartyRole) {
-		this.securitiesPartyRole = securitiesPartyRole;
+	public SecuritiesAccount setSecuritiesPartyRole(com.tools20022.repository.entity.SecuritiesPartyRole securitiesPartyRole) {
+		this.securitiesPartyRole = Objects.requireNonNull(securitiesPartyRole);
+		return this;
 	}
 
 	public List<Security> getSecurity() {
-		return security;
+		return security == null ? security = new ArrayList<>() : security;
 	}
 
-	public void setSecurity(List<com.tools20022.repository.entity.Security> security) {
-		this.security = security;
+	public SecuritiesAccount setSecurity(List<com.tools20022.repository.entity.Security> security) {
+		this.security = Objects.requireNonNull(security);
+		return this;
 	}
 
-	public RegistrarRole getRelatedRegistrar() {
-		return relatedRegistrar;
+	public Optional<RegistrarRole> getRelatedRegistrar() {
+		return relatedRegistrar == null ? Optional.empty() : Optional.of(relatedRegistrar);
 	}
 
-	public void setRelatedRegistrar(com.tools20022.repository.entity.RegistrarRole relatedRegistrar) {
+	public SecuritiesAccount setRelatedRegistrar(com.tools20022.repository.entity.RegistrarRole relatedRegistrar) {
 		this.relatedRegistrar = relatedRegistrar;
+		return this;
 	}
 
 	public List<SafekeepingPlace> getSafekeepingPlace() {
-		return safekeepingPlace;
+		return safekeepingPlace == null ? safekeepingPlace = new ArrayList<>() : safekeepingPlace;
 	}
 
-	public void setSafekeepingPlace(List<com.tools20022.repository.entity.SafekeepingPlace> safekeepingPlace) {
-		this.safekeepingPlace = safekeepingPlace;
+	public SecuritiesAccount setSafekeepingPlace(List<com.tools20022.repository.entity.SafekeepingPlace> safekeepingPlace) {
+		this.safekeepingPlace = Objects.requireNonNull(safekeepingPlace);
+		return this;
 	}
 
 	public List<SecuritiesBalance> getSecuritiesBalance() {
-		return securitiesBalance;
+		return securitiesBalance == null ? securitiesBalance = new ArrayList<>() : securitiesBalance;
 	}
 
-	public void setSecuritiesBalance(List<com.tools20022.repository.entity.SecuritiesBalance> securitiesBalance) {
-		this.securitiesBalance = securitiesBalance;
+	public SecuritiesAccount setSecuritiesBalance(List<com.tools20022.repository.entity.SecuritiesBalance> securitiesBalance) {
+		this.securitiesBalance = Objects.requireNonNull(securitiesBalance);
+		return this;
 	}
 
 	public List<CorporateActionServicing> getCorporateActionServicing() {
-		return corporateActionServicing;
+		return corporateActionServicing == null ? corporateActionServicing = new ArrayList<>() : corporateActionServicing;
 	}
 
-	public void setCorporateActionServicing(List<com.tools20022.repository.entity.CorporateActionServicing> corporateActionServicing) {
-		this.corporateActionServicing = corporateActionServicing;
+	public SecuritiesAccount setCorporateActionServicing(List<com.tools20022.repository.entity.CorporateActionServicing> corporateActionServicing) {
+		this.corporateActionServicing = Objects.requireNonNull(corporateActionServicing);
+		return this;
 	}
 
-	public Allocation getRelatedAllocation() {
-		return relatedAllocation;
+	public Optional<Allocation> getRelatedAllocation() {
+		return relatedAllocation == null ? Optional.empty() : Optional.of(relatedAllocation);
 	}
 
-	public void setRelatedAllocation(com.tools20022.repository.entity.Allocation relatedAllocation) {
+	public SecuritiesAccount setRelatedAllocation(com.tools20022.repository.entity.Allocation relatedAllocation) {
 		this.relatedAllocation = relatedAllocation;
+		return this;
 	}
 
 	public List<SecuritiesEntry> getSecuritiesEntry() {
-		return securitiesEntry;
+		return securitiesEntry == null ? securitiesEntry = new ArrayList<>() : securitiesEntry;
 	}
 
-	public void setSecuritiesEntry(List<com.tools20022.repository.entity.SecuritiesEntry> securitiesEntry) {
-		this.securitiesEntry = securitiesEntry;
+	public SecuritiesAccount setSecuritiesEntry(List<com.tools20022.repository.entity.SecuritiesEntry> securitiesEntry) {
+		this.securitiesEntry = Objects.requireNonNull(securitiesEntry);
+		return this;
 	}
 
-	public ClearingMemberRole getClearingAccountOwner() {
-		return clearingAccountOwner;
+	public Optional<ClearingMemberRole> getClearingAccountOwner() {
+		return clearingAccountOwner == null ? Optional.empty() : Optional.of(clearingAccountOwner);
 	}
 
-	public void setClearingAccountOwner(com.tools20022.repository.entity.ClearingMemberRole clearingAccountOwner) {
+	public SecuritiesAccount setClearingAccountOwner(com.tools20022.repository.entity.ClearingMemberRole clearingAccountOwner) {
 		this.clearingAccountOwner = clearingAccountOwner;
+		return this;
 	}
 
-	public ClearingMemberRole getMarginAccountOwner() {
-		return marginAccountOwner;
+	public Optional<ClearingMemberRole> getMarginAccountOwner() {
+		return marginAccountOwner == null ? Optional.empty() : Optional.of(marginAccountOwner);
 	}
 
-	public void setMarginAccountOwner(com.tools20022.repository.entity.ClearingMemberRole marginAccountOwner) {
+	public SecuritiesAccount setMarginAccountOwner(com.tools20022.repository.entity.ClearingMemberRole marginAccountOwner) {
 		this.marginAccountOwner = marginAccountOwner;
+		return this;
 	}
 
-	public ClearingMemberRole getDeliveryAccountOwner() {
-		return deliveryAccountOwner;
+	public Optional<ClearingMemberRole> getDeliveryAccountOwner() {
+		return deliveryAccountOwner == null ? Optional.empty() : Optional.of(deliveryAccountOwner);
 	}
 
-	public void setDeliveryAccountOwner(com.tools20022.repository.entity.ClearingMemberRole deliveryAccountOwner) {
+	public SecuritiesAccount setDeliveryAccountOwner(com.tools20022.repository.entity.ClearingMemberRole deliveryAccountOwner) {
 		this.deliveryAccountOwner = deliveryAccountOwner;
+		return this;
 	}
 
-	public PowerOfAttorney getRelatedPowerOfAttorney() {
-		return relatedPowerOfAttorney;
+	public Optional<PowerOfAttorney> getRelatedPowerOfAttorney() {
+		return relatedPowerOfAttorney == null ? Optional.empty() : Optional.of(relatedPowerOfAttorney);
 	}
 
-	public void setRelatedPowerOfAttorney(com.tools20022.repository.entity.PowerOfAttorney relatedPowerOfAttorney) {
+	public SecuritiesAccount setRelatedPowerOfAttorney(com.tools20022.repository.entity.PowerOfAttorney relatedPowerOfAttorney) {
 		this.relatedPowerOfAttorney = relatedPowerOfAttorney;
+		return this;
 	}
 
-	public InstructionForMeeting getRelatedMeetingInstruction() {
-		return relatedMeetingInstruction;
+	public Optional<InstructionForMeeting> getRelatedMeetingInstruction() {
+		return relatedMeetingInstruction == null ? Optional.empty() : Optional.of(relatedMeetingInstruction);
 	}
 
-	public void setRelatedMeetingInstruction(com.tools20022.repository.entity.InstructionForMeeting relatedMeetingInstruction) {
+	public SecuritiesAccount setRelatedMeetingInstruction(com.tools20022.repository.entity.InstructionForMeeting relatedMeetingInstruction) {
 		this.relatedMeetingInstruction = relatedMeetingInstruction;
+		return this;
 	}
 
 	public ClearingAccountTypeCode getClearingAccountType() {
 		return clearingAccountType;
 	}
 
-	public void setClearingAccountType(ClearingAccountTypeCode clearingAccountType) {
-		this.clearingAccountType = clearingAccountType;
+	public SecuritiesAccount setClearingAccountType(ClearingAccountTypeCode clearingAccountType) {
+		this.clearingAccountType = Objects.requireNonNull(clearingAccountType);
+		return this;
 	}
 
-	public SecuritiesOrder getRelatedOrder() {
-		return relatedOrder;
+	public Optional<SecuritiesOrder> getRelatedOrder() {
+		return relatedOrder == null ? Optional.empty() : Optional.of(relatedOrder);
 	}
 
-	public void setRelatedOrder(com.tools20022.repository.entity.SecuritiesOrder relatedOrder) {
+	public SecuritiesAccount setRelatedOrder(com.tools20022.repository.entity.SecuritiesOrder relatedOrder) {
 		this.relatedOrder = relatedOrder;
+		return this;
 	}
 
-	public DisclosedListTrading getDisclosedListTrading() {
-		return disclosedListTrading;
+	public Optional<DisclosedListTrading> getDisclosedListTrading() {
+		return disclosedListTrading == null ? Optional.empty() : Optional.of(disclosedListTrading);
 	}
 
-	public void setDisclosedListTrading(com.tools20022.repository.entity.DisclosedListTrading disclosedListTrading) {
+	public SecuritiesAccount setDisclosedListTrading(com.tools20022.repository.entity.DisclosedListTrading disclosedListTrading) {
 		this.disclosedListTrading = disclosedListTrading;
+		return this;
 	}
 
 	public AccountLink getAccountLink() {
 		return accountLink;
 	}
 
-	public void setAccountLink(com.tools20022.repository.entity.AccountLink accountLink) {
-		this.accountLink = accountLink;
+	public SecuritiesAccount setAccountLink(com.tools20022.repository.entity.AccountLink accountLink) {
+		this.accountLink = Objects.requireNonNull(accountLink);
+		return this;
 	}
 }

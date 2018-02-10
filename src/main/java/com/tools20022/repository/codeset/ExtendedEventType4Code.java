@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ExtendedEventTypeV2Code;
+import com.tools20022.repository.codeset.ExtendedEventType4Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies DTCC (The Depository Trust and Clearing Corporation) defined
@@ -31,27 +35,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventTypeV2Code
- * ExtendedEventTypeV2Code}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType4Code#mmTermination
- * ExtendedEventType4Code.mmTermination}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType4Code#Termination
+ * ExtendedEventType4Code.Termination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType4Code#mmFinalPaydown
- * ExtendedEventType4Code.mmFinalPaydown}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType4Code#FinalPaydown
+ * ExtendedEventType4Code.FinalPaydown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ExtendedEventType4Code#mmCertificateOfDepositEarlyRedemption
- * ExtendedEventType4Code.mmCertificateOfDepositEarlyRedemption}</li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventType4Code#CertificateOfDepositEarlyRedemption
+ * ExtendedEventType4Code.CertificateOfDepositEarlyRedemption}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventTypeV2Code
+ * ExtendedEventTypeV2Code}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ExtendedEventType3Code}</li>
  * </ul>
  */
-public class ExtendedEventType4Code extends ExtendedEventTypeV2Code {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ExtendedEventType4Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,16 +93,17 @@ public class ExtendedEventType4Code extends ExtendedEventTypeV2Code {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.ExtendedEventType3Code#mmTermination
-	 * ExtendedEventType3Code.mmTermination}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ExtendedEventType3Code#Termination
+	 * ExtendedEventType3Code.Termination}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTermination = new MMCode() {
+	public static final ExtendedEventType4Code Termination = new ExtendedEventType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Termination";
-			previousVersion_lazy = () -> ExtendedEventType3Code.mmTermination;
-			owner_lazy = () -> ExtendedEventType4Code.mmObject();
+			previousVersion_lazy = () -> ExtendedEventType3Code.Termination;
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType4Code.mmObject();
+			codeName = ExtendedEventTypeV2Code.Termination.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -116,11 +122,12 @@ public class ExtendedEventType4Code extends ExtendedEventTypeV2Code {
 	 * name} = "FinalPaydown"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFinalPaydown = new MMCode() {
+	public static final ExtendedEventType4Code FinalPaydown = new ExtendedEventType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalPaydown";
-			owner_lazy = () -> ExtendedEventType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType4Code.mmObject();
+			codeName = ExtendedEventTypeV2Code.FinalPaydown.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -139,26 +146,59 @@ public class ExtendedEventType4Code extends ExtendedEventTypeV2Code {
 	 * name} = "CertificateOfDepositEarlyRedemption"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCertificateOfDepositEarlyRedemption = new MMCode() {
+	public static final ExtendedEventType4Code CertificateOfDepositEarlyRedemption = new ExtendedEventType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateOfDepositEarlyRedemption";
-			owner_lazy = () -> ExtendedEventType4Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType4Code.mmObject();
+			codeName = ExtendedEventTypeV2Code.CertificateOfDepositEarlyRedemption.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ExtendedEventType4Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ExtendedEventType4Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExtendedEventType4Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type.";
 				previousVersion_lazy = () -> ExtendedEventType3Code.mmObject();
-				code_lazy = () -> Arrays.asList(ExtendedEventType4Code.mmTermination, ExtendedEventType4Code.mmFinalPaydown, ExtendedEventType4Code.mmCertificateOfDepositEarlyRedemption);
 				trace_lazy = () -> ExtendedEventTypeV2Code.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExtendedEventType4Code.Termination, com.tools20022.repository.codeset.ExtendedEventType4Code.FinalPaydown,
+						com.tools20022.repository.codeset.ExtendedEventType4Code.CertificateOfDepositEarlyRedemption);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Termination.getCodeName().get(), Termination);
+		codesByName.put(FinalPaydown.getCodeName().get(), FinalPaydown);
+		codesByName.put(CertificateOfDepositEarlyRedemption.getCodeName().get(), CertificateOfDepositEarlyRedemption);
+	}
+
+	public static ExtendedEventType4Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ExtendedEventType4Code[] values() {
+		ExtendedEventType4Code[] values = new ExtendedEventType4Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ExtendedEventType4Code> {
+		@Override
+		public ExtendedEventType4Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ExtendedEventType4Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

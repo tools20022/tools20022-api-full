@@ -27,9 +27,11 @@ import com.tools20022.repository.entity.PersonIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.NonFinancialInstitutionIdentification1;
 import com.tools20022.repository.msg.PersonIdentification2;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -60,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Party1Choice", propOrder = {"organisationIdentification", "privateIdentification"})
 public class Party1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgId", required = true)
 	protected NonFinancialInstitutionIdentification1 organisationIdentification;
 	/**
-	 * Unique and unambiguous way of identifying an organisation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +119,7 @@ public class Party1Choice {
 	public static final MMMessageAttribute mmOrganisationIdentification = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> OrganisationIdentification.mmObject();
-			componentContext_lazy = () -> Party1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Party1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "OrgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +130,11 @@ public class Party1Choice {
 			complexType_lazy = () -> NonFinancialInstitutionIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "PrvtId", required = true)
 	protected List<PersonIdentification2> privateIdentification;
 	/**
-	 * Unique and unambiguous identification of a person, eg, passport.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -162,7 +166,7 @@ public class Party1Choice {
 	public static final MMMessageAssociationEnd mmPrivateIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> PersonIdentification.mmObject();
-			componentContext_lazy = () -> Party1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Party1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrvtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -178,9 +182,9 @@ public class Party1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Party1Choice.mmOrganisationIdentification, Party1Choice.mmPrivateIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Party1Choice.mmOrganisationIdentification, com.tools20022.repository.choice.Party1Choice.mmPrivateIdentification);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Party1Choice";
 				definition = "Choice between the identification of a person and the identification of a non-financial institution.";
@@ -189,21 +193,21 @@ public class Party1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgId", required = true)
 	public NonFinancialInstitutionIdentification1 getOrganisationIdentification() {
 		return organisationIdentification;
 	}
 
-	public void setOrganisationIdentification(NonFinancialInstitutionIdentification1 organisationIdentification) {
-		this.organisationIdentification = organisationIdentification;
+	public Party1Choice setOrganisationIdentification(NonFinancialInstitutionIdentification1 organisationIdentification) {
+		this.organisationIdentification = Objects.requireNonNull(organisationIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "PrvtId", required = true)
 	public List<PersonIdentification2> getPrivateIdentification() {
-		return privateIdentification;
+		return privateIdentification == null ? privateIdentification = new ArrayList<>() : privateIdentification;
 	}
 
-	public void setPrivateIdentification(List<PersonIdentification2> privateIdentification) {
-		this.privateIdentification = privateIdentification;
+	public Party1Choice setPrivateIdentification(List<PersonIdentification2> privateIdentification) {
+		this.privateIdentification = Objects.requireNonNull(privateIdentification);
+		return this;
 	}
 }

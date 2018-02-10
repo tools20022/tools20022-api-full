@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.MergerCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Classification of the regulatory condition of a merger for the TSE/JASDEC
@@ -33,18 +38,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MergerCode#mmMergerClassificationIsUnknown
- * MergerCode.mmMergerClassificationIsUnknown}</li>
+ * {@linkplain com.tools20022.repository.codeset.MergerCode#MergerClassificationIsUnknown
+ * MergerCode.MergerClassificationIsUnknown}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MergerCode#mmNoGeneralShareholdersMeeting
- * MergerCode.mmNoGeneralShareholdersMeeting}</li>
+ * {@linkplain com.tools20022.repository.codeset.MergerCode#NoGeneralShareholdersMeeting
+ * MergerCode.NoGeneralShareholdersMeeting}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class MergerCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MergerCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -80,12 +86,12 @@ public class MergerCode {
 	 * definition} = "The merger regulatory condition is unknown."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMergerClassificationIsUnknown = new MMCode() {
+	public static final MergerCode MergerClassificationIsUnknown = new MergerCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MergerClassificationIsUnknown";
 			definition = "The merger regulatory condition is unknown.";
-			owner_lazy = () -> MergerCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MergerCode.mmObject();
 			codeName = "UKWN";
 		}
 	};
@@ -112,26 +118,57 @@ public class MergerCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmNoGeneralShareholdersMeeting = new MMCode() {
+	public static final MergerCode NoGeneralShareholdersMeeting = new MergerCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoGeneralShareholdersMeeting";
 			definition = "The merger regulatory condition is: no general shareholders meeting at discontinued company or subsidiary to be acquired.";
-			owner_lazy = () -> MergerCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MergerCode.mmObject();
 			codeName = "OMIT";
 		}
 	};
+	final static private LinkedHashMap<String, MergerCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MergerCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MergerCode";
 				definition = "Classification of the regulatory condition of a merger for the TSE/JASDEC extension.";
-				code_lazy = () -> Arrays.asList(MergerCode.mmMergerClassificationIsUnknown, MergerCode.mmNoGeneralShareholdersMeeting);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MergerCode.MergerClassificationIsUnknown, com.tools20022.repository.codeset.MergerCode.NoGeneralShareholdersMeeting);
+				length = 4;
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(MergerClassificationIsUnknown.getCodeName().get(), MergerClassificationIsUnknown);
+		codesByName.put(NoGeneralShareholdersMeeting.getCodeName().get(), NoGeneralShareholdersMeeting);
+	}
+
+	public static MergerCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MergerCode[] values() {
+		MergerCode[] values = new MergerCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MergerCode> {
+		@Override
+		public MergerCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MergerCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

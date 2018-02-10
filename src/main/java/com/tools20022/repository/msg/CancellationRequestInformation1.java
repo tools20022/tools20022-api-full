@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -86,8 +88,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -100,17 +102,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CancellationRequestInformation1", propOrder = {"originalGroupIdentification", "originalCreationDateTime", "numberOfInvoiceRequests", "totalBulkInvoiceAmount", "cancellationReason", "financingRequestor",
 		"intermediaryAgent", "firstAgent"})
 public class CancellationRequestInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgnlGrpId", required = true)
 	protected Max35Text originalGroupIdentification;
 	/**
-	 * Unique and unambiguous identifier of the original financing request
-	 * message as assigned by the original sending party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +141,7 @@ public class CancellationRequestInformation1 {
 	 */
 	public static final MMMessageAttribute mmOriginalGroupIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CancellationRequestInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlGrpId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -150,11 +152,11 @@ public class CancellationRequestInformation1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlCreDtTm", required = true)
 	protected ISODateTime originalCreationDateTime;
 	/**
-	 * Date and time at which the original financing request message was
-	 * created.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -183,7 +185,7 @@ public class CancellationRequestInformation1 {
 	 */
 	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CancellationRequestInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlCreDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -194,11 +196,11 @@ public class CancellationRequestInformation1 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "NbOfInvcReqs")
 	protected Max15NumericText numberOfInvoiceRequests;
 	/**
-	 * Specifies the number of single invoice financing requests included in the
-	 * original financing request message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -228,7 +230,7 @@ public class CancellationRequestInformation1 {
 	 */
 	public static final MMMessageAttribute mmNumberOfInvoiceRequests = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CancellationRequestInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfInvcReqs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -239,12 +241,11 @@ public class CancellationRequestInformation1 {
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlBlkInvcAmt")
 	protected ActiveCurrencyAndAmount totalBulkInvoiceAmount;
 	/**
-	 * Total amount of the bulk invoice financing request. It is composed by the
-	 * sum of the total amounts of all invoices included in the original
-	 * financing request message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -274,7 +275,7 @@ public class CancellationRequestInformation1 {
 	 */
 	public static final MMMessageAttribute mmTotalBulkInvoiceAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CancellationRequestInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlBlkInvcAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -285,11 +286,11 @@ public class CancellationRequestInformation1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "CxlRsn", required = true)
 	protected Max105Text cancellationReason;
 	/**
-	 * Further details on the cancellation request information, in an uncoded
-	 * form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -324,7 +325,7 @@ public class CancellationRequestInformation1 {
 	public static final MMMessageAttribute mmCancellationReason = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingStatus.mmCancellationRequestReason;
-			componentContext_lazy = () -> CancellationRequestInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CxlRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -335,11 +336,11 @@ public class CancellationRequestInformation1 {
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FincgRqstr")
 	protected PartyIdentificationAndAccount6 financingRequestor;
 	/**
-	 * Party that requests the cancellation of a financing request previously
-	 * sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -374,7 +375,7 @@ public class CancellationRequestInformation1 {
 	public static final MMMessageAssociationEnd mmFinancingRequestor = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CancellationRequestInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "FincgRqstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -386,11 +387,11 @@ public class CancellationRequestInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount6.mmObject();
 		}
 	};
+	@XmlElement(name = "IntrmyAgt")
 	protected FinancialInstitutionIdentification6 intermediaryAgent;
 	/**
-	 * Financial institution that receives the request from the financing
-	 * requestor and forwards it to the first agent for execution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -425,7 +426,7 @@ public class CancellationRequestInformation1 {
 	public static final MMMessageAssociationEnd mmIntermediaryAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> CancellationRequestInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "IntrmyAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -437,11 +438,11 @@ public class CancellationRequestInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstitutionIdentification6.mmObject();
 		}
 	};
+	@XmlElement(name = "FrstAgt")
 	protected FinancialInstitutionIdentification6 firstAgent;
 	/**
-	 * Financial institution of financing requestor to which an invoice
-	 * financing cancellation request is addressed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -476,7 +477,7 @@ public class CancellationRequestInformation1 {
 	public static final MMMessageAssociationEnd mmFirstAgent = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CancellationRequestInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CancellationRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "FrstAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -492,12 +493,14 @@ public class CancellationRequestInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CancellationRequestInformation1.mmOriginalGroupIdentification, CancellationRequestInformation1.mmOriginalCreationDateTime, CancellationRequestInformation1.mmNumberOfInvoiceRequests,
-						CancellationRequestInformation1.mmTotalBulkInvoiceAmount, CancellationRequestInformation1.mmCancellationReason, CancellationRequestInformation1.mmFinancingRequestor,
-						CancellationRequestInformation1.mmIntermediaryAgent, CancellationRequestInformation1.mmFirstAgent);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CancellationRequestInformation1.mmOriginalGroupIdentification,
+						com.tools20022.repository.msg.CancellationRequestInformation1.mmOriginalCreationDateTime, com.tools20022.repository.msg.CancellationRequestInformation1.mmNumberOfInvoiceRequests,
+						com.tools20022.repository.msg.CancellationRequestInformation1.mmTotalBulkInvoiceAmount, com.tools20022.repository.msg.CancellationRequestInformation1.mmCancellationReason,
+						com.tools20022.repository.msg.CancellationRequestInformation1.mmFinancingRequestor, com.tools20022.repository.msg.CancellationRequestInformation1.mmIntermediaryAgent,
+						com.tools20022.repository.msg.CancellationRequestInformation1.mmFirstAgent);
 				messageBuildingBlock_lazy = () -> Arrays.asList(InvoiceFinancingCancellationRequestV01.mmCancellationRequestInformation);
 				trace_lazy = () -> InvoiceFinancingStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationRequestInformation1";
 				definition = "Set of information related to the cancellation request, such as actors involved and identification of the original multiple invoice financing request to which the cancellation request is referring.";
@@ -506,75 +509,75 @@ public class CancellationRequestInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgnlGrpId", required = true)
 	public Max35Text getOriginalGroupIdentification() {
 		return originalGroupIdentification;
 	}
 
-	public void setOriginalGroupIdentification(Max35Text originalGroupIdentification) {
-		this.originalGroupIdentification = originalGroupIdentification;
+	public CancellationRequestInformation1 setOriginalGroupIdentification(Max35Text originalGroupIdentification) {
+		this.originalGroupIdentification = Objects.requireNonNull(originalGroupIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlCreDtTm", required = true)
 	public ISODateTime getOriginalCreationDateTime() {
 		return originalCreationDateTime;
 	}
 
-	public void setOriginalCreationDateTime(ISODateTime originalCreationDateTime) {
-		this.originalCreationDateTime = originalCreationDateTime;
+	public CancellationRequestInformation1 setOriginalCreationDateTime(ISODateTime originalCreationDateTime) {
+		this.originalCreationDateTime = Objects.requireNonNull(originalCreationDateTime);
+		return this;
 	}
 
-	@XmlElement(name = "NbOfInvcReqs")
-	public Max15NumericText getNumberOfInvoiceRequests() {
-		return numberOfInvoiceRequests;
+	public Optional<Max15NumericText> getNumberOfInvoiceRequests() {
+		return numberOfInvoiceRequests == null ? Optional.empty() : Optional.of(numberOfInvoiceRequests);
 	}
 
-	public void setNumberOfInvoiceRequests(Max15NumericText numberOfInvoiceRequests) {
+	public CancellationRequestInformation1 setNumberOfInvoiceRequests(Max15NumericText numberOfInvoiceRequests) {
 		this.numberOfInvoiceRequests = numberOfInvoiceRequests;
+		return this;
 	}
 
-	@XmlElement(name = "TtlBlkInvcAmt")
-	public ActiveCurrencyAndAmount getTotalBulkInvoiceAmount() {
-		return totalBulkInvoiceAmount;
+	public Optional<ActiveCurrencyAndAmount> getTotalBulkInvoiceAmount() {
+		return totalBulkInvoiceAmount == null ? Optional.empty() : Optional.of(totalBulkInvoiceAmount);
 	}
 
-	public void setTotalBulkInvoiceAmount(ActiveCurrencyAndAmount totalBulkInvoiceAmount) {
+	public CancellationRequestInformation1 setTotalBulkInvoiceAmount(ActiveCurrencyAndAmount totalBulkInvoiceAmount) {
 		this.totalBulkInvoiceAmount = totalBulkInvoiceAmount;
+		return this;
 	}
 
-	@XmlElement(name = "CxlRsn", required = true)
 	public Max105Text getCancellationReason() {
 		return cancellationReason;
 	}
 
-	public void setCancellationReason(Max105Text cancellationReason) {
-		this.cancellationReason = cancellationReason;
+	public CancellationRequestInformation1 setCancellationReason(Max105Text cancellationReason) {
+		this.cancellationReason = Objects.requireNonNull(cancellationReason);
+		return this;
 	}
 
-	@XmlElement(name = "FincgRqstr")
-	public PartyIdentificationAndAccount6 getFinancingRequestor() {
-		return financingRequestor;
+	public Optional<PartyIdentificationAndAccount6> getFinancingRequestor() {
+		return financingRequestor == null ? Optional.empty() : Optional.of(financingRequestor);
 	}
 
-	public void setFinancingRequestor(com.tools20022.repository.msg.PartyIdentificationAndAccount6 financingRequestor) {
+	public CancellationRequestInformation1 setFinancingRequestor(com.tools20022.repository.msg.PartyIdentificationAndAccount6 financingRequestor) {
 		this.financingRequestor = financingRequestor;
+		return this;
 	}
 
-	@XmlElement(name = "IntrmyAgt")
-	public FinancialInstitutionIdentification6 getIntermediaryAgent() {
-		return intermediaryAgent;
+	public Optional<FinancialInstitutionIdentification6> getIntermediaryAgent() {
+		return intermediaryAgent == null ? Optional.empty() : Optional.of(intermediaryAgent);
 	}
 
-	public void setIntermediaryAgent(com.tools20022.repository.msg.FinancialInstitutionIdentification6 intermediaryAgent) {
+	public CancellationRequestInformation1 setIntermediaryAgent(com.tools20022.repository.msg.FinancialInstitutionIdentification6 intermediaryAgent) {
 		this.intermediaryAgent = intermediaryAgent;
+		return this;
 	}
 
-	@XmlElement(name = "FrstAgt")
-	public FinancialInstitutionIdentification6 getFirstAgent() {
-		return firstAgent;
+	public Optional<FinancialInstitutionIdentification6> getFirstAgent() {
+		return firstAgent == null ? Optional.empty() : Optional.of(firstAgent);
 	}
 
-	public void setFirstAgent(com.tools20022.repository.msg.FinancialInstitutionIdentification6 firstAgent) {
+	public CancellationRequestInformation1 setFirstAgent(com.tools20022.repository.msg.FinancialInstitutionIdentification6 firstAgent) {
 		this.firstAgent = firstAgent;
+		return this;
 	}
 }

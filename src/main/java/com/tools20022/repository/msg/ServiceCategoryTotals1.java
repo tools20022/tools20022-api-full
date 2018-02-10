@@ -27,9 +27,8 @@ import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.datatype.Max4AlphaNumericText;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -84,16 +83,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies totals related to the invoice."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ServiceCategoryTotals1", propOrder = {"accountIdentification", "billedCustomerIdentification", "totalTaxableAmount", "totalTaxAmount", "totalInvoiceAmount", "serviceCategory", "serviceItemTotals"})
 public class ServiceCategoryTotals1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctId")
 	protected AccountIdentification20Choice accountIdentification;
 	/**
-	 * Unique identification of an securities account or cash account belonging
-	 * to billed customer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -128,7 +127,7 @@ public class ServiceCategoryTotals1 {
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> ServiceCategoryTotals1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceCategoryTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -140,10 +139,11 @@ public class ServiceCategoryTotals1 {
 			type_lazy = () -> AccountIdentification20Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "BlldCstmrId")
 	protected BICFIIdentifier billedCustomerIdentification;
 	/**
-	 * BIC of the party which is invoiced by the CSD/NCB.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,7 +177,7 @@ public class ServiceCategoryTotals1 {
 	public static final MMMessageAttribute mmBilledCustomerIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> OrganisationIdentification.mmBICFI;
-			componentContext_lazy = () -> ServiceCategoryTotals1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceCategoryTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "BlldCstmrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -188,10 +188,11 @@ public class ServiceCategoryTotals1 {
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlTaxblAmt")
 	protected ActiveCurrencyAndAmount totalTaxableAmount;
 	/**
-	 * Total amount subject to tax.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,7 +226,7 @@ public class ServiceCategoryTotals1 {
 	public static final MMMessageAttribute mmTotalTaxableAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmTaxableBaseAmount;
-			componentContext_lazy = () -> ServiceCategoryTotals1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceCategoryTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlTaxblAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,10 +237,11 @@ public class ServiceCategoryTotals1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlTaxAmt")
 	protected ActiveCurrencyAndAmount totalTaxAmount;
 	/**
-	 * Sum of all tax amounts related to the invoice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -272,7 +274,7 @@ public class ServiceCategoryTotals1 {
 	public static final MMMessageAttribute mmTotalTaxAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Tax.mmAmount;
-			componentContext_lazy = () -> ServiceCategoryTotals1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceCategoryTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlTaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -283,12 +285,11 @@ public class ServiceCategoryTotals1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlInvcAmt", required = true)
 	protected ActiveCurrencyAndAmount totalInvoiceAmount;
 	/**
-	 * Total amount of the invoice, being the sum of total invoice lines
-	 * amounts, total invoice adjustment amount (discounts, allowances and
-	 * charges) and total tax amounts.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -324,7 +325,7 @@ public class ServiceCategoryTotals1 {
 	public static final MMMessageAttribute mmTotalInvoiceAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Document.mmAmount;
-			componentContext_lazy = () -> ServiceCategoryTotals1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceCategoryTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlInvcAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -335,11 +336,11 @@ public class ServiceCategoryTotals1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "SvcCtgy", required = true)
 	protected Max4AlphaNumericText serviceCategory;
 	/**
-	 * Agreement under which or rules under which the transaction should be
-	 * processed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -369,7 +370,7 @@ public class ServiceCategoryTotals1 {
 	 */
 	public static final MMMessageAttribute mmServiceCategory = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ServiceCategoryTotals1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceCategoryTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcCtgy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -380,10 +381,11 @@ public class ServiceCategoryTotals1 {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "SvcItmTtls")
 	protected List<com.tools20022.repository.msg.ServiceItemTotals1> serviceItemTotals;
 	/**
-	 * Specifies totals related to the invoice.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -415,7 +417,7 @@ public class ServiceCategoryTotals1 {
 	public static final MMMessageAssociationEnd mmServiceItemTotals = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> LineItem.mmInvoicedProduct;
-			componentContext_lazy = () -> ServiceCategoryTotals1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ServiceCategoryTotals1.mmObject();
 			isDerived = false;
 			xmlTag = "SvcItmTtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -430,10 +432,12 @@ public class ServiceCategoryTotals1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ServiceCategoryTotals1.mmAccountIdentification, ServiceCategoryTotals1.mmBilledCustomerIdentification, ServiceCategoryTotals1.mmTotalTaxableAmount,
-						ServiceCategoryTotals1.mmTotalTaxAmount, ServiceCategoryTotals1.mmTotalInvoiceAmount, ServiceCategoryTotals1.mmServiceCategory, ServiceCategoryTotals1.mmServiceItemTotals);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ServiceCategoryTotals1.mmAccountIdentification, com.tools20022.repository.msg.ServiceCategoryTotals1.mmBilledCustomerIdentification,
+						com.tools20022.repository.msg.ServiceCategoryTotals1.mmTotalTaxableAmount, com.tools20022.repository.msg.ServiceCategoryTotals1.mmTotalTaxAmount,
+						com.tools20022.repository.msg.ServiceCategoryTotals1.mmTotalInvoiceAmount, com.tools20022.repository.msg.ServiceCategoryTotals1.mmServiceCategory,
+						com.tools20022.repository.msg.ServiceCategoryTotals1.mmServiceItemTotals);
 				trace_lazy = () -> Invoice.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ServiceCategoryTotals1";
 				definition = "Specifies totals related to the invoice.";
@@ -442,66 +446,66 @@ public class ServiceCategoryTotals1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctId")
-	public AccountIdentification20Choice getAccountIdentification() {
-		return accountIdentification;
+	public Optional<AccountIdentification20Choice> getAccountIdentification() {
+		return accountIdentification == null ? Optional.empty() : Optional.of(accountIdentification);
 	}
 
-	public void setAccountIdentification(AccountIdentification20Choice accountIdentification) {
+	public ServiceCategoryTotals1 setAccountIdentification(AccountIdentification20Choice accountIdentification) {
 		this.accountIdentification = accountIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "BlldCstmrId")
-	public BICFIIdentifier getBilledCustomerIdentification() {
-		return billedCustomerIdentification;
+	public Optional<BICFIIdentifier> getBilledCustomerIdentification() {
+		return billedCustomerIdentification == null ? Optional.empty() : Optional.of(billedCustomerIdentification);
 	}
 
-	public void setBilledCustomerIdentification(BICFIIdentifier billedCustomerIdentification) {
+	public ServiceCategoryTotals1 setBilledCustomerIdentification(BICFIIdentifier billedCustomerIdentification) {
 		this.billedCustomerIdentification = billedCustomerIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "TtlTaxblAmt")
-	public ActiveCurrencyAndAmount getTotalTaxableAmount() {
-		return totalTaxableAmount;
+	public Optional<ActiveCurrencyAndAmount> getTotalTaxableAmount() {
+		return totalTaxableAmount == null ? Optional.empty() : Optional.of(totalTaxableAmount);
 	}
 
-	public void setTotalTaxableAmount(ActiveCurrencyAndAmount totalTaxableAmount) {
+	public ServiceCategoryTotals1 setTotalTaxableAmount(ActiveCurrencyAndAmount totalTaxableAmount) {
 		this.totalTaxableAmount = totalTaxableAmount;
+		return this;
 	}
 
-	@XmlElement(name = "TtlTaxAmt")
-	public ActiveCurrencyAndAmount getTotalTaxAmount() {
-		return totalTaxAmount;
+	public Optional<ActiveCurrencyAndAmount> getTotalTaxAmount() {
+		return totalTaxAmount == null ? Optional.empty() : Optional.of(totalTaxAmount);
 	}
 
-	public void setTotalTaxAmount(ActiveCurrencyAndAmount totalTaxAmount) {
+	public ServiceCategoryTotals1 setTotalTaxAmount(ActiveCurrencyAndAmount totalTaxAmount) {
 		this.totalTaxAmount = totalTaxAmount;
+		return this;
 	}
 
-	@XmlElement(name = "TtlInvcAmt", required = true)
 	public ActiveCurrencyAndAmount getTotalInvoiceAmount() {
 		return totalInvoiceAmount;
 	}
 
-	public void setTotalInvoiceAmount(ActiveCurrencyAndAmount totalInvoiceAmount) {
-		this.totalInvoiceAmount = totalInvoiceAmount;
+	public ServiceCategoryTotals1 setTotalInvoiceAmount(ActiveCurrencyAndAmount totalInvoiceAmount) {
+		this.totalInvoiceAmount = Objects.requireNonNull(totalInvoiceAmount);
+		return this;
 	}
 
-	@XmlElement(name = "SvcCtgy", required = true)
 	public Max4AlphaNumericText getServiceCategory() {
 		return serviceCategory;
 	}
 
-	public void setServiceCategory(Max4AlphaNumericText serviceCategory) {
-		this.serviceCategory = serviceCategory;
+	public ServiceCategoryTotals1 setServiceCategory(Max4AlphaNumericText serviceCategory) {
+		this.serviceCategory = Objects.requireNonNull(serviceCategory);
+		return this;
 	}
 
-	@XmlElement(name = "SvcItmTtls")
 	public List<ServiceItemTotals1> getServiceItemTotals() {
-		return serviceItemTotals;
+		return serviceItemTotals == null ? serviceItemTotals = new ArrayList<>() : serviceItemTotals;
 	}
 
-	public void setServiceItemTotals(List<com.tools20022.repository.msg.ServiceItemTotals1> serviceItemTotals) {
-		this.serviceItemTotals = serviceItemTotals;
+	public ServiceCategoryTotals1 setServiceItemTotals(List<com.tools20022.repository.msg.ServiceItemTotals1> serviceItemTotals) {
+		this.serviceItemTotals = Objects.requireNonNull(serviceItemTotals);
+		return this;
 	}
 }

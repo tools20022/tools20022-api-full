@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.SettlementTimeRequest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,17 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Information on the requested settlement time of the instruction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
-@XmlType(name = "SettlementTimeRequest1", propOrder = "CLSTime")
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "SettlementTimeRequest1", propOrder = "cLSTime")
 public class SettlementTimeRequest1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CLSTm", required = true)
 	protected ISOTime cLSTime;
 	/**
-	 * Time by which the funds must be credited, with confirmation, to the CLS
-	 * Bank's account at the central bank, expressed in Central European Time
-	 * (CET).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +108,7 @@ public class SettlementTimeRequest1 {
 	public static final MMMessageAttribute mmCLSTime = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SettlementTimeRequest.mmCLSTime;
-			componentContext_lazy = () -> SettlementTimeRequest1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SettlementTimeRequest1.mmObject();
 			isDerived = false;
 			xmlTag = "CLSTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -123,9 +123,9 @@ public class SettlementTimeRequest1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementTimeRequest1.mmCLSTime);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTimeRequest1.mmCLSTime);
 				trace_lazy = () -> SettlementTimeRequest.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementTimeRequest1";
 				definition = "Information on the requested settlement time of the instruction.";
@@ -134,12 +134,12 @@ public class SettlementTimeRequest1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CLSTm", required = true)
 	public ISOTime getCLSTime() {
 		return cLSTime;
 	}
 
-	public void setCLSTime(ISOTime cLSTime) {
-		this.cLSTime = cLSTime;
+	public SettlementTimeRequest1 setCLSTime(ISOTime cLSTime) {
+		this.cLSTime = Objects.requireNonNull(cLSTime);
+		return this;
 	}
 }

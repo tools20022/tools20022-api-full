@@ -39,8 +39,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,7 +60,7 @@ public class ExtensionContents1 {
 	final static public MMUserDefined mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMUserDefined() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExtensionContents1";
 				definition = "Technical extension structure that allows to specify any valid XML Structure (e.g. through an XML Schema). The property namespace is set to 'any'. \r\nThe content of the extension MUST NOT be validated by the receiver (processContent=lax).";

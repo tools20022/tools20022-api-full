@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Indicates the status of a baseline.
@@ -35,6 +36,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -45,8 +48,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * BaselineStatus.mmCommercialTrade}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Status Status}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmTransactionStatus
+ * CommercialTrade.mmTransactionStatus}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -64,19 +74,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CommercialTrade#mmTransactionStatus
- * CommercialTrade.mmTransactionStatus}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,8 +93,8 @@ public class BaselineStatus extends Status {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected BaselineStatusCode status;
 	/**
-	 * Specifies the status of the processing of a baseline.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,8 +148,8 @@ public class BaselineStatus extends Status {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionStatus1.mmStatus, TransactionStatus4.mmStatus, TransactionStatus3.mmStatus, TransactionStatus2.mmStatus, TransactionStatus5.mmStatus, StatusReportItems1.mmStatus,
 					StatusReportItems2.mmStatus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.BaselineStatus.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BaselineStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Status";
 			definition = "Specifies the status of the processing of a baseline.";
@@ -167,8 +168,8 @@ public class BaselineStatus extends Status {
 	};
 	protected CommercialTrade commercialTrade;
 	/**
-	 * Commercial trade for which a status is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,8 +202,8 @@ public class BaselineStatus extends Status {
 	 */
 	public static final MMBusinessAssociationEnd mmCommercialTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.BaselineStatus.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.BaselineStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CommercialTrade";
 			definition = "Commercial trade for which a status is provided.";
@@ -217,7 +218,7 @@ public class BaselineStatus extends Status {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BaselineStatus";
 				definition = "Indicates the status of a baseline.";
@@ -239,15 +240,17 @@ public class BaselineStatus extends Status {
 		return status;
 	}
 
-	public void setStatus(BaselineStatusCode status) {
-		this.status = status;
+	public BaselineStatus setStatus(BaselineStatusCode status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
 	public CommercialTrade getCommercialTrade() {
 		return commercialTrade;
 	}
 
-	public void setCommercialTrade(com.tools20022.repository.entity.CommercialTrade commercialTrade) {
-		this.commercialTrade = commercialTrade;
+	public BaselineStatus setCommercialTrade(com.tools20022.repository.entity.CommercialTrade commercialTrade) {
+		this.commercialTrade = Objects.requireNonNull(commercialTrade);
+		return this;
 	}
 }

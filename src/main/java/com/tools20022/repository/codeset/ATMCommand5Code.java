@@ -20,36 +20,39 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ATMCommandCode;
+import com.tools20022.repository.codeset.ATMCommand5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Type of command performed by the ATM.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ATMCommandCode ATMCommandCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMCommand5Code#ATMBalance
+ * ATMCommand5Code.ATMBalance}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand5Code#mmATMBalance
- * ATMCommand5Code.mmATMBalance}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand5Code#CountersInquiry
+ * ATMCommand5Code.CountersInquiry}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand5Code#mmCountersInquiry
- * ATMCommand5Code.mmCountersInquiry}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ATMCommand5Code#mmCountersReport
- * ATMCommand5Code.mmCountersReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.ATMCommand5Code#CountersReport
+ * ATMCommand5Code.CountersReport}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ATMCommandCode ATMCommandCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -60,7 +63,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Type of command performed by the ATM."</li>
  * </ul>
  */
-public class ATMCommand5Code extends ATMCommandCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ATMCommand5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -79,11 +83,12 @@ public class ATMCommand5Code extends ATMCommandCode {
 	 * name} = "ATMBalance"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmATMBalance = new MMCode() {
+	public static final ATMCommand5Code ATMBalance = new ATMCommand5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMBalance";
-			owner_lazy = () -> ATMCommand5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand5Code.mmObject();
+			codeName = ATMCommandCode.ATMBalance.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -102,11 +107,12 @@ public class ATMCommand5Code extends ATMCommandCode {
 	 * name} = "CountersInquiry"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCountersInquiry = new MMCode() {
+	public static final ATMCommand5Code CountersInquiry = new ATMCommand5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersInquiry";
-			owner_lazy = () -> ATMCommand5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand5Code.mmObject();
+			codeName = ATMCommandCode.CountersInquiry.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -125,25 +131,58 @@ public class ATMCommand5Code extends ATMCommandCode {
 	 * name} = "CountersReport"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCountersReport = new MMCode() {
+	public static final ATMCommand5Code CountersReport = new ATMCommand5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersReport";
-			owner_lazy = () -> ATMCommand5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand5Code.mmObject();
+			codeName = ATMCommandCode.CountersReport.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ATMCommand5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ATMCommand5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand5Code";
 				definition = "Type of command performed by the ATM.";
-				code_lazy = () -> Arrays.asList(ATMCommand5Code.mmATMBalance, ATMCommand5Code.mmCountersInquiry, ATMCommand5Code.mmCountersReport);
 				trace_lazy = () -> ATMCommandCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCommand5Code.ATMBalance, com.tools20022.repository.codeset.ATMCommand5Code.CountersInquiry,
+						com.tools20022.repository.codeset.ATMCommand5Code.CountersReport);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ATMBalance.getCodeName().get(), ATMBalance);
+		codesByName.put(CountersInquiry.getCodeName().get(), CountersInquiry);
+		codesByName.put(CountersReport.getCodeName().get(), CountersReport);
+	}
+
+	public static ATMCommand5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ATMCommand5Code[] values() {
+		ATMCommand5Code[] values = new ATMCommand5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ATMCommand5Code> {
+		@Override
+		public ATMCommand5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ATMCommand5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

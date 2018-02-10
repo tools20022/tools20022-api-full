@@ -27,6 +27,7 @@ import com.tools20022.repository.msg.CounterpartySideTransactionReporting1;
 import com.tools20022.repository.msg.TradingSideTransactionReporting1;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * Party responsible for providing regulatory reports.
@@ -37,6 +38,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -45,8 +48,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * ReportingPartyRole.mmRegulatoryReport}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.RegulatoryReport#mmReportingPartyRole
+ * RegulatoryReport.mmReportingPartyRole}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -60,19 +70,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.RegulatoryReport#mmReportingPartyRole
- * RegulatoryReport.mmReportingPartyRole}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -88,8 +89,8 @@ public class ReportingPartyRole extends Role {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected RegulatoryReport regulatoryReport;
 	/**
-	 * Report provided by the reporting party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -122,8 +123,8 @@ public class ReportingPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmRegulatoryReport = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ReportingPartyRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ReportingPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegulatoryReport";
 			definition = "Report provided by the reporting party.";
@@ -138,7 +139,7 @@ public class ReportingPartyRole extends Role {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportingPartyRole";
 				definition = "Party responsible for providing regulatory reports.";
@@ -160,7 +161,8 @@ public class ReportingPartyRole extends Role {
 		return regulatoryReport;
 	}
 
-	public void setRegulatoryReport(com.tools20022.repository.entity.RegulatoryReport regulatoryReport) {
-		this.regulatoryReport = regulatoryReport;
+	public ReportingPartyRole setRegulatoryReport(com.tools20022.repository.entity.RegulatoryReport regulatoryReport) {
+		this.regulatoryReport = Objects.requireNonNull(regulatoryReport);
+		return this;
 	}
 }

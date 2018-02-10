@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.MeetingEntitlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of entitlement calculation method."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Entitlement1Choice", propOrder = {"entitlementRatio", "entitlementDescription"})
 public class Entitlement1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "EntitlmntRatio", required = true)
 	protected DecimalNumber entitlementRatio;
 	/**
-	 * Number of votes assigned to one security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -105,7 +107,7 @@ public class Entitlement1Choice {
 	public static final MMMessageAttribute mmEntitlementRatio = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MeetingEntitlement.mmEntitlementRatio;
-			componentContext_lazy = () -> Entitlement1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Entitlement1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EntitlmntRatio";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -116,12 +118,11 @@ public class Entitlement1Choice {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "EntitlmntDesc", required = true)
 	protected Max35Text entitlementDescription;
 	/**
-	 * Specifies the calculation method of the number of votes assigned to one
-	 * security. This element should be used when the entitlement calculation
-	 * rule is complex.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +157,7 @@ public class Entitlement1Choice {
 	public static final MMMessageAttribute mmEntitlementDescription = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> MeetingEntitlement.mmObject();
-			componentContext_lazy = () -> Entitlement1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.Entitlement1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "EntitlmntDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,8 +172,8 @@ public class Entitlement1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Entitlement1Choice.mmEntitlementRatio, Entitlement1Choice.mmEntitlementDescription);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Entitlement1Choice.mmEntitlementRatio, com.tools20022.repository.choice.Entitlement1Choice.mmEntitlementDescription);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Entitlement1Choice";
 				definition = "Choice of entitlement calculation method.";
@@ -181,21 +182,21 @@ public class Entitlement1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "EntitlmntRatio", required = true)
 	public DecimalNumber getEntitlementRatio() {
 		return entitlementRatio;
 	}
 
-	public void setEntitlementRatio(DecimalNumber entitlementRatio) {
-		this.entitlementRatio = entitlementRatio;
+	public Entitlement1Choice setEntitlementRatio(DecimalNumber entitlementRatio) {
+		this.entitlementRatio = Objects.requireNonNull(entitlementRatio);
+		return this;
 	}
 
-	@XmlElement(name = "EntitlmntDesc", required = true)
 	public Max35Text getEntitlementDescription() {
 		return entitlementDescription;
 	}
 
-	public void setEntitlementDescription(Max35Text entitlementDescription) {
-		this.entitlementDescription = entitlementDescription;
+	public Entitlement1Choice setEntitlementDescription(Max35Text entitlementDescription) {
+		this.entitlementDescription = Objects.requireNonNull(entitlementDescription);
+		return this;
 	}
 }

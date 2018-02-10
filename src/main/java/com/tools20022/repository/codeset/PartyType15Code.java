@@ -20,35 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PartyTypeCode;
+import com.tools20022.repository.codeset.PartyType15Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Party involved by the data set.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PartyTypeCode PartyTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PartyType15Code#mmPOIGroup
- * PartyType15Code.mmPOIGroup}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType15Code#mmPOISystem
- * PartyType15Code.mmPOISystem}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PartyType15Code#mmSinglePOI
- * PartyType15Code.mmSinglePOI}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType15Code#POIGroup
+ * PartyType15Code.POIGroup}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType15Code#POISystem
+ * PartyType15Code.POISystem}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.PartyType15Code#SinglePOI
+ * PartyType15Code.SinglePOI}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PartyTypeCode PartyTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,7 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Party involved by the data set."</li>
  * </ul>
  */
-public class PartyType15Code extends PartyTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PartyType15Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -78,11 +81,12 @@ public class PartyType15Code extends PartyTypeCode {
 	 * name} = "POIGroup"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPOIGroup = new MMCode() {
+	public static final PartyType15Code POIGroup = new PartyType15Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIGroup";
-			owner_lazy = () -> PartyType15Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType15Code.mmObject();
+			codeName = PartyTypeCode.POIGroup.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -101,11 +105,12 @@ public class PartyType15Code extends PartyTypeCode {
 	 * name} = "POISystem"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPOISystem = new MMCode() {
+	public static final PartyType15Code POISystem = new PartyType15Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POISystem";
-			owner_lazy = () -> PartyType15Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType15Code.mmObject();
+			codeName = PartyTypeCode.POISystem.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -124,25 +129,57 @@ public class PartyType15Code extends PartyTypeCode {
 	 * name} = "SinglePOI"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSinglePOI = new MMCode() {
+	public static final PartyType15Code SinglePOI = new PartyType15Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SinglePOI";
-			owner_lazy = () -> PartyType15Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartyType15Code.mmObject();
+			codeName = PartyTypeCode.SinglePOI.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PartyType15Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PartyType15Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyType15Code";
 				definition = "Party involved by the data set.";
-				code_lazy = () -> Arrays.asList(PartyType15Code.mmPOIGroup, PartyType15Code.mmPOISystem, PartyType15Code.mmSinglePOI);
 				trace_lazy = () -> PartyTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartyType15Code.POIGroup, com.tools20022.repository.codeset.PartyType15Code.POISystem, com.tools20022.repository.codeset.PartyType15Code.SinglePOI);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(POIGroup.getCodeName().get(), POIGroup);
+		codesByName.put(POISystem.getCodeName().get(), POISystem);
+		codesByName.put(SinglePOI.getCodeName().get(), SinglePOI);
+	}
+
+	public static PartyType15Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PartyType15Code[] values() {
+		PartyType15Code[] values = new PartyType15Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PartyType15Code> {
+		@Override
+		public PartyType15Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PartyType15Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

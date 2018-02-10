@@ -28,9 +28,8 @@ import com.tools20022.repository.msg.SettlementObligation7;
 import com.tools20022.repository.msg.SupplementaryData1;
 import com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -48,22 +47,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
- * SecuritiesClearingLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion
- * CentralCounterPartyCCPSecuritiesClearingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "BuyInRspn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -82,6 +65,22 @@ import javax.xml.bind.annotation.*;
  * BuyInResponseV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CentralCounterPartyCCPSecuritiesClearingISOLatestversion
+ * CentralCounterPartyCCPSecuritiesClearingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "BuyInRspn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesClearingLatestVersion
+ * SecuritiesClearingLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code secl.008.001.03}</li>
@@ -97,16 +96,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BuyInResponseV03", propOrder = {"transactionIdentification", "buyInResponseDetails", "originalSettlementObligationDetails", "supplementaryData"})
 public class BuyInResponseV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TxId")
 	protected Max35Text transactionIdentification;
 	/**
-	 * Unambiguous identification of the transaction as known by the instructing
-	 * party.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,11 +146,11 @@ public class BuyInResponseV03 {
 			}
 		}
 	};
+	@XmlElement(name = "BuyInRspnDtls", required = true)
 	protected BuyIn3 buyInResponseDetails;
 	/**
-	 * Provides response details such as a request for delay and the number of
-	 * days associated to that request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -191,11 +190,11 @@ public class BuyInResponseV03 {
 			}
 		}
 	};
+	@XmlElement(name = "OrgnlSttlmOblgtnDtls")
 	protected SettlementObligation7 originalSettlementObligationDetails;
 	/**
-	 * Provides details about the original settlement obligation that did not
-	 * settle and for which the buy in process will be launched.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -237,11 +236,11 @@ public class BuyInResponseV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that can not be captured in the structured fields
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -313,43 +312,43 @@ public class BuyInResponseV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TxId")
-	public Max35Text getTransactionIdentification() {
-		return transactionIdentification;
+	public Optional<Max35Text> getTransactionIdentification() {
+		return transactionIdentification == null ? Optional.empty() : Optional.of(transactionIdentification);
 	}
 
-	public void setTransactionIdentification(Max35Text transactionIdentification) {
+	public BuyInResponseV03 setTransactionIdentification(Max35Text transactionIdentification) {
 		this.transactionIdentification = transactionIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "BuyInRspnDtls", required = true)
 	public BuyIn3 getBuyInResponseDetails() {
 		return buyInResponseDetails;
 	}
 
-	public void setBuyInResponseDetails(BuyIn3 buyInResponseDetails) {
-		this.buyInResponseDetails = buyInResponseDetails;
+	public BuyInResponseV03 setBuyInResponseDetails(BuyIn3 buyInResponseDetails) {
+		this.buyInResponseDetails = Objects.requireNonNull(buyInResponseDetails);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlSttlmOblgtnDtls")
-	public SettlementObligation7 getOriginalSettlementObligationDetails() {
-		return originalSettlementObligationDetails;
+	public Optional<SettlementObligation7> getOriginalSettlementObligationDetails() {
+		return originalSettlementObligationDetails == null ? Optional.empty() : Optional.of(originalSettlementObligationDetails);
 	}
 
-	public void setOriginalSettlementObligationDetails(SettlementObligation7 originalSettlementObligationDetails) {
+	public BuyInResponseV03 setOriginalSettlementObligationDetails(SettlementObligation7 originalSettlementObligationDetails) {
 		this.originalSettlementObligationDetails = originalSettlementObligationDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public BuyInResponseV03 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:secl.008.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:secl.008.001.03")
 	static public class Document {
 		@XmlElement(name = "BuyInRspn", required = true)
 		public BuyInResponseV03 messageBody;

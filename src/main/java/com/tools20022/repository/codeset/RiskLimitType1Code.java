@@ -20,39 +20,43 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.LimitTypeCode;
+import com.tools20022.repository.codeset.RiskLimitType1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of risk management limit.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.LimitTypeCode LimitTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RiskLimitType1Code#mmMultilateral
- * RiskLimitType1Code.mmMultilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.RiskLimitType1Code#Multilateral
+ * RiskLimitType1Code.Multilateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RiskLimitType1Code#mmBilateral
- * RiskLimitType1Code.mmBilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.RiskLimitType1Code#Bilateral
+ * RiskLimitType1Code.Bilateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RiskLimitType1Code#mmNetBilateral
- * RiskLimitType1Code.mmNetBilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.RiskLimitType1Code#NetBilateral
+ * RiskLimitType1Code.NetBilateral}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RiskLimitType1Code#mmIndirectBilateral
- * RiskLimitType1Code.mmIndirectBilateral}</li>
+ * {@linkplain com.tools20022.repository.codeset.RiskLimitType1Code#IndirectBilateral
+ * RiskLimitType1Code.IndirectBilateral}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.LimitTypeCode LimitTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +73,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of risk management limit."</li>
  * </ul>
  */
-public class RiskLimitType1Code extends LimitTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RiskLimitType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -88,11 +93,12 @@ public class RiskLimitType1Code extends LimitTypeCode {
 	 * name} = "Multilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMultilateral = new MMCode() {
+	public static final RiskLimitType1Code Multilateral = new RiskLimitType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multilateral";
-			owner_lazy = () -> RiskLimitType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RiskLimitType1Code.mmObject();
+			codeName = LimitTypeCode.Multilateral.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -111,11 +117,12 @@ public class RiskLimitType1Code extends LimitTypeCode {
 	 * name} = "Bilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBilateral = new MMCode() {
+	public static final RiskLimitType1Code Bilateral = new RiskLimitType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bilateral";
-			owner_lazy = () -> RiskLimitType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RiskLimitType1Code.mmObject();
+			codeName = LimitTypeCode.Bilateral.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -134,11 +141,12 @@ public class RiskLimitType1Code extends LimitTypeCode {
 	 * name} = "NetBilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNetBilateral = new MMCode() {
+	public static final RiskLimitType1Code NetBilateral = new RiskLimitType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetBilateral";
-			owner_lazy = () -> RiskLimitType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RiskLimitType1Code.mmObject();
+			codeName = LimitTypeCode.NetBilateral.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -157,26 +165,60 @@ public class RiskLimitType1Code extends LimitTypeCode {
 	 * name} = "IndirectBilateral"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIndirectBilateral = new MMCode() {
+	public static final RiskLimitType1Code IndirectBilateral = new RiskLimitType1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndirectBilateral";
-			owner_lazy = () -> RiskLimitType1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RiskLimitType1Code.mmObject();
+			codeName = LimitTypeCode.IndirectBilateral.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, RiskLimitType1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RiskLimitType1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MULT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RiskLimitType1Code";
 				definition = "Specifies the type of risk management limit.";
-				code_lazy = () -> Arrays.asList(RiskLimitType1Code.mmMultilateral, RiskLimitType1Code.mmBilateral, RiskLimitType1Code.mmNetBilateral, RiskLimitType1Code.mmIndirectBilateral);
 				trace_lazy = () -> LimitTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RiskLimitType1Code.Multilateral, com.tools20022.repository.codeset.RiskLimitType1Code.Bilateral,
+						com.tools20022.repository.codeset.RiskLimitType1Code.NetBilateral, com.tools20022.repository.codeset.RiskLimitType1Code.IndirectBilateral);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Multilateral.getCodeName().get(), Multilateral);
+		codesByName.put(Bilateral.getCodeName().get(), Bilateral);
+		codesByName.put(NetBilateral.getCodeName().get(), NetBilateral);
+		codesByName.put(IndirectBilateral.getCodeName().get(), IndirectBilateral);
+	}
+
+	public static RiskLimitType1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RiskLimitType1Code[] values() {
+		RiskLimitType1Code[] values = new RiskLimitType1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RiskLimitType1Code> {
+		@Override
+		public RiskLimitType1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RiskLimitType1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

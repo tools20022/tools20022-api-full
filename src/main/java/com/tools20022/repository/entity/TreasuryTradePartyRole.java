@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.TradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.TradePartyIdentification6;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Role played by a party in the context of a treasury trade.
@@ -38,30 +40,15 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
+ * TradePartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
  * <li>
  * {@linkplain com.tools20022.repository.entity.TreasuryTradePartyRole#mmTreasuryTrade
  * TreasuryTradePartyRole.mmTreasuryTrade}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.TreasuryTradingParty
- * TreasuryTradingParty}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.TradePartyRole
- * TradePartyRole}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TradePartyIdentification6
- * TradePartyIdentification6}</li>
  * </ul>
  * </li>
  * <li>
@@ -72,11 +59,26 @@ import java.util.List;
  * TreasuryTrade.mmPartyRole}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.TreasuryTradingParty
+ * TreasuryTradingParty}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TradePartyIdentification6
+ * TradePartyIdentification6}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -92,8 +94,8 @@ public class TreasuryTradePartyRole extends TradePartyRole {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.TreasuryTrade> treasuryTrade;
 	/**
-	 * Identifies the treasury trade for which a party plays a role.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -127,8 +129,8 @@ public class TreasuryTradePartyRole extends TradePartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmTreasuryTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.TreasuryTradePartyRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TreasuryTradePartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TreasuryTrade";
 			definition = "Identifies the treasury trade for which a party plays a role.";
@@ -142,7 +144,7 @@ public class TreasuryTradePartyRole extends TradePartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TreasuryTradePartyRole";
 				definition = "Role played by a party in the context of a treasury trade.";
@@ -162,10 +164,11 @@ public class TreasuryTradePartyRole extends TradePartyRole {
 	}
 
 	public List<TreasuryTrade> getTreasuryTrade() {
-		return treasuryTrade;
+		return treasuryTrade == null ? treasuryTrade = new ArrayList<>() : treasuryTrade;
 	}
 
-	public void setTreasuryTrade(List<com.tools20022.repository.entity.TreasuryTrade> treasuryTrade) {
-		this.treasuryTrade = treasuryTrade;
+	public TreasuryTradePartyRole setTreasuryTrade(List<com.tools20022.repository.entity.TreasuryTrade> treasuryTrade) {
+		this.treasuryTrade = Objects.requireNonNull(treasuryTrade);
+		return this;
 	}
 }

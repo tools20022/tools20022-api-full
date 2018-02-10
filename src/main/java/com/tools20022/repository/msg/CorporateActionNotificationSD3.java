@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,8 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionNotificationSD3", propOrder = {"placeAndName", "createDateAndTime", "updateDateAndTime"})
 public class CorporateActionNotificationSD3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -103,7 +107,7 @@ public class CorporateActionNotificationSD3 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD3.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,11 +118,11 @@ public class CorporateActionNotificationSD3 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CretDtAndTm", required = true)
 	protected ISODateTime createDateAndTime;
 	/**
-	 * Date and time when DTCC (The Depository Trust and Clearing Corporation)
-	 * created the announcement record.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,6 +136,9 @@ public class CorporateActionNotificationSD3 {
 	 * CorporateActionNotificationSD3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CretDtAndTm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Create Date and Time</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -147,9 +154,10 @@ public class CorporateActionNotificationSD3 {
 	 */
 	public static final MMMessageAttribute mmCreateDateAndTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD3.mmObject();
 			isDerived = false;
 			xmlTag = "CretDtAndTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Create Date and Time"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreateDateAndTime";
 			definition = "Date and time when DTCC  (The Depository Trust and Clearing Corporation) created the announcement record.";
@@ -158,11 +166,11 @@ public class CorporateActionNotificationSD3 {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "UpdDtAndTm")
 	protected ISODateTime updateDateAndTime;
 	/**
-	 * Date and time when DTCC (The Depository Trust and Clearing Corporation)
-	 * last updated the announcement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -176,6 +184,9 @@ public class CorporateActionNotificationSD3 {
 	 * CorporateActionNotificationSD3}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "UpdDtAndTm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Update Date and Time</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -191,9 +202,10 @@ public class CorporateActionNotificationSD3 {
 	 */
 	public static final MMMessageAttribute mmUpdateDateAndTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNotificationSD3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNotificationSD3.mmObject();
 			isDerived = false;
 			xmlTag = "UpdDtAndTm";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Update Date and Time"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDateAndTime";
 			definition = "Date and time when DTCC  (The Depository Trust and Clearing Corporation) last updated the announcement.";
@@ -206,8 +218,9 @@ public class CorporateActionNotificationSD3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionNotificationSD3.mmPlaceAndName, CorporateActionNotificationSD3.mmCreateDateAndTime, CorporateActionNotificationSD3.mmUpdateDateAndTime);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotificationSD3.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionNotificationSD3.mmCreateDateAndTime,
+						com.tools20022.repository.msg.CorporateActionNotificationSD3.mmUpdateDateAndTime);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotificationSD3";
 				definition = "Provides additional information regarding notification general information details.";
@@ -216,30 +229,30 @@ public class CorporateActionNotificationSD3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionNotificationSD3 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "CretDtAndTm", required = true)
 	public ISODateTime getCreateDateAndTime() {
 		return createDateAndTime;
 	}
 
-	public void setCreateDateAndTime(ISODateTime createDateAndTime) {
-		this.createDateAndTime = createDateAndTime;
+	public CorporateActionNotificationSD3 setCreateDateAndTime(ISODateTime createDateAndTime) {
+		this.createDateAndTime = Objects.requireNonNull(createDateAndTime);
+		return this;
 	}
 
-	@XmlElement(name = "UpdDtAndTm")
-	public ISODateTime getUpdateDateAndTime() {
-		return updateDateAndTime;
+	public Optional<ISODateTime> getUpdateDateAndTime() {
+		return updateDateAndTime == null ? Optional.empty() : Optional.of(updateDateAndTime);
 	}
 
-	public void setUpdateDateAndTime(ISODateTime updateDateAndTime) {
+	public CorporateActionNotificationSD3 setUpdateDateAndTime(ISODateTime updateDateAndTime) {
 		this.updateDateAndTime = updateDateAndTime;
+		return this;
 	}
 }

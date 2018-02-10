@@ -31,6 +31,7 @@ import com.tools20022.repository.msg.IssuerAgent2;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 /**
  * A firm authorised to act as an intermediary between issuer and shareholders.
@@ -43,6 +44,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.CorporateActionPartyRole
+ * CorporateActionPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -51,10 +56,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionAgent.mmAgentRole}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.CorporateActionPartyRole
- * CorporateActionPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#mmCorporateActionOtherAgentDetails
+ * CorporateActionOption1.mmCorporateActionOtherAgentDetails}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -68,19 +78,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionOption1#mmCorporateActionOtherAgentDetails
- * CorporateActionOption1.mmCorporateActionOtherAgentDetails}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -98,8 +99,8 @@ public class CorporateActionAgent extends CorporateActionPartyRole {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected AgentRoleCode agentRole;
 	/**
-	 * Specifies the agent role played by a party in a corporate action process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -146,8 +147,8 @@ public class CorporateActionAgent extends CorporateActionPartyRole {
 	public static final MMBusinessAttribute mmAgentRole = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(IssuerAgent1.mmRole, AgentRole1FormatChoice.mmCode, AgentRole1FormatChoice.mmProprietary, CorporateActionAgent1.mmAgentRole, IssuerAgent2.mmRole);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionAgent.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionAgent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AgentRole";
 			definition = "Specifies the agent role played by a party in a corporate action process.";
@@ -168,7 +169,7 @@ public class CorporateActionAgent extends CorporateActionPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionAgent";
 				definition = "A firm authorised to act as an intermediary between issuer and shareholders. It takes care of the needs of the shareholders such as reporting, inquiries and regulatory compliance.";
@@ -190,7 +191,8 @@ public class CorporateActionAgent extends CorporateActionPartyRole {
 		return agentRole;
 	}
 
-	public void setAgentRole(AgentRoleCode agentRole) {
-		this.agentRole = agentRole;
+	public CorporateActionAgent setAgentRole(AgentRoleCode agentRole) {
+		this.agentRole = Objects.requireNonNull(agentRole);
+		return this;
 	}
 }

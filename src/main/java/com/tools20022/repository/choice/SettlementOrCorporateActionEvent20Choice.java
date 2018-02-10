@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,7 @@ import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementOrCorporateActionEvent20Choice", propOrder = {"securitiesTransactionType", "corporateActionEventType"})
 public class SettlementOrCorporateActionEvent20Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SctiesTxTp", required = true)
 	protected SecuritiesTransactionType24Choice securitiesTransactionType;
 	/**
-	 * Identifies the type of securities transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -93,6 +96,9 @@ public class SettlementOrCorporateActionEvent20Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SctiesTxTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::SETR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -106,9 +112,10 @@ public class SettlementOrCorporateActionEvent20Choice {
 	public static final MMMessageAttribute mmSecuritiesTransactionType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmSecuritiesTransactionType;
-			componentContext_lazy = () -> SettlementOrCorporateActionEvent20Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementOrCorporateActionEvent20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesTxTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::SETR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTransactionType";
 			definition = "Identifies the type of securities transaction.";
@@ -117,10 +124,11 @@ public class SettlementOrCorporateActionEvent20Choice {
 			complexType_lazy = () -> com.tools20022.repository.choice.SecuritiesTransactionType24Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "CorpActnEvtTp", required = true)
 	protected CorporateActionEventType71Choice corporateActionEventType;
 	/**
-	 * Specifies the type of corporate event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,6 +149,9 @@ public class SettlementOrCorporateActionEvent20Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CorpActnEvtTp"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :22F::CAEV</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -154,9 +165,10 @@ public class SettlementOrCorporateActionEvent20Choice {
 	public static final MMMessageAttribute mmCorporateActionEventType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmType;
-			componentContext_lazy = () -> SettlementOrCorporateActionEvent20Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementOrCorporateActionEvent20Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CorpActnEvtTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CAEV"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventType";
 			definition = "Specifies the type of corporate event.";
@@ -169,8 +181,9 @@ public class SettlementOrCorporateActionEvent20Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementOrCorporateActionEvent20Choice.mmSecuritiesTransactionType, SettlementOrCorporateActionEvent20Choice.mmCorporateActionEventType);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementOrCorporateActionEvent20Choice.mmSecuritiesTransactionType,
+						com.tools20022.repository.choice.SettlementOrCorporateActionEvent20Choice.mmCorporateActionEventType);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementOrCorporateActionEvent20Choice";
 				definition = "Choice of transaction type, corporate action event or settlement transaction.";
@@ -179,21 +192,21 @@ public class SettlementOrCorporateActionEvent20Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SctiesTxTp", required = true)
 	public SecuritiesTransactionType24Choice getSecuritiesTransactionType() {
 		return securitiesTransactionType;
 	}
 
-	public void setSecuritiesTransactionType(com.tools20022.repository.choice.SecuritiesTransactionType24Choice securitiesTransactionType) {
-		this.securitiesTransactionType = securitiesTransactionType;
+	public SettlementOrCorporateActionEvent20Choice setSecuritiesTransactionType(com.tools20022.repository.choice.SecuritiesTransactionType24Choice securitiesTransactionType) {
+		this.securitiesTransactionType = Objects.requireNonNull(securitiesTransactionType);
+		return this;
 	}
 
-	@XmlElement(name = "CorpActnEvtTp", required = true)
 	public CorporateActionEventType71Choice getCorporateActionEventType() {
 		return corporateActionEventType;
 	}
 
-	public void setCorporateActionEventType(com.tools20022.repository.choice.CorporateActionEventType71Choice corporateActionEventType) {
-		this.corporateActionEventType = corporateActionEventType;
+	public SettlementOrCorporateActionEvent20Choice setCorporateActionEventType(com.tools20022.repository.choice.CorporateActionEventType71Choice corporateActionEventType) {
+		this.corporateActionEventType = Objects.requireNonNull(corporateActionEventType);
+		return this;
 	}
 }

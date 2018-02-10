@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.PaymentInstruction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,16 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentInstructionInformation", propOrder = {"requestedExecutionDateTime", "paymentType"})
 public class PaymentInstructionInformation {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ReqdExctnDtTm")
 	protected ISODateTime requestedExecutionDateTime;
 	/**
-	 * Date at which the initiating party requests that the payment instruction
-	 * be processed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,7 +109,7 @@ public class PaymentInstructionInformation {
 	 */
 	public static final MMMessageAttribute mmRequestedExecutionDateTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentInstructionInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionInformation.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdExctnDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,10 +120,11 @@ public class PaymentInstructionInformation {
 			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 	};
+	@XmlElement(name = "PmtTp")
 	protected PaymentType2Choice paymentType;
 	/**
-	 * Type, or nature, of the payment, eg, express payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,7 +152,7 @@ public class PaymentInstructionInformation {
 	 */
 	public static final MMMessageAttribute mmPaymentType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PaymentInstructionInformation.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentInstructionInformation.mmObject();
 			isDerived = false;
 			xmlTag = "PmtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -165,9 +167,9 @@ public class PaymentInstructionInformation {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentInstructionInformation.mmRequestedExecutionDateTime, PaymentInstructionInformation.mmPaymentType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstructionInformation.mmRequestedExecutionDateTime, com.tools20022.repository.msg.PaymentInstructionInformation.mmPaymentType);
 				trace_lazy = () -> PaymentInstruction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentInstructionInformation";
 				definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.";
@@ -176,21 +178,21 @@ public class PaymentInstructionInformation {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ReqdExctnDtTm")
-	public ISODateTime getRequestedExecutionDateTime() {
-		return requestedExecutionDateTime;
+	public Optional<ISODateTime> getRequestedExecutionDateTime() {
+		return requestedExecutionDateTime == null ? Optional.empty() : Optional.of(requestedExecutionDateTime);
 	}
 
-	public void setRequestedExecutionDateTime(ISODateTime requestedExecutionDateTime) {
+	public PaymentInstructionInformation setRequestedExecutionDateTime(ISODateTime requestedExecutionDateTime) {
 		this.requestedExecutionDateTime = requestedExecutionDateTime;
+		return this;
 	}
 
-	@XmlElement(name = "PmtTp")
-	public PaymentType2Choice getPaymentType() {
-		return paymentType;
+	public Optional<PaymentType2Choice> getPaymentType() {
+		return paymentType == null ? Optional.empty() : Optional.of(paymentType);
 	}
 
-	public void setPaymentType(PaymentType2Choice paymentType) {
+	public PaymentInstructionInformation setPaymentType(PaymentType2Choice paymentType) {
 		this.paymentType = paymentType;
+		return this;
 	}
 }

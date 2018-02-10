@@ -24,9 +24,11 @@ import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Description of the calculation of the amounts representing the risk that
@@ -77,17 +79,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.Collateral1 Collateral1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.CollateralBalance1Choice
- * CollateralBalance1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.MarginRequirement1Choice
- * MarginRequirement1Choice}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -130,10 +121,21 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Collateral1 Collateral1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CollateralBalance1Choice
+ * CollateralBalance1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.MarginRequirement1Choice
+ * MarginRequirement1Choice}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -151,9 +153,8 @@ public class ExposureCalculation {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected ActiveCurrencyAndAmount totalCollateralCurrentValue;
 	/**
-	 * Total value of the collateral derived from the sum of the current
-	 * independent amounts and variation margins held, agreed and in transit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -222,8 +223,8 @@ public class ExposureCalculation {
 			derivation_lazy = () -> Arrays.asList(InterestCalculation1.mmEffectivePrincipalAmount, InterestCalculation2.mmEffectivePrincipalAmount, MarginCall1.mmCollateralBalance, SummaryAmounts1.mmPreHaircutCollateralValue,
 					SummaryAmounts1.mmPreviousCollateralValue, Summary1.mmTotalValueOfCollateral, Margin2.mmCollateralOnDeposit, MarginCalculation1.mmCollateralOnDeposit, MarginCalculation2.mmCollateralOnDeposit,
 					InterestCalculation3.mmEffectivePrincipalAmount, InterestCalculation4.mmEffectivePrincipalAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCollateralCurrentValue";
 			definition = "Total value of the collateral derived from the sum of the current independent amounts and variation margins held, agreed and in transit.";
@@ -242,10 +243,8 @@ public class ExposureCalculation {
 	};
 	protected ActiveCurrencyAndAmount totalExposedAmount;
 	/**
-	 * The sum of the exposures of all transactions which are in favour of a
-	 * Party. That is, all transactions which would have an amount payable by
-	 * the counterparty if they were being terminated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -303,8 +302,8 @@ public class ExposureCalculation {
 		{
 			derivation_lazy = () -> Arrays.asList(MarginCall1.mmExposedAmountPartyA, MarginCall1.mmExposedAmountPartyB, SummaryAmounts1.mmAdjustedExposure, SummaryAmounts1.mmPreviousExposureValue, Summary1.mmExposedAmountPartyA,
 					Summary1.mmExposedAmountPartyB, Margin2.mmExposureAmount, MarginCalculation2.mmExposureAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalExposedAmount";
 			definition = "The sum of the exposures of all transactions which are in favour of a Party. That is, all transactions which would have an amount payable by the counterparty if they were being terminated.";
@@ -323,9 +322,8 @@ public class ExposureCalculation {
 	};
 	protected List<com.tools20022.repository.entity.IndependentAmount> currentIndependentAmount;
 	/**
-	 * Amount applied as an add-on to the exposure usually intended to cover a
-	 * possible increase in exposure before the next valuation date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -372,8 +370,8 @@ public class ExposureCalculation {
 	public static final MMBusinessAssociationEnd mmCurrentIndependentAmount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(MarginCall1.mmIndependentAmountPartyA, MarginCall1.mmIndependentAmountPartyB);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentIndependentAmount";
 			definition = "Amount applied as an add-on to the exposure usually intended to cover a possible increase in exposure before the next valuation date.";
@@ -385,9 +383,8 @@ public class ExposureCalculation {
 	};
 	protected CollateralBalance currentVariationMargin;
 	/**
-	 * Provides details about the collateral held, in transit or that still
-	 * needs to be agreed by both parties, against the variation margin.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -431,8 +428,8 @@ public class ExposureCalculation {
 	public static final MMBusinessAssociationEnd mmCurrentVariationMargin = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Collateral1.mmVariationMargin);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentVariationMargin";
 			definition = "Provides details about the collateral held, in transit or that still needs to be agreed by both parties, against the variation margin.";
@@ -445,10 +442,8 @@ public class ExposureCalculation {
 	};
 	protected CollateralBalance currentSegregatedIndependentAmount;
 	/**
-	 * Provides details about the collateral held, in transit or that still
-	 * needs to be agreed by both parties, against the segregated independent
-	 * amount only.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -495,8 +490,8 @@ public class ExposureCalculation {
 	public static final MMBusinessAssociationEnd mmCurrentSegregatedIndependentAmount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Collateral1.mmSegregatedIndependentAmount, CollateralBalance1Choice.mmSegregatedIndependentAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentSegregatedIndependentAmount";
 			definition = "Provides details about the collateral held, in transit or that still needs to be agreed by both parties, against the segregated independent amount only.";
@@ -509,9 +504,8 @@ public class ExposureCalculation {
 	};
 	protected List<com.tools20022.repository.entity.MarginAmountRequirement> variationMarginAmountRequirement;
 	/**
-	 * Amount of expected margin required by any of the parties of the margin
-	 * calculation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -559,8 +553,8 @@ public class ExposureCalculation {
 	public static final MMBusinessAssociationEnd mmVariationMarginAmountRequirement = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Requirement1.mmVariationMarginRequirement, MarginRequirement1Choice.mmMarginRequirement);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariationMarginAmountRequirement";
 			definition = "Amount of expected margin required by any of the parties of the margin calculation.";
@@ -572,8 +566,8 @@ public class ExposureCalculation {
 	};
 	protected List<com.tools20022.repository.entity.MarginAmountRequirement> segregatedAmountRequirement;
 	/**
-	 * Margin requirements for the segregated independent amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -620,8 +614,8 @@ public class ExposureCalculation {
 	public static final MMBusinessAssociationEnd mmSegregatedAmountRequirement = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Requirement1.mmSegregatedIndependentAmountRequirement, MarginRequirement1Choice.mmSegregatedIndependentAmountRequirement);
-			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SegregatedAmountRequirement";
 			definition = "Margin requirements for the segregated independent amount.";
@@ -633,9 +627,8 @@ public class ExposureCalculation {
 	};
 	protected List<com.tools20022.repository.entity.CollateralManagement> collateralManagement;
 	/**
-	 * Specifies the collateral management actions resulting from the
-	 * calculation of the risk.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -671,8 +664,8 @@ public class ExposureCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmCollateralManagement = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralManagement";
 			definition = "Specifies the collateral management actions resulting from the calculation of the risk.";
@@ -684,9 +677,8 @@ public class ExposureCalculation {
 	};
 	protected List<com.tools20022.repository.entity.CounterpartyRisk> counterpartyRisk;
 	/**
-	 * Calculation of the exposure amount that one party has vis-a-vis one
-	 * counterparty or a central system, based on its credit risk.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -721,8 +713,8 @@ public class ExposureCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmCounterpartyRisk = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CounterpartyRisk";
 			definition = "Calculation of the exposure amount that one party has vis-a-vis one counterparty or a central system, based on its credit risk.";
@@ -734,10 +726,8 @@ public class ExposureCalculation {
 	};
 	protected List<com.tools20022.repository.entity.TransactionRisk> transactionRisk;
 	/**
-	 * Calculation of the exposure amount that one party has vis-a-vis one
-	 * counterparty or a central system, based on the transactions that are not
-	 * yet settled.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -772,8 +762,8 @@ public class ExposureCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmTransactionRisk = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionRisk";
 			definition = "Calculation of the exposure amount that one party has vis-a-vis one counterparty or a central system, based on the transactions that are not yet settled.";
@@ -785,9 +775,8 @@ public class ExposureCalculation {
 	};
 	protected ActiveCurrencyAndAmount totalCollateralAfterHaircut;
 	/**
-	 * Collateral currently received (+)/delivered (-) in the base currency.
-	 * This amount is after the haircut has been applied.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -815,8 +804,8 @@ public class ExposureCalculation {
 	 */
 	public static final MMBusinessAttribute mmTotalCollateralAfterHaircut = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCollateralAfterHaircut";
 			definition = "Collateral currently received (+)/delivered (-) in the base currency. This amount is after the haircut has been applied.";
@@ -837,7 +826,7 @@ public class ExposureCalculation {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExposureCalculation";
 				definition = "Description of the calculation of the amounts representing the risk that needs to be covered, together with the calculation of the existing coverage.";
@@ -867,87 +856,98 @@ public class ExposureCalculation {
 		return totalCollateralCurrentValue;
 	}
 
-	public void setTotalCollateralCurrentValue(ActiveCurrencyAndAmount totalCollateralCurrentValue) {
-		this.totalCollateralCurrentValue = totalCollateralCurrentValue;
+	public ExposureCalculation setTotalCollateralCurrentValue(ActiveCurrencyAndAmount totalCollateralCurrentValue) {
+		this.totalCollateralCurrentValue = Objects.requireNonNull(totalCollateralCurrentValue);
+		return this;
 	}
 
 	public ActiveCurrencyAndAmount getTotalExposedAmount() {
 		return totalExposedAmount;
 	}
 
-	public void setTotalExposedAmount(ActiveCurrencyAndAmount totalExposedAmount) {
-		this.totalExposedAmount = totalExposedAmount;
+	public ExposureCalculation setTotalExposedAmount(ActiveCurrencyAndAmount totalExposedAmount) {
+		this.totalExposedAmount = Objects.requireNonNull(totalExposedAmount);
+		return this;
 	}
 
 	public List<IndependentAmount> getCurrentIndependentAmount() {
-		return currentIndependentAmount;
+		return currentIndependentAmount == null ? currentIndependentAmount = new ArrayList<>() : currentIndependentAmount;
 	}
 
-	public void setCurrentIndependentAmount(List<com.tools20022.repository.entity.IndependentAmount> currentIndependentAmount) {
-		this.currentIndependentAmount = currentIndependentAmount;
+	public ExposureCalculation setCurrentIndependentAmount(List<com.tools20022.repository.entity.IndependentAmount> currentIndependentAmount) {
+		this.currentIndependentAmount = Objects.requireNonNull(currentIndependentAmount);
+		return this;
 	}
 
 	public CollateralBalance getCurrentVariationMargin() {
 		return currentVariationMargin;
 	}
 
-	public void setCurrentVariationMargin(com.tools20022.repository.entity.CollateralBalance currentVariationMargin) {
-		this.currentVariationMargin = currentVariationMargin;
+	public ExposureCalculation setCurrentVariationMargin(com.tools20022.repository.entity.CollateralBalance currentVariationMargin) {
+		this.currentVariationMargin = Objects.requireNonNull(currentVariationMargin);
+		return this;
 	}
 
 	public CollateralBalance getCurrentSegregatedIndependentAmount() {
 		return currentSegregatedIndependentAmount;
 	}
 
-	public void setCurrentSegregatedIndependentAmount(com.tools20022.repository.entity.CollateralBalance currentSegregatedIndependentAmount) {
-		this.currentSegregatedIndependentAmount = currentSegregatedIndependentAmount;
+	public ExposureCalculation setCurrentSegregatedIndependentAmount(com.tools20022.repository.entity.CollateralBalance currentSegregatedIndependentAmount) {
+		this.currentSegregatedIndependentAmount = Objects.requireNonNull(currentSegregatedIndependentAmount);
+		return this;
 	}
 
 	public List<MarginAmountRequirement> getVariationMarginAmountRequirement() {
-		return variationMarginAmountRequirement;
+		return variationMarginAmountRequirement == null ? variationMarginAmountRequirement = new ArrayList<>() : variationMarginAmountRequirement;
 	}
 
-	public void setVariationMarginAmountRequirement(List<com.tools20022.repository.entity.MarginAmountRequirement> variationMarginAmountRequirement) {
-		this.variationMarginAmountRequirement = variationMarginAmountRequirement;
+	public ExposureCalculation setVariationMarginAmountRequirement(List<com.tools20022.repository.entity.MarginAmountRequirement> variationMarginAmountRequirement) {
+		this.variationMarginAmountRequirement = Objects.requireNonNull(variationMarginAmountRequirement);
+		return this;
 	}
 
 	public List<MarginAmountRequirement> getSegregatedAmountRequirement() {
-		return segregatedAmountRequirement;
+		return segregatedAmountRequirement == null ? segregatedAmountRequirement = new ArrayList<>() : segregatedAmountRequirement;
 	}
 
-	public void setSegregatedAmountRequirement(List<com.tools20022.repository.entity.MarginAmountRequirement> segregatedAmountRequirement) {
-		this.segregatedAmountRequirement = segregatedAmountRequirement;
+	public ExposureCalculation setSegregatedAmountRequirement(List<com.tools20022.repository.entity.MarginAmountRequirement> segregatedAmountRequirement) {
+		this.segregatedAmountRequirement = Objects.requireNonNull(segregatedAmountRequirement);
+		return this;
 	}
 
 	public List<CollateralManagement> getCollateralManagement() {
-		return collateralManagement;
+		return collateralManagement == null ? collateralManagement = new ArrayList<>() : collateralManagement;
 	}
 
-	public void setCollateralManagement(List<com.tools20022.repository.entity.CollateralManagement> collateralManagement) {
-		this.collateralManagement = collateralManagement;
+	public ExposureCalculation setCollateralManagement(List<com.tools20022.repository.entity.CollateralManagement> collateralManagement) {
+		this.collateralManagement = Objects.requireNonNull(collateralManagement);
+		return this;
 	}
 
 	public List<CounterpartyRisk> getCounterpartyRisk() {
-		return counterpartyRisk;
+		return counterpartyRisk == null ? counterpartyRisk = new ArrayList<>() : counterpartyRisk;
 	}
 
-	public void setCounterpartyRisk(List<com.tools20022.repository.entity.CounterpartyRisk> counterpartyRisk) {
-		this.counterpartyRisk = counterpartyRisk;
+	public ExposureCalculation setCounterpartyRisk(List<com.tools20022.repository.entity.CounterpartyRisk> counterpartyRisk) {
+		this.counterpartyRisk = Objects.requireNonNull(counterpartyRisk);
+		return this;
 	}
 
 	public List<TransactionRisk> getTransactionRisk() {
-		return transactionRisk;
+		return transactionRisk == null ? transactionRisk = new ArrayList<>() : transactionRisk;
 	}
 
-	public void setTransactionRisk(List<com.tools20022.repository.entity.TransactionRisk> transactionRisk) {
-		this.transactionRisk = transactionRisk;
+	public ExposureCalculation setTransactionRisk(List<com.tools20022.repository.entity.TransactionRisk> transactionRisk) {
+		this.transactionRisk = Objects.requireNonNull(transactionRisk);
+		return this;
 	}
 
 	public ActiveCurrencyAndAmount getTotalCollateralAfterHaircut() {
 		return totalCollateralAfterHaircut;
 	}
 
-	public void setTotalCollateralAfterHaircut(ActiveCurrencyAndAmount totalCollateralAfterHaircut) {
-		this.totalCollateralAfterHaircut = totalCollateralAfterHaircut;
+	public ExposureCalculation setTotalCollateralAfterHaircut(ActiveCurrencyAndAmount totalCollateralAfterHaircut) {
+		this.totalCollateralAfterHaircut = Objects.requireNonNull(totalCollateralAfterHaircut);
+		return this;
 	}
 }

@@ -27,9 +27,11 @@ import com.tools20022.repository.entity.InvestmentFundClass;
 import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.entity.PortfolioTransfer;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -43,8 +45,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PEPISACashTransfer1#mmPercentageOrAmountOrYearRule
- * PEPISACashTransfer1.mmPercentageOrAmountOrYearRule}</li>
+ * {@linkplain com.tools20022.repository.msg.PEPISACashTransfer1#PercentageOrAmountOrYearRule
+ * PEPISACashTransfer1.PercentageOrAmountOrYearRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -74,8 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintPEPOrISARule#forPEPISACashTransfer1
+ * ConstraintPEPOrISARule.forPEPISACashTransfer1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,16 +97,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Describes the type of account and the assets to be transferred."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PEPISACashTransfer1", propOrder = {"identification", "type", "percentageToBeTransferred", "amountToBeTransferred", "year", "assets"})
 public class PEPISACashTransfer1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Identification assigned by the new plan manager to each transfer of
-	 * asset.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,7 +135,7 @@ public class PEPISACashTransfer1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> PEPISACashTransfer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PEPISACashTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -136,10 +146,11 @@ public class PEPISACashTransfer1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp", required = true)
 	protected PEPISA1Code type;
 	/**
-	 * Indicates the type of product that will be transferred. PEP or ISA.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,7 +184,7 @@ public class PEPISACashTransfer1 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmPEPOrISAPlan;
-			componentContext_lazy = () -> PEPISACashTransfer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PEPISACashTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -184,12 +195,11 @@ public class PEPISACashTransfer1 {
 			simpleType_lazy = () -> PEPISA1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PctgToBeTrfd", required = true)
 	protected PercentageRate percentageToBeTransferred;
 	/**
-	 * Quantity expressed as a percentage rate, eg, in the investment fund
-	 * business, a quantity of a financial instrument may be expressed as
-	 * percentage of the investor's total holding.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -225,7 +235,7 @@ public class PEPISACashTransfer1 {
 	public static final MMMessageAttribute mmPercentageToBeTransferred = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmTransferredPercentage;
-			componentContext_lazy = () -> PEPISACashTransfer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PEPISACashTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "PctgToBeTrfd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -236,12 +246,11 @@ public class PEPISACashTransfer1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtToBeTrfd", required = true)
 	protected ImpliedCurrencyAndAmount amountToBeTransferred;
 	/**
-	 * Quantity expressed as an amount, eg, in the investment fund business, a
-	 * quantity of a financial instrument may be expressed as an amount of
-	 * money.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -277,7 +286,7 @@ public class PEPISACashTransfer1 {
 	public static final MMMessageAttribute mmAmountToBeTransferred = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentObligation.mmAmount;
-			componentContext_lazy = () -> PEPISACashTransfer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PEPISACashTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "AmtToBeTrfd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -288,10 +297,11 @@ public class PEPISACashTransfer1 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "Yr", required = true)
 	protected PEPOrISAChoice year;
 	/**
-	 * Specifies the year during which the investment plan was issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -324,7 +334,7 @@ public class PEPISACashTransfer1 {
 	public static final MMMessageAssociationEnd mmYear = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PortfolioTransfer.mmTransferredYear;
-			componentContext_lazy = () -> PEPISACashTransfer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PEPISACashTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "Yr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -336,10 +346,11 @@ public class PEPISACashTransfer1 {
 			type_lazy = () -> PEPOrISAChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Assts")
 	protected List<com.tools20022.repository.msg.FinancialInstrument7> assets;
 	/**
-	 * Specifies the underlying assets for the PEP or ISA.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -371,7 +382,7 @@ public class PEPISACashTransfer1 {
 	public static final MMMessageAssociationEnd mmAssets = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> InvestmentFundClass.mmObject();
-			componentContext_lazy = () -> PEPISACashTransfer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PEPISACashTransfer1.mmObject();
 			isDerived = false;
 			xmlTag = "Assts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -418,83 +429,86 @@ public class PEPISACashTransfer1 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmPercentageOrAmountOrYearRule = new MMXor() {
+	public static final MMXor PercentageOrAmountOrYearRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageOrAmountOrYearRule";
 			definition = "One and only one message element in the list (PercentageToBeTransferred, AmountToBeTransferred, Year) must be present.";
-			messageComponent_lazy = () -> PEPISACashTransfer1.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(PEPISACashTransfer1.mmPercentageToBeTransferred, PEPISACashTransfer1.mmAmountToBeTransferred, PEPISACashTransfer1.mmYear);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.PEPISACashTransfer1.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISACashTransfer1.mmPercentageToBeTransferred, com.tools20022.repository.msg.PEPISACashTransfer1.mmAmountToBeTransferred,
+					com.tools20022.repository.msg.PEPISACashTransfer1.mmYear);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PEPISACashTransfer1.mmIdentification, PEPISACashTransfer1.mmType, PEPISACashTransfer1.mmPercentageToBeTransferred, PEPISACashTransfer1.mmAmountToBeTransferred,
-						PEPISACashTransfer1.mmYear, PEPISACashTransfer1.mmAssets);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISACashTransfer1.mmIdentification, com.tools20022.repository.msg.PEPISACashTransfer1.mmType,
+						com.tools20022.repository.msg.PEPISACashTransfer1.mmPercentageToBeTransferred, com.tools20022.repository.msg.PEPISACashTransfer1.mmAmountToBeTransferred, com.tools20022.repository.msg.PEPISACashTransfer1.mmYear,
+						com.tools20022.repository.msg.PEPISACashTransfer1.mmAssets);
 				trace_lazy = () -> PortfolioTransfer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPEPOrISARule.forPEPISACashTransfer1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PEPISACashTransfer1";
 				definition = "Describes the type of account and the assets to be transferred.";
-				xors_lazy = () -> Arrays.asList(PEPISACashTransfer1.mmPercentageOrAmountOrYearRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PEPISACashTransfer1.PercentageOrAmountOrYearRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public PEPISACashTransfer1 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public PEPISA1Code getType() {
 		return type;
 	}
 
-	public void setType(PEPISA1Code type) {
-		this.type = type;
+	public PEPISACashTransfer1 setType(PEPISA1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "PctgToBeTrfd", required = true)
 	public PercentageRate getPercentageToBeTransferred() {
 		return percentageToBeTransferred;
 	}
 
-	public void setPercentageToBeTransferred(PercentageRate percentageToBeTransferred) {
-		this.percentageToBeTransferred = percentageToBeTransferred;
+	public PEPISACashTransfer1 setPercentageToBeTransferred(PercentageRate percentageToBeTransferred) {
+		this.percentageToBeTransferred = Objects.requireNonNull(percentageToBeTransferred);
+		return this;
 	}
 
-	@XmlElement(name = "AmtToBeTrfd", required = true)
 	public ImpliedCurrencyAndAmount getAmountToBeTransferred() {
 		return amountToBeTransferred;
 	}
 
-	public void setAmountToBeTransferred(ImpliedCurrencyAndAmount amountToBeTransferred) {
-		this.amountToBeTransferred = amountToBeTransferred;
+	public PEPISACashTransfer1 setAmountToBeTransferred(ImpliedCurrencyAndAmount amountToBeTransferred) {
+		this.amountToBeTransferred = Objects.requireNonNull(amountToBeTransferred);
+		return this;
 	}
 
-	@XmlElement(name = "Yr", required = true)
 	public PEPOrISAChoice getYear() {
 		return year;
 	}
 
-	public void setYear(PEPOrISAChoice year) {
-		this.year = year;
+	public PEPISACashTransfer1 setYear(PEPOrISAChoice year) {
+		this.year = Objects.requireNonNull(year);
+		return this;
 	}
 
-	@XmlElement(name = "Assts")
 	public List<FinancialInstrument7> getAssets() {
-		return assets;
+		return assets == null ? assets = new ArrayList<>() : assets;
 	}
 
-	public void setAssets(List<com.tools20022.repository.msg.FinancialInstrument7> assets) {
-		this.assets = assets;
+	public PEPISACashTransfer1 setAssets(List<com.tools20022.repository.msg.FinancialInstrument7> assets) {
+		this.assets = Objects.requireNonNull(assets);
+		return this;
 	}
 }

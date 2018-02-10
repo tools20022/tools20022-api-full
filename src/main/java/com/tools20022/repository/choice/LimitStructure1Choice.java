@@ -26,6 +26,7 @@ import com.tools20022.repository.msg.LimitIdentification1;
 import com.tools20022.repository.msg.LimitIdentification2;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LimitStructure1Choice", propOrder = {"currentLimitIdentification", "allCurrentLimits"})
 public class LimitStructure1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CurLmtId", required = true)
 	protected LimitIdentification1 currentLimitIdentification;
 	/**
-	 * Identification of the current limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -109,7 +111,7 @@ public class LimitStructure1Choice {
 	public static final MMMessageAssociationEnd mmCurrentLimitIdentification = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
-			componentContext_lazy = () -> LimitStructure1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.LimitStructure1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "CurLmtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -121,10 +123,11 @@ public class LimitStructure1Choice {
 			type_lazy = () -> LimitIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "AllCurLmts", required = true)
 	protected LimitIdentification2 allCurrentLimits;
 	/**
-	 * Identification of the current limit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -156,7 +159,7 @@ public class LimitStructure1Choice {
 	public static final MMMessageAssociationEnd mmAllCurrentLimits = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> RiskManagementLimit.mmObject();
-			componentContext_lazy = () -> LimitStructure1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.LimitStructure1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AllCurLmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -172,9 +175,9 @@ public class LimitStructure1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LimitStructure1Choice.mmCurrentLimitIdentification, LimitStructure1Choice.mmAllCurrentLimits);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.LimitStructure1Choice.mmCurrentLimitIdentification, com.tools20022.repository.choice.LimitStructure1Choice.mmAllCurrentLimits);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitStructure1Choice";
 				definition = "Limit details of one or more limits set by the member and managed by the transaction administrator.";
@@ -183,21 +186,21 @@ public class LimitStructure1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CurLmtId", required = true)
 	public LimitIdentification1 getCurrentLimitIdentification() {
 		return currentLimitIdentification;
 	}
 
-	public void setCurrentLimitIdentification(LimitIdentification1 currentLimitIdentification) {
-		this.currentLimitIdentification = currentLimitIdentification;
+	public LimitStructure1Choice setCurrentLimitIdentification(LimitIdentification1 currentLimitIdentification) {
+		this.currentLimitIdentification = Objects.requireNonNull(currentLimitIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AllCurLmts", required = true)
 	public LimitIdentification2 getAllCurrentLimits() {
 		return allCurrentLimits;
 	}
 
-	public void setAllCurrentLimits(LimitIdentification2 allCurrentLimits) {
-		this.allCurrentLimits = allCurrentLimits;
+	public LimitStructure1Choice setAllCurrentLimits(LimitIdentification2 allCurrentLimits) {
+		this.allCurrentLimits = Objects.requireNonNull(allCurrentLimits);
+		return this;
 	}
 }

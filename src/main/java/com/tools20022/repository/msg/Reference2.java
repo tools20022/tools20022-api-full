@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,15 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Additional references linked to the quote request reject."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Reference2", propOrder = {"quoteRequestIdentification", "requestForQuoteRequestIdentification"})
 public class Reference2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "QtReqId", required = true)
 	protected Max35Text quoteRequestIdentification;
 	/**
-	 * Unique identifier for quote request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -83,6 +87,9 @@ public class Reference2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtReqId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 131</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -95,9 +102,10 @@ public class Reference2 {
 	 */
 	public static final MMMessageAttribute mmQuoteRequestIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference2.mmObject();
 			isDerived = false;
 			xmlTag = "QtReqId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "131"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuoteRequestIdentification";
 			definition = "Unique identifier for quote request.";
@@ -106,10 +114,11 @@ public class Reference2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqForQtReqId")
 	protected Max35Text requestForQuoteRequestIdentification;
 	/**
-	 * Identifier used to identify a request for quote request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -123,6 +132,9 @@ public class Reference2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ReqForQtReqId"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 644</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -135,9 +147,10 @@ public class Reference2 {
 	 */
 	public static final MMMessageAttribute mmRequestForQuoteRequestIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference2.mmObject();
 			isDerived = false;
 			xmlTag = "ReqForQtReqId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "644"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestForQuoteRequestIdentification";
 			definition = "Identifier used to identify a request for quote request.";
@@ -150,8 +163,8 @@ public class Reference2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Reference2.mmQuoteRequestIdentification, Reference2.mmRequestForQuoteRequestIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference2.mmQuoteRequestIdentification, com.tools20022.repository.msg.Reference2.mmRequestForQuoteRequestIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference2";
 				definition = "Additional references linked to the quote request reject.";
@@ -160,21 +173,21 @@ public class Reference2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "QtReqId", required = true)
 	public Max35Text getQuoteRequestIdentification() {
 		return quoteRequestIdentification;
 	}
 
-	public void setQuoteRequestIdentification(Max35Text quoteRequestIdentification) {
-		this.quoteRequestIdentification = quoteRequestIdentification;
+	public Reference2 setQuoteRequestIdentification(Max35Text quoteRequestIdentification) {
+		this.quoteRequestIdentification = Objects.requireNonNull(quoteRequestIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "ReqForQtReqId")
-	public Max35Text getRequestForQuoteRequestIdentification() {
-		return requestForQuoteRequestIdentification;
+	public Optional<Max35Text> getRequestForQuoteRequestIdentification() {
+		return requestForQuoteRequestIdentification == null ? Optional.empty() : Optional.of(requestForQuoteRequestIdentification);
 	}
 
-	public void setRequestForQuoteRequestIdentification(Max35Text requestForQuoteRequestIdentification) {
+	public Reference2 setRequestForQuoteRequestIdentification(Max35Text requestForQuoteRequestIdentification) {
 		this.requestForQuoteRequestIdentification = requestForQuoteRequestIdentification;
+		return this;
 	}
 }

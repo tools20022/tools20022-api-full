@@ -29,9 +29,8 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -90,8 +89,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,17 +105,17 @@ import javax.xml.bind.annotation.XmlType;
  * AccountManagementStatusAndReason4}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AccountManagementStatusAndReason5", propOrder = {"status", "statusReason", "accountApplicationIdentification", "existingAccountIdentification", "accountIdentification", "accountStatus", "blockedStatus",
-		"FATCAReportingDate", "CRSReportingDate"})
+		"fATCAReportingDate", "cRSReportingDate"})
 public class AccountManagementStatusAndReason5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sts", required = true)
 	protected Status25Choice status;
 	/**
-	 * Status of the account management instruction that was previously
-	 * received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +156,7 @@ public class AccountManagementStatusAndReason5 {
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> AccountStatus.mmObject();
-			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,10 +168,11 @@ public class AccountManagementStatusAndReason5 {
 			complexType_lazy = () -> Status25Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "StsRsn")
 	protected List<AcceptedStatusReason1Choice> statusReason;
 	/**
-	 * Reason for the status of the account management instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -206,7 +206,7 @@ public class AccountManagementStatusAndReason5 {
 	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Status.mmStatusReason;
-			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "StsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -217,11 +217,11 @@ public class AccountManagementStatusAndReason5 {
 			type_lazy = () -> AcceptedStatusReason1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctApplId")
 	protected Max35Text accountApplicationIdentification;
 	/**
-	 * Unique and unambiguous identifier of the account opening or modification
-	 * instruction at application level.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -255,7 +255,7 @@ public class AccountManagementStatusAndReason5 {
 	 */
 	public static final MMMessageAttribute mmAccountApplicationIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "AcctApplId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -267,10 +267,11 @@ public class AccountManagementStatusAndReason5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "ExstgAcctId")
 	protected List<com.tools20022.repository.msg.Account23> existingAccountIdentification;
 	/**
-	 * Account to which the account opening is related.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -306,7 +307,7 @@ public class AccountManagementStatusAndReason5 {
 	public static final MMMessageAssociationEnd mmExistingAccountIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "ExstgAcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -318,11 +319,11 @@ public class AccountManagementStatusAndReason5 {
 			type_lazy = () -> com.tools20022.repository.msg.Account23.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctId")
 	protected Max35Text accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -357,7 +358,7 @@ public class AccountManagementStatusAndReason5 {
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -368,10 +369,11 @@ public class AccountManagementStatusAndReason5 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSts")
 	protected AccountStatus2 accountStatus;
 	/**
-	 * Status of the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -403,7 +405,7 @@ public class AccountManagementStatusAndReason5 {
 	public static final MMMessageAssociationEnd mmAccountStatus = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmStatus;
-			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -415,11 +417,11 @@ public class AccountManagementStatusAndReason5 {
 			type_lazy = () -> com.tools20022.repository.msg.AccountStatus2.mmObject();
 		}
 	};
+	@XmlElement(name = "BlckdSts")
 	protected BlockedStatusReason2Choice blockedStatus;
 	/**
-	 * Specifies the account is blocked and other factors for the blocked
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -455,7 +457,7 @@ public class AccountManagementStatusAndReason5 {
 	public static final MMMessageAttribute mmBlockedStatus = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmStatus;
-			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "BlckdSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -466,12 +468,11 @@ public class AccountManagementStatusAndReason5 {
 			complexType_lazy = () -> BlockedStatusReason2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FATCARptgDt")
 	protected ISODate fATCAReportingDate;
 	/**
-	 * Date provided by the account owner to inform the account servicer of the
-	 * date on which the holdings must be reported before the account is
-	 * subsequently closed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -506,7 +507,7 @@ public class AccountManagementStatusAndReason5 {
 	public static final MMMessageAttribute mmFATCAReportingDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> FATCAStatus.mmFATCAReportingDate;
-			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "FATCARptgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -517,12 +518,11 @@ public class AccountManagementStatusAndReason5 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "CRSRptgDt")
 	protected ISODate cRSReportingDate;
 	/**
-	 * Date provided by the account owner to inform the account servicer of the
-	 * date on which the holdings must be reported before the account is
-	 * subsequently closed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -557,7 +557,7 @@ public class AccountManagementStatusAndReason5 {
 	public static final MMMessageAttribute mmCRSReportingDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CRSStatus.mmCRSReportingDate;
-			componentContext_lazy = () -> AccountManagementStatusAndReason5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmObject();
 			isDerived = false;
 			xmlTag = "CRSRptgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -572,12 +572,14 @@ public class AccountManagementStatusAndReason5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AccountManagementStatusAndReason5.mmStatus, AccountManagementStatusAndReason5.mmStatusReason, AccountManagementStatusAndReason5.mmAccountApplicationIdentification,
-						AccountManagementStatusAndReason5.mmExistingAccountIdentification, AccountManagementStatusAndReason5.mmAccountIdentification, AccountManagementStatusAndReason5.mmAccountStatus,
-						AccountManagementStatusAndReason5.mmBlockedStatus, AccountManagementStatusAndReason5.mmFATCAReportingDate, AccountManagementStatusAndReason5.mmCRSReportingDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmStatus, com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmStatusReason,
+						com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmAccountApplicationIdentification, com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmExistingAccountIdentification,
+						com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmAccountIdentification, com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmAccountStatus,
+						com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmBlockedStatus, com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmFATCAReportingDate,
+						com.tools20022.repository.msg.AccountManagementStatusAndReason5.mmCRSReportingDate);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AccountManagementStatusReportV06.mmStatusReport);
 				trace_lazy = () -> AccountStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountManagementStatusAndReason5";
 				definition = "Status information.";
@@ -587,84 +589,84 @@ public class AccountManagementStatusAndReason5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sts", required = true)
 	public Status25Choice getStatus() {
 		return status;
 	}
 
-	public void setStatus(Status25Choice status) {
-		this.status = status;
+	public AccountManagementStatusAndReason5 setStatus(Status25Choice status) {
+		this.status = Objects.requireNonNull(status);
+		return this;
 	}
 
-	@XmlElement(name = "StsRsn")
 	public List<AcceptedStatusReason1Choice> getStatusReason() {
-		return statusReason;
+		return statusReason == null ? statusReason = new ArrayList<>() : statusReason;
 	}
 
-	public void setStatusReason(List<AcceptedStatusReason1Choice> statusReason) {
-		this.statusReason = statusReason;
+	public AccountManagementStatusAndReason5 setStatusReason(List<AcceptedStatusReason1Choice> statusReason) {
+		this.statusReason = Objects.requireNonNull(statusReason);
+		return this;
 	}
 
-	@XmlElement(name = "AcctApplId")
-	public Max35Text getAccountApplicationIdentification() {
-		return accountApplicationIdentification;
+	public Optional<Max35Text> getAccountApplicationIdentification() {
+		return accountApplicationIdentification == null ? Optional.empty() : Optional.of(accountApplicationIdentification);
 	}
 
-	public void setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
+	public AccountManagementStatusAndReason5 setAccountApplicationIdentification(Max35Text accountApplicationIdentification) {
 		this.accountApplicationIdentification = accountApplicationIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "ExstgAcctId")
 	public List<Account23> getExistingAccountIdentification() {
-		return existingAccountIdentification;
+		return existingAccountIdentification == null ? existingAccountIdentification = new ArrayList<>() : existingAccountIdentification;
 	}
 
-	public void setExistingAccountIdentification(List<com.tools20022.repository.msg.Account23> existingAccountIdentification) {
-		this.existingAccountIdentification = existingAccountIdentification;
+	public AccountManagementStatusAndReason5 setExistingAccountIdentification(List<com.tools20022.repository.msg.Account23> existingAccountIdentification) {
+		this.existingAccountIdentification = Objects.requireNonNull(existingAccountIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctId")
-	public Max35Text getAccountIdentification() {
-		return accountIdentification;
+	public Optional<Max35Text> getAccountIdentification() {
+		return accountIdentification == null ? Optional.empty() : Optional.of(accountIdentification);
 	}
 
-	public void setAccountIdentification(Max35Text accountIdentification) {
+	public AccountManagementStatusAndReason5 setAccountIdentification(Max35Text accountIdentification) {
 		this.accountIdentification = accountIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "AcctSts")
-	public AccountStatus2 getAccountStatus() {
-		return accountStatus;
+	public Optional<AccountStatus2> getAccountStatus() {
+		return accountStatus == null ? Optional.empty() : Optional.of(accountStatus);
 	}
 
-	public void setAccountStatus(com.tools20022.repository.msg.AccountStatus2 accountStatus) {
+	public AccountManagementStatusAndReason5 setAccountStatus(com.tools20022.repository.msg.AccountStatus2 accountStatus) {
 		this.accountStatus = accountStatus;
+		return this;
 	}
 
-	@XmlElement(name = "BlckdSts")
-	public BlockedStatusReason2Choice getBlockedStatus() {
-		return blockedStatus;
+	public Optional<BlockedStatusReason2Choice> getBlockedStatus() {
+		return blockedStatus == null ? Optional.empty() : Optional.of(blockedStatus);
 	}
 
-	public void setBlockedStatus(BlockedStatusReason2Choice blockedStatus) {
+	public AccountManagementStatusAndReason5 setBlockedStatus(BlockedStatusReason2Choice blockedStatus) {
 		this.blockedStatus = blockedStatus;
+		return this;
 	}
 
-	@XmlElement(name = "FATCARptgDt")
-	public ISODate getFATCAReportingDate() {
-		return fATCAReportingDate;
+	public Optional<ISODate> getFATCAReportingDate() {
+		return fATCAReportingDate == null ? Optional.empty() : Optional.of(fATCAReportingDate);
 	}
 
-	public void setFATCAReportingDate(ISODate fATCAReportingDate) {
+	public AccountManagementStatusAndReason5 setFATCAReportingDate(ISODate fATCAReportingDate) {
 		this.fATCAReportingDate = fATCAReportingDate;
+		return this;
 	}
 
-	@XmlElement(name = "CRSRptgDt")
-	public ISODate getCRSReportingDate() {
-		return cRSReportingDate;
+	public Optional<ISODate> getCRSReportingDate() {
+		return cRSReportingDate == null ? Optional.empty() : Optional.of(cRSReportingDate);
 	}
 
-	public void setCRSReportingDate(ISODate cRSReportingDate) {
+	public AccountManagementStatusAndReason5 setCRSReportingDate(ISODate cRSReportingDate) {
 		this.cRSReportingDate = cRSReportingDate;
+		return this;
 	}
 }

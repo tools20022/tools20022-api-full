@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ReceiptAcknowledgementReport1", propOrder = {"relatedReference", "requestHandling", "originalMessageIdentification"})
 public class ReceiptAcknowledgementReport1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RltdRef", required = true)
 	protected AdditionalReferences relatedReference;
 	/**
-	 * Reference of the request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -100,7 +103,7 @@ public class ReceiptAcknowledgementReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmRelatedReference = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReceiptAcknowledgementReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReceiptAcknowledgementReport1.mmObject();
 			isDerived = false;
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -112,10 +115,11 @@ public class ReceiptAcknowledgementReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.AdditionalReferences.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqHdlg", required = true)
 	protected RequestHandling1 requestHandling;
 	/**
-	 * Gives the status of the request.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -141,7 +145,7 @@ public class ReceiptAcknowledgementReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmRequestHandling = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReceiptAcknowledgementReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReceiptAcknowledgementReport1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqHdlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,11 +157,11 @@ public class ReceiptAcknowledgementReport1 {
 			type_lazy = () -> com.tools20022.repository.msg.RequestHandling1.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlMsgId")
 	protected MessageIdentification6 originalMessageIdentification;
 	/**
-	 * Identification of the original message for which the acknowledgement is
-	 * sent.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -185,7 +189,7 @@ public class ReceiptAcknowledgementReport1 {
 	 */
 	public static final MMMessageAssociationEnd mmOriginalMessageIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ReceiptAcknowledgementReport1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ReceiptAcknowledgementReport1.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlMsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -201,8 +205,9 @@ public class ReceiptAcknowledgementReport1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ReceiptAcknowledgementReport1.mmRelatedReference, ReceiptAcknowledgementReport1.mmRequestHandling, ReceiptAcknowledgementReport1.mmOriginalMessageIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReceiptAcknowledgementReport1.mmRelatedReference, com.tools20022.repository.msg.ReceiptAcknowledgementReport1.mmRequestHandling,
+						com.tools20022.repository.msg.ReceiptAcknowledgementReport1.mmOriginalMessageIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReceiptAcknowledgementReport1";
 				definition = "Provides details on the original request. Identifies the message being acknowledged and its status";
@@ -211,30 +216,30 @@ public class ReceiptAcknowledgementReport1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RltdRef", required = true)
 	public AdditionalReferences getRelatedReference() {
 		return relatedReference;
 	}
 
-	public void setRelatedReference(com.tools20022.repository.msg.AdditionalReferences relatedReference) {
-		this.relatedReference = relatedReference;
+	public ReceiptAcknowledgementReport1 setRelatedReference(com.tools20022.repository.msg.AdditionalReferences relatedReference) {
+		this.relatedReference = Objects.requireNonNull(relatedReference);
+		return this;
 	}
 
-	@XmlElement(name = "ReqHdlg", required = true)
 	public RequestHandling1 getRequestHandling() {
 		return requestHandling;
 	}
 
-	public void setRequestHandling(com.tools20022.repository.msg.RequestHandling1 requestHandling) {
-		this.requestHandling = requestHandling;
+	public ReceiptAcknowledgementReport1 setRequestHandling(com.tools20022.repository.msg.RequestHandling1 requestHandling) {
+		this.requestHandling = Objects.requireNonNull(requestHandling);
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlMsgId")
-	public MessageIdentification6 getOriginalMessageIdentification() {
-		return originalMessageIdentification;
+	public Optional<MessageIdentification6> getOriginalMessageIdentification() {
+		return originalMessageIdentification == null ? Optional.empty() : Optional.of(originalMessageIdentification);
 	}
 
-	public void setOriginalMessageIdentification(com.tools20022.repository.msg.MessageIdentification6 originalMessageIdentification) {
+	public ReceiptAcknowledgementReport1 setOriginalMessageIdentification(com.tools20022.repository.msg.MessageIdentification6 originalMessageIdentification) {
 		this.originalMessageIdentification = originalMessageIdentification;
+		return this;
 	}
 }

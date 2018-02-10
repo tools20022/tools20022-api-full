@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -26,6 +27,8 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionRateSD5", propOrder = {"placeAndName", "deferredInterestRate", "americanOrGlobalDepositReceiptRatio"})
 public class CorporateActionRateSD5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm", required = true)
 	protected Max350Text placeAndName;
 	/**
-	 * xPath to the element that is being extended.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +108,7 @@ public class CorporateActionRateSD5 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionRateSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD5.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -115,13 +119,11 @@ public class CorporateActionRateSD5 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DfrrdIntrstRate")
 	protected PercentageRate deferredInterestRate;
 	/**
-	 * Applicable to structured securities where there is a set schedule of
-	 * principal and interest payments for the life of the issue. A portion of
-	 * the scheduled interest payment will not be paid at the time of
-	 * distribution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -137,6 +139,9 @@ public class CorporateActionRateSD5 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DfrrdIntrstRate"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Deferred Interest Rate</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -151,9 +156,10 @@ public class CorporateActionRateSD5 {
 	 */
 	public static final MMMessageAttribute mmDeferredInterestRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionRateSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD5.mmObject();
 			isDerived = false;
 			xmlTag = "DfrrdIntrstRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Deferred Interest Rate"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeferredInterestRate";
 			definition = "Applicable to structured securities where there is a set schedule of principal and interest payments for the life of the issue. A portion of the scheduled interest payment will not be paid at the time of distribution.  ";
@@ -162,10 +168,11 @@ public class CorporateActionRateSD5 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "AmrcnOrGblDpstRctRatio")
 	protected CorporateActionRateSD2 americanOrGlobalDepositReceiptRatio;
 	/**
-	 * American or Global Depository Receipt(s) per ordinary share(s) ratio.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -192,7 +199,7 @@ public class CorporateActionRateSD5 {
 	 */
 	public static final MMMessageAssociationEnd mmAmericanOrGlobalDepositReceiptRatio = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CorporateActionRateSD5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionRateSD5.mmObject();
 			isDerived = false;
 			xmlTag = "AmrcnOrGblDpstRctRatio";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -208,8 +215,9 @@ public class CorporateActionRateSD5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionRateSD5.mmPlaceAndName, CorporateActionRateSD5.mmDeferredInterestRate, CorporateActionRateSD5.mmAmericanOrGlobalDepositReceiptRatio);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionRateSD5.mmPlaceAndName, com.tools20022.repository.msg.CorporateActionRateSD5.mmDeferredInterestRate,
+						com.tools20022.repository.msg.CorporateActionRateSD5.mmAmericanOrGlobalDepositReceiptRatio);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRateSD5";
 				definition = "Provides additional information regarding corporate action details rates and amounts details.";
@@ -218,30 +226,30 @@ public class CorporateActionRateSD5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm", required = true)
 	public Max350Text getPlaceAndName() {
 		return placeAndName;
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
-		this.placeAndName = placeAndName;
+	public CorporateActionRateSD5 setPlaceAndName(Max350Text placeAndName) {
+		this.placeAndName = Objects.requireNonNull(placeAndName);
+		return this;
 	}
 
-	@XmlElement(name = "DfrrdIntrstRate")
-	public PercentageRate getDeferredInterestRate() {
-		return deferredInterestRate;
+	public Optional<PercentageRate> getDeferredInterestRate() {
+		return deferredInterestRate == null ? Optional.empty() : Optional.of(deferredInterestRate);
 	}
 
-	public void setDeferredInterestRate(PercentageRate deferredInterestRate) {
+	public CorporateActionRateSD5 setDeferredInterestRate(PercentageRate deferredInterestRate) {
 		this.deferredInterestRate = deferredInterestRate;
+		return this;
 	}
 
-	@XmlElement(name = "AmrcnOrGblDpstRctRatio")
-	public CorporateActionRateSD2 getAmericanOrGlobalDepositReceiptRatio() {
-		return americanOrGlobalDepositReceiptRatio;
+	public Optional<CorporateActionRateSD2> getAmericanOrGlobalDepositReceiptRatio() {
+		return americanOrGlobalDepositReceiptRatio == null ? Optional.empty() : Optional.of(americanOrGlobalDepositReceiptRatio);
 	}
 
-	public void setAmericanOrGlobalDepositReceiptRatio(com.tools20022.repository.msg.CorporateActionRateSD2 americanOrGlobalDepositReceiptRatio) {
+	public CorporateActionRateSD5 setAmericanOrGlobalDepositReceiptRatio(com.tools20022.repository.msg.CorporateActionRateSD2 americanOrGlobalDepositReceiptRatio) {
 		this.americanOrGlobalDepositReceiptRatio = americanOrGlobalDepositReceiptRatio;
+		return this;
 	}
 }

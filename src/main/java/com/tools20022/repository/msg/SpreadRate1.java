@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.PlusOrMinusIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SpreadRate1", propOrder = {"sign", "rateOrAmount"})
 public class SpreadRate1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Sgn", required = true)
 	protected PlusOrMinusIndicator sign;
 	/**
-	 * Specifies the sign of the rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +101,7 @@ public class SpreadRate1 {
 	 */
 	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SpreadRate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SpreadRate1.mmObject();
 			isDerived = false;
 			xmlTag = "Sgn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,10 +112,11 @@ public class SpreadRate1 {
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RateOrAmt", required = true)
 	protected AmountOrRate1Choice rateOrAmount;
 	/**
-	 * Specifies if the spreadf is expressed as an amount or a rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -139,7 +142,7 @@ public class SpreadRate1 {
 	 */
 	public static final MMMessageAssociationEnd mmRateOrAmount = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SpreadRate1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SpreadRate1.mmObject();
 			isDerived = false;
 			xmlTag = "RateOrAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -155,8 +158,8 @@ public class SpreadRate1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SpreadRate1.mmSign, SpreadRate1.mmRateOrAmount);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SpreadRate1.mmSign, com.tools20022.repository.msg.SpreadRate1.mmRateOrAmount);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SpreadRate1";
 				definition = "Margin over or under an index that determines the repurchase rate expressed as a rate or an amount.";
@@ -165,21 +168,21 @@ public class SpreadRate1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Sgn", required = true)
 	public PlusOrMinusIndicator getSign() {
 		return sign;
 	}
 
-	public void setSign(PlusOrMinusIndicator sign) {
-		this.sign = sign;
+	public SpreadRate1 setSign(PlusOrMinusIndicator sign) {
+		this.sign = Objects.requireNonNull(sign);
+		return this;
 	}
 
-	@XmlElement(name = "RateOrAmt", required = true)
 	public AmountOrRate1Choice getRateOrAmount() {
 		return rateOrAmount;
 	}
 
-	public void setRateOrAmount(AmountOrRate1Choice rateOrAmount) {
-		this.rateOrAmount = rateOrAmount;
+	public SpreadRate1 setRateOrAmount(AmountOrRate1Choice rateOrAmount) {
+		this.rateOrAmount = Objects.requireNonNull(rateOrAmount);
+		return this;
 	}
 }

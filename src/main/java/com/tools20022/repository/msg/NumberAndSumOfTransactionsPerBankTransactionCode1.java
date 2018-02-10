@@ -25,9 +25,8 @@ import com.tools20022.repository.codeset.CreditDebitCode;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max15NumericText;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -65,8 +64,17 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDebitCreditIndicatorGuideline#forNumberAndSumOfTransactionsPerBankTransactionCode1
+ * ConstraintDebitCreditIndicatorGuideline.
+ * forNumberAndSumOfTransactionsPerBankTransactionCode1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,15 +87,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NumberAndSumOfTransactionsPerBankTransactionCode1", propOrder = {"numberOfEntries", "sum", "totalNetEntryAmount", "creditDebitIndicator", "bankTransactionCode", "availability"})
 public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "NbOfNtries")
 	protected Max15NumericText numberOfEntries;
 	/**
-	 * Number of individual entries contained in the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +124,7 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 	 */
 	public static final MMMessageAttribute mmNumberOfEntries = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NumberAndSumOfTransactionsPerBankTransactionCode1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1.mmObject();
 			isDerived = false;
 			xmlTag = "NbOfNtries";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +135,11 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 			simpleType_lazy = () -> Max15NumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "Sum")
 	protected DecimalNumber sum;
 	/**
-	 * Total of all individual entries included in the report.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -157,7 +167,7 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 	 */
 	public static final MMMessageAttribute mmSum = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NumberAndSumOfTransactionsPerBankTransactionCode1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1.mmObject();
 			isDerived = false;
 			xmlTag = "Sum";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,11 +178,11 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlNetNtryAmt")
 	protected DecimalNumber totalNetEntryAmount;
 	/**
-	 * Resulting amount of the netted amounts for all debit and credit entries
-	 * per bank transaction code.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -202,7 +212,7 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 	 */
 	public static final MMMessageAttribute mmTotalNetEntryAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NumberAndSumOfTransactionsPerBankTransactionCode1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlNetNtryAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -213,11 +223,11 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 			simpleType_lazy = () -> DecimalNumber.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtInd")
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates whether the total net entry amount is a credit or a debit
-	 * amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -247,7 +257,7 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> NumberAndSumOfTransactionsPerBankTransactionCode1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,11 +268,11 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "BkTxCd", required = true)
 	protected BankTransactionCodeStructure1 bankTransactionCode;
 	/**
-	 * Set of elements to fully identify the type of underlying transaction
-	 * resulting in an entry.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -291,7 +301,7 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 	 */
 	public static final MMMessageAssociationEnd mmBankTransactionCode = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> NumberAndSumOfTransactionsPerBankTransactionCode1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1.mmObject();
 			isDerived = false;
 			xmlTag = "BkTxCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -303,11 +313,11 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 			type_lazy = () -> com.tools20022.repository.msg.BankTransactionCodeStructure1.mmObject();
 		}
 	};
+	@XmlElement(name = "Avlbty")
 	protected List<com.tools20022.repository.msg.CashBalanceAvailability1> availability;
 	/**
-	 * Set of elements used to indicate when the booked amount of money will
-	 * become available, ie can be accessed and start generating interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -336,7 +346,7 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 	 */
 	public static final MMMessageAssociationEnd mmAvailability = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> NumberAndSumOfTransactionsPerBankTransactionCode1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1.mmObject();
 			isDerived = false;
 			xmlTag = "Avlbty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -351,10 +361,12 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NumberAndSumOfTransactionsPerBankTransactionCode1.mmNumberOfEntries, NumberAndSumOfTransactionsPerBankTransactionCode1.mmSum,
-						NumberAndSumOfTransactionsPerBankTransactionCode1.mmTotalNetEntryAmount, NumberAndSumOfTransactionsPerBankTransactionCode1.mmCreditDebitIndicator,
-						NumberAndSumOfTransactionsPerBankTransactionCode1.mmBankTransactionCode, NumberAndSumOfTransactionsPerBankTransactionCode1.mmAvailability);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1.mmNumberOfEntries,
+						com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1.mmSum, com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1.mmTotalNetEntryAmount,
+						com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1.mmCreditDebitIndicator, com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1.mmBankTransactionCode,
+						com.tools20022.repository.msg.NumberAndSumOfTransactionsPerBankTransactionCode1.mmAvailability);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDebitCreditIndicatorGuideline.forNumberAndSumOfTransactionsPerBankTransactionCode1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NumberAndSumOfTransactionsPerBankTransactionCode1";
 				definition = "Set of elements providing the total sum of entries per bank transaction code.";
@@ -363,57 +375,57 @@ public class NumberAndSumOfTransactionsPerBankTransactionCode1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "NbOfNtries")
-	public Max15NumericText getNumberOfEntries() {
-		return numberOfEntries;
+	public Optional<Max15NumericText> getNumberOfEntries() {
+		return numberOfEntries == null ? Optional.empty() : Optional.of(numberOfEntries);
 	}
 
-	public void setNumberOfEntries(Max15NumericText numberOfEntries) {
+	public NumberAndSumOfTransactionsPerBankTransactionCode1 setNumberOfEntries(Max15NumericText numberOfEntries) {
 		this.numberOfEntries = numberOfEntries;
+		return this;
 	}
 
-	@XmlElement(name = "Sum")
-	public DecimalNumber getSum() {
-		return sum;
+	public Optional<DecimalNumber> getSum() {
+		return sum == null ? Optional.empty() : Optional.of(sum);
 	}
 
-	public void setSum(DecimalNumber sum) {
+	public NumberAndSumOfTransactionsPerBankTransactionCode1 setSum(DecimalNumber sum) {
 		this.sum = sum;
+		return this;
 	}
 
-	@XmlElement(name = "TtlNetNtryAmt")
-	public DecimalNumber getTotalNetEntryAmount() {
-		return totalNetEntryAmount;
+	public Optional<DecimalNumber> getTotalNetEntryAmount() {
+		return totalNetEntryAmount == null ? Optional.empty() : Optional.of(totalNetEntryAmount);
 	}
 
-	public void setTotalNetEntryAmount(DecimalNumber totalNetEntryAmount) {
+	public NumberAndSumOfTransactionsPerBankTransactionCode1 setTotalNetEntryAmount(DecimalNumber totalNetEntryAmount) {
 		this.totalNetEntryAmount = totalNetEntryAmount;
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtInd")
-	public CreditDebitCode getCreditDebitIndicator() {
-		return creditDebitIndicator;
+	public Optional<CreditDebitCode> getCreditDebitIndicator() {
+		return creditDebitIndicator == null ? Optional.empty() : Optional.of(creditDebitIndicator);
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+	public NumberAndSumOfTransactionsPerBankTransactionCode1 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
 		this.creditDebitIndicator = creditDebitIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "BkTxCd", required = true)
 	public BankTransactionCodeStructure1 getBankTransactionCode() {
 		return bankTransactionCode;
 	}
 
-	public void setBankTransactionCode(com.tools20022.repository.msg.BankTransactionCodeStructure1 bankTransactionCode) {
-		this.bankTransactionCode = bankTransactionCode;
+	public NumberAndSumOfTransactionsPerBankTransactionCode1 setBankTransactionCode(com.tools20022.repository.msg.BankTransactionCodeStructure1 bankTransactionCode) {
+		this.bankTransactionCode = Objects.requireNonNull(bankTransactionCode);
+		return this;
 	}
 
-	@XmlElement(name = "Avlbty")
 	public List<CashBalanceAvailability1> getAvailability() {
-		return availability;
+		return availability == null ? availability = new ArrayList<>() : availability;
 	}
 
-	public void setAvailability(List<com.tools20022.repository.msg.CashBalanceAvailability1> availability) {
-		this.availability = availability;
+	public NumberAndSumOfTransactionsPerBankTransactionCode1 setAvailability(List<com.tools20022.repository.msg.CashBalanceAvailability1> availability) {
+		this.availability = Objects.requireNonNull(availability);
+		return this;
 	}
 }

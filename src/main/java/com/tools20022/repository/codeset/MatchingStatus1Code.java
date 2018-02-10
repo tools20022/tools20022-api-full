@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.MatchingStatusCode;
+import com.tools20022.repository.codeset.MatchingStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Provides the matching status of the instruction at the time the settlement
@@ -31,24 +35,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.MatchingStatusCode
- * MatchingStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MatchingStatus1Code#mmMatched
- * MatchingStatus1Code.mmMatched}</li>
+ * {@linkplain com.tools20022.repository.codeset.MatchingStatus1Code#Matched
+ * MatchingStatus1Code.Matched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MatchingStatus1Code#mmUnmatched
- * MatchingStatus1Code.mmUnmatched}</li>
+ * {@linkplain com.tools20022.repository.codeset.MatchingStatus1Code#Unmatched
+ * MatchingStatus1Code.Unmatched}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.MatchingStatusCode
+ * MatchingStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +71,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class MatchingStatus1Code extends MatchingStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MatchingStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -86,11 +91,12 @@ public class MatchingStatus1Code extends MatchingStatusCode {
 	 * name} = "Matched"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMatched = new MMCode() {
+	public static final MatchingStatus1Code Matched = new MatchingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
-			owner_lazy = () -> MatchingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MatchingStatus1Code.mmObject();
+			codeName = MatchingStatusCode.Matched.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -109,26 +115,57 @@ public class MatchingStatus1Code extends MatchingStatusCode {
 	 * name} = "Unmatched"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUnmatched = new MMCode() {
+	public static final MatchingStatus1Code Unmatched = new MatchingStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
-			owner_lazy = () -> MatchingStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MatchingStatus1Code.mmObject();
+			codeName = MatchingStatusCode.Unmatched.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, MatchingStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MatchingStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MACH");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MatchingStatus1Code";
 				definition = "Provides the matching status of the instruction at the time the settlement instruction was sent.";
-				code_lazy = () -> Arrays.asList(MatchingStatus1Code.mmMatched, MatchingStatus1Code.mmUnmatched);
 				trace_lazy = () -> MatchingStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MatchingStatus1Code.Matched, com.tools20022.repository.codeset.MatchingStatus1Code.Unmatched);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Matched.getCodeName().get(), Matched);
+		codesByName.put(Unmatched.getCodeName().get(), Unmatched);
+	}
+
+	public static MatchingStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MatchingStatus1Code[] values() {
+		MatchingStatus1Code[] values = new MatchingStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MatchingStatus1Code> {
+		@Override
+		public MatchingStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MatchingStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

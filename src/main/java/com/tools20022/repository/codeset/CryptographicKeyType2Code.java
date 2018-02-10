@@ -20,37 +20,41 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CryptographicKeyTypeCode;
+import com.tools20022.repository.codeset.CryptographicKeyType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Codes for qualifying the type of cryptographic keys;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode
- * CryptographicKeyTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType2Code#mmAES128
- * CryptographicKeyType2Code.mmAES128}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType2Code#AES128
+ * CryptographicKeyType2Code.AES128}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType2Code#mmDES112
- * CryptographicKeyType2Code.mmDES112}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType2Code#DES112
+ * CryptographicKeyType2Code.DES112}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType2Code#mmDUKPT2009
- * CryptographicKeyType2Code.mmDUKPT2009}</li>
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType2Code#DUKPT2009
+ * CryptographicKeyType2Code.DUKPT2009}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CryptographicKeyTypeCode
+ * CryptographicKeyTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -74,7 +78,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class CryptographicKeyType2Code extends CryptographicKeyTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CryptographicKeyType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -95,18 +100,19 @@ public class CryptographicKeyType2Code extends CryptographicKeyTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#mmAES128
-	 * CryptographicKeyType3Code.mmAES128}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#AES128
+	 * CryptographicKeyType3Code.AES128}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmAES128 = new MMCode() {
+	public static final CryptographicKeyType2Code AES128 = new CryptographicKeyType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES128";
-			nextVersions_lazy = () -> Arrays.asList(CryptographicKeyType3Code.mmAES128);
-			owner_lazy = () -> CryptographicKeyType2Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKeyType3Code.AES128);
+			owner_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType2Code.mmObject();
+			codeName = CryptographicKeyTypeCode.AES128.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -127,18 +133,19 @@ public class CryptographicKeyType2Code extends CryptographicKeyTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#mmDES112
-	 * CryptographicKeyType3Code.mmDES112}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#DES112
+	 * CryptographicKeyType3Code.DES112}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDES112 = new MMCode() {
+	public static final CryptographicKeyType2Code DES112 = new CryptographicKeyType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DES112";
-			nextVersions_lazy = () -> Arrays.asList(CryptographicKeyType3Code.mmDES112);
-			owner_lazy = () -> CryptographicKeyType2Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKeyType3Code.DES112);
+			owner_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType2Code.mmObject();
+			codeName = CryptographicKeyTypeCode.DES112.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -159,34 +166,67 @@ public class CryptographicKeyType2Code extends CryptographicKeyTypeCode {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#mmDUKPT2009
-	 * CryptographicKeyType3Code.mmDUKPT2009}</li>
+	 * {@linkplain com.tools20022.repository.codeset.CryptographicKeyType3Code#DUKPT2009
+	 * CryptographicKeyType3Code.DUKPT2009}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmDUKPT2009 = new MMCode() {
+	public static final CryptographicKeyType2Code DUKPT2009 = new CryptographicKeyType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DUKPT2009";
-			nextVersions_lazy = () -> Arrays.asList(CryptographicKeyType3Code.mmDUKPT2009);
-			owner_lazy = () -> CryptographicKeyType2Code.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKeyType3Code.DUKPT2009);
+			owner_lazy = () -> com.tools20022.repository.codeset.CryptographicKeyType2Code.mmObject();
+			codeName = CryptographicKeyTypeCode.DUKPT2009.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CryptographicKeyType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CryptographicKeyType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AES2");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CryptographicKeyType2Code";
 				definition = "Codes for qualifying the type of cryptographic keys;";
 				nextVersions_lazy = () -> Arrays.asList(CryptographicKeyType3Code.mmObject());
-				code_lazy = () -> Arrays.asList(CryptographicKeyType2Code.mmAES128, CryptographicKeyType2Code.mmDES112, CryptographicKeyType2Code.mmDUKPT2009);
 				trace_lazy = () -> CryptographicKeyTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CryptographicKeyType2Code.AES128, com.tools20022.repository.codeset.CryptographicKeyType2Code.DES112,
+						com.tools20022.repository.codeset.CryptographicKeyType2Code.DUKPT2009);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AES128.getCodeName().get(), AES128);
+		codesByName.put(DES112.getCodeName().get(), DES112);
+		codesByName.put(DUKPT2009.getCodeName().get(), DUKPT2009);
+	}
+
+	public static CryptographicKeyType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CryptographicKeyType2Code[] values() {
+		CryptographicKeyType2Code[] values = new CryptographicKeyType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CryptographicKeyType2Code> {
+		@Override
+		public CryptographicKeyType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CryptographicKeyType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

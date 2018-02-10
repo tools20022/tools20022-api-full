@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.MergerTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Types of merger for the TSE/JASDEC extension.
@@ -32,21 +37,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MergerTypeCode#mmOrdinaryMerger
- * MergerTypeCode.mmOrdinaryMerger}</li>
+ * {@linkplain com.tools20022.repository.codeset.MergerTypeCode#OrdinaryMerger
+ * MergerTypeCode.OrdinaryMerger}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MergerTypeCode#mmExchangeofShares
- * MergerTypeCode.mmExchangeofShares}</li>
+ * {@linkplain com.tools20022.repository.codeset.MergerTypeCode#ExchangeofShares
+ * MergerTypeCode.ExchangeofShares}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.MergerTypeCode#mmTransferofShares
- * MergerTypeCode.mmTransferofShares}</li>
+ * {@linkplain com.tools20022.repository.codeset.MergerTypeCode#TransferofShares
+ * MergerTypeCode.TransferofShares}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,7 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Types of merger for the TSE/JASDEC extension."</li>
  * </ul>
  */
-public class MergerTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class MergerTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -81,12 +87,12 @@ public class MergerTypeCode {
 	 * definition} = "The type of merger is an ordinary merger."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOrdinaryMerger = new MMCode() {
+	public static final MergerTypeCode OrdinaryMerger = new MergerTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrdinaryMerger";
 			definition = "The type of merger is an ordinary merger.";
-			owner_lazy = () -> MergerTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MergerTypeCode.mmObject();
 			codeName = "MRGR";
 		}
 	};
@@ -111,12 +117,12 @@ public class MergerTypeCode {
 	 * definition} = "The type of merger is an exchange of shares."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmExchangeofShares = new MMCode() {
+	public static final MergerTypeCode ExchangeofShares = new MergerTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeofShares";
 			definition = "The type of merger is an exchange of shares.";
-			owner_lazy = () -> MergerTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MergerTypeCode.mmObject();
 			codeName = "EXSH";
 		}
 	};
@@ -141,26 +147,59 @@ public class MergerTypeCode {
 	 * definition} = "The type of merger is a transfer of shares."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmTransferofShares = new MMCode() {
+	public static final MergerTypeCode TransferofShares = new MergerTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferofShares";
 			definition = "The type of merger is a transfer of shares.";
-			owner_lazy = () -> MergerTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.MergerTypeCode.mmObject();
 			codeName = "TRSH";
 		}
 	};
+	final static private LinkedHashMap<String, MergerTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected MergerTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MergerTypeCode";
 				definition = "Types of merger for the TSE/JASDEC extension.";
-				code_lazy = () -> Arrays.asList(MergerTypeCode.mmOrdinaryMerger, MergerTypeCode.mmExchangeofShares, MergerTypeCode.mmTransferofShares);
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MergerTypeCode.OrdinaryMerger, com.tools20022.repository.codeset.MergerTypeCode.ExchangeofShares,
+						com.tools20022.repository.codeset.MergerTypeCode.TransferofShares);
+				length = 4;
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(OrdinaryMerger.getCodeName().get(), OrdinaryMerger);
+		codesByName.put(ExchangeofShares.getCodeName().get(), ExchangeofShares);
+		codesByName.put(TransferofShares.getCodeName().get(), TransferofShares);
+	}
+
+	public static MergerTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static MergerTypeCode[] values() {
+		MergerTypeCode[] values = new MergerTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, MergerTypeCode> {
+		@Override
+		public MergerTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(MergerTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

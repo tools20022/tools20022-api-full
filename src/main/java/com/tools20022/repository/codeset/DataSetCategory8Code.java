@@ -20,58 +20,62 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.DataSetCategoryCode;
+import com.tools20022.repository.codeset.DataSetCategory8Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Category of data set to transfer.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode
- * DataSetCategoryCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#mmSoftwareModule
- * DataSetCategory8Code.mmSoftwareModule}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#SoftwareModule
+ * DataSetCategory8Code.SoftwareModule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#mmVendorParameters
- * DataSetCategory8Code.mmVendorParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#VendorParameters
+ * DataSetCategory8Code.VendorParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#mmAcquirerParameters
- * DataSetCategory8Code.mmAcquirerParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#AcquirerParameters
+ * DataSetCategory8Code.AcquirerParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#mmMerchantParameters
- * DataSetCategory8Code.mmMerchantParameters}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#MerchantParameters
+ * DataSetCategory8Code.MerchantParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#mmBatchCapture
- * DataSetCategory8Code.mmBatchCapture}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#BatchCapture
+ * DataSetCategory8Code.BatchCapture}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#mmCaptureResponse
- * DataSetCategory8Code.mmCaptureResponse}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#CaptureResponse
+ * DataSetCategory8Code.CaptureResponse}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#mmStatusReport
- * DataSetCategory8Code.mmStatusReport}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#StatusReport
+ * DataSetCategory8Code.StatusReport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#mmDelegationData
- * DataSetCategory8Code.mmDelegationData}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#DelegationData
+ * DataSetCategory8Code.DelegationData}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#mmManagementPlan
- * DataSetCategory8Code.mmManagementPlan}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#ManagementPlan
+ * DataSetCategory8Code.ManagementPlan}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#mmReconciliationError
- * DataSetCategory8Code.mmReconciliationError}</li>
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategory8Code#ReconciliationError
+ * DataSetCategory8Code.ReconciliationError}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.DataSetCategoryCode
+ * DataSetCategoryCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -92,7 +96,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * DataSetCategory1Code}</li>
  * </ul>
  */
-public class DataSetCategory8Code extends DataSetCategoryCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DataSetCategory8Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -112,16 +117,17 @@ public class DataSetCategory8Code extends DataSetCategoryCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#mmSoftwareModule
-	 * DataSetCategory1Code.mmSoftwareModule}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#SoftwareModule
+	 * DataSetCategory1Code.SoftwareModule}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSoftwareModule = new MMCode() {
+	public static final DataSetCategory8Code SoftwareModule = new DataSetCategory8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SoftwareModule";
-			previousVersion_lazy = () -> DataSetCategory1Code.mmSoftwareModule;
-			owner_lazy = () -> DataSetCategory8Code.mmObject();
+			previousVersion_lazy = () -> DataSetCategory1Code.SoftwareModule;
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategory8Code.mmObject();
+			codeName = DataSetCategoryCode.SoftwareModule.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -141,16 +147,17 @@ public class DataSetCategory8Code extends DataSetCategoryCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#mmVendorParameters
-	 * DataSetCategory1Code.mmVendorParameters}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#VendorParameters
+	 * DataSetCategory1Code.VendorParameters}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmVendorParameters = new MMCode() {
+	public static final DataSetCategory8Code VendorParameters = new DataSetCategory8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorParameters";
-			previousVersion_lazy = () -> DataSetCategory1Code.mmVendorParameters;
-			owner_lazy = () -> DataSetCategory8Code.mmObject();
+			previousVersion_lazy = () -> DataSetCategory1Code.VendorParameters;
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategory8Code.mmObject();
+			codeName = DataSetCategoryCode.VendorParameters.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -170,16 +177,17 @@ public class DataSetCategory8Code extends DataSetCategoryCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#mmAcquirerParameters
-	 * DataSetCategory1Code.mmAcquirerParameters}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#AcquirerParameters
+	 * DataSetCategory1Code.AcquirerParameters}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcquirerParameters = new MMCode() {
+	public static final DataSetCategory8Code AcquirerParameters = new DataSetCategory8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerParameters";
-			previousVersion_lazy = () -> DataSetCategory1Code.mmAcquirerParameters;
-			owner_lazy = () -> DataSetCategory8Code.mmObject();
+			previousVersion_lazy = () -> DataSetCategory1Code.AcquirerParameters;
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategory8Code.mmObject();
+			codeName = DataSetCategoryCode.AcquirerParameters.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -199,16 +207,17 @@ public class DataSetCategory8Code extends DataSetCategoryCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#mmMerchantParameters
-	 * DataSetCategory1Code.mmMerchantParameters}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#MerchantParameters
+	 * DataSetCategory1Code.MerchantParameters}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMerchantParameters = new MMCode() {
+	public static final DataSetCategory8Code MerchantParameters = new DataSetCategory8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantParameters";
-			previousVersion_lazy = () -> DataSetCategory1Code.mmMerchantParameters;
-			owner_lazy = () -> DataSetCategory8Code.mmObject();
+			previousVersion_lazy = () -> DataSetCategory1Code.MerchantParameters;
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategory8Code.mmObject();
+			codeName = DataSetCategoryCode.MerchantParameters.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -228,16 +237,17 @@ public class DataSetCategory8Code extends DataSetCategoryCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#mmBatchCapture
-	 * DataSetCategory1Code.mmBatchCapture}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#BatchCapture
+	 * DataSetCategory1Code.BatchCapture}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBatchCapture = new MMCode() {
+	public static final DataSetCategory8Code BatchCapture = new DataSetCategory8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BatchCapture";
-			previousVersion_lazy = () -> DataSetCategory1Code.mmBatchCapture;
-			owner_lazy = () -> DataSetCategory8Code.mmObject();
+			previousVersion_lazy = () -> DataSetCategory1Code.BatchCapture;
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategory8Code.mmObject();
+			codeName = DataSetCategoryCode.BatchCapture.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -257,16 +267,17 @@ public class DataSetCategory8Code extends DataSetCategoryCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#mmCaptureResponse
-	 * DataSetCategory1Code.mmCaptureResponse}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#CaptureResponse
+	 * DataSetCategory1Code.CaptureResponse}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCaptureResponse = new MMCode() {
+	public static final DataSetCategory8Code CaptureResponse = new DataSetCategory8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CaptureResponse";
-			previousVersion_lazy = () -> DataSetCategory1Code.mmCaptureResponse;
-			owner_lazy = () -> DataSetCategory8Code.mmObject();
+			previousVersion_lazy = () -> DataSetCategory1Code.CaptureResponse;
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategory8Code.mmObject();
+			codeName = DataSetCategoryCode.CaptureResponse.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -286,16 +297,17 @@ public class DataSetCategory8Code extends DataSetCategoryCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#mmStatusReport
-	 * DataSetCategory1Code.mmStatusReport}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#StatusReport
+	 * DataSetCategory1Code.StatusReport}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmStatusReport = new MMCode() {
+	public static final DataSetCategory8Code StatusReport = new DataSetCategory8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReport";
-			previousVersion_lazy = () -> DataSetCategory1Code.mmStatusReport;
-			owner_lazy = () -> DataSetCategory8Code.mmObject();
+			previousVersion_lazy = () -> DataSetCategory1Code.StatusReport;
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategory8Code.mmObject();
+			codeName = DataSetCategoryCode.StatusReport.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -315,16 +327,17 @@ public class DataSetCategory8Code extends DataSetCategoryCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#mmDelegationData
-	 * DataSetCategory1Code.mmDelegationData}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#DelegationData
+	 * DataSetCategory1Code.DelegationData}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDelegationData = new MMCode() {
+	public static final DataSetCategory8Code DelegationData = new DataSetCategory8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationData";
-			previousVersion_lazy = () -> DataSetCategory1Code.mmDelegationData;
-			owner_lazy = () -> DataSetCategory8Code.mmObject();
+			previousVersion_lazy = () -> DataSetCategory1Code.DelegationData;
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategory8Code.mmObject();
+			codeName = DataSetCategoryCode.DelegationData.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -344,16 +357,17 @@ public class DataSetCategory8Code extends DataSetCategoryCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#mmManagementPlan
-	 * DataSetCategory1Code.mmManagementPlan}</li>
+	 * {@linkplain com.tools20022.repository.codeset.DataSetCategory1Code#ManagementPlan
+	 * DataSetCategory1Code.ManagementPlan}</li>
 	 * </ul>
 	 */
-	public static final MMCode mmManagementPlan = new MMCode() {
+	public static final DataSetCategory8Code ManagementPlan = new DataSetCategory8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManagementPlan";
-			previousVersion_lazy = () -> DataSetCategory1Code.mmManagementPlan;
-			owner_lazy = () -> DataSetCategory8Code.mmObject();
+			previousVersion_lazy = () -> DataSetCategory1Code.ManagementPlan;
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategory8Code.mmObject();
+			codeName = DataSetCategoryCode.ManagementPlan.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -372,29 +386,70 @@ public class DataSetCategory8Code extends DataSetCategoryCode {
 	 * name} = "ReconciliationError"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReconciliationError = new MMCode() {
+	public static final DataSetCategory8Code ReconciliationError = new DataSetCategory8Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationError";
-			owner_lazy = () -> DataSetCategory8Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DataSetCategory8Code.mmObject();
+			codeName = DataSetCategoryCode.ReconciliationError.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, DataSetCategory8Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DataSetCategory8Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SWPK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataSetCategory8Code";
 				definition = "Category of data set to transfer.";
 				previousVersion_lazy = () -> DataSetCategory1Code.mmObject();
-				code_lazy = () -> Arrays.asList(DataSetCategory8Code.mmSoftwareModule, DataSetCategory8Code.mmVendorParameters, DataSetCategory8Code.mmAcquirerParameters, DataSetCategory8Code.mmMerchantParameters,
-						DataSetCategory8Code.mmBatchCapture, DataSetCategory8Code.mmCaptureResponse, DataSetCategory8Code.mmStatusReport, DataSetCategory8Code.mmDelegationData, DataSetCategory8Code.mmManagementPlan,
-						DataSetCategory8Code.mmReconciliationError);
 				trace_lazy = () -> DataSetCategoryCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DataSetCategory8Code.SoftwareModule, com.tools20022.repository.codeset.DataSetCategory8Code.VendorParameters,
+						com.tools20022.repository.codeset.DataSetCategory8Code.AcquirerParameters, com.tools20022.repository.codeset.DataSetCategory8Code.MerchantParameters,
+						com.tools20022.repository.codeset.DataSetCategory8Code.BatchCapture, com.tools20022.repository.codeset.DataSetCategory8Code.CaptureResponse, com.tools20022.repository.codeset.DataSetCategory8Code.StatusReport,
+						com.tools20022.repository.codeset.DataSetCategory8Code.DelegationData, com.tools20022.repository.codeset.DataSetCategory8Code.ManagementPlan,
+						com.tools20022.repository.codeset.DataSetCategory8Code.ReconciliationError);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SoftwareModule.getCodeName().get(), SoftwareModule);
+		codesByName.put(VendorParameters.getCodeName().get(), VendorParameters);
+		codesByName.put(AcquirerParameters.getCodeName().get(), AcquirerParameters);
+		codesByName.put(MerchantParameters.getCodeName().get(), MerchantParameters);
+		codesByName.put(BatchCapture.getCodeName().get(), BatchCapture);
+		codesByName.put(CaptureResponse.getCodeName().get(), CaptureResponse);
+		codesByName.put(StatusReport.getCodeName().get(), StatusReport);
+		codesByName.put(DelegationData.getCodeName().get(), DelegationData);
+		codesByName.put(ManagementPlan.getCodeName().get(), ManagementPlan);
+		codesByName.put(ReconciliationError.getCodeName().get(), ReconciliationError);
+	}
+
+	public static DataSetCategory8Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DataSetCategory8Code[] values() {
+		DataSetCategory8Code[] values = new DataSetCategory8Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DataSetCategory8Code> {
+		@Override
+		public DataSetCategory8Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DataSetCategory8Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

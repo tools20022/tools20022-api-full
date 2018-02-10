@@ -20,33 +20,37 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PriceStatusCode;
+import com.tools20022.repository.codeset.PriceStatus1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the status of the price of a financial instrument.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.PriceStatus1Code#Pending
+ * PriceStatus1Code.Pending}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.PriceStatus1Code#NotApplicable
+ * PriceStatus1Code.NotApplicable}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.PriceStatusCode
  * PriceStatusCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.PriceStatus1Code#mmPending
- * PriceStatus1Code.mmPending}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.PriceStatus1Code#mmNotApplicable
- * PriceStatus1Code.mmNotApplicable}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -57,7 +61,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the status of the price of a financial instrument."</li>
  * </ul>
  */
-public class PriceStatus1Code extends PriceStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PriceStatus1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -76,11 +81,12 @@ public class PriceStatus1Code extends PriceStatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPending = new MMCode() {
+	public static final PriceStatus1Code Pending = new PriceStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
-			owner_lazy = () -> PriceStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceStatus1Code.mmObject();
+			codeName = PriceStatusCode.Pending.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -99,25 +105,56 @@ public class PriceStatus1Code extends PriceStatusCode {
 	 * name} = "NotApplicable"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotApplicable = new MMCode() {
+	public static final PriceStatus1Code NotApplicable = new PriceStatus1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotApplicable";
-			owner_lazy = () -> PriceStatus1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PriceStatus1Code.mmObject();
+			codeName = PriceStatusCode.NotApplicable.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PriceStatus1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PriceStatus1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceStatus1Code";
 				definition = "Specifies the status of the price of a financial instrument.";
-				code_lazy = () -> Arrays.asList(PriceStatus1Code.mmPending, PriceStatus1Code.mmNotApplicable);
 				trace_lazy = () -> PriceStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceStatus1Code.Pending, com.tools20022.repository.codeset.PriceStatus1Code.NotApplicable);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Pending.getCodeName().get(), Pending);
+		codesByName.put(NotApplicable.getCodeName().get(), NotApplicable);
+	}
+
+	public static PriceStatus1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PriceStatus1Code[] values() {
+		PriceStatus1Code[] values = new PriceStatus1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PriceStatus1Code> {
+		@Override
+		public PriceStatus1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PriceStatus1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

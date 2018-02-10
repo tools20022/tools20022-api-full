@@ -28,6 +28,7 @@ import com.tools20022.repository.msg.FutureOrOptionDetails1;
 import com.tools20022.repository.msg.SecuritiesFinancing10;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,19 +69,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the choice of the two leg transaction type."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TwoLegTransactionType1Choice", propOrder = {"futureOrOptionDetails", "securitiesFinancingDetails"})
 public class TwoLegTransactionType1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FutrOrOptnDtls", required = true)
 	protected FutureOrOptionDetails1 futureOrOptionDetails;
 	/**
-	 * Parameters for contracts which obligate the buyer to receive and the
-	 * seller to deliver in the future the assets specified at an agreed price
-	 * or contracts which grant to the holder either the privilege to purchase
-	 * or the privilege to sell the assets specified at a predetermined price or
-	 * formula at or within a time in the future.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -114,7 +112,7 @@ public class TwoLegTransactionType1Choice {
 	public static final MMMessageAssociationEnd mmFutureOrOptionDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmDerivative;
-			componentContext_lazy = () -> TwoLegTransactionType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TwoLegTransactionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FutrOrOptnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,10 +124,11 @@ public class TwoLegTransactionType1Choice {
 			type_lazy = () -> FutureOrOptionDetails1.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesFincgDtls", required = true)
 	protected SecuritiesFinancing10 securitiesFinancingDetails;
 	/**
-	 * Provides details about the two leg transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -161,7 +160,7 @@ public class TwoLegTransactionType1Choice {
 	public static final MMMessageAssociationEnd mmSecuritiesFinancingDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesFinancing.mmObject();
-			componentContext_lazy = () -> TwoLegTransactionType1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TwoLegTransactionType1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesFincgDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -177,9 +176,9 @@ public class TwoLegTransactionType1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TwoLegTransactionType1Choice.mmFutureOrOptionDetails, TwoLegTransactionType1Choice.mmSecuritiesFinancingDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TwoLegTransactionType1Choice.mmFutureOrOptionDetails, com.tools20022.repository.choice.TwoLegTransactionType1Choice.mmSecuritiesFinancingDetails);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TwoLegTransactionType1Choice";
 				definition = "Specifies the choice of the two leg transaction type.";
@@ -188,21 +187,21 @@ public class TwoLegTransactionType1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FutrOrOptnDtls", required = true)
 	public FutureOrOptionDetails1 getFutureOrOptionDetails() {
 		return futureOrOptionDetails;
 	}
 
-	public void setFutureOrOptionDetails(FutureOrOptionDetails1 futureOrOptionDetails) {
-		this.futureOrOptionDetails = futureOrOptionDetails;
+	public TwoLegTransactionType1Choice setFutureOrOptionDetails(FutureOrOptionDetails1 futureOrOptionDetails) {
+		this.futureOrOptionDetails = Objects.requireNonNull(futureOrOptionDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesFincgDtls", required = true)
 	public SecuritiesFinancing10 getSecuritiesFinancingDetails() {
 		return securitiesFinancingDetails;
 	}
 
-	public void setSecuritiesFinancingDetails(SecuritiesFinancing10 securitiesFinancingDetails) {
-		this.securitiesFinancingDetails = securitiesFinancingDetails;
+	public TwoLegTransactionType1Choice setSecuritiesFinancingDetails(SecuritiesFinancing10 securitiesFinancingDetails) {
+		this.securitiesFinancingDetails = Objects.requireNonNull(securitiesFinancingDetails);
+		return this;
 	}
 }

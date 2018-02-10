@@ -29,9 +29,8 @@ import com.tools20022.repository.entity.Account;
 import com.tools20022.repository.entity.CashClearingSystem;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,15 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Search for a system and a member of a system."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemSearch2", propOrder = {"systemIdentification", "memberIdentification", "country", "accountIdentification"})
 public class SystemSearch2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SysId")
 	protected List<CashClearingSystem1Code> systemIdentification;
 	/**
-	 * Identification of a particular cash clearing system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,7 +117,7 @@ public class SystemSearch2 {
 	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashClearingSystem.mmCashSettlementSystem;
-			componentContext_lazy = () -> SystemSearch2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSearch2.mmObject();
 			isDerived = false;
 			xmlTag = "SysId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,11 +127,11 @@ public class SystemSearch2 {
 			simpleType_lazy = () -> CashClearingSystem1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MmbId")
 	protected List<MemberIdentificationChoice> memberIdentification;
 	/**
-	 * Unique and unambiguous identification of a member within a system,
-	 * assigned using the member identification scheme of the system.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +160,7 @@ public class SystemSearch2 {
 	 */
 	public static final MMMessageAttribute mmMemberIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> SystemSearch2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSearch2.mmObject();
 			isDerived = false;
 			xmlTag = "MmbId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,10 +170,11 @@ public class SystemSearch2 {
 			complexType_lazy = () -> MemberIdentificationChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Ctry")
 	protected CountryCode country;
 	/**
-	 * Country in which the system is located.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -205,7 +206,7 @@ public class SystemSearch2 {
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> System.mmLocation;
-			componentContext_lazy = () -> SystemSearch2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSearch2.mmObject();
 			isDerived = false;
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -216,11 +217,11 @@ public class SystemSearch2 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctId")
 	protected AccountIdentification1Choice accountIdentification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -254,7 +255,7 @@ public class SystemSearch2 {
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> SystemSearch2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemSearch2.mmObject();
 			isDerived = false;
 			xmlTag = "AcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -270,9 +271,10 @@ public class SystemSearch2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SystemSearch2.mmSystemIdentification, SystemSearch2.mmMemberIdentification, SystemSearch2.mmCountry, SystemSearch2.mmAccountIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemSearch2.mmSystemIdentification, com.tools20022.repository.msg.SystemSearch2.mmMemberIdentification,
+						com.tools20022.repository.msg.SystemSearch2.mmCountry, com.tools20022.repository.msg.SystemSearch2.mmAccountIdentification);
 				trace_lazy = () -> System.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemSearch2";
 				definition = "Search for a system and a member of a system.";
@@ -281,39 +283,39 @@ public class SystemSearch2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SysId")
 	public List<CashClearingSystem1Code> getSystemIdentification() {
-		return systemIdentification;
+		return systemIdentification == null ? systemIdentification = new ArrayList<>() : systemIdentification;
 	}
 
-	public void setSystemIdentification(List<CashClearingSystem1Code> systemIdentification) {
-		this.systemIdentification = systemIdentification;
+	public SystemSearch2 setSystemIdentification(List<CashClearingSystem1Code> systemIdentification) {
+		this.systemIdentification = Objects.requireNonNull(systemIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "MmbId")
 	public List<MemberIdentificationChoice> getMemberIdentification() {
-		return memberIdentification;
+		return memberIdentification == null ? memberIdentification = new ArrayList<>() : memberIdentification;
 	}
 
-	public void setMemberIdentification(List<MemberIdentificationChoice> memberIdentification) {
-		this.memberIdentification = memberIdentification;
+	public SystemSearch2 setMemberIdentification(List<MemberIdentificationChoice> memberIdentification) {
+		this.memberIdentification = Objects.requireNonNull(memberIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Ctry")
-	public CountryCode getCountry() {
-		return country;
+	public Optional<CountryCode> getCountry() {
+		return country == null ? Optional.empty() : Optional.of(country);
 	}
 
-	public void setCountry(CountryCode country) {
+	public SystemSearch2 setCountry(CountryCode country) {
 		this.country = country;
+		return this;
 	}
 
-	@XmlElement(name = "AcctId")
-	public AccountIdentification1Choice getAccountIdentification() {
-		return accountIdentification;
+	public Optional<AccountIdentification1Choice> getAccountIdentification() {
+		return accountIdentification == null ? Optional.empty() : Optional.of(accountIdentification);
 	}
 
-	public void setAccountIdentification(AccountIdentification1Choice accountIdentification) {
+	public SystemSearch2 setAccountIdentification(AccountIdentification1Choice accountIdentification) {
 		this.accountIdentification = accountIdentification;
+		return this;
 	}
 }

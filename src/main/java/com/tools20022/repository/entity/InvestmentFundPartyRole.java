@@ -24,9 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Specifies roles played by a party that are linked to the handling of
@@ -39,6 +41,8 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -48,42 +52,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.InvestmentFundPartyRole#mmInvestmentFund
  * InvestmentFundPartyRole.mmInvestmentFund}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.Grantor Grantor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Settlor Settlor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FundManagerRole
- * FundManagerRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Auditor Auditor}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FundAccountantRole
- * FundAccountantRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FundAdministratorRole
- * FundAdministratorRole}</li>
- * <li>{@linkplain com.tools20022.repository.entity.FundOrderDesk FundOrderDesk}
- * </li>
- * <li>{@linkplain com.tools20022.repository.entity.PlacementAgent
- * PlacementAgent}</li>
- * <li>{@linkplain com.tools20022.repository.entity.TransferAgentRole
- * TransferAgentRole}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Role Role}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.Role2Choice Role2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Role3Choice Role3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.IntermediaryRoleChoice1
- * IntermediaryRoleChoice1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Role1Choice Role1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Role5Choice Role5Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Role6Choice Role6Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Role7Choice Role7Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -109,11 +77,45 @@ import java.util.List;
  * IntermediaryRoleChoice1.mmProprietary}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.Grantor Grantor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Settlor Settlor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FundManagerRole
+ * FundManagerRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Auditor Auditor}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FundAccountantRole
+ * FundAccountantRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FundAdministratorRole
+ * FundAdministratorRole}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.FundOrderDesk FundOrderDesk}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.entity.PlacementAgent
+ * PlacementAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.TransferAgentRole
+ * TransferAgentRole}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.Role2Choice Role2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Role3Choice Role3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.IntermediaryRoleChoice1
+ * IntermediaryRoleChoice1}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Role1Choice Role1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Role5Choice Role5Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Role6Choice Role6Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Role7Choice Role7Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -131,10 +133,8 @@ public class InvestmentFundPartyRole extends Role {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.Account> account;
 	/**
-	 * Unambiguous identification of the account used in the context of the
-	 * investment fund party role such as intermediary's account, beneficiary's
-	 * account...
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,8 +168,8 @@ public class InvestmentFundPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundPartyRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
 			definition = "Unambiguous identification of the account used in the context of the investment fund party role such as intermediary's account, beneficiary's account...";
@@ -181,8 +181,8 @@ public class InvestmentFundPartyRole extends Role {
 	};
 	protected List<com.tools20022.repository.entity.InvestmentFund> investmentFund;
 	/**
-	 * Specifies the fund for which the party plays a role.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -215,8 +215,8 @@ public class InvestmentFundPartyRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentFund = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundPartyRole.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentFund";
 			definition = "Specifies the fund for which the party plays a role.";
@@ -230,7 +230,7 @@ public class InvestmentFundPartyRole extends Role {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundPartyRole";
 				definition = "Specifies roles played by a party that are linked to the handling of investment funds but not related to a specific process.";
@@ -253,18 +253,20 @@ public class InvestmentFundPartyRole extends Role {
 	}
 
 	public List<Account> getAccount() {
-		return account;
+		return account == null ? account = new ArrayList<>() : account;
 	}
 
-	public void setAccount(List<com.tools20022.repository.entity.Account> account) {
-		this.account = account;
+	public InvestmentFundPartyRole setAccount(List<com.tools20022.repository.entity.Account> account) {
+		this.account = Objects.requireNonNull(account);
+		return this;
 	}
 
 	public List<InvestmentFund> getInvestmentFund() {
-		return investmentFund;
+		return investmentFund == null ? investmentFund = new ArrayList<>() : investmentFund;
 	}
 
-	public void setInvestmentFund(List<com.tools20022.repository.entity.InvestmentFund> investmentFund) {
-		this.investmentFund = investmentFund;
+	public InvestmentFundPartyRole setInvestmentFund(List<com.tools20022.repository.entity.InvestmentFund> investmentFund) {
+		this.investmentFund = Objects.requireNonNull(investmentFund);
+		return this;
 	}
 }

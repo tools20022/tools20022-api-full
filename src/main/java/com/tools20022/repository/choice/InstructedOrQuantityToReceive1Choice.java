@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -29,6 +30,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +59,19 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintInstructedQuantityRule#forInstructedOrQuantityToReceive1Choice
+ * ConstraintInstructedQuantityRule.forInstructedOrQuantityToReceive1Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule#forInstructedOrQuantityToReceive1Choice
+ * ConstraintCoexistenceQuantityRule.forInstructedOrQuantityToReceive1Choice}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -71,15 +84,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Choice between an instructed quantity or a quantity to receive."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InstructedOrQuantityToReceive1Choice", propOrder = {"instructedQuantity", "quantityToReceive"})
 public class InstructedOrQuantityToReceive1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InstdQty", required = true)
 	protected Quantity5Choice instructedQuantity;
 	/**
-	 * Quantity of underlying securities to which this instruction applies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +128,7 @@ public class InstructedOrQuantityToReceive1Choice {
 	public static final MMMessageAttribute mmInstructedQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEntitlement.mmInstructedBalance;
-			componentContext_lazy = () -> InstructedOrQuantityToReceive1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InstructedOrQuantityToReceive1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "InstdQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,11 +139,11 @@ public class InstructedOrQuantityToReceive1Choice {
 			complexType_lazy = () -> com.tools20022.repository.choice.Quantity5Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "QtyToRcv", required = true)
 	protected Quantity5Choice quantityToReceive;
 	/**
-	 * Quantity of the benefits that the account owner wants to receive, for
-	 * example, as a result of dividend reinvestment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -150,6 +164,9 @@ public class InstructedOrQuantityToReceive1Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "QtyToRcv"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :36a::QINS or QREC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -165,9 +182,10 @@ public class InstructedOrQuantityToReceive1Choice {
 	public static final MMMessageAttribute mmQuantityToReceive = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesProceedsDefinition.mmQuantityToReceive;
-			componentContext_lazy = () -> InstructedOrQuantityToReceive1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.InstructedOrQuantityToReceive1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "QtyToRcv";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36a::QINS or QREC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityToReceive";
 			definition = "Quantity of the benefits that the account owner wants to receive, for example, as a result of dividend reinvestment.";
@@ -180,9 +198,12 @@ public class InstructedOrQuantityToReceive1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InstructedOrQuantityToReceive1Choice.mmInstructedQuantity, InstructedOrQuantityToReceive1Choice.mmQuantityToReceive);
+				messageElement_lazy = () -> Arrays
+						.asList(com.tools20022.repository.choice.InstructedOrQuantityToReceive1Choice.mmInstructedQuantity, com.tools20022.repository.choice.InstructedOrQuantityToReceive1Choice.mmQuantityToReceive);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInstructedQuantityRule.forInstructedOrQuantityToReceive1Choice,
+						com.tools20022.repository.constraints.ConstraintCoexistenceQuantityRule.forInstructedOrQuantityToReceive1Choice);
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -198,21 +219,21 @@ public class InstructedOrQuantityToReceive1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InstdQty", required = true)
 	public Quantity5Choice getInstructedQuantity() {
 		return instructedQuantity;
 	}
 
-	public void setInstructedQuantity(com.tools20022.repository.choice.Quantity5Choice instructedQuantity) {
-		this.instructedQuantity = instructedQuantity;
+	public InstructedOrQuantityToReceive1Choice setInstructedQuantity(com.tools20022.repository.choice.Quantity5Choice instructedQuantity) {
+		this.instructedQuantity = Objects.requireNonNull(instructedQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "QtyToRcv", required = true)
 	public Quantity5Choice getQuantityToReceive() {
 		return quantityToReceive;
 	}
 
-	public void setQuantityToReceive(com.tools20022.repository.choice.Quantity5Choice quantityToReceive) {
-		this.quantityToReceive = quantityToReceive;
+	public InstructedOrQuantityToReceive1Choice setQuantityToReceive(com.tools20022.repository.choice.Quantity5Choice quantityToReceive) {
+		this.quantityToReceive = Objects.requireNonNull(quantityToReceive);
+		return this;
 	}
 }

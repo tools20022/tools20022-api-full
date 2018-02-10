@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.EligibleCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether the item is eligible or not eligible.
@@ -31,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.EligibleCode#mmEligible
- * EligibleCode.mmEligible}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.EligibleCode#mmNotEligible
- * EligibleCode.mmNotEligible}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EligibleCode#Eligible
+ * EligibleCode.Eligible}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.EligibleCode#NotEligible
+ * EligibleCode.NotEligible}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -59,7 +64,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies whether the item is eligible or not eligible."</li>
  * </ul>
  */
-public class EligibleCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class EligibleCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -82,12 +88,12 @@ public class EligibleCode {
 	 * definition} = "Item is eligible."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEligible = new MMCode() {
+	public static final EligibleCode Eligible = new EligibleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Eligible";
 			definition = "Item is eligible.";
-			owner_lazy = () -> EligibleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EligibleCode.mmObject();
 			codeName = "ELIG";
 		}
 	};
@@ -111,27 +117,57 @@ public class EligibleCode {
 	 * definition} = "Item is not eligible."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotEligible = new MMCode() {
+	public static final EligibleCode NotEligible = new EligibleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEligible";
 			definition = "Item is not eligible.";
-			owner_lazy = () -> EligibleCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.EligibleCode.mmObject();
 			codeName = "NELI";
 		}
 	};
+	final static private LinkedHashMap<String, EligibleCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected EligibleCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EligibleCode";
 				definition = "Specifies whether the item is eligible or not eligible.";
-				code_lazy = () -> Arrays.asList(EligibleCode.mmEligible, EligibleCode.mmNotEligible);
 				derivation_lazy = () -> Arrays.asList(Eligible1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EligibleCode.Eligible, com.tools20022.repository.codeset.EligibleCode.NotEligible);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Eligible.getCodeName().get(), Eligible);
+		codesByName.put(NotEligible.getCodeName().get(), NotEligible);
+	}
+
+	public static EligibleCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static EligibleCode[] values() {
+		EligibleCode[] values = new EligibleCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, EligibleCode> {
+		@Override
+		public EligibleCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(EligibleCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

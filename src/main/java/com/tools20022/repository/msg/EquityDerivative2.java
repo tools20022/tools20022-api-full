@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.Derivative;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +55,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Element to define an equity instrument."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EquityDerivative2", propOrder = {"underlyingType", "parameter"})
 public class EquityDerivative2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "UndrlygTp", required = true)
 	protected EquityDerivative3Choice underlyingType;
 	/**
-	 * Underlying type of the equity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,7 +109,7 @@ public class EquityDerivative2 {
 	public static final MMMessageAssociationEnd mmUnderlyingType = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Derivative.mmUnderlyingAsset;
-			componentContext_lazy = () -> EquityDerivative2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EquityDerivative2.mmObject();
 			isDerived = false;
 			xmlTag = "UndrlygTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +121,11 @@ public class EquityDerivative2 {
 			type_lazy = () -> EquityDerivative3Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Param")
 	protected EquityReturnParameter1Code parameter;
 	/**
-	 * Return parameter for the equity derivative.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -149,7 +153,7 @@ public class EquityDerivative2 {
 	 */
 	public static final MMMessageAttribute mmParameter = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EquityDerivative2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EquityDerivative2.mmObject();
 			isDerived = false;
 			xmlTag = "Param";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -164,9 +168,9 @@ public class EquityDerivative2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EquityDerivative2.mmUnderlyingType, EquityDerivative2.mmParameter);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EquityDerivative2.mmUnderlyingType, com.tools20022.repository.msg.EquityDerivative2.mmParameter);
 				trace_lazy = () -> Derivative.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EquityDerivative2";
 				definition = "Element to define an equity instrument.";
@@ -175,21 +179,21 @@ public class EquityDerivative2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "UndrlygTp", required = true)
 	public EquityDerivative3Choice getUnderlyingType() {
 		return underlyingType;
 	}
 
-	public void setUnderlyingType(EquityDerivative3Choice underlyingType) {
-		this.underlyingType = underlyingType;
+	public EquityDerivative2 setUnderlyingType(EquityDerivative3Choice underlyingType) {
+		this.underlyingType = Objects.requireNonNull(underlyingType);
+		return this;
 	}
 
-	@XmlElement(name = "Param")
-	public EquityReturnParameter1Code getParameter() {
-		return parameter;
+	public Optional<EquityReturnParameter1Code> getParameter() {
+		return parameter == null ? Optional.empty() : Optional.of(parameter);
 	}
 
-	public void setParameter(EquityReturnParameter1Code parameter) {
+	public EquityDerivative2 setParameter(EquityReturnParameter1Code parameter) {
 		this.parameter = parameter;
+		return this;
 	}
 }

@@ -32,11 +32,9 @@ import com.tools20022.repository.entity.NetAssetValueCalculation;
 import com.tools20022.repository.entity.SecuritiesPricing;
 import com.tools20022.repository.GeneratedRepository;
 import java.text.DateFormat;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.Date;
 import java.util.function.Supplier;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -102,8 +100,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -117,16 +115,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ValuationDealingProcessingCharacteristics", propOrder = {"valuationFrequency", "valuationFrequencyDescription", "subscriptionDealingFrequency", "subscriptionDealFrequencyDescription", "limitedSubscriptionPeriod",
 		"redemptionDealingFrequency", "redemptionDealFrequencyDescription", "limitedRedemptionPeriod", "decimalisationPrice", "decimalisationUnits", "dualFundIndicator", "priceMethod", "priceCurrency"})
 public class ValuationDealingProcessingCharacteristics {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ValtnFrqcy", required = true)
 	protected EventFrequency2Code valuationFrequency;
 	/**
-	 * Frequency of the valuation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -160,7 +159,7 @@ public class ValuationDealingProcessingCharacteristics {
 	public static final MMMessageAttribute mmValuationFrequency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> NetAssetValueCalculation.mmValuationFrequency;
-			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,11 +170,11 @@ public class ValuationDealingProcessingCharacteristics {
 			simpleType_lazy = () -> EventFrequency2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ValtnFrqcyDesc")
 	protected Max350Text valuationFrequencyDescription;
 	/**
-	 * Further details regarding the dealing frequency, eg, Tuesday (for weekly
-	 * dealing) or last business day of the month.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -204,7 +203,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 */
 	public static final MMMessageAttribute mmValuationFrequencyDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "ValtnFrqcyDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,10 +214,11 @@ public class ValuationDealingProcessingCharacteristics {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SbcptDealgFrqcy", required = true)
 	protected EventFrequency2Code subscriptionDealingFrequency;
 	/**
-	 * Frequency at which the subscriptions are done.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -246,7 +246,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 */
 	public static final MMMessageAttribute mmSubscriptionDealingFrequency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptDealgFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,10 +257,11 @@ public class ValuationDealingProcessingCharacteristics {
 			simpleType_lazy = () -> EventFrequency2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "SbcptDealFrqcyDesc")
 	protected Max350Text subscriptionDealFrequencyDescription;
 	/**
-	 * Description of frequency at which the subscription is done.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -288,7 +289,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 */
 	public static final MMMessageAttribute mmSubscriptionDealFrequencyDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "SbcptDealFrqcyDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -299,11 +300,11 @@ public class ValuationDealingProcessingCharacteristics {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "LtdSbcptPrd")
 	protected Max350Text limitedSubscriptionPeriod;
 	/**
-	 * Specific period, eg, for some guaranteed funds, during which the
-	 * units/shares may be subscribed to.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -339,7 +340,7 @@ public class ValuationDealingProcessingCharacteristics {
 	public static final MMMessageAttribute mmLimitedSubscriptionPeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmLimitedSubscriptionPeriod;
-			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "LtdSbcptPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -350,10 +351,11 @@ public class ValuationDealingProcessingCharacteristics {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "RedDealgFrqcy", required = true)
 	protected EventFrequency2Code redemptionDealingFrequency;
 	/**
-	 * Frequency at which the redemptions are done.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -381,7 +383,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 */
 	public static final MMMessageAttribute mmRedemptionDealingFrequency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "RedDealgFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -392,10 +394,11 @@ public class ValuationDealingProcessingCharacteristics {
 			simpleType_lazy = () -> EventFrequency2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RedDealFrqcyDesc")
 	protected Max350Text redemptionDealFrequencyDescription;
 	/**
-	 * Description of frequency at which the redemption is done.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -423,7 +426,7 @@ public class ValuationDealingProcessingCharacteristics {
 	 */
 	public static final MMMessageAttribute mmRedemptionDealFrequencyDescription = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "RedDealFrqcyDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -434,11 +437,11 @@ public class ValuationDealingProcessingCharacteristics {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "LtdRedPrd")
 	protected Max350Text limitedRedemptionPeriod;
 	/**
-	 * Specific period, eg, for some guaranteed funds, during which the
-	 * units/shares may be redeemed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -473,7 +476,7 @@ public class ValuationDealingProcessingCharacteristics {
 	public static final MMMessageAttribute mmLimitedRedemptionPeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmLimitedRedemptionPeriod;
-			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "LtdRedPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -484,10 +487,11 @@ public class ValuationDealingProcessingCharacteristics {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "DcmlstnPric", required = true)
 	protected Number decimalisationPrice;
 	/**
-	 * Number of decimal places to which quantities of units/shares are rounded.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -522,7 +526,7 @@ public class ValuationDealingProcessingCharacteristics {
 	public static final MMMessageAttribute mmDecimalisationPrice = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmDecimalisation;
-			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "DcmlstnPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -533,10 +537,11 @@ public class ValuationDealingProcessingCharacteristics {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "DcmlstnUnits", required = true)
 	protected Number decimalisationUnits;
 	/**
-	 * Number of decimal places to which quantities of units/shares are rounded.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -571,7 +576,7 @@ public class ValuationDealingProcessingCharacteristics {
 	public static final MMMessageAttribute mmDecimalisationUnits = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmDecimalisation;
-			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "DcmlstnUnits";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -582,10 +587,11 @@ public class ValuationDealingProcessingCharacteristics {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "DualFndInd", required = true)
 	protected YesNoIndicator dualFundIndicator;
 	/**
-	 * Indicates whether the fund has two prices.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -619,7 +625,7 @@ public class ValuationDealingProcessingCharacteristics {
 	public static final MMMessageAttribute mmDualFundIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmDualFundIndicator;
-			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "DualFndInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -630,10 +636,11 @@ public class ValuationDealingProcessingCharacteristics {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "PricMtd", required = true)
 	protected PriceMethod1Code priceMethod;
 	/**
-	 * Type of pricing calculation method.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -667,7 +674,7 @@ public class ValuationDealingProcessingCharacteristics {
 	public static final MMMessageAttribute mmPriceMethod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmPriceMethod;
-			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "PricMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -678,11 +685,11 @@ public class ValuationDealingProcessingCharacteristics {
 			simpleType_lazy = () -> PriceMethod1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PricCcy", required = true)
 	protected List<ActiveCurrencyCode> priceCurrency;
 	/**
-	 * Currencies in which the prices for the investment fund class are
-	 * published by the fund management company.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -718,7 +725,7 @@ public class ValuationDealingProcessingCharacteristics {
 	public static final MMMessageAttribute mmPriceCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundClass.mmRequestedNAVCurrency;
-			componentContext_lazy = () -> ValuationDealingProcessingCharacteristics.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmObject();
 			isDerived = false;
 			xmlTag = "PricCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -732,14 +739,15 @@ public class ValuationDealingProcessingCharacteristics {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ValuationDealingProcessingCharacteristics.mmValuationFrequency, ValuationDealingProcessingCharacteristics.mmValuationFrequencyDescription,
-						ValuationDealingProcessingCharacteristics.mmSubscriptionDealingFrequency, ValuationDealingProcessingCharacteristics.mmSubscriptionDealFrequencyDescription,
-						ValuationDealingProcessingCharacteristics.mmLimitedSubscriptionPeriod, ValuationDealingProcessingCharacteristics.mmRedemptionDealingFrequency,
-						ValuationDealingProcessingCharacteristics.mmRedemptionDealFrequencyDescription, ValuationDealingProcessingCharacteristics.mmLimitedRedemptionPeriod, ValuationDealingProcessingCharacteristics.mmDecimalisationPrice,
-						ValuationDealingProcessingCharacteristics.mmDecimalisationUnits, ValuationDealingProcessingCharacteristics.mmDualFundIndicator, ValuationDealingProcessingCharacteristics.mmPriceMethod,
-						ValuationDealingProcessingCharacteristics.mmPriceCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmValuationFrequency,
+						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmValuationFrequencyDescription, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmSubscriptionDealingFrequency,
+						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmSubscriptionDealFrequencyDescription, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmLimitedSubscriptionPeriod,
+						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmRedemptionDealingFrequency, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmRedemptionDealFrequencyDescription,
+						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmLimitedRedemptionPeriod, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmDecimalisationPrice,
+						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmDecimalisationUnits, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmDualFundIndicator,
+						com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmPriceMethod, com.tools20022.repository.msg.ValuationDealingProcessingCharacteristics.mmPriceCurrency);
 				trace_lazy = () -> InvestmentFundClassProcessingCharacteristics.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -755,120 +763,120 @@ public class ValuationDealingProcessingCharacteristics {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ValtnFrqcy", required = true)
 	public EventFrequency2Code getValuationFrequency() {
 		return valuationFrequency;
 	}
 
-	public void setValuationFrequency(EventFrequency2Code valuationFrequency) {
-		this.valuationFrequency = valuationFrequency;
+	public ValuationDealingProcessingCharacteristics setValuationFrequency(EventFrequency2Code valuationFrequency) {
+		this.valuationFrequency = Objects.requireNonNull(valuationFrequency);
+		return this;
 	}
 
-	@XmlElement(name = "ValtnFrqcyDesc")
-	public Max350Text getValuationFrequencyDescription() {
-		return valuationFrequencyDescription;
+	public Optional<Max350Text> getValuationFrequencyDescription() {
+		return valuationFrequencyDescription == null ? Optional.empty() : Optional.of(valuationFrequencyDescription);
 	}
 
-	public void setValuationFrequencyDescription(Max350Text valuationFrequencyDescription) {
+	public ValuationDealingProcessingCharacteristics setValuationFrequencyDescription(Max350Text valuationFrequencyDescription) {
 		this.valuationFrequencyDescription = valuationFrequencyDescription;
+		return this;
 	}
 
-	@XmlElement(name = "SbcptDealgFrqcy", required = true)
 	public EventFrequency2Code getSubscriptionDealingFrequency() {
 		return subscriptionDealingFrequency;
 	}
 
-	public void setSubscriptionDealingFrequency(EventFrequency2Code subscriptionDealingFrequency) {
-		this.subscriptionDealingFrequency = subscriptionDealingFrequency;
+	public ValuationDealingProcessingCharacteristics setSubscriptionDealingFrequency(EventFrequency2Code subscriptionDealingFrequency) {
+		this.subscriptionDealingFrequency = Objects.requireNonNull(subscriptionDealingFrequency);
+		return this;
 	}
 
-	@XmlElement(name = "SbcptDealFrqcyDesc")
-	public Max350Text getSubscriptionDealFrequencyDescription() {
-		return subscriptionDealFrequencyDescription;
+	public Optional<Max350Text> getSubscriptionDealFrequencyDescription() {
+		return subscriptionDealFrequencyDescription == null ? Optional.empty() : Optional.of(subscriptionDealFrequencyDescription);
 	}
 
-	public void setSubscriptionDealFrequencyDescription(Max350Text subscriptionDealFrequencyDescription) {
+	public ValuationDealingProcessingCharacteristics setSubscriptionDealFrequencyDescription(Max350Text subscriptionDealFrequencyDescription) {
 		this.subscriptionDealFrequencyDescription = subscriptionDealFrequencyDescription;
+		return this;
 	}
 
-	@XmlElement(name = "LtdSbcptPrd")
-	public Max350Text getLimitedSubscriptionPeriod() {
-		return limitedSubscriptionPeriod;
+	public Optional<Max350Text> getLimitedSubscriptionPeriod() {
+		return limitedSubscriptionPeriod == null ? Optional.empty() : Optional.of(limitedSubscriptionPeriod);
 	}
 
-	public void setLimitedSubscriptionPeriod(Max350Text limitedSubscriptionPeriod) {
+	public ValuationDealingProcessingCharacteristics setLimitedSubscriptionPeriod(Max350Text limitedSubscriptionPeriod) {
 		this.limitedSubscriptionPeriod = limitedSubscriptionPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "RedDealgFrqcy", required = true)
 	public EventFrequency2Code getRedemptionDealingFrequency() {
 		return redemptionDealingFrequency;
 	}
 
-	public void setRedemptionDealingFrequency(EventFrequency2Code redemptionDealingFrequency) {
-		this.redemptionDealingFrequency = redemptionDealingFrequency;
+	public ValuationDealingProcessingCharacteristics setRedemptionDealingFrequency(EventFrequency2Code redemptionDealingFrequency) {
+		this.redemptionDealingFrequency = Objects.requireNonNull(redemptionDealingFrequency);
+		return this;
 	}
 
-	@XmlElement(name = "RedDealFrqcyDesc")
-	public Max350Text getRedemptionDealFrequencyDescription() {
-		return redemptionDealFrequencyDescription;
+	public Optional<Max350Text> getRedemptionDealFrequencyDescription() {
+		return redemptionDealFrequencyDescription == null ? Optional.empty() : Optional.of(redemptionDealFrequencyDescription);
 	}
 
-	public void setRedemptionDealFrequencyDescription(Max350Text redemptionDealFrequencyDescription) {
+	public ValuationDealingProcessingCharacteristics setRedemptionDealFrequencyDescription(Max350Text redemptionDealFrequencyDescription) {
 		this.redemptionDealFrequencyDescription = redemptionDealFrequencyDescription;
+		return this;
 	}
 
-	@XmlElement(name = "LtdRedPrd")
-	public Max350Text getLimitedRedemptionPeriod() {
-		return limitedRedemptionPeriod;
+	public Optional<Max350Text> getLimitedRedemptionPeriod() {
+		return limitedRedemptionPeriod == null ? Optional.empty() : Optional.of(limitedRedemptionPeriod);
 	}
 
-	public void setLimitedRedemptionPeriod(Max350Text limitedRedemptionPeriod) {
+	public ValuationDealingProcessingCharacteristics setLimitedRedemptionPeriod(Max350Text limitedRedemptionPeriod) {
 		this.limitedRedemptionPeriod = limitedRedemptionPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "DcmlstnPric", required = true)
 	public Number getDecimalisationPrice() {
 		return decimalisationPrice;
 	}
 
-	public void setDecimalisationPrice(Number decimalisationPrice) {
-		this.decimalisationPrice = decimalisationPrice;
+	public ValuationDealingProcessingCharacteristics setDecimalisationPrice(Number decimalisationPrice) {
+		this.decimalisationPrice = Objects.requireNonNull(decimalisationPrice);
+		return this;
 	}
 
-	@XmlElement(name = "DcmlstnUnits", required = true)
 	public Number getDecimalisationUnits() {
 		return decimalisationUnits;
 	}
 
-	public void setDecimalisationUnits(Number decimalisationUnits) {
-		this.decimalisationUnits = decimalisationUnits;
+	public ValuationDealingProcessingCharacteristics setDecimalisationUnits(Number decimalisationUnits) {
+		this.decimalisationUnits = Objects.requireNonNull(decimalisationUnits);
+		return this;
 	}
 
-	@XmlElement(name = "DualFndInd", required = true)
 	public YesNoIndicator getDualFundIndicator() {
 		return dualFundIndicator;
 	}
 
-	public void setDualFundIndicator(YesNoIndicator dualFundIndicator) {
-		this.dualFundIndicator = dualFundIndicator;
+	public ValuationDealingProcessingCharacteristics setDualFundIndicator(YesNoIndicator dualFundIndicator) {
+		this.dualFundIndicator = Objects.requireNonNull(dualFundIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "PricMtd", required = true)
 	public PriceMethod1Code getPriceMethod() {
 		return priceMethod;
 	}
 
-	public void setPriceMethod(PriceMethod1Code priceMethod) {
-		this.priceMethod = priceMethod;
+	public ValuationDealingProcessingCharacteristics setPriceMethod(PriceMethod1Code priceMethod) {
+		this.priceMethod = Objects.requireNonNull(priceMethod);
+		return this;
 	}
 
-	@XmlElement(name = "PricCcy", required = true)
 	public List<ActiveCurrencyCode> getPriceCurrency() {
-		return priceCurrency;
+		return priceCurrency == null ? priceCurrency = new ArrayList<>() : priceCurrency;
 	}
 
-	public void setPriceCurrency(List<ActiveCurrencyCode> priceCurrency) {
-		this.priceCurrency = priceCurrency;
+	public ValuationDealingProcessingCharacteristics setPriceCurrency(List<ActiveCurrencyCode> priceCurrency) {
+		this.priceCurrency = Objects.requireNonNull(priceCurrency);
+		return this;
 	}
 }

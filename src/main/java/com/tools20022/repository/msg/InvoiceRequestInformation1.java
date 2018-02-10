@@ -26,9 +26,8 @@ import com.tools20022.repository.choice.FinancingRateOrAmountChoice;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -89,8 +88,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -103,17 +102,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InvoiceRequestInformation1", propOrder = {"invoiceGeneralInformation", "invoiceTotalsInformation", "creditDebitNoteAmount", "instalmentInformation", "requestedAmount", "supplier", "buyer", "invoicePaymentInformation",
 		"referredDocument"})
 public class InvoiceRequestInformation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InvcGnlInf", required = true)
 	protected DocumentGeneralInformation1 invoiceGeneralInformation;
 	/**
-	 * General information that unambiguously identify the invoice to be
-	 * financed, such as invoice type, invoice number and issue date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -148,7 +147,7 @@ public class InvoiceRequestInformation1 {
 	public static final MMMessageAssociationEnd mmInvoiceGeneralInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Agreement.mmDocument;
-			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "InvcGnlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,11 +159,11 @@ public class InvoiceRequestInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation1.mmObject();
 		}
 	};
+	@XmlElement(name = "InvcTtlsInf", required = true)
 	protected InvoiceTotals1 invoiceTotalsInformation;
 	/**
-	 * Specifies totals related to the invoice, such as total invoice amount and
-	 * total tax amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -198,7 +197,7 @@ public class InvoiceRequestInformation1 {
 	public static final MMMessageAssociationEnd mmInvoiceTotalsInformation = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmInvoice;
-			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "InvcTtlsInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,10 +209,11 @@ public class InvoiceRequestInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.InvoiceTotals1.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtDbtNoteAmt")
 	protected ActiveCurrencyAndAmount creditDebitNoteAmount;
 	/**
-	 * Amount of credit/debit note related to the invoice to be financed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -248,7 +248,7 @@ public class InvoiceRequestInformation1 {
 	public static final MMMessageAttribute mmCreditDebitNoteAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Invoice.mmCreditDebitNoteAmount;
-			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtNoteAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -259,11 +259,11 @@ public class InvoiceRequestInformation1 {
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "InstlmtInf")
 	protected List<com.tools20022.repository.msg.Instalment1> instalmentInformation;
 	/**
-	 * Details of a single instalment to be financed, related to an invoice
-	 * settlement (amount, payment due date).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -296,7 +296,7 @@ public class InvoiceRequestInformation1 {
 	public static final MMMessageAssociationEnd mmInstalmentInformation = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Instalment.mmObject();
-			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "InstlmtInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -307,11 +307,11 @@ public class InvoiceRequestInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.Instalment1.mmObject();
 		}
 	};
+	@XmlElement(name = "ReqdAmt")
 	protected FinancingRateOrAmountChoice requestedAmount;
 	/**
-	 * Amount requested by the requestor party, related to a single invoice to
-	 * be financed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -346,7 +346,7 @@ public class InvoiceRequestInformation1 {
 	public static final MMMessageAssociationEnd mmRequestedAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvoiceFinancingAgreement.mmRequestedAmount;
-			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "ReqdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -358,11 +358,11 @@ public class InvoiceRequestInformation1 {
 			type_lazy = () -> FinancingRateOrAmountChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "Spplr", required = true)
 	protected PartyAndAccountIdentificationAndContactInformation1 supplier;
 	/**
-	 * Person or organization that represents the creditor for the invoice to be
-	 * financed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -397,7 +397,7 @@ public class InvoiceRequestInformation1 {
 	public static final MMMessageAssociationEnd mmSupplier = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> FinancingRequestorRole.mmObject();
-			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Spplr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -409,11 +409,11 @@ public class InvoiceRequestInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyAndAccountIdentificationAndContactInformation1.mmObject();
 		}
 	};
+	@XmlElement(name = "Buyr", required = true)
 	protected PartyIdentificationAndContactInformation1 buyer;
 	/**
-	 * Person or organization that represents the debtor for the invoice to be
-	 * financed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -448,7 +448,7 @@ public class InvoiceRequestInformation1 {
 	public static final MMMessageAssociationEnd mmBuyer = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "Buyr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -460,11 +460,11 @@ public class InvoiceRequestInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndContactInformation1.mmObject();
 		}
 	};
+	@XmlElement(name = "InvcPmtInf", required = true)
 	protected PaymentInformation15 invoicePaymentInformation;
 	/**
-	 * Specifies payment terms and conditions related to a single invoice to be
-	 * financed, including identifier of possible account used for payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -492,7 +492,7 @@ public class InvoiceRequestInformation1 {
 	 */
 	public static final MMMessageAssociationEnd mmInvoicePaymentInformation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "InvcPmtInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -504,11 +504,11 @@ public class InvoiceRequestInformation1 {
 			type_lazy = () -> com.tools20022.repository.msg.PaymentInformation15.mmObject();
 		}
 	};
+	@XmlElement(name = "RfrdDoc")
 	protected List<com.tools20022.repository.msg.ReferredDocumentInformation2> referredDocument;
 	/**
-	 * Information about a document related to the invoice to be financed, in
-	 * structured form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -543,7 +543,7 @@ public class InvoiceRequestInformation1 {
 	public static final MMMessageAssociationEnd mmReferredDocument = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> FinancialDocument.mmObject();
-			componentContext_lazy = () -> InvoiceRequestInformation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InvoiceRequestInformation1.mmObject();
 			isDerived = false;
 			xmlTag = "RfrdDoc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -558,12 +558,13 @@ public class InvoiceRequestInformation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InvoiceRequestInformation1.mmInvoiceGeneralInformation, InvoiceRequestInformation1.mmInvoiceTotalsInformation, InvoiceRequestInformation1.mmCreditDebitNoteAmount,
-						InvoiceRequestInformation1.mmInstalmentInformation, InvoiceRequestInformation1.mmRequestedAmount, InvoiceRequestInformation1.mmSupplier, InvoiceRequestInformation1.mmBuyer,
-						InvoiceRequestInformation1.mmInvoicePaymentInformation, InvoiceRequestInformation1.mmReferredDocument);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvoiceRequestInformation1.mmInvoiceGeneralInformation, com.tools20022.repository.msg.InvoiceRequestInformation1.mmInvoiceTotalsInformation,
+						com.tools20022.repository.msg.InvoiceRequestInformation1.mmCreditDebitNoteAmount, com.tools20022.repository.msg.InvoiceRequestInformation1.mmInstalmentInformation,
+						com.tools20022.repository.msg.InvoiceRequestInformation1.mmRequestedAmount, com.tools20022.repository.msg.InvoiceRequestInformation1.mmSupplier, com.tools20022.repository.msg.InvoiceRequestInformation1.mmBuyer,
+						com.tools20022.repository.msg.InvoiceRequestInformation1.mmInvoicePaymentInformation, com.tools20022.repository.msg.InvoiceRequestInformation1.mmReferredDocument);
 				messageBuildingBlock_lazy = () -> Arrays.asList(InvoiceFinancingRequestV01.mmInvoiceRequestInformation);
 				trace_lazy = () -> InvoiceFinancingAgreement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvoiceRequestInformation1";
 				definition = "Set of characteristics that unambiguously identify the single invoice financing request.";
@@ -572,84 +573,84 @@ public class InvoiceRequestInformation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InvcGnlInf", required = true)
 	public DocumentGeneralInformation1 getInvoiceGeneralInformation() {
 		return invoiceGeneralInformation;
 	}
 
-	public void setInvoiceGeneralInformation(com.tools20022.repository.msg.DocumentGeneralInformation1 invoiceGeneralInformation) {
-		this.invoiceGeneralInformation = invoiceGeneralInformation;
+	public InvoiceRequestInformation1 setInvoiceGeneralInformation(com.tools20022.repository.msg.DocumentGeneralInformation1 invoiceGeneralInformation) {
+		this.invoiceGeneralInformation = Objects.requireNonNull(invoiceGeneralInformation);
+		return this;
 	}
 
-	@XmlElement(name = "InvcTtlsInf", required = true)
 	public InvoiceTotals1 getInvoiceTotalsInformation() {
 		return invoiceTotalsInformation;
 	}
 
-	public void setInvoiceTotalsInformation(com.tools20022.repository.msg.InvoiceTotals1 invoiceTotalsInformation) {
-		this.invoiceTotalsInformation = invoiceTotalsInformation;
+	public InvoiceRequestInformation1 setInvoiceTotalsInformation(com.tools20022.repository.msg.InvoiceTotals1 invoiceTotalsInformation) {
+		this.invoiceTotalsInformation = Objects.requireNonNull(invoiceTotalsInformation);
+		return this;
 	}
 
-	@XmlElement(name = "CdtDbtNoteAmt")
-	public ActiveCurrencyAndAmount getCreditDebitNoteAmount() {
-		return creditDebitNoteAmount;
+	public Optional<ActiveCurrencyAndAmount> getCreditDebitNoteAmount() {
+		return creditDebitNoteAmount == null ? Optional.empty() : Optional.of(creditDebitNoteAmount);
 	}
 
-	public void setCreditDebitNoteAmount(ActiveCurrencyAndAmount creditDebitNoteAmount) {
+	public InvoiceRequestInformation1 setCreditDebitNoteAmount(ActiveCurrencyAndAmount creditDebitNoteAmount) {
 		this.creditDebitNoteAmount = creditDebitNoteAmount;
+		return this;
 	}
 
-	@XmlElement(name = "InstlmtInf")
 	public List<Instalment1> getInstalmentInformation() {
-		return instalmentInformation;
+		return instalmentInformation == null ? instalmentInformation = new ArrayList<>() : instalmentInformation;
 	}
 
-	public void setInstalmentInformation(List<com.tools20022.repository.msg.Instalment1> instalmentInformation) {
-		this.instalmentInformation = instalmentInformation;
+	public InvoiceRequestInformation1 setInstalmentInformation(List<com.tools20022.repository.msg.Instalment1> instalmentInformation) {
+		this.instalmentInformation = Objects.requireNonNull(instalmentInformation);
+		return this;
 	}
 
-	@XmlElement(name = "ReqdAmt")
-	public FinancingRateOrAmountChoice getRequestedAmount() {
-		return requestedAmount;
+	public Optional<FinancingRateOrAmountChoice> getRequestedAmount() {
+		return requestedAmount == null ? Optional.empty() : Optional.of(requestedAmount);
 	}
 
-	public void setRequestedAmount(FinancingRateOrAmountChoice requestedAmount) {
+	public InvoiceRequestInformation1 setRequestedAmount(FinancingRateOrAmountChoice requestedAmount) {
 		this.requestedAmount = requestedAmount;
+		return this;
 	}
 
-	@XmlElement(name = "Spplr", required = true)
 	public PartyAndAccountIdentificationAndContactInformation1 getSupplier() {
 		return supplier;
 	}
 
-	public void setSupplier(com.tools20022.repository.msg.PartyAndAccountIdentificationAndContactInformation1 supplier) {
-		this.supplier = supplier;
+	public InvoiceRequestInformation1 setSupplier(com.tools20022.repository.msg.PartyAndAccountIdentificationAndContactInformation1 supplier) {
+		this.supplier = Objects.requireNonNull(supplier);
+		return this;
 	}
 
-	@XmlElement(name = "Buyr", required = true)
 	public PartyIdentificationAndContactInformation1 getBuyer() {
 		return buyer;
 	}
 
-	public void setBuyer(com.tools20022.repository.msg.PartyIdentificationAndContactInformation1 buyer) {
-		this.buyer = buyer;
+	public InvoiceRequestInformation1 setBuyer(com.tools20022.repository.msg.PartyIdentificationAndContactInformation1 buyer) {
+		this.buyer = Objects.requireNonNull(buyer);
+		return this;
 	}
 
-	@XmlElement(name = "InvcPmtInf", required = true)
 	public PaymentInformation15 getInvoicePaymentInformation() {
 		return invoicePaymentInformation;
 	}
 
-	public void setInvoicePaymentInformation(com.tools20022.repository.msg.PaymentInformation15 invoicePaymentInformation) {
-		this.invoicePaymentInformation = invoicePaymentInformation;
+	public InvoiceRequestInformation1 setInvoicePaymentInformation(com.tools20022.repository.msg.PaymentInformation15 invoicePaymentInformation) {
+		this.invoicePaymentInformation = Objects.requireNonNull(invoicePaymentInformation);
+		return this;
 	}
 
-	@XmlElement(name = "RfrdDoc")
 	public List<ReferredDocumentInformation2> getReferredDocument() {
-		return referredDocument;
+		return referredDocument == null ? referredDocument = new ArrayList<>() : referredDocument;
 	}
 
-	public void setReferredDocument(List<com.tools20022.repository.msg.ReferredDocumentInformation2> referredDocument) {
-		this.referredDocument = referredDocument;
+	public InvoiceRequestInformation1 setReferredDocument(List<com.tools20022.repository.msg.ReferredDocumentInformation2> referredDocument) {
+		this.referredDocument = Objects.requireNonNull(referredDocument);
+		return this;
 	}
 }

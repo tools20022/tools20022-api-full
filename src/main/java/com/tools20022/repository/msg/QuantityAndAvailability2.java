@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +67,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "QuantityAndAvailability2", propOrder = {"quantity", "availabilityIndicator"})
 public class QuantityAndAvailability2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Qty", required = true)
 	protected FinancialInstrumentQuantity15Choice quantity;
 	/**
-	 * Quantity of securities in the sub-balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -101,7 +103,7 @@ public class QuantityAndAvailability2 {
 	 */
 	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> QuantityAndAvailability2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAvailability2.mmObject();
 			isDerived = false;
 			xmlTag = "Qty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,11 +115,11 @@ public class QuantityAndAvailability2 {
 			type_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AvlbtyInd", required = true)
 	protected YesNoIndicator availabilityIndicator;
 	/**
-	 * Indicates whether the quantity of securities on the sub-balance is
-	 * available.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -147,7 +149,7 @@ public class QuantityAndAvailability2 {
 	 */
 	public static final MMMessageAttribute mmAvailabilityIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> QuantityAndAvailability2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.QuantityAndAvailability2.mmObject();
 			isDerived = false;
 			xmlTag = "AvlbtyInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,8 +164,8 @@ public class QuantityAndAvailability2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(QuantityAndAvailability2.mmQuantity, QuantityAndAvailability2.mmAvailabilityIndicator);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.QuantityAndAvailability2.mmQuantity, com.tools20022.repository.msg.QuantityAndAvailability2.mmAvailabilityIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuantityAndAvailability2";
 				definition = "Net position of a segregated holding of a single security within the overall position held in the securities account, eg, sub-balance per status.";
@@ -172,21 +174,21 @@ public class QuantityAndAvailability2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Qty", required = true)
 	public FinancialInstrumentQuantity15Choice getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(FinancialInstrumentQuantity15Choice quantity) {
-		this.quantity = quantity;
+	public QuantityAndAvailability2 setQuantity(FinancialInstrumentQuantity15Choice quantity) {
+		this.quantity = Objects.requireNonNull(quantity);
+		return this;
 	}
 
-	@XmlElement(name = "AvlbtyInd", required = true)
 	public YesNoIndicator getAvailabilityIndicator() {
 		return availabilityIndicator;
 	}
 
-	public void setAvailabilityIndicator(YesNoIndicator availabilityIndicator) {
-		this.availabilityIndicator = availabilityIndicator;
+	public QuantityAndAvailability2 setAvailabilityIndicator(YesNoIndicator availabilityIndicator) {
+		this.availabilityIndicator = Objects.requireNonNull(availabilityIndicator);
+		return this;
 	}
 }

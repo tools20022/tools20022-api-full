@@ -24,9 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Name and address details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "EnglishNameLocalNameAndAddress1", propOrder = {"englishName", "nameAndAddress", "longAddressLine"})
 public class EnglishNameLocalNameAndAddress1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "EnNm")
 	protected Max210Text englishName;
 	/**
-	 * Name.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -102,7 +102,7 @@ public class EnglishNameLocalNameAndAddress1 {
 	 */
 	public static final MMMessageAttribute mmEnglishName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EnglishNameLocalNameAndAddress1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EnglishNameLocalNameAndAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "EnNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -113,10 +113,11 @@ public class EnglishNameLocalNameAndAddress1 {
 			simpleType_lazy = () -> Max210Text.mmObject();
 		}
 	};
+	@XmlElement(name = "NmAndAdr", required = true)
 	protected PartyIdentification77 nameAndAddress;
 	/**
-	 * Name and address details of a participant.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -142,7 +143,7 @@ public class EnglishNameLocalNameAndAddress1 {
 	 */
 	public static final MMMessageAssociationEnd mmNameAndAddress = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> EnglishNameLocalNameAndAddress1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EnglishNameLocalNameAndAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "NmAndAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,11 +155,11 @@ public class EnglishNameLocalNameAndAddress1 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification77.mmObject();
 		}
 	};
+	@XmlElement(name = "LngAdrLine")
 	protected List<Max256Text> longAddressLine;
 	/**
-	 * Information that locates and identifies a specific address in long text
-	 * format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,7 +188,7 @@ public class EnglishNameLocalNameAndAddress1 {
 	 */
 	public static final MMMessageAttribute mmLongAddressLine = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> EnglishNameLocalNameAndAddress1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.EnglishNameLocalNameAndAddress1.mmObject();
 			isDerived = false;
 			xmlTag = "LngAdrLine";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -202,8 +203,9 @@ public class EnglishNameLocalNameAndAddress1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(EnglishNameLocalNameAndAddress1.mmEnglishName, EnglishNameLocalNameAndAddress1.mmNameAndAddress, EnglishNameLocalNameAndAddress1.mmLongAddressLine);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.EnglishNameLocalNameAndAddress1.mmEnglishName, com.tools20022.repository.msg.EnglishNameLocalNameAndAddress1.mmNameAndAddress,
+						com.tools20022.repository.msg.EnglishNameLocalNameAndAddress1.mmLongAddressLine);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EnglishNameLocalNameAndAddress1";
 				definition = "Name and address details.";
@@ -212,30 +214,30 @@ public class EnglishNameLocalNameAndAddress1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "EnNm")
-	public Max210Text getEnglishName() {
-		return englishName;
+	public Optional<Max210Text> getEnglishName() {
+		return englishName == null ? Optional.empty() : Optional.of(englishName);
 	}
 
-	public void setEnglishName(Max210Text englishName) {
+	public EnglishNameLocalNameAndAddress1 setEnglishName(Max210Text englishName) {
 		this.englishName = englishName;
+		return this;
 	}
 
-	@XmlElement(name = "NmAndAdr", required = true)
 	public PartyIdentification77 getNameAndAddress() {
 		return nameAndAddress;
 	}
 
-	public void setNameAndAddress(com.tools20022.repository.msg.PartyIdentification77 nameAndAddress) {
-		this.nameAndAddress = nameAndAddress;
+	public EnglishNameLocalNameAndAddress1 setNameAndAddress(com.tools20022.repository.msg.PartyIdentification77 nameAndAddress) {
+		this.nameAndAddress = Objects.requireNonNull(nameAndAddress);
+		return this;
 	}
 
-	@XmlElement(name = "LngAdrLine")
 	public List<Max256Text> getLongAddressLine() {
-		return longAddressLine;
+		return longAddressLine == null ? longAddressLine = new ArrayList<>() : longAddressLine;
 	}
 
-	public void setLongAddressLine(List<Max256Text> longAddressLine) {
-		this.longAddressLine = longAddressLine;
+	public EnglishNameLocalNameAndAddress1 setLongAddressLine(List<Max256Text> longAddressLine) {
+		this.longAddressLine = Objects.requireNonNull(longAddressLine);
+		return this;
 	}
 }

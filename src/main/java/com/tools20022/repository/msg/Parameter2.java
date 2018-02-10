@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.Algorithm5Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -72,16 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * Parameter1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Parameter2", propOrder = {"digestAlgorithm", "maskGeneratorAlgorithm"})
 public class Parameter2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DgstAlgo")
 	protected Algorithm5Code digestAlgorithm;
 	/**
-	 * Digest algorithm used in the RSAES-OAEP encryption algorithm (RSA
-	 * Encryption Scheme: Optimal Asymmetric Encryption Padding).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -118,7 +119,7 @@ public class Parameter2 {
 	 */
 	public static final MMMessageAttribute mmDigestAlgorithm = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Parameter2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter2.mmObject();
 			isDerived = false;
 			xmlTag = "DgstAlgo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -130,10 +131,11 @@ public class Parameter2 {
 			simpleType_lazy = () -> Algorithm5Code.mmObject();
 		}
 	};
+	@XmlElement(name = "MskGnrtrAlgo")
 	protected AlgorithmIdentification8 maskGeneratorAlgorithm;
 	/**
-	 * Mask generator function cryptographic algorithm and parameters.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -169,7 +171,7 @@ public class Parameter2 {
 	 */
 	public static final MMMessageAttribute mmMaskGeneratorAlgorithm = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Parameter2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Parameter2.mmObject();
 			isDerived = false;
 			xmlTag = "MskGnrtrAlgo";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -185,8 +187,8 @@ public class Parameter2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Parameter2.mmDigestAlgorithm, Parameter2.mmMaskGeneratorAlgorithm);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Parameter2.mmDigestAlgorithm, com.tools20022.repository.msg.Parameter2.mmMaskGeneratorAlgorithm);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Parameter2";
 				definition = "Parameters of the RSAES-OAEP encryption algorithm (RSA Encryption Scheme: Optimal Asymmetric Encryption Padding).";
@@ -197,21 +199,21 @@ public class Parameter2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DgstAlgo")
-	public Algorithm5Code getDigestAlgorithm() {
-		return digestAlgorithm;
+	public Optional<Algorithm5Code> getDigestAlgorithm() {
+		return digestAlgorithm == null ? Optional.empty() : Optional.of(digestAlgorithm);
 	}
 
-	public void setDigestAlgorithm(Algorithm5Code digestAlgorithm) {
+	public Parameter2 setDigestAlgorithm(Algorithm5Code digestAlgorithm) {
 		this.digestAlgorithm = digestAlgorithm;
+		return this;
 	}
 
-	@XmlElement(name = "MskGnrtrAlgo")
-	public AlgorithmIdentification8 getMaskGeneratorAlgorithm() {
-		return maskGeneratorAlgorithm;
+	public Optional<AlgorithmIdentification8> getMaskGeneratorAlgorithm() {
+		return maskGeneratorAlgorithm == null ? Optional.empty() : Optional.of(maskGeneratorAlgorithm);
 	}
 
-	public void setMaskGeneratorAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification8 maskGeneratorAlgorithm) {
+	public Parameter2 setMaskGeneratorAlgorithm(com.tools20022.repository.msg.AlgorithmIdentification8 maskGeneratorAlgorithm) {
 		this.maskGeneratorAlgorithm = maskGeneratorAlgorithm;
+		return this;
 	}
 }

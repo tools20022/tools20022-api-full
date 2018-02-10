@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.TransactionOperationTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of process related to a specific transaction.
@@ -32,38 +37,38 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#mmNewTransaction
- * TransactionOperationTypeCode.mmNewTransaction}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#NewTransaction
+ * TransactionOperationTypeCode.NewTransaction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#mmCancellation
- * TransactionOperationTypeCode.mmCancellation}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#Cancellation
+ * TransactionOperationTypeCode.Cancellation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#mmAmendment
- * TransactionOperationTypeCode.mmAmendment}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#Amendment
+ * TransactionOperationTypeCode.Amendment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#mmCorrection
- * TransactionOperationTypeCode.mmCorrection}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#Correction
+ * TransactionOperationTypeCode.Correction}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#mmEarlyTermination
- * TransactionOperationTypeCode.mmEarlyTermination}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#EarlyTermination
+ * TransactionOperationTypeCode.EarlyTermination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#mmError
- * TransactionOperationTypeCode.mmError}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#Error
+ * TransactionOperationTypeCode.Error}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#mmModification
- * TransactionOperationTypeCode.mmModification}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#Modification
+ * TransactionOperationTypeCode.Modification}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#mmCompression
- * TransactionOperationTypeCode.mmCompression}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#Compression
+ * TransactionOperationTypeCode.Compression}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#mmValuationUpdate
- * TransactionOperationTypeCode.mmValuationUpdate}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#ValuationUpdate
+ * TransactionOperationTypeCode.ValuationUpdate}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#mmPositionComponent
- * TransactionOperationTypeCode.mmPositionComponent}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#PositionComponent
+ * TransactionOperationTypeCode.PositionComponent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#mmOther
- * TransactionOperationTypeCode.mmOther}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationTypeCode#Other
+ * TransactionOperationTypeCode.Other}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -77,8 +82,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -90,7 +95,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the type of process related to a specific transaction."</li>
  * </ul>
  */
-public class TransactionOperationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransactionOperationTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -114,12 +120,12 @@ public class TransactionOperationTypeCode {
 	 * definition} = "Transaction is a new transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNewTransaction = new MMCode() {
+	public static final TransactionOperationTypeCode NewTransaction = new TransactionOperationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewTransaction";
 			definition = "Transaction is a new transaction.";
-			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionOperationTypeCode.mmObject();
 			codeName = "NEWT";
 		}
 	};
@@ -147,12 +153,12 @@ public class TransactionOperationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCancellation = new MMCode() {
+	public static final TransactionOperationTypeCode Cancellation = new TransactionOperationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
 			definition = "Transaction requests the deletion/cancellation of a previously sent transaction.";
-			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionOperationTypeCode.mmObject();
 			codeName = "CANC";
 		}
 	};
@@ -177,12 +183,12 @@ public class TransactionOperationTypeCode {
 	 * definition} = "Transaction amends a previously sent transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAmendment = new MMCode() {
+	public static final TransactionOperationTypeCode Amendment = new TransactionOperationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amendment";
 			definition = "Transaction amends a previously sent transaction.";
-			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionOperationTypeCode.mmObject();
 			codeName = "AMND";
 		}
 	};
@@ -208,12 +214,12 @@ public class TransactionOperationTypeCode {
 	 * "Transaction corrects errors in a previously sent transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCorrection = new MMCode() {
+	public static final TransactionOperationTypeCode Correction = new TransactionOperationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Correction";
 			definition = "Transaction corrects errors in a previously sent transaction.";
-			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionOperationTypeCode.mmObject();
 			codeName = "CORR";
 		}
 	};
@@ -238,12 +244,12 @@ public class TransactionOperationTypeCode {
 	 * definition} = "Transaction is an early termination."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEarlyTermination = new MMCode() {
+	public static final TransactionOperationTypeCode EarlyTermination = new TransactionOperationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlyTermination";
 			definition = "Transaction is an early termination.";
-			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionOperationTypeCode.mmObject();
 			codeName = "ETRM";
 		}
 	};
@@ -273,12 +279,12 @@ public class TransactionOperationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmError = new MMCode() {
+	public static final TransactionOperationTypeCode Error = new TransactionOperationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Error";
 			definition = "Cancellation of a wrongly submitted entire report in case the contract never came into existence or was not subject to regulatory reporting requirements but was reported to a regulatory authority by mistake, in which case, it will be identified as ‘error’.";
-			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionOperationTypeCode.mmObject();
 			codeName = "EROR";
 		}
 	};
@@ -303,12 +309,12 @@ public class TransactionOperationTypeCode {
 	 * definition} = "Transaction modifies in a previously sent transaction."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmModification = new MMCode() {
+	public static final TransactionOperationTypeCode Modification = new TransactionOperationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
 			definition = "Transaction modifies in a previously sent transaction.";
-			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionOperationTypeCode.mmObject();
 			codeName = "MODI";
 		}
 	};
@@ -333,12 +339,12 @@ public class TransactionOperationTypeCode {
 	 * definition} = "Transaction is a compression."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCompression = new MMCode() {
+	public static final TransactionOperationTypeCode Compression = new TransactionOperationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compression";
 			definition = "Transaction is a compression.";
-			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionOperationTypeCode.mmObject();
 			codeName = "COMP";
 		}
 	};
@@ -363,12 +369,12 @@ public class TransactionOperationTypeCode {
 	 * definition} = "Update of a contract valuation or collateral."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmValuationUpdate = new MMCode() {
+	public static final TransactionOperationTypeCode ValuationUpdate = new TransactionOperationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationUpdate";
 			definition = "Update of a contract valuation or collateral.";
-			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionOperationTypeCode.mmObject();
 			codeName = "VALU";
 		}
 	};
@@ -396,12 +402,12 @@ public class TransactionOperationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmPositionComponent = new MMCode() {
+	public static final TransactionOperationTypeCode PositionComponent = new TransactionOperationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PositionComponent";
 			definition = "Contract to be reported as a new trade and included in a separate position report on the same day.";
-			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionOperationTypeCode.mmObject();
 			codeName = "POSC";
 		}
 	};
@@ -426,29 +432,71 @@ public class TransactionOperationTypeCode {
 	 * definition} = "Other."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final TransactionOperationTypeCode Other = new TransactionOperationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other.";
-			owner_lazy = () -> TransactionOperationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransactionOperationTypeCode.mmObject();
 			codeName = "OTHR";
 		}
 	};
+	final static private LinkedHashMap<String, TransactionOperationTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransactionOperationTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionOperationTypeCode";
 				definition = "Specifies the type of process related to a specific transaction.";
-				code_lazy = () -> Arrays.asList(TransactionOperationTypeCode.mmNewTransaction, TransactionOperationTypeCode.mmCancellation, TransactionOperationTypeCode.mmAmendment, TransactionOperationTypeCode.mmCorrection,
-						TransactionOperationTypeCode.mmEarlyTermination, TransactionOperationTypeCode.mmError, TransactionOperationTypeCode.mmModification, TransactionOperationTypeCode.mmCompression,
-						TransactionOperationTypeCode.mmValuationUpdate, TransactionOperationTypeCode.mmPositionComponent, TransactionOperationTypeCode.mmOther);
 				derivation_lazy = () -> Arrays.asList(TransactionOperationType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionOperationTypeCode.NewTransaction, com.tools20022.repository.codeset.TransactionOperationTypeCode.Cancellation,
+						com.tools20022.repository.codeset.TransactionOperationTypeCode.Amendment, com.tools20022.repository.codeset.TransactionOperationTypeCode.Correction,
+						com.tools20022.repository.codeset.TransactionOperationTypeCode.EarlyTermination, com.tools20022.repository.codeset.TransactionOperationTypeCode.Error,
+						com.tools20022.repository.codeset.TransactionOperationTypeCode.Modification, com.tools20022.repository.codeset.TransactionOperationTypeCode.Compression,
+						com.tools20022.repository.codeset.TransactionOperationTypeCode.ValuationUpdate, com.tools20022.repository.codeset.TransactionOperationTypeCode.PositionComponent,
+						com.tools20022.repository.codeset.TransactionOperationTypeCode.Other);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NewTransaction.getCodeName().get(), NewTransaction);
+		codesByName.put(Cancellation.getCodeName().get(), Cancellation);
+		codesByName.put(Amendment.getCodeName().get(), Amendment);
+		codesByName.put(Correction.getCodeName().get(), Correction);
+		codesByName.put(EarlyTermination.getCodeName().get(), EarlyTermination);
+		codesByName.put(Error.getCodeName().get(), Error);
+		codesByName.put(Modification.getCodeName().get(), Modification);
+		codesByName.put(Compression.getCodeName().get(), Compression);
+		codesByName.put(ValuationUpdate.getCodeName().get(), ValuationUpdate);
+		codesByName.put(PositionComponent.getCodeName().get(), PositionComponent);
+		codesByName.put(Other.getCodeName().get(), Other);
+	}
+
+	public static TransactionOperationTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransactionOperationTypeCode[] values() {
+		TransactionOperationTypeCode[] values = new TransactionOperationTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransactionOperationTypeCode> {
+		@Override
+		public TransactionOperationTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransactionOperationTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

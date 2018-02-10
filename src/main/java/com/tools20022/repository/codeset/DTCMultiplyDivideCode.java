@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DTCMultiplyDivideCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies DTC (The Depository Trust Company) entitlement calculation logic.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCMultiplyDivideCode#mmMultiply
- * DTCMultiplyDivideCode.mmMultiply}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCMultiplyDivideCode#Multiply
+ * DTCMultiplyDivideCode.Multiply}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.DTCMultiplyDivideCode#mmDivide
- * DTCMultiplyDivideCode.mmDivide}</li>
+ * {@linkplain com.tools20022.repository.codeset.DTCMultiplyDivideCode#Divide
+ * DTCMultiplyDivideCode.Divide}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -69,7 +74,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class DTCMultiplyDivideCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DTCMultiplyDivideCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -93,12 +99,12 @@ public class DTCMultiplyDivideCode {
 	 * definition} = "Positions multiplied by rate. "</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMultiply = new MMCode() {
+	public static final DTCMultiplyDivideCode Multiply = new DTCMultiplyDivideCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multiply";
 			definition = "Positions multiplied by rate. ";
-			owner_lazy = () -> DTCMultiplyDivideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCMultiplyDivideCode.mmObject();
 			codeName = "MULT";
 		}
 	};
@@ -123,28 +129,58 @@ public class DTCMultiplyDivideCode {
 	 * definition} = "Positions divided by rate."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDivide = new MMCode() {
+	public static final DTCMultiplyDivideCode Divide = new DTCMultiplyDivideCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Divide";
 			definition = "Positions divided by rate.";
-			owner_lazy = () -> DTCMultiplyDivideCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCMultiplyDivideCode.mmObject();
 			codeName = "DVDE";
 		}
 	};
+	final static private LinkedHashMap<String, DTCMultiplyDivideCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DTCMultiplyDivideCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MULT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCMultiplyDivideCode";
 				definition = "Specifies DTC (The Depository Trust Company) entitlement calculation logic.";
-				code_lazy = () -> Arrays.asList(DTCMultiplyDivideCode.mmMultiply, DTCMultiplyDivideCode.mmDivide);
 				derivation_lazy = () -> Arrays.asList(DTCMultiplyDivide1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCMultiplyDivideCode.Multiply, com.tools20022.repository.codeset.DTCMultiplyDivideCode.Divide);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Multiply.getCodeName().get(), Multiply);
+		codesByName.put(Divide.getCodeName().get(), Divide);
+	}
+
+	public static DTCMultiplyDivideCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DTCMultiplyDivideCode[] values() {
+		DTCMultiplyDivideCode[] values = new DTCMultiplyDivideCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DTCMultiplyDivideCode> {
+		@Override
+		public DTCMultiplyDivideCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DTCMultiplyDivideCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

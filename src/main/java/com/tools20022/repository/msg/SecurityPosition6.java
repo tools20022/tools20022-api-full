@@ -25,9 +25,11 @@ import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.entity.SecuritiesBalance;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -82,8 +84,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -102,16 +104,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecurityPosition6", propOrder = {"identification", "position"})
 public class SecurityPosition6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected SecurityIdentification11 identification;
 	/**
-	 * Identification of a security, as assigned under a formal or proprietary
-	 * identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +157,7 @@ public class SecurityPosition6 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> SecurityPosition6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition6.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -167,10 +169,11 @@ public class SecurityPosition6 {
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification11.mmObject();
 		}
 	};
+	@XmlElement(name = "Pos")
 	protected List<com.tools20022.repository.msg.EligiblePosition3> position;
 	/**
-	 * Amount of securities that are eligible for the vote.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -210,7 +213,7 @@ public class SecurityPosition6 {
 	public static final MMMessageAssociationEnd mmPosition = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
-			componentContext_lazy = () -> SecurityPosition6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SecurityPosition6.mmObject();
 			isDerived = false;
 			xmlTag = "Pos";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -227,11 +230,11 @@ public class SecurityPosition6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SecurityPosition6.mmIdentification, SecurityPosition6.mmPosition);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SecurityPosition6.mmIdentification, com.tools20022.repository.msg.SecurityPosition6.mmPosition);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MeetingNotificationV03.mmSecurity, MeetingNotificationV04.mmSecurity, MeetingCancellationV03.mmSecurity, MeetingCancellationV04.mmSecurity,
 						MeetingEntitlementNotificationV03.mmSecurity, MeetingResultDisseminationV03.mmSecurity, MeetingResultDisseminationV04.mmSecurity);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityPosition6";
 				definition = "Identifies the securities for which the meeting is organised.";
@@ -241,21 +244,21 @@ public class SecurityPosition6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public SecurityIdentification11 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.SecurityIdentification11 identification) {
-		this.identification = identification;
+	public SecurityPosition6 setIdentification(com.tools20022.repository.msg.SecurityIdentification11 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Pos")
 	public List<EligiblePosition3> getPosition() {
-		return position;
+		return position == null ? position = new ArrayList<>() : position;
 	}
 
-	public void setPosition(List<com.tools20022.repository.msg.EligiblePosition3> position) {
-		this.position = position;
+	public SecurityPosition6 setPosition(List<com.tools20022.repository.msg.EligiblePosition3> position) {
+		this.position = Objects.requireNonNull(position);
+		return this;
 	}
 }

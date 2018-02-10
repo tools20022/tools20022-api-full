@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ConfirmationTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies whether a message is an intention to execute a transfer instruction
@@ -33,11 +38,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationTypeCode#mmIntent
- * ConfirmationTypeCode.mmIntent}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationTypeCode#Intent
+ * ConfirmationTypeCode.Intent}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ConfirmationTypeCode#mmActual
- * ConfirmationTypeCode.mmActual}</li>
+ * {@linkplain com.tools20022.repository.codeset.ConfirmationTypeCode#Actual
+ * ConfirmationTypeCode.Actual}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -50,8 +55,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -70,7 +75,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class ConfirmationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ConfirmationTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -97,12 +103,12 @@ public class ConfirmationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmIntent = new MMCode() {
+	public static final ConfirmationTypeCode Intent = new ConfirmationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intent";
 			definition = "Specifies that the confirmation is an intention to execute a transfer instruction for the listed assets.";
-			owner_lazy = () -> ConfirmationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConfirmationTypeCode.mmObject();
 			codeName = "INTT";
 		}
 	};
@@ -130,28 +136,58 @@ public class ConfirmationTypeCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmActual = new MMCode() {
+	public static final ConfirmationTypeCode Actual = new ConfirmationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Actual";
 			definition = "Specifies that the message is an actual confirmation of the execution of a transfer request.";
-			owner_lazy = () -> ConfirmationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ConfirmationTypeCode.mmObject();
 			codeName = "ACTL";
 		}
 	};
+	final static private LinkedHashMap<String, ConfirmationTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ConfirmationTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("INTT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationTypeCode";
 				definition = "Specifies whether a message is an intention to execute a transfer instruction or an actual confirmation of the execution of the transfer.";
-				code_lazy = () -> Arrays.asList(ConfirmationTypeCode.mmIntent, ConfirmationTypeCode.mmActual);
 				derivation_lazy = () -> Arrays.asList(ConfirmationType1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConfirmationTypeCode.Intent, com.tools20022.repository.codeset.ConfirmationTypeCode.Actual);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Intent.getCodeName().get(), Intent);
+		codesByName.put(Actual.getCodeName().get(), Actual);
+	}
+
+	public static ConfirmationTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ConfirmationTypeCode[] values() {
+		ConfirmationTypeCode[] values = new ConfirmationTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ConfirmationTypeCode> {
+		@Override
+		public ConfirmationTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ConfirmationTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

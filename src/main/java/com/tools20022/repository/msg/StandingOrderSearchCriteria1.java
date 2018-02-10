@@ -35,6 +35,7 @@ import com.tools20022.repository.entity.StandingOrder;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -97,8 +98,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -111,17 +112,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StandingOrderSearchCriteria1", propOrder = {"keyAttributesIndicator", "standingOrderIdentification", "type", "account", "currency", "validityPeriod", "systemMember", "responsibleParty", "associatedPoolAccount",
 		"linkSetIdentification", "linkSetOrderIdentification", "linkSetOrderSequence", "zeroSweepIndicator"})
 public class StandingOrderSearchCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "KeyAttrbtsInd")
 	protected TrueFalseIndicator keyAttributesIndicator;
 	/**
-	 * Indicates whether the key fields or business attributes defined within
-	 * the system must be returned.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -151,7 +152,7 @@ public class StandingOrderSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmKeyAttributesIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "KeyAttrbtsInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -162,11 +163,11 @@ public class StandingOrderSearchCriteria1 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "StgOrdrId")
 	protected Max35Text standingOrderIdentification;
 	/**
-	 * Unique identification to unambiguously identify the standing order used
-	 * to initiate the liquidity transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,7 +202,7 @@ public class StandingOrderSearchCriteria1 {
 	public static final MMMessageAttribute mmStandingOrderIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmIdentification;
-			componentContext_lazy = () -> StandingOrderSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "StgOrdrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,10 +213,11 @@ public class StandingOrderSearchCriteria1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Tp")
 	protected StandingOrderType1Choice type;
 	/**
-	 * Type of the standing order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -249,7 +251,7 @@ public class StandingOrderSearchCriteria1 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmType;
-			componentContext_lazy = () -> StandingOrderSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -260,11 +262,11 @@ public class StandingOrderSearchCriteria1 {
 			complexType_lazy = () -> StandingOrderType1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Acct")
 	protected CashAccount24 account;
 	/**
-	 * Liquidity transfer origin or destination account within the pool of
-	 * accounts under management of the requestor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -298,7 +300,7 @@ public class StandingOrderSearchCriteria1 {
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CashStandingOrder.mmCashAccount;
-			componentContext_lazy = () -> StandingOrderSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -310,11 +312,11 @@ public class StandingOrderSearchCriteria1 {
 			type_lazy = () -> com.tools20022.repository.msg.CashAccount24.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected ActiveCurrencyCode currency;
 	/**
-	 * Unique and unambiguous identification for a standing order, as assigned
-	 * by the account servicer or the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -344,7 +346,7 @@ public class StandingOrderSearchCriteria1 {
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -355,10 +357,11 @@ public class StandingOrderSearchCriteria1 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "VldtyPrd")
 	protected DatePeriodDetails2Choice validityPeriod;
 	/**
-	 * Dates during which the standing order is in effect.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -392,7 +395,7 @@ public class StandingOrderSearchCriteria1 {
 	public static final MMMessageAttribute mmValidityPeriod = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmValidityPeriod;
-			componentContext_lazy = () -> StandingOrderSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtyPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -403,10 +406,11 @@ public class StandingOrderSearchCriteria1 {
 			complexType_lazy = () -> DatePeriodDetails2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SysMmb")
 	protected BranchAndFinancialInstitutionIdentification5 systemMember;
 	/**
-	 * Specifies if the account is debited or credited by the standing order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -434,7 +438,7 @@ public class StandingOrderSearchCriteria1 {
 	 */
 	public static final MMMessageAssociationEnd mmSystemMember = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> StandingOrderSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SysMmb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -446,10 +450,11 @@ public class StandingOrderSearchCriteria1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "RspnsblPty")
 	protected BranchAndFinancialInstitutionIdentification5 responsibleParty;
 	/**
-	 * Entity involved in an activity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -482,7 +487,7 @@ public class StandingOrderSearchCriteria1 {
 	public static final MMMessageAssociationEnd mmResponsibleParty = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
-			componentContext_lazy = () -> StandingOrderSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RspnsblPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -494,11 +499,11 @@ public class StandingOrderSearchCriteria1 {
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
 		}
 	};
+	@XmlElement(name = "AssoctdPoolAcct")
 	protected AccountIdentification4Choice associatedPoolAccount;
 	/**
-	 * Liquidity transfer origin or destination account within the pool of
-	 * accounts under management of the requestor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -534,7 +539,7 @@ public class StandingOrderSearchCriteria1 {
 	public static final MMMessageAttribute mmAssociatedPoolAccount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> StandingOrderSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AssoctdPoolAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -545,12 +550,11 @@ public class StandingOrderSearchCriteria1 {
 			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "LkSetId")
 	protected Max35Text linkSetIdentification;
 	/**
-	 * Unique identification to unambiguously identiy the link set in which the
-	 * standing order is defined. The link set is a collection of standing order
-	 * defined in a specific sequence.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -585,7 +589,7 @@ public class StandingOrderSearchCriteria1 {
 	public static final MMMessageAttribute mmLinkSetIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmLinkSetIdentification;
-			componentContext_lazy = () -> StandingOrderSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "LkSetId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -596,11 +600,11 @@ public class StandingOrderSearchCriteria1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "LkSetOrdrId")
 	protected Max35Text linkSetOrderIdentification;
 	/**
-	 * Unique identification to unambiguously identify liquidity transfer
-	 * standing order within the link set.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -635,7 +639,7 @@ public class StandingOrderSearchCriteria1 {
 	public static final MMMessageAttribute mmLinkSetOrderIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmIdentification;
-			componentContext_lazy = () -> StandingOrderSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "LkSetOrdrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -646,12 +650,11 @@ public class StandingOrderSearchCriteria1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "LkSetOrdrSeq")
 	protected Number linkSetOrderSequence;
 	/**
-	 * Specifies the sequence in which the system will execute the liquidity
-	 * transfers standing order within the link set when additional liquidity is
-	 * required.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -686,7 +689,7 @@ public class StandingOrderSearchCriteria1 {
 	public static final MMMessageAttribute mmLinkSetOrderSequence = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> StandingOrder.mmStandingOrderSequence;
-			componentContext_lazy = () -> StandingOrderSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "LkSetOrdrSeq";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -697,14 +700,11 @@ public class StandingOrderSearchCriteria1 {
 			simpleType_lazy = () -> Number.mmObject();
 		}
 	};
+	@XmlElement(name = "ZeroSweepInd")
 	protected TrueFalseIndicator zeroSweepIndicator;
 	/**
-	 * Indicates whether the query shall return all liquidity transfer standing
-	 * orders defined as zero sweeping orders.<br>
-	 * When the indicator is set to true, the liquidity transfer standing order
-	 * will transfer all amount of money out of the account so the resulting
-	 * balance is zero.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -740,7 +740,7 @@ public class StandingOrderSearchCriteria1 {
 	public static final MMMessageAttribute mmZeroSweepIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CashStandingOrder.mmZeroSweepIndicator;
-			componentContext_lazy = () -> StandingOrderSearchCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ZeroSweepInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -755,12 +755,14 @@ public class StandingOrderSearchCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StandingOrderSearchCriteria1.mmKeyAttributesIndicator, StandingOrderSearchCriteria1.mmStandingOrderIdentification, StandingOrderSearchCriteria1.mmType,
-						StandingOrderSearchCriteria1.mmAccount, StandingOrderSearchCriteria1.mmCurrency, StandingOrderSearchCriteria1.mmValidityPeriod, StandingOrderSearchCriteria1.mmSystemMember,
-						StandingOrderSearchCriteria1.mmResponsibleParty, StandingOrderSearchCriteria1.mmAssociatedPoolAccount, StandingOrderSearchCriteria1.mmLinkSetIdentification, StandingOrderSearchCriteria1.mmLinkSetOrderIdentification,
-						StandingOrderSearchCriteria1.mmLinkSetOrderSequence, StandingOrderSearchCriteria1.mmZeroSweepIndicator);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmKeyAttributesIndicator, com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmStandingOrderIdentification,
+						com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmType, com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmAccount, com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmCurrency,
+						com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmValidityPeriod, com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmSystemMember,
+						com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmResponsibleParty, com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmAssociatedPoolAccount,
+						com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmLinkSetIdentification, com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmLinkSetOrderIdentification,
+						com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmLinkSetOrderSequence, com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmZeroSweepIndicator);
 				trace_lazy = () -> CashStandingOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderSearchCriteria1";
 				definition = "Defines the criteria which are used to search for standing orders defined within the system.";
@@ -769,120 +771,120 @@ public class StandingOrderSearchCriteria1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "KeyAttrbtsInd")
-	public TrueFalseIndicator getKeyAttributesIndicator() {
-		return keyAttributesIndicator;
+	public Optional<TrueFalseIndicator> getKeyAttributesIndicator() {
+		return keyAttributesIndicator == null ? Optional.empty() : Optional.of(keyAttributesIndicator);
 	}
 
-	public void setKeyAttributesIndicator(TrueFalseIndicator keyAttributesIndicator) {
+	public StandingOrderSearchCriteria1 setKeyAttributesIndicator(TrueFalseIndicator keyAttributesIndicator) {
 		this.keyAttributesIndicator = keyAttributesIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "StgOrdrId")
-	public Max35Text getStandingOrderIdentification() {
-		return standingOrderIdentification;
+	public Optional<Max35Text> getStandingOrderIdentification() {
+		return standingOrderIdentification == null ? Optional.empty() : Optional.of(standingOrderIdentification);
 	}
 
-	public void setStandingOrderIdentification(Max35Text standingOrderIdentification) {
+	public StandingOrderSearchCriteria1 setStandingOrderIdentification(Max35Text standingOrderIdentification) {
 		this.standingOrderIdentification = standingOrderIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "Tp")
-	public StandingOrderType1Choice getType() {
-		return type;
+	public Optional<StandingOrderType1Choice> getType() {
+		return type == null ? Optional.empty() : Optional.of(type);
 	}
 
-	public void setType(StandingOrderType1Choice type) {
+	public StandingOrderSearchCriteria1 setType(StandingOrderType1Choice type) {
 		this.type = type;
+		return this;
 	}
 
-	@XmlElement(name = "Acct")
-	public CashAccount24 getAccount() {
-		return account;
+	public Optional<CashAccount24> getAccount() {
+		return account == null ? Optional.empty() : Optional.of(account);
 	}
 
-	public void setAccount(com.tools20022.repository.msg.CashAccount24 account) {
+	public StandingOrderSearchCriteria1 setAccount(com.tools20022.repository.msg.CashAccount24 account) {
 		this.account = account;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public ActiveCurrencyCode getCurrency() {
-		return currency;
+	public Optional<ActiveCurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(ActiveCurrencyCode currency) {
+	public StandingOrderSearchCriteria1 setCurrency(ActiveCurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "VldtyPrd")
-	public DatePeriodDetails2Choice getValidityPeriod() {
-		return validityPeriod;
+	public Optional<DatePeriodDetails2Choice> getValidityPeriod() {
+		return validityPeriod == null ? Optional.empty() : Optional.of(validityPeriod);
 	}
 
-	public void setValidityPeriod(DatePeriodDetails2Choice validityPeriod) {
+	public StandingOrderSearchCriteria1 setValidityPeriod(DatePeriodDetails2Choice validityPeriod) {
 		this.validityPeriod = validityPeriod;
+		return this;
 	}
 
-	@XmlElement(name = "SysMmb")
-	public BranchAndFinancialInstitutionIdentification5 getSystemMember() {
-		return systemMember;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getSystemMember() {
+		return systemMember == null ? Optional.empty() : Optional.of(systemMember);
 	}
 
-	public void setSystemMember(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 systemMember) {
+	public StandingOrderSearchCriteria1 setSystemMember(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 systemMember) {
 		this.systemMember = systemMember;
+		return this;
 	}
 
-	@XmlElement(name = "RspnsblPty")
-	public BranchAndFinancialInstitutionIdentification5 getResponsibleParty() {
-		return responsibleParty;
+	public Optional<BranchAndFinancialInstitutionIdentification5> getResponsibleParty() {
+		return responsibleParty == null ? Optional.empty() : Optional.of(responsibleParty);
 	}
 
-	public void setResponsibleParty(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 responsibleParty) {
+	public StandingOrderSearchCriteria1 setResponsibleParty(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 responsibleParty) {
 		this.responsibleParty = responsibleParty;
+		return this;
 	}
 
-	@XmlElement(name = "AssoctdPoolAcct")
-	public AccountIdentification4Choice getAssociatedPoolAccount() {
-		return associatedPoolAccount;
+	public Optional<AccountIdentification4Choice> getAssociatedPoolAccount() {
+		return associatedPoolAccount == null ? Optional.empty() : Optional.of(associatedPoolAccount);
 	}
 
-	public void setAssociatedPoolAccount(AccountIdentification4Choice associatedPoolAccount) {
+	public StandingOrderSearchCriteria1 setAssociatedPoolAccount(AccountIdentification4Choice associatedPoolAccount) {
 		this.associatedPoolAccount = associatedPoolAccount;
+		return this;
 	}
 
-	@XmlElement(name = "LkSetId")
-	public Max35Text getLinkSetIdentification() {
-		return linkSetIdentification;
+	public Optional<Max35Text> getLinkSetIdentification() {
+		return linkSetIdentification == null ? Optional.empty() : Optional.of(linkSetIdentification);
 	}
 
-	public void setLinkSetIdentification(Max35Text linkSetIdentification) {
+	public StandingOrderSearchCriteria1 setLinkSetIdentification(Max35Text linkSetIdentification) {
 		this.linkSetIdentification = linkSetIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "LkSetOrdrId")
-	public Max35Text getLinkSetOrderIdentification() {
-		return linkSetOrderIdentification;
+	public Optional<Max35Text> getLinkSetOrderIdentification() {
+		return linkSetOrderIdentification == null ? Optional.empty() : Optional.of(linkSetOrderIdentification);
 	}
 
-	public void setLinkSetOrderIdentification(Max35Text linkSetOrderIdentification) {
+	public StandingOrderSearchCriteria1 setLinkSetOrderIdentification(Max35Text linkSetOrderIdentification) {
 		this.linkSetOrderIdentification = linkSetOrderIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "LkSetOrdrSeq")
-	public Number getLinkSetOrderSequence() {
-		return linkSetOrderSequence;
+	public Optional<Number> getLinkSetOrderSequence() {
+		return linkSetOrderSequence == null ? Optional.empty() : Optional.of(linkSetOrderSequence);
 	}
 
-	public void setLinkSetOrderSequence(Number linkSetOrderSequence) {
+	public StandingOrderSearchCriteria1 setLinkSetOrderSequence(Number linkSetOrderSequence) {
 		this.linkSetOrderSequence = linkSetOrderSequence;
+		return this;
 	}
 
-	@XmlElement(name = "ZeroSweepInd")
-	public TrueFalseIndicator getZeroSweepIndicator() {
-		return zeroSweepIndicator;
+	public Optional<TrueFalseIndicator> getZeroSweepIndicator() {
+		return zeroSweepIndicator == null ? Optional.empty() : Optional.of(zeroSweepIndicator);
 	}
 
-	public void setZeroSweepIndicator(TrueFalseIndicator zeroSweepIndicator) {
+	public StandingOrderSearchCriteria1 setZeroSweepIndicator(TrueFalseIndicator zeroSweepIndicator) {
 		this.zeroSweepIndicator = zeroSweepIndicator;
+		return this;
 	}
 }

@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -94,8 +95,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -106,17 +107,18 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Defines the criteria used to report on standing orders."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "StandingOrderReturnCriteria1", propOrder = {"standingOrderIdentificationIndicator", "typeIndicator", "systemMemberIndicator", "responsiblePartyIndicator", "currencyIndicator", "debtorAccountIndicator",
 		"creditorAccountIndicator", "associatedPoolAccount", "frequencyIndicator", "executionTypeIndicator", "validityFromIndicator", "validToIndicator", "linkSetIdentificationIndicator", "linkSetOrderIdentificationIndicator",
 		"linkSetOrderSequenceIndicator", "totalAmountIndicator", "zeroSweepIndicator"})
 public class StandingOrderReturnCriteria1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "StgOrdrIdInd")
 	protected RequestedIndicator standingOrderIdentificationIndicator;
 	/**
-	 * Defines the criteria used to report on a multilateral balance.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -145,7 +147,7 @@ public class StandingOrderReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmStandingOrderIdentificationIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "StgOrdrIdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -156,10 +158,11 @@ public class StandingOrderReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "TpInd")
 	protected RequestedIndicator typeIndicator;
 	/**
-	 * Indicates whether the standing order type is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -187,7 +190,7 @@ public class StandingOrderReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmTypeIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "TpInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -198,10 +201,11 @@ public class StandingOrderReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "SysMmbInd")
 	protected RequestedIndicator systemMemberIndicator;
 	/**
-	 * Indicates whether the system member identification is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -230,7 +234,7 @@ public class StandingOrderReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmSystemMemberIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "SysMmbInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -241,10 +245,11 @@ public class StandingOrderReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RspnsblPtyInd")
 	protected RequestedIndicator responsiblePartyIndicator;
 	/**
-	 * Indicates whether the responsible party identification is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -273,7 +278,7 @@ public class StandingOrderReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmResponsiblePartyIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "RspnsblPtyInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -284,10 +289,11 @@ public class StandingOrderReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CcyInd")
 	protected RequestedIndicator currencyIndicator;
 	/**
-	 * Indicates whether the account currency is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -315,7 +321,7 @@ public class StandingOrderReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmCurrencyIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CcyInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -326,10 +332,11 @@ public class StandingOrderReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "DbtrAcctInd")
 	protected RequestedIndicator debtorAccountIndicator;
 	/**
-	 * Indicates whether the account type is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -357,7 +364,7 @@ public class StandingOrderReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmDebtorAccountIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "DbtrAcctInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -368,10 +375,11 @@ public class StandingOrderReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "CdtrAcctInd")
 	protected RequestedIndicator creditorAccountIndicator;
 	/**
-	 * Indicates whether the multilateral limit is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -399,7 +407,7 @@ public class StandingOrderReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmCreditorAccountIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtrAcctInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -410,10 +418,11 @@ public class StandingOrderReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AssoctdPoolAcct")
 	protected RequestedIndicator associatedPoolAccount;
 	/**
-	 * Indicates whether the associated pool account is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -442,7 +451,7 @@ public class StandingOrderReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmAssociatedPoolAccount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "AssoctdPoolAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -453,10 +462,11 @@ public class StandingOrderReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "FrqcyInd")
 	protected RequestedIndicator frequencyIndicator;
 	/**
-	 * Indicates whether the frequency is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -484,7 +494,7 @@ public class StandingOrderReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmFrequencyIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "FrqcyInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -495,10 +505,11 @@ public class StandingOrderReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ExctnTpInd")
 	protected RequestedIndicator executionTypeIndicator;
 	/**
-	 * Indicates whether the execution type is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -526,7 +537,7 @@ public class StandingOrderReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmExecutionTypeIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ExctnTpInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -537,10 +548,11 @@ public class StandingOrderReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "VldtyFrInd")
 	protected RequestedIndicator validityFromIndicator;
 	/**
-	 * Indicates whether the account standing order is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -569,7 +581,7 @@ public class StandingOrderReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmValidityFromIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "VldtyFrInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -580,10 +592,11 @@ public class StandingOrderReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "VldToInd")
 	protected RequestedIndicator validToIndicator;
 	/**
-	 * Indicates whether the account owner information is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -612,7 +625,7 @@ public class StandingOrderReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmValidToIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "VldToInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -623,10 +636,11 @@ public class StandingOrderReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "LkSetIdInd")
 	protected RequestedIndicator linkSetIdentificationIndicator;
 	/**
-	 * Indicates whether the link set identification is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -655,7 +669,7 @@ public class StandingOrderReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmLinkSetIdentificationIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "LkSetIdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -666,11 +680,11 @@ public class StandingOrderReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "LkSetOrdrIdInd")
 	protected RequestedIndicator linkSetOrderIdentificationIndicator;
 	/**
-	 * Indicates whether the identification of a standing order within a link
-	 * set is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -700,7 +714,7 @@ public class StandingOrderReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmLinkSetOrderIdentificationIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "LkSetOrdrIdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -711,11 +725,11 @@ public class StandingOrderReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "LkSetOrdrSeqInd")
 	protected RequestedIndicator linkSetOrderSequenceIndicator;
 	/**
-	 * Indicates whether the sequence of a standing order within a link set is
-	 * requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -745,7 +759,7 @@ public class StandingOrderReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmLinkSetOrderSequenceIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "LkSetOrdrSeqInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -756,10 +770,11 @@ public class StandingOrderReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "TtlAmtInd")
 	protected RequestedIndicator totalAmountIndicator;
 	/**
-	 * Indicates whether the total amount per standing order type is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -789,7 +804,7 @@ public class StandingOrderReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmTotalAmountIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "TtlAmtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -800,10 +815,11 @@ public class StandingOrderReturnCriteria1 {
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "ZeroSweepInd")
 	protected RequestedIndicator zeroSweepIndicator;
 	/**
-	 * Indicates whether the zero sweeping indicator is requested.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -832,7 +848,7 @@ public class StandingOrderReturnCriteria1 {
 	 */
 	public static final MMMessageAttribute mmZeroSweepIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> StandingOrderReturnCriteria1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmObject();
 			isDerived = false;
 			xmlTag = "ZeroSweepInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -847,13 +863,16 @@ public class StandingOrderReturnCriteria1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(StandingOrderReturnCriteria1.mmStandingOrderIdentificationIndicator, StandingOrderReturnCriteria1.mmTypeIndicator, StandingOrderReturnCriteria1.mmSystemMemberIndicator,
-						StandingOrderReturnCriteria1.mmResponsiblePartyIndicator, StandingOrderReturnCriteria1.mmCurrencyIndicator, StandingOrderReturnCriteria1.mmDebtorAccountIndicator,
-						StandingOrderReturnCriteria1.mmCreditorAccountIndicator, StandingOrderReturnCriteria1.mmAssociatedPoolAccount, StandingOrderReturnCriteria1.mmFrequencyIndicator,
-						StandingOrderReturnCriteria1.mmExecutionTypeIndicator, StandingOrderReturnCriteria1.mmValidityFromIndicator, StandingOrderReturnCriteria1.mmValidToIndicator,
-						StandingOrderReturnCriteria1.mmLinkSetIdentificationIndicator, StandingOrderReturnCriteria1.mmLinkSetOrderIdentificationIndicator, StandingOrderReturnCriteria1.mmLinkSetOrderSequenceIndicator,
-						StandingOrderReturnCriteria1.mmTotalAmountIndicator, StandingOrderReturnCriteria1.mmZeroSweepIndicator);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmStandingOrderIdentificationIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmTypeIndicator,
+						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmSystemMemberIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmResponsiblePartyIndicator,
+						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmCurrencyIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmDebtorAccountIndicator,
+						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmCreditorAccountIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmAssociatedPoolAccount,
+						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmFrequencyIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmExecutionTypeIndicator,
+						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmValidityFromIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmValidToIndicator,
+						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmLinkSetIdentificationIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmLinkSetOrderIdentificationIndicator,
+						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmLinkSetOrderSequenceIndicator, com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmTotalAmountIndicator,
+						com.tools20022.repository.msg.StandingOrderReturnCriteria1.mmZeroSweepIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderReturnCriteria1";
 				definition = "Defines the criteria used to report on standing orders.";
@@ -862,156 +881,156 @@ public class StandingOrderReturnCriteria1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "StgOrdrIdInd")
-	public RequestedIndicator getStandingOrderIdentificationIndicator() {
-		return standingOrderIdentificationIndicator;
+	public Optional<RequestedIndicator> getStandingOrderIdentificationIndicator() {
+		return standingOrderIdentificationIndicator == null ? Optional.empty() : Optional.of(standingOrderIdentificationIndicator);
 	}
 
-	public void setStandingOrderIdentificationIndicator(RequestedIndicator standingOrderIdentificationIndicator) {
+	public StandingOrderReturnCriteria1 setStandingOrderIdentificationIndicator(RequestedIndicator standingOrderIdentificationIndicator) {
 		this.standingOrderIdentificationIndicator = standingOrderIdentificationIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "TpInd")
-	public RequestedIndicator getTypeIndicator() {
-		return typeIndicator;
+	public Optional<RequestedIndicator> getTypeIndicator() {
+		return typeIndicator == null ? Optional.empty() : Optional.of(typeIndicator);
 	}
 
-	public void setTypeIndicator(RequestedIndicator typeIndicator) {
+	public StandingOrderReturnCriteria1 setTypeIndicator(RequestedIndicator typeIndicator) {
 		this.typeIndicator = typeIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "SysMmbInd")
-	public RequestedIndicator getSystemMemberIndicator() {
-		return systemMemberIndicator;
+	public Optional<RequestedIndicator> getSystemMemberIndicator() {
+		return systemMemberIndicator == null ? Optional.empty() : Optional.of(systemMemberIndicator);
 	}
 
-	public void setSystemMemberIndicator(RequestedIndicator systemMemberIndicator) {
+	public StandingOrderReturnCriteria1 setSystemMemberIndicator(RequestedIndicator systemMemberIndicator) {
 		this.systemMemberIndicator = systemMemberIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "RspnsblPtyInd")
-	public RequestedIndicator getResponsiblePartyIndicator() {
-		return responsiblePartyIndicator;
+	public Optional<RequestedIndicator> getResponsiblePartyIndicator() {
+		return responsiblePartyIndicator == null ? Optional.empty() : Optional.of(responsiblePartyIndicator);
 	}
 
-	public void setResponsiblePartyIndicator(RequestedIndicator responsiblePartyIndicator) {
+	public StandingOrderReturnCriteria1 setResponsiblePartyIndicator(RequestedIndicator responsiblePartyIndicator) {
 		this.responsiblePartyIndicator = responsiblePartyIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "CcyInd")
-	public RequestedIndicator getCurrencyIndicator() {
-		return currencyIndicator;
+	public Optional<RequestedIndicator> getCurrencyIndicator() {
+		return currencyIndicator == null ? Optional.empty() : Optional.of(currencyIndicator);
 	}
 
-	public void setCurrencyIndicator(RequestedIndicator currencyIndicator) {
+	public StandingOrderReturnCriteria1 setCurrencyIndicator(RequestedIndicator currencyIndicator) {
 		this.currencyIndicator = currencyIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "DbtrAcctInd")
-	public RequestedIndicator getDebtorAccountIndicator() {
-		return debtorAccountIndicator;
+	public Optional<RequestedIndicator> getDebtorAccountIndicator() {
+		return debtorAccountIndicator == null ? Optional.empty() : Optional.of(debtorAccountIndicator);
 	}
 
-	public void setDebtorAccountIndicator(RequestedIndicator debtorAccountIndicator) {
+	public StandingOrderReturnCriteria1 setDebtorAccountIndicator(RequestedIndicator debtorAccountIndicator) {
 		this.debtorAccountIndicator = debtorAccountIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "CdtrAcctInd")
-	public RequestedIndicator getCreditorAccountIndicator() {
-		return creditorAccountIndicator;
+	public Optional<RequestedIndicator> getCreditorAccountIndicator() {
+		return creditorAccountIndicator == null ? Optional.empty() : Optional.of(creditorAccountIndicator);
 	}
 
-	public void setCreditorAccountIndicator(RequestedIndicator creditorAccountIndicator) {
+	public StandingOrderReturnCriteria1 setCreditorAccountIndicator(RequestedIndicator creditorAccountIndicator) {
 		this.creditorAccountIndicator = creditorAccountIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "AssoctdPoolAcct")
-	public RequestedIndicator getAssociatedPoolAccount() {
-		return associatedPoolAccount;
+	public Optional<RequestedIndicator> getAssociatedPoolAccount() {
+		return associatedPoolAccount == null ? Optional.empty() : Optional.of(associatedPoolAccount);
 	}
 
-	public void setAssociatedPoolAccount(RequestedIndicator associatedPoolAccount) {
+	public StandingOrderReturnCriteria1 setAssociatedPoolAccount(RequestedIndicator associatedPoolAccount) {
 		this.associatedPoolAccount = associatedPoolAccount;
+		return this;
 	}
 
-	@XmlElement(name = "FrqcyInd")
-	public RequestedIndicator getFrequencyIndicator() {
-		return frequencyIndicator;
+	public Optional<RequestedIndicator> getFrequencyIndicator() {
+		return frequencyIndicator == null ? Optional.empty() : Optional.of(frequencyIndicator);
 	}
 
-	public void setFrequencyIndicator(RequestedIndicator frequencyIndicator) {
+	public StandingOrderReturnCriteria1 setFrequencyIndicator(RequestedIndicator frequencyIndicator) {
 		this.frequencyIndicator = frequencyIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "ExctnTpInd")
-	public RequestedIndicator getExecutionTypeIndicator() {
-		return executionTypeIndicator;
+	public Optional<RequestedIndicator> getExecutionTypeIndicator() {
+		return executionTypeIndicator == null ? Optional.empty() : Optional.of(executionTypeIndicator);
 	}
 
-	public void setExecutionTypeIndicator(RequestedIndicator executionTypeIndicator) {
+	public StandingOrderReturnCriteria1 setExecutionTypeIndicator(RequestedIndicator executionTypeIndicator) {
 		this.executionTypeIndicator = executionTypeIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "VldtyFrInd")
-	public RequestedIndicator getValidityFromIndicator() {
-		return validityFromIndicator;
+	public Optional<RequestedIndicator> getValidityFromIndicator() {
+		return validityFromIndicator == null ? Optional.empty() : Optional.of(validityFromIndicator);
 	}
 
-	public void setValidityFromIndicator(RequestedIndicator validityFromIndicator) {
+	public StandingOrderReturnCriteria1 setValidityFromIndicator(RequestedIndicator validityFromIndicator) {
 		this.validityFromIndicator = validityFromIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "VldToInd")
-	public RequestedIndicator getValidToIndicator() {
-		return validToIndicator;
+	public Optional<RequestedIndicator> getValidToIndicator() {
+		return validToIndicator == null ? Optional.empty() : Optional.of(validToIndicator);
 	}
 
-	public void setValidToIndicator(RequestedIndicator validToIndicator) {
+	public StandingOrderReturnCriteria1 setValidToIndicator(RequestedIndicator validToIndicator) {
 		this.validToIndicator = validToIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "LkSetIdInd")
-	public RequestedIndicator getLinkSetIdentificationIndicator() {
-		return linkSetIdentificationIndicator;
+	public Optional<RequestedIndicator> getLinkSetIdentificationIndicator() {
+		return linkSetIdentificationIndicator == null ? Optional.empty() : Optional.of(linkSetIdentificationIndicator);
 	}
 
-	public void setLinkSetIdentificationIndicator(RequestedIndicator linkSetIdentificationIndicator) {
+	public StandingOrderReturnCriteria1 setLinkSetIdentificationIndicator(RequestedIndicator linkSetIdentificationIndicator) {
 		this.linkSetIdentificationIndicator = linkSetIdentificationIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "LkSetOrdrIdInd")
-	public RequestedIndicator getLinkSetOrderIdentificationIndicator() {
-		return linkSetOrderIdentificationIndicator;
+	public Optional<RequestedIndicator> getLinkSetOrderIdentificationIndicator() {
+		return linkSetOrderIdentificationIndicator == null ? Optional.empty() : Optional.of(linkSetOrderIdentificationIndicator);
 	}
 
-	public void setLinkSetOrderIdentificationIndicator(RequestedIndicator linkSetOrderIdentificationIndicator) {
+	public StandingOrderReturnCriteria1 setLinkSetOrderIdentificationIndicator(RequestedIndicator linkSetOrderIdentificationIndicator) {
 		this.linkSetOrderIdentificationIndicator = linkSetOrderIdentificationIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "LkSetOrdrSeqInd")
-	public RequestedIndicator getLinkSetOrderSequenceIndicator() {
-		return linkSetOrderSequenceIndicator;
+	public Optional<RequestedIndicator> getLinkSetOrderSequenceIndicator() {
+		return linkSetOrderSequenceIndicator == null ? Optional.empty() : Optional.of(linkSetOrderSequenceIndicator);
 	}
 
-	public void setLinkSetOrderSequenceIndicator(RequestedIndicator linkSetOrderSequenceIndicator) {
+	public StandingOrderReturnCriteria1 setLinkSetOrderSequenceIndicator(RequestedIndicator linkSetOrderSequenceIndicator) {
 		this.linkSetOrderSequenceIndicator = linkSetOrderSequenceIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "TtlAmtInd")
-	public RequestedIndicator getTotalAmountIndicator() {
-		return totalAmountIndicator;
+	public Optional<RequestedIndicator> getTotalAmountIndicator() {
+		return totalAmountIndicator == null ? Optional.empty() : Optional.of(totalAmountIndicator);
 	}
 
-	public void setTotalAmountIndicator(RequestedIndicator totalAmountIndicator) {
+	public StandingOrderReturnCriteria1 setTotalAmountIndicator(RequestedIndicator totalAmountIndicator) {
 		this.totalAmountIndicator = totalAmountIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "ZeroSweepInd")
-	public RequestedIndicator getZeroSweepIndicator() {
-		return zeroSweepIndicator;
+	public Optional<RequestedIndicator> getZeroSweepIndicator() {
+		return zeroSweepIndicator == null ? Optional.empty() : Optional.of(zeroSweepIndicator);
 	}
 
-	public void setZeroSweepIndicator(RequestedIndicator zeroSweepIndicator) {
+	public StandingOrderReturnCriteria1 setZeroSweepIndicator(RequestedIndicator zeroSweepIndicator) {
 		this.zeroSweepIndicator = zeroSweepIndicator;
+		return this;
 	}
 }

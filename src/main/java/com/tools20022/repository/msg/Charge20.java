@@ -36,6 +36,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,11 +51,11 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Charge20#mmTypeOrExtendedTypeRule
- * Charge20.mmTypeOrExtendedTypeRule}</li>
+ * {@linkplain com.tools20022.repository.msg.Charge20#TypeOrExtendedTypeRule
+ * Charge20.TypeOrExtendedTypeRule}</li>
  * <li>
- * {@linkplain com.tools20022.repository.msg.Charge20#mmChargeBasisOrExtendedChargeBasisRule
- * Charge20.mmChargeBasisOrExtendedChargeBasisRule}</li>
+ * {@linkplain com.tools20022.repository.msg.Charge20#ChargeBasisOrExtendedChargeBasisRule
+ * Charge20.ChargeBasisOrExtendedChargeBasisRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -82,8 +84,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -101,15 +103,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Charge20", propOrder = {"type", "extendedType", "amount", "chargeBasis", "extendedChargeBasis", "chargeBearer", "recipientIdentification"})
 public class Charge20 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected ChargeType12Code type;
 	/**
-	 * Type of service for which a charge is asked or paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -142,7 +145,7 @@ public class Charge20 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
-			componentContext_lazy = () -> Charge20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge20.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,10 +156,11 @@ public class Charge20 {
 			simpleType_lazy = () -> ChargeType12Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedTp", required = true)
 	protected Extended350Code extendedType;
 	/**
-	 * Type of service for which a charge is asked or paid.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,7 +193,7 @@ public class Charge20 {
 	public static final MMMessageAttribute mmExtendedType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmChargeType;
-			componentContext_lazy = () -> Charge20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge20.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,10 +204,11 @@ public class Charge20 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Amt", required = true)
 	protected ActiveOrHistoricCurrencyAndAmount amount;
 	/**
-	 * Amount of money asked or paid for the charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -243,7 +248,7 @@ public class Charge20 {
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmAmount;
-			componentContext_lazy = () -> Charge20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge20.mmObject();
 			isDerived = false;
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -255,10 +260,11 @@ public class Charge20 {
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgBsis")
 	protected TaxationBasis2Code chargeBasis;
 	/**
-	 * Method used to calculate a charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -291,7 +297,7 @@ public class Charge20 {
 	public static final MMMessageAttribute mmChargeBasis = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmCalculationMethod;
-			componentContext_lazy = () -> Charge20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge20.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -302,10 +308,11 @@ public class Charge20 {
 			simpleType_lazy = () -> TaxationBasis2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "XtndedChrgBsis")
 	protected Extended350Code extendedChargeBasis;
 	/**
-	 * Method used to calculate a charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -338,7 +345,7 @@ public class Charge20 {
 	public static final MMMessageAttribute mmExtendedChargeBasis = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Adjustment.mmCalculationMethod;
-			componentContext_lazy = () -> Charge20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge20.mmObject();
 			isDerived = false;
 			xmlTag = "XtndedChrgBsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -349,11 +356,11 @@ public class Charge20 {
 			simpleType_lazy = () -> Extended350Code.mmObject();
 		}
 	};
+	@XmlElement(name = "ChrgBr")
 	protected ChargeBearer1Code chargeBearer;
 	/**
-	 * Specifies the party that will bear the charges associated with a
-	 * transfer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -388,7 +395,7 @@ public class Charge20 {
 	public static final MMMessageAttribute mmChargeBearer = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Charges.mmBearerType;
-			componentContext_lazy = () -> Charge20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge20.mmObject();
 			isDerived = false;
 			xmlTag = "ChrgBr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -399,10 +406,11 @@ public class Charge20 {
 			simpleType_lazy = () -> ChargeBearer1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "RcptId")
 	protected PartyIdentification2Choice recipientIdentification;
 	/**
-	 * Party entitled to the amount of money resulting from a charge.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -444,7 +452,7 @@ public class Charge20 {
 	public static final MMMessageAttribute mmRecipientIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Charge20.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Charge20.mmObject();
 			isDerived = false;
 			xmlTag = "RcptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -485,13 +493,13 @@ public class Charge20 {
 	 * "Either Type or ExtendedType must be present, but not both."</li>
 	 * </ul>
 	 */
-	public static final MMXor mmTypeOrExtendedTypeRule = new MMXor() {
+	public static final MMXor TypeOrExtendedTypeRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOrExtendedTypeRule";
 			definition = "Either Type or ExtendedType must be present, but not both.";
-			messageComponent_lazy = () -> Charge20.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(Charge20.mmType, Charge20.mmExtendedType);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.Charge20.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge20.mmType, com.tools20022.repository.msg.Charge20.mmExtendedType);
 		}
 	};
 	/**
@@ -525,22 +533,24 @@ public class Charge20 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmChargeBasisOrExtendedChargeBasisRule = new MMXor() {
+	public static final MMXor ChargeBasisOrExtendedChargeBasisRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeBasisOrExtendedChargeBasisRule";
 			definition = "Either ChargeBasis or ExtendedChargeBasis may be present, but not both.";
-			messageComponent_lazy = () -> Charge20.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(Charge20.mmChargeBasis, Charge20.mmExtendedChargeBasis);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.Charge20.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge20.mmChargeBasis, com.tools20022.repository.msg.Charge20.mmExtendedChargeBasis);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Charge20.mmType, Charge20.mmExtendedType, Charge20.mmAmount, Charge20.mmChargeBasis, Charge20.mmExtendedChargeBasis, Charge20.mmChargeBearer, Charge20.mmRecipientIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge20.mmType, com.tools20022.repository.msg.Charge20.mmExtendedType, com.tools20022.repository.msg.Charge20.mmAmount,
+						com.tools20022.repository.msg.Charge20.mmChargeBasis, com.tools20022.repository.msg.Charge20.mmExtendedChargeBasis, com.tools20022.repository.msg.Charge20.mmChargeBearer,
+						com.tools20022.repository.msg.Charge20.mmRecipientIdentification);
 				trace_lazy = () -> Charges.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -552,72 +562,72 @@ public class Charge20 {
 				name = "Charge20";
 				definition = "Amount of money associated with a service.";
 				nextVersions_lazy = () -> Arrays.asList(Charge27.mmObject());
-				xors_lazy = () -> Arrays.asList(Charge20.mmTypeOrExtendedTypeRule, Charge20.mmChargeBasisOrExtendedChargeBasisRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Charge20.TypeOrExtendedTypeRule, com.tools20022.repository.msg.Charge20.ChargeBasisOrExtendedChargeBasisRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public ChargeType12Code getType() {
 		return type;
 	}
 
-	public void setType(ChargeType12Code type) {
-		this.type = type;
+	public Charge20 setType(ChargeType12Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "XtndedTp", required = true)
 	public Extended350Code getExtendedType() {
 		return extendedType;
 	}
 
-	public void setExtendedType(Extended350Code extendedType) {
-		this.extendedType = extendedType;
+	public Charge20 setExtendedType(Extended350Code extendedType) {
+		this.extendedType = Objects.requireNonNull(extendedType);
+		return this;
 	}
 
-	@XmlElement(name = "Amt", required = true)
 	public ActiveOrHistoricCurrencyAndAmount getAmount() {
 		return amount;
 	}
 
-	public void setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
-		this.amount = amount;
+	public Charge20 setAmount(ActiveOrHistoricCurrencyAndAmount amount) {
+		this.amount = Objects.requireNonNull(amount);
+		return this;
 	}
 
-	@XmlElement(name = "ChrgBsis")
-	public TaxationBasis2Code getChargeBasis() {
-		return chargeBasis;
+	public Optional<TaxationBasis2Code> getChargeBasis() {
+		return chargeBasis == null ? Optional.empty() : Optional.of(chargeBasis);
 	}
 
-	public void setChargeBasis(TaxationBasis2Code chargeBasis) {
+	public Charge20 setChargeBasis(TaxationBasis2Code chargeBasis) {
 		this.chargeBasis = chargeBasis;
+		return this;
 	}
 
-	@XmlElement(name = "XtndedChrgBsis")
-	public Extended350Code getExtendedChargeBasis() {
-		return extendedChargeBasis;
+	public Optional<Extended350Code> getExtendedChargeBasis() {
+		return extendedChargeBasis == null ? Optional.empty() : Optional.of(extendedChargeBasis);
 	}
 
-	public void setExtendedChargeBasis(Extended350Code extendedChargeBasis) {
+	public Charge20 setExtendedChargeBasis(Extended350Code extendedChargeBasis) {
 		this.extendedChargeBasis = extendedChargeBasis;
+		return this;
 	}
 
-	@XmlElement(name = "ChrgBr")
-	public ChargeBearer1Code getChargeBearer() {
-		return chargeBearer;
+	public Optional<ChargeBearer1Code> getChargeBearer() {
+		return chargeBearer == null ? Optional.empty() : Optional.of(chargeBearer);
 	}
 
-	public void setChargeBearer(ChargeBearer1Code chargeBearer) {
+	public Charge20 setChargeBearer(ChargeBearer1Code chargeBearer) {
 		this.chargeBearer = chargeBearer;
+		return this;
 	}
 
-	@XmlElement(name = "RcptId")
-	public PartyIdentification2Choice getRecipientIdentification() {
-		return recipientIdentification;
+	public Optional<PartyIdentification2Choice> getRecipientIdentification() {
+		return recipientIdentification == null ? Optional.empty() : Optional.of(recipientIdentification);
 	}
 
-	public void setRecipientIdentification(PartyIdentification2Choice recipientIdentification) {
+	public Charge20 setRecipientIdentification(PartyIdentification2Choice recipientIdentification) {
 		this.recipientIdentification = recipientIdentification;
+		return this;
 	}
 }

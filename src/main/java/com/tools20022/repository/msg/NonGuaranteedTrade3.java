@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.SystemPartyRole;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -79,17 +81,16 @@ import javax.xml.bind.annotation.XmlType;
  * NonGuaranteedTrade2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NonGuaranteedTrade3", propOrder = {"tradeCounterpartyMemberIdentification", "tradeCounterpartyClearingMemberIdentification", "deliveringParties", "receivingParties"})
 public class NonGuaranteedTrade3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "TradCtrPtyMmbId", required = true)
 	protected PartyIdentification35Choice tradeCounterpartyMemberIdentification;
 	/**
-	 * External identification of the member who is the market counterpart
-	 * member of the current trade leg (in case of non guarantee trades, this
-	 * field allows buyer and seller to identify each other).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,7 +131,7 @@ public class NonGuaranteedTrade3 {
 	public static final MMMessageAttribute mmTradeCounterpartyMemberIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> NonGuaranteedTrade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NonGuaranteedTrade3.mmObject();
 			isDerived = false;
 			xmlTag = "TradCtrPtyMmbId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -142,12 +143,11 @@ public class NonGuaranteedTrade3 {
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TradCtrPtyClrMmbId", required = true)
 	protected PartyIdentification35Choice tradeCounterpartyClearingMemberIdentification;
 	/**
-	 * External identification of the clearing member of the market couterpart
-	 * member (in case of non guarantee trades, this field allows buyer and
-	 * seller to identify each other).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -188,7 +188,7 @@ public class NonGuaranteedTrade3 {
 	public static final MMMessageAttribute mmTradeCounterpartyClearingMemberIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> NonGuaranteedTrade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NonGuaranteedTrade3.mmObject();
 			isDerived = false;
 			xmlTag = "TradCtrPtyClrMmbId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -200,11 +200,11 @@ public class NonGuaranteedTrade3 {
 			complexType_lazy = () -> PartyIdentification35Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvrgPties")
 	protected DeliveringPartiesAndAccount11 deliveringParties;
 	/**
-	 * Provides details about the delivering parties involved in the settlement
-	 * chain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -244,7 +244,7 @@ public class NonGuaranteedTrade3 {
 	public static final MMMessageAssociationEnd mmDeliveringParties = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> DeliveringSettlementParty.mmObject();
-			componentContext_lazy = () -> NonGuaranteedTrade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NonGuaranteedTrade3.mmObject();
 			isDerived = false;
 			xmlTag = "DlvrgPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -257,11 +257,11 @@ public class NonGuaranteedTrade3 {
 			type_lazy = () -> com.tools20022.repository.msg.DeliveringPartiesAndAccount11.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvgPties")
 	protected ReceivingPartiesAndAccount11 receivingParties;
 	/**
-	 * Provides details about the receiving parties involved in the settlement
-	 * chain.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -301,7 +301,7 @@ public class NonGuaranteedTrade3 {
 	public static final MMMessageAssociationEnd mmReceivingParties = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> ReceivingSettlementParty.mmObject();
-			componentContext_lazy = () -> NonGuaranteedTrade3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NonGuaranteedTrade3.mmObject();
 			isDerived = false;
 			xmlTag = "RcvgPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -318,10 +318,11 @@ public class NonGuaranteedTrade3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NonGuaranteedTrade3.mmTradeCounterpartyMemberIdentification, NonGuaranteedTrade3.mmTradeCounterpartyClearingMemberIdentification, NonGuaranteedTrade3.mmDeliveringParties,
-						NonGuaranteedTrade3.mmReceivingParties);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NonGuaranteedTrade3.mmTradeCounterpartyMemberIdentification,
+						com.tools20022.repository.msg.NonGuaranteedTrade3.mmTradeCounterpartyClearingMemberIdentification, com.tools20022.repository.msg.NonGuaranteedTrade3.mmDeliveringParties,
+						com.tools20022.repository.msg.NonGuaranteedTrade3.mmReceivingParties);
 				trace_lazy = () -> SystemPartyRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NonGuaranteedTrade3";
 				definition = "Provides the non guaranteed trade details.";
@@ -331,39 +332,39 @@ public class NonGuaranteedTrade3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "TradCtrPtyMmbId", required = true)
 	public PartyIdentification35Choice getTradeCounterpartyMemberIdentification() {
 		return tradeCounterpartyMemberIdentification;
 	}
 
-	public void setTradeCounterpartyMemberIdentification(PartyIdentification35Choice tradeCounterpartyMemberIdentification) {
-		this.tradeCounterpartyMemberIdentification = tradeCounterpartyMemberIdentification;
+	public NonGuaranteedTrade3 setTradeCounterpartyMemberIdentification(PartyIdentification35Choice tradeCounterpartyMemberIdentification) {
+		this.tradeCounterpartyMemberIdentification = Objects.requireNonNull(tradeCounterpartyMemberIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "TradCtrPtyClrMmbId", required = true)
 	public PartyIdentification35Choice getTradeCounterpartyClearingMemberIdentification() {
 		return tradeCounterpartyClearingMemberIdentification;
 	}
 
-	public void setTradeCounterpartyClearingMemberIdentification(PartyIdentification35Choice tradeCounterpartyClearingMemberIdentification) {
-		this.tradeCounterpartyClearingMemberIdentification = tradeCounterpartyClearingMemberIdentification;
+	public NonGuaranteedTrade3 setTradeCounterpartyClearingMemberIdentification(PartyIdentification35Choice tradeCounterpartyClearingMemberIdentification) {
+		this.tradeCounterpartyClearingMemberIdentification = Objects.requireNonNull(tradeCounterpartyClearingMemberIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "DlvrgPties")
-	public DeliveringPartiesAndAccount11 getDeliveringParties() {
-		return deliveringParties;
+	public Optional<DeliveringPartiesAndAccount11> getDeliveringParties() {
+		return deliveringParties == null ? Optional.empty() : Optional.of(deliveringParties);
 	}
 
-	public void setDeliveringParties(com.tools20022.repository.msg.DeliveringPartiesAndAccount11 deliveringParties) {
+	public NonGuaranteedTrade3 setDeliveringParties(com.tools20022.repository.msg.DeliveringPartiesAndAccount11 deliveringParties) {
 		this.deliveringParties = deliveringParties;
+		return this;
 	}
 
-	@XmlElement(name = "RcvgPties")
-	public ReceivingPartiesAndAccount11 getReceivingParties() {
-		return receivingParties;
+	public Optional<ReceivingPartiesAndAccount11> getReceivingParties() {
+		return receivingParties == null ? Optional.empty() : Optional.of(receivingParties);
 	}
 
-	public void setReceivingParties(com.tools20022.repository.msg.ReceivingPartiesAndAccount11 receivingParties) {
+	public NonGuaranteedTrade3 setReceivingParties(com.tools20022.repository.msg.ReceivingPartiesAndAccount11 receivingParties) {
 		this.receivingParties = receivingParties;
+		return this;
 	}
 }

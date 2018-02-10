@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -26,9 +27,8 @@ import com.tools20022.repository.entity.Leg;
 import com.tools20022.repository.entity.SecuritiesOrder;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -62,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -80,15 +80,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "InstrumentLeg1", propOrder = {"legIOIQuantity", "instrumentLegDetails", "legStipulations", "legFinancialInstrumentAttributes"})
 public class InstrumentLeg1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "LegIOIQty", required = true)
 	protected Quantity1Choice legIOIQuantity;
 	/**
-	 * Required for multileg IOIs and for each leg.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -108,6 +109,9 @@ public class InstrumentLeg1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "LegIOIQty"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 682</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -121,9 +125,10 @@ public class InstrumentLeg1 {
 	public static final MMMessageAttribute mmLegIOIQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmOrderedQuantity;
-			componentContext_lazy = () -> InstrumentLeg1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg1.mmObject();
 			isDerived = false;
 			xmlTag = "LegIOIQty";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "682"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegIOIQuantity";
 			definition = "Required for multileg IOIs and for each leg.";
@@ -132,10 +137,11 @@ public class InstrumentLeg1 {
 			complexType_lazy = () -> Quantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "InstrmLegDtls")
 	protected SecurityIdentification7 instrumentLegDetails;
 	/**
-	 * Provides details about the financial instrument of a particular leg.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -168,7 +174,7 @@ public class InstrumentLeg1 {
 	public static final MMMessageAssociationEnd mmInstrumentLegDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> InstrumentLeg1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg1.mmObject();
 			isDerived = false;
 			xmlTag = "InstrmLegDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -180,11 +186,11 @@ public class InstrumentLeg1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification7.mmObject();
 		}
 	};
+	@XmlElement(name = "LegStiptns")
 	protected FinancialInstrumentStipulations legStipulations;
 	/**
-	 * Provides details about the financial instrument stipulations of a
-	 * particular leg.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -217,7 +223,7 @@ public class InstrumentLeg1 {
 	public static final MMMessageAssociationEnd mmLegStipulations = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Security.mmObject();
-			componentContext_lazy = () -> InstrumentLeg1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg1.mmObject();
 			isDerived = false;
 			xmlTag = "LegStiptns";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -229,11 +235,11 @@ public class InstrumentLeg1 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentStipulations.mmObject();
 		}
 	};
+	@XmlElement(name = "LegFinInstrmAttrbts")
 	protected List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> legFinancialInstrumentAttributes;
 	/**
-	 * Provides details about the financial instrument attributes of a
-	 * particular leg.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -267,7 +273,7 @@ public class InstrumentLeg1 {
 	public static final MMMessageAssociationEnd mmLegFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Leg.mmRelatedAsset;
-			componentContext_lazy = () -> InstrumentLeg1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.InstrumentLeg1.mmObject();
 			isDerived = false;
 			xmlTag = "LegFinInstrmAttrbts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -282,9 +288,10 @@ public class InstrumentLeg1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(InstrumentLeg1.mmLegIOIQuantity, InstrumentLeg1.mmInstrumentLegDetails, InstrumentLeg1.mmLegStipulations, InstrumentLeg1.mmLegFinancialInstrumentAttributes);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InstrumentLeg1.mmLegIOIQuantity, com.tools20022.repository.msg.InstrumentLeg1.mmInstrumentLegDetails,
+						com.tools20022.repository.msg.InstrumentLeg1.mmLegStipulations, com.tools20022.repository.msg.InstrumentLeg1.mmLegFinancialInstrumentAttributes);
 				trace_lazy = () -> Leg.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InstrumentLeg1";
 				definition = "Additionnal details related to the leg.";
@@ -294,39 +301,39 @@ public class InstrumentLeg1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "LegIOIQty", required = true)
 	public Quantity1Choice getLegIOIQuantity() {
 		return legIOIQuantity;
 	}
 
-	public void setLegIOIQuantity(Quantity1Choice legIOIQuantity) {
-		this.legIOIQuantity = legIOIQuantity;
+	public InstrumentLeg1 setLegIOIQuantity(Quantity1Choice legIOIQuantity) {
+		this.legIOIQuantity = Objects.requireNonNull(legIOIQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "InstrmLegDtls")
-	public SecurityIdentification7 getInstrumentLegDetails() {
-		return instrumentLegDetails;
+	public Optional<SecurityIdentification7> getInstrumentLegDetails() {
+		return instrumentLegDetails == null ? Optional.empty() : Optional.of(instrumentLegDetails);
 	}
 
-	public void setInstrumentLegDetails(com.tools20022.repository.msg.SecurityIdentification7 instrumentLegDetails) {
+	public InstrumentLeg1 setInstrumentLegDetails(com.tools20022.repository.msg.SecurityIdentification7 instrumentLegDetails) {
 		this.instrumentLegDetails = instrumentLegDetails;
+		return this;
 	}
 
-	@XmlElement(name = "LegStiptns")
-	public FinancialInstrumentStipulations getLegStipulations() {
-		return legStipulations;
+	public Optional<FinancialInstrumentStipulations> getLegStipulations() {
+		return legStipulations == null ? Optional.empty() : Optional.of(legStipulations);
 	}
 
-	public void setLegStipulations(com.tools20022.repository.msg.FinancialInstrumentStipulations legStipulations) {
+	public InstrumentLeg1 setLegStipulations(com.tools20022.repository.msg.FinancialInstrumentStipulations legStipulations) {
 		this.legStipulations = legStipulations;
+		return this;
 	}
 
-	@XmlElement(name = "LegFinInstrmAttrbts")
 	public List<FinancialInstrumentAttributes1> getLegFinancialInstrumentAttributes() {
-		return legFinancialInstrumentAttributes;
+		return legFinancialInstrumentAttributes == null ? legFinancialInstrumentAttributes = new ArrayList<>() : legFinancialInstrumentAttributes;
 	}
 
-	public void setLegFinancialInstrumentAttributes(List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> legFinancialInstrumentAttributes) {
-		this.legFinancialInstrumentAttributes = legFinancialInstrumentAttributes;
+	public InstrumentLeg1 setLegFinancialInstrumentAttributes(List<com.tools20022.repository.msg.FinancialInstrumentAttributes1> legFinancialInstrumentAttributes) {
+		this.legFinancialInstrumentAttributes = Objects.requireNonNull(legFinancialInstrumentAttributes);
+		return this;
 	}
 }

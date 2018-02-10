@@ -25,6 +25,7 @@ import com.tools20022.repository.entity.CorporateActionCashEntitlement;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,15 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information about cash entitlements."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashEntitlement1", propOrder = "cashAmount")
 public class CashEntitlement1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CshAmt", required = true)
 	protected ActiveCurrencyAndAmount cashAmount;
 	/**
-	 * Entitled cash amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -104,7 +106,7 @@ public class CashEntitlement1 {
 	public static final MMMessageAttribute mmCashAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionCashEntitlement.mmEntitledCashAmount;
-			componentContext_lazy = () -> CashEntitlement1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashEntitlement1.mmObject();
 			isDerived = false;
 			xmlTag = "CshAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -119,9 +121,9 @@ public class CashEntitlement1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashEntitlement1.mmCashAmount);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashEntitlement1.mmCashAmount);
 				trace_lazy = () -> CorporateActionCashEntitlement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashEntitlement1";
 				definition = "Provides information about cash entitlements.";
@@ -130,12 +132,12 @@ public class CashEntitlement1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CshAmt", required = true)
 	public ActiveCurrencyAndAmount getCashAmount() {
 		return cashAmount;
 	}
 
-	public void setCashAmount(ActiveCurrencyAndAmount cashAmount) {
-		this.cashAmount = cashAmount;
+	public CashEntitlement1 setCashAmount(ActiveCurrencyAndAmount cashAmount) {
+		this.cashAmount = Objects.requireNonNull(cashAmount);
+		return this;
 	}
 }

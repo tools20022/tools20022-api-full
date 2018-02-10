@@ -25,9 +25,11 @@ import com.tools20022.repository.entity.AccountOwnerRole;
 import com.tools20022.repository.entity.BuyerRole;
 import com.tools20022.repository.entity.RolePlayer;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -74,16 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * PartyIdentification76}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyIdentification79", propOrder = {"accountOwner", "decisionMaker"})
 public class PartyIdentification79 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AcctOwnr", required = true)
 	protected List<com.tools20022.repository.msg.PartyIdentification76> accountOwner;
 	/**
-	 * Identifies the account which is used to acquire or sell financial
-	 * instruments.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -117,7 +119,7 @@ public class PartyIdentification79 {
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> AccountOwnerRole.mmObject();
-			componentContext_lazy = () -> PartyIdentification79.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification79.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,11 +130,11 @@ public class PartyIdentification79 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification76.mmObject();
 		}
 	};
+	@XmlElement(name = "DcsnMakr")
 	protected List<PersonOrOrganisation2Choice> decisionMaker;
 	/**
-	 * Identifies the person who makes the decision on the financial instrument,
-	 * acquire in case the of a buyer or to sell in case of the seller.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -166,7 +168,7 @@ public class PartyIdentification79 {
 	public static final MMMessageAssociationEnd mmDecisionMaker = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> BuyerRole.mmObject();
-			componentContext_lazy = () -> PartyIdentification79.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentification79.mmObject();
 			isDerived = false;
 			xmlTag = "DcsnMakr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -181,9 +183,9 @@ public class PartyIdentification79 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentification79.mmAccountOwner, PartyIdentification79.mmDecisionMaker);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification79.mmAccountOwner, com.tools20022.repository.msg.PartyIdentification79.mmDecisionMaker);
 				trace_lazy = () -> RolePlayer.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification79";
 				definition = "Set of elements used to identify an account owner and the associated decision maker.";
@@ -193,21 +195,21 @@ public class PartyIdentification79 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AcctOwnr", required = true)
 	public List<PartyIdentification76> getAccountOwner() {
-		return accountOwner;
+		return accountOwner == null ? accountOwner = new ArrayList<>() : accountOwner;
 	}
 
-	public void setAccountOwner(List<com.tools20022.repository.msg.PartyIdentification76> accountOwner) {
-		this.accountOwner = accountOwner;
+	public PartyIdentification79 setAccountOwner(List<com.tools20022.repository.msg.PartyIdentification76> accountOwner) {
+		this.accountOwner = Objects.requireNonNull(accountOwner);
+		return this;
 	}
 
-	@XmlElement(name = "DcsnMakr")
 	public List<PersonOrOrganisation2Choice> getDecisionMaker() {
-		return decisionMaker;
+		return decisionMaker == null ? decisionMaker = new ArrayList<>() : decisionMaker;
 	}
 
-	public void setDecisionMaker(List<PersonOrOrganisation2Choice> decisionMaker) {
-		this.decisionMaker = decisionMaker;
+	public PartyIdentification79 setDecisionMaker(List<PersonOrOrganisation2Choice> decisionMaker) {
+		this.decisionMaker = Objects.requireNonNull(decisionMaker);
+		return this;
 	}
 }

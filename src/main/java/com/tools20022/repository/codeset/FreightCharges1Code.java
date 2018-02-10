@@ -20,34 +20,38 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.FreightChargesCode;
+import com.tools20022.repository.codeset.FreightCharges1Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the arrangement as to the freight charges.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.FreightChargesCode
- * FreightChargesCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FreightCharges1Code#mmCollect
- * FreightCharges1Code.mmCollect}</li>
+ * {@linkplain com.tools20022.repository.codeset.FreightCharges1Code#Collect
+ * FreightCharges1Code.Collect}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.FreightCharges1Code#mmPrepaid
- * FreightCharges1Code.mmPrepaid}</li>
+ * {@linkplain com.tools20022.repository.codeset.FreightCharges1Code#Prepaid
+ * FreightCharges1Code.Prepaid}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.FreightChargesCode
+ * FreightChargesCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +68,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Indicates the arrangement as to the freight charges."</li>
  * </ul>
  */
-public class FreightCharges1Code extends FreightChargesCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class FreightCharges1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -83,11 +88,12 @@ public class FreightCharges1Code extends FreightChargesCode {
 	 * name} = "Collect"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCollect = new MMCode() {
+	public static final FreightCharges1Code Collect = new FreightCharges1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collect";
-			owner_lazy = () -> FreightCharges1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FreightCharges1Code.mmObject();
+			codeName = FreightChargesCode.Collect.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -106,26 +112,57 @@ public class FreightCharges1Code extends FreightChargesCode {
 	 * name} = "Prepaid"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPrepaid = new MMCode() {
+	public static final FreightCharges1Code Prepaid = new FreightCharges1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prepaid";
-			owner_lazy = () -> FreightCharges1Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.FreightCharges1Code.mmObject();
+			codeName = FreightChargesCode.Prepaid.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, FreightCharges1Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected FreightCharges1Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("CLCT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FreightCharges1Code";
 				definition = "Indicates the arrangement as to the freight charges.";
-				code_lazy = () -> Arrays.asList(FreightCharges1Code.mmCollect, FreightCharges1Code.mmPrepaid);
 				trace_lazy = () -> FreightChargesCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FreightCharges1Code.Collect, com.tools20022.repository.codeset.FreightCharges1Code.Prepaid);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Collect.getCodeName().get(), Collect);
+		codesByName.put(Prepaid.getCodeName().get(), Prepaid);
+	}
+
+	public static FreightCharges1Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static FreightCharges1Code[] values() {
+		FreightCharges1Code[] values = new FreightCharges1Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, FreightCharges1Code> {
+		@Override
+		public FreightCharges1Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(FreightCharges1Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

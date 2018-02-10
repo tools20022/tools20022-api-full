@@ -26,9 +26,8 @@ import com.tools20022.repository.choice.NumberCount1Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -60,22 +59,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
- * SecuritiesTradeLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion
- * PostTradeMatchingISOLatestversion}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "SctiesTradConf"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -148,6 +131,22 @@ import javax.xml.bind.annotation.*;
  * SecuritiesTradeConfirmationV03.mmSupplementaryData}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.PostTradeMatchingISOLatestversion
+ * PostTradeMatchingISOLatestversion}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "SctiesTradConf"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.SecuritiesTradeLatestVersion
+ * SecuritiesTradeLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code setr.027.001.03}</li>
@@ -167,19 +166,18 @@ import javax.xml.bind.annotation.*;
  * SecuritiesTradeConfirmationV02}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SecuritiesTradeConfirmationV03", propOrder = {"identification", "numberCount", "references", "tradeDetails", "financialInstrumentIdentification", "financialInstrumentAttributes", "underlyingFinancialInstrument",
 		"stipulations", "confirmationParties", "settlementParameters", "standingSettlementInstruction", "deliveringSettlementParties", "receivingSettlementParties", "cashParties", "clearingDetails", "settlementAmount", "otherAmounts",
 		"otherPrices", "otherBusinessParties", "twoLegTransactionDetails", "regulatoryStipulations", "supplementaryData"})
 public class SecuritiesTradeConfirmationV03 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected TransactiontIdentification4 identification;
 	/**
-	 * Information that unambiguously identifies an SecuritiesTradeConfirmation
-	 * message as known by the account owner (or the instructing party acting on
-	 * its behalf).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -227,10 +225,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "NbCnt")
 	protected NumberCount1Choice numberCount;
 	/**
-	 * Count of the number of transactions linked.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -276,13 +275,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Refs")
 	protected List<Linkages15> references;
 	/**
-	 * Reference to the transaction identifier issued by a business party and/or
-	 * market infrastructure. It may also be used to reference a previous
-	 * transaction, for example, a block/allocation instruction, or tie a set of
-	 * messages together.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -328,10 +325,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "TradDtls", required = true)
 	protected Order17 tradeDetails;
 	/**
-	 * Details of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -376,11 +374,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "FinInstrmId", required = true)
 	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
-	 * Unique and unambiguous identifier of a financial instrument, assigned
-	 * under a formal or proprietary identification scheme.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -428,10 +426,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "FinInstrmAttrbts")
 	protected FinancialInstrumentAttributes44 financialInstrumentAttributes;
 	/**
-	 * Elements characterising a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -477,11 +476,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "UndrlygFinInstrm")
 	protected List<UnderlyingFinancialInstrument2> underlyingFinancialInstrument;
 	/**
-	 * Underlying financial instrument to which an trade confirmation is
-	 * related.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -528,11 +527,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "Stiptns")
 	protected FinancialInstrumentStipulations2 stipulations;
 	/**
-	 * Additional restrictions on the financial instrument, related to the
-	 * stipulation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -580,10 +579,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "ConfPties", required = true)
 	protected List<ConfirmationParties2> confirmationParties;
 	/**
-	 * Parties involved in the confirmation of the details of a trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -629,13 +629,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SttlmParams")
 	protected SettlementDetails43 settlementParameters;
 	/**
-	 * Parameters which explicitly state the conditions that must be fulfilled
-	 * before a particular transaction of a financial instrument can be settled.
-	 * These parameters are defined by the instructing party in compliance with
-	 * settlement rules in the market the transaction will settle in.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -683,11 +681,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "StgSttlmInstr")
 	protected StandingSettlementInstruction9 standingSettlementInstruction;
 	/**
-	 * Specifies what settlement standing instruction database is to be used to
-	 * derive the settlement parties involved in the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -735,10 +733,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "DlvrgSttlmPties")
 	protected SettlementParties23 deliveringSettlementParties;
 	/**
-	 * Identifies the chain of delivering settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -784,10 +783,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RcvgSttlmPties")
 	protected SettlementParties23 receivingSettlementParties;
 	/**
-	 * Identifies the chain of receiving settlement parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -833,10 +833,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "CshPties")
 	protected CashParties18 cashParties;
 	/**
-	 * Cash parties involved in the specific transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -881,10 +882,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "ClrDtls")
 	protected Clearing3 clearingDetails;
 	/**
-	 * Provides clearing member information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -929,12 +931,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SttlmAmt")
 	protected AmountAndDirection28 settlementAmount;
 	/**
-	 * Total amount of money to be paid or received in exchange for the
-	 * securities. The amount includes the principal with any commissions and
-	 * fees or accrued interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -982,10 +983,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrAmts")
 	protected List<OtherAmounts16> otherAmounts;
 	/**
-	 * Other amounts than the settlement amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1029,10 +1031,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrPrics")
 	protected List<OtherPrices2> otherPrices;
 	/**
-	 * Other prices than the deal price.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1076,10 +1079,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "OthrBizPties")
 	protected OtherParties18 otherBusinessParties;
 	/**
-	 * Other business parties relevant to the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1124,16 +1128,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "TwoLegTxDtls")
 	protected TwoLegTransactionDetails1 twoLegTransactionDetails;
 	/**
-	 * Identifies a transaction that the trading parties are agreeing to
-	 * repurchase, sell back or return the same or similar securities at a later
-	 * time. <br>
-	 * The two leg transaction details defines the closing leg conditions of a
-	 * two leg transaction. It is also used to define the anticipated closing
-	 * leg conditions at the time of opening the closed-end transaction. <br>
-	 * <br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1181,11 +1180,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "RgltryStiptns")
 	protected RegulatoryStipulations1 regulatoryStipulations;
 	/**
-	 * Specifies regulatory stipulations that financial institutions must be
-	 * compliant with in the country, region, and/or area they conduct business.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1233,11 +1232,11 @@ public class SecuritiesTradeConfirmationV03 {
 			}
 		}
 	};
+	@XmlElement(name = "SplmtryData")
 	protected List<SupplementaryData1> supplementaryData;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1325,205 +1324,205 @@ public class SecuritiesTradeConfirmationV03 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public TransactiontIdentification4 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(TransactiontIdentification4 identification) {
-		this.identification = identification;
+	public SecuritiesTradeConfirmationV03 setIdentification(TransactiontIdentification4 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "NbCnt")
-	public NumberCount1Choice getNumberCount() {
-		return numberCount;
+	public Optional<NumberCount1Choice> getNumberCount() {
+		return numberCount == null ? Optional.empty() : Optional.of(numberCount);
 	}
 
-	public void setNumberCount(NumberCount1Choice numberCount) {
+	public SecuritiesTradeConfirmationV03 setNumberCount(NumberCount1Choice numberCount) {
 		this.numberCount = numberCount;
+		return this;
 	}
 
-	@XmlElement(name = "Refs")
 	public List<Linkages15> getReferences() {
-		return references;
+		return references == null ? references = new ArrayList<>() : references;
 	}
 
-	public void setReferences(List<Linkages15> references) {
-		this.references = references;
+	public SecuritiesTradeConfirmationV03 setReferences(List<Linkages15> references) {
+		this.references = Objects.requireNonNull(references);
+		return this;
 	}
 
-	@XmlElement(name = "TradDtls", required = true)
 	public Order17 getTradeDetails() {
 		return tradeDetails;
 	}
 
-	public void setTradeDetails(Order17 tradeDetails) {
-		this.tradeDetails = tradeDetails;
+	public SecuritiesTradeConfirmationV03 setTradeDetails(Order17 tradeDetails) {
+		this.tradeDetails = Objects.requireNonNull(tradeDetails);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public SecuritiesTradeConfirmationV03 setFinancialInstrumentIdentification(SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmAttrbts")
-	public FinancialInstrumentAttributes44 getFinancialInstrumentAttributes() {
-		return financialInstrumentAttributes;
+	public Optional<FinancialInstrumentAttributes44> getFinancialInstrumentAttributes() {
+		return financialInstrumentAttributes == null ? Optional.empty() : Optional.of(financialInstrumentAttributes);
 	}
 
-	public void setFinancialInstrumentAttributes(FinancialInstrumentAttributes44 financialInstrumentAttributes) {
+	public SecuritiesTradeConfirmationV03 setFinancialInstrumentAttributes(FinancialInstrumentAttributes44 financialInstrumentAttributes) {
 		this.financialInstrumentAttributes = financialInstrumentAttributes;
+		return this;
 	}
 
-	@XmlElement(name = "UndrlygFinInstrm")
 	public List<UnderlyingFinancialInstrument2> getUnderlyingFinancialInstrument() {
-		return underlyingFinancialInstrument;
+		return underlyingFinancialInstrument == null ? underlyingFinancialInstrument = new ArrayList<>() : underlyingFinancialInstrument;
 	}
 
-	public void setUnderlyingFinancialInstrument(List<UnderlyingFinancialInstrument2> underlyingFinancialInstrument) {
-		this.underlyingFinancialInstrument = underlyingFinancialInstrument;
+	public SecuritiesTradeConfirmationV03 setUnderlyingFinancialInstrument(List<UnderlyingFinancialInstrument2> underlyingFinancialInstrument) {
+		this.underlyingFinancialInstrument = Objects.requireNonNull(underlyingFinancialInstrument);
+		return this;
 	}
 
-	@XmlElement(name = "Stiptns")
-	public FinancialInstrumentStipulations2 getStipulations() {
-		return stipulations;
+	public Optional<FinancialInstrumentStipulations2> getStipulations() {
+		return stipulations == null ? Optional.empty() : Optional.of(stipulations);
 	}
 
-	public void setStipulations(FinancialInstrumentStipulations2 stipulations) {
+	public SecuritiesTradeConfirmationV03 setStipulations(FinancialInstrumentStipulations2 stipulations) {
 		this.stipulations = stipulations;
+		return this;
 	}
 
-	@XmlElement(name = "ConfPties", required = true)
 	public List<ConfirmationParties2> getConfirmationParties() {
-		return confirmationParties;
+		return confirmationParties == null ? confirmationParties = new ArrayList<>() : confirmationParties;
 	}
 
-	public void setConfirmationParties(List<ConfirmationParties2> confirmationParties) {
-		this.confirmationParties = confirmationParties;
+	public SecuritiesTradeConfirmationV03 setConfirmationParties(List<ConfirmationParties2> confirmationParties) {
+		this.confirmationParties = Objects.requireNonNull(confirmationParties);
+		return this;
 	}
 
-	@XmlElement(name = "SttlmParams")
-	public SettlementDetails43 getSettlementParameters() {
-		return settlementParameters;
+	public Optional<SettlementDetails43> getSettlementParameters() {
+		return settlementParameters == null ? Optional.empty() : Optional.of(settlementParameters);
 	}
 
-	public void setSettlementParameters(SettlementDetails43 settlementParameters) {
+	public SecuritiesTradeConfirmationV03 setSettlementParameters(SettlementDetails43 settlementParameters) {
 		this.settlementParameters = settlementParameters;
+		return this;
 	}
 
-	@XmlElement(name = "StgSttlmInstr")
-	public StandingSettlementInstruction9 getStandingSettlementInstruction() {
-		return standingSettlementInstruction;
+	public Optional<StandingSettlementInstruction9> getStandingSettlementInstruction() {
+		return standingSettlementInstruction == null ? Optional.empty() : Optional.of(standingSettlementInstruction);
 	}
 
-	public void setStandingSettlementInstruction(StandingSettlementInstruction9 standingSettlementInstruction) {
+	public SecuritiesTradeConfirmationV03 setStandingSettlementInstruction(StandingSettlementInstruction9 standingSettlementInstruction) {
 		this.standingSettlementInstruction = standingSettlementInstruction;
+		return this;
 	}
 
-	@XmlElement(name = "DlvrgSttlmPties")
-	public SettlementParties23 getDeliveringSettlementParties() {
-		return deliveringSettlementParties;
+	public Optional<SettlementParties23> getDeliveringSettlementParties() {
+		return deliveringSettlementParties == null ? Optional.empty() : Optional.of(deliveringSettlementParties);
 	}
 
-	public void setDeliveringSettlementParties(SettlementParties23 deliveringSettlementParties) {
+	public SecuritiesTradeConfirmationV03 setDeliveringSettlementParties(SettlementParties23 deliveringSettlementParties) {
 		this.deliveringSettlementParties = deliveringSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "RcvgSttlmPties")
-	public SettlementParties23 getReceivingSettlementParties() {
-		return receivingSettlementParties;
+	public Optional<SettlementParties23> getReceivingSettlementParties() {
+		return receivingSettlementParties == null ? Optional.empty() : Optional.of(receivingSettlementParties);
 	}
 
-	public void setReceivingSettlementParties(SettlementParties23 receivingSettlementParties) {
+	public SecuritiesTradeConfirmationV03 setReceivingSettlementParties(SettlementParties23 receivingSettlementParties) {
 		this.receivingSettlementParties = receivingSettlementParties;
+		return this;
 	}
 
-	@XmlElement(name = "CshPties")
-	public CashParties18 getCashParties() {
-		return cashParties;
+	public Optional<CashParties18> getCashParties() {
+		return cashParties == null ? Optional.empty() : Optional.of(cashParties);
 	}
 
-	public void setCashParties(CashParties18 cashParties) {
+	public SecuritiesTradeConfirmationV03 setCashParties(CashParties18 cashParties) {
 		this.cashParties = cashParties;
+		return this;
 	}
 
-	@XmlElement(name = "ClrDtls")
-	public Clearing3 getClearingDetails() {
-		return clearingDetails;
+	public Optional<Clearing3> getClearingDetails() {
+		return clearingDetails == null ? Optional.empty() : Optional.of(clearingDetails);
 	}
 
-	public void setClearingDetails(Clearing3 clearingDetails) {
+	public SecuritiesTradeConfirmationV03 setClearingDetails(Clearing3 clearingDetails) {
 		this.clearingDetails = clearingDetails;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmAmt")
-	public AmountAndDirection28 getSettlementAmount() {
-		return settlementAmount;
+	public Optional<AmountAndDirection28> getSettlementAmount() {
+		return settlementAmount == null ? Optional.empty() : Optional.of(settlementAmount);
 	}
 
-	public void setSettlementAmount(AmountAndDirection28 settlementAmount) {
+	public SecuritiesTradeConfirmationV03 setSettlementAmount(AmountAndDirection28 settlementAmount) {
 		this.settlementAmount = settlementAmount;
+		return this;
 	}
 
-	@XmlElement(name = "OthrAmts")
 	public List<OtherAmounts16> getOtherAmounts() {
-		return otherAmounts;
+		return otherAmounts == null ? otherAmounts = new ArrayList<>() : otherAmounts;
 	}
 
-	public void setOtherAmounts(List<OtherAmounts16> otherAmounts) {
-		this.otherAmounts = otherAmounts;
+	public SecuritiesTradeConfirmationV03 setOtherAmounts(List<OtherAmounts16> otherAmounts) {
+		this.otherAmounts = Objects.requireNonNull(otherAmounts);
+		return this;
 	}
 
-	@XmlElement(name = "OthrPrics")
 	public List<OtherPrices2> getOtherPrices() {
-		return otherPrices;
+		return otherPrices == null ? otherPrices = new ArrayList<>() : otherPrices;
 	}
 
-	public void setOtherPrices(List<OtherPrices2> otherPrices) {
-		this.otherPrices = otherPrices;
+	public SecuritiesTradeConfirmationV03 setOtherPrices(List<OtherPrices2> otherPrices) {
+		this.otherPrices = Objects.requireNonNull(otherPrices);
+		return this;
 	}
 
-	@XmlElement(name = "OthrBizPties")
-	public OtherParties18 getOtherBusinessParties() {
-		return otherBusinessParties;
+	public Optional<OtherParties18> getOtherBusinessParties() {
+		return otherBusinessParties == null ? Optional.empty() : Optional.of(otherBusinessParties);
 	}
 
-	public void setOtherBusinessParties(OtherParties18 otherBusinessParties) {
+	public SecuritiesTradeConfirmationV03 setOtherBusinessParties(OtherParties18 otherBusinessParties) {
 		this.otherBusinessParties = otherBusinessParties;
+		return this;
 	}
 
-	@XmlElement(name = "TwoLegTxDtls")
-	public TwoLegTransactionDetails1 getTwoLegTransactionDetails() {
-		return twoLegTransactionDetails;
+	public Optional<TwoLegTransactionDetails1> getTwoLegTransactionDetails() {
+		return twoLegTransactionDetails == null ? Optional.empty() : Optional.of(twoLegTransactionDetails);
 	}
 
-	public void setTwoLegTransactionDetails(TwoLegTransactionDetails1 twoLegTransactionDetails) {
+	public SecuritiesTradeConfirmationV03 setTwoLegTransactionDetails(TwoLegTransactionDetails1 twoLegTransactionDetails) {
 		this.twoLegTransactionDetails = twoLegTransactionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "RgltryStiptns")
-	public RegulatoryStipulations1 getRegulatoryStipulations() {
-		return regulatoryStipulations;
+	public Optional<RegulatoryStipulations1> getRegulatoryStipulations() {
+		return regulatoryStipulations == null ? Optional.empty() : Optional.of(regulatoryStipulations);
 	}
 
-	public void setRegulatoryStipulations(RegulatoryStipulations1 regulatoryStipulations) {
+	public SecuritiesTradeConfirmationV03 setRegulatoryStipulations(RegulatoryStipulations1 regulatoryStipulations) {
 		this.regulatoryStipulations = regulatoryStipulations;
+		return this;
 	}
 
-	@XmlElement(name = "SplmtryData")
 	public List<SupplementaryData1> getSupplementaryData() {
-		return supplementaryData;
+		return supplementaryData == null ? supplementaryData = new ArrayList<>() : supplementaryData;
 	}
 
-	public void setSupplementaryData(List<SupplementaryData1> supplementaryData) {
-		this.supplementaryData = supplementaryData;
+	public SecuritiesTradeConfirmationV03 setSupplementaryData(List<SupplementaryData1> supplementaryData) {
+		this.supplementaryData = Objects.requireNonNull(supplementaryData);
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:setr.027.03.03")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:setr.027.001.03")
 	static public class Document {
 		@XmlElement(name = "SctiesTradConf", required = true)
 		public SecuritiesTradeConfirmationV03 messageBody;

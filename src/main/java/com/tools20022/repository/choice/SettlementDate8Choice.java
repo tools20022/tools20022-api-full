@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.entity.SettlementTimeRequest;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of format for the settlement date."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SettlementDate8Choice", propOrder = {"date", "code"})
 public class SettlementDate8Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Dt", required = true)
 	protected DateAndDateTime1Choice date;
 	/**
-	 * Numeric representation of the day of the month and year.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -93,6 +96,10 @@ public class SettlementDate8Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Dt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98A::SETT, ISO15022Synonym:
+	 * :98C::SETT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -106,9 +113,10 @@ public class SettlementDate8Choice {
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SettlementTimeRequest.mmObject();
-			componentContext_lazy = () -> SettlementDate8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementDate8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Dt";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98A::SETT"), new ISO15022Synonym(this, ":98C::SETT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Numeric representation of the day of the month and year.";
@@ -117,10 +125,11 @@ public class SettlementDate8Choice {
 			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTime1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "Cd", required = true)
 	protected SettlementDateCode5Choice code;
 	/**
-	 * Date and time at which the securities are to be delivered or received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -141,6 +150,9 @@ public class SettlementDate8Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Cd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98B:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -155,9 +167,10 @@ public class SettlementDate8Choice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SettlementTimeRequest.mmObject();
-			componentContext_lazy = () -> SettlementDate8Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.SettlementDate8Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Date and time at which the securities are to be delivered or received.";
@@ -170,9 +183,9 @@ public class SettlementDate8Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SettlementDate8Choice.mmDate, SettlementDate8Choice.mmCode);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementDate8Choice.mmDate, com.tools20022.repository.choice.SettlementDate8Choice.mmCode);
 				trace_lazy = () -> SettlementTimeRequest.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementDate8Choice";
 				definition = "Choice of format for the settlement date.";
@@ -181,21 +194,21 @@ public class SettlementDate8Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Dt", required = true)
 	public DateAndDateTime1Choice getDate() {
 		return date;
 	}
 
-	public void setDate(com.tools20022.repository.choice.DateAndDateTime1Choice date) {
-		this.date = date;
+	public SettlementDate8Choice setDate(com.tools20022.repository.choice.DateAndDateTime1Choice date) {
+		this.date = Objects.requireNonNull(date);
+		return this;
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public SettlementDateCode5Choice getCode() {
 		return code;
 	}
 
-	public void setCode(com.tools20022.repository.choice.SettlementDateCode5Choice code) {
-		this.code = code;
+	public SettlementDate8Choice setCode(com.tools20022.repository.choice.SettlementDateCode5Choice code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 }

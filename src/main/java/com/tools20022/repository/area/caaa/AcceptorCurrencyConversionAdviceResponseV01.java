@@ -29,6 +29,8 @@ import com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance2016201
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.*;
 
 /**
@@ -38,22 +40,6 @@ import javax.xml.bind.annotation.*;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
- * businessArea} =
- * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVersion
- * AcceptortoAcquirerCardTransactionLatestVersion}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
- * messageSet} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20162017
- * CAPEAcceptortoAcquirerMaintenance20162017}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
- * xmlTag} = "AccptrCcyConvsAdvcRspn"</li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
- * rootElement} = "Document"</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageBuildingBlock
  * messageBuildingBlock} =
@@ -70,6 +56,22 @@ import javax.xml.bind.annotation.*;
  * AcceptorCurrencyConversionAdviceResponseV01.mmSecurityTrailer}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageSet
+ * messageSet} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20162017
+ * CAPEAcceptortoAcquirerMaintenance20162017}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
+ * rootElement} = "Document"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getXmlTag
+ * xmlTag} = "AccptrCcyConvsAdvcRspn"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
+ * businessArea} =
+ * {@linkplain com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVersion
+ * AcceptortoAcquirerCardTransactionLatestVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code caaa.019.001.01}</li>
@@ -85,15 +87,16 @@ import javax.xml.bind.annotation.*;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AcceptorCurrencyConversionAdviceResponseV01", propOrder = {"header", "currencyConversionAdviceResponse", "securityTrailer"})
 public class AcceptorCurrencyConversionAdviceResponseV01 {
 
 	final static private AtomicReference<MMMessageDefinition> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Hdr", required = true)
 	protected Header34 header;
 	/**
-	 * Cancellation advice response message management information.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -133,10 +136,11 @@ public class AcceptorCurrencyConversionAdviceResponseV01 {
 			}
 		}
 	};
+	@XmlElement(name = "CcyConvsAdvcRspn", required = true)
 	protected AcceptorCancellationAdviceResponse6 currencyConversionAdviceResponse;
 	/**
-	 * Information related to the currency conversion advice response.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -177,10 +181,11 @@ public class AcceptorCurrencyConversionAdviceResponseV01 {
 			}
 		}
 	};
+	@XmlElement(name = "SctyTrlr")
 	protected ContentInformationType15 securityTrailer;
 	/**
-	 * Trailer of the message containing a MAC.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -251,34 +256,34 @@ public class AcceptorCurrencyConversionAdviceResponseV01 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Hdr", required = true)
 	public Header34 getHeader() {
 		return header;
 	}
 
-	public void setHeader(Header34 header) {
-		this.header = header;
+	public AcceptorCurrencyConversionAdviceResponseV01 setHeader(Header34 header) {
+		this.header = Objects.requireNonNull(header);
+		return this;
 	}
 
-	@XmlElement(name = "CcyConvsAdvcRspn", required = true)
 	public AcceptorCancellationAdviceResponse6 getCurrencyConversionAdviceResponse() {
 		return currencyConversionAdviceResponse;
 	}
 
-	public void setCurrencyConversionAdviceResponse(AcceptorCancellationAdviceResponse6 currencyConversionAdviceResponse) {
-		this.currencyConversionAdviceResponse = currencyConversionAdviceResponse;
+	public AcceptorCurrencyConversionAdviceResponseV01 setCurrencyConversionAdviceResponse(AcceptorCancellationAdviceResponse6 currencyConversionAdviceResponse) {
+		this.currencyConversionAdviceResponse = Objects.requireNonNull(currencyConversionAdviceResponse);
+		return this;
 	}
 
-	@XmlElement(name = "SctyTrlr")
-	public ContentInformationType15 getSecurityTrailer() {
-		return securityTrailer;
+	public Optional<ContentInformationType15> getSecurityTrailer() {
+		return securityTrailer == null ? Optional.empty() : Optional.of(securityTrailer);
 	}
 
-	public void setSecurityTrailer(ContentInformationType15 securityTrailer) {
+	public AcceptorCurrencyConversionAdviceResponseV01 setSecurityTrailer(ContentInformationType15 securityTrailer) {
 		this.securityTrailer = securityTrailer;
+		return this;
 	}
 
-	@XmlRootElement(namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.019.01.01")
+	@XmlRootElement(name = "Document", namespace = "urn:iso:std:iso:20022:tech:xsd:caaa.019.001.01")
 	static public class Document {
 		@XmlElement(name = "AccptrCcyConvsAdvcRspn", required = true)
 		public AcceptorCurrencyConversionAdviceResponseV01 messageBody;

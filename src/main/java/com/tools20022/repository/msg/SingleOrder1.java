@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
@@ -28,6 +29,8 @@ import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -74,8 +77,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -86,17 +89,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides details about the single order."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SingleOrder1", propOrder = {"manualOrderIndicator", "directedOrder", "receivedDepartment", "customerHandlingInstruction", "orderDetails", "spreadAndBenchmarkCurveDetails", "yieldDetails", "twoLegTransactionDetails",
 		"tradeRegulatoryTimeStampsDetails"})
 public class SingleOrder1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MnlOrdrInd")
 	protected YesNoIndicator manualOrderIndicator;
 	/**
-	 * Indicates if the order was initially received manually (as opposed to
-	 * electronically).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,6 +119,9 @@ public class SingleOrder1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MnlOrdrInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1028</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -131,9 +137,10 @@ public class SingleOrder1 {
 	public static final MMMessageAttribute mmManualOrderIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmManualOrderIndicator;
-			componentContext_lazy = () -> SingleOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "MnlOrdrInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1028"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualOrderIndicator";
 			definition = "Indicates if the order was initially received manually (as opposed to electronically).";
@@ -142,11 +149,11 @@ public class SingleOrder1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "DrctdOrdr")
 	protected YesNoIndicator directedOrder;
 	/**
-	 * Indicates if the customer directed this order to a specific execution
-	 * venue (Y) or not (N).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -166,6 +173,9 @@ public class SingleOrder1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DrctdOrdr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1029</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -181,9 +191,10 @@ public class SingleOrder1 {
 	public static final MMMessageAttribute mmDirectedOrder = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmDirectedOrder;
-			componentContext_lazy = () -> SingleOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "DrctdOrdr";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1029"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirectedOrder";
 			definition = "Indicates if the customer directed this order to a specific execution venue (Y) or not (N).";
@@ -192,10 +203,11 @@ public class SingleOrder1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "RcvdDptmt")
 	protected Max35Text receivedDepartment;
 	/**
-	 * Identifies the Broker / Dealer Department that first took the order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -214,6 +226,9 @@ public class SingleOrder1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RcvdDptmt"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1030</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -228,9 +243,10 @@ public class SingleOrder1 {
 	public static final MMMessageAttribute mmReceivedDepartment = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmReceivedDepartment;
-			componentContext_lazy = () -> SingleOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "RcvdDptmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1030"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedDepartment";
 			definition = "Identifies the Broker / Dealer Department that first took the order.";
@@ -239,11 +255,11 @@ public class SingleOrder1 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CstmrHdlgInstr")
 	protected CustomerHandlingInstructionChoice customerHandlingInstruction;
 	/**
-	 * Codes that apply special information that the Broker / Dealer needs to
-	 * report, as specified by the customer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -263,6 +279,9 @@ public class SingleOrder1 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CstmrHdlgInstr"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1032</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -278,9 +297,10 @@ public class SingleOrder1 {
 	public static final MMMessageAttribute mmCustomerHandlingInstruction = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrderParameters.mmCustomerHandlingInstruction;
-			componentContext_lazy = () -> SingleOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "CstmrHdlgInstr";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1032"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerHandlingInstruction";
 			definition = "Codes that apply special information that the Broker / Dealer needs to report, as specified by the customer.";
@@ -289,10 +309,11 @@ public class SingleOrder1 {
 			complexType_lazy = () -> CustomerHandlingInstructionChoice.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrDtls", required = true)
 	protected Order3 orderDetails;
 	/**
-	 * Provides order details.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -322,7 +343,7 @@ public class SingleOrder1 {
 	public static final MMMessageAssociationEnd mmOrderDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesOrder.mmObject();
-			componentContext_lazy = () -> SingleOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -334,11 +355,11 @@ public class SingleOrder1 {
 			type_lazy = () -> com.tools20022.repository.msg.Order3.mmObject();
 		}
 	};
+	@XmlElement(name = "SprdAndBchmkCrvDtls")
 	protected BenchmarkCurve1 spreadAndBenchmarkCurveDetails;
 	/**
-	 * Indicates the difference in value between a financial instrument and a
-	 * benchmark for an indication of interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -370,7 +391,7 @@ public class SingleOrder1 {
 	public static final MMMessageAssociationEnd mmSpreadAndBenchmarkCurveDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> Spread.mmObject();
-			componentContext_lazy = () -> SingleOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "SprdAndBchmkCrvDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -382,10 +403,11 @@ public class SingleOrder1 {
 			type_lazy = () -> com.tools20022.repository.msg.BenchmarkCurve1.mmObject();
 		}
 	};
+	@XmlElement(name = "YldDtls")
 	protected YieldCalculation1 yieldDetails;
 	/**
-	 * Details about the return provided by a financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -417,7 +439,7 @@ public class SingleOrder1 {
 	public static final MMMessageAssociationEnd mmYieldDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesPricing.mmYieldCalculation;
-			componentContext_lazy = () -> SingleOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "YldDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -429,10 +451,11 @@ public class SingleOrder1 {
 			type_lazy = () -> com.tools20022.repository.msg.YieldCalculation1.mmObject();
 		}
 	};
+	@XmlElement(name = "TwoLegTxDtls")
 	protected SecuritiesFinancing1 twoLegTransactionDetails;
 	/**
-	 * Provides details about the two leg transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -463,7 +486,7 @@ public class SingleOrder1 {
 	public static final MMMessageAssociationEnd mmTwoLegTransactionDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesFinancing.mmObject();
-			componentContext_lazy = () -> SingleOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "TwoLegTxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -475,10 +498,11 @@ public class SingleOrder1 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesFinancing1.mmObject();
 		}
 	};
+	@XmlElement(name = "TradRgltryTmStmpsDtls")
 	protected TradeRegulatoryTimeStampGroup tradeRegulatoryTimeStampsDetails;
 	/**
-	 * Provides details about the time the order was received and executed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -505,7 +529,7 @@ public class SingleOrder1 {
 	 */
 	public static final MMMessageAssociationEnd mmTradeRegulatoryTimeStampsDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> SingleOrder1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SingleOrder1.mmObject();
 			isDerived = false;
 			xmlTag = "TradRgltryTmStmpsDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -521,10 +545,12 @@ public class SingleOrder1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SingleOrder1.mmManualOrderIndicator, SingleOrder1.mmDirectedOrder, SingleOrder1.mmReceivedDepartment, SingleOrder1.mmCustomerHandlingInstruction, SingleOrder1.mmOrderDetails,
-						SingleOrder1.mmSpreadAndBenchmarkCurveDetails, SingleOrder1.mmYieldDetails, SingleOrder1.mmTwoLegTransactionDetails, SingleOrder1.mmTradeRegulatoryTimeStampsDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SingleOrder1.mmManualOrderIndicator, com.tools20022.repository.msg.SingleOrder1.mmDirectedOrder,
+						com.tools20022.repository.msg.SingleOrder1.mmReceivedDepartment, com.tools20022.repository.msg.SingleOrder1.mmCustomerHandlingInstruction, com.tools20022.repository.msg.SingleOrder1.mmOrderDetails,
+						com.tools20022.repository.msg.SingleOrder1.mmSpreadAndBenchmarkCurveDetails, com.tools20022.repository.msg.SingleOrder1.mmYieldDetails, com.tools20022.repository.msg.SingleOrder1.mmTwoLegTransactionDetails,
+						com.tools20022.repository.msg.SingleOrder1.mmTradeRegulatoryTimeStampsDetails);
 				trace_lazy = () -> SecuritiesOrder.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SingleOrder1";
 				definition = "Provides details about the single order.";
@@ -533,84 +559,84 @@ public class SingleOrder1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "MnlOrdrInd")
-	public YesNoIndicator getManualOrderIndicator() {
-		return manualOrderIndicator;
+	public Optional<YesNoIndicator> getManualOrderIndicator() {
+		return manualOrderIndicator == null ? Optional.empty() : Optional.of(manualOrderIndicator);
 	}
 
-	public void setManualOrderIndicator(YesNoIndicator manualOrderIndicator) {
+	public SingleOrder1 setManualOrderIndicator(YesNoIndicator manualOrderIndicator) {
 		this.manualOrderIndicator = manualOrderIndicator;
+		return this;
 	}
 
-	@XmlElement(name = "DrctdOrdr")
-	public YesNoIndicator getDirectedOrder() {
-		return directedOrder;
+	public Optional<YesNoIndicator> getDirectedOrder() {
+		return directedOrder == null ? Optional.empty() : Optional.of(directedOrder);
 	}
 
-	public void setDirectedOrder(YesNoIndicator directedOrder) {
+	public SingleOrder1 setDirectedOrder(YesNoIndicator directedOrder) {
 		this.directedOrder = directedOrder;
+		return this;
 	}
 
-	@XmlElement(name = "RcvdDptmt")
-	public Max35Text getReceivedDepartment() {
-		return receivedDepartment;
+	public Optional<Max35Text> getReceivedDepartment() {
+		return receivedDepartment == null ? Optional.empty() : Optional.of(receivedDepartment);
 	}
 
-	public void setReceivedDepartment(Max35Text receivedDepartment) {
+	public SingleOrder1 setReceivedDepartment(Max35Text receivedDepartment) {
 		this.receivedDepartment = receivedDepartment;
+		return this;
 	}
 
-	@XmlElement(name = "CstmrHdlgInstr")
-	public CustomerHandlingInstructionChoice getCustomerHandlingInstruction() {
-		return customerHandlingInstruction;
+	public Optional<CustomerHandlingInstructionChoice> getCustomerHandlingInstruction() {
+		return customerHandlingInstruction == null ? Optional.empty() : Optional.of(customerHandlingInstruction);
 	}
 
-	public void setCustomerHandlingInstruction(CustomerHandlingInstructionChoice customerHandlingInstruction) {
+	public SingleOrder1 setCustomerHandlingInstruction(CustomerHandlingInstructionChoice customerHandlingInstruction) {
 		this.customerHandlingInstruction = customerHandlingInstruction;
+		return this;
 	}
 
-	@XmlElement(name = "OrdrDtls", required = true)
 	public Order3 getOrderDetails() {
 		return orderDetails;
 	}
 
-	public void setOrderDetails(com.tools20022.repository.msg.Order3 orderDetails) {
-		this.orderDetails = orderDetails;
+	public SingleOrder1 setOrderDetails(com.tools20022.repository.msg.Order3 orderDetails) {
+		this.orderDetails = Objects.requireNonNull(orderDetails);
+		return this;
 	}
 
-	@XmlElement(name = "SprdAndBchmkCrvDtls")
-	public BenchmarkCurve1 getSpreadAndBenchmarkCurveDetails() {
-		return spreadAndBenchmarkCurveDetails;
+	public Optional<BenchmarkCurve1> getSpreadAndBenchmarkCurveDetails() {
+		return spreadAndBenchmarkCurveDetails == null ? Optional.empty() : Optional.of(spreadAndBenchmarkCurveDetails);
 	}
 
-	public void setSpreadAndBenchmarkCurveDetails(com.tools20022.repository.msg.BenchmarkCurve1 spreadAndBenchmarkCurveDetails) {
+	public SingleOrder1 setSpreadAndBenchmarkCurveDetails(com.tools20022.repository.msg.BenchmarkCurve1 spreadAndBenchmarkCurveDetails) {
 		this.spreadAndBenchmarkCurveDetails = spreadAndBenchmarkCurveDetails;
+		return this;
 	}
 
-	@XmlElement(name = "YldDtls")
-	public YieldCalculation1 getYieldDetails() {
-		return yieldDetails;
+	public Optional<YieldCalculation1> getYieldDetails() {
+		return yieldDetails == null ? Optional.empty() : Optional.of(yieldDetails);
 	}
 
-	public void setYieldDetails(com.tools20022.repository.msg.YieldCalculation1 yieldDetails) {
+	public SingleOrder1 setYieldDetails(com.tools20022.repository.msg.YieldCalculation1 yieldDetails) {
 		this.yieldDetails = yieldDetails;
+		return this;
 	}
 
-	@XmlElement(name = "TwoLegTxDtls")
-	public SecuritiesFinancing1 getTwoLegTransactionDetails() {
-		return twoLegTransactionDetails;
+	public Optional<SecuritiesFinancing1> getTwoLegTransactionDetails() {
+		return twoLegTransactionDetails == null ? Optional.empty() : Optional.of(twoLegTransactionDetails);
 	}
 
-	public void setTwoLegTransactionDetails(com.tools20022.repository.msg.SecuritiesFinancing1 twoLegTransactionDetails) {
+	public SingleOrder1 setTwoLegTransactionDetails(com.tools20022.repository.msg.SecuritiesFinancing1 twoLegTransactionDetails) {
 		this.twoLegTransactionDetails = twoLegTransactionDetails;
+		return this;
 	}
 
-	@XmlElement(name = "TradRgltryTmStmpsDtls")
-	public TradeRegulatoryTimeStampGroup getTradeRegulatoryTimeStampsDetails() {
-		return tradeRegulatoryTimeStampsDetails;
+	public Optional<TradeRegulatoryTimeStampGroup> getTradeRegulatoryTimeStampsDetails() {
+		return tradeRegulatoryTimeStampsDetails == null ? Optional.empty() : Optional.of(tradeRegulatoryTimeStampsDetails);
 	}
 
-	public void setTradeRegulatoryTimeStampsDetails(com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup tradeRegulatoryTimeStampsDetails) {
+	public SingleOrder1 setTradeRegulatoryTimeStampsDetails(com.tools20022.repository.msg.TradeRegulatoryTimeStampGroup tradeRegulatoryTimeStampsDetails) {
 		this.tradeRegulatoryTimeStampsDetails = tradeRegulatoryTimeStampsDetails;
+		return this;
 	}
 }

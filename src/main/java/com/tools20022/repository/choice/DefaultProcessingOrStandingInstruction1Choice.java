@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +52,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,16 +64,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice between default processing or standing instruction."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DefaultProcessingOrStandingInstruction1Choice", propOrder = {"defaultOptionIndicator", "standingInstructionIndicator"})
 public class DefaultProcessingOrStandingInstruction1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DfltOptnInd", required = true)
 	protected YesNoIndicator defaultOptionIndicator;
 	/**
-	 * Indicates whether the option, for example, currency option, will be
-	 * selected by default if no instruction is provided by the account owner.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -87,6 +89,9 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DfltOptnInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :17B::DFLT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -101,9 +106,10 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 	 */
 	public static final MMMessageAttribute mmDefaultOptionIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DefaultProcessingOrStandingInstruction1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DefaultProcessingOrStandingInstruction1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "DfltOptnInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":17B::DFLT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultOptionIndicator";
 			definition = "Indicates whether the option, for example, currency option, will be selected by default if no instruction is provided by the account owner.";
@@ -112,11 +118,11 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "StgInstrInd", required = true)
 	protected YesNoIndicator standingInstructionIndicator;
 	/**
-	 * Indicates whether an account owner has placed a standing order to select
-	 * this corporate action option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,6 +138,9 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "StgInstrInd"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :17B::STIN</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -146,9 +155,10 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 	 */
 	public static final MMMessageAttribute mmStandingInstructionIndicator = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DefaultProcessingOrStandingInstruction1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.DefaultProcessingOrStandingInstruction1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "StgInstrInd";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":17B::STIN"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingInstructionIndicator";
 			definition = "Indicates whether an account owner has placed a standing order to select this corporate action option.";
@@ -161,8 +171,9 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DefaultProcessingOrStandingInstruction1Choice.mmDefaultOptionIndicator, DefaultProcessingOrStandingInstruction1Choice.mmStandingInstructionIndicator);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DefaultProcessingOrStandingInstruction1Choice.mmDefaultOptionIndicator,
+						com.tools20022.repository.choice.DefaultProcessingOrStandingInstruction1Choice.mmStandingInstructionIndicator);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DefaultProcessingOrStandingInstruction1Choice";
 				definition = "Choice between default processing or standing instruction.";
@@ -171,21 +182,21 @@ public class DefaultProcessingOrStandingInstruction1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DfltOptnInd", required = true)
 	public YesNoIndicator getDefaultOptionIndicator() {
 		return defaultOptionIndicator;
 	}
 
-	public void setDefaultOptionIndicator(YesNoIndicator defaultOptionIndicator) {
-		this.defaultOptionIndicator = defaultOptionIndicator;
+	public DefaultProcessingOrStandingInstruction1Choice setDefaultOptionIndicator(YesNoIndicator defaultOptionIndicator) {
+		this.defaultOptionIndicator = Objects.requireNonNull(defaultOptionIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "StgInstrInd", required = true)
 	public YesNoIndicator getStandingInstructionIndicator() {
 		return standingInstructionIndicator;
 	}
 
-	public void setStandingInstructionIndicator(YesNoIndicator standingInstructionIndicator) {
-		this.standingInstructionIndicator = standingInstructionIndicator;
+	public DefaultProcessingOrStandingInstruction1Choice setStandingInstructionIndicator(YesNoIndicator standingInstructionIndicator) {
+		this.standingInstructionIndicator = Objects.requireNonNull(standingInstructionIndicator);
+		return this;
 	}
 }

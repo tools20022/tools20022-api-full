@@ -27,6 +27,7 @@ import com.tools20022.repository.datatype.RestrictedFINActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -69,8 +70,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -81,19 +82,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides extra tax details."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TaxSD1", propOrder = {"placeAndName", "foreignTaxCreditAmount", "foreignTaxCreditRate", "foreignSourceAmount", "foreignSourceRate", "taxAdvantageType", "taxAdvantageAmount", "taxAdvantageRate", "sundryOrOtherRate",
 		"taxDeferredRate", "taxFreeRate"})
 public class TaxSD1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "PlcAndNm")
 	protected Max350Text placeAndName;
 	/**
-	 * Unambiguous reference to the location where the supplementary data must
-	 * be inserted in the message instance. <br>
-	 * <br>
-	 * In the case of XML, this is expressed by a valid XPath.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -121,7 +120,7 @@ public class TaxSD1 {
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -132,10 +131,11 @@ public class TaxSD1 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "FrgnTaxCdtAmt")
 	protected RestrictedFINActiveCurrencyAndAmount foreignTaxCreditAmount;
 	/**
-	 * Amount of foreign tax credit per security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -162,7 +162,7 @@ public class TaxSD1 {
 	 */
 	public static final MMMessageAttribute mmForeignTaxCreditAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FrgnTaxCdtAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -173,10 +173,11 @@ public class TaxSD1 {
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "FrgnTaxCdtRate")
 	protected PercentageRate foreignTaxCreditRate;
 	/**
-	 * Percent of foreign tax credit per security .<br>
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -203,7 +204,7 @@ public class TaxSD1 {
 	 */
 	public static final MMMessageAttribute mmForeignTaxCreditRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FrgnTaxCdtRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -214,11 +215,11 @@ public class TaxSD1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "FrgnSrcAmt")
 	protected RestrictedFINActiveCurrencyAndAmount foreignSourceAmount;
 	/**
-	 * Amount of the dividend that is being paid out of income earned in a
-	 * foreign jurisdiction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -247,7 +248,7 @@ public class TaxSD1 {
 	 */
 	public static final MMMessageAttribute mmForeignSourceAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FrgnSrcAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -258,11 +259,11 @@ public class TaxSD1 {
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "FrgnSrcRate")
 	protected PercentageRate foreignSourceRate;
 	/**
-	 * Percentage of the dividend that is being paid out of income earned in a
-	 * foreign jurisdiction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -291,7 +292,7 @@ public class TaxSD1 {
 	 */
 	public static final MMMessageAttribute mmForeignSourceRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "FrgnSrcRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -302,10 +303,11 @@ public class TaxSD1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxAdvntgTp")
 	protected TaxAdvantageType1Code taxAdvantageType;
 	/**
-	 * Form of tax advantage on the dividend.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -332,7 +334,7 @@ public class TaxSD1 {
 	 */
 	public static final MMMessageAttribute mmTaxAdvantageType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxAdvntgTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -343,10 +345,11 @@ public class TaxSD1 {
 			simpleType_lazy = () -> TaxAdvantageType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxAdvntgAmt")
 	protected RestrictedFINActiveCurrencyAndAmount taxAdvantageAmount;
 	/**
-	 * Amount of the tax advantage on the dividend.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -373,7 +376,7 @@ public class TaxSD1 {
 	 */
 	public static final MMMessageAttribute mmTaxAdvantageAmount = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxAdvntgAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -384,10 +387,11 @@ public class TaxSD1 {
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxAdvntgRate")
 	protected PercentageRate taxAdvantageRate;
 	/**
-	 * Percent of the tax advantage on the dividend.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -414,7 +418,7 @@ public class TaxSD1 {
 	 */
 	public static final MMMessageAttribute mmTaxAdvantageRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxAdvntgRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -425,11 +429,11 @@ public class TaxSD1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "SndryOrOthrRate")
 	protected PercentageRate sundryOrOtherRate;
 	/**
-	 * Percentage of the amount of money related to taxable income that cannot
-	 * be categorised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -458,7 +462,7 @@ public class TaxSD1 {
 	 */
 	public static final MMMessageAttribute mmSundryOrOtherRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "SndryOrOthrRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -469,10 +473,11 @@ public class TaxSD1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxDfrrdRate")
 	protected PercentageRate taxDeferredRate;
 	/**
-	 * Percentage of the amount of income eligible for deferred taxation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -500,7 +505,7 @@ public class TaxSD1 {
 	 */
 	public static final MMMessageAttribute mmTaxDeferredRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxDfrrdRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -511,10 +516,11 @@ public class TaxSD1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxFreeRate")
 	protected PercentageRate taxFreeRate;
 	/**
-	 * Percentage of the amount of money that has not been subject to taxation.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -543,7 +549,7 @@ public class TaxSD1 {
 	 */
 	public static final MMMessageAttribute mmTaxFreeRate = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> TaxSD1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.TaxSD1.mmObject();
 			isDerived = false;
 			xmlTag = "TaxFreeRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -558,9 +564,11 @@ public class TaxSD1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TaxSD1.mmPlaceAndName, TaxSD1.mmForeignTaxCreditAmount, TaxSD1.mmForeignTaxCreditRate, TaxSD1.mmForeignSourceAmount, TaxSD1.mmForeignSourceRate, TaxSD1.mmTaxAdvantageType,
-						TaxSD1.mmTaxAdvantageAmount, TaxSD1.mmTaxAdvantageRate, TaxSD1.mmSundryOrOtherRate, TaxSD1.mmTaxDeferredRate, TaxSD1.mmTaxFreeRate);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TaxSD1.mmPlaceAndName, com.tools20022.repository.msg.TaxSD1.mmForeignTaxCreditAmount, com.tools20022.repository.msg.TaxSD1.mmForeignTaxCreditRate,
+						com.tools20022.repository.msg.TaxSD1.mmForeignSourceAmount, com.tools20022.repository.msg.TaxSD1.mmForeignSourceRate, com.tools20022.repository.msg.TaxSD1.mmTaxAdvantageType,
+						com.tools20022.repository.msg.TaxSD1.mmTaxAdvantageAmount, com.tools20022.repository.msg.TaxSD1.mmTaxAdvantageRate, com.tools20022.repository.msg.TaxSD1.mmSundryOrOtherRate,
+						com.tools20022.repository.msg.TaxSD1.mmTaxDeferredRate, com.tools20022.repository.msg.TaxSD1.mmTaxFreeRate);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxSD1";
 				definition = "Provides extra tax details.";
@@ -569,102 +577,102 @@ public class TaxSD1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "PlcAndNm")
-	public Max350Text getPlaceAndName() {
-		return placeAndName;
+	public Optional<Max350Text> getPlaceAndName() {
+		return placeAndName == null ? Optional.empty() : Optional.of(placeAndName);
 	}
 
-	public void setPlaceAndName(Max350Text placeAndName) {
+	public TaxSD1 setPlaceAndName(Max350Text placeAndName) {
 		this.placeAndName = placeAndName;
+		return this;
 	}
 
-	@XmlElement(name = "FrgnTaxCdtAmt")
-	public RestrictedFINActiveCurrencyAndAmount getForeignTaxCreditAmount() {
-		return foreignTaxCreditAmount;
+	public Optional<RestrictedFINActiveCurrencyAndAmount> getForeignTaxCreditAmount() {
+		return foreignTaxCreditAmount == null ? Optional.empty() : Optional.of(foreignTaxCreditAmount);
 	}
 
-	public void setForeignTaxCreditAmount(RestrictedFINActiveCurrencyAndAmount foreignTaxCreditAmount) {
+	public TaxSD1 setForeignTaxCreditAmount(RestrictedFINActiveCurrencyAndAmount foreignTaxCreditAmount) {
 		this.foreignTaxCreditAmount = foreignTaxCreditAmount;
+		return this;
 	}
 
-	@XmlElement(name = "FrgnTaxCdtRate")
-	public PercentageRate getForeignTaxCreditRate() {
-		return foreignTaxCreditRate;
+	public Optional<PercentageRate> getForeignTaxCreditRate() {
+		return foreignTaxCreditRate == null ? Optional.empty() : Optional.of(foreignTaxCreditRate);
 	}
 
-	public void setForeignTaxCreditRate(PercentageRate foreignTaxCreditRate) {
+	public TaxSD1 setForeignTaxCreditRate(PercentageRate foreignTaxCreditRate) {
 		this.foreignTaxCreditRate = foreignTaxCreditRate;
+		return this;
 	}
 
-	@XmlElement(name = "FrgnSrcAmt")
-	public RestrictedFINActiveCurrencyAndAmount getForeignSourceAmount() {
-		return foreignSourceAmount;
+	public Optional<RestrictedFINActiveCurrencyAndAmount> getForeignSourceAmount() {
+		return foreignSourceAmount == null ? Optional.empty() : Optional.of(foreignSourceAmount);
 	}
 
-	public void setForeignSourceAmount(RestrictedFINActiveCurrencyAndAmount foreignSourceAmount) {
+	public TaxSD1 setForeignSourceAmount(RestrictedFINActiveCurrencyAndAmount foreignSourceAmount) {
 		this.foreignSourceAmount = foreignSourceAmount;
+		return this;
 	}
 
-	@XmlElement(name = "FrgnSrcRate")
-	public PercentageRate getForeignSourceRate() {
-		return foreignSourceRate;
+	public Optional<PercentageRate> getForeignSourceRate() {
+		return foreignSourceRate == null ? Optional.empty() : Optional.of(foreignSourceRate);
 	}
 
-	public void setForeignSourceRate(PercentageRate foreignSourceRate) {
+	public TaxSD1 setForeignSourceRate(PercentageRate foreignSourceRate) {
 		this.foreignSourceRate = foreignSourceRate;
+		return this;
 	}
 
-	@XmlElement(name = "TaxAdvntgTp")
-	public TaxAdvantageType1Code getTaxAdvantageType() {
-		return taxAdvantageType;
+	public Optional<TaxAdvantageType1Code> getTaxAdvantageType() {
+		return taxAdvantageType == null ? Optional.empty() : Optional.of(taxAdvantageType);
 	}
 
-	public void setTaxAdvantageType(TaxAdvantageType1Code taxAdvantageType) {
+	public TaxSD1 setTaxAdvantageType(TaxAdvantageType1Code taxAdvantageType) {
 		this.taxAdvantageType = taxAdvantageType;
+		return this;
 	}
 
-	@XmlElement(name = "TaxAdvntgAmt")
-	public RestrictedFINActiveCurrencyAndAmount getTaxAdvantageAmount() {
-		return taxAdvantageAmount;
+	public Optional<RestrictedFINActiveCurrencyAndAmount> getTaxAdvantageAmount() {
+		return taxAdvantageAmount == null ? Optional.empty() : Optional.of(taxAdvantageAmount);
 	}
 
-	public void setTaxAdvantageAmount(RestrictedFINActiveCurrencyAndAmount taxAdvantageAmount) {
+	public TaxSD1 setTaxAdvantageAmount(RestrictedFINActiveCurrencyAndAmount taxAdvantageAmount) {
 		this.taxAdvantageAmount = taxAdvantageAmount;
+		return this;
 	}
 
-	@XmlElement(name = "TaxAdvntgRate")
-	public PercentageRate getTaxAdvantageRate() {
-		return taxAdvantageRate;
+	public Optional<PercentageRate> getTaxAdvantageRate() {
+		return taxAdvantageRate == null ? Optional.empty() : Optional.of(taxAdvantageRate);
 	}
 
-	public void setTaxAdvantageRate(PercentageRate taxAdvantageRate) {
+	public TaxSD1 setTaxAdvantageRate(PercentageRate taxAdvantageRate) {
 		this.taxAdvantageRate = taxAdvantageRate;
+		return this;
 	}
 
-	@XmlElement(name = "SndryOrOthrRate")
-	public PercentageRate getSundryOrOtherRate() {
-		return sundryOrOtherRate;
+	public Optional<PercentageRate> getSundryOrOtherRate() {
+		return sundryOrOtherRate == null ? Optional.empty() : Optional.of(sundryOrOtherRate);
 	}
 
-	public void setSundryOrOtherRate(PercentageRate sundryOrOtherRate) {
+	public TaxSD1 setSundryOrOtherRate(PercentageRate sundryOrOtherRate) {
 		this.sundryOrOtherRate = sundryOrOtherRate;
+		return this;
 	}
 
-	@XmlElement(name = "TaxDfrrdRate")
-	public PercentageRate getTaxDeferredRate() {
-		return taxDeferredRate;
+	public Optional<PercentageRate> getTaxDeferredRate() {
+		return taxDeferredRate == null ? Optional.empty() : Optional.of(taxDeferredRate);
 	}
 
-	public void setTaxDeferredRate(PercentageRate taxDeferredRate) {
+	public TaxSD1 setTaxDeferredRate(PercentageRate taxDeferredRate) {
 		this.taxDeferredRate = taxDeferredRate;
+		return this;
 	}
 
-	@XmlElement(name = "TaxFreeRate")
-	public PercentageRate getTaxFreeRate() {
-		return taxFreeRate;
+	public Optional<PercentageRate> getTaxFreeRate() {
+		return taxFreeRate == null ? Optional.empty() : Optional.of(taxFreeRate);
 	}
 
-	public void setTaxFreeRate(PercentageRate taxFreeRate) {
+	public TaxSD1 setTaxFreeRate(PercentageRate taxFreeRate) {
 		this.taxFreeRate = taxFreeRate;
+		return this;
 	}
 }

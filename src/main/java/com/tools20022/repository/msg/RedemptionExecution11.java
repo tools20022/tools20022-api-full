@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.RedemptionExecution;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -57,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Extract of trade data for a redemption order execution."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RedemptionExecution11", propOrder = {"investmentAccountDetails", "financialInstrumentDetails", "financialInstrumentQuantity"})
 public class RedemptionExecution11 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "InvstmtAcctDtls")
 	protected InvestmentAccount30 investmentAccountDetails;
 	/**
-	 * Account information of the subscription order / subscription order
-	 * confirmation for which the advice is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -112,7 +113,7 @@ public class RedemptionExecution11 {
 	public static final MMMessageAssociationEnd mmInvestmentAccountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentAccount;
-			componentContext_lazy = () -> RedemptionExecution11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionExecution11.mmObject();
 			isDerived = false;
 			xmlTag = "InvstmtAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -124,11 +125,11 @@ public class RedemptionExecution11 {
 			type_lazy = () -> com.tools20022.repository.msg.InvestmentAccount30.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmDtls")
 	protected FinancialInstrument18 financialInstrumentDetails;
 	/**
-	 * Financial instrument information of the subscription order / subscription
-	 * order confirmation for which the advice is given.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -162,7 +163,7 @@ public class RedemptionExecution11 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmInvestmentFundClass;
-			componentContext_lazy = () -> RedemptionExecution11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionExecution11.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +175,11 @@ public class RedemptionExecution11 {
 			type_lazy = () -> com.tools20022.repository.msg.FinancialInstrument18.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmQty")
 	protected FinancialInstrumentQuantity3 financialInstrumentQuantity;
 	/**
-	 * Quantity of an order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -210,7 +212,7 @@ public class RedemptionExecution11 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundOrder.mmUnitsNumber;
-			componentContext_lazy = () -> RedemptionExecution11.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.RedemptionExecution11.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -226,9 +228,10 @@ public class RedemptionExecution11 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RedemptionExecution11.mmInvestmentAccountDetails, RedemptionExecution11.mmFinancialInstrumentDetails, RedemptionExecution11.mmFinancialInstrumentQuantity);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.RedemptionExecution11.mmInvestmentAccountDetails, com.tools20022.repository.msg.RedemptionExecution11.mmFinancialInstrumentDetails,
+						com.tools20022.repository.msg.RedemptionExecution11.mmFinancialInstrumentQuantity);
 				trace_lazy = () -> RedemptionExecution.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RedemptionExecution11";
 				definition = "Extract of trade data for a redemption order execution.";
@@ -237,30 +240,30 @@ public class RedemptionExecution11 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "InvstmtAcctDtls")
-	public InvestmentAccount30 getInvestmentAccountDetails() {
-		return investmentAccountDetails;
+	public Optional<InvestmentAccount30> getInvestmentAccountDetails() {
+		return investmentAccountDetails == null ? Optional.empty() : Optional.of(investmentAccountDetails);
 	}
 
-	public void setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount30 investmentAccountDetails) {
+	public RedemptionExecution11 setInvestmentAccountDetails(com.tools20022.repository.msg.InvestmentAccount30 investmentAccountDetails) {
 		this.investmentAccountDetails = investmentAccountDetails;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmDtls")
-	public FinancialInstrument18 getFinancialInstrumentDetails() {
-		return financialInstrumentDetails;
+	public Optional<FinancialInstrument18> getFinancialInstrumentDetails() {
+		return financialInstrumentDetails == null ? Optional.empty() : Optional.of(financialInstrumentDetails);
 	}
 
-	public void setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument18 financialInstrumentDetails) {
+	public RedemptionExecution11 setFinancialInstrumentDetails(com.tools20022.repository.msg.FinancialInstrument18 financialInstrumentDetails) {
 		this.financialInstrumentDetails = financialInstrumentDetails;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmQty")
-	public FinancialInstrumentQuantity3 getFinancialInstrumentQuantity() {
-		return financialInstrumentQuantity;
+	public Optional<FinancialInstrumentQuantity3> getFinancialInstrumentQuantity() {
+		return financialInstrumentQuantity == null ? Optional.empty() : Optional.of(financialInstrumentQuantity);
 	}
 
-	public void setFinancialInstrumentQuantity(com.tools20022.repository.msg.FinancialInstrumentQuantity3 financialInstrumentQuantity) {
+	public RedemptionExecution11 setFinancialInstrumentQuantity(com.tools20022.repository.msg.FinancialInstrumentQuantity3 financialInstrumentQuantity) {
 		this.financialInstrumentQuantity = financialInstrumentQuantity;
+		return this;
 	}
 }

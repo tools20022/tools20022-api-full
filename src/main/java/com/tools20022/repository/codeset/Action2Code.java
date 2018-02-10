@@ -20,61 +20,64 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ActionCode;
+import com.tools20022.repository.codeset.Action2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies which type of action a user should take.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ActionCode ActionCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.Action2Code#mmSubmitTwin
- * Action2Code.mmSubmitTwin}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.Action2Code#mmReSubmitTwin
- * Action2Code.mmReSubmitTwin}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Action2Code#SubmitTwin
+ * Action2Code.SubmitTwin}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Action2Code#ReSubmitTwin
+ * Action2Code.ReSubmitTwin}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Action2Code#mmReSubmitBaseline
- * Action2Code.mmReSubmitBaseline}</li>
+ * {@linkplain com.tools20022.repository.codeset.Action2Code#ReSubmitBaseline
+ * Action2Code.ReSubmitBaseline}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Action2Code#mmAcceptOrRejectDataSetMisMatches
- * Action2Code.mmAcceptOrRejectDataSetMisMatches}</li>
+ * {@linkplain com.tools20022.repository.codeset.Action2Code#AcceptOrRejectDataSetMisMatches
+ * Action2Code.AcceptOrRejectDataSetMisMatches}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Action2Code#mmAcceptOrRejectChangeOfStatus
- * Action2Code.mmAcceptOrRejectChangeOfStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.Action2Code#AcceptOrRejectChangeOfStatus
+ * Action2Code.AcceptOrRejectChangeOfStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Action2Code#mmAcceptOrRejectExtensionOfStatus
- * Action2Code.mmAcceptOrRejectExtensionOfStatus}</li>
+ * {@linkplain com.tools20022.repository.codeset.Action2Code#AcceptOrRejectExtensionOfStatus
+ * Action2Code.AcceptOrRejectExtensionOfStatus}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Action2Code#mmWaitForBaselineEstablished
- * Action2Code.mmWaitForBaselineEstablished}</li>
+ * {@linkplain com.tools20022.repository.codeset.Action2Code#WaitForBaselineEstablished
+ * Action2Code.WaitForBaselineEstablished}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Action2Code#mmUpdateAndResend
- * Action2Code.mmUpdateAndResend}</li>
+ * {@linkplain com.tools20022.repository.codeset.Action2Code#UpdateAndResend
+ * Action2Code.UpdateAndResend}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Action2Code#SubmitDataSet
+ * Action2Code.SubmitDataSet}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Action2Code#mmSubmitDataSet
- * Action2Code.mmSubmitDataSet}</li>
+ * {@linkplain com.tools20022.repository.codeset.Action2Code#AcceptOrRejectBaselineAmendment
+ * Action2Code.AcceptOrRejectBaselineAmendment}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Action2Code#mmAcceptOrRejectBaselineAmendment
- * Action2Code.mmAcceptOrRejectBaselineAmendment}</li>
+ * {@linkplain com.tools20022.repository.codeset.Action2Code#AcceptOrRejectBaselineAndRole
+ * Action2Code.AcceptOrRejectBaselineAndRole}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.Action2Code#mmAcceptOrRejectBaselineAndRole
- * Action2Code.mmAcceptOrRejectBaselineAndRole}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.Action2Code#mmCheckInvoiceReference
- * Action2Code.mmCheckInvoiceReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.Action2Code#CheckInvoiceReference
+ * Action2Code.CheckInvoiceReference}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ActionCode ActionCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -91,7 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies which type of action a user should take."</li>
  * </ul>
  */
-public class Action2Code extends ActionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class Action2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -109,11 +113,12 @@ public class Action2Code extends ActionCode {
 	 * name} = "SubmitTwin"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubmitTwin = new MMCode() {
+	public static final Action2Code SubmitTwin = new Action2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitTwin";
-			owner_lazy = () -> Action2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Action2Code.mmObject();
+			codeName = ActionCode.SubmitTwin.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -131,11 +136,12 @@ public class Action2Code extends ActionCode {
 	 * name} = "ReSubmitTwin"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReSubmitTwin = new MMCode() {
+	public static final Action2Code ReSubmitTwin = new Action2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReSubmitTwin";
-			owner_lazy = () -> Action2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Action2Code.mmObject();
+			codeName = ActionCode.ReSubmitTwin.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -153,11 +159,12 @@ public class Action2Code extends ActionCode {
 	 * name} = "ReSubmitBaseline"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmReSubmitBaseline = new MMCode() {
+	public static final Action2Code ReSubmitBaseline = new Action2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReSubmitBaseline";
-			owner_lazy = () -> Action2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Action2Code.mmObject();
+			codeName = ActionCode.ReSubmitBaseline.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -175,11 +182,12 @@ public class Action2Code extends ActionCode {
 	 * name} = "AcceptOrRejectDataSetMisMatches"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptOrRejectDataSetMisMatches = new MMCode() {
+	public static final Action2Code AcceptOrRejectDataSetMisMatches = new Action2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptOrRejectDataSetMisMatches";
-			owner_lazy = () -> Action2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Action2Code.mmObject();
+			codeName = ActionCode.AcceptOrRejectDataSetMisMatches.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -197,11 +205,12 @@ public class Action2Code extends ActionCode {
 	 * name} = "AcceptOrRejectChangeOfStatus"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptOrRejectChangeOfStatus = new MMCode() {
+	public static final Action2Code AcceptOrRejectChangeOfStatus = new Action2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptOrRejectChangeOfStatus";
-			owner_lazy = () -> Action2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Action2Code.mmObject();
+			codeName = ActionCode.AcceptOrRejectChangeOfStatus.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -219,11 +228,12 @@ public class Action2Code extends ActionCode {
 	 * name} = "AcceptOrRejectExtensionOfStatus"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptOrRejectExtensionOfStatus = new MMCode() {
+	public static final Action2Code AcceptOrRejectExtensionOfStatus = new Action2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptOrRejectExtensionOfStatus";
-			owner_lazy = () -> Action2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Action2Code.mmObject();
+			codeName = ActionCode.AcceptOrRejectExtensionOfStatus.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -241,11 +251,12 @@ public class Action2Code extends ActionCode {
 	 * name} = "WaitForBaselineEstablished"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmWaitForBaselineEstablished = new MMCode() {
+	public static final Action2Code WaitForBaselineEstablished = new Action2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaitForBaselineEstablished";
-			owner_lazy = () -> Action2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Action2Code.mmObject();
+			codeName = ActionCode.WaitForBaselineEstablished.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -263,11 +274,12 @@ public class Action2Code extends ActionCode {
 	 * name} = "UpdateAndResend"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUpdateAndResend = new MMCode() {
+	public static final Action2Code UpdateAndResend = new Action2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateAndResend";
-			owner_lazy = () -> Action2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Action2Code.mmObject();
+			codeName = ActionCode.UpdateAndResend.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -285,11 +297,12 @@ public class Action2Code extends ActionCode {
 	 * name} = "SubmitDataSet"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSubmitDataSet = new MMCode() {
+	public static final Action2Code SubmitDataSet = new Action2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmitDataSet";
-			owner_lazy = () -> Action2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Action2Code.mmObject();
+			codeName = ActionCode.SubmitDataSet.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -307,11 +320,12 @@ public class Action2Code extends ActionCode {
 	 * name} = "AcceptOrRejectBaselineAmendment"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptOrRejectBaselineAmendment = new MMCode() {
+	public static final Action2Code AcceptOrRejectBaselineAmendment = new Action2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptOrRejectBaselineAmendment";
-			owner_lazy = () -> Action2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Action2Code.mmObject();
+			codeName = ActionCode.AcceptOrRejectBaselineAmendment.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -329,11 +343,12 @@ public class Action2Code extends ActionCode {
 	 * name} = "AcceptOrRejectBaselineAndRole"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptOrRejectBaselineAndRole = new MMCode() {
+	public static final Action2Code AcceptOrRejectBaselineAndRole = new Action2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptOrRejectBaselineAndRole";
-			owner_lazy = () -> Action2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Action2Code.mmObject();
+			codeName = ActionCode.AcceptOrRejectBaselineAndRole.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -351,28 +366,71 @@ public class Action2Code extends ActionCode {
 	 * name} = "CheckInvoiceReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCheckInvoiceReference = new MMCode() {
+	public static final Action2Code CheckInvoiceReference = new Action2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CheckInvoiceReference";
-			owner_lazy = () -> Action2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.Action2Code.mmObject();
+			codeName = ActionCode.CheckInvoiceReference.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, Action2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected Action2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("SBTW");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Action2Code";
 				definition = "Specifies which type of action a user should take.";
-				code_lazy = () -> Arrays.asList(Action2Code.mmSubmitTwin, Action2Code.mmReSubmitTwin, Action2Code.mmReSubmitBaseline, Action2Code.mmAcceptOrRejectDataSetMisMatches, Action2Code.mmAcceptOrRejectChangeOfStatus,
-						Action2Code.mmAcceptOrRejectExtensionOfStatus, Action2Code.mmWaitForBaselineEstablished, Action2Code.mmUpdateAndResend, Action2Code.mmSubmitDataSet, Action2Code.mmAcceptOrRejectBaselineAmendment,
-						Action2Code.mmAcceptOrRejectBaselineAndRole, Action2Code.mmCheckInvoiceReference);
 				trace_lazy = () -> ActionCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Action2Code.SubmitTwin, com.tools20022.repository.codeset.Action2Code.ReSubmitTwin, com.tools20022.repository.codeset.Action2Code.ReSubmitBaseline,
+						com.tools20022.repository.codeset.Action2Code.AcceptOrRejectDataSetMisMatches, com.tools20022.repository.codeset.Action2Code.AcceptOrRejectChangeOfStatus,
+						com.tools20022.repository.codeset.Action2Code.AcceptOrRejectExtensionOfStatus, com.tools20022.repository.codeset.Action2Code.WaitForBaselineEstablished, com.tools20022.repository.codeset.Action2Code.UpdateAndResend,
+						com.tools20022.repository.codeset.Action2Code.SubmitDataSet, com.tools20022.repository.codeset.Action2Code.AcceptOrRejectBaselineAmendment,
+						com.tools20022.repository.codeset.Action2Code.AcceptOrRejectBaselineAndRole, com.tools20022.repository.codeset.Action2Code.CheckInvoiceReference);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(SubmitTwin.getCodeName().get(), SubmitTwin);
+		codesByName.put(ReSubmitTwin.getCodeName().get(), ReSubmitTwin);
+		codesByName.put(ReSubmitBaseline.getCodeName().get(), ReSubmitBaseline);
+		codesByName.put(AcceptOrRejectDataSetMisMatches.getCodeName().get(), AcceptOrRejectDataSetMisMatches);
+		codesByName.put(AcceptOrRejectChangeOfStatus.getCodeName().get(), AcceptOrRejectChangeOfStatus);
+		codesByName.put(AcceptOrRejectExtensionOfStatus.getCodeName().get(), AcceptOrRejectExtensionOfStatus);
+		codesByName.put(WaitForBaselineEstablished.getCodeName().get(), WaitForBaselineEstablished);
+		codesByName.put(UpdateAndResend.getCodeName().get(), UpdateAndResend);
+		codesByName.put(SubmitDataSet.getCodeName().get(), SubmitDataSet);
+		codesByName.put(AcceptOrRejectBaselineAmendment.getCodeName().get(), AcceptOrRejectBaselineAmendment);
+		codesByName.put(AcceptOrRejectBaselineAndRole.getCodeName().get(), AcceptOrRejectBaselineAndRole);
+		codesByName.put(CheckInvoiceReference.getCodeName().get(), CheckInvoiceReference);
+	}
+
+	public static Action2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static Action2Code[] values() {
+		Action2Code[] values = new Action2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, Action2Code> {
+		@Override
+		public Action2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(Action2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

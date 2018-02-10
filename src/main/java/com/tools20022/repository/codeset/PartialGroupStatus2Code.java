@@ -20,10 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.PaymentStatusCode;
+import com.tools20022.repository.codeset.PartialGroupStatus2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Indicates the status of a single payment transaction or of a group of payment
@@ -31,39 +35,39 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.PaymentStatusCode
- * PaymentStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#mmAcceptedTechnicalValidation
- * PartialGroupStatus2Code.mmAcceptedTechnicalValidation}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#AcceptedTechnicalValidation
+ * PartialGroupStatus2Code.AcceptedTechnicalValidation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#mmAcceptedCustomerProfile
- * PartialGroupStatus2Code.mmAcceptedCustomerProfile}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#AcceptedCustomerProfile
+ * PartialGroupStatus2Code.AcceptedCustomerProfile}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#mmAcceptedSettlementInProcess
- * PartialGroupStatus2Code.mmAcceptedSettlementInProcess}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#AcceptedSettlementInProcess
+ * PartialGroupStatus2Code.AcceptedSettlementInProcess}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#mmAcceptedSettlementCompleted
- * PartialGroupStatus2Code.mmAcceptedSettlementCompleted}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#AcceptedSettlementCompleted
+ * PartialGroupStatus2Code.AcceptedSettlementCompleted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#mmAcceptedCancellationRequest
- * PartialGroupStatus2Code.mmAcceptedCancellationRequest}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#AcceptedCancellationRequest
+ * PartialGroupStatus2Code.AcceptedCancellationRequest}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#mmAcceptedWithChange
- * PartialGroupStatus2Code.mmAcceptedWithChange}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#AcceptedWithChange
+ * PartialGroupStatus2Code.AcceptedWithChange}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#mmPending
- * PartialGroupStatus2Code.mmPending}</li>
+ * {@linkplain com.tools20022.repository.codeset.PartialGroupStatus2Code#Pending
+ * PartialGroupStatus2Code.Pending}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.PaymentStatusCode
+ * PaymentStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -82,7 +86,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * </ul>
  */
-public class PartialGroupStatus2Code extends PaymentStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class PartialGroupStatus2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -101,11 +106,12 @@ public class PartialGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "AcceptedTechnicalValidation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedTechnicalValidation = new MMCode() {
+	public static final PartialGroupStatus2Code AcceptedTechnicalValidation = new PartialGroupStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedTechnicalValidation";
-			owner_lazy = () -> PartialGroupStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartialGroupStatus2Code.mmObject();
+			codeName = PaymentStatusCode.AcceptedTechnicalValidation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -124,11 +130,12 @@ public class PartialGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "AcceptedCustomerProfile"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedCustomerProfile = new MMCode() {
+	public static final PartialGroupStatus2Code AcceptedCustomerProfile = new PartialGroupStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedCustomerProfile";
-			owner_lazy = () -> PartialGroupStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartialGroupStatus2Code.mmObject();
+			codeName = PaymentStatusCode.AcceptedCustomerProfile.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -147,11 +154,12 @@ public class PartialGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "AcceptedSettlementInProcess"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedSettlementInProcess = new MMCode() {
+	public static final PartialGroupStatus2Code AcceptedSettlementInProcess = new PartialGroupStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedSettlementInProcess";
-			owner_lazy = () -> PartialGroupStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartialGroupStatus2Code.mmObject();
+			codeName = PaymentStatusCode.AcceptedSettlementInProcess.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -170,11 +178,12 @@ public class PartialGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "AcceptedSettlementCompleted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedSettlementCompleted = new MMCode() {
+	public static final PartialGroupStatus2Code AcceptedSettlementCompleted = new PartialGroupStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedSettlementCompleted";
-			owner_lazy = () -> PartialGroupStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartialGroupStatus2Code.mmObject();
+			codeName = PaymentStatusCode.AcceptedSettlementCompleted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -193,11 +202,12 @@ public class PartialGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "AcceptedCancellationRequest"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedCancellationRequest = new MMCode() {
+	public static final PartialGroupStatus2Code AcceptedCancellationRequest = new PartialGroupStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedCancellationRequest";
-			owner_lazy = () -> PartialGroupStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartialGroupStatus2Code.mmObject();
+			codeName = PaymentStatusCode.AcceptedCancellationRequest.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -216,11 +226,12 @@ public class PartialGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "AcceptedWithChange"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAcceptedWithChange = new MMCode() {
+	public static final PartialGroupStatus2Code AcceptedWithChange = new PartialGroupStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedWithChange";
-			owner_lazy = () -> PartialGroupStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartialGroupStatus2Code.mmObject();
+			codeName = PaymentStatusCode.AcceptedWithChange.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -239,27 +250,65 @@ public class PartialGroupStatus2Code extends PaymentStatusCode {
 	 * name} = "Pending"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPending = new MMCode() {
+	public static final PartialGroupStatus2Code Pending = new PartialGroupStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pending";
-			owner_lazy = () -> PartialGroupStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.PartialGroupStatus2Code.mmObject();
+			codeName = PaymentStatusCode.Pending.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, PartialGroupStatus2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected PartialGroupStatus2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("ACTC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartialGroupStatus2Code";
 				definition = "Indicates the status of a single payment transaction or of a group of payment transactions.";
-				code_lazy = () -> Arrays.asList(PartialGroupStatus2Code.mmAcceptedTechnicalValidation, PartialGroupStatus2Code.mmAcceptedCustomerProfile, PartialGroupStatus2Code.mmAcceptedSettlementInProcess,
-						PartialGroupStatus2Code.mmAcceptedSettlementCompleted, PartialGroupStatus2Code.mmAcceptedCancellationRequest, PartialGroupStatus2Code.mmAcceptedWithChange, PartialGroupStatus2Code.mmPending);
 				trace_lazy = () -> PaymentStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PartialGroupStatus2Code.AcceptedTechnicalValidation, com.tools20022.repository.codeset.PartialGroupStatus2Code.AcceptedCustomerProfile,
+						com.tools20022.repository.codeset.PartialGroupStatus2Code.AcceptedSettlementInProcess, com.tools20022.repository.codeset.PartialGroupStatus2Code.AcceptedSettlementCompleted,
+						com.tools20022.repository.codeset.PartialGroupStatus2Code.AcceptedCancellationRequest, com.tools20022.repository.codeset.PartialGroupStatus2Code.AcceptedWithChange,
+						com.tools20022.repository.codeset.PartialGroupStatus2Code.Pending);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AcceptedTechnicalValidation.getCodeName().get(), AcceptedTechnicalValidation);
+		codesByName.put(AcceptedCustomerProfile.getCodeName().get(), AcceptedCustomerProfile);
+		codesByName.put(AcceptedSettlementInProcess.getCodeName().get(), AcceptedSettlementInProcess);
+		codesByName.put(AcceptedSettlementCompleted.getCodeName().get(), AcceptedSettlementCompleted);
+		codesByName.put(AcceptedCancellationRequest.getCodeName().get(), AcceptedCancellationRequest);
+		codesByName.put(AcceptedWithChange.getCodeName().get(), AcceptedWithChange);
+		codesByName.put(Pending.getCodeName().get(), Pending);
+	}
+
+	public static PartialGroupStatus2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static PartialGroupStatus2Code[] values() {
+		PartialGroupStatus2Code[] values = new PartialGroupStatus2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, PartialGroupStatus2Code> {
+		@Override
+		public PartialGroupStatus2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(PartialGroupStatus2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

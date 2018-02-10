@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.RenounceableStatusCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the renounceable status.
@@ -32,11 +37,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RenounceableStatusCode#mmNonRenounceable
- * RenounceableStatusCode.mmNonRenounceable}</li>
+ * {@linkplain com.tools20022.repository.codeset.RenounceableStatusCode#NonRenounceable
+ * RenounceableStatusCode.NonRenounceable}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.RenounceableStatusCode#mmRenounceable
- * RenounceableStatusCode.mmRenounceable}</li>
+ * {@linkplain com.tools20022.repository.codeset.RenounceableStatusCode#Renounceable
+ * RenounceableStatusCode.Renounceable}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -49,8 +54,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -67,7 +72,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the renounceable status."</li>
  * </ul>
  */
-public class RenounceableStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class RenounceableStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,12 +97,12 @@ public class RenounceableStatusCode {
 	 * definition} = "Intermediate securities cannot be sold."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNonRenounceable = new MMCode() {
+	public static final RenounceableStatusCode NonRenounceable = new RenounceableStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonRenounceable";
 			definition = "Intermediate securities cannot be sold.";
-			owner_lazy = () -> RenounceableStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RenounceableStatusCode.mmObject();
 			codeName = "NREN";
 		}
 	};
@@ -121,28 +127,58 @@ public class RenounceableStatusCode {
 	 * definition} = "Intermediate securities can be sold."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmRenounceable = new MMCode() {
+	public static final RenounceableStatusCode Renounceable = new RenounceableStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Renounceable";
 			definition = "Intermediate securities can be sold.";
-			owner_lazy = () -> RenounceableStatusCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.RenounceableStatusCode.mmObject();
 			codeName = "RENO";
 		}
 	};
+	final static private LinkedHashMap<String, RenounceableStatusCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected RenounceableStatusCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("NREN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RenounceableStatusCode";
 				definition = "Specifies the renounceable status.";
-				code_lazy = () -> Arrays.asList(RenounceableStatusCode.mmNonRenounceable, RenounceableStatusCode.mmRenounceable);
 				derivation_lazy = () -> Arrays.asList(RenounceableStatus1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RenounceableStatusCode.NonRenounceable, com.tools20022.repository.codeset.RenounceableStatusCode.Renounceable);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NonRenounceable.getCodeName().get(), NonRenounceable);
+		codesByName.put(Renounceable.getCodeName().get(), Renounceable);
+	}
+
+	public static RenounceableStatusCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static RenounceableStatusCode[] values() {
+		RenounceableStatusCode[] values = new RenounceableStatusCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, RenounceableStatusCode> {
+		@Override
+		public RenounceableStatusCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(RenounceableStatusCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

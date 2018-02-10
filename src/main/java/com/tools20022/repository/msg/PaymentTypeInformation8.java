@@ -29,6 +29,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +60,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -73,16 +75,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PaymentTypeInformation8", propOrder = {"serviceLevel", "sequenceType"})
 public class PaymentTypeInformation8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SvcLvl", required = true)
 	protected ServiceLevel5 serviceLevel;
 	/**
-	 * Agreement under which or rules under which the transaction should be
-	 * processed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -116,7 +118,7 @@ public class PaymentTypeInformation8 {
 	public static final MMMessageAssociationEnd mmServiceLevel = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmServiceLevel;
-			componentContext_lazy = () -> PaymentTypeInformation8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation8.mmObject();
 			isDerived = false;
 			xmlTag = "SvcLvl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -128,11 +130,11 @@ public class PaymentTypeInformation8 {
 			type_lazy = () -> com.tools20022.repository.msg.ServiceLevel5.mmObject();
 		}
 	};
+	@XmlElement(name = "SeqTp")
 	protected SequenceType1Code sequenceType;
 	/**
-	 * Identifies the direct debit sequence, eg, first, recurrent, final or
-	 * one-off.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -168,7 +170,7 @@ public class PaymentTypeInformation8 {
 	public static final MMMessageAttribute mmSequenceType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PaymentProcessing.mmSequenceType;
-			componentContext_lazy = () -> PaymentTypeInformation8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PaymentTypeInformation8.mmObject();
 			isDerived = false;
 			xmlTag = "SeqTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -183,9 +185,9 @@ public class PaymentTypeInformation8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PaymentTypeInformation8.mmServiceLevel, PaymentTypeInformation8.mmSequenceType);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentTypeInformation8.mmServiceLevel, com.tools20022.repository.msg.PaymentTypeInformation8.mmSequenceType);
 				trace_lazy = () -> PaymentProcessing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -201,21 +203,21 @@ public class PaymentTypeInformation8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SvcLvl", required = true)
 	public ServiceLevel5 getServiceLevel() {
 		return serviceLevel;
 	}
 
-	public void setServiceLevel(com.tools20022.repository.msg.ServiceLevel5 serviceLevel) {
-		this.serviceLevel = serviceLevel;
+	public PaymentTypeInformation8 setServiceLevel(com.tools20022.repository.msg.ServiceLevel5 serviceLevel) {
+		this.serviceLevel = Objects.requireNonNull(serviceLevel);
+		return this;
 	}
 
-	@XmlElement(name = "SeqTp")
-	public SequenceType1Code getSequenceType() {
-		return sequenceType;
+	public Optional<SequenceType1Code> getSequenceType() {
+		return sequenceType == null ? Optional.empty() : Optional.of(sequenceType);
 	}
 
-	public void setSequenceType(SequenceType1Code sequenceType) {
+	public PaymentTypeInformation8 setSequenceType(SequenceType1Code sequenceType) {
 		this.sequenceType = sequenceType;
+		return this;
 	}
 }

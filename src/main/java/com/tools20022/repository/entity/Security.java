@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.*;
@@ -26,10 +27,8 @@ import com.tools20022.repository.entity.Asset;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Financial instruments representing a sum of rights of the investor vis-a-vis
@@ -41,6 +40,8 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -185,207 +186,6 @@ import java.util.List;
  * <li>
  * {@linkplain com.tools20022.repository.entity.Security#mmRestrictedIndicator
  * Security.mmRestrictedIndicator}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
- * subType} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.entity.InvestmentFundClass
- * InvestmentFundClass}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Debt Debt}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Equity Equity}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Warrant Warrant}</li>
- * <li>{@linkplain com.tools20022.repository.entity.Entitlement Entitlement}</li>
- * </ul>
- * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.choice.FormOfSecurity1Choice
- * FormOfSecurity1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.FormOfSecurity2Choice
- * FormOfSecurity2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PaymentDirection1Choice
- * PaymentDirection1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PaymentDirection2Choice
- * PaymentDirection2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.FormOfSecurity3Choice
- * FormOfSecurity3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnderlyingSecurity1
- * UnderlyingSecurity1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnderlyingSecurity2
- * UnderlyingSecurity2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnderlyingSecurity3
- * UnderlyingSecurity3}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator1Choice
- * TemporaryFinancialInstrumentIndicator1Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator2Choice
- * TemporaryFinancialInstrumentIndicator2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityDate9 SecurityDate9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityDate10 SecurityDate10}</li>
- * <li>{@linkplain com.tools20022.repository.choice.PaymentDirection3Choice
- * PaymentDirection3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails1
- * FinancialInstrumentDetails1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails4
- * FinancialInstrumentDetails4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails6
- * FinancialInstrumentDetails6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails7
- * FinancialInstrumentDetails7}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails10
- * FinancialInstrumentDetails10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails12
- * FinancialInstrumentDetails12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails14
- * FinancialInstrumentDetails14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails15
- * FinancialInstrumentDetails15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails2
- * FinancialInstrumentDetails2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails3
- * FinancialInstrumentDetails3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails5
- * FinancialInstrumentDetails5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails8
- * FinancialInstrumentDetails8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails9
- * FinancialInstrumentDetails9}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails11
- * FinancialInstrumentDetails11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails13
- * FinancialInstrumentDetails13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails16
- * FinancialInstrumentDetails16}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentStipulations
- * FinancialInstrumentStipulations}</li>
- * <li>{@linkplain com.tools20022.repository.choice.FormOfSecurity4Choice
- * FormOfSecurity4Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnderlyingFinancialInstrument1
- * UnderlyingFinancialInstrument1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentStipulations2
- * FinancialInstrumentStipulations2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.UnderlyingFinancialInstrument2
- * UnderlyingFinancialInstrument2}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDescription3
- * FinancialInstrumentDescription3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription1
- * SecurityInstrumentDescription1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument14
- * FinancialInstrument14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2
- * SecurityInstrumentDescription2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument15
- * FinancialInstrument15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCollateral1
- * SecuritiesCollateral1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument28
- * FinancialInstrument28}</li>
- * <li>{@linkplain com.tools20022.repository.choice.Appearance2Choice
- * Appearance2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.choice.FormOfSecurity5Choice
- * FormOfSecurity5Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1
- * CommonFinancialInstrumentAttributes1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.CloseLink1 CloseLink1}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument1
- * FinancialInstrument1}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstrumentIdentification1Choice
- * InstrumentIdentification1Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument2
- * FinancialInstrument2}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstrumentIdentification2Choice
- * InstrumentIdentification2Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails17
- * FinancialInstrumentDetails17}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails18
- * FinancialInstrumentDetails18}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCollateral2
- * SecuritiesCollateral2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCollateral3
- * SecuritiesCollateral3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCollateral4
- * SecuritiesCollateral4}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails20
- * FinancialInstrumentDetails20}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails21
- * FinancialInstrumentDetails21}</li>
- * <li>{@linkplain com.tools20022.repository.choice.FormOfSecurity6Choice
- * FormOfSecurity6Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityDate12 SecurityDate12}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator3Choice
- * TemporaryFinancialInstrumentIndicator3Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCollateral6
- * SecuritiesCollateral6}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCollateral5
- * SecuritiesCollateral5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCollateral7
- * SecuritiesCollateral7}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator4Choice
- * TemporaryFinancialInstrumentIndicator4Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityDate14 SecurityDate14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails23
- * FinancialInstrumentDetails23}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails22
- * FinancialInstrumentDetails22}</li>
- * <li>{@linkplain com.tools20022.repository.choice.FormOfSecurity7Choice
- * FormOfSecurity7Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription9
- * SecurityInstrumentDescription9}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription11
- * SecurityInstrumentDescription11}</li>
- * <li>{@linkplain com.tools20022.repository.choice.FinancialInstrument46Choice
- * FinancialInstrument46Choice}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument53
- * FinancialInstrument53}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransparencyDataReport11
- * TransparencyDataReport11}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransparencyDataReport13
- * TransparencyDataReport13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesReferenceDataReport5
- * SecuritiesReferenceDataReport5}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransparencyDataReport12
- * TransparencyDataReport12}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransparencyDataReport15
- * TransparencyDataReport15}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransparencyDataReport10
- * TransparencyDataReport10}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TransparencyDataReport14
- * TransparencyDataReport14}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument58
- * FinancialInstrument58}</li>
- * <li>{@linkplain com.tools20022.repository.choice.FinancialInstrument48Choice
- * FinancialInstrument48Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice
- * FinancialInstrumentAttributes3Choice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription13
- * SecurityInstrumentDescription13}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails25
- * FinancialInstrumentDetails25}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails24
- * FinancialInstrumentDetails24}</li>
- * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCollateral8
- * SecuritiesCollateral8}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails27
- * FinancialInstrumentDetails27}</li>
- * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails26
- * FinancialInstrumentDetails26}</li>
  * </ul>
  * </li>
  * <li>
@@ -674,11 +474,210 @@ import java.util.List;
  * FinancialInstrumentDetails26.mmFinancialInstrumentAttributes}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
+ * subType} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.entity.InvestmentFundClass
+ * InvestmentFundClass}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Debt Debt}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Equity Equity}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Warrant Warrant}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Entitlement Entitlement}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.FormOfSecurity1Choice
+ * FormOfSecurity1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.FormOfSecurity2Choice
+ * FormOfSecurity2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PaymentDirection1Choice
+ * PaymentDirection1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PaymentDirection2Choice
+ * PaymentDirection2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.FormOfSecurity3Choice
+ * FormOfSecurity3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnderlyingSecurity1
+ * UnderlyingSecurity1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnderlyingSecurity2
+ * UnderlyingSecurity2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnderlyingSecurity3
+ * UnderlyingSecurity3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator1Choice
+ * TemporaryFinancialInstrumentIndicator1Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator2Choice
+ * TemporaryFinancialInstrumentIndicator2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityDate9 SecurityDate9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityDate10 SecurityDate10}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.PaymentDirection3Choice
+ * PaymentDirection3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails1
+ * FinancialInstrumentDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails4
+ * FinancialInstrumentDetails4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails6
+ * FinancialInstrumentDetails6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails7
+ * FinancialInstrumentDetails7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails10
+ * FinancialInstrumentDetails10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails12
+ * FinancialInstrumentDetails12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails14
+ * FinancialInstrumentDetails14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails15
+ * FinancialInstrumentDetails15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails2
+ * FinancialInstrumentDetails2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails3
+ * FinancialInstrumentDetails3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails5
+ * FinancialInstrumentDetails5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails8
+ * FinancialInstrumentDetails8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails9
+ * FinancialInstrumentDetails9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails11
+ * FinancialInstrumentDetails11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails13
+ * FinancialInstrumentDetails13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails16
+ * FinancialInstrumentDetails16}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentStipulations
+ * FinancialInstrumentStipulations}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.FormOfSecurity4Choice
+ * FormOfSecurity4Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnderlyingFinancialInstrument1
+ * UnderlyingFinancialInstrument1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentStipulations2
+ * FinancialInstrumentStipulations2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnderlyingFinancialInstrument2
+ * UnderlyingFinancialInstrument2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDescription3
+ * FinancialInstrumentDescription3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription1
+ * SecurityInstrumentDescription1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument14
+ * FinancialInstrument14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription2
+ * SecurityInstrumentDescription2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument15
+ * FinancialInstrument15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCollateral1
+ * SecuritiesCollateral1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument28
+ * FinancialInstrument28}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Appearance2Choice
+ * Appearance2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.FormOfSecurity5Choice
+ * FormOfSecurity5Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1
+ * CommonFinancialInstrumentAttributes1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CloseLink1 CloseLink1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument1
+ * FinancialInstrument1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstrumentIdentification1Choice
+ * InstrumentIdentification1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument2
+ * FinancialInstrument2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstrumentIdentification2Choice
+ * InstrumentIdentification2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails17
+ * FinancialInstrumentDetails17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails18
+ * FinancialInstrumentDetails18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCollateral2
+ * SecuritiesCollateral2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCollateral3
+ * SecuritiesCollateral3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCollateral4
+ * SecuritiesCollateral4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails20
+ * FinancialInstrumentDetails20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails21
+ * FinancialInstrumentDetails21}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.FormOfSecurity6Choice
+ * FormOfSecurity6Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityDate12 SecurityDate12}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator3Choice
+ * TemporaryFinancialInstrumentIndicator3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCollateral6
+ * SecuritiesCollateral6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCollateral5
+ * SecuritiesCollateral5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCollateral7
+ * SecuritiesCollateral7}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TemporaryFinancialInstrumentIndicator4Choice
+ * TemporaryFinancialInstrumentIndicator4Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityDate14 SecurityDate14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails23
+ * FinancialInstrumentDetails23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails22
+ * FinancialInstrumentDetails22}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.FormOfSecurity7Choice
+ * FormOfSecurity7Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription9
+ * SecurityInstrumentDescription9}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription11
+ * SecurityInstrumentDescription11}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.FinancialInstrument46Choice
+ * FinancialInstrument46Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument53
+ * FinancialInstrument53}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransparencyDataReport11
+ * TransparencyDataReport11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransparencyDataReport13
+ * TransparencyDataReport13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesReferenceDataReport5
+ * SecuritiesReferenceDataReport5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransparencyDataReport12
+ * TransparencyDataReport12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransparencyDataReport15
+ * TransparencyDataReport15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransparencyDataReport10
+ * TransparencyDataReport10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransparencyDataReport14
+ * TransparencyDataReport14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument58
+ * FinancialInstrument58}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.FinancialInstrument48Choice
+ * FinancialInstrument48Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice
+ * FinancialInstrumentAttributes3Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription13
+ * SecurityInstrumentDescription13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails25
+ * FinancialInstrumentDetails25}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails24
+ * FinancialInstrumentDetails24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesCollateral8
+ * SecuritiesCollateral8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails27
+ * FinancialInstrumentDetails27}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails26
+ * FinancialInstrumentDetails26}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -696,8 +695,8 @@ public class Security extends Asset {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected List<com.tools20022.repository.entity.SecuritiesIdentification> identification;
 	/**
-	 * Way(s) of identifying the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -733,8 +732,8 @@ public class Security extends Asset {
 	public static final MMBusinessAssociationEnd mmIdentification = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> ListBuilderForSecurity_00.addElems(new ArrayList<>());
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Way(s) of identifying the security.";
@@ -746,8 +745,8 @@ public class Security extends Asset {
 	};
 	protected CountryCode registeredDistributionCountry;
 	/**
-	 * Country in which the processing characteristic applies.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -790,8 +789,8 @@ public class Security extends Asset {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmRegisteredDistributionCountry, SecurityIdentification1.mmRegisteredDistributionCountry, FinancialInstrument21.mmRegisteredDistributionCountry,
 					FinancialInstrument22.mmRegisteredDistributionCountry);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegisteredDistributionCountry";
 			definition = "Country in which the processing characteristic applies.";
@@ -810,8 +809,8 @@ public class Security extends Asset {
 	};
 	protected CurrencyCode denominationCurrency;
 	/**
-	 * Currency in which a security is issued or redenominated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1072,8 +1071,8 @@ public class Security extends Asset {
 					FinancialInstrumentAttributes71.mmDenominationCurrency, FinancialInstrumentAttributes75.mmDenominationCurrency, FinancialInstrumentAttributes78.mmDenominationCurrency,
 					FinancialInstrumentAttributes79.mmDenominationCurrency, FinancialInstrumentAttributes81.mmDenominationCurrency, FinancialInstrumentAttributes80.mmDenominationCurrency,
 					FinancialInstrumentAttributes85.mmDenominationCurrency, FinancialInstrumentAttributes84.mmDenominationCurrency, FinancialInstrumentAttributes83.mmDenominationCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DenominationCurrency";
 			definition = "Currency in which a security is issued or redenominated.";
@@ -1092,8 +1091,8 @@ public class Security extends Asset {
 	};
 	protected FormOfSecurityCode registrationForm;
 	/**
-	 * Specifies the form, ie, ownership, of the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1368,8 +1367,8 @@ public class Security extends Asset {
 					InvestmentAccount54.mmSecuritiesForm, InvestmentAccount56.mmSecuritiesForm, FinancialInstrument51.mmSecuritiesForm, InvestmentAccount55.mmSecuritiesForm, FinancialInstrument45.mmSecuritiesForm,
 					FinancialInstrument49.mmSecuritiesForm, InvestmentAccount57.mmSecuritiesForm, FinancialInstrumentAttributes75.mmRegistrationForm, FinancialInstrumentAttributes78.mmRegistrationForm, FormOfSecurity7Choice.mmCode,
 					FormOfSecurity7Choice.mmProprietary, FinancialInstrument57.mmSecuritiesForm, FinancialInstrument56.mmSecuritiesForm, FinancialInstrument55.mmSecuritiesForm);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationForm";
 			definition = "Specifies the form, ie, ownership, of the security.";
@@ -1388,9 +1387,8 @@ public class Security extends Asset {
 	};
 	protected YesNoIndicator dematerialisedIndicator;
 	/**
-	 * Indicates whether a security exists only as an electronic record, ie,
-	 * there is no physical document representing the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1458,8 +1456,8 @@ public class Security extends Asset {
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmDematerialisedIndicator, InvestmentAccount10.mmDematerialisedIndicator, InvestmentAccount11.mmDematerialisedIndicator, InvestmentAccount22.mmDematerialisedIndicator,
 					InvestmentAccount24.mmDematerialisedIndicator, InvestmentAccount40.mmDematerialisedIndicator, InvestmentAccount41.mmDematerialisedIndicator, InvestmentAccount54.mmDematerialisedIndicator,
 					InvestmentAccount56.mmDematerialisedIndicator, InvestmentAccount55.mmDematerialisedIndicator, InvestmentAccount57.mmDematerialisedIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DematerialisedIndicator";
 			definition = "Indicates whether a security exists only as an electronic record, ie, there is no physical document representing the security.";
@@ -1478,9 +1476,8 @@ public class Security extends Asset {
 	};
 	protected EUSavingsDirectiveCode eUSavingsDirective;
 	/**
-	 * Indicates whether the investment fund class is subject to the European
-	 * Union Saving Directive.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1519,8 +1516,8 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmEUSavingsDirective = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrument16.mmEUSavingsDirective, FinancialInstrument20.mmEUSavingsDirective);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EUSavingsDirective";
 			definition = "Indicates whether the investment fund class is subject to the European Union Saving Directive.";
@@ -1539,8 +1536,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesQuantity> securitiesQuantity;
 	/**
-	 * Specifies the quantity associated with a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1802,8 +1799,8 @@ public class Security extends Asset {
 					OtherCollateral6.mmBlockedQuantity, SecuritiesCollateral6.mmQuantity, SecuritiesCollateral6.mmBlockedQuantity, SecuritiesCollateral5.mmQuantity, SecuritiesCollateral7.mmQuantity,
 					PartyIdentification101.mmOwnedSecuritiesQuantity, FinancialInstrumentAttributes73.mmQuantity, AmountPricePerFinancialInstrumentQuantity7.mmFinancialInstrumentQuantity, AdditionalInformation12.mmQuantity,
 					AdditionalInformation13.mmQuantity, SecuritiesCollateral8.mmQuantity, AdditionalInformation14.mmQuantity);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesQuantity";
 			definition = "Specifies the quantity associated with a security.";
@@ -1815,8 +1812,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesRelatedFees> fees;
 	/**
-	 * Fees related to securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1964,8 +1961,8 @@ public class Security extends Asset {
 					OtherAmounts16.mmMatchingConfirmationFee, OtherAmounts16.mmMarketMemberFeeAmount, OtherAmounts16.mmOddLotFee, ReceiveInformation13.mmChargeDetails, ReceiveInformation12.mmChargeDetails,
 					DeliverInformation12.mmChargeDetails, DeliverInformation13.mmChargeDetails, DeliverInformation15.mmChargeDetails, DeliverInformation14.mmChargeDetails, ReceiveInformation15.mmChargeDetails,
 					ReceiveInformation14.mmChargeDetails, ReceiveInformation17.mmChargeDetails, ReceiveInformation16.mmChargeDetails, DeliverInformation16.mmChargeDetails, DeliverInformation17.mmChargeDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Fees";
 			definition = "Fees related to securities.";
@@ -1977,8 +1974,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesPricing> pricing;
 	/**
-	 * Information on the price of the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2370,8 +2367,8 @@ public class Security extends Asset {
 					SecuritiesCollateral5.mmPrice, SecuritiesCollateral7.mmPrice, FinancialInstrumentAttributes71.mmIssuePrice, FinancialInstrumentDetails23.mmPriceDetails, AggregateBalanceInformation32.mmPriceDetails,
 					AggregateBalanceInformation33.mmPriceDetails, AggregateBalancePerSafekeepingPlace31.mmPriceDetails, AggregateBalancePerSafekeepingPlace30.mmPriceDetails, FinancialInstrumentAttributes80.mmIssuePrice,
 					FinancialInstrumentDetails25.mmPriceDetails, SecuritiesCollateral8.mmPrice, FinancialInstrumentDetails27.mmPriceDetails, FinancialInstrumentAttributes83.mmIssuePrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Pricing";
 			definition = "Information on the price of the security.";
@@ -2383,8 +2380,8 @@ public class Security extends Asset {
 	};
 	protected SecuritiesAccount securitiesAccount;
 	/**
-	 * Account on which the security is held.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2627,8 +2624,8 @@ public class Security extends Asset {
 					SecuritiesCollateral7.mmSafekeepingAccount, AdditionalInformation12.mmSafekeepingAccount, TransactionDetails88.mmSafekeepingAccount, TransactionDetails92.mmSafekeepingAccount, TransactionDetails85.mmSafekeepingAccount,
 					TransactionDetails87.mmSafekeepingAccount, TransactionDetails97.mmSafekeepingAccount, AdditionalInformation13.mmSafekeepingAccount, SecuritiesCollateral8.mmSafekeepingAccount,
 					AdditionalInformation14.mmSafekeepingAccount, TransactionDetails100.mmSafekeepingAccount, TransactionDetails101.mmSafekeepingAccount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesAccount";
 			definition = "Account on which the security is held.";
@@ -2641,8 +2638,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.TradingMarket> tradingMarket;
 	/**
-	 * Market(s) on which the security is traded.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3138,8 +3135,8 @@ public class Security extends Asset {
 					TransactionDetails97.mmPlaceOfTrade, SecuritiesFinancingTransactionDetails35.mmPlaceOfTrade, TransactionDetails96.mmPlaceOfTrade, TransactionDetails95.mmPlaceOfTrade, SecuritiesTradeDetails69.mmPlaceOfTrade,
 					CorporateActionOption136.mmPlaceOfTrade, SecuritiesTradeDetails70.mmPlaceOfTrade, SecuritiesFinancingTransactionDetails36.mmPlaceOfTrade, TransactionDetails100.mmPlaceOfTrade, TransactionDetails99.mmPlaceOfTrade,
 					TransactionDetails98.mmPlaceOfTrade);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradingMarket";
 			definition = "Market(s) on which the security is traded.";
@@ -3151,8 +3148,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.TradingMarket> placeOfListing;
 	/**
-	 * Market(s) on which the security is listed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3545,8 +3542,8 @@ public class Security extends Asset {
 					TransparencyDataReport12.mmRelevantMarket, TransparencyDataReport15.mmTradingVenue, TransparencyDataReport10.mmTradingVenue, TransparencyDataReport14.mmTradingVenue, FinancialInstrumentAttributes79.mmPlaceOfListing,
 					FinancialInstrumentAttributes81.mmPlaceOfListing, FinancialInstrumentAttributes80.mmPlaceOfListing, FinancialInstrumentAttributes85.mmPlaceOfListing, FinancialInstrumentAttributes84.mmPlaceOfListing,
 					FinancialInstrumentAttributes83.mmPlaceOfListing);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlaceOfListing";
 			definition = "Market(s) on which the security is listed.";
@@ -3558,8 +3555,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.BasicSecuritiesRegistration> registration;
 	/**
-	 * Information related to registration of securities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4052,8 +4049,8 @@ public class Security extends Asset {
 					SettlementDetails134.mmRegistration, SettlementDetails137.mmRegistration, SettlementDetails132.mmRegistration, SecuritiesSettlementTransactionDetails30.mmAdditionalPhysicalOrRegistrationDetails,
 					SettlementDetails138.mmRegistration, SettlementDetails130.mmRegistration, SettlementDetails131.mmRegistration, SettlementDetails133.mmRegistration,
 					SecuritiesSettlementTransactionDetails29.mmAdditionalPhysicalOrRegistrationDetails, SecuritiesSettlementTransactionDetails31.mmAdditionalPhysicalOrRegistrationDetails, SettlementDetails139.mmRegistration);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Registration";
 			definition = "Information related to registration of securities.";
@@ -4065,8 +4062,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesRestriction> restriction;
 	/**
-	 * Regulatory restriction(s) linked to the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4496,8 +4493,8 @@ public class Security extends Asset {
 					SettlementDetails126.mmLegalRestrictions, SettlementDetails122.mmLegalRestrictions, SettlementDetails127.mmLegalRestrictions, SettlementDetails121.mmLegalRestrictions, SettlementDetails134.mmLegalRestrictions,
 					SettlementDetails137.mmLegalRestrictions, SettlementDetails132.mmLegalRestrictions, SettlementDetails138.mmLegalRestrictions, SettlementDetails130.mmLegalRestrictions, SettlementDetails133.mmLegalRestrictions,
 					SettlementDetails139.mmLegalRestrictions);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Restriction";
 			definition = "Regulatory restriction(s) linked to the security.";
@@ -4509,8 +4506,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.CorporateActionEvent> corporateEvent;
 	/**
-	 * Corporate event linked to the security
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4646,8 +4643,8 @@ public class Security extends Asset {
 					EntryTransaction4.mmCorporateAction, EntryTransaction7.mmCorporateAction, IntraPositionDetails34.mmCorporateActionEventType, EntryTransaction8.mmCorporateAction, AccountIdentification33.mmCorporateActionEventAndBalance,
 					AccountIdentification35.mmCorporateActionEventAndBalance, IntraPositionDetails35.mmCorporateActionEventType, AccountIdentification40.mmCorporateActionEventAndBalance, IntraPositionDetails41.mmCorporateActionEventType,
 					IntraPositionDetails43.mmCorporateActionEventType, AccountIdentification41.mmCorporateActionEventAndBalance);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateEvent";
 			definition = "Corporate event linked to the security";
@@ -4659,8 +4656,8 @@ public class Security extends Asset {
 	};
 	protected YesNoIndicator temporaryFinancialInstrumentIndicator;
 	/**
-	 * Specifies that the security is a temporary security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -4840,8 +4837,8 @@ public class Security extends Asset {
 					SecuritiesOption50.mmTemporaryFinancialInstrumentIndicator, SecuritiesOption55.mmTemporaryFinancialInstrumentIndicator, SecuritiesOption57.mmTemporaryFinancialInstrumentIndicator,
 					TemporaryFinancialInstrumentIndicator4Choice.mmTemporaryIndicator, TemporaryFinancialInstrumentIndicator4Choice.mmProprietary, SecuritiesOption60.mmTemporaryFinancialInstrumentIndicator,
 					SecuritiesOption59.mmTemporaryFinancialInstrumentIndicator, SecuritiesOption61.mmTemporaryFinancialInstrumentIndicator, SecuritiesOption63.mmTemporaryFinancialInstrumentIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TemporaryFinancialInstrumentIndicator";
 			definition = "Specifies that the security is a temporary security.";
@@ -4860,8 +4857,8 @@ public class Security extends Asset {
 	};
 	protected ISODateTime availableDate;
 	/**
-	 * Date on which securities become available for sale.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5022,8 +5019,8 @@ public class Security extends Asset {
 					IntraPositionMovementDetails11.mmAvailableDate, SecurityDate12.mmAvailableDate, SecurityDate11.mmAvailableDate, SecurityDate14.mmAvailableDate, SecurityDate13.mmAvailableDate, IntraPositionDetails35.mmAvailableDate,
 					IntraPositionMovementDetails12.mmAvailableDate, IntraPositionDetails41.mmAvailableDate, IntraPositionMovementDetails13.mmAvailableDate, IntraPositionDetails43.mmAvailableDate,
 					IntraPositionMovementDetails14.mmAvailableDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AvailableDate";
 			definition = "Date on which securities become available for sale.";
@@ -5042,9 +5039,8 @@ public class Security extends Asset {
 	};
 	protected Max350Text declarationDetails;
 	/**
-	 * Provides declaration details narrative relative to the financial
-	 * instrument, eg, beneficial ownership.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5105,8 +5101,8 @@ public class Security extends Asset {
 			derivation_lazy = () -> Arrays.asList(CorporateActionNarrative4.mmDeclarationDetails, CorporateActionNarrative14.mmDeclarationDetails, CorporateActionNarrative6.mmDeclarationDetails,
 					CorporateActionNarrative16.mmDeclarationDetails, CorporateActionNarrative11.mmDeclarationDetails, CorporateActionNarrative17.mmDeclarationDetails, CorporateActionNarrative2.mmDeclarationDetails,
 					BeneficialOwner1.mmDeclarationDetails, BeneficialOwner2.mmDeclarationDetails);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DeclarationDetails";
 			definition = "Provides declaration details narrative relative to the financial instrument, eg, beneficial ownership.";
@@ -5125,8 +5121,8 @@ public class Security extends Asset {
 	};
 	protected Spread spread;
 	/**
-	 * Spread that uses the security as benchmark reference.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5204,8 +5200,8 @@ public class Security extends Asset {
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate3.mmSpread, CorporateActionRate14.mmSpread, CorporateActionRate16.mmSpread, CorporateActionRate24.mmSpread, CorporateActionRate27.mmSpread,
 					CorporateActionRate32.mmSpread, CorporateActionRate35.mmSpread, CorporateActionRate41.mmSpread, CorporateActionRate1.mmSpread, CorporateActionRate43.mmSpread, CorporateActionRate56.mmSpread,
 					CorporateActionRate66.mmSpread, CorporateActionRate78.mmSpread);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Spread";
 			definition = "Spread that uses the security as benchmark reference.";
@@ -5218,8 +5214,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.Dividend> dividend;
 	/**
-	 * Dividend per financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5294,8 +5290,8 @@ public class Security extends Asset {
 			derivation_lazy = () -> Arrays.asList(CorporateAction3.mmDividendType, CorporateAction4.mmDividendType, CorporateAction7.mmDividendType, CorporateAction8.mmDividendType, CorporateAction10.mmDividendType,
 					CorporateAction11.mmDividendType, CorporateAction2.mmDividendType, CorporateAction12.mmDividendType, CorporateAction17.mmDividendType, CorporateActionSD13.mmDividendType, CorporateAction31.mmDividendType,
 					CorporateAction40.mmDividendType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Dividend";
 			definition = "Dividend per financial instrument.";
@@ -5307,8 +5303,8 @@ public class Security extends Asset {
 	};
 	protected SecuritiesBalance balance;
 	/**
-	 * Balance of the account which holds a specific security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5340,8 +5336,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmBalance = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Balance";
 			definition = "Balance of the account which holds a specific security.";
@@ -5354,9 +5350,8 @@ public class Security extends Asset {
 	};
 	protected YesNoIndicator fungibleIndicator;
 	/**
-	 * Indicates whether a security is interchangeable, ie, the security is
-	 * allowed to be replaced by another security, without loss of value.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5408,8 +5403,8 @@ public class Security extends Asset {
 		{
 			derivation_lazy = () -> Arrays.asList(SafekeepingAccount1.mmFungibleIndicator, SubAccountIdentification2.mmFungibleIndicator, SafekeepingAccount2.mmFungibleIndicator, SubAccountIdentification3.mmFungibleIndicator,
 					SubAccountIdentification1.mmFungibleIndicator, SubAccountIdentification5.mmFungibleIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FungibleIndicator";
 			definition = "Indicates whether a security is interchangeable, ie, the security is allowed to be replaced by another security, without loss of value.";
@@ -5428,8 +5423,8 @@ public class Security extends Asset {
 	};
 	protected AppearanceCode appearance;
 	/**
-	 * Specifies the deliverability of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5472,8 +5467,8 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmAppearance = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmAppearance, FutureOrOptionDetails1.mmAppearance, Appearance2Choice.mmCode, Appearance2Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Appearance";
 			definition = "Specifies the deliverability of a security.";
@@ -5492,9 +5487,8 @@ public class Security extends Asset {
 	};
 	protected Number nearTermPositionLimit;
 	/**
-	 * Position limit in the near-term contract for a given exchange-traded
-	 * product.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5535,8 +5529,8 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmNearTermPositionLimit = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmNTPositionLimit, FutureOrOptionDetails1.mmNearTermPositionLimit, CommonFinancialInstrumentAttributes1.mmNearTermPositionLimit);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NearTermPositionLimit";
 			definition = "Position limit in the near-term contract for a given exchange-traded product.";
@@ -5555,8 +5549,8 @@ public class Security extends Asset {
 	};
 	protected ISOYearMonth contractSettlementMonth;
 	/**
-	 * Specifies when the contract (i.e. MBS/TBA) will settle.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5580,6 +5574,9 @@ public class Security extends Asset {
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Security
 	 * Security}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 667</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -5593,8 +5590,9 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmContractSettlementMonth = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmContractSettlementMonth, FutureOrOptionDetails1.mmContractSettlementMonth);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "667"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ContractSettlementMonth";
 			definition = "Specifies when the contract (i.e. MBS/TBA) will settle.";
@@ -5613,8 +5611,8 @@ public class Security extends Asset {
 	};
 	protected Number minimumTradingPricingIncrement;
 	/**
-	 * Minimum price increase for a given exchange-traded Instrument
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5654,8 +5652,8 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmMinimumTradingPricingIncrement = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmMinimumTradingPricingIncrement, FutureOrOptionDetails1.mmMinimumTradingPricingIncrement, TradingParameters1.mmMinimumTradingPricingIncrement);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumTradingPricingIncrement";
 			definition = "Minimum price increase for a given exchange-traded Instrument";
@@ -5674,8 +5672,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.Rating> rating;
 	/**
-	 * Rating(s) of the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5731,8 +5729,8 @@ public class Security extends Asset {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmRating, FinancialInstrumentStipulations.mmRating, FinancialInstrumentAttributes31.mmRating, FinancialInstrumentStipulations2.mmRating,
 					FutureOrOptionDetails1.mmRating, FinancialInstrumentAttributes44.mmRating);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rating";
 			definition = "Rating(s) of the security.";
@@ -5744,8 +5742,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.CouponAttached> couponAttached;
 	/**
-	 * Coupon information of the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5789,8 +5787,8 @@ public class Security extends Asset {
 	public static final MMBusinessAssociationEnd mmCouponAttached = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmCouponRange, FinancialInstrumentStipulations2.mmCouponRange);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CouponAttached";
 			definition = "Coupon information of the security.";
@@ -5802,9 +5800,8 @@ public class Security extends Asset {
 	};
 	protected Sector sector;
 	/**
-	 * Indicates the market sector the security is classified as
-	 * pharmaceuticals, automobile, housing, etc.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5851,8 +5848,8 @@ public class Security extends Asset {
 	public static final MMBusinessAssociationEnd mmSector = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmSector, FinancialInstrumentStipulations2.mmSector, Debt2.mmSector);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Sector";
 			definition = "Indicates the market sector the security is classified as pharmaceuticals, automobile, housing, etc.";
@@ -5865,9 +5862,8 @@ public class Security extends Asset {
 	};
 	protected YesNoIndicator warrantAttachedOnDelivery;
 	/**
-	 * Indicates whether the warrants on a financial instrument (which has been
-	 * traded cum warrants) will be attached on delivery.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5909,8 +5905,8 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmWarrantAttachedOnDelivery = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes31.mmWarrantAttachedOnDelivery, FinancialInstrumentAttributes44.mmWarrantAttachedOnDelivery, FinancialInstrumentAttributes2.mmWarrantAttachedOnDelivery);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WarrantAttachedOnDelivery";
 			definition = "Indicates whether the warrants on a financial instrument (which has been traded cum warrants) will be attached on delivery.";
@@ -5929,8 +5925,8 @@ public class Security extends Asset {
 	};
 	protected YesNoIndicator strippableIndicator;
 	/**
-	 * Indicates whether the interest is separable from the principal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -5965,8 +5961,8 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmStrippableIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FutureOrOptionDetails1.mmStrippableIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StrippableIndicator";
 			definition = "Indicates whether the interest is separable from the principal.";
@@ -5985,8 +5981,8 @@ public class Security extends Asset {
 	};
 	protected ISODateTime firstDealingDate;
 	/**
-	 * Date on which new securities begin trading.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6022,8 +6018,8 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmFirstDealingDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FutureOrOptionDetails1.mmFirstDealingDate, CorporateActionDate3.mmFirstDealingDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirstDealingDate";
 			definition = "Date on which new securities begin trading.";
@@ -6042,8 +6038,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesTax> taxDetails;
 	/**
-	 * Tax details of the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6084,8 +6080,8 @@ public class Security extends Asset {
 	public static final MMBusinessAssociationEnd mmTaxDetails = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesAccount8.mmStampDuty);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxDetails";
 			definition = "Tax details of the security.";
@@ -6097,8 +6093,8 @@ public class Security extends Asset {
 	};
 	protected SecuritiesTrade securitiesTrade;
 	/**
-	 * Trade in which the security is involved.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6130,8 +6126,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesTrade = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTrade";
 			definition = "Trade in which the security is involved.";
@@ -6144,9 +6140,8 @@ public class Security extends Asset {
 	};
 	protected Jurisdiction registrationJurisdiction;
 	/**
-	 * Jurisdiction (country, county, state, province, city) in which the
-	 * security is legally recorded for regulatory and/or tax purposes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6180,8 +6175,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmRegistrationJurisdiction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RegistrationJurisdiction";
 			definition = "Jurisdiction (country, county, state, province, city) in which the security is legally recorded for regulatory and/or tax purposes.";
@@ -6194,9 +6189,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesPartyRole> partyRole;
 	/**
-	 * Specifies roles played by a party that are linked to the handling of
-	 * securities but not related to a specific process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6230,8 +6224,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartyRole";
 			definition = "Specifies roles played by a party that are linked to the handling of securities but not related to a specific process.";
@@ -6243,8 +6237,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesStatus> securityStatus;
 	/**
-	 * Specifies the status of the security within its lifecycle.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6286,8 +6280,8 @@ public class Security extends Asset {
 	public static final MMBusinessAssociationEnd mmSecurityStatus = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CommonFinancialInstrumentAttributes1.mmSecurityStatus);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecurityStatus";
 			definition = "Specifies the status of the security within its lifecycle.";
@@ -6299,8 +6293,8 @@ public class Security extends Asset {
 	};
 	protected SecuritiesModification modification;
 	/**
-	 * Modification process which applies to a specific security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6334,8 +6328,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmModification = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Modification";
 			definition = "Modification process which applies to a specific security.";
@@ -6348,8 +6342,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.RedemptionSchedule> redemptionSchedule;
 	/**
-	 * RedemptionSchedule(s) linked to the security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6381,8 +6375,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmRedemptionSchedule = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RedemptionSchedule";
 			definition = "RedemptionSchedule(s) linked to the security.";
@@ -6394,8 +6388,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesSettlement> securitiesSettlement;
 	/**
-	 * Settlement of a specific security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6450,8 +6444,8 @@ public class Security extends Asset {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesCollateral3.mmSettlementParameters, SecuritiesCollateral4.mmSettlementParameters, SecuritiesCollateral5.mmSettlementParameters, SecuritiesCollateral7.mmSettlementParameters,
 					SecuritiesCollateral8.mmSettlementParameters);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesSettlement";
 			definition = "Settlement of a specific security.";
@@ -6463,8 +6457,8 @@ public class Security extends Asset {
 	};
 	protected SecuritiesTransfer securitiesTransfer;
 	/**
-	 * Transfer process in which that security is transferred..
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6496,8 +6490,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesTransfer = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTransfer";
 			definition = "Transfer process in which that security is transferred..";
@@ -6510,9 +6504,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.AgentCorporateActionStandingInstruction> corporateActionStandingInstructions;
 	/**
-	 * Standing instructions related to the security in the context of corporate
-	 * action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6547,8 +6540,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionStandingInstructions = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionStandingInstructions";
 			definition = "Standing instructions related to the security in the context of corporate action.";
@@ -6560,8 +6553,8 @@ public class Security extends Asset {
 	};
 	protected Quote quote;
 	/**
-	 * Quote of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6592,8 +6585,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmQuote = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quote";
 			definition = "Quote of a security.";
@@ -6606,8 +6599,8 @@ public class Security extends Asset {
 	};
 	protected SecuritiesOrder securitiesOrder;
 	/**
-	 * Order for which a specific security is indicated.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6639,8 +6632,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesOrder = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesOrder";
 			definition = "Order for which a specific security is indicated.";
@@ -6653,9 +6646,8 @@ public class Security extends Asset {
 	};
 	protected VariableInterest relatedVariableInterest;
 	/**
-	 * Variable interest parameters specified for interest related to a
-	 * financial instrument.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6689,8 +6681,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedVariableInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedVariableInterest";
 			definition = "Variable interest parameters specified for interest related to a financial instrument.";
@@ -6703,10 +6695,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesConversion> conversion;
 	/**
-	 * Information on the conversion exchange of an entitlement or of preferred
-	 * equities or of convertible bonds, into another form of securities,
-	 * usually common equities.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6741,8 +6731,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmConversion = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Conversion";
 			definition = "Information on the conversion exchange of an entitlement or of preferred equities or of convertible bonds, into another form of securities, usually common equities.";
@@ -6754,8 +6744,8 @@ public class Security extends Asset {
 	};
 	protected List<com.tools20022.repository.entity.ComponentSecurity> componentSecurity;
 	/**
-	 * The security is part of the component security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6787,8 +6777,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmComponentSecurity = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ComponentSecurity";
 			definition = "The security is part of the component security.";
@@ -6800,9 +6790,8 @@ public class Security extends Asset {
 	};
 	protected YesNoIndicator recompositionIndicator;
 	/**
-	 * Indicates whether the interest and the principal can be recomposed. This
-	 * is the reverse operation of stripping.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6829,8 +6818,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAttribute mmRecompositionIndicator = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RecompositionIndicator";
 			definition = "Indicates whether the interest and the principal can be recomposed. This is the reverse operation of stripping.";
@@ -6849,8 +6838,8 @@ public class Security extends Asset {
 	};
 	protected Max35Text series;
 	/**
-	 * Identifier that links multiple security classes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6874,8 +6863,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAttribute mmSeries = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Series";
 			definition = "Identifier that links multiple security classes.";
@@ -6894,9 +6883,8 @@ public class Security extends Asset {
 	};
 	protected PercentageRate percentageOfDebtClaim;
 	/**
-	 * Percentage of the underlying assets of a fund that represents a debt and
-	 * is in the scope of the EU Savings directive.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -6982,8 +6970,8 @@ public class Security extends Asset {
 					FinancialInstrumentAttributes44.mmPercentageOfDebtClaims, FinancialInstrumentAttributes48.mmPercentageOfDebtClaim, FinancialInstrumentAttributes55.mmPercentageOfDebtClaim,
 					FinancialInstrumentAttributes66.mmPercentageOfDebtClaim, FinancialInstrumentAttributes70.mmPercentageOfDebtClaim, FinancialInstrumentAttributes79.mmPercentageOfDebtClaim,
 					FinancialInstrumentAttributes85.mmPercentageOfDebtClaim);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PercentageOfDebtClaim";
 			definition = "Percentage of the underlying assets of a fund that represents a debt and is in the scope of the EU Savings directive.";
@@ -7002,9 +6990,8 @@ public class Security extends Asset {
 	};
 	protected PercentageRate coverRate;
 	/**
-	 * Amount of dividends the issuer intends to pay out the following year
-	 * based on their normalised earnings.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -7031,8 +7018,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAttribute mmCoverRate = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CoverRate";
 			definition = "Amount of dividends the issuer intends to pay out the following year based on their normalised earnings.";
@@ -7051,8 +7038,8 @@ public class Security extends Asset {
 	};
 	protected MaturityRedemptionTypeCode maturityRedemption;
 	/**
-	 * Return of an investor's principal in a security at maturity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -7078,8 +7065,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAttribute mmMaturityRedemption = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityRedemption";
 			definition = "Return of an investor's principal in a security at maturity.";
@@ -7098,8 +7085,8 @@ public class Security extends Asset {
 	};
 	protected MarginCall relatedMarginCall;
 	/**
-	 * Margin call for which the associated securities are specified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -7132,8 +7119,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedMarginCall = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedMarginCall";
 			definition = "Margin call for which the associated securities are specified.";
@@ -7146,10 +7133,8 @@ public class Security extends Asset {
 	};
 	protected Party closeLink;
 	/**
-	 * Situation in which two entities are linked because one of these entities
-	 * owns some of the capital of the other one, or has a control relationship
-	 * with it.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -7191,8 +7176,8 @@ public class Security extends Asset {
 	public static final MMBusinessAssociationEnd mmCloseLink = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CloseLink1.mmSecurityIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CloseLink";
 			definition = "Situation in which two entities are linked because one of these entities owns some of the capital of the other one, or has a control relationship with it.";
@@ -7205,9 +7190,8 @@ public class Security extends Asset {
 	};
 	protected YesNoIndicator potentialEuroSystemEligibility;
 	/**
-	 * Indicates that the security is intended to be held in a manner that could
-	 * allow the Eurosystem eligibility.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -7234,8 +7218,8 @@ public class Security extends Asset {
 	 */
 	public static final MMBusinessAttribute mmPotentialEuroSystemEligibility = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PotentialEuroSystemEligibility";
 			definition = "Indicates that the security is intended to be held in a manner that could allow the Eurosystem eligibility.";
@@ -7254,8 +7238,8 @@ public class Security extends Asset {
 	};
 	protected SecuritiesQuantity minimumQuantity;
 	/**
-	 * Indicates the minimum tradable quantity of a security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -7502,8 +7486,8 @@ public class Security extends Asset {
 					FinancialInstrumentAttributes75.mmMinimumNominalQuantity, FinancialInstrumentAttributes78.mmMinimumNominalQuantity, FinancialInstrumentAttributes79.mmMinimumNominalQuantity,
 					FinancialInstrumentAttributes81.mmMinimumNominalQuantity, FinancialInstrumentAttributes80.mmMinimumNominalQuantity, FinancialInstrumentAttributes85.mmMinimumNominalQuantity,
 					FinancialInstrumentAttributes84.mmMinimumNominalQuantity, FinancialInstrumentAttributes83.mmMinimumNominalQuantity);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MinimumQuantity";
 			definition = "Indicates the minimum tradable quantity of a security.";
@@ -7516,10 +7500,8 @@ public class Security extends Asset {
 	};
 	protected YesNoIndicator restrictedIndicator;
 	/**
-	 * Identifies if the securities is restricted or not (as per Rule 144 of the
-	 * Securities and Exchange Commission,that sets the conditions under which
-	 * restricted, unregistered and control securities can be sold).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -7555,8 +7537,8 @@ public class Security extends Asset {
 	public static final MMBusinessAttribute mmRestrictedIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt2.mmRestrictedIndicator);
-			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Security.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RestrictedIndicator";
 			definition = "Identifies if the securities is restricted or not (as per Rule 144 of the Securities and Exchange Commission,that sets the conditions under which restricted, unregistered and control securities can be sold).";
@@ -7577,7 +7559,7 @@ public class Security extends Asset {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Security";
 				definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
@@ -7661,458 +7643,515 @@ public class Security extends Asset {
 	}
 
 	public List<SecuritiesIdentification> getIdentification() {
-		return identification;
+		return identification == null ? identification = new ArrayList<>() : identification;
 	}
 
-	public void setIdentification(List<com.tools20022.repository.entity.SecuritiesIdentification> identification) {
-		this.identification = identification;
+	public Security setIdentification(List<com.tools20022.repository.entity.SecuritiesIdentification> identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
 	public CountryCode getRegisteredDistributionCountry() {
 		return registeredDistributionCountry;
 	}
 
-	public void setRegisteredDistributionCountry(CountryCode registeredDistributionCountry) {
-		this.registeredDistributionCountry = registeredDistributionCountry;
+	public Security setRegisteredDistributionCountry(CountryCode registeredDistributionCountry) {
+		this.registeredDistributionCountry = Objects.requireNonNull(registeredDistributionCountry);
+		return this;
 	}
 
 	public CurrencyCode getDenominationCurrency() {
 		return denominationCurrency;
 	}
 
-	public void setDenominationCurrency(CurrencyCode denominationCurrency) {
-		this.denominationCurrency = denominationCurrency;
+	public Security setDenominationCurrency(CurrencyCode denominationCurrency) {
+		this.denominationCurrency = Objects.requireNonNull(denominationCurrency);
+		return this;
 	}
 
 	public FormOfSecurityCode getRegistrationForm() {
 		return registrationForm;
 	}
 
-	public void setRegistrationForm(FormOfSecurityCode registrationForm) {
-		this.registrationForm = registrationForm;
+	public Security setRegistrationForm(FormOfSecurityCode registrationForm) {
+		this.registrationForm = Objects.requireNonNull(registrationForm);
+		return this;
 	}
 
 	public YesNoIndicator getDematerialisedIndicator() {
 		return dematerialisedIndicator;
 	}
 
-	public void setDematerialisedIndicator(YesNoIndicator dematerialisedIndicator) {
-		this.dematerialisedIndicator = dematerialisedIndicator;
+	public Security setDematerialisedIndicator(YesNoIndicator dematerialisedIndicator) {
+		this.dematerialisedIndicator = Objects.requireNonNull(dematerialisedIndicator);
+		return this;
 	}
 
 	public EUSavingsDirectiveCode getEUSavingsDirective() {
 		return eUSavingsDirective;
 	}
 
-	public void setEUSavingsDirective(EUSavingsDirectiveCode eUSavingsDirective) {
-		this.eUSavingsDirective = eUSavingsDirective;
+	public Security setEUSavingsDirective(EUSavingsDirectiveCode eUSavingsDirective) {
+		this.eUSavingsDirective = Objects.requireNonNull(eUSavingsDirective);
+		return this;
 	}
 
 	public List<SecuritiesQuantity> getSecuritiesQuantity() {
-		return securitiesQuantity;
+		return securitiesQuantity == null ? securitiesQuantity = new ArrayList<>() : securitiesQuantity;
 	}
 
-	public void setSecuritiesQuantity(List<com.tools20022.repository.entity.SecuritiesQuantity> securitiesQuantity) {
-		this.securitiesQuantity = securitiesQuantity;
+	public Security setSecuritiesQuantity(List<com.tools20022.repository.entity.SecuritiesQuantity> securitiesQuantity) {
+		this.securitiesQuantity = Objects.requireNonNull(securitiesQuantity);
+		return this;
 	}
 
 	public List<SecuritiesRelatedFees> getFees() {
-		return fees;
+		return fees == null ? fees = new ArrayList<>() : fees;
 	}
 
-	public void setFees(List<com.tools20022.repository.entity.SecuritiesRelatedFees> fees) {
-		this.fees = fees;
+	public Security setFees(List<com.tools20022.repository.entity.SecuritiesRelatedFees> fees) {
+		this.fees = Objects.requireNonNull(fees);
+		return this;
 	}
 
 	public List<SecuritiesPricing> getPricing() {
-		return pricing;
+		return pricing == null ? pricing = new ArrayList<>() : pricing;
 	}
 
-	public void setPricing(List<com.tools20022.repository.entity.SecuritiesPricing> pricing) {
-		this.pricing = pricing;
+	public Security setPricing(List<com.tools20022.repository.entity.SecuritiesPricing> pricing) {
+		this.pricing = Objects.requireNonNull(pricing);
+		return this;
 	}
 
 	public SecuritiesAccount getSecuritiesAccount() {
 		return securitiesAccount;
 	}
 
-	public void setSecuritiesAccount(com.tools20022.repository.entity.SecuritiesAccount securitiesAccount) {
-		this.securitiesAccount = securitiesAccount;
+	public Security setSecuritiesAccount(com.tools20022.repository.entity.SecuritiesAccount securitiesAccount) {
+		this.securitiesAccount = Objects.requireNonNull(securitiesAccount);
+		return this;
 	}
 
 	public List<TradingMarket> getTradingMarket() {
-		return tradingMarket;
+		return tradingMarket == null ? tradingMarket = new ArrayList<>() : tradingMarket;
 	}
 
-	public void setTradingMarket(List<com.tools20022.repository.entity.TradingMarket> tradingMarket) {
-		this.tradingMarket = tradingMarket;
+	public Security setTradingMarket(List<com.tools20022.repository.entity.TradingMarket> tradingMarket) {
+		this.tradingMarket = Objects.requireNonNull(tradingMarket);
+		return this;
 	}
 
 	public List<TradingMarket> getPlaceOfListing() {
-		return placeOfListing;
+		return placeOfListing == null ? placeOfListing = new ArrayList<>() : placeOfListing;
 	}
 
-	public void setPlaceOfListing(List<com.tools20022.repository.entity.TradingMarket> placeOfListing) {
-		this.placeOfListing = placeOfListing;
+	public Security setPlaceOfListing(List<com.tools20022.repository.entity.TradingMarket> placeOfListing) {
+		this.placeOfListing = Objects.requireNonNull(placeOfListing);
+		return this;
 	}
 
 	public List<BasicSecuritiesRegistration> getRegistration() {
-		return registration;
+		return registration == null ? registration = new ArrayList<>() : registration;
 	}
 
-	public void setRegistration(List<com.tools20022.repository.entity.BasicSecuritiesRegistration> registration) {
-		this.registration = registration;
+	public Security setRegistration(List<com.tools20022.repository.entity.BasicSecuritiesRegistration> registration) {
+		this.registration = Objects.requireNonNull(registration);
+		return this;
 	}
 
 	public List<SecuritiesRestriction> getRestriction() {
-		return restriction;
+		return restriction == null ? restriction = new ArrayList<>() : restriction;
 	}
 
-	public void setRestriction(List<com.tools20022.repository.entity.SecuritiesRestriction> restriction) {
-		this.restriction = restriction;
+	public Security setRestriction(List<com.tools20022.repository.entity.SecuritiesRestriction> restriction) {
+		this.restriction = Objects.requireNonNull(restriction);
+		return this;
 	}
 
 	public List<CorporateActionEvent> getCorporateEvent() {
-		return corporateEvent;
+		return corporateEvent == null ? corporateEvent = new ArrayList<>() : corporateEvent;
 	}
 
-	public void setCorporateEvent(List<com.tools20022.repository.entity.CorporateActionEvent> corporateEvent) {
-		this.corporateEvent = corporateEvent;
+	public Security setCorporateEvent(List<com.tools20022.repository.entity.CorporateActionEvent> corporateEvent) {
+		this.corporateEvent = Objects.requireNonNull(corporateEvent);
+		return this;
 	}
 
 	public YesNoIndicator getTemporaryFinancialInstrumentIndicator() {
 		return temporaryFinancialInstrumentIndicator;
 	}
 
-	public void setTemporaryFinancialInstrumentIndicator(YesNoIndicator temporaryFinancialInstrumentIndicator) {
-		this.temporaryFinancialInstrumentIndicator = temporaryFinancialInstrumentIndicator;
+	public Security setTemporaryFinancialInstrumentIndicator(YesNoIndicator temporaryFinancialInstrumentIndicator) {
+		this.temporaryFinancialInstrumentIndicator = Objects.requireNonNull(temporaryFinancialInstrumentIndicator);
+		return this;
 	}
 
 	public ISODateTime getAvailableDate() {
 		return availableDate;
 	}
 
-	public void setAvailableDate(ISODateTime availableDate) {
-		this.availableDate = availableDate;
+	public Security setAvailableDate(ISODateTime availableDate) {
+		this.availableDate = Objects.requireNonNull(availableDate);
+		return this;
 	}
 
 	public Max350Text getDeclarationDetails() {
 		return declarationDetails;
 	}
 
-	public void setDeclarationDetails(Max350Text declarationDetails) {
-		this.declarationDetails = declarationDetails;
+	public Security setDeclarationDetails(Max350Text declarationDetails) {
+		this.declarationDetails = Objects.requireNonNull(declarationDetails);
+		return this;
 	}
 
-	public Spread getSpread() {
-		return spread;
+	public Optional<Spread> getSpread() {
+		return spread == null ? Optional.empty() : Optional.of(spread);
 	}
 
-	public void setSpread(com.tools20022.repository.entity.Spread spread) {
+	public Security setSpread(com.tools20022.repository.entity.Spread spread) {
 		this.spread = spread;
+		return this;
 	}
 
 	public List<Dividend> getDividend() {
-		return dividend;
+		return dividend == null ? dividend = new ArrayList<>() : dividend;
 	}
 
-	public void setDividend(List<com.tools20022.repository.entity.Dividend> dividend) {
-		this.dividend = dividend;
+	public Security setDividend(List<com.tools20022.repository.entity.Dividend> dividend) {
+		this.dividend = Objects.requireNonNull(dividend);
+		return this;
 	}
 
 	public SecuritiesBalance getBalance() {
 		return balance;
 	}
 
-	public void setBalance(com.tools20022.repository.entity.SecuritiesBalance balance) {
-		this.balance = balance;
+	public Security setBalance(com.tools20022.repository.entity.SecuritiesBalance balance) {
+		this.balance = Objects.requireNonNull(balance);
+		return this;
 	}
 
 	public YesNoIndicator getFungibleIndicator() {
 		return fungibleIndicator;
 	}
 
-	public void setFungibleIndicator(YesNoIndicator fungibleIndicator) {
-		this.fungibleIndicator = fungibleIndicator;
+	public Security setFungibleIndicator(YesNoIndicator fungibleIndicator) {
+		this.fungibleIndicator = Objects.requireNonNull(fungibleIndicator);
+		return this;
 	}
 
 	public AppearanceCode getAppearance() {
 		return appearance;
 	}
 
-	public void setAppearance(AppearanceCode appearance) {
-		this.appearance = appearance;
+	public Security setAppearance(AppearanceCode appearance) {
+		this.appearance = Objects.requireNonNull(appearance);
+		return this;
 	}
 
 	public Number getNearTermPositionLimit() {
 		return nearTermPositionLimit;
 	}
 
-	public void setNearTermPositionLimit(Number nearTermPositionLimit) {
-		this.nearTermPositionLimit = nearTermPositionLimit;
+	public Security setNearTermPositionLimit(Number nearTermPositionLimit) {
+		this.nearTermPositionLimit = Objects.requireNonNull(nearTermPositionLimit);
+		return this;
 	}
 
 	public ISOYearMonth getContractSettlementMonth() {
 		return contractSettlementMonth;
 	}
 
-	public void setContractSettlementMonth(ISOYearMonth contractSettlementMonth) {
-		this.contractSettlementMonth = contractSettlementMonth;
+	public Security setContractSettlementMonth(ISOYearMonth contractSettlementMonth) {
+		this.contractSettlementMonth = Objects.requireNonNull(contractSettlementMonth);
+		return this;
 	}
 
 	public Number getMinimumTradingPricingIncrement() {
 		return minimumTradingPricingIncrement;
 	}
 
-	public void setMinimumTradingPricingIncrement(Number minimumTradingPricingIncrement) {
-		this.minimumTradingPricingIncrement = minimumTradingPricingIncrement;
+	public Security setMinimumTradingPricingIncrement(Number minimumTradingPricingIncrement) {
+		this.minimumTradingPricingIncrement = Objects.requireNonNull(minimumTradingPricingIncrement);
+		return this;
 	}
 
 	public List<Rating> getRating() {
-		return rating;
+		return rating == null ? rating = new ArrayList<>() : rating;
 	}
 
-	public void setRating(List<com.tools20022.repository.entity.Rating> rating) {
-		this.rating = rating;
+	public Security setRating(List<com.tools20022.repository.entity.Rating> rating) {
+		this.rating = Objects.requireNonNull(rating);
+		return this;
 	}
 
 	public List<CouponAttached> getCouponAttached() {
-		return couponAttached;
+		return couponAttached == null ? couponAttached = new ArrayList<>() : couponAttached;
 	}
 
-	public void setCouponAttached(List<com.tools20022.repository.entity.CouponAttached> couponAttached) {
-		this.couponAttached = couponAttached;
+	public Security setCouponAttached(List<com.tools20022.repository.entity.CouponAttached> couponAttached) {
+		this.couponAttached = Objects.requireNonNull(couponAttached);
+		return this;
 	}
 
 	public Sector getSector() {
 		return sector;
 	}
 
-	public void setSector(com.tools20022.repository.entity.Sector sector) {
-		this.sector = sector;
+	public Security setSector(com.tools20022.repository.entity.Sector sector) {
+		this.sector = Objects.requireNonNull(sector);
+		return this;
 	}
 
 	public YesNoIndicator getWarrantAttachedOnDelivery() {
 		return warrantAttachedOnDelivery;
 	}
 
-	public void setWarrantAttachedOnDelivery(YesNoIndicator warrantAttachedOnDelivery) {
-		this.warrantAttachedOnDelivery = warrantAttachedOnDelivery;
+	public Security setWarrantAttachedOnDelivery(YesNoIndicator warrantAttachedOnDelivery) {
+		this.warrantAttachedOnDelivery = Objects.requireNonNull(warrantAttachedOnDelivery);
+		return this;
 	}
 
 	public YesNoIndicator getStrippableIndicator() {
 		return strippableIndicator;
 	}
 
-	public void setStrippableIndicator(YesNoIndicator strippableIndicator) {
-		this.strippableIndicator = strippableIndicator;
+	public Security setStrippableIndicator(YesNoIndicator strippableIndicator) {
+		this.strippableIndicator = Objects.requireNonNull(strippableIndicator);
+		return this;
 	}
 
 	public ISODateTime getFirstDealingDate() {
 		return firstDealingDate;
 	}
 
-	public void setFirstDealingDate(ISODateTime firstDealingDate) {
-		this.firstDealingDate = firstDealingDate;
+	public Security setFirstDealingDate(ISODateTime firstDealingDate) {
+		this.firstDealingDate = Objects.requireNonNull(firstDealingDate);
+		return this;
 	}
 
 	public List<SecuritiesTax> getTaxDetails() {
-		return taxDetails;
+		return taxDetails == null ? taxDetails = new ArrayList<>() : taxDetails;
 	}
 
-	public void setTaxDetails(List<com.tools20022.repository.entity.SecuritiesTax> taxDetails) {
-		this.taxDetails = taxDetails;
+	public Security setTaxDetails(List<com.tools20022.repository.entity.SecuritiesTax> taxDetails) {
+		this.taxDetails = Objects.requireNonNull(taxDetails);
+		return this;
 	}
 
 	public SecuritiesTrade getSecuritiesTrade() {
 		return securitiesTrade;
 	}
 
-	public void setSecuritiesTrade(com.tools20022.repository.entity.SecuritiesTrade securitiesTrade) {
-		this.securitiesTrade = securitiesTrade;
+	public Security setSecuritiesTrade(com.tools20022.repository.entity.SecuritiesTrade securitiesTrade) {
+		this.securitiesTrade = Objects.requireNonNull(securitiesTrade);
+		return this;
 	}
 
 	public Jurisdiction getRegistrationJurisdiction() {
 		return registrationJurisdiction;
 	}
 
-	public void setRegistrationJurisdiction(com.tools20022.repository.entity.Jurisdiction registrationJurisdiction) {
-		this.registrationJurisdiction = registrationJurisdiction;
+	public Security setRegistrationJurisdiction(com.tools20022.repository.entity.Jurisdiction registrationJurisdiction) {
+		this.registrationJurisdiction = Objects.requireNonNull(registrationJurisdiction);
+		return this;
 	}
 
 	public List<SecuritiesPartyRole> getPartyRole() {
-		return partyRole;
+		return partyRole == null ? partyRole = new ArrayList<>() : partyRole;
 	}
 
-	public void setPartyRole(List<com.tools20022.repository.entity.SecuritiesPartyRole> partyRole) {
-		this.partyRole = partyRole;
+	public Security setPartyRole(List<com.tools20022.repository.entity.SecuritiesPartyRole> partyRole) {
+		this.partyRole = Objects.requireNonNull(partyRole);
+		return this;
 	}
 
 	public List<SecuritiesStatus> getSecurityStatus() {
-		return securityStatus;
+		return securityStatus == null ? securityStatus = new ArrayList<>() : securityStatus;
 	}
 
-	public void setSecurityStatus(List<com.tools20022.repository.entity.SecuritiesStatus> securityStatus) {
-		this.securityStatus = securityStatus;
+	public Security setSecurityStatus(List<com.tools20022.repository.entity.SecuritiesStatus> securityStatus) {
+		this.securityStatus = Objects.requireNonNull(securityStatus);
+		return this;
 	}
 
-	public SecuritiesModification getModification() {
-		return modification;
+	public Optional<SecuritiesModification> getModification() {
+		return modification == null ? Optional.empty() : Optional.of(modification);
 	}
 
-	public void setModification(com.tools20022.repository.entity.SecuritiesModification modification) {
+	public Security setModification(com.tools20022.repository.entity.SecuritiesModification modification) {
 		this.modification = modification;
+		return this;
 	}
 
 	public List<RedemptionSchedule> getRedemptionSchedule() {
-		return redemptionSchedule;
+		return redemptionSchedule == null ? redemptionSchedule = new ArrayList<>() : redemptionSchedule;
 	}
 
-	public void setRedemptionSchedule(List<com.tools20022.repository.entity.RedemptionSchedule> redemptionSchedule) {
-		this.redemptionSchedule = redemptionSchedule;
+	public Security setRedemptionSchedule(List<com.tools20022.repository.entity.RedemptionSchedule> redemptionSchedule) {
+		this.redemptionSchedule = Objects.requireNonNull(redemptionSchedule);
+		return this;
 	}
 
 	public List<SecuritiesSettlement> getSecuritiesSettlement() {
-		return securitiesSettlement;
+		return securitiesSettlement == null ? securitiesSettlement = new ArrayList<>() : securitiesSettlement;
 	}
 
-	public void setSecuritiesSettlement(List<com.tools20022.repository.entity.SecuritiesSettlement> securitiesSettlement) {
-		this.securitiesSettlement = securitiesSettlement;
+	public Security setSecuritiesSettlement(List<com.tools20022.repository.entity.SecuritiesSettlement> securitiesSettlement) {
+		this.securitiesSettlement = Objects.requireNonNull(securitiesSettlement);
+		return this;
 	}
 
 	public SecuritiesTransfer getSecuritiesTransfer() {
 		return securitiesTransfer;
 	}
 
-	public void setSecuritiesTransfer(com.tools20022.repository.entity.SecuritiesTransfer securitiesTransfer) {
-		this.securitiesTransfer = securitiesTransfer;
+	public Security setSecuritiesTransfer(com.tools20022.repository.entity.SecuritiesTransfer securitiesTransfer) {
+		this.securitiesTransfer = Objects.requireNonNull(securitiesTransfer);
+		return this;
 	}
 
 	public List<AgentCorporateActionStandingInstruction> getCorporateActionStandingInstructions() {
-		return corporateActionStandingInstructions;
+		return corporateActionStandingInstructions == null ? corporateActionStandingInstructions = new ArrayList<>() : corporateActionStandingInstructions;
 	}
 
-	public void setCorporateActionStandingInstructions(List<com.tools20022.repository.entity.AgentCorporateActionStandingInstruction> corporateActionStandingInstructions) {
-		this.corporateActionStandingInstructions = corporateActionStandingInstructions;
+	public Security setCorporateActionStandingInstructions(List<com.tools20022.repository.entity.AgentCorporateActionStandingInstruction> corporateActionStandingInstructions) {
+		this.corporateActionStandingInstructions = Objects.requireNonNull(corporateActionStandingInstructions);
+		return this;
 	}
 
-	public Quote getQuote() {
-		return quote;
+	public Optional<Quote> getQuote() {
+		return quote == null ? Optional.empty() : Optional.of(quote);
 	}
 
-	public void setQuote(com.tools20022.repository.entity.Quote quote) {
+	public Security setQuote(com.tools20022.repository.entity.Quote quote) {
 		this.quote = quote;
+		return this;
 	}
 
 	public SecuritiesOrder getSecuritiesOrder() {
 		return securitiesOrder;
 	}
 
-	public void setSecuritiesOrder(com.tools20022.repository.entity.SecuritiesOrder securitiesOrder) {
-		this.securitiesOrder = securitiesOrder;
+	public Security setSecuritiesOrder(com.tools20022.repository.entity.SecuritiesOrder securitiesOrder) {
+		this.securitiesOrder = Objects.requireNonNull(securitiesOrder);
+		return this;
 	}
 
-	public VariableInterest getRelatedVariableInterest() {
-		return relatedVariableInterest;
+	public Optional<VariableInterest> getRelatedVariableInterest() {
+		return relatedVariableInterest == null ? Optional.empty() : Optional.of(relatedVariableInterest);
 	}
 
-	public void setRelatedVariableInterest(com.tools20022.repository.entity.VariableInterest relatedVariableInterest) {
+	public Security setRelatedVariableInterest(com.tools20022.repository.entity.VariableInterest relatedVariableInterest) {
 		this.relatedVariableInterest = relatedVariableInterest;
+		return this;
 	}
 
 	public List<SecuritiesConversion> getConversion() {
-		return conversion;
+		return conversion == null ? conversion = new ArrayList<>() : conversion;
 	}
 
-	public void setConversion(List<com.tools20022.repository.entity.SecuritiesConversion> conversion) {
-		this.conversion = conversion;
+	public Security setConversion(List<com.tools20022.repository.entity.SecuritiesConversion> conversion) {
+		this.conversion = Objects.requireNonNull(conversion);
+		return this;
 	}
 
 	public List<ComponentSecurity> getComponentSecurity() {
-		return componentSecurity;
+		return componentSecurity == null ? componentSecurity = new ArrayList<>() : componentSecurity;
 	}
 
-	public void setComponentSecurity(List<com.tools20022.repository.entity.ComponentSecurity> componentSecurity) {
-		this.componentSecurity = componentSecurity;
+	public Security setComponentSecurity(List<com.tools20022.repository.entity.ComponentSecurity> componentSecurity) {
+		this.componentSecurity = Objects.requireNonNull(componentSecurity);
+		return this;
 	}
 
 	public YesNoIndicator getRecompositionIndicator() {
 		return recompositionIndicator;
 	}
 
-	public void setRecompositionIndicator(YesNoIndicator recompositionIndicator) {
-		this.recompositionIndicator = recompositionIndicator;
+	public Security setRecompositionIndicator(YesNoIndicator recompositionIndicator) {
+		this.recompositionIndicator = Objects.requireNonNull(recompositionIndicator);
+		return this;
 	}
 
 	public Max35Text getSeries() {
 		return series;
 	}
 
-	public void setSeries(Max35Text series) {
-		this.series = series;
+	public Security setSeries(Max35Text series) {
+		this.series = Objects.requireNonNull(series);
+		return this;
 	}
 
 	public PercentageRate getPercentageOfDebtClaim() {
 		return percentageOfDebtClaim;
 	}
 
-	public void setPercentageOfDebtClaim(PercentageRate percentageOfDebtClaim) {
-		this.percentageOfDebtClaim = percentageOfDebtClaim;
+	public Security setPercentageOfDebtClaim(PercentageRate percentageOfDebtClaim) {
+		this.percentageOfDebtClaim = Objects.requireNonNull(percentageOfDebtClaim);
+		return this;
 	}
 
 	public PercentageRate getCoverRate() {
 		return coverRate;
 	}
 
-	public void setCoverRate(PercentageRate coverRate) {
-		this.coverRate = coverRate;
+	public Security setCoverRate(PercentageRate coverRate) {
+		this.coverRate = Objects.requireNonNull(coverRate);
+		return this;
 	}
 
 	public MaturityRedemptionTypeCode getMaturityRedemption() {
 		return maturityRedemption;
 	}
 
-	public void setMaturityRedemption(MaturityRedemptionTypeCode maturityRedemption) {
-		this.maturityRedemption = maturityRedemption;
+	public Security setMaturityRedemption(MaturityRedemptionTypeCode maturityRedemption) {
+		this.maturityRedemption = Objects.requireNonNull(maturityRedemption);
+		return this;
 	}
 
 	public MarginCall getRelatedMarginCall() {
 		return relatedMarginCall;
 	}
 
-	public void setRelatedMarginCall(com.tools20022.repository.entity.MarginCall relatedMarginCall) {
-		this.relatedMarginCall = relatedMarginCall;
+	public Security setRelatedMarginCall(com.tools20022.repository.entity.MarginCall relatedMarginCall) {
+		this.relatedMarginCall = Objects.requireNonNull(relatedMarginCall);
+		return this;
 	}
 
 	public Party getCloseLink() {
 		return closeLink;
 	}
 
-	public void setCloseLink(com.tools20022.repository.entity.Party closeLink) {
-		this.closeLink = closeLink;
+	public Security setCloseLink(com.tools20022.repository.entity.Party closeLink) {
+		this.closeLink = Objects.requireNonNull(closeLink);
+		return this;
 	}
 
 	public YesNoIndicator getPotentialEuroSystemEligibility() {
 		return potentialEuroSystemEligibility;
 	}
 
-	public void setPotentialEuroSystemEligibility(YesNoIndicator potentialEuroSystemEligibility) {
-		this.potentialEuroSystemEligibility = potentialEuroSystemEligibility;
+	public Security setPotentialEuroSystemEligibility(YesNoIndicator potentialEuroSystemEligibility) {
+		this.potentialEuroSystemEligibility = Objects.requireNonNull(potentialEuroSystemEligibility);
+		return this;
 	}
 
 	public SecuritiesQuantity getMinimumQuantity() {
 		return minimumQuantity;
 	}
 
-	public void setMinimumQuantity(com.tools20022.repository.entity.SecuritiesQuantity minimumQuantity) {
-		this.minimumQuantity = minimumQuantity;
+	public Security setMinimumQuantity(com.tools20022.repository.entity.SecuritiesQuantity minimumQuantity) {
+		this.minimumQuantity = Objects.requireNonNull(minimumQuantity);
+		return this;
 	}
 
 	public YesNoIndicator getRestrictedIndicator() {
 		return restrictedIndicator;
 	}
 
-	public void setRestrictedIndicator(YesNoIndicator restrictedIndicator) {
-		this.restrictedIndicator = restrictedIndicator;
+	public Security setRestrictedIndicator(YesNoIndicator restrictedIndicator) {
+		this.restrictedIndicator = Objects.requireNonNull(restrictedIndicator);
+		return this;
 	}
 }

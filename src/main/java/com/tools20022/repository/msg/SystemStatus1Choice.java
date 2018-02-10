@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.SystemStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -54,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "SystemStatus1Choice", propOrder = {"code", "proprietary"})
 public class SystemStatus1Choice {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Cd", required = true)
 	protected SystemStatus2Code code;
 	/**
-	 * Status of the system, in a coded form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,7 +128,7 @@ public class SystemStatus1Choice {
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
-			componentContext_lazy = () -> SystemStatus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,10 +140,11 @@ public class SystemStatus1Choice {
 			simpleType_lazy = () -> SystemStatus2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Prtry")
 	protected GenericIdentification1 proprietary;
 	/**
-	 * Status of the system, in a proprietary form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -180,7 +184,7 @@ public class SystemStatus1Choice {
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SystemStatus.mmStatus;
-			componentContext_lazy = () -> SystemStatus1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.SystemStatus1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -197,9 +201,9 @@ public class SystemStatus1Choice {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(SystemStatus1Choice.mmCode, SystemStatus1Choice.mmProprietary);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemStatus1Choice.mmCode, com.tools20022.repository.msg.SystemStatus1Choice.mmProprietary);
 				trace_lazy = () -> SystemStatus.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemStatus1Choice";
 				definition = "Status of a system and the period of time during which the status is valid.";
@@ -209,21 +213,21 @@ public class SystemStatus1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Cd", required = true)
 	public SystemStatus2Code getCode() {
 		return code;
 	}
 
-	public void setCode(SystemStatus2Code code) {
-		this.code = code;
+	public SystemStatus1Choice setCode(SystemStatus2Code code) {
+		this.code = Objects.requireNonNull(code);
+		return this;
 	}
 
-	@XmlElement(name = "Prtry")
-	public GenericIdentification1 getProprietary() {
-		return proprietary;
+	public Optional<GenericIdentification1> getProprietary() {
+		return proprietary == null ? Optional.empty() : Optional.of(proprietary);
 	}
 
-	public void setProprietary(com.tools20022.repository.msg.GenericIdentification1 proprietary) {
+	public SystemStatus1Choice setProprietary(com.tools20022.repository.msg.GenericIdentification1 proprietary) {
 		this.proprietary = proprietary;
+		return this;
 	}
 }

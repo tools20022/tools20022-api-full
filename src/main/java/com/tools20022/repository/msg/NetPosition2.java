@@ -29,9 +29,8 @@ import com.tools20022.repository.codeset.TradingCapacity5Code;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -92,8 +91,16 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule#forNetPosition2
+ * ConstraintDepositoryOrPlaceOfListingPresenceRule.forNetPosition2}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -110,18 +117,17 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "NetPosition2", propOrder = {"clearingAccount", "nonClearingMember", "deliveryAccount", "financialInstrumentIdentification", "initialPositionAmount", "netPositionAmount", "accruedInterestAmount", "averageDealPrice",
 		"netQuantity", "securitiesMovementType", "depository", "tradingCapacity", "placeOfTrade", "tradeDate", "settlementDate", "tradeLegDetails"})
 public class NetPosition2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "ClrAcct", required = true)
 	protected SecuritiesAccount18 clearingAccount;
 	/**
-	 * Identifies the clearing member account at the Central counterparty
-	 * through which the trade must be cleared (sometimes called position
-	 * account).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -162,7 +168,7 @@ public class NetPosition2 {
 	public static final MMMessageAssociationEnd mmClearingAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ClearingMemberRole.mmClearingAccount;
-			componentContext_lazy = () -> NetPosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "ClrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,10 +181,11 @@ public class NetPosition2 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount18.mmObject();
 		}
 	};
+	@XmlElement(name = "NonClrMmb")
 	protected PartyIdentificationAndAccount31 nonClearingMember;
 	/**
-	 * Provides the identification for the non-clearing member.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -218,7 +225,7 @@ public class NetPosition2 {
 	public static final MMMessageAssociationEnd mmNonClearingMember = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> NetPosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "NonClrMmb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -231,13 +238,11 @@ public class NetPosition2 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentificationAndAccount31.mmObject();
 		}
 	};
+	@XmlElement(name = "DlvryAcct")
 	protected SecuritiesAccount19 deliveryAccount;
 	/**
-	 * An account opened by the central counterparty in the name of the clearing
-	 * member or its settlement agent within the account structure, for
-	 * settlement purposes (gives information about the clearing member/its
-	 * settlement agent account at the central securities depository).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -278,7 +283,7 @@ public class NetPosition2 {
 	public static final MMMessageAssociationEnd mmDeliveryAccount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> ClearingMemberRole.mmDeliveryAccount;
-			componentContext_lazy = () -> NetPosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "DlvryAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -291,10 +296,11 @@ public class NetPosition2 {
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount19.mmObject();
 		}
 	};
+	@XmlElement(name = "FinInstrmId", required = true)
 	protected SecurityIdentification14 financialInstrumentIdentification;
 	/**
-	 * Provides details about the security identification.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -334,7 +340,7 @@ public class NetPosition2 {
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Security.mmIdentification;
-			componentContext_lazy = () -> NetPosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -347,10 +353,11 @@ public class NetPosition2 {
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
+	@XmlElement(name = "InitlPosAmt")
 	protected AmountAndDirection21 initialPositionAmount;
 	/**
-	 * Provides the intra position amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -389,7 +396,7 @@ public class NetPosition2 {
 	public static final MMMessageAssociationEnd mmInitialPositionAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Position.mmInitialPositionAmount;
-			componentContext_lazy = () -> NetPosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "InitlPosAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -402,10 +409,11 @@ public class NetPosition2 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection21.mmObject();
 		}
 	};
+	@XmlElement(name = "NetPosAmt", required = true)
 	protected AmountAndDirection21 netPositionAmount;
 	/**
-	 * Provides the net position amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -444,7 +452,7 @@ public class NetPosition2 {
 	public static final MMMessageAssociationEnd mmNetPositionAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Position.mmNetPositionAmount;
-			componentContext_lazy = () -> NetPosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "NetPosAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -457,11 +465,11 @@ public class NetPosition2 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection21.mmObject();
 		}
 	};
+	@XmlElement(name = "AcrdIntrstAmt")
 	protected AmountAndDirection21 accruedInterestAmount;
 	/**
-	 * Interest that has accumulated on a bond since the last interest payment
-	 * up to, but not including, the settlement date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -502,7 +510,7 @@ public class NetPosition2 {
 	public static final MMMessageAssociationEnd mmAccruedInterestAmount = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAmount;
-			componentContext_lazy = () -> NetPosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "AcrdIntrstAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -515,10 +523,11 @@ public class NetPosition2 {
 			type_lazy = () -> com.tools20022.repository.msg.AmountAndDirection21.mmObject();
 		}
 	};
+	@XmlElement(name = "AvrgDealPric")
 	protected Price4 averageDealPrice;
 	/**
-	 * This is the price of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -556,7 +565,7 @@ public class NetPosition2 {
 	public static final MMMessageAssociationEnd mmAverageDealPrice = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesTrade.mmTradePrice;
-			componentContext_lazy = () -> NetPosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "AvrgDealPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -569,10 +578,11 @@ public class NetPosition2 {
 			type_lazy = () -> com.tools20022.repository.msg.Price4.mmObject();
 		}
 	};
+	@XmlElement(name = "NetQty", required = true)
 	protected FinancialInstrumentQuantity1Choice netQuantity;
 	/**
-	 * Identifies the quantity of the trade leg.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -611,7 +621,7 @@ public class NetPosition2 {
 	public static final MMMessageAssociationEnd mmNetQuantity = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Position.mmNetQuantity;
-			componentContext_lazy = () -> NetPosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "NetQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -624,11 +634,11 @@ public class NetPosition2 {
 			type_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "SctiesMvmntTp", required = true)
 	protected ReceiveDelivery1Code securitiesMovementType;
 	/**
-	 * Indicates the securities movement direction, that is, whether this is a
-	 * delivery or return.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -671,7 +681,7 @@ public class NetPosition2 {
 	public static final MMMessageAttribute mmSecuritiesMovementType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSecuritiesMovementType;
-			componentContext_lazy = () -> NetPosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "SctiesMvmntTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -683,10 +693,11 @@ public class NetPosition2 {
 			simpleType_lazy = () -> ReceiveDelivery1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Dpstry", required = true)
 	protected PartyIdentification34Choice depository;
 	/**
-	 * Place at which a trade settles.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -725,7 +736,7 @@ public class NetPosition2 {
 	public static final MMMessageAssociationEnd mmDepository = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> NetPosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "Dpstry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -738,10 +749,11 @@ public class NetPosition2 {
 			type_lazy = () -> PartyIdentification34Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TradgCpcty")
 	protected TradingCapacity5Code tradingCapacity;
 	/**
-	 * Identifies the trading capacity of the seller.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -782,7 +794,7 @@ public class NetPosition2 {
 	public static final MMMessageAttribute mmTradingCapacity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> TradePartyRole.mmTradingPartyCapacity;
-			componentContext_lazy = () -> NetPosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "TradgCpcty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -794,10 +806,11 @@ public class NetPosition2 {
 			simpleType_lazy = () -> TradingCapacity5Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PlcOfTrad")
 	protected MarketIdentification20 placeOfTrade;
 	/**
-	 * Place at which the security is traded.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -838,7 +851,7 @@ public class NetPosition2 {
 	public static final MMMessageAttribute mmPlaceOfTrade = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmMarket;
-			componentContext_lazy = () -> NetPosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "PlcOfTrad";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -850,10 +863,11 @@ public class NetPosition2 {
 			complexType_lazy = () -> com.tools20022.repository.msg.MarketIdentification20.mmObject();
 		}
 	};
+	@XmlElement(name = "TradDt")
 	protected ISODate tradeDate;
 	/**
-	 * Provides the date of the trade.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -892,7 +906,7 @@ public class NetPosition2 {
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Trade.mmTradeDateTime;
-			componentContext_lazy = () -> NetPosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -904,10 +918,11 @@ public class NetPosition2 {
 			simpleType_lazy = () -> ISODate.mmObject();
 		}
 	};
+	@XmlElement(name = "SttlmDt")
 	protected DateFormat15Choice settlementDate;
 	/**
-	 * Provides the contractual settlement date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -948,7 +963,7 @@ public class NetPosition2 {
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesSettlement.mmSettlementDate;
-			componentContext_lazy = () -> NetPosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "SttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -960,11 +975,11 @@ public class NetPosition2 {
 			complexType_lazy = () -> DateFormat15Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "TradLegDtls")
 	protected List<com.tools20022.repository.msg.TradeLeg7> tradeLegDetails;
 	/**
-	 * Provides the trade leg details such as trade leg identification and trade
-	 * type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -1004,7 +1019,7 @@ public class NetPosition2 {
 	public static final MMMessageAssociationEnd mmTradeLegDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesTrade.mmObject();
-			componentContext_lazy = () -> NetPosition2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.NetPosition2.mmObject();
 			isDerived = false;
 			xmlTag = "TradLegDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1020,11 +1035,15 @@ public class NetPosition2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(NetPosition2.mmClearingAccount, NetPosition2.mmNonClearingMember, NetPosition2.mmDeliveryAccount, NetPosition2.mmFinancialInstrumentIdentification,
-						NetPosition2.mmInitialPositionAmount, NetPosition2.mmNetPositionAmount, NetPosition2.mmAccruedInterestAmount, NetPosition2.mmAverageDealPrice, NetPosition2.mmNetQuantity, NetPosition2.mmSecuritiesMovementType,
-						NetPosition2.mmDepository, NetPosition2.mmTradingCapacity, NetPosition2.mmPlaceOfTrade, NetPosition2.mmTradeDate, NetPosition2.mmSettlementDate, NetPosition2.mmTradeLegDetails);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.NetPosition2.mmClearingAccount, com.tools20022.repository.msg.NetPosition2.mmNonClearingMember,
+						com.tools20022.repository.msg.NetPosition2.mmDeliveryAccount, com.tools20022.repository.msg.NetPosition2.mmFinancialInstrumentIdentification, com.tools20022.repository.msg.NetPosition2.mmInitialPositionAmount,
+						com.tools20022.repository.msg.NetPosition2.mmNetPositionAmount, com.tools20022.repository.msg.NetPosition2.mmAccruedInterestAmount, com.tools20022.repository.msg.NetPosition2.mmAverageDealPrice,
+						com.tools20022.repository.msg.NetPosition2.mmNetQuantity, com.tools20022.repository.msg.NetPosition2.mmSecuritiesMovementType, com.tools20022.repository.msg.NetPosition2.mmDepository,
+						com.tools20022.repository.msg.NetPosition2.mmTradingCapacity, com.tools20022.repository.msg.NetPosition2.mmPlaceOfTrade, com.tools20022.repository.msg.NetPosition2.mmTradeDate,
+						com.tools20022.repository.msg.NetPosition2.mmSettlementDate, com.tools20022.repository.msg.NetPosition2.mmTradeLegDetails);
 				trace_lazy = () -> Position.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule.forNetPosition2);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "NetPosition2";
 				definition = "Provides the net positions details.";
@@ -1034,147 +1053,147 @@ public class NetPosition2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "ClrAcct", required = true)
 	public SecuritiesAccount18 getClearingAccount() {
 		return clearingAccount;
 	}
 
-	public void setClearingAccount(com.tools20022.repository.msg.SecuritiesAccount18 clearingAccount) {
-		this.clearingAccount = clearingAccount;
+	public NetPosition2 setClearingAccount(com.tools20022.repository.msg.SecuritiesAccount18 clearingAccount) {
+		this.clearingAccount = Objects.requireNonNull(clearingAccount);
+		return this;
 	}
 
-	@XmlElement(name = "NonClrMmb")
-	public PartyIdentificationAndAccount31 getNonClearingMember() {
-		return nonClearingMember;
+	public Optional<PartyIdentificationAndAccount31> getNonClearingMember() {
+		return nonClearingMember == null ? Optional.empty() : Optional.of(nonClearingMember);
 	}
 
-	public void setNonClearingMember(com.tools20022.repository.msg.PartyIdentificationAndAccount31 nonClearingMember) {
+	public NetPosition2 setNonClearingMember(com.tools20022.repository.msg.PartyIdentificationAndAccount31 nonClearingMember) {
 		this.nonClearingMember = nonClearingMember;
+		return this;
 	}
 
-	@XmlElement(name = "DlvryAcct")
-	public SecuritiesAccount19 getDeliveryAccount() {
-		return deliveryAccount;
+	public Optional<SecuritiesAccount19> getDeliveryAccount() {
+		return deliveryAccount == null ? Optional.empty() : Optional.of(deliveryAccount);
 	}
 
-	public void setDeliveryAccount(com.tools20022.repository.msg.SecuritiesAccount19 deliveryAccount) {
+	public NetPosition2 setDeliveryAccount(com.tools20022.repository.msg.SecuritiesAccount19 deliveryAccount) {
 		this.deliveryAccount = deliveryAccount;
+		return this;
 	}
 
-	@XmlElement(name = "FinInstrmId", required = true)
 	public SecurityIdentification14 getFinancialInstrumentIdentification() {
 		return financialInstrumentIdentification;
 	}
 
-	public void setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
-		this.financialInstrumentIdentification = financialInstrumentIdentification;
+	public NetPosition2 setFinancialInstrumentIdentification(com.tools20022.repository.msg.SecurityIdentification14 financialInstrumentIdentification) {
+		this.financialInstrumentIdentification = Objects.requireNonNull(financialInstrumentIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "InitlPosAmt")
-	public AmountAndDirection21 getInitialPositionAmount() {
-		return initialPositionAmount;
+	public Optional<AmountAndDirection21> getInitialPositionAmount() {
+		return initialPositionAmount == null ? Optional.empty() : Optional.of(initialPositionAmount);
 	}
 
-	public void setInitialPositionAmount(com.tools20022.repository.msg.AmountAndDirection21 initialPositionAmount) {
+	public NetPosition2 setInitialPositionAmount(com.tools20022.repository.msg.AmountAndDirection21 initialPositionAmount) {
 		this.initialPositionAmount = initialPositionAmount;
+		return this;
 	}
 
-	@XmlElement(name = "NetPosAmt", required = true)
 	public AmountAndDirection21 getNetPositionAmount() {
 		return netPositionAmount;
 	}
 
-	public void setNetPositionAmount(com.tools20022.repository.msg.AmountAndDirection21 netPositionAmount) {
-		this.netPositionAmount = netPositionAmount;
+	public NetPosition2 setNetPositionAmount(com.tools20022.repository.msg.AmountAndDirection21 netPositionAmount) {
+		this.netPositionAmount = Objects.requireNonNull(netPositionAmount);
+		return this;
 	}
 
-	@XmlElement(name = "AcrdIntrstAmt")
-	public AmountAndDirection21 getAccruedInterestAmount() {
-		return accruedInterestAmount;
+	public Optional<AmountAndDirection21> getAccruedInterestAmount() {
+		return accruedInterestAmount == null ? Optional.empty() : Optional.of(accruedInterestAmount);
 	}
 
-	public void setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection21 accruedInterestAmount) {
+	public NetPosition2 setAccruedInterestAmount(com.tools20022.repository.msg.AmountAndDirection21 accruedInterestAmount) {
 		this.accruedInterestAmount = accruedInterestAmount;
+		return this;
 	}
 
-	@XmlElement(name = "AvrgDealPric")
-	public Price4 getAverageDealPrice() {
-		return averageDealPrice;
+	public Optional<Price4> getAverageDealPrice() {
+		return averageDealPrice == null ? Optional.empty() : Optional.of(averageDealPrice);
 	}
 
-	public void setAverageDealPrice(com.tools20022.repository.msg.Price4 averageDealPrice) {
+	public NetPosition2 setAverageDealPrice(com.tools20022.repository.msg.Price4 averageDealPrice) {
 		this.averageDealPrice = averageDealPrice;
+		return this;
 	}
 
-	@XmlElement(name = "NetQty", required = true)
 	public FinancialInstrumentQuantity1Choice getNetQuantity() {
 		return netQuantity;
 	}
 
-	public void setNetQuantity(FinancialInstrumentQuantity1Choice netQuantity) {
-		this.netQuantity = netQuantity;
+	public NetPosition2 setNetQuantity(FinancialInstrumentQuantity1Choice netQuantity) {
+		this.netQuantity = Objects.requireNonNull(netQuantity);
+		return this;
 	}
 
-	@XmlElement(name = "SctiesMvmntTp", required = true)
 	public ReceiveDelivery1Code getSecuritiesMovementType() {
 		return securitiesMovementType;
 	}
 
-	public void setSecuritiesMovementType(ReceiveDelivery1Code securitiesMovementType) {
-		this.securitiesMovementType = securitiesMovementType;
+	public NetPosition2 setSecuritiesMovementType(ReceiveDelivery1Code securitiesMovementType) {
+		this.securitiesMovementType = Objects.requireNonNull(securitiesMovementType);
+		return this;
 	}
 
-	@XmlElement(name = "Dpstry", required = true)
 	public PartyIdentification34Choice getDepository() {
 		return depository;
 	}
 
-	public void setDepository(PartyIdentification34Choice depository) {
-		this.depository = depository;
+	public NetPosition2 setDepository(PartyIdentification34Choice depository) {
+		this.depository = Objects.requireNonNull(depository);
+		return this;
 	}
 
-	@XmlElement(name = "TradgCpcty")
-	public TradingCapacity5Code getTradingCapacity() {
-		return tradingCapacity;
+	public Optional<TradingCapacity5Code> getTradingCapacity() {
+		return tradingCapacity == null ? Optional.empty() : Optional.of(tradingCapacity);
 	}
 
-	public void setTradingCapacity(TradingCapacity5Code tradingCapacity) {
+	public NetPosition2 setTradingCapacity(TradingCapacity5Code tradingCapacity) {
 		this.tradingCapacity = tradingCapacity;
+		return this;
 	}
 
-	@XmlElement(name = "PlcOfTrad")
-	public MarketIdentification20 getPlaceOfTrade() {
-		return placeOfTrade;
+	public Optional<MarketIdentification20> getPlaceOfTrade() {
+		return placeOfTrade == null ? Optional.empty() : Optional.of(placeOfTrade);
 	}
 
-	public void setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification20 placeOfTrade) {
+	public NetPosition2 setPlaceOfTrade(com.tools20022.repository.msg.MarketIdentification20 placeOfTrade) {
 		this.placeOfTrade = placeOfTrade;
+		return this;
 	}
 
-	@XmlElement(name = "TradDt")
-	public ISODate getTradeDate() {
-		return tradeDate;
+	public Optional<ISODate> getTradeDate() {
+		return tradeDate == null ? Optional.empty() : Optional.of(tradeDate);
 	}
 
-	public void setTradeDate(ISODate tradeDate) {
+	public NetPosition2 setTradeDate(ISODate tradeDate) {
 		this.tradeDate = tradeDate;
+		return this;
 	}
 
-	@XmlElement(name = "SttlmDt")
-	public DateFormat15Choice getSettlementDate() {
-		return settlementDate;
+	public Optional<DateFormat15Choice> getSettlementDate() {
+		return settlementDate == null ? Optional.empty() : Optional.of(settlementDate);
 	}
 
-	public void setSettlementDate(DateFormat15Choice settlementDate) {
+	public NetPosition2 setSettlementDate(DateFormat15Choice settlementDate) {
 		this.settlementDate = settlementDate;
+		return this;
 	}
 
-	@XmlElement(name = "TradLegDtls")
 	public List<TradeLeg7> getTradeLegDetails() {
-		return tradeLegDetails;
+		return tradeLegDetails == null ? tradeLegDetails = new ArrayList<>() : tradeLegDetails;
 	}
 
-	public void setTradeLegDetails(List<com.tools20022.repository.msg.TradeLeg7> tradeLegDetails) {
-		this.tradeLegDetails = tradeLegDetails;
+	public NetPosition2 setTradeLegDetails(List<com.tools20022.repository.msg.TradeLeg7> tradeLegDetails) {
+		this.tradeLegDetails = Objects.requireNonNull(tradeLegDetails);
+		return this;
 	}
 }

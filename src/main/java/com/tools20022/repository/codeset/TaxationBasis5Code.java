@@ -20,42 +20,45 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TaxationBasisCode;
+import com.tools20022.repository.codeset.TaxationBasis5Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the tax or charge basis.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis5Code#Flat
+ * TaxationBasis5Code.Flat}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TaxationBasis5Code#GrossAmount
+ * TaxationBasis5Code.GrossAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TaxationBasis5Code#NetAmount
+ * TaxationBasis5Code.NetAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TaxationBasis5Code#NetAssetValuePrice
+ * TaxationBasis5Code.NetAssetValuePrice}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis5Code#PerUnit
+ * TaxationBasis5Code.PerUnit}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
  * {@linkplain com.tools20022.repository.codeset.TaxationBasisCode
  * TaxationBasisCode}</li>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.TaxationBasis5Code#mmFlat
- * TaxationBasis5Code.mmFlat}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxationBasis5Code#mmGrossAmount
- * TaxationBasis5Code.mmGrossAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxationBasis5Code#mmNetAmount
- * TaxationBasis5Code.mmNetAmount}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxationBasis5Code#mmNetAssetValuePrice
- * TaxationBasis5Code.mmNetAssetValuePrice}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.TaxationBasis5Code#mmPerUnit
- * TaxationBasis5Code.mmPerUnit}</li>
- * </ul>
- * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the tax or charge basis."</li>
  * </ul>
  */
-public class TaxationBasis5Code extends TaxationBasisCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TaxationBasis5Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -85,11 +89,12 @@ public class TaxationBasis5Code extends TaxationBasisCode {
 	 * name} = "Flat"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmFlat = new MMCode() {
+	public static final TaxationBasis5Code Flat = new TaxationBasis5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Flat";
-			owner_lazy = () -> TaxationBasis5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxationBasis5Code.mmObject();
+			codeName = TaxationBasisCode.Flat.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -108,11 +113,12 @@ public class TaxationBasis5Code extends TaxationBasisCode {
 	 * name} = "GrossAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGrossAmount = new MMCode() {
+	public static final TaxationBasis5Code GrossAmount = new TaxationBasis5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossAmount";
-			owner_lazy = () -> TaxationBasis5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxationBasis5Code.mmObject();
+			codeName = TaxationBasisCode.GrossAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -131,11 +137,12 @@ public class TaxationBasis5Code extends TaxationBasisCode {
 	 * name} = "NetAmount"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNetAmount = new MMCode() {
+	public static final TaxationBasis5Code NetAmount = new TaxationBasis5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
-			owner_lazy = () -> TaxationBasis5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxationBasis5Code.mmObject();
+			codeName = TaxationBasisCode.NetAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -154,11 +161,12 @@ public class TaxationBasis5Code extends TaxationBasisCode {
 	 * name} = "NetAssetValuePrice"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNetAssetValuePrice = new MMCode() {
+	public static final TaxationBasis5Code NetAssetValuePrice = new TaxationBasis5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAssetValuePrice";
-			owner_lazy = () -> TaxationBasis5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxationBasis5Code.mmObject();
+			codeName = TaxationBasisCode.NetAssetValuePrice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -177,25 +185,60 @@ public class TaxationBasis5Code extends TaxationBasisCode {
 	 * name} = "PerUnit"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPerUnit = new MMCode() {
+	public static final TaxationBasis5Code PerUnit = new TaxationBasis5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerUnit";
-			owner_lazy = () -> TaxationBasis5Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TaxationBasis5Code.mmObject();
+			codeName = TaxationBasisCode.PerUnit.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TaxationBasis5Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TaxationBasis5Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxationBasis5Code";
 				definition = "Specifies the tax or charge basis.";
-				code_lazy = () -> Arrays.asList(TaxationBasis5Code.mmFlat, TaxationBasis5Code.mmGrossAmount, TaxationBasis5Code.mmNetAmount, TaxationBasis5Code.mmNetAssetValuePrice, TaxationBasis5Code.mmPerUnit);
 				trace_lazy = () -> TaxationBasisCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxationBasis5Code.Flat, com.tools20022.repository.codeset.TaxationBasis5Code.GrossAmount, com.tools20022.repository.codeset.TaxationBasis5Code.NetAmount,
+						com.tools20022.repository.codeset.TaxationBasis5Code.NetAssetValuePrice, com.tools20022.repository.codeset.TaxationBasis5Code.PerUnit);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Flat.getCodeName().get(), Flat);
+		codesByName.put(GrossAmount.getCodeName().get(), GrossAmount);
+		codesByName.put(NetAmount.getCodeName().get(), NetAmount);
+		codesByName.put(NetAssetValuePrice.getCodeName().get(), NetAssetValuePrice);
+		codesByName.put(PerUnit.getCodeName().get(), PerUnit);
+	}
+
+	public static TaxationBasis5Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TaxationBasis5Code[] values() {
+		TaxationBasis5Code[] values = new TaxationBasis5Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TaxationBasis5Code> {
+		@Override
+		public TaxationBasis5Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TaxationBasis5Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.InRepairStatusReasonCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the reason for a In Repair status.
@@ -32,8 +37,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.InRepairStatusReasonCode#mmCommercialAgreement
- * InRepairStatusReasonCode.mmCommercialAgreement}</li>
+ * {@linkplain com.tools20022.repository.codeset.InRepairStatusReasonCode#CommercialAgreement
+ * InRepairStatusReasonCode.CommercialAgreement}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -46,8 +51,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -64,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the reason for a In Repair status."</li>
  * </ul>
  */
-public class InRepairStatusReasonCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class InRepairStatusReasonCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -91,28 +97,57 @@ public class InRepairStatusReasonCode {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMCode mmCommercialAgreement = new MMCode() {
+	public static final InRepairStatusReasonCode CommercialAgreement = new InRepairStatusReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialAgreement";
 			definition = "Order has been accepted and centralised before the cut off, but with different sales agreement than the one provided in the order.";
-			owner_lazy = () -> InRepairStatusReasonCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.InRepairStatusReasonCode.mmObject();
 			codeName = "COMA";
 		}
 	};
+	final static private LinkedHashMap<String, InRepairStatusReasonCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected InRepairStatusReasonCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("COMA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InRepairStatusReasonCode";
 				definition = "Specifies the reason for a In Repair status.";
-				code_lazy = () -> Arrays.asList(InRepairStatusReasonCode.mmCommercialAgreement);
 				derivation_lazy = () -> Arrays.asList(InRepairStatusReason1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InRepairStatusReasonCode.CommercialAgreement);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(CommercialAgreement.getCodeName().get(), CommercialAgreement);
+	}
+
+	public static InRepairStatusReasonCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static InRepairStatusReasonCode[] values() {
+		InRepairStatusReasonCode[] values = new InRepairStatusReasonCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, InRepairStatusReasonCode> {
+		@Override
+		public InRepairStatusReasonCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(InRepairStatusReasonCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

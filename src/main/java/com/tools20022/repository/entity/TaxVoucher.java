@@ -22,9 +22,8 @@ import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Statement showing the amount or value of a distribution and either the tax
@@ -88,15 +87,6 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} =
- * <ul>
- * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher2 TaxVoucher2}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher3 TaxVoucher3}</li>
- * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher1 TaxVoucher1}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
  * associationDomain} =
  * <ul>
@@ -117,10 +107,19 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher2 TaxVoucher2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher3 TaxVoucher3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher1 TaxVoucher1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -138,9 +137,8 @@ public class TaxVoucher {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected PercentageRate requestedTaxationRate;
 	/**
-	 * Requested tax rate in case of breakdown of tax rate, for example, used
-	 * for adjustment of tax rate. This is the new requested applicable rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -192,8 +190,8 @@ public class TaxVoucher {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate8.mmRequestedTaxationRate, CorporateActionRate9.mmRequestedTaxationRate, CorporateActionRate47.mmRequestedTaxationRate, CorporateActionRate59.mmRequestedTaxationRate,
 					CorporateActionRate71.mmRequestedWithholdingTaxRate, CorporateActionRate73.mmRequestedWithholdingTaxRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RequestedTaxationRate";
 			definition = "Requested tax rate in case of breakdown of tax rate, for example, used for adjustment of tax rate. This is the new requested applicable rate.";
@@ -212,8 +210,8 @@ public class TaxVoucher {
 	};
 	protected PercentageRate creditRate;
 	/**
-	 * Applicable tax rate on the tax credit amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -364,8 +362,8 @@ public class TaxVoucher {
 					RateDetails18.mmTaxCreditRate, RateDetails21.mmTaxCreditRate, CorporateActionRate65.mmTaxCreditRate, RateDetails23.mmTaxCreditRate, CorporateActionRate69.mmTaxCreditRate, RateDetails22.mmTaxCreditRate,
 					CorporateActionRate72.mmTaxCreditRate, RateDetails24.mmTaxCreditRate, RateDetails25.mmTaxCreditRate, CorporateActionRate77.mmTaxCreditRate, CorporateActionRate75.mmTaxCreditRate, RateDetails26.mmTaxCreditRate,
 					RateDetails27.mmTaxCreditRate, RateDetails28.mmTaxCreditRate, RateDetails30.mmTaxCreditRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditRate";
 			definition = "Applicable tax rate on the tax credit amount.";
@@ -384,9 +382,8 @@ public class TaxVoucher {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesTax> relatedSecurityTax;
 	/**
-	 * Specifies tax elements on the security which is involved in the corporate
-	 * event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -513,8 +510,8 @@ public class TaxVoucher {
 					CorporateActionRate36.mmWithholdingOfForeignTax, CorporateActionRate42.mmWithholdingOfForeignTax, CorporateActionRate2.mmWithholdingOfForeignTax, CorporateActionRate2.mmWithholdingOfLocalTax,
 					CorporateActionRate2.mmRelatedTax, CorporateActionRate46.mmWithholdingOfForeignTax, CorporateActionRate45.mmWithholdingOfForeignTax, CorporateActionRate44.mmWithholdingOfForeignTax,
 					CorporateActionRate60.mmWithholdingOfForeignTax, CorporateActionRate64.mmWithholdingOfForeignTax, CorporateActionRate57.mmWithholdingOfForeignTax);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSecurityTax";
 			definition = "Specifies tax elements on the security which is involved in the corporate event.";
@@ -526,8 +523,8 @@ public class TaxVoucher {
 	};
 	protected CurrencyAndAmount sundryOrOtherAmount;
 	/**
-	 * Amount of money related to taxable income that cannot be categorised.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -679,8 +676,8 @@ public class TaxVoucher {
 					CorporateActionAmounts33.mmSundryOrOtherAmount, CorporateActionAmounts32.mmSundryOrOtherAmount, CorporateActionAmounts35.mmSundryOrOtherAmount, CorporateActionAmounts37.mmSundryOrOtherAmount,
 					CorporateActionAmounts36.mmSundryOrOtherAmount, CorporateActionAmounts38.mmSundryOrOtherAmount, CorporateActionAmounts39.mmSundryOrOtherAmount, CorporateActionAmounts41.mmSundryOrOtherAmount,
 					CorporateActionAmounts40.mmSundryOrOtherAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SundryOrOtherAmount";
 			definition = "Amount of money related to taxable income that cannot be categorised.";
@@ -699,8 +696,8 @@ public class TaxVoucher {
 	};
 	protected CurrencyAndAmount creditAmount;
 	/**
-	 * Amount of money per equity allocated as the result of a tax credit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -850,8 +847,8 @@ public class TaxVoucher {
 					CorporateActionAmounts1.mmTaxCreditAmount, CorporateActionAmounts29.mmTaxCreditAmount, CorporateActionAmounts27.mmTaxCreditAmount, CorporateActionAmounts28.mmTaxCreditAmount, CorporateActionAmounts33.mmTaxCreditAmount,
 					CorporateActionAmounts32.mmTaxCreditAmount, CorporateActionAmounts35.mmTaxCreditAmount, CorporateActionAmounts37.mmTaxCreditAmount, CorporateActionAmounts36.mmTaxCreditAmount, CorporateActionAmounts38.mmTaxCreditAmount,
 					CorporateActionAmounts39.mmTaxCreditAmount, CorporateActionAmounts41.mmTaxCreditAmount, CorporateActionAmounts40.mmTaxCreditAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditAmount";
 			definition = "Amount of money per equity allocated as the result of a tax credit.";
@@ -870,8 +867,8 @@ public class TaxVoucher {
 	};
 	protected CurrencyAndAmount cashAmountBroughtForward;
 	/**
-	 * Cash amount retained from previous dividend or interest payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -945,8 +942,8 @@ public class TaxVoucher {
 					CorporateActionAmounts12.mmCashAmountBroughtForward, CorporateActionAmounts17.mmCashAmountBroughtForward, CorporateActionAmounts20.mmCashAmountBroughtForward, CorporateActionAmounts23.mmCashAmountBroughtForward,
 					CorporateActionAmounts24.mmCashAmountBroughtForward, TaxVoucher1.mmCashAmountBroughtForward, CorporateActionAmounts29.mmCashAmountBroughtForward, CorporateActionAmounts35.mmCashAmountBroughtForward,
 					CorporateActionAmounts37.mmCashAmountBroughtForward, CorporateActionAmounts39.mmCashAmountBroughtForward);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAmountBroughtForward";
 			definition = "Cash amount retained from previous dividend or interest payment.";
@@ -965,8 +962,8 @@ public class TaxVoucher {
 	};
 	protected CurrencyAndAmount cashAmountCarriedForward;
 	/**
-	 * Cash amount carried forward to next dividend or interest payment.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1040,8 +1037,8 @@ public class TaxVoucher {
 					CorporateActionAmounts12.mmCashAmountCarriedForward, CorporateActionAmounts17.mmCashAmountCarriedForward, CorporateActionAmounts20.mmCashAmountCarriedForward, CorporateActionAmounts23.mmCashAmountCarriedForward,
 					CorporateActionAmounts24.mmCashAmountCarriedForward, TaxVoucher1.mmCashAmountCarriedForward, CorporateActionAmounts29.mmCashAmountCarriedForward, CorporateActionAmounts35.mmCashAmountCarriedForward,
 					CorporateActionAmounts37.mmCashAmountCarriedForward, CorporateActionAmounts39.mmCashAmountCarriedForward);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAmountCarriedForward";
 			definition = "Cash amount carried forward to next dividend or interest payment.";
@@ -1060,9 +1057,8 @@ public class TaxVoucher {
 	};
 	protected CurrencyAndAmount notionalTaxAmount;
 	/**
-	 * Tax on the amount of cash that would have been paid when new securities
-	 * are issued in lieu of a cash dividend.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1133,8 +1129,8 @@ public class TaxVoucher {
 			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmNotionalTaxAmount, CorporateActionAmounts5.mmNotionalTaxAmount, CorporateActionAmounts11.mmNotionalTaxAmount, CorporateActionAmounts12.mmNotionalTaxAmount,
 					CorporateActionAmounts17.mmNotionalTaxAmount, CorporateActionAmounts20.mmNotionalTaxAmount, CorporateActionAmounts23.mmNotionalTaxAmount, CorporateActionAmounts24.mmNotionalTaxAmount,
 					CorporateActionAmounts29.mmNotionalTaxAmount, CorporateActionAmounts35.mmNotionalTaxAmount, CorporateActionAmounts37.mmNotionalTaxAmount, CorporateActionAmounts39.mmNotionalTaxAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NotionalTaxAmount";
 			definition = "Tax on the amount of cash that would have been paid when new securities are issued in lieu of a cash dividend.";
@@ -1153,9 +1149,8 @@ public class TaxVoucher {
 	};
 	protected CorporateActionDistribution distribution;
 	/**
-	 * Corporate action distribution process for which tax voucher information
-	 * is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1190,8 +1185,8 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAssociationEnd mmDistribution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Distribution";
 			definition = "Corporate action distribution process for which tax voucher information is provided.";
@@ -1204,8 +1199,8 @@ public class TaxVoucher {
 	};
 	protected Max35Text identification;
 	/**
-	 * Unique and unambiguous identification for the tax voucher.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1242,8 +1237,8 @@ public class TaxVoucher {
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxVoucher2.mmIdentification, TaxVoucher3.mmIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the tax voucher.";
@@ -1262,8 +1257,8 @@ public class TaxVoucher {
 	};
 	protected ISODate bargainDate;
 	/**
-	 * Date on which DRIP purchase completed.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1299,8 +1294,8 @@ public class TaxVoucher {
 	public static final MMBusinessAttribute mmBargainDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxVoucher2.mmBargainDate, TaxVoucher3.mmBargainDate, TaxVoucher1.mmBargainDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BargainDate";
 			definition = "Date on which DRIP purchase completed.";
@@ -1319,8 +1314,8 @@ public class TaxVoucher {
 	};
 	protected ISODate bargainSettlementDate;
 	/**
-	 * Settlement date of the DRIP purchase transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1359,8 +1354,8 @@ public class TaxVoucher {
 	public static final MMBusinessAttribute mmBargainSettlementDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxVoucher2.mmBargainSettlementDate, TaxVoucher3.mmBargainSettlementDate, TaxVoucher1.mmBargainSettlementDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BargainSettlementDate";
 			definition = "Settlement date of the DRIP purchase transaction.";
@@ -1379,8 +1374,8 @@ public class TaxVoucher {
 	};
 	protected BaseOneRate taxVoucherRate;
 	/**
-	 * Distribution rate per share.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1413,8 +1408,8 @@ public class TaxVoucher {
 	public static final MMBusinessAttribute mmTaxVoucherRate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxVoucher1.mmTaxVoucherRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxVoucherRate";
 			definition = "Distribution rate per share.";
@@ -1433,8 +1428,8 @@ public class TaxVoucher {
 	};
 	protected SecuritiesQuantity recordDateHolding;
 	/**
-	 * Securities holding on record date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1475,8 +1470,8 @@ public class TaxVoucher {
 	public static final MMBusinessAssociationEnd mmRecordDateHolding = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxVoucher1.mmRecordDateHolding);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RecordDateHolding";
 			definition = "Securities holding on record date.";
@@ -1489,8 +1484,8 @@ public class TaxVoucher {
 	};
 	protected SecuritiesPricing scripDividendReinvestmentPricePerShare;
 	/**
-	 * Cost per share of new shares allotted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1531,8 +1526,8 @@ public class TaxVoucher {
 	public static final MMBusinessAssociationEnd mmScripDividendReinvestmentPricePerShare = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxVoucher1.mmScripDividendReinvestmentPricePerShare);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ScripDividendReinvestmentPricePerShare";
 			definition = "Cost per share of new shares allotted.";
@@ -1545,8 +1540,8 @@ public class TaxVoucher {
 	};
 	protected ActiveCurrencyAndAmount allotedSharesCost;
 	/**
-	 * Total cash amount required to purchase shares allotted.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1580,8 +1575,8 @@ public class TaxVoucher {
 	public static final MMBusinessAttribute mmAllotedSharesCost = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(TaxVoucher1.mmAllotedSharesCost);
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AllotedSharesCost";
 			definition = "Total cash amount required to purchase shares allotted.";
@@ -1600,8 +1595,8 @@ public class TaxVoucher {
 	};
 	protected List<com.tools20022.repository.entity.ForeignExchangeTrade> foreignExchangeTransaction;
 	/**
-	 * Provides information about the foreign exchange transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1635,8 +1630,8 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAssociationEnd mmForeignExchangeTransaction = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForeignExchangeTransaction";
 			definition = "Provides information about the foreign exchange transaction.";
@@ -1650,7 +1645,7 @@ public class TaxVoucher {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxVoucher";
 				definition = "Statement showing the amount or value of a distribution and either the tax credit to which the recipient is entitled in respect of that distribution; or the amount of tax deducted from the distribution.";
@@ -1679,135 +1674,152 @@ public class TaxVoucher {
 		return requestedTaxationRate;
 	}
 
-	public void setRequestedTaxationRate(PercentageRate requestedTaxationRate) {
-		this.requestedTaxationRate = requestedTaxationRate;
+	public TaxVoucher setRequestedTaxationRate(PercentageRate requestedTaxationRate) {
+		this.requestedTaxationRate = Objects.requireNonNull(requestedTaxationRate);
+		return this;
 	}
 
 	public PercentageRate getCreditRate() {
 		return creditRate;
 	}
 
-	public void setCreditRate(PercentageRate creditRate) {
-		this.creditRate = creditRate;
+	public TaxVoucher setCreditRate(PercentageRate creditRate) {
+		this.creditRate = Objects.requireNonNull(creditRate);
+		return this;
 	}
 
 	public List<SecuritiesTax> getRelatedSecurityTax() {
-		return relatedSecurityTax;
+		return relatedSecurityTax == null ? relatedSecurityTax = new ArrayList<>() : relatedSecurityTax;
 	}
 
-	public void setRelatedSecurityTax(List<com.tools20022.repository.entity.SecuritiesTax> relatedSecurityTax) {
-		this.relatedSecurityTax = relatedSecurityTax;
+	public TaxVoucher setRelatedSecurityTax(List<com.tools20022.repository.entity.SecuritiesTax> relatedSecurityTax) {
+		this.relatedSecurityTax = Objects.requireNonNull(relatedSecurityTax);
+		return this;
 	}
 
 	public CurrencyAndAmount getSundryOrOtherAmount() {
 		return sundryOrOtherAmount;
 	}
 
-	public void setSundryOrOtherAmount(CurrencyAndAmount sundryOrOtherAmount) {
-		this.sundryOrOtherAmount = sundryOrOtherAmount;
+	public TaxVoucher setSundryOrOtherAmount(CurrencyAndAmount sundryOrOtherAmount) {
+		this.sundryOrOtherAmount = Objects.requireNonNull(sundryOrOtherAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getCreditAmount() {
 		return creditAmount;
 	}
 
-	public void setCreditAmount(CurrencyAndAmount creditAmount) {
-		this.creditAmount = creditAmount;
+	public TaxVoucher setCreditAmount(CurrencyAndAmount creditAmount) {
+		this.creditAmount = Objects.requireNonNull(creditAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getCashAmountBroughtForward() {
 		return cashAmountBroughtForward;
 	}
 
-	public void setCashAmountBroughtForward(CurrencyAndAmount cashAmountBroughtForward) {
-		this.cashAmountBroughtForward = cashAmountBroughtForward;
+	public TaxVoucher setCashAmountBroughtForward(CurrencyAndAmount cashAmountBroughtForward) {
+		this.cashAmountBroughtForward = Objects.requireNonNull(cashAmountBroughtForward);
+		return this;
 	}
 
 	public CurrencyAndAmount getCashAmountCarriedForward() {
 		return cashAmountCarriedForward;
 	}
 
-	public void setCashAmountCarriedForward(CurrencyAndAmount cashAmountCarriedForward) {
-		this.cashAmountCarriedForward = cashAmountCarriedForward;
+	public TaxVoucher setCashAmountCarriedForward(CurrencyAndAmount cashAmountCarriedForward) {
+		this.cashAmountCarriedForward = Objects.requireNonNull(cashAmountCarriedForward);
+		return this;
 	}
 
 	public CurrencyAndAmount getNotionalTaxAmount() {
 		return notionalTaxAmount;
 	}
 
-	public void setNotionalTaxAmount(CurrencyAndAmount notionalTaxAmount) {
-		this.notionalTaxAmount = notionalTaxAmount;
+	public TaxVoucher setNotionalTaxAmount(CurrencyAndAmount notionalTaxAmount) {
+		this.notionalTaxAmount = Objects.requireNonNull(notionalTaxAmount);
+		return this;
 	}
 
-	public CorporateActionDistribution getDistribution() {
-		return distribution;
+	public Optional<CorporateActionDistribution> getDistribution() {
+		return distribution == null ? Optional.empty() : Optional.of(distribution);
 	}
 
-	public void setDistribution(com.tools20022.repository.entity.CorporateActionDistribution distribution) {
+	public TaxVoucher setDistribution(com.tools20022.repository.entity.CorporateActionDistribution distribution) {
 		this.distribution = distribution;
+		return this;
 	}
 
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public TaxVoucher setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
 	public ISODate getBargainDate() {
 		return bargainDate;
 	}
 
-	public void setBargainDate(ISODate bargainDate) {
-		this.bargainDate = bargainDate;
+	public TaxVoucher setBargainDate(ISODate bargainDate) {
+		this.bargainDate = Objects.requireNonNull(bargainDate);
+		return this;
 	}
 
 	public ISODate getBargainSettlementDate() {
 		return bargainSettlementDate;
 	}
 
-	public void setBargainSettlementDate(ISODate bargainSettlementDate) {
-		this.bargainSettlementDate = bargainSettlementDate;
+	public TaxVoucher setBargainSettlementDate(ISODate bargainSettlementDate) {
+		this.bargainSettlementDate = Objects.requireNonNull(bargainSettlementDate);
+		return this;
 	}
 
 	public BaseOneRate getTaxVoucherRate() {
 		return taxVoucherRate;
 	}
 
-	public void setTaxVoucherRate(BaseOneRate taxVoucherRate) {
-		this.taxVoucherRate = taxVoucherRate;
+	public TaxVoucher setTaxVoucherRate(BaseOneRate taxVoucherRate) {
+		this.taxVoucherRate = Objects.requireNonNull(taxVoucherRate);
+		return this;
 	}
 
 	public SecuritiesQuantity getRecordDateHolding() {
 		return recordDateHolding;
 	}
 
-	public void setRecordDateHolding(com.tools20022.repository.entity.SecuritiesQuantity recordDateHolding) {
-		this.recordDateHolding = recordDateHolding;
+	public TaxVoucher setRecordDateHolding(com.tools20022.repository.entity.SecuritiesQuantity recordDateHolding) {
+		this.recordDateHolding = Objects.requireNonNull(recordDateHolding);
+		return this;
 	}
 
 	public SecuritiesPricing getScripDividendReinvestmentPricePerShare() {
 		return scripDividendReinvestmentPricePerShare;
 	}
 
-	public void setScripDividendReinvestmentPricePerShare(com.tools20022.repository.entity.SecuritiesPricing scripDividendReinvestmentPricePerShare) {
-		this.scripDividendReinvestmentPricePerShare = scripDividendReinvestmentPricePerShare;
+	public TaxVoucher setScripDividendReinvestmentPricePerShare(com.tools20022.repository.entity.SecuritiesPricing scripDividendReinvestmentPricePerShare) {
+		this.scripDividendReinvestmentPricePerShare = Objects.requireNonNull(scripDividendReinvestmentPricePerShare);
+		return this;
 	}
 
 	public ActiveCurrencyAndAmount getAllotedSharesCost() {
 		return allotedSharesCost;
 	}
 
-	public void setAllotedSharesCost(ActiveCurrencyAndAmount allotedSharesCost) {
-		this.allotedSharesCost = allotedSharesCost;
+	public TaxVoucher setAllotedSharesCost(ActiveCurrencyAndAmount allotedSharesCost) {
+		this.allotedSharesCost = Objects.requireNonNull(allotedSharesCost);
+		return this;
 	}
 
 	public List<ForeignExchangeTrade> getForeignExchangeTransaction() {
-		return foreignExchangeTransaction;
+		return foreignExchangeTransaction == null ? foreignExchangeTransaction = new ArrayList<>() : foreignExchangeTransaction;
 	}
 
-	public void setForeignExchangeTransaction(List<com.tools20022.repository.entity.ForeignExchangeTrade> foreignExchangeTransaction) {
-		this.foreignExchangeTransaction = foreignExchangeTransaction;
+	public TaxVoucher setForeignExchangeTransaction(List<com.tools20022.repository.entity.ForeignExchangeTrade> foreignExchangeTransaction) {
+		this.foreignExchangeTransaction = Objects.requireNonNull(foreignExchangeTransaction);
+		return this;
 	}
 }

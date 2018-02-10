@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.ProrationTypeCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * TSE/JASDEC extension codes for the specific use of pro ration.
@@ -32,14 +37,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProrationTypeCode#mmNotDecided
- * ProrationTypeCode.mmNotDecided}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProrationTypeCode#NotDecided
+ * ProrationTypeCode.NotDecided}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ProrationTypeCode#mmNotEstablished
- * ProrationTypeCode.mmNotEstablished}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ProrationTypeCode#mmNotUsed
- * ProrationTypeCode.mmNotUsed}</li>
+ * {@linkplain com.tools20022.repository.codeset.ProrationTypeCode#NotEstablished
+ * ProrationTypeCode.NotEstablished}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProrationTypeCode#NotUsed
+ * ProrationTypeCode.NotUsed}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -52,8 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,7 +69,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "TSE/JASDEC extension codes for the specific use of pro ration."</li>
  * </ul>
  */
-public class ProrationTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ProrationTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,12 +94,12 @@ public class ProrationTypeCode {
 	 * definition} = "Pro ration is not decided."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotDecided = new MMCode() {
+	public static final ProrationTypeCode NotDecided = new ProrationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotDecided";
 			definition = "Pro ration is not decided.";
-			owner_lazy = () -> ProrationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProrationTypeCode.mmObject();
 			codeName = "PRND";
 		}
 	};
@@ -119,12 +124,12 @@ public class ProrationTypeCode {
 	 * definition} = "Pro ration is not established."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotEstablished = new MMCode() {
+	public static final ProrationTypeCode NotEstablished = new ProrationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEstablished";
 			definition = "Pro ration is not established.";
-			owner_lazy = () -> ProrationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProrationTypeCode.mmObject();
 			codeName = "PRNE";
 		}
 	};
@@ -149,27 +154,59 @@ public class ProrationTypeCode {
 	 * definition} = "Pro ration is not used."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmNotUsed = new MMCode() {
+	public static final ProrationTypeCode NotUsed = new ProrationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotUsed";
 			definition = "Pro ration is not used.";
-			owner_lazy = () -> ProrationTypeCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ProrationTypeCode.mmObject();
 			codeName = "PRNU";
 		}
 	};
+	final static private LinkedHashMap<String, ProrationTypeCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ProrationTypeCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProrationTypeCode";
 				definition = "TSE/JASDEC extension codes for the specific use of pro ration.";
-				code_lazy = () -> Arrays.asList(ProrationTypeCode.mmNotDecided, ProrationTypeCode.mmNotEstablished, ProrationTypeCode.mmNotUsed);
 				derivation_lazy = () -> Arrays.asList(ProrationType1Code.mmObject());
+				code_lazy = () -> Arrays
+						.asList(com.tools20022.repository.codeset.ProrationTypeCode.NotDecided, com.tools20022.repository.codeset.ProrationTypeCode.NotEstablished, com.tools20022.repository.codeset.ProrationTypeCode.NotUsed);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(NotDecided.getCodeName().get(), NotDecided);
+		codesByName.put(NotEstablished.getCodeName().get(), NotEstablished);
+		codesByName.put(NotUsed.getCodeName().get(), NotUsed);
+	}
+
+	public static ProrationTypeCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ProrationTypeCode[] values() {
+		ProrationTypeCode[] values = new ProrationTypeCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ProrationTypeCode> {
+		@Override
+		public ProrationTypeCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ProrationTypeCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

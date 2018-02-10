@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.DTCCSynonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -24,6 +25,7 @@ import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PartyIdentificationSD4", propOrder = {"contactPerson", "employingParty"})
 public class PartyIdentificationSD4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CtctPrsn")
 	protected ContactIdentification1 contactPerson;
 	/**
-	 * Identifies a contact person by a name, a given name and an address.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -87,6 +90,9 @@ public class PartyIdentificationSD4 {
 	 * PartyIdentificationSD4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "CtctPrsn"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Information Contact</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -101,9 +107,10 @@ public class PartyIdentificationSD4 {
 	 */
 	public static final MMMessageAssociationEnd mmContactPerson = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentificationSD4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD4.mmObject();
 			isDerived = false;
 			xmlTag = "CtctPrsn";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Information Contact"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactPerson";
 			definition = "Identifies a contact person by a name, a given name and an address.";
@@ -113,11 +120,11 @@ public class PartyIdentificationSD4 {
 			type_lazy = () -> com.tools20022.repository.msg.ContactIdentification1.mmObject();
 		}
 	};
+	@XmlElement(name = "EmplngPty")
 	protected PartyIdentificationSD3 employingParty;
 	/**
-	 * Identifies the organisation which is represented by a person or for which
-	 * a person works.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -130,6 +137,9 @@ public class PartyIdentificationSD4 {
 	 * PartyIdentificationSD4}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "EmplngPty"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = DTCCSynonym: Information Contact</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -145,9 +155,10 @@ public class PartyIdentificationSD4 {
 	 */
 	public static final MMMessageAssociationEnd mmEmployingParty = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> PartyIdentificationSD4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PartyIdentificationSD4.mmObject();
 			isDerived = false;
 			xmlTag = "EmplngPty";
+			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Information Contact"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployingParty";
 			definition = "Identifies the organisation which is represented by a person or for which a person works.";
@@ -161,9 +172,9 @@ public class PartyIdentificationSD4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PartyIdentificationSD4.mmContactPerson, PartyIdentificationSD4.mmEmployingParty);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentificationSD4.mmContactPerson, com.tools20022.repository.msg.PartyIdentificationSD4.mmEmployingParty);
 				trace_lazy = () -> Person.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationSD4";
 				definition = "Contact person at the party organising the meeting, at the issuer or at an intermediary.";
@@ -172,21 +183,21 @@ public class PartyIdentificationSD4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CtctPrsn")
-	public ContactIdentification1 getContactPerson() {
-		return contactPerson;
+	public Optional<ContactIdentification1> getContactPerson() {
+		return contactPerson == null ? Optional.empty() : Optional.of(contactPerson);
 	}
 
-	public void setContactPerson(com.tools20022.repository.msg.ContactIdentification1 contactPerson) {
+	public PartyIdentificationSD4 setContactPerson(com.tools20022.repository.msg.ContactIdentification1 contactPerson) {
 		this.contactPerson = contactPerson;
+		return this;
 	}
 
-	@XmlElement(name = "EmplngPty")
-	public PartyIdentificationSD3 getEmployingParty() {
-		return employingParty;
+	public Optional<PartyIdentificationSD3> getEmployingParty() {
+		return employingParty == null ? Optional.empty() : Optional.of(employingParty);
 	}
 
-	public void setEmployingParty(com.tools20022.repository.msg.PartyIdentificationSD3 employingParty) {
+	public PartyIdentificationSD4 setEmployingParty(com.tools20022.repository.msg.PartyIdentificationSD3 employingParty) {
 		this.employingParty = employingParty;
+		return this;
 	}
 }

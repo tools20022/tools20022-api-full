@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Debt;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +54,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,15 +66,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Specifies the debit instrument."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DebtInstrument5", propOrder = {"type", "issuanceDate"})
 public class DebtInstrument5 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Tp", required = true)
 	protected BondType1Code type;
 	/**
-	 * Specifies the type of bond type.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +109,7 @@ public class DebtInstrument5 {
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AssetClassification.mmProductType;
-			componentContext_lazy = () -> DebtInstrument5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DebtInstrument5.mmObject();
 			isDerived = false;
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +120,11 @@ public class DebtInstrument5 {
 			simpleType_lazy = () -> BondType1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "IssncDt", required = true)
 	protected ISODate issuanceDate;
 	/**
-	 * Date on which a bond is issued and begins to accrue interest.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -155,7 +158,7 @@ public class DebtInstrument5 {
 	public static final MMMessageAttribute mmIssuanceDate = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Asset.mmMaturityDate;
-			componentContext_lazy = () -> DebtInstrument5.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DebtInstrument5.mmObject();
 			isDerived = false;
 			xmlTag = "IssncDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -170,9 +173,9 @@ public class DebtInstrument5 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DebtInstrument5.mmType, DebtInstrument5.mmIssuanceDate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebtInstrument5.mmType, com.tools20022.repository.msg.DebtInstrument5.mmIssuanceDate);
 				trace_lazy = () -> Debt.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebtInstrument5";
 				definition = "Specifies the debit instrument.";
@@ -181,21 +184,21 @@ public class DebtInstrument5 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Tp", required = true)
 	public BondType1Code getType() {
 		return type;
 	}
 
-	public void setType(BondType1Code type) {
-		this.type = type;
+	public DebtInstrument5 setType(BondType1Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
-	@XmlElement(name = "IssncDt", required = true)
 	public ISODate getIssuanceDate() {
 		return issuanceDate;
 	}
 
-	public void setIssuanceDate(ISODate issuanceDate) {
-		this.issuanceDate = issuanceDate;
+	public DebtInstrument5 setIssuanceDate(ISODate issuanceDate) {
+		this.issuanceDate = Objects.requireNonNull(issuanceDate);
+		return this;
 	}
 }

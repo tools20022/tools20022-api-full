@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.entity;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.RepurchaseTypeCode;
@@ -26,9 +27,8 @@ import com.tools20022.repository.entity.SecuritiesTrade;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 
 /**
  * Process of lending or borrowing cash or securities against securities or cash
@@ -41,6 +41,9 @@ import java.util.List;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.SecuritiesTrade
+ * SecuritiesTrade}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -135,6 +138,60 @@ import java.util.List;
  * SecuritiesFinancing.mmIdentification}</li>
  * </ul>
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedSecuritiesFinancing
+ * SecuritiesPricing.mmRelatedSecuritiesFinancing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesFinancingClosingData
+ * SecuritiesTrade.mmSecuritiesFinancingClosingData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesFinancingOpeningData
+ * SecuritiesTrade.mmSecuritiesFinancingOpeningData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Interest#mmSecuritiesFinancing
+ * Interest.mmSecuritiesFinancing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Spread#mmSecuritiesFinancing
+ * Spread.mmSecuritiesFinancing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement#mmSecuritiesFinancingTrade
+ * SecuritiesFinancingAgreement.mmSecuritiesFinancingTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#mmTwoLegTransaction
+ * BuyOrSellIndicationOfInterest.mmTwoLegTransaction}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TwoLegTransactionType1Choice#mmSecuritiesFinancingDetails
+ * TwoLegTransactionType1Choice.mmSecuritiesFinancingDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TwoLegTransactionDetails1#mmOtherAmounts
+ * TwoLegTransactionDetails1.mmOtherAmounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TwoLegTransactionDetails1#mmTwoLegTransactionType
+ * TwoLegTransactionDetails1.mmTwoLegTransactionType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SingleQuote1#mmTwoLegTransactionDetails
+ * SingleQuote1.mmTwoLegTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SingleOrder1#mmTwoLegTransactionDetails
+ * SingleOrder1.mmTwoLegTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Order11#mmTwoLegTransactionDetails
+ * Order11.mmTwoLegTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuoteRequest1#mmTwoLegTransactionDetails
+ * QuoteRequest1.mmTwoLegTransactionDetails}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
  * subType} =
  * <ul>
@@ -144,9 +201,6 @@ import java.util.List;
  * RepurchaseAgreement}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.SecuritiesTrade
- * SecuritiesTrade}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -342,64 +396,13 @@ import java.util.List;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedSecuritiesFinancing
- * SecuritiesPricing.mmRelatedSecuritiesFinancing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesFinancingClosingData
- * SecuritiesTrade.mmSecuritiesFinancingClosingData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesTrade#mmSecuritiesFinancingOpeningData
- * SecuritiesTrade.mmSecuritiesFinancingOpeningData}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Interest#mmSecuritiesFinancing
- * Interest.mmSecuritiesFinancing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.Spread#mmSecuritiesFinancing
- * Spread.mmSecuritiesFinancing}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.SecuritiesFinancingAgreement#mmSecuritiesFinancingTrade
- * SecuritiesFinancingAgreement.mmSecuritiesFinancingTrade}</li>
- * <li>
- * {@linkplain com.tools20022.repository.entity.BuyOrSellIndicationOfInterest#mmTwoLegTransaction
- * BuyOrSellIndicationOfInterest.mmTwoLegTransaction}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.TwoLegTransactionType1Choice#mmSecuritiesFinancingDetails
- * TwoLegTransactionType1Choice.mmSecuritiesFinancingDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TwoLegTransactionDetails1#mmOtherAmounts
- * TwoLegTransactionDetails1.mmOtherAmounts}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.TwoLegTransactionDetails1#mmTwoLegTransactionType
- * TwoLegTransactionDetails1.mmTwoLegTransactionType}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SingleQuote1#mmTwoLegTransactionDetails
- * SingleQuote1.mmTwoLegTransactionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.SingleOrder1#mmTwoLegTransactionDetails
- * SingleOrder1.mmTwoLegTransactionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.Order11#mmTwoLegTransactionDetails
- * Order11.mmTwoLegTransactionDetails}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.QuoteRequest1#mmTwoLegTransactionDetails
- * QuoteRequest1.mmTwoLegTransactionDetails}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+ * semanticMarkup} = ISO15022Synonym: :22F::SETR//REPO</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -417,10 +420,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected YesNoIndicator returnLegInstruction;
 	/**
-	 * Specifies whether, for a securities lending/borrowing settlement
-	 * transaction, the lender will instruct the return leg as agreed with the
-	 * borrower.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -533,8 +534,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SettlementDetails81.mmReturnLeg, SettlementDetails83.mmReturnLeg, SettlementDetails93.mmReturnLeg, SettlementDetails94.mmReturnLeg, SettlementDetails101.mmReturnLeg, SettlementDetails111.mmReturnLeg,
 					SettlementDetails112.mmReturnLeg, SettlementDetails113.mmReturnLeg, SettlementDetails120.mmReturnLeg, SettlementDetails119.mmReturnLeg, SettlementDetails122.mmReturnLeg, SettlementDetails137.mmReturnLeg,
 					SettlementDetails132.mmReturnLeg, SettlementDetails138.mmReturnLeg);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReturnLegInstruction";
 			definition = "Specifies whether, for a securities lending/borrowing settlement transaction, the lender will instruct the return leg as agreed with the borrower.";
@@ -553,10 +554,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected SecuritiesTransactionTypeV2Code type;
 	/**
-	 * Specifies the type of securities financing transaction, that is,
-	 * repurchase agreement, reverse repurchase agreement, securities lending or
-	 * securities borrowing.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -584,8 +583,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of securities financing transaction, that is, repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing.";
@@ -604,8 +603,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected ISODateTime terminationDateTime;
 	/**
-	 * Closing date/time or maturity date/time of the repo transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -719,6 +718,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :98a::TERM</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -742,8 +744,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails28.mmTerminationDate, SecuritiesFinancingTransactionDetails27.mmTerminationDate, SecuritiesFinancingTransactionDetails29.mmTerminationDate,
 					SecuritiesFinancingTransactionDetails33.mmTerminationDate, SecuritiesFinancingTransactionDetails32.mmTerminationDate, SecuritiesFinancingTransactionDetails30.mmTerminationDate,
 					SecuritiesFinancingTransactionDetails34.mmTerminationDate, SecuritiesFinancingTransactionDetails35.mmTerminationDate, SecuritiesFinancingTransactionDetails36.mmTerminationDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::TERM"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TerminationDateTime";
 			definition = "Closing date/time or maturity date/time of the repo transaction.";
@@ -762,8 +765,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected ISODateTime rateChangeDateTime;
 	/**
-	 * Date/Time at which rate change has taken place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -886,8 +889,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails26.mmRateChangeDate, SecuritiesFinancingTransactionDetails28.mmRateChangeDate, SecuritiesFinancingTransactionDetails27.mmRateChangeDate,
 					SecuritiesFinancingTransactionDetails33.mmRateChangeDate, SecuritiesFinancingTransactionDetails32.mmRateChangeDate, SecuritiesFinancingTransactionDetails30.mmRateChangeDate,
 					SecuritiesFinancingTransactionDetails35.mmRateChangeDate, SecuritiesFinancingTransactionDetails36.mmRateChangeDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RateChangeDateTime";
 			definition = "Date/Time at which rate change has taken place.";
@@ -906,9 +909,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected YesNoIndicator revaluationIndicator;
 	/**
-	 * Specifies whether the collateral position should be subject to automatic
-	 * revaluation by the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1026,8 +1028,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancing1.mmRevaluationIndicator, SecuritiesFinancingTransactionDetails28.mmRevaluation, SecuritiesFinancingTransactionDetails27.mmRevaluation, RevaluationIndicator3Choice.mmIndicator,
 					RevaluationIndicator3Choice.mmProprietary, SecuritiesFinancingTransactionDetails32.mmRevaluation, SecuritiesFinancingTransactionDetails30.mmRevaluation, RevaluationIndicator4Choice.mmIndicator,
 					RevaluationIndicator4Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RevaluationIndicator";
 			definition = "Specifies whether the collateral position should be subject to automatic revaluation by the account servicer.";
@@ -1046,9 +1048,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected YesNoIndicator interestPayment;
 	/**
-	 * Specifies whether the interest is to be paid to the collateral taker. If
-	 * set to no, the interest is paid to the collateral giver.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1135,8 +1136,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails9.mmInterestPayment, SecuritiesFinancingTransactionDetails28.mmInterestPayment, SecuritiesFinancingTransactionDetails27.mmInterestPayment,
 					SecuritiesFinancingTransactionDetails29.mmInterestPayment, SecuritiesFinancingTransactionDetails32.mmInterestPayment, SecuritiesFinancingTransactionDetails30.mmInterestPayment,
 					SecuritiesFinancingTransactionDetails34.mmInterestPayment);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InterestPayment";
 			definition = "Specifies whether the interest is to be paid to the collateral taker. If set to no, the interest is paid to the collateral giver.";
@@ -1155,9 +1156,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected Max35Text variableRateSupport;
 	/**
-	 * Index or support rate used together with the spread to calculate the
-	 * repurchase rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1271,6 +1271,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92C::VASU</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1296,8 +1299,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails27.mmVariableRateSupport, SecuritiesFinancingTransactionDetails29.mmVariableRateSupport, SecuritiesFinancingTransactionDetails33.mmVariableRateSupport,
 					SecuritiesFinancingTransactionDetails32.mmVariableRateSupport, SecuritiesFinancingTransactionDetails30.mmVariableRateSupport, SecuritiesFinancingTransactionDetails34.mmVariableRateSupport,
 					SecuritiesFinancingTransactionDetails35.mmVariableRateSupport, SecuritiesFinancingTransactionDetails36.mmVariableRateSupport);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92C::VASU"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VariableRateSupport";
 			definition = "Index or support rate used together with the spread to calculate the repurchase rate.";
@@ -1316,8 +1320,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected PercentageRate repurchaseRate;
 	/**
-	 * Rate to be used to recalculate the repurchase amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1432,6 +1436,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92A::REPO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1454,8 +1461,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails28.mmRepurchaseRate, SecuritiesFinancingTransactionDetails27.mmRepurchaseRate, SecuritiesFinancingTransactionDetails29.mmRepurchaseRate,
 					SecuritiesFinancingTransactionDetails33.mmRepurchaseRate, SecuritiesFinancingTransactionDetails32.mmRepurchaseRate, SecuritiesFinancingTransactionDetails30.mmRepurchaseRate,
 					SecuritiesFinancingTransactionDetails34.mmRepurchaseRate, SecuritiesFinancingTransactionDetails35.mmRepurchaseRate, SecuritiesFinancingTransactionDetails36.mmRepurchaseRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92A::REPO"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RepurchaseRate";
 			definition = "Rate to be used to recalculate the repurchase amount.";
@@ -1474,9 +1482,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected PercentageRate stockLoanMargin;
 	/**
-	 * Percentage mark-up on a loan consideration used to reflect the lender's
-	 * risk.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1602,8 +1609,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails26.mmStockLoanMargin, SecuritiesFinancingTransactionDetails28.mmStockLoanMargin, SecuritiesFinancingTransactionDetails27.mmStockLoanMargin,
 					SecuritiesFinancingTransactionDetails33.mmStockLoanMargin, SecuritiesFinancingTransactionDetails32.mmStockLoanMargin, SecuritiesFinancingTransactionDetails30.mmStockLoanMargin,
 					SecuritiesFinancingTransactionDetails35.mmStockLoanMargin, SecuritiesFinancingTransactionDetails36.mmStockLoanMargin);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StockLoanMargin";
 			definition = "Percentage mark-up on a loan consideration used to reflect the lender's risk.";
@@ -1622,8 +1629,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected List<com.tools20022.repository.entity.Interest> interest;
 	/**
-	 * Interest to be paid on the transaction amount.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1752,8 +1759,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails25.mmPricingRate, SecuritiesFinancingTransactionDetails26.mmPricingRate, SecuritiesFinancingTransactionDetails28.mmPricingRate, SecuritiesFinancingTransactionDetails27.mmPricingRate,
 					SecuritiesFinancingTransactionDetails33.mmPricingRate, SecuritiesFinancingTransactionDetails32.mmPricingRate, SecuritiesFinancingTransactionDetails30.mmPricingRate, SecuritiesFinancingTransactionDetails35.mmPricingRate,
 					SecuritiesFinancingTransactionDetails36.mmPricingRate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Interest";
 			definition = "Interest to be paid on the transaction amount.";
@@ -1765,9 +1772,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected Spread repurchaseSpread;
 	/**
-	 * Repurchase spread expressed as a rate; margin over or under an index that
-	 * determines the repurchase rate.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1870,6 +1876,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :92A::RSPR</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -1891,8 +1900,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails22.mmSpread, SecuritiesFinancingTransactionDetails24.mmSpread, SecuritiesFinancingTransactionDetails25.mmSpread, SecuritiesFinancingTransactionDetails26.mmSpread,
 					SecuritiesFinancingTransactionDetails28.mmSpread, SecuritiesFinancingTransactionDetails27.mmSpread, SecuritiesFinancingTransactionDetails33.mmSpread, SecuritiesFinancingTransactionDetails32.mmSpread,
 					SecuritiesFinancingTransactionDetails30.mmSpread, SecuritiesFinancingTransactionDetails35.mmSpread, SecuritiesFinancingTransactionDetails36.mmSpread);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92A::RSPR"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RepurchaseSpread";
 			definition = "Repurchase spread expressed as a rate; margin over or under an index that determines the repurchase rate.";
@@ -1905,9 +1915,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected Max3NumericText transactionCallDelay;
 	/**
-	 * Minimum number of days' notice a counterparty needs for terminating the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2000,8 +2009,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails20.mmTransactionCallDelay, SecuritiesFinancingTransactionDetails9.mmTransactionCallDelay, SecuritiesFinancing1.mmTransactionCallDelay,
 					SecuritiesFinancingTransactionDetails28.mmTransactionCallDelay, SecuritiesFinancingTransactionDetails27.mmTransactionCallDelay, SecuritiesFinancingTransactionDetails29.mmTransactionCallDelay,
 					SecuritiesFinancingTransactionDetails32.mmTransactionCallDelay, SecuritiesFinancingTransactionDetails30.mmTransactionCallDelay, SecuritiesFinancingTransactionDetails34.mmTransactionCallDelay);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionCallDelay";
 			definition = "Minimum number of days' notice a counterparty needs for terminating the transaction.";
@@ -2020,9 +2029,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected Max3NumericText totalNumberOfCollateralInstructions;
 	/**
-	 * Indicates the total Number of collateral instructions involved in the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2095,6 +2103,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :99B::TOCO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2115,8 +2126,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails19.mmTotalNumberOfCollateralInstructions, SecuritiesFinancingTransactionDetails20.mmTotalNumberOfCollateralInstructions, SecuritiesFinancing1.mmTotalNumberOfCollateralInstructions,
 					SecuritiesFinancingTransactionDetails28.mmTotalNumberOfCollateralInstructions, SecuritiesFinancingTransactionDetails27.mmTotalNumberOfCollateralInstructions,
 					SecuritiesFinancingTransactionDetails32.mmTotalNumberOfCollateralInstructions, SecuritiesFinancingTransactionDetails30.mmTotalNumberOfCollateralInstructions);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":99B::TOCO"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalNumberOfCollateralInstructions";
 			definition = "Indicates the total Number of collateral instructions involved in the transaction.";
@@ -2135,8 +2147,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected CurrencyAndAmount dealAmount;
 	/**
-	 * Deal amount of the second leg.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2194,6 +2206,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::DEAL</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2210,8 +2225,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails11.mmDealAmount, SecuritiesFinancingTransactionDetails14.mmDealAmount, SecuritiesFinancingTransactionDetails4.mmDealAmount, SecuritiesFinancingTransactionDetails19.mmDealAmount,
 					SecuritiesFinancingTransactionDetails20.mmDealAmount, SecuritiesFinancing1.mmDealAmount, SecuritiesFinancingTransactionDetails28.mmDealAmount, SecuritiesFinancingTransactionDetails27.mmDealAmount,
 					SecuritiesFinancingTransactionDetails32.mmDealAmount, SecuritiesFinancingTransactionDetails30.mmDealAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::DEAL"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DealAmount";
 			definition = "Deal amount of the second leg.";
@@ -2230,9 +2246,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected CurrencyAndAmount forfeitRepurchaseAmount;
 	/**
-	 * Fixed amount which has to be paid (instead of interest) in the case of a
-	 * recall.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2293,6 +2308,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::FORF</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2311,8 +2329,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails11.mmForfeitAmount, SecuritiesFinancingTransactionDetails14.mmForfeitAmount, SecuritiesFinancingTransactionDetails4.mmForfeitAmount, SecuritiesFinancing10.mmForfeitAmount,
 					SecuritiesFinancingTransactionDetails19.mmForfeitAmount, SecuritiesFinancingTransactionDetails20.mmForfeitAmount, SecuritiesFinancing1.mmForfeitAmount, SecuritiesFinancingTransactionDetails28.mmForfeitAmount,
 					SecuritiesFinancingTransactionDetails27.mmForfeitAmount, SecuritiesFinancingTransactionDetails32.mmForfeitAmount, SecuritiesFinancingTransactionDetails30.mmForfeitAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::FORF"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ForfeitRepurchaseAmount";
 			definition = "Fixed amount which has to be paid (instead of interest) in the case of a recall.";
@@ -2331,9 +2350,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected CurrencyAndAmount premiumAmount;
 	/**
-	 * Difference between the cash amount of the first leg and the cash amount
-	 * of the second leg of the repurchase agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2394,6 +2412,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :19A::REPP</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -2412,8 +2433,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails11.mmPremiumAmount, SecuritiesFinancingTransactionDetails14.mmPremiumAmount, SecuritiesFinancingTransactionDetails4.mmPremiumAmount, SecuritiesFinancing10.mmPremiumAmount,
 					SecuritiesFinancingTransactionDetails19.mmPremiumAmount, SecuritiesFinancingTransactionDetails20.mmPremiumAmount, SecuritiesFinancing1.mmPremiumAmount, SecuritiesFinancingTransactionDetails28.mmPremiumAmount,
 					SecuritiesFinancingTransactionDetails27.mmPremiumAmount, SecuritiesFinancingTransactionDetails32.mmPremiumAmount, SecuritiesFinancingTransactionDetails30.mmPremiumAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::REPP"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PremiumAmount";
 			definition = "Difference between the cash amount of the first leg and the cash amount of the \nsecond leg of the repurchase agreement.";
@@ -2432,9 +2454,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected CurrencyAndAmount terminationAmountPerPieceOfCollateral;
 	/**
-	 * Amount of money to be settled per piece of collateral to terminate the
-	 * transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2525,8 +2546,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancing1.mmTerminationAmountPerPiecesOfCollateral, SecuritiesFinancingTransactionDetails28.mmTerminationAmountPerPieceOfCollateral,
 					SecuritiesFinancingTransactionDetails27.mmTerminationAmountPerPieceOfCollateral, SecuritiesFinancingTransactionDetails32.mmTerminationAmountPerPieceOfCollateral,
 					SecuritiesFinancingTransactionDetails30.mmTerminationAmountPerPieceOfCollateral);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TerminationAmountPerPieceOfCollateral";
 			definition = "Amount of money to be settled per piece of collateral to terminate the transaction.";
@@ -2545,8 +2566,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected CurrencyAndAmount terminationTransactionAmount;
 	/**
-	 * Total amount of money to be settled to terminate the transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2685,8 +2706,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails28.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails27.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails29.mmTerminationTransactionAmount,
 					SecuritiesFinancingTransactionDetails33.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails32.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails30.mmTerminationTransactionAmount,
 					SecuritiesFinancingTransactionDetails34.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails35.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails36.mmTerminationTransactionAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TerminationTransactionAmount";
 			definition = "Total amount of money to be settled to terminate the transaction.";
@@ -2705,9 +2726,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected YesNoIndicator maturityDateModification;
 	/**
-	 * Specifies whether the maturity date of the securities financing
-	 * transaction may be modified.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2787,8 +2807,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails19.mmMaturityDateModification, SecuritiesFinancingTransactionDetails20.mmMaturityDateModification, SecuritiesFinancingTransactionDetails9.mmMaturityDateModification,
 					SecuritiesFinancingTransactionDetails28.mmMaturityDateModification, SecuritiesFinancingTransactionDetails27.mmMaturityDateModification, SecuritiesFinancingTransactionDetails29.mmMaturityDateModification,
 					SecuritiesFinancingTransactionDetails32.mmMaturityDateModification, SecuritiesFinancingTransactionDetails30.mmMaturityDateModification, SecuritiesFinancingTransactionDetails34.mmMaturityDateModification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaturityDateModification";
 			definition = "Specifies whether the maturity date of the securities financing transaction may be modified.";
@@ -2807,8 +2827,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected ISODateTime earliestCallBackDate;
 	/**
-	 * Earliest date/time at which the call back can take place.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2866,8 +2886,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 			derivation_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails11.mmEarliestCallBackDate, SecuritiesFinancingTransactionDetails14.mmEarliestCallBackDate,
 					SecuritiesFinancingTransactionDetails19.mmEarliestCallBackDate, SecuritiesFinancingTransactionDetails20.mmEarliestCallBackDate, SecuritiesFinancingTransactionDetails28.mmEarliestCallBackDate,
 					SecuritiesFinancingTransactionDetails27.mmEarliestCallBackDate, SecuritiesFinancingTransactionDetails32.mmEarliestCallBackDate, SecuritiesFinancingTransactionDetails30.mmEarliestCallBackDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EarliestCallBackDate";
 			definition = "Earliest date/time at which the call back can take place.";
@@ -2886,8 +2906,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected ISODateTime openingSettlementDate;
 	/**
-	 * Date and time at which the securities are to be delivered or received.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -2992,8 +3012,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails25.mmOpeningSettlementDate, SecuritiesFinancingTransactionDetails26.mmOpeningSettlementDate, SecuritiesTradeDetails56.mmOpeningSettlementDate,
 					SecuritiesTradeDetails59.mmOpeningSettlementDate, SecuritiesFinancingTransactionDetails33.mmOpeningSettlementDate, SecuritiesFinancingTransactionDetails35.mmOpeningSettlementDate,
 					SecuritiesFinancingTransactionDetails36.mmOpeningSettlementDate);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OpeningSettlementDate";
 			definition = "Date and time at which the securities are to be delivered or received.";
@@ -3012,8 +3032,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected RepurchaseTypeCode repurchaseType;
 	/**
-	 * Specifies the type of repurchase transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3452,8 +3472,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SettlementDetails121.mmRepurchaseType, SettlementDetails134.mmRepurchaseType, SettlementDetails137.mmRepurchaseType, SettlementDetails132.mmRepurchaseType, RepurchaseType31Choice.mmCode,
 					RepurchaseType31Choice.mmProprietary, SettlementDetails130.mmRepurchaseType, RepurchaseType24Choice.mmCode, RepurchaseType24Choice.mmProprietary, RepurchaseType26Choice.mmCode, RepurchaseType26Choice.mmProprietary,
 					SettlementDetails131.mmRepurchaseType, SettlementDetails133.mmRepurchaseType, SettlementDetails139.mmRepurchaseType);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RepurchaseType";
 			definition = "Specifies the type of repurchase transaction.";
@@ -3472,8 +3492,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected List<com.tools20022.repository.entity.SecuritiesPricing> endPrice;
 	/**
-	 * Negotiated fixed price of the security to buy it back.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3515,8 +3535,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	public static final MMBusinessAssociationEnd mmEndPrice = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TwoLegTransactionDetails1.mmEndPrice);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EndPrice";
 			definition = "Negotiated fixed price of the security to buy it back.";
@@ -3528,10 +3548,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected YesNoIndicator spreadTransaction;
 	/**
-	 * Specifies that there will be one price and one transaction when two
-	 * contracts are carried out simultaneously, one to buy and the other one to
-	 * sell with two different expiration dates.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3568,8 +3586,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	public static final MMBusinessAttribute mmSpreadTransaction = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FutureOrOptionDetails1.mmSpreadTransaction);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpreadTransaction";
 			definition = "Specifies that there will be one price and one transaction when two contracts are carried out simultaneously, one to buy and the other one to sell with two different expiration dates.";
@@ -3588,9 +3606,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected SecuritiesFinancingAgreement financingAgreement;
 	/**
-	 * Provides the contractual details related to the agreement between
-	 * parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3638,8 +3655,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	public static final MMBusinessAssociationEnd mmFinancingAgreement = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesFinancing10.mmFinancingAgreement, SecuritiesFinancing1.mmFinancingAgreement);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancingAgreement";
 			definition = "Provides the contractual details related to the agreement between parties.";
@@ -3652,9 +3669,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected CurrencyAndAmount openingSettlementAmount;
 	/**
-	 * Total amount of money to be paid or received in exchange for the
-	 * securities at the opening of a securities financing transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3734,8 +3750,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails18.mmOpeningSettlementAmount, SecuritiesFinancingTransactionDetails21.mmOpeningSettlementAmount, SecuritiesFinancingTransactionDetails22.mmOpeningSettlementAmount,
 					SecuritiesFinancingTransactionDetails24.mmOpeningSettlementAmount, SecuritiesFinancingTransactionDetails25.mmOpeningSettlementAmount, SecuritiesFinancingTransactionDetails26.mmOpeningSettlementAmount,
 					SecuritiesFinancingTransactionDetails33.mmOpeningSettlementAmount, SecuritiesFinancingTransactionDetails35.mmOpeningSettlementAmount, SecuritiesFinancingTransactionDetails36.mmOpeningSettlementAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OpeningSettlementAmount";
 			definition = "Total amount of money to be paid or received in exchange for the securities at the opening of a securities financing transaction.";
@@ -3754,9 +3770,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected SecuritiesTrade closingLegExecution;
 	/**
-	 * Repayment of the previously received cash by one party in exchange of the
-	 * return of the security by the counterparty.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3791,8 +3806,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmClosingLegExecution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosingLegExecution";
 			definition = "Repayment of the previously received cash by one party in exchange of the return of the security by the counterparty.";
@@ -3805,10 +3820,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected SecuritiesTrade openingLegExecution;
 	/**
-	 * Transfer of cash to a party against the legal transfer of securities. The
-	 * cash receiver agrees to buy the same security from the counterparty at a
-	 * fixed price at some later date.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3843,8 +3856,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmOpeningLegExecution = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OpeningLegExecution";
 			definition = "Transfer of cash to a party against the legal transfer of securities. The cash receiver agrees to buy the same security from the counterparty at a fixed price at some later date.";
@@ -3857,9 +3870,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected BuyOrSellIndicationOfInterest relatedIndicationOfInterest;
 	/**
-	 * Indication of interest process which is the source of a securities
-	 * financing process.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3895,8 +3907,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedIndicationOfInterest = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedIndicationOfInterest";
 			definition = "Indication of interest process which is the source of a securities financing process.";
@@ -3909,8 +3921,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	};
 	protected Max35Text identification;
 	/**
-	 * Unique identification of the repurchase agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -3931,6 +3943,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesFinancing
 	 * SecuritiesFinancing}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :20C::REPO</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
@@ -3944,8 +3959,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesFinancing1.mmIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C::REPO"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the repurchase agreement.";
@@ -3966,7 +3982,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::SETR//REPO"));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesFinancing";
 				definition = "Process of lending or borrowing cash or securities against securities or cash collateral. It aims at optimising liquidity, support a trading strategy, or increase settlement efficiency.";
@@ -4022,239 +4039,269 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 		return returnLegInstruction;
 	}
 
-	public void setReturnLegInstruction(YesNoIndicator returnLegInstruction) {
-		this.returnLegInstruction = returnLegInstruction;
+	public SecuritiesFinancing setReturnLegInstruction(YesNoIndicator returnLegInstruction) {
+		this.returnLegInstruction = Objects.requireNonNull(returnLegInstruction);
+		return this;
 	}
 
 	public SecuritiesTransactionTypeV2Code getType() {
 		return type;
 	}
 
-	public void setType(SecuritiesTransactionTypeV2Code type) {
-		this.type = type;
+	public SecuritiesFinancing setType(SecuritiesTransactionTypeV2Code type) {
+		this.type = Objects.requireNonNull(type);
+		return this;
 	}
 
 	public ISODateTime getTerminationDateTime() {
 		return terminationDateTime;
 	}
 
-	public void setTerminationDateTime(ISODateTime terminationDateTime) {
-		this.terminationDateTime = terminationDateTime;
+	public SecuritiesFinancing setTerminationDateTime(ISODateTime terminationDateTime) {
+		this.terminationDateTime = Objects.requireNonNull(terminationDateTime);
+		return this;
 	}
 
 	public ISODateTime getRateChangeDateTime() {
 		return rateChangeDateTime;
 	}
 
-	public void setRateChangeDateTime(ISODateTime rateChangeDateTime) {
-		this.rateChangeDateTime = rateChangeDateTime;
+	public SecuritiesFinancing setRateChangeDateTime(ISODateTime rateChangeDateTime) {
+		this.rateChangeDateTime = Objects.requireNonNull(rateChangeDateTime);
+		return this;
 	}
 
 	public YesNoIndicator getRevaluationIndicator() {
 		return revaluationIndicator;
 	}
 
-	public void setRevaluationIndicator(YesNoIndicator revaluationIndicator) {
-		this.revaluationIndicator = revaluationIndicator;
+	public SecuritiesFinancing setRevaluationIndicator(YesNoIndicator revaluationIndicator) {
+		this.revaluationIndicator = Objects.requireNonNull(revaluationIndicator);
+		return this;
 	}
 
 	public YesNoIndicator getInterestPayment() {
 		return interestPayment;
 	}
 
-	public void setInterestPayment(YesNoIndicator interestPayment) {
-		this.interestPayment = interestPayment;
+	public SecuritiesFinancing setInterestPayment(YesNoIndicator interestPayment) {
+		this.interestPayment = Objects.requireNonNull(interestPayment);
+		return this;
 	}
 
 	public Max35Text getVariableRateSupport() {
 		return variableRateSupport;
 	}
 
-	public void setVariableRateSupport(Max35Text variableRateSupport) {
-		this.variableRateSupport = variableRateSupport;
+	public SecuritiesFinancing setVariableRateSupport(Max35Text variableRateSupport) {
+		this.variableRateSupport = Objects.requireNonNull(variableRateSupport);
+		return this;
 	}
 
 	public PercentageRate getRepurchaseRate() {
 		return repurchaseRate;
 	}
 
-	public void setRepurchaseRate(PercentageRate repurchaseRate) {
-		this.repurchaseRate = repurchaseRate;
+	public SecuritiesFinancing setRepurchaseRate(PercentageRate repurchaseRate) {
+		this.repurchaseRate = Objects.requireNonNull(repurchaseRate);
+		return this;
 	}
 
 	public PercentageRate getStockLoanMargin() {
 		return stockLoanMargin;
 	}
 
-	public void setStockLoanMargin(PercentageRate stockLoanMargin) {
-		this.stockLoanMargin = stockLoanMargin;
+	public SecuritiesFinancing setStockLoanMargin(PercentageRate stockLoanMargin) {
+		this.stockLoanMargin = Objects.requireNonNull(stockLoanMargin);
+		return this;
 	}
 
 	public List<Interest> getInterest() {
-		return interest;
+		return interest == null ? interest = new ArrayList<>() : interest;
 	}
 
-	public void setInterest(List<com.tools20022.repository.entity.Interest> interest) {
-		this.interest = interest;
+	public SecuritiesFinancing setInterest(List<com.tools20022.repository.entity.Interest> interest) {
+		this.interest = Objects.requireNonNull(interest);
+		return this;
 	}
 
 	public Spread getRepurchaseSpread() {
 		return repurchaseSpread;
 	}
 
-	public void setRepurchaseSpread(com.tools20022.repository.entity.Spread repurchaseSpread) {
-		this.repurchaseSpread = repurchaseSpread;
+	public SecuritiesFinancing setRepurchaseSpread(com.tools20022.repository.entity.Spread repurchaseSpread) {
+		this.repurchaseSpread = Objects.requireNonNull(repurchaseSpread);
+		return this;
 	}
 
 	public Max3NumericText getTransactionCallDelay() {
 		return transactionCallDelay;
 	}
 
-	public void setTransactionCallDelay(Max3NumericText transactionCallDelay) {
-		this.transactionCallDelay = transactionCallDelay;
+	public SecuritiesFinancing setTransactionCallDelay(Max3NumericText transactionCallDelay) {
+		this.transactionCallDelay = Objects.requireNonNull(transactionCallDelay);
+		return this;
 	}
 
 	public Max3NumericText getTotalNumberOfCollateralInstructions() {
 		return totalNumberOfCollateralInstructions;
 	}
 
-	public void setTotalNumberOfCollateralInstructions(Max3NumericText totalNumberOfCollateralInstructions) {
-		this.totalNumberOfCollateralInstructions = totalNumberOfCollateralInstructions;
+	public SecuritiesFinancing setTotalNumberOfCollateralInstructions(Max3NumericText totalNumberOfCollateralInstructions) {
+		this.totalNumberOfCollateralInstructions = Objects.requireNonNull(totalNumberOfCollateralInstructions);
+		return this;
 	}
 
 	public CurrencyAndAmount getDealAmount() {
 		return dealAmount;
 	}
 
-	public void setDealAmount(CurrencyAndAmount dealAmount) {
-		this.dealAmount = dealAmount;
+	public SecuritiesFinancing setDealAmount(CurrencyAndAmount dealAmount) {
+		this.dealAmount = Objects.requireNonNull(dealAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getForfeitRepurchaseAmount() {
 		return forfeitRepurchaseAmount;
 	}
 
-	public void setForfeitRepurchaseAmount(CurrencyAndAmount forfeitRepurchaseAmount) {
-		this.forfeitRepurchaseAmount = forfeitRepurchaseAmount;
+	public SecuritiesFinancing setForfeitRepurchaseAmount(CurrencyAndAmount forfeitRepurchaseAmount) {
+		this.forfeitRepurchaseAmount = Objects.requireNonNull(forfeitRepurchaseAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getPremiumAmount() {
 		return premiumAmount;
 	}
 
-	public void setPremiumAmount(CurrencyAndAmount premiumAmount) {
-		this.premiumAmount = premiumAmount;
+	public SecuritiesFinancing setPremiumAmount(CurrencyAndAmount premiumAmount) {
+		this.premiumAmount = Objects.requireNonNull(premiumAmount);
+		return this;
 	}
 
 	public CurrencyAndAmount getTerminationAmountPerPieceOfCollateral() {
 		return terminationAmountPerPieceOfCollateral;
 	}
 
-	public void setTerminationAmountPerPieceOfCollateral(CurrencyAndAmount terminationAmountPerPieceOfCollateral) {
-		this.terminationAmountPerPieceOfCollateral = terminationAmountPerPieceOfCollateral;
+	public SecuritiesFinancing setTerminationAmountPerPieceOfCollateral(CurrencyAndAmount terminationAmountPerPieceOfCollateral) {
+		this.terminationAmountPerPieceOfCollateral = Objects.requireNonNull(terminationAmountPerPieceOfCollateral);
+		return this;
 	}
 
 	public CurrencyAndAmount getTerminationTransactionAmount() {
 		return terminationTransactionAmount;
 	}
 
-	public void setTerminationTransactionAmount(CurrencyAndAmount terminationTransactionAmount) {
-		this.terminationTransactionAmount = terminationTransactionAmount;
+	public SecuritiesFinancing setTerminationTransactionAmount(CurrencyAndAmount terminationTransactionAmount) {
+		this.terminationTransactionAmount = Objects.requireNonNull(terminationTransactionAmount);
+		return this;
 	}
 
-	public YesNoIndicator getMaturityDateModification() {
-		return maturityDateModification;
+	public Optional<YesNoIndicator> getMaturityDateModification() {
+		return maturityDateModification == null ? Optional.empty() : Optional.of(maturityDateModification);
 	}
 
-	public void setMaturityDateModification(YesNoIndicator maturityDateModification) {
+	public SecuritiesFinancing setMaturityDateModification(YesNoIndicator maturityDateModification) {
 		this.maturityDateModification = maturityDateModification;
+		return this;
 	}
 
 	public ISODateTime getEarliestCallBackDate() {
 		return earliestCallBackDate;
 	}
 
-	public void setEarliestCallBackDate(ISODateTime earliestCallBackDate) {
-		this.earliestCallBackDate = earliestCallBackDate;
+	public SecuritiesFinancing setEarliestCallBackDate(ISODateTime earliestCallBackDate) {
+		this.earliestCallBackDate = Objects.requireNonNull(earliestCallBackDate);
+		return this;
 	}
 
 	public ISODateTime getOpeningSettlementDate() {
 		return openingSettlementDate;
 	}
 
-	public void setOpeningSettlementDate(ISODateTime openingSettlementDate) {
-		this.openingSettlementDate = openingSettlementDate;
+	public SecuritiesFinancing setOpeningSettlementDate(ISODateTime openingSettlementDate) {
+		this.openingSettlementDate = Objects.requireNonNull(openingSettlementDate);
+		return this;
 	}
 
 	public RepurchaseTypeCode getRepurchaseType() {
 		return repurchaseType;
 	}
 
-	public void setRepurchaseType(RepurchaseTypeCode repurchaseType) {
-		this.repurchaseType = repurchaseType;
+	public SecuritiesFinancing setRepurchaseType(RepurchaseTypeCode repurchaseType) {
+		this.repurchaseType = Objects.requireNonNull(repurchaseType);
+		return this;
 	}
 
 	public List<SecuritiesPricing> getEndPrice() {
-		return endPrice;
+		return endPrice == null ? endPrice = new ArrayList<>() : endPrice;
 	}
 
-	public void setEndPrice(List<com.tools20022.repository.entity.SecuritiesPricing> endPrice) {
-		this.endPrice = endPrice;
+	public SecuritiesFinancing setEndPrice(List<com.tools20022.repository.entity.SecuritiesPricing> endPrice) {
+		this.endPrice = Objects.requireNonNull(endPrice);
+		return this;
 	}
 
 	public YesNoIndicator getSpreadTransaction() {
 		return spreadTransaction;
 	}
 
-	public void setSpreadTransaction(YesNoIndicator spreadTransaction) {
-		this.spreadTransaction = spreadTransaction;
+	public SecuritiesFinancing setSpreadTransaction(YesNoIndicator spreadTransaction) {
+		this.spreadTransaction = Objects.requireNonNull(spreadTransaction);
+		return this;
 	}
 
 	public SecuritiesFinancingAgreement getFinancingAgreement() {
 		return financingAgreement;
 	}
 
-	public void setFinancingAgreement(com.tools20022.repository.entity.SecuritiesFinancingAgreement financingAgreement) {
-		this.financingAgreement = financingAgreement;
+	public SecuritiesFinancing setFinancingAgreement(com.tools20022.repository.entity.SecuritiesFinancingAgreement financingAgreement) {
+		this.financingAgreement = Objects.requireNonNull(financingAgreement);
+		return this;
 	}
 
 	public CurrencyAndAmount getOpeningSettlementAmount() {
 		return openingSettlementAmount;
 	}
 
-	public void setOpeningSettlementAmount(CurrencyAndAmount openingSettlementAmount) {
-		this.openingSettlementAmount = openingSettlementAmount;
+	public SecuritiesFinancing setOpeningSettlementAmount(CurrencyAndAmount openingSettlementAmount) {
+		this.openingSettlementAmount = Objects.requireNonNull(openingSettlementAmount);
+		return this;
 	}
 
-	public SecuritiesTrade getClosingLegExecution() {
-		return closingLegExecution;
+	public Optional<SecuritiesTrade> getClosingLegExecution() {
+		return closingLegExecution == null ? Optional.empty() : Optional.of(closingLegExecution);
 	}
 
-	public void setClosingLegExecution(SecuritiesTrade closingLegExecution) {
+	public SecuritiesFinancing setClosingLegExecution(SecuritiesTrade closingLegExecution) {
 		this.closingLegExecution = closingLegExecution;
+		return this;
 	}
 
-	public SecuritiesTrade getOpeningLegExecution() {
-		return openingLegExecution;
+	public Optional<SecuritiesTrade> getOpeningLegExecution() {
+		return openingLegExecution == null ? Optional.empty() : Optional.of(openingLegExecution);
 	}
 
-	public void setOpeningLegExecution(SecuritiesTrade openingLegExecution) {
+	public SecuritiesFinancing setOpeningLegExecution(SecuritiesTrade openingLegExecution) {
 		this.openingLegExecution = openingLegExecution;
+		return this;
 	}
 
-	public BuyOrSellIndicationOfInterest getRelatedIndicationOfInterest() {
-		return relatedIndicationOfInterest;
+	public Optional<BuyOrSellIndicationOfInterest> getRelatedIndicationOfInterest() {
+		return relatedIndicationOfInterest == null ? Optional.empty() : Optional.of(relatedIndicationOfInterest);
 	}
 
-	public void setRelatedIndicationOfInterest(com.tools20022.repository.entity.BuyOrSellIndicationOfInterest relatedIndicationOfInterest) {
+	public SecuritiesFinancing setRelatedIndicationOfInterest(com.tools20022.repository.entity.BuyOrSellIndicationOfInterest relatedIndicationOfInterest) {
 		this.relatedIndicationOfInterest = relatedIndicationOfInterest;
+		return this;
 	}
 
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public SecuritiesFinancing setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 }

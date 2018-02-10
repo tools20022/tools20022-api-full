@@ -20,50 +20,53 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ChargeTypeCode;
+import com.tools20022.repository.codeset.ChargeType7Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of service for which a charge is asked or paid.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode ChargeTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType7Code#mmManagementFee
- * ChargeType7Code.mmManagementFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType7Code#ManagementFee
+ * ChargeType7Code.ManagementFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType7Code#mmBackEndLoad
- * ChargeType7Code.mmBackEndLoad}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType7Code#BackEndLoad
+ * ChargeType7Code.BackEndLoad}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType7Code#mmAdvisoryFee
- * ChargeType7Code.mmAdvisoryFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType7Code#AdvisoryFee
+ * ChargeType7Code.AdvisoryFee}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType7Code#CustodyFee
+ * ChargeType7Code.CustodyFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType7Code#mmCustodyFee
- * ChargeType7Code.mmCustodyFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType7Code#PublicationFee
+ * ChargeType7Code.PublicationFee}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType7Code#mmPublicationFee
- * ChargeType7Code.mmPublicationFee}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType7Code#AccountingFee
+ * ChargeType7Code.AccountingFee}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ChargeType7Code#Other
+ * ChargeType7Code.Other}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType7Code#mmAccountingFee
- * ChargeType7Code.mmAccountingFee}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.ChargeType7Code#mmOther
- * ChargeType7Code.mmOther}</li>
- * <li>
- * {@linkplain com.tools20022.repository.codeset.ChargeType7Code#mmEqualisation
- * ChargeType7Code.mmEqualisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.ChargeType7Code#Equalisation
+ * ChargeType7Code.Equalisation}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ChargeTypeCode ChargeTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -81,7 +84,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Specifies the type of service for which a charge is asked or paid."</li>
  * </ul>
  */
-public class ChargeType7Code extends ChargeTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class ChargeType7Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -100,11 +104,12 @@ public class ChargeType7Code extends ChargeTypeCode {
 	 * name} = "ManagementFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmManagementFee = new MMCode() {
+	public static final ChargeType7Code ManagementFee = new ChargeType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManagementFee";
-			owner_lazy = () -> ChargeType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType7Code.mmObject();
+			codeName = ChargeTypeCode.ManagementFee.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -123,11 +128,12 @@ public class ChargeType7Code extends ChargeTypeCode {
 	 * name} = "BackEndLoad"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmBackEndLoad = new MMCode() {
+	public static final ChargeType7Code BackEndLoad = new ChargeType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackEndLoad";
-			owner_lazy = () -> ChargeType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType7Code.mmObject();
+			codeName = ChargeTypeCode.BackEndLoad.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -146,11 +152,12 @@ public class ChargeType7Code extends ChargeTypeCode {
 	 * name} = "AdvisoryFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAdvisoryFee = new MMCode() {
+	public static final ChargeType7Code AdvisoryFee = new ChargeType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdvisoryFee";
-			owner_lazy = () -> ChargeType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType7Code.mmObject();
+			codeName = ChargeTypeCode.AdvisoryFee.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -169,11 +176,12 @@ public class ChargeType7Code extends ChargeTypeCode {
 	 * name} = "CustodyFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmCustodyFee = new MMCode() {
+	public static final ChargeType7Code CustodyFee = new ChargeType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyFee";
-			owner_lazy = () -> ChargeType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType7Code.mmObject();
+			codeName = ChargeTypeCode.CustodyFee.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -192,11 +200,12 @@ public class ChargeType7Code extends ChargeTypeCode {
 	 * name} = "PublicationFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPublicationFee = new MMCode() {
+	public static final ChargeType7Code PublicationFee = new ChargeType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicationFee";
-			owner_lazy = () -> ChargeType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType7Code.mmObject();
+			codeName = ChargeTypeCode.PublicationFee.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -215,11 +224,12 @@ public class ChargeType7Code extends ChargeTypeCode {
 	 * name} = "AccountingFee"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccountingFee = new MMCode() {
+	public static final ChargeType7Code AccountingFee = new ChargeType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountingFee";
-			owner_lazy = () -> ChargeType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType7Code.mmObject();
+			codeName = ChargeTypeCode.AccountingFee.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -238,11 +248,12 @@ public class ChargeType7Code extends ChargeTypeCode {
 	 * name} = "Other"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmOther = new MMCode() {
+	public static final ChargeType7Code Other = new ChargeType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			owner_lazy = () -> ChargeType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType7Code.mmObject();
+			codeName = ChargeTypeCode.Other.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -261,27 +272,65 @@ public class ChargeType7Code extends ChargeTypeCode {
 	 * name} = "Equalisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmEqualisation = new MMCode() {
+	public static final ChargeType7Code Equalisation = new ChargeType7Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equalisation";
-			owner_lazy = () -> ChargeType7Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.ChargeType7Code.mmObject();
+			codeName = ChargeTypeCode.Equalisation.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, ChargeType7Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected ChargeType7Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("MANF");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeType7Code";
 				definition = "Specifies the type of service for which a charge is asked or paid.";
-				code_lazy = () -> Arrays.asList(ChargeType7Code.mmManagementFee, ChargeType7Code.mmBackEndLoad, ChargeType7Code.mmAdvisoryFee, ChargeType7Code.mmCustodyFee, ChargeType7Code.mmPublicationFee, ChargeType7Code.mmAccountingFee,
-						ChargeType7Code.mmOther, ChargeType7Code.mmEqualisation);
 				trace_lazy = () -> ChargeTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType7Code.ManagementFee, com.tools20022.repository.codeset.ChargeType7Code.BackEndLoad, com.tools20022.repository.codeset.ChargeType7Code.AdvisoryFee,
+						com.tools20022.repository.codeset.ChargeType7Code.CustodyFee, com.tools20022.repository.codeset.ChargeType7Code.PublicationFee, com.tools20022.repository.codeset.ChargeType7Code.AccountingFee,
+						com.tools20022.repository.codeset.ChargeType7Code.Other, com.tools20022.repository.codeset.ChargeType7Code.Equalisation);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(ManagementFee.getCodeName().get(), ManagementFee);
+		codesByName.put(BackEndLoad.getCodeName().get(), BackEndLoad);
+		codesByName.put(AdvisoryFee.getCodeName().get(), AdvisoryFee);
+		codesByName.put(CustodyFee.getCodeName().get(), CustodyFee);
+		codesByName.put(PublicationFee.getCodeName().get(), PublicationFee);
+		codesByName.put(AccountingFee.getCodeName().get(), AccountingFee);
+		codesByName.put(Other.getCodeName().get(), Other);
+		codesByName.put(Equalisation.getCodeName().get(), Equalisation);
+	}
+
+	public static ChargeType7Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static ChargeType7Code[] values() {
+		ChargeType7Code[] values = new ChargeType7Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, ChargeType7Code> {
+		@Override
+		public ChargeType7Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(ChargeType7Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

@@ -31,6 +31,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -71,16 +72,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Additionnal details related to the leg."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "LegDetails1", propOrder = {"ratioQuantity", "side", "currency"})
 public class LegDetails1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RatioQty")
 	protected PercentageRate ratioQuantity;
 	/**
-	 * Only for multileg instrument - Ratio of quantity for an individual leg
-	 * relative to the entire multileg security.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -115,7 +116,7 @@ public class LegDetails1 {
 	public static final MMMessageAttribute mmRatioQuantity = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Leg.mmRatioQuantity;
-			componentContext_lazy = () -> LegDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LegDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "RatioQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -126,11 +127,11 @@ public class LegDetails1 {
 			simpleType_lazy = () -> PercentageRate.mmObject();
 		}
 	};
+	@XmlElement(name = "Sd")
 	protected Side1Code side;
 	/**
-	 * Only for multileg instrument- Side of an individual leg (multileg
-	 * security).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -164,7 +165,7 @@ public class LegDetails1 {
 	public static final MMMessageAttribute mmSide = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> SecuritiesOrder.mmSide;
-			componentContext_lazy = () -> LegDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LegDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Sd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,11 +176,11 @@ public class LegDetails1 {
 			simpleType_lazy = () -> Side1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected CurrencyCode currency;
 	/**
-	 * Only for multileg instrument - Currency associated with a particular
-	 * Leg's quantity .
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -213,7 +214,7 @@ public class LegDetails1 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Leg.mmCurrency;
-			componentContext_lazy = () -> LegDetails1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.LegDetails1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -228,9 +229,9 @@ public class LegDetails1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(LegDetails1.mmRatioQuantity, LegDetails1.mmSide, LegDetails1.mmCurrency);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LegDetails1.mmRatioQuantity, com.tools20022.repository.msg.LegDetails1.mmSide, com.tools20022.repository.msg.LegDetails1.mmCurrency);
 				trace_lazy = () -> Leg.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -246,30 +247,30 @@ public class LegDetails1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RatioQty")
-	public PercentageRate getRatioQuantity() {
-		return ratioQuantity;
+	public Optional<PercentageRate> getRatioQuantity() {
+		return ratioQuantity == null ? Optional.empty() : Optional.of(ratioQuantity);
 	}
 
-	public void setRatioQuantity(PercentageRate ratioQuantity) {
+	public LegDetails1 setRatioQuantity(PercentageRate ratioQuantity) {
 		this.ratioQuantity = ratioQuantity;
+		return this;
 	}
 
-	@XmlElement(name = "Sd")
-	public Side1Code getSide() {
-		return side;
+	public Optional<Side1Code> getSide() {
+		return side == null ? Optional.empty() : Optional.of(side);
 	}
 
-	public void setSide(Side1Code side) {
+	public LegDetails1 setSide(Side1Code side) {
 		this.side = side;
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public CurrencyCode getCurrency() {
-		return currency;
+	public Optional<CurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(CurrencyCode currency) {
+	public LegDetails1 setCurrency(CurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 }

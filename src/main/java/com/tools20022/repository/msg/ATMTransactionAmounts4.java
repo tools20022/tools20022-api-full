@@ -28,6 +28,7 @@ import com.tools20022.repository.entity.Limit;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,15 +88,16 @@ import javax.xml.bind.annotation.XmlType;
  * ATMTransactionAmounts2}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMTransactionAmounts4", propOrder = {"displayFlag", "availableAmount", "dailyBalance", "weeklyBalance", "monthlyBalance"})
 public class ATMTransactionAmounts4 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DispFlg")
 	protected TrueFalseIndicator displayFlag;
 	/**
-	 * True if limits may be displayed on the ATM to the customer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -132,7 +134,7 @@ public class ATMTransactionAmounts4 {
 	 */
 	public static final MMMessageAttribute mmDisplayFlag = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMTransactionAmounts4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts4.mmObject();
 			isDerived = false;
 			xmlTag = "DispFlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -144,10 +146,11 @@ public class ATMTransactionAmounts4 {
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "AvlblAmt")
 	protected ImpliedCurrencyAndAmount availableAmount;
 	/**
-	 * Amount available for withdrawal on the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -194,7 +197,7 @@ public class ATMTransactionAmounts4 {
 	public static final MMMessageAttribute mmAvailableAmount = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Limit.mmAvailableAmount;
-			componentContext_lazy = () -> ATMTransactionAmounts4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts4.mmObject();
 			isDerived = false;
 			xmlTag = "AvlblAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -207,11 +210,11 @@ public class ATMTransactionAmounts4 {
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
 		}
 	};
+	@XmlElement(name = "DalyBal")
 	protected DetailedAmount4 dailyBalance;
 	/**
-	 * Remaining daily amount of the customer totals for withdrawals on the
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -250,7 +253,7 @@ public class ATMTransactionAmounts4 {
 	public static final MMMessageAssociationEnd mmDailyBalance = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccountBalance;
-			componentContext_lazy = () -> ATMTransactionAmounts4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts4.mmObject();
 			isDerived = false;
 			xmlTag = "DalyBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -263,11 +266,11 @@ public class ATMTransactionAmounts4 {
 			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
 		}
 	};
+	@XmlElement(name = "WklyBal")
 	protected DetailedAmount4 weeklyBalance;
 	/**
-	 * Remaining weekly amount of the customer totals for withdrawals on the
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -306,7 +309,7 @@ public class ATMTransactionAmounts4 {
 	public static final MMMessageAssociationEnd mmWeeklyBalance = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccountBalance;
-			componentContext_lazy = () -> ATMTransactionAmounts4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts4.mmObject();
 			isDerived = false;
 			xmlTag = "WklyBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -319,11 +322,11 @@ public class ATMTransactionAmounts4 {
 			type_lazy = () -> com.tools20022.repository.msg.DetailedAmount4.mmObject();
 		}
 	};
+	@XmlElement(name = "MnthlyBal")
 	protected DetailedAmount4 monthlyBalance;
 	/**
-	 * Remaining monthly amount of the customer totals for withdrawals on the
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -362,7 +365,7 @@ public class ATMTransactionAmounts4 {
 	public static final MMMessageAssociationEnd mmMonthlyBalance = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Interest.mmAccountBalance;
-			componentContext_lazy = () -> ATMTransactionAmounts4.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMTransactionAmounts4.mmObject();
 			isDerived = false;
 			xmlTag = "MnthlyBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -379,10 +382,10 @@ public class ATMTransactionAmounts4 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMTransactionAmounts4.mmDisplayFlag, ATMTransactionAmounts4.mmAvailableAmount, ATMTransactionAmounts4.mmDailyBalance, ATMTransactionAmounts4.mmWeeklyBalance,
-						ATMTransactionAmounts4.mmMonthlyBalance);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMTransactionAmounts4.mmDisplayFlag, com.tools20022.repository.msg.ATMTransactionAmounts4.mmAvailableAmount,
+						com.tools20022.repository.msg.ATMTransactionAmounts4.mmDailyBalance, com.tools20022.repository.msg.ATMTransactionAmounts4.mmWeeklyBalance, com.tools20022.repository.msg.ATMTransactionAmounts4.mmMonthlyBalance);
 				trace_lazy = () -> Limit.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMTransactionAmounts4";
 				definition = "Withdrawal limits for the account.";
@@ -393,48 +396,48 @@ public class ATMTransactionAmounts4 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DispFlg")
-	public TrueFalseIndicator getDisplayFlag() {
-		return displayFlag;
+	public Optional<TrueFalseIndicator> getDisplayFlag() {
+		return displayFlag == null ? Optional.empty() : Optional.of(displayFlag);
 	}
 
-	public void setDisplayFlag(TrueFalseIndicator displayFlag) {
+	public ATMTransactionAmounts4 setDisplayFlag(TrueFalseIndicator displayFlag) {
 		this.displayFlag = displayFlag;
+		return this;
 	}
 
-	@XmlElement(name = "AvlblAmt")
-	public ImpliedCurrencyAndAmount getAvailableAmount() {
-		return availableAmount;
+	public Optional<ImpliedCurrencyAndAmount> getAvailableAmount() {
+		return availableAmount == null ? Optional.empty() : Optional.of(availableAmount);
 	}
 
-	public void setAvailableAmount(ImpliedCurrencyAndAmount availableAmount) {
+	public ATMTransactionAmounts4 setAvailableAmount(ImpliedCurrencyAndAmount availableAmount) {
 		this.availableAmount = availableAmount;
+		return this;
 	}
 
-	@XmlElement(name = "DalyBal")
-	public DetailedAmount4 getDailyBalance() {
-		return dailyBalance;
+	public Optional<DetailedAmount4> getDailyBalance() {
+		return dailyBalance == null ? Optional.empty() : Optional.of(dailyBalance);
 	}
 
-	public void setDailyBalance(com.tools20022.repository.msg.DetailedAmount4 dailyBalance) {
+	public ATMTransactionAmounts4 setDailyBalance(com.tools20022.repository.msg.DetailedAmount4 dailyBalance) {
 		this.dailyBalance = dailyBalance;
+		return this;
 	}
 
-	@XmlElement(name = "WklyBal")
-	public DetailedAmount4 getWeeklyBalance() {
-		return weeklyBalance;
+	public Optional<DetailedAmount4> getWeeklyBalance() {
+		return weeklyBalance == null ? Optional.empty() : Optional.of(weeklyBalance);
 	}
 
-	public void setWeeklyBalance(com.tools20022.repository.msg.DetailedAmount4 weeklyBalance) {
+	public ATMTransactionAmounts4 setWeeklyBalance(com.tools20022.repository.msg.DetailedAmount4 weeklyBalance) {
 		this.weeklyBalance = weeklyBalance;
+		return this;
 	}
 
-	@XmlElement(name = "MnthlyBal")
-	public DetailedAmount4 getMonthlyBalance() {
-		return monthlyBalance;
+	public Optional<DetailedAmount4> getMonthlyBalance() {
+		return monthlyBalance == null ? Optional.empty() : Optional.of(monthlyBalance);
 	}
 
-	public void setMonthlyBalance(com.tools20022.repository.msg.DetailedAmount4 monthlyBalance) {
+	public ATMTransactionAmounts4 setMonthlyBalance(com.tools20022.repository.msg.DetailedAmount4 monthlyBalance) {
 		this.monthlyBalance = monthlyBalance;
+		return this;
 	}
 }

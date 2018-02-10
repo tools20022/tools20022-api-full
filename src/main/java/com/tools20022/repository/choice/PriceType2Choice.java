@@ -25,6 +25,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Price3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -52,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -64,16 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of price type."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PriceType2Choice", propOrder = {"market", "indicative"})
 public class PriceType2Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Mkt", required = true)
 	protected Price3 market;
 	/**
-	 * Last reported price of a financial instrument in a market, determined by
-	 * supply and demand.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -106,7 +107,7 @@ public class PriceType2Choice {
 	public static final MMMessageAssociationEnd mmMarket = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
-			componentContext_lazy = () -> PriceType2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PriceType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Mkt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +119,11 @@ public class PriceType2Choice {
 			type_lazy = () -> Price3.mmObject();
 		}
 	};
+	@XmlElement(name = "Indctv", required = true)
 	protected Price3 indicative;
 	/**
-	 * Estimated price, for valuation purposes.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -152,7 +154,7 @@ public class PriceType2Choice {
 	public static final MMMessageAssociationEnd mmIndicative = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesPricing.mmObject();
-			componentContext_lazy = () -> PriceType2Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.PriceType2Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Indctv";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,9 +170,9 @@ public class PriceType2Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PriceType2Choice.mmMarket, PriceType2Choice.mmIndicative);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PriceType2Choice.mmMarket, com.tools20022.repository.choice.PriceType2Choice.mmIndicative);
 				trace_lazy = () -> SecuritiesPricing.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceType2Choice";
 				definition = "Choice of price type.";
@@ -179,21 +181,21 @@ public class PriceType2Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Mkt", required = true)
 	public Price3 getMarket() {
 		return market;
 	}
 
-	public void setMarket(Price3 market) {
-		this.market = market;
+	public PriceType2Choice setMarket(Price3 market) {
+		this.market = Objects.requireNonNull(market);
+		return this;
 	}
 
-	@XmlElement(name = "Indctv", required = true)
 	public Price3 getIndicative() {
 		return indicative;
 	}
 
-	public void setIndicative(Price3 indicative) {
-		this.indicative = indicative;
+	public PriceType2Choice setIndicative(Price3 indicative) {
+		this.indicative = Objects.requireNonNull(indicative);
+		return this;
 	}
 }

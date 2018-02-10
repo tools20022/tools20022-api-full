@@ -26,6 +26,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Specifies the underlying reason for a status of a corporate action.
@@ -37,6 +39,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} = {@linkplain com.tools20022.repository.entity.StatusReason
+ * StatusReason}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -60,9 +65,141 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorporateActionStatusReason.mmMovementRejectionReason}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} = {@linkplain com.tools20022.repository.entity.StatusReason
- * StatusReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmCorporateActionStatusReason
+ * CorporateActionStatus.mmCorporateActionStatusReason}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PendingStatus2Choice#mmReason
+ * PendingStatus2Choice.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PendingStatus5Choice#mmReason
+ * PendingStatus5Choice.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus1Choice#mmDefaultAction
+ * InstructionProcessingStatus1Choice.mmDefaultAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus1Choice#mmStandingInstruction
+ * InstructionProcessingStatus1Choice.mmStandingInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus4Choice#mmDefaultAction
+ * InstructionProcessingStatus4Choice.mmDefaultAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus4Choice#mmStandingInstruction
+ * InstructionProcessingStatus4Choice.mmStandingInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus7Choice#mmDefaultAction
+ * InstructionProcessingStatus7Choice.mmDefaultAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus7Choice#mmStandingInstruction
+ * InstructionProcessingStatus7Choice.mmStandingInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus8Choice#mmDefaultAction
+ * InstructionProcessingStatus8Choice.mmDefaultAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus8Choice#mmStandingInstruction
+ * InstructionProcessingStatus8Choice.mmStandingInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus12Choice#mmDefaultAction
+ * InstructionProcessingStatus12Choice.mmDefaultAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus12Choice#mmStandingInstruction
+ * InstructionProcessingStatus12Choice.mmStandingInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus13Choice#mmDefaultAction
+ * InstructionProcessingStatus13Choice.mmDefaultAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus13Choice#mmStandingInstruction
+ * InstructionProcessingStatus13Choice.mmStandingInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionReversalReason1#mmReason
+ * CorporateActionReversalReason1.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionReversalReason2#mmReason
+ * CorporateActionReversalReason2.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AcceptedStatus3Choice#mmReason
+ * AcceptedStatus3Choice.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus15Choice#mmDefaultAction
+ * InstructionProcessingStatus15Choice.mmDefaultAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus15Choice#mmStandingInstruction
+ * InstructionProcessingStatus15Choice.mmStandingInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#mmDefaultAction
+ * InstructionProcessingStatus16Choice.mmDefaultAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#mmStandingInstruction
+ * InstructionProcessingStatus16Choice.mmStandingInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AcceptedStatus5Choice#mmReason
+ * AcceptedStatus5Choice.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus20Choice#mmDefaultAction
+ * InstructionProcessingStatus20Choice.mmDefaultAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus20Choice#mmStandingInstruction
+ * InstructionProcessingStatus20Choice.mmStandingInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus21Choice#mmDefaultAction
+ * InstructionProcessingStatus21Choice.mmDefaultAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus21Choice#mmStandingInstruction
+ * InstructionProcessingStatus21Choice.mmStandingInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionReversalReason3#mmReason
+ * CorporateActionReversalReason3.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus24Choice#mmDefaultAction
+ * InstructionProcessingStatus24Choice.mmDefaultAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus24Choice#mmStandingInstruction
+ * InstructionProcessingStatus24Choice.mmStandingInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AcceptedStatus8Choice#mmReason
+ * AcceptedStatus8Choice.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PendingStatus41Choice#mmReason
+ * PendingStatus41Choice.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus25Choice#mmDefaultAction
+ * InstructionProcessingStatus25Choice.mmDefaultAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus25Choice#mmStandingInstruction
+ * InstructionProcessingStatus25Choice.mmStandingInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionReversalReason4#mmReason
+ * CorporateActionReversalReason4.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PendingStatus43Choice#mmReason
+ * PendingStatus43Choice.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AcceptedStatus9Choice#mmReason
+ * AcceptedStatus9Choice.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus29Choice#mmDefaultAction
+ * InstructionProcessingStatus29Choice.mmDefaultAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus29Choice#mmStandingInstruction
+ * InstructionProcessingStatus29Choice.mmStandingInstruction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus30Choice#mmDefaultAction
+ * InstructionProcessingStatus30Choice.mmDefaultAction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus30Choice#mmStandingInstruction
+ * InstructionProcessingStatus30Choice.mmStandingInstruction}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
@@ -515,145 +652,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.CorporateActionStatus#mmCorporateActionStatusReason
- * CorporateActionStatus.mmCorporateActionStatusReason}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PendingStatus2Choice#mmReason
- * PendingStatus2Choice.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PendingStatus5Choice#mmReason
- * PendingStatus5Choice.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus1Choice#mmDefaultAction
- * InstructionProcessingStatus1Choice.mmDefaultAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus1Choice#mmStandingInstruction
- * InstructionProcessingStatus1Choice.mmStandingInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus4Choice#mmDefaultAction
- * InstructionProcessingStatus4Choice.mmDefaultAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus4Choice#mmStandingInstruction
- * InstructionProcessingStatus4Choice.mmStandingInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus7Choice#mmDefaultAction
- * InstructionProcessingStatus7Choice.mmDefaultAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus7Choice#mmStandingInstruction
- * InstructionProcessingStatus7Choice.mmStandingInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus8Choice#mmDefaultAction
- * InstructionProcessingStatus8Choice.mmDefaultAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus8Choice#mmStandingInstruction
- * InstructionProcessingStatus8Choice.mmStandingInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus12Choice#mmDefaultAction
- * InstructionProcessingStatus12Choice.mmDefaultAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus12Choice#mmStandingInstruction
- * InstructionProcessingStatus12Choice.mmStandingInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus13Choice#mmDefaultAction
- * InstructionProcessingStatus13Choice.mmDefaultAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus13Choice#mmStandingInstruction
- * InstructionProcessingStatus13Choice.mmStandingInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionReversalReason1#mmReason
- * CorporateActionReversalReason1.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionReversalReason2#mmReason
- * CorporateActionReversalReason2.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.AcceptedStatus3Choice#mmReason
- * AcceptedStatus3Choice.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus15Choice#mmDefaultAction
- * InstructionProcessingStatus15Choice.mmDefaultAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus15Choice#mmStandingInstruction
- * InstructionProcessingStatus15Choice.mmStandingInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#mmDefaultAction
- * InstructionProcessingStatus16Choice.mmDefaultAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus16Choice#mmStandingInstruction
- * InstructionProcessingStatus16Choice.mmStandingInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.AcceptedStatus5Choice#mmReason
- * AcceptedStatus5Choice.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus20Choice#mmDefaultAction
- * InstructionProcessingStatus20Choice.mmDefaultAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus20Choice#mmStandingInstruction
- * InstructionProcessingStatus20Choice.mmStandingInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus21Choice#mmDefaultAction
- * InstructionProcessingStatus21Choice.mmDefaultAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus21Choice#mmStandingInstruction
- * InstructionProcessingStatus21Choice.mmStandingInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionReversalReason3#mmReason
- * CorporateActionReversalReason3.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus24Choice#mmDefaultAction
- * InstructionProcessingStatus24Choice.mmDefaultAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus24Choice#mmStandingInstruction
- * InstructionProcessingStatus24Choice.mmStandingInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.AcceptedStatus8Choice#mmReason
- * AcceptedStatus8Choice.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PendingStatus41Choice#mmReason
- * PendingStatus41Choice.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus25Choice#mmDefaultAction
- * InstructionProcessingStatus25Choice.mmDefaultAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus25Choice#mmStandingInstruction
- * InstructionProcessingStatus25Choice.mmStandingInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CorporateActionReversalReason4#mmReason
- * CorporateActionReversalReason4.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.PendingStatus43Choice#mmReason
- * PendingStatus43Choice.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.AcceptedStatus9Choice#mmReason
- * AcceptedStatus9Choice.mmReason}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus29Choice#mmDefaultAction
- * InstructionProcessingStatus29Choice.mmDefaultAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus29Choice#mmStandingInstruction
- * InstructionProcessingStatus29Choice.mmStandingInstruction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus30Choice#mmDefaultAction
- * InstructionProcessingStatus30Choice.mmDefaultAction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus30Choice#mmStandingInstruction
- * InstructionProcessingStatus30Choice.mmStandingInstruction}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -670,8 +672,8 @@ public class CorporateActionStatusReason extends StatusReason {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected CorporateActionCancellationReasonCode corporateActionCancellationReason;
 	/**
-	 * Specifies reasons for cancellation of a corporate action event.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -720,8 +722,8 @@ public class CorporateActionStatusReason extends StatusReason {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionCancellation3.mmCancellationReasonCode, CorporateActionCancellation3.mmCancellationReason, CorporateActionCancellation4.mmCancellationReasonCode,
 					CorporateActionCancellation4.mmCancellationReason, CorporateActionCancellation2SD1.mmLocalLanguageCancellationReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionCancellationReason";
 			definition = "Specifies reasons for cancellation of a corporate action event.";
@@ -740,8 +742,8 @@ public class CorporateActionStatusReason extends StatusReason {
 	};
 	protected CorporateActionStatus corporateActionStatus;
 	/**
-	 * Corporate actions status for which a reason is provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -775,8 +777,8 @@ public class CorporateActionStatusReason extends StatusReason {
 	 */
 	public static final MMBusinessAssociationEnd mmCorporateActionStatus = new MMBusinessAssociationEnd() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CorporateActionStatus";
 			definition = "Corporate actions status for which a reason is provided.";
@@ -789,8 +791,8 @@ public class CorporateActionStatusReason extends StatusReason {
 	};
 	protected AcknowledgementReasonCode acceptedReason;
 	/**
-	 * Specifies additional information about the processed instruction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -973,8 +975,8 @@ public class CorporateActionStatusReason extends StatusReason {
 					InstructionCancellationRequestStatus10Choice.mmAccepted, InstructionProcessingStatus25Choice.mmAcceptedForFurtherProcessing, AcceptedStatusReason10.mmReasonCode, AcceptedReason11Choice.mmCode,
 					AcceptedReason11Choice.mmProprietary, InstructionCancellationRequestStatus11Choice.mmAccepted, InstructionProcessingStatus29Choice.mmAcceptedForFurtherProcessing, InstructionCancellationRequestStatus12Choice.mmAccepted,
 					InstructionProcessingStatus30Choice.mmAcceptedForFurtherProcessing);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AcceptedReason";
 			definition = "Specifies additional information about the processed instruction.";
@@ -993,8 +995,8 @@ public class CorporateActionStatusReason extends StatusReason {
 	};
 	protected CorporateActionReversalReasonCode reversalReason;
 	/**
-	 * Reason for the reversal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1052,8 +1054,8 @@ public class CorporateActionStatusReason extends StatusReason {
 			derivation_lazy = () -> Arrays.asList(CorporateActionReversalReason1Choice.mmCode, CorporateActionReversalReason1Choice.mmProprietary, CorporateActionReversalReason2Choice.mmCode,
 					CorporateActionReversalReason2Choice.mmProprietary, CorporateActionReversalReason3Choice.mmCode, CorporateActionReversalReason3Choice.mmProprietary, CorporateActionReversalReason4Choice.mmCode,
 					CorporateActionReversalReason4Choice.mmProprietary);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReversalReason";
 			definition = "Reason for the reversal.";
@@ -1072,8 +1074,8 @@ public class CorporateActionStatusReason extends StatusReason {
 	};
 	protected FailedSettlementReasonCode movementFailureReason;
 	/**
-	 * The reason for the failure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1113,8 +1115,8 @@ public class CorporateActionStatusReason extends StatusReason {
 	public static final MMBusinessAttribute mmMovementFailureReason = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(FailedSettlementReason1FormatChoice.mmCode, FailedSettlementReason1FormatChoice.mmProprietary, FailedMovement1.mmReason);
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MovementFailureReason";
 			definition = "The reason for the failure.";
@@ -1133,8 +1135,8 @@ public class CorporateActionStatusReason extends StatusReason {
 	};
 	protected RejectionReasonCode movementRejectionReason;
 	/**
-	 * Provides information about the rejection status.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1160,8 +1162,8 @@ public class CorporateActionStatusReason extends StatusReason {
 	 */
 	public static final MMBusinessAttribute mmMovementRejectionReason = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MovementRejectionReason";
 			definition = "Provides information about the rejection status.";
@@ -1182,7 +1184,7 @@ public class CorporateActionStatusReason extends StatusReason {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionStatusReason";
 				definition = "Specifies the underlying reason for a status of a corporate action.";
@@ -1255,47 +1257,53 @@ public class CorporateActionStatusReason extends StatusReason {
 		return corporateActionCancellationReason;
 	}
 
-	public void setCorporateActionCancellationReason(CorporateActionCancellationReasonCode corporateActionCancellationReason) {
-		this.corporateActionCancellationReason = corporateActionCancellationReason;
+	public CorporateActionStatusReason setCorporateActionCancellationReason(CorporateActionCancellationReasonCode corporateActionCancellationReason) {
+		this.corporateActionCancellationReason = Objects.requireNonNull(corporateActionCancellationReason);
+		return this;
 	}
 
-	public CorporateActionStatus getCorporateActionStatus() {
-		return corporateActionStatus;
+	public Optional<CorporateActionStatus> getCorporateActionStatus() {
+		return corporateActionStatus == null ? Optional.empty() : Optional.of(corporateActionStatus);
 	}
 
-	public void setCorporateActionStatus(com.tools20022.repository.entity.CorporateActionStatus corporateActionStatus) {
+	public CorporateActionStatusReason setCorporateActionStatus(com.tools20022.repository.entity.CorporateActionStatus corporateActionStatus) {
 		this.corporateActionStatus = corporateActionStatus;
+		return this;
 	}
 
 	public AcknowledgementReasonCode getAcceptedReason() {
 		return acceptedReason;
 	}
 
-	public void setAcceptedReason(AcknowledgementReasonCode acceptedReason) {
-		this.acceptedReason = acceptedReason;
+	public CorporateActionStatusReason setAcceptedReason(AcknowledgementReasonCode acceptedReason) {
+		this.acceptedReason = Objects.requireNonNull(acceptedReason);
+		return this;
 	}
 
 	public CorporateActionReversalReasonCode getReversalReason() {
 		return reversalReason;
 	}
 
-	public void setReversalReason(CorporateActionReversalReasonCode reversalReason) {
-		this.reversalReason = reversalReason;
+	public CorporateActionStatusReason setReversalReason(CorporateActionReversalReasonCode reversalReason) {
+		this.reversalReason = Objects.requireNonNull(reversalReason);
+		return this;
 	}
 
 	public FailedSettlementReasonCode getMovementFailureReason() {
 		return movementFailureReason;
 	}
 
-	public void setMovementFailureReason(FailedSettlementReasonCode movementFailureReason) {
-		this.movementFailureReason = movementFailureReason;
+	public CorporateActionStatusReason setMovementFailureReason(FailedSettlementReasonCode movementFailureReason) {
+		this.movementFailureReason = Objects.requireNonNull(movementFailureReason);
+		return this;
 	}
 
 	public RejectionReasonCode getMovementRejectionReason() {
 		return movementRejectionReason;
 	}
 
-	public void setMovementRejectionReason(RejectionReasonCode movementRejectionReason) {
-		this.movementRejectionReason = movementRejectionReason;
+	public CorporateActionStatusReason setMovementRejectionReason(RejectionReasonCode movementRejectionReason) {
+		this.movementRejectionReason = Objects.requireNonNull(movementRejectionReason);
+		return this;
 	}
 }

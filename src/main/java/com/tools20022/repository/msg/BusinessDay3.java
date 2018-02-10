@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.BusinessDayReportOrError4Choice;
 import com.tools20022.repository.choice.SystemIdentification2Choice;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -66,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * BusinessDay1}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BusinessDay3", propOrder = {"systemIdentification", "businessDayOrError"})
 public class BusinessDay3 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SysId", required = true)
 	protected List<SystemIdentification2Choice> systemIdentification;
 	/**
-	 * Identification of a particular market infrastructure.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -105,7 +108,7 @@ public class BusinessDay3 {
 	 */
 	public static final MMMessageAssociationEnd mmSystemIdentification = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BusinessDay3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDay3.mmObject();
 			isDerived = false;
 			xmlTag = "SysId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -117,11 +120,11 @@ public class BusinessDay3 {
 			type_lazy = () -> SystemIdentification2Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "BizDayOrErr", required = true)
 	protected BusinessDayReportOrError4Choice businessDayOrError;
 	/**
-	 * Requested information on the system availability for a specific business
-	 * day or business error when information has not been found.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -154,7 +157,7 @@ public class BusinessDay3 {
 	 */
 	public static final MMMessageAssociationEnd mmBusinessDayOrError = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> BusinessDay3.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.BusinessDay3.mmObject();
 			isDerived = false;
 			xmlTag = "BizDayOrErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,8 +174,8 @@ public class BusinessDay3 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BusinessDay3.mmSystemIdentification, BusinessDay3.mmBusinessDayOrError);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.BusinessDay3.mmSystemIdentification, com.tools20022.repository.msg.BusinessDay3.mmBusinessDayOrError);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDay3";
 				definition = "Reports on business day information.";
@@ -182,21 +185,21 @@ public class BusinessDay3 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SysId", required = true)
 	public List<SystemIdentification2Choice> getSystemIdentification() {
-		return systemIdentification;
+		return systemIdentification == null ? systemIdentification = new ArrayList<>() : systemIdentification;
 	}
 
-	public void setSystemIdentification(List<SystemIdentification2Choice> systemIdentification) {
-		this.systemIdentification = systemIdentification;
+	public BusinessDay3 setSystemIdentification(List<SystemIdentification2Choice> systemIdentification) {
+		this.systemIdentification = Objects.requireNonNull(systemIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "BizDayOrErr", required = true)
 	public BusinessDayReportOrError4Choice getBusinessDayOrError() {
 		return businessDayOrError;
 	}
 
-	public void setBusinessDayOrError(BusinessDayReportOrError4Choice businessDayOrError) {
-		this.businessDayOrError = businessDayOrError;
+	public BusinessDay3 setBusinessDayOrError(BusinessDayReportOrError4Choice businessDayOrError) {
+		this.businessDayOrError = Objects.requireNonNull(businessDayOrError);
+		return this;
 	}
 }

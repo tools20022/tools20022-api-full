@@ -26,6 +26,7 @@ import com.tools20022.repository.entity.InvestmentFundTransaction;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,15 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of formats for the transaction type."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "TransactionType1CodeChoice", propOrder = {"structured", "unstructured"})
 public class TransactionType1CodeChoice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Strd", required = true)
 	protected TransactionType2Code structured;
 	/**
-	 * Transaction type in a structured format.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -109,7 +111,7 @@ public class TransactionType1CodeChoice {
 	public static final MMMessageAttribute mmStructured = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
-			componentContext_lazy = () -> TransactionType1CodeChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionType1CodeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Strd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -120,10 +122,11 @@ public class TransactionType1CodeChoice {
 			simpleType_lazy = () -> TransactionType2Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Ustrd", required = true)
 	protected Max35Text unstructured;
 	/**
-	 * Transaction type in free text form.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -156,7 +159,7 @@ public class TransactionType1CodeChoice {
 	public static final MMMessageAttribute mmUnstructured = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> InvestmentFundTransaction.mmType;
-			componentContext_lazy = () -> TransactionType1CodeChoice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.TransactionType1CodeChoice.mmObject();
 			isDerived = false;
 			xmlTag = "Ustrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -171,9 +174,9 @@ public class TransactionType1CodeChoice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(TransactionType1CodeChoice.mmStructured, TransactionType1CodeChoice.mmUnstructured);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.TransactionType1CodeChoice.mmStructured, com.tools20022.repository.choice.TransactionType1CodeChoice.mmUnstructured);
 				trace_lazy = () -> InvestmentFundTransaction.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionType1CodeChoice";
 				definition = "Choice of formats for the transaction type.";
@@ -182,21 +185,21 @@ public class TransactionType1CodeChoice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Strd", required = true)
 	public TransactionType2Code getStructured() {
 		return structured;
 	}
 
-	public void setStructured(TransactionType2Code structured) {
-		this.structured = structured;
+	public TransactionType1CodeChoice setStructured(TransactionType2Code structured) {
+		this.structured = Objects.requireNonNull(structured);
+		return this;
 	}
 
-	@XmlElement(name = "Ustrd", required = true)
 	public Max35Text getUnstructured() {
 		return unstructured;
 	}
 
-	public void setUnstructured(Max35Text unstructured) {
-		this.unstructured = unstructured;
+	public TransactionType1CodeChoice setUnstructured(Max35Text unstructured) {
+		this.unstructured = Objects.requireNonNull(unstructured);
+		return this;
 	}
 }

@@ -28,6 +28,8 @@ import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 
 /**
  * Acceptor parameters to be downloaded from the terminal management system.
@@ -81,6 +83,81 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.AcceptorConfiguration#mmApplicationVersion
  * AcceptorConfiguration.mmApplicationVersion}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
+ * associationDomain} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmAcceptorConfiguration
+ * TerminalManagementSystem.mmAcceptorConfiguration}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters2#mmCompletionExchange
+ * AcquirerProtocolParameters2.mmCompletionExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#mmOnLineTransaction
+ * AcquirerProtocolParameters1.mmOnLineTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#mmOffLineTransaction
+ * AcquirerProtocolParameters1.mmOffLineTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#mmReconciliationExchange
+ * AcquirerProtocolParameters1.mmReconciliationExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent1#mmAcquirerProtocolParameters
+ * AcceptorConfigurationContent1.mmAcquirerProtocolParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration1#mmDataSet
+ * AcceptorConfiguration1.mmDataSet}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters4#mmCompletionExchange
+ * AcquirerProtocolParameters4.mmCompletionExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmOnLineTransaction
+ * AcquirerProtocolParameters3.mmOnLineTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmOffLineTransaction
+ * AcquirerProtocolParameters3.mmOffLineTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmReconciliationExchange
+ * AcquirerProtocolParameters3.mmReconciliationExchange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent2#mmAcquirerProtocolParameters
+ * AcceptorConfigurationContent2.mmAcquirerProtocolParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration2#mmDataSet
+ * AcceptorConfiguration2.mmDataSet}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent3#mmAcquirerProtocolParameters
+ * AcceptorConfigurationContent3.mmAcquirerProtocolParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmOnLineTransaction
+ * AcquirerProtocolParameters6.mmOnLineTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#mmOnLineTransaction
+ * AcquirerProtocolParameters7.mmOnLineTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent4#mmAcquirerProtocolParameters
+ * AcceptorConfigurationContent4.mmAcquirerProtocolParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#mmOnLineTransaction
+ * AcquirerProtocolParameters9.mmOnLineTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#mmAcquirerProtocolParameters
+ * AcceptorConfigurationContent5.mmAcquirerProtocolParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#mmAcquirerProtocolParameters
+ * AcceptorConfigurationContent6.mmAcquirerProtocolParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#mmOnLineTransaction
+ * AcquirerProtocolParameters10.mmOnLineTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -176,85 +253,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * </ul>
  * </li>
  * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getAssociationDomain
- * associationDomain} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.entity.TerminalManagementSystem#mmAcceptorConfiguration
- * TerminalManagementSystem.mmAcceptorConfiguration}</li>
- * </ul>
- * </li>
- * <li>
- * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
- * derivationElement} =
- * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters2#mmCompletionExchange
- * AcquirerProtocolParameters2.mmCompletionExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#mmOnLineTransaction
- * AcquirerProtocolParameters1.mmOnLineTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#mmOffLineTransaction
- * AcquirerProtocolParameters1.mmOffLineTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters1#mmReconciliationExchange
- * AcquirerProtocolParameters1.mmReconciliationExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent1#mmAcquirerProtocolParameters
- * AcceptorConfigurationContent1.mmAcquirerProtocolParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration1#mmDataSet
- * AcceptorConfiguration1.mmDataSet}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters4#mmCompletionExchange
- * AcquirerProtocolParameters4.mmCompletionExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmOnLineTransaction
- * AcquirerProtocolParameters3.mmOnLineTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmOffLineTransaction
- * AcquirerProtocolParameters3.mmOffLineTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters3#mmReconciliationExchange
- * AcquirerProtocolParameters3.mmReconciliationExchange}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent2#mmAcquirerProtocolParameters
- * AcceptorConfigurationContent2.mmAcquirerProtocolParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration2#mmDataSet
- * AcceptorConfiguration2.mmDataSet}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent3#mmAcquirerProtocolParameters
- * AcceptorConfigurationContent3.mmAcquirerProtocolParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters6#mmOnLineTransaction
- * AcquirerProtocolParameters6.mmOnLineTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters7#mmOnLineTransaction
- * AcquirerProtocolParameters7.mmOnLineTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent4#mmAcquirerProtocolParameters
- * AcceptorConfigurationContent4.mmAcquirerProtocolParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9#mmOnLineTransaction
- * AcquirerProtocolParameters9.mmOnLineTransaction}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5#mmAcquirerProtocolParameters
- * AcceptorConfigurationContent5.mmAcquirerProtocolParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent6#mmAcquirerProtocolParameters
- * AcceptorConfigurationContent6.mmAcquirerProtocolParameters}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#mmOnLineTransaction
- * AcquirerProtocolParameters10.mmOnLineTransaction}</li>
- * </ul>
- * </li>
- * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -271,8 +273,8 @@ public class AcceptorConfiguration {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Max35Text applicationIdentification;
 	/**
-	 * Identification of the payment application.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -342,8 +344,8 @@ public class AcceptorConfiguration {
 					ApplicationParameters2.mmApplicationIdentification, AcquirerProtocolParameters6.mmApplicationIdentification, ApplicationParameters3.mmApplicationIdentification, AcquirerProtocolParameters7.mmApplicationIdentification,
 					ApplicationParameters4.mmApplicationIdentification, ApplicationParameters5.mmApplicationIdentification, AcquirerProtocolParameters9.mmApplicationIdentification, ApplicationParameters6.mmApplicationIdentification,
 					AcquirerProtocolParameters10.mmApplicationIdentification);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ApplicationIdentification";
 			definition = "Identification of the payment application.";
@@ -362,8 +364,8 @@ public class AcceptorConfiguration {
 	};
 	protected FinancialCaptureCode financialCapture;
 	/**
-	 * Mode for the financial capture of the transaction by the acquirer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -409,8 +411,8 @@ public class AcceptorConfiguration {
 		{
 			derivation_lazy = () -> Arrays.asList(AcquirerProtocolParameters2.mmFinancialCapture, AcquirerProtocolParameters4.mmFinancialCapture, AcquirerProtocolParameters5.mmFinancialCapture,
 					AcquirerProtocolParameters8.mmFinancialCapture);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialCapture";
 			definition = "Mode for the financial capture of the transaction by the acquirer.";
@@ -429,8 +431,8 @@ public class AcceptorConfiguration {
 	};
 	protected BatchTransactionTypeCode batchTransferContent;
 	/**
-	 * Types of transaction to include in the batch.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -494,8 +496,8 @@ public class AcceptorConfiguration {
 			derivation_lazy = () -> Arrays.asList(AcquirerProtocolParameters2.mmBatchTransfer, AcquirerProtocolParameters1.mmBatchTransferContent, AcquirerProtocolParameters4.mmBatchTransfer,
 					AcquirerProtocolParameters3.mmBatchTransferContent, AcquirerProtocolParameters6.mmBatchTransferContent, AcquirerProtocolParameters5.mmBatchTransfer, AcquirerProtocolParameters7.mmBatchTransferContent,
 					AcquirerProtocolParameters8.mmBatchTransfer, AcquirerProtocolParameters9.mmBatchTransferContent, AcquirerProtocolParameters10.mmBatchTransferContent);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BatchTransferContent";
 			definition = "Types of transaction to include in the batch.";
@@ -514,8 +516,8 @@ public class AcceptorConfiguration {
 	};
 	protected ExchangePolicyCode exchangePolicy;
 	/**
-	 * Exchange policy between parties.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -569,8 +571,8 @@ public class AcceptorConfiguration {
 		{
 			derivation_lazy = () -> Arrays.asList(ExchangeConfiguration1.mmExchangePolicy, ExchangeConfiguration2.mmExchangePolicy, ExchangeConfiguration3.mmExchangePolicy, ExchangeConfiguration5.mmExchangePolicy,
 					ExchangeConfiguration4.mmExchangePolicy, ExchangeConfiguration6.mmExchangePolicy, ExchangeConfiguration7.mmExchangePolicy);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExchangePolicy";
 			definition = "Exchange policy between parties.";
@@ -589,8 +591,8 @@ public class AcceptorConfiguration {
 	};
 	protected Number maximumNumber;
 	/**
-	 * Maximum number of transactions without exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -643,8 +645,8 @@ public class AcceptorConfiguration {
 		{
 			derivation_lazy = () -> Arrays.asList(ExchangeConfiguration1.mmMaximumNumber, ExchangeConfiguration2.mmMaximumNumber, ExchangeConfiguration3.mmMaximumNumber, ExchangeConfiguration5.mmMaximumNumber,
 					ExchangeConfiguration4.mmMaximumNumber, ExchangeConfiguration6.mmMaximumNumber, ExchangeConfiguration7.mmMaximumNumber);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumNumber";
 			definition = "Maximum number of transactions without exchange.";
@@ -663,8 +665,8 @@ public class AcceptorConfiguration {
 	};
 	protected ImpliedCurrencyAndAmount maximumAmount;
 	/**
-	 * Maximum cumulative amount of the transactions without exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -719,8 +721,8 @@ public class AcceptorConfiguration {
 		{
 			derivation_lazy = () -> Arrays.asList(ExchangeConfiguration1.mmMaximumAmount, ExchangeConfiguration2.mmMaximumAmount, ExchangeConfiguration3.mmMaximumAmount, ExchangeConfiguration5.mmMaximumAmount,
 					ExchangeConfiguration4.mmMaximumAmount, ExchangeConfiguration6.mmMaximumAmount, ExchangeConfiguration7.mmMaximumAmount);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MaximumAmount";
 			definition = "Maximum cumulative amount of the transactions without exchange.";
@@ -739,9 +741,8 @@ public class AcceptorConfiguration {
 	};
 	protected TrueFalseIndicator reconciliationByAcquirer;
 	/**
-	 * Indicates the reconciliation period is assigned by the acquirer instead
-	 * of the acceptor.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -794,8 +795,8 @@ public class AcceptorConfiguration {
 		{
 			derivation_lazy = () -> Arrays.asList(AcquirerProtocolParameters1.mmReconciliationByAcquirer, AcquirerProtocolParameters3.mmReconciliationByAcquirer, AcquirerProtocolParameters6.mmReconciliationByAcquirer,
 					AcquirerProtocolParameters7.mmReconciliationByAcquirer, AcquirerProtocolParameters9.mmReconciliationByAcquirer, AcquirerProtocolParameters10.mmReconciliationByAcquirer);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReconciliationByAcquirer";
 			definition = "Indicates the reconciliation period is assigned by the acquirer instead of the acceptor.";
@@ -814,8 +815,8 @@ public class AcceptorConfiguration {
 	};
 	protected TrueFalseIndicator totalsPerCurrency;
 	/**
-	 * Indicates the reconciliation total amounts are computed per currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -867,8 +868,8 @@ public class AcceptorConfiguration {
 		{
 			derivation_lazy = () -> Arrays.asList(AcquirerProtocolParameters1.mmTotalsPerCurrency, AcquirerProtocolParameters3.mmTotalsPerCurrency, AcquirerProtocolParameters6.mmTotalsPerCurrency,
 					AcquirerProtocolParameters7.mmTotalsPerCurrency, AcquirerProtocolParameters9.mmTotalsPerCurrency, AcquirerProtocolParameters10.mmTotalsPerCurrency);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalsPerCurrency";
 			definition = "Indicates the reconciliation total amounts are computed per currency.";
@@ -887,8 +888,8 @@ public class AcceptorConfiguration {
 	};
 	protected TrueFalseIndicator protectCardData;
 	/**
-	 * Indicator to require protection of sensitive card data in messages.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -940,8 +941,8 @@ public class AcceptorConfiguration {
 		{
 			derivation_lazy = () -> Arrays.asList(AcquirerProtocolParameters1.mmProtectCardData, AcquirerProtocolParameters3.mmProtectCardData, AcquirerProtocolParameters6.mmProtectCardData, AcquirerProtocolParameters7.mmProtectCardData,
 					AcquirerProtocolParameters9.mmProtectCardData, AcquirerProtocolParameters10.mmProtectCardData);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProtectCardData";
 			definition = "Indicator to require protection of sensitive card data in messages.";
@@ -960,8 +961,8 @@ public class AcceptorConfiguration {
 	};
 	protected Max10000Binary retailerParameters;
 	/**
-	 * Acceptor parameters dedicated to the retailer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1002,8 +1003,8 @@ public class AcceptorConfiguration {
 	public static final MMBusinessAttribute mmRetailerParameters = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AcceptorConfigurationContent1.mmMerchantParameters, AcceptorConfigurationContent2.mmMerchantParameters, AcceptorConfigurationContent3.mmMerchantParameters);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RetailerParameters";
 			definition = "Acceptor parameters dedicated to the retailer.";
@@ -1022,8 +1023,8 @@ public class AcceptorConfiguration {
 	};
 	protected Max10000Binary applicationParameters;
 	/**
-	 * Configuration parameters attached to the payment application.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1075,8 +1076,8 @@ public class AcceptorConfiguration {
 		{
 			derivation_lazy = () -> Arrays.asList(AcceptorConfigurationContent1.mmApplicationParameters, AcceptorConfigurationContent2.mmApplicationParameters, AcceptorConfigurationContent3.mmApplicationParameters,
 					AcceptorConfigurationContent4.mmApplicationParameters, AcceptorConfigurationContent5.mmApplicationParameters, AcceptorConfigurationContent6.mmApplicationParameters);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ApplicationParameters";
 			definition = "Configuration parameters attached to the payment application.";
@@ -1095,9 +1096,8 @@ public class AcceptorConfiguration {
 	};
 	protected TerminalManagementSystem terminalManagementSystem;
 	/**
-	 * Terminal management system for which an acceptor configuration is
-	 * provided.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1178,8 +1178,8 @@ public class AcceptorConfiguration {
 					AcceptorConfigurationContent2.mmHostCommunicationParameters, AcceptorConfigurationContent3.mmHostCommunicationParameters, AcquirerProtocolParameters6.mmHost, AcquirerProtocolParameters7.mmHost,
 					AcceptorConfigurationContent4.mmHostCommunicationParameters, AcquirerProtocolParameters9.mmHost, AcceptorConfigurationContent5.mmHostCommunicationParameters, AcceptorConfigurationContent6.mmHostCommunicationParameters,
 					AcquirerProtocolParameters10.mmHost);
-			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TerminalManagementSystem";
 			definition = "Terminal management system for which an acceptor configuration is provided.";
@@ -1192,8 +1192,8 @@ public class AcceptorConfiguration {
 	};
 	protected Max35Text applicationVersion;
 	/**
-	 * Version of the application.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -1218,8 +1218,8 @@ public class AcceptorConfiguration {
 	 */
 	public static final MMBusinessAttribute mmApplicationVersion = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.AcceptorConfiguration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ApplicationVersion";
 			definition = "Version of the application.";
@@ -1240,7 +1240,7 @@ public class AcceptorConfiguration {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorConfiguration";
 				definition = "Acceptor parameters to be downloaded from the terminal management system.";
@@ -1281,103 +1281,116 @@ public class AcceptorConfiguration {
 		return applicationIdentification;
 	}
 
-	public void setApplicationIdentification(Max35Text applicationIdentification) {
-		this.applicationIdentification = applicationIdentification;
+	public AcceptorConfiguration setApplicationIdentification(Max35Text applicationIdentification) {
+		this.applicationIdentification = Objects.requireNonNull(applicationIdentification);
+		return this;
 	}
 
 	public FinancialCaptureCode getFinancialCapture() {
 		return financialCapture;
 	}
 
-	public void setFinancialCapture(FinancialCaptureCode financialCapture) {
-		this.financialCapture = financialCapture;
+	public AcceptorConfiguration setFinancialCapture(FinancialCaptureCode financialCapture) {
+		this.financialCapture = Objects.requireNonNull(financialCapture);
+		return this;
 	}
 
 	public BatchTransactionTypeCode getBatchTransferContent() {
 		return batchTransferContent;
 	}
 
-	public void setBatchTransferContent(BatchTransactionTypeCode batchTransferContent) {
-		this.batchTransferContent = batchTransferContent;
+	public AcceptorConfiguration setBatchTransferContent(BatchTransactionTypeCode batchTransferContent) {
+		this.batchTransferContent = Objects.requireNonNull(batchTransferContent);
+		return this;
 	}
 
 	public ExchangePolicyCode getExchangePolicy() {
 		return exchangePolicy;
 	}
 
-	public void setExchangePolicy(ExchangePolicyCode exchangePolicy) {
-		this.exchangePolicy = exchangePolicy;
+	public AcceptorConfiguration setExchangePolicy(ExchangePolicyCode exchangePolicy) {
+		this.exchangePolicy = Objects.requireNonNull(exchangePolicy);
+		return this;
 	}
 
 	public Number getMaximumNumber() {
 		return maximumNumber;
 	}
 
-	public void setMaximumNumber(Number maximumNumber) {
-		this.maximumNumber = maximumNumber;
+	public AcceptorConfiguration setMaximumNumber(Number maximumNumber) {
+		this.maximumNumber = Objects.requireNonNull(maximumNumber);
+		return this;
 	}
 
 	public ImpliedCurrencyAndAmount getMaximumAmount() {
 		return maximumAmount;
 	}
 
-	public void setMaximumAmount(ImpliedCurrencyAndAmount maximumAmount) {
-		this.maximumAmount = maximumAmount;
+	public AcceptorConfiguration setMaximumAmount(ImpliedCurrencyAndAmount maximumAmount) {
+		this.maximumAmount = Objects.requireNonNull(maximumAmount);
+		return this;
 	}
 
 	public TrueFalseIndicator getReconciliationByAcquirer() {
 		return reconciliationByAcquirer;
 	}
 
-	public void setReconciliationByAcquirer(TrueFalseIndicator reconciliationByAcquirer) {
-		this.reconciliationByAcquirer = reconciliationByAcquirer;
+	public AcceptorConfiguration setReconciliationByAcquirer(TrueFalseIndicator reconciliationByAcquirer) {
+		this.reconciliationByAcquirer = Objects.requireNonNull(reconciliationByAcquirer);
+		return this;
 	}
 
 	public TrueFalseIndicator getTotalsPerCurrency() {
 		return totalsPerCurrency;
 	}
 
-	public void setTotalsPerCurrency(TrueFalseIndicator totalsPerCurrency) {
-		this.totalsPerCurrency = totalsPerCurrency;
+	public AcceptorConfiguration setTotalsPerCurrency(TrueFalseIndicator totalsPerCurrency) {
+		this.totalsPerCurrency = Objects.requireNonNull(totalsPerCurrency);
+		return this;
 	}
 
 	public TrueFalseIndicator getProtectCardData() {
 		return protectCardData;
 	}
 
-	public void setProtectCardData(TrueFalseIndicator protectCardData) {
-		this.protectCardData = protectCardData;
+	public AcceptorConfiguration setProtectCardData(TrueFalseIndicator protectCardData) {
+		this.protectCardData = Objects.requireNonNull(protectCardData);
+		return this;
 	}
 
 	public Max10000Binary getRetailerParameters() {
 		return retailerParameters;
 	}
 
-	public void setRetailerParameters(Max10000Binary retailerParameters) {
-		this.retailerParameters = retailerParameters;
+	public AcceptorConfiguration setRetailerParameters(Max10000Binary retailerParameters) {
+		this.retailerParameters = Objects.requireNonNull(retailerParameters);
+		return this;
 	}
 
 	public Max10000Binary getApplicationParameters() {
 		return applicationParameters;
 	}
 
-	public void setApplicationParameters(Max10000Binary applicationParameters) {
-		this.applicationParameters = applicationParameters;
+	public AcceptorConfiguration setApplicationParameters(Max10000Binary applicationParameters) {
+		this.applicationParameters = Objects.requireNonNull(applicationParameters);
+		return this;
 	}
 
-	public TerminalManagementSystem getTerminalManagementSystem() {
-		return terminalManagementSystem;
+	public Optional<TerminalManagementSystem> getTerminalManagementSystem() {
+		return terminalManagementSystem == null ? Optional.empty() : Optional.of(terminalManagementSystem);
 	}
 
-	public void setTerminalManagementSystem(com.tools20022.repository.entity.TerminalManagementSystem terminalManagementSystem) {
+	public AcceptorConfiguration setTerminalManagementSystem(com.tools20022.repository.entity.TerminalManagementSystem terminalManagementSystem) {
 		this.terminalManagementSystem = terminalManagementSystem;
+		return this;
 	}
 
 	public Max35Text getApplicationVersion() {
 		return applicationVersion;
 	}
 
-	public void setApplicationVersion(Max35Text applicationVersion) {
-		this.applicationVersion = applicationVersion;
+	public AcceptorConfiguration setApplicationVersion(Max35Text applicationVersion) {
+		this.applicationVersion = Objects.requireNonNull(applicationVersion);
+		return this;
 	}
 }

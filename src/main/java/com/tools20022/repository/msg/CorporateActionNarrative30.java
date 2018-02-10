@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -26,9 +27,11 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -72,8 +75,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -89,15 +92,16 @@ import javax.xml.bind.annotation.XmlType;
  * CorporateActionNarrative21}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CorporateActionNarrative30", propOrder = {"registrationDetails", "partyContactNarrative", "certificationBreakdown"})
 public class CorporateActionNarrative30 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "RegnDtls")
 	protected List<Max350Text> registrationDetails;
 	/**
-	 * Provides information required for the registration.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -117,6 +121,9 @@ public class CorporateActionNarrative30 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "RegnDtls"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E::REGI</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -135,9 +142,10 @@ public class CorporateActionNarrative30 {
 	public static final MMMessageAttribute mmRegistrationDetails = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmRegistrationDetails;
-			componentContext_lazy = () -> CorporateActionNarrative30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative30.mmObject();
 			isDerived = false;
 			xmlTag = "RegnDtls";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E::REGI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDetails";
 			definition = "Provides information required for the registration.";
@@ -146,12 +154,11 @@ public class CorporateActionNarrative30 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PtyCtctNrrtv")
 	protected List<Max350Text> partyContactNarrative;
 	/**
-	 * Provides additional information regarding the party, for example, the
-	 * contact unit or person responsible for the transaction identified in the
-	 * message.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -170,6 +177,9 @@ public class CorporateActionNarrative30 {
 	 * CorporateActionNarrative30}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PtyCtctNrrtv"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :70E::PACO</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -191,9 +201,10 @@ public class CorporateActionNarrative30 {
 	public static final MMMessageAttribute mmPartyContactNarrative = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Role.mmContactPersonRole;
-			componentContext_lazy = () -> CorporateActionNarrative30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative30.mmObject();
 			isDerived = false;
 			xmlTag = "PtyCtctNrrtv";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E::PACO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyContactNarrative";
 			definition = "Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.";
@@ -202,10 +213,11 @@ public class CorporateActionNarrative30 {
 			simpleType_lazy = () -> Max350Text.mmObject();
 		}
 	};
+	@XmlElement(name = "CertfctnBrkdwn")
 	protected List<Max350Text> certificationBreakdown;
 	/**
-	 * Provides information required for the certification/breakdown.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -238,7 +250,7 @@ public class CorporateActionNarrative30 {
 	 */
 	public static final MMMessageAttribute mmCertificationBreakdown = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CorporateActionNarrative30.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CorporateActionNarrative30.mmObject();
 			isDerived = false;
 			xmlTag = "CertfctnBrkdwn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -253,10 +265,11 @@ public class CorporateActionNarrative30 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CorporateActionNarrative30.mmRegistrationDetails, CorporateActionNarrative30.mmPartyContactNarrative, CorporateActionNarrative30.mmCertificationBreakdown);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative30.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative30.mmPartyContactNarrative,
+						com.tools20022.repository.msg.CorporateActionNarrative30.mmCertificationBreakdown);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmAdditionalInformation, CorporateActionInstructionV07.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNarrative30";
 				definition = "Provides additional information such as the registration details.";
@@ -266,30 +279,30 @@ public class CorporateActionNarrative30 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "RegnDtls")
 	public List<Max350Text> getRegistrationDetails() {
-		return registrationDetails;
+		return registrationDetails == null ? registrationDetails = new ArrayList<>() : registrationDetails;
 	}
 
-	public void setRegistrationDetails(List<Max350Text> registrationDetails) {
-		this.registrationDetails = registrationDetails;
+	public CorporateActionNarrative30 setRegistrationDetails(List<Max350Text> registrationDetails) {
+		this.registrationDetails = Objects.requireNonNull(registrationDetails);
+		return this;
 	}
 
-	@XmlElement(name = "PtyCtctNrrtv")
 	public List<Max350Text> getPartyContactNarrative() {
-		return partyContactNarrative;
+		return partyContactNarrative == null ? partyContactNarrative = new ArrayList<>() : partyContactNarrative;
 	}
 
-	public void setPartyContactNarrative(List<Max350Text> partyContactNarrative) {
-		this.partyContactNarrative = partyContactNarrative;
+	public CorporateActionNarrative30 setPartyContactNarrative(List<Max350Text> partyContactNarrative) {
+		this.partyContactNarrative = Objects.requireNonNull(partyContactNarrative);
+		return this;
 	}
 
-	@XmlElement(name = "CertfctnBrkdwn")
 	public List<Max350Text> getCertificationBreakdown() {
-		return certificationBreakdown;
+		return certificationBreakdown == null ? certificationBreakdown = new ArrayList<>() : certificationBreakdown;
 	}
 
-	public void setCertificationBreakdown(List<Max350Text> certificationBreakdown) {
-		this.certificationBreakdown = certificationBreakdown;
+	public CorporateActionNarrative30 setCertificationBreakdown(List<Max350Text> certificationBreakdown) {
+		this.certificationBreakdown = Objects.requireNonNull(certificationBreakdown);
+		return this;
 	}
 }

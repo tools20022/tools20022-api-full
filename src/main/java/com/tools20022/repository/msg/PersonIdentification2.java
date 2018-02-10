@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.IdentificationIssuerRole;
@@ -28,6 +29,8 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Date;
 import java.util.function.Supplier;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -41,8 +44,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponent#getXors xors} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msg.PersonIdentification2#mmPersonIdentificationRule
- * PersonIdentification2.mmPersonIdentificationRule}</li>
+ * {@linkplain com.tools20022.repository.msg.PersonIdentification2#PersonIdentificationRule
+ * PersonIdentification2.PersonIdentificationRule}</li>
  * </ul>
  * </li>
  * <li>
@@ -83,8 +86,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
@@ -96,16 +99,17 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Unique and unambiguous way to identify a person."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "PersonIdentification2", propOrder = {"driversLicenseNumber", "socialSecurityNumber", "alienRegistrationNumber", "passportNumber", "taxIdentificationNumber", "identityCardNumber", "employerIdentificationNumber",
 		"otherIdentification", "issuer"})
 public class PersonIdentification2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DrvrsLicNb", required = true)
 	protected Max35Text driversLicenseNumber;
 	/**
-	 * Number assigned by a license authority to a driver's license.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,6 +129,9 @@ public class PersonIdentification2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "DrvrsLicNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE//DRLC</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -139,9 +146,10 @@ public class PersonIdentification2 {
 	public static final MMMessageAttribute mmDriversLicenseNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmDriversLicenseNumber;
-			componentContext_lazy = () -> PersonIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "DrvrsLicNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE//DRLC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DriversLicenseNumber";
 			definition = "Number assigned by a license authority to a driver's license.";
@@ -150,10 +158,11 @@ public class PersonIdentification2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SclSctyNb", required = true)
 	protected Max35Text socialSecurityNumber;
 	/**
-	 * Number assigned by a social security agency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -173,6 +182,9 @@ public class PersonIdentification2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "SclSctyNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE//SSNX</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -186,9 +198,10 @@ public class PersonIdentification2 {
 	public static final MMMessageAttribute mmSocialSecurityNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmSocialSecurityNumber;
-			componentContext_lazy = () -> PersonIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "SclSctyNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE//SSNX"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SocialSecurityNumber";
 			definition = "Number assigned by a social security agency.";
@@ -197,10 +210,11 @@ public class PersonIdentification2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "AlnRegnNb", required = true)
 	protected Max35Text alienRegistrationNumber;
 	/**
-	 * Number assigned by a government agency to identify foreign nationals.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -220,6 +234,9 @@ public class PersonIdentification2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "AlnRegnNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE//ARNU</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -234,9 +251,10 @@ public class PersonIdentification2 {
 	public static final MMMessageAttribute mmAlienRegistrationNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmAlienRegistrationNumber;
-			componentContext_lazy = () -> PersonIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "AlnRegnNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE//ARNU"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlienRegistrationNumber";
 			definition = "Number assigned by a government agency to identify foreign nationals.";
@@ -245,10 +263,11 @@ public class PersonIdentification2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "PsptNb", required = true)
 	protected Max35Text passportNumber;
 	/**
-	 * Number assigned by a passport authority to a passport.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -268,6 +287,9 @@ public class PersonIdentification2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "PsptNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE//CCPT</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -281,9 +303,10 @@ public class PersonIdentification2 {
 	public static final MMMessageAttribute mmPassportNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmPassportNumber;
-			componentContext_lazy = () -> PersonIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "PsptNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE//CCPT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PassportNumber";
 			definition = "Number assigned by a passport authority to a passport.";
@@ -292,10 +315,11 @@ public class PersonIdentification2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "TaxIdNb", required = true)
 	protected Max35Text taxIdentificationNumber;
 	/**
-	 * Number assigned by a tax authority to an entity.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -315,6 +339,9 @@ public class PersonIdentification2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "TaxIdNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE//TXID</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -328,9 +355,10 @@ public class PersonIdentification2 {
 	public static final MMMessageAttribute mmTaxIdentificationNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmTaxIdentificationNumber;
-			componentContext_lazy = () -> PersonIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "TaxIdNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE//TXID"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
 			definition = "Number assigned by a tax authority to an entity.";
@@ -339,10 +367,11 @@ public class PersonIdentification2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "IdntyCardNb", required = true)
 	protected Max35Text identityCardNumber;
 	/**
-	 * Number assigned by a national authority to an identity card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -376,7 +405,7 @@ public class PersonIdentification2 {
 	public static final MMMessageAttribute mmIdentityCardNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmIdentityCardNumber;
-			componentContext_lazy = () -> PersonIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "IdntyCardNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -387,10 +416,11 @@ public class PersonIdentification2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "MplyrIdNb", required = true)
 	protected Max35Text employerIdentificationNumber;
 	/**
-	 * Number assigned to an employer by a registration authority.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -410,6 +440,9 @@ public class PersonIdentification2 {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "MplyrIdNb"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :95S::ALTE//EINX</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -424,9 +457,10 @@ public class PersonIdentification2 {
 	public static final MMMessageAttribute mmEmployerIdentificationNumber = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> PersonIdentification.mmEmployerIdentificationNumber;
-			componentContext_lazy = () -> PersonIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "MplyrIdNb";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":95S::ALTE//EINX"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployerIdentificationNumber";
 			definition = "Number assigned to an employer by a registration authority.";
@@ -435,11 +469,11 @@ public class PersonIdentification2 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OthrId", required = true)
 	protected GenericIdentification4 otherIdentification;
 	/**
-	 * Identifier issued to a person for which no specific identifier has been
-	 * defined.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -473,7 +507,7 @@ public class PersonIdentification2 {
 	public static final MMMessageAssociationEnd mmOtherIdentification = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> PartyIdentificationInformation.mmOtherIdentification;
-			componentContext_lazy = () -> PersonIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "OthrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -485,10 +519,11 @@ public class PersonIdentification2 {
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification4.mmObject();
 		}
 	};
+	@XmlElement(name = "Issr")
 	protected Max35Text issuer;
 	/**
-	 * Entity that assigns the identifier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -521,7 +556,7 @@ public class PersonIdentification2 {
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> IdentificationIssuerRole.mmObject();
-			componentContext_lazy = () -> PersonIdentification2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.PersonIdentification2.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -586,25 +621,29 @@ public class PersonIdentification2 {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMXor mmPersonIdentificationRule = new MMXor() {
+	public static final MMXor PersonIdentificationRule = new MMXor() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PersonIdentificationRule";
 			definition = "One and only one Message Element in the list (DriversLicenseNumber, SocialSecurityNumber, AlienRegistrationNumber, PassportNumber, TaxIdentificationNumber, IdentityCardNumber, EmployerIdentificationNumber, OtherIdentification) must be present.";
-			messageComponent_lazy = () -> PersonIdentification2.mmObject();
-			impactedElements_lazy = () -> Arrays.asList(PersonIdentification2.mmDriversLicenseNumber, PersonIdentification2.mmSocialSecurityNumber, PersonIdentification2.mmAlienRegistrationNumber, PersonIdentification2.mmPassportNumber,
-					PersonIdentification2.mmTaxIdentificationNumber, PersonIdentification2.mmIdentityCardNumber, PersonIdentification2.mmEmployerIdentificationNumber, PersonIdentification2.mmOtherIdentification);
+			messageComponent_lazy = () -> com.tools20022.repository.msg.PersonIdentification2.mmObject();
+			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification2.mmDriversLicenseNumber, com.tools20022.repository.msg.PersonIdentification2.mmSocialSecurityNumber,
+					com.tools20022.repository.msg.PersonIdentification2.mmAlienRegistrationNumber, com.tools20022.repository.msg.PersonIdentification2.mmPassportNumber,
+					com.tools20022.repository.msg.PersonIdentification2.mmTaxIdentificationNumber, com.tools20022.repository.msg.PersonIdentification2.mmIdentityCardNumber,
+					com.tools20022.repository.msg.PersonIdentification2.mmEmployerIdentificationNumber, com.tools20022.repository.msg.PersonIdentification2.mmOtherIdentification);
 		}
 	};
 
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(PersonIdentification2.mmDriversLicenseNumber, PersonIdentification2.mmSocialSecurityNumber, PersonIdentification2.mmAlienRegistrationNumber, PersonIdentification2.mmPassportNumber,
-						PersonIdentification2.mmTaxIdentificationNumber, PersonIdentification2.mmIdentityCardNumber, PersonIdentification2.mmEmployerIdentificationNumber, PersonIdentification2.mmOtherIdentification,
-						PersonIdentification2.mmIssuer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification2.mmDriversLicenseNumber, com.tools20022.repository.msg.PersonIdentification2.mmSocialSecurityNumber,
+						com.tools20022.repository.msg.PersonIdentification2.mmAlienRegistrationNumber, com.tools20022.repository.msg.PersonIdentification2.mmPassportNumber,
+						com.tools20022.repository.msg.PersonIdentification2.mmTaxIdentificationNumber, com.tools20022.repository.msg.PersonIdentification2.mmIdentityCardNumber,
+						com.tools20022.repository.msg.PersonIdentification2.mmEmployerIdentificationNumber, com.tools20022.repository.msg.PersonIdentification2.mmOtherIdentification,
+						com.tools20022.repository.msg.PersonIdentification2.mmIssuer);
 				trace_lazy = () -> PersonIdentification.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				removalDate = ((Supplier<Date>) (() -> {
 					try {
@@ -615,90 +654,90 @@ public class PersonIdentification2 {
 				})).get();
 				name = "PersonIdentification2";
 				definition = "Unique and unambiguous way to identify a person.";
-				xors_lazy = () -> Arrays.asList(PersonIdentification2.mmPersonIdentificationRule);
+				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PersonIdentification2.PersonIdentificationRule);
 			}
 		});
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DrvrsLicNb", required = true)
 	public Max35Text getDriversLicenseNumber() {
 		return driversLicenseNumber;
 	}
 
-	public void setDriversLicenseNumber(Max35Text driversLicenseNumber) {
-		this.driversLicenseNumber = driversLicenseNumber;
+	public PersonIdentification2 setDriversLicenseNumber(Max35Text driversLicenseNumber) {
+		this.driversLicenseNumber = Objects.requireNonNull(driversLicenseNumber);
+		return this;
 	}
 
-	@XmlElement(name = "SclSctyNb", required = true)
 	public Max35Text getSocialSecurityNumber() {
 		return socialSecurityNumber;
 	}
 
-	public void setSocialSecurityNumber(Max35Text socialSecurityNumber) {
-		this.socialSecurityNumber = socialSecurityNumber;
+	public PersonIdentification2 setSocialSecurityNumber(Max35Text socialSecurityNumber) {
+		this.socialSecurityNumber = Objects.requireNonNull(socialSecurityNumber);
+		return this;
 	}
 
-	@XmlElement(name = "AlnRegnNb", required = true)
 	public Max35Text getAlienRegistrationNumber() {
 		return alienRegistrationNumber;
 	}
 
-	public void setAlienRegistrationNumber(Max35Text alienRegistrationNumber) {
-		this.alienRegistrationNumber = alienRegistrationNumber;
+	public PersonIdentification2 setAlienRegistrationNumber(Max35Text alienRegistrationNumber) {
+		this.alienRegistrationNumber = Objects.requireNonNull(alienRegistrationNumber);
+		return this;
 	}
 
-	@XmlElement(name = "PsptNb", required = true)
 	public Max35Text getPassportNumber() {
 		return passportNumber;
 	}
 
-	public void setPassportNumber(Max35Text passportNumber) {
-		this.passportNumber = passportNumber;
+	public PersonIdentification2 setPassportNumber(Max35Text passportNumber) {
+		this.passportNumber = Objects.requireNonNull(passportNumber);
+		return this;
 	}
 
-	@XmlElement(name = "TaxIdNb", required = true)
 	public Max35Text getTaxIdentificationNumber() {
 		return taxIdentificationNumber;
 	}
 
-	public void setTaxIdentificationNumber(Max35Text taxIdentificationNumber) {
-		this.taxIdentificationNumber = taxIdentificationNumber;
+	public PersonIdentification2 setTaxIdentificationNumber(Max35Text taxIdentificationNumber) {
+		this.taxIdentificationNumber = Objects.requireNonNull(taxIdentificationNumber);
+		return this;
 	}
 
-	@XmlElement(name = "IdntyCardNb", required = true)
 	public Max35Text getIdentityCardNumber() {
 		return identityCardNumber;
 	}
 
-	public void setIdentityCardNumber(Max35Text identityCardNumber) {
-		this.identityCardNumber = identityCardNumber;
+	public PersonIdentification2 setIdentityCardNumber(Max35Text identityCardNumber) {
+		this.identityCardNumber = Objects.requireNonNull(identityCardNumber);
+		return this;
 	}
 
-	@XmlElement(name = "MplyrIdNb", required = true)
 	public Max35Text getEmployerIdentificationNumber() {
 		return employerIdentificationNumber;
 	}
 
-	public void setEmployerIdentificationNumber(Max35Text employerIdentificationNumber) {
-		this.employerIdentificationNumber = employerIdentificationNumber;
+	public PersonIdentification2 setEmployerIdentificationNumber(Max35Text employerIdentificationNumber) {
+		this.employerIdentificationNumber = Objects.requireNonNull(employerIdentificationNumber);
+		return this;
 	}
 
-	@XmlElement(name = "OthrId", required = true)
 	public GenericIdentification4 getOtherIdentification() {
 		return otherIdentification;
 	}
 
-	public void setOtherIdentification(com.tools20022.repository.msg.GenericIdentification4 otherIdentification) {
-		this.otherIdentification = otherIdentification;
+	public PersonIdentification2 setOtherIdentification(com.tools20022.repository.msg.GenericIdentification4 otherIdentification) {
+		this.otherIdentification = Objects.requireNonNull(otherIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "Issr")
-	public Max35Text getIssuer() {
-		return issuer;
+	public Optional<Max35Text> getIssuer() {
+		return issuer == null ? Optional.empty() : Optional.of(issuer);
 	}
 
-	public void setIssuer(Max35Text issuer) {
+	public PersonIdentification2 setIssuer(Max35Text issuer) {
 		this.issuer = issuer;
+		return this;
 	}
 }

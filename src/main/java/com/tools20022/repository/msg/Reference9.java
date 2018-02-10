@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.msg;
 
+import com.tools20022.metamodel.ext.FIXSynonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
@@ -25,6 +26,8 @@ import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -53,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -65,16 +68,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Additional references linked to the order cancel request."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Reference9", propOrder = {"originalClientOrderIdentification", "orderIdentification", "originalOrderModificationTime"})
 public class Reference9 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "OrgnlClntOrdrId", required = true)
 	protected Max35Text originalClientOrderIdentification;
 	/**
-	 * Client order identification of the previous non-rejected order (not the
-	 * initial order of the day) when canceling or replacing an order.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -87,6 +90,9 @@ public class Reference9 {
 	 * Reference9}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrgnlClntOrdrId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 41</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -102,9 +108,10 @@ public class Reference9 {
 	 */
 	public static final MMMessageAttribute mmOriginalClientOrderIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference9.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlClntOrdrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "41"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalClientOrderIdentification";
 			definition = "Client order identification of the previous non-rejected order (not the initial order of the day) when canceling or replacing an order.";
@@ -113,11 +120,11 @@ public class Reference9 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrdrId")
 	protected Max35Text orderIdentification;
 	/**
-	 * Unique identifier of most recent order as assigned by sell-side (broker,
-	 * exchange..).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -130,6 +137,9 @@ public class Reference9 {
 	 * Reference9}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "OrdrId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 37</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -145,9 +155,10 @@ public class Reference9 {
 	 */
 	public static final MMMessageAttribute mmOrderIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference9.mmObject();
 			isDerived = false;
 			xmlTag = "OrdrId";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "37"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderIdentification";
 			definition = "Unique identifier of most recent order as assigned by sell-side (broker, exchange..).";
@@ -156,13 +167,11 @@ public class Reference9 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "OrgnlOrdrModTm")
 	protected ISODateTime originalOrderModificationTime;
 	/**
-	 * TransactionTime of the last state change that occurred to the original
-	 * order. The original order modification time is provided as an optional
-	 * field in the order modification request to identify that the state of the
-	 * order has not changed since the request was issued.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -190,7 +199,7 @@ public class Reference9 {
 	 */
 	public static final MMMessageAttribute mmOriginalOrderModificationTime = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Reference9.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Reference9.mmObject();
 			isDerived = false;
 			xmlTag = "OrgnlOrdrModTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -205,8 +214,9 @@ public class Reference9 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Reference9.mmOriginalClientOrderIdentification, Reference9.mmOrderIdentification, Reference9.mmOriginalOrderModificationTime);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Reference9.mmOriginalClientOrderIdentification, com.tools20022.repository.msg.Reference9.mmOrderIdentification,
+						com.tools20022.repository.msg.Reference9.mmOriginalOrderModificationTime);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference9";
 				definition = "Additional references linked to the order cancel request.";
@@ -215,30 +225,30 @@ public class Reference9 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "OrgnlClntOrdrId", required = true)
 	public Max35Text getOriginalClientOrderIdentification() {
 		return originalClientOrderIdentification;
 	}
 
-	public void setOriginalClientOrderIdentification(Max35Text originalClientOrderIdentification) {
-		this.originalClientOrderIdentification = originalClientOrderIdentification;
+	public Reference9 setOriginalClientOrderIdentification(Max35Text originalClientOrderIdentification) {
+		this.originalClientOrderIdentification = Objects.requireNonNull(originalClientOrderIdentification);
+		return this;
 	}
 
-	@XmlElement(name = "OrdrId")
-	public Max35Text getOrderIdentification() {
-		return orderIdentification;
+	public Optional<Max35Text> getOrderIdentification() {
+		return orderIdentification == null ? Optional.empty() : Optional.of(orderIdentification);
 	}
 
-	public void setOrderIdentification(Max35Text orderIdentification) {
+	public Reference9 setOrderIdentification(Max35Text orderIdentification) {
 		this.orderIdentification = orderIdentification;
+		return this;
 	}
 
-	@XmlElement(name = "OrgnlOrdrModTm")
-	public ISODateTime getOriginalOrderModificationTime() {
-		return originalOrderModificationTime;
+	public Optional<ISODateTime> getOriginalOrderModificationTime() {
+		return originalOrderModificationTime == null ? Optional.empty() : Optional.of(originalOrderModificationTime);
 	}
 
-	public void setOriginalOrderModificationTime(ISODateTime originalOrderModificationTime) {
+	public Reference9 setOriginalOrderModificationTime(ISODateTime originalOrderModificationTime) {
 		this.originalOrderModificationTime = originalOrderModificationTime;
+		return this;
 	}
 }

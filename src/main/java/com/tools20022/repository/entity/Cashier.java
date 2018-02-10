@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 
 /**
  * Cashier who carried out the payment card transaction.
@@ -36,6 +37,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
+ * superType} =
+ * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole
+ * CardPaymentPartyRole}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getElement
  * element} =
  * <ul>
@@ -43,15 +48,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * Cashier.mmShiftNumber}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
- * superType} =
- * {@linkplain com.tools20022.repository.entity.CardPaymentPartyRole
- * CardPaymentPartyRole}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -67,8 +68,8 @@ public class Cashier extends CardPaymentPartyRole {
 	final static private AtomicReference<MMBusinessComponent> mmObject_lazy = new AtomicReference<>();
 	protected Max2NumericText shiftNumber;
 	/**
-	 * Identifies the shift of the cashier.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -93,8 +94,8 @@ public class Cashier extends CardPaymentPartyRole {
 	 */
 	public static final MMBusinessAttribute mmShiftNumber = new MMBusinessAttribute() {
 		{
-			elementContext_lazy = () -> com.tools20022.repository.entity.Cashier.mmObject();
 			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Cashier.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ShiftNumber";
 			definition = "Identifies the shift of the cashier.";
@@ -115,7 +116,7 @@ public class Cashier extends CardPaymentPartyRole {
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Cashier";
 				definition = "Cashier who carried out the payment card transaction.";
@@ -131,11 +132,12 @@ public class Cashier extends CardPaymentPartyRole {
 		return mmObject_lazy.get();
 	}
 
-	public Max2NumericText getShiftNumber() {
-		return shiftNumber;
+	public Optional<Max2NumericText> getShiftNumber() {
+		return shiftNumber == null ? Optional.empty() : Optional.of(shiftNumber);
 	}
 
-	public void setShiftNumber(Max2NumericText shiftNumber) {
+	public Cashier setShiftNumber(Max2NumericText shiftNumber) {
 		this.shiftNumber = shiftNumber;
+		return this;
 	}
 }

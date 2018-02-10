@@ -20,9 +20,14 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.codeset.DirectionCode.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the direction of a payment.
@@ -31,10 +36,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.codeset.DirectionCode#mmDown
- * DirectionCode.mmDown}</li>
- * <li>{@linkplain com.tools20022.repository.codeset.DirectionCode#mmUp
- * DirectionCode.mmUp}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DirectionCode#Down
+ * DirectionCode.Down}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DirectionCode#Up
+ * DirectionCode.Up}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -47,8 +52,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -65,7 +70,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the direction of a payment."</li>
  * </ul>
  */
-public class DirectionCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class DirectionCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -89,12 +95,12 @@ public class DirectionCode {
 	 * definition} = "Down."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDown = new MMCode() {
+	public static final DirectionCode Down = new DirectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Down";
 			definition = "Down.";
-			owner_lazy = () -> DirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DirectionCode.mmObject();
 			codeName = "DRDW";
 		}
 	};
@@ -119,28 +125,58 @@ public class DirectionCode {
 	 * definition} = "Up."</li>
 	 * </ul>
 	 */
-	public static final MMCode mmUp = new MMCode() {
+	public static final DirectionCode Up = new DirectionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Up";
 			definition = "Up.";
-			owner_lazy = () -> DirectionCode.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.DirectionCode.mmObject();
 			codeName = "DRUP";
 		}
 	};
+	final static private LinkedHashMap<String, DirectionCode> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected DirectionCode() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("DRDW");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DirectionCode";
 				definition = "Specifies the direction of a payment.";
-				code_lazy = () -> Arrays.asList(DirectionCode.mmDown, DirectionCode.mmUp);
 				derivation_lazy = () -> Arrays.asList(Direction1Code.mmObject());
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DirectionCode.Down, com.tools20022.repository.codeset.DirectionCode.Up);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Down.getCodeName().get(), Down);
+		codesByName.put(Up.getCodeName().get(), Up);
+	}
+
+	public static DirectionCode valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static DirectionCode[] values() {
+		DirectionCode[] values = new DirectionCode[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, DirectionCode> {
+		@Override
+		public DirectionCode unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(DirectionCode codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

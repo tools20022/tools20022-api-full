@@ -26,6 +26,7 @@ import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -55,8 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -69,15 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AgreementFramework1Choice", propOrder = {"agreementFramework", "proprietaryIdentification"})
 public class AgreementFramework1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AgrmtFrmwk", required = true)
 	protected AgreementFramework1Code agreementFramework;
 	/**
-	 * Code to specify the type of collateral agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class AgreementFramework1Choice {
 	public static final MMMessageAttribute mmAgreementFramework = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MasterAgreement.mmMasterAgreementType;
-			componentContext_lazy = () -> AgreementFramework1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AgreementFramework1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "AgrmtFrmwk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class AgreementFramework1Choice {
 			simpleType_lazy = () -> AgreementFramework1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "PrtryId", required = true)
 	protected GenericIdentification30 proprietaryIdentification;
 	/**
-	 * Proprietary identification to specify the type of collateral agreement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -161,7 +164,7 @@ public class AgreementFramework1Choice {
 	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> MasterAgreement.mmMasterAgreementType;
-			componentContext_lazy = () -> AgreementFramework1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.AgreementFramework1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PrtryId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -176,9 +179,9 @@ public class AgreementFramework1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(AgreementFramework1Choice.mmAgreementFramework, AgreementFramework1Choice.mmProprietaryIdentification);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AgreementFramework1Choice.mmAgreementFramework, com.tools20022.repository.choice.AgreementFramework1Choice.mmProprietaryIdentification);
 				trace_lazy = () -> MasterAgreement.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgreementFramework1Choice";
 				definition = "Choice between a code or a proprietary code for  the underlying master agreement.";
@@ -187,21 +190,21 @@ public class AgreementFramework1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "AgrmtFrmwk", required = true)
 	public AgreementFramework1Code getAgreementFramework() {
 		return agreementFramework;
 	}
 
-	public void setAgreementFramework(AgreementFramework1Code agreementFramework) {
-		this.agreementFramework = agreementFramework;
+	public AgreementFramework1Choice setAgreementFramework(AgreementFramework1Code agreementFramework) {
+		this.agreementFramework = Objects.requireNonNull(agreementFramework);
+		return this;
 	}
 
-	@XmlElement(name = "PrtryId", required = true)
 	public GenericIdentification30 getProprietaryIdentification() {
 		return proprietaryIdentification;
 	}
 
-	public void setProprietaryIdentification(GenericIdentification30 proprietaryIdentification) {
-		this.proprietaryIdentification = proprietaryIdentification;
+	public AgreementFramework1Choice setProprietaryIdentification(GenericIdentification30 proprietaryIdentification) {
+		this.proprietaryIdentification = Objects.requireNonNull(proprietaryIdentification);
+		return this;
 	}
 }

@@ -20,43 +20,47 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.TransferStatusCode;
+import com.tools20022.repository.codeset.TransferStatus2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the transfer or settlement instruction status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.TransferStatusCode
- * TransferStatusCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus2Code#mmAccepted
- * TransferStatus2Code.mmAccepted}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus2Code#Accepted
+ * TransferStatus2Code.Accepted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus2Code#mmSentToNextParty
- * TransferStatus2Code.mmSentToNextParty}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus2Code#SentToNextParty
+ * TransferStatus2Code.SentToNextParty}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus2Code#mmMatched
- * TransferStatus2Code.mmMatched}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus2Code#Matched
+ * TransferStatus2Code.Matched}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus2Code#mmAlreadyExecuted
- * TransferStatus2Code.mmAlreadyExecuted}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus2Code#AlreadyExecuted
+ * TransferStatus2Code.AlreadyExecuted}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.TransferStatus2Code#mmSettled
- * TransferStatus2Code.mmSettled}</li>
+ * {@linkplain com.tools20022.repository.codeset.TransferStatus2Code#Settled
+ * TransferStatus2Code.Settled}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.TransferStatusCode
+ * TransferStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -73,7 +77,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the transfer or settlement instruction status."</li>
  * </ul>
  */
-public class TransferStatus2Code extends TransferStatusCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class TransferStatus2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -92,11 +97,12 @@ public class TransferStatus2Code extends TransferStatusCode {
 	 * name} = "Accepted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAccepted = new MMCode() {
+	public static final TransferStatus2Code Accepted = new TransferStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accepted";
-			owner_lazy = () -> TransferStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferStatus2Code.mmObject();
+			codeName = TransferStatusCode.Accepted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -115,11 +121,12 @@ public class TransferStatus2Code extends TransferStatusCode {
 	 * name} = "SentToNextParty"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSentToNextParty = new MMCode() {
+	public static final TransferStatus2Code SentToNextParty = new TransferStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SentToNextParty";
-			owner_lazy = () -> TransferStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferStatus2Code.mmObject();
+			codeName = TransferStatusCode.SentToNextParty.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -138,11 +145,12 @@ public class TransferStatus2Code extends TransferStatusCode {
 	 * name} = "Matched"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmMatched = new MMCode() {
+	public static final TransferStatus2Code Matched = new TransferStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Matched";
-			owner_lazy = () -> TransferStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferStatus2Code.mmObject();
+			codeName = TransferStatusCode.Matched.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -161,11 +169,12 @@ public class TransferStatus2Code extends TransferStatusCode {
 	 * name} = "AlreadyExecuted"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAlreadyExecuted = new MMCode() {
+	public static final TransferStatus2Code AlreadyExecuted = new TransferStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlreadyExecuted";
-			owner_lazy = () -> TransferStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferStatus2Code.mmObject();
+			codeName = TransferStatusCode.AlreadyExecuted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -184,26 +193,61 @@ public class TransferStatus2Code extends TransferStatusCode {
 	 * name} = "Settled"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmSettled = new MMCode() {
+	public static final TransferStatus2Code Settled = new TransferStatus2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
-			owner_lazy = () -> TransferStatus2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.TransferStatus2Code.mmObject();
+			codeName = TransferStatusCode.Settled.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, TransferStatus2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected TransferStatus2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("PACK");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferStatus2Code";
 				definition = "Specifies the transfer or settlement instruction status.";
-				code_lazy = () -> Arrays.asList(TransferStatus2Code.mmAccepted, TransferStatus2Code.mmSentToNextParty, TransferStatus2Code.mmMatched, TransferStatus2Code.mmAlreadyExecuted, TransferStatus2Code.mmSettled);
 				trace_lazy = () -> TransferStatusCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransferStatus2Code.Accepted, com.tools20022.repository.codeset.TransferStatus2Code.SentToNextParty,
+						com.tools20022.repository.codeset.TransferStatus2Code.Matched, com.tools20022.repository.codeset.TransferStatus2Code.AlreadyExecuted, com.tools20022.repository.codeset.TransferStatus2Code.Settled);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(Accepted.getCodeName().get(), Accepted);
+		codesByName.put(SentToNextParty.getCodeName().get(), SentToNextParty);
+		codesByName.put(Matched.getCodeName().get(), Matched);
+		codesByName.put(AlreadyExecuted.getCodeName().get(), AlreadyExecuted);
+		codesByName.put(Settled.getCodeName().get(), Settled);
+	}
+
+	public static TransferStatus2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static TransferStatus2Code[] values() {
+		TransferStatus2Code[] values = new TransferStatus2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, TransferStatus2Code> {
+		@Override
+		public TransferStatus2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(TransferStatus2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

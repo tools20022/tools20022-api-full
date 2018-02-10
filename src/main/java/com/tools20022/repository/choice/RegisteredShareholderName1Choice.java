@@ -25,6 +25,7 @@ import com.tools20022.repository.msg.IndividualPerson29;
 import com.tools20022.repository.msg.Organisation23;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -50,8 +51,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -62,16 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Choice of individual or organisation name and address."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "RegisteredShareholderName1Choice", propOrder = {"individualPerson", "organisation"})
 public class RegisteredShareholderName1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "IndvPrsn", required = true)
 	protected IndividualPerson29 individualPerson;
 	/**
-	 * Human entity, as distinguished from a corporate entity (which is
-	 * sometimes referred to as an 'artificial person').
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -99,7 +100,7 @@ public class RegisteredShareholderName1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmIndividualPerson = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RegisteredShareholderName1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RegisteredShareholderName1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "IndvPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -111,12 +112,11 @@ public class RegisteredShareholderName1Choice {
 			type_lazy = () -> IndividualPerson29.mmObject();
 		}
 	};
+	@XmlElement(name = "Org", required = true)
 	protected Organisation23 organisation;
 	/**
-	 * Organised structure that is set up for a particular purpose, for example,
-	 * a business, government body, department, charity, or financial
-	 * institution.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -144,7 +144,7 @@ public class RegisteredShareholderName1Choice {
 	 */
 	public static final MMMessageAssociationEnd mmOrganisation = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> RegisteredShareholderName1Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.RegisteredShareholderName1Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Org";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -160,8 +160,8 @@ public class RegisteredShareholderName1Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(RegisteredShareholderName1Choice.mmIndividualPerson, RegisteredShareholderName1Choice.mmOrganisation);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.RegisteredShareholderName1Choice.mmIndividualPerson, com.tools20022.repository.choice.RegisteredShareholderName1Choice.mmOrganisation);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegisteredShareholderName1Choice";
 				definition = "Choice of individual or organisation name and address.";
@@ -170,21 +170,21 @@ public class RegisteredShareholderName1Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "IndvPrsn", required = true)
 	public IndividualPerson29 getIndividualPerson() {
 		return individualPerson;
 	}
 
-	public void setIndividualPerson(IndividualPerson29 individualPerson) {
-		this.individualPerson = individualPerson;
+	public RegisteredShareholderName1Choice setIndividualPerson(IndividualPerson29 individualPerson) {
+		this.individualPerson = Objects.requireNonNull(individualPerson);
+		return this;
 	}
 
-	@XmlElement(name = "Org", required = true)
 	public Organisation23 getOrganisation() {
 		return organisation;
 	}
 
-	public void setOrganisation(Organisation23 organisation) {
-		this.organisation = organisation;
+	public RegisteredShareholderName1Choice setOrganisation(Organisation23 organisation) {
+		this.organisation = Objects.requireNonNull(organisation);
+		return this;
 	}
 }

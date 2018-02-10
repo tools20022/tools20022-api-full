@@ -29,6 +29,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -61,8 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -76,16 +78,16 @@ import javax.xml.bind.annotation.XmlType;
  * CashAccount26}</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashAccount32", propOrder = {"identification", "accountOwner", "accountServicer", "accountServicerBranch"})
 public class CashAccount32 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected AccountIdentificationAndName5 identification;
 	/**
-	 * Unique and unambiguous identification for the account between the account
-	 * owner and the account servicer.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -125,7 +127,7 @@ public class CashAccount32 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Account.mmIdentification;
-			componentContext_lazy = () -> CashAccount32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount32.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -137,10 +139,11 @@ public class CashAccount32 {
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName5.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctOwnr")
 	protected PartyIdentification70Choice accountOwner;
 	/**
-	 * Party that legally owns the account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -177,7 +180,7 @@ public class CashAccount32 {
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CashAccount32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount32.mmObject();
 			isDerived = false;
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -190,13 +193,11 @@ public class CashAccount32 {
 			type_lazy = () -> PartyIdentification70Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcr")
 	protected PartyIdentification70Choice accountServicer;
 	/**
-	 * Party that manages the account on behalf of the account owner, that is
-	 * manages the registration and booking of entries on the account,
-	 * calculates balances on the account and provides information about the
-	 * account.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -235,7 +236,7 @@ public class CashAccount32 {
 	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> CashAccount32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount32.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -248,14 +249,11 @@ public class CashAccount32 {
 			type_lazy = () -> PartyIdentification70Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "AcctSvcrBrnch")
 	protected BranchData accountServicerBranch;
 	/**
-	 * Information identifying a specific branch of a financial institution.
 	 * 
-	 * Usage : this component should be used in case the identification
-	 * information in the financial institution component does not provide
-	 * identification up to branch level.
-	 * <p>
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -294,7 +292,7 @@ public class CashAccount32 {
 	public static final MMMessageAttribute mmAccountServicerBranch = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Organisation.mmBranch;
-			componentContext_lazy = () -> CashAccount32.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashAccount32.mmObject();
 			isDerived = false;
 			xmlTag = "AcctSvcrBrnch";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -310,9 +308,10 @@ public class CashAccount32 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashAccount32.mmIdentification, CashAccount32.mmAccountOwner, CashAccount32.mmAccountServicer, CashAccount32.mmAccountServicerBranch);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount32.mmIdentification, com.tools20022.repository.msg.CashAccount32.mmAccountOwner,
+						com.tools20022.repository.msg.CashAccount32.mmAccountServicer, com.tools20022.repository.msg.CashAccount32.mmAccountServicerBranch);
 				trace_lazy = () -> CashAccount.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccount32";
 				definition = "Account to or from which a cash entry is made.";
@@ -322,39 +321,39 @@ public class CashAccount32 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public AccountIdentificationAndName5 getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(com.tools20022.repository.msg.AccountIdentificationAndName5 identification) {
-		this.identification = identification;
+	public CashAccount32 setIdentification(com.tools20022.repository.msg.AccountIdentificationAndName5 identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "AcctOwnr")
-	public PartyIdentification70Choice getAccountOwner() {
-		return accountOwner;
+	public Optional<PartyIdentification70Choice> getAccountOwner() {
+		return accountOwner == null ? Optional.empty() : Optional.of(accountOwner);
 	}
 
-	public void setAccountOwner(PartyIdentification70Choice accountOwner) {
+	public CashAccount32 setAccountOwner(PartyIdentification70Choice accountOwner) {
 		this.accountOwner = accountOwner;
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcr")
-	public PartyIdentification70Choice getAccountServicer() {
-		return accountServicer;
+	public Optional<PartyIdentification70Choice> getAccountServicer() {
+		return accountServicer == null ? Optional.empty() : Optional.of(accountServicer);
 	}
 
-	public void setAccountServicer(PartyIdentification70Choice accountServicer) {
+	public CashAccount32 setAccountServicer(PartyIdentification70Choice accountServicer) {
 		this.accountServicer = accountServicer;
+		return this;
 	}
 
-	@XmlElement(name = "AcctSvcrBrnch")
-	public BranchData getAccountServicerBranch() {
-		return accountServicerBranch;
+	public Optional<BranchData> getAccountServicerBranch() {
+		return accountServicerBranch == null ? Optional.empty() : Optional.of(accountServicerBranch);
 	}
 
-	public void setAccountServicerBranch(com.tools20022.repository.msg.BranchData accountServicerBranch) {
+	public CashAccount32 setAccountServicerBranch(com.tools20022.repository.msg.BranchData accountServicerBranch) {
 		this.accountServicerBranch = accountServicerBranch;
+		return this;
 	}
 }

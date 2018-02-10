@@ -28,6 +28,8 @@ import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -71,16 +73,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Amendment identification."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Amendment8", propOrder = {"identification", "sequenceNumber", "beneficiaryReferenceNumber", "issuer"})
 public class Amendment8 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Unique and unambiguous identifier assigned by the issuer to the
-	 * undertaking, for example the guarantee or standby number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -114,7 +116,7 @@ public class Amendment8 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> AmendmentOfUndertaking.mmAmendmentIdentification;
-			componentContext_lazy = () -> Amendment8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment8.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -125,11 +127,11 @@ public class Amendment8 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "SeqNb", required = true)
 	protected Max4AlphaNumericText sequenceNumber;
 	/**
-	 * Sequence number assigned by the issuer to each amendment of the
-	 * undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -158,7 +160,7 @@ public class Amendment8 {
 	 */
 	public static final MMMessageAttribute mmSequenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Amendment8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment8.mmObject();
 			isDerived = false;
 			xmlTag = "SeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -169,11 +171,11 @@ public class Amendment8 {
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
 		}
 	};
+	@XmlElement(name = "BnfcryRefNb")
 	protected Max35Text beneficiaryReferenceNumber;
 	/**
-	 * Unique and unambiguous identifier assigned by the beneficiary to the
-	 * undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -201,7 +203,7 @@ public class Amendment8 {
 	 */
 	public static final MMMessageAttribute mmBeneficiaryReferenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Amendment8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment8.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -212,10 +214,11 @@ public class Amendment8 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Issr", required = true)
 	protected PartyIdentification43 issuer;
 	/**
-	 * Party that issues the undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -246,7 +249,7 @@ public class Amendment8 {
 	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> Party.mmIdentification;
-			componentContext_lazy = () -> Amendment8.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Amendment8.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -262,9 +265,10 @@ public class Amendment8 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Amendment8.mmIdentification, Amendment8.mmSequenceNumber, Amendment8.mmBeneficiaryReferenceNumber, Amendment8.mmIssuer);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Amendment8.mmIdentification, com.tools20022.repository.msg.Amendment8.mmSequenceNumber,
+						com.tools20022.repository.msg.Amendment8.mmBeneficiaryReferenceNumber, com.tools20022.repository.msg.Amendment8.mmIssuer);
 				trace_lazy = () -> AmendmentOfUndertaking.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Amendment8";
 				definition = "Amendment identification.";
@@ -273,39 +277,39 @@ public class Amendment8 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public Amendment8 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "SeqNb", required = true)
 	public Max4AlphaNumericText getSequenceNumber() {
 		return sequenceNumber;
 	}
 
-	public void setSequenceNumber(Max4AlphaNumericText sequenceNumber) {
-		this.sequenceNumber = sequenceNumber;
+	public Amendment8 setSequenceNumber(Max4AlphaNumericText sequenceNumber) {
+		this.sequenceNumber = Objects.requireNonNull(sequenceNumber);
+		return this;
 	}
 
-	@XmlElement(name = "BnfcryRefNb")
-	public Max35Text getBeneficiaryReferenceNumber() {
-		return beneficiaryReferenceNumber;
+	public Optional<Max35Text> getBeneficiaryReferenceNumber() {
+		return beneficiaryReferenceNumber == null ? Optional.empty() : Optional.of(beneficiaryReferenceNumber);
 	}
 
-	public void setBeneficiaryReferenceNumber(Max35Text beneficiaryReferenceNumber) {
+	public Amendment8 setBeneficiaryReferenceNumber(Max35Text beneficiaryReferenceNumber) {
 		this.beneficiaryReferenceNumber = beneficiaryReferenceNumber;
+		return this;
 	}
 
-	@XmlElement(name = "Issr", required = true)
 	public PartyIdentification43 getIssuer() {
 		return issuer;
 	}
 
-	public void setIssuer(com.tools20022.repository.msg.PartyIdentification43 issuer) {
-		this.issuer = issuer;
+	public Amendment8 setIssuer(com.tools20022.repository.msg.PartyIdentification43 issuer) {
+		this.issuer = Objects.requireNonNull(issuer);
+		return this;
 	}
 }

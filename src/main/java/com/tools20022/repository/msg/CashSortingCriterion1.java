@@ -23,9 +23,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.SortCriteria1Choice;
 import com.tools20022.repository.GeneratedRepository;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.List;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -51,8 +53,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -63,17 +65,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Criterion by which the cash movements are broken down."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashSortingCriterion1", propOrder = {"sortingCriterionType", "forecastBreakdownDetails"})
 public class CashSortingCriterion1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "SrtgCritnTp", required = true)
 	protected SortCriteria1Choice sortingCriterionType;
 	/**
-	 * Type of criterion by which the estimated cash flow is being broken down,
-	 * ie, country, institution, currency code or a user defined type, such as a
-	 * region or distribution channel.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -103,7 +104,7 @@ public class CashSortingCriterion1 {
 	 */
 	public static final MMMessageAttribute mmSortingCriterionType = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CashSortingCriterion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashSortingCriterion1.mmObject();
 			isDerived = false;
 			xmlTag = "SrtgCritnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -114,10 +115,11 @@ public class CashSortingCriterion1 {
 			complexType_lazy = () -> SortCriteria1Choice.mmObject();
 		}
 	};
+	@XmlElement(name = "FcstBrkdwnDtls", required = true)
 	protected List<com.tools20022.repository.msg.ForecastParameter1> forecastBreakdownDetails;
 	/**
-	 * Parameter for which the cash movements are reported.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -143,7 +145,7 @@ public class CashSortingCriterion1 {
 	 */
 	public static final MMMessageAssociationEnd mmForecastBreakdownDetails = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> CashSortingCriterion1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashSortingCriterion1.mmObject();
 			isDerived = false;
 			xmlTag = "FcstBrkdwnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -158,8 +160,8 @@ public class CashSortingCriterion1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashSortingCriterion1.mmSortingCriterionType, CashSortingCriterion1.mmForecastBreakdownDetails);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashSortingCriterion1.mmSortingCriterionType, com.tools20022.repository.msg.CashSortingCriterion1.mmForecastBreakdownDetails);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashSortingCriterion1";
 				definition = "Criterion by which the cash movements are broken down.";
@@ -168,21 +170,21 @@ public class CashSortingCriterion1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "SrtgCritnTp", required = true)
 	public SortCriteria1Choice getSortingCriterionType() {
 		return sortingCriterionType;
 	}
 
-	public void setSortingCriterionType(SortCriteria1Choice sortingCriterionType) {
-		this.sortingCriterionType = sortingCriterionType;
+	public CashSortingCriterion1 setSortingCriterionType(SortCriteria1Choice sortingCriterionType) {
+		this.sortingCriterionType = Objects.requireNonNull(sortingCriterionType);
+		return this;
 	}
 
-	@XmlElement(name = "FcstBrkdwnDtls", required = true)
 	public List<ForecastParameter1> getForecastBreakdownDetails() {
-		return forecastBreakdownDetails;
+		return forecastBreakdownDetails == null ? forecastBreakdownDetails = new ArrayList<>() : forecastBreakdownDetails;
 	}
 
-	public void setForecastBreakdownDetails(List<com.tools20022.repository.msg.ForecastParameter1> forecastBreakdownDetails) {
-		this.forecastBreakdownDetails = forecastBreakdownDetails;
+	public CashSortingCriterion1 setForecastBreakdownDetails(List<com.tools20022.repository.msg.ForecastParameter1> forecastBreakdownDetails) {
+		this.forecastBreakdownDetails = Objects.requireNonNull(forecastBreakdownDetails);
+		return this;
 	}
 }

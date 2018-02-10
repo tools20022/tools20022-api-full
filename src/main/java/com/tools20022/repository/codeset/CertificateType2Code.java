@@ -20,58 +20,62 @@ package com.tools20022.repository.codeset;
 import com.tools20022.metamodel.MMCode;
 import com.tools20022.metamodel.MMCodeSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.CertificateTypeCode;
+import com.tools20022.repository.codeset.CertificateType2Code.InternalXmlAdapter;
 import com.tools20022.repository.GeneratedRepository;
+import java.lang.String;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.LinkedHashMap;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the type of certificate.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
- * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
- * {@linkplain com.tools20022.repository.codeset.CertificateTypeCode
- * CertificateTypeCode}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getCode code} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmAntiMoneyLaundering
- * CertificateType2Code.mmAntiMoneyLaundering}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#AntiMoneyLaundering
+ * CertificateType2Code.AntiMoneyLaundering}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmDrivingLicense
- * CertificateType2Code.mmDrivingLicense}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#DrivingLicense
+ * CertificateType2Code.DrivingLicense}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmDueFormationAndOrganisation
- * CertificateType2Code.mmDueFormationAndOrganisation}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#DueFormationAndOrganisation
+ * CertificateType2Code.DueFormationAndOrganisation}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmGoodStanding
- * CertificateType2Code.mmGoodStanding}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#GoodStanding
+ * CertificateType2Code.GoodStanding}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmIdentityCard
- * CertificateType2Code.mmIdentityCard}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#IdentityCard
+ * CertificateType2Code.IdentityCard}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmIncumbency
- * CertificateType2Code.mmIncumbency}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#Incumbency
+ * CertificateType2Code.Incumbency}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmLetterOfReference
- * CertificateType2Code.mmLetterOfReference}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#LetterOfReference
+ * CertificateType2Code.LetterOfReference}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmPassport
- * CertificateType2Code.mmPassport}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#Passport
+ * CertificateType2Code.Passport}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmProofOfAddress
- * CertificateType2Code.mmProofOfAddress}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#ProofOfAddress
+ * CertificateType2Code.ProofOfAddress}</li>
  * <li>
- * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#mmPublicKeyInfrastructureCertificate
- * CertificateType2Code.mmPublicKeyInfrastructureCertificate}</li>
+ * {@linkplain com.tools20022.repository.codeset.CertificateType2Code#PublicKeyInfrastructureCertificate
+ * CertificateType2Code.PublicKeyInfrastructureCertificate}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CertificateTypeCode
+ * CertificateTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
@@ -88,7 +92,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * definition} = "Specifies the type of certificate."</li>
  * </ul>
  */
-public class CertificateType2Code extends CertificateTypeCode {
+@XmlJavaTypeAdapter(InternalXmlAdapter.class)
+public class CertificateType2Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
@@ -107,11 +112,12 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "AntiMoneyLaundering"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmAntiMoneyLaundering = new MMCode() {
+	public static final CertificateType2Code AntiMoneyLaundering = new CertificateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AntiMoneyLaundering";
-			owner_lazy = () -> CertificateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CertificateType2Code.mmObject();
+			codeName = CertificateTypeCode.AntiMoneyLaundering.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -130,11 +136,12 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "DrivingLicense"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDrivingLicense = new MMCode() {
+	public static final CertificateType2Code DrivingLicense = new CertificateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DrivingLicense";
-			owner_lazy = () -> CertificateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CertificateType2Code.mmObject();
+			codeName = CertificateTypeCode.DrivingLicense.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -153,11 +160,12 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "DueFormationAndOrganisation"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmDueFormationAndOrganisation = new MMCode() {
+	public static final CertificateType2Code DueFormationAndOrganisation = new CertificateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueFormationAndOrganisation";
-			owner_lazy = () -> CertificateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CertificateType2Code.mmObject();
+			codeName = CertificateTypeCode.DueFormationAndOrganisation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -176,11 +184,12 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "GoodStanding"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmGoodStanding = new MMCode() {
+	public static final CertificateType2Code GoodStanding = new CertificateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoodStanding";
-			owner_lazy = () -> CertificateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CertificateType2Code.mmObject();
+			codeName = CertificateTypeCode.GoodStanding.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -199,11 +208,12 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "IdentityCard"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIdentityCard = new MMCode() {
+	public static final CertificateType2Code IdentityCard = new CertificateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentityCard";
-			owner_lazy = () -> CertificateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CertificateType2Code.mmObject();
+			codeName = CertificateTypeCode.IdentityCard.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -222,11 +232,12 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "Incumbency"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmIncumbency = new MMCode() {
+	public static final CertificateType2Code Incumbency = new CertificateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incumbency";
-			owner_lazy = () -> CertificateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CertificateType2Code.mmObject();
+			codeName = CertificateTypeCode.Incumbency.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -245,11 +256,12 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "LetterOfReference"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmLetterOfReference = new MMCode() {
+	public static final CertificateType2Code LetterOfReference = new CertificateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterOfReference";
-			owner_lazy = () -> CertificateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CertificateType2Code.mmObject();
+			codeName = CertificateTypeCode.LetterOfReference.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -268,11 +280,12 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "Passport"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPassport = new MMCode() {
+	public static final CertificateType2Code Passport = new CertificateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Passport";
-			owner_lazy = () -> CertificateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CertificateType2Code.mmObject();
+			codeName = CertificateTypeCode.Passport.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -291,11 +304,12 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "ProofOfAddress"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmProofOfAddress = new MMCode() {
+	public static final CertificateType2Code ProofOfAddress = new CertificateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProofOfAddress";
-			owner_lazy = () -> CertificateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CertificateType2Code.mmObject();
+			codeName = CertificateTypeCode.ProofOfAddress.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -314,28 +328,69 @@ public class CertificateType2Code extends CertificateTypeCode {
 	 * name} = "PublicKeyInfrastructureCertificate"</li>
 	 * </ul>
 	 */
-	public static final MMCode mmPublicKeyInfrastructureCertificate = new MMCode() {
+	public static final CertificateType2Code PublicKeyInfrastructureCertificate = new CertificateType2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PublicKeyInfrastructureCertificate";
-			owner_lazy = () -> CertificateType2Code.mmObject();
+			owner_lazy = () -> com.tools20022.repository.codeset.CertificateType2Code.mmObject();
+			codeName = CertificateTypeCode.PublicKeyInfrastructureCertificate.getCodeName().orElse(name);
 		}
 	};
+	final static private LinkedHashMap<String, CertificateType2Code> codesByName = new LinkedHashMap<>();
 
-	static public MMCodeSet mmObject() {
+	protected CertificateType2Code() {
+	}
+
+	final static public MMCodeSet mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				example = Arrays.asList("AMLC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificateType2Code";
 				definition = "Specifies the type of certificate.";
-				code_lazy = () -> Arrays.asList(CertificateType2Code.mmAntiMoneyLaundering, CertificateType2Code.mmDrivingLicense, CertificateType2Code.mmDueFormationAndOrganisation, CertificateType2Code.mmGoodStanding,
-						CertificateType2Code.mmIdentityCard, CertificateType2Code.mmIncumbency, CertificateType2Code.mmLetterOfReference, CertificateType2Code.mmPassport, CertificateType2Code.mmProofOfAddress,
-						CertificateType2Code.mmPublicKeyInfrastructureCertificate);
 				trace_lazy = () -> CertificateTypeCode.mmObject();
+				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CertificateType2Code.AntiMoneyLaundering, com.tools20022.repository.codeset.CertificateType2Code.DrivingLicense,
+						com.tools20022.repository.codeset.CertificateType2Code.DueFormationAndOrganisation, com.tools20022.repository.codeset.CertificateType2Code.GoodStanding,
+						com.tools20022.repository.codeset.CertificateType2Code.IdentityCard, com.tools20022.repository.codeset.CertificateType2Code.Incumbency, com.tools20022.repository.codeset.CertificateType2Code.LetterOfReference,
+						com.tools20022.repository.codeset.CertificateType2Code.Passport, com.tools20022.repository.codeset.CertificateType2Code.ProofOfAddress,
+						com.tools20022.repository.codeset.CertificateType2Code.PublicKeyInfrastructureCertificate);
 			}
 		});
 		return mmObject_lazy.get();
+	}
+
+	static {
+		codesByName.put(AntiMoneyLaundering.getCodeName().get(), AntiMoneyLaundering);
+		codesByName.put(DrivingLicense.getCodeName().get(), DrivingLicense);
+		codesByName.put(DueFormationAndOrganisation.getCodeName().get(), DueFormationAndOrganisation);
+		codesByName.put(GoodStanding.getCodeName().get(), GoodStanding);
+		codesByName.put(IdentityCard.getCodeName().get(), IdentityCard);
+		codesByName.put(Incumbency.getCodeName().get(), Incumbency);
+		codesByName.put(LetterOfReference.getCodeName().get(), LetterOfReference);
+		codesByName.put(Passport.getCodeName().get(), Passport);
+		codesByName.put(ProofOfAddress.getCodeName().get(), ProofOfAddress);
+		codesByName.put(PublicKeyInfrastructureCertificate.getCodeName().get(), PublicKeyInfrastructureCertificate);
+	}
+
+	public static CertificateType2Code valueOf(String codeName) {
+		return codesByName.get(codeName);
+	}
+
+	public static CertificateType2Code[] values() {
+		CertificateType2Code[] values = new CertificateType2Code[codesByName.size()];
+		return codesByName.values().toArray(values);
+	}
+
+	protected static class InternalXmlAdapter extends XmlAdapter<String, CertificateType2Code> {
+		@Override
+		public CertificateType2Code unmarshal(String codeName) {
+			return valueOf(codeName);
+		}
+
+		@Override
+		public String marshal(CertificateType2Code codeObj) {
+			return codeObj.getCodeName().orElse(null);
+		}
 	}
 }

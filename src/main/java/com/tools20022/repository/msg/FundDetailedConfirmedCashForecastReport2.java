@@ -23,9 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.FundDetailedConfirmedCashForecastReportCancellationV02;
 import com.tools20022.repository.entity.FundsCashFlow;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -67,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -87,19 +86,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FundDetailedConfirmedCashForecastReport2", propOrder = {"fundCashForecastDetails", "consolidatedNetCashForecast", "extension"})
 public class FundDetailedConfirmedCashForecastReport2 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "FndCshFcstDtls", required = true)
 	protected List<com.tools20022.repository.msg.FundCashForecast4> fundCashForecastDetails;
 	/**
-	 * Information related to the cash-in and cash-out flows for a specific
-	 * trade date as a result of investment fund transactions, for example,
-	 * subscriptions, redemptions or switches to/from a specified investment
-	 * fund. The information provided is sorted by pre-defined criteria such as
-	 * country, institution, currency or user defined criteria.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -141,7 +137,7 @@ public class FundDetailedConfirmedCashForecastReport2 {
 	public static final MMMessageAssociationEnd mmFundCashForecastDetails = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
-			componentContext_lazy = () -> FundDetailedConfirmedCashForecastReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport2.mmObject();
 			isDerived = false;
 			xmlTag = "FndCshFcstDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -153,10 +149,11 @@ public class FundDetailedConfirmedCashForecastReport2 {
 			type_lazy = () -> com.tools20022.repository.msg.FundCashForecast4.mmObject();
 		}
 	};
+	@XmlElement(name = "CnsltdNetCshFcst")
 	protected NetCashForecast3 consolidatedNetCashForecast;
 	/**
-	 * Estimated net cash as a result of the cash-in and cash-out flows.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -197,7 +194,7 @@ public class FundDetailedConfirmedCashForecastReport2 {
 	public static final MMMessageAssociationEnd mmConsolidatedNetCashForecast = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> FundsCashFlow.mmObject();
-			componentContext_lazy = () -> FundDetailedConfirmedCashForecastReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport2.mmObject();
 			isDerived = false;
 			xmlTag = "CnsltdNetCshFcst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -210,11 +207,11 @@ public class FundDetailedConfirmedCashForecastReport2 {
 			type_lazy = () -> com.tools20022.repository.msg.NetCashForecast3.mmObject();
 		}
 	};
+	@XmlElement(name = "Xtnsn")
 	protected List<com.tools20022.repository.msg.Extension1> extension;
 	/**
-	 * Additional information that cannot be captured in the structured elements
-	 * and/or any other specific block.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -249,7 +246,7 @@ public class FundDetailedConfirmedCashForecastReport2 {
 	 */
 	public static final MMMessageAssociationEnd mmExtension = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> FundDetailedConfirmedCashForecastReport2.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport2.mmObject();
 			isDerived = false;
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -265,11 +262,11 @@ public class FundDetailedConfirmedCashForecastReport2 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(FundDetailedConfirmedCashForecastReport2.mmFundCashForecastDetails, FundDetailedConfirmedCashForecastReport2.mmConsolidatedNetCashForecast,
-						FundDetailedConfirmedCashForecastReport2.mmExtension);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport2.mmFundCashForecastDetails,
+						com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport2.mmConsolidatedNetCashForecast, com.tools20022.repository.msg.FundDetailedConfirmedCashForecastReport2.mmExtension);
 				messageBuildingBlock_lazy = () -> Arrays.asList(FundDetailedConfirmedCashForecastReportCancellationV02.mmCashForecastReportToBeCancelled);
 				trace_lazy = () -> FundsCashFlow.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundDetailedConfirmedCashForecastReport2";
 				definition = "Information about a cash forecast report.";
@@ -279,30 +276,30 @@ public class FundDetailedConfirmedCashForecastReport2 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "FndCshFcstDtls", required = true)
 	public List<FundCashForecast4> getFundCashForecastDetails() {
-		return fundCashForecastDetails;
+		return fundCashForecastDetails == null ? fundCashForecastDetails = new ArrayList<>() : fundCashForecastDetails;
 	}
 
-	public void setFundCashForecastDetails(List<com.tools20022.repository.msg.FundCashForecast4> fundCashForecastDetails) {
-		this.fundCashForecastDetails = fundCashForecastDetails;
+	public FundDetailedConfirmedCashForecastReport2 setFundCashForecastDetails(List<com.tools20022.repository.msg.FundCashForecast4> fundCashForecastDetails) {
+		this.fundCashForecastDetails = Objects.requireNonNull(fundCashForecastDetails);
+		return this;
 	}
 
-	@XmlElement(name = "CnsltdNetCshFcst")
-	public NetCashForecast3 getConsolidatedNetCashForecast() {
-		return consolidatedNetCashForecast;
+	public Optional<NetCashForecast3> getConsolidatedNetCashForecast() {
+		return consolidatedNetCashForecast == null ? Optional.empty() : Optional.of(consolidatedNetCashForecast);
 	}
 
-	public void setConsolidatedNetCashForecast(com.tools20022.repository.msg.NetCashForecast3 consolidatedNetCashForecast) {
+	public FundDetailedConfirmedCashForecastReport2 setConsolidatedNetCashForecast(com.tools20022.repository.msg.NetCashForecast3 consolidatedNetCashForecast) {
 		this.consolidatedNetCashForecast = consolidatedNetCashForecast;
+		return this;
 	}
 
-	@XmlElement(name = "Xtnsn")
 	public List<Extension1> getExtension() {
-		return extension;
+		return extension == null ? extension = new ArrayList<>() : extension;
 	}
 
-	public void setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
-		this.extension = extension;
+	public FundDetailedConfirmedCashForecastReport2 setExtension(List<com.tools20022.repository.msg.Extension1> extension) {
+		this.extension = Objects.requireNonNull(extension);
+		return this;
 	}
 }

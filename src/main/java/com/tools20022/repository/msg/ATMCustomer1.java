@@ -24,9 +24,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.LanguageCode;
 import com.tools20022.repository.entity.CardholderRole;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -59,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +76,16 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "ATMCustomer1", propOrder = {"profile", "selectedLanguage", "authentication", "authenticationResult"})
 public class ATMCustomer1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Prfl")
 	protected ATMCustomerProfile1 profile;
 	/**
-	 * Profile of the customer selected to perform the withdrawal.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -118,7 +118,7 @@ public class ATMCustomer1 {
 	 */
 	public static final MMMessageAssociationEnd mmProfile = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMCustomer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomer1.mmObject();
 			isDerived = false;
 			xmlTag = "Prfl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -131,11 +131,11 @@ public class ATMCustomer1 {
 			type_lazy = () -> com.tools20022.repository.msg.ATMCustomerProfile1.mmObject();
 		}
 	};
+	@XmlElement(name = "SelctdLang")
 	protected LanguageCode selectedLanguage;
 	/**
-	 * Language selected by the customer at the ATM for the customer session.
-	 * Reference ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3).
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +163,7 @@ public class ATMCustomer1 {
 	 */
 	public static final MMMessageAttribute mmSelectedLanguage = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> ATMCustomer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomer1.mmObject();
 			isDerived = false;
 			xmlTag = "SelctdLang";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,11 +174,11 @@ public class ATMCustomer1 {
 			simpleType_lazy = () -> LanguageCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Authntcn", required = true)
 	protected List<com.tools20022.repository.msg.CardholderAuthentication8> authentication;
 	/**
-	 * Method and data intended to be used for this transaction to authenticate
-	 * the customer and its card.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -212,7 +212,7 @@ public class ATMCustomer1 {
 	public static final MMMessageAssociationEnd mmAuthentication = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CardholderRole.mmAuthentication;
-			componentContext_lazy = () -> ATMCustomer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomer1.mmObject();
 			isDerived = false;
 			xmlTag = "Authntcn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -223,10 +223,11 @@ public class ATMCustomer1 {
 			type_lazy = () -> com.tools20022.repository.msg.CardholderAuthentication8.mmObject();
 		}
 	};
+	@XmlElement(name = "AuthntcnRslt")
 	protected List<com.tools20022.repository.msg.TransactionVerificationResult5> authenticationResult;
 	/**
-	 * Result of the customer authentication for this transaction.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -261,7 +262,7 @@ public class ATMCustomer1 {
 	 */
 	public static final MMMessageAssociationEnd mmAuthenticationResult = new MMMessageAssociationEnd() {
 		{
-			componentContext_lazy = () -> ATMCustomer1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.ATMCustomer1.mmObject();
 			isDerived = false;
 			xmlTag = "AuthntcnRslt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -277,9 +278,10 @@ public class ATMCustomer1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(ATMCustomer1.mmProfile, ATMCustomer1.mmSelectedLanguage, ATMCustomer1.mmAuthentication, ATMCustomer1.mmAuthenticationResult);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ATMCustomer1.mmProfile, com.tools20022.repository.msg.ATMCustomer1.mmSelectedLanguage, com.tools20022.repository.msg.ATMCustomer1.mmAuthentication,
+						com.tools20022.repository.msg.ATMCustomer1.mmAuthenticationResult);
 				trace_lazy = () -> CardholderRole.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCustomer1";
 				definition = "Customer involved in a withdrawal transaction.";
@@ -289,39 +291,39 @@ public class ATMCustomer1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Prfl")
-	public ATMCustomerProfile1 getProfile() {
-		return profile;
+	public Optional<ATMCustomerProfile1> getProfile() {
+		return profile == null ? Optional.empty() : Optional.of(profile);
 	}
 
-	public void setProfile(com.tools20022.repository.msg.ATMCustomerProfile1 profile) {
+	public ATMCustomer1 setProfile(com.tools20022.repository.msg.ATMCustomerProfile1 profile) {
 		this.profile = profile;
+		return this;
 	}
 
-	@XmlElement(name = "SelctdLang")
-	public LanguageCode getSelectedLanguage() {
-		return selectedLanguage;
+	public Optional<LanguageCode> getSelectedLanguage() {
+		return selectedLanguage == null ? Optional.empty() : Optional.of(selectedLanguage);
 	}
 
-	public void setSelectedLanguage(LanguageCode selectedLanguage) {
+	public ATMCustomer1 setSelectedLanguage(LanguageCode selectedLanguage) {
 		this.selectedLanguage = selectedLanguage;
+		return this;
 	}
 
-	@XmlElement(name = "Authntcn", required = true)
 	public List<CardholderAuthentication8> getAuthentication() {
-		return authentication;
+		return authentication == null ? authentication = new ArrayList<>() : authentication;
 	}
 
-	public void setAuthentication(List<com.tools20022.repository.msg.CardholderAuthentication8> authentication) {
-		this.authentication = authentication;
+	public ATMCustomer1 setAuthentication(List<com.tools20022.repository.msg.CardholderAuthentication8> authentication) {
+		this.authentication = Objects.requireNonNull(authentication);
+		return this;
 	}
 
-	@XmlElement(name = "AuthntcnRslt")
 	public List<TransactionVerificationResult5> getAuthenticationResult() {
-		return authenticationResult;
+		return authenticationResult == null ? authenticationResult = new ArrayList<>() : authenticationResult;
 	}
 
-	public void setAuthenticationResult(List<com.tools20022.repository.msg.TransactionVerificationResult5> authenticationResult) {
-		this.authenticationResult = authenticationResult;
+	public ATMCustomer1 setAuthenticationResult(List<com.tools20022.repository.msg.TransactionVerificationResult5> authenticationResult) {
+		this.authenticationResult = Objects.requireNonNull(authenticationResult);
+		return this;
 	}
 }

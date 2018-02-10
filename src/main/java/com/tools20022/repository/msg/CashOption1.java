@@ -30,6 +30,8 @@ import com.tools20022.repository.entity.ProceedsDefinition;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -63,8 +65,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -75,15 +77,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Provides information about the cash option."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CashOption1", propOrder = {"creditDebitIndicator", "currency", "dateDetails", "amountDetails", "exchangeRate"})
 public class CashOption1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CdtDbtInd", required = true)
 	protected CreditDebitCode creditDebitIndicator;
 	/**
-	 * Indicates wether it is a debit or a credit.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -116,7 +119,7 @@ public class CashOption1 {
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> ProceedsDefinition.mmCreditDebitIndicator;
-			componentContext_lazy = () -> CashOption1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption1.mmObject();
 			isDerived = false;
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -127,10 +130,11 @@ public class CashOption1 {
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
 		}
 	};
+	@XmlElement(name = "Ccy")
 	protected ActiveCurrencyCode currency;
 	/**
-	 * Currency of the option.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -163,7 +167,7 @@ public class CashOption1 {
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmCurrencyOption;
-			componentContext_lazy = () -> CashOption1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption1.mmObject();
 			isDerived = false;
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -174,10 +178,11 @@ public class CashOption1 {
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
 	};
+	@XmlElement(name = "DtDtls")
 	protected CorporateActionDate5 dateDetails;
 	/**
-	 * Provides information about the dates related to a cash movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -209,7 +214,7 @@ public class CashOption1 {
 	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmRelatedChoiceCorporateAction;
-			componentContext_lazy = () -> CashOption1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption1.mmObject();
 			isDerived = false;
 			xmlTag = "DtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -221,10 +226,11 @@ public class CashOption1 {
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionDate5.mmObject();
 		}
 	};
+	@XmlElement(name = "AmtDtls")
 	protected CorporateActionAmounts1 amountDetails;
 	/**
-	 * Provides information about the amounts related to a cash movement.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -257,7 +263,7 @@ public class CashOption1 {
 	public static final MMMessageAssociationEnd mmAmountDetails = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionOption.mmRelatedChoiceCorporateAction;
-			componentContext_lazy = () -> CashOption1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption1.mmObject();
 			isDerived = false;
 			xmlTag = "AmtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -269,10 +275,11 @@ public class CashOption1 {
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionAmounts1.mmObject();
 		}
 	};
+	@XmlElement(name = "XchgRate")
 	protected ForeignExchangeTerms8 exchangeRate;
 	/**
-	 * Provides information about a foreign exchange.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -303,7 +310,7 @@ public class CashOption1 {
 	public static final MMMessageAssociationEnd mmExchangeRate = new MMMessageAssociationEnd() {
 		{
 			businessElementTrace_lazy = () -> CorporateActionEvent.mmExchangeRate;
-			componentContext_lazy = () -> CashOption1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CashOption1.mmObject();
 			isDerived = false;
 			xmlTag = "XchgRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -319,9 +326,10 @@ public class CashOption1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CashOption1.mmCreditDebitIndicator, CashOption1.mmCurrency, CashOption1.mmDateDetails, CashOption1.mmAmountDetails, CashOption1.mmExchangeRate);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashOption1.mmCreditDebitIndicator, com.tools20022.repository.msg.CashOption1.mmCurrency, com.tools20022.repository.msg.CashOption1.mmDateDetails,
+						com.tools20022.repository.msg.CashOption1.mmAmountDetails, com.tools20022.repository.msg.CashOption1.mmExchangeRate);
 				trace_lazy = () -> CashProceedsDefinition.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashOption1";
 				definition = "Provides information about the cash option.";
@@ -330,48 +338,48 @@ public class CashOption1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CdtDbtInd", required = true)
 	public CreditDebitCode getCreditDebitIndicator() {
 		return creditDebitIndicator;
 	}
 
-	public void setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
-		this.creditDebitIndicator = creditDebitIndicator;
+	public CashOption1 setCreditDebitIndicator(CreditDebitCode creditDebitIndicator) {
+		this.creditDebitIndicator = Objects.requireNonNull(creditDebitIndicator);
+		return this;
 	}
 
-	@XmlElement(name = "Ccy")
-	public ActiveCurrencyCode getCurrency() {
-		return currency;
+	public Optional<ActiveCurrencyCode> getCurrency() {
+		return currency == null ? Optional.empty() : Optional.of(currency);
 	}
 
-	public void setCurrency(ActiveCurrencyCode currency) {
+	public CashOption1 setCurrency(ActiveCurrencyCode currency) {
 		this.currency = currency;
+		return this;
 	}
 
-	@XmlElement(name = "DtDtls")
-	public CorporateActionDate5 getDateDetails() {
-		return dateDetails;
+	public Optional<CorporateActionDate5> getDateDetails() {
+		return dateDetails == null ? Optional.empty() : Optional.of(dateDetails);
 	}
 
-	public void setDateDetails(com.tools20022.repository.msg.CorporateActionDate5 dateDetails) {
+	public CashOption1 setDateDetails(com.tools20022.repository.msg.CorporateActionDate5 dateDetails) {
 		this.dateDetails = dateDetails;
+		return this;
 	}
 
-	@XmlElement(name = "AmtDtls")
-	public CorporateActionAmounts1 getAmountDetails() {
-		return amountDetails;
+	public Optional<CorporateActionAmounts1> getAmountDetails() {
+		return amountDetails == null ? Optional.empty() : Optional.of(amountDetails);
 	}
 
-	public void setAmountDetails(com.tools20022.repository.msg.CorporateActionAmounts1 amountDetails) {
+	public CashOption1 setAmountDetails(com.tools20022.repository.msg.CorporateActionAmounts1 amountDetails) {
 		this.amountDetails = amountDetails;
+		return this;
 	}
 
-	@XmlElement(name = "XchgRate")
-	public ForeignExchangeTerms8 getExchangeRate() {
-		return exchangeRate;
+	public Optional<ForeignExchangeTerms8> getExchangeRate() {
+		return exchangeRate == null ? Optional.empty() : Optional.of(exchangeRate);
 	}
 
-	public void setExchangeRate(com.tools20022.repository.msg.ForeignExchangeTerms8 exchangeRate) {
+	public CashOption1 setExchangeRate(com.tools20022.repository.msg.ForeignExchangeTerms8 exchangeRate) {
 		this.exchangeRate = exchangeRate;
+		return this;
 	}
 }

@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -49,8 +50,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -61,16 +62,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about a database."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "DataBaseCheck1", propOrder = {"databaseCheck", "identification"})
 public class DataBaseCheck1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "DBChck", required = true)
 	protected YesNoIndicator databaseCheck;
 	/**
-	 * Indicates whether the individual or organisation is listed in an on-line
-	 * global Know Your Customer (KYC) database.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -99,7 +100,7 @@ public class DataBaseCheck1 {
 	 */
 	public static final MMMessageAttribute mmDatabaseCheck = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DataBaseCheck1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DataBaseCheck1.mmObject();
 			isDerived = false;
 			xmlTag = "DBChck";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -110,10 +111,11 @@ public class DataBaseCheck1 {
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
 		}
 	};
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Identification of the database.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -139,7 +141,7 @@ public class DataBaseCheck1 {
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> DataBaseCheck1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.DataBaseCheck1.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -154,8 +156,8 @@ public class DataBaseCheck1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(DataBaseCheck1.mmDatabaseCheck, DataBaseCheck1.mmIdentification);
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DataBaseCheck1.mmDatabaseCheck, com.tools20022.repository.msg.DataBaseCheck1.mmIdentification);
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataBaseCheck1";
 				definition = "Information about a database.";
@@ -164,21 +166,21 @@ public class DataBaseCheck1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "DBChck", required = true)
 	public YesNoIndicator getDatabaseCheck() {
 		return databaseCheck;
 	}
 
-	public void setDatabaseCheck(YesNoIndicator databaseCheck) {
-		this.databaseCheck = databaseCheck;
+	public DataBaseCheck1 setDatabaseCheck(YesNoIndicator databaseCheck) {
+		this.databaseCheck = Objects.requireNonNull(databaseCheck);
+		return this;
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public DataBaseCheck1 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 }

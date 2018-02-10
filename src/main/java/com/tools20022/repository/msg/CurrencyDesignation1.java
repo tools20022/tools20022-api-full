@@ -27,6 +27,7 @@ import com.tools20022.repository.entity.CurrencyExchange;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -58,8 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -70,15 +71,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about the designation of a currency."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "CurrencyDesignation1", propOrder = {"currencyDesignation", "location", "additionalInformation"})
 public class CurrencyDesignation1 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "CcyDsgnt")
 	protected CurrencyDesignation1Code currencyDesignation;
 	/**
-	 * Specifies whether the currency is settled offshore or onshore.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -107,7 +109,7 @@ public class CurrencyDesignation1 {
 	 */
 	public static final MMMessageAttribute mmCurrencyDesignation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyDesignation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDesignation1.mmObject();
 			isDerived = false;
 			xmlTag = "CcyDsgnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -118,10 +120,11 @@ public class CurrencyDesignation1 {
 			simpleType_lazy = () -> CurrencyDesignation1Code.mmObject();
 		}
 	};
+	@XmlElement(name = "Lctn")
 	protected CountryCode location;
 	/**
-	 * Offshore location of the currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -148,7 +151,7 @@ public class CurrencyDesignation1 {
 	 */
 	public static final MMMessageAttribute mmLocation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyDesignation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDesignation1.mmObject();
 			isDerived = false;
 			xmlTag = "Lctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -159,10 +162,11 @@ public class CurrencyDesignation1 {
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
 	};
+	@XmlElement(name = "AddtlInf")
 	protected Max350Text additionalInformation;
 	/**
-	 * Additional information about the off-shore currency.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -189,7 +193,7 @@ public class CurrencyDesignation1 {
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> CurrencyDesignation1.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.CurrencyDesignation1.mmObject();
 			isDerived = false;
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -204,9 +208,10 @@ public class CurrencyDesignation1 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(CurrencyDesignation1.mmCurrencyDesignation, CurrencyDesignation1.mmLocation, CurrencyDesignation1.mmAdditionalInformation);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencyDesignation1.mmCurrencyDesignation, com.tools20022.repository.msg.CurrencyDesignation1.mmLocation,
+						com.tools20022.repository.msg.CurrencyDesignation1.mmAdditionalInformation);
 				trace_lazy = () -> CurrencyExchange.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyDesignation1";
 				definition = "Information about the designation of a currency.";
@@ -215,30 +220,30 @@ public class CurrencyDesignation1 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "CcyDsgnt")
-	public CurrencyDesignation1Code getCurrencyDesignation() {
-		return currencyDesignation;
+	public Optional<CurrencyDesignation1Code> getCurrencyDesignation() {
+		return currencyDesignation == null ? Optional.empty() : Optional.of(currencyDesignation);
 	}
 
-	public void setCurrencyDesignation(CurrencyDesignation1Code currencyDesignation) {
+	public CurrencyDesignation1 setCurrencyDesignation(CurrencyDesignation1Code currencyDesignation) {
 		this.currencyDesignation = currencyDesignation;
+		return this;
 	}
 
-	@XmlElement(name = "Lctn")
-	public CountryCode getLocation() {
-		return location;
+	public Optional<CountryCode> getLocation() {
+		return location == null ? Optional.empty() : Optional.of(location);
 	}
 
-	public void setLocation(CountryCode location) {
+	public CurrencyDesignation1 setLocation(CountryCode location) {
 		this.location = location;
+		return this;
 	}
 
-	@XmlElement(name = "AddtlInf")
-	public Max350Text getAdditionalInformation() {
-		return additionalInformation;
+	public Optional<Max350Text> getAdditionalInformation() {
+		return additionalInformation == null ? Optional.empty() : Optional.of(additionalInformation);
 	}
 
-	public void setAdditionalInformation(Max350Text additionalInformation) {
+	public CurrencyDesignation1 setAdditionalInformation(Max350Text additionalInformation) {
 		this.additionalInformation = additionalInformation;
+		return this;
 	}
 }

@@ -27,6 +27,8 @@ import com.tools20022.repository.entity.UndertakingIssuer;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
+import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -56,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -68,16 +70,16 @@ import javax.xml.bind.annotation.XmlType;
  * definition} = "Information about an undertaking."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "Undertaking6", propOrder = {"identification", "issuer", "beneficiaryReferenceNumber"})
 public class Undertaking6 {
 
 	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Id", required = true)
 	protected Max35Text identification;
 	/**
-	 * Unique and unambiguous identifier assigned by the issuer to the
-	 * undertaking, for example the guarantee or standby number.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -111,7 +113,7 @@ public class Undertaking6 {
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
 		{
 			businessElementTrace_lazy = () -> Undertaking.mmIdentification;
-			componentContext_lazy = () -> Undertaking6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking6.mmObject();
 			isDerived = false;
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -122,10 +124,11 @@ public class Undertaking6 {
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
 	};
+	@XmlElement(name = "Issr", required = true)
 	protected PartyIdentification43 issuer;
 	/**
-	 * Party that issues the undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -156,7 +159,7 @@ public class Undertaking6 {
 	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> UndertakingIssuer.mmObject();
-			componentContext_lazy = () -> Undertaking6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking6.mmObject();
 			isDerived = false;
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -168,11 +171,11 @@ public class Undertaking6 {
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
 		}
 	};
+	@XmlElement(name = "BnfcryRefNb")
 	protected Max35Text beneficiaryReferenceNumber;
 	/**
-	 * Unique and unambiguous identifier assigned by the beneficiary to the
-	 * undertaking.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -200,7 +203,7 @@ public class Undertaking6 {
 	 */
 	public static final MMMessageAttribute mmBeneficiaryReferenceNumber = new MMMessageAttribute() {
 		{
-			componentContext_lazy = () -> Undertaking6.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.msg.Undertaking6.mmObject();
 			isDerived = false;
 			xmlTag = "BnfcryRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -215,9 +218,10 @@ public class Undertaking6 {
 	final static public MMMessageComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(Undertaking6.mmIdentification, Undertaking6.mmIssuer, Undertaking6.mmBeneficiaryReferenceNumber);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Undertaking6.mmIdentification, com.tools20022.repository.msg.Undertaking6.mmIssuer,
+						com.tools20022.repository.msg.Undertaking6.mmBeneficiaryReferenceNumber);
 				trace_lazy = () -> Undertaking.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Undertaking6";
 				definition = "Information about an undertaking.";
@@ -226,30 +230,30 @@ public class Undertaking6 {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Id", required = true)
 	public Max35Text getIdentification() {
 		return identification;
 	}
 
-	public void setIdentification(Max35Text identification) {
-		this.identification = identification;
+	public Undertaking6 setIdentification(Max35Text identification) {
+		this.identification = Objects.requireNonNull(identification);
+		return this;
 	}
 
-	@XmlElement(name = "Issr", required = true)
 	public PartyIdentification43 getIssuer() {
 		return issuer;
 	}
 
-	public void setIssuer(com.tools20022.repository.msg.PartyIdentification43 issuer) {
-		this.issuer = issuer;
+	public Undertaking6 setIssuer(com.tools20022.repository.msg.PartyIdentification43 issuer) {
+		this.issuer = Objects.requireNonNull(issuer);
+		return this;
 	}
 
-	@XmlElement(name = "BnfcryRefNb")
-	public Max35Text getBeneficiaryReferenceNumber() {
-		return beneficiaryReferenceNumber;
+	public Optional<Max35Text> getBeneficiaryReferenceNumber() {
+		return beneficiaryReferenceNumber == null ? Optional.empty() : Optional.of(beneficiaryReferenceNumber);
 	}
 
-	public void setBeneficiaryReferenceNumber(Max35Text beneficiaryReferenceNumber) {
+	public Undertaking6 setBeneficiaryReferenceNumber(Max35Text beneficiaryReferenceNumber) {
 		this.beneficiaryReferenceNumber = beneficiaryReferenceNumber;
+		return this;
 	}
 }

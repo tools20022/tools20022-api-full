@@ -17,6 +17,7 @@
 
 package com.tools20022.repository.choice;
 
+import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
@@ -27,6 +28,7 @@ import com.tools20022.repository.msg.SignedQuantityFormat8;
 import com.tools20022.repository.msg.SignedQuantityFormat9;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -64,8 +66,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
- * {@linkplain com.tools20022.repository.GeneratedRepository#mmdataDict
- * GeneratedRepository.mmdataDict}</li>
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
@@ -77,15 +79,16 @@ import javax.xml.bind.annotation.XmlType;
  * "Choice between balance, eligible balance and not eligible balance formats."</li>
  * </ul>
  */
-@XmlAccessorType(XmlAccessType.PROPERTY)
+@XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "BalanceFormat10Choice", propOrder = {"balance", "eligibleBalance", "notEligibleBalance", "fullPeriodUnits", "partWayPeriodUnits"})
 public class BalanceFormat10Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "Bal", required = true)
 	protected SignedQuantityFormat8 balance;
 	/**
-	 * Provides information about balance related to a corporate action.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -104,6 +107,9 @@ public class BalanceFormat10Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "Bal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93B:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -118,9 +124,10 @@ public class BalanceFormat10Choice {
 	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
-			componentContext_lazy = () -> BalanceFormat10Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "Bal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Provides information about balance related to a corporate action.";
@@ -130,10 +137,11 @@ public class BalanceFormat10Choice {
 			type_lazy = () -> SignedQuantityFormat8.mmObject();
 		}
 	};
+	@XmlElement(name = "ElgblBal", required = true)
 	protected SignedQuantityFormat9 eligibleBalance;
 	/**
-	 * Provide eligible balance information in different formats.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -152,6 +160,9 @@ public class BalanceFormat10Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "ElgblBal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -166,9 +177,10 @@ public class BalanceFormat10Choice {
 	public static final MMMessageAssociationEnd mmEligibleBalance = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
-			componentContext_lazy = () -> BalanceFormat10Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "ElgblBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleBalance";
 			definition = "Provide eligible balance information in different formats.";
@@ -178,10 +190,11 @@ public class BalanceFormat10Choice {
 			type_lazy = () -> SignedQuantityFormat9.mmObject();
 		}
 	};
+	@XmlElement(name = "NotElgblBal", required = true)
 	protected SignedQuantityFormat9 notEligibleBalance;
 	/**
-	 * Provide not eligible balance information in different formats.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
@@ -200,6 +213,9 @@ public class BalanceFormat10Choice {
 	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
 	 * xmlTag} = "NotElgblBal"</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = ISO15022Synonym: :93C:</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
@@ -214,9 +230,10 @@ public class BalanceFormat10Choice {
 	public static final MMMessageAssociationEnd mmNotEligibleBalance = new MMMessageAssociationEnd() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
-			componentContext_lazy = () -> BalanceFormat10Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "NotElgblBal";
+			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEligibleBalance";
 			definition = "Provide not eligible balance information in different formats.";
@@ -226,12 +243,11 @@ public class BalanceFormat10Choice {
 			type_lazy = () -> SignedQuantityFormat9.mmObject();
 		}
 	};
+	@XmlElement(name = "FullPrdUnits", required = true)
 	protected SignedQuantityFormat9 fullPeriodUnits;
 	/**
-	 * Number of units of a fund that were purchased in a previous distribution
-	 * period and/or held at the beginning of a distribution period, for example
-	 * Group I Units in the UK.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -267,7 +283,7 @@ public class BalanceFormat10Choice {
 	public static final MMMessageAttribute mmFullPeriodUnits = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
-			componentContext_lazy = () -> BalanceFormat10Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "FullPrdUnits";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -278,11 +294,11 @@ public class BalanceFormat10Choice {
 			complexType_lazy = () -> SignedQuantityFormat9.mmObject();
 		}
 	};
+	@XmlElement(name = "PartWayPrdUnits", required = true)
 	protected SignedQuantityFormat9 partWayPeriodUnits;
 	/**
-	 * Number of units of a fund that were purchased part way throughout a
-	 * distribution period, for example Group II Units in the U.K.
-	 * <p>
+	 * 
+	 <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>
@@ -318,7 +334,7 @@ public class BalanceFormat10Choice {
 	public static final MMMessageAttribute mmPartWayPeriodUnits = new MMMessageAttribute() {
 		{
 			businessComponentTrace_lazy = () -> SecuritiesBalance.mmObject();
-			componentContext_lazy = () -> BalanceFormat10Choice.mmObject();
+			componentContext_lazy = () -> com.tools20022.repository.choice.BalanceFormat10Choice.mmObject();
 			isDerived = false;
 			xmlTag = "PartWayPrdUnits";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -333,10 +349,11 @@ public class BalanceFormat10Choice {
 	final static public MMChoiceComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
-				messageElement_lazy = () -> Arrays.asList(BalanceFormat10Choice.mmBalance, BalanceFormat10Choice.mmEligibleBalance, BalanceFormat10Choice.mmNotEligibleBalance, BalanceFormat10Choice.mmFullPeriodUnits,
-						BalanceFormat10Choice.mmPartWayPeriodUnits);
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.BalanceFormat10Choice.mmBalance, com.tools20022.repository.choice.BalanceFormat10Choice.mmEligibleBalance,
+						com.tools20022.repository.choice.BalanceFormat10Choice.mmNotEligibleBalance, com.tools20022.repository.choice.BalanceFormat10Choice.mmFullPeriodUnits,
+						com.tools20022.repository.choice.BalanceFormat10Choice.mmPartWayPeriodUnits);
 				trace_lazy = () -> SecuritiesBalance.mmObject();
-				dataDictionary_lazy = () -> GeneratedRepository.mmdataDict;
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceFormat10Choice";
 				definition = "Choice between balance, eligible balance and not eligible balance formats.";
@@ -345,48 +362,48 @@ public class BalanceFormat10Choice {
 		return mmObject_lazy.get();
 	}
 
-	@XmlElement(name = "Bal", required = true)
 	public SignedQuantityFormat8 getBalance() {
 		return balance;
 	}
 
-	public void setBalance(SignedQuantityFormat8 balance) {
-		this.balance = balance;
+	public BalanceFormat10Choice setBalance(SignedQuantityFormat8 balance) {
+		this.balance = Objects.requireNonNull(balance);
+		return this;
 	}
 
-	@XmlElement(name = "ElgblBal", required = true)
 	public SignedQuantityFormat9 getEligibleBalance() {
 		return eligibleBalance;
 	}
 
-	public void setEligibleBalance(SignedQuantityFormat9 eligibleBalance) {
-		this.eligibleBalance = eligibleBalance;
+	public BalanceFormat10Choice setEligibleBalance(SignedQuantityFormat9 eligibleBalance) {
+		this.eligibleBalance = Objects.requireNonNull(eligibleBalance);
+		return this;
 	}
 
-	@XmlElement(name = "NotElgblBal", required = true)
 	public SignedQuantityFormat9 getNotEligibleBalance() {
 		return notEligibleBalance;
 	}
 
-	public void setNotEligibleBalance(SignedQuantityFormat9 notEligibleBalance) {
-		this.notEligibleBalance = notEligibleBalance;
+	public BalanceFormat10Choice setNotEligibleBalance(SignedQuantityFormat9 notEligibleBalance) {
+		this.notEligibleBalance = Objects.requireNonNull(notEligibleBalance);
+		return this;
 	}
 
-	@XmlElement(name = "FullPrdUnits", required = true)
 	public SignedQuantityFormat9 getFullPeriodUnits() {
 		return fullPeriodUnits;
 	}
 
-	public void setFullPeriodUnits(SignedQuantityFormat9 fullPeriodUnits) {
-		this.fullPeriodUnits = fullPeriodUnits;
+	public BalanceFormat10Choice setFullPeriodUnits(SignedQuantityFormat9 fullPeriodUnits) {
+		this.fullPeriodUnits = Objects.requireNonNull(fullPeriodUnits);
+		return this;
 	}
 
-	@XmlElement(name = "PartWayPrdUnits", required = true)
 	public SignedQuantityFormat9 getPartWayPeriodUnits() {
 		return partWayPeriodUnits;
 	}
 
-	public void setPartWayPeriodUnits(SignedQuantityFormat9 partWayPeriodUnits) {
-		this.partWayPeriodUnits = partWayPeriodUnits;
+	public BalanceFormat10Choice setPartWayPeriodUnits(SignedQuantityFormat9 partWayPeriodUnits) {
+		this.partWayPeriodUnits = Objects.requireNonNull(partWayPeriodUnits);
+		return this;
 	}
 }
